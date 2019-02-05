@@ -1,0 +1,28 @@
+## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+## File:  $HOME/.emacs.d/.gitignore
+##        Git Ignore file for Modular Emacs
+##
+## Ref:   https://github.com/harmonicalchemy/modular-emacs.git
+##
+## The following will be globally ignored by git for this
+## repository...
+## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# exclude init.el (your custom copy of: me.init.el will not be tracked)
+init.el
+
+# exclude custom.el (Emacs Customize features are ignored)
+custom.el
+
+# exclude entire elpa directory and it's contents.
+# Emacs Packages contain git repositories!
+elpa/*
+
+# exclude everything within my-custom-modules folder...
+# This is for you to add your own modules and git won't complain
+# about new untracked files.  (comment this line if you want to make
+# your own branch and track your custom modules as well...
+my-custom-modules/*
+
+# exception to the rule so git keeps the folder containing this empty file...
+!my-custom-modules/.gitkeep
