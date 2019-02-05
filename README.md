@@ -76,7 +76,7 @@ _(clone to a temporary directory `~/me.emacs.d`)_
 
 This will clone `modular-emacs.git` into a fresh new empty `me.emacs.d` directory in your home directory.  Everything you need to run Emacs will be installed within that parent directory exclusively.  No outside .emacs init files will be created or used...
 
-If you navigate within your new cloned directory you will find the `lisp` sub directory.  Go into the **`lisp`** directory and you will see three sub directories there: ** `modules`**, **`my-modules`**, & **`themes`**...
+If you navigate within your new cloned directory you will find the `lisp` sub directory.  Go into the **`lisp`** directory and you will see three sub directories there: **`modules`**, **`my-modules`**, & **`themes`**...
 
 The purpose of the **`my-modules`** folder is to give you a place to keep your own extensions to **Modular Emacs** without causing **git** to complain about new un-tracked files.  `my-modules` has been added to `.gitignore` so anything you create within that directory will be ignored as well!  This way you can try out different things without worrying about messing up the base install...  
 
@@ -111,11 +111,11 @@ This file is also named within the `.gigignore` file so that anytime you use the
 
 First Rename your existing:  **`~/.emacs.d`** to: **`~/save.emacs.d`** _(You may have already done this in the beginning)_  You may also have a `.emacs` init file outside of the `.emacs.d` folder that also needs to be renamed!
 
-Next Rename: **`~/me.emacs.d`** to: **`~/.emacs.d`** _(This is now your new Emacs Home Directory)_
+Next Rename: **`~/me.emacs.d`** to: **`~/.emacs.d`** _(This is now your new **Modular Emacs Local Repository** which is also now your default_ **`.emacs.d`** _home directory)_
 
 **_Start up GNU Emacs v26.1 from the menu or command line and hold your breath!_**
 
-After a lot of super computing lisp number crunching flashing away in your minibuffer _(wait wait wait...)_ Then **Bam!** You should now see your new emacs pop up with the **Welcome to Harmonic Alchemy Modular!** scratch buffer in a frame with a pre-determined row/column initial size! 
+After a lot of super computing lisp number crunching flashing away in your minibuffer _(wait wait wait...)_ Then **Bam!** You should now see your new emacs pop up with the **Welcome to Harmonic Alchemy Modular Emacs!** scratch buffer in a frame with a pre-determined row/column initial size! 
 
 **No?** Broken? Oh My! What a freekin let down!  I feel your pain!  OK... You may be fine if there are only warnings... _(which are hard to avoid upon first startup with all those new packages compiling etc. Not much you can do about that... The developers who made the packages need to clean that up, you could help them though. ;-)_
 
@@ -123,13 +123,11 @@ If you got an error and see the default emacs screen, try to retrace your steps 
 
 **Yes?** It worked!  **Yay!** What a fantastic feeling the first time eh?
 
-> **Note:** Fetching/pulling new changes from the master `modular-emacs` Github repository to: local: `~/.emacs.d/` will automatically be reflected within your emacs configurations... No need to copy any more files... 
-
-> If you wish to keep your changes separate from the remote master branch, create your own local `develop` branch _(or call it what you like)_ and maintain your local changes in parallel... Change your local branch's .gitignore to accommodate your needs...
+> **Note:** Fetching/pulling new changes from the master `modular-emacs` Github repository to: local: `~/.emacs.d/` will automatically be reflected within your emacs configurations... No need to copy any more files... But you may be surprised to see some new feature or something working differently.  If that bothers you, you may wish to keep your changes separate from the remote master branch.  Therefore create your own local `develop` branch _(or call it what you like)_ and maintain your local changes in parallel... Change your local branch's .gitignore to accommodate your needs...
 
 **Usage:**
 
-In this kind of setup, your local `~/.emacs.d/init.el` is not kept in modular-emacs code revision.  Instead, you may use this file to try out experimental customization and you may wish to keep it in your local branch under code revision by removing it from your local branch's `.gitignore` file.  If something goes wrong you can quickly refresh this file from the original `~/.emacs.d/me.init.el`.
+In this default setup, your local `~/.emacs.d/init.el` is not kept in modular-emacs code revision.  Instead, you may use this file to try out experimental customization and you may wish to keep it in your local branch under code revision by removing it from your local branch's `.gitignore` file.  If something goes wrong you can quickly refresh this file from the original `~/.emacs.d/me.init.el`.
 
 You can also use the Modular Emacs \*scratch\* buffer to paste experimental lisp code to try out before making it permanent as a stand alone `.el` emacs lisp file...  you can evaluate the entire \*scratch\* buffer without removing the banner message at the top as that message is one huge lisp comment...  If something horrible happens, no worries... Restart emacs... Your messup will be gone and you will be back to where you were before you or that elisp test code goofed up...
 
