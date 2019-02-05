@@ -14,6 +14,7 @@
 (defvar super-emacs--req-pubops-packages
   '(markdown-mode
     markdown-mode+
+    markdown-toc
     fountain-mode
     olivetti
     org-bullets    

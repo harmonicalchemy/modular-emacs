@@ -205,6 +205,7 @@ Modular Emacs comes with my slightly customized version of the **Blackbaord colo
 
 - [markdown-mode](https://jblevins.org/projects/markdown-mode/) Markdown capability within emacs.
 - [markdown-mode+](https://github.com/milkypostman/markdown-mode-plus) Extras for Markdown mode.
+- [markdown-toc](https://github.com/ardumont/markdown-toc) Generate a TOC in a markdown file. This is a simple but powerful mode to create a TOC in a well-formed markdown file. In other words: The generated TOC will be well-formed if your markdown file is also well formed. ;-)
 - [vmd-mode](https://github.com/blak3mill3r/vmd-mode) Fast Github-flavored Markdown previews synchronized with changes to an emacs buffer (no need to save).  Renders org files _(and normal markdown)_ in an external VMD App that automatically shows changes in real-time as you type! _(You need to install this external app separately, and make sure Emacs knows where to find it.  See: `exec-path-from-shell` below)_
 - [fountain-mode](https://github.com/rnkn/fountain-mode) For **#writers #screenwriters #Fantastic!!!**
 - [olivetti](https://github.com/rnkn/olivetti) Adjust margins with word wrap. _(great with fountain mode!)_ Perfect for distraction free writing!
