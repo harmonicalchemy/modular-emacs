@@ -2,6 +2,44 @@
 
 [![License](https://img.shields.io/badge/LICENSE-GPL%20v3.0-blue.svg)](https://www.gnu.org/licenses/gpl.html)
 
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+**Table of Contents**
+
+- [Harmonic Alchemy Modular Emacs:](#harmonic-alchemy-modular-emacs)
+    - [Introduction:](#introduction)
+    - [Requirements:](#requirements)
+        - [Emacs: V26.1+](#emacs-v261)
+        - [VMD: _(Visual MarkDown App)_](#vmd-visual-markdown-app)
+        - [Fountain Screenwriting Tools: _(optional)_](#fountain-screenwriting-tools-optional)
+        - [ZSH: _(optional)_](#zsh-optional)
+    - [Details:](#details)
+    - [Start Here: _(Modular Emacs Setup)_](#start-here-modular-emacs-setup)
+        - [Backup existing Emacs which may already be installed:](#backup-existing-emacs-which-may-already-be-installed)
+        - [Clone: Harmonic Alchemy Modular Emacs](#clone-harmonic-alchemy-modular-emacs)
+        - [Clone MultiMarkdown Mode:](#clone-multimarkdown-mode)
+        - [Copy `me.init.el` to: `init.el`:](#copy-meinitel-to-initel)
+        - [Create an empty `custom.el` file:](#create-an-empty-customel-file)
+    - [OK... Ready Freddy? Start up Emacs and see what happens!](#ok-ready-freddy-start-up-emacs-and-see-what-happens)
+    - [Features:](#features)
+        - [Key-bindings:](#key-bindings)
+        - [Pre-configured packages - Comprehensive list:](#pre-configured-packages---comprehensive-list)
+            - [Misc. Packages:](#misc-packages)
+            - [Core Emacs System Related Packages:](#core-emacs-system-related-packages)
+            - [Emacs Helm & Extras:](#emacs-helm--extras)
+            - [Ace Jump Mode & Helpers:](#ace-jump-mode--helpers)
+            - [Tree & Menu Related Packages:](#tree--menu-related-packages)
+            - [Dired Related Packages:](#dired-related-packages)
+            - [dev§Ops, sys§Admin, info?Sec Related Packages:](#devops-sysadmin-infosec-related-packages)
+                - [More languages, devOps tools, etc. to add later:](#more-languages-devops-tools-etc-to-add-later)
+            - [Writer's \- Publishing Tools:](#writers---publishing-tools)
+            - [Spelling:](#spelling)
+            - [Project Management Tools:](#project-management-tools)
+            - [Git \- `magit` & Related:](#git---magit--related)
+
+<!-- markdown-toc end -->
+
+# Harmonic Alchemy Modular Emacs:
+
 ## Introduction:
 
 **Welcome to Harmonic Alchemy Modular Emacs V1.0 RC2** - Now final testing my second release candidate.  This is almost ready to be dubbed my first official release.  There are only a few glitches left (on Mac OS)...
@@ -22,9 +60,13 @@ Therefore: **Here is Modular Emacs!** I hope my long years of **devOps** experie
 
 I strive to make this simple starting out with as few fancy extras as possible.  This will provide you with a simpler base from which to build to your own needs... Having said that... there are a few things I find to be vital for anyone who writes as well as codes and this means you... **All coders need to document as well, so there you go!**  **_My plan is to build the best Emacs Skeleton Base Configuration for Writing as well as Coding..._**  Please help me accomplish this goal!  I will need your input!  For now here is what you need to do:
 
-- **Emacs V26.1+ :** Many of the default packages installed with this project will not work with previous versions of Emacs. These new features are vital to make things work well going forward from 2018 onward, so I decided not to support lesser versions of Emacs...  The latest version of Emacs is available on Fedora but not Debian yet. On Debian you will have to build from source.  The new version of Debian will include Emacs 26.1 however, and that is coming soon!  On Mac OS you can get the latest version of Gnu Emacs via Homebrew...  There are easy ways to get the latest version of Emacs on Ubuntu LTS as well... _(You may have to install from source within your system `sudo user's` $HOME account however)_.  Don't give your Apache web user the emacs App.  That would increase your server's www attack surface too much in my humble opinion...  Let's keep this part open to discussion... Better solutions will present themselves.     
+### Emacs: V26.1+
 
-- **VMD _(Visual MarkDown)_: -** This is a stand alone `node.js` **Electron Web App** that you need to install in your `$HOME` directory for this Emacs setup to use.  **VMD** allows you to visualize the results of your edits of **markdown files:** `.md` & **ORG files:** `.org` **instantly! _(in  real time, while you edit the markdown text within your emacs buffer, all without the need for a full web browser)..._**     
+Many of the default packages installed with this project will not work with previous versions of Emacs. These new features are vital to make things work well going forward from 2018 onward, so I decided not to support lesser versions of Emacs...  The latest version of Emacs is available on Fedora but not Debian yet. On Debian you will have to build from source.  The new version of Debian will include Emacs 26.1 however, and that is coming soon!  On Mac OS you can get the latest version of Gnu Emacs via Homebrew...  There are easy ways to get the latest version of Emacs on Ubuntu LTS as well... _(You may have to install from source within your system `sudo user's` $HOME account however)_.  Don't give your Apache web user the emacs App.  That would increase your server's www attack surface too much in my humble opinion...  Let's keep this part open to discussion... Better solutions will present themselves.     
+
+### VMD: _(Visual MarkDown App)_
+
+This is a stand alone `node.js` **Electron Web App** that you need to install in your `$HOME` directory for this Emacs setup to use.  **VMD** allows you to visualize the results of your edits of **markdown files:** `.md` & **ORG files:** `.org` **instantly! _(in  real time, while you edit the markdown text within your emacs buffer, all without the need for a full web browser)..._**     
 Your rendered markdown will appear as it would look on GitHub!  This is a **_much smarter tool for writing/publishing_** because it combines the ease of: `WYSIWYG` with the power of `text-editors`.  That is the best of both worlds with no compromise!     
 The best way to install **VMD** is locally within your home directory _(not system wide via your distro's package manager, or app store)..._    
 The best way to install locally is to install it as a `Node.js` package...      
@@ -34,11 +76,15 @@ Follow the instructions on the above linked `nvm` Github project to install **NV
 > `$ cd ~/`     
 > `$ npm install -g vmd`     
 
-- **Fountain Screenwriting Tools: _(optional)_** For processing text files from emacs and exporting them to formats used within the industry etc.  These tools can be installed with the Node Package Manager _(just as for installing **VMD**)_ I am not making this a requirement obviously, but if you are into fiction or screenwriting Fountain should be a main part your emacs publishing environment!
+### Fountain Screenwriting Tools: _(optional)_
 
-- **ZSH _(optional)_:** I use `zsh`, `Antigen` & `Oh-My-Zsh` as my default unix shell configuration.  There may be some configurations within emacs here that make that work well.  Hopefully those configs will not change a `bash` or other `shell` user's experience...  I will have to test that to make sure...  I don't wish to make Zsh a requirement.  This should work equally well in the bash shell, or any POSIX compliant shell.  
+For processing text files from emacs and exporting them to formats used within the industry etc.  These tools can be installed with the Node Package Manager _(just as for installing **VMD** above)_ I am not making this a requirement obviously, but if you are into fiction or screenwriting Fountain should be a main part your emacs publishing environment!
 
-## Details: 
+### ZSH: _(optional)_
+
+I use `zsh`, `Antigen` & `Oh-My-Zsh` as my default unix shell configuration.  There may be some configurations within emacs here that make that work well.  Hopefully those configs will not change a `bash` or other `shell` user's experience...  I will have to test that to make sure...  I don't wish to make Zsh a requirement.  This should work equally well in the bash shell, or any POSIX compliant shell.
+
+## Details:
 
 The above requirements are pretty much all you need to get ready for installing and running this project in your home directory... Also, not covered here, you need to have a standard unix like development environment set up on your machine as well, _(even if all you intend to do is write but not code)_ you will still need to have some of the standard **devTools** installed and configured to make some of these cool writer's features work well.
 
@@ -56,7 +102,7 @@ By using open source exclusively as much as possible, your bottom line becomes: 
 
 The **_share-and-share-alike_** rule keeps your work and all its derivatives open-source for others to fork and/or contribute which will help you smash those bugs much faster!  You will also be taking part in a global community and will make some very interesting friends over time!  This is all good for the open-source ecosystem.  It keeps it healthy and keeps it alive!  This is the true meaning of **_"Free Software"_** and the original reason I decided to adopt my life to it.  There are many other great reasons for using all **FOSS** as well of course...  Therefore... keeping in the spirit of "The Cathedral and the Bazaar", here we bravely go!  Enough talking already!
 
-## Start Here -  Modular Emacs Setup:
+## Start Here: _(Modular Emacs Setup)_
 
 ### Backup existing Emacs which may already be installed:
 
@@ -82,7 +128,9 @@ The purpose of the **`my-modules`** folder is to give you a place to keep your o
 
 > **Note:** You may want to create your own private local **`branch/fork`** of this repository where **`my-modules`** directory is not ignored, and then you can keep your own customized version under local git revision as well.  Once you do this, you may or may not wish to **`pull/merge`** any new changes from **Modular Emacs** into your new private branch...  You could also simply **"cherry pick"** **`cut/paste`** snippets of `lisp` code from new features released in the **master** Modular Emacs branch into your **local branch** instead...  The choice is up to you... Free software! You have many options! Yay! 
 
-**Clone MultiMarkdown Mode from its public repo on Github into the `lisp/my-modules` directory:**   
+### Clone MultiMarkdown Mode:
+
+Clone MultiMarkdown from its public repo on Github into the `lisp/my-modules` directory:**   
 
 > **Note:** _This package is not available on `MELPA` but it is required for `modular-emacs` to run...  It makes **markdown** files like this look good on GitHub!_ :octocat: We will clone this into **`my-modules`** so that it will be ignored...  If it were on `MELPA` it would be installed within the `melpa` directory _(which is also ignored by git in this project)_
 
@@ -91,23 +139,33 @@ The purpose of the **`my-modules`** folder is to give you a place to keep your o
    $ git clone https://github.com/jmquigley/mmd-mode.git 
 ```
 
-Now go back to your cloned `me.emacs.d` parent directory to do the last few things needed to get Modular Emacs running...
+### Copy `me.init.el` to: `init.el`:
 
-**Copy: `~/me.emacs.d/me.init.el`** to: **`~/me.emacs.d/init.el`**
+Go back to your cloned `me.emacs.d` parent directory and copy the init.el reference file:
+
+```
+   $ cd ~/me.emacs.d
+   $ cp me.init.el init.el
+```
 
 _`init.el` has also been put into .gitignore so you can edit that file to your hearts content without disrupting the state of the master branch!_  You may also choose to add your `init.el` copy to a local git branch in parallel to track your own custom changes to that file as well...  
 
 > **Note:** Don't mess with **`~/.emacs.d/me.init.el`**.  That is there for reference only...  You may need to copy it again if you mess up your first copy somehow or you simply want to get back to the default setup out of box to start over or something like that...
 
-**Create an empty `custom.el` file within the `~/me.emacs.d/` directory**.
+### Create an empty `custom.el` file:
+
+Modular Emacs is configured to save all **"Emacs Customize"** configurations _(i.e., from the Options menu)_ to a file named: `custom.el`
 
 ```
    $ cd ~/me.emacs.d
    $ touch custom.el
 ```
-This file is also named within the `.gigignore` file so that anytime you use the built in Customize features of Emacs they won't disrupt the state of your master branch...
 
-## OK... Ready Freddy? Lets start up Emacs and see what happens!:
+This file is named within the `.gigignore` file so that anytime you use the built in Customize features of Emacs they won't disrupt the state of your master branch...
+
+
+
+## OK... Ready Freddy? Start up Emacs and see what happens!
 
 First Rename your existing:  **`~/.emacs.d`** to: **`~/save.emacs.d`** _(You may have already done this in the beginning)_  You may also have a `.emacs` init file outside of the `.emacs.d` folder that also needs to be renamed!
 
