@@ -18,6 +18,7 @@
     smart-tabs-mode
     ssh-config-mode
     magit
+    gitignore-mode
     gitattributes-mode))
 
 ;; Install required packages:
