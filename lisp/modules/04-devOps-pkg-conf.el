@@ -17,9 +17,10 @@
     neotree
     smart-tabs-mode
     ssh-config-mode
-    magit
+    gitconfig-mode
     gitignore-mode
-    gitattributes-mode))
+    gitattributes-mode
+    magit))
 
 ;; Install required packages:
 (mapc (lambda (p)
