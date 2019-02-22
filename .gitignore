@@ -33,25 +33,3 @@ lisp/my-modules/*
 !lisp/my-modules/.gitkeep
 
 
-##
-#  The following Emacs related temp files etc. should be included within
-#  your ~/.gitignore_global file.  They have been added here as a convienence...
-##
-*~
-\#*\#
-/.emacs.desktop
-/.emacs.desktop.lock
-*.elc
-auto-save-list
-tramp
-.\#*
-
-# Org-mode
-.org-id-locations
-*_archive
-
-# flymake-mode
-*_flymake.*
-
-
-
