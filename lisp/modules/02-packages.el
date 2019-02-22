@@ -1,5 +1,8 @@
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; [modular-emacs]:~/.emacs.d/lisp/modules/02-packages.el
+;;
+;; This module provides the basic modules that most likely will be needed
+;; by most all use-cases...  Modular Emacs default packages so-to-speak...
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;; Create repositories cache, if required

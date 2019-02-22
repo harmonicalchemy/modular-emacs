@@ -1,9 +1,15 @@
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; [machine-name]:~/.emacs.d/lisp/modules/05-pubOps-pkg-conf.el
+;; [modular-emacs]:~/.emacs.d/lisp/modules/05-pubOps-pkg-conf.el
 ;;
-;; This is a new file which is not part of the original Super-Emacs project.
-;; This adds extra tools for writing, viewing, and publishing which super-emacs
-;; alone does not provide...
+;; This module adds extra tools for writing, viewing, and publishing to give you
+;; a jump start at using Emacs as a great publishing platform.  Just as good or
+;; in-my-opinion, better than using something like Open Office, MS Word, or even
+;; something fancier like Scrivener!
+;;
+;; using vmd-mode in combination with olivetti, etc. provide you with both
+;; WYSIWYG live (like standard word processors) but also very powerful macro
+;; commands, ease of fast typing everything (no mouse needed) etc.  Which is
+;; why I strongly feel Emacs is the best publishing tool out there for anything!
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;; Create repositories cache for pubOps extras, if required:

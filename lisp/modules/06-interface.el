@@ -1,9 +1,17 @@
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; [machine-name]:~/.emacs.d/lisp/modules/06-interface.el
+;; [modular-emacs]:~/.emacs.d/lisp/modules/06-interface.el
 ;;
-;; This file has been modified from my original Super-Emacs fork.
-;; A different theme (Blackboard) & Features/Settings have been
-;; changed/added...
+;; This file defines general Emacs interface Customizations.  You may find my
+;; comments below a little bit cuemudgin against changing the default Emacs
+;; key bindings, or enabling scroll wheels, track pads, etc. in lieu of using
+;; the classic Emacs prefix keys & commands that do the same things but much more
+;; efficiently.  As a result you will not find much like that in here...
+;;
+;; Customize this file by adding your own interface tweaks...  You could add CUA
+;; mode here if you like...  Not me. ;-)  I have been using C-w, M-w, C-k, & C-y
+;; for 30 years and like it that way.  I tried CUA mode for a while once and my
+;; fingers got confused and typed other non-emacs keys within Emacs, and also
+;; accidentlay typed Emacs key commands when I was in other apps!  OMG!
 ;;
 ;; Update 2019-002-21:
 ;;    Updated to Release Candidate 3 for Modular Emacs Version: 1.0 (Q1-2019)
@@ -17,16 +25,15 @@
 (setq frame-title-format
       "Modular Emacs v1.0 (RC3) [Q1 2019]")
 
-;; Disable tool-bar - yes... I could care less about tool bars in emacs!  an oxymoron!
+;; Disable tool-bar - I could care less about tool bars in emacs!
+;; An oxymoron! But you may feel differently.  Comment this out if you like them.
 (tool-bar-mode -1)
 
-;; Disable scroll-bar - yes... I use my fingers to swipe, or just use key commands to move around...
+;; Disable scroll-bar - I use key commands to navigate in emacs.  Once you get
+;; used to the alternate methods you will throw your mouse away! The key commands
+;; are way faster and more accurate as well.  Some key commands take you right to
+;; the precise spot you want to go!
 (scroll-bar-mode -1)
-
-(cua-mode t)
-(setq cua-auto-tabify-rectangles nil)    ;; Don't tabify after rectangle commands
-(transient-mark-mode 1)                  ;; No region when it is not highlighted
-(setq cua-keep-region-after-copy t)      ;; Standard Windows behavior
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Disable this section if you like using the mouse wheel:

@@ -1,9 +1,8 @@
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; [machine-name]:~/.emacs.d/lisp/modules/04-devOps-pkg-conf.el
+;; [modular-emacs]:~/.emacs.d/lisp/modules/04-devOps-pkg-conf.el
 ;;
-;; This is a new file and is not part of my original Super-Emacs fork.
-;; This adds extra sysAdmin, programming, develop/test, and deployment features
-;; that super-emacs alone does not include...
+;; This module adds extra sysAdmin, programming, develop/test, and deployment
+;; features to make Emacs the center of your development operations...
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;; Create repositories cache for devOps extras, if required:

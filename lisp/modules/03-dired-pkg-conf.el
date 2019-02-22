@@ -1,8 +1,7 @@
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; [machine-name]:~/.emacs.d/lisp/modules/03-dired-pkg-conf.el
+;; [modular-emacs]:~/.emacs.d/lisp/modules/03-dired-pkg-conf.el
 ;;
-;; This is a new file and is not part of my original Super-Emacs fork.
-;; This adds extra dired features that super-emacs alone does not include...
+;; This module adds extra dired features that are not part of the default dired.
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;; Create repositories cache for dired extras, if required:

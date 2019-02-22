@@ -1,5 +1,12 @@
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; [modular-emacs]:~/.emacs.d/lisp/modules/07.misc.el
+;;
+;; This module is a catch-all for things that don't seem to fit in a specific
+;; category.  More genearl nature...  I am using this module to troubleshoot
+;; Mac OS problem of not getting the proper environment variables, (PATH etc.)
+;; I still have not solved the Mac OS problem.  The "exec-path-from-shell"
+;; related lines at the end of this file are my first attempt to fix this problem.
+;; exec-path-from-shell did solve some environment problems on Linux however...
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;; Reload File Function:

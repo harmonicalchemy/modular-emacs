@@ -1,10 +1,9 @@
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; [machine-name]:~/.emacs.d/lisp/modules/08.spelling.el
+;; [modular-emacs]:~/.emacs.d/lisp/modules/08.spelling.el
 ;;
-;; This is a new file which is not part of my original Super-Emacs fork.
-;; This breaks out spelling into its own module making it easier to turn
+;; This module encapsulates spelling features making it easier to turn
 ;; specific features on or off, choose to use Aspell or Hunspell or both,
-;; switch dictionaries, languages. etc.
+;; switch dictionaries, languages. etc. all within this one module...
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;; Create repositories cache for spelling extras, if required:
