@@ -5,6 +5,9 @@
 ;; A different theme (Blackboard) & Features/Settings have been
 ;; changed/added...
 ;;
+;; Update 2019-002-21:
+;;    Updated to Release Candidate 3 for Modular Emacs Version: 1.0 (Q1-2019)
+;;
 ;; Update 2019-001-21:
 ;;    This file marks the first Release Candidate for Version 1 of:
 ;;    Harmonic Alchemy Modular Emacs (displayed in the default Emacs frame title) 
@@ -12,16 +15,18 @@
 
 ;; Change title-bar text
 (setq frame-title-format
-      "Modular Emacs v1.0 (RC2) [Q1 2019]")
-
-;; Disable menu-bar - NO! I like the menu bar for some things...
-;(menu-bar-mode -1)
+      "Modular Emacs v1.0 (RC3) [Q1 2019]")
 
 ;; Disable tool-bar - yes... I could care less about tool bars in emacs!  an oxymoron!
 (tool-bar-mode -1)
 
 ;; Disable scroll-bar - yes... I use my fingers to swipe, or just use key commands to move around...
 (scroll-bar-mode -1)
+
+(cua-mode t)
+(setq cua-auto-tabify-rectangles nil)    ;; Don't tabify after rectangle commands
+(transient-mark-mode 1)                  ;; No region when it is not highlighted
+(setq cua-keep-region-after-copy t)      ;; Standard Windows behavior
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Disable this section if you like using the mouse wheel:

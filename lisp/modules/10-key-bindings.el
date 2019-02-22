@@ -1,15 +1,14 @@
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; [machine-name]:~/.emacs.d/lisp/modules/10-key-bindings.el
-;;
-;; This file has been modified from my original Super-Emacs fork.
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-(defvar super-emacs--my-keyboard-bindings 
+(defvar modular-emacs--my-keyboard-bindings 
   '(("C-}" . mc/mark-next-like-this)
     ("C-{" . mc/mark-previous-like-this)
     ("C-|" . mc/mark-all-like-this)
     ("C->" . ace-jump-mode)
     ("C-<" . ace-jump-mode-pop-mark)
+    ("C-'" . imenu-list-smart-toggle)
     ("M-/" . undo-tree-visualize)
     ("C-\," . neotree-toggle)
     ("C-c M-x" . execute-extended-command)
@@ -24,15 +23,15 @@
     ("C-S-<down>" . buf-move-down)
     ("C-S-<left>" . buf-move-left)
     ("C-S-<right>" . buf-move-right)
-    ("<f5>" . super-emacs-reload-current-file)))
+    ("<f5>" . modular-emacs-reload-current-file)))
 
-(defun super-emacs-apply-keyboard-bindings (pair)
+(defun modular-emacs-apply-keyboard-bindings (pair)
   "Apply keyboard-bindings for supplied list of key-pair values"
   (global-set-key (kbd (car pair))
                   (cdr pair)))
 
-(mapc 'super-emacs-apply-keyboard-bindings
-      super-emacs--my-keyboard-bindings)
+(mapc 'modular-emacs-apply-keyboard-bindings
+      modular-emacs--my-keyboard-bindings)
 
 ;; Map Alt key to Meta:
 ;; Note: You may want to comment this out on Mac-OS!. Mac already works fine with the command key.

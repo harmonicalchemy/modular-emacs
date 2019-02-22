@@ -1,21 +1,20 @@
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; [machine-name]:~/.emacs.d/lisp/modules/02-packages.el
-;;
-;; This file has been modified from my original Super-Emacs fork.
+;; [modular-emacs]:~/.emacs.d/lisp/modules/02-packages.el
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;; Create repositories cache, if required
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-;; Declare default super-emacs list of required packages:
-(defvar super-emacs--required-packages
+;; Declare default modular-emacs list of required packages:
+(defvar modular-emacs--required-packages
   '(
     helm
     sublimity
     multiple-cursors
     ace-jump-mode
     ace-window
+    imenu-list
     powerline
     buffer-move
     auto-complete
@@ -28,7 +27,7 @@
 ;; Install required packages
 (mapc (lambda (p)
         (package-install p))
-      super-emacs--required-packages)
+      modular-emacs--required-packages)
 
 ;; Configure and enable sublimity-mode
 (require 'sublimity-scroll)
@@ -49,6 +48,9 @@
   "ace-jump-mode" 
   "Ace jump back:-"
   t)
+
+;; Enable iMenu List minor mode globally at startup:
+;(imenu-list-minor-mode)
 
 ;; Enable powerline
 (powerline-center-theme)

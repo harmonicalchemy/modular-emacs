@@ -11,7 +11,7 @@
   (package-refresh-contents))
 
 ;; Declare a list of required packages for writers, bloggers, publishers, etc.:
-(defvar super-emacs--req-pubops-packages
+(defvar modular-emacs--req-pubops-packages
   '(markdown-mode
     markdown-mode+
     markdown-toc
@@ -23,7 +23,7 @@
 ;; Install required packages:
 (mapc (lambda (p)
         (package-install p))
-      super-emacs--req-pubops-packages)
+      modular-emacs--req-pubops-packages)
 
 ;; Toggle olivetti minor mode (for writing) on and off:
 (global-set-key (kbd "C-`") #'olivetti-mode)

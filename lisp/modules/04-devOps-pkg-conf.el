@@ -11,7 +11,7 @@
   (package-refresh-contents))
 
 ;; Declare a list of required packages for programming, build/test, deploy, etc.:
-(defvar super-emacs--req-devops-packages
+(defvar modular-emacs--req-devops-packages
   '(ztree
     undo-tree
     neotree
@@ -25,7 +25,7 @@
 ;; Install required packages:
 (mapc (lambda (p)
         (package-install p))
-      super-emacs--req-devops-packages)
+      modular-emacs--req-devops-packages)
 
 ;; Start undo-tree:
 (global-undo-tree-mode)

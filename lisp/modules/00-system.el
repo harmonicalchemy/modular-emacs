@@ -1,11 +1,11 @@
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; [machine-name]:~/.emacs.d/lisp/modules/00-system.el
-;;
-;; This file has been modified from the original Super-Emacs project.
+;; [modular-emacs]:~/.emacs.d/lisp/modules/00-system.el
 ;;
 ;; Note:  I changed everything in this file because it was causing issues with
 ;;        newer versions of emacs!  Everything below has been re-written based
 ;;        on Emacs Manual: 49.1.4 Saving Customizations...
+;;        Also, all my work environments now have the latest GnuPG installed.
+;;        no need to play games with defining gpg to gpg2 anymore...
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;; Set custom-file so that Emacs does not use init.el
@@ -19,7 +19,7 @@
 ;; However some systems have both gpg & gpg2 installed so it is best to
 ;; leave it below the way it is. (you could also create an alias in .bashrc
 ;; .profile, etc.)
-(setq epg-gpg-program "gpg2")
+(setq epg-gpg-program "gpg")
 
 ;; Configure custom elisp library load path.
 (add-to-list 'load-path "~/.emacs.d/lisp/")

@@ -12,13 +12,13 @@
   (package-refresh-contents))
 
 ;; Declare a list of required packages for Spelling:
-(defvar super-emacs--req-spelling-packages
+(defvar modular-emacs--req-spelling-packages
   '(flyspell-correct-helm))
 
 ;;Install required packages:
 (mapc (lambda (p)
         (package-install p))
-      super-emacs--req-spelling-packages)
+      modular-emacs--req-spelling-packages)
 
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

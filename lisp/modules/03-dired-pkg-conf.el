@@ -10,16 +10,15 @@
   (package-refresh-contents))
 
 ;; Declare a list of required packages for extra dired features:
-(defvar super-emacs--req-dired-packages
+(defvar modular-emacs--req-dired-packages
   '(helm-core
     dired-launch
-    imenu-list
     dired-imenu))
 
 ;; Install required packages:
 (mapc (lambda (p)
         (package-install p))
-      super-emacs--req-dired-packages)
+      modular-emacs--req-dired-packages)
 
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

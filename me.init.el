@@ -29,6 +29,18 @@
 ;;
 ;; Change Log: (descending chronological order)
 ;;
+;;   2019-002-21 - Harmonic Alchemy Modular-Emacs v1.0 (RC3) [Q1 2019]
+;;      I am now testing/debugging this release candidate on [MWM-work] within
+;;      a new local branch named:  mwm-work (of course ;-).  all variable
+;;      names no longer reference any old super-emacs ghosts from the past.
+;;      this is a completely independent Emacs Project on Github now...
+;;      too many things have been changed/introduced/revamped to call this
+;;      a fork of Super-Emacs anymore...  Once I have this working well on
+;;      [MWM-Work] I will create a remote develop branch on Github and push
+;;      local mwm-work branch to origin/develop.  That will be for testing
+;;      on other Qubes environments... In particular my [public] VM which
+;;      is based on a different template...
+;;
 ;;   2019-002-04 - Harmonic Alchemy Modular-Emacs v1.0 (RC2) [Q1 2019] !!!
 ;;      I believe I am close to having this work well on [MWM-work].  Three are
 ;;      a few quirks, (shift arrow does not move to another frame if it is present)
@@ -46,7 +58,8 @@
 ;;      actually create an entirely new Depot repository for it on GitHub.com.
 ;;      The new repository name will be called: `modular-emacs.git`.  I may decide
 ;;      to change all variable and function name refs: `super-emacs` to: `mod-emacs`.
-;;      If I do, that note will be appended here...
+;;      If I do, that note will be appended here... Retroactive Note: all vars
+;;      defined within modular-emacs are now prefixed with me_ instead of super-emacs_.
 ;;
 ;;   2019-001-15 - Harmonic Alchemy super-emacs [Q1 2019] v0.5:
 ;;      With Spelling working well, I corrected some errors and inconsistencies
@@ -121,7 +134,7 @@
                        ";; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
                        ";; Welcome to: [Your-Machine-Name-Here]\n"
                        ";;             Harmonic Alchemy - Modular Emacs!\n"
-                       ";; Version:    1.0 (RC2) [Q1 2019]\n"
+                       ";; Version:    1.0 (RC3) [Q1 2019]\n"
                        ";; \n"
                        ";; Today's date: " (format-time-string "%Y %B %d") "\n"
                        ";; Startup completed in "

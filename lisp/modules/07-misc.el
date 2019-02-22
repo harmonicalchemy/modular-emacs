@@ -1,11 +1,9 @@
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; [machine-name]:~/.emacs.d/lisp/modules/07.misc.el
-;;
-;; This file has been modified from my original Super-Emacs fork.
+;; [modular-emacs]:~/.emacs.d/lisp/modules/07.misc.el
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;; Reload File Function:
-(defun super-emacs-reload-current-file ()
+(defun modular-emacs-reload-current-file ()
   "Reload the file loaded in current buffer from the disk"
   (interactive)
   (cond (buffer-file-name (progn (find-alternate-file buffer-file-name)
