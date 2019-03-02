@@ -39,7 +39,7 @@
 ;; mmd-mode - Multimarkdown extensions to markdown-mode:
 ;; Reference: GitHub:jmquigley/mmd-mode
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-(add-to-list 'load-path "{~/.emacs.d/lisp/mmd-mode/}")
+(add-to-list 'load-path "{~/.emacs.d/lisp/my-modules/mmd-mode}")
 (require 'mmd-mode)
 
 (add-to-list 'auto-mode-alist '("\\.md\\'" . mmd-mode))

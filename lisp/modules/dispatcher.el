@@ -58,3 +58,6 @@
 ;; Load Harmonic Alchemy Modular Emacs - Key Bindings module:
 (load-file "~/.emacs.d/lisp/modules/10-key-bindings.el")
 
+;; Load Harmonic Alchemy Modular Emacs - Games module:
+(load-file "~/.emacs.d/lisp/modules/11-games-pkg-conf.el")
+
