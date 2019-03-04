@@ -58,6 +58,10 @@
 ;; Load Harmonic Alchemy Modular Emacs - Key Bindings module:
 (load-file "~/.emacs.d/lisp/modules/10-key-bindings.el")
 
+;; Optional: Un-comment the load file line below if you would like
+;; to explore MOOs or MUDs using a customized Emacs MOO client! ;-)
+;; This option is OFF by default.  Make sure to follow the instructions
+;; within the ~/.emacs.d/README.md to install the RMOO package first...
 ;; Load Harmonic Alchemy Modular Emacs - Games module:
-(load-file "~/.emacs.d/lisp/modules/11-games-pkg-conf.el")
+;(load-file "~/.emacs.d/lisp/modules/11-games-pkg-conf.el")
 

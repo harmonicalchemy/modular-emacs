@@ -11,12 +11,14 @@
         - [Emacs: V26.1+](#emacs-v261)
         - [VMD: _(Visual MarkDown App)_](#vmd-visual-markdown-app)
         - [Fountain Screenwriting Tools: _(optional)_](#fountain-screenwriting-tools-optional)
+        - [Games _(`rmoo`)_: _(optional)_](#games-rmoo-optional)
         - [ZSH: _(optional)_](#zsh-optional)
     - [Details:](#details)
     - [Start Here: _(Modular Emacs Setup)_](#start-here-modular-emacs-setup)
         - [Backup existing Emacs which may already be installed:](#backup-existing-emacs-which-may-already-be-installed)
         - [Clone: Harmonic Alchemy Modular Emacs](#clone-harmonic-alchemy-modular-emacs)
         - [Clone MultiMarkdown Mode:](#clone-multimarkdown-mode)
+        - [Clone RMOO MOO Client from Github: _(optional)_](#clone-rmoo-moo-client-from-github-optional)
         - [Copy `me.init.el` to: `init.el`:](#copy-meinitel-to-initel)
         - [Create an empty `custom.el` file:](#create-an-empty-customel-file)
     - [OK... Ready Freddy? Start up Emacs and see what happens!](#ok-ready-freddy-start-up-emacs-and-see-what-happens)
@@ -87,7 +89,7 @@ For processing text files from emacs and exporting them to formats used within t
 
 ### Games _(`rmoo`)_: _(optional)_
 
-This final release candidate contains an optional **Games Module** which is not enabled by default.  If you are interested in exploring MUDs and / or MOOs from within Emacs, than you will want to enable this Games Module... 
+This final release candidate contains an optional **Games Module** which is not enabled by default.  If you are interested in exploring MUDs and / or MOOs from within Emacs, than you will want to enable this Games Module within `~/.emacs.d/lisp/modules/dispatcher.el`... 
 
 ### ZSH: _(optional)_
 
@@ -156,6 +158,8 @@ Clone MultiMarkdown from its public repo on Github into the `lisp/my-modules` di
     $ cd ~/me.emacs.d/lisp/my-modules
     $ git clone https://github.com/lisdude/rmoo.git
 ```
+> **Note:** To use the `rmoo` MOO client within Emacs, you need to enable the **Games Module:** by un-commenting the last load file line in: `~/.emacs.d/lisp/modules/dispatcher.el` that calls: `.../lisp/modules/11-games-pkg-conf.el`... 
+
 I will be updating and or modifying this fork for my own MOO needs... When that time comes I may be publishing my own version of `rmoo` on GitHub...
 
 
@@ -288,7 +292,7 @@ Modular Emacs comes with my slightly customized version of the **Blackboard colo
 - [markdown-toc](https://github.com/ardumont/markdown-toc) Generate a TOC in a markdown file. This is a simple but powerful mode to create a TOC in a well-formed markdown file. In other words: The generated TOC will be well-formed if your markdown file is also well formed. ;-)
 - [vmd-mode](https://github.com/blak3mill3r/vmd-mode) Fast Github-flavored Markdown previews synchronized with changes to an emacs buffer (no need to save).  Renders org files _(and normal markdown)_ in an external VMD App that automatically shows changes in real-time as you type! _(You need to install this external app separately, and make sure Emacs knows where to find it.  See: `exec-path-from-shell` below)_
 - [fountain-mode](https://github.com/rnkn/fountain-mode) For **#writers #screenwriters #Fantastic!!!**
-- [olivetti](https://github.com/rnkn/olivetti) Adjust margins with word wrap. _(great with fountain mode!)_ Perfect for distraction free writing!
+- [olivetti](https://github.com/rnkn/olivetti) Adjust margins with word wrap. _(great with fountain mode!)_ Perfect for distraction free writing! I also enable this within `rmoo` _(if you have the **games module** enabled)..._  you can adjust the margin width with: `C-[` and `C-[` 
 
 #### Spelling:
 
