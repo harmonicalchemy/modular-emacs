@@ -20,6 +20,19 @@
 ;;                           (A great place to start a MOO server in 2019)
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+;; Create repositories cache for games, if required:
+(when (not package-archive-contents)
+  (package-refresh-contents))
+
+;; Declare a list of required packages for extra dired features:
+(defvar modular-emacs--req-games-packages
+  '(xterm-color))
+
+;; Install required packages:
+(mapc (lambda (p)
+        (package-install p))
+      modular-emacs--req-games-packages)
+
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; RMOO - A MOO client for Emacs:
 ;; Reference: Github.com/lisdude/rmoo.git
@@ -31,6 +44,8 @@
 (add-to-list 'auto-mode-alist '("\\.moo$" . moocode-mode))
 (add-hook 'rmoo-interactive-mode-hooks (lambda ()
 (linum-mode -1)                  ;; ... no line numbers
+(olivetti-mode)
+(olivetti-set-width 88)
 (goto-address-mode t)))          ;; ... clickable links
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
