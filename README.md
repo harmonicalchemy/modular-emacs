@@ -42,11 +42,13 @@
 
 ## Introduction:
 
-**Welcome to Harmonic Alchemy Modular Emacs V1.0 RC2** - Now final testing my second release candidate.  This is almost ready to be dubbed my first official release.  There are only a few glitches left (on Mac OS)...
+**Welcome to Harmonic Alchemy Modular Emacs V1.0 RC3** - Now final testing my third release candidate.  This is almost ready to be dubbed my first official release.  
 
-This project originally started out after I forked Mohammed Ismail Ansari's  [**super-emacs project**](https://github.com/MyTerminal/super-emacs) from Github a few years ago...  I changed so many things, adding modules etc. from my pre-existing Emacs setup that over time everything became a total mess!  So I decided to start over from scratch and modularize everything with the idea of preventing messes like this from happening with your own Emacs setups!
+> **Note:** There are still a few glitches on Mac OS but I now suspect the cause is external to Emacs... Therefore I will not consider that to be blocking this official multiplatform "nx" release of Harmonic Alchemy Modular Emacs...
 
-Keeping the original spirit that Mohammed started, I plan to build this into something that you can use and extend for your own purposes without experiencing the same kinds of pain I have over the years attempting to customize my own Emacs configurations!
+This project has been a long time coming.  Its history goes back a few years ago when I went searching for some better ways to configure my then pretty basic Emacs configuration...  I ended up forking Mohammed Ismail Ansari's  [**super-emacs project**](https://github.com/MyTerminal/super-emacs) from Github...  I tried that for a while, liked some things and tried to get rid of other things that were confusing to me at the time.  After a couple years of adding/removing configuring/re-configuring it started feeling like I was painting myself into a corner! Things started to getting really messy!  So I decided to start over from scratch and modularize everything with the idea of preventing messes like this from happening with your own Emacs setups!
+
+Keeping the original spirit that Mohammed started, I built this into something you can hopefully use and extend for your own purposes without experiencing the same kinds of pain I have over the years attempting to customize my own Emacs configurations!
 
 I am a developer, computer scientist, composer/musician, sound designer, architect, writer.  I wear a lot of hats! My emacs needs to wear a lot of hats as well!  I am attempting to build features into **Emacs** that empower all the above without becoming an over complicated mess! **_"good luck with that"_**  :octocat:
 
@@ -68,6 +70,9 @@ Many of the default packages installed with this project will not work with prev
 
 This is a stand alone `node.js` **Electron Web App** that you need to install in your `$HOME` directory for this Emacs setup to use.  **VMD** allows you to visualize the results of your edits of **markdown files:** `.md` & **ORG files:** `.org` **instantly! _(in  real time, while you edit the markdown text within your emacs buffer, all without the need for a full web browser)..._**     
 Your rendered markdown will appear as it would look on GitHub!  This is a **_much smarter tool for writing/publishing_** because it combines the ease of: `WYSIWYG` with the power of `text-editors`.  That is the best of both worlds with no compromise!     
+
+> **Note:** Not having **VMD** installed will not break Modular Emacs, however you will of course not be able to use Emacs with VMD, some Modular Emacs defined keys will not work, and may even cause an error within Emacs if you try those keys...  You will also see compile time errors when you first start up Modular Emacs.  After startup, Modular Emacs should work fine without VMD...
+
 The best way to install **VMD** is locally within your home directory _(not system wide via your distro's package manager, or app store)..._    
 The best way to install locally is to install it as a `Node.js` package...      
 To do that you must first install **Node Version Manager** `NVM` using a script from: [`https://github.com/creationix/nvm`](https://github.com/creationix/nvm).      
@@ -79,6 +84,10 @@ Follow the instructions on the above linked `nvm` Github project to install **NV
 ### Fountain Screenwriting Tools: _(optional)_
 
 For processing text files from emacs and exporting them to formats used within the industry etc.  These tools can be installed with the Node Package Manager _(just as for installing **VMD** above)_ I am not making this a requirement obviously, but if you are into fiction or screenwriting Fountain should be a main part your emacs publishing environment!
+
+### Games _(`rmoo`)_: _(optional)_
+
+This final release candidate contains an optional **Games Module** which is not enabled by default.  If you are interested in exploring MUDs and / or MOOs from within Emacs, than you will want to enable this Games Module... 
 
 ### ZSH: _(optional)_
 
@@ -126,7 +135,7 @@ If you navigate within your new cloned directory you will find the `lisp` sub di
 
 The purpose of the **`my-modules`** folder is to give you a place to keep your own extensions to **Modular Emacs** without causing **git** to complain about new un-tracked files.  `my-modules` has been added to `.gitignore` so anything you create within that directory will be ignored as well!  This way you can try out different things without worrying about messing up the base install...  
 
-> **Note:** You may want to create your own private local **`branch/fork`** of this repository where **`my-modules`** directory is not ignored, and then you can keep your own customized version under local git revision as well.  Once you do this, you may or may not wish to **`pull/merge`** any new changes from **Modular Emacs** into your new private branch...  You could also simply **"cherry pick"** **`cut/paste`** snippets of `lisp` code from new features released in the **master** Modular Emacs branch into your **local branch** instead...  The choice is up to you... Free software! You have many options! Yay! 
+> **Note:** It is important that **git** ignores this folder and all of it's contents because you will be cloning other **git repositories** inside `my-modules` and we don't really want to get into a complicated `git-sub-modules` mess do we?  You are free to clone and try out any extra Emacs things within `my-modules` folder to your hearts content!  Modular Emacs will stay clean outside...
 
 ### Clone MultiMarkdown Mode:
 
@@ -135,13 +144,24 @@ Clone MultiMarkdown from its public repo on Github into the `lisp/my-modules` di
 > **Note:** _This package is not available on `MELPA` but it is required for `modular-emacs` to run...  It makes **markdown** files like this look good on GitHub!_ :octocat: We will clone this into **`my-modules`** so that it will be ignored...  If it were on `MELPA` it would be installed within the `melpa` directory _(which is also ignored by git in this project)_
 
 ```
-   $ cd ~/me.emacs.d/lisp/my-modules/
+   $ cd ~/me.emacs.d/lisp/my-modules
    $ git clone https://github.com/jmquigley/mmd-mode.git 
 ```
 
+### Clone RMOO MOO Client from Github: _(optional)_
+
+**RMOO** is a LambdaMOO client for Emacs that will also work with other MUDs as well.  Many MOO features were added however and since I intend to get back into MOO programming I am looking for the best possible Emacs client to start with.  I first found Matt Campbell's original `rmoo` on Gighub at: `https://github.com/toddsundsted/rmoo`...  But then I found a fork that has been somewhat improved and was last updated November 13, 2018... This fork was made by **lisdude** on Github: `https://github.com/lisdude/rmoo`...
+ 
+```
+    $ cd ~/me.emacs.d/lisp/my-modules
+    $ git clone https://github.com/lisdude/rmoo.git
+```
+I will be updating and or modifying this fork for my own MOO needs... When that time comes I may be publishing my own version of `rmoo` on GitHub...
+
+
 ### Copy `me.init.el` to: `init.el`:
 
-Go back to your cloned `me.emacs.d` parent directory and copy the init.el reference file:
+We are almost done now... Go back to your cloned `me.emacs.d` parent directory and copy the init.el reference file:
 
 ```
    $ cd ~/me.emacs.d
@@ -181,7 +201,9 @@ If you got an error and see the default emacs screen, try to retrace your steps 
 
 **Yes?** It worked!  **Yay!** What a fantastic feeling the first time eh?
 
-> **Note:** Fetching/pulling new changes from the master `modular-emacs` Github repository to: local: `~/.emacs.d/` will automatically be reflected within your emacs configurations... No need to copy any more files... But you may be surprised to see some new feature or something working differently.  If that bothers you, you may wish to keep your changes separate from the remote master branch.  Therefore create your own local `develop` branch _(or call it what you like)_ and maintain your local changes in parallel... Change your local branch's .gitignore to accommodate your needs...
+> **Note1:** Fetching/pulling new changes from the master `modular-emacs` Github repository to: local: `~/.emacs.d/` will automatically be reflected within your emacs configurations... No need to copy any more files... But you may be surprised to see some new feature or something working differently.  If that bothers you, you may wish to keep your changes separate from the remote master branch.  Therefore create your own local `test` branch _(or call it what you like)_ and maintain your local changes in parallel... Change your local branch's .gitignore to accommodate your needs...
+
+> **Note2:** The remote `modular-emacs` Github repository also maintains a `develop` branch where new ideas and features are tried out before folding them into the master branch which maintains the Modular Emacs stable release.  You could also create a local branch that tracks origin:develop if you would like to participate in any new things I am trying out before final release... This RC3 version is being maintained currently within the develop branch...  When final release is ready develop will be merged into master and tagged as V1.0.
 
 **Usage:**
 
@@ -191,13 +213,13 @@ You can also use the Modular Emacs \*scratch\* buffer to paste experimental lisp
 
 If your customization proves stable, and you like it, you could then save your scratch buffer (as is) to a new file, for example: `~/.emacs.d/lisp/my-modules/00-my-new-module.el` _(use your own module name prefixed with `01.` `02.` `03.` `...` etc.)_ for your new custom module name.  This will make you consistant with the naming convention used within `~/.emacs.d/lisp/modules` directory...
 
-> **Note:** _(You should be on your local `develop` branch when you do this to keep your changes in parallel with the master branch)_.  Add a call to this new module from your `~/.emacs.d/init.el`
+> **Note:** _(You should be on your local `test` branch when you do this to keep your changes in parallel with the master branch)_.  Add a call to this new module from your `~/.emacs.d/init.el`
 
-In all cases you would be wise to create and checkout a local `develop` branch and keep all your custom changes in there separate from the `master` branch...
+In all cases you would be wise to create and checkout a local `test` branch _(call it what you wish)_ and keep all your custom changes in there separate from the `master` or `origin:develop` branch...
 
-Modular Emacs comes with my slightly customized version of the **Blackbaord color theme**.  If you would like to add more custom themes or a different theme than `blackboard.el`, you can replace it or add additional themes into your local branch's: `~/.emacs.d/lisp/themes` directory and they will also will work with this setup by choosing `M-x load-theme` or changing the last line within `~/.emacs.d/lisp/modules/06-interface.el` to: `(load-theme 'your-chosen-theme-name t)`
+Modular Emacs comes with my slightly customized version of the **Blackboard color theme**.  If you would like to add more custom themes or a different theme than `blackboard.el`, you can replace it or add additional themes into your local branch's: `~/.emacs.d/lisp/themes` directory and they will also will work with this setup by choosing `M-x load-theme` or changing the last line within `~/.emacs.d/lisp/modules/06-interface.el` to: `(load-theme 'your-chosen-theme-name t)`
 
-> **Note:** _Obviously if you add more themes to your **Modular Emacs** **themes** directory you will be adding new un-tracked files to your cloned git repository!  Make sure you have created your own local branch and that is currently checked out before adding new themes or doing any customization outside the init.el file or the `my-modules` directory.  Then you will have proper management of your local custom changes and also have all that in code revision as well!_  How many times have I said this already?  OMG! :octocat:
+> **Note:** _Obviously if you add more themes to your **Modular Emacs** **themes** directory you will be adding new un-tracked files to your cloned git repository!  Make sure you have checked out your own local branch before adding new themes or doing any customization outside the init.el file or the `my-modules` directory.  Then you will have proper management of your local custom changes and also have all that in code revision as well!_  How many times have I said this already?  OMG! :octocat:
 
 ## Features:
 
