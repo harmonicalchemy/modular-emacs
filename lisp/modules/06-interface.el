@@ -13,17 +13,25 @@
 ;; fingers got confused and typed other non-emacs keys within Emacs, and also
 ;; accidentlay typed Emacs key commands when I was in other apps!  OMG!
 ;;
-;; Update 2019-002-21:
-;;    Updated to Release Candidate 3 for Modular Emacs Version: 1.0 (Q1-2019)
+;; Change Log: (descending chronological order)
 ;;
-;; Update 2019-001-21:
-;;    This file marks the first Release Candidate for Version 1 of:
-;;    Harmonic Alchemy Modular Emacs (displayed in the default Emacs frame title) 
+;;   2019-003-04 - Harmonic Alchemy Modular-Emacs Official Release v1.0 [Q1 2019]
+;;      Final test of release candidates is over now... the develop
+;;      branch has been merged back into master... (after this commit)...
+;;      This commit will be tagged as Harmonic Alchemy Modular Emacs Version 1.0
+;;      Official Release [Q1-2019]...
+;;
+;;   2019-002-21 - Updated to Release Candidate 3 for Modular Emacs
+;;      Version: 1.0 (Q1-2019)
+;;
+;;   2019-001-21 - This file marks the first Release Candidate for Version
+;;      1 of: Harmonic Alchemy Modular Emacs (displayed in the default Emacs
+;;      frame title) 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;; Change title-bar text
 (setq frame-title-format
-      "Modular Emacs v1.0 (RC3) [Q1 2019]")
+      "Modular Emacs v1.0 (Official Release) [Q1 2019]")
 
 ;; Disable tool-bar - I could care less about tool bars in emacs!
 ;; An oxymoron! But you may feel differently.  Comment this out if you like them.

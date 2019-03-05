@@ -29,6 +29,12 @@
 ;;
 ;; Change Log: (descending chronological order)
 ;;
+;;   2019-003-04 - Harmonic Alchemy Modular-Emacs Official Release v1.0 [Q1 2019]
+;;      Final test of release candidates is over now... the develop
+;;      branch has been merged back into master... (after this commit)...
+;;      This commit will be tagged as Harmonic Alchemy Modular Emacs Version 1.0
+;;      Official Release [Q1-2019]...
+;;
 ;;   2019-002-21 - Harmonic Alchemy Modular-Emacs v1.0 (RC3) [Q1 2019]
 ;;      I am now testing/debugging this release candidate on [MWM-work] within
 ;;      a new local branch named:  mwm-work (of course ;-).  all variable
@@ -134,7 +140,7 @@
                        ";; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
                        ";; Welcome to: [Your-Machine-Name-Here]\n"
                        ";;             Harmonic Alchemy - Modular Emacs!\n"
-                       ";; Version:    1.0 (RC3) [Q1 2019]\n"
+                       ";; Version:    1.0 (Official Release) [Q1 2019]\n"
                        ";; \n"
                        ";; Today's date: " (format-time-string "%Y %B %d") "\n"
                        ";; Startup completed in "
