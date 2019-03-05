@@ -44,11 +44,11 @@
 
 ## Introduction:
 
-**Welcome to Harmonic Alchemy Modular Emacs V1.0 RC3** - Now final testing my third release candidate.  This is almost ready to be dubbed my first official release.  
+**Welcome to Harmonic Alchemy Modular Emacs - _Official V1.0 Release_** - The final testing period is over.  Release Candidate 3 passed inspection and is now merged in as Harmonic Alchemy Modular Emacs Official Release 1.0.  
 
-> **Note:** There are still a few glitches on Mac OS but I now suspect the cause is external to Emacs... Therefore I will not consider that to be blocking this official multiplatform "nx" release of Harmonic Alchemy Modular Emacs...
+> **Note:** There are still a few glitches on Mac OS but I now suspect the cause is external to Emacs... Therefore I did not consider that to be blocking this official multiplatform `nx` release of Harmonic Alchemy Modular Emacs...  On **Mac OS** you have to start this from a command shell to get all features working the same as on other **`nx`** environments...  I am working on fixing that problem outside of Modular Emacs and will report back here when I find a solution...
 
-This project has been a long time coming.  Its history goes back a few years ago when I went searching for some better ways to configure my then pretty basic Emacs configuration...  I ended up forking Mohammed Ismail Ansari's  [**super-emacs project**](https://github.com/MyTerminal/super-emacs) from Github...  I tried that for a while, liked some things and tried to get rid of other things that were confusing to me at the time.  After a couple years of adding/removing configuring/re-configuring it started feeling like I was painting myself into a corner! Things started to getting really messy!  So I decided to start over from scratch and modularize everything with the idea of preventing messes like this from happening with your own Emacs setups!
+This project has been a long time coming.  Its history goes back a few years ago when I went searching for some better ways to configure my then pretty basic Emacs configuration of over 10 or so years!  I ended up forking Mohammed Ismail Ansari's  [**super-emacs project**](https://github.com/MyTerminal/super-emacs) from Github...  I tried that for a while, liked some things and tried to get rid of other things that were confusing to me at the time.  After a couple years of adding/removing configuring/re-configuring it started feeling like I was painting myself into a tangled corner like getting _"lost in a maze of twisty little passages all different"_!  So I decided to start over from scratch and modularize everything with the idea of preventing tangled messes like this from happening with your own Emacs setups!
 
 Keeping the original spirit that Mohammed started, I built this into something you can hopefully use and extend for your own purposes without experiencing the same kinds of pain I have over the years attempting to customize my own Emacs configurations!
 
@@ -197,6 +197,8 @@ Next Rename: **`~/me.emacs.d`** to: **`~/.emacs.d`** _(This is now your new **Mo
 
 **_Start up GNU Emacs v26.1 from the menu or command line and hold your breath!_**
 
+> **Note:** If you are on **Mac OS** you will have to start Emacs from the shell `bash` or `zsh` etc.  This is a workaround to get important environment variables into Emacs on Mac OS... Unfortunately I have not found a better solution to this problem yet... but you can dedicate a small terminal window for this purpose and then minimize the terminal window it while you are working in Emacs. With that workaround everything will work on Mac OS the same as it does on Linux, etc.
+
 After a lot of super computing lisp number crunching flashing away in your minibuffer _(wait wait wait...)_ Then **Bam!** You should now see your new emacs pop up with the **Welcome to Harmonic Alchemy Modular Emacs!** scratch buffer in a frame with a pre-determined row/column initial size! 
 
 **No?** Broken? Oh My! What a freekin let down!  I feel your pain!  OK... You may be fine if there are only warnings... _(which are hard to avoid upon first startup with all those new packages compiling etc. Not much you can do about that... The developers who made the packages need to clean that up, you could help them though. ;-)_
@@ -228,14 +230,6 @@ Modular Emacs comes with my slightly customized version of the **Blackboard colo
 ## Features:
 
 **Default Emacs welcome screen replaced with simple greeting:** Prints current emacs configuration, and date... With a famous quote _(which may change from time to time with new updates)_  Use Scratch buffer to evaluate snippets of `lisp` without having to remove the welcome text... _(which are lisp comments)_
-
-### Key-bindings:
-
-**_[See: 09-key-bindings.el](.emacs.d/lisp/modules/09-key-bindings.el)_**
-
-- Reload file in a buffer quickly with `<f5>`
-
-- **TODO:** _Copy More Key Commands Here before the final release!_
 
 ### Pre-configured packages - Comprehensive list:
 
@@ -315,4 +309,29 @@ Modular Emacs comes with my slightly customized version of the **Blackboard colo
 - [gitconfig-mode](https://github.com/magit/git-modes) Major mode for editing .gitconfig files.
 - [gitignore-mode](https://github.com/magit/git-modes) Major mode for editing .gitignore files.
 - [with-editor](https://github.com/magit/with-editor) Use the Emacsclient as $EDITOR.
+
+### Key-bindings:
+
+**_[See: 09-key-bindings.el](.emacs.d/lisp/modules/09-key-bindings.el)_**
+
+**Function:**  | **Key:** 
+:-------- | --------: 
+Reload file in a buffer    | `<f5>`
+ace-jump-mode-pop-mark     | `C->`
+ace-window                 | `C-;`
+imenu-list-smart-toggle    | `C-'`
+undo-tree-visualize        | `M-/`
+neotree-toggle             | `C-,`
+buf-move-up                | `C-S-<up>`
+buf-move-down              | `C-S-<down>`
+buf-move-left              | `C-S-<left>`
+buf-move-right             | `C-S-<right>`
+helm-mini                  | `C-x b`
+helm-buffers-list          | `C-x C-b`
+helm-find-files            | `C-x C-f`
+helm-recentf               | `C-x C-r`
+helm-show-kill-ring        | `M-y`
+mc/mark-next-like-this     | `C-}`
+mc/mark-previous-like-this | `C-{`
+mc/mark-all-like-this      | `C-|`
 
