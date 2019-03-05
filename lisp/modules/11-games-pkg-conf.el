@@ -45,7 +45,7 @@
 (add-hook 'rmoo-interactive-mode-hooks (lambda ()
 (linum-mode -1)                  ;; ... no line numbers
 (olivetti-mode)
-(olivetti-set-width 88)
+(olivetti-set-width 102)
 (goto-address-mode t)))          ;; ... clickable links
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
