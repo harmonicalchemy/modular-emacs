@@ -21,6 +21,7 @@
   '(markdown-mode
     markdown-mode+
     markdown-toc
+    pandoc-mode
     fountain-mode
     olivetti
     org-bullets    
@@ -47,6 +48,9 @@
 (add-to-list 'auto-mode-alist '("\\.mdt\\'" . mmd-mode))
 (add-to-list 'auto-mode-alist '("\\.mmd\\'" . mmd-mode))
 
+;; Add Pandoc Mode to all Markdown Files:
+;; Ref: https://joostkremers.github.io/pandoc-mode/
+(add-hook 'markdown-mode-hook 'pandoc-mode)
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Org-Mode Configurations...
