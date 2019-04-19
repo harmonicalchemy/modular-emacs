@@ -21,6 +21,7 @@ elpa/*
 # exclude other auto emacs files:
 ac-comphist.dat
 auto-save-list/*
+transient/*
 recentf
 
 # exclude everything within my-custom-modules folder...
