@@ -11,6 +11,8 @@
     ("C-'" . imenu-list-smart-toggle)
     ("M-/" . undo-tree-visualize)
     ("C-\," . neotree-toggle)
+    ("C-c d" . deft)
+    ("C-x C-g" . deft-find-file)
     ("C-c M-x" . execute-extended-command)
     ("M-x" . helm-M-x)
     ("C-x b" . helm-mini)

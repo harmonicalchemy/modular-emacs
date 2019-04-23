@@ -41,7 +41,10 @@
 ;; used to the alternate methods you will throw your mouse away! The key commands
 ;; are way faster and more accurate as well.  Some key commands take you right to
 ;; the precise spot you want to go!
-(scroll-bar-mode -1)
+;; NOTE: I got this to work below by setting the Default Frame alist after
+;; trying many other things that were not working...  I am leaving this here
+;; commented out to keep the option here in case I need it later, (or you do).
+;(scroll-bar-mode -1)
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Disable this section if you like using the mouse wheel:
@@ -51,7 +54,7 @@
 ;; are best in Emacs.  Right? I Mean Right??? Yup. ;-)
 ;; 
 ;; Disable mouse wheel (and two finger swipe) scrolling because
-;; it scrolls horribly and I would rather work without it. %~)
+;; it scrolls horribly and I would rather work without it. %^)
 ;;
 (mouse-wheel-mode -1)
 (global-set-key [wheel-up] 'ignore)
@@ -71,9 +74,11 @@
 ;; Set default Frame Dimensions:
 ;; You may have to play with this depending on your total screen size etc...
 (setq default-frame-alist
-      '((width . 101)
-        (height . 38)
-        (menu-bar-lines . 1)))
+      '( (width . 101)
+         (height . 38)
+         (menu-bar-lines . 1)
+         (vertical-scroll-bars . nil)
+         (horizontal-scroll-bars . nil) ))
 
 ;; Set default font to Hermit Medium (my favorite mono font for everything)...
 (set-face-attribute 'default nil
@@ -83,6 +88,23 @@
                     :height 113
                     :weight 'normal
                     :width 'normal)
+
+;; Disable scrollbar on new frame (all frames no matter what)
+;; Scroll bars in Emacs are strange animals.. They don't belong here.
+;; There seems to be a bug in the standard Emacs way to do this as
+;; I originally tried at the top with: (scroll-bar-mode -1)
+;;
+;; Here is a custom function that takes care of that problem...
+;; Oops! Well that does not work for me either... It may be needed on
+;; Windows platforms however...  If you are trying this on Windows,
+;; you may try un-commenting the function and add-hook below if
+;; you are seeing scroll bars on a second frame...
+;(defun me-disable-scroll-bars (frame)
+;  (modify-frames-parameters frame
+;                            '((vertical-scroll-bars . nil)
+;                              (horizontal-scroll-bars . nil))))
+
+;(add-hook 'after-make-frame-functions 'me-disable-scroll-bars)
 
 ;; Activate blackbord theme...
 (load-theme 'blackboard t)

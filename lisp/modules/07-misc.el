@@ -46,6 +46,33 @@
 (add-hook 'text-mode-hook 'turn-on-visual-line-mode)
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; The default visible bell actually startles me when it occurs!
+;; This is a much better way... Only the mode line flashes!  Great.
+;; I found this clever snippit in a comment by: Phil@disqus_COwPSAc69c
+;; on: Pragmatic Emacs.
+(defun my-visible-bell ()
+  "A friendlier visual bell effect."
+  (invert-face 'mode-line)
+  (run-with-timer 0.1 nil #'invert-face 'mode-line))
+
+(define-minor-mode my-visible-bell-mode
+  "Use `my-visible-bell' as the `ring-bell-function'."
+  :global t
+  (let ((this 'my-visible-bell-mode))
+    (if my-visible-bell-mode
+        (progn
+          (put this 'visible-bell-backup visible-bell)
+          (put this 'ring-bell-function-backup ring-bell-function)
+          (setq visible-bell nil
+                ring-bell-function #'my-visible-bell))
+      ;; Restore the original values when disabling.
+      (setq visible-bell (get this 'visible-bell-backup)
+            ring-bell-function (get this 'ring-bell-function-backup)))))
+
+(setq visible-bell t)
+(my-visible-bell-mode 1)
+
+;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Load Environment Vars from shell:
 ;; If we are using unix in a POSIX compliant shell...
 ;; (e.g., OS X, Linux, BSD, with POSIX: Bash, or Zsh etc.)

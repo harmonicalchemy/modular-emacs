@@ -21,6 +21,7 @@
   '(markdown-mode
     markdown-mode+
     markdown-toc
+    deft
     pandoc-mode
     fountain-mode
     olivetti
@@ -47,6 +48,33 @@
 (add-to-list 'auto-mode-alist '("\\.mdwn\\'" . mmd-mode))
 (add-to-list 'auto-mode-alist '("\\.mdt\\'" . mmd-mode))
 (add-to-list 'auto-mode-alist '("\\.mmd\\'" . mmd-mode))
+
+
+;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; Use Deft mode for quickly browsing, filtering, and
+;; editing directories of plain text notes...
+;; Deft was created by Jason Blevins. What a clever dude who
+;; besides being an Emacs wizard. He is also a wizard in the
+;; fine art of statistics! And looks to also dabble with
+;; economics, money, crypotcurrency, etc...
+;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(require 'deft)
+;; Enable/edit these next several lines to Customize items in
+;; the deft group to change default functionality...
+(setq deft-directory "~/Documents/000-Alisha/000-GIT/Gen-Dat/personal-docs/000.Notebooks")
+(setq deft-recursive t)
+(setq deft-use-filename-as-title t)
+(setq deft-file-naming-rules
+      '((noslash . "-")
+        (nospace . "-")))
+(setq deft-markdown-mode-title-level 1)
+(setq deft-org-mode-title-prefix t)
+;; Associate file types for deft to process.  The default
+;; is "txt" "md" "org".  I have added Tex (LaTex files)
+;; You may add more here if you work with other formats.
+(setq deft-extensions '("txt" "md" "tex" "org"))
+;; Set deft to do regexp search instead of incremental...
+;(setq deft-org-mode-title-prefix nil)
 
 ;; Add Pandoc Mode to all Markdown Files:
 ;; Ref: https://joostkremers.github.io/pandoc-mode/
