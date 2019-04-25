@@ -19,6 +19,9 @@
     gitconfig-mode
     gitignore-mode
     gitattributes-mode
+    yaml-mode
+    indent-tools
+    hydra
     magit))
 
 ;; Install required packages:
