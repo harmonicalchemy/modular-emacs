@@ -61,7 +61,7 @@
 (require 'deft)
 ;; Enable/edit these next several lines to Customize items in
 ;; the deft group to change default functionality...
-(setq deft-directory "~/Documents/000-Alisha/000-GIT/Gen-Dat/personal-docs/000.Notebooks")
+(setq deft-directory "~/000-GIT/Gen-Dat/personal-docs/000.Notebooks")
 (setq deft-recursive t)
 (setq deft-use-filename-as-title t)
 (setq deft-file-naming-rules
@@ -75,6 +75,21 @@
 (setq deft-extensions '("txt" "md" "tex" "org"))
 ;; Set deft to do regexp search instead of incremental...
 ;(setq deft-org-mode-title-prefix nil)
+
+;; I don't want auto save because I open many notes for viewing only.
+;; (Not to edit them but to read as reference, etc.  If this is not
+;; disabled, I end up with a bunch of un-tracked files in my git
+;; repository that holds these notes!
+(setq deft-auto-save-interval 0)
+
+;; Also, I had to add this deft-mode-hook function because lines were wrapping.
+;; I tried everything else to no avail... This is a band-aid.  I need
+;; to consult with Jason Blevins about this one %^)
+(defun me-deft-init ()
+  (setq truncate-lines t))
+
+(add-hook 'deft-mode-hook 'me-deft-init)
+
 
 ;; Add Pandoc Mode to all Markdown Files:
 ;; Ref: https://joostkremers.github.io/pandoc-mode/
