@@ -167,7 +167,7 @@
                        ";; Evaluate this entire buffer as a test\n"
                        ";; before committing it as your:\n"
                        ";; \"new-cool-custom-module.el\"\n"
-                       ";;               -- Cheers! ;-)\n"
+                       ";;      -- Cheers! %^) Alisha Awen @harmonicalchemy (twitter etc.)\n"
                        ";; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
                        )
        (get-buffer-create (current-buffer)))
