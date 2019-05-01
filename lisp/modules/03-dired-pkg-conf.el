@@ -36,10 +36,12 @@
             ;; NOTE: 2019-001-26 - Something here is not working...
             ;; I am troubleshooting this on Mac OS...
             ;; Not sure if this is a problem on Linux yet...
-;            (setq-default dired-omit-files-p t)
+            (setq-default dired-omit-files-p t)
+;            (setq dired-listing-switches "-aBhl  --group-directories-first")
+            
 ;            (setq dired-listing-switches
 ;                  "-la --ignore='#*' --ignore='.DS_Store' --ignore='Icon*' --group-directories-first")
-;            ;; Specify which files get omitted in Dired mode:
+            ;; Specify which files get omitted in Dired mode:
 ;            (setq dired-omit-files "^\\.?#\\|\\.DS_STORE\\|Icon*")
             ))
 
@@ -55,6 +57,23 @@
             (dired-omit-mode 1)
 	    (define-key dired-mode-map (kbd "h") #'dired-omit-mode)
             ))
+
+
+;; Dired Sort Directories First... This function works and does not break after
+;; adding marks and pressing 'g'.
+;; From: https://www.emacswiki.org/emacs/DiredSortDirectoriesFirst
+(defun mydired-sort ()
+  "Sort dired listings with directories first."
+  (save-excursion
+    (let (buffer-read-only)
+      (forward-line 2) ;; beyond dir. header 
+      (sort-regexp-fields t "^.*$" "[ ]*." (point) (point-max)))
+    (set-buffer-modified-p nil)))
+
+(defadvice dired-readin
+    (after dired-after-updating-hook first () activate)
+  "Sort dired listings with directories first before adding marks."
+  (mydired-sort))
 
 
 ;; Auto load dired-jump and dired-jump-other-window:
