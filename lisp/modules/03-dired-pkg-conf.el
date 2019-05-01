@@ -20,8 +20,13 @@
       modular-emacs--req-dired-packages)
 
 
-;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; Dired Extras - (added 2018-011-04 by Alisha)
+;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; Dired Extras - (first added: 2018-011-04 - Alisha)
+
+;; On Mac OS, the hooks below break because Mac OS no longer supports
+;; standard ls command!  This next line fixes that.
+;; NOTE: Requires: $> brew install coreutils
+(setq insert-directory-program "gls" dired-use-ls-dired t)
 
 ;; Load dired-x.el when dired is first invoked (e.g., when you first type C-x d)
 (add-hook 'dired-load-hook
@@ -33,16 +38,25 @@
             ;;   (setq dired-x-hands-off-my-keys nil)
             ;;
             ;; Specify default ls switches for dired to use:
-            ;; NOTE: 2019-001-26 - Something here is not working...
-            ;; I am troubleshooting this on Mac OS...
-            ;; Not sure if this is a problem on Linux yet...
+            ;; NOTE 2019-001-26:
+            ;;       Something here is not working...
+            ;;       I am troubleshooting this on Mac OS...
+            ;;       Was not a problem on Linux...
+            ;; Update 2019-005-01:
+            ;;       I finally have this working well on Mac OS...
+            ;;       We needed:  insert-directory-program "gls" Doh!
+            ;; NOTE: I removed the group-directories-first option from
+            ;;       dired-listing-switches here, because I have a new function
+            ;;       below that so far looks like it does a better job...
+            ;;       Although I still notice .DS_Store show up after hiting "g".
+            ;;       (you have to toggle it off by hitting "h" twice!)
+            (setq dired-listing-switches
+                 "-la --ignore='#*' --ignore='.DS_Store' --ignore='Icon*' ")
+            ;;
             (setq-default dired-omit-files-p t)
-;            (setq dired-listing-switches "-aBhl  --group-directories-first")
-            
-;            (setq dired-listing-switches
-;                  "-la --ignore='#*' --ignore='.DS_Store' --ignore='Icon*' --group-directories-first")
+            ;;
             ;; Specify which files get omitted in Dired mode:
-;            (setq dired-omit-files "^\\.?#\\|\\.DS_STORE\\|Icon*")
+            (setq dired-omit-files "^\\.?#\\|\\.DS_STORE\\|Icon*")
             ))
 
 ;; Load dired-x mode hook (dired-omit-mode, etc.)
@@ -57,7 +71,6 @@
             (dired-omit-mode 1)
 	    (define-key dired-mode-map (kbd "h") #'dired-omit-mode)
             ))
-
 
 ;; Dired Sort Directories First... This function works and does not break after
 ;; adding marks and pressing 'g'.
