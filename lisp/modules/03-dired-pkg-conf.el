@@ -23,10 +23,11 @@
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Dired Extras - (first added: 2018-011-04 - Alisha)
 
-;; On Mac OS, the hooks below break because Mac OS no longer supports
+;; On Mac OS, (darwin) the hooks below break because Mac OS no longer supports
 ;; standard ls command!  This next line fixes that.
 ;; NOTE: Requires: $> brew install coreutils
-(setq insert-directory-program "gls" dired-use-ls-dired t)
+(if (eq system-type 'darwin)
+    (setq insert-directory-program "gls" dired-use-ls-dired t))
 
 ;; Load dired-x.el when dired is first invoked (e.g., when you first type C-x d)
 (add-hook 'dired-load-hook
