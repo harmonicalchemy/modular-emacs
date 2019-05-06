@@ -7,7 +7,7 @@
 
 - [Harmonic Alchemy Modular Emacs:](#harmonic-alchemy-modular-emacs)
     - [Introduction:](#introduction)
-    - [Disclamer for Windows Users:](#disclamer-for-windows-users)
+    - [Disclaimer for Windows Users:](#disclamer-for-windows-users)
     - [My Commitment:](#my-commitment)
     - [Requirements:](#requirements)
         - [Emacs: V26.1+](#emacs-v261)
@@ -47,13 +47,13 @@
 
 **Welcome to Harmonic Alchemy Modular Emacs - _Official V1.0.1 point release Q2-2019_** -
 
-> **Note:** I still have not solved the Mac OS glitch, of not getting shell environment vars into Emacs, _(Emacs cannot find the VMD app)_.  I still suspect the cause is external to Emacs though...  The bandaid fix is to start Emacs from the shell and everything works fine... So I got that problem on the back burner for now...  If you are a Mac User and find a solution please let me know! I will give you credit!
+> **Note:** I still have not solved the Mac OS glitch, of not getting shell environment vars into Emacs, _(Emacs cannot find the VMD app)_.  I still suspect the cause is external to Emacs though...  The band-aid fix is to start Emacs from the shell and everything works fine... So I got that problem on the back burner for now...  If you are a Mac User and find a solution please let me know! I will give you credit!
 
 This project has been a long time coming.  Its history goes back a few years ago when I went searching for some better ways to configure my then pretty basic Emacs configuration of over 10 or so years!  I cloned a few Emacs repos on Github to try different things out for a while.  I liked some things and tried to get rid of other things after installing them which got confusing after a while. I ended up with lots of questionable elisp code, much of which were things possibly no longer needed!  After a couple years of adding/removing configuring/re-configuring it started feeling like I was painting myself into a tangled corner like getting _"lost in a maze of twisty little passages all different"_!  So I decided to start over from scratch and modularize everything with the idea of preventing tangled messes like this from happening with your own Emacs setups!
 
 I am a devOps engineer, computer scientist, composer/musician, sound designer, architect, writer/publisher.  I wear a lot of hats! My emacs needs to wear a lot of hats as well!  I am attempting to build features into **Emacs** that empower all the above without becoming an over complicated mess! **_"good luck with that"_**  :octocat:
 
-## Disclamer for Windows Users:
+## Disclaimer for Windows Users:
 
 For the first 10 years out of college, I worked around the Boston 128 area as a hired gun scientific and industry control systems programmer.  The systems I worked on were either unix or VAX VMS based main-frames _(or mini-mainframes)_ and workstations. My favorite OS back then was HP-UX. I used Apollo workstations for a short while and then we switched to SUN workstations.  When the really nice HP-UX workstations came around, I was in love!  At home I have always used a Mac...  I had the first classic Mac+ when it first came out around 1985...  
 
@@ -65,15 +65,15 @@ OK I got off track there... The main point of that long story above is if you us
 
 If you find glitches please let me know... I need your knowledge for that part...  I will give you credit for any Windows solutions you provide.  I had some problems with _(unwanted)_ scroll bars showing up on new frames _(after initial frame)_ and read about others having this problem on Windows... I found a simple _(best practice)_ fix for Mac OS and Linux, but don't know if it will work on Windows yet...  
 
-I have already added in some _(commented out)_ code to: `.../lisp/modules/06-interface.el` after reading some things on Stack Exchange about problems with scrollbars on Windows...  You could un-comment them to try if you are having the same problems...  Let me know if that works...  Thanks!
+I have already added in some _(commented out)_ code to: `.../lisp/modules/06-interface.el` after reading some things on Stack Exchange about problems with scroll bars on Windows...  You could un-comment them to try if you are having the same problems...  Let me know if that works...  Thanks!
 
 But also in general, if you like this "modular" Emacs idea, please drop me a note to let me know! Please do ask questions, etc.  Thanks!  I have been using Emacs for over 25 years but I never shared any of that Emacs knowledge with anyone before now... :heart_decoration:
 
-> ** _"Always do what is right. It will gratify half of mankind and astound the other."_** - Mark Twain
+> **_"Always do what is right. It will gratify half of mankind and astound the other."_** - Mark Twain
 
 ## My Commitment:
 
-I promice to strive to make this **process/journey** as painless as possible for you as I have found many other Emacs setups to be way to complicated to make it easy for adoption into my workflow, and you are probably experiencing the same!  On the other end of the spectrum... Installing simple Emacs alone is not enough to get you started (IMHO)...  
+I promise to strive to make this **process/journey** as painless as possible for you as I have found many other Emacs setups to be way to complicated to make it easy for adoption into my workflow, and you are probably experiencing the same!  On the other end of the spectrum... Installing simple Emacs alone is not enough to get you started (IMHO)...  
 
 Therefore: **Here is Modular Emacs!** I hope my long years of **devOps** experience will turn out a nice jewel for new comers to try out and succeed with!  **Good Luck and God Speed!**
 
@@ -109,7 +109,7 @@ If you are on Mac OS you can install MultiMarkdown via Homebrew.  `$> brew insta
 
 ### Pandoc: _(optional)_
 
-As with MultiMarkdown you don't need to have Pandoc installed to use Emacs _(until you have written something and want to export it to LaTeX, PDF, or something like that directly from Emacs)_  You can also do some of these exports with multimarkdown tricks as well...  Read the docs for both to decide how to use them.  Instructions for installing Pandoc can be found on their official website here: <https://pandoc.org/installing.html> The Pandoc.org website has most everthing you will need all in one place...
+As with MultiMarkdown you don't need to have Pandoc installed to use Emacs _(until you have written something and want to export it to LaTeX, PDF, or something like that directly from Emacs)_  You can also do some of these exports with multimarkdown tricks as well...  Read the docs for both to decide how to use them.  Instructions for installing Pandoc can be found on their official website here: <https://pandoc.org/installing.html> The Pandoc.org website has most everything you will need all in one place...
 
 ## Details:
 
@@ -117,13 +117,13 @@ The above requirements are pretty much all you need to get ready for installing 
 
 Discussion of getting the rest of your development environment configured is outside the scope of this project.  However, for example: On **Mac OS** you will need to have **Xcode** and **Homebrew** installed for any of this to work correctly on a Mac.  The best way to do that is to go to the **[Homebrew main website](https://docs.brew.sh/Installation)** first and use their instructions for installing Homebrew on Mac OS.  They will point you in the right direction for installing the required Xcode tools first...  Likewise on Linux you will need to install some standard unix devTools via your distro's package manager...
 
-This project and everthing you need to install and run it is all open-source and very portable across many computing platforms!  With this project installed you will easily be able to edit any `markdown` or `.org` text file within any Emacs buffer while at the same time previewing **live real-time updates** to the automagically rendered version of the buffer you are editing!  This is currently the **only** way I have found it possible to perform live edits within a text file and see the results displayed (as you type) within another window fully rendered as it would look on a website!  That feature alome is totally revolutionary for any writer to use!  
+This project and everything you need to install and run it is all open-source and very portable across many computing platforms!  With this project installed you will easily be able to edit any `markdown` or `.org` text file within any Emacs buffer while at the same time previewing **live real-time updates** to the automagically rendered version of the buffer you are editing!  This is currently the **only** way I have found it possible to perform live edits within a text file and see the results displayed (as you type) within another window fully rendered as it would look on a website!  That feature alone is totally revolutionary for any writer to use!  
 
 **OMG! _This is a life saver for me who has to use Scrivener_** on a **_Mac_** _(proprietary software)_ to organize all my reference and fiction writing projects...  Eventually I plan to replace **Scrivener** with a powerful `org-mode` based **Emacs Publishing Environment**. Then I will be open-source future proof finally! You can't imagine how many times over the past 30 years! I had to go through some painful conversion process after the proprietary app I was using (for several years) suddenly became obsolete, the company went out of business, or they just dropped that product without asking my permission!  :grimacing:  :weary:
 
-For you Millennials, 30 years ago was before the web, and even before the Internet itself was commercialized as well!  Back then we called it the ARPANET. _I came aboard shortly after it was changed from DARPANET!_ ;-)   btw, I am still waiting for some of the original specs to get done,  _(e.g., `P2P`, `blockchain`, `smart-contracts`, `consensus algorithms`, etc.)._  All that still needs to be implemented! 
+For you Millennials, 30 years ago was before the web, and even before the Internet itself was commercialized as well!  Back then we called it the ARPANET. _I came aboard shortly after it was changed to DARPANET but we never called it that_ ;-)   btw, I am still waiting for some of the original specs to get done,  _(e.g., `P2P`, `blockchain`, `smart-contracts`, `consensus algorithms`, etc.)._  All that still needs to be implemented! 
 
-I said above **_"still waiting"_** because many are calling all those features: **Web 3.0** when it really should be **Internet 1.0!**  The government wanted those features to make our Internet truly bomb proof, but business trumped them... Don't believe it?  Go read the original BSD specs...  You will see that all that **client/server** stuff was a compromise that ended up sticking when we all went commercial... To be honest, we did not have the tech back then to implement all those requirements in a practical way.  Now we do... _(well almost...)_ Consensus and Byzantine Fault Tolerance is a bitch to get right!  But Lets get it done already! OK? ;-)
+I said above **_"still waiting"_** because many are calling all those features: **Web 3.0** when it really should be **Internet 1.0!**  The government wanted those features to make our Internet truly bomb proof, but business trumped them... Don't believe it? Can you say **_"distributed adaptive message block switching"?_**  Go read the original BSD specs...  You will see that all that **client/server** stuff was a compromise that ended up sticking when we all went commercial... To be honest, we did not have the tech back then to implement all those requirements in a practical way.  Now we do... **_"Decentralized adaptive message block switching. lol"_** _(well almost...)_ Consensus and Byzantine Fault Tolerance is a bitch to get right!  But Lets get it done already! OK? ;-)
 
 By using open source exclusively as much as possible, your bottom line becomes: **_(If you use it and the maintainer quits support, you can fork the project and support it yourself!  You have options, and you can take total control of the software if needed.)_** More importantly, you will own outright your own copy of this software and may do with it as you like, **_(except make it into a proprietary product of course)_**.  
 
@@ -141,7 +141,7 @@ If you already have emacs installed, you should backup your existing environment
 
 Now you are ready to clone Harmonic Alchemy Modular Emacs into your home directory as: `~/.emacs.d/`
 
-But lets Hold off cloning directly to `~/.emacs.d` and consider the following possible scenario: If you are using emacs on a daily basis and are used to that, you need to use your existing emacs setup to do some of the things below...  If you pre-maturely remove your emacs environment ahead of time you will have to resort to command line only to do everything below...
+But lets Hold off cloning directly to `~/.emacs.d` and consider the following possible scenario: If you are using emacs on a daily basis and are used to that, you need to use your existing emacs setup to do some of the things below...  If you prematurely remove your emacs environment ahead of time you will have to resort to command line only to do everything below...
 
 In that case, leave your existing **`~/.emacs.d`** folder as it is... _(don't rename it as instructed above)_...  Instead, clone `modular-emacs` to a temporary name i.e., `me.emacs.d` first.  Then you will be able to use your existing emacs environment (the one you are used to using) to finish doing the configurations below... **_This is how we will do it in the following example:_** No harm done doing it either way.  Just understand the temporary directory name we used below will be different if you are doing it directly to **`$HOME/.emacs.d`** :house_with_garden:  
 
@@ -172,7 +172,7 @@ Clone my fork of MultiMarkdown Mode (`mmd-mode`) from Github into the `lisp/my-m
 
 ### Clone RMOO MOO Client from Github: _(optional)_
 
-**RMOO** is a LambdaMOO client for Emacs that will also work with other MUDs as well.  Many **LambdaMOO** features are supported by `RMOO` which is more than most `MUD` clients these days.  Since I intend to get back into MOO programming I am looking for the best possible Emacs client to start with.  I first found Matt Campbell's original `rmoo` on Gighub at: `https://github.com/toddsundsted/rmoo`...  But then I found a fork that has been somewhat improved and was last updated November 16, 2018... This fork was made by **lisdude** on Github: `https://github.com/lisdude/rmoo`...  I have forked this fork into my own Github account in order to add more features if needed...
+**RMOO** is a LambdaMOO client for Emacs that will also work with other MUDs as well.  Many **LambdaMOO** features are supported by `RMOO` which is more than most `MUD` clients these days.  Since I intend to get back into MOO programming I am looking for the best possible Emacs client to start with.  I first found Matt Campbell's original `rmoo` on Github at: `https://github.com/toddsundsted/rmoo`...  But then I found a fork that has been somewhat improved and was last updated November 16, 2018... This fork was made by **lisdude** on Github: `https://github.com/lisdude/rmoo`...  I have forked this fork into my own Github account in order to add more features if needed...
 
 ```
     $ cd ~/me.emacs.d/lisp/my-modules
@@ -220,9 +220,9 @@ Next Rename: **`~/me.emacs.d`** to: **`~/.emacs.d`** _(This is now your new **Mo
 
 > **Note:** If you are on **Mac OS** you will have to start Emacs from the shell `bash` or `zsh` etc.  This is a workaround to get important environment variables into Emacs on Mac OS... Unfortunately I have not found a better solution to this problem yet... but you can dedicate a small terminal window for this purpose and then minimize the terminal window while you are working in Emacs. With that workaround everything will work on Mac OS the same as it does on Linux, etc.
 
-After a lot of super computing lisp number crunching flashing away in your minibuffer _(wait wait wait...)_ Then **Bam!** You should now see your new emacs pop up with the **Welcome to Harmonic Alchemy Modular Emacs!** scratch buffer in a frame with a pre-determined row/column initial size! 
+After a lot of super computing lisp number crunching flashing away in your mini buffer _(wait wait wait...)_ Then **Bam!** You should now see your new emacs pop up with the **Welcome to Harmonic Alchemy Modular Emacs!** scratch buffer in a frame with a pre-determined row/column initial size! 
 
-**No?** Broken? Oh My! What a freekin let down!  I feel your pain!  OK... You may be fine if there are only warnings... _(which are hard to avoid upon first startup with all those new packages compiling etc. Not much you can do about that... The developers who made the packages need to clean that up, you could help them though. ;-)_
+**No?** Broken? Oh My! What a freaking let down!  I feel your pain!  OK... You may be fine if there are only warnings... _(which are hard to avoid upon first startup with all those new packages compiling etc. Not much you can do about that... The developers who made the packages need to clean that up, you could help them though. ;-)_
 
 If you got an error and see the default emacs screen, try to retrace your steps or try running emacs with the debugger turned on...  Its probably something dumb and easy to fix...  _(happens to us all the first time, most of the time)_
 
@@ -236,9 +236,9 @@ If you got an error and see the default emacs screen, try to retrace your steps 
 
 In this default setup, your local `~/.emacs.d/init.el` is not kept in modular-emacs code revision.  Instead, you may use this file to try out experimental customization and you may wish to keep it in your local branch under code revision by removing it from your local branch's `.gitignore` file.  If something goes wrong you can quickly refresh this file from the original `~/.emacs.d/me.init.el`.
 
-You can also use the Modular Emacs \*scratch\* buffer to paste experimental lisp code to try out before making it permanent as a stand alone `.el` emacs lisp file...  you can evaluate the entire \*scratch\* buffer without removing the banner message at the top as that message is one huge lisp comment...  If something horrible happens, no worries... Restart emacs... Your messup will be gone and you will be back to where you were before you or that elisp test code goofed up...
+You can also use the Modular Emacs \*scratch\* buffer to paste experimental lisp code to try out before making it permanent as a stand alone `.el` emacs lisp file...  you can evaluate the entire \*scratch\* buffer without removing the banner message at the top as that message is one huge lisp comment...  If something horrible happens, no worries... Restart emacs... Your mess-up will be gone and you will be back to where you were before you or that elisp test code goofed up...
 
-If your customization proves stable, and you like it, you could then save your scratch buffer (as is) to a new file, for example: `~/.emacs.d/lisp/my-modules/00-my-new-module.el` _(use your own module name prefixed with `01.` `02.` `03.` `...` etc.)_ for your new custom module name.  This will make you consistant with the naming convention used within `~/.emacs.d/lisp/modules` directory...
+If your customization proves stable, and you like it, you could then save your scratch buffer (as is) to a new file, for example: `~/.emacs.d/lisp/my-modules/00-my-new-module.el` _(use your own module name prefixed with `01.` `02.` `03.` `...` etc.)_ for your new custom module name.  This will make you consistent with the naming convention used within `~/.emacs.d/lisp/modules` directory...
 
 > **Note:** _(You should be on your local `test` branch when you do this to keep your changes in parallel with the master branch)_.  Add a call to this new module from your `~/.emacs.d/init.el`
 
@@ -300,13 +300,13 @@ Use Scratch buffer to evaluate snippets of `lisp` without having to remove the w
 #### dev§Ops, sys§Admin, info✷Sec Related Packages:
 
 - [ssh-config-mode](https://github.com/jhgorrell/ssh-config-mode-el) A mode to edit SSH config files.
-- [smart-tabs-mode](https://www.emacswiki.org/emacs/SmartTabs) Intelligent tabs to end the f---ing tabs vs spaces war already ok? Read the docs :-)
+- [smart-tabs-mode](https://www.emacswiki.org/emacs/SmartTabs) Intelligent tabs to end the f---ing tabs vs spaces war already OK? Read the docs :-)
 - [php-mode](https://github.com/emacs-php/php-mode) Major mode for editing PHP code.
 - [undo-tree]() Minor mode that treats undo history as a tree... Copy this text file: <http://www.dr-qubit.org/undo-tree/undo-tree.txt> and save it as: Emacs-undo-tree-cheatsheet.md (it's an MD file of course). It's very comprehensive!
 
 ##### More languages, devOps tools, etc. to add later:
 
-- `digitalocean-helm`  Woah? A `helm` Interface and API connector to your Digital Ocean Account! _(I need to read more about this first...)_
+- `digitalocean-helm`  Whoa!!! A `helm` Interface and API connector to your Digital Ocean Account! _(I need to read more about this...)_
 
 #### Writer's \- Publishing Tools:
 
@@ -348,7 +348,7 @@ Use Scratch buffer to evaluate snippets of `lisp` without having to remove the w
 - [gitattributes-mode](https://github.com/magit/git-modes) Major mode for editing .gitattributes files.
 - [gitconfig-mode](https://github.com/magit/git-modes) Major mode for editing .gitconfig files.
 - [gitignore-mode](https://github.com/magit/git-modes) Major mode for editing .gitignore files.
-- [with-editor](https://github.com/magit/with-editor) Use the Emacsclient as $EDITOR.
+- [with-editor](https://github.com/magit/with-editor) Use the Emacs client as $EDITOR.
 
 ### Key-bindings:
 
