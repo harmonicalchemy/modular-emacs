@@ -70,7 +70,11 @@
             'dired-launch-mode
             ;; Begin new dired sessions with dired-omit-mode `on` by default...
             (dired-omit-mode 1)
-	    (define-key dired-mode-map (kbd "h") #'dired-omit-mode)
+            ;; Truncate long lines... Don't mess up my nice dired columns!
+            ;; You can always C-e, C-a to jump back and forth... (rarely needed)
+            (setq truncate-lines t)
+            ;;
+            (define-key dired-mode-map (kbd "h") #'dired-omit-mode)
             ))
 
 ;; Dired Sort Directories First... This function works and does not break after
