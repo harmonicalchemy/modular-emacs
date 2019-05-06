@@ -12,9 +12,8 @@
     - [Requirements:](#requirements)
         - [Emacs: V26.1+](#emacs-v261)
         - [VMD: _(Visual MarkDown App)_](#vmd-visual-markdown-app)
-        - [Fountain Screenwriting Tools: _(optional)_](#fountain-screenwriting-tools-optional)
-        - [Games _(`rmoo`)_: _(optional)_](#games-rmoo-optional)
-        - [ZSH: _(optional)_](#zsh-optional)
+        - [MultiMarkdown: _(optional)_](#multimarkdown-optional)
+        - [Pandoc: _(optional)_](#pandoc-optional)
     - [Details:](#details)
     - [Start Here: _(Modular Emacs Setup)_](#start-here-modular-emacs-setup)
         - [Backup existing Emacs which may already be installed:](#backup-existing-emacs-which-may-already-be-installed)
@@ -46,11 +45,11 @@
 
 ## Introduction:
 
-**Welcome to Harmonic Alchemy Modular Emacs - _Official V1.0.1 point release_** -
+**Welcome to Harmonic Alchemy Modular Emacs - _Official V1.0.1 point release Q2-2019_** -
 
 > **Note:** I still have not solved the Mac OS glitch, of not getting shell environment vars into Emacs, _(Emacs cannot find the VMD app)_.  I still suspect the cause is external to Emacs though...  The bandaid fix is to start Emacs from the shell and everything works fine... So I got that problem on the back burner for now...  If you are a Mac User and find a solution please let me know! I will give you credit!
 
-This project has been a long time coming.  Its history goes back a few years ago when I went searching for some better ways to configure my then pretty basic Emacs configuration of over 10 or so years!  I ended up forking Mohammed Ismail Ansari's  [**super-emacs project**](https://github.com/MyTerminal/super-emacs) from Github...  I tried that for a while, liked some things and tried to get rid of other things that were confusing to me at the time.  After a couple years of adding/removing configuring/re-configuring it started feeling like I was painting myself into a tangled corner like getting _"lost in a maze of twisty little passages all different"_!  So I decided to start over from scratch and modularize everything with the idea of preventing tangled messes like this from happening with your own Emacs setups!
+This project has been a long time coming.  Its history goes back a few years ago when I went searching for some better ways to configure my then pretty basic Emacs configuration of over 10 or so years!  I cloned a few Emacs repos on Github to try different things out for a while.  I liked some things and tried to get rid of other things after installing them which got confusing after a while. I ended up with lots of questionable elisp code, much of which were things possibly no longer needed!  After a couple years of adding/removing configuring/re-configuring it started feeling like I was painting myself into a tangled corner like getting _"lost in a maze of twisty little passages all different"_!  So I decided to start over from scratch and modularize everything with the idea of preventing tangled messes like this from happening with your own Emacs setups!
 
 I am a devOps engineer, computer scientist, composer/musician, sound designer, architect, writer/publisher.  I wear a lot of hats! My emacs needs to wear a lot of hats as well!  I am attempting to build features into **Emacs** that empower all the above without becoming an over complicated mess! **_"good luck with that"_**  :octocat:
 
@@ -158,27 +157,28 @@ If you navigate within your new cloned directory you will find the `lisp` sub di
 
 The purpose of the **`my-modules`** folder is to give you a place to keep your own extensions to **Modular Emacs** without causing **git** to complain about new un-tracked files.  `my-modules` has been added to `.gitignore` so anything you create within that directory will be ignored as well!  This way you can try out different things without worrying about messing up the base install...  
 
-> **Note:** It is important that **git** ignores this folder and all of it's contents because you will be cloning other **git repositories** inside `my-modules` and we don't really want to get into a complicated `git-sub-modules` mess do we?  You are free to clone and try out any extra Emacs things within `my-modules` folder to your hearts content!  Modular Emacs will stay clean outside...
+> **Note:** It is important that **git** ignores all content within `$HOME/me.emacs.c/lisp/my-modules` because you will be cloning other **git repositories** inside `my-modules` and we don't really want to get into a complicated `git-sub-modules` mess do we?  You are free to clone and try out any extra Emacs things within `my-modules` folder to your hearts content!  Modular Emacs will stay clean outside...
 
 ### Clone MultiMarkdown Mode:
 
-Clone MultiMarkdown from its public repo on Github into the `lisp/my-modules` directory:**   
+Clone my fork of MultiMarkdown Mode (`mmd-mode`) from Github into the `lisp/my-modules` directory:**   
 
-> **Note:** _This package is not available on `MELPA` but it is required for `modular-emacs` to run...  It makes **markdown** files like this look good on GitHub!_ :octocat: We will clone this into **`my-modules`** so that it will be ignored...  If it were on `MELPA` it would be installed within the `melpa` directory _(which is also ignored by git in this project)_
+> **Note:** _This package is no longer available on `MELPA` but it is required for `modular-emacs` to run...  It makes **markdown** files like this look good on GitHub!_ :octocat: You can also customize the lisp module to change how different elements look.  We will clone this into **`my-modules`** so that it will be ignored...  If it were on `MELPA` it would be installed within the `melpa` directory _(which is also ignored by git in this project)_
 
 ```
    $ cd ~/me.emacs.d/lisp/my-modules
-   $ git clone https://github.com/jmquigley/mmd-mode.git 
+   $ git clone https://github.com/harmonicalchemy/mmd-mode.git 
 ```
 
 ### Clone RMOO MOO Client from Github: _(optional)_
 
-**RMOO** is a LambdaMOO client for Emacs that will also work with other MUDs as well.  Many MOO features were added however and since I intend to get back into MOO programming I am looking for the best possible Emacs client to start with.  I first found Matt Campbell's original `rmoo` on Gighub at: `https://github.com/toddsundsted/rmoo`...  But then I found a fork that has been somewhat improved and was last updated November 13, 2018... This fork was made by **lisdude** on Github: `https://github.com/lisdude/rmoo`...
- 
+**RMOO** is a LambdaMOO client for Emacs that will also work with other MUDs as well.  Many **LambdaMOO** features are supported by `RMOO` which is more than most `MUD` clients these days.  Since I intend to get back into MOO programming I am looking for the best possible Emacs client to start with.  I first found Matt Campbell's original `rmoo` on Gighub at: `https://github.com/toddsundsted/rmoo`...  But then I found a fork that has been somewhat improved and was last updated November 16, 2018... This fork was made by **lisdude** on Github: `https://github.com/lisdude/rmoo`...  I have forked this fork into my own Github account in order to add more features if needed...
+
 ```
     $ cd ~/me.emacs.d/lisp/my-modules
-    $ git clone https://github.com/lisdude/rmoo.git
+    $ git clone https://github.com/harmonicalchemy/rmoo.git
 ```
+
 > **Note:** To use the `rmoo` MOO client within Emacs, you need to enable the **Games Module:** by un-commenting the last load file line in: `~/.emacs.d/lisp/modules/dispatcher.el` that calls: `.../lisp/modules/11-games-pkg-conf.el`... 
 
 I will be updating and or modifying this fork for my own MOO needs... When that time comes I may be publishing my own version of `rmoo` on GitHub...
@@ -218,7 +218,7 @@ Next Rename: **`~/me.emacs.d`** to: **`~/.emacs.d`** _(This is now your new **Mo
 
 **_Start up GNU Emacs v26.1 from the menu or command line and hold your breath!_**
 
-> **Note:** If you are on **Mac OS** you will have to start Emacs from the shell `bash` or `zsh` etc.  This is a workaround to get important environment variables into Emacs on Mac OS... Unfortunately I have not found a better solution to this problem yet... but you can dedicate a small terminal window for this purpose and then minimize the terminal window it while you are working in Emacs. With that workaround everything will work on Mac OS the same as it does on Linux, etc.
+> **Note:** If you are on **Mac OS** you will have to start Emacs from the shell `bash` or `zsh` etc.  This is a workaround to get important environment variables into Emacs on Mac OS... Unfortunately I have not found a better solution to this problem yet... but you can dedicate a small terminal window for this purpose and then minimize the terminal window while you are working in Emacs. With that workaround everything will work on Mac OS the same as it does on Linux, etc.
 
 After a lot of super computing lisp number crunching flashing away in your minibuffer _(wait wait wait...)_ Then **Bam!** You should now see your new emacs pop up with the **Welcome to Harmonic Alchemy Modular Emacs!** scratch buffer in a frame with a pre-determined row/column initial size! 
 
@@ -250,7 +250,9 @@ Modular Emacs comes with my slightly customized version of the **Blackboard colo
 
 ## Features:
 
-**Default Emacs welcome screen replaced with simple greeting:** Prints current emacs configuration, and date... With a famous quote _(which may change from time to time with new updates)_  Use Scratch buffer to evaluate snippets of `lisp` without having to remove the welcome text... _(which are lisp comments)_
+**Default Emacs welcome screen replaced with simple greeting:** Prints current emacs configuration, and date... With a famous Mark Twain quote _(My Favorite author. This quote may change from time to time with new updates)_.  
+
+Use Scratch buffer to evaluate snippets of `lisp` without having to remove the welcome text... _(which are lisp comments)_
 
 ### Pre-configured packages - Comprehensive list:
 
@@ -264,13 +266,18 @@ Modular Emacs comes with my slightly customized version of the **Blackboard colo
 - [auto-complete](https://github.com/auto-complete/auto-complete) Easy Text Editing with suggested word completion.
 
 #### Core Emacs System Related Packages:
+
 - [exec-path-from-shell](https://github.com/purcell/exec-path-from-shell) Get environment variables such as $PATH from the shell.  btw, this can be a tricky thing to do in emacs!  I have struggled with this on Mac OS for a while!  You may find you have to start Emacs from the terminal to get all your environment vars into Emacs!  More about that later.. A continuing saga!
 
 #### Emacs Helm & Extras:
-- [helm](https://github.com/emacs-helm/helm) Helm is an Emacs incremental and narrowing framework that helps speed up operations on commands with structured command completions and more.  It is a programmable interface (API) as well.
+
+- [helm](https://github.com/emacs-helm/helm) Helm is an Emacs incremental and narrowing framework that helps speed up operations on commands with structured command completions and more.  It is a programmable interface (API) as well. To see how HELM can speed things up try a prefix key like: `C-x` or `C-c` or `M-x` and just wait before typing any more keys... You will see all the possible key-combos currently associated with that prefix key pop up in the HELM mini-buffer!  Fantastic! No more guessing!
+
 - [helm-core](https://emacs-helm.github.io/helm/) Development files for Helm (API)... Installed as dependency.
+
 - [popup](https://github.com/emacs-helm/helm) Popup is a dependency package for helm.
-- [which-key](https://github.com/justbur/emacs-which-key) Used with helm, pops up suggestions for what can follow after pressing `C-x` key...
+
+- [which-key](https://github.com/justbur/emacs-which-key) Used with helm, pops up suggestions for what can follow after pressing `C-x` key... _(this is what I was talking about above in the intro paragraph)_
 
 #### Ace Jump Mode & Helpers:
 
@@ -282,13 +289,13 @@ Modular Emacs comes with my slightly customized version of the **Blackboard colo
 
 - [ztree](https://github.com/fourier/ztree) An efficient directory tree comparison utility.
 - [undo-tree](https://github.com/emacsmirror/undo-tree) Visualize your changes in a buffer.
-- [neotree](https://github.com/jaypei/emacs-neotree) Spawn a tree at any directory.
-- [imenu-list](https://github.com/bmag/imenu-list) Right panel Menu and Variable list.
+- [neotree](https://github.com/jaypei/emacs-neotree) Spawn a tree at any directory. You can toggle a `neotree` left side panel window within `dired-mode` with `C-,`
+- [imenu-list](https://github.com/bmag/imenu-list) Right panel Menu and Variable list.  You can toggle an imenu list right panel window (for example within an elisp, Python, etc. file) with: `C-'`
 
 #### Dired Related Packages:
 
 - [dired-launch](https://github.com/thomp/dired-launch) Open files directly within `dired` using default applications.
-- [dired-imenu](https://github.com/DamienCassou/dired-imenu) `imenu` binding for `dired-mode`
+- [dired-imenu](https://github.com/DamienCassou/dired-imenu) `imenu` binding for `dired-mode`. I am not sure the usefulness of this because I also use neotree which does a much better job...  It is in here just the same if you care to try it out...
 
 #### dev§Ops, sys§Admin, info✷Sec Related Packages:
 
@@ -297,69 +304,39 @@ Modular Emacs comes with my slightly customized version of the **Blackboard colo
 - [php-mode](https://github.com/emacs-php/php-mode) Major mode for editing PHP code.
 - [undo-tree]() Minor mode that treats undo history as a tree... Copy this text file: <http://www.dr-qubit.org/undo-tree/undo-tree.txt> and save it as: Emacs-undo-tree-cheatsheet.md (it's an MD file of course). It's very comprehensive!
 
-
-
-
-
-
-
-
-
-
-- [neotree]() M__ mode for
-- [smart-tabs-mode]() M__ mode for
-- [ssh-config-mode]() M__ mode for 
-- [gitconfig-mode]() M__ mode for 
-- [gitignore-mode]() M__ mode for 
-- [gitattributes-mode]() M__ mode for
-- [magit]() M__ mode for
-
 ##### More languages, devOps tools, etc. to add later:
 
 - `digitalocean-helm`  Woah? A `helm` Interface and API connector to your Digital Ocean Account! _(I need to read more about this first...)_
 
 #### Writer's \- Publishing Tools:
 
-
-
-
-
-
-
-
-
-
-
-    
-
-- [-mode]() Major mode for...
-- [-mode]() Major mode for...
-
-
-
-
-- [deft](https://jblevins.org/projects/deft/) Major mode for quickly browsing, filtering, and editing directories of plain text notes. Created by Jason Blevins _(the same statistics economics professor at Ohio State who also created Emacs Markdown Mode)_ This guy is wiced clever!  Looks like he has some nice algorithms for studying the cryptocurrency and smart contracts world as well!
-- [pandoc-mode]() Major mode for...
-- [org-bullets]() Major mode for...
-
-
-
 - [markdown-mode](https://jblevins.org/projects/markdown-mode/) Markdown capability within emacs.
+
 - [markdown-mode+](https://github.com/milkypostman/markdown-mode-plus) Extras for Markdown mode.
+
 - [markdown-toc](https://github.com/ardumont/markdown-toc) Generate a TOC in a markdown file. This is a simple but powerful mode to create a TOC in a well-formed markdown file. In other words: The generated TOC will be well-formed if your markdown file is also well formed. ;-)
-- [vmd-mode](https://github.com/blak3mill3r/vmd-mode) Fast Github-flavored Markdown previews synchronized with changes to an emacs buffer (no need to save).  Renders org files _(and normal markdown)_ in an external VMD App that automatically shows changes in real-time as you type! _(You need to install this external app separately, and make sure Emacs knows where to find it.  See: `exec-path-from-shell` below)_
-- [fountain-mode](https://github.com/rnkn/fountain-mode) For **#writers #screenwriters #Fantastic!!!**
+
+- [deft](https://jblevins.org/projects/deft/) Major mode for quickly browsing, filtering, and editing directories of plain text notes. Created by Jason Blevins _(the same statistics economics professor at Ohio State who also created Emacs Markdown Mode)_ This guy is wicked clever!  Looks like he has some nice algorithms for studying the cryptocurrency and smart contracts world as well!
+
+- [pandoc-mode](https://joostkremers.github.io/pandoc-mode/) `pandoc-mode` is an Emacs mode for interacting with Pandoc. Pandoc is a program _(plus libraries)_ created by John MacFarlane that can convert a text written in one markup language into another markup language. This is going to help me get off proprietary Scrivener on **Mac OS** and finally be able to use Emacs for all my **Pub§Ops**!
+
+- [fountain-mode](https://github.com/rnkn/fountain-mode) For **writers, screenwriters** A markdown mode for writing screenplays! Fantastic!!! Fountain together with pandoc, allows you to do many conversions for screenplays to industry formats like **Final Draft** etc. but the best part is the text highlighting and colors make it very easy to read/rehearse dialog and cues right from an Emacs buffer!  Writing scripts in this mode is as natural as typing `INT` _(your line instantly turns into a scene heading!)_ Try it! Just start typing your script and find out what happens!
+
 - [olivetti](https://github.com/rnkn/olivetti) Adjust margins with word wrap. _(great with fountain mode!)_ Perfect for distraction free writing! I also enable this within `rmoo` _(if you have the **games module** enabled)..._  you can adjust the margin width with: `C-[` and `C-[` 
+
+- [vmd-mode](https://github.com/blak3mill3r/vmd-mode) Fast Github-flavored Markdown previews synchronized with changes to an emacs buffer (no need to save).  Renders org files _(and normal markdown)_ in an external VMD App that automatically shows changes in real-time as you type! _(You need to install this external app separately, and make sure Emacs knows where to find it.  See: `exec-path-from-shell` below)_
+
 
 #### Spelling:
 
-- [flyspell-correct](https://github.com/) Flyspell: correct, suggestions, actions, dictionary add, subtract, etc.
+- [flyspell-correct](https://github.com/) This package provides functionality for correcting words via custom interfaces. There are several functions for this: `flyspell-correct-wrapper`, `flyspell-correct-at-point`, `flyspell-correct-previous` & `flyspell-correct-next`.
+
 - [helm-flyspell](https://github.com/pronobis/helm-flyspell) Helm extension for correcting words with flyspell.
-- [flyspell-correct-helm](https://github.com/d12frosted/flyspell-correct) Nice helm interface for flyspell.
+- [flyspell-correct-helm](https://github.com/d12frosted/flyspell-correct) Nice helm interface for flyspell.  Place your cursor after any misspelled word and type: `C-;` to see a list of suggestions...
 
 #### Project Management Tools:
 
-- [org-bullets](https://github.com/emacsorphanage/org-bullets) Fancy bullet fonts for Org Mode... Author is absentee landlord but these work great for me just fine...  it's a pretty short lisp file to maintain. ;-)
+- [org-bullets](https://github.com/emacsorphanage/org-bullets) Fancy UTF-8 bullet fonts for Org Mode... This is an old emacs package but looks like it still works fine in Emacs 26... If there are problems, it's a pretty short lisp file and easy to maintain. ;-)
 
 #### Git \- `magit` & Related:
 
@@ -374,6 +351,8 @@ Modular Emacs comes with my slightly customized version of the **Blackboard colo
 - [with-editor](https://github.com/magit/with-editor) Use the Emacsclient as $EDITOR.
 
 ### Key-bindings:
+
+> **NOTE:** I have changed some of these since last documented here.  Some of the keys below have changed.  I will update this README.md once I sort that all out... You can always consult HELM with a prefix key however... _(which works fine right there when you need it without having to manually open this README.md just to see what keys are bound! OMG!)_
 
 **_[See: 09-key-bindings.el](.emacs.d/lisp/modules/09-key-bindings.el)_**
 

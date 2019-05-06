@@ -149,12 +149,6 @@
 ;; GitHub flavored Markdown preview minor-mode.
 (require 'vmd-mode)
 
-;; Global Keybindings:
-
-(global-set-key (kbd "M-N") 'org-md-export-as-markdown)
-(global-set-key (kbd "M-n") 'vmd-mode) 
-
-
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; END: 05-pubOps-pkg-conf.el
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
