@@ -30,14 +30,22 @@
     (setq insert-directory-program "gls" dired-use-ls-dired t))
 
 ;; Load dired-x.el when dired is first invoked (e.g., when you first type C-x d)
-(add-hook 'dired-load-hook
-          (lambda ()
-            (load "dired-x")
+;; NOTE: Newer versions of Emacs do not require doing this in a hook anymore. ;-)
+(require 'dired-x)
+(setq-default dired-omit-files-p t)
+;; Specify which files get omitted in Dired mode:
+(setq dired-omit-files (concat dired-omit-files "^\\.?#\\|\\.DS_STORE\\|Icon*"))
+;(setq dired-omit-extensions "<add-extensions-here-to-omit-file-types>")
+
+;(add-hook 'dired-load-hook
+;          (lambda ()
+;            (load "dired-x")
             ;; Set dired-x global variables here:
             ;; For example:
             ;;   (setq dired-guess-shell-gnutar "gtar")
             ;;   (setq dired-x-hands-off-my-keys nil)
-            ;;
+            ;; Turn on Omit Mode:
+;            (setq dired-omit-mode t) 
             ;; Specify default ls switches for dired to use:
             ;; NOTE 2019-001-26:
             ;;       Something here is not working...
@@ -51,14 +59,15 @@
             ;;       below that so far looks like it does a better job...
             ;;       Although I still notice .DS_Store show up after hiting "g".
             ;;       (you have to toggle it off by hitting "h" twice!)
-            (setq dired-listing-switches
-                 "-la --ignore='#*' --ignore='.DS_Store' --ignore='Icon*' ")
+;            (setq dired-listing-switches
+;                 "-la --ignore='#*' --ignore='.DS_Store' --ignore='Icon*' ")
             ;;
-            (setq-default dired-omit-files-p t)
+;            (setq-default dired-omit-files-p t)
             ;;
             ;; Specify which files get omitted in Dired mode:
-            (setq dired-omit-files "^\\.?#\\|\\.DS_STORE\\|Icon*")
-            ))
+;            (setq dired-omit-files "^\\.?#\\|\\.DS_STORE\\|Icon*")
+            ;(setq dired-omit-extensions "<add-extensions-here-to-omit-file-types>")
+;            ))
 
 ;; Load dired-x mode hook (dired-omit-mode, etc.)
 (add-hook 'dired-mode-hook
@@ -93,7 +102,6 @@
   "Sort dired listings with directories first before adding marks."
   (mydired-sort))
 
-
 ;; Auto load dired-jump and dired-jump-other-window:
 (autoload 'dired-jump "dired-x"
   "Jump to Dired buffer corresponding to current buffer." t)
@@ -103,7 +111,6 @@
 
 (define-key global-map "\C-x\C-j" 'dired-jump)
 (define-key global-map "\C-x4\C-j" 'dired-jump-other-window)
-
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; END 03-dired-pkg-conf.el
