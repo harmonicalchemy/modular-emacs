@@ -61,7 +61,7 @@
 (require 'deft)
 ;; Enable/edit these next several lines to Customize items in
 ;; the deft group to change default functionality...
-(setq deft-directory "~/000-GIT/Gen-Dat/personal-docs/000-Notebooks")
+(setq deft-directory "~/000-GIT/Gen-Dat/personal-docs/Notebooks/Alisha-Notes")
 (setq deft-recursive t)
 (setq deft-use-filename-as-title t)
 (setq deft-file-naming-rules
