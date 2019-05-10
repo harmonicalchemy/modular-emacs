@@ -31,54 +31,19 @@
 
 ;; Load dired-x.el when dired is first invoked (e.g., when you first type C-x d)
 ;; NOTE: Newer versions of Emacs do not require doing this in a hook anymore. ;-)
-;; Plus I learned a fancy trick for dired-omit-extensions. Hope this works!
+;; Plus I learned a fancy trick for dired-omit-extensions as well...
 (require 'dired-x)
 (setq-default dired-omit-files-p t)
 ;; Specify which files get omitted in Dired mode:
-(setq dired-omit-files (concat dired-omit-files "^\\.?#\\|^.DS_STORE$\\|^.SSH_AGENT_vault-ssh$\\|Icon*\\|^.git$"))
-;;
+(setq dired-omit-files (concat dired-omit-files
+                               "^\\.?#\\|^.DS_STORE$\\|^.SSH_AGENT\\|Icon*\\|^.git$"))
+
+;; Ignore files with these extensions:
 (let* ((exts '(".dat" ".temp" ".out"))
        (omit (delete-dups (append exts dired-omit-extensions))))
   (setq dired-omit-extensions omit))
 
-
-
-
-
-
-;(add-hook 'dired-load-hook
-;          (lambda ()
-;            (load "dired-x")
-            ;; Set dired-x global variables here:
-            ;; For example:
-            ;;   (setq dired-guess-shell-gnutar "gtar")
-            ;;   (setq dired-x-hands-off-my-keys nil)
-            ;; Turn on Omit Mode:
-;            (setq dired-omit-mode t) 
-            ;; Specify default ls switches for dired to use:
-            ;; NOTE 2019-001-26:
-            ;;       Something here is not working...
-            ;;       I am troubleshooting this on Mac OS...
-            ;;       Was not a problem on Linux...
-            ;; Update 2019-005-01:
-            ;;       I finally have this working well on Mac OS...
-            ;;       We needed:  insert-directory-program "gls" Doh!
-            ;; NOTE: I removed the group-directories-first option from
-            ;;       dired-listing-switches here, because I have a new function
-            ;;       below that so far looks like it does a better job...
-            ;;       Although I still notice .DS_Store show up after hiting "g".
-            ;;       (you have to toggle it off by hitting "h" twice!)
-;            (setq dired-listing-switches
-;                 "-la --ignore='#*' --ignore='.DS_Store' --ignore='Icon*' ")
-            ;;
-;            (setq-default dired-omit-files-p t)
-            ;;
-            ;; Specify which files get omitted in Dired mode:
-;            (setq dired-omit-files "^\\.?#\\|\\.DS_STORE\\|Icon*")
-            ;(setq dired-omit-extensions "<add-extensions-here-to-omit-file-types>")
-;            ))
-
-;; Load dired-x mode hook (dired-omit-mode, etc.)
+;; Load dired-x mode hook (load dired-omit-mode, and a few more tweaks for every session.)
 (add-hook 'dired-mode-hook
           (lambda ()
             ;; Set dired-x buffer-local variables here:
