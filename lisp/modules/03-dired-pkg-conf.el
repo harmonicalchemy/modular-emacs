@@ -31,11 +31,20 @@
 
 ;; Load dired-x.el when dired is first invoked (e.g., when you first type C-x d)
 ;; NOTE: Newer versions of Emacs do not require doing this in a hook anymore. ;-)
+;; Plus I learned a fancy trick for dired-omit-extensions. Hope this works!
 (require 'dired-x)
 (setq-default dired-omit-files-p t)
 ;; Specify which files get omitted in Dired mode:
-(setq dired-omit-files (concat dired-omit-files "^\\.?#\\|\\.DS_STORE\\|Icon*"))
-;(setq dired-omit-extensions "<add-extensions-here-to-omit-file-types>")
+(setq dired-omit-files (concat dired-omit-files "^\\.?#\\|^.DS_STORE$\\|^.SSH_AGENT_vault-ssh$\\|Icon*\\|^.git$"))
+;;
+(let* ((exts '(".dat" ".temp" ".out"))
+       (omit (delete-dups (append exts dired-omit-extensions))))
+  (setq dired-omit-extensions omit))
+
+
+
+
+
 
 ;(add-hook 'dired-load-hook
 ;          (lambda ()
