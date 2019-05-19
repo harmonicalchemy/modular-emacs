@@ -29,8 +29,13 @@
 ;;
 ;; Change Log: (descending chronological order)
 ;;
+;;   2019-005-15 - Harmonic Alchemy Modular-Emacs Official Point Release:
+;;      v1.0.2 [Q2 2019] Final testing a new point release within the develop
+;;      branch... After testing period is over a final commit will be made and
+;;      merged back into master...  Master currently holds Release: 1.0...
+;;
 ;;   2019-004-24 - Harmonic Alchemy Modular-Emacs Official Point Release:
-;;      v1.0.0 [Q2 2019] Final testing a new point release within the develop
+;;      v1.0.1 [Q2 2019] Final testing a new point release within the develop
 ;;      branch... After testing period is over a final commit will be made and
 ;;      merged back into master...  Master still holds Official Release: 1.0...
 ;;
@@ -145,7 +150,7 @@
                        ";; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
                        ";; Welcome to: [Your-Machine-Name-Here]\n"
                        ";;             Harmonic Alchemy - Modular Emacs!\n"
-                       ";; Version:    1.0.1 (Official Point Release) [Q2 2019]\n"
+                       ";; Version:    1.0.2 (Official Point Release) [Q2 2019]\n"
                        ";; \n"
                        ";; Today's date: " (format-time-string "%Y %B %d") "\n"
                        ";; Startup completed in "
@@ -159,6 +164,14 @@
                        ";;    Some think it is the voice of God.\"\n"
                        ";;                         -- Mark Twain\n"
                        ";; \n"
+                       ";; If Mark Twain was a Lisp programmer in New Orleans during the 90's:"
+                       ";; \n"
+                       ";;   \"I yous to be a river boat pilot until dis crafty gambler\n"
+                       ";;    CONS me out of averyting, including my CAR, and CDR!\n"
+                       ";;    Dey caught em doh...  Yey-sir-ee!  Now e's in prison...\n"
+                       ";;    locked in a CONs cell... Doing hard (constructive) labor!\"\n"
+                       ";;                         -- Alisha Awen %^) \n"
+                       ";; \n"
                        ";; Evaluate lisp expressions below, (if you'd like to do that ;-)\n"
                        ";; Here is GNU.org's link to: an Intro to Programming in Emacs Lisp:\n"
                        ";; https://www.gnu.org/software/emacs/manual/html_node/eintr/index.html\n"
@@ -166,8 +179,8 @@
                        ";; This entire message is a lisp comment!\n"
                        ";; Evaluate this entire buffer as a test\n"
                        ";; before committing it as your:\n"
-                       ";; \"new-cool-custom-module.el\"\n"
-                       ";;      -- Cheers! %^) Alisha Awen @harmonicalchemy (twitter etc.)\n"
+                       ";; \"new-cool-custom-module.el\" %^)\n"
+                       ";;      -- Cheers! Alisha Awen @harmonicalchemy (twitter etc.)\n"
                        ";;         PGP Pubkey: 0x922CC456F48355A8D9B2E044C9E6CD44A817E7BF\n"
                        ";; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
                        )

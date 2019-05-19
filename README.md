@@ -7,13 +7,14 @@
 
 - [Harmonic Alchemy Modular Emacs:](#harmonic-alchemy-modular-emacs)
     - [Introduction:](#introduction)
-    - [Disclaimer for Windows Users:](#disclamer-for-windows-users)
+    - [Disclaimer for Windows Users:](#disclaimer-for-windows-users)
     - [My Commitment:](#my-commitment)
     - [Requirements:](#requirements)
         - [Emacs: V26.1+](#emacs-v261)
         - [VMD: _(Visual MarkDown App)_](#vmd-visual-markdown-app)
         - [MultiMarkdown: _(optional)_](#multimarkdown-optional)
         - [Pandoc: _(optional)_](#pandoc-optional)
+        - [Steel Bank Common Lisp _(optional for CS research, prototyping, etc.)_](#steel-bank-common-lisp-optional-for-cs-research-prototyping-etc)
     - [Details:](#details)
     - [Start Here: _(Modular Emacs Setup)_](#start-here-modular-emacs-setup)
         - [Backup existing Emacs which may already be installed:](#backup-existing-emacs-which-may-already-be-installed)
@@ -45,7 +46,7 @@
 
 ## Introduction:
 
-**Welcome to Harmonic Alchemy Modular Emacs - _Official V1.0.1 point release Q2-2019_** -
+**Welcome to Harmonic Alchemy Modular Emacs - _Official V1.0.2 point release Q2-2019_** -
 
 > **Note:** I still have not solved the Mac OS glitch, of not getting shell environment vars into Emacs, _(Emacs cannot find the VMD app)_.  I still suspect the cause is external to Emacs though...  The band-aid fix is to start Emacs from the shell and everything works fine... So I got that problem on the back burner for now...  If you are a Mac User and find a solution please let me know! I will give you credit!
 
@@ -110,6 +111,19 @@ If you are on Mac OS you can install MultiMarkdown via Homebrew.  `$> brew insta
 ### Pandoc: _(optional)_
 
 As with MultiMarkdown you don't need to have Pandoc installed to use Emacs _(until you have written something and want to export it to LaTeX, PDF, or something like that directly from Emacs)_  You can also do some of these exports with multimarkdown tricks as well...  Read the docs for both to decide how to use them.  Instructions for installing Pandoc can be found on their official website here: <https://pandoc.org/installing.html> The Pandoc.org website has most everything you will need all in one place...
+
+### Steel Bank Common Lisp _(optional for CS research, prototyping, etc.)_
+
+Steel Bank Common Lisp is the best full-fledged Lisp compiler option for Fedora and Debian...  You don't actually need a full fledged Lisp compiler for Emacs because Emacs Slime Mode takes care of handling most things internally within Emacs and also provides a nice [REPL](https://en.wikipedia.org/wiki/Read-eval-print_loop) interface with that setup by default...  Adding Steel Bank Common Lisp to your system (with Slime mode in Emacs) is arguably the best IDE for serious Lisp projects... _(my opinion and totally biased of course ;-)_
+
+To install `SBCL` on Fedora do:
+    `$> sudo dnf install sbcl`
+
+To install `SBCL` on Debian do:
+    `$> sudo apt install sbcl`
+
+That's it... simple but powerful _(like lisp)_
+
 
 ## Details:
 
