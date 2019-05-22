@@ -9,14 +9,14 @@
     - [Introduction:](#introduction)
     - [Disclaimer for Windows Users:](#disclaimer-for-windows-users)
     - [My Commitment:](#my-commitment)
-    - [Requirements:](#requirements)
-        - [Emacs: V26.1+](#emacs-v261)
-        - [VMD: _(Visual MarkDown App)_](#vmd-visual-markdown-app)
-        - [MultiMarkdown: _(optional)_](#multimarkdown-optional)
-        - [Pandoc: _(optional)_](#pandoc-optional)
-        - [Steel Bank Common Lisp _(optional for CS research, prototyping, etc.)_](#steel-bank-common-lisp-optional-for-cs-research-prototyping-etc)
     - [Details:](#details)
     - [Start Here: _(Modular Emacs Setup)_](#start-here-modular-emacs-setup)
+        - [Requirements:](#requirements)
+            - [Emacs: V26.1+](#emacs-v261)
+            - [VMD: _(Visual MarkDown App)_](#vmd-visual-markdown-app)
+            - [MultiMarkdown: _(optional)_](#multimarkdown-optional)
+            - [Pandoc: _(optional)_](#pandoc-optional)
+            - [Steel Bank Common Lisp _(optional for CS research, prototyping, etc.)_](#steel-bank-common-lisp-optional-for-cs-research-prototyping-etc)
         - [Backup existing Emacs which may already be installed:](#backup-existing-emacs-which-may-already-be-installed)
         - [Clone: Harmonic Alchemy Modular Emacs](#clone-harmonic-alchemy-modular-emacs)
         - [Clone MultiMarkdown Mode:](#clone-multimarkdown-mode)
@@ -78,53 +78,6 @@ I promise to strive to make this **process/journey** as painless as possible for
 
 Therefore: **Here is Modular Emacs!** I hope my long years of **devOps** experience will turn out a nice jewel for new comers to try out and succeed with!  **Good Luck and God Speed!**
 
-## Requirements:
-
-I strive to make this simple starting out with as few fancy extras as possible.  This will provide you with a simpler base from which to build to your own needs... Having said that... there are a few things I find to be vital for anyone who writes as well as codes and this means you... **All coders need to document as well, so there you go!**  **_My plan is to build the best Emacs Skeleton Base Configuration for Writing as well as Coding..._**  Please help me accomplish this goal!  I will need your input!  For now here is what you need to do:
-
-### Emacs: V26.1+
-
-Many of the default packages installed with this project will not work with previous versions of Emacs. Also the security of older Emacs and packages is Horrendous! Recently, some of the older packages were removed from the updated MELPA and the entire site is TLS enabled now!  These new features are vital to make things work well, staying reasonably safe going forward from 2018 onward, so I decided not to support lesser versions of Emacs...  The latest version of Emacs is available on Fedora and also on the latest version of Debian 9.8 _(Just Released - I think may also have Emacs 26)_. On Debian you still may have to build from source.  The new version of Debian _(Buster)_ will include Emacs 26.1 for sure, and that is coming soon!  On Mac OS you can get the latest version of Gnu Emacs via Homebrew...  There are easy ways to get the latest version of Emacs on Ubuntu LTS as well... _(You may have to install from source within your system `sudo user's` $HOME account however)_.  Don't give your Apache web user the Emacs App.  That would increase your server's WWW attack surface with far too many holes in my humble opinion... On servers, install Emacs locally within your System Admin Users account only.  Let's keep this part open to discussion... Better solutions will present themselves.     
-
-### VMD: _(Visual MarkDown App)_
-
-This is a stand alone `node.js` **Electron Web App** that you need to install in your `$HOME` directory for this Emacs setup to use.  **VMD** allows you to visualize the results of your edits of **markdown files:** `.md` & **ORG files:** `.org` **instantly! _(in  real time, while you edit the markdown text within your Emacs buffer, all without the need for a full web browser)..._**     
-Your rendered markdown will appear as it would look on Github!  This is a **_much smarter tool for writing/publishing_** because it combines the ease of: `WYSIWYG` with the power of `text-editors`.  That is the best of both worlds with no compromise!     
-
-> **Note:** Not having **VMD** installed will not break Modular Emacs, however you will of course not be able to use Emacs with VMD, some Modular Emacs defined keys will not work, and may even cause an error within Emacs if you try those keys...  You will also see compile time errors when you first start up Modular Emacs.  After startup, Modular Emacs should work fine without VMD...
-
-The best way to install **VMD** is locally within your home directory _(not system wide via your distro's package manager, or app store)..._    
-The best way to install locally is to install it as a `Node.js` package...      
-To do that you must first install **Node Version Manager** `NVM` using a script from: [`https://github.com/creationix/nvm`](https://github.com/creationix/nvm).      
-Follow the instructions on the above linked `nvm` Github project to install **NVM**, and the latest `LTS` version of `node.js`  Once you have the latest version of `node.js` installed you will also have `NPM`**_Node Package Manager_** installed with it, _(because it is bundled with the latest LTS versions of `node.js`)_  
-
-**Whew!**  That was a lot to digest! It's probably the most difficult part of this whole thing, but once that is done via the linked instructions above, you can easily install VMD with the following command: _(from your home directory)_  
-> `$ cd ~/`     
-> `$ npm install -g vmd`  
-
-### MultiMarkdown: _(optional)_
-
-You don't actually need the MultiMarkdown package installed on your machine to use MultiMarkdown in Emacs.  There is a package for that which you will be installing further down within this document.  However you will need multimarkdown installed later to do some fancy publishing tricks and conversions...  Some of that functionality overlaps with Pandoc as well.  It does not hurt to have both of these technologies installed on your machine...
-
-If you are on Mac OS you can install MultiMarkdown via Homebrew.  `$> brew install multimarkdown`.  On Linux follow the instructions on this page <https://fletcher.github.io/peg-multimarkdown/> This same page will show you how to customize MultiMarkdown as well but don't do any of that yet. You won't know what you need until you have used it for a while.  That's it for now...  you will also be installing mmd-mode below...
-
-### Pandoc: _(optional)_
-
-As with MultiMarkdown you don't need to have Pandoc installed to use Emacs _(until you have written something and want to export it to LaTeX, PDF, or something like that directly from Emacs)_  You can also do some of these exports with multimarkdown tricks as well...  Read the docs for both to decide how to use them.  Instructions for installing Pandoc can be found on their official website here: <https://pandoc.org/installing.html> The Pandoc.org website has most everything you will need all in one place...
-
-### Steel Bank Common Lisp _(optional for CS research, prototyping, etc.)_
-
-Steel Bank Common Lisp is the best full-fledged Lisp compiler option for Fedora and Debian...  You don't actually need a full fledged Lisp compiler for Emacs because Emacs Slime Mode takes care of handling most things internally within Emacs and also provides a nice [REPL](https://en.wikipedia.org/wiki/Read-eval-print_loop) interface with that setup by default...  Adding Steel Bank Common Lisp to your system (with Slime mode in Emacs) is arguably the best IDE for serious Lisp projects... _(my opinion and totally biased of course ;-)_
-
-To install `SBCL` on Fedora do:
-    `$> sudo dnf install sbcl`
-
-To install `SBCL` on Debian do:
-    `$> sudo apt install sbcl`
-
-That's it... simple but powerful _(like lisp)_
-
-
 ## Details:
 
 The above requirements are pretty much all you need to get ready for installing and running this project in your home directory... Also, not covered here, you need to have a standard unix like development environment set up on your machine as well, _(even if all you intend to do is write but not code)_ you will still need to have some of the standard **devTools** installed and configured to make some of these cool writer's features work well.
@@ -145,7 +98,55 @@ The **_share-and-share-alike_** rule keeps your work and all its derivatives ope
 
 > **_"There are basically two types of people. People who accomplish things, and people who claim to have accomplished things. The first group is less crowded."_** - Mark Twain
 
+
 ## Start Here: _(Modular Emacs Setup)_
+### Requirements:
+
+I strive to make this simple starting out with as few fancy extras as possible.  This will provide you with a simpler base from which to build to your own needs... Having said that... there are a few things I find to be vital for anyone who writes as well as codes and this means you... **All coders need to document as well, so there you go!**  **_My plan is to build the best Emacs Skeleton Base Configuration for Writing as well as Coding..._**  Please help me accomplish this goal!  I will need your input!  For now here is what you need to do:
+
+#### Emacs: V26.1+
+
+Many of the default packages installed with this project will not work with previous versions of Emacs. Also the security of older Emacs and packages is Horrendous! Recently, some of the older packages were removed from the updated MELPA and the entire site is TLS enabled now!  These new features are vital to make things work well, staying reasonably safe going forward from 2018 onward, so I decided not to support lesser versions of Emacs...  The latest version of Emacs is available on Fedora and also on the latest version of Debian 9.8 _(Just Released - I think may also have Emacs 26)_. On Debian you still may have to build from source.  The new version of Debian _(Buster)_ will include Emacs 26.1 for sure, and that is coming soon!  On Mac OS you can get the latest version of Gnu Emacs via Homebrew...  There are easy ways to get the latest version of Emacs on Ubuntu LTS as well... _(You may have to install from source within your system `sudo user's` $HOME account however)_.  Don't give your Apache web user the Emacs App.  That would increase your server's WWW attack surface with far too many holes in my humble opinion... On servers, install Emacs locally within your System Admin Users account only.  Let's keep this part open to discussion... Better solutions will present themselves.     
+
+#### VMD: _(Visual MarkDown App)_
+
+This is a stand alone `node.js` **Electron Web App** that you need to install in your `$HOME` directory for this Emacs setup to use.  **VMD** allows you to visualize the results of your edits of **markdown files:** `.md` & **ORG files:** `.org` **instantly! _(in  real time, while you edit the markdown text within your Emacs buffer, all without the need for a full web browser)..._**     
+Your rendered markdown will appear as it would look on Github!  This is a **_much smarter tool for writing/publishing_** because it combines the ease of: `WYSIWYG` with the power of `text-editors`.  That is the best of both worlds with no compromise!     
+
+> **Note:** Not having **VMD** installed will not break Modular Emacs, however you will of course not be able to use Emacs with VMD, some Modular Emacs defined keys will not work, and may even cause an error within Emacs if you try those keys...  You will also see compile time errors when you first start up Modular Emacs.  After startup, Modular Emacs should work fine without VMD...
+
+The best way to install **VMD** is locally within your home directory _(not system wide via your distro's package manager, or app store)..._    
+The best way to install locally is to install it as a `Node.js` package...      
+To do that you must first install **Node Version Manager** `NVM` using a script from: [`https://github.com/creationix/nvm`](https://github.com/creationix/nvm).      
+Follow the instructions on the above linked `nvm` Github project to install **NVM**, and the latest `LTS` version of `node.js`  Once you have the latest version of `node.js` installed you will also have `NPM`**_Node Package Manager_** installed with it, _(because it is bundled with the latest LTS versions of `node.js`)_  
+
+**Whew!**  That was a lot to digest! It's probably the most difficult part of this whole thing, but once that is done via the linked instructions above, you can easily install VMD with the following command: _(from your home directory)_  
+> `$ cd ~/`     
+> `$ npm install -g vmd`  
+
+#### MultiMarkdown: _(optional)_
+
+You don't actually need the MultiMarkdown package installed on your machine to use MultiMarkdown in Emacs.  There is a package for that which you will be installing further down within this document.  However you will need multimarkdown installed later to do some fancy publishing tricks and conversions...  Some of that functionality overlaps with Pandoc as well.  It does not hurt to have both of these technologies installed on your machine...
+
+If you are on Mac OS you can install MultiMarkdown via Homebrew.  `$> brew install multimarkdown`.  On Linux follow the instructions on this page <https://fletcher.github.io/peg-multimarkdown/> This same page will show you how to customize MultiMarkdown as well but don't do any of that yet. You won't know what you need until you have used it for a while.  That's it for now...  you will also be installing mmd-mode below...
+
+#### Pandoc: _(optional)_
+
+As with MultiMarkdown you don't need to have Pandoc installed to use Emacs _(until you have written something and want to export it to LaTeX, PDF, or something like that directly from Emacs)_  You can also do some of these exports with multimarkdown tricks as well...  Read the docs for both to decide how to use them.  Instructions for installing Pandoc can be found on their official website here: <https://pandoc.org/installing.html> The Pandoc.org website has most everything you will need all in one place...
+
+#### Steel Bank Common Lisp _(optional for CS research, prototyping, etc.)_
+
+Steel Bank Common Lisp is the best full-fledged Lisp compiler option for Fedora and Debian...  You don't actually need a full fledged Lisp compiler for Emacs because Emacs Slime Mode takes care of handling most things internally within Emacs and also provides a nice [REPL](https://en.wikipedia.org/wiki/Read-eval-print_loop) interface with that setup by default...  Adding Steel Bank Common Lisp to your system (with Slime mode in Emacs) is arguably the best IDE for serious Lisp projects... _(my opinion and totally biased of course ;-)_
+
+To install `SBCL` on Fedora do:
+    `$> sudo dnf install sbcl`
+
+To install `SBCL` on Debian do:
+    `$> sudo apt install sbcl`
+
+That's it... simple but powerful _(like lisp)_
+
+
 
 ### Backup existing Emacs which may already be installed:
 
