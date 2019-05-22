@@ -24,6 +24,7 @@ auto-save-list/*
 transient/*
 games/*
 recentf
+*.temp
 
 # exclude everything within my-custom-modules folder...
 # This is for you to add your own modules and git won't complain

@@ -9,21 +9,17 @@
     - [Introduction:](#introduction)
     - [Disclaimer for Windows Users:](#disclaimer-for-windows-users)
     - [My Commitment:](#my-commitment)
-    - [Details:](#details)
-    - [Start Here: _(Modular Emacs Setup)_](#start-here-modular-emacs-setup)
-        - [Requirements:](#requirements)
-            - [Emacs: V26.1+](#emacs-v261)
-            - [VMD: _(Visual MarkDown App)_](#vmd-visual-markdown-app)
-            - [MultiMarkdown: _(optional)_](#multimarkdown-optional)
-            - [Pandoc: _(optional)_](#pandoc-optional)
-            - [Steel Bank Common Lisp _(optional for CS research, prototyping, etc.)_](#steel-bank-common-lisp-optional-for-cs-research-prototyping-etc)
-        - [Backup existing Emacs which may already be installed:](#backup-existing-emacs-which-may-already-be-installed)
-        - [Clone: Harmonic Alchemy Modular Emacs](#clone-harmonic-alchemy-modular-emacs)
-        - [Clone MultiMarkdown Mode:](#clone-multimarkdown-mode)
-        - [Clone RMOO MOO Client from Github: _(optional)_](#clone-rmoo-moo-client-from-github-optional)
-        - [Copy `me.init.el` to: `init.el`:](#copy-meinitel-to-initel)
-        - [Create an empty `custom.el` file:](#create-an-empty-customel-file)
-    - [OK... Ready Freddy? Start up Emacs and see what happens!](#ok-ready-freddy-start-up-emacs-and-see-what-happens)
+    - [Start Here: _(Modular Emacs Installation)_](#start-here-modular-emacs-installation)
+    - [Requirements:](#requirements)
+        - [Emacs: V26.1+](#emacs-v261)
+            - [Commands to install Emacs on various unix platforms:](#commands-to-install-emacs-on-various-unix-platforms)
+        - [NODE.js:](#nodejs)
+        - [VMD: _(Visual MarkDown App)_](#vmd-visual-markdown-app)
+        - [MultiMarkdown: _(optional)_](#multimarkdown-optional)
+        - [Pandoc: _(optional)_](#pandoc-optional)
+        - [Steel Bank Common Lisp _(optional for CS research, prototyping, etc.)_](#steel-bank-common-lisp-optional-for-cs-research-prototyping-etc)
+    - [Final Step (make Modular Emacs folder the default `~/.emacs.d` folder](#final-step-make-modular-emacs-folder-the-default-emacsd-folder)
+    - [OK... Ready Freddy?  Lets Start up Emacs and see what happens!](#ok-ready-freddy--lets-start-up-emacs-and-see-what-happens)
     - [Features:](#features)
         - [Pre-configured packages - Comprehensive list:](#pre-configured-packages---comprehensive-list)
             - [Misc. Packages:](#misc-packages)
@@ -46,69 +42,84 @@
 
 ## Introduction:
 
-**Welcome to Harmonic Alchemy Modular Emacs - _Official V1.0.2 point release Q2-2019_** -
+**Welcome to Harmonic Alchemy Modular Emacs - _V1.0.3 - Q2-2019_**
 
-> **Note:** I still have not solved the Mac OS glitch, of not getting shell environment vars into Emacs, _(Emacs cannot find the VMD app)_.  I still suspect the cause is external to Emacs though...  The band-aid fix is to start Emacs from the shell and everything works fine... So I got that problem on the back burner for now...  If you are a Mac User and find a solution please let me know! I will give you credit!
+> **Note:** Currently editing this doc... it's good down to Start Here but after that many changes are going on... This note will dissapear once this doc is all updated... Thanks!
 
-This project has been a long time coming.  Its history goes back a few years ago when I went searching for some better ways to configure my then pretty basic Emacs configuration of over 10 or so years!  I cloned a few Emacs repos on Github to try different things out for a while.  I liked some things and tried to get rid of other things after installing them which got confusing after a while. I ended up with lots of questionable elisp code, much of which were things possibly no longer needed!  After a couple years of adding/removing configuring/re-configuring it started feeling like I was painting myself into a tangled corner like getting _"lost in a maze of twisty little passages all different"_!  So I decided to start over from scratch and modularize everything with the idea of preventing tangled messes like this from happening with your own Emacs setups!
+This project has been a long time coming.  Its history goes back a few years ago when I went searching for some better ways to configure my then pretty basic Emacs configuration of over 10 or so years!  I cloned a few Emacs repos on Github to try different things out for a while.  I liked some things and tried to get rid of other things later.  
 
-I am a devOps engineer, computer scientist, composer/musician, sound designer, architect, writer/publisher.  I wear a lot of hats! My emacs needs to wear a lot of hats as well!  I am attempting to build features into **Emacs** that empower all the above without becoming an over complicated mess! **_"good luck with that"_**  :octocat:
+Management became confusing after a while.  I ended up with lots of questionable elisp code, much of which were things possibly no longer needed!  Lets face it... I was not keeping good logs... I was being a cowgirl and got into trouble!  It was my fault.  I learned a lot in the process though...  
 
-## Disclaimer for Windows Users:
+After a couple years of **adding**, **removing**, **configuring**, **re-configuring** it started feeling like I was painting myself into a tangled corner like getting lost in **_"a maze of twisty little passages all alike!"_**  So I decided to start over from scratch and modularize everything with the purpose of preventing tangled messes like this from happening within your own Emacs setups! _(and mine too_ `%^)`
 
-For the first 10 years out of college, I worked around the Boston 128 area as a hired gun scientific and industry control systems programmer.  The systems I worked on were either unix or VAX VMS based main-frames _(or mini-mainframes)_ and workstations. My favorite OS back then was HP-UX. I used Apollo workstations for a short while and then we switched to SUN workstations.  When the really nice HP-UX workstations came around, I was in love!  At home I have always used a Mac...  I had the first classic Mac+ when it first came out around 1985...  
+**Modular Emacs** is more than just Emacs with configurable modules however... It is also designed to be the centerpiece **_(command central)_** of a larger **DevOps** / **PubOps** **Personal IDE** workstation or laptop.  I am a devOps engineer, computer scientist, composer/musician, sound designer, architect, writer/publisher.  I wear a lot of hats! My Emacs needs to wear a lot of hats as well!  The central focus of **Modular Emacs** is to build empowering features into **Emacs** utilizing a modular framework that facilitates all the above without becoming an over complicated mess to manage! **_"good luck with that"_**  :octocat:
 
-I did not do any IBM PC (Windows) programming until I went to work for IBM around 15 years later.  At that point I was a software architect and I hated MS Visual Studio even for prototyping designs!  After leaving IBM I started my own Application Service Provider (ASP) company _(what we used to call the Cloud)_ and based my co-located servers on SCO unix (for commercial work) and other flavors of BSD, and RedHat Linux for open-source projects...  
+> **NOTE:** Earlier versions of this project called out some things in the **_Requirements_** section as **_optional_** to give interested users the option to install only the basics...  However this is not the purpose of **Modular Emacs**... **_It is not basic at all..._**   
 
-I have been retired since 2017 but I am doing more development, writing, and music than ever before!  Funny how that works once the checks start showing up for free. %^)  All my efforts are focused on open-source development and I am putting together a publishing platform within a private 100% open-source cloud for our local community here on Orcas Island...
+> **Modular Emacs** was designed to be easy to maintain and configure through the management of independent modules and in that sense Modular Emacs hopefully forms a basic sensible framework that is easy to manage and flexible enough to adjust to your work-style, programming-style, and writing-style...  
 
-OK I got off track there... The main point of that long story above is if you use Emacs on Windows, you could help me immensely by testing Modular Emacs within your MS Windows environment. _(As you can see above, I am a Windows dummy who has not tested any of this on Windows yet!)_   
+> However, Your Modular Emacs experience will be much reduced without any of the extra features afforded by the external requirements...   It will feel crippled when some expected action results in "not defined" messages... Stripped of all the external helper apps etc, Modular Emacs may not provide any advantage over many of the other simpler Emacs projects on GitHub...
 
-If you find glitches please let me know... I need your knowledge for that part...  I will give you credit for any Windows solutions you provide.  I had some problems with _(unwanted)_ scroll bars showing up on new frames _(after initial frame)_ and read about others having this problem on Windows... I found a simple _(best practice)_ fix for Mac OS and Linux, but don't know if it will work on Windows yet...  
+Therefore, if all you need is vanilla Emacs, _(with some of the more basic options thrown in)_, you don't need Modular Emacs at all.  Here is a simpler _"sensible"_ Emacs Config: **[hrs/sensible-defaults.el](https://github.com/hrs/sensible-defaults.el)**  _(which claims to also be modular - I have not tried it.  I only briefly read through the README.  It looks like a good alternate option to try)_   
 
-I have already added in some _(commented out)_ code to: `.../lisp/modules/06-interface.el` after reading some things on Stack Exchange about problems with scroll bars on Windows...  You could un-comment them to try if you are having the same problems...  Let me know if that works...  Thanks!
+For those of you who feel this may be exactly what you were looking for... By all means!  Dive in and try Modular Emacs...  There are some external requirements... It may take a while... OK?  Great... Lets go...  Eventually I will script this up so you can just enter this at the command prompt: **`./.emacs.d/install.sh`** and be done with it...  That script will be installing a lot of things though... I have to work all that out as a **non-interactive** process.  It should auto install everything from that single running shell script...  If you have to answer questions and make decisions... Better that you execute manually instead, and read the docs first...  Right?  
 
-But also in general, if you like this "modular" Emacs idea, please drop me a note to let me know! Please do ask questions, etc.  Thanks!  I have been using Emacs for over 25 years but I never shared any of that Emacs knowledge with anyone before now... :heart_decoration:
+And so for now... We will learn this together... Please give feedback, ask questions!  Thanks ;-)
 
-> **_"Always do what is right. It will gratify half of mankind and astound the other."_** - Mark Twain
+## Note for Windows Users:
+
+I have no idea whether this project will work on Windows and I have no experience using Emacs on Windows or Cygwin...  If you use Emacs on Windows, you could help the Windows user community immensely by testing Modular Emacs within your MS Windows environment!  
+
+If you find glitches please let me know... I need your knowledge for that part...  I will give you credit for any Windows solutions you provide.  I had some problems with _(unwanted)_ scroll bars showing up on new frames _(after initial frame)_ and read about others having this problem on Windows... I found a simple _(best practice)_ for Mac OS and Linux, but don't know if it will work on Windows...  
+
+I added some _(commented out)_ code to: `.../lisp/modules/06-interface.el` after reading some things on Stack Exchange about problems with scroll bars on Windows...  You could un-comment this code and try it if you are having the same problems...  Let me know if that works...  Thanks!  
 
 ## My Commitment:
 
-I promise to strive to make this **process/journey** as painless as possible for you as I have found many other Emacs setups to be way to complicated to make it easy for adoption into my workflow, and you are probably experiencing the same!  On the other end of the spectrum... Installing simple Emacs alone is not enough to get you started (IMHO)...  
+> **_"Always do what is right. It will gratify half of mankind and astound the other."_** - Mark Twain  
 
-Therefore: **Here is Modular Emacs!** I hope my long years of **devOps** experience will turn out a nice jewel for new comers to try out and succeed with!  **Good Luck and God Speed!**
+I am committed to making this **process/journey** as painless as possible for you as I have found many other Emacs setups to be way to complicated to make it easy for adoption into my workflow, and you are probably experiencing the same!  On the other end of the spectrum... Installing simple Emacs alone is not enough to get you started (IMHO)...  
 
-## Details:
+If you end up liking **Harmonic Alchemy Modular Emacs**, please drop me a note to let me know! Please do ask questions, etc.  Thanks!  I have been using Emacs for over 25 years but I never shared any of that Emacs knowledge with anyone before now... :heart_decoration:  
 
-The above requirements are pretty much all you need to get ready for installing and running this project in your home directory... Also, not covered here, you need to have a standard unix like development environment set up on your machine as well, _(even if all you intend to do is write but not code)_ you will still need to have some of the standard **devTools** installed and configured to make some of these cool writer's features work well.
+Therefore: **Here is Modular Emacs!** I hope my long years of **devOps** experience will turn out a nice jewel for new comers to try out and succeed with!  **Good Luck and God Speed!**  
 
-Discussion of getting the rest of your development environment configured is outside the scope of this project.  However, for example: On **Mac OS** you will need to have **Xcode** and **Homebrew** installed for any of this to work correctly on a Mac.  The best way to do that is to go to the **[Homebrew main website](https://docs.brew.sh/Installation)** first and use their instructions for installing Homebrew on Mac OS.  They will point you in the right direction for installing the required Xcode tools first...  Likewise on Linux you will need to install some standard unix devTools via your distro's package manager...
+## Start Here: _(Modular Emacs Installation)_  
+## Requirements:  
+### Emacs: V26.1+  
 
-This project and everything you need to install and run it is all open-source and very portable across many computing platforms!  With this project installed you will easily be able to edit any `markdown` or `.org` text file within any Emacs buffer while at the same time previewing **live real-time updates** to the automagically rendered version of the buffer you are editing!  This is currently the **only** way I have found it possible to perform live edits within a text file and see the results displayed (as you type) within another window fully rendered as it would look on a website!  That feature alone is totally revolutionary for any writer to use!  
+Many of the default packages installed with this project will not work with previous versions of Emacs. Also the security of older Emacs and packages is Horrendous! Recently, some of the older packages were removed from the updated MELPA and the entire site is TLS enabled now!  These new features are vital for being reasonably safe going forward from 2018 onward, so I decided not to support lesser versions of Emacs...  
 
-**OMG! _This is a life saver for me who has to use Scrivener_** on a **_Mac_** _(proprietary software)_ to organize all my reference and fiction writing projects...  Eventually I plan to replace **Scrivener** with a powerful `org-mode` based **Emacs Publishing Environment**. Then I will be open-source future proof finally! You can't imagine how many times over the past 30 years! I had to go through some painful conversion process after the proprietary app I was using (for several years) suddenly became obsolete, the company went out of business, or they just dropped that product without asking my permission!  :grimacing:  :weary:
+> **Warning:** If you have a really old version of Emacs currently installed you should backup all emacs related files: _(i.e.,_ `.emacs` `.emacs.d`_)_ located in your $HOME directory.  Simply move them into a temporary directory of your choice before upgrading below...  If you have saved key commands etc., you can get them back later as long as the modules they invoke have also been updated and work with Emacs V26.1...  
 
-For you Millennials, 30 years ago was before the web, and even before the Internet itself was commercialized as well!  Back then we called it the ARPANET. _I came aboard shortly after it was changed to DARPANET but we never called it that_ ;-)   btw, I am still waiting for some of the original specs to get done,  _(e.g., `P2P`, `blockchain`, `smart-contracts`, `consensus algorithms`, etc.)._  All that still needs to be implemented! 
+#### Commands to install Emacs on various unix platforms:  
 
-I said above **_"still waiting"_** because many are calling all those features: **Web 3.0** when it really should be **Internet 1.0!**  The government wanted those features to make our Internet truly bomb proof, but business trumped them... Don't believe it? Can you say **_"distributed adaptive message block switching"?_**  Go read the original BSD specs...  You will see that all that **client/server** stuff was a compromise that ended up sticking when we all went commercial... To be honest, we did not have the tech back then to implement all those requirements in a practical way.  Now we do... **_"Decentralized adaptive message block switching. lol"_** _(well almost...)_ Consensus and Byzantine Fault Tolerance is a bitch to get right!  But Lets get it done already! OK? ;-)
+_(Choose your Flavor:)_  
 
-By using open source exclusively as much as possible, your bottom line becomes: **_(If you use it and the maintainer quits support, you can fork the project and support it yourself!  You have options, and you can take total control of the software if needed.)_** More importantly, you will own outright your own copy of this software and may do with it as you like, **_(except make it into a proprietary product of course)_**.  
+[Fedora 27-29]:~$ `sudo dnf install emacs`  
 
-The **_share-and-share-alike_** rule keeps your work and all its derivatives open-source for others to fork and/or contribute which will help you smash those bugs much faster!  You will also be taking part in a global community and will make some very interesting friends over time!  This is all good for the open-source ecosystem.  It keeps it healthy and keeps it alive!  This is the true meaning of **_"Free Software"_** and the original reason I decided to adopt my life to it.  There are many other great reasons for using all **FOSS** as well of course...  Therefore... keeping in the spirit of "The Cathedral and the Bazaar", here we bravely go!  Enough talking already!
+[Debian9 Stretch]:~$ `sudo apt install emacs` _**Note:** the Debian Package Repo (and all mirrors) call this package version: `46.1` which must obviously be a typo unless they time traveled into the future! lol - that may be fixed (with a new signed release) by the time you read this :octocat:_  
 
-> **_"There are basically two types of people. People who accomplish things, and people who claim to have accomplished things. The first group is less crowded."_** - Mark Twain
+[Ubuntu 18.04 LTS]:~$ `sudo apt install emacs`  _(don't install any of the other listed emacs packages as older versions are also supported by Ubuntu - If you already have them installed issue: $> `sudo apt purge` all of the older versions first)_  
+
+[Mac OS]:~$ `brew install emacs` _(Install from Homebrew)_  
+
+**Free BSD - OpenBSD]** Install the most recent prebuilt binary package of Emacs:   _(must be up to v26.1 by now - 2019-May)_
+
+[BSD]:~$ `pkg_add -r emacs`
+
+### NODE.js:
+
+**NODE** is a very popular open-source, cross-platform JavaScript run-time environment that executes JavaScript code outside of a browser. This allows developers to create web-apps and run them anywhere...  Not just within a browser... and not just on a remote server... They can run in your local environment as well and perform nifty tasks for you!  Quick prototype like development as well.. No wonder it's so popular!  Node.js is bringing the AI and Machine Learning Lab to inexperienced programmers!  That's way cool!  A Gateway language to Lisp Addiction?  Maybe Python first. ;-)
+
+The easiest way to install NODE.js _(as of this writing May 2019)_ is to install the **NODE Version Manager (NVM)** by running the following command within your $HOME directory:
+
+$> `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash`
+
+> **Note:** The same command above can also be used later to **Update NVM**... You can always find the latest version of this script (and command) within the README file located in: [NVM's Github Repository](https://github.com/nvm-sh/nvm)...  
 
 
-## Start Here: _(Modular Emacs Setup)_
-### Requirements:
-
-I strive to make this simple starting out with as few fancy extras as possible.  This will provide you with a simpler base from which to build to your own needs... Having said that... there are a few things I find to be vital for anyone who writes as well as codes and this means you... **All coders need to document as well, so there you go!**  **_My plan is to build the best Emacs Skeleton Base Configuration for Writing as well as Coding..._**  Please help me accomplish this goal!  I will need your input!  For now here is what you need to do:
-
-#### Emacs: V26.1+
-
-Many of the default packages installed with this project will not work with previous versions of Emacs. Also the security of older Emacs and packages is Horrendous! Recently, some of the older packages were removed from the updated MELPA and the entire site is TLS enabled now!  These new features are vital to make things work well, staying reasonably safe going forward from 2018 onward, so I decided not to support lesser versions of Emacs...  The latest version of Emacs is available on Fedora and also on the latest version of Debian 9.8 _(Just Released - I think may also have Emacs 26)_. On Debian you still may have to build from source.  The new version of Debian _(Buster)_ will include Emacs 26.1 for sure, and that is coming soon!  On Mac OS you can get the latest version of Gnu Emacs via Homebrew...  There are easy ways to get the latest version of Emacs on Ubuntu LTS as well... _(You may have to install from source within your system `sudo user's` $HOME account however)_.  Don't give your Apache web user the Emacs App.  That would increase your server's WWW attack surface with far too many holes in my humble opinion... On servers, install Emacs locally within your System Admin Users account only.  Let's keep this part open to discussion... Better solutions will present themselves.     
-
-#### VMD: _(Visual MarkDown App)_
+### VMD: _(Visual MarkDown App)_
 
 This is a stand alone `node.js` **Electron Web App** that you need to install in your `$HOME` directory for this Emacs setup to use.  **VMD** allows you to visualize the results of your edits of **markdown files:** `.md` & **ORG files:** `.org` **instantly! _(in  real time, while you edit the markdown text within your Emacs buffer, all without the need for a full web browser)..._**     
 Your rendered markdown will appear as it would look on Github!  This is a **_much smarter tool for writing/publishing_** because it combines the ease of: `WYSIWYG` with the power of `text-editors`.  That is the best of both worlds with no compromise!     
@@ -117,24 +128,32 @@ Your rendered markdown will appear as it would look on Github!  This is a **_muc
 
 The best way to install **VMD** is locally within your home directory _(not system wide via your distro's package manager, or app store)..._    
 The best way to install locally is to install it as a `Node.js` package...      
-To do that you must first install **Node Version Manager** `NVM` using a script from: [`https://github.com/creationix/nvm`](https://github.com/creationix/nvm).      
+To do that you must first install **Node Version Manager** `NVM` using a script from: [`https://github.com/nvm-sh/nvm`](https://github.com/nvm-sh/nvm).
+
+
+
+
+
+
+
+      
 Follow the instructions on the above linked `nvm` Github project to install **NVM**, and the latest `LTS` version of `node.js`  Once you have the latest version of `node.js` installed you will also have `NPM`**_Node Package Manager_** installed with it, _(because it is bundled with the latest LTS versions of `node.js`)_  
 
 **Whew!**  That was a lot to digest! It's probably the most difficult part of this whole thing, but once that is done via the linked instructions above, you can easily install VMD with the following command: _(from your home directory)_  
 > `$ cd ~/`     
 > `$ npm install -g vmd`  
 
-#### MultiMarkdown: _(optional)_
+### MultiMarkdown: _(optional)_
 
 You don't actually need the MultiMarkdown package installed on your machine to use MultiMarkdown in Emacs.  There is a package for that which you will be installing further down within this document.  However you will need multimarkdown installed later to do some fancy publishing tricks and conversions...  Some of that functionality overlaps with Pandoc as well.  It does not hurt to have both of these technologies installed on your machine...
 
 If you are on Mac OS you can install MultiMarkdown via Homebrew.  `$> brew install multimarkdown`.  On Linux follow the instructions on this page <https://fletcher.github.io/peg-multimarkdown/> This same page will show you how to customize MultiMarkdown as well but don't do any of that yet. You won't know what you need until you have used it for a while.  That's it for now...  you will also be installing mmd-mode below...
 
-#### Pandoc: _(optional)_
+### Pandoc: _(optional)_
 
 As with MultiMarkdown you don't need to have Pandoc installed to use Emacs _(until you have written something and want to export it to LaTeX, PDF, or something like that directly from Emacs)_  You can also do some of these exports with multimarkdown tricks as well...  Read the docs for both to decide how to use them.  Instructions for installing Pandoc can be found on their official website here: <https://pandoc.org/installing.html> The Pandoc.org website has most everything you will need all in one place...
 
-#### Steel Bank Common Lisp _(optional for CS research, prototyping, etc.)_
+### Steel Bank Common Lisp _(optional for CS research, prototyping, etc.)_
 
 Steel Bank Common Lisp is the best full-fledged Lisp compiler option for Fedora and Debian...  You don't actually need a full fledged Lisp compiler for Emacs because Emacs Slime Mode takes care of handling most things internally within Emacs and also provides a nice [REPL](https://en.wikipedia.org/wiki/Read-eval-print_loop) interface with that setup by default...  Adding Steel Bank Common Lisp to your system (with Slime mode in Emacs) is arguably the best IDE for serious Lisp projects... _(my opinion and totally biased of course ;-)_
 
@@ -146,86 +165,8 @@ To install `SBCL` on Debian do:
 
 That's it... simple but powerful _(like lisp)_
 
-
-
-### Backup existing Emacs which may already be installed:
-
-In the future I plan to include a shell script that will do all of this automagically for you...  Doing that now, _(while I work on bugs etc.)_ would not make sense right?  At some point I may even include a Docker file or some other container tech... :gift:
-
-If you already have emacs installed, you should backup your existing environment first.  Simply renaming your existing `~/.emacs.d/` folder and any `.emacs` init files that may also be in your home directory is sufficient...  Change them to something like: `.default.emacs` &  `.default.emacs.d`.  Don't delete these renamed files from your `$HOME` directory...   You may need them later to come back to if you get into trouble and just want things back the way they were before you decided to try any of this out...  To start over, or give up...  What ever... Hopefully not to give up! :no_good:
-
-Now you are ready to clone Harmonic Alchemy Modular Emacs into your home directory as: `~/.emacs.d/`
-
-But lets Hold off cloning directly to `~/.emacs.d` and consider the following possible scenario: If you are using emacs on a daily basis and are used to that, you need to use your existing emacs setup to do some of the things below...  If you prematurely remove your emacs environment ahead of time you will have to resort to command line only to do everything below...
-
-In that case, leave your existing **`~/.emacs.d`** folder as it is... _(don't rename it as instructed above)_...  Instead, clone `modular-emacs` to a temporary name i.e., `me.emacs.d` first.  Then you will be able to use your existing emacs environment (the one you are used to using) to finish doing the configurations below... **_This is how we will do it in the following example:_** No harm done doing it either way.  Just understand the temporary directory name we used below will be different if you are doing it directly to **`$HOME/.emacs.d`** :house_with_garden:  
-
-### Clone: Harmonic Alchemy Modular Emacs
-
-_(clone to a temporary directory `~/me.emacs.d`)_
-
-    $ git clone https://github.com/harmonicalchemy/modular-emacs.git ~/me.emacs.d
-
-This will clone `modular-emacs.git` into a fresh new empty `me.emacs.d` directory in your home directory.  Everything you need to run Emacs will be installed within that parent directory exclusively.  No outside .emacs init files will be created or used...
-
-If you navigate within your new cloned directory you will find the `lisp` sub directory.  Go into the **`lisp`** directory and you will see three sub directories there: **`modules`**, **`my-modules`**, & **`themes`**...
-
-The purpose of the **`my-modules`** folder is to give you a place to keep your own extensions to **Modular Emacs** without causing **git** to complain about new un-tracked files.  `my-modules` has been added to `.gitignore` so anything you create within that directory will be ignored as well!  This way you can try out different things without worrying about messing up the base install...  
-
-> **Note:** It is important that **git** ignores all content within `$HOME/me.emacs.c/lisp/my-modules` because you will be cloning other **git repositories** inside `my-modules` and we don't really want to get into a complicated `git-sub-modules` mess do we?  You are free to clone and try out any extra Emacs things within `my-modules` folder to your hearts content!  Modular Emacs will stay clean outside...
-
-### Clone MultiMarkdown Mode:
-
-Clone my fork of MultiMarkdown Mode (`mmd-mode`) from Github into the `lisp/my-modules` directory:**   
-
-> **Note:** _This package is no longer available on `MELPA` but it is required for `modular-emacs` to run...  It makes **markdown** files like this look good on GitHub!_ :octocat: You can also customize the lisp module to change how different elements look.  We will clone this into **`my-modules`** so that it will be ignored...  If it were on `MELPA` it would be installed within the `melpa` directory _(which is also ignored by git in this project)_
-
-```
-   $ cd ~/me.emacs.d/lisp/my-modules
-   $ git clone https://github.com/harmonicalchemy/mmd-mode.git 
-```
-
-### Clone RMOO MOO Client from Github: _(optional)_
-
-**RMOO** is a LambdaMOO client for Emacs that will also work with other MUDs as well.  Many **LambdaMOO** features are supported by `RMOO` which is more than most `MUD` clients these days.  Since I intend to get back into MOO programming I am looking for the best possible Emacs client to start with.  I first found Matt Campbell's original `rmoo` on Github at: `https://github.com/toddsundsted/rmoo`...  But then I found a fork that has been somewhat improved and was last updated November 16, 2018... This fork was made by **lisdude** on Github: `https://github.com/lisdude/rmoo`...  I have forked this fork into my own Github account in order to add more features if needed...
-
-```
-    $ cd ~/me.emacs.d/lisp/my-modules
-    $ git clone https://github.com/harmonicalchemy/rmoo.git
-```
-
-> **Note:** To use the `rmoo` MOO client within Emacs, you need to enable the **Games Module:** by un-commenting the last load file line in: `~/.emacs.d/lisp/modules/dispatcher.el` that calls: `.../lisp/modules/11-games-pkg-conf.el`... 
-
-I will be updating and or modifying this fork for my own MOO needs... When that time comes I may be publishing my own version of `rmoo` on GitHub...
-
-
-### Copy `me.init.el` to: `init.el`:
-
-We are almost done now... Go back to your cloned `me.emacs.d` parent directory and copy the init.el reference file:
-
-```
-   $ cd ~/me.emacs.d
-   $ cp me.init.el init.el
-```
-
-_`init.el` has also been put into .gitignore so you can edit that file to your hearts content without disrupting the state of the master branch!_  You may also choose to add your `init.el` copy to a local git branch in parallel to track your own custom changes to that file as well...  
-
-> **Note:** Don't mess with **`~/.emacs.d/me.init.el`**.  That is there for reference only...  You may need to copy it again if you mess up your first copy somehow or you simply want to get back to the default setup out of box to start over or something like that...
-
-### Create an empty `custom.el` file:
-
-Modular Emacs is configured to save all **"Emacs Customize"** configurations _(i.e., from the Options menu)_ to a file named: `custom.el`
-
-```
-   $ cd ~/me.emacs.d
-   $ touch custom.el
-```
-
-This file is named within the `.gigignore` file so that anytime you use the built in Customize features of Emacs they won't disrupt the state of your master branch...
-
-
-
-## OK... Ready Freddy? Start up Emacs and see what happens!
+## Final Step (make Modular Emacs folder the default `~/.emacs.d` folder
+## OK... Ready Freddy?  Lets Start up Emacs and see what happens!
 
 First Rename your existing:  **`~/.emacs.d`** to: **`~/save.emacs.d`** _(You may have already done this in the beginning)_  You may also have a `.emacs` init file outside of the `.emacs.d` folder that also needs to be renamed!
 
@@ -391,4 +332,7 @@ helm-show-kill-ring        | `M-y`
 mc/mark-next-like-this     | `C-}`
 mc/mark-previous-like-this | `C-{`
 mc/mark-all-like-this      | `C-|`
+
+
+
 
