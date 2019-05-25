@@ -60,6 +60,8 @@
 ;; 
 ;; Disable mouse wheel (and two finger swipe) scrolling because
 ;; it scrolls horribly and I would rather work without it. %^)
+;; also disable the middle mouse (mouse-2) pasting text by accident
+;; really annoys me!
 ;;
 (mouse-wheel-mode -1)
 (global-set-key [wheel-up] 'ignore)
@@ -74,6 +76,11 @@
 (global-set-key [triple-wheel-down] 'ignore)
 (global-set-key [triple-wheel-right] 'ignore)
 (global-set-key [triple-wheel-left] 'ignore)
+(global-set-key [mouse-2] 'ignore)
+
+;(global-set-key [mouse-yank-at-point] 'ignore)
+;(setq mouse-yank-at-point nil)
+
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;; Set default Frame Dimensions:

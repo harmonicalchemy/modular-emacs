@@ -7,7 +7,7 @@
 
 - [Harmonic Alchemy Modular Emacs:](#harmonic-alchemy-modular-emacs)
     - [Introduction:](#introduction)
-    - [Disclaimer for Windows Users:](#disclaimer-for-windows-users)
+    - [Note for Windows Users:](#note-for-windows-users)
     - [My Commitment:](#my-commitment)
     - [Start Here: _(Modular Emacs Installation)_](#start-here-modular-emacs-installation)
     - [Requirements:](#requirements)
@@ -15,7 +15,9 @@
             - [Commands to install Emacs on various unix platforms:](#commands-to-install-emacs-on-various-unix-platforms)
         - [NODE.js:](#nodejs)
         - [VMD: _(Visual MarkDown App)_](#vmd-visual-markdown-app)
-        - [MultiMarkdown: _(optional)_](#multimarkdown-optional)
+        - [MultiMarkdown:](#multimarkdown)
+            - [Install Multimarkdown on Mac OS:](#install-multimarkdown-on-mac-os)
+            - [Install Multimarkdown on Linux:](#install-multimarkdown-on-linux)
         - [Pandoc: _(optional)_](#pandoc-optional)
         - [Steel Bank Common Lisp _(optional for CS research, prototyping, etc.)_](#steel-bank-common-lisp-optional-for-cs-research-prototyping-etc)
     - [Final Step (make Modular Emacs folder the default `~/.emacs.d` folder](#final-step-make-modular-emacs-folder-the-default-emacsd-folder)
@@ -44,13 +46,14 @@
 
 **Welcome to Harmonic Alchemy Modular Emacs - _V1.0.3 - Q2-2019_**
 
-> **Note:** Currently editing this doc... it's good down to Start Here but after that many changes are going on... This note will dissapear once this doc is all updated... Thanks!
+> **Note:** Currently editing this doc... it's good down to Start Here but after that many changes are going on... This note will disappear once this doc is all updated... Thanks!
 
-This project has been a long time coming.  Its history goes back a few years ago when I went searching for some better ways to configure my then pretty basic Emacs configuration of over 10 or so years!  I cloned a few Emacs repos on Github to try different things out for a while.  I liked some things and tried to get rid of other things later.  
+This project has been a long time coming.  Its history goes back a few years ago when I went searching for some better ways to configure my then pretty basic Emacs configuration of over 10 or so years!  I cloned a few Emacs repos on Github to try different things out for a while.  I liked some things and tried to get rid of other things later.  Management became confusing after a while.  I ended up with lots of questionable elisp code, much of which were things possibly no longer needed!  
 
-Management became confusing after a while.  I ended up with lots of questionable elisp code, much of which were things possibly no longer needed!  Lets face it... I was not keeping good logs... I was being a cowgirl and got into trouble!  It was my fault.  I learned a lot in the process though...  
+After a couple years of **adding**, **removing**, **configuring**, **re-configuring** it started feeling like I was painting myself into a tangled corner like getting lost in **_"a maze of twisty little passages all alike!"_**  Lets face it... I was not keeping good logs... I was being a cowgirl and got into trouble!  It was my fault.  I learned a lot in the process about SH, BASH, and ZSH best practices though...  
 
-After a couple years of **adding**, **removing**, **configuring**, **re-configuring** it started feeling like I was painting myself into a tangled corner like getting lost in **_"a maze of twisty little passages all alike!"_**  So I decided to start over from scratch and modularize everything with the purpose of preventing tangled messes like this from happening within your own Emacs setups! _(and mine too_ `%^)`
+
+So I decided to start over from scratch and modularize everything with the purpose of preventing tangled messes like this from happening within your own Emacs setups! _(and mine as well..._ `%^)`
 
 **Modular Emacs** is more than just Emacs with configurable modules however... It is also designed to be the centerpiece **_(command central)_** of a larger **DevOps** / **PubOps** **Personal IDE** workstation or laptop.  I am a devOps engineer, computer scientist, composer/musician, sound designer, architect, writer/publisher.  I wear a lot of hats! My Emacs needs to wear a lot of hats as well!  The central focus of **Modular Emacs** is to build empowering features into **Emacs** utilizing a modular framework that facilitates all the above without becoming an over complicated mess to manage! **_"good luck with that"_**  :octocat:
 
@@ -58,11 +61,13 @@ After a couple years of **adding**, **removing**, **configuring**, **re-configur
 
 > **Modular Emacs** was designed to be easy to maintain and configure through the management of independent modules and in that sense Modular Emacs hopefully forms a basic sensible framework that is easy to manage and flexible enough to adjust to your work-style, programming-style, and writing-style...  
 
-> However, Your Modular Emacs experience will be much reduced without any of the extra features afforded by the external requirements...   It will feel crippled when some expected action results in "not defined" messages... Stripped of all the external helper apps etc, Modular Emacs may not provide any advantage over many of the other simpler Emacs projects on GitHub...
+> Your Modular Emacs experience will be much reduced without any of the extra features afforded by the external requirements...   It will feel crippled when some expected action results in "not defined" messages... Stripped of all the external helper apps etc, Modular Emacs may not provide any advantage over many of the other simpler Emacs projects on GitHub...
 
-Therefore, if all you need is vanilla Emacs, _(with some of the more basic options thrown in)_, you don't need Modular Emacs at all.  Here is a simpler _"sensible"_ Emacs Config: **[hrs/sensible-defaults.el](https://github.com/hrs/sensible-defaults.el)**  _(which claims to also be modular - I have not tried it.  I only briefly read through the README.  It looks like a good alternate option to try)_   
+Therefore, if all you need is vanilla Emacs, _(with some of the more basic options thrown in)_, you don't need Modular Emacs at all.  Here is a simpler light weight _"sensible"_ Emacs Config: **[hrs/sensible-defaults.el](https://github.com/hrs/sensible-defaults.el)**  _(which claims to also be modular - I have not tried it.  I only briefly read through the README.  It looks like a good alternate option to try)_   
 
-For those of you who feel this may be exactly what you were looking for... By all means!  Dive in and try Modular Emacs...  There are some external requirements... It may take a while... OK?  Great... Lets go...  Eventually I will script this up so you can just enter this at the command prompt: **`./.emacs.d/install.sh`** and be done with it...  That script will be installing a lot of things though... I have to work all that out as a **non-interactive** process.  It should auto install everything from that single running shell script...  If you have to answer questions and make decisions... Better that you execute manually instead, and read the docs first...  Right?  
+For those of you who feel **[Harmonic Alchemy Modular Emacs](https://github.com/harmonicalchemy/modular-emacs)** may be exactly what you were looking for... By all means!  Dive in and try Modular Emacs!
+
+There are some external requirements... It may take a while... If that's OK with you, Great!... Lets go...  Eventually I will script this up so you can just enter this at the command prompt: **`./.emacs.d/install.sh`** and be done with it...  That script will be installing a lot of things though... I have to work all that out as a **non-interactive** process.  It should auto install everything from that single running shell script...  If you have to answer questions and make decisions... Better that you execute manually instead, and read the docs first...  Right?  
 
 And so for now... We will learn this together... Please give feedback, ask questions!  Thanks ;-)
 
@@ -72,7 +77,7 @@ I have no idea whether this project will work on Windows and I have no experienc
 
 If you find glitches please let me know... I need your knowledge for that part...  I will give you credit for any Windows solutions you provide.  I had some problems with _(unwanted)_ scroll bars showing up on new frames _(after initial frame)_ and read about others having this problem on Windows... I found a simple _(best practice)_ for Mac OS and Linux, but don't know if it will work on Windows...  
 
-I added some _(commented out)_ code to: `.../lisp/modules/06-interface.el` after reading some things on Stack Exchange about problems with scroll bars on Windows...  You could un-comment this code and try it if you are having the same problems...  Let me know if that works...  Thanks!  
+I added some _(commented out)_ code to: `.../lisp/modules/06-interface.el` after reading some things on Stack Exchange about problems with scroll bars on Windows...  You could un-comment this code and try it if you are having the same problems...  If that works for you, please open up an Issue about that and I will update this doc to let everyone else know...  Thanks!  
 
 ## My Commitment:
 
@@ -94,41 +99,132 @@ Many of the default packages installed with this project will not work with prev
 
 #### Commands to install Emacs on various unix platforms:  
 
-_(Choose your Flavor:)_  
+_(Choose your Flavor)_  
 
-[Fedora 27-29]:~$ `sudo dnf install emacs`  
+- **[Fedora 27-29]:~$ `sudo dnf install emacs`**  
 
-[Debian9 Stretch]:~$ `sudo apt install emacs` _**Note:** the Debian Package Repo (and all mirrors) call this package version: `46.1` which must obviously be a typo unless they time traveled into the future! lol - that may be fixed (with a new signed release) by the time you read this :octocat:_  
 
-[Ubuntu 18.04 LTS]:~$ `sudo apt install emacs`  _(don't install any of the other listed emacs packages as older versions are also supported by Ubuntu - If you already have them installed issue: $> `sudo apt purge` all of the older versions first)_  
+- **[Debian9 Stretch]:~$ `sudo apt install emacs`**  
+_**Note:** the Debian Package Repo (and all mirrors) call this package version: `46.1` which must obviously be a typo unless they time traveled into the future! lol - that may be fixed (with a new signed release) by the time you read this :octocat:_  
 
-[Mac OS]:~$ `brew install emacs` _(Install from Homebrew)_  
 
-**Free BSD - OpenBSD]** Install the most recent prebuilt binary package of Emacs:   _(must be up to v26.1 by now - 2019-May)_
+- **[Ubuntu 18.04 LTS]:~$ `sudo apt install emacs`**  
+_(don't install any of the other listed emacs packages as older versions are also supported by Ubuntu - If you already have them installed issue:  
+**$> `sudo apt purge`** to completely remove all of the older packages and configurations first)_  
 
-[BSD]:~$ `pkg_add -r emacs`
+
+- **[Mac OS]:~$ `brew install emacs`**  
+_(Install from Homebrew)_  
+
+**FreeBSD & OpenBSD:** Install the most recent pre-built binary package of Emacs:   _(must be up to v26.1 by now - 2019-May)_
+
+- **[BSD]:~$ `pkg_add -r emacs`**
 
 ### NODE.js:
 
-**NODE** is a very popular open-source, cross-platform JavaScript run-time environment that executes JavaScript code outside of a browser. This allows developers to create web-apps and run them anywhere...  Not just within a browser... and not just on a remote server... They can run in your local environment as well and perform nifty tasks for you!  Quick prototype like development as well.. No wonder it's so popular!  Node.js is bringing the AI and Machine Learning Lab to inexperienced programmers!  That's way cool!  A Gateway language to Lisp Addiction?  Maybe Python first. ;-)
+**NODE** is a very popular open-source, cross-platform JavaScript run-time environment that executes JavaScript code outside of a browser. This allows developers to create web-apps and run them anywhere...  Not just within a browser... and not just on a remote server... They can run in your local environment as well and perform nifty tasks for you!  Quick prototype like development is easy to do...  No wonder it's so popular!  Node.js brings **AI** and **Machine Learning** to inexperienced programmers!  That's way cool!  A Gateway language to Lisp Addiction?  Hmm... Maybe Python first before going hard core eh? ;-)
 
 The easiest way to install NODE.js _(as of this writing May 2019)_ is to install the **NODE Version Manager (NVM)** by running the following command within your $HOME directory:
 
-$> `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash`
+- **[HOME]:~$ `curl -o-** https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash`
 
-> **Note:** The same command above can also be used later to **Update NVM**... You can always find the latest version of this script (and command) within the README file located in: [NVM's Github Repository](https://github.com/nvm-sh/nvm)...  
+> **Note:** The same command above can also be used later to **Update NVM**... You can always find and review the latest version of this script (and command) within the README file located in: [NVM's Github Repository](https://github.com/nvm-sh/nvm)...:octocat:  
 
+After running the above `curl` command you will have **Node Version Manager (NVM)** up and ready on your local machine.  The script sets up proper environment variables and everything... Now you can use it to update to the latest LTS version of **NODE.js**... _(Oh Right... We have not installed Node.js yet.  We installed the installer... :octocat:_
+
+**Run the following NVM Commands from the terminal:**
+
+- List available **Node.js** versions using ls-remote:   
+$> `nvm ls-remote`  
+Jot down the version number from the (Latest LTS: ...) line...
+
+- Install Latest LTS version from the list. _(V10.15.3 As of 2019-005-22)_   
+$> `nvm install 10.15.3`  
+
+OK... Now you have the latest LTS version of **Node.js** installed. **Yay!**.  You also have a nifty new package manager called **NPM** that comes with Node.js...  You will be using **NPM** to install useful utilities like **Visual Markdown (VMD)**.  
 
 ### VMD: _(Visual MarkDown App)_
 
-This is a stand alone `node.js` **Electron Web App** that you need to install in your `$HOME` directory for this Emacs setup to use.  **VMD** allows you to visualize the results of your edits of **markdown files:** `.md` & **ORG files:** `.org` **instantly! _(in  real time, while you edit the markdown text within your Emacs buffer, all without the need for a full web browser)..._**     
-Your rendered markdown will appear as it would look on Github!  This is a **_much smarter tool for writing/publishing_** because it combines the ease of: `WYSIWYG` with the power of `text-editors`.  That is the best of both worlds with no compromise!     
+This is a stand alone **NODE.js: Electron Web App** that you need to install _(globally)_ from your `$HOME` directory for Harmonic Alchemy Modular Emacs to work well.  **VMD** allows you to visualize the results of your edits of **markdown (`.md`)** & **ORG (`.org`)** files **_Instantly... LIVE... in real time, displaying the results of your edits and cursor movements as you make them within your Emacs markdown buffer!!!_**  This is not a two step _wait-and-see_ process like normal previews are in most other Markdown Editors I have seen and used!     
 
-> **Note:** Not having **VMD** installed will not break Modular Emacs, however you will of course not be able to use Emacs with VMD, some Modular Emacs defined keys will not work, and may even cause an error within Emacs if you try those keys...  You will also see compile time errors when you first start up Modular Emacs.  After startup, Modular Emacs should work fine without VMD...
+Not only is it always **WYSIWYG** _(on the side)_, Your rendered markdown will appear as it would smartly look on Github! :octocat:  This is a **_much smarter tool for writing/publishing_** _(in my book - pun intended)_ because it combines the ease of: `WYSIWYG` with the power of `text-editors`.  That is the best of both worlds with no compromise!     
 
-The best way to install **VMD** is locally within your home directory _(not system wide via your distro's package manager, or app store)..._    
-The best way to install locally is to install it as a `Node.js` package...      
-To do that you must first install **Node Version Manager** `NVM` using a script from: [`https://github.com/nvm-sh/nvm`](https://github.com/nvm-sh/nvm).
+> **Note:** Not having **VMD** installed will not break Modular Emacs for doing other things, however you will of course not be able to use Emacs with VMD, some Modular Emacs defined keys will not work either.  If you accidentally type them you may see an error or end up in the debugger!  You will most likely see compile time errors upon first starting up Emacs as well...
+
+With Node.js, NVM, and NPM already installed _(from above)_ you can easily install VMD with the following command: _(from your home directory):_
+
+- **[HOME]:~$ `$ cd ~/`**  
+
+- **[HOME]:~$ `$ npm install -g vmd`**  
+
+### MultiMarkdown:  
+
+MultiMarkdown is needed for exporting from Markdown to other formats beyond HTML alone.  Emacs does not require it to be installed in order to format the look of the text in your markdown buffers however.  There's an Emacs package for that which you will be installing further down within this document.  Some of the publishing-format conversion functionality of **Multimarkdown** overlaps with **Pandoc** as well.  It does not hurt to have both of these technologies installed on your machine...  You will need both of them at some point to publish something somewhere in some fancy format like LA-TeX or an eBook...  
+
+#### Install Multimarkdown on Mac OS:  
+
+If you are on Mac OS you can install MultiMarkdown via Homebrew:  
+
+- $> **`brew install multimarkdown`**  
+
+That's it... Easy!  
+
+#### Install Multimarkdown on Linux:  
+
+On Linux you will have to clone and make/build/maintain Multimarkdown yourself... No package managers for this on Linux baby.  Sorry...  Hey... You wanted to be cool like the hackers and use Linux?  OK then... You don't need no stinking binary package managers anymore.  Right!  :octocat:  
+
+Make sure you have glib2 dev-files installed on your system:  
+
+- **[Debian]:~$ `sudo apt install libglib2.0-dev`**  
+
+
+- **[Ubuntu]:~$ `sudo apt install libglib2.0-dev`**  
+
+
+- **[Fedora]:~$ `sudo dnf install glib2.devel`**  
+
+Clone and build Multimarkdown into your $HOME or directory where you build things:  _(version 6 as of this writing)_
+
+- **[All-Linux]:~$ `git clone https://github.com/fletcher/MultiMarkdown-6.git`**  
+
+Update the sub-modules:  
+
+- **[All-Linux]:~$ `cd MultiMarkdown-6`**  
+
+- **[All-Linux]:~$ `git submodule init`**  
+
+- **[All-Linux]:~$ `git submodule update`**  
+
+Now compile it:  
+
+- **[All-Linux]:~$ `make`**  
+
+> **Note:**  After pulling new changes from the master repo above, always run the two `git submodule` commands afterwards to get the sub-modules updated as well...   
+
+If you want to run some tests do this:  
+
+- **[All-Linux]:~$ `make test`**  
+
+- **[All-Linux]:~$ `make mmdtest`**  
+
+- **[All-Linux]:~$ `make latextest`**  
+
+This will be more than enough for you as you also will be using **Pandoc** to convert to some of the same formats that **Multimarkdown** does...  
+
+Now that you have Multimarkdown installed, **[Download The Manual Here](https://fletcher.github.io/MultiMarkdown-5/MMD_Users_Guide.pdf)**  
+
+### Pandoc: _(optional)_  
+
+As with MultiMarkdown you don't need to have Pandoc installed to use Emacs _(until you have written something and want to export it to LaTeX, PDF, or something like that directly from Emacs)_  You can also do some of these exports with multimarkdown tricks as well...  Read the docs for both to decide how to use them.  Instructions for installing Pandoc can be found on their official website here: <https://pandoc.org/installing.html> The Pandoc.org website has most everything you will need all in one place...  
+
+
+#### Install Pandoc on Mac OS:  
+
+If you are on Mac OS you can install Pandoc via Homebrew:  
+
+- $> **`brew install pandoc`**  
+
+That's it... Easy!  
 
 
 
@@ -136,24 +232,37 @@ To do that you must first install **Node Version Manager** `NVM` using a script 
 
 
 
-      
-Follow the instructions on the above linked `nvm` Github project to install **NVM**, and the latest `LTS` version of `node.js`  Once you have the latest version of `node.js` installed you will also have `NPM`**_Node Package Manager_** installed with it, _(because it is bundled with the latest LTS versions of `node.js`)_  
 
-**Whew!**  That was a lot to digest! It's probably the most difficult part of this whole thing, but once that is done via the linked instructions above, you can easily install VMD with the following command: _(from your home directory)_  
-> `$ cd ~/`     
-> `$ npm install -g vmd`  
 
-### MultiMarkdown: _(optional)_
 
-You don't actually need the MultiMarkdown package installed on your machine to use MultiMarkdown in Emacs.  There is a package for that which you will be installing further down within this document.  However you will need multimarkdown installed later to do some fancy publishing tricks and conversions...  Some of that functionality overlaps with Pandoc as well.  It does not hurt to have both of these technologies installed on your machine...
+#### Install Pandoc on Linux:  
 
-If you are on Mac OS you can install MultiMarkdown via Homebrew.  `$> brew install multimarkdown`.  On Linux follow the instructions on this page <https://fletcher.github.io/peg-multimarkdown/> This same page will show you how to customize MultiMarkdown as well but don't do any of that yet. You won't know what you need until you have used it for a while.  That's it for now...  you will also be installing mmd-mode below...
+Pandoc is in the Debian, Ubuntu, Slackware, Arch, Fedora, NiXOS, openSUSE, and gentoo repositories so you don't have to build this one. ;-)
 
-### Pandoc: _(optional)_
+- **[Debian]:~$ `sudo apt install `**  
 
-As with MultiMarkdown you don't need to have Pandoc installed to use Emacs _(until you have written something and want to export it to LaTeX, PDF, or something like that directly from Emacs)_  You can also do some of these exports with multimarkdown tricks as well...  Read the docs for both to decide how to use them.  Instructions for installing Pandoc can be found on their official website here: <https://pandoc.org/installing.html> The Pandoc.org website has most everything you will need all in one place...
 
-### Steel Bank Common Lisp _(optional for CS research, prototyping, etc.)_
+- **[Ubuntu]:~$ `sudo apt install `**  
+
+
+- **[Fedora]:~$ `sudo dnf install `**  
+
+
+Now that you have Pandoc installed, **[Download The Manual Here]()**  
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Steel Bank Common Lisp _(optional for CS research, prototyping, etc.)_  
 
 Steel Bank Common Lisp is the best full-fledged Lisp compiler option for Fedora and Debian...  You don't actually need a full fledged Lisp compiler for Emacs because Emacs Slime Mode takes care of handling most things internally within Emacs and also provides a nice [REPL](https://en.wikipedia.org/wiki/Read-eval-print_loop) interface with that setup by default...  Adding Steel Bank Common Lisp to your system (with Slime mode in Emacs) is arguably the best IDE for serious Lisp projects... _(my opinion and totally biased of course ;-)_
 

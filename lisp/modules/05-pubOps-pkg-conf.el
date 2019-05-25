@@ -25,6 +25,7 @@
     pandoc-mode
     fountain-mode
     olivetti
+    graphviz-dot-mode
     org-bullets    
     vmd-mode))
 
@@ -148,6 +149,14 @@
 
 ;; GitHub flavored Markdown preview minor-mode.
 (require 'vmd-mode)
+
+
+;; Graphviz-dot-mode Customizations:
+(defun my-graphviz-tweaks ()
+  (setq graphviz-dot-preview-extension "svg"))
+
+(add-hook 'graphviz-dot-mode-hook 'my-graphviz-tweaks)
+
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; END: 05-pubOps-pkg-conf.el
