@@ -49,7 +49,7 @@
 
 ;; Define Default Lisp Environment:
 
-(load (expand-file-name "~/.quicklisp/slime-helper.el"))
+(load (expand-file-name "~/quicklisp/slime-helper.el"))
 (setq inferior-lisp-program "/usr/bin/sbcl")
 
 ;; Set your lisp system and some contribs...

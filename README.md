@@ -26,9 +26,13 @@
             - [Install SBCL on Mac OS:](#install-sbcl-on-mac-os)
             - [Install SBCL on Linux:](#install-sbcl-on-linux)
             - [Install QuickLisp Package Manager:](#install-quicklisp-package-manager)
+                - [Run these commands from your HOME directory:](#run-these-commands-from-your-home-directory)
     - [Get Ready to Start up Modular Emacs for the first time!](#get-ready-to-start-up-modular-emacs-for-the-first-time)
         - [First Some Initial House Keeping: _before we move in_](#first-some-initial-house-keeping-before-we-move-in)
-        - [Final Step (make Modular Emacs folder the default `~/.emacs.d` folder](#final-step-make-modular-emacs-folder-the-default-emacsd-folder)
+            - [Create an empty file named `custom.el`:](#create-an-empty-file-named-customel)
+            - [Clone `mmd-mode.git` into `my-modules`:](#clone-mmd-modegit-into-my-modules)
+            - [Copy `me.init.el` to: `init.el`:](#copy-meinitel-to-initel)
+        - [Final Step - Make Modular Emacs folder the default `~/.emacs.d` folder:](#final-step---make-modular-emacs-folder-the-default-emacsd-folder)
     - [Ready Set Go!  Start Up Modular Emacs:](#ready-set-go--start-up-modular-emacs)
     - [Usage:](#usage)
     - [Features:](#features)
@@ -255,7 +259,11 @@ Now that you have Pandoc installed, **[Download The Manual Here]()**
 ### Steel Bank Common Lisp 
 #### _(optional for CS research eggheads, prototyping, blockchain? etc.)_  
 
-OK Already! This one is **_(optional)_** for Eggheads :octocat:...  Steel Bank Common Lisp is the best full-fledged Lisp compiler option for Fedora and Debian and I guess Mac as well.  But the Mac world has many Eggheads so there may be many opinions to choose from as well. %^)... I personally feel SBCL is best for using with Emacs... But then I'm an Emacs Egghead... Oh Well...  You can be what ever Egghead you wish... Or not... Have fun playing croquet among the ivory towers!
+OK Already! This one is **_(optional)_** for Eggheads :octocat:...  You can skip this section if you are not interested because the Lisp Programmers Module is not loaded by Modular Emacs at startup _(by default)_...  To use Steel Bank Common Lisp within Emacs you will have to load the Programming languages Module which is discused later within the **Useage** section below...  
+
+You can install this now, decide not to install it ever, or wait and skip this section for later after you have Modular Emacs up and running and have had a chance to get familiar with everything first...  Or just use Modular Emacs without it...  No matter what you choose everything will be fine...
+
+Steel Bank Common Lisp is the best full-fledged Lisp compiler option for Fedora and Debian and I guess Mac as well.  But the Mac world has many Eggheads so there may be many opinions to choose from as well. %^)... I personally feel SBCL is best for using with Emacs... But then I'm an Emacs Egghead... Oh Well...  You can be what ever Egghead you wish... Or not... Have fun playing croquet among the ivory towers!
 
 You don't actually need a full fledged Lisp compiler for Emacs because Emacs Slime Mode takes care of handling most things internally within Emacs and also provides a nice [REPL](https://en.wikipedia.org/wiki/Read-eval-print_loop) interface with that setup by default...  
 
@@ -297,15 +305,46 @@ That's it... simple but powerful _(like lisp)_
 
 You don't have to re-invent wheels in Lisp!  No No NO!  Here are over 1,500 libraries available at your fingertips!  You **Must** have this!  Installing is not too painful, and they will also be integrated into Emacs Slime Mode!  
 
-**Run these commands from your HOME directory: _(all platforms)_**  
+Download the file for installation somewhere into your HOME directory _(Downloads is fine)_. (https://beta.quicklisp.org/quicklisp.lisp)
 
-    curl -o /tmp/ql.lisp http://beta.quicklisp.org/quicklisp.lisp  
+##### Run these commands from your HOME directory: 
 
-    sbcl --no-sysinit --no-userinit --load /tmp/ql.lisp \
-       --eval '(quicklisp-quickstart:install :path ".quicklisp")' \
-       --quit  
+1. **Install Quicklisp via sbcl: _(all platforms)_**  
 
-This will install **Quicklisp** into the: **`~/.quicklisp/`** directory...
+    sbcl --load path/to/downloaded/quicklisp.lisp  
+This will install **Quicklisp** into the: **`~/quicklisp/`** directory.  
+**`sbcl`** will still be running after this is done...  
+Your cursor will be at the next Lisp **"*"** prompt:
+
+2. **Install Quicklisp Quickstart:**  
+`    * (quicklisp-quickstart:install)`  
+
+3.  **Load Quicklist Every Time you start Lisp:**  
+`    * (ql:add-to-init-file)`  
+
+4. **Load Quicklisp Slime Helper command for Emacs:**  
+`    * (ql:quickload "quicklisp-slime-helper")`  
+
+After the last step you will see a message that looks like this:  
+```
+    To use, add this to your ~/.emacs:
+
+    (load (expand-file-name "~/quicklisp/slime-helper.el"))
+    ;; Replace "sbcl" with the path to your implementation
+    (setq inferior-lisp-program "sbcl")  
+```
+You are all set now... Everything will be setup each time you start up **`sbcl`** from now on... You don't have to add anything to .emacs etc.  That part was already done for you within: **Modular Emacs:** `./lisp/modules/12-progLang-pkg-conf.el`...
+
+5. **Howto Quit the SBCL Lisp Interpreter:**    
+
+`    * (cl-user::quit)`  
+
+
+After you get your new Modular Emacs up and running you can test Slime and Common Lisp out by typing:
+
+    M-x slime
+
+Enjoy! :octocat:
 
 ## Get Ready to Start up Modular Emacs for the first time!
 ### First Some Initial House Keeping: _before we move in_  
