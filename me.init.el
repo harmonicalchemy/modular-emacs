@@ -5,7 +5,10 @@
 ;; Info:
 ;;   This is my default Emacs Initialization file for Linux & OSX.  I don't use
 ;;   any MS Windows machines so I don't know if this works there as well.  If
-;;   you try this on Windows and get it to work, please drop me a message and I
+;;   you try this on Windows and get it to work, please make a pull request for
+;;   your branch and add an issue to HarmonicAlchemy/modular-emacs.  You my also
+;;   simply send me an email to siren1@MarketingWebMedia.com to get in touch
+;;   as well.  If you put together a nice solution for your Windows setup I
 ;;   may end up working with you as the MS Windows OS test engineer for this emacs
 ;;   config.  If we get a good version of this working on Windows I will include
 ;;   it in this repo and credit you as the author of any Windows config files you
@@ -28,6 +31,10 @@
 ;;       version number!
 ;;
 ;; Change Log: (descending chronological order)
+;;
+;;   2019-005-28 - Harmonic Alchemy Modular-Emacs Official Point Release:
+;;      v1.0.2 [Q2 2019] Final testing on Mac OS now.  This version includes
+;;      the new SBCL Lisp connection with Slime etc.  I need to test on MacOS!
 ;;
 ;;   2019-005-15 - Harmonic Alchemy Modular-Emacs Official Point Release:
 ;;      v1.0.2 [Q2 2019] Final testing a new point release within the develop
@@ -127,8 +134,14 @@
 ;; After testing here, if you want to make your custom scripts more formal, move
 ;; them to one or more of the ~/.emacs.d/lisp/modules/<module-name>.el files...
 ;;
-;; **Note:** Be sure to be checked out on your local "develop" branch of your local
-;; clone of: Harmonic Alchemy - Modular Emacs first! (keep your master branch clean)
+;; **Note:** Be sure to be checked out on your own local (un-tracked) branch on
+;; your clone of: Harmonic Alchemy - Modular Emacs first! (keep your master 
+;; and/or develop branches clean!)  Its much easier to merge your un-tracked 
+;; branches into a local tracking branch (which can be destroyed and re-fetched 
+;; if anything goes wrong). Your custom changes stay safe on an un-tracked branch 
+;; while you recover pull your tracking branches... Trying to do things the other 
+;; way around, after the fact, can end up turning into a merge nightmare, wasted 
+;; afternoon!
 ;;
 ;; Choose a module that best fits the category of your new script.  If your new
 ;; script does not fit with any of the existing modules, create a new one:
@@ -164,12 +177,15 @@
                        ";;    Some think it is the voice of God.\"\n"
                        ";;                         -- Mark Twain\n"
                        ";; \n"
-                       ";; If Mark Twain was a Lisp programmer in New Orleans during the 90's:"
+                       ";; If Mark Twain was a Lisp Hacker / DJ in New Orleans during the 80's:\n"
                        ";; \n"
-                       ";;   \"I yous to be a river boat pilot until dis crafty gambler\n"
-                       ";;    CONS me out of averyting, including my CAR, and CDR!\n"
-                       ";;    Dey caught em doh...  Yey-sir-ee!  Now e's in prison...\n"
-                       ";;    locked in a CONs cell... Doing hard (constructive) labor!\"\n"
+                       ";;   \"I yous to be a river boat pilot until dis crafty gambler,\n"
+                       ";;    he, CON me out of averyting, including my CAR, CDR,\n"
+                       ";;    and my entire Michael Jackson CD collection man!!!\n"
+                       ";; \n"
+                       ";;    Dey caught em doh...  Yey-sir-ee!  Now e's a CONvict...\n"
+                       ";;    locked away in a CONs cell... Being (evaluated) for:\n"
+                       ";;    (constructive . rehabilitation)!\"\n"
                        ";;                         -- Alisha Awen %^) \n"
                        ";; \n"
                        ";; Evaluate lisp expressions below, (if you'd like to do that ;-)\n"
@@ -179,7 +195,7 @@
                        ";; This entire message is a lisp comment!\n"
                        ";; Evaluate this entire buffer as a test\n"
                        ";; before committing it as your:\n"
-                       ";; \"new-cool-custom-module.el\" %^)\n"
+                       ";; \"new-way-cool-custom-module.el\" %^)\n"
                        ";;      -- Cheers! Alisha Awen @harmonicalchemy (twitter etc.)\n"
                        ";;         PGP Pubkey: 0x922CC456F48355A8D9B2E044C9E6CD44A817E7BF\n"
                        ";; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
