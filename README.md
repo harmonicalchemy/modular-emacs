@@ -21,12 +21,16 @@
         - [Pandoc:](#pandoc)
             - [Install Pandoc on Mac OS:](#install-pandoc-on-mac-os)
             - [Install Pandoc on Linux:](#install-pandoc-on-linux)
+        - [Graphviz:](#graphviz)
+            - [Install Graphviz on Mac OS:](#install-graphviz-on-mac-os)
+            - [Install Graphviz on Linux:](#install-graphviz-on-linux)
         - [Steel Bank Common Lisp](#steel-bank-common-lisp)
             - [_(optional for CS research eggheads, prototyping, blockchain? etc.)_](#optional-for-cs-research-eggheads-prototyping-blockchain-etc)
             - [Install SBCL on Mac OS:](#install-sbcl-on-mac-os)
             - [Install SBCL on Linux:](#install-sbcl-on-linux)
             - [Install QuickLisp Package Manager:](#install-quicklisp-package-manager)
                 - [Run these commands from your HOME directory:](#run-these-commands-from-your-home-directory)
+            - [SBCL Installed? Now Read the Docs!](#sbcl-installed-now-read-the-docs)
     - [Get Ready to Start up Modular Emacs for the first time!](#get-ready-to-start-up-modular-emacs-for-the-first-time)
         - [First Some Initial House Keeping: _before we move in_](#first-some-initial-house-keeping-before-we-move-in)
             - [Create an empty file named `custom.el`:](#create-an-empty-file-named-customel)
@@ -35,6 +39,7 @@
         - [Final Step - Make Modular Emacs folder the default `~/.emacs.d` folder:](#final-step---make-modular-emacs-folder-the-default-emacsd-folder)
     - [Ready Set Go!  Start Up Modular Emacs:](#ready-set-go--start-up-modular-emacs)
     - [Usage:](#usage)
+        - [Strategies for Concurrent Development:](#strategies-for-concurrent-development)
     - [Features:](#features)
         - [Pre-configured packages - Comprehensive list:](#pre-configured-packages---comprehensive-list)
             - [Misc. Packages:](#misc-packages)
@@ -256,6 +261,42 @@ The pandoc package installs a lot of sub-packages and can take some time to inst
 
 Now that you have Pandoc installed, **[Download The Manual Here]()**  
 
+
+
+### Graphviz:
+
+Harmonic Alchemy Modular Emacs comes integrated with the popular **Graphviz utility** which allows the creation of nice graphs, flowcharts, data diagrams, etc. using a powerful scripting language called **dot**...  The Emacs mode for Graphvis is: **`graphviz-dot-mode`**
+
+Modular Emacs invokes: **`graphviz-dot-mode`** when you visit files ending in either: **`.dot`** or **`.gv`**
+
+When you are visiting a **`.dot`** file, you can compile it with **`C-c C-C`** which will produce a **`.svg`** file along side...  By default, Modular Emacs produces **SVG vector files** _(instead of `.png` files)_... which is my preference because if you add one to a markdown file and then view it using **VMD-Mode** you can expand the resulting rendered chart or graph full screen and it will still look very sharp! Not to mention you can edit the resulting SVG file within **inkscape** to add things to it that Graphviz cannot...  Don't underestimate the power of **Graphviz** though!  **[Read the docs!](https://graphviz.org/documentation/)**  
+
+You could create a nice workflow that **_starts programmatically_** within some program or language, invoke **graphviz** to produce some diagrams, export to **`SVG`**, then edit the resulting `.svg` in **inkscape** to add some fancy graphics or other things, Lastly import the final `.svg` into **Blender** to add animations, 3D, etc...  **_The sky is the limit!_**  
+
+You better send me an email to show me the cool thing you made on **Github** after reading this! :octocat:  
+
+#### Install Graphviz on Mac OS:
+
+If you are on Mac OS you can install graphviz via Homebrew:  
+
+    brew install graphviz
+
+That's it... Easy!  
+
+#### Install Graphviz on Linux:
+
+Graphviz is in the Debian, Ubuntu, Slackware, Arch, Fedora, NiXOS, openSUSE, and gentoo repositories so you don't have to build this one either. ;-)
+
+- **[Debian]:~$ `sudo apt install graphviz`**  
+
+
+- **[Ubuntu]:~$ `sudo apt install graphviz`**  
+
+
+- **[Fedora]:~$ `sudo dnf install graphviz`**  
+
+That's it... Easy Peazy!
+
 ### Steel Bank Common Lisp 
 #### _(optional for CS research eggheads, prototyping, blockchain? etc.)_  
 
@@ -296,14 +337,9 @@ Steel Bank Common Lisp is available in the Linux package managers as well:
 
 - **[Fedora]:~$ `sudo dnf install sbcl`**  
 
-
-Now that you have SBCL installed, **[Download The Manual Here]()**  
-
-That's it... simple but powerful _(like lisp)_
-
 #### Install QuickLisp Package Manager:
 
-You don't have to re-invent wheels in Lisp!  No No NO!  Here are over 1,500 libraries available at your fingertips!  You **Must** have this!  Installing is not too painful, and they will also be integrated into Emacs Slime Mode!  
+You don't have to re-invent wheels in Lisp!  no No NO!  Here are over 1,500 libraries available at your fingertips!  You **Must** have this!  Installing is not too painful, and they will also be integrated into Emacs Slime Mode!  
 
 Download the file for installation somewhere into your HOME directory _(Downloads is fine)_. (https://beta.quicklisp.org/quicklisp.lisp)
 
@@ -312,9 +348,11 @@ Download the file for installation somewhere into your HOME directory _(Download
 1. **Install Quicklisp via sbcl: _(all platforms)_**  
 
     sbcl --load path/to/downloaded/quicklisp.lisp  
-This will install **Quicklisp** into the: **`~/quicklisp/`** directory.  
+This will use the file you downloaded above to install  
+**Quicklisp** into the: **`~/quicklisp/`** directory.  
 **`sbcl`** will still be running after this is done...  
-Your cursor will be at the next Lisp **"*"** prompt:
+Your cursor will be at the next Lisp **"`*`"** prompt:  
+Continue typing the rest after the **`*`** below:
 
 2. **Install Quicklisp Quickstart:**  
 `    * (quicklisp-quickstart:install)`  
@@ -339,12 +377,17 @@ You are all set now... Everything will be setup each time you start up **`sbcl`*
 
 `    * (cl-user::quit)`  
 
-
-After you get your new Modular Emacs up and running you can test Slime and Common Lisp out by typing:
+The above command will shut down your SBCL process cleanly...  After you get your new Modular Emacs up and running you can test Slime and Common Lisp out by typing:
 
     M-x slime
 
 Enjoy! :octocat:
+
+#### SBCL Installed? Now Read the Docs!
+
+Now that you have SBCL installed, **[Download The Manual Here](http://www.gigamonkeys.com/book/)**  
+
+That's it... simple but powerful _(like lisp)_
 
 ## Get Ready to Start up Modular Emacs for the first time!
 ### First Some Initial House Keeping: _before we move in_  
@@ -385,7 +428,7 @@ _(This is now your new **Modular Emacs Local Repository** which is also now your
 
 > **Note:** If you are on **Mac OS** you will have to start Emacs from the shell `bash` or `zsh` etc.  This is a workaround to get important environment variables into Emacs on Mac OS... Unfortunately I have not found a better solution to this problem yet... but you can dedicate a small terminal window for this purpose and then minimize the terminal window while you are working in Emacs. With that workaround everything will work on Mac OS the same as it does on Linux, etc.
 
-After a lot of super computing lisp number crunching flashing away in your mini buffer _(wait wait wait...)_ Then **Bam!** You should now see your new emacs pop up with the **Welcome to Harmonic Alchemy Modular Emacs!** scratch buffer in a frame with a pre-determined row/column initial size! 
+After a lot of super computing lisp number crunching flashing away in your mini buffer _(wait wait wait... the first time can take up to a minute! After that no more than 7 or 8 seconds at most...)_ Then **Bam!** You should now see your new emacs pop up with the **Welcome to Harmonic Alchemy Modular Emacs!** scratch buffer in a frame with a pre-determined row/column initial size! 
 
 **No?** Broken? Oh My! What a freaking let down!  I feel your pain!  OK... You may be fine if there are only warnings... _(which are hard to avoid upon first startup with all those new packages compiling etc. Not much you can do about that... The developers who made the packages need to clean that up, you could help them though. ;-)_
 
@@ -395,7 +438,7 @@ If you got an error and see the default emacs screen, try to retrace your steps 
 
 > **Note1:** Fetching/pulling new changes from the master `modular-emacs` GitHub repository to your local `~/.emacs.d/` directory will automatically be reflected within your emacs configurations... No need to copy any more files... But you may be surprised to see some new feature or something working differently.  If that bothers you, you may wish to keep your changes separate from the remote master branch.  Therefore create your own local `test` branch _(or call it what you like)_ and maintain your local changes in parallel... Change your local branch's .gitignore to accommodate your needs...
 
-> **Note2:** The remote `modular-emacs` Github repository also maintains a `develop` branch where new ideas and features are tried out before folding them into the master branch which maintains the Modular Emacs stable release.  You could also create a local branch that tracks origin:develop if you would like to participate in any new things I am trying out before final release... This version 1.0.1 of Modular Emacs was first started within the develop branch...  Any time a final release of new features is ready, the develop branch will be merged back into master branch, tagged as a new point release (or major release when a lot of new features have been added to warrant it)...
+> **Note2:** The remote `modular-emacs` Github repository also maintains a `develop` branch where new ideas and features are tried out before folding them into the master branch which maintains the Modular Emacs stable release.  You could also create a local branch that tracks origin:develop if you would like to participate in any new things I am trying out before final release... Version 1.0.1 of Modular Emacs was first staged and tested within the develop branch.  Version 1.0.2 is currently being tested on the develop branch. _(if not already merged into master by now)_...  Any time a final release of new features is ready, the develop branch will be merged back into master branch, tagged as a new point release (or major release when a lot of new features have been added to warrant it)...
 
 ## Usage:
 
@@ -409,9 +452,17 @@ If your customization proves stable, and you like it, you could then save your s
 
 In all cases you would be wise to create and checkout a local `test` branch _(call it what you wish)_ and keep all your custom changes in there separate from the `master` or `origin:develop` branch...
 
-Modular Emacs comes with my slightly customized version of the **Blackboard color theme**.  If you would like to add more custom themes or a different theme than `blackboard.el`, you can replace it or add additional themes into your local branch's: `~/.emacs.d/lisp/themes` directory and they will also will work with this setup by choosing `M-x load-theme` or changing the last line within `~/.emacs.d/lisp/modules/06-interface.el` to: `(load-theme 'your-chosen-theme-name t)`
+Modular Emacs comes with my slightly customized version of the **Blackboard color theme** which I like for the _pedagogic essence_ it inspires...  If you would like to add more custom themes or a different theme than `blackboard.el`, you can replace it or add additional themes into your local branch's: `~/.emacs.d/lisp/themes` directory and they will also will work with this setup by choosing `M-x load-theme` or changing the last line within `~/.emacs.d/lisp/modules/06-interface.el` to: `(load-theme 'your-chosen-theme-name t)`
 
-> **Note:** _Obviously if you add more themes to your **Modular Emacs** **themes** directory you will be adding new un-tracked files to your cloned git repository!  Make sure you have checked out your own local branch before adding new themes or doing any customization outside the init.el file or the `my-modules` directory.  Then you will have proper management of your local custom changes and also have all that in code revision as well!_  How many times have I said this already?  OMG! :octocat:
+> **Note:** _Obviously if you add more themes to your **Modular Emacs** **themes** directory you will be adding new un-tracked files to your cloned git repository!  Make sure you have checked out your own local branch before adding new themes or doing any customization outside the init.el file or the `my-modules` directory.  Then you will have proper management of your local custom changes and also have all that in code revision as well!_  How many times have I said this already?  OMG! So I wrote a section Strategies for Concurrent Development below... :octocat:
+
+### Strategies for Concurrent Development:
+
+**Harmonic Alchemy Modular Emacs** Version **`1.0.2`** and beyond contain some modules that are not loaded by default.  These modules are ones that you will most likely need to customize on your own as well if you choose to use them...  The following Scheme lays out a nice way to have different **_test_** versions of your own **Modular Emacs** running along side the stock Modular Emacs current HEAD at origin master...  Doing it in the following manner will make it easy to decide what to merge from origin master, if needed, and when... And it will be easy to do... You will be free to experiment as much as you like and have a few safety nets just in case...
+
+> `TODO:` Insert svg diagram here...
+
+To be continued...
 
 ## Features:
 
@@ -541,6 +592,8 @@ helm-show-kill-ring        | `M-y`
 mc/mark-next-like-this     | `C-}`
 mc/mark-previous-like-this | `C-{`
 mc/mark-all-like-this      | `C-|`
+
+
 
 
 
