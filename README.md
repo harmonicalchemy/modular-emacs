@@ -61,9 +61,9 @@
 # Harmonic Alchemy Modular Emacs:
 ## Introduction:
 
-**Welcome to Harmonic Alchemy Modular Emacs - _V1.0.3 - Q2-2019_**
+**Welcome to Harmonic Alchemy Modular Emacs - _V2.0.0 RC1 Q2-2019_**
 
-> **Note:** Currently editing this doc... it's good down to Start Here but after that many changes are going on... This note will disappear once this doc is all updated... Thanks!
+> **Note:** This Doc is not yet complete but will be finished before the new **_Version 2 release candidate_** period is over...  Everything is done and current down to the **Usage/Strategies for Concurrent Development** Section...  Everything after that is still being updated and reviewed.  Read those sections with that in mind.  _(i.e., some new things are not documented yet but old things will be fine)_ This note will disappear once this doc is all updated... Thanks!
 
 This project has been a long time coming.  Its history goes back a few years ago when I went searching for some better ways to configure my then pretty basic Emacs configuration of over 10 or so years!  I cloned a few Emacs repos on Github to try different things out for a while.  I liked some things and tried to get rid of other things later.  Management became confusing after a while.  I ended up with lots of questionable elisp code, much of which were things possibly no longer needed!  
 
@@ -74,7 +74,7 @@ So I decided to start over from scratch and modularize everything with the purpo
 
 **Modular Emacs** is more than just Emacs with configurable modules however... It is also designed to be the centerpiece **_(command central)_** of a larger **DevOps** / **PubOps** **Personal IDE** workstation or laptop.  I am a devOps engineer, computer scientist, composer/musician, sound designer, architect, writer/publisher.  I wear a lot of hats! My Emacs needs to wear a lot of hats as well!  The central focus of **Modular Emacs** is to build empowering features into **Emacs** utilizing a modular framework that facilitates all the above without becoming an over complicated mess to manage! **_"good luck with that"_**  :octocat:
 
-> **NOTE:** Earlier versions of this project called out some things in the **_Requirements_** section as **_optional_** to give interested users the option to install only the basics...  However only supporting **_basic Emacs features_** this is not the purpose of **Modular Emacs**...  
+> **NOTE:** Earlier versions of this project called out some things in the **_Requirements_** section as **_optional_** to give interested users the option to install only the basics...  However only supporting **_basic Emacs features_** is not the purpose of **Modular Emacs**...  
 
 > **Modular Emacs** was designed to be easy to maintain and configure through the management of independent modules and in that sense Modular Emacs hopefully forms a basic sensible framework that is easy to use and flexible enough to adjust to your work-style, programming-style, and writing-style...  
 
@@ -114,7 +114,9 @@ Therefore: **Here is Modular Emacs!** I hope my long years of **devOps** experie
 
 Many of the default packages installed with this project will not work with previous versions of Emacs. Also the security of older Emacs and packages is Horrendous! Recently, some of the older packages were removed from the updated MELPA and the entire site is TLS enabled now!  These new features are vital for being reasonably safe going forward from 2018 onward, so I decided not to support lesser versions of Emacs...  
 
-> **Warning:** If you have a really old version of Emacs currently installed you should backup all emacs related files: _(i.e.,_ `.emacs` `.emacs.d`_)_ located in your $HOME directory.  Simply move them into a temporary directory of your choice before upgrading below...  If you have saved key  etc., you can get them back later as long as the modules they invoke have also been updated and work with Emacs V26.1...  
+> **Warning:** If you have a really old version of Emacs currently installed, it may break after you update Emacs below... Therefore before trying any of this out, first you should record the current version of Emacs you are using, and backup all previous emacs related files: _(i.e.,_ `.emacs` `.emacs.d`_)_ located in your $HOME directory.  
+
+> Simply COPY your entire: **`~/.emacs.d`** directory _(and/or_ **`~/.emacs`** _file)_ into a temporary directory of your choice before upgrading below... _(or compress and make a `.zip` or `.gz` archive file)_  This will be your safety net for coming back later if you decide you are not ready to upgrade.  Don't move or touch your original Emacs files, as you will try them out with your new Upgraded version of Emacs...  If anything goes wrong, you will be able to reverse everythig back no problem! _(Note: before restoring your backups, you will have to downgrade your Emacs back to the version you were on before trying out Modular Emacs)_ 
 
 #### Commands to install Emacs on various unix platforms:  
 
@@ -265,7 +267,7 @@ Now that you have Pandoc installed, **[Download The Manual Here]()**
 
 ### Graphviz:
 
-Harmonic Alchemy Modular Emacs comes integrated with the popular **Graphviz utility** which allows the creation of nice graphs, flowcharts, data diagrams, etc. using a powerful scripting language called **dot**...  The Emacs mode for Graphvis is: **`graphviz-dot-mode`**
+Harmonic Alchemy Modular Emacs comes integrated with the popular **Graphviz utility** which allows the creation of nice graphs, flowcharts, data diagrams, etc. using a powerful scripting language called **dot**...  The Emacs mode for Graphviz is: **`graphviz-dot-mode`**
 
 Modular Emacs invokes: **`graphviz-dot-mode`** when you visit files ending in either: **`.dot`** or **`.gv`**
 
@@ -300,7 +302,7 @@ That's it... Easy Peazy!
 ### Steel Bank Common Lisp 
 #### _(optional for CS research eggheads, prototyping, blockchain? etc.)_  
 
-OK Already! This one is **_(optional)_** for Eggheads :octocat:...  You can skip this section if you are not interested because the Lisp Programmers Module is not loaded by Modular Emacs at startup _(by default)_...  To use Steel Bank Common Lisp within Emacs you will have to load the Programming languages Module which is discused later within the **Useage** section below...  
+OK Already! This one is **_(optional)_** for Eggheads :octocat:...  You can skip this section if you are not interested because the Lisp Programmers Module is not loaded by Modular Emacs at startup _(by default)_...  To use Steel Bank Common Lisp within Emacs you will have to load the Programming languages Module which is discussed later within the **Usage** section below...  
 
 You can install this now, decide not to install it ever, or wait and skip this section for later after you have Modular Emacs up and running and have had a chance to get familiar with everything first...  Or just use Modular Emacs without it...  No matter what you choose everything will be fine...
 
@@ -312,9 +314,9 @@ You don't actually need a full fledged Lisp compiler for Emacs because Emacs Sli
 
 RMS may not remember this, but I sat at a table not far from him many times during lunch at Mary Chung's (Kendall Sq. Cambridge MA)... Is Mary Chung's still open after all these years? Was it even called Mary Chungs?  I believe Mary Chung's was the secret meeting place for many early FSF meetings!  Probably secret super computer design meetings _(Thinking Machines)_ as well...  And who knows what other DARPA High Tech secret meetings may have been held there tucked away in a dark corner!
 
-OMG! Maybe I was part of a secret-operation-gone-bad and they wiped some of my memories!!! That may explain why...  _(nevermind)_...  
+OMG! Maybe I was part of a secret-operation-gone-bad and they wiped some of my memories!!! That may explain why...  _(never-mind)_...  
 
-One thing I do remember was that **Hot&Sour soup** _(at what ever that Chinese restruant on Broadway near Kendall Sq. (not far away from Eli Heffron & Sons Computer Junk Yard . PDP11 Gold mine) was called?)_ was the best in the universe!  I have many fond memories about sitting studiously alone at a table _(on a gloomy New England rainy day)_ with a warm savory steaming bowl of H&S soup _(scallions sprinkled on top)_ in front of me, my laptop on the side... _(em... er... Oh! With my HP-15c rpn calculator sitting next to a graph-paper log/notebook, mechanical pencil, engineering scale/straight edge, and possibly a small shapes template as well.)_  School Days... LOL   At least I didn't have to carry a slide rule.  Abacus? LOL I was talking about the soup somewhere in that stack overflow above. `%^)`  Maybe we should get back to the subject at hand _(install this already ok?)_
+One thing I do remember was that **Hot&Sour soup** _(at what ever that Chinese restaurant on Broadway near Kendall Sq. (not far away from Eli Heffron & Sons Computer Junk Yard . PDP11 Gold mine) was called?)_ was the best in the universe!  I have many fond memories about sitting studiously alone at a table _(on a gloomy New England rainy day)_ with a warm savory steaming bowl of H&S soup _(scallions sprinkled on top)_ in front of me, my laptop on the side... _(em... er... Oh! With my HP-15c rpn calculator sitting next to a graph-paper log/notebook, mechanical pencil, engineering scale/straight edge, and possibly a small shapes template as well.)_  School Days... LOL   At least I didn't have to carry a slide rule.  Abacus? LOL I was talking about the soup somewhere in that stack overflow above. `%^)`  Maybe we should get back to the subject at hand _(install this already OK?)_
 :octocat:
 
 #### Install SBCL on Mac OS:  

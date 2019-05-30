@@ -36,7 +36,7 @@
 
 ;; Change title-bar text
 (setq frame-title-format
-      "Modular Emacs v1.0.2 (Official Point Release) [Q2 2019]")
+      "Modular Emacs v2.0.0 (RC1) [Q2 2019]")
 
 ;; Disable tool-bar - I could care less about tool bars in emacs!
 ;; An oxymoron! But you may feel differently.  Comment this out if you like them.

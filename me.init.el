@@ -32,6 +32,14 @@
 ;;
 ;; Change Log: (descending chronological order)
 ;;
+;;   2019-005-29 - Harmonic Alchemy Modular-Emacs Official Release: V2.0.0
+;;      RC1 [Q2 2019] Testing on Mac OS complete.  Because of the new SBCL
+;;      with Slime mode features, I decided to call this a major release
+;;      instead of a point release... I everything is working reasonably
+;;      well now (except for having to start from shell prompt on Mac OS).
+;;      The only reason I am calling this a Release Candidate instead of
+;;      final release is because I am still updating the Docs...
+;;
 ;;   2019-005-28 - Harmonic Alchemy Modular-Emacs Official Point Release:
 ;;      v1.0.2 [Q2 2019] Final testing on Mac OS now.  This version includes
 ;;      the new SBCL Lisp connection with Slime etc.  I need to test on MacOS!
@@ -146,9 +154,25 @@
 ;; Choose a module that best fits the category of your new script.  If your new
 ;; script does not fit with any of the existing modules, create a new one:
 ;; (e.g., ./modules/NN-your-module-name.el, - where: "NN-" = 10-, 11-, 12-, ...).
-;; After creating new module files, be sure to update: ./modules/dispatcher.el
-;; with a call to your new modules as well! (don't forget that last step or else
-;; your brand new shiny module will just sit there like an orphan! ;-)
+;;
+;; After creating a new module file, be sure to update: ./modules/dispatcher.el
+;; as well... In order to prevent changes to "dispatcher.el" from being detected
+;; by git, you will need to copy it into: ~/.emacs.d/lisp/my-modules/dispatcher.el
+;; and update that Instead.  Once you have your own my-modules/dispatcher.el
+;; Edit the line ABOVE (within this file) where the dispatcher gets loaded as follows:
+;;
+;;           Load: Harmonic Alchemy Modular Emacs - Dispatcher
+;;           (load-file "~/.emacs.d/lisp/my-modules/dispatcher.el")
+;;
+;; Any modules you add will then be loaded from your own /my-modules/dispatcher.el
+;; from then on...  You will have to check now and again for any new modules
+;; that may have been introduced by the remote/master branch etc...
+;; But that's easy because you can simply check the difference between your:
+;; ./lisp/my-modules/dispatcher.el and ./lisp/modules/dispatcher.el then copy
+;; the load lines of any of those new modules you would like to add to your
+;; customized installation...
+;; Note: There are many ways to skin a rat...
+;; btw, I don't skin cats!  My cats do skin rats though. And mice... And birds... %^)
 
 
 
@@ -163,7 +187,7 @@
                        ";; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
                        ";; Welcome to: [Your-Machine-Name-Here]\n"
                        ";;             Harmonic Alchemy - Modular Emacs!\n"
-                       ";; Version:    1.0.2 (Official Point Release) [Q2 2019]\n"
+                       ";; Version:    2.0.0 (RC1) [Q2 2019]\n"
                        ";; \n"
                        ";; Today's date: " (format-time-string "%Y %B %d") "\n"
                        ";; Startup completed in "
@@ -184,7 +208,7 @@
                        ";;    and my entire Michael Jackson CD collection man!!!\n"
                        ";; \n"
                        ";;    Dey caught em doh...  Yey-sir-ee!  Now e's a CONvict...\n"
-                       ";;    locked away in a CONs cell... Being (evaluated) for:\n"
+                       ";;    locked away in a CON cell... Being (evaluated) for:\n"
                        ";;    (constructive . rehabilitation)!\"\n"
                        ";;                         -- Alisha Awen %^) \n"
                        ";; \n"
