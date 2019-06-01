@@ -34,7 +34,8 @@
   '(slime
 ;   slime-autoloads
     helm-slime
-    ac-slime))
+    yasnippet
+    yasnippet-snippets))
 
 ;; Install required packages:
 
