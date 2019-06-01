@@ -5,10 +5,11 @@
 ;;        newer versions of emacs!  Everything below has been re-written based
 ;;        on Emacs Manual: 49.1.4 Saving Customizations...
 ;;        Also, all my work environments now have the latest GnuPG installed.
-;;        no need to play games with defining gpg to gpg2 anymore...
+;;        When GPG is invoked, it will (and should) be at least V2.2 or higher...
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;; Set custom-file so that Emacs does not use init.el
+
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
 
@@ -19,9 +20,20 @@
 ;; However some systems have both gpg & gpg2 installed so it is best to
 ;; leave it below the way it is. (you could also create an alias in .bashrc
 ;; .profile, etc.)
+
 (setq epg-gpg-program "gpg")
 
+;; System Constants:
+
+(defconst *is-darwin* (eq system-type 'darwin))
+(defconst *is-linux* (eq system-type 'gnu/linux))
+
+(when (memq window-system `(ns x))
+  (defconst *is-posix* t)
+  )
+
 ;; Configure custom elisp library load path.
+
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
 (let ((default-directory  "~/.emacs.d/lisp/"))
@@ -29,5 +41,18 @@
   (normal-top-level-add-subdirs-to-load-path))
 
 ;; Load path for your custom Emacs themes:
+
 (add-to-list 'custom-theme-load-path "~/.emacs.d/lisp/themes/")
+
+;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; Load Environment Vars from shell:
+;; If we are using unix in a POSIX compliant shell...
+;; (e.g., OS X, Linux, BSD, with POSIX: Bash, or Zsh etc.)
+;; Reference: GitHub:Purcell/exec-path-from-shell
+;; Install: from MELPA exec-path-from-shell
+
+(when *is-posix*
+  (exec-path-from-shell-initialize)
+  (exec-path-from-shell-copy-envs '("NVM_BIN"))
+  )
 
