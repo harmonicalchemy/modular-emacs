@@ -13,6 +13,11 @@
     - [Requirements:](#requirements)
         - [Emacs: V26.1+](#emacs-v261)
             - [Commands to install Emacs on various unix platforms:](#commands-to-install-emacs-on-various-unix-platforms)
+                - [Fedora 27-29:](#fedora-27-29)
+                - [Debian9 Stretch:](#debian9-stretch)
+                - [Ubuntu 18.04 LTS:](#ubuntu-1804-lts)
+                - [Mac OS:](#mac-os)
+                - [FreeBSD & OpenBSD:](#freebsd--openbsd)
         - [NODE.js:](#nodejs)
         - [VMD: _(Visual MarkDown App)_](#vmd-visual-markdown-app)
         - [MultiMarkdown:](#multimarkdown)
@@ -122,24 +127,36 @@ Many of the default packages installed with this project will not work with prev
 
 _(Choose your Flavor)_  
 
-- **[Fedora 27-29]:~$ `sudo dnf install emacs`**  
+##### Fedora 27-29:  
 
+    sudo dnf install emacs
 
-- **[Debian9 Stretch]:~$ `sudo apt install emacs`**  
-_**Note:** the Debian Package Repo (and all mirrors) call this package version: `46.1` which must obviously be a typo unless they time traveled into the future! lol - that may be fixed (with a new signed release) by the time you read this :octocat:_  
+##### Debian9 Stretch:  
 
+    sudo apt install emacs
 
-- **[Ubuntu 18.04 LTS]:~$ `sudo apt install emacs`**  
-_(don't install any of the other listed emacs packages as older versions are also supported by Ubuntu - If you already have them installed issue:  
-**$> `sudo apt purge`** to completely remove all of the older packages and configurations first)_  
+> **Note:** the Debian Package Repo (and all mirrors) call this package version: `46.1` which must obviously be a typo unless they time traveled into the future! lol - that may be fixed (with a new signed release) by the time you read this :octocat:_  
 
+##### Ubuntu 18.04 LTS:  
 
-- **[Mac OS]:~$ `brew install emacs`**  
-_(Install from Homebrew)_  
+    sudo apt install emacs  
 
-**FreeBSD & OpenBSD:** Install the most recent pre-built binary package of Emacs:   _(must be up to v26.1 by now - 2019-May)_
+> **Note:** Don't install any of the other listed emacs packages as older versions are also supported by Ubuntu - If you already have them installed run: **`sudo apt purge`** to completely remove all of the older packages and configurations first,,,  
 
-- **[BSD]:~$ `pkg_add -r emacs`**
+##### Mac OS:  
+
+_(Install from Homebrew Cask)_  
+
+    brew cask install emacs
+
+> **Note:** This will install the latest GUI version of Emacs `--with-cocoa` and other important compile options.  The older way of installing emacs via regular Homebrew with these extra compile options is no longer available.  Now: `brew install emacs` will only install the non GUI shell version...  
+
+##### FreeBSD & OpenBSD:  
+
+Install the most recent pre-built binary package of Emacs: _(must be up to v26.1 by now - 2019-May)_
+
+    pkg_add -r emacs
+
 
 ### NODE.js:
 
@@ -426,9 +443,9 @@ _(This is now your new **Modular Emacs Local Repository** which is also now your
 
 ## Ready Set Go!  Start Up Modular Emacs:
 
-**_Start up GNU Emacs v26.1 from the menu or command line and hold your breath!_**
+**_Start up GNU Emacs from the menu or command line and hold your breath!_**
 
-> **Note:** If you are on **Mac OS** you will have to start Emacs from the shell `bash` or `zsh` etc.  This is a workaround to get important environment variables into Emacs on Mac OS... Unfortunately I have not found a better solution to this problem yet... but you can dedicate a small terminal window for this purpose and then minimize the terminal window while you are working in Emacs. With that workaround everything will work on Mac OS the same as it does on Linux, etc.
+> **Note:** You no longer have to start Modular Emacs on Mac OS from the command line, and you probably never had to do that anyway... I got it working on my Mac now... There were multiple issues...  My problem started when Homebrew changed a bunch of things and did not bother to tell me..  Not knowing any better, I had three different versions of Emacs installed on Mac OS at one point.  I finally got all that sorted out.  Nothing in Modular Emacs caused any of my previous problems running Emacs on Mac OS! So this was never really an inssue with Modular Emacs in the first place! :trollface:
 
 After a lot of super computing lisp number crunching flashing away in your mini buffer _(wait wait wait... the first time can take up to a minute! After that no more than 7 or 8 seconds at most...)_ Then **Bam!** You should now see your new emacs pop up with the **Welcome to Harmonic Alchemy Modular Emacs!** scratch buffer in a frame with a pre-determined row/column initial size! 
 
