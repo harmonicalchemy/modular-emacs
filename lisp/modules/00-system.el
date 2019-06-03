@@ -51,7 +51,7 @@
 ;; Reference: GitHub:Purcell/exec-path-from-shell
 ;; Install: from MELPA exec-path-from-shell
 
-(when *is-posix*
+(when *is-darwin*
   (exec-path-from-shell-initialize)
   (exec-path-from-shell-copy-envs '("NVM_BIN"))
   )

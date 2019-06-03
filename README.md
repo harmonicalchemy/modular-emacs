@@ -17,6 +17,17 @@
                 - [Debian9 Stretch:](#debian9-stretch)
                 - [Ubuntu 18.04 LTS:](#ubuntu-1804-lts)
                 - [Mac OS:](#mac-os)
+                - [Install Emacs From Source on Mac OS:](#install-emacs-from-source-on-mac-os)
+                    - [Prerequisites:](#prerequisites)
+                    - [Clone `GNU Emacs Repo @ Savannah.gnu.org:`](#clone-gnu-emacs-repo--savannahgnuorg)
+                    - [Set up Autotools:](#set-up-autotools)
+                    - [Run Configure:](#run-configure)
+                    - [Make Bootstrap: _(does a more thourough job)_](#make-bootstrap-does-a-more-thourough-job)
+                    - [Make Install! _(Make the Emacs Mac App package!)_](#make-install-make-the-emacs-mac-app-package)
+                    - [Move your shiny new Emacs.app to: `$HOME/Applications:`](#move-your-shiny-new-emacsapp-to-homeapplications)
+                    - [Launch Emacs from your Apps Folder/Menu:](#launch-emacs-from-your-apps-foldermenu)
+                    - [Revert Repo back to fresh clone state to start over:](#revert-repo-back-to-fresh-clone-state-to-start-over)
+                    - [Troubleshooting Debugging:](#troubleshooting-debugging)
                 - [FreeBSD & OpenBSD:](#freebsd--openbsd)
         - [NODE.js:](#nodejs)
         - [VMD: _(Visual MarkDown App)_](#vmd-visual-markdown-app)
@@ -44,6 +55,12 @@
         - [Final Step - Make Modular Emacs folder the default `~/.emacs.d` folder:](#final-step---make-modular-emacs-folder-the-default-emacsd-folder)
     - [Ready Set Go!  Start Up Modular Emacs:](#ready-set-go--start-up-modular-emacs)
     - [Usage:](#usage)
+        - [Blackboard Color Theme:](#blackboard-color-theme)
+        - [Enable Optional Steel Bank Common Lisp IDE:](#enable-optional-steel-bank-common-lisp-ide)
+            - [Copy `dispatcher.el` into `my-modules`:](#copy-dispatcherel-into-my-modules)
+                - [Edit your clone `/my-modules/dispatcher.el`:](#edit-your-clone-my-modulesdispatcherel)
+            - [Edit `~/.emacs.d/init.el` to load your clone of `dispatcher.el`:](#edit-emacsdinitel-to-load-your-clone-of-dispatcherel)
+                - [Change the following line within `init.el`:](#change-the-following-line-within-initel)
         - [Strategies for Concurrent Development:](#strategies-for-concurrent-development)
     - [Features:](#features)
         - [Pre-configured packages - Comprehensive list:](#pre-configured-packages---comprehensive-list)
@@ -143,20 +160,121 @@ _(Choose your Flavor)_
 
 > **Note:** Don't install any of the other listed emacs packages as older versions are also supported by Ubuntu - If you already have them installed run: **`sudo apt purge`** to completely remove all of the older packages and configurations first,,,  
 
-##### Mac OS:  
+##### Mac OS: 
 
-_(Install from Homebrew Cask)_  
+> **Update 2019** _It looks like **Build-from-Source** or **Macports** is our only option now..._  
 
-    brew cask install emacs
+OK you Mac die-hards!  All the Linux dudes are going to be angry now as we are about to take up the rest of the real-estate in this **Emacs install guide**!
 
-> **Note:** This will install the latest GUI version of Emacs `--with-cocoa` and other important compile options.  The older way of installing emacs via regular Homebrew with these extra compile options is no longer available.  Now: `brew install emacs` will only install the non GUI shell version...  
+It looks like _(we)_ Macolites have been abandoned by both Apple and Homebrew!  What a mess... and What a shame! **_Linux dudes roll eyes and wonder why MacRats don't jump ship?_**  
+
+The Mac OS was, and still is a nice environment to work _(and create)_ in... I loved the NextStep `NS` environment all the way back to when it was first created at **NeXT** And... Being a musician, composer, programmer and member of the **BCS NeXT SIG**, in those early days, I was in collaboration with the digital audio developers at NeXT during that time as well! _(I typed that from memory... hope I got the camel case right. lol)_.
+
+Now, I am not sure which direction Apple is taking...  The design of Mac OS morphing into iOS and visa versa makes it not so much of a unix anymore (also Mac OS never had a proper unix File System anyway)... I remember it was the file system and risky R/W optical disks which were the Achelies heel of the **NeXT** computer.  I am quite frightened by the new **APFS** spec Apple is throwing out! I have not upgraded past regular **Sierra** either... Time is running out?  What to do?
+
+Unfortunately I am dependent on Mac OS For digital music/sound, video, graphic design, etc. I currently use a late 2015 27" retina iMac.  All of my other computing work is done on a reasonably secure Qubes _(personal hypervisor)_ Laptop that runs different flavors of Linux as App VMs... My Qubes laptop is used for writing, coding, business, personal...  
+
+On my Qubes Laptop, Emacs works great, straight from any of the above package managers _(as you can see above...)_  
+
+Mac OS (**Darwin**) has always been a mongrel cross-breed of different unix flavors. _(by now all the unix are mixed up pretty much however... so that's not it...)_  The problem is all the non-standard junk that Apple does that tends to break standard unix things if those are also installed!  OMG! Hair pulling time!
+
+Long story short... My Emacs install was causing all my woes... Homebrew stopped building versions that I needed for my Emacs configuration to work correctly. _(some of the problems were also shell startup related)_.  After experiencing of all of that over the past year, and coming to the realization that I shoulda/coulda used MacPorts instead of Homebrew, but not daring to change all that now mid stream of course... So... I am building Emacs from source... Straight from a cloned repository from Gnu's Git Server!  I can get the bleeding edge if I want now... :stuck_out_tongue:
+
+##### Install Emacs From Source on Mac OS:
+
+> **Note:** We are going to build a fast moving/changing target: Monster Lisp Machine with lots of little bitty _loaded.el bugs_ they are fixing and working on all the time! It's important to set up a scheme allowing for quick updates to keep in sync and get those bug fixes, _(possibly bugs that are blocking you from making a successful build!)_  OK **_MacCowboys_** and **_MacCowgirls_**... Are you ready for this? Strap in... Or should I say.. Bootstrap! :octocat:
+
+###### Prerequisites:
+
+- **Install Autoconf & Automake**  
+These can be safely installed by Homebrew:  
+`brew install autoconf automake`  
+
+
+- **autoconf:**  - Check that it is at least the version specified near the start of **`configure.ac`** _(in the_ **`AC_PREREQ`** _command)._  **`V2.65`** or greater is required as of `2019-006-01`.  The Homebrew version at same time is: **`V2.69`** Whew! That was close! :trollface:
+
+
+- **git:** - Check that `git` is at least **`Git 1.7.1`**.  If you cloned this repository with an older **Git** version, you may need to reclone it after upgrading `git`.  The current version of `git` at **Homebrew** is **`V2.21.0`** so you are all set if you **`update/upgrade`** Homebrew...  
+`brew install git`  
+-or-   
+`brew update`   
+`brew upgrade`  
+
+
+- **makeinfo:** - This is not strictly necessary, but highly recommended, so that you can build the manuals. **makeinfo** is bundled as part of **GNU Texinfo**.  You can install **texinfo** with **Homebrew** as well:  
+`brew install texinfo`  
+Make sure your installed **Texinfo** is: **`V4.13`** or later to work with this build... No problem... Homebrew version is currently **`V6.6`**   _(as of 2019-006-01)_
+
+###### Clone `GNU Emacs Repo @ Savannah.gnu.org:`  
+
+You could do this within a dedicated **`Dev`** folder because you will most likely want to maintain a local clone so you can come back later to build again when you need to upgrade or drop back to a more stable version...  I created my own local _untracked_ branch and keep my local `tracking` branch clean...   This helps speed up the build-problems-debug-re-build-till-it-works cycle...  
+
+```bash
+
+git clone https://git.savannah.gnu.org/git/emacs.git
+
+```
+
+> **_btw:_**  So far all these instructions are universal to build the entire Emacs world on any platform, Mac, Linux, BSD, Windows, Tests, etc.  You have the cloned repo.  Try: **`git branch -a`** and you will see what I mean!
+
+###### Set up Autotools:  
+
+To use the autotools: Run the following shell command within your cloned **`emacs`** directory:  
+
+``` bash
+
+$> cd emacs 
+$> ./autogen.sh
+
+```
+
+This will generate the **`configure`** script and some related files, and to set up your git configuration...  
+
+###### Run Configure:  
+
+To get all the features I wish Homebrew would give us, run `configure` with the following switches set:
+
+```
+
+$> ./configure --with-ns --with-imagemagick --with-mailutils\
+   --with-gnutils --with-modules --with-rsvg --with-dbus\
+   --with-xml2
+
+```
+
+###### Make Bootstrap: _(does a more thourough job)_  
+
+The **Bootstrap make** is quite **`CPU`** intensive... If your Mac can _(4 cores? no prob!)_ fan won't even twitch? Maybe... :octocat: So if you don't mind waiting, this is the best way to build according to the GNU dudes...
+
+    make bootstrap
+
+###### Make Install! _(Make the Emacs Mac App package!)_
+
+    make install
+
+###### Move your shiny new Emacs.app to: `$HOME/Applications:`
+
+    mv nextstep/Emacs.app ~/Applications
+
+###### Launch Emacs from your Apps Folder/Menu:
+
+Launch Emacs for the first time...  If it runs you can check the version with **`C-h C-a`**... If you have problems? Go back to the top of this **_squirrel cage_** and start over... :trollface:
+
+###### Revert Repo back to fresh clone state to start over:  
+
+If your build was successful, you don't need to do this now... Wait until you need to build again...  However if your build went bad... This is the way to start completely over... 
+
+    git clean -fdx
+
+###### Troubleshooting Debugging:
+
+My build went well because I planned well this time... _(i.e., you did not see the big goofs I made before writing this... lol)_  Because of that I am now running Emacs V26.2.50 on my iMac now with Imagemagick, and all my favorite bells and whistles!  **_Caveat:_** I have to manage builds now.. Oh well... it felt good getting that monster to build!   :octocat:
 
 ##### FreeBSD & OpenBSD:  
 
-Install the most recent pre-built binary package of Emacs: _(must be up to v26.1 by now - 2019-May)_
+I have not tried this yet with a Qubes configured BSD VM... Hopefully the FreeBSD world knows how to do Emacs correctly... Install the most recent pre-built binary package of Emacs: _(must be up to v26.1 by now - 2019-May)_
 
     pkg_add -r emacs
-
 
 ### NODE.js:
 
@@ -280,8 +398,6 @@ The pandoc package installs a lot of sub-packages and can take some time to inst
 
 Now that you have Pandoc installed, **[Download The Manual Here]()**  
 
-
-
 ### Graphviz:
 
 Harmonic Alchemy Modular Emacs comes integrated with the popular **Graphviz utility** which allows the creation of nice graphs, flowcharts, data diagrams, etc. using a powerful scripting language called **dot**...  The Emacs mode for Graphviz is: **`graphviz-dot-mode`**
@@ -323,17 +439,19 @@ OK Already! This one is **_(optional)_** for Eggheads :octocat:...  You can skip
 
 You can install this now, decide not to install it ever, or wait and skip this section for later after you have Modular Emacs up and running and have had a chance to get familiar with everything first...  Or just use Modular Emacs without it...  No matter what you choose everything will be fine...
 
-Steel Bank Common Lisp is the best full-fledged Lisp compiler option for Fedora and Debian and I guess Mac as well.  But the Mac world has many Eggheads so there may be many opinions to choose from as well. %^)... I personally feel SBCL is best for using with Emacs... But then I'm an Emacs Egghead... Oh Well...  You can be what ever Egghead you wish... Or not... Have fun playing croquet among the ivory towers!
+Steel Bank Common Lisp is the best full-fledged Lisp compiler option for Fedora and Debian and I guess Mac as well.  But the Mac world has many Eggheads so there may be many opinions to choose from as well. %^)... I personally feel SBCL is best for using with Emacs... But then I'm an Emacs Egghead... _(I prefer the term hacker - Eggheads are nerds with academic credentials.  They may or may not also be hackers who DIY knowledge from anywhere, regardless of the source...)_ Oh Well...  You can be what ever Egghead or Hacker you wish... Or not... Have fun playing croquet among the ivory towers!
 
 You don't actually need a full fledged Lisp compiler for Emacs because Emacs Slime Mode takes care of handling most things internally within Emacs and also provides a nice [REPL](https://en.wikipedia.org/wiki/Read-eval-print_loop) interface with that setup by default...  
 
 **_However..._** Once you add Steel Bank Common Lisp to your system _(supercharged with Emacs Slime mode)_  You will arguably have the best IDE for serious Lisp projects... _(my opinion and totally biased of course.  Most likely RMS's choice as well... %^)_  If you don't know who RMS is... You need to read about the history of Emacs & the MIT AI lab!  btw, I don't think RMS likes CL...  If he reads this and replies and/or corrects me, I would be flattered... :octopus: 
 
-RMS may not remember this, but I sat at a table not far from him many times during lunch at Mary Chung's (Kendall Sq. Cambridge MA)... Is Mary Chung's still open after all these years? Was it even called Mary Chungs?  I believe Mary Chung's was the secret meeting place for many early FSF meetings!  Probably secret super computer design meetings _(Thinking Machines)_ as well...  And who knows what other DARPA High Tech secret meetings may have been held there tucked away in a dark corner!
+RMS may not remember this, but we seem to have eaten lunch at the same Chinese restaurant many times in the past.  I have also seen him dancing wildly at a few New England folk dances! I sat at a table overhearing early informal lunchtime FSF meetings as well! I cannot remember the name of that Chinese restaurant anymore but it was near Tech Square, (Kendall Sq. Cambridge MA)... Was it called Mary Chung's?  Nope... that was the Harvard one I also loved...  I believe this particular Kendall Sq. Broadway/Main St. restaurant was an informal strategic meeting place for super computer design meetings _(Thinking Machines)_ as well...  And who knows what other DARPA High Tech black ops secret projects may have had their beginnings right there tucked away in a dark corner!
 
-OMG! Maybe I was part of a secret-operation-gone-bad and they wiped some of my memories!!! That may explain why...  _(never-mind)_...  
+OMG! That's why I can't remember the name!  Maybe I was part of a secret-operation-gone-bad and they wiped some of my memories!!! That may explain why...  _(never-mind...)_ :trollface:  
 
-One thing I do remember was that **Hot&Sour soup** _(at what ever that Chinese restaurant on Broadway near Kendall Sq. (not far away from Eli Heffron & Sons Computer Junk Yard . PDP11 Gold mine) was called?)_ was the best in the universe!  I have many fond memories about sitting studiously alone at a table _(on a gloomy New England rainy day)_ with a warm savory steaming bowl of H&S soup _(scallions sprinkled on top)_ in front of me, my laptop on the side... _(em... er... Oh! With my HP-15c rpn calculator sitting next to a graph-paper log/notebook, mechanical pencil, engineering scale/straight edge, and possibly a small shapes template as well.)_  School Days... LOL   At least I didn't have to carry a slide rule.  Abacus? LOL I was talking about the soup somewhere in that stack overflow above. `%^)`  Maybe we should get back to the subject at hand _(install this already OK?)_
+One thing I do remember was that **Hot&Sour soup** _(at what ever that Chinese restaurant on Broadway near Kendall Sq. (not far away from Eli Heffron & Sons Computer Junk Yard . PDP11 Gold mine) was called?)_ was the best in the universe!  I have many fond memories about sitting studiously alone at a table _(on a gloomy New England rainy day)_ with a warm savory steaming bowl of H&S soup _(scallions sprinkled on top)_ in front of me, my laptop on the side... _(em... er... Oh! With my HP-15c rpn calculator sitting next to a graph-paper log/notebook, mechanical pencil, engineering scale/straight edge, and possibly a small shapes template as well. Eytballing some piece of interesting electronic junk (probably a power supply) I got at Eli Heffron & Sons...)_  School Days... LOL   At least I didn't have to carry a slide rule.  I still have my HP-15c _(and it works great!)_ It's future proof like Emacs & Abacus! 
+
+LOL I was talking about the soup somewhere in that stack overflow above. `%^)`  Maybe we should get back to the subject at hand _(install this already OK?)_  Enough Lisp nostalgia...
 :octocat:
 
 #### Install SBCL on Mac OS:  
@@ -342,7 +460,7 @@ If you are on Mac OS you can install Steel Bank Common Lisp via Homebrew:
 
     brew install sbcl
 
-That's it... Easy!  
+That's it... Easy Peazy!  
 
 #### Install SBCL on Linux:  
 
@@ -390,9 +508,9 @@ After the last step you will see a message that looks like this:
     ;; Replace "sbcl" with the path to your implementation
     (setq inferior-lisp-program "sbcl")  
 ```
-You are all set now... Everything will be setup each time you start up **`sbcl`** from now on... You don't have to add anything to .emacs etc.  That part was already done for you within: **Modular Emacs:** `./lisp/modules/12-progLang-pkg-conf.el`...
+You are all set now and you will not be needing to use `sbcl` or it's `REPL` from the command line as you have Slime mode which is much better...  You can ignore the above message as well about adding anything to your Emacs init file as well.  That part was already done for you within: **Modular Emacs:** `./lisp/modules/12-progLang-pkg-conf.el`...
 
-5. **Howto Quit the SBCL Lisp Interpreter:**    
+5. **Quit the SBCL Lisp Interpreter _(you will be using Slime Mode from now on)_:**    
 
 `    * (cl-user::quit)`  
 
@@ -404,9 +522,13 @@ Enjoy! :octocat:
 
 #### SBCL Installed? Now Read the Docs!
 
-Now that you have SBCL installed, **[Download The Manual Here](http://www.gigamonkeys.com/book/)**  
+Now that you have SBCL installed, you will not have to use it directly from the terminal... Instead you will be interfacing with it through **Emacs' Superior Slime Mode** 
 
-That's it... simple but powerful _(like lisp)_
+**[Read the Slime Manual Here](https://common-lisp.net/project/slime/doc/html/)**  
+
+**[Read the Common Lisp Manual Here](http://www.gigamonkeys.com/book/)**  
+
+That's it... simple but powerful _(like lisp)_  
 
 ## Get Ready to Start up Modular Emacs for the first time!
 ### First Some Initial House Keeping: _before we move in_  
@@ -457,7 +579,7 @@ If you got an error and see the default emacs screen, try to retrace your steps 
 
 > **Note1:** Fetching/pulling new changes from the master `modular-emacs` GitHub repository to your local `~/.emacs.d/` directory will automatically be reflected within your emacs configurations... No need to copy any more files... But you may be surprised to see some new feature or something working differently.  If that bothers you, you may wish to keep your changes separate from the remote master branch.  Therefore create your own local `test` branch _(or call it what you like)_ and maintain your local changes in parallel... Change your local branch's .gitignore to accommodate your needs...
 
-> **Note2:** The remote `modular-emacs` Github repository also maintains a `develop` branch where new ideas and features are tried out before folding them into the master branch which maintains the Modular Emacs stable release.  You could also create a local branch that tracks origin:develop if you would like to participate in any new things I am trying out before final release... Version 1.0.1 of Modular Emacs was first staged and tested within the develop branch.  Version 1.0.2 is currently being tested on the develop branch. _(if not already merged into master by now)_...  Any time a final release of new features is ready, the develop branch will be merged back into master branch, tagged as a new point release (or major release when a lot of new features have been added to warrant it)...
+> **Note2:** The remote `modular-emacs` Github repository also maintains a `develop` branch where new ideas and features are tried out before folding them into the master branch which maintains the Modular Emacs stable release.  You could also create a local branch that tracks origin:develop if you would like to participate in any new things I am trying out before final release... Earlier point versions of Modular Emacs were first staged and tested within the develop branch.  Version 2.0.0 is currently being tested on the develop branch. _(if not already merged into master by now)_...  Any time a final release of new features is ready, the develop branch will be merged back into master branch, tagged as a new point release _(or major release when a lot of new features have been added to warrant it)_...
 
 ## Usage:
 
@@ -471,19 +593,62 @@ If your customization proves stable, and you like it, you could then save your s
 
 In all cases you would be wise to create and checkout a local `test` branch _(call it what you wish)_ and keep all your custom changes in there separate from the `master` or `origin:develop` branch...
 
+### Blackboard Color Theme:  
+
 Modular Emacs comes with my slightly customized version of the **Blackboard color theme** which I like for the _pedagogic essence_ it inspires...  If you would like to add more custom themes or a different theme than `blackboard.el`, you can replace it or add additional themes into your local branch's: `~/.emacs.d/lisp/themes` directory and they will also will work with this setup by choosing `M-x load-theme` or changing the last line within `~/.emacs.d/lisp/modules/06-interface.el` to: `(load-theme 'your-chosen-theme-name t)`
 
-> **Note:** _Obviously if you add more themes to your **Modular Emacs** **themes** directory you will be adding new un-tracked files to your cloned git repository!  Make sure you have checked out your own local branch before adding new themes or doing any customization outside the init.el file or the `my-modules` directory.  Then you will have proper management of your local custom changes and also have all that in code revision as well!_  How many times have I said this already?  OMG! So I wrote a section Strategies for Concurrent Development below... :octocat:
+> **Note:** _Obviously if you add more themes to your **Modular Emacs** **themes** directory you will be adding new un-tracked files to your cloned git repository!  Make sure you have checked out your own local branch before adding new themes or doing any customization outside the init.el file or the `my-modules` directory.  Then you will have proper management of your local custom changes and also have all that in code revision as well!_  How many times have I said this already?  OMG! So I wrote a section Strategies for Concurrent Development below... :octocat:  
+
+### Enable Optional Steel Bank Common Lisp IDE:  
+
+The above **_Requirements_** section lists the optional installation of **SBCL**...  If you installed that on your machine and you would like to enable Slime mode within Emacs there are a few extra steps to do to make that happen now... If you have not installed Steel Bank Common Lisp you need to go back up to the requirements section now and get that task done first...  Then come back here to finish up...  
+
+#### Copy `dispatcher.el` into `my-modules`:  
+
+    cp ~/.emacs.d/lisp/modules/dispatcher.el ~/.emacs.d/lisp/my-modules/dispatcher.el
+
+##### Edit your clone `/my-modules/dispatcher.el`:  
+
+Un-comment the line that loads `12-progLang-pkg-conf.el` as reflected below:  
+
+```lisp
+
+;; Optional: Load Harmonic Alchemy Modular Emacs - Programming Languages module:
+;; This is for using Emacs as a full fledged Common Lisp IDE!  Don't un-comment
+;; this Load Line unless you are an Egghead...  You have been warned!
+(load-file "~/.emacs.d/lisp/modules/12-progLang-pkg-conf.el")
+
+```
+
+#### Edit `~/.emacs.d/init.el` to load your clone of `dispatcher.el`:  
+
+##### Change the following line within `init.el` to look like this:
+
+```lisp
+
+;; Load: Harmonic Alchemy Modular Emacs - Dispatcher
+(load-file "~/.emacs.d/lisp/my-modules/dispatcher.el")
+
+```
+Now restart Emacs and then try the following from your scratch buffer:
+
+    M-x slime
+
+**[Read the Slime Manual Here](https://common-lisp.net/project/slime/doc/html/)**  
+
+**[Read the Common Lisp Manual Here](http://www.gigamonkeys.com/book/)**  
 
 ### Strategies for Concurrent Development:
 
 **Harmonic Alchemy Modular Emacs** Version **`1.0.2`** and beyond contain some modules that are not loaded by default.  These modules are ones that you will most likely need to customize on your own as well if you choose to use them...  The following Scheme lays out a nice way to have different **_test_** versions of your own **Modular Emacs** running along side the stock Modular Emacs current HEAD at origin master...  Doing it in the following manner will make it easy to decide what to merge from origin master, if needed, and when... And it will be easy to do... You will be free to experiment as much as you like and have a few safety nets just in case...
 
-> `TODO:` Insert svg diagram here...
+> `TODO:` Insert `git branch scheme` svg diagram here...
 
 To be continued...
 
 ## Features:
+
+> **Note:** This section needs an update... Many new features have been added.  Documentation for them is still an on-going process...  Please be patient... Or open an issue... Our conversation may end up being part of this doc. :octocat:
 
 **Default Emacs welcome screen replaced with simple greeting:** Prints current emacs configuration, and date... With a famous Mark Twain quote _(My Favorite author. This quote may change from time to time with new updates)_.  
 
