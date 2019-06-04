@@ -60,7 +60,9 @@
             - [Copy `dispatcher.el` into `my-modules`:](#copy-dispatcherel-into-my-modules)
                 - [Edit your clone `/my-modules/dispatcher.el`:](#edit-your-clone-my-modulesdispatcherel)
             - [Edit `~/.emacs.d/init.el` to load your clone of `dispatcher.el`:](#edit-emacsdinitel-to-load-your-clone-of-dispatcherel)
-                - [Change the following line within `init.el`:](#change-the-following-line-within-initel)
+                - [Change the following line within `init.el` to look like this:](#change-the-following-line-within-initel-to-look-like-this)
+            - [Restart Emacs & Run Slime from your scratch buffer:](#restart-emacs--run-slime-from-your-scratch-buffer)
+            - [Common Lisp Resources:](#common-lisp-resources)
         - [Strategies for Concurrent Development:](#strategies-for-concurrent-development)
     - [Features:](#features)
         - [Pre-configured packages - Comprehensive list:](#pre-configured-packages---comprehensive-list)
@@ -445,14 +447,15 @@ You don't actually need a full fledged Lisp compiler for Emacs because Emacs Sli
 
 **_However..._** Once you add Steel Bank Common Lisp to your system _(supercharged with Emacs Slime mode)_  You will arguably have the best IDE for serious Lisp projects... _(my opinion and totally biased of course.  Most likely RMS's choice as well... %^)_  If you don't know who RMS is... You need to read about the history of Emacs & the MIT AI lab!  btw, I don't think RMS likes CL...  If he reads this and replies and/or corrects me, I would be flattered... :octopus: 
 
-RMS may not remember this, but we seem to have eaten lunch at the same Chinese restaurant many times in the past.  I have also seen him dancing wildly at a few New England folk dances! I sat at a table overhearing early informal lunchtime FSF meetings as well! I cannot remember the name of that Chinese restaurant anymore but it was near Tech Square, (Kendall Sq. Cambridge MA)... Was it called Mary Chung's?  Nope... that was the Harvard one I also loved...  I believe this particular Kendall Sq. Broadway/Main St. restaurant was an informal strategic meeting place for super computer design meetings _(Thinking Machines)_ as well...  And who knows what other DARPA High Tech black ops secret projects may have had their beginnings right there tucked away in a dark corner!
+RMS may not remember this, but years ago _(when we were both much younger)_ we seem to have eaten lunch at the same Chinese restaurant on many simultaneous occasions.  I also remember seeing him dancing wildly at a few New England folk dances! Some of those lunchtime encounters were actually early informal FSF meetings! During one of these encounters, my friend and I just happened to be sitting at a table close enough to overhear the entire meeting.
+
+I cannot remember the name of that Chinese restaurant anymore but it was near Tech Square, (Kendall Sq. Cambridge MA)... Was it called Mary Chung's?  Nope... that was the Harvard one I also loved...  I believe this particular Kendall Sq. Broadway/Main St. restaurant was an informal strategic meeting place for super computer design meetings _(Thinking Machines)_ as well...  And who knows what other DARPA High Tech black ops secret projects may have had their beginnings right there tucked away in a dark corner!
 
 OMG! That's why I can't remember the name!  Maybe I was part of a secret-operation-gone-bad and they wiped some of my memories!!! That may explain why...  _(never-mind...)_ :trollface:  
 
 One thing I do remember was that **Hot&Sour soup** _(at what ever that Chinese restaurant on Broadway near Kendall Sq. (not far away from Eli Heffron & Sons Computer Junk Yard . PDP11 Gold mine) was called?)_ was the best in the universe!  I have many fond memories about sitting studiously alone at a table _(on a gloomy New England rainy day)_ with a warm savory steaming bowl of H&S soup _(scallions sprinkled on top)_ in front of me, my laptop on the side... _(em... er... Oh! With my HP-15c rpn calculator sitting next to a graph-paper log/notebook, mechanical pencil, engineering scale/straight edge, and possibly a small shapes template as well. Eytballing some piece of interesting electronic junk (probably a power supply) I got at Eli Heffron & Sons...)_  School Days... LOL   At least I didn't have to carry a slide rule.  I still have my HP-15c _(and it works great!)_ It's future proof like Emacs & Abacus! 
 
-LOL I was talking about the soup somewhere in that stack overflow above. `%^)`  Maybe we should get back to the subject at hand _(install this already OK?)_  Enough Lisp nostalgia...
-:octocat:
+LOL I was talking about the soup somewhere in that stack overflow above. `%^)`  Maybe we should get back to the subject at hand _(install this already OK?)_  Enough Lisp nostalgia...  I mean I wasn't even a Lisp programmer back then...  I had to make money and support a growing family!  I sold out to the dark side from "C" to C++ to (more C++ and some Java - later Python). :octocat:
 
 #### Install SBCL on Mac OS:  
 
@@ -525,8 +528,6 @@ Enjoy! :octocat:
 Now that you have SBCL installed, you will not have to use it directly from the terminal... Instead you will be interfacing with it through **Emacs' Superior Slime Mode** 
 
 **[Read the Slime Manual Here](https://common-lisp.net/project/slime/doc/html/)**  
-
-**[Read the Common Lisp Manual Here](http://www.gigamonkeys.com/book/)**  
 
 That's it... simple but powerful _(like lisp)_  
 
@@ -630,13 +631,41 @@ Un-comment the line that loads `12-progLang-pkg-conf.el` as reflected below:
 (load-file "~/.emacs.d/lisp/my-modules/dispatcher.el")
 
 ```
-Now restart Emacs and then try the following from your scratch buffer:
+#### Restart Emacs & Run Slime from your scratch buffer:
 
     M-x slime
 
-**[Read the Slime Manual Here](https://common-lisp.net/project/slime/doc/html/)**  
+#### Common Lisp Resources:
 
-**[Read the Common Lisp Manual Here](http://www.gigamonkeys.com/book/)**  
+- **[Read the Slime Manual Here](https://common-lisp.net/project/slime/doc/html/)**  
+
+- **[Check out the Common Lisp Wiki CLiki](https://www.cliki.net/)**
+
+
+- **[Read Practical Common Lisp by Peter Seibel Here](http://www.gigamonkeys.com/book/)**  
+
+- **[Watch Peter Siebel's Practical Common Lisp Presentation - Youtube](https://youtu.be/4NO83wZVT0A)**
+
+
+- **[Download Paul Graham's Classic: ANSI Common Lisp Here - PDF](https://7chan.org/pr/src/ANSI_Common_Lisp_-_Paul_Graham.pdf)**
+
+- **[Study Annotations on Graham's ANSI Common Lisp Here](http://www.cs.northwestern.edu/academics/courses/325/readings/graham/graham-notes.html)**
+
+
+- **[Download Paul Graham's On Lisp Book - PDF](http://ep.yimg.com/ty/cdn/paulgraham/onlisp.pdf)**
+
+In addition to above if you would like to try a complete interactive guide complete with example source code etc.  Clone **_Paradigms of Artificial Intelligence Programming_ by: Peter Norvig** _(Don't let that title fool you.  It's all about Lisp!)_
+
+    git clone https://github.com/norvig/paip-lisp.git
+
+Everything you need will be in your clone... Read the README.md first of course... 
+
+**Other Books:**
+
+- **[Download Common Lisp - the Language by: Guy L. Steele - PDF](http://www.lispmachine.net/books/common_lisp_the_language.pdf)**
+
+- **[Much Nore Can Be Found on this CLiki Page](https://www.cliki.net/Exercices)**
+
 
 ### Strategies for Concurrent Development:
 
@@ -754,7 +783,7 @@ Use Scratch buffer to evaluate snippets of `lisp` without having to remove the w
 
 > **NOTE:** I have changed some of these since last documented here.  Some of the keys below have changed.  I will update this README.md once I sort that all out... You can always consult HELM with a prefix key however... _(which works fine right there when you need it without having to manually open this README.md just to see what keys are bound! OMG!)_
 
-**_[See: 09-key-bindings.el](.emacs.d/lisp/modules/09-key-bindings.el)_**
+**_[See: 10-key-bindings.el](.emacs.d/lisp/modules/10-key-bindings.el)_**
 
 **Function:**  | **Key:** 
 :-------- | --------: 
