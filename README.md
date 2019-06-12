@@ -481,55 +481,55 @@ Steel Bank Common Lisp is available in the Linux package managers as well:
 
 You don't have to re-invent wheels in Lisp!  no No NO!  Here are over 1,500 libraries available at your fingertips!  You **Must** have this!  Installing is not too painful, and they will also be integrated into Emacs Slime Mode!  
 
-Download the file for installation somewhere into your HOME directory _(Downloads is fine)_. (https://beta.quicklisp.org/quicklisp.lisp)
+You need to download `quicklisp.lisp` somewhere into your HOME path that is convieanent for you _(`~/Downloads` is fine... The important thing is to remember where you downloaded it. DOH! You will need this file next)_.  
+**Simply Click this link:** (https://beta.quicklisp.org/quicklisp.lisp) to download it from your browser.  _(or use `wget` if you are a terminal die-hard, lol)_
+You may and should inspect this lisp file before running it if you are paranoid. _evil grin_...  Lisp is not evil...  It just speaks with a lisp... :trollface:  
 
 ##### Run these commands from your HOME directory: 
 
 1. **Install Quicklisp via sbcl: _(all platforms)_**  
+Use SBCL to load the file you just downloaded above:  
+$_ `sbcl --load <path/to/your/quicklisp.lisp>`  
 
-    sbcl --load path/to/downloaded/quicklisp.lisp  
-This will use the file you downloaded above to install  
-**Quicklisp** into the: **`~/quicklisp/`** directory.  
-**`sbcl`** will still be running after this is done...  
-Your cursor will be at the next Lisp **"`*`"** prompt:  
-Continue typing the rest after the **`*`** below:
+The above command invokes **`sbcl`** which then loads the file you just downloaded above to install **Quicklisp** into: **`~/quicklisp/`** which was also automagically created for you by some wizard behind the curtain...  **`sbcl`** will still be running after this is done...  Your cursor will be at the next `sbcl` **"`*`"** prompt:  Continue typing the rest after the **`*`** below: _(if copying don't copy the star ok? That simply indicates the `sbcl` prompt already... OK? %^)_
 
 2. **Install Quicklisp Quickstart:**  
-`    * (quicklisp-quickstart:install)`  
+***** `(quicklisp-quickstart:install)`  
 
 3.  **Load Quicklist Every Time you start Lisp:**  
-`    * (ql:add-to-init-file)`  
+***** `(ql:add-to-init-file)`  
 
 4. **Load Quicklisp Slime Helper command for Emacs:**  
-`    * (ql:quickload "quicklisp-slime-helper")`  
+***** `(ql:quickload "quicklisp-slime-helper")`  
 
-After the last step you will see a message that looks like this:  
+After the last step you will see some text at the very end of output that looks like this:_
 ```
-    To use, add this to your ~/.emacs:
-
     (load (expand-file-name "~/quicklisp/slime-helper.el"))
     ;; Replace "sbcl" with the path to your implementation
     (setq inferior-lisp-program "sbcl")  
 ```
-You are all set now and you will not be needing to use `sbcl` or it's `REPL` from the command line as you have Slime mode which is much better...  You can ignore the above message as well about adding anything to your Emacs init file as well.  That part was already done for you within: **Modular Emacs:** `./lisp/modules/12-progLang-pkg-conf.el`...
+You can disregard that message... You are done with your part here... Everything is installed properly for now.  Later... When you are all set to run Modular Emacs for the first time the above Slime Mode scripts will load and compile while Emacs is loading Modular Emacs for the first time...
 
-5. **Quit the SBCL Lisp Interpreter _(you will be using Slime Mode from now on)_:**    
+You will not be needing to use `sbcl` or it's `REPL` from the command line from now on, as you will have Emacs Slime mode later to use, which is much better...  
 
-`    * (cl-user::quit)`  
+5. **Quit the SBCL Lisp Interpreter:**    
+***** `(cl-user::quit)`  
 
-The above command will shut down your SBCL process cleanly...  After you get your new Modular Emacs up and running you can test Slime and Common Lisp out by typing:
+The above command will shut down your SBCL process cleanly...  
+
+Later...  Once you have your new Modular Emacs environment up and running smoothly, you will be able to do Common Lisp, development, research, experiments, coding, anything... within a fully compliant Common Lisp IDE, simply by typing:
 
     M-x slime
 
-Enjoy! :octocat:
+Comming soon at the end or your journey! :octocat:
 
-#### SBCL Installed? Now Read the Docs!
-
-Now that you have SBCL installed, you will not have to use it directly from the terminal... Instead you will be interfacing with it through **Emacs' Superior Slime Mode** 
+#### Read the SBCL Docs!
 
 **[Read the Slime Manual Here](https://common-lisp.net/project/slime/doc/html/)**  
 
-That's it... simple but powerful _(like lisp)_  
+**[Read the Common Lisp Manual Here](http://www.gigamonkeys.com/book/)**  
+
+**[Clone This Repo, Study Chapters, Do Exercises](https://github.com/norvig/paip-lisp.git)**  
 
 ## Get Ready to Start up Modular Emacs for the first time!
 ### First Some Initial House Keeping: _before we move in_  
@@ -546,23 +546,26 @@ You need this for Emacs to work with Multimarkdown well... Even if you did not i
     cd ~/me.emacs.d/lisp/my-modules
     git clone https://github.com/harmonicalchemy/mmd-mode.git  
 
+
 #### Copy `me.init.el` to: `init.el`:
 
 **`me.init.el`** is a template for reference only...  I did it this way, _(adding `init.el` to `.gitignore`)_ for the purpose of providing more flexible ways to manage your local install of Modular Emacs...  me.init.el will stay in sync with the remote origin while your local clone: **`init.el`** runs the show _(with any changes you might add)_ without triggering git to complain about new un-tracked files etc...
 
     cp ~/me.emacs.d/me.init.el ~/me.emacs.d/init.el
 
-Edit your fresh new init.d and change the Banner Message to what ever you want...  Later we will discuss different strategies of management that will hopefully allow you to build your own setup concurrently and in harmony with Modular Emacs, and be able to easily share any extra features/modules of your own that you may wish to bring to the rest of the Modular Emacs user community!
+Later... You may want to edit your fresh new init.d and change the Banner Message to be more specific to your installation...  Also, later we will discuss different strategies of management that will hopefully allow you to build your own setup concurrently and in harmony with Modular Emacs, and be able to easily share any extra features/modules of your own that you may wish to bring to the rest of the Modular Emacs user community!
 
 ### Final Step - Make Modular Emacs folder the default `~/.emacs.d` folder:  
 
-First make sure to rename _(save)_ your existing:  **`~/.emacs.d`** to: **`~/save.emacs.d`** _(You may have already done this in the beginning)_  You may also have a `.emacs` init file outside of the `.emacs.d` folder that also needs to be renamed!  
+First be sure to rename _(save)_ your existing:  **`~/.emacs.d`** to: **`~/save.emacs.d`** _(You may have already done this in the beginning)_  You may also have a `.emacs` init file outside of the `.emacs.d` folder that also needs to be renamed!    **This is very important!  Becase the next steps will overwrite them if you did not change their names!!!**
 
 Now you are ready to rename: **`~/me.emacs.d`** to: **`~/.emacs.d`**  
 
     mv ~/me.emacs.d ~/.emacs.d
 
 _(This is now your new **Modular Emacs Local Repository** which is also now your default_ **`.emacs.d`** _home directory!)_  
+
+One last check... Make sure you no longer have a `~/.emacs` file still in your home directory...  You should now only have an: `~/.emacs.d/` directory... 
 
 ## Ready Set Go!  Start Up Modular Emacs:
 
@@ -572,7 +575,7 @@ _(This is now your new **Modular Emacs Local Repository** which is also now your
 
 After a lot of super computing lisp number crunching flashing away in your mini buffer _(wait wait wait... the first time can take up to a minute! After that no more than 7 or 8 seconds at most...)_ Then **Bam!** You should now see your new emacs pop up with the **Welcome to Harmonic Alchemy Modular Emacs!** scratch buffer in a frame with a pre-determined row/column initial size! 
 
-**No?** Broken? Oh My! What a freaking let down!  I feel your pain!  OK... You may be fine if there are only warnings... _(which are hard to avoid upon first startup with all those new packages compiling etc. Not much you can do about that... The developers who made the packages need to clean that up, you could help them though. ;-)_
+**No?** Broken? Oh My! What a freaking let down!  I feel your pain!  OK... Don't worry if all you see are only numerous compiler warnings... _(those are hard to avoid upon first startup with all the new packages compiling etc. Not much you can do about that... The developers who made the packages need to clean that up, you could help them though.  You can safely kill that message buffer and move on... ;-)_
 
 If you got an error and see the default emacs screen, try to retrace your steps or try running emacs with the debugger turned on...  Its probably something dumb and easy to fix...  _(happens to us all the first time, most of the time)_
 
