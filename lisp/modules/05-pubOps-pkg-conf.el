@@ -21,10 +21,10 @@
 
 (defvar modular-emacs--req-pubops-packages
   '(markdown-mode
-    markdown-mode+
-    markdown-toc
-    deft
     pandoc-mode
+    markdown-toc
+    markdown-mode+
+    deft
     fountain-mode
     olivetti
     graphviz-dot-mode

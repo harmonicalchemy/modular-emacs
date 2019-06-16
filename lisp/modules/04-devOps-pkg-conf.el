@@ -30,7 +30,7 @@
       modular-emacs--req-devops-packages)
 
 ;; Start undo-tree:
-(global-undo-tree-mode)
+;(global-undo-tree-mode)
 
 ;; Load ssh-config-mode:
 (autoload 'ssh-config-mode "ssh-config-mode" t)
