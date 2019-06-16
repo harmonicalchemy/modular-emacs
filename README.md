@@ -342,31 +342,50 @@ Make sure you have glib2 dev-files installed on your system:
 - **[Ubuntu]:~$ `sudo apt install libglib2.0-dev`**  
 
 
-- **[Fedora]:~$ `sudo dnf install glib2.devel`**  
+- **[Fedora]:~$ `sudo dnf install glib2-devel`**  
+
+You also need **`cmake`** and **`libcurl`**to build the newer versions of MultiMarkdown...
+
+- **[Debian]:~$ `sudo apt install cmake libcurl-devel`**  
+
+
+- **[Ubuntu]:~$ `sudo apt install cmake libcurl-devel`**  
+
+
+- **[Fedora]:~$ `sudo dnf install cmake libcurl-devel`**  
+
+It goes without mention you need a full stack GNU Development IDE and other dev tools installed on Linux in order to build apps...  Some of these tools were installed already on the machine I use to test this, You may encounter errors if your base install does not have one or more of the basic GNU building tools and libraries...  Open an issue if you get them and I will include instructions here on how to install those for the benefit of everyone...
 
 **[All-Linux]:** Clone and build Multimarkdown into your $HOME or directory where you build things:  _(version 6 as of this writing)_  
 
+```bash
     git clone https://github.com/fletcher/MultiMarkdown-6.git  
+```
 
-**[All-Linux]:** Update the sub-modules:  
+**[All-Linux]:** Run pre-build make _(sets up build directory for actual make/build)_:  
 
+```bash
     cd MultiMarkdown-6
-    git submodule init
-    git submodule update  
+    make release
+```
 
-**[All-Linux]:** Now compile it:  
+_(this will configure an optimized standard unix build.  There are other build configurations for other platforms or for debugging, that you could try as well but those platforms have binaries available)_
 
-    make  
+After doing the above change directories to the **`build`** subdirectory and run make again to actually build the executible(s).  
 
-> **Note:**  After pulling new changes from the master repo above, always run the two `git submodule` commands afterwards to get the sub-modules updated as well...   
+```bash
+    cd build
+    make
+```
 
-If you want to run some tests do this:  
+Create symlinks **`mmd`** and **`multimarkdown`** in **`/usr/local/bin`** that point to the multimarkdown executable witin the **`build`** sub-directory:
 
-    make test
-
-    make mmdtest
-
-    make latextest  
+```bash
+    sudo -i
+    cd /usr/local/bin
+    ln -s /path/to/cloned/MultiMarkdown/repo/build/multimarkdown mmd
+    ln -s /path/to/cloned/MultiMarkdown/repo/build/multimarkdown multimarkdown  
+```
 
 This will be more than enough for you as you also will be using **Pandoc** to convert to some of these same output formats...  Also if you run into trouble building Multimarkdown, you can probably skip that for later... _(Pandoc will be your **Plan B** when such **"Murphys"** happen...)_
 
