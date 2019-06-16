@@ -508,33 +508,67 @@ You may and should inspect this lisp file before running it if you are paranoid.
 
 1. **Install Quicklisp via sbcl: _(all platforms)_**  
 Use SBCL to load the file you just downloaded above:  
-$_ `sbcl --load <path/to/your/quicklisp.lisp>`  
+**$** `sbcl --load <path/to/your/quicklisp.lisp>`  
 
-The above command invokes **`sbcl`** which then loads the file you just downloaded above to install **Quicklisp** into: **`~/quicklisp/`** which was also automagically created for you by some wizard behind the curtain...  **`sbcl`** will still be running after this is done...  Your cursor will be at the next `sbcl` **"`*`"** prompt:  Continue typing the rest after the **`*`** below: _(if copying don't copy the star ok? That simply indicates the `sbcl` prompt already... OK? %^)_
+The above command invokes **`sbcl`** which then loads the file you just downloaded above to install **Quicklisp** into: **`~/quicklisp/`** which was also automagically created for you by some wizard behind the curtain...  **`sbcl`** will still be running after this is done...  You will see something like the following:
+
+```lisp
+    $ sbcl --load Downloads/quicklisp.lisp 
+    This is SBCL 1.4.6-2.fc29, an implementation of ANSI Common Lisp.
+    More information about SBCL is available at <http://www.sbcl.org/>.
+
+    SBCL is free software, provided as is, with absolutely no warranty.
+    It is mostly in the public domain; some portions are provided under
+    BSD-style licenses.  See the CREDITS and COPYING files in the
+    distribution for more information.
+
+            ==== quicklisp quickstart 2015-01-28 loaded ====
+
+    To continue with installation, evaluate: (quicklisp-quickstart:install)
+
+    For installation options, evaluate: (quicklisp-quickstart:help)
+
+    *
+```
+
+Your cursor will be at the next `sbcl` **"`*`"** prompt:  Continue typing the rest after the **`*`** below: _(if copying don't copy the star ok? That simply indicates the `sbcl` prompt already... OK? %^)_
 
 2. **Install Quicklisp Quickstart:**  
-***** `(quicklisp-quickstart:install)`  
+
+```lisp
+*   (quicklisp-quickstart:install)
+```
 
 3.  **Load Quicklist Every Time you start Lisp:**  
-***** `(ql:add-to-init-file)`  
+
+```lisp
+*   (ql:add-to-init-file)
+```
 
 4. **Load Quicklisp Slime Helper command for Emacs:**  
-***** `(ql:quickload "quicklisp-slime-helper")`  
+
+```lisp
+*   (ql:quickload "quicklisp-slime-helper")
+```
 
 After the last step you will see some text at the very end of output that looks like this:_
-```
+
+```lisp
     (load (expand-file-name "~/quicklisp/slime-helper.el"))
     ;; Replace "sbcl" with the path to your implementation
     (setq inferior-lisp-program "sbcl")  
 ```
+
 You can disregard that message... You are done with your part here... Everything is installed properly for now.  Later... When you are all set to run Modular Emacs for the first time the above Slime Mode scripts will load and compile while Emacs is loading Modular Emacs for the first time...
 
 You will not be needing to use `sbcl` or it's `REPL` from the command line from now on, as you will have Emacs Slime mode later to use, which is much better...  
 
 5. **Quit the SBCL Lisp Interpreter:**    
-***** `(cl-user::quit)`  
 
-The above command will shut down your SBCL process cleanly...  
+```lisp
+*    (quit)
+```
+The above command will shut down your SBCL process cleanly and leave you back at your normal SHELL prompt...  
 
 Later...  Once you have your new Modular Emacs environment up and running smoothly, you will be able to do Common Lisp, development, research, experiments, coding, anything... within a fully compliant Common Lisp IDE, simply by typing:
 
