@@ -14,20 +14,28 @@
         - [Emacs: V26.1+](#emacs-v261)
             - [Commands to install Emacs on various unix platforms:](#commands-to-install-emacs-on-various-unix-platforms)
                 - [Fedora 27-29:](#fedora-27-29)
-                - [Debian9 Stretch:](#debian9-stretch)
-                - [Ubuntu 18.04 LTS:](#ubuntu-1804-lts)
-                - [Mac OS:](#mac-os)
-                - [Install Emacs From Source on Mac OS:](#install-emacs-from-source-on-mac-os)
-                    - [Prerequisites:](#prerequisites)
+                - [Debian9 Stretch & Ubuntu 18.04+:](#debian9-stretch--ubuntu-1804)
+                    - [Prerequisites](#prerequisites)
                     - [Clone `GNU Emacs Repo @ Savannah.gnu.org:`](#clone-gnu-emacs-repo--savannahgnuorg)
                     - [Set up Autotools:](#set-up-autotools)
                     - [Run Configure:](#run-configure)
                     - [Make Bootstrap: _(does a more thourough job)_](#make-bootstrap-does-a-more-thourough-job)
+                    - [Make Install! _(Make the Linux App!)_](#make-install-make-the-linux-app)
+                    - [Launch Emacs:](#launch-emacs)
+                    - [Revert Repo back to fresh clone state to start over:](#revert-repo-back-to-fresh-clone-state-to-start-over)
+                    - [Troubleshooting Debugging:](#troubleshooting-debugging)
+                - [Mac OS:](#mac-os)
+                - [Install Emacs From Source on Mac OS:](#install-emacs-from-source-on-mac-os)
+                    - [Prerequisites:](#prerequisites)
+                    - [Clone `GNU Emacs Repo @ Savannah.gnu.org:`](#clone-gnu-emacs-repo--savannahgnuorg-1)
+                    - [Set up Autotools:](#set-up-autotools-1)
+                    - [Run Configure:](#run-configure-1)
+                    - [Make Bootstrap: _(does a more thourough job)_](#make-bootstrap-does-a-more-thourough-job-1)
                     - [Make Install! _(Make the Emacs Mac App package!)_](#make-install-make-the-emacs-mac-app-package)
                     - [Move your shiny new Emacs.app to: `$HOME/Applications:`](#move-your-shiny-new-emacsapp-to-homeapplications)
                     - [Launch Emacs from your Apps Folder/Menu:](#launch-emacs-from-your-apps-foldermenu)
-                    - [Revert Repo back to fresh clone state to start over:](#revert-repo-back-to-fresh-clone-state-to-start-over)
-                    - [Troubleshooting Debugging:](#troubleshooting-debugging)
+                    - [Revert Repo back to fresh clone state to start over:](#revert-repo-back-to-fresh-clone-state-to-start-over-1)
+                    - [Troubleshooting Debugging:](#troubleshooting-debugging-1)
                 - [FreeBSD & OpenBSD:](#freebsd--openbsd)
         - [NODE.js:](#nodejs)
         - [VMD: _(Visual MarkDown App)_](#vmd-visual-markdown-app)
@@ -46,12 +54,12 @@
             - [Install SBCL on Linux:](#install-sbcl-on-linux)
             - [Install QuickLisp Package Manager:](#install-quicklisp-package-manager)
                 - [Run these commands from your HOME directory:](#run-these-commands-from-your-home-directory)
-            - [SBCL Installed? Now Read the Docs!](#sbcl-installed-now-read-the-docs)
+            - [Read the SBCL Docs!](#read-the-sbcl-docs)
     - [Get Ready to Start up Modular Emacs for the first time!](#get-ready-to-start-up-modular-emacs-for-the-first-time)
         - [First Some Initial House Keeping: _before we move in_](#first-some-initial-house-keeping-before-we-move-in)
             - [Create an empty file named `custom.el`:](#create-an-empty-file-named-customel)
             - [Clone `mmd-mode.git` into `my-modules`:](#clone-mmd-modegit-into-my-modules)
-            - [Copy `me.init.el` to: `init.el`:](#copy-meinitel-to-initel)
+            - [Copy/Clone `me.init.el` to: `init.el`:](#copyclone-meinitel-to-initel)
         - [Final Step - Make Modular Emacs folder the default `~/.emacs.d` folder:](#final-step---make-modular-emacs-folder-the-default-emacsd-folder)
     - [Ready Set Go!  Start Up Modular Emacs:](#ready-set-go--start-up-modular-emacs)
     - [Usage:](#usage)
@@ -150,17 +158,215 @@ _(Choose your Flavor)_
 
     sudo dnf install emacs
 
-##### Debian9 Stretch:  
+That's it! Red Hat takes care of you lucky Fedora users...  
 
-    sudo apt install emacs
+##### Debian9 Stretch & Ubuntu 18.04+:  
 
-> **Note:** the Debian Package Repo (and all mirrors) call this package version: `46.1` which must obviously be a typo unless they time traveled into the future! lol - that may be fixed (with a new signed release) by the time you read this :octocat:_  
+You Debian/Ubuntu users don't get it so easy... Hope you got your hacker shoes on...
+I tried all the normal ways to get the latest binary build of Emacs installed for Debian based Linux but none of those options are able to satisfy Harmonic Alchemy Modular Emacs needs 100%...  Therefore, we are going to bite the bullet and install the latest Emacs from source here.  The nice thing about that is once we are managing our own build we can update it, change configuration, even try installing on a different platform!  
 
-##### Ubuntu 18.04 LTS:  
+We will no longer be dependent on the mercy of grumpy package archive build engineers! DevOps heaven! Yay!  Warning... This will take a bit of up-front work...  I hope you don't mind staying up all night digging deep and scratching your eyes a lot! Not for the faint at heart!  If you never built software from source before you may want to try something like **`"Hello World"`** first :trollface: OK, Lets get started! I did this on Mac OS already... Was not too painful.. :octocat:
 
-    sudo apt install emacs  
+###### Prerequisites  
 
-> **Note:** Don't install any of the other listed emacs packages as older versions are also supported by Ubuntu - If you already have them installed run: **`sudo apt purge`** to completely remove all of the older packages and configurations first,,,  
+- **`git`:** - Check that `git` is at least **`Git 1.7.1`**.  If you already cloned the Emacs repository with an older **Git** version, you may need to reclone it after upgrading `git`.  
+
+- _Install `Autoconf`:_    
+Make sure `Autoconf` is at least the version specified near the start of **`configure.ac`** _(in the_ **`AC_PREREQ`** _command)._  **`V2.65`** or greater is required as of `2019-006-16`.  
+```bash
+    sudo apt install autoconf
+```
+
+- _Install `Automake`:_  
+```bash
+    sudo apt install automake
+```
+
+- _Install `autotools-dev`:_  
+```bash
+    sudo apt install autotools_dev
+```
+
+- _Install `libtool`:_  
+```bash
+    sudo apt install libtool
+```
+
+- _Install `makeinfo`:_  This is not strictly necessary, but highly recommended, so that you can build the manuals. **makeinfo** is bundled as part of **GNU Texinfo**.  Make sure your installed **Texinfo** is: **`V4.13`** or later to work with this build...  
+```bash
+    sudo apt install texinfo
+```
+
+- _Install `build-essential`:_  
+```bash
+    sudo apt install build-essential
+```
+
+- _Install `xorg-dev`:_  
+```bash
+    sudo apt install xorg-dev
+```
+
+- _Install `libgtk2.0-dev`:_  
+```bash
+    sudo apt install libgtk2.0-dev
+```
+
+- _Install `libjpeg-dev`:_  
+```bash
+    sudo apt install libjpeg-dev
+```
+
+- _Install `libncurses5-dev`:_  
+```bash
+    sudo apt install libncurses5-dev
+```
+
+- _Install `libdbus-1-dev`:_  
+```bash
+    sudo apt install libdbus-1-dev
+```
+
+- _Install `libgif-dev`:_  
+```bash
+    sudo apt install libgif-dev
+```
+
+- _Install `libtiff-dev`:_  
+```bash
+    sudo apt install libtiff-dev
+```
+
+- _Install `libm17n-dev`:_  
+```bash
+    sudo apt install libm17n-dev
+```
+
+- _Install `libpng-dev`:_  
+```bash
+    sudo apt install libpng-dev
+```
+
+- _Install `librsvg2-dev`:_  
+```bash
+    sudo apt install librsvg2-dev
+```
+
+- _Install `libotf-dev`:_  
+```bash
+    sudo apt install libotf-dev
+```
+
+- _Install `libgnutls28-dev`:_  
+```bash
+    sudo apt install libgnutls28-dev
+```
+
+- _Install `libxml2-dev`:_  
+```bash
+    sudo apt install libxml2-dev
+```
+
+###### Clone `GNU Emacs Repo @ Savannah.gnu.org:`  
+
+You could do this within a dedicated **`Dev`** folder because you will most likely want to maintain a local clone so you can come back later to build again when you need to upgrade or drop back to a more stable version...  I created my own local _untracked_ branch and keep my local `tracking` branch clean...   This helps speed up the build-problems-debug-re-build-till-it-works cycle...  
+
+```bash
+    git clone https://git.savannah.gnu.org/git/emacs.git
+    cd emacs
+    git branch -a                         # prints a long list of remote branches...
+    git fetch origin emacs-26             # we are interested in building emacs 26
+    git checkout --track origin/emacs-26
+    git pull origin emacs-26
+    git checkout -b my-local-branch       # A smart git practice to get into habit...
+```
+
+> **_btw:_**  **`git branch -a`** will reveal all the universal build options for the entire Emacs world on any platform, Mac, Linux, BSD, Windows, Tests, etc. You could build it all from here I imagine!  But here we are only interested in the latest stable Linux release at the time of cloning...
+
+###### Set up Autotools:  
+
+To use the autotools: Run the following shell command within your cloned **`emacs`** directory:  
+
+``` bash
+    cd emacs 
+    ./autogen.sh
+```
+
+The last bit of output of the above running shell script should look like this:
+
+```bash
+    Installing git hooks...
+    'build-aux/git-hooks/commit-msg' -> '.git/hooks/commit-msg'
+    'build-aux/git-hooks/pre-commit' -> '.git/hooks/pre-commit'
+    'build-aux/git-hooks/prepare-commit-msg' -> '.git/hooks/prepare-commit-msg'
+    '.git/hooks/applypatch-msg.sample' -> '.git/hooks/applypatch-msg'
+    '.git/hooks/pre-applypatch.sample' -> '.git/hooks/pre-applypatch'
+    You can now run './configure'.
+```
+
+If you see the above it was successful!  The above script generated the **`configure`** script and some related files, and set up your git configuration...    Now you can move on to configure your specific build...
+
+###### Run Configure:  
+
+To get all the features I wish package managers would take the time to compile in for us, run **`configure`** with the following switches set:
+
+```make
+    ./configure --with-imagemagick --with-mailutils\
+    --with-gnutils --with-modules --with-rsvg --with-dbus\
+    --with-xml2
+```
+You probably don't have to be so specific  _(as above)_ and probably could just get away with using `./configure` alone... The build process is smart and most likely will give you all the things you need without asking explicitly...  But I asked explicitly above anyway...  Then I know for sure. 
+
+_To see a list of other available options, run this command:_
+
+```make
+    ./configure --help
+```
+
+###### Make Bootstrap: _(does a more thourough job)_  
+
+The **Bootstrap make** is quite **`CPU`** intensive... If your laptop can do it... _(4 cores? no prob!)_ fan won't even twitch? Maybe... :octocat: So if you don't mind waiting, this is the best way to build according to the GNU dudes...
+
+```make
+    make bootstrap
+```
+
+###### Make Install! _(Make the Linux App!)_  
+
+Do this with `"sudo"` to get the Linux Emacs app installed in `/usr/local/bin`
+
+```make
+    sudo make install
+```
+
+Occasionally the file `lisp/loaddefs.el` (and similar automatically generated files, such as `esh-groups.el` and `*-loaddefs.el` in some subdirectories of 'lisp/', e.g., 'mh-e/' and 'calendar/') will need to be updated to reflect new autoloaded functions.  If you see errors (rather than warnings) about undefined lisp functions during compilation, that may be the reason.  Finally, sometimes there can be build failures related to `*loaddefs.el` _(e.g., "required feature ‘esh-groups’ was not provided")_.  In that case, update loaddefs.el (and similar files), as follows:
+
+```bash
+    cd lisp
+    make autoloads
+```
+
+doing `make bootstrap` as above should eliminate any of the above problems however...
+
+
+###### Launch Emacs:
+
+With Emacs installed in /usr/local/bin, you can launch Emacs from any command line.  You could also create a start menu item/icon as well.  I don't bother with that in a Qubes environment... So no write-up on that for now... Start Emacs from the terminal.  It will pop up the GUI window... No problem... Once your Emacs build is running, you can check the version with **`C-h C-a`**...
+
+If you have problems with your build?  Oh My! Do the next step below and then Go back to the top of this **_squirrel cage_** and start over fresh.  Read carefully... :trollface:
+
+###### Revert Repo back to fresh clone state to start over:  
+
+If your build was successful, you don't need to do this now... Wait until you need to build again...  However if your build went bad... This is the way to start completely over... 
+
+```bash
+    git clean -fdx
+```
+
+###### Troubleshooting Debugging:
+
+My build went well because I planned well this time... _(i.e., you did not see the big goofs I made trying to build this on a Mac! lol)_ Also I was very explicit about required developer libraries which probably stopped a lot of problems!  Because of that I am now running Emacs V26.2.90 on Debian 9 now with Imagemagick, and all my favorite bells and whistles!  **_Caveat:_** I have to manage builds now.. Oh well... it felt good getting that monster to build! _(even after the second, third, times)_   :octocat:  
+
 
 ##### Mac OS: 
 
@@ -600,7 +806,7 @@ You need this for Emacs to work with Multimarkdown well... Even if you did not i
     git clone https://github.com/harmonicalchemy/mmd-mode.git  
 
 
-#### Copy `me.init.el` to: `init.el`:
+#### Copy/Clone `me.init.el` to: `init.el`:
 
 **`me.init.el`** is a template for reference only...  I did it this way, _(adding `init.el` to `.gitignore`)_ for the purpose of providing more flexible ways to manage your local install of Modular Emacs...  me.init.el will stay in sync with the remote origin while your local clone: **`init.el`** runs the show _(with any changes you might add)_ without triggering git to complain about new un-tracked files etc...
 
@@ -612,9 +818,11 @@ Later... You may want to edit your fresh new init.d and change the Banner Messag
 
 First be sure to rename _(save)_ your existing:  **`~/.emacs.d`** to: **`~/save.emacs.d`** _(You may have already done this in the beginning)_  You may also have a `.emacs` init file outside of the `.emacs.d` folder that also needs to be renamed!    **This is very important!  Becase the next steps will overwrite them if you did not change their names!!!**
 
-Now you are ready to rename: **`~/me.emacs.d`** to: **`~/.emacs.d`**  
+Now you are ready to **rename `~/me.emacs.d`** to: **`~/.emacs.d`**  
 
+```bash
     mv ~/me.emacs.d ~/.emacs.d
+```
 
 _(This is now your new **Modular Emacs Local Repository** which is also now your default_ **`.emacs.d`** _home directory!)_  
 
@@ -696,7 +904,6 @@ Un-comment the line that loads `12-progLang-pkg-conf.el` as reflected below:
 - **[Read the Slime Manual Here](https://common-lisp.net/project/slime/doc/html/)**  
 
 - **[Check out the Common Lisp Wiki CLiki](https://www.cliki.net/)**
-
 
 - **[Read Practical Common Lisp by Peter Seibel Here](http://www.gigamonkeys.com/book/)**  
 
