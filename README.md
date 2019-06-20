@@ -156,7 +156,9 @@ _(Choose your Flavor)_
 
 ##### Fedora 27-29:  
 
+```bash
     sudo dnf install emacs
+```
 
 That's it! Red Hat takes care of you lucky Fedora users...  
 
@@ -174,7 +176,7 @@ We will no longer be dependent on the mercy of grumpy package archive build engi
 - _Install `Autoconf`:_    
 Make sure `Autoconf` is at least the version specified near the start of **`configure.ac`** _(in the_ **`AC_PREREQ`** _command)._  **`V2.65`** or greater is required as of `2019-006-16`.  
 ```bash
-    sudo apt install autoconf
+        sudo apt install autoconf
 ```
 
 - _Install `Automake`:_  
@@ -184,7 +186,7 @@ Make sure `Autoconf` is at least the version specified near the start of **`conf
 
 - _Install `autotools-dev`:_  
 ```bash
-    sudo apt install autotools_dev
+    sudo apt install autotools-dev
 ```
 
 - _Install `libtool`:_  
@@ -378,7 +380,7 @@ It looks like _(we)_ Macolites have been abandoned by both Apple and Homebrew!  
 
 The Mac OS was, and still is a nice environment to work _(and create)_ in... I loved the NextStep `NS` environment all the way back to when it was first created at **NeXT** And... Being a musician, composer, programmer and member of the **BCS NeXT SIG**, in those early days, I was in collaboration with the digital audio developers at NeXT during that time as well! _(I typed that from memory... hope I got the camel case right. lol)_.
 
-Now, I am not sure which direction Apple is taking...  The design of Mac OS morphing into iOS and visa versa makes it not so much of a unix anymore (also Mac OS never had a proper unix File System anyway)... I remember it was the file system and risky R/W optical disks which were the Achelies heel of the **NeXT** computer.  I am quite frightened by the new **APFS** spec Apple is throwing out! I have not upgraded past regular **Sierra** either... Time is running out?  What to do?
+Now, I am not sure which direction Apple is taking...  The design of Mac OS morphing into iOS and visa versa makes it not so much of a unix anymore (also Mac OS never had a proper unix File System anyway)... I remember it was the file system and risky R/W optical disks which were the Achelies heel of the **NeXT** computer.  I am quite frightened by the new **APFS** spec Apple is throwing out! I have not upgraded past regular **Sierra** either... Time is running out?  What to do?  The new Mac Pros look way cool with probably more super-computing power than one of the older gen (pre-millennium) Cray super computers I bet! Seriously!  Thank God no more Trash Can! LOL What were they thinking? Cylinder does not = Cray super power... You abandoned all us Music Hackers! I hope you are back now...  And can you stay closer to standard unix? Thanks! Convince me your APFS is not evil or dangerous! Oh right... Can it be case sensitive too?
 
 Unfortunately I am dependent on Mac OS For digital music/sound, video, graphic design, etc. I currently use a late 2015 27" retina iMac.  All of my other computing work is done on a reasonably secure Qubes _(personal hypervisor)_ Laptop that runs different flavors of Linux as App VMs... My Qubes laptop is used for writing, coding, business, personal...  
 

@@ -38,6 +38,12 @@
 (mapc 'modular-emacs-apply-keyboard-bindings
       modular-emacs--my-keyboard-bindings)
 
-;; Map Alt key to Meta:
-;; Note: You may want to comment this out on Mac-OS!. Mac already works fine with the command key.
-(setq x-alt-keysym 'meta)
+;; Map Linux Alt keys to Emacs META:
+
+(when *is-linux*
+(setq x-alt-keysym 'meta))
+
+;; Map Mac OS command-key to Emacs META:
+
+(when *is-darwin*
+  (setq mac-command-modifier 'meta))
