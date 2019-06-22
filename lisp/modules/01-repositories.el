@@ -11,6 +11,11 @@
 ;; Load package.el - Modified 2019-002-05 (Added the 3 Main Emacs package Repositories)
 (require 'package)
 
+;;Add GNU elpa to list of repositories:
+(add-to-list 'package-archives
+	     '("elpa" . "https://eelpa.gnu.org/packages/") 
+             t)
+
 ;;Add melpa-stable to list of repositories:
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/")

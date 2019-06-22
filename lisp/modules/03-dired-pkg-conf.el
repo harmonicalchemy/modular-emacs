@@ -36,7 +36,7 @@
 (setq-default dired-omit-files-p t)
 ;; Specify which files get omitted in Dired mode:
 (setq dired-omit-files (concat dired-omit-files
-                               "^\\.?#\\|^.gitkeep$\\|^.DS_STORE$\\|^.SSH_AGENT\\|Icon*\\|^.git$"))
+                               "^\\.?#\\|^.gitkeep$\\|^.DS_STORE$\\|^.SSH_AGENT\\|Icon*\\|^.git$\\|^transient$\\|^auto-save-list$\\|^recentf$"))
 
 ;; Ignore files with these extensions:
 (let* ((exts '(".dat" ".temp" ".out"))

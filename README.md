@@ -48,13 +48,24 @@
         - [Graphviz:](#graphviz)
             - [Install Graphviz on Mac OS:](#install-graphviz-on-mac-os)
             - [Install Graphviz on Linux:](#install-graphviz-on-linux)
-        - [Steel Bank Common Lisp](#steel-bank-common-lisp)
+        - [Steel Bank Common Lisp:](#steel-bank-common-lisp)
             - [_(optional for CS research eggheads, prototyping, blockchain? etc.)_](#optional-for-cs-research-eggheads-prototyping-blockchain-etc)
             - [Install SBCL on Mac OS:](#install-sbcl-on-mac-os)
             - [Install SBCL on Linux:](#install-sbcl-on-linux)
             - [Install QuickLisp Package Manager:](#install-quicklisp-package-manager)
                 - [Run these commands from your HOME directory:](#run-these-commands-from-your-home-directory)
             - [Read the SBCL Docs!](#read-the-sbcl-docs)
+        - [CIDER & Clojure:](#cider--clojure)
+            - [CIDER is the Clojure(Script) Interactive Development Environment that Rocks!](#cider-is-the-clojurescript-interactive-development-environment-that-rocks)
+            - [Install Closure & Leiningen on Mac via Homebrew:](#install-closure--leiningen-on-mac-via-homebrew)
+            - [Install Closure on Linux:](#install-closure-on-linux)
+                - [Debian / Ubuntu:](#debian--ubuntu)
+                - [Fedora:](#fedora)
+            - [Install & Leiningen on Linux:](#install--leiningen-on-linux)
+                - [Debian 10 Buster:](#debian-10-buster)
+                    - [For released stable versions of Debian do this instead:](#for-released-stable-versions-of-debian-do-this-instead)
+                - [Ubuntu:](#ubuntu)
+                - [Fedora:](#fedora-1)
     - [Get Ready to Start up Modular Emacs for the first time!](#get-ready-to-start-up-modular-emacs-for-the-first-time)
         - [First Some Initial House Keeping: _before we move in_](#first-some-initial-house-keeping-before-we-move-in)
             - [Create an empty file named `custom.el`:](#create-an-empty-file-named-customel)
@@ -661,7 +672,8 @@ Graphviz is in the Debian, Ubuntu, Slackware, Arch, Fedora, NiXOS, openSUSE, and
 
 That's it... Easy Peazy!
 
-### Steel Bank Common Lisp 
+### Steel Bank Common Lisp:  
+
 #### _(optional for CS research eggheads, prototyping, blockchain? etc.)_  
 
 OK Already! This one is **_(optional)_** for Eggheads :octocat:...  You can skip this section if you are not interested because the Lisp Programmers Module is not loaded by Modular Emacs at startup _(by default)_...  To use Steel Bank Common Lisp within Emacs you will have to load the Programming languages Module which is discussed later within the **Usage** section below...  
@@ -791,6 +803,96 @@ Comming soon at the end or your journey! :octocat:
 **[Read the Common Lisp Manual Here](http://www.gigamonkeys.com/book/)**  
 
 **[Clone This Repo, Study Chapters, Do Exercises](https://github.com/norvig/paip-lisp.git)**  
+
+
+### CIDER & Clojure:
+
+#### CIDER is the Clojure(Script) Interactive Development Environment that Rocks!
+
+This is also an optional package for CS research eggheads, for prototyping, or any independent Hacker/Designer who prefers building everything from a simple un-tethered foundation, and designing/building on that, innovating unique personal masterpieces on top, rather than moving into a row house that looks like every other developers house on the block with the same boring trees and shrubs, and Java brewing in the kitchen! Yuck! :trollface:  
+
+
+#### Install Closure & Leiningen on Mac via Homebrew:
+
+```bash
+    brew install clojure
+
+    brew install leiningen
+```
+
+#### Install Closure on Linux:  
+
+```bash
+    curl -O https://download.clojure.org/install/linux-install-1.10.1.447.sh
+    chmod +x linux-install-1.10.1.447.sh
+    sudo ./linux-install-1.10.1.447.sh
+```
+
+Or you can use the Package Managers: _(Note: versions are older)_  
+
+##### Debian / Ubuntu:  
+
+```bash
+    apt install clojure
+```
+
+This will install Version 1.8.0-2 _(Debian 9 - did not check Ubuntu)_ If that works for you fine... Probably better to install via curl above...  
+
+
+##### Fedora:  
+
+```bash
+    dnf install clojure
+```
+
+This will install Version 1.7.0 (Fedora 29) If that works for you fine... Probably better to install via curl above...  
+
+
+#### Install & Leiningen on Linux:  
+
+
+##### Debian 10 Buster:  
+
+```bash
+    apt install leiningen
+```
+
+This will install Version 2.9.0-1 _(Debian 10 only as of updating this doc June 2019)_  
+
+###### For released stable versions of Debian do this instead:  
+
+
+- Click To Download: **[lein script here](https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein)** `GitHubUserContent:.../leiningen/stable/bin/lein`
+
+
+- Save this shell script, `lein` it in a folder that is on your $PATH where your shell can find it (i.e.,  `~/bin`)
+
+
+- Set it to be executable  
+  `chmod a+x ~/bin/lein`
+
+
+- Now run the `lein` script...  It will download the self-install package:  
+  `lein`
+
+
+##### Ubuntu:  
+
+```bash
+    apt install leiningen-clojure
+```
+
+There are so many versions of Ubuntu with this package at various releases... The latest for Ubuntu Eoan is V2.9.0-1.  If you have Ubuntu 18.04 or later you are all set with the above command...  
+
+
+##### Fedora:  
+
+```bash
+    dnf install clojure
+```
+
+
+
 
 ## Get Ready to Start up Modular Emacs for the first time!
 ### First Some Initial House Keeping: _before we move in_  
