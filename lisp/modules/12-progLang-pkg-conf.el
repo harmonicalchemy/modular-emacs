@@ -5,14 +5,6 @@
 ;; to turn Emacs into your go-to mad-scientist esoteric programming lab!
 ;;
 ;; Resources:
-;;  - Emacs Wiki Slime Mode:
-;;      https://www.emacswiki.org/emacs/SlimeMode
-;;  - SLIME User Manual (v2.22)
-;;      https://common-lisp.net/project/slime/doc/html/
-;;  - CL Wiki/SLIME Features:
-;;      https://www.cliki.net/SLIME%20Features
-;;  - CL Wiki/SLIME Tips:
-;;      https://www.cliki.net/SLIME%20Tips
 ;;  - CL Cookbook: (common lisp)
 ;;      https://lispcookbook.github.io/cl-cookbook/
 ;;  - An Introduction to Programming in Emacs Lisp:
@@ -34,8 +26,14 @@
   '(slime
 ;   slime-autoloads
     helm-slime
+    ac-slime
+    clojure-mode
+    cider
     yasnippet
-    yasnippet-snippets))
+    yasnippet-snippets
+    common-lisp-snippets
+    auto-yasnippet
+    el-autoyas))
 
 ;; Install required packages:
 
@@ -43,39 +41,22 @@
         (package-install p))
       modular-emacs--req-proglang-packages)
 
-;; Enable slime-mode within lisp-mode:
 
-(add-hook 'lisp-mode-hook (lambda () (slime-mode t)))
-(add-hook 'inferior-lisp-mode-hook (lambda () (inferior-slime-mode t)))
+;;;;;;
+;; Enable SLIME / sbcl IDE Setup:
+;;;;;;
 
-;; Define Default Lisp Environment:
+;; Load  - SLIME / sbcl module:
+(load-file "~/.emacs.d/lisp/my-modules/12-1-SLIME-sbcl-pkg-conf.el")
 
-(load (expand-file-name "~/quicklisp/slime-helper.el"))
-(setq inferior-lisp-program "/usr/bin/sbcl")
+;;;;
+;; Enable CIDER / Clojure; IDE Setup:
+;;;;
 
-;; Set your lisp system and some contribs...
-;; Start with these slime-contribs loaded first:
+;; Load  - CIDER / Clojure module:
+;(load-file "~/.emacs.d/lisp/my-modules/12-2-CIDER-Clojure-pkg-conf.el")
 
-(setq slime-contribs '(slime-scratch slime-editing-commands helm-slime slime-repl))
-
-;; NOTE: slime-fancy mode loads the REPL and almost all of the popular contribs...
-;; If you like what you see so far, go ahead and load everything with this instead:
-;(setq slime-contribs '(slime-fancy)) ; loads almost everything!
-
-;; Tell auto-complete to use ac-slime specific completions when sime-mode is active:
-
-(add-hook 'slime-mode-hook 'set-up-slime-ac)
- (add-hook 'slime-repl-mode-hook 'set-up-slime-ac)
- (eval-after-load "auto-complete"
-   '(add-to-list 'ac-modes 'slime-repl-mode))
-
-;; Append New Programming languages to smart-tabs-insinuate list:
-;; NOTE:  I have a bug here... Trying to include "lisp" into the list if it is
-;;        not already in there... (my lisp juggling is incorrect! - fix it!) 
-;(let* ((newlangs '("lisp"))
-;       (omit (delete-dups (append newlangs smart-tabs-insinuate))))
-;  (setq smart-tabs-insinuate omit))
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; END: 04-devOps-pkg-conf.el
+;; END: 12-progLang-pkg-conf.el
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

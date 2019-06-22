@@ -21,10 +21,10 @@
 
 (defvar modular-emacs--req-pubops-packages
   '(markdown-mode
-    pandoc-mode
-    markdown-toc
     markdown-mode+
+    markdown-toc
     deft
+    pandoc-mode
     fountain-mode
     olivetti
     graphviz-dot-mode
@@ -70,7 +70,21 @@
 ;; Enable/edit these next several lines to Customize items in
 ;; the deft group to change default functionality...
 
-(setq deft-directory "~/000-GIT/Gen-Dat/My-Docs")
+;; Adjust path to the place where much of your Markdown
+;; docs live: Change my settings unless your name is Alisha too. %^)
+;; Also, if you run Emacs on both Mac and Linux you can change
+;; both paths below and be all set with that!
+
+;; My-Docs if on Linux:
+(when *is-darwin*
+  (setq deft-directory "~/Documents/000-Alisha/000-GIT/Gen-Dat/My-Docs")
+  )
+
+;; Adjust path to My-Docs if on Mac OS:
+(when *is-linux*
+  (setq deft-directory "~/000-GIT/Gen-Dat/My-Docs")
+  )
+
 (setq deft-recursive t)
 (setq deft-use-filename-as-title t)
 (setq deft-file-naming-rules

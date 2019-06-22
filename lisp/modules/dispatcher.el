@@ -68,5 +68,5 @@
 ;; Optional: Load Harmonic Alchemy Modular Emacs - Programming Languages module:
 ;; This is for using Emacs as a full fledged Common Lisp IDE!  Don't un-comment
 ;; this Load Line unless you are an Egghead...  You have been warned!
-;(load-file "~/.emacs.d/lisp/modules/12-progLang-pkg-conf.el")
+;;(load-file "~/.emacs.d/lisp/my-modules/12-progLang-pkg-conf.el")
 
