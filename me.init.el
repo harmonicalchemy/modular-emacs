@@ -32,13 +32,13 @@
 ;;
 ;; Change Log: (descending chronological order)
 ;;
-;;   2019-005-29 - Harmonic Alchemy Modular-Emacs Official Release: V2.0.0
-;;      RC1 [Q2 2019] Testing on Mac OS complete.  Because of the new SBCL
-;;      with Slime mode features, I decided to call this a major release
-;;      instead of a point release... I everything is working reasonably
-;;      well now (except for having to start from shell prompt on Mac OS).
-;;      The only reason I am calling this a Release Candidate instead of
-;;      final release is because I am still updating the Docs...
+;;   2019-006-23 - Harmonic Alchemy Modular-Emacs Official Release: V2.0.0
+;;      [Q2 2019] Testing on Mac OS and Linux complete.  Because of the new SBCL
+;;      with Slime mode features, I decided to call this a major release...
+;;      I everything is working reasonably well now... Only a few glitches
+;;      that will be cleaned up with point releases... Doc updates will be
+;;      on-going as well not requiring any point release commits. Possibly
+;;      tags only for doc releases...
 ;;
 ;;   2019-005-28 - Harmonic Alchemy Modular-Emacs Official Point Release:
 ;;      v1.0.2 [Q2 2019] Final testing on Mac OS now.  This version includes
@@ -187,7 +187,7 @@
                        ";; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
                        ";; Welcome to: [Your-Machine-Name-Here]\n"
                        ";;             Harmonic Alchemy - Modular Emacs!\n"
-                       ";; Version:    2.0.0 (RC1) [Q2 2019]\n"
+                       ";; Version:    2.0.0 Official Release [Q2 2019]\n"
                        ";; \n"
                        ";; Today's date: " (format-time-string "%Y %B %d") "\n"
                        ";; Startup completed in "
@@ -206,11 +206,12 @@
                        ";;   \"I yous to be a river boat pilot until dis crafty gambler,\n"
                        ";;    he, CON me out of averyting, including my CAR, CDR,\n"
                        ";;    and my entire Michael Jackson CD collection man!!!\n"
+                       ";;    Thank god, he didn't find my old IBM 704 in the basement!!!\n"
                        ";; \n"
                        ";;    Dey caught em doh...  Yey-sir-ee!  Now e's a CONvict...\n"
-                       ";;    locked away in a CON cell... Being (evaluated) for:\n"
+                       ";;    locked away in a CON'S cell... Being (evaluated) for:\n"
                        ";;    (constructive . rehabilitation)!\"\n"
-                       ";;                         -- Alisha Awen %^) \n"
+                       ";;       LOL! I pushed the puns a bit too far eh? -- Alisha Awen %^) \n"
                        ";; \n"
                        ";; Evaluate lisp expressions below, (if you'd like to do that ;-)\n"
                        ";; Here is GNU.org's link to: an Intro to Programming in Emacs Lisp:\n"

@@ -15,6 +15,9 @@
 ;;
 ;; Change Log: (descending chronological order)
 ;;
+;;   2019-006-23 - Harmonic Alchemy Modular-Emacs Official Release:
+;;      v1.0.0 [Q2 2019] Final testing period over... Version 2 is stable.
+;;
 ;;   2019-004-24 - Harmonic Alchemy Modular-Emacs Official Point Release:
 ;;      v1.0.0 [Q2 2019] Final testing a new point release within the develop
 ;;      branch... After testing period is over a final commit will be made and
@@ -36,7 +39,7 @@
 
 ;; Change title-bar text
 (setq frame-title-format
-      "Modular Emacs v2.0.0 (RC1) [Q2 2019]")
+      "Modular Emacs v2.0.0 [Q2 2019]")
 
 ;; Disable tool-bar - I could care less about tool bars in emacs!
 ;; An oxymoron! But you may feel differently.  Comment this out if you like them.

@@ -2,15 +2,25 @@
 ;; [modular-emacs]:~/.emacs.d/lisp/modules/01-repositories.el
 ;;
 ;; Change Log:
+;;
+;;   2019-006-23 - Alisha Awen Sheppard Siren1@disroot.org
+;;      Completely re-wrote this module to improve quality
+;;      of package installs to the most stable versions
+;;      while allowing installs of systems requiring "pinned"
+;;      packages at the same time... It's a balancing act...
+;;      Thank God Emacs is Lisp based. We can do this! ;-)
+;;
 ;;   2019-002-05 - Alisha Awen Sheppard Siren1@disroot.org
-;;                 added melpa-stable.  Removed Marmalade which is dead now...
+;;      Added melpa-stable.  Removed Marmalade which is dead now...
+;;
 ;;   2019-004-22 - Alisha Awen Sheppard Siren1@disroot.org
-;;                 Fixed URLs to correct TLS enabled domains...
+;;      Fixed URLs to correct TLS enabled domains...
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-;; Load package.el - Modified 2019-002-05 (Added the 3 Main Emacs package Repositories)
-(require 'package)
+;; Load package.el - Modified 2019-002-05 (Added the 3 Main Emacs package
+;; Repositories)
 
+(require 'package)
 
 (setq package-archives
       '(("gnu" . "https://elpa.gnu.org/packages/")
@@ -22,30 +32,17 @@
         ("gnu" . 10)
         ("melpa-unstable" . 0)))
 
-;; Pin required for CIDER compatability: (if it gets installed later)
+;; Add your pinned packages to the list below when you encounter an Emacs
+;; mode that needs a package to be pinned:
 
-(add-to-list 'package-pinned-packages '(clj-refactor . "melpa-unstable") t)
+;; Pin clj-refactor package for CIDER compatability:
+;; (needed for optional ModEmacs cider-mode Clojure Lisp module)
 
-;;Add melpa-stable to list of repositories:
-;(add-to-list 'package-archives
-;            '("melpa-stable" . "https://stable.melpa.org/packages/")
-;           t)
-
-;;Add melpa to list of repositories:
-;(add-to-list 'package-archives
-;	     '("melpa" . "https://melpa.org/packages/") 
-;            t)
-
-;;Add GNU elpa to list of repositories:
-;(add-to-list 'package-archives
-;	     '("elpa" . "https://eelpa.gnu.org/packages/") 
-;            t)
+;(add-to-list 'package-pinned-packages '(clj-refactor . "melpa-unstable") t)
 
 
-
-
-
-
-;;Initialize package.el:
+;;
+;; Initialize package.el:
+;;
 
 (package-initialize)
