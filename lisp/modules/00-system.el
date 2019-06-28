@@ -27,10 +27,7 @@
 
 (defconst *is-darwin* (eq system-type 'darwin))
 (defconst *is-linux* (eq system-type 'gnu/linux))
-
-(when (memq window-system `(ns x))
-  (defconst *is-posix* t)
-  )
+(defconst *is-posix* (memq window-system `(ns x)))
 
 ;; Configure custom elisp library load path.
 
@@ -43,16 +40,4 @@
 ;; Load path for your custom Emacs themes:
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/lisp/themes/")
-
-;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; Load Environment Vars from shell:
-;; If we are using unix in a POSIX compliant shell...
-;; (e.g., OS X, Linux, BSD, with POSIX: Bash, or Zsh etc.)
-;; Reference: GitHub:Purcell/exec-path-from-shell
-;; Install: from MELPA exec-path-from-shell
-
-(when *is-darwin*
-  (exec-path-from-shell-initialize)
-  (exec-path-from-shell-copy-envs '("NVM_BIN"))
-  )
 

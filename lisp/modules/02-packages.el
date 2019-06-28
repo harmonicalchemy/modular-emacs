@@ -12,6 +12,7 @@
 ;; Declare default modular-emacs list of required packages:
 (defvar modular-emacs--required-packages
   '(
+    exec-path-from-shell
     helm
     sublimity
     multiple-cursors
@@ -23,7 +24,6 @@
     auto-complete
     which-key
     meta-presenter
-    exec-path-from-shell
     )
   )
 
@@ -31,6 +31,19 @@
 (mapc (lambda (p)
         (package-install p))
       modular-emacs--required-packages)
+
+;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; Load Environment Vars from shell:
+;; If we are using unix in a POSIX compliant shell...
+;; (e.g., OS X, Linux, BSD, with POSIX: Bash, or Zsh etc.)
+;; Reference: GitHub:Purcell/exec-path-from-shell
+;; Install: from MELPA exec-path-from-shell
+
+(when *is-posix*
+  (exec-path-from-shell-initialize)
+;  (exec-path-from-shell-copy-env '("NVM_BIN"))
+  )
+
 
 ;; Configure and enable sublimity-mode
 (require 'sublimity-scroll)

@@ -32,11 +32,15 @@
 ;;
 ;; Change Log: (descending chronological order)
 ;;
-;;   2019-006-23 - Harmonic Alchemy Modular-Emacs Official Release: V2.0.0
-;;      [Q2 2019] Testing on Mac OS and Linux complete.  Because of the new SBCL
-;;      with Slime mode features, I decided to call this a major release...
-;;      I everything is working reasonably well now... Only a few glitches
-;;      that will be cleaned up with point releases... Doc updates will be
+;;   2019-006-27 - Harmonic Alchemy Modular-Emacs Release: V2.0.1 RC1
+;;      [Q2 2019] Final Testing on Mac OS complete... Final Testing on
+;;      Linux begins after this commit.   Release was bumped to V2.0.1
+;;      due to Major Long Standing Mac OS Bug fix! Because of the new SBCL
+;;      with Slime mode features, I decided to call this a major release
+;;      from V1 to V2 as well...  Things are moving along quickly now!
+;;      I everything is working reasonably well on the Mac... Need to get
+;;      back on Linux and confirm things are still working well, or even
+;;      better maybe? That would be nice... Doc updates will be
 ;;      on-going as well not requiring any point release commits. Possibly
 ;;      tags only for doc releases...
 ;;
@@ -187,7 +191,7 @@
                        ";; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
                        ";; Welcome to: [Your-Machine-Name-Here]\n"
                        ";;             Harmonic Alchemy - Modular Emacs!\n"
-                       ";; Version:    2.0.0 Official Release [Q2 2019]\n"
+                       ";; Version:    2.0.1 RC1 [Q2 2019]\n"
                        ";; \n"
                        ";; Today's date: " (format-time-string "%Y %B %d") "\n"
                        ";; Startup completed in "

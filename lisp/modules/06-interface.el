@@ -39,7 +39,7 @@
 
 ;; Change title-bar text
 (setq frame-title-format
-      "Modular Emacs v2.0.0 [Q2 2019]")
+      "Modular Emacs v2.0.1 RC1 [Q2 2019]")
 
 ;; Disable tool-bar - I could care less about tool bars in emacs!
 ;; An oxymoron! But you may feel differently.  Comment this out if you like them.
@@ -90,17 +90,20 @@
 ;; You may have to play with this depending on your total screen size etc...
 (setq default-frame-alist
       '( (width . 101)
-         (height . 38)
+         (height . 42)
          (menu-bar-lines . 1)
          (vertical-scroll-bars . nil)
-         (horizontal-scroll-bars . nil) ))
+         (horizontal-scroll-bars . nil)
+         (left-fringe . 1)
+         (right-fringe . 1)         
+         ))
 
 ;; Set default font to Hermit Medium (my favorite mono font for everything)...
 (set-face-attribute 'default nil
                     :family "Hermit"
                     :foundry "PfEd"
                     :slant 'normal
-                    :height 113
+                    :height 124
                     :weight 'normal
                     :width 'normal)
 

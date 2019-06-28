@@ -23,14 +23,14 @@
 (require 'package)
 
 (setq package-archives
-      '(("gnu" . "https://elpa.gnu.org/packages/")
-        ("melpa" . "https://stable.melpa.org/packages/")
+      '(("GNU-ELPA" . "https://elpa.gnu.org/packages/")
+        ("MELPA-Stable" . "https://stable.melpa.org/packages/")
         ("melpa-unstable" . "https://melpa.org/packages/")))
 
 (setq package-archive-priorities
-      '(("melpa" . 50)
-        ("gnu" . 10)
-        ("melpa-unstable" . 0)))
+      '(("MELPA-Stable" . 50)
+        ("GNU-ELPA" . 5)
+        ("MELPA-Unstable" . 0)))
 
 ;; Add your pinned packages to the list below when you encounter an Emacs
 ;; mode that needs a package to be pinned:

@@ -2,10 +2,11 @@
 
 [![License](https://img.shields.io/badge/LICENSE-GPL%20v3.0-blue.svg)](https://www.gnu.org/licenses/gpl.html)
 
-<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-generate-toc again -->
 **Table of Contents**
 
 - [Harmonic Alchemy Modular Emacs:](#harmonic-alchemy-modular-emacs)
+
     - [Introduction:](#introduction)
     - [Note for Windows Users:](#note-for-windows-users)
     - [My Commitment:](#my-commitment)
@@ -27,15 +28,15 @@
                 - [Mac OS:](#mac-os)
                 - [Install Emacs From Source on Mac OS:](#install-emacs-from-source-on-mac-os)
                     - [Prerequisites:](#prerequisites)
-                    - [Clone `GNU Emacs Repo @ Savannah.gnu.org:`](#clone-gnu-emacs-repo--savannahgnuorg-1)
-                    - [Set up Autotools:](#set-up-autotools-1)
-                    - [Run Configure:](#run-configure-1)
-                    - [Make Bootstrap: _(does a more thourough job)_](#make-bootstrap-does-a-more-thourough-job-1)
+                    - [Clone `GNU Emacs Repo @ Savannah.gnu.org:`](#clone-gnu-emacs-repo--savannahgnuorg)
+                    - [Set up Autotools:](#set-up-autotools)
+                    - [Run Configure:](#run-configure)
+                    - [Make Bootstrap: _(does a more thourough job)_](#make-bootstrap-does-a-more-thourough-job)
                     - [Make Install! _(Make the Emacs Mac App package!)_](#make-install-make-the-emacs-mac-app-package)
                     - [Move your shiny new Emacs.app to: `$HOME/Applications:`](#move-your-shiny-new-emacsapp-to-homeapplications)
                     - [Launch Emacs from your Apps Folder/Menu:](#launch-emacs-from-your-apps-foldermenu)
-                    - [Revert Repo back to fresh clone state to start over:](#revert-repo-back-to-fresh-clone-state-to-start-over-1)
-                    - [Troubleshooting Debugging:](#troubleshooting-debugging-1)
+                    - [Revert Repo back to fresh clone state to start over:](#revert-repo-back-to-fresh-clone-state-to-start-over)
+                    - [Troubleshooting Debugging:](#troubleshooting-debugging)
                 - [FreeBSD & OpenBSD:](#freebsd--openbsd)
         - [NODE.js:](#nodejs)
         - [VMD: _(Visual MarkDown App)_](#vmd-visual-markdown-app)
@@ -65,7 +66,7 @@
                 - [Debian 10 Buster:](#debian-10-buster)
                     - [For released stable versions of Debian do this instead:](#for-released-stable-versions-of-debian-do-this-instead)
                 - [Ubuntu:](#ubuntu)
-                - [Fedora:](#fedora-1)
+                - [Fedora:](#fedora)
     - [Get Ready to Start up Modular Emacs for the first time!](#get-ready-to-start-up-modular-emacs-for-the-first-time)
         - [First Some Initial House Keeping: _before we move in_](#first-some-initial-house-keeping-before-we-move-in)
             - [Create an empty file named `custom.el`:](#create-an-empty-file-named-customel)
@@ -101,12 +102,18 @@
 
 <!-- markdown-toc end -->
 
+
 # Harmonic Alchemy Modular Emacs:
+
+##### Current Status: 
+
+_Final Testing Stages for Version 2.0.1 RC1..._  The long standing **Mac OS Environment Settings Bug** has finally been tackled and many other minor problems were fixed as well...  _Now prepairing to re-run testing on **Linux** platforms_ to make sure nothing that got fixed on the **Mac** also broke something on **Linux** as a side effect... DOH!  If everything works fine on **Linux** we are going to push this commit to both **`develop`** and **`master`** branches _(as stable release candidates)_ because this branch **(`commit`)** is running so much better than any of the older released versions _(master & develop branches)_...
+
 ## Introduction:
 
-**Welcome to Harmonic Alchemy Modular Emacs - _V2.0.0 RC1 Q2-2019_**
+**Welcome to Harmonic Alchemy Modular Emacs - _V2.0.1 RC1 Q2-2019_**
 
-> **Note:** This Doc is not yet complete but will be finished before the new **_Version 2 release candidate_** period is over...  Everything is done and current down to the **Usage/Strategies for Concurrent Development** Section...  Everything after that is still being updated and reviewed.  Read those sections with that in mind.  _(i.e., some new things are not documented yet but old things will be fine)_ This note will disappear once this doc is all updated... Thanks!
+> **Note:** This Doc is not yet complete but will be finished before the new **_Version 2 release candidate_** period is over...  Everything written down to the **Usage/Strategies for Concurrent Development** Section is fairly _up-to-date_...  Everything after that is still being updated and reviewed.  Read those sections with that in mind.  _(i.e., some new things are not documented yet but old things will be fine)_ This note will disappear once this doc is all updated... I may decide to break this document up into separate linked docs.  It's growing rather large now eh? %^) Thanks!
 
 This project has been a long time coming.  Its history goes back a few years ago when I went searching for some better ways to configure my then pretty basic Emacs configuration of over 10 or so years!  I cloned a few Emacs repos on Github to try different things out for a while.  I liked some things and tried to get rid of other things later.  Management became confusing after a while.  I ended up with lots of questionable elisp code, much of which were things possibly no longer needed!  
 
@@ -115,7 +122,7 @@ After a couple years of **adding**, **removing**, **configuring**, **re-configur
 
 So I decided to start over from scratch and modularize everything with the purpose of preventing tangled messes like this from happening within your own Emacs setups! _(and mine as well..._ `%^)`
 
-**Modular Emacs** is more than just Emacs with configurable modules however... It is also designed to be the centerpiece **_(command central)_** of a larger **DevOps** / **PubOps** **Personal IDE** workstation or laptop.  I am a devOps engineer, computer scientist, composer/musician, sound designer, architect, writer/publisher.  I wear a lot of hats! My Emacs needs to wear a lot of hats as well!  The central focus of **Modular Emacs** is to build empowering features into **Emacs** utilizing a modular framework that facilitates all the above without becoming an over complicated mess to manage! **_"good luck with that"_**  :octocat:
+**Modular Emacs** is more than just Emacs with configurable modules however... It is also designed to be the centerpiece **_(command central)_** of a larger **_Extremely Personalized, Extremely Extensible_: ** **DevOps** / **PubOps** **IDE** workstation and/or companion **IDE** workstation **laptop**.  I am a devOps engineer, computer scientist, composer/musician, sound designer, architect, writer/publisher.  I wear a lot of hats! My Emacs needs to wear a lot of hats as well!  The central focus of **Modular Emacs** is to build empowering features into **Emacs** utilizing a modular framework that facilitates all the above without becoming an over complicated mess to manage! **_"good luck with that"_**  :octocat:
 
 > **NOTE:** Earlier versions of this project called out some things in the **_Requirements_** section as **_optional_** to give interested users the option to install only the basics...  However only supporting **_basic Emacs features_** is not the purpose of **Modular Emacs**...  
 
