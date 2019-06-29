@@ -89,8 +89,8 @@
 ;; Set default Frame Dimensions:
 ;; You may have to play with this depending on your total screen size etc...
 (setq default-frame-alist
-      '( (width . 101)
-         (height . 42)
+      '( (width . 92)
+         (height . 35)
          (menu-bar-lines . 1)
          (vertical-scroll-bars . nil)
          (horizontal-scroll-bars . nil)

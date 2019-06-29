@@ -53,6 +53,20 @@
 
 (add-hook 'text-mode-hook 'turn-on-visual-line-mode)
 
+;; Turn highlight matching brackets ON when cursor is on one.
+
+(show-paren-mode 1)
+
+;; highlight brackets
+;(setq show-paren-style 'parenthesis)
+
+;; highlight entire expression
+;(setq show-paren-style 'expression)
+
+;; highlight brackets if visible, else entire expression
+(setq show-paren-style 'mixed)
+
+
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; The default visible bell actually startles me when it occurs!
 ;; This is a much better way... Only the mode line flashes!  Great.
