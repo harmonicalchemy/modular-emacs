@@ -39,10 +39,11 @@
 
 ;; Change title-bar text
 (setq frame-title-format
-      "Modular Emacs v2.0.1 RC1 [Q2 2019]")
+      "Modular Emacs - Lisp IDE v2.0.1 RC1 [Q2 2019]")
 
 ;; Disable tool-bar - I could care less about tool bars in emacs!
 ;; An oxymoron! But you may feel differently.  Comment this out if you like them.
+
 (tool-bar-mode -1)
 
 ;; Disable scroll-bar - I use key commands to navigate in emacs.  Once you get
@@ -65,7 +66,7 @@
 ;; it scrolls horribly and I would rather work without it. %^)
 ;; also disable the middle mouse (mouse-2) pasting text by accident
 ;; really annoys me!
-;;
+
 (mouse-wheel-mode -1)
 (global-set-key [wheel-up] 'ignore)
 (global-set-key [wheel-down] 'ignore)
@@ -95,8 +96,7 @@
          (vertical-scroll-bars . nil)
          (horizontal-scroll-bars . nil)
          (left-fringe . 1)
-         (right-fringe . 1)         
-         ))
+         (right-fringe . 1)))
 
 ;; Set default font to Hermit Medium (my favorite mono font for everything)...
 (set-face-attribute 'default nil

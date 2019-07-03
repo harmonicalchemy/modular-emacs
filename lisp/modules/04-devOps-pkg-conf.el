@@ -12,7 +12,6 @@
 ;; Declare a list of required packages for programming, build/test, deploy, etc.:
 (defvar modular-emacs--req-devops-packages
   '(ztree
-    undo-tree
     neotree
     smart-tabs-mode
     ssh-config-mode
@@ -28,9 +27,6 @@
 (mapc (lambda (p)
         (package-install p))
       modular-emacs--req-devops-packages)
-
-;; Start undo-tree:
-;(global-undo-tree-mode)
 
 ;; Load ssh-config-mode:
 (autoload 'ssh-config-mode "ssh-config-mode" t)
