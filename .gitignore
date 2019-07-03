@@ -24,6 +24,7 @@ auto-save-list/*
 transient/*
 games/*
 recentf
+abbrev_defs
 *.temp
 
 # exclude everything within my-custom-modules folder...
