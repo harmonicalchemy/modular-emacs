@@ -190,9 +190,10 @@
 (princ (cl-concatenate 'string
                        ";; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
                        ";; Welcome to: [Your-Machine-Name-Here]\n"
-                       ";;             Harmonic Alchemy - Modular Emacs!\n"
+                       ";;             Harmonic Alchemy Modular Emacs! \n"
+                       ";;                     ((( Lisp IDE )))        \n"
                        ";; Version:    2.0.1 RC1 [Q2 2019]\n"
-                       ";; \n"
+                       ";; \n" 
                        ";; Today's date: " (format-time-string "%Y %B %d") "\n"
                        ";; Startup completed in "
                        (number-to-string (cadr (time-subtract (current-time)

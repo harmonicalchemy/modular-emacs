@@ -28,7 +28,7 @@
     fountain-mode
     olivetti
     graphviz-dot-mode
-    org-bullets    
+    org-bullets
     vmd-mode))
 
 ;; Install required packages:
@@ -77,13 +77,11 @@
 
 ;; My-Docs if on Linux:
 (when *is-darwin*
-  (setq deft-directory "~/Documents/000-Alisha/000-GIT/Gen-Dat/My-Docs")
-  )
+  (setq deft-directory "~/Documents/000-Alisha/000-GIT/Gen-Dat/My-Docs"))
 
 ;; Adjust path to My-Docs if on Mac OS:
 (when *is-linux*
-  (setq deft-directory "~/000-GIT/Gen-Dat/My-Docs")
-  )
+  (setq deft-directory "~/000-GIT/Gen-Dat/My-Docs"))
 
 (setq deft-recursive t)
 (setq deft-use-filename-as-title t)

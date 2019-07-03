@@ -107,9 +107,8 @@
 
 ##### Current Status: 
 
-_Final Testing Stages for Version 2.0.1 RC1..._  The long standing **Mac OS Environment Settings Bug** has finally been tackled and many other minor problems were fixed as well...  _Now prepairing to re-run testing on **Linux** platforms_ to make sure nothing that got fixed on the **Mac** also broke something on **Linux** as a side effect... DOH!  If everything works fine on **Linux** we are going to push this commit to both **`develop`** and **`master`** branches _(as stable release candidates)_ because this branch **(`commit`)** is running so much better than any of the older released versions _(master & develop branches)_...
-
-## Introduction:
+_New Lisp IDE Fork beginning at: Version 2.0.1 RC1..._ **Linux** testing went without any problems.  I only had to adjust screen size as a compromise between laptops and larger desktop screens...  This new fork contains extra Lisp Programming language features and tools built in by default... No need to enable anything.. I needed this fork to make it easier to test both the vanilla version of Modular Emacs side by side with this fork...
+If you are reading this you have selected the `lisp-ide` branch... _(in case you were wondering)_ If you want the plain vanilla flavor of Harmonic Alchemy Modular Emacs than switch back to the `master` branch...
 
 **Welcome to Harmonic Alchemy Modular Emacs - _V2.0.1 RC1 Q2-2019_**
 

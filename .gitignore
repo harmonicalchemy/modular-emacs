@@ -20,6 +20,7 @@ elpa/*
 
 # exclude other auto emacs files:
 ac-comphist.dat
+abbrev_defs
 auto-save-list/*
 transient/*
 games/*

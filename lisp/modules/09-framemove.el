@@ -76,7 +76,7 @@
 (defun fm-frame-is-to-dir-of (refframe dir otherframe)
   (cond
    ((not (eq (frame-parameter refframe 'display) (frame-parameter otherframe 'display)))
-      nil)
+    nil)
    ((eq refframe otherframe)
     nil)
    ((memq dir '(left up))
@@ -106,7 +106,6 @@
             (fm-frame-coord frame dir))
     (cons (fm-frame-coord frame dir)
           (cdr coord))))
-
 
 (defun fm-next-frame (dir)
   "move focus to next frame in direction (from currently focused frame)"

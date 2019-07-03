@@ -33,12 +33,10 @@
 (load (expand-file-name "~/quicklisp/slime-helper.el"))
 
 (when *is-darwin*
-  (setq inferior-lisp-program "/usr/local/bin/sbcl")
-  )
+  (setq inferior-lisp-program "/usr/local/bin/sbcl"))
 
 (when *is-linux*
-  (setq inferior-lisp-program "/usr/bin/sbcl")
-  )
+  (setq inferior-lisp-program "/usr/bin/sbcl"))
 
 ;;;;
 ;; Set up Emacs Lisp IDE with some contribs:
@@ -49,13 +47,12 @@
 
 ;; First: Start with only these slime-contribs loaded:
 
-(setq slime-contribs '(slime-scratch slime-editing-commands helm-slime slime-repl))
-
-;; Next: If you like what you see so far, Try slime-fancy mode, which loads the REPL
-;; and almost all of the popular contribs... (un-comment next line to enable.
-;; You may want to disable the above line afterwards since it may be redundant)
-
-(setq slime-contribs '(slime-fancy)) ; loads almost everything!
+(setq slime-contribs '(slime-fancy
+                       slime-quicklisp
+                       helm-slime
+                       slime-repl
+                       slime-contribs
+                       slime-asdf))
 
 ;; Tell auto-complete to use ac-slime specific completions when sime-mode is active:
 
