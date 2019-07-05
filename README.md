@@ -6,10 +6,13 @@
 **Table of Contents**
 
 - [Harmonic Alchemy Modular Emacs:](#harmonic-alchemy-modular-emacs)
-
     - [Introduction:](#introduction)
-    - [Note for Windows Users:](#note-for-windows-users)
-    - [My Commitment:](#my-commitment)
+        - [History:](#history)
+        - [Modular Emacs is Born:](#modular-emacs-is-born)
+        - [Why Modular?](#why-modular)
+        - [Try Harmonic Alchemy Modular Emacs:](#try-harmonic-alchemy-modular-emacs)
+        - [Note for Windows Users:](#note-for-windows-users)
+        - [My Commitment:](#my-commitment)
     - [Start Here: _(Modular Emacs Installation)_](#start-here-modular-emacs-installation)
     - [Requirements:](#requirements)
         - [Emacs: V26.1+](#emacs-v261)
@@ -107,38 +110,64 @@
 
 ##### Current Status: 
 
-_Final Testing Stages for Version 2.0.1 RC1..._  The long standing **Mac OS Environment Settings Bug** has finally been tackled and many other minor problems were fixed as well...  _Now prepairing to re-run testing on **Linux** platforms_ to make sure nothing that got fixed on the **Mac** also broke something on **Linux** as a side effect... DOH!  If everything works fine on **Linux** we are going to push this commit to both **`develop`** and **`master`** branches _(as stable release candidates)_ because this branch **(`commit`)** is running so much better than any of the older released versions _(master & develop branches)_...
+This commit represents Modular Emacs official release V2.0.1 which is now running fairly well on various flavors of Linux and Mac OS, _(and probably BSD as well, but untested)_  
 
 ## Introduction:
 
-**Welcome to Harmonic Alchemy Modular Emacs - _V2.0.1 RC1 Q2-2019_**
+**Welcome to Harmonic Alchemy Modular Emacs - _V2.0.1 Q3-2019_**
 
-> **Note:** This Doc is not yet complete but will be finished before the new **_Version 2 release candidate_** period is over...  Everything written down to the **Usage/Strategies for Concurrent Development** Section is fairly _up-to-date_...  Everything after that is still being updated and reviewed.  Read those sections with that in mind.  _(i.e., some new things are not documented yet but old things will be fine)_ This note will disappear once this doc is all updated... I may decide to break this document up into separate linked docs.  It's growing rather large now eh? %^) Thanks!
+**Note:** Updates to this Doc will be on-going...  Some features documented below were optional with previous versions, and now they may no longer work as expected with this release!  Try them out at your own risk... Optional features will be changing... Consider all the optional features below as alpha...  Daily Development of these new optional features goes on under the **`lisp-ide`** branch which will be getting frequent updates...  
+
+Also note that on the **`lisp-ide` branch** I have been trying out: **`Xah-Fly-Keys`** _(a modal edit mode for Emacs!)_.  That has been a bitter-sweet experience so far...  If it helps to speed up my Emacs workflow and editing speed I am all for it!  At first I was stumbling all over myself with mis-typed keys etc.... I was cursing Xah, blaming him for lying about things etc... _(even calling him a troll - lol)_ 
+
+However, I committed myself to try it for a bit longer. _(After spending all that time installing and configuring, I did not want that time to have been wasted eh?)_ With this new resolve I began to notice/realize I was forcing my fingers to get over bad keyboarding habits! Habits that were slowing me down, and possibly causing strain in my little fingers!
+
+This was an epiphany for me as I am a bass player and well know the problems of bad fingerboard habits!  I stuck with Xaw's keys a bit longer and low-and-behold, I am now starting to see how fast I can go, _(once I train my damn fingers not to slip over to the dark side :space_invader: - lol)_
+
+It is true!  You don't need to hold down the damn **Ctrl** or **Meta Key** anyomre!  But you will need the disipline, commitment, and probably about 20 hours of time to master it!  No slipping back and forth during your finger training time or you will end up reinforcing your old habits wasting all of your effort!
+
+I think its worth trying if you are already experiencing health problems.  It's also worth trying if you think your keyboarding skills are much to slow...  I don't believe it's practical or a good idea to mix **Xah-Fly-Keys** with your old **Ctrl** and **Meta** key tricks at the same time... Especially while you are learning... Know what I mean?  Stay off them and use the **leader keys** instead...
+
+Much patience is required before you will stop calling Xah a troll and recognize him for the vast keyboarding knowledge he offers to the world!!!  He truly knows the subject of keyboards, keyboarding efficiency and health, etc.  he did his homework, and we all benefit!  **Hey!** Would you **GNU** guys Let **[Xah Lee](https://github.com/xahlee)** into the **FSF** and add his Emacs projects to Elpa already OK? In my opinion his `Xah-Fly-Keys` is the best **Emacs** Major Modal Edit Mode available...  
+
+I am not totally convinced a modal version of Emacs is going to be right for me, but I am sure it is right for a lot of folks out there!!!  Especially **Vi2Emacs Converts**...  This modal version of Emacs comes with your health's best intrest first priority, keeping speed and efficiency as the second priority which should be in harmony with the first priority...  I am very impressed with it so far... I don't understand some of FSF's complaints?  Maybe those are old now...
+
+If you are interested in trying these new features out, checkout the **`origin/lisp-ide`** branch to your local machine and restart Emacs... _(Some of these new Lisp IDE Programming Language features may not work correctly at first, but as I fix things you will see things start working as expected...  If you keep your local branch updated you will be the first to find out! ;-)_ I will be updating the docs below accordingly...
+
+Otherwise, stay on the master branch and don't install any of the _Optional_ features discussed below...
+
+### History:
 
 This project has been a long time coming.  Its history goes back a few years ago when I went searching for some better ways to configure my then pretty basic Emacs configuration of over 10 or so years!  I cloned a few Emacs repos on Github to try different things out for a while.  I liked some things and tried to get rid of other things later.  Management became confusing after a while.  I ended up with lots of questionable elisp code, much of which were things possibly no longer needed!  
 
-After a couple years of **adding**, **removing**, **configuring**, **re-configuring** it started feeling like I was painting myself into a tangled corner like getting lost in **_"a maze of twisty little passages all alike!"_**  Lets face it... I was not keeping good logs... I was being a cowgirl and got into trouble!  It was my fault.  I learned a lot in the process about SH, BASH, and ZSH best practices though...  
+After a couple years of **adding**, **removing**, **configuring**, **re-configuring** it started feeling like I was painting myself into a tangled corner like getting lost in **_"a maze of twisty little passages all alike!"_**  Lets face it... I was not keeping good logs and my **git** management skills were wanting!  I was being: _"oh that looks cool lets try that" - (cowgirl mode)_ and I got into a wee bit of trouble as a result of my wild adventures!  It was all my fault! But it was fun just the same.
+
+However as a result of that saga, I learned a lot about **`SH`**, **`BASH`**, and **`ZSH`** best practices...  That spawned a complete re-write of my **`.dotfiles` project** to become multiplatform... _(**Note:** My `.dotfiles` have not been updated yet as that project has been forked and made private until my final scheme is ready...)_ Currently my **New** _(but still private)_ **`.dotfiles` project** is _Full of Twisty Little Pathways Still Unknown..._  :question:
+
+### Modular Emacs is Born:
+
+As a result of the mess above, I decided to start over from scratch and modularize everything with the purpose of preventing tangled messes like this from happening within your own Emacs setups! _(and mine as well..._ `%^)`
+
+**Modular Emacs** is more than just Emacs with configurable modules... It is also designed to be the centerpiece **_(command central)_** of a larger **_Extremely Personalized, Extremely Extensible_: ** **DevOps** / **PubOps** **IDE** workstation and/or companion **IDE** workstation **laptop**.  I am a devOps engineer, computer scientist, composer/musician, sound designer, architect, writer/publisher.  I wear a lot of hats! My Emacs needs to wear a lot of hats as well!  The central focus of **Modular Emacs** is to build empowering features into **Emacs** utilizing a modular framework that facilitates all the above without becoming an over complicated mess to manage! **_"good luck with that"_**  :octocat:  
+
+### Why Modular?
+
+- **Modular Emacs** was designed to be easy to maintain and configure through the management of independent modules and in that sense Modular Emacs hopefully forms a basic sensible framework that is easy to use and flexible enough to adjust to your work-style, programming-style, and writing-style...  
 
 
-So I decided to start over from scratch and modularize everything with the purpose of preventing tangled messes like this from happening within your own Emacs setups! _(and mine as well..._ `%^)`
+- **Add What You Need Only:** You have choices encapsulated within modules. Each module comes with its own requirements.  Removing and or adding many of the _extra feature_ modules will not disrupt the rest of your Emacs configuration.  They have been designed to be encapsulated in that way... Some of the more basic modules are required for Modular Emacs basic operation however.  The nice thing is everything is modular so it will be easy to find out which ones are doing what...
 
-**Modular Emacs** is more than just Emacs with configurable modules however... It is also designed to be the centerpiece **_(command central)_** of a larger **_Extremely Personalized, Extremely Extensible_: ** **DevOps** / **PubOps** **IDE** workstation and/or companion **IDE** workstation **laptop**.  I am a devOps engineer, computer scientist, composer/musician, sound designer, architect, writer/publisher.  I wear a lot of hats! My Emacs needs to wear a lot of hats as well!  The central focus of **Modular Emacs** is to build empowering features into **Emacs** utilizing a modular framework that facilitates all the above without becoming an over complicated mess to manage! **_"good luck with that"_**  :octocat:
+On the other hand, if you install Modular Emacs stripped of all external helper apps _(described below in the **Requirements** section)_, It may not provide any advantage over many of the other simpler Emacs projects on GitHub... **_Therefore if all you need is vanilla Emacs:_** _(with some of the more basic options thrown in)_, you don't need Modular Emacs at all.  Here is a simpler light weight _"sensible"_ Emacs Config: **[hrs/sensible-defaults.el](https://github.com/hrs/sensible-defaults.el)**  _(which claims to also be modular - I have not tried it.  I only briefly read through the README.  It looks like a good alternate option to try)_ :octocat:   
 
-> **NOTE:** Earlier versions of this project called out some things in the **_Requirements_** section as **_optional_** to give interested users the option to install only the basics...  However only supporting **_basic Emacs features_** is not the purpose of **Modular Emacs**...  
+### Try Harmonic Alchemy Modular Emacs:
 
-> **Modular Emacs** was designed to be easy to maintain and configure through the management of independent modules and in that sense Modular Emacs hopefully forms a basic sensible framework that is easy to use and flexible enough to adjust to your work-style, programming-style, and writing-style...  
-
-> **However**, Your Modular Emacs experience would be much reduced without any of the **_extra_** features afforded by these **_external requirements_**...   It will feel crippled when some expected action results in **_"not defined"_** messages... Stripped of all the external helper apps etc, Modular Emacs may not provide any advantage over many of the other simpler Emacs projects on GitHub...
-
-Therefore, if all you need is vanilla Emacs, _(with some of the more basic options thrown in)_, you don't need Modular Emacs at all.  Here is a simpler light weight _"sensible"_ Emacs Config: **[hrs/sensible-defaults.el](https://github.com/hrs/sensible-defaults.el)**  _(which claims to also be modular - I have not tried it.  I only briefly read through the README.  It looks like a good alternate option to try)_ :octocat:   
-
-For those of you who feel **[Harmonic Alchemy Modular Emacs](https://github.com/harmonicalchemy/modular-emacs)** may be exactly what you were looking for... **_By all means!  Dive in and try Modular Emacs!_**
+For those of you who feel **[Harmonic Alchemy Modular Emacs](https://github.com/harmonicalchemy/modular-emacs)** may be exactly what you were looking for: **_By all means... Lets Dive in!_**
 
 There are some external requirements... It may take a while... If that's OK with you, Great!... Lets go...  Eventually I will script this up so you can just enter this at the command prompt: **`./install.sh`** and be done with it...  That script will be installing a lot of things though! It will have to check a lot of system states!  I have to work all that out as a **non-interactive** process.  It should install everything _(transparently non-interactively)_ from that single running shell script...  If you have to answer questions and make decisions... Better that you execute manually instead, and read the docs first...  Right?  
 
 And so for now... We will learn this together... Please give feedback, open issues, ask questions!  Thanks ;-)
 
-## Note for Windows Users:
+### Note for Windows Users:
 
 I have no idea whether this project will work on **Windows** and I have no experience using **Emacs** on **Windows** or **Cygwin**...  When I was working at **IBM/Lotus** we were building major IBM/Lotus middleware software systems using the full premium stack of **Microsoft Developer Works** tools, as well as a full stack of **IBM Developer tools** to boot!  **Emacs** would have felt quite out of place among those monsters!  I did work on building IBM/Lotus Open Source Software Products and deployed them on **Red Hat Linux** servers however.  You better believe my trusty old friend **Emacs** would be one of the first things that got installed on those boxes!
 
@@ -148,7 +177,7 @@ If you find glitches please let me know... I need your knowledge for that part..
 
 I added some _(commented out)_ code to: `.../lisp/modules/06-interface.el` after reading some things on Stack Exchange about problems with scroll bars on Windows...  You could un-comment this code and try it if you are having the same problems...  If that works for you, please open up an Issue about that and I will update this doc to let everyone else know...  Thanks!  
 
-## My Commitment:
+### My Commitment:
 
 > **_"Always do what is right. It will gratify half of mankind and astound the other."_** - Mark Twain  
 

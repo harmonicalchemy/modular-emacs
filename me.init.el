@@ -32,6 +32,10 @@
 ;;
 ;; Change Log: (descending chronological order)
 ;;
+;;   2019-007-05 - Harmonic Alchemy Modular-Emacs Official Release: V2.0.1
+;;      Final testing on Linux done... Updated Docs accordingly... All
+;;      platforms running reasonably stable now... Compiler warnings noted...
+;;
 ;;   2019-006-27 - Harmonic Alchemy Modular-Emacs Release: V2.0.1 RC1
 ;;      [Q2 2019] Final Testing on Mac OS complete... Final Testing on
 ;;      Linux begins after this commit.   Release was bumped to V2.0.1
@@ -191,7 +195,7 @@
                        ";; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
                        ";; Welcome to: [Your-Machine-Name-Here]\n"
                        ";;             Harmonic Alchemy - Modular Emacs!\n"
-                       ";; Version:    2.0.1 RC1 [Q2 2019]\n"
+                       ";; Version:    2.0.1 [Q3 2019]\n"
                        ";; \n"
                        ";; Today's date: " (format-time-string "%Y %B %d") "\n"
                        ";; Startup completed in "
@@ -208,9 +212,9 @@
                        ";; If Mark Twain was a Lisp Hacker / DJ in New Orleans during the 80's:\n"
                        ";; \n"
                        ";;   \"I yous to be a river boat pilot until dis crafty gambler,\n"
-                       ";;    he, CON me out of averyting, including my CAR, CDR,\n"
+                       ";;    he, CONs me out of averyting, including my CAR, CDR,\n"
                        ";;    and my entire Michael Jackson CD collection man!!!\n"
-                       ";;    Thank god, he didn't find my old IBM 704 in the basement!!!\n"
+                       ";;    Tank god, he didn't find my old IBM 704 in the basement!!!\n"
                        ";; \n"
                        ";;    Dey caught em doh...  Yey-sir-ee!  Now e's a CONvict...\n"
                        ";;    locked away in a CON'S cell... Being (evaluated) for:\n"
