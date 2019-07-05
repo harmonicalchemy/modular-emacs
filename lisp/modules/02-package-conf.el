@@ -23,9 +23,9 @@
     auto-complete
     which-key
     meta-presenter
-    xah-fly-keys
-    flyspell-correct-helm
-    xah-elisp-mode))
+;    xah-fly-keys
+    xah-elisp-mode
+    flyspell-correct-helm))
 
 ;; Install required packages
 (mapc (lambda (p) (package-install p))

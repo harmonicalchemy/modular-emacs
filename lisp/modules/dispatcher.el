@@ -58,7 +58,7 @@
 (load-file "~/.emacs.d/lisp/modules/09-framemove.el")
 
 ;; Load Harmonic Alchemy Modular Emacs - Xah Emacs module:
-(load-file "~/.emacs.d/lisp/modules/10-Xah-Fly-Keys.el")
+;(load-file "~/.emacs.d/lisp/modules/10-Xah-Fly-Keys.el")
 
 ;; Optional: Un-comment the load file line below if you would like
 ;; to explore MOOs or MUDs using a customized Emacs MOO client! ;-)
@@ -70,11 +70,11 @@
 ;; Optional: Load Harmonic Alchemy Modular Emacs - Programming Languages module:
 ;; This is for using Emacs as a full fledged Common Lisp IDE!  Don't un-comment
 ;; this Load Line unless you are an Egghead...  You have been warned!
-(load-file "~/.emacs.d/lisp/modules/12-progLang-pkg-conf.el")
+;(load-file "~/.emacs.d/lisp/modules/12-progLang-pkg-conf.el")
 
 ;; Load Harmonic Alchemy Modular Emacs - Key Bindings module:
 (load-file "~/.emacs.d/lisp/modules/13-key-bindings.el")
 
 ;; Load Harmonic Alchemy Modular Emacs - Key Bindings module:
-(load-file "~/.emacs.d/lisp/modules/14-progLang-key-bindings.el")
+;(load-file "~/.emacs.d/lisp/modules/14-progLang-key-bindings.el")
 
