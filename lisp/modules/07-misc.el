@@ -22,6 +22,7 @@
 
 (setq initial-buffer-choice 
       t)
+
 (setq initial-scratch-message 
       "")
 
@@ -64,8 +65,8 @@
 ;(setq show-paren-style 'expression)
 
 ;; highlight brackets if visible, else entire expression
-(setq show-paren-style 'mixed)
 
+(setq show-paren-style 'mixed)
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; The default visible bell actually startles me when it occurs!

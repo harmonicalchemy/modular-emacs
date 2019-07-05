@@ -24,10 +24,10 @@
 
 (defvar modular-emacs--req-proglang-packages
   '(slime
-;   slime-autoloads
+  ;   slime-autoloads
     helm-slime
     ac-slime
-    clojure-mode
+  ;    clojure-mode
     cider
     yasnippet
     yasnippet-snippets
@@ -37,25 +37,22 @@
 
 ;; Install required packages:
 
-(mapc (lambda (p)
-        (package-install p))
+(mapc (lambda (p) (package-install p))
       modular-emacs--req-proglang-packages)
 
+(add-to-list 'auto-mode-alist '("\\.el\\'" . xah-elisp-mode))
 
 ;;;;;;
-;; Enable SLIME / sbcl IDE Setup:
+;; Load SLIME / sbcl IDE Module:
 ;;;;;;
 
-;; Load  - SLIME / sbcl module:
-(load-file "~/.emacs.d/lisp/my-modules/12-1-SLIME-sbcl-pkg-conf.el")
+(load-file "~/.emacs.d/lisp/modules/12-1-SLIME-sbcl-conf.el")
 
 ;;;;
-;; Enable CIDER / Clojure; IDE Setup:
+;; Load CIDER / Clojure; IDE Module:  (not using on Linux)
 ;;;;
 
-;; Load  - CIDER / Clojure module:
-;(load-file "~/.emacs.d/lisp/my-modules/12-2-CIDER-Clojure-pkg-conf.el")
-
+;(load-file "~/.emacs.d/lisp/modules/12-2-CIDER-Clojure-conf.el")
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; END: 12-progLang-pkg-conf.el
