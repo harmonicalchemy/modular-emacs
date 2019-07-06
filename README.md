@@ -110,11 +110,13 @@
 
 ##### Current Status: 
 
-This commit represents Modular Emacs official release V2.0.1 which is now running fairly well on various flavors of Linux and Mac OS, _(and probably BSD as well, but untested)_  
+This commit represents **Modular Emacs: _Lisp IDE Fork:_ `Release V2.2.0`** which has it's own branch on Github (**`lisp-ide`**) with all of these new features turned on.  This fork has also been merged into the **Github `develop`** branch with all of the new features commented out.  That way I can develop and test these features but also keep most of the code in sync with the **`master`** and **`develop`** branches on-going _(with those features turned off within those branches of course...)_ 
+
+This fork is also running fairly well _(with a few caveats)_ on various flavors of Linux and Mac OS, _(and probably BSD as well, but untested)_  
 
 ## Introduction:
 
-**Welcome to Harmonic Alchemy Modular Emacs - _V2.0.1 Q3-2019_**
+**Welcome to Harmonic Alchemy Modular Emacs - _V2.2.0 Q3-2019_**
 
 **Note:** Updates to this Doc will be on-going...  Some features documented below were optional with previous versions, and now they may no longer work as expected with this release!  Try them out at your own risk... Optional features will be changing... Consider all the optional features below as alpha...  Daily Development of these new optional features goes on under the **`lisp-ide`** branch which will be getting frequent updates...  
 

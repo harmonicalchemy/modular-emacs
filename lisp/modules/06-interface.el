@@ -15,6 +15,13 @@
 ;;
 ;; Change Log: (descending chronological order)
 ;;
+;;   2019-007-05 - Harmonic Alchemy Modular-Emacs Lisp IDE Fork v2.2.0 [Q3 2019]
+;;      v2.0.1 [Q3 2019] Final testing period over... Version 2.0.1 is stable.
+;;      This fork represents new commented out features added from Lisp-IDE
+;;      branch/fork back into the develop branch so they can be kept up to
+;;      date when the time comes for these features to be turned on within
+;;      the develop or master branch at a later date...
+;;
 ;;   2019-007-05 - Harmonic Alchemy Modular-Emacs Official Release:
 ;;      v2.0.1 [Q3 2019] Final testing period over... Version 2.0.1 is stable.
 ;;
@@ -42,7 +49,7 @@
 
 ;; Change title-bar text
 (setq frame-title-format
-      "Harmonic Alchemy - Modular Emacs v2.0.1 [Q3 2019]")
+      "Modular Emacs v2.2.0 - Lisp IDE Fork [Q3 2019]")
 
 ;; Disable tool-bar - I could care less about tool bars in emacs!
 ;; An oxymoron! But you may feel differently.  Comment this out if you like them.

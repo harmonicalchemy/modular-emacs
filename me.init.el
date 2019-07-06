@@ -32,9 +32,17 @@
 ;;
 ;; Change Log: (descending chronological order)
 ;;
-;;   2019-007-05 - Harmonic Alchemy Modular-Emacs Official Release: V2.0.1
-;;      Final testing on Linux done... Updated Docs accordingly... All
-;;      platforms running reasonably stable now... Compiler warnings noted...
+;;   2019-007-05 - Harmonic Alchemy Modular-Emacs - Lisp-IDE fork Release:
+;;      V2.2.0.  Final testing V2.0.1 on Linux done... This fork adds in
+;;      all commented out code from the lisp-ide fork to the develop branch.
+;;      Updated Docs accordingly... All platforms have been running reasonably
+;;      stable for a while now... Compiler warnings noted...  The lisp-ide
+;;      branch will be updated frequently and merged into the develop branch
+;;      less often when things are looking stable... The develop branch
+;;      will be merged into the master branch after docs are all up to date...
+;;      None of the extra features will be turned on within the master or
+;;      develop branches.  Only the lisp-ide branch has those features on by
+;;      default...
 ;;
 ;;   2019-006-27 - Harmonic Alchemy Modular-Emacs Release: V2.0.1 RC1
 ;;      [Q2 2019] Final Testing on Mac OS complete... Final Testing on
@@ -193,44 +201,47 @@
 ;; Print Welcome With Computed Emacs Load Time this configuration took:
 (princ (cl-concatenate 'string
                        ";; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
-                       ";; Welcome to: [Your-Machine-Name-Here]\n"
-                       ";;             Harmonic Alchemy - Modular Emacs!\n"
-                       ";; Version:    2.0.1 [Q3 2019]\n"
-                       ";; \n"
-                       ";; Today's date: " (format-time-string "%Y %B %d") "\n"
+                       ";; Welcome to: [Your-Machine-Name-Here]                    \n"
+                       ";;             Harmonic Alchemy - Modular Emacs!           \n"
+                       ";;                   (((Lisp IDE Fork)))                   \n"
+                       ";; Version:    2.2.0 [Q3 2019]                             \n"
+                       ";;                                                         \n"
+                       ";; Today's date: " (format-time-string "%Y %B %d") "       \n"
                        ";; Startup completed in "
                        (number-to-string (cadr (time-subtract (current-time)
                                                               config-start-time)))
-                       " seconds\n"
-                       ";; \n"
-                       ";;   \"Its name is Public Opinion.\n"
-                       ";;    It is held in reverence.\n"
-                       ";;    It settles everything.\n"
-                       ";;    Some think it is the voice of God.\"\n"
-                       ";;                         -- Mark Twain\n"
-                       ";; \n"
-                       ";; If Mark Twain was a Lisp Hacker / DJ in New Orleans during the 80's:\n"
-                       ";; \n"
-                       ";;   \"I yous to be a river boat pilot until dis crafty gambler,\n"
-                       ";;    he, CONs me out of averyting, including my CAR, CDR,\n"
-                       ";;    and my entire Michael Jackson CD collection man!!!\n"
-                       ";;    Tank god, he didn't find my old IBM 704 in the basement!!!\n"
-                       ";; \n"
-                       ";;    Dey caught em doh...  Yey-sir-ee!  Now e's a CONvict...\n"
-                       ";;    locked away in a CON'S cell... Being (evaluated) for:\n"
-                       ";;    (constructive . rehabilitation)!\"\n"
-                       ";;       LOL! I pushed the puns a bit too far eh? -- Alisha Awen %^) \n"
-                       ";; \n"
-                       ";; Evaluate lisp expressions below, (if you'd like to do that ;-)\n"
-                       ";; Here is GNU.org's link to: an Intro to Programming in Emacs Lisp:\n"
+                       " seconds                                                   \n"
+                       ";;                                                         \n"
+                       ";;   \"Its name is Public Opinion.                         \n"
+                       ";;    It is held in reverence.                             \n"
+                       ";;    It settles everything.                               \n"
+                       ";;    Some think it is the voice of God.\"                 \n"
+                       ";;                         -- Mark Twain                   \n"
+                       ";;                                                         \n"
+                       ";; If Mark Twain was an 80's New Orleans Lisp Hacker/DJ:   \n"
+                       ";;                                                         \n"
+                       ";;   \"I yous to be a river boat pilot until dis crafty    \n"
+                       ";;   gambler CONs me out of averyting, including my CAR,   \n"
+                       ";;   CDR, and my entire Michael Jackson CD collection      \n"
+                       ";;   man!!!  Tank god, he didn't find my old IBM 704 in    \n"
+                       ";;   the basement!!!                                       \n"
+                       ";;                                                         \n"
+                       ";;   Well, dey finally caught em...  Now e's a CONvict...  \n"
+                       ";;   locked away in a CON'S cell. Being (evaluated) for:   \n"
+                       ";;   (constructive . rehabilitation)!\"                    \n"
+                       ";;                    LOL! -- Alisha Awen %^)              \n"
+                       ";;                                                         \n"
+                       ";; Evaluate lisp expressions below within this buffer      \n"
+                       ";; Check Out: GNU.org's Intro to Programming Emacs Lisp:   \n"
                        ";; https://www.gnu.org/software/emacs/manual/html_node/eintr/index.html\n"
-                       ";; \n"
-                       ";; This entire message is a lisp comment!\n"
-                       ";; Evaluate this entire buffer as a test\n"
-                       ";; before committing it as your:\n"
-                       ";; \"new-way-cool-custom-module.el\" %^)\n"
-                       ";;      -- Cheers! Alisha Awen @harmonicalchemy (twitter etc.)\n"
-                       ";;         PGP Pubkey: 0x922CC456F48355A8D9B2E044C9E6CD44A817E7BF\n"
+                       ";;                                                         \n"
+                       ";; This entire message is a lisp comment!                  \n"
+                       ";; Evaluate this entire buffer as a test                   \n"
+                       ";; before committing it as your:                           \n"
+                       ";; \"new-way-cool-custom-module.el\" %^)                   \n"
+                       ";;                        -- Cheers!                       \n"
+                       ";; Alisha Awen: @harmonicalchemy (twitter etc.)            \n"
+                       ";; PGP Pubkey: 0x922CC456F48355A8D9B2E044C9E6CD44A817E7BF  \n"
                        ";; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
                        )
        (get-buffer-create (current-buffer)))
