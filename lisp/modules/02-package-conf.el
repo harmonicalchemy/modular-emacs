@@ -23,7 +23,7 @@
     auto-complete
     which-key
     meta-presenter
-;    xah-fly-keys
+    xah-fly-keys
     xah-elisp-mode
     flyspell-correct-helm))
 
