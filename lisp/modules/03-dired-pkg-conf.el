@@ -97,5 +97,6 @@
 (define-key global-map "\C-x4\C-j" 'dired-jump-other-window)
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; END 03-dired-pkg-conf.el
+;; END: [modular-emacs]:~/.emacs.d/lisp/modules/03-dired-pkg-conf.el
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+

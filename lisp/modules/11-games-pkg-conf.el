@@ -49,5 +49,5 @@
 (goto-address-mode t)))          ;; ... clickable links
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; END 11-games-pkg-conf.el
+;; END: [modular-emacs]:~/.emacs.d/lisp/modules/11-games-pkg-conf.el
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

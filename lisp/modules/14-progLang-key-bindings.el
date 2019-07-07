@@ -1,30 +1,53 @@
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; File:    $HOME/.emacs.d/lisp/modules/14-progLang-key-bindings.el
+;; File:    [modular-emacs]:~/.emacs.d/lisp/modules/14-progLang-key-bindings.el
 ;; Ref:     Xah Emacs - Insert Brackets by Pair Article on ErgoEmacs.org
 ;;          http://ergoemacs.org/emacs/elisp_insert_brackets_by_pair.html
 ;;
 ;; Created: 2019-007-02 - Alisha Awen, siren1@disroot.org
 ;;
-;; These functions are Xah's improvements upon Emacs built in electric-pair-mode
-;; which inserts a bracket pair when you type the left bracket...
+;; Copyright (C) 2019 by Alisha Awen Sheppard - siren1@disroot.org
+;;    (this is a derivative work)
+;; This software is licensed under the GPL version 3+
 ;;
-;; Advantages of xah-insert-bracket-pair
+;; About:
+;;
+;; These functions are my interpretations of: Xah Lee's improvements upon
+;; Emacs built in electric-pair-mode which inserts a bracket pair when you
+;; type the left bracket...
+;;
+;; Advantages of xah-insert-bracket-pair:
 ;;
 ;;    1. Wrap brackets around current word (if cursor is on a word), or text
 ;;       selection, else just insert a pair and place cursor in between.
 ;;    2. Behavior is same and predictable anywhere.
 ;;    3. Convenient shortcuts keys on homerow, or any key you chose.
 ;;    4. Inserts 10 other Unicode brackets and quotes.
-
-
-
-
-
+;;
+;;    NOTE: I believe you can customize these functions within Xaw-Fly-Keys...
+;;          Xaw-Fly-Keys Default key commands for bracket pair inserts are:
+;;
+;;             [space] d k  -  insert Parenthesis:        ()
+;;             [space] d l  -  insert Square Bracket:     []
+;;             [space] d j  -  insert Brace:              {}
+;;             [space] d u  -  insert ASCII Double Quote: ""
+;;             [space] d i  -  insert ASCII Single Quote: ''
+;;             
+;;             [space] d ,  -  insert Angle Bracket:     〈〉
+;;             [space] d W  -  insert Double Angle Bkt:  《》
+;;             [space] d h  -  insert Dbl Curly Quote:    “”
+;;             [space] d m  -  insert Corner Bracket:    「」
+;;             [space] d n  -  insert Black Lenticular:  【】
+;;             [space] d o  -  insert Tortice Shell Bkt: 〔〕
+;;             [space] d t  -  insert Dbl Anble Quote:    «»
+;;             [space] d y  -  insert Emacs Quote:        `'
 ;;
 ;; Change Log:
 ;;
-;; 2019-007-02: Alisha Awen, siren1@disroot.org - Newly created file...
-;;              Added functions from above link.  No mods to these files yet...
+;; 2019-007-02: Alisha Awen, siren1@disroot.org
+;;    Newly created file...  Added functions referenced in above link...
+;;    No mods to these functions or key assignments yet...
+;;
+;;
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;;;;
@@ -122,8 +145,6 @@ Version 2017-01-17"
               (insert @left-bracket)
               (goto-char (+ $p2 (length @left-bracket))))))))))
 
-
-
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; END: 14-progLang-key-bindings.el
+;; END: [modular-emacs]:~/.emacs.d/lisp/modules/14-progLang-key-bindings.el
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

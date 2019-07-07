@@ -47,12 +47,13 @@
 
 ;; First: Start with only these slime-contribs loaded:
 
-(setq slime-contribs '(slime-fancy
-                       slime-quicklisp
-                       helm-slime
-                       slime-repl
-                       slime-contribs
-                       slime-asdf))
+(setq slime-contribs
+      '(slime-fancy
+        slime-quicklisp
+        helm-slime
+        slime-repl
+;        slime-contribs
+        slime-asdf))
 
 ;; Tell auto-complete to use ac-slime specific completions when sime-mode is active:
 
@@ -72,5 +73,5 @@
 ;  (setq smart-tabs-insinuate omit))
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; END: 12-1-SLIME-sbcl-pkg-conf.el
+;; END: [modular-emacs]:~/.emacs.d/lisp/modules/12-1-SLIME-sbcl-pkg-conf.el
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

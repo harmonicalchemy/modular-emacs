@@ -78,3 +78,7 @@
 ;; Load Harmonic Alchemy Modular Emacs - Key Bindings module:
 ;(load-file "~/.emacs.d/lisp/modules/14-progLang-key-bindings.el")
 
+;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; END: [modular-emacs]:~/.emacs.d/lisp/modules/dispatcher.el
+;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+

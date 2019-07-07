@@ -218,5 +218,5 @@
 (add-hook 'graphviz-dot-mode-hook 'my-graphviz-tweaks)
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; END: 05-pubOps-pkg-conf.el
+;; END: [modular-emacs]:~/.emacs.d/lisp/modules/05-pubOps-pkg-conf.el
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

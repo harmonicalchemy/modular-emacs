@@ -1,45 +1,59 @@
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; framemove.el --- directional frame selection routines
+;; [modular-emacs]:~/.emacs.d/lisp/modules/framemove.el
+;;    Directional frame selection functions
 ;;
 ;; Copyright (C) 2019 by Alisha Awen Sheppard - siren1@disroot.org
-;; (this is a derivative work)
+;;    (this is a derivative work)
 ;;
 ;; Original Author: Trey Jackson (bigfaceworm@gmail.com)
-;; Created: February 14, 2010
-;; Keywords: frame, movement, convenience
+;; Created:         February 14, 2010
+;; Keywords:        frame, movement, convenience
 ;;
-;; This file is not included with GNU Emacs, nor is it available on Melpa anymore
-;; since all Emacs Wiki packages were removed from Melpa over a year ago.
-;; I am maintaining this copy within Github.com/harmonicalchemy/super-emacs as
-;; a stand alone copy not intended to stay in sync with any other versions
+;; This file is no longer available on Melpa anymore... It has not been
+;; updated in several years... Therefore I am maintaining this copy within
+;; Github.com/harmonicalchemy/modular-emacs/lisp/modules/framemove.el as
+;; a stand alone module, not intended to stay in sync with any other versions
 ;; on Emacs Wiki or any other package managers anywhere.  This new file derives
 ;; from the original but may end up being vastly different over time...
 ;;
 ;; Integrity of this file is audited only by myself!  Use at your own risk!
-;;
-;; Features:
-;;
-;; Very much like the windmove package, only for frames.
-;; Provide a simple set of keystrokes to move the input/focus
-;; between windows.
-;;
-;; Version 0.9 (with configuration settings added after end-of-file comment)
+;; I sign all my commits with: PGP: 0x922CC456F48355A8D9B2E044C9E6CD44A817E7BF
+;; (siren1@disroot.org)
 ;;
 ;; This software is licensed under the GPL version 3.
 ;;
+;; Features:
+;;
+;;    Very much like the windmove package, only for frames.
+;;    Provide a simple set of keystrokes to move the input/focus
+;;    between windows.
+;;
 ;; To install:
-;;   (require 'framemove)
-;;   (framemove-default-keybindings)
 ;;
-;; If you want to integrate framemove and windmove
-;; You can omit the call to 'framemove-default-keybindings
-;; And instead do:
 ;;    (require 'framemove)
-;;    (windmove-default-keybindings)
-;;    (setq framemove-hook-into-windmove t)
-;; 
-;; Compatibility: GNU Emacs 22.x, 23.x, (25.x? 26.x? so far seems to work fine :-) 
+;;    (framemove-default-keybindings)
 ;;
+;;    If you want to integrate framemove and windmove
+;;    You can omit the call to 'framemove-default-keybindings
+;;    And instead do:
+;;       (require 'framemove)
+;;       (windmove-default-keybindings)
+;;       (setq framemove-hook-into-windmove t)
+;; 
+;; Compatibility:
+;;
+;;    GNU Emacs 22.x, 23.x, (25.x? 26.x?
+;;    So far this is working fairly well with Emacs V26.2.50 :-)
+;;    (there are some problems with errors when no adjacent frames
+;;    exist, throwing Emacs into the debugger... DOH! which I have
+;;    to fix... it's not an Emacs error, it's a user error! LOL)
+;;
+;; Change Log:
+;;
+;;   2019-002-05: Alisha Awen Sheppard - siren1@disroot.org
+;;      Copied this file from: https://github.com/emacsmirror/framemove
+;;      Version 0.9 (with configuration settings added after end-of-file comment)
+;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 (defvar framemove-hook-into-windmove nil
   "When non-nil, try moving frames if moving windows fails.")
@@ -241,16 +255,20 @@ Default MODIFIER is 'meta."
 (provide 'framemove)
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; END: framemove.el
+;; END: [modular-emacs]:~/.emacs.d/lisp/modules/framemove.el
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Framemove Configuration - (added here for modular portability)
 ;; Integrate framemove with windmove so that they work together as one:
+;; NOTE:  Move this code somewhere more approperate...
+
 (require 'framemove)
     (windmove-default-keybindings)
     (setq framemove-hook-into-windmove t)
 
 (require 'cl)
 
+;; END File...

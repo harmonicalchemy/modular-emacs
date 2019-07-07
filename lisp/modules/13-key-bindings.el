@@ -1,5 +1,5 @@
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; [modular-emacs]:~/.emacs.d/lisp/modules/10-key-bindings.el
+;; [modular-emacs]:~/.emacs.d/lisp/modules/13-key-bindings.el
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 (defun me-insert-backtick-quote () (interactive) (xah-insert-bracket-pair "`" "`"))
@@ -59,11 +59,23 @@
 ;; Map Linux Alt keys to Emacs META:
 
 (when *is-linux*
-  (setq x-alt-keysym 'meta))
+  (setq x-alt-keysym 'control)
+  (setq x-super-keysym 'meta)
+  (setq x-ctrl-keysym 'meta))
 
 ;;;;
 ;; Map Mac OS command-key to Emacs META:
 
 (when *is-darwin*
-  (setq mac-command-modifier 'meta))
+  (setq mac-command-modifier 'control)
+  (setq mac-control-modifier 'meta))
 
+
+;;;;
+;; Make Escape Key Do C-g:
+
+(define-key key-translation-map (kbd "ESC") (kbd "C-g"))
+
+;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; END: [modular-emacs]:~/.emacs.d/lisp/modules/13-key-bindings.el
+;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

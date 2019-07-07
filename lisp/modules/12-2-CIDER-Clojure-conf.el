@@ -24,10 +24,8 @@
 (add-hook 'clojure-mode-hook #'cider-mode)
 
 ;; Note: There’s no need to enable it explicitly for modes derived from
-;;       clojure-mode like clojurescript-mode. 
-;;;;
-
+;;       clojure-mode like clojurescript-mode.
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; END: 12-2-CIDER-Clojure-pkg-conf.el
+;; END: [modular-emacs]:~/.emacs.d/lisp/modules/12-2-CIDER-Clojure-pkg-conf.el
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

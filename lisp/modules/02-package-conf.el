@@ -1,5 +1,5 @@
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; [modular-emacs]:~/.emacs.d/lisp/modules/02-packages.el
+;; [modular-emacs]:~/.emacs.d/lisp/modules/02-package-conf.el
 ;;
 ;; This module provides the basic modules that most likely will be needed
 ;; by most all use-cases...  Modular Emacs default packages so-to-speak...
@@ -25,6 +25,7 @@
     meta-presenter
     xah-fly-keys
     xah-elisp-mode
+    xah-find
     flyspell-correct-helm))
 
 ;; Install required packages
@@ -79,7 +80,6 @@
 (helm-autoresize-mode 1)
 (setq helm-split-window-in-side-p t)
 
-;; ~~~~~~~~~~~~~~~~~~~
-;; END: 02-packages.el
-;; ~~~~~~~~~~~~~~~~~~~
-
+;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; END: [modular-emacs]:~/.emacs.d/lisp/modules/02-package-conf.el
+;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

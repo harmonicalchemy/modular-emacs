@@ -100,3 +100,6 @@
 ;; (I prefer to do this manually only when there are real problems)
 (setq debug-on-error nil)
 
+;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; END: [modular-emacs]:~/.emacs.d/lisp/modules/07.misc.el
+;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
