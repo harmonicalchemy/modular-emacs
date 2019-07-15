@@ -21,13 +21,14 @@
 ;;    "qwertz"
 ;;    "workman"
 
-;; Disable Xah's Control Key Functions:
+;; Disable Xah's Control & Meta Key Functions:
 ;; I don't need these as I am learning leader (SPACE) key
 ;; commands that are much better eh?
 ;; Also, I have some of my own Ctrl Key's of my own that
 ;; must not be overwritten!
 
 (setq xah-fly-use-control-key nil)
+(setq xah-fly-use-meta-key nil)
 
 ;; Enable Xah Fly Keys:
 

@@ -2,7 +2,7 @@
 ;; [modular-emacs]:~/.emacs.d/lisp/modules/13-key-bindings.el
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-(defun me-insert-backtick-quote () (interactive) (xah-insert-bracket-pair "`" "`"))
+;(defun me-insert-backtick-quote () (interactive) (xah-insert-bracket-pair "`" "`"))
 
 ;;;;
 ;; Map Modular Emacs General Keys:
@@ -33,19 +33,7 @@
     ("C-S-<down>" . buf-move-down)
     ("C-S-<left>" . buf-move-left)
     ("C-S-<right>" . buf-move-right)
-    ("<f5>" . modular-emacs-reload-current-file)
-    ;; Reassigned Xah Keys:
-    ("C-1" . previous-error)            ; For Debugging - Was C-3
-    ("C-2" . next-error)                ; For Debugging - Was C-4
-    ("C-3" . xah-previous-emacs-buffer) ; For Debugging - Was C-5
-    ("C-4" . xah-next-emacs-buffer)     ; For Debugging - Was C-6
-    ;; Modular Emacs New Assigned Xah Keys:
-    ("C-5" . xah-insert-square-bracket)       ; [] - This is new
-    ("C-6" . xah-insert-paren)                ; () - This is new
-    ("C-7" . xah-insert-brace)                ; {} - This is new
-    ("C-8" . xah-insert-double-curly-quote“”) ; “” - This is new
-    ("C-9" . me-insert-backtick-quote)        ; `` - This is new
-    ("C-0" . xah-select-text-in-quote)))       ; This one is wicked HOT!
+    ("<f5>" . modular-emacs-reload-current-file)))
 
 (defun modular-emacs-apply-keyboard-bindings (pair)
   "Apply keyboard-bindings for supplied list of key-pair values"
@@ -58,10 +46,10 @@
 ;;;;
 ;; Map Linux Alt keys to Emacs META:
 
-(when *is-linux*
-  (setq x-alt-keysym 'control)
-  (setq x-super-keysym 'meta)
-  (setq x-ctrl-keysym 'meta))
+;(when *is-linux*
+;  (setq x-alt-keysym 'control)
+;  (setq x-ctrl-keysym 'control)
+;  (setq x-super-keysym 'meta))
 
 ;;;;
 ;; Map Mac OS command-key to Emacs META:
