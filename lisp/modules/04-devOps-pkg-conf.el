@@ -51,6 +51,10 @@
                       'ruby
                       'nxml)
 
+;; Set C Lang Auto Mode for specific file extensions:
+
+(add-to-list 'auto-mode-alist '("\\.xkb\\'" . c-mode))
+
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Set F1 key to load man page for keyword at current cursor position (woman):
