@@ -67,6 +67,18 @@
 
 (define-key key-translation-map (kbd "ESC") (kbd "C-g"))
 
+;; function slime-space() is called from SPC key!
+;; Stop SLIME from grabbing "SPC", (Xah-fly-keys Global Leader Key)
+;; when in slime-mode or visiting any .lisp file...
+;; This really cripples my ability to use Emacs now!  Yikes!
+
+(defun override-slime-space-key-binding ()
+  (define-key slime-mode-indirect-map (read-kbd-macro slime-space) nil)
+  (define-key slime-mode-indirect-map (kbd "SPC")
+    'xah-fly-leader-key-map))
+
+(add-hook 'slime-mode-hook 'override-slime-space-key-binding)
+
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; END: [modular-emacs]:~/.emacs.d/lisp/modules/13-key-bindings.el
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

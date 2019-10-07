@@ -834,21 +834,41 @@ Later...  Once you have your new Modular Emacs environment up and running smooth
 
 Comming soon at the end or your journey! :octocat:
 
+
+#### Update Quicklisp Packages from Emacs Slime REPL:
+
+To update Quicklisp Quicklisp packages:
+
+    CL-USER> (ql:update-dist "quicklisp")
+
+Software updates are usually available about once per month.
+
+To update the Quicklisp client, use:
+
+    CL-USER> (ql:update-client)
+
+
 #### Read the SBCL Docs!
 
 **[Read the Slime Manual Here](https://common-lisp.net/project/slime/doc/html/)**  
+
+**[Quicklisp News](http://blog.quicklisp.org/)**
 
 **[Read the Common Lisp Manual Here](http://www.gigamonkeys.com/book/)**  
 
 **[Clone This Repo, Study Chapters, Do Exercises](https://github.com/norvig/paip-lisp.git)**  
 
+##### Lisp Web Dev Resources:
+
+**[The Common Lisp Cookbook - Web Development](https://lispcookbook.github.io/cl-cookbook/web.html)**
+
+**[Shirakumo's Radiance Web App Environment Tutorial Tutorial](https://github.com/Shirakumo/radiance-tutorial/blob/master/Part%201.md)**
 
 ### CIDER & Clojure:
 
 #### CIDER is the Clojure(Script) Interactive Development Environment that Rocks!
 
-This is also an optional package for CS research eggheads, for prototyping, or any independent Hacker/Designer who prefers building everything from a simple un-tethered foundation, and designing/building on that, innovating unique personal masterpieces on top, rather than moving into a row house that looks like every other developers house on the block with the same boring trees and shrubs, and Java brewing in the kitchen! Yuck! :trollface:  
-
+This is also an optional package for CS research eggheads, for prototyping, or any independent Hacker/Designer who prefers building everything from a simple un-tethered foundation, and designing/building on that, innovating unique personal masterpieces on top, rather than moving into a row house that looks like every other developers house on the block with the same boring trees and shrubs, and Java brewing in the kitchen! Yuck! :trollface:
 
 #### Install Closure & Leiningen on Mac via Homebrew:
 

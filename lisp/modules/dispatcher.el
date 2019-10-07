@@ -24,6 +24,16 @@
 ;; Emacs without leaving behind artifacts...  For now I need to test things as
 ;; they are because I have added a lot of new Xaw-Fly-Keys things and need to
 ;; get that working stable first... (also learn how to use the damn thing! LOL)
+;;
+;; Change Log: (descending chronological order)
+;;
+;;   2019-010-07 - Harmonic Alchemy Modular-Emacs Lisp IDE Fork v2.2.0 [Q4 2019]
+;;      I renumbered the module file names to match the exact order in which
+;;      they must be evaluated... This is important to prevent some packages
+;;      being shadowed by others due to reverse initialization...  This is a
+;;      symptom of Lisp being so flexible... "We wanna da flex in da right
+;;      places!" (what she said as she turned on the workout exercise machine)
+;;      Timing makes all the difference in the world! LOL
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;; Load Harmonic Alchemy Modular Emacs - Main system.el configuration module:
@@ -57,8 +67,11 @@
 ;; (similar to windmove, & integrated with same key commands)
 (load-file "~/.emacs.d/lisp/modules/09-framemove.el")
 
-;; Load Harmonic Alchemy Modular Emacs - Xah Emacs module:
-(load-file "~/.emacs.d/lisp/modules/10-Xah-Fly-Keys.el")
+;; Optional: Load Harmonic Alchemy Modular Emacs - Programming Languages module:
+;; This is for using Emacs as a full fledged Common Lisp IDE!
+;; This module is enabled by default on the ME lisp-ide branch.  Pull that
+;; branch instead if you want to stay up with the programming stuff...
+(load-file "~/.emacs.d/lisp/modules/10-progLang-pkg-conf.el")
 
 ;; Optional: Un-comment the load file line below if you would like
 ;; to explore MOOs or MUDs using a customized Emacs MOO client! ;-)
@@ -67,15 +80,13 @@
 ;; Load Harmonic Alchemy Modular Emacs - Games module:
 ;(load-file "~/.emacs.d/lisp/modules/11-games-pkg-conf.el")
 
-;; Optional: Load Harmonic Alchemy Modular Emacs - Programming Languages module:
-;; This is for using Emacs as a full fledged Common Lisp IDE!  Don't un-comment
-;; this Load Line unless you are an Egghead...  You have been warned!
-(load-file "~/.emacs.d/lisp/modules/12-progLang-pkg-conf.el")
+;; Load Harmonic Alchemy Modular Emacs - Xah Emacs module:
+(load-file "~/.emacs.d/lisp/modules/12-Xah-Fly-Keys.el")
 
 ;; Load Harmonic Alchemy Modular Emacs - Key Bindings module:
 (load-file "~/.emacs.d/lisp/modules/13-key-bindings.el")
 
-;; Load Harmonic Alchemy Modular Emacs - Key Bindings module:
+;; Optional/experimental - Load ME S/W Programmer's Key Bindings module:
 ;(load-file "~/.emacs.d/lisp/modules/14-progLang-key-bindings.el")
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

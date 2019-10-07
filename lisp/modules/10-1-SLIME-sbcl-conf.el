@@ -1,5 +1,5 @@
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; [modular-emacs]:~/.emacs.d/lisp/modules/12-1-SLIME-sbcl-pkg-conf.el
+;; [modular-emacs]:~/.emacs.d/lisp/modules/10-1-SLIME-sbcl-pkg-conf.el
 ;;
 ;; This module adds SLIME sbcl support to Modular Emacs...  The older
 ;; SLIME mode is still useful for older Common Lisp projects (which abound)
@@ -73,5 +73,5 @@
 ;  (setq smart-tabs-insinuate omit))
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; END: [modular-emacs]:~/.emacs.d/lisp/modules/12-1-SLIME-sbcl-pkg-conf.el
+;; END: [modular-emacs]:~/.emacs.d/lisp/modules/10-1-SLIME-sbcl-pkg-conf.el
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -1,5 +1,5 @@
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; [modular-emacs]:~/.emacs.d/lisp/modules/07.misc.el
+;; [modular-emacs]:~/.emacs.d/lisp/modules/07-misc.el
 ;;
 ;; This module is a catch-all for things that don't seem to fit in a specific
 ;; category.  More genearl nature...  I am using this module to troubleshoot
@@ -101,5 +101,5 @@
 (setq debug-on-error nil)
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; END: [modular-emacs]:~/.emacs.d/lisp/modules/07.misc.el
+;; END: [modular-emacs]:~/.emacs.d/lisp/modules/07-misc.el
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

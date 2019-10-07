@@ -25,10 +25,12 @@
 (setq package-archives
       '(("GNU-ELPA" . "https://elpa.gnu.org/packages/")
         ("MELPA-Stable" . "https://stable.melpa.org/packages/")
-        ("melpa-unstable" . "https://melpa.org/packages/")))
+        ("MELPA-Unstable" . "https://melpa.org/packages/")
+        ("ORG"   . "https://orgmode.org/elpa/")))
 
 (setq package-archive-priorities
       '(("MELPA-Stable" . 50)
+        ("ORG" . 5)
         ("GNU-ELPA" . 5)
         ("MELPA-Unstable" . 0)))
 

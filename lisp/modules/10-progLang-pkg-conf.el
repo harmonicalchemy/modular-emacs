@@ -1,5 +1,5 @@
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; [modular-emacs]:~/.emacs.d/lisp/modules/12-progLang-pkg-conf.el
+;; [modular-emacs]:~/.emacs.d/lisp/modules/10-progLang-pkg-conf.el
 ;;
 ;; This module adds extra Comp Science Programming Language features
 ;; to turn Emacs into your go-to mad-scientist esoteric programming lab!
@@ -44,14 +44,14 @@
 ;; Load SLIME / sbcl IDE Module:
 ;;;;;;
 
-(load-file "~/.emacs.d/lisp/modules/12-1-SLIME-sbcl-conf.el")
+(load-file "~/.emacs.d/lisp/modules/10-1-SLIME-sbcl-conf.el")
 
 ;;;;
 ;; Load CIDER / Clojure; IDE Module:  (not using on Linux)
 ;;;;
 
-;(load-file "~/.emacs.d/lisp/modules/12-2-CIDER-Clojure-conf.el")
+;(load-file "~/.emacs.d/lisp/modules/10-2-CIDER-Clojure-conf.el")
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; END: [modular-emacs]:~/.emacs.d/lisp/modules/12-progLang-pkg-conf.el
+;; END: [modular-emacs]:~/.emacs.d/lisp/modules/10-progLang-pkg-conf.el
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

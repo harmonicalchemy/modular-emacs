@@ -19,6 +19,8 @@ custom.el
 elpa/*
 
 # exclude other auto emacs files:
+bookmarks
+.mc-lists.el
 ac-comphist.dat
 abbrev_defs
 auto-save-list/*

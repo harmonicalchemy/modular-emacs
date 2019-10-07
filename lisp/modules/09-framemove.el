@@ -1,5 +1,5 @@
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; [modular-emacs]:~/.emacs.d/lisp/modules/framemove.el
+;; [modular-emacs]:~/.emacs.d/lisp/modules/09-framemove.el
 ;;    Directional frame selection functions
 ;;
 ;; Copyright (C) 2019 by Alisha Awen Sheppard - siren1@disroot.org
@@ -255,10 +255,10 @@ Default MODIFIER is 'meta."
 (provide 'framemove)
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; END: [modular-emacs]:~/.emacs.d/lisp/modules/framemove.el
+;; END: [modular-emacs]:~/.emacs.d/lisp/modules/09-framemove.el
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
+;; TODO: Move the snippet below to a better location...
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Framemove Configuration - (added here for modular portability)

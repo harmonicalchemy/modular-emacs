@@ -1,5 +1,5 @@
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; [modular-emacs]:~/.emacs.d/lisp/modules/10-Xah-Fly-Keys.el
+;; [modular-emacs]:~/.emacs.d/lisp/modules/12-Xah-Fly-Keys.el
 ;;
 ;; This module turns Emacs into a Modal Editor (like VI) but this is NOT a
 ;; VI emulation..  The keys are arranged to improve efficiency and limit finger
@@ -49,7 +49,7 @@
 (autoload 'xah-find-count "xah-find" "find replace" t)
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; END: [modular-emacs]:~/.emacs.d/lisp/modules/10-Xah-Fly-Keys.el
+;; END: [modular-emacs]:~/.emacs.d/lisp/modules/12-Xah-Fly-Keys.el
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 

@@ -95,7 +95,7 @@
 ;; The default is "txt" "md" "org".  I have added Tex (LaTex files)
 ;; You may add more here if you work with other formats.
 
-(setq deft-extensions '("txt" "md" "tex" "org"))
+(setq deft-extensions '("txt" "md" "tex" "org" "fountain"))
 
 ;; Set deft to do regexp search instead of incremental:
 ;(setq deft-org-mode-title-prefix nil)

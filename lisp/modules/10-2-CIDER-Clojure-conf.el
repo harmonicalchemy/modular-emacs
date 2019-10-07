@@ -1,5 +1,5 @@
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; [modular-emacs]:~/.emacs.d/lisp/modules/12-2-CIDER-Clojure-pkg-conf.el
+;; [modular-emacs]:~/.emacs.d/lisp/modules/10-2-CIDER-Clojure-pkg-conf.el
 ;;
 ;; This module adds CIDER / Clojure support to Modular Emacs...  This is a more
 ;;  up to date IDE for Clojure than SLIME ever was!  Hopefully we can switch
@@ -27,5 +27,5 @@
 ;;       clojure-mode like clojurescript-mode.
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; END: [modular-emacs]:~/.emacs.d/lisp/modules/12-2-CIDER-Clojure-pkg-conf.el
+;; END: [modular-emacs]:~/.emacs.d/lisp/modules/10-2-CIDER-Clojure-pkg-conf.el
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

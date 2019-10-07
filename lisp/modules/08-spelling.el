@@ -1,5 +1,5 @@
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; [modular-emacs]:~/.emacs.d/lisp/modules/08.spelling.el
+;; [modular-emacs]:~/.emacs.d/lisp/modules/08-spelling.el
 ;;
 ;; This module encapsulates spelling features making it easier to turn
 ;; specific features on or off, choose to use Aspell or Hunspell or both,
@@ -158,5 +158,5 @@ Toggles between: “all lower”, “Init Caps”, “ALL CAPS”."
 
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; END: [modular-emacs]:~/.emacs.d/lisp/modules/08.spelling.el
+;; END: [modular-emacs]:~/.emacs.d/lisp/modules/08-spelling.el
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
