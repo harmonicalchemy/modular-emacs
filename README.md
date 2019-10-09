@@ -1,19 +1,19 @@
 ![Banner](banner.jpg)
 
 [![License](https://img.shields.io/badge/LICENSE-GPL%20v3.0-blue.svg)](https://www.gnu.org/licenses/gpl.html)
-
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-generate-toc again -->
 **Table of Contents**
 
-- [Harmonic Alchemy Modular Emacs:](#harmonic-alchemy-modular-emacs)
-    - [Introduction:](#introduction)
-        - [History:](#history)
+- [Introduction](#introduction)
+    - [Current Status:](#current-status)
+    - [Welcome!](#welcome)
+    - [History:](#history)
         - [Modular Emacs is Born:](#modular-emacs-is-born)
         - [Why Modular?](#why-modular)
-        - [Try Harmonic Alchemy Modular Emacs:](#try-harmonic-alchemy-modular-emacs)
+    - [Try Harmonic Alchemy Modular Emacs:](#try-harmonic-alchemy-modular-emacs)
         - [Note for Windows Users:](#note-for-windows-users)
         - [My Commitment:](#my-commitment)
-    - [Start Here: _(Modular Emacs Installation)_](#start-here-modular-emacs-installation)
+- [Start Here: _(Modular Emacs Installation)_](#start-here-modular-emacs-installation)
     - [Requirements:](#requirements)
         - [Emacs: V26.1+](#emacs-v261)
             - [Commands to install Emacs on various unix platforms:](#commands-to-install-emacs-on-various-unix-platforms)
@@ -41,7 +41,9 @@
                     - [Revert Repo back to fresh clone state to start over:](#revert-repo-back-to-fresh-clone-state-to-start-over)
                     - [Troubleshooting Debugging:](#troubleshooting-debugging)
                 - [FreeBSD & OpenBSD:](#freebsd--openbsd)
-        - [NODE.js:](#nodejs)
+        - [`NODE.js` with `NVM` & `NPM`:](#nodejs-with-nvm--npm)
+            - [Install Node Version Manager `NVM` with `curl` first:](#install-node-version-manager-nvm-with-curl-first)
+            - [Now install `NODE` with `NVM`:](#now-install-node-with-nvm)
         - [VMD: _(Visual MarkDown App)_](#vmd-visual-markdown-app)
         - [MultiMarkdown:](#multimarkdown)
             - [Install Multimarkdown on Mac OS:](#install-multimarkdown-on-mac-os)
@@ -58,7 +60,9 @@
             - [Install SBCL on Linux:](#install-sbcl-on-linux)
             - [Install QuickLisp Package Manager:](#install-quicklisp-package-manager)
                 - [Run these commands from your HOME directory:](#run-these-commands-from-your-home-directory)
+            - [Find, install, update, remove Quicklisp System packages:](#find-install-update-remove-quicklisp-system-packages)
             - [Read the SBCL Docs!](#read-the-sbcl-docs)
+                - [Lisp Web Dev Resources:](#lisp-web-dev-resources)
         - [CIDER & Clojure:](#cider--clojure)
             - [CIDER is the Clojure(Script) Interactive Development Environment that Rocks!](#cider-is-the-clojurescript-interactive-development-environment-that-rocks)
             - [Install Closure & Leiningen on Mac via Homebrew:](#install-closure--leiningen-on-mac-via-homebrew)
@@ -105,16 +109,15 @@
 
 <!-- markdown-toc end -->
 
+# Introduction
 
-# Harmonic Alchemy Modular Emacs:
-
-##### Current Status: 
+## Current Status:
 
 This commit represents **Modular Emacs: _Lisp IDE Fork:_ `Release V2.2.0`** which has it's own branch on Github (**`lisp-ide`**) with all of these new features turned on.  This fork has also been merged into the **Github `develop`** branch with all of the new features commented out.  That way I can develop and test these features but also keep most of the code in sync with the **`master`** and **`develop`** branches on-going _(with those features turned off within those branches of course...)_ 
 
 This fork is also running fairly well _(with a few caveats)_ on various flavors of Linux and Mac OS, _(and probably BSD as well, but untested)_  
 
-## Introduction:
+## Welcome!
 
 **Welcome to Harmonic Alchemy Modular Emacs - _V2.2.0 Q3-2019_**
 
@@ -138,7 +141,7 @@ If you are interested in trying these new features out, checkout the **`origin/l
 
 Otherwise, stay on the master branch and don't install any of the _Optional_ features discussed below...
 
-### History:
+## History:
 
 This project has been a long time coming.  Its history goes back a few years ago when I went searching for some better ways to configure my then pretty basic Emacs configuration of over 10 or so years!  I cloned a few Emacs repos on Github to try different things out for a while.  I liked some things and tried to get rid of other things later.  Management became confusing after a while.  I ended up with lots of questionable elisp code, much of which were things possibly no longer needed!  
 
@@ -154,14 +157,13 @@ As a result of the mess above, I decided to start over from scratch and modulari
 
 ### Why Modular?
 
-- **Modular Emacs** was designed to be easy to maintain and configure through the management of independent modules and in that sense Modular Emacs hopefully forms a basic sensible framework that is easy to use and flexible enough to adjust to your work-style, programming-style, and writing-style...  
-
+- **Modular Emacs** was designed to be easy to maintain and configure through the management of independent modules and in that sense Modular Emacs hopefully forms a basic sensible framework that is easy to use and flexible enough to adjust to your work-style, programming-style, and writing-style...
 
 - **Add What You Need Only:** You have choices encapsulated within modules. Each module comes with its own requirements.  Removing and or adding many of the _extra feature_ modules will not disrupt the rest of your Emacs configuration.  They have been designed to be encapsulated in that way... Some of the more basic modules are required for Modular Emacs basic operation however.  The nice thing is everything is modular so it will be easy to find out which ones are doing what...
 
 On the other hand, if you install Modular Emacs stripped of all external helper apps _(described below in the **Requirements** section)_, It may not provide any advantage over many of the other simpler Emacs projects on GitHub... **_Therefore if all you need is vanilla Emacs:_** _(with some of the more basic options thrown in)_, you don't need Modular Emacs at all.  Here is a simpler light weight _"sensible"_ Emacs Config: **[hrs/sensible-defaults.el](https://github.com/hrs/sensible-defaults.el)**  _(which claims to also be modular - I have not tried it.  I only briefly read through the README.  It looks like a good alternate option to try)_ :octocat:   
 
-### Try Harmonic Alchemy Modular Emacs:
+## Try Harmonic Alchemy Modular Emacs:
 
 For those of you who feel **[Harmonic Alchemy Modular Emacs](https://github.com/harmonicalchemy/modular-emacs)** may be exactly what you were looking for: **_By all means... Lets Dive in!_**
 
@@ -189,8 +191,10 @@ If you end up liking **Harmonic Alchemy Modular Emacs**, please drop me a note t
 
 Therefore: **Here is Modular Emacs!** I hope my long years of **devOps** experience will turn out a nice jewel for new comers to try out and succeed with!  **Good Luck and God Speed!**  
 
-## Start Here: _(Modular Emacs Installation)_  
+# Start Here: _(Modular Emacs Installation)_  
+
 ## Requirements:  
+
 ### Emacs: V26.1+  
 
 Many of the default packages installed with this project will not work with previous versions of Emacs. Also the security of older Emacs and packages is Horrendous! Recently, some of the older packages were removed from the updated MELPA and the entire site is TLS enabled now!  These new features are vital for being reasonably safe going forward from 2018 onward, so I decided not to support lesser versions of Emacs...  
@@ -535,15 +539,19 @@ I have not tried this yet with a Qubes configured BSD VM... Hopefully the FreeBS
 
     pkg_add -r emacs
 
-### NODE.js:
+### `NODE.js` with `NVM` & `NPM`:
 
-**NODE** is a very popular open-source, cross-platform JavaScript run-time environment that executes JavaScript code outside of a browser. This allows developers to create web-apps and run them anywhere...  Not just within a browser... and not just on a remote server... They can run in your local environment as well and perform nifty tasks for you!  Quick prototype like development is easy to do...  No wonder it's so popular!  Node.js brings **AI** and **Machine Learning** to inexperienced programmers!  That's way cool!  A Gateway language to Lisp Addiction?  Hmm... Maybe Python first before going hard core eh? ;-)
+**NODE** is a very popular open-source, cross-platform JavaScript run-time environment that executes JavaScript code outside of a browser. This allows developers to create web-apps and run them anywhere...  Not just within a browser... and not just on a remote server... They can run in your local environment as well and perform nifty tasks for you!  Quick prototype like development is easy to do...  No wonder it's so popular!  `Node.js` brings **AI** and **Machine Learning** to inexperienced programmers!  That's way cool!  A Gateway language to Lisp Addiction?  Hmm... Maybe Python first before going hard core eh? ;-)
+
+#### Install Node Version Manager `NVM` with `curl` first:
 
 The easiest way to install NODE.js _(as of this writing May 2019)_ is to install the **NODE Version Manager (NVM)** by running the following command within your HOME directory:
 
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 
 > **Note:** The same command above can also be used later to **Update NVM**... You can always find and review the latest version of this script (and command) within the README file located in: [NVM's Github Repository](https://github.com/nvm-sh/nvm)...:octocat:  
+
+#### Now install `NODE` with `NVM`:
 
 After running the above `curl` command you will have **Node Version Manager (NVM)** up and ready on your local machine.  The script sets up proper environment variables and everything... Now you can use it to update to the latest LTS version of **NODE.js**... _(Oh Right... We have not installed Node.js yet.  We just installed the installer)..._ **_DOH!_** :octocat:
 
@@ -756,13 +764,30 @@ Steel Bank Common Lisp is available in the Linux package managers as well:
 
 #### Install QuickLisp Package Manager:
 
+**_Ref:_ [Quicklisp.org](https://www.quicklisp.org)**
+
 You don't have to re-invent wheels in Lisp!  no No NO!  Here are over 1,500 libraries available at your fingertips!  You **Must** have this!  Installing is not too painful, and they will also be integrated into Emacs Slime Mode!  
 
 You need to download `quicklisp.lisp` somewhere into your HOME path that is convieanent for you _(`~/Downloads` is fine... The important thing is to remember where you downloaded it. DOH! You will need this file next)_.  
+
 **Simply Click this link:** (https://beta.quicklisp.org/quicklisp.lisp) to download it from your browser.  _(or use `wget` if you are a terminal die-hard, lol)_
-You may and should inspect this lisp file before running it if you are paranoid. _evil grin_...  Lisp is not evil...  It just speaks with a lisp... :trollface:  
+
+The download file: `quicklisp.lisp` has been signed by the official Quicklisp release signing key:
+
+- **Fingerprint:**
+
+    `D7A3 489D DEFE 32B7 D0E7 CC61 3079 65AB 028B 5FF7`
+
+- **ID: `028B5FF7`**
+- **Email: `release@quicklisp.org`**
+
+You should verify the file and all of the above from multiple sources _(i.e., the usual super paranoid checks)_ to be reasonably sure the file, keys, signatures, etc. have not been tampered with!
+
+It's also probably a good idea to inspect this lisp file before running it _(if only to see what it does)_   The file is only needed once the first time... _(it is a bootstrap)_  From then on Quicklisp itself will maintain a lot of things within your **Lisp IDE**.  **Quicklisp** is well integrated into **Emacs Slime**...
 
 ##### Run these commands from your HOME directory: 
+
+After verifying your downloaded `quicklisp.lisp` do the following:
 
 1. **Install Quicklisp via sbcl: _(all platforms)_**  
 Use SBCL to load the file you just downloaded above:  
@@ -835,13 +860,49 @@ Later...  Once you have your new Modular Emacs environment up and running smooth
 Comming soon at the end or your journey! :octocat:
 
 
-#### Update Quicklisp Packages from Emacs Slime REPL:
+#### Find, install, update, remove Quicklisp System packages:
+
+To find out what's available in Quicklisp, use:
+
+    CL-USER> (ql:system-apropos "substring")
+
+where `substring` makes up part of a quicklisp system name you might be interested in...
+
+The output will list all system names, one on each line, right after `#<SYSTEM` and before the first `/`... The rest of the line provides more information.  Use the system name with the quickload command...
+
+To Load _(install)_ a **`quicklisp`** system use:
+
+    CL-USER> (ql:quickload "system-name")
+
+where `system-name` is the name of a known registered **Quicklisp** system...
+
+ To see what systems depend on a particular system, use:
+
+    CL-USER>(ql:who-depends-on system-name)
+
+To remove software, use:
+
+    CL-USER> (ql:uninstall system-name)
+
+An uninstall does the following:
+
+- Deletes the system's tarball archive and unpacked source files
+- Deletes Quicklisp metadata files associated with the system
+- Clears ASDF's system cache via asdf:clear-system 
+
+Uninstalling does not alter the current Lisp session in any other way; if the given system has been loaded, it remains loaded and accessible until the session is ended.
 
 To update Quicklisp Quicklisp packages:
 
     CL-USER> (ql:update-dist "quicklisp")
 
 Software updates are usually available about once per month.
+
+After installing systems or making changes to your environment, if you want them to be permanent, _(i.e. you will need them for most sessions, and you don't want to have to load them over again each time)_ then use this command to save the current environment in: `quicklisp/.sbclrc`.
+
+    CL-USER> (ql:add-to-init-file)
+
+SBCL will tell you and show you what it is going to do and then ask you to press Enter to continue...  _(how polite sbcl is! I love it... ;-)_
 
 To update the Quicklisp client, use:
 

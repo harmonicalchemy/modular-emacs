@@ -38,6 +38,8 @@
 (when *is-linux*
   (setq inferior-lisp-program "/usr/bin/sbcl"))
 
+(require 'slime-autoloads)
+
 ;;;;
 ;; Set up Emacs Lisp IDE with some contribs:
 ;; (See: Section 8.1 Loading Contrib Packages - Slime.PDF)
@@ -50,20 +52,45 @@
 (setq slime-contribs
       '(slime-fancy
         slime-quicklisp
+        slime-tramp
+        slime-asdf
         helm-slime
         slime-repl
-;        slime-contribs
         slime-asdf))
+
+(slime-require :swank-listener-hooks)
 
 ;; Tell auto-complete to use ac-slime specific completions when sime-mode is active:
 
 (add-hook 'slime-mode-hook 'set-up-slime-ac)
 (add-hook 'slime-repl-mode-hook 'set-up-slime-ac)
 
-;; Bind ac-modes and slime-repl-mode:
+;; Bind ac-modes and slime-repl-mode to Slime:
 
 (eval-after-load "auto-complete"
   '(add-to-list 'ac-modes 'slime-repl-mode))
+
+;; TODO:  (NOTE: put this next key def line in the Keys module when you get a chance
+;          I put it here while I was editing this file but its better off together
+;          with all the other ME Key Definitions)
+
+;; Bind M-h key to Invoke Slime Doc Lookup:
+
+(eval-after-load 'slime
+`(define-key slime-prefix-map (kbd "M-h") 'slime-documentation-lookup))
+
+;;;;
+;; Load Swank Faster by using custom core file with socket support and POSIX
+;; bindings included: (advise from slime.pdf doc)
+;;
+;; One Time Setup from shell:
+;;   $> sbcl
+;;      * (mapc 'require '(sb-bsd-sockets sb-posix sb-introspect sb-cltl2 asdf))
+;;      * (save-lisp-and-die "sbcl.core-for-slime")
+;;
+;; Corresponding Emacs Lisp code:
+(setq slime-lisp-implementations
+'((sbcl ("sbcl" "--core" "sbcl.core-for-slime"))))
 
 ;; Append New Programming languages to smart-tabs-insinuate list:
 ;; NOTE:  I have a bug here... Trying to include "lisp" into the list if it is

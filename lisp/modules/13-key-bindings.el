@@ -46,14 +46,14 @@
 ;;;;
 ;; Map Linux Alt keys to Emacs META:
 
-(when *is-linux*
+;(when *is-linux*
   ;(define-key key-translation-map (kbd "Control_L") (kbd "Alt_L"))
   ;(define-key key-translation-map (kbd "Alt_L") (kbd "Ccontrol_L"))
   ;(define-key key-translation-map (kbd "Control_R") (kbd "Alt_R"))
   ;(define-key key-translation-map (kbd "Alt_R") (kbd "Ccontrol_R")) )
-  (setq x-alt-keysym 'control)
-  (setq x-ctrl-keysym 'meta)
-  (setq x-super-keysym 'meta))
+;  (setq x-alt-keysym 'control)
+;  (setq x-ctrl-keysym 'meta)
+;  (setq x-super-keysym 'meta))
 
 ;;;;
 ;; Map Mac OS command-key to Emacs META:
