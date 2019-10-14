@@ -50,7 +50,7 @@
   ;(define-key key-translation-map (kbd "Control_L") (kbd "Alt_L"))
   ;(define-key key-translation-map (kbd "Alt_L") (kbd "Ccontrol_L"))
   ;(define-key key-translation-map (kbd "Control_R") (kbd "Alt_R"))
-  ;(define-key key-translation-map (kbd "Alt_R") (kbd "Ccontrol_R")) )
+  ;(define-key key-translation-map (kbd "Alt_R") (kbd "Ccontrol_R"))
 ;  (setq x-alt-keysym 'control)
 ;  (setq x-ctrl-keysym 'meta)
 ;  (setq x-super-keysym 'meta))
@@ -67,15 +67,19 @@
 
 (define-key key-translation-map (kbd "ESC") (kbd "C-g"))
 
+;; Bind M-h key to Invoke Slime Doc Lookup:
+
+(eval-after-load 'slime
+  `(define-key slime-prefix-map (kbd "M-h") 'slime-documentation-lookup))
+
 ;; function slime-space() is called from SPC key!
 ;; Stop SLIME from grabbing "SPC", (Xah-fly-keys Global Leader Key)
+;; Instead map it to xah-fly-leader-key "SPACE"
 ;; when in slime-mode or visiting any .lisp file...
-;; This really cripples my ability to use Emacs now!  Yikes!
+;; Otherwise this really cripples my ability to use Emacs now!  Yikes!
 
 (defun override-slime-space-key-binding ()
-  (define-key slime-mode-indirect-map (read-kbd-macro slime-space) nil)
-  (define-key slime-mode-indirect-map (kbd "SPC")
-    'xah-fly-leader-key-map))
+  (define-key slime-mode-indirect-map (kbd "SPC") 'xah-fly-leader-key-map))
 
 (add-hook 'slime-mode-hook 'override-slime-space-key-binding)
 

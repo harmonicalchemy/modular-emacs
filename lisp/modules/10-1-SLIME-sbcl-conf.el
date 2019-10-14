@@ -28,15 +28,22 @@
 (add-hook 'lisp-mode-hook (lambda () (slime-mode t)))
 (add-hook 'inferior-lisp-mode-hook (lambda () (inferior-slime-mode t)))
 
-;; Define Default Lisp Environment:
+;;_Define_Default_Lisp_Environment:
 
 (load (expand-file-name "~/quicklisp/slime-helper.el"))
+
+;;;;
+;; BEGIN: Platform Specific Rules:
 
 (when *is-darwin*
   (setq inferior-lisp-program "/usr/local/bin/sbcl"))
 
 (when *is-linux*
   (setq inferior-lisp-program "/usr/bin/sbcl"))
+
+;; END: Platform Specific Rules...
+
+;; Load Slime Autoloads package:
 
 (require 'slime-autoloads)
 
@@ -51,12 +58,11 @@
 
 (setq slime-contribs
       '(slime-fancy
+        slime-asdf
         slime-quicklisp
         slime-tramp
-        slime-asdf
         helm-slime
-        slime-repl
-        slime-asdf))
+        slime-repl))
 
 (slime-require :swank-listener-hooks)
 
@@ -70,15 +76,31 @@
 (eval-after-load "auto-complete"
   '(add-to-list 'ac-modes 'slime-repl-mode))
 
-;; TODO:  (NOTE: put this next key def line in the Keys module when you get a chance
-;          I put it here while I was editing this file but its better off together
-;          with all the other ME Key Definitions)
+;;;;
+;; Modify the way lisp-mode buffers behave:
 
-;; Bind M-h key to Invoke Slime Doc Lookup:
+(defun lisp-hook-fn ()
+  (interactive)
+  ;; Start slime mode:
+  (slime-mode)
+  ;; Set TAB key-binding the Slime Complete Symbol:
+  (local-set-key [tab] 'slime-complete-symbol)
+  ;; Set Meta "q" to Re Indent Lisp Block: (used to be TAB)
+  (local-set-key (kbd "M-q") 'slime-reindent-defun)
+  (set (make-local-variable lisp-indent-function) 'common-lisp-indent-function)
+  ;; Tell slime to NOT load failed compiled code:
+  (setq slime-load-failed-fasl 'never))
+ 
+ ;; Run above lisp-hook function on startup:
+ (add-hook 'lisp-mode-hook 'lisp-hook-fn)
 
-(eval-after-load 'slime
-`(define-key slime-prefix-map (kbd "M-h") 'slime-documentation-lookup))
-
+;;;;
+;; EXPERIMENTAL STUFF:
+;;   The code below is mostly for performance tuning and smart tabs for languages...
+;;   So far nothing is working for me here... I need to consult Stack Overflow etc...
+;;   Maybe I don't even need the smart tabs stuff below...
+;;   Seems like tabs are working ;)
+;;
 ;;;;
 ;; Load Swank Faster by using custom core file with socket support and POSIX
 ;; bindings included: (advise from slime.pdf doc)
@@ -89,8 +111,9 @@
 ;;      * (save-lisp-and-die "sbcl.core-for-slime")
 ;;
 ;; Corresponding Emacs Lisp code:
-(setq slime-lisp-implementations
-'((sbcl ("sbcl" "--core" "sbcl.core-for-slime"))))
+;(setq slime-lisp-implementations
+;'((sbcl ("sbcl" "--core" "sbcl.core-for-slime"))))
+
 
 ;; Append New Programming languages to smart-tabs-insinuate list:
 ;; NOTE:  I have a bug here... Trying to include "lisp" into the list if it is
