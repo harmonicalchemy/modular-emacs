@@ -1,10 +1,10 @@
-;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; [modular-emacs]:~/.emacs.d/lisp/modules/13-key-bindings.el
-;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;;; [modular-emacs]:~/.emacs.d/lisp/modules/13-key-bindings.el
+;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;(defun me-insert-backtick-quote () (interactive) (xah-insert-bracket-pair "`" "`"))
 
-;;;;
+;;;
 ;; Map Modular Emacs General Keys:
 
 (defvar modular-emacs--my-keyboard-bindings
@@ -43,7 +43,7 @@
 (mapc 'modular-emacs-apply-keyboard-bindings
       modular-emacs--my-keyboard-bindings)
 
-;;;;
+;;;
 ;; Map Linux Alt keys to Emacs META:
 
 ;(when *is-linux*
@@ -55,33 +55,46 @@
 ;  (setq x-ctrl-keysym 'meta)
 ;  (setq x-super-keysym 'meta))
 
-;;;;
+;;;
 ;; Map Mac OS command-key to Emacs META:
 
 (when *is-darwin*
   (setq mac-command-modifier 'control)
   (setq mac-control-modifier 'meta))
 
-;;;;
+;;;
 ;; Make Escape Key Do C-g:
 
 (define-key key-translation-map (kbd "ESC") (kbd "C-g"))
 
+;;;
 ;; Bind M-h key to Invoke Slime Doc Lookup:
 
 (eval-after-load 'slime
   `(define-key slime-prefix-map (kbd "M-h") 'slime-documentation-lookup))
 
-;; function slime-space() is called from SPC key!
-;; Stop SLIME from grabbing "SPC", (Xah-fly-keys Global Leader Key)
-;; Instead map it to xah-fly-leader-key "SPACE"
-;; when in slime-mode or visiting any .lisp file...
-;; Otherwise this really cripples my ability to use Emacs now!  Yikes!
+;;;
+;; Function slime-space() is called from SPC key when in slime-mode!
+;; This cripples my Xah Fly Keys Global SPC Leader key which needs to
+;; be established while in COMMAND mode! I use Xah-Fly-Keys (both modes)
+;; pretty much all the time.  The xah SPC leader key cannot get shadowed
+;; by other modes when I am in xah-fly-keys-command-mode.
+;;;
 
+; Set slime SPC key to xah-fly-leader-key when activating xah fly command mode:
 (defun override-slime-space-key-binding ()
   (define-key slime-mode-indirect-map (kbd "SPC") 'xah-fly-leader-key-map))
 
-(add-hook 'slime-mode-hook 'override-slime-space-key-binding)
+(add-hook 'xah-fly-command-mode-activate-hook 'override-slime-space-key-binding)
+
+; Set Slime SPC key back to slime-space() when activating xah fly insert mode:
+(defun restore-slime-space-key-binding ()
+  (define-key slime-mode-indirect-map (kbd "SPC") 'slime-space))
+
+(add-hook 'xah-fly-insert-mode-activate-hook 'restore-slime-space-key-binding)
+
+;; something I tried before but was not correct way...
+;(add-hook 'slime-mode-hook 'override-slime-space-key-binding)
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; END: [modular-emacs]:~/.emacs.d/lisp/modules/13-key-bindings.el
