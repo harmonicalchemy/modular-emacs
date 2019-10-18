@@ -244,7 +244,7 @@
         ";;   mon!!!  Tank god, he didn't find me old IBM 704 in    \n"
         ";;   da basement!!! That's cuz he spied me big bulldog    \n"
         ";;   sleepin back in da corner... He decided his gains     \n"
-        ";;   would be NUL down dare after dat...                   \n"
+        ";;   would be NIL down dare after dat...                   \n"
         ";;                                                         \n"
         ";;   Well, dey finally caught em...  Now e's a CONvict...  \n"
         ";;   locked away in a CON'S cell. Being (evaluated) for:   \n"
