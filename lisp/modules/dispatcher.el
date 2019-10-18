@@ -27,6 +27,12 @@
 ;;
 ;; Change Log: (descending chronological order)
 ;;
+;;   2019-010-17 - Harmonic Alchemy Modular-Emacs Lisp IDE Fork v2.3.0 [Q4 2019]
+;;      This final commit marks the latest sync between Master, Develop, and Lisp
+;;      IDE Branches...  All common features and bug fixes have been updated to
+;;      all branches.  Lisp IDE branch continues to provide more features with
+;;      extra modules enabled...
+;;
 ;;   2019-010-07 - Harmonic Alchemy Modular-Emacs Lisp IDE Fork v2.2.0 [Q4 2019]
 ;;      I renumbered the module file names to match the exact order in which
 ;;      they must be evaluated... This is important to prevent some packages
@@ -71,7 +77,7 @@
 ;; This is for using Emacs as a full fledged Common Lisp IDE!
 ;; This module is enabled by default on the ME lisp-ide branch.  Pull that
 ;; branch instead if you want to stay up with the programming stuff...
-;(load-file "~/.emacs.d/lisp/modules/10-progLang-pkg-conf.el")
+(load-file "~/.emacs.d/lisp/modules/10-progLang-pkg-conf.el")
 
 ;; Optional: Un-comment the load file line below if you would like
 ;; to explore MOOs or MUDs using a customized Emacs MOO client! ;-)
@@ -81,7 +87,7 @@
 ;(load-file "~/.emacs.d/lisp/modules/11-games-pkg-conf.el")
 
 ;; Load Harmonic Alchemy Modular Emacs - Xah Emacs module:
-;(load-file "~/.emacs.d/lisp/modules/12-Xah-Fly-Keys.el")
+(load-file "~/.emacs.d/lisp/modules/12-Xah-Fly-Keys.el")
 
 ;; Load Harmonic Alchemy Modular Emacs - Key Bindings module:
 (load-file "~/.emacs.d/lisp/modules/13-key-bindings.el")

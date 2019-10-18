@@ -32,23 +32,13 @@
 ;;
 ;; Change Log: (descending chronological order)
 ;;
-;;   2019-010-17 - Harmonic Alchemy Modular-Emacs - Master and Develop
-;;      Branches - Release V2.3.0 [Q4-2019] This commit represents a
-;;      merge of the best things from the Lisp-IDE branch back into
-;;      the Develop and Master Branch...  I keep the Lisp-IDE branch
-;;      separate because there are too many esoteric things and packages
-;;      enabled that regular users will not want!  For one thing I have
-;;      remapped some keys on both Linux and Mac!  And I enable Xah-Fly-Keys!
-;;      for programmers this is a great thing but most will not want to spend
-;;      20 hours to learn new tricks in Emacs...  Therefore I leave it up to
-;;      you to decide...  If you are willing, and are a coder, I promice if
-;;      you spend at least 20 hours learning the Lisp-IDE branch, you will
-;;      improve your coding efficiency and quality too, a HUGE amount!
-;;      Most coders are not willing to do that... Instead they poke fun at
-;;      guys that did spend the time to improve their typing skills and speed.
-;;      Normal human nature... that's all it is...  If you are willing to
-;;      make that 20 hour commitment, you will be coding circles around other
-;;      coders with your keyboard skills alone!  Trust me...
+;;
+;;   2019-010-17 - Harmonic Alchemy Modular-Emacs - Lisp-IDE fork Release:
+;;      V2.3.0. [Q4-2019]  This commitment marks the final update after
+;;      merging the Lisp IDE branch back into the Develop branch...
+;;      and then modifying that branch so that the extra modules here are
+;;      not enabled... Both the Master and Develop branch are up to date now
+;;      with all changes from Lisp IDE branch that make sense there...
 ;;
 ;;   2019-007-05 - Harmonic Alchemy Modular-Emacs - Lisp-IDE fork Release:
 ;;      V2.2.0.  Final testing V2.0.1 on Linux done... This fork adds in
@@ -222,6 +212,7 @@
         ";; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
         ";; Welcome to: [Your-Machine-Name-Here]                    \n"
         ";;             Harmonic Alchemy - Modular Emacs!           \n"
+        ";;                   (((Lisp IDE Fork)))                   \n"
         ";; Version:    2.3.0 [Q4 2019]                             \n"
         ";;                                                         \n"
         ";; Today's date: " (format-time-string "%Y %B %d") "       \n"
@@ -242,23 +233,25 @@
         ";;   gambler CONs me out of averyting, including my CAR,   \n"
         ";;   CDR, and my entire Michael Jackson CD collection      \n"
         ";;   mon!!!  Tank god, he didn't find me old IBM 704 in    \n"
-        ";;   da basement!!! That's cuz he spied me big bulldog    \n"
+        ";;   da basement!!! That's cuz he spied me big bulldog     \n"
         ";;   sleepin back in da corner... He decided his gains     \n"
         ";;   would be NIL down dare after dat...                   \n"
         ";;                                                         \n"
         ";;   Well, dey finally caught em...  Now e's a CONvict...  \n"
-        ";;   locked away in a CON'S cell. Being (evaluated) for:   \n"
-        ";;   (constructive . rehabilitation)!\"                    \n"
-        ";;                    LOL! -- Alisha Awen %^)              \n"
-        ";;                                                         \n"
-        ";; Evaluate lisp expressions below within this buffer      \n"
-        ";; Check Out: GNU.org's Intro to Programming Emacs Lisp:   \n"
-        ";; https://www.gnu.org/software/emacs/manual/html_node/eintr/index.html\n"
-        ";;                                                         \n"
-        ";; This entire message is a lisp comment!                  \n"
-        ";; Evaluate this entire buffer as a test.                  \n"
-        ";; Why not? Go for it... You may have super powers!        \n"
-        ";; Be sure to debug it well before committing it as your:  \n"
+        ";;   locked away in a CON'S cell. Being (evaluated) for:    \n"
+        ";;   (constructive . rehabilitation)!\"                       \n"
+        ";;                    LOL! -- Alisha Awen %^)                   \n"
+        ";;                                                                \n"
+        ";; Evaluate lisp expressions below within this buffer                \n"
+        ";; Check Out: GNU.org's Intro to Programming Emacs Lisp:               \n"
+        ";; https://www.gnu.org/software/emacs/manual/html_node/eintr/index.html  \n"
+        ";;                                                                      \n"
+        ";; This entire message is a lisp comment!                              \n"
+        ";; Emacs makes a great S-exps IDE!                                   \n"
+        ";; Our Universe is nothing more than a big Sex PistolS IDE ;-)     \n"
+        ";; Evaluate this entire buffer as a test...  Of the universe?    \n"
+        ";; Why not? Go for it... You may have super powers!           \n"
+        ";; Be sure to debug it well before committing it as your:   \n"
         ";; \"new-way-cool-custom-module.el\" %^)                   \n"
         ";;                        -- Cheers!                       \n"
         ";; Alisha Awen: @harmonicalchemy (twitter etc.)            \n"

@@ -67,15 +67,11 @@
 
 (define-key key-translation-map (kbd "ESC") (kbd "C-g"))
 
-;;;;
-;;  The Rest Below are only enabled for Lisp-IDE branch...
-;;;;
-
 ;;;
 ;; Bind M-h key to Invoke Slime Doc Lookup:
 
-;(eval-after-load 'slime
-;  `(define-key slime-prefix-map (kbd "M-h") 'slime-documentation-lookup))
+(eval-after-load 'slime
+  `(define-key slime-prefix-map (kbd "M-h") 'slime-documentation-lookup))
 
 ;;;
 ;; Function slime-space() is called from SPC key when in slime-mode!
@@ -85,19 +81,20 @@
 ;; by other modes when I am in xah-fly-keys-command-mode.
 ;;;
 
-;; Set slime SPC key to xah-fly-leader-key when activating xah fly command mode:
+; Set slime SPC key to xah-fly-leader-key when activating xah fly command mode:
+(defun override-slime-space-key-binding ()
+  (define-key slime-mode-indirect-map (kbd "SPC") 'xah-fly-leader-key-map))
 
-;(defun override-slime-space-key-binding ()
-;  (define-key slime-mode-indirect-map (kbd "SPC") 'xah-fly-leader-key-map))
-
-;(add-hook 'xah-fly-command-mode-activate-hook 'override-slime-space-key-binding)
+(add-hook 'xah-fly-command-mode-activate-hook 'override-slime-space-key-binding)
 
 ; Set Slime SPC key back to slime-space() when activating xah fly insert mode:
+(defun restore-slime-space-key-binding ()
+  (define-key slime-mode-indirect-map (kbd "SPC") 'slime-space))
 
-;(defun restore-slime-space-key-binding ()
-;  (define-key slime-mode-indirect-map (kbd "SPC") 'slime-space))
+(add-hook 'xah-fly-insert-mode-activate-hook 'restore-slime-space-key-binding)
 
-;(add-hook 'xah-fly-insert-mode-activate-hook 'restore-slime-space-key-binding)
+;; something I tried before but was not correct way...
+;(add-hook 'slime-mode-hook 'override-slime-space-key-binding)
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; END: [modular-emacs]:~/.emacs.d/lisp/modules/13-key-bindings.el
