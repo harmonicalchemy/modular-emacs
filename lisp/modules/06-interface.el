@@ -15,6 +15,16 @@
 ;;
 ;; Change Log: (descending chronological order)
 ;;
+;;   2019-010-17 - Harmonic Alchemy Modular-Emacs (modified from Lisp IDE fork)
+;;      Regular Version for Dev and Master Branch:  V2.3.0 [Q4 2019]
+;;      This is an updated Dev/Master branch... Merging in some things learned
+;;      while testing the Lisp-IDE branch...  The Lisp IDE Branch is to esoteric
+;;      to include everything there... It enables Xaw-fly-keys for one thing...
+;;      and a lot of SBCL Slime, Lisp packages that must users will not want.
+;;      Users that want that cool stuff.. Yay! can check out Lisp-IDE branch
+;;      instead...  I maintain both branches and share good common things between
+;;      them when found...
+;;
 ;;   2019-007-05 - Harmonic Alchemy Modular-Emacs Lisp IDE Fork v2.2.0 [Q3 2019]
 ;;      v2.0.1 [Q3 2019] Final testing period over... Version 2.0.1 is stable.
 ;;      This fork represents new commented out features added from Lisp-IDE
@@ -49,7 +59,7 @@
 
 ;; Change title-bar text
 (setq frame-title-format
-      "Modular Emacs v2.2.0 - Lisp IDE Fork [Q3 2019]")
+      "Modular Emacs v2.3.0 - [Q4 2019]")
 
 ;; Disable tool-bar - I could care less about tool bars in emacs!
 ;; An oxymoron! But you may feel differently.  Comment this out if you like them.

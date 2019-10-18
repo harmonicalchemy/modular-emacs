@@ -113,13 +113,17 @@
 
 ## Current Status:
 
-This commit represents **Modular Emacs: _Lisp IDE Fork:_ `Release V2.2.0`** which has it's own branch on Github (**`lisp-ide`**) with all of these new features turned on.  This fork has also been merged into the **Github `develop`** branch with all of the new features commented out.  That way I can develop and test these features but also keep most of the code in sync with the **`master`** and **`develop`** branches on-going _(with those features turned off within those branches of course...)_ 
+This commit represents **Modular Emacs: `Release V2.3.0` [Q4 2019]** which merges some bug fixes and
+common features developed within the **Lisp-IDE branch**.  The **Lisp IDE** branch is to esoteric for general Emacs users, therefore I broke it out to give users a choice whether to use it...  For one thing,
+The Lisp IDE branch remaps some keys that would disrupt most Emacs user's habits.  Also I have enabled **`xah-fly-keys`** on that branch which requires about 20 hours of commitment before seeing the real benefits that mode provides... If you are willing to make that minimal commitment, you will be typing code circles around most other developers, just from your new keyboard skills alone!  Try it! I did, and I am here to tell you, Xah Lee is not a troll! :trollface: He is a wizard of the keyboard!  Those guys saying he is a troll are not willing to commit 20 hours on his keys... If they did they would know like me...  My skills have increased about 4 fold! Those guys complaining, are responding the normal human-nature way, not willing to get out of their comfort zone, and instead poke fun at folks who were willing to do what it takes to improve... know-what-I-mean?
 
-This fork is also running fairly well _(with a few caveats)_ on various flavors of Linux and Mac OS, _(and probably BSD as well, but untested)_  
+Like I said, its an option... not enabled here... If you want it... try the `lisp-ide` branch...
+
+Also, most importantly!  The next release of this will break out a lot of this single doc into separate categorized docs, each addressing different major sections below... OK?  Sorry this doc grew and grew... While I was spending much time making the code modularized... I did not modularize the docs... LOL  Now it is time for that...  You will love me afterwards... ;-)
 
 ## Welcome!
 
-**Welcome to Harmonic Alchemy Modular Emacs - _V2.2.0 Q3-2019_**
+**Welcome to Harmonic Alchemy Modular Emacs - _V2.3.0 Q4-2019_**
 
 **Note:** Updates to this Doc will be on-going...  Some features documented below were optional with previous versions, and now they may no longer work as expected with this release!  Try them out at your own risk... Optional features will be changing... Consider all the optional features below as alpha...  Daily Development of these new optional features goes on under the **`lisp-ide`** branch which will be getting frequent updates...  
 
@@ -135,19 +139,19 @@ I think its worth trying if you are already experiencing health problems.  It's 
 
 Much patience is required before you will stop calling Xah a troll and recognize him for the vast keyboarding knowledge he offers to the world!!!  He truly knows the subject of keyboards, keyboarding efficiency and health, etc.  he did his homework, and we all benefit!  **Hey!** Would you **GNU** guys Let **[Xah Lee](https://github.com/xahlee)** into the **FSF** and add his Emacs projects to Elpa already OK? In my opinion his `Xah-Fly-Keys` is the best **Emacs** Major Modal Edit Mode available...  
 
-I am not totally convinced a modal version of Emacs is going to be right for me, but I am sure it is right for a lot of folks out there!!!  Especially **Vi2Emacs Converts**...  This modal version of Emacs comes with your health's best intrest first priority, keeping speed and efficiency as the second priority which should be in harmony with the first priority...  I am very impressed with it so far... I don't understand some of FSF's complaints?  Maybe those are old now...
+I am not totally convinced a modal version of Emacs is going to be right for me, _(Edit: Update.  I am so used to `xah-fly-keys` now that I cannot remember some old Ctrl key combos anymore!  And I am loving not having to move my hands from home position.. it's a miracle!)_ but I am sure it is right for a lot of folks out there!!!  Especially **Vi2Emacs Converts**...  This modal version of Emacs comes with your health's best intrest first priority, keeping speed and efficiency as the second priority which should be in harmony with the first priority...  I am very impressed with it so far... I don't understand some of FSF's complaints?  Maybe those are old now...
 
-If you are interested in trying these new features out, checkout the **`origin/lisp-ide`** branch to your local machine and restart Emacs... _(Some of these new Lisp IDE Programming Language features may not work correctly at first, but as I fix things you will see things start working as expected...  If you keep your local branch updated you will be the first to find out! ;-)_ I will be updating the docs below accordingly...
+If you are interested in trying these new features out, `git checkout --track` **`origin/lisp-ide`** branch on your local machine and restart Emacs... _(Some of these new Lisp IDE Programming Language features may not work correctly at first, and you will need to remap your caps-lock, ctrl and alt (or command on Mac) keys.  But as I fix things you will see things start working as expected...  If you keep your local branch updated you will be the first to find out! ;-)_ I will be updating the docs below for that branch accordingly...  But those docs may not make it here to this one.. _(because they won't apply)_ here...
 
-Otherwise, stay on the master branch and don't install any of the _Optional_ features discussed below...
+To be safe... especially if you are new, stay on the master branch and don't install any of the _Optional_ features discussed below...  OK?  Have fun!!! 
 
 ## History:
 
-This project has been a long time coming.  Its history goes back a few years ago when I went searching for some better ways to configure my then pretty basic Emacs configuration of over 10 or so years!  I cloned a few Emacs repos on Github to try different things out for a while.  I liked some things and tried to get rid of other things later.  Management became confusing after a while.  I ended up with lots of questionable elisp code, much of which were things possibly no longer needed!  
+This project has been a long time coming.  Its history goes back a few years ago when I went searching for some better ways to configure my then pretty basic Emacs configuration of over 10 or so years!  I cloned a few Emacs repos on Github to try different things out for a while.  I liked some things and tried to get rid of other things later.  Management became confusing after a while.  I ended up with lots of questionable elisp code, much of which were things possibly no longer needed!  This is especially true if you are not used to Lisp but instead used to more conventional languages like C, C++, Java, PHP, etc...  I was thinking of my eLisp code like that and ended up with a lot of spaghetti code.  More like elbow spaghetti.  LOL _(parenthesis)_...
 
 After a couple years of **adding**, **removing**, **configuring**, **re-configuring** it started feeling like I was painting myself into a tangled corner like getting lost in **_"a maze of twisty little passages all alike!"_**  Lets face it... I was not keeping good logs and my **git** management skills were wanting!  I was being: _"oh that looks cool lets try that" - (cowgirl mode)_ and I got into a wee bit of trouble as a result of my wild adventures!  It was all my fault! But it was fun just the same.
 
-However as a result of that saga, I learned a lot about **`SH`**, **`BASH`**, and **`ZSH`** best practices...  That spawned a complete re-write of my **`.dotfiles` project** to become multiplatform... _(**Note:** My `.dotfiles` have not been updated yet as that project has been forked and made private until my final scheme is ready...)_ Currently my **New** _(but still private)_ **`.dotfiles` project** is _Full of Twisty Little Pathways Still Unknown..._  :question:
+However as a result of that saga, I learned a lot about **`SH`**, **`BASH`**, and **`ZSH`** best practices...  That spawned a complete re-write of my **`.dotfiles` project** to become multiplatform... _(**Note:** My `.dotfiles` have not been updated yet as that project has been forked and made private until my final scheme is ready...)_ Currently my **New** _(but still private)_ **`.dotfiles` project** is _Full of Twisty Little Pathways Still Unknown..._  :question: Maybe best not to try that out yet... My advise.. the author.. omg!
 
 ### Modular Emacs is Born:
 

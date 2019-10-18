@@ -71,7 +71,7 @@
 ;; This is for using Emacs as a full fledged Common Lisp IDE!
 ;; This module is enabled by default on the ME lisp-ide branch.  Pull that
 ;; branch instead if you want to stay up with the programming stuff...
-(load-file "~/.emacs.d/lisp/modules/10-progLang-pkg-conf.el")
+;(load-file "~/.emacs.d/lisp/modules/10-progLang-pkg-conf.el")
 
 ;; Optional: Un-comment the load file line below if you would like
 ;; to explore MOOs or MUDs using a customized Emacs MOO client! ;-)
@@ -81,7 +81,7 @@
 ;(load-file "~/.emacs.d/lisp/modules/11-games-pkg-conf.el")
 
 ;; Load Harmonic Alchemy Modular Emacs - Xah Emacs module:
-(load-file "~/.emacs.d/lisp/modules/12-Xah-Fly-Keys.el")
+;(load-file "~/.emacs.d/lisp/modules/12-Xah-Fly-Keys.el")
 
 ;; Load Harmonic Alchemy Modular Emacs - Key Bindings module:
 (load-file "~/.emacs.d/lisp/modules/13-key-bindings.el")
