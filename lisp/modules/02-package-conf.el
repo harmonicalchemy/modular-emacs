@@ -13,7 +13,6 @@
 (defvar modular-emacs--required-packages
   '(exec-path-from-shell
     helm
-    sublimity
     multiple-cursors
     ace-jump-mode
     ace-window
@@ -40,11 +39,6 @@
 ;; Install: from MELPA exec-path-from-shell
 
 (when *is-posix* (exec-path-from-shell-initialize))
-
-;; Configure and enable sublimity-mode
-
-(require 'sublimity-scroll)
-(sublimity-mode)
 
 ;; Load default auto-complete configs
 

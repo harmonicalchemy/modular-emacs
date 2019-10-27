@@ -36,7 +36,7 @@
 ;; BEGIN: Platform Specific Rules:
 
 (when *is-darwin*
-  (setq inferior-lisp-program "/usr/local/bin/sbcl"))
+  (setq inferior-lisp-program "/opt/local/bin/sbcl"))
 
 (when *is-linux*
   (setq inferior-lisp-program "/usr/bin/sbcl"))
