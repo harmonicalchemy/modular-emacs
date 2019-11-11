@@ -116,16 +116,28 @@
 
 (add-hook 'deft-mode-hook 'me-deft-init)
 
-
 ;; ~~~~~~~~~~~~
 ;; Pandoc Mode:
 ;; ~~~~~~~~~~~~
+
+;; NOTE: On Mac OS, Depending on how you installed PanDoc,
+;; you may need one of the following: (I enabled the MacPorts form for my setup)
+
+(if (eq system-type 'darwin)
+    ;; You may need to enable the first form if you used HomeBrew
+    ;; to install Pandoc...  If you enable the first form, be sure to comment
+    ;; out (disable) the second form below it as well!
+
+    ;; Your Pandoc was installed by HomeBrew.  Ensure Emacs gets the path...
+    ;(setq pandoc-binary "/usr/local/bin/pandoc")
+
+    ;; Your Pandoc was installed by MacPorts.  Ensure Emacs gets the path...
+    (setq pandoc-binary "/opt/local/bin/pandoc"))
 
 ;; Add Pandoc Mode to all Markdown Files:
 ;; Ref: https://joostkremers.github.io/pandoc-mode/
 
 (add-hook 'markdown-mode-hook 'pandoc-mode)
-
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Org-Mode Configurations:

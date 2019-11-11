@@ -79,7 +79,7 @@
 ;; From: https://oremacs.com/2015/01/17/setting-up-ediff/
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-;; Macro for setting custom variables:
+;; Macro for setting custom variables (not just useful for eDiff:
 (defmacro csetq (variable value)
   `(funcall (or (get ',variable 'custom-set)
                 'set-default)
@@ -99,8 +99,8 @@
 ;; Assign j to move down, and k to move up.
 (defun ora-ediff-hook ()
   (ediff-setup-keymap)
-  (define-key ediff-mode-map "j" 'ediff-next-difference)
-  (define-key ediff-mode-map "k" 'ediff-previous-difference))
+  (define-key ediff-mode-map "k" 'ediff-next-difference)
+  (define-key ediff-mode-map "i" 'ediff-previous-difference))
 
 (add-hook 'ediff-mode-hook 'ora-ediff-hook)
 
