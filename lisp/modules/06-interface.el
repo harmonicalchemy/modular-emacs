@@ -49,7 +49,7 @@
 
 ;; Change title-bar text
 (setq frame-title-format
-      "Modular Emacs v3 - Lisp IDE Fork [Q4 2019]")
+      "Harmonic Alchemy Modular Emacs - Version 3 (currently beta) [Q4 2019]")
 
 ;; Disable tool-bar - I could care less about tool bars in emacs!
 ;; An oxymoron! But you may feel differently.  Comment this out if you like them.
