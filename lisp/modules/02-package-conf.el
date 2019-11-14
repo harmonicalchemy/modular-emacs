@@ -22,9 +22,9 @@
     auto-complete
     which-key
     meta-presenter
-;    xah-fly-keys
-;    xah-elisp-mode
-;    xah-find
+    xah-fly-keys
+    xah-elisp-mode
+    xah-find
     flyspell-correct-helm))
 
 ;; Install required packages
