@@ -9,11 +9,13 @@ tags: Emacs, 2020, apps-tools, SysAdmin, HA-ModEmacs, how-to, README
 
 ![Banner](./Docs/media/Modular-Emacs-Github-Banner-v3.png)
 
-# Introduction
+# Modular Emacs README
 
 **[\[Table Of Contents\]](#table-of-contents)**
 
-## Welcome to Harmonic Alchemy Modular Emacs - V3!
+## Introduction:
+
+**_Welcome to Harmonic Alchemy Modular Emacs - V3!_ (Currently in Beta)**
 
 **Current Status:**
 
@@ -26,6 +28,8 @@ tags: Emacs, 2020, apps-tools, SysAdmin, HA-ModEmacs, how-to, README
 - The Default Install of Harmonic Alchemy Emacs _(from the `master` branch)_ has been made as simple as possible without any bells or whistles...  However it is set up nicely at that point to be easily customized in different ways, depending on your personal needs and choices.  This is a more practical approach.  That is the aim of the basic default install of **_Harmonic Alchemy Modular Emacs_**...
 
 - None of the optional features from the Lisp IDE branch or elsewhere are enabled in the default install... If you are interested in trying any of the optional features, you must install the default Modular Emacs first...  That is how it works now...  I like it..  I think you will too...
+
+- A new optional **[Accounting Module](./Docs/ModE-Accounting-Module-Configuration.md)** _(currently an experimental feature)_ has been added.  The accounting module will enable `hledger-mode`, an Emacs interface to **hledger** _(a fork of_ **ledger** _completely rewritten in Haskell with hopeful improvements)_ ...
 
 > Note: One place where modular-emacs is not yet modular are the key-binding modules...  All key-bindings for everything are in those key-bindings .el files. I plan to modularize key-bindings as well by moving related key commands into the modules they exclusively belong to.  This way, removing any single module will also remove everthing exclusively related to it, seamlessly from Emacs without leaving behind artifacts...  For now I need to test things as they are because I have added a lot of new Xaw-Fly-Keys things and need to get that working stable first... (also learn how to use the damn thing! LOL) I'm still cursing myself after accidentally hitting "V" for paste, when I thought I was in insert mode typing plain text!  But I am getting better.  
 
@@ -45,7 +49,7 @@ Once the above is done, visit the _**optional section headings**_ below to find 
 
 ### History & Purpose:
 
-The history of **Harmonic Alchemy Modular Emacs** is _"a confusing journey through many little twisty passages, all alike..."_ [Everything is documented here now](./ModE-History.md)...  Read it at your leasure...  It provides some perspective, insight, and purpose behind how and why things are done here in the present time...
+The history of **Harmonic Alchemy Modular Emacs** is _"a confusing journey through many little twisty passages, all alike..."_ [Everything is documented here now](./Docs/ModE-History.md)...  Read it at your leasure...  It provides some perspective, insight, and purpose behind how and why things are done here in the present time...
 
 The present is a continuum... Therefore this history document will also be updated over time, to record _"our new enlightened adventure through many interesting little twisty passages, all different!"_
 
@@ -106,7 +110,7 @@ That's it! Red Hat takes care of you lucky Fedora users...
 ##### Debian9 Stretch & Ubuntu 18.04+:  
 
 You Debian/Ubuntu users don't get it so easy... Hope you got your hacker shoes on...
-I tried all the normal ways to get the latest binary build of Emacs installed for Debian based Linux but none of those options are able to satisfy Harmonic Alchemy Modular Emacs basic default needs 100%... Follow this link to: **[Build Emacs from Source](./Build-Emacs-from-Source.md)** and then come back here to continue below...
+I tried all the normal ways to get the latest binary build of Emacs installed for Debian based Linux but none of those options are able to satisfy Harmonic Alchemy Modular Emacs basic default needs 100%... Follow this link to: **[Build Emacs from Source](./Docs/ModE-Build-Emacs-from-Src.md)** and then come back here to continue below...
 
 > **Warning:** This will take a bit of up-front work...  I hope you don't mind staying up all night digging deep and scratching your eyes a lot! Not for the faint at heart!  If you never built software from source before you may want to try something like **`"Hello World"`** first... _(just kidding)_ :trollface:  
     **Harmonic Alchemy Modular Emacs** may still work if you give up and use the latest builds from the package managers, but you may not be able to use many of the nice extra features that Modular Emacs provides...
@@ -165,7 +169,7 @@ I have not tried this yet with a Qubes configured BSD VM... Hopefully the FreeBS
 
 > **Note: _(Debian, Ubuntu, & Mac Users)_** If you were unsuccessful attempting to build Emacs from Source _(above)_ you can skip this section and wait to come back here later to install `NODE` as well.  The features NODE provides may not be accessable from Emacs if it was installed from the package managers on your platforms _(exception MacPorts)_. Therefore you can wait to install this later after you have built your own custom Emacs first... enuff said...
 
-Follow this link to: **[Install NODE.js with NVM and NPM](./ModE-Install-NODE.md)** and then come back here to continue below...
+Follow this link to: **[Install NODE.js with NVM and NPM](./Docs/ModE-Install-NODE.md)** and then come back here to continue below...
 
 **[\[Table of Contents\]](#table-of-contents)**
 
@@ -219,7 +223,7 @@ That's it... Easy!
 
 #### Install Multimarkdown on Linux:  
 
-On Linux you will have to clone/configure/make/build & maintain Multimarkdown yourself... No package managers for this on Linux baby.  Sorry...  Hey... You wanted to be cool like the hackers and use Linux?  OK then... You don't need no stinking binary package managers anymore...  Right!  :octocat:  Follow this link to: **[Build MultiMarkdown from Source!](ModE-Build-MultiMarkdown-from-Src.md)**
+On Linux you will have to clone/configure/make/build & maintain Multimarkdown yourself... No package managers for this on Linux baby.  Sorry...  Hey... You wanted to be cool like the hackers and use Linux?  OK then... You don't need no stinking binary package managers anymore...  Right!  :octocat:  Follow this link to: **[Build MultiMarkdown from Source!](./Docs/ModE-Build-MultiMarkdown-from-Src.md)**
 
 > **Note:** if you run into trouble building Multimarkdown, you can probably skip that as well for later... _Pandoc, (install below) will serve your **Plan B** when such **"Murphys"** happen..._
 
@@ -282,7 +286,7 @@ Now that you have Pandoc installed, **[Download The Manual Here](https://pandoc.
 
 No I did not forget LaTeX...  This is a powerful monster! It needs its own monster doc to install and configure as well... You need it to work with **_Pandoc_**, **_Multimarkdown_**, and later **_org-mode_** when I have that also integrated into Modular Emacs...  LaTeX provides extended features to produce PDFs, and eBook formats... Emacs can be integrated _(especially `org-mode`)_ to be able to export to these fancy formats using LaTeX...
 
-This is Great News if you would like to make **Emacs** work as well as _(or better than)_ **Scrivener**...  So get on it already OK? Follow this Guide to get started: **[Install LaTeX Publishing Environment](ModE-Install-LaTeX-pubOps-Env.md)**...
+This is Great News if you would like to make **Emacs** work as well as _(or better than)_ **Scrivener**...  So get on it already OK? Follow this Guide to get started: **[Install LaTeX Publishing Environment](./Docs/ModE-Install-LaTeX-pubOps-Env.md)**...
 
 **[\[Table of Contents\]](#table-of-contents)**
 

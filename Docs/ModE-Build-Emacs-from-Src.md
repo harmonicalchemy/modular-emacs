@@ -8,11 +8,13 @@ tags: Emacs, apps-tools, SysAdmin, HA-ModEmacs, how-to, README
 
 ![Banner](./media/Modular-Emacs-Github-Banner-v3.png)
 
+# Modular Emacs - Optional Build Emacs from Source
+
 **[\[Back To Top README\]](../README.md)**
 
-# Introduction:
+## Introduction:
 
-Go ahead... bite the bullet and install the latest Emacs from source. Building from source is tedious, _especially if you are doing it for the first time! You WILL have to try many times before little glitches are solved._  If you stick to your guns and stay persistant, you will be awesome!  You will also be in total control of your personal and OFFICIAL build of GNU Emacs, how it works, and what it does!  Your second build experience will go much more smoothly...  By your third build the process the task will become a boring routine of typing a few commands in the terminal, and then waiting as your machine cranks away a brand new version for you...  Play **_mind_ sweeper** with your smart spyPhone, or read a book about exploding brain synapses while your computer's busy making free-as-in-liberated Emacs...
+Go ahead... bite the bullet and install the latest Emacs from source. Building from source is tedious, _especially if you are doing it for the first time! You WILL have to try many times before getting all those "twisty little snippets all different", sorted out and resolved._  If you stick to your guns and stay persistant, you will be awesome!  You will also be in total control of your personal and OFFICIAL build of GNU Emacs, how it works, and what it does!  Your second build experience will go much more smoothly...  By your third build the process the task will become a boring routine of typing a few commands in the terminal, and then waiting as your machine cranks away a brand new version for you...  Play **_mind_ sweeper** with your smart spyPhone, or read a book about exploding brain synapses while your computer's busy making free-as-in-liberated Emacs...
 
 ## Mac OS:
 
