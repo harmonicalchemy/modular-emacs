@@ -70,18 +70,20 @@
 ;; Enable/edit these next several lines to Customize items in
 ;; the deft group to change default functionality...
 
-;; Adjust path to the place where much of your Markdown
-;; docs live: Change my settings unless your name is Alisha too. %^)
-;; Also, if you run Emacs on both Mac and Linux you can change
-;; both paths below and be all set with that!
+;; Adjust path to the place where much of your Markdown docs live:
+;; Change the placeholder paths below to a location where you keep your library
+;; of markdown files. If you don't have something like that set up already,
+;; create a place for that now.  DEFT will give you a nice for navigating your
+;; markdown and/or org docs...  There are options below for both Mac OS and Linux
+;; systems.  If you Emacs on both systems set the paths below for both of them...
 
-;; My-Docs if on Linux:
+;; Path to My-Docs on Mac OS:
 (when *is-darwin*
-  (setq deft-directory "~/Documents/000-Alisha/000-GIT/Gen-Dat/My-Docs"))
+  (setq deft-directory "~/change-this-path/to/your-Docs"))
 
-;; Adjust path to My-Docs if on Mac OS:
+;; Path to My-Docs on Linux:
 (when *is-linux*
-  (setq deft-directory "~/000-GIT/Gen-Dat/My-Docs"))
+  (setq deft-directory "~/change-this-path/to/your-Docs"))
 
 (setq deft-recursive t)
 (setq deft-use-filename-as-title t)

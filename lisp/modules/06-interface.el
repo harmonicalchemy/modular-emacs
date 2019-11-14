@@ -49,7 +49,7 @@
 
 ;; Change title-bar text
 (setq frame-title-format
-      "Modular Emacs v2.2.0 - Lisp IDE Fork [Q3 2019]")
+      "Modular Emacs v3 - Lisp IDE Fork [Q4 2019]")
 
 ;; Disable tool-bar - I could care less about tool bars in emacs!
 ;; An oxymoron! But you may feel differently.  Comment this out if you like them.
@@ -63,6 +63,7 @@
 ;; NOTE: I got this to work below by setting the Default Frame alist after
 ;; trying many other things that were not working...  I am leaving this here
 ;; commented out to keep the option here in case I need it later, (or you do).
+
 ;(scroll-bar-mode -1)
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -130,7 +131,7 @@
 ;(defun me-disable-scroll-bars (frame)
 ;  (modify-frames-parameters frame
 ;                            '((vertical-scroll-bars . nil)
-;                              (horizontal-scroll-bars . nil))))
+;                                (horizontal-scroll-bars . nil))))
 
 ;(add-hook 'after-make-frame-functions 'me-disable-scroll-bars)
 

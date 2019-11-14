@@ -45,6 +45,18 @@
 
 ;;;
 ;; Map Linux Alt keys to Emacs META:
+;; Don't enable this next form as it is not working yet...
+;; On Linux, I swapped Caps-Lock and Home keys using xmodmap to accommodate using
+;; Xah Fly Keys in an efficient manner...  However, I tried many ways, including
+;; full blown custom xkb keymap to swap my control and alt keys, (so it would be
+;; the same keystrokes for me on both Mac and Linux ;-).  All that sweat to no
+;; avail so far! ...but I will get it.. I was stuck and needed a good break...
+;; The Mac has its quirks as well but Karabiner Elements saved the day!
+;;
+;; You may not need any of this anyway... Unless you also want to enable and use
+;; Xah Fly Keys... Then you are in the same Linux boat as I am... ARR!!! Mate! %^)
+;; This form will be enabled, (with the right settings) once I get all this working!
+;; Stay Tuned...
 
 ;(when *is-linux*
   ;(define-key key-translation-map (kbd "Control_L") (kbd "Alt_L"))
@@ -56,19 +68,35 @@
 ;  (setq x-super-keysym 'meta))
 
 ;;;
-;; Map Mac OS command-key to Emacs META:
+;; For Mac OS - Set Mac Command key (both sides of space bar) to work as Emacs
+;; Control Key...  Set normal keyboard control key to work as Emacs META:
+;; Note: Don't enable this unless you like to have the control key on both
+;; sides right next to your space bar (for Emacs only)...
+;;
+;; In addition to above, you have to install and configure Karabiner-Elements on
+;; your Mac to remap some of your keys. I did all the above and also enable
+;; Xah-Fly-Keys to make Emacs behave as a modal editor similar to the way Vi
+;; works. After using this setup over my hands and fingers are now much less
+;; stressed, and I can edit code, compose documents or write fiction faster than
+;; ever!
 
-(when *is-darwin*
-  (setq mac-command-modifier 'control)
-  (setq mac-control-modifier 'meta))
+;(when *is-darwin*
+;  (setq mac-command-modifier 'control)
+;  (setq mac-control-modifier 'meta))
 
 ;;;
 ;; Make Escape Key Do C-g:
+;; This is a goodie I learned while setting up Xah-Fly-Keys.  It is not for
+;; Xah Fly Keys users specifically, but rather a general purpose aid...
 
 (define-key key-translation-map (kbd "ESC") (kbd "C-g"))
 
 ;;;
 ;; Bind M-h key to Invoke Slime Doc Lookup:
+;; You don't need this unless you have enabled the optional ProgLang module
+;; and its associated sub modules... But leaving this enabled does not hurt
+;; if you are not using those modules... Best to leave this alone... It
+;; does not activate until slime-mode is loaded...
 
 (eval-after-load 'slime
   `(define-key slime-prefix-map (kbd "M-h") 'slime-documentation-lookup))
@@ -81,20 +109,25 @@
 ;; by other modes when I am in xah-fly-keys-command-mode.
 ;;;
 
-; Set slime SPC key to xah-fly-leader-key when activating xah fly command mode:
-(defun override-slime-space-key-binding ()
-  (define-key slime-mode-indirect-map (kbd "SPC") 'xah-fly-leader-key-map))
+;; You care about this if:  You use the extra Common Lisp Prog Lang modules,
+;; AND you also wish to enable Xah-Fly-Keys...
+;;
+;; If True, Enable ALL forms below:
+;; Otherwise, Leave everything below commented out as it is...
 
-(add-hook 'xah-fly-command-mode-activate-hook 'override-slime-space-key-binding)
+; Set slime SPC key to xah-fly-leader-key when activating xah fly command mode:
+
+;(defun override-slime-space-key-binding ()
+;  (define-key slime-mode-indirect-map (kbd "SPC") 'xah-fly-leader-key-map))
+
+;(add-hook 'xah-fly-command-mode-activate-hook 'override-slime-space-key-binding)
 
 ; Set Slime SPC key back to slime-space() when activating xah fly insert mode:
-(defun restore-slime-space-key-binding ()
-  (define-key slime-mode-indirect-map (kbd "SPC") 'slime-space))
 
-(add-hook 'xah-fly-insert-mode-activate-hook 'restore-slime-space-key-binding)
+;(defun restore-slime-space-key-binding ()
+;  (define-key slime-mode-indirect-map (kbd "SPC") 'slime-space))
 
-;; something I tried before but was not correct way...
-;(add-hook 'slime-mode-hook 'override-slime-space-key-binding)
+;(add-hook 'xah-fly-insert-mode-activate-hook 'restore-slime-space-key-binding)
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; END: [modular-emacs]:~/.emacs.d/lisp/modules/13-key-bindings.el

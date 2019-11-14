@@ -32,9 +32,14 @@
 ;;
 ;; Change Log: (descending chronological order)
 ;;
+;;   2019-011-12 - Harmonic Alchemy Modular-Emacs V3.0 [Q4 2019]
+;;      This represents mostly updated docs which has been needed for a while!
+;;      there were also many bug fixes brought over from the Lisp IDE fork,
+;;      where I have been living for most of the summer and fall!  Now the
+;;      master and develop branches can benefit the gains...
 ;;
 ;;   2019-010-17 - Harmonic Alchemy Modular-Emacs - Lisp-IDE fork Release:
-;;      V2.3.0. [Q4-2019]  This commitment marks the final update after
+;;      V2.3.0. [Q3-2019]  This commitment marks the final update after
 ;;      merging the Lisp IDE branch back into the Develop branch...
 ;;      and then modifying that branch so that the extra modules here are
 ;;      not enabled... Both the Master and Develop branch are up to date now
@@ -212,8 +217,7 @@
         ";; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
         ";; Welcome to: [Your-Machine-Name-Here]                    \n"
         ";;             Harmonic Alchemy - Modular Emacs!           \n"
-        ";;                   (((Lisp IDE Fork)))                   \n"
-        ";; Version:    2.3.0 [Q4 2019]                             \n"
+        ";; Version:    3.0 [Q4 2019]                               \n"
         ";;                                                         \n"
         ";; Today's date: " (format-time-string "%Y %B %d") "       \n"
         ";; Startup completed in "
@@ -229,9 +233,9 @@
         ";;                                                         \n"
         ";; If Mark Twain was an 80's New Orleans Lisp Hacker/DJ:   \n"
         ";;                                                         \n"
-        ";;   \"I yous to be a river boat pilot until dis crafty    \n"
-        ";;   gambler CONs me out of averyting, including my CAR,   \n"
-        ";;   CDR, and my entire Michael Jackson CD collection      \n"
+        ";;   \"I yous'ta be a river boat pilot until dis crafty    \n"
+        ";;   gambler CONs me out of averyting, including me CAR,   \n"
+        ";;   CDR, and me entire Michael Jackson CD collection      \n"
         ";;   mon!!!  Tank god, he didn't find me old IBM 704 in    \n"
         ";;   da basement!!! That's cuz he spied me big bulldog     \n"
         ";;   sleepin back in da corner... He decided his gains     \n"
@@ -247,14 +251,14 @@
         ";; https://www.gnu.org/software/emacs/manual/html_node/eintr/index.html  \n"
         ";;                                                                      \n"
         ";; This entire message is a lisp comment!                              \n"
-        ";; Emacs makes a great S-exps IDE!                                   \n"
-        ";; Our Universe is nothing more than a big Sex PistolS IDE ;-)     \n"
+        ";; Emacs makes a Great S-exPs (S Expressions) IDE!                    \n"
+        ";; Our Universe is a Great Big Sex PistolS IDE ;-)                  \n"
         ";; Evaluate this entire buffer as a test...  Of the universe?    \n"
         ";; Why not? Go for it... You may have super powers!           \n"
         ";; Be sure to debug it well before committing it as your:   \n"
-        ";; \"new-way-cool-custom-module.el\" %^)                   \n"
+        ";; \"new-way-cool-custom-parallel-world-module.el\" %^)    \n"
         ";;                        -- Cheers!                       \n"
-        ";; Alisha Awen: @harmonicalchemy (twitter etc.)            \n"
+        ";; Alisha Awen: @harmonicalchemy (Github, twitter etc.)    \n"
         ";; PGP Pubkey: 0x922CC456F48355A8D9B2E044C9E6CD44A817E7BF  \n"
         ";; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
        (get-buffer-create (current-buffer)))
