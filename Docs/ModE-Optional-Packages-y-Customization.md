@@ -2,6 +2,7 @@
 file: ModE-Optional-Packages-y-Customization.md
 author: Alisha Awen Sheppard
 created: 2019-010-30
+updated: 2019-011-14
 tags: Emacs, Xah-Fly-Keys, apps-tools, SysAdmin, HA-ModEmacs, how-to, README 
 ---
 <!-- #Emacs #Xah-Fly-Keys #apps-tools #SysAdmin #HA-ModEmacs #how-to #README -->

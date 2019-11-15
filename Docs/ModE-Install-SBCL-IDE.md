@@ -2,6 +2,7 @@
 file: ModE-Install-SBCL-IDE.md
 author: Alisha Awen Sheppard
 created: 2019-010-24
+updated: 2019-011-14
 tags: Lisp, SBCL, Emacs, apps-tools, SysAdmin, HA-ModEmacs, how-to, README 
 ---
 <!-- #SBCL #Emacs #apps-tools #SysAdmin #HA-ModEmacs #how-to #README -->

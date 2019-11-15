@@ -2,6 +2,7 @@
 file: ModE-Note-2-MS-Windows-Users.md
 author: Alisha Awen Sheppard
 created: 2019-010-30
+updated: 2019-011-14
 tags: MS-Windows, Emacs, apps-tools, SysAdmin, HA-ModEmacs, how-to, README 
 ---
 <!-- #MS-Windows #Emacs #apps-tools #SysAdmin #HA-ModEmacs #how-to #README -->

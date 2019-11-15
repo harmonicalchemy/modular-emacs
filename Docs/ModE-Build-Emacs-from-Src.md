@@ -2,6 +2,7 @@
 file: ModE-Build-Emacs-from-Src.md
 author: Alisha Awen Sheppard
 created: 2019-010-19
+updated: 2019-011-14
 tags: Emacs, apps-tools, SysAdmin, HA-ModEmacs, how-to, README 
 ---
 <!-- #Emacs #apps-tools #SysAdmin #HA-ModEmacs #how-to #README -->
