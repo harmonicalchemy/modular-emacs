@@ -32,7 +32,7 @@
 ;;
 ;; Change Log: (descending chronological order)
 ;;
-;;   2019-011-12 - Harmonic Alchemy Modular-Emacs V3.0 [Q4 2019]
+;;   2019-011-12 - Harmonic Alchemy Modular-Emacs V3.0 (beta) [Q4 2019]
 ;;      This represents mostly updated docs which has been needed for a while!
 ;;      there were also many bug fixes brought over from the Lisp IDE fork,
 ;;      where I have been living for most of the summer and fall!  Now the
@@ -217,7 +217,7 @@
         ";; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
         ";; Welcome to: [Your-Machine-Name-Here]                    \n"
         ";;             Harmonic Alchemy - Modular Emacs!           \n"
-        ";; Version:    3.0 [Q4 2019]                               \n"
+        ";; Version:    3.0 (beta) [Q4 2019]                        \n"
         ";;                                                         \n"
         ";; Today's date: " (format-time-string "%Y %B %d") "       \n"
         ";; Startup completed in "
