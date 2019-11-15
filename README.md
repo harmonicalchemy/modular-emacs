@@ -37,7 +37,7 @@ tags: Emacs, 2020, apps-tools, SysAdmin, HA-ModEmacs, how-to, README
 
 To install Harmonic Alchemy Modular Emacs for the first time, follow this guide _(in a top down fashion)_... Do not skip to any of the other install guides until you have the basic default configuration of Modular Emacs installed and running _(without errors)_ in your home directory... 
 
-> **Exception: _Debian and Mac users will have to follow a linked doc that guides you through building and maintaining your own Official GNU Emacs from source first!_** Building from source is tedious, _especially if you are doing it for the first time, you WILL have to try many times before little glitches are solved._  If you stick to your guns and stay persistant, you will be awesome!  You will also be in total control of your personal and OFFICIAL build of GNU Emacs, how it works, and what it does!  Your second build experience will go much more smoothly...  By the third build the process will become the boring routine of typing a few commands, and then waiting as your machine cranks away a brand new version for you...  Play **_mind_ sweeper** with your smart spyPhone, or read a book about exploding brain synapses while your computer's busy making free-as-in-liberated Emacs... :trollface:
+> **Exception: _Debian and Mac users will have to follow a linked doc that guides you through building and maintaining your own Official GNU Emacs from source first!_** Building from source is tedious, _especially if you are doing it for the first time, you WILL have to try many times before getting all those "twisty little snippets all different", sorted out and resolved._  If you stick to your guns and stay persistant, you will be awesome!  You will also be in total control of your personal and OFFICIAL build of GNU Emacs, how it works, and what it does!  Your second build experience will go much more smoothly...  By the third build the process will become the boring routine of typing a few commands, and then waiting as your machine cranks away a brand new version for you...  Play **_mind_ sweeper** with your smart spyPhone, or read a book about exploding brain synapses while your computer's busy making free-as-in-liberated Emacs... :trollface:
 
 Once the above is done, visit the _**optional section headings**_ below to find links to install guides for optional modules you may be interested in trying out...  Consult the **[\[Table Of Contents\]](#table-of-contents)** for quick access if you are coming back to this doc later... You will see a link to the **Table of Contents** placed approximately one page or half page apart continuing down this document as well for easy quick reference...
 
@@ -112,14 +112,14 @@ That's it! Red Hat takes care of you lucky Fedora users...
 You Debian/Ubuntu users don't get it so easy... Hope you got your hacker shoes on...
 I tried all the normal ways to get the latest binary build of Emacs installed for Debian based Linux but none of those options are able to satisfy Harmonic Alchemy Modular Emacs basic default needs 100%... Follow this link to: **[Build Emacs from Source](./Docs/ModE-Build-Emacs-from-Src.md)** and then come back here to continue below...
 
-> **Warning:** This will take a bit of up-front work...  I hope you don't mind staying up all night digging deep and scratching your eyes a lot! Not for the faint at heart!  If you never built software from source before you may want to try something like **`"Hello World"`** first... _(just kidding)_ :trollface:  
+> **Warning:** This will take a bit of up-front work...  I hope you don't mind staying up all night digging deep and scratching your eyes a lot! Not for the faint at heart!  If you never built software from source before you may want to try something like **`"Hello World"`** first... _(just kidding)_ :trollface:  No..  you stay right here soldier! We will get you up to speed soon enough... 
     **Harmonic Alchemy Modular Emacs** may still work if you give up and use the latest builds from the package managers, but you may not be able to use many of the nice extra features that Modular Emacs provides...
 
 **_Was your Emacs Build Saga Successful?_**  
 
-**Yes?:**  Little grasshopper... You are awesome! Now you may now call yourself a devOps engineer _(to friends and family only... Don't put it on your resume LOL)_.  Now you will no longer be dependent on the mercy of grumpy package archive build engineers! DevOps heaven! Yay!  Continue bravely on below with your next steps _(challenges)_...
+**Yes?:**  Little grasshopper... You are awesome! Now you may now call yourself a devOps engineer _(to friends and family only... Don't put it on your resume LOL)_.  Now you will no longer be dependent on the mercy of wining sniveling package archive build engineers! Worse than anything Monty Python ever made fun of! LOL  Welcome to DevOps heaven you pirate! Arr! :octocat:  Continue bravely on below with your next steps _(challenges)_...
 
-**No?:** OK, You are wicked frustrated trying to build Emacs eh?  No problem... I feel your pain. Take a rest...  You can still get Modular Emacs installed below, with a few caveats of missing features of course... Just use your default package manager to install the latest version of Emacs you can find there and continue on below...  You will have gotten your winning attitude back by that time.  Later on, when you are itching to get Emacs updated, come back to this doc and read **[Optional Packages & Customization:](#optional-packages--customization)** below where you will be given instructions for that and any of the other things you missed during the default install here... _(plus more goodies ;-)_
+**No?:** OK, You are wicked frustrated trying to build Emacs eh?  No problem... I feel your pain. Take a rest...  You can still get Modular Emacs installed below, _(with a few caveats of missing features of course...)_ Just use your default package manager to install the latest version of Emacs you can find there and continue on below...  You will have gotten your winning attitude back by that time.  Later on, when you are itching to get Emacs updated, come back to this doc and read **[Optional Packages & Customization:](#optional-packages--customization)** below where you will be given instructions for that and any of the other things you missed during the default install here... _(plus more goodies ;-)_
 
 You will be surprised at your devOps abilities after a long rest! Your psychology needs a few gains first... Get the rest done and you will feel better! I promise! :purple_heart:
 
@@ -141,7 +141,7 @@ MacPorts will get you Emacs version 26.3+ which should work fine... I have not t
 
 If instead you have HomeBrew installed?  Do like I did and install Emacs from source... We Macolites have been abandoned by both Apple and Homebrew!  What a mess... and What a shame! **_Linux dudes roll eyes and wonder why MacRats don't jump ship?_**  
 
-Follow this link to: **[Build Emacs from Source](./Build-Emacs-from-Source.md)** Follow that guide, and then come back here to continue below...
+Follow this link to: **[Build Emacs from Source](./Docs/ModE-Build-Emacs-from-Src.md)** Follow that guide, and then come back here to continue below...
 
 **_Were you successful after only a few tries?_**  
 
@@ -557,7 +557,7 @@ mc/mark-all-like-this      | `C-|`
 
 ## Optional Packages & Customization:
 
-Above I kept going on and on about setting up the Default version of Modular Emacs... Now it's time to forget boring defaults and really tune this baby up to be the best **DevOps** , **PubOPs** , **Lisp IDE** that it can be!  The following doc with guide you through that process:  **[Modular Emacs Customization](./ModE-Optional-Packages-y-Customization.md)**
+Above I kept going on and on about setting up the Default version of Modular Emacs... Now it's time to forget boring defaults and really tune this baby up to be the best **DevOps** , **PubOPs** , **Lisp IDE** that it can be!  The following doc with guide you through that process:  **[Modular Emacs Customization](./Docs/ModE-Optional-Packages-y-Customization.md)**
 
 # Table of Contents:
 
