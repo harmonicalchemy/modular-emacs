@@ -17,7 +17,27 @@ tags: Emacs, apps-tools, SysAdmin, HA-ModEmacs, MWM-how-to, how-to, README
 
 **_This module provides self customizeable Accounting & Double Entry Ledger Features to Harmonic Alchemy Modular Emacs..._**
 
-I am currently experimenting with this.  Looking into using **`hledger-mode`** etc. Initially I am using this document as a log of my first attempts...  When I am done, you will not only have a guide to follow, but you will also know the why and how behind my chosen path.  This will be invaluable as will be a path chosen because it works on all **`nx`** platforms producing the least headaches, and will also contain all needed info and **_gotchas_** recorded along side _in-line_ using block quote message boxes...
+I am currently experimenting with this.  Looking into using **`hledger-mode`** etc. Initially I am using this document as a log of my first attempts...  When I am done, you will not only have a guide to follow, but you will also know the why and how behind my chosen path.  This will be invaluable as it will..., should have ... by that time ... been tested to work on all **`nx`** platforms producing the least headaches.  
+
+You will see documented historical proof, _(of the dragons being slain)_ right here within this guide... As a result you will have all needed info and **_gotchas_** recorded along side _in-line_ using block quote message boxes... _(for your easy reference)_
+
+> _"TahMe!   
+Here's to our pirate accountant...,   
+Haul Away... Haul Away...   
+Plain text ledgers, No more Quickening Rues,   
+Haul away... Haul Away...   
+
+> No... more... CyberSnatch Rules,  
+Haul Away... Haul Away...   
+Well stacked privateers, gladly waging our labour,   
+Haul Away... Freedom Bound!   
+
+> Deep adventure we do sail,   
+Haul Away... Haul Away!  
+On a plain text ship that's Freedom Bound,   
+A ship called The Haskell Ledger! Arrrrr!"_ :octocat: 
+
+_(lol my rhyme scheme got wak - you figure out the rhythm... I think it's a slow hornpipe.  I will improve it later... `%^)`_
 
 ### Refs:
 - **[PTA.org Dedicated to Plain Text Accounting](https://plaintextaccounting.org/)**
