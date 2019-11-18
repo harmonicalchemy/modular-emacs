@@ -53,7 +53,7 @@ After reading a bunch of scary posts about **MacPorts** causing problems with **
 ``` 
 One single command for all platforms... That is great! I will build it on both Mac OS, and Fedora for my first test cases...
 
-> **Note:** This script will ask for root access using sudo in order to use your platform's package manager to install dependencies and to install to `/usr/local/bin`. 
+> **Note:** This script will ask for root access using sudo in order to install dependencies and to install the binaries to `/usr/local/bin`.
 
 Installing within **`/usr/local/bin`** is fine for me on all platforms!  It won't interfere with packages installed by MacPorts within **`/opt/local/bin`**  
 

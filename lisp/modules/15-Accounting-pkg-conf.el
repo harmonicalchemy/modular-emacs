@@ -43,7 +43,7 @@
 ;; Provide the path to you journal file.
 ;; The default location is too opinionated.
 
-(setq hledger-jfile "/Documents/000-Alisha/000-GIT/My-Docs/Alisha-Notes/000-Personal/HR-Finance-Legal/HLedger-Accounting/2019.journal")
+(setq hledger-jfile "~/Documents/000-Alisha/000-GIT/My-Docs/Alisha-Notes/000-Personal/HR-Finance-Legal/HLedger-Accounting/.hledger.journal")
 
 ;;;;
 ;; Auto-completion for account names
