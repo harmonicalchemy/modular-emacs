@@ -34,6 +34,8 @@
         ("GNU-ELPA" . 5)
         ("MELPA-Unstable" . 0)))
 
+;(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
+
 ;; Add your pinned packages to the list below when you encounter an Emacs
 ;; mode that needs a package to be pinned:
 

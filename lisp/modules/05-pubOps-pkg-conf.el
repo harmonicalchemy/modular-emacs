@@ -24,6 +24,7 @@
     markdown-mode+
     markdown-toc
     deft
+    auctex
     pandoc-mode
     fountain-mode
     olivetti
@@ -37,9 +38,29 @@
         (package-install p))
       modular-emacs--req-pubops-packages)
 
-;; Toggle olivetti minor mode (for writing) on and off:
+;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; AUCTeX: LaTeX configuration:
+;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-(global-set-key (kbd "C-`") #'olivetti-mode)
+(setq TeX-auto-save t)
+(setq TeX-parse-self t)
+(setq-default TeX-master nil)
+
+(add-hook 'LaTeX-mode-hook 'visual-line-mode)
+(add-hook 'LaTeX-mode-hook 'flyspell-mode)
+(add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
+(add-hook 'LaTeX-mode-hook 'turn-on-reftex)
+
+(setq reftex-plug-into-AUCTeX t)
+
+;; Set default compile to PDF:
+
+(setq TeX-PDF-mode t)
+
+;; If the above did’t work, try this instead:
+
+;    (require 'tex)
+;    (TeX-global-PDF-mode t)
 
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -140,6 +161,11 @@
 ;; Ref: https://joostkremers.github.io/pandoc-mode/
 
 (add-hook 'markdown-mode-hook 'pandoc-mode)
+
+;; ~~~~~~~~~~~~~~~
+;; Toggle olivetti minor mode (for writing) on and off:
+
+(global-set-key (kbd "C-`") #'olivetti-mode)
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Org-Mode Configurations:
