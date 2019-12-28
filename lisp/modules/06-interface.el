@@ -114,7 +114,7 @@
                     :family "Hermit"
                     :foundry "PfEd"
                     :slant 'normal
-                    :height 124
+                    :height 111
                     :weight 'normal
                     :width 'normal)
 
