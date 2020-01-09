@@ -34,7 +34,12 @@
         ("GNU-ELPA" . 5)
         ("MELPA-Unstable" . 0)))
 
-;(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
+;;;;
+;; Some packages are not loading due to a current bug in emacs...
+;; This is supposed to be fixed in version 26.3  Here is the workaround...
+;; When they fix this you may have to comment this out!  Don't forget... ;-)
+
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
 
 ;; Add your pinned packages to the list below when you encounter an Emacs
 ;; mode that needs a package to be pinned:
@@ -44,6 +49,10 @@
 
 ;(add-to-list 'package-pinned-packages '(clj-refactor . "melpa-unstable") t)
 
+;;;;
+;; Always try to load the newest up-to-date packages...
+
+(setq load-prefer-newer t)
 
 ;;
 ;; Initialize package.el:
