@@ -19,14 +19,14 @@
 ;;;
 ;; Declare default modular-emacs list of required packages:
 
-(defvar modular-emacs--acounting-packages
+(defvar me--acounting-packages
   '(hledger-mode))
 
 ;;;
 ;; Install required packages
 
 (mapc (lambda (p) (package-install p))
-      modular-emacs--acounting-packages)
+      me--acounting-packages)
 
 ;;;;
 ;; Basic HLedger Mode Configuration:

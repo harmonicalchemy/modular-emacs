@@ -131,9 +131,17 @@
 
 ;(load-file "~/.emacs.d/lisp/modules/12-Xah-Fly-Keys.el")
 
-;; Load Harmonic Alchemy Modular Emacs - Key Bindings module:
 
-(load-file "~/.emacs.d/lisp/modules/13-key-bindings.el")
+;; Load Harmonic Alchemy Modular Emacs - Frame "cursor" Move module:
+;; (similar to windmove, & integrated with same key commands)
+;;
+;; NOTE - Module to be removed!
+;;
+;; I am going to remove this feature as it is no longer needed
+;; and it was causing problems with going into debug mode if
+;; the direction had no windoes or frames to move to!
+;(load-file "~/.emacs.d/lisp/modules/09-framemove.el")
+
 
 ;;;;
 ;; Optional/experimental - Load ME S/W Programmer's Key Bindings module:

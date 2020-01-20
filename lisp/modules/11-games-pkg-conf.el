@@ -25,13 +25,13 @@
   (package-refresh-contents))
 
 ;; Declare a list of required packages for extra dired features:
-(defvar modular-emacs--req-games-packages
+(defvar me--req-games-packages
   '(xterm-color))
 
 ;; Install required packages:
 (mapc (lambda (p)
         (package-install p))
-      modular-emacs--req-games-packages)
+      me--req-games-packages)
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; RMOO - A MOO client for Emacs:

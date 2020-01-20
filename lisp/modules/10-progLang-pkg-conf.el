@@ -22,7 +22,7 @@
 
 ;; Declare a list of required packages for esoteric computer-science programming:
 
-(defvar modular-emacs--req-proglang-packages
+(defvar me--req-proglang-packages
   '(slime
 ;   slime-autoloads
     helm-slime
@@ -38,7 +38,7 @@
 ;; Install required packages:
 
 (mapc (lambda (p) (package-install p))
-      modular-emacs--req-proglang-packages)
+      me--req-proglang-packages)
 
 ;;;;;;
 ;; Load SLIME / sbcl IDE Module:

@@ -6,30 +6,28 @@
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;; Create repositories cache, if required
+
 (when (not package-archive-contents)
   (package-refresh-contents))
 
 ;; Declare default modular-emacs list of required packages:
-(defvar modular-emacs--required-packages
+
+(defvar me--required-packages
   '(exec-path-from-shell
     helm
-    multiple-cursors
-    ace-jump-mode
-    ace-window
     imenu-list
     powerline
-    buffer-move
     auto-complete
     which-key
-    meta-presenter
     xah-fly-keys
     xah-elisp-mode
     xah-find
     flyspell-correct-helm))
 
 ;; Install required packages
+
 (mapc (lambda (p) (package-install p))
-      modular-emacs--required-packages)
+      me--required-packages)
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Load Environment Vars from shell:
@@ -47,18 +45,6 @@
 ;; Start which-key-mode
 
 (which-key-mode)
-
-;; Set up ace-jump-mode
-
-(autoload 'ace-jump-mode
-  "ace-jump-mode"
-  "Emacs quick move minor mode"
-  t)
-
-(autoload 'ace-jump-mode-pop-mark
-  "ace-jump-mode"
-  "Ace jump back:-"
-  t)
 
 ;; Enable iMenu List minor mode globally at startup:
 ;(imenu-list-minor-mode)

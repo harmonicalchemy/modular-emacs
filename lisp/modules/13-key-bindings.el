@@ -7,41 +7,45 @@
 ;;;
 ;; Map Modular Emacs General Keys:
 
-(defvar modular-emacs--my-keyboard-bindings
-  '(("C-}" . mc/mark-next-like-this)
-    ("C-{" . mc/mark-previous-like-this)
-    ("C-|" . mc/mark-all-like-this)
-    ("C->" . ace-jump-mode)
-    ("C-<" . ace-jump-mode-pop-mark)
-    ("C-'" . imenu-list-smart-toggle)
-    ("M-/" . undo-tree-visualize)
+(defvar me--my-keyboard-bindings
+  '(("C-'" . imenu-list-smart-toggle)
     ("C-\," . neotree-toggle)
     ("C-c d" . deft)
     ("C-x C-g" . deft-find-file)
-    ("C-c m" . org-md-export-as-markdown)
+    ("C-c m" . org-md-export-to-markdown)
     ("C-c v" . vmd-mode)
     ("C-c r" . view-mode)
-    ("C-c M-x" . execute-extended-command)
+    ("C-c b" . make-frame)
+    ("C-c ," . other-frame)
+    ("M-c" . toggle-letter-case)
     ("M-x" . helm-M-x)
     ("C-x b" . helm-mini)
-    ("C-x C-b" . helm-buffers-list)
     ("C-x C-f" . helm-find-files)
     ("C-x C-r" . helm-recentf)
-    ("M-y" . helm-show-kill-ring)
-    ("C-;" . ace-window)
-    ("C-S-<up>" . buf-move-up)
-    ("C-S-<down>" . buf-move-down)
-    ("C-S-<left>" . buf-move-left)
-    ("C-S-<right>" . buf-move-right)
-    ("<f5>" . modular-emacs-reload-current-file)))
+    ("<f5>" . me-reload-current-file)))
 
-(defun modular-emacs-apply-keyboard-bindings (pair)
+(defun me-apply-keyboard-bindings (pair)
   "Apply keyboard-bindings for supplied list of key-pair values"
   (global-set-key (kbd (car pair))
                   (cdr pair)))
  
-(mapc 'modular-emacs-apply-keyboard-bindings
-      modular-emacs--my-keyboard-bindings)
+(mapc 'me-apply-keyboard-bindings
+      me--my-keyboard-bindings)
+
+;;;
+;; Add new key(s) to xah fly command mode keys:
+
+(defun me-xfk-cmd-keys-add ()
+  "Modify keys for xah fly key command mode keys
+To be added to `xah-fly-command-mode-activate-hook'"
+  (interactive)
+  ;; I need a key to switch frames if they contain windows...
+  (define-key xah-fly-key-map (kbd "b") 'other-frame)
+  ;; Add more key definitions here if needed.
+  ;; Options left:  ~, `, 1, 2, 0, |, _. -. and =
+  )
+
+(add-hook 'xah-fly-command-mode-activate-hook 'me-xfk-cmd-keys-add)
 
 ;;;
 ;; Map Linux Alt keys to Emacs META:
@@ -80,9 +84,9 @@
 ;; stressed, and I can edit code, compose documents or write fiction faster than
 ;; ever!
 
-;(when *is-darwin*
-;  (setq mac-command-modifier 'control)
-;  (setq mac-control-modifier 'meta))
+(when *is-darwin*
+  (setq mac-command-modifier 'control)
+  (setq mac-control-modifier 'meta))
 
 ;;;
 ;; Make Escape Key Do C-g:
@@ -107,15 +111,14 @@
 ;; be established while in COMMAND mode! I use Xah-Fly-Keys (both modes)
 ;; pretty much all the time.  The xah SPC leader key cannot get shadowed
 ;; by other modes when I am in xah-fly-keys-command-mode.
-;;;
-
+;;
 ;; You care about this if:  You use the extra Common Lisp Prog Lang modules,
 ;; AND you also wish to enable Xah-Fly-Keys...
 ;;
 ;; If True, Enable ALL forms below:
 ;; Otherwise, Leave everything below commented out as it is...
-
-; Set slime SPC key to xah-fly-leader-key when activating xah fly command mode:
+;;
+;; Set slime SPC key to xah-fly-leader-key when activating xah fly command mode:
 
 ;(defun override-slime-space-key-binding ()
 ;  (define-key slime-mode-indirect-map (kbd "SPC") 'xah-fly-leader-key-map))

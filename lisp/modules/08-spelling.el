@@ -114,6 +114,7 @@ Please note RUN-TOGETHER will make aspell less capable. So it should only be use
 (global-set-key (kbd "C-c s") 'flyspell-auto-correct-word)
 
 ;; Flyspell Correct Helm key binding:
+
 (require 'flyspell-correct-helm)
 (define-key flyspell-mode-map (kbd "C-;") 'flyspell-correct-previous-word-generic)
 
@@ -151,10 +152,6 @@ Toggles between: “all lower”, “Init Caps”, “ALL CAPS”."
       (upcase-region p1 p2) (put this-command 'state "all caps"))
      ((string= "all caps" (get this-command 'state))
       (downcase-region p1 p2) (put this-command 'state "all lower")))))
-
-;; Set Global key for Letter Case Toggle to M-c:
-
-(global-set-key "\M-c" 'toggle-letter-case)
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; END: [modular-emacs]:~/.emacs.d/lisp/modules/08-spelling.el

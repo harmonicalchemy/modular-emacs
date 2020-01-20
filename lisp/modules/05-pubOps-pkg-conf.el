@@ -19,7 +19,7 @@
 
 ;; Declare a list of required packages for writers, bloggers, publishers, etc.:
 
-(defvar modular-emacs--req-pubops-packages
+(defvar me--req-pubops-packages
   '(markdown-mode
     markdown-mode+
     markdown-toc
@@ -36,7 +36,7 @@
 
 (mapc (lambda (p)
         (package-install p))
-      modular-emacs--req-pubops-packages)
+      me--req-pubops-packages)
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; AUCTeX: LaTeX configuration:
@@ -58,7 +58,6 @@
 (setq TeX-PDF-mode t)
 
 ;; If the above did’t work, try this instead:
-
 ;    (require 'tex)
 ;    (TeX-global-PDF-mode t)
 
@@ -99,10 +98,12 @@
 ;; systems.  If you Emacs on both systems set the paths below for both of them...
 
 ;; Path to My-Docs on Mac OS:
+
 (when *is-darwin*
   (setq deft-directory "~/change-this-path/to/your-Docs"))
 
 ;; Path to My-Docs on Linux:
+
 (when *is-linux*
   (setq deft-directory "~/change-this-path/to/your-Docs"))
 

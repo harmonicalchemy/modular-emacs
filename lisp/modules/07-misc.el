@@ -11,7 +11,7 @@
 
 ;; Reload File Function:
 
-(defun modular-emacs-reload-current-file ()
+(defun me-reload-current-file ()
   "Reload the file loaded in current buffer from the disk"
   (interactive)
   (cond (buffer-file-name (progn (find-alternate-file buffer-file-name)
@@ -33,10 +33,6 @@
 ;;Enable winner-mode
 
 (winner-mode t)
-
-;;Enable windmove
-
-(windmove-default-keybindings)
 
 ;; Highlight current line
 

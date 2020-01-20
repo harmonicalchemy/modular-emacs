@@ -5,19 +5,22 @@
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;; Create repositories cache for dired extras, if required:
+
 (when (not package-archive-contents)
   (package-refresh-contents))
 
 ;; Declare a list of required packages for extra dired features:
-(defvar modular-emacs--req-dired-packages
+
+(defvar me--req-dired-packages
   '(helm-core
     dired-launch
     dired-imenu))
 
 ;; Install required packages:
+
 (mapc (lambda (p)
         (package-install p))
-      modular-emacs--req-dired-packages)
+      me--req-dired-packages)
 
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -67,6 +70,7 @@
   (define-key dired-mode-map (kbd "h") #'dired-omit-mode))
 
 ;; Load dired-x mode hook (load dired-omit-mode, and a few more tweaks for every session.)
+
 (add-hook 'dired-mode-hook 'me-dired-mode-hook-tweaks)        
 
 ;; Dired Sort Directories First... This function works and does not break after
@@ -87,6 +91,7 @@
   (mydired-sort))
 
 ;; Auto load dired-jump and dired-jump-other-window:
+
 (autoload 'dired-jump "dired-x"
   "Jump to Dired buffer corresponding to current buffer." t)
 
