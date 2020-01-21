@@ -15,7 +15,6 @@
     ("C-c m" . org-md-export-to-markdown)
     ("C-c v" . vmd-mode)
     ("C-c r" . view-mode)
-    ("C-c b" . make-frame)
     ("C-c ," . other-frame)
     ("M-c" . toggle-letter-case)
     ("M-x" . helm-M-x)
@@ -34,16 +33,18 @@
 
 ;;;
 ;; Add new key(s) to xah fly command mode keys:
-
 (defun me-xfk-cmd-keys-add ()
-  "Modify keys for xah fly key command mode keys
-To be added to `xah-fly-command-mode-activate-hook'"
+  "Add or Modify xah fly keys - Command Mode Keys
+To be added to `xah-fly-command-mode-activate-hook'. Note, it appears
+you have to toggle from command mode to insert mode and back the first
+time you open Emacs.  For some reason this hook is not being called the
+very first time..."
   (interactive)
-  ;; I need a key to switch frames if they contain windows...
-  (define-key xah-fly-key-map (kbd "b") 'other-frame)
+  ;; I need easy keys to create and switch frames, (not just windows)
   ;; Add more key definitions here if needed.
-  ;; Options left:  ~, `, 1, 2, 0, |, _. -. and =
-  )
+  ;; Options not used by xfkeys:  ~  `  1  2  0  \  - and =
+  (define-key xah-fly-key-map (kbd "b") 'other-frame)
+  (define-key xah-fly-key-map (kbd "2") 'make-frame))
 
 (add-hook 'xah-fly-command-mode-activate-hook 'me-xfk-cmd-keys-add)
 
