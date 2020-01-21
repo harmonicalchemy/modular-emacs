@@ -33,6 +33,7 @@
 
 ;;;
 ;; Add new key(s) to xah fly command mode keys:
+
 (defun me-xfk-cmd-keys-add ()
   "Add or Modify xah fly keys - Command Mode Keys
 To be added to `xah-fly-command-mode-activate-hook'. Note, it appears
@@ -42,9 +43,11 @@ very first time..."
   (interactive)
   ;; I need easy keys to create and switch frames, (not just windows)
   ;; Add more key definitions here if needed.
-  ;; Options not used by xfkeys:  ~  `  1  2  0  \  - and =
+  ;; Options not used by xfkeys:  ~  `  1  2  0  \  -  =
   (define-key xah-fly-key-map (kbd "b") 'other-frame)
-  (define-key xah-fly-key-map (kbd "2") 'make-frame))
+  (define-key xah-fly-key-map (kbd "2") 'make-frame)
+  (define-key xah-fly-leader-key-map (kbd "2 ") 'delete-frame)
+  (define-key xah-fly-leader-key-map (kbd "6 ") 'toggle-letter-case))
 
 (add-hook 'xah-fly-command-mode-activate-hook 'me-xfk-cmd-keys-add)
 
