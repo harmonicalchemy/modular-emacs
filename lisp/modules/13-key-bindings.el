@@ -36,17 +36,24 @@
 
 (defun me-xfk-cmd-keys-add ()
   "Add or Modify xah fly keys - Command Mode Keys
-To be added to `xah-fly-command-mode-activate-hook'. Note, it appears
-you have to toggle from command mode to insert mode and back the first
-time you open Emacs.  For some reason this hook is not being called the
-very first time..."
+  To be added to `xah-fly-command-mode-activate-hook'. 
+  NOTE: It appears you have to toggle from command mode to insert mode 
+    and back at least one time after closing and reopening Emacs before
+    these custom keys take hold...  I need to troubleshoot this hook to
+    discover the cause.  For some reason this hook is not being called 
+    the very first time... Also, there seem to be some quirks with 
+    deleting frames, causing Emacs to loose focus requiring clicking 
+    mouse outside, and then back to window frame to get it back in focus."
   (interactive)
-  ;; I need easy keys to create and switch frames, (not just windows)
   ;; Add more key definitions here if needed.
   ;; Options not used by xfkeys:  ~  `  1  2  0  \  -  =
+  ;; I need easy keys to create and switch frames, (not just windows)
   (define-key xah-fly-key-map (kbd "b") 'other-frame)
+  ;; Added olivetti-mode key since I have a new custom other-frame key...
+  (define-key xah-fly-key-map (kbd "`") #'olivetti-mode)
   (define-key xah-fly-key-map (kbd "2") 'make-frame)
   (define-key xah-fly-leader-key-map (kbd "2 ") 'delete-frame)
+  ;; I need a handy toggle letter case due to caps-lock being reused...
   (define-key xah-fly-leader-key-map (kbd "6 ") 'toggle-letter-case))
 
 (add-hook 'xah-fly-command-mode-activate-hook 'me-xfk-cmd-keys-add)
