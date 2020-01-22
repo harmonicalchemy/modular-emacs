@@ -1,4 +1,4 @@
-;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; [modular-emacs]:~/.emacs.d/lisp/modules/dispatcher.el
 ;;
 ;; This module is an encapsulated `Modular Emacs` init file which is called
@@ -62,40 +62,49 @@
 ;;      symptom of Lisp being so flexible... "We wanna da flex in da right
 ;;      places!" (what she said as she turned on the workout exercise machine)
 ;;      Timing makes all the difference in the world! LOL
-;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+;;;
 ;; Load Harmonic Alchemy Modular Emacs - Main system.el configuration module:
 
 (load-file "~/.emacs.d/lisp/modules/00-system.el")
 
+;;;
 ;; Load (default) Super Emacs repositories configuration module:
 
 (load-file "~/.emacs.d/lisp/modules/01-repositories.el")
 
+;;;
 ;; Load Harmonic Alchemy Modular Emacs - Standard Packages module:
 
 (load-file "~/.emacs.d/lisp/modules/02-package-conf.el")
 
+;;;
 ;; Load Harmonic Alchemy Modular Emacs - Dired Extras module:
 
 (load-file "~/.emacs.d/lisp/modules/03-dired-pkg-conf.el")
 
+;;;
 ;; Load Harmonic Alchemy Modular Emacs - devOps module:
 
 (load-file "~/.emacs.d/lisp/modules/04-devOps-pkg-conf.el")
 
+;;;
 ;; Load Harmonic Alchemy Modular Emacs - pubOps module:
 
 (load-file "~/.emacs.d/lisp/modules/05-pubOps-pkg-conf.el")
 
+;;;
 ;; Load Harmonic Alchemy Modular Emacs - Interface module:
 
 (load-file "~/.emacs.d/lisp/modules/06-interface.el")
 
+;;;
 ;; Load Harmonic Alchemy Modular Emacs - Misc Configs module:
 
 (load-file "~/.emacs.d/lisp/modules/07-misc.el")
 
+;;;
 ;; Load Harmonic Alchemy Modular Emacs - Spelling module:
 
 (load-file "~/.emacs.d/lisp/modules/08-spelling.el")
@@ -122,28 +131,28 @@
 
 ;;;;
 ;;              *** Optional Feature ***
-;; Load Harmonic Alchemy Modular Emacs - Xah Emacs module:
+;; Load Harmonic Alchemy Modular Emacs - Xah Fly Keys module:
 
 ;(load-file "~/.emacs.d/lisp/modules/12-Xah-Fly-Keys.el")
 
+;;;
+;; Load Harmonic Alchemy Modular Emacs - Key Bindings module:
 
-;; Load Harmonic Alchemy Modular Emacs - Frame "cursor" Move module:
-;; (similar to windmove, & integrated with same key commands)
-;;
-;; NOTE - Module to be removed!
-;;
-;; I am going to remove this feature as it is no longer needed
-;; and it was causing problems with going into debug mode if
-;; the direction had no windoes or frames to move to!
-;(load-file "~/.emacs.d/lisp/modules/09-framemove.el")
-
+(load-file "~/.emacs.d/lisp/modules/13-key-bindings.el")
 
 ;;;;
-;; Optional/experimental - Load ME S/W Programmer's Key Bindings module:
+;;              *** Optional / Experimental Feature ***
+;; Load Modular Emacs S/W Programmer's Key Bindings module:
 
 ;(load-file "~/.emacs.d/lisp/modules/14-progLang-key-bindings.el")
 
-;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;;;
+;;              *** Optional / Experimental Feature ***
+;; Load Modular Emacs Accounting module:
+
+;(load-file "~/.emacs.d/lisp/modules/15-Accounting-pkg-conf.el")
+
+;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; END: [modular-emacs]:~/.emacs.d/lisp/modules/dispatcher.el
-;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
