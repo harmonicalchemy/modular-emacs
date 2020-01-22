@@ -40,10 +40,10 @@
 (add-to-list 'auto-mode-alist '("\\.journal\\'" . hledger-mode))
 
 ;;;
-;; Provide the path to you journal file.
-;; The default location is too opinionated.
+;; Kindly Provide the path to your local journal file...
+;; (a default location would be too opinionated %^)
 
-(setq hledger-jfile "~/Documents/000-Alisha/000-GIT/My-Docs/Alisha-Notes/000-Personal/HR-Finance-Legal/HLedger-Accounting/.hledger.journal")
+(setq hledger-jfile "~/path/to/your/HLedger-Accounting/.hledger.journal")
 
 ;;;;
 ;; Auto-completion for account names

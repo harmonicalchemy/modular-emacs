@@ -425,7 +425,7 @@ Modular Emacs comes with my slightly customized version of the **Blackboard colo
 
 > **Note:** This section needs an update... Many new features have been added.  Documentation for them is still an on-going process...  Please be patient... Or open an issue... Our conversation may end up being part of this doc. :octocat:
 
-**Default Emacs welcome screen replaced with simple greeting:** Prints current emacs configuration, and date... With a famous Mark Twain quote _(My Favorite author. This quote may change from time to time with new updates)_.  
+**Default Emacs welcome screen replaced with custom greeting:** Prints current emacs configuration, and date... With a famous Mark Twain quote _(My Favorite author. This quote may change from time to time with new updates)_.  
 
 Use Scratch buffer to evaluate snippets of `lisp` without having to remove the welcome text... _(which are lisp comments)_
 
@@ -433,51 +433,54 @@ Use Scratch buffer to evaluate snippets of `lisp` without having to remove the w
 
 #### Misc. Packages:
 
-- [sublimity](https://github.com/zk-phi/sublimity) Makes Buffers Scroll Smoothly.
-- [meta-presenter](https://github.com/myTerminal/meta-presenter) Present Slide Shows in Emacs.
-- [multiple-cursors](https://github.com/magnars/multiple-cursors.el) Edit text with nice cursors!
-- [powerline](https://github.com/milkypostman/powerline) Decorate `mode-line` & make it More Informative.
-- [buffer-move](http://www.emacswiki.org/emacs/buffer-move.el) Quickly Move Buffers Within Windows.
-- [auto-complete](https://github.com/auto-complete/auto-complete) Easy Text Editing with suggested word completion.
+- [powerline](https://github.com/milkypostman/powerline) Decorate `mode-line` & make it More Informative.  You can customize options and use themes etc...
+
+
+- [auto-complete](https://github.com/auto-complete/auto-complete) Easy Text Editing with suggested word completion.   
+**Update 2020:** I believe this may be a bit buggy at the moment... I have neglected it and some update or debugging may be needed... Currently when entering code if I enter a function name and completion pops up.. If I want to keep typing _(not accepting the default, or maybe what I want is different than what it thinks)_... It fights me...  I have to fool it by typing some junk and then pull off a text switch game.... LOL  I will fix this later...  If you hate it, you can comment it out in 02-package-conf.el I may end up doing that myself... `%^)`
 
 #### Core Emacs System Related Packages:
 
-- [exec-path-from-shell](https://github.com/purcell/exec-path-from-shell) Get environment variables such as $PATH from the shell.  btw, this can be a tricky thing to do in emacs!  I have struggled with this on Mac OS for a while!  You may find you have to start Emacs from the terminal to get all your environment vars into Emacs!  More about that later.. A continuing saga!
+- [exec-path-from-shell](https://github.com/purcell/exec-path-from-shell) Get environment variables such as $PATH from the shell.  btw, this can be a tricky thing to do in emacs!  I have struggled with this on Mac OS for a while!  You may find you have to start Emacs from the terminal to get all your environment vars into Emacs!  More about that later.. A continuing saga!   
+**Update 2020:** This has been working fine on my iMac since completely replacing Homebrew with MacPorts.  IMHO _(biased by a host of irritant issues using Homebrew over the years)_  MacPorts is a much better package manager all around...  But not the popular one...  Oh Well... %^) Also, since building my own Emacs from GNU source tree on my iMac, configured just how I like it, I have had no more nagging MacOS related issues... And I can have the latest Emacs the second it is released _(one build cycle away, or choose to go back to my archived app if they introduce some bug or someting)_! :octocat:
 
 #### Emacs Helm & Extras:
 
-- [helm](https://github.com/emacs-helm/helm) Helm is an Emacs incremental and narrowing framework that helps speed up operations on commands with structured command completions and more.  It is a programmable interface (API) as well. To see how HELM can speed things up try a prefix key like: `C-x` or `C-c` or `M-x` and just wait before typing any more keys... You will see all the possible key-combos currently associated with that prefix key pop up in the HELM mini-buffer!  Fantastic! No more guessing!
+- [helm](https://github.com/emacs-helm/helm) Helm is an Emacs incremental and narrowing framework that helps speed up operations on commands with structured command completions and more.  It is a programmable interface (API) as well. To see how HELM can speed things up try a prefix key like: `C-x` or `C-c` or `M-x` and just wait before typing any more keys... You will see all the possible key-combos currently associated with that prefix key pop up in the HELM mini-buffer!  Fantastic! No more guessing!   
 
-- [helm-core](https://emacs-helm.github.io/helm/) Development files for Helm (API)... Installed as dependency.
+
+- [helm-core](https://emacs-helm.github.io/helm/) Development files for Helm (API)... Installed as dependency.   
+
 
 - [popup](https://github.com/emacs-helm/helm) Popup is a dependency package for helm.
 
-- [which-key](https://github.com/justbur/emacs-which-key) Used with helm, pops up suggestions for what can follow after pressing `C-x` key... _(this is what I was talking about above in the intro paragraph)_
 
-#### Ace Jump Mode & Helpers:
-
-- [ace-jump-mode](https://github.com/winterTTr/ace-jump-mode) Makes it Easy to Jump Around Quickly.
-- [ace-window](https://github.com/abo-abo/ace-window) Switch Windows Visually.
-- [avy](https://github.com/abo-abo/avy) Jump to Arbitrary Positions in Visible Text & Select Text Quickly. Installed as dependency to: `ace-window`
-
+- [which-key](https://github.com/justbur/emacs-which-key) Used with helm, pops up suggestions for what can follow after pressing `C-x` key... _(this is what I was talking about above in the intro paragraph)_   
+**Note:** **_xah-fly-keys_** also uses helm to pop up leader key choices and extended menu...  Hit the `SPACEBAR` _(LEADER KEY)_ and wait a second for helm to pop up the list of options... _(with help feature and pagination! Vital for learning all those keys!)_
 #### Tree & Menu Related Packages:
 
-- [ztree](https://github.com/fourier/ztree) An efficient directory tree comparison utility.
-- [undo-tree](https://github.com/emacsmirror/undo-tree) Visualize your changes in a buffer.
-- [neotree](https://github.com/jaypei/emacs-neotree) Spawn a tree at any directory. You can toggle a `neotree` left side panel window within `dired-mode` with `C-,`
+- [ztree](https://github.com/fourier/ztree) An efficient directory tree comparison utility. Invaluable for visually oriented thinkers! Integrates directly with ediff files!
+
+
 - [imenu-list](https://github.com/bmag/imenu-list) Right panel Menu and Variable list.  You can toggle an imenu list right panel window (for example within an elisp, Python, etc. file) with: `C-'`
 
 #### Dired Related Packages:
 
-- [dired-launch](https://github.com/thomp/dired-launch) Open files directly within `dired` using default applications.
-- [dired-imenu](https://github.com/DamienCassou/dired-imenu) `imenu` binding for `dired-mode`. I am not sure the usefulness of this because I also use neotree which does a much better job...  It is in here just the same if you care to try it out...
+- [dired-launch](https://github.com/thomp/dired-launch) Open files directly within `dired` using default applications. Great for quick viewing PDF or Image files with your OS default viewer app!
+
+
+- [neotree](https://github.com/jaypei/emacs-neotree) Spawn a tree at any directory. You can toggle a `neotree` left side panel window within `dired-mode` from Xah Fly Keys Command mode by hitting **`'`**    
+**Note:** I have been using bookmarks pretty nicely for a while now and not using this neotree feature all that much... but it is a nice way to navigate from your current location when you are NOT within dired... Your mileage may vary...
 
 #### dev§Ops, sys§Admin, info✷Sec Related Packages:
 
 - [ssh-config-mode](https://github.com/jhgorrell/ssh-config-mode-el) A mode to edit SSH config files.
+
+
 - [smart-tabs-mode](https://www.emacswiki.org/emacs/SmartTabs) Intelligent tabs to end the f---ing tabs vs spaces war already OK? Read the docs :-)
+
+
 - [php-mode](https://github.com/emacs-php/php-mode) Major mode for editing PHP code.
-- [undo-tree]() Minor mode that treats undo history as a tree... Copy this text file: <http://www.dr-qubit.org/undo-tree/undo-tree.txt> and save it as: Emacs-undo-tree-cheatsheet.md (it's an MD file of course). It's very comprehensive!
 
 ##### More languages, devOps tools, etc. to add later:
 
@@ -485,28 +488,39 @@ Use Scratch buffer to evaluate snippets of `lisp` without having to remove the w
 
 #### Writer's \- Publishing Tools:
 
-- [markdown-mode](https://jblevins.org/projects/markdown-mode/) Markdown capability within emacs.
+- [markdown-mode](https://jblevins.org/projects/markdown-mode/) Markdown capability within emacs. You cannot live without this!!!
 
-- [markdown-mode+](https://github.com/milkypostman/markdown-mode-plus) Extras for Markdown mode.
 
-- [markdown-toc](https://github.com/ardumont/markdown-toc) Generate a TOC in a markdown file. This is a simple but powerful mode to create a TOC in a well-formed markdown file. In other words: The generated TOC will be well-formed if your markdown file is also well formed. ;-)
+- [markdown-mode+](https://github.com/milkypostman/markdown-mode-plus) Extras for Markdown mode. More markdown-mode magic!
 
-- [deft](https://jblevins.org/projects/deft/) Major mode for quickly browsing, filtering, and editing directories of plain text notes. Created by Jason Blevins _(the same statistics economics professor at Ohio State who also created Emacs Markdown Mode)_ This guy is wicked clever!  Looks like he has some nice algorithms for studying the cryptocurrency and smart contracts world as well!
 
-- [pandoc-mode](https://joostkremers.github.io/pandoc-mode/) `pandoc-mode` is an Emacs mode for interacting with Pandoc. Pandoc is a program _(plus libraries)_ created by John MacFarlane that can convert a text written in one markup language into another markup language. This is going to help me get off proprietary Scrivener on **Mac OS** and finally be able to use Emacs for all my **Pub§Ops**!
+- [markdown-toc](https://github.com/ardumont/markdown-toc) Generate a TOC in a markdown file. This is a simple but powerful mode to create a TOC in a well-formed markdown file. In other words: The generated TOC will be well-formed if your markdown file is also well formed. ;-)    
+**Note:** I like to place my toc at the bottom, and provide a simple link named: `table-of-contents` or `index` and put that link at the top, as well as strategic places down within the body of the markdown file... This README is structured in that style... It reminds me of the way we used to do a similar thing in HTML before fancy CSS menus started popping up...
+
+
+- [deft](https://jblevins.org/projects/deft/) Major mode for quickly browsing, filtering, and editing directories of plain text notes. Created by Jason Blevins _(the same statistics economics professor at Ohio State who also created Emacs Markdown Mode)_ This guy is wicked clever!  Looks like he has some nice algorithms for studying the cryptocurrency and smart contracts world as well!  Invoke Deft Mode with custom Xah Fly Keys Command Mode key: **`0`**
+
+
+- [pandoc-mode](https://joostkremers.github.io/pandoc-mode/) `pandoc-mode` is an Emacs mode for interacting with Pandoc. Pandoc is a program _(plus libraries)_ created by John MacFarlane that can convert a text written in one markup language into another markup language. This is one of the tools that will help me get off proprietary Scrivener on **Mac OS** and finally be able to use Emacs for all my **Pub§Ops**!
+
 
 - [fountain-mode](https://github.com/rnkn/fountain-mode) For **writers, screenwriters** A markdown mode for writing screenplays! Fantastic!!! Fountain together with pandoc, allows you to do many conversions for screenplays to industry formats like **Final Draft** etc. but the best part is the text highlighting and colors make it very easy to read/rehearse dialog and cues right from an Emacs buffer!  Writing scripts in this mode is as natural as typing `INT` _(your line instantly turns into a scene heading!)_ Try it! Just start typing your script and find out what happens!
 
-- [olivetti](https://github.com/rnkn/olivetti) Adjust margins with word wrap. _(great with fountain mode!)_ Perfect for distraction free writing! I also enable this within `rmoo` _(if you have the **games module** enabled)..._  you can adjust the margin width with: `C-[` and `C-[` 
 
-- [vmd-mode](https://github.com/blak3mill3r/vmd-mode) Fast Github-flavored Markdown previews synchronized with changes to an emacs buffer (no need to save).  Renders org files _(and normal markdown)_ in an external VMD App that automatically shows changes in real-time as you type! _(You need to install this external app separately, and make sure Emacs knows where to find it.  See: `exec-path-from-shell` below)_
+- [olivetti](https://github.com/rnkn/olivetti) Adjust margins with word wrap. _(great with fountain mode!)_ Perfect for distraction free writing! I also enable this within `rmoo` _(if you have the **games module** enabled)..._  Toggle it on and off within Xah Fly Keys Command Mode by hitting: **\`** key.  Adjust the margin width within Xah Fly Keys Command Mode by hitting: `SPACEBAR [` or: `SPACEBAR ]` to shrink or grow respectively.
+
+
+- [vmd-mode],(https://github.com/blak3mill3r/vmd-mode) Fast Github-flavored Markdown previews synchronized with changes to an emacs buffer (no need to save).  Renders org files _(and normal markdown)_ in an external VMD App that automatically shows changes in real-time as you type! _(You need to install this external app separately, and make sure Emacs knows where to find it.  See: `exec-path-from-shell` below)_  Toggle `vmd-mode` on and off within Xah Fly Keys Command Mode by hitting leader key sequence:  `SPACEBAR-v`
 
 
 #### Spelling:
 
 - [flyspell-correct](https://github.com/) This package provides functionality for correcting words via custom interfaces. There are several functions for this: `flyspell-correct-wrapper`, `flyspell-correct-at-point`, `flyspell-correct-previous` & `flyspell-correct-next`.
 
+
 - [helm-flyspell](https://github.com/pronobis/helm-flyspell) Helm extension for correcting words with flyspell.
+
+
 - [flyspell-correct-helm](https://github.com/d12frosted/flyspell-correct) Nice helm interface for flyspell.  Place your cursor after any misspelled word and type: `C-;` to see a list of suggestions...
 
 #### Project Management Tools:
@@ -516,13 +530,29 @@ Use Scratch buffer to evaluate snippets of `lisp` without having to remove the w
 #### Git \- `magit` & Related:
 
 - [magit](https://github.com/magit/magit) A `git` porcelain inside Emacs. _(the main package)_
+
+
 - [magit-popup](https://github.com/magit/magit-popup) Installed as dependency to `magit`
+
+
 - [git-commit](https://github.com/magit/git-modes) Installed as dependency to `magit`
+
+
 - [dash](https://github.com/magnars/dash.el) A modern list library for Emacs. Installed as dependency to `magit`
+
+
 - [async](https://github.com/jwiegley/emacs-async) Asynchronous processing in Emacs. Installed as dependency to `magit`, `helm`, & others...
+
+
 - [gitattributes-mode](https://github.com/magit/git-modes) Major mode for editing .gitattributes files.
+
+
 - [gitconfig-mode](https://github.com/magit/git-modes) Major mode for editing .gitconfig files.
+
+
 - [gitignore-mode](https://github.com/magit/git-modes) Major mode for editing .gitignore files.
+
+
 - [with-editor](https://github.com/magit/with-editor) Use the Emacs client as $EDITOR.
 
 ### Key-bindings:
@@ -531,30 +561,6 @@ Use Scratch buffer to evaluate snippets of `lisp` without having to remove the w
 
 **_[See: 10-key-bindings.el](.emacs.d/lisp/modules/10-key-bindings.el)_**
 
-**Function:**  | **Key:** 
-:-------- | --------: 
-Reload file in a buffer    | `<f5>`
-ace-jump-mode-pop-mark     | `C->`
-ace-window                 | `C-;`
-imenu-list-smart-toggle    | `C-'`
-undo-tree-visualize        | `M-/`
-neotree-toggle             | `C-,`
-buf-move-up                | `C-S-<up>`
-buf-move-down              | `C-S-<down>`
-buf-move-left              | `C-S-<left>`
-buf-move-right             | `C-S-<right>`
-helm-mini                  | `C-x b`
-helm-buffers-list          | `C-x C-b`
-helm-find-files            | `C-x C-f`
-helm-recentf               | `C-x C-r`
-helm-show-kill-ring        | `M-y`
-mc/mark-next-like-this     | `C-}`
-mc/mark-previous-like-this | `C-{`
-mc/mark-all-like-this      | `C-|`
-
-
-
-
 ## Optional Packages & Customization:
 
 Above I kept going on and on about setting up the Default version of Modular Emacs... Now it's time to forget boring defaults and really tune this baby up to be the best **DevOps** , **PubOPs** , **Lisp IDE** that it can be!  The following doc with guide you through that process:  **[Modular Emacs Customization](./Docs/ModE-Optional-Packages-y-Customization.md)**
@@ -562,9 +568,10 @@ Above I kept going on and on about setting up the Default version of Modular Ema
 # Table of Contents:
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-generate-toc again -->
+**Table of Contents**
 
-- [Introduction](#introduction)
-    - [Welcome to Harmonic Alchemy Modular Emacs - V3!](#welcome-to-harmonic-alchemy-modular-emacs---v3)
+- [Modular Emacs README](#modular-emacs-readme)
+    - [Introduction:](#introduction)
         - [History & Purpose:](#history--purpose)
     - [Try Harmonic Alchemy Modular Emacs:](#try-harmonic-alchemy-modular-emacs)
         - [Microsoft Windows Support](#microsoft-windows-support)
@@ -605,7 +612,6 @@ Above I kept going on and on about setting up the Default version of Modular Ema
             - [Misc. Packages:](#misc-packages)
             - [Core Emacs System Related Packages:](#core-emacs-system-related-packages)
             - [Emacs Helm & Extras:](#emacs-helm--extras)
-            - [Ace Jump Mode & Helpers:](#ace-jump-mode--helpers)
             - [Tree & Menu Related Packages:](#tree--menu-related-packages)
             - [Dired Related Packages:](#dired-related-packages)
             - [dev§Ops, sys§Admin, info✷Sec Related Packages:](#devops-sysadmin-info✷sec-related-packages)

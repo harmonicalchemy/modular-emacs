@@ -14,7 +14,6 @@
 
 (defvar me--req-devops-packages
   '(ztree
-    neotree
     smart-tabs-mode
     ssh-config-mode
     gitconfig-mode

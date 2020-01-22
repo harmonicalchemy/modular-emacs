@@ -13,8 +13,8 @@
 
 (defvar me--req-dired-packages
   '(helm-core
-    dired-launch
-    dired-imenu))
+    neotree
+    dired-launch))
 
 ;; Install required packages:
 

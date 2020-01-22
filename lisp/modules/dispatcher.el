@@ -100,11 +100,6 @@
 
 (load-file "~/.emacs.d/lisp/modules/08-spelling.el")
 
-;; Load Harmonic Alchemy Modular Emacs - Frame "cursor" Move module:
-;; (similar to windmove, & integrated with same key commands)
-
-(load-file "~/.emacs.d/lisp/modules/09-framemove.el")
-
 ;;;;
 ;;              *** Optional Feature ***
 ;; Load Harmonic Alchemy Modular Emacs - Programming Languages module:

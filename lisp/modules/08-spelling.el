@@ -124,7 +124,7 @@ Please note RUN-TOGETHER will make aspell less capable. So it should only be use
 ;; http://ergoemacs.org/emacs/modernization_upcase-word.html
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-(defun toggle-letter-case ()
+(defun me_toggle-letter-case ()
   "Toggle the letter case of current word or text selection.
 Toggles between: “all lower”, “Init Caps”, “ALL CAPS”."
   (interactive)

@@ -7,14 +7,12 @@
 
 (defvar me--my-keyboard-bindings
   '(("C-'" . imenu-list-smart-toggle)
-    ("C-\," . neotree-toggle)
-    ("C-c d" . deft)
     ("C-x C-g" . deft-find-file)
     ("C-c m" . org-md-export-to-markdown)
     ("C-c v" . vmd-mode)
     ("C-c r" . view-mode)
     ("C-c ," . other-frame)
-    ("M-c" . toggle-letter-case)
+    ("M-c" . me_toggle-letter-case)
     ("M-x" . helm-M-x)
     ("C-x b" . helm-mini)
     ("C-x C-f" . helm-find-files)
@@ -47,12 +45,23 @@
   ;; Options not used by xfkeys:  ~  `  1  2  0  \  -  =
   ;; I need easy keys to create and switch frames, (not just windows)
   (define-key xah-fly-key-map (kbd "b") 'other-frame)
-  ;; Added olivetti-mode key since I have a new custom other-frame key...
-  (define-key xah-fly-key-map (kbd "`") #'olivetti-mode)
   (define-key xah-fly-key-map (kbd "2") 'make-frame)
-  (define-key xah-fly-leader-key-map (kbd "2 ") 'delete-frame)
+  ;; Added olivetti-mode key since I have a new custom other-frame key...
+  (define-key xah-fly-key-map (kbd "`") 'olivetti-mode)
+  ;; Added neotree key to primary KFKeys Command Mode Map...
+  (define-key xah-fly-key-map (kbd "'") 'neotree-toggle)
+  ;; Added key to primary KFKeys Command Mode Map to invoke deft-mode...
+  (define-key xah-fly-key-map (kbd "0") 'deft)
+  ;; Added KFKeys Leader Sequence to expand and shrink olivetti...
+  (define-key xah-fly-leader-key-map (kbd "]") 'olivetti-expand)
+  (define-key xah-fly-leader-key-map (kbd "[") 'olivetti-shrink)
+  ;; leader-key delete-frame key mirrors direct make-frame key...
+  (define-key xah-fly-leader-key-map (kbd "2") 'delete-frame)
+  ;; Added VMD mode leader key sequence: SPC "v" ("k" Dvorak)
+  ;; since I already have that paste key in normal Command mode...
+  (define-key xah-fly-leader-key-map (kbd "v") 'vmd-mode)
   ;; I need a handy toggle letter case due to caps-lock being reused...
-  (define-key xah-fly-leader-key-map (kbd "6 ") 'toggle-letter-case))
+  (define-key xah-fly-leader-key-map (kbd "6") 'me_toggle-letter-case))
 
 (add-hook 'xah-fly-command-mode-activate-hook 'me-xfk-cmd-keys-add)
 
@@ -142,6 +151,6 @@
 
 ;(add-hook 'xah-fly-insert-mode-activate-hook 'restore-slime-space-key-binding)
 
-;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; END: [modular-emacs]:~/.emacs.d/lisp/modules/13-key-bindings.el
-;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
