@@ -1,8 +1,6 @@
-;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;;; [modular-emacs]:~/.emacs.d/lisp/modules/13-key-bindings.el
-;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-;(defun me-insert-backtick-quote () (interactive) (xah-insert-bracket-pair "`" "`"))
+;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;;;
 ;; Map Modular Emacs General Keys:
@@ -136,7 +134,8 @@
 
 ;(add-hook 'xah-fly-command-mode-activate-hook 'override-slime-space-key-binding)
 
-; Set Slime SPC key back to slime-space() when activating xah fly insert mode:
+;;;
+;; Set Slime SPC key back to slime-space() when activating xah fly insert mode:
 
 ;(defun restore-slime-space-key-binding ()
 ;  (define-key slime-mode-indirect-map (kbd "SPC") 'slime-space))

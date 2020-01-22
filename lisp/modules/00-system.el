@@ -1,4 +1,4 @@
-;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; [modular-emacs]:~/.emacs.d/lisp/modules/00-system.el
 ;;
 ;; Note:  I changed everything in this file because it was causing issues with
@@ -6,13 +6,15 @@
 ;;        on Emacs Manual: 49.1.4 Saving Customizations...
 ;;        Also, all my work environments now have the latest GnuPG installed.
 ;;        When GPG is invoked, it will (and should) be at least V2.2 or higher...
-;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+;;;
 ;; Set custom-file so that Emacs does not use init.el
 
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
 
+;;;
 ;; Use GPG Version 2 (gpg2) instead of gpg.
 ;; Note: If you are using GnuPG later than V2.2 you may have to change
 ;; below from "gpg2" back to "gpg". (After version 2.2, the default GnuPG
@@ -23,12 +25,20 @@
 
 (setq epg-gpg-program "gpg")
 
+;;;
 ;; System Constants:
+;;   They are like the dead,
+;;   Fixed in place, indellable,
+;;   The living move on in flux,
+;;   New memories emerge,
+;;   Old memories lost, changed...
+;;                  - Alisha Awen
 
 (defconst *is-darwin* (eq system-type 'darwin))
 (defconst *is-linux* (eq system-type 'gnu/linux))
 (defconst *is-posix* (memq window-system `(ns x)))
 
+;;;
 ;; Configure custom elisp library load path.
 
 (add-to-list 'load-path "~/.emacs.d/lisp/")
@@ -37,10 +47,11 @@
   (normal-top-level-add-to-load-path '("."))
   (normal-top-level-add-subdirs-to-load-path))
 
+;;;
 ;; Load path for your custom Emacs themes:
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/lisp/themes/")
 
-;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; END: [modular-emacs]:~/.emacs.d/lisp/modules/00-system.el
-;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
