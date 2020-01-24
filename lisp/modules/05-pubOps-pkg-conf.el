@@ -243,16 +243,6 @@
 (require 'org-bullets)
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
-;;;
-;; Make windmove work in org-mode: 
-;; The point must not be on an outline heading for this to work...
-;; (move your point to a blank space or normal text first)
-
-(add-hook 'org-shiftup-final-hook 'windmove-up)
-(add-hook 'org-shiftleft-final-hook 'windmove-left)
-(add-hook 'org-shiftdown-final-hook 'windmove-down)
-(add-hook 'org-shiftright-final-hook 'windmove-right)
-
 ;;;; ~~~~~~~~~
 ;;   VMD Mode:
 ;;;; ~~~~~~~~~
