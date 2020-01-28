@@ -1,18 +1,21 @@
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;;; [modular-emacs]:~/.emacs.d/lisp/modules/13-key-bindings.el
+;;;; [Modular-Emacs]:~/.emacs.d/lisp/modules/13-key-bindings.el
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;;;
 ;; Map Modular Emacs General Keys:
 
 (defvar me--my-keyboard-bindings
-  '(("C-'" . imenu-list-smart-toggle)
+  '(("C-c l" . org-store-link)
+    ("C-c a" . org-agenda)
+    ("C-c c" . org-capture)
     ("C-x C-g" . deft-find-file)
     ("C-c m" . org-md-export-to-markdown)
+    ("C-c s" . flyspell-auto-correct-word) 
     ("C-c v" . vmd-mode)
     ("C-c r" . view-mode)
     ("C-c ," . other-frame)
-    ("M-c" . me_toggle-letter-case)
+    ("C-c u" . me_toggle-letter-case)
     ("M-x" . helm-M-x)
     ("C-x b" . helm-mini)
     ("C-x C-f" . helm-find-files)
@@ -21,14 +24,21 @@
 
 (defun me-apply-keyboard-bindings (pair)
   "Apply keyboard-bindings for supplied list of key-pair values"
+  (interactive)
   (global-set-key (kbd (car pair))
                   (cdr pair)))
- 
+
 (mapc 'me-apply-keyboard-bindings
       me--my-keyboard-bindings)
 
 ;;;
-;; Add new key(s) to xah fly command mode keys:
+;; Flyspell Correct Previous - Helm key binding:
+
+(require 'flyspell-correct-helm)
+(define-key flyspell-mode-map (kbd "C-;") 'flyspell-correct-previous)
+
+;;;
+;; Add New key(s) to xah fly command mode keys:
 
 (defun me-xfk-cmd-keys-add ()
   "Add or Modify xah fly keys - Command Mode Keys
@@ -55,13 +65,13 @@
   ;; Added KFKeys Leader Sequence to expand and shrink olivetti...
   (define-key xah-fly-leader-key-map (kbd "]") 'olivetti-expand)
   (define-key xah-fly-leader-key-map (kbd "[") 'olivetti-shrink)
+  ;; Added KFKeys Leader Sequence to toggle case (three choices)...
+  (define-key xah-fly-leader-key-map (kbd "u") 'me_toggle-letter-case)
   ;; leader-key delete-frame key mirrors direct make-frame key...
   (define-key xah-fly-leader-key-map (kbd "2") 'delete-frame)
   ;; Added VMD mode leader key sequence: SPC "v" ("k" Dvorak)
   ;; since I already have that paste key in normal Command mode...
-  (define-key xah-fly-leader-key-map (kbd "v") 'vmd-mode)
-  ;; I need a handy toggle letter case due to caps-lock being reused...
-  (define-key xah-fly-leader-key-map (kbd "6") 'me_toggle-letter-case))
+  (define-key xah-fly-leader-key-map (kbd "v") 'vmd-mode))
 
 (add-hook 'xah-fly-command-mode-activate-hook 'me-xfk-cmd-keys-add)
 

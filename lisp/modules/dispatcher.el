@@ -111,6 +111,12 @@
 
 ;;;;
 ;;              *** Optional Feature ***
+;; Load Harmonic Alchemy Modular Emacs - Org Mode module:
+
+;(load-file "~/.emacs.d/lisp/modules/09-org-mode-pkg-conf.el")
+
+;;;;
+;;              *** Optional Feature ***
 ;; Load Harmonic Alchemy Modular Emacs - Programming Languages module:
 ;; This is for using Emacs as a full fledged Common Lisp IDE!
 ;; This module is enabled by default on the ME lisp-ide branch.  Pull that

@@ -1,4 +1,4 @@
-;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; [modular-emacs]:~/.emacs.d/lisp/modules/08-spelling.el
 ;;
 ;; This module encapsulates spelling features making it easier to turn
@@ -13,9 +13,9 @@
 ;; Aspell conditions only...
 ;;
 ;; Ref: http://blog.binchen.org/posts/what-s-the-best-spell-check-set-up-in-emacs.html
-;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-;;;;
+;;;
 ;; Function: flyspell-detect-ispell-args (&optional run-together)
 ;;
 ;; Pseudo Code Synopsis:
@@ -30,7 +30,8 @@
 
 (defun flyspell-detect-ispell-args (&optional run-together)
   "If RUN-TOGETHER is true, spell check the CamelCase words.
-Please note RUN-TOGETHER will make aspell less capable. So it should only be used in prog-mode-hook."
+  Please note RUN-TOGETHER will make aspell less capable. 
+  So it should only be used in prog-mode-hook."
   (let* (args)
     (when ispell-program-name
       (cond
@@ -49,19 +50,24 @@ Please note RUN-TOGETHER will make aspell less capable. So it should only be use
         (setq args nil))))
     args))
 
-;; Don't bother testing for aspel or Hunspell, Just set the variable... Just make sure
-;; to install aspell globally on the OS!
-;; Important Note!: Realize this breaks if you don't have aspell installed in the environment!
-;; Note to self: Add warning in the README.md file!  Don't forget. ;-)
+;;;
+;; Don't bother testing for aspel or Hunspell, Just set the variable...
+;; Just make sure to install aspell globally on the OS!
+;; Important Note!: Realize this breaks if you don't have at least aspell
+;; installed in your local environmen;!
+;;
+;; Note to self: Add above warning in the README.md file!  Don't forget. ;-)
 
 (setq ispell-program-name "aspell")
 
+;;;
 ;; Set dictionarys...
 
 (setq ispell-local-dictionary "en_CA")
 (setq ispell-local-dictionary-alist
       '(("en_CA" "[[:alpha:]]" "[^[:alpha:]]" "[']" nil ("-d" "en_CA") nil utf-8)))
 
+;;;
 ;; According to the above linked article: ispell-cmd-args are useless...
 ;; it's the list of *extra* arguments we will append to the ispell
 ;; process when "ispell-word" is called.
@@ -75,6 +81,7 @@ Please note RUN-TOGETHER will make aspell less capable. So it should only be use
 
 (setq-default ispell-extra-args (flyspell-detect-ispell-args t))
 
+;;;
 ;; (setq ispell-cmd-args (flyspell-detect-ispell-args))
 
 (defadvice ispell-word (around my-ispell-word activate)
@@ -101,28 +108,19 @@ Please note RUN-TOGETHER will make aspell less capable. So it should only be use
 
 (add-hook 'text-mode-hook 'text-mode-hook-setup)
 
+;;;
 ;; turn on flyspell in desired modes
 
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
 
-;; Set Keybindings:
-;; You can also use "M-x ispell-word" or hotkey "M-$".
-;; It will pop up a multiple choice box.
-;; @see http://frequal.com/Perspectives/EmacsTip03-FlyspellAutoCorrectWord.html
-
-(global-set-key (kbd "C-c s") 'flyspell-auto-correct-word)
-
-;; Flyspell Correct Helm key binding:
-
-(require 'flyspell-correct-helm)
-(define-key flyspell-mode-map (kbd "C-;") 'flyspell-correct-previous-word-generic)
-
-
-;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; change case of letters:
+;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; Function:  me_toggle-letter-case ()
+;;   Change case of letters, toggleing through
+;;   three different options:
+;;     (First Letter Only - all lower - ALL CAPS)
 ;; http://ergoemacs.org/emacs/modernization_upcase-word.html
-;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 (defun me_toggle-letter-case ()
   "Toggle the letter case of current word or text selection.
@@ -153,6 +151,6 @@ Toggles between: “all lower”, “Init Caps”, “ALL CAPS”."
      ((string= "all caps" (get this-command 'state))
       (downcase-region p1 p2) (put this-command 'state "all lower")))))
 
-;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; END: [modular-emacs]:~/.emacs.d/lisp/modules/08-spelling.el
-;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

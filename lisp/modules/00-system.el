@@ -26,12 +26,22 @@
 (setq epg-gpg-program "gpg")
 
 ;;;
-;; System Constants:
+;; System Constants: (Sonnet XVIII rebuttal - no rhyming yet. maybe later)
+;;
+;;   There are no constants in life,
+;;   Nothing to compare,
 ;;   They are like the dead,
-;;   Fixed in place, indellable,
-;;   The living move on in flux,
+;;   Frozen in place,
+;;   Indellable stasis,
+;;   Even our dead contain life not ours,
+;;   Only timeless skeletons remain,
+;;   Fading and soon forgotten,
+;;   But the living, they move on,
+;;   Engaged in the flux,
+;;   Intoxicated from fair to fair,
 ;;   New memories emerge,
-;;   Old memories lost, changed...
+;;   Old memories lost,
+;;   forever now new...
 ;;                  - Alisha Awen
 
 (defconst *is-darwin* (eq system-type 'darwin))
@@ -52,6 +62,5 @@
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/lisp/themes/")
 
-;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; END: [modular-emacs]:~/.emacs.d/lisp/modules/00-system.el
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
