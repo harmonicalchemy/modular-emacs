@@ -62,6 +62,9 @@
   (define-key xah-fly-key-map (kbd "'") 'neotree-toggle)
   ;; Added key to primary KFKeys Command Mode Map to invoke deft-mode...
   (define-key xah-fly-key-map (kbd "0") 'deft)
+  ;; I need easy keys for HLedger Mode:
+  (define-key xah-fly-key-map (kbd "s") 'hledger-jentry)
+  (define-key xah-fly-key-map (kbd "=") 'hledger-run-command)
   ;; Added KFKeys Leader Sequence to expand and shrink olivetti...
   (define-key xah-fly-leader-key-map (kbd "]") 'olivetti-expand)
   (define-key xah-fly-leader-key-map (kbd "[") 'olivetti-shrink)
