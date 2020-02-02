@@ -415,6 +415,7 @@
  '((R . t)
    (ditaa . t)
    (dot . t)
+   (shell . t)
    (emacs-lisp . t)
 ;   (lisp . t)
    (lilypond . t)
