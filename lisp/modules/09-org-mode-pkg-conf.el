@@ -46,9 +46,21 @@
 ;; org-notes directory on your file system yet, create that directory now and
 ;; change this next form below to reflect your new directory's path)
 
+;;;
+;; Path to My ORG Docs on Mac OS:
+
+(when *is-darwin*
 (defconst my-org-dir
   (file-name-as-directory
-   (expand-file-name "~/Path/To/Your/Private/Org-Docs")))
+   (expand-file-name "~/Documents/000-Alisha/000-GIT/My-Docs/Org-Docs"))))
+
+;;;
+;; Path to My ORG Docs on Linux:
+
+(when *is-linux*
+(defconst my-org-dir
+  (file-name-as-directory
+   (expand-file-name "~/000-GIT/My-Docs/Org-Docs"))))
 
 ;;;
 ;; The rest of the definitions below depend on above "my-org-dir" being set
@@ -94,7 +106,7 @@
 
 (defconst my-org-agenda-files
   (file-name-as-directory
-   (expand-file-name "03-Private" my-org-dir)))
+   (expand-file-name "00-Agenda-files" my-org-dir)))
 
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;   Advanced Org-Mode Configurations: (currently under development)
