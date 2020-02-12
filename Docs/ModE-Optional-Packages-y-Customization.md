@@ -13,6 +13,25 @@ tags: Emacs, Xah-Fly-Keys, apps-tools, SysAdmin, HA-ModEmacs, how-to, README
 
 **[\[Back To Top README\]](../README.md)**
 
+## New _(changed/replaced)_ Tools for Writers:
+
+**_Update 2020:_** It looks like **`fountain-mode`** is ditching its built in export features... _(and I don't blame them after digging deep into all that TeX LaTeX stuff `%^)`_.  They say there are plenty of conversion tools out there already... **_Wat? Where?_** I don't see a sea of fountain to PDF utilities out there for Emacs!  
+
+OK, Well I just found:
+
+**_[Github:ifrost/afterwriting-labs/CLI Tool](https://github.com/ifrost/afterwriting-labs/blob/master/docs/clients.md)_**
+
+That looks like a good place to start... I can interface Emacs with his Node.js tool: **`afterwriting`**
+
+Install it globally on your machine _([assuming you already have `Node.js npm` installed](./ModE-Install-NODE.md))_:
+
+```yaml
+   npm install afterwriting -g
+   afterwriting --help
+```
+
+More instructions on how to use it to export your screenplays to PDF files will be fourthcoming...  Now I am adjusting my radio theater project templates to use Afterwriting now instead of _"wandering through twisty little LaTeX passages all alike"_... :octocat:
+
 ## Steel Bank Common Lisp:
 
 Moved to it's own file... Finish introducing here...
