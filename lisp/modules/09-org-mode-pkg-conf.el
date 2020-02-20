@@ -26,7 +26,8 @@
 (defvar me--req-org-packages
   '(gnuplot-mode
     sass-mode
-    abc-mode))
+    abc-mode
+    org-mind-map))
 
 ;;;
 ;; Install required packages:
@@ -40,27 +41,27 @@
 ;; sub-directories... You may already have a special directory for your
 ;; org files.  In that case be sure to read all the notes below!
 ;;
-;; IMPORTANT NOTE: Change the path in this first form below to match your
+;; IMPORTANT NOTE: Change the path in the first two forms below to match your
 ;; Org-Files Home Directory. All path definitions below this form will be
 ;; relative to this defined MY-ORG-DIR... (if you don't have a special
 ;; org-notes directory on your file system yet, create that directory now and
 ;; change this next form below to reflect your new directory's path)
 
 ;;;
-;; Path to My ORG Docs on Mac OS:
+;; Path to Your ORG Docs on Mac OS:
 
 (when *is-darwin*
-(defconst my-org-dir
-  (file-name-as-directory
-   (expand-file-name "~/Documents/000-Alisha/000-GIT/My-Docs/Org-Docs"))))
+  (defconst my-org-dir
+    (file-name-as-directory
+     (expand-file-name "~/Path/To/Your-MacOS-Org-Docs"))))
 
 ;;;
-;; Path to My ORG Docs on Linux:
+;; Path to Your ORG Docs on Linux:
 
 (when *is-linux*
-(defconst my-org-dir
-  (file-name-as-directory
-   (expand-file-name "~/000-GIT/My-Docs/Org-Docs"))))
+  (defconst my-org-dir
+    (file-name-as-directory
+     (expand-file-name "~/Path/To/Your-Linux-Org-Docs"))))
 
 ;;;
 ;; The rest of the definitions below depend on above "my-org-dir" being set
@@ -114,6 +115,27 @@
 
 (require 'org)
 (require 'org-faces)
+
+;;;
+;; Enable extra org-babel language-specific packages:
+
+(require 'ob-lisp)
+
+;;;;
+;; Org Mind Map Configuration:
+;; Note:  Graphviz must be installed on your system before enabling these next
+;;        Forms!!!
+
+(require 'ox-org)
+
+(setq org-mind-map-engine "dot")      ; Default. Directed Graph
+(setq org-mind-map-engine "neato")    ; Undirected Spring Graph
+(setq org-mind-map-engine "twopi")    ; Radial Layout
+(setq org-mind-map-engine "fdp")      ; Undirected Spring Force-Directed
+(setq org-mind-map-engine "sfdp")     ; Multiscale version of fdp for the 
+                                      ; layout of large graphs
+(setq org-mind-map-engine "twopi")    ; Radial layouts
+(setq org-mind-map-engine "circo")    ; Circular Layout
 
 ;;;
 ;; Make sure TEXINPUTS is set to: elpa/auctex-nn.nn.n/latex
@@ -425,26 +447,32 @@
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((R . t)
-   (ditaa . t)
-   (dot . t)
-   (shell . t)
-   (emacs-lisp . t)
-;   (lisp . t)
-   (lilypond . t)
    (abc . t)
    (asymptote . t)
-   (org . t)
+   (awk . t)
+   (calc . t)
+   (css . t)
+   (ditaa . t)
+   (dot . t)
+   (emacs-lisp . t)
    (gnuplot . t)
    (haskell . nil)
+   (java . t)
+   (js . t)
    (latex . t)
    (ledger . t) ;This adds support for hledger hopefully...
+   (lilypond . t)
+   (lua . nil)
    (ocaml . nil)
    (octave . t)
-   (sass . t)
+   (org . t)
+   (perl . t)
    (python . t)
-   (js . t)
    (ruby . t)
+   (sass . t)
+   (sed . t)
    (screen . nil)
+   (shell . t)
    (sql . nil)
    (sqlite . t)))
 

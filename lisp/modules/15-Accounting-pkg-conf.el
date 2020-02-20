@@ -69,7 +69,6 @@
 (global-set-key (kbd "C-c j") 'hledger-run-command)
 
 
-
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  *** Custom Functions for Timesheet.el ***
 ;;  These are for setting up templates within my
@@ -78,6 +77,10 @@
 ;;  I am making a single GP test case first...
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+;; ensure TEXINPUTs is set
+(require 'preview)
+
+;; Require Timesheet bindings
 (require 'timesheet)
 
 ;;;
