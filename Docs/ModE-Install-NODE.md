@@ -40,3 +40,62 @@ $> `nvm install 10.15.3`
 
 OK... Now you have the latest LTS version of **Node.js** installed. **Yay!**.  You also have a nifty new package manager called **NPM** that comes with Node.js...  You will be using **NPM** to install useful utilities like **Visual Markdown (VMD)**.
 
+## Managing Updates:
+
+Updating **NODE**, **NVM**, and **NPM** can be quite confusing to new users... This is because you are dealing with more than one package manager, and also one or more versions both installed globally, as well as in local isolated projects.  This is great for JS developers, but not so great for new users just wanting to take advantage of some nice JS tools to use for other things...
+
+We can deal with that and we can also be ready to start our own JS project at some point as well if we feel like doing that...
+
+Here are a few commands that will be helpful:
+
+### Upgrade to Latest NVM _(LTS)_ & reinstall/upgrade all previous packages:
+
+> **Note:** The following instructions also remove previous versions... _(don't do that if you need them.  You may if you have previous modules installed that are pinned to that version!)_
+
+In the example below `$prev_ver` = any previous versions you had installed before update:
+
+```bash
+    $_ nvm install --lts
+    $_ nvm use --lts
+    $_ nvm ls     # List versions you now have 
+                  # installed for next commands
+    $_ nvm alias default <lts version number you just installed>
+    $_ nvm reinstall-packages $prev_ver
+    $_ nvm uninstall $prev_ver
+    $_ nvm cache clear
+```
+
+### Upgrade NPM itself to latest version:
+
+```bash
+    $_ npm install -g npm@latest        # Install Latest NPM version
+    $_ npm list --global --depth=0      # Shows tree of currently 
+                                        # installed package names
+                                        # only without dependencies.
+```
+
+### Update NPM Packages:
+
+#### Locally installed Packages:
+
+Navigate to any directory containing a package.json file _(the presence of which means it was installed by npm)_.  Then run the update command...
+
+```bash
+    $_ cd /path/to/project      # Must contain a package.json file...
+    $_ npm update               # Update the package...
+    $_ npm outdated             # No output means all packages in
+                                # this project directory have been 
+                                # updated...
+```
+
+#### Globally installed Packages:
+
+```bash
+    $_ npm outdated -g --depth=0  # No output means all globally 
+                                  # installed packages been updated.
+                                  # Otherwise, jot down the names of 
+                                  # packages listed and update them.
+    $_ npm update -g <package>    # Update a package 
+                                  # (Do this command on each package 
+                                  # listed from output of above)...
+```
