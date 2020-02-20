@@ -97,6 +97,10 @@
 ;; Note: These constants are also used by 15-Accounting-pkg-conf.el
 ;;       which gets loaded later in the module chain...
 
+(defconst my-org-agenda-files
+  (file-name-as-directory
+   (expand-file-name "00-Agenda-files" my-org-dir)))
+
 (defconst my-org-templates
   (file-name-as-directory
    (expand-file-name "02-Templates" my-org-dir)))
@@ -104,10 +108,6 @@
 (defconst my-org-files
   (file-name-as-directory
    (expand-file-name "03-Private" my-org-dir)))
-
-(defconst my-org-agenda-files
-  (file-name-as-directory
-   (expand-file-name "00-Agenda-files" my-org-dir)))
 
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;   Advanced Org-Mode Configurations: (currently under development)
@@ -419,7 +419,6 @@
 ;;   Alisha's Advanced Org-Mode Configurations:
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Org Babel Active Language Configurations:
 ;;      t = enable     nil = disable
@@ -475,7 +474,6 @@
    (shell . t)
    (sql . nil)
    (sqlite . t)))
-
 
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;   END: [modular-emacs]:~/.emacs.d/lisp/modules/09-org-mode-pkg-conf.el
