@@ -8,15 +8,19 @@
 ## repository...
 ## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-# exclude init.el (your custom copy of: me.init.el will not be tracked)
+# Exclude init.el (your custom copy of: me.init.el will not be tracked)
 init.el
 
-# exclude custom.el (Emacs Customize features are ignored)
+# Exclude custom.el (Emacs Customize features are ignored)
 custom.el
 
-# exclude entire elpa directory and it's contents.
+# Exclude entire elpa directory and it's contents.
 # Emacs Packages contain git repositories!
 elpa/*
+
+# Exclude EMMS directory and it's contents
+# (keep local media manangement out of git revision).
+emms/*
 
 # exclude other auto emacs files:
 bookmarks
