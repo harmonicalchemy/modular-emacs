@@ -315,7 +315,7 @@ Just as on **MacOS**, on **Fedora**, **Python** and **PIP** are both installed a
 
 #### PIP Management:
 
-Done within your local user's `$HOME` environment.  _(e.g., Not within Qubes Template VMs or with `sudo`, etc.)_
+Done within your normal user's `$HOME/.local` environment.  _(e.g., Not within Qubes Template VMs or with `sudo`, etc.)_
 
 > **Note:** The commands below also work as: `pip2 <command>` etc.    
 _(for managing Python 2 packages)_...
@@ -323,25 +323,28 @@ _(for managing Python 2 packages)_...
 - **Search for Package:**
 
 ```bash
-  $_  pip3 search <PACKAGE_NAME>
+ $_ pip3 search <PACKAGE_NAME>
 ```
 
 - **Install Package:**
 
 ```bash
-  $_  pip3 install <PACKAGE_NAME>
+ $_ pip3 install --user <PACKAGE_NAME>   # Installs package 
+                                         # in: ~/.local/bin
 ```
 
 - **Upgrade Package:**
 
 ```bash
-  $_  pip3 install --upgrade <PACKAGE_NAME>
+ $_ pip3 install --upgrade <PACKAGE_NAME>  # --user option would
+                                           # be redundant here...
 ```
 
 - **Uninstall Package:**
 
 ```bash
-  $_  pip3 uninstall <PACKAGE_NAME>
+ $_ pip3 uninstall <PACKAGE_NAME>     # --user option would
+                                      # be redundant here...
 ```
 
 ### Extra for Experts - LaTeX
