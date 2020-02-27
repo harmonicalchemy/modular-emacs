@@ -79,7 +79,9 @@ Therefore: **Here is Modular Emacs!** I hope my long years of **devOps** experie
 
 **[\[Table of Contents\]](#table-of-contents)**
 
-# Start Here: _(Modular Emacs Default Installation)_
+# Start Here: 
+
+**_(Modular Emacs Default Installation)_**
 
 ## Requirements:  
 
@@ -100,7 +102,7 @@ _(Choose your Flavor)_
 ##### Fedora 27-29:  
 
 ```bash
-    sudo dnf install emacs
+   $_  sudo dnf install emacs
 ```
 
 That's it! Red Hat takes care of you lucky Fedora users...  
@@ -132,7 +134,7 @@ You will be surprised at your devOps abilities after a long rest! Your psycholog
 If you have MacPorts installed simply use this command and you will be all set:
 
 ```bash
-    sudo port install emacs
+    $_ sudo port install emacs
 ```
 
 If you don't have Homebrew or MacPorts installed, Don't even think about HomeBrew!  Instead, Install MacPorts: **[Follow instructions on the MacPorts website](https://guide.macports.org/#installing)**...  Then use the above command to install Emacs...  Then you will be all set...
@@ -161,7 +163,9 @@ Alternately, if you are willing to go through the pain of completely un-installi
 
 I have not tried this yet with a Qubes configured BSD VM... Hopefully the FreeBSD world knows how to do Emacs correctly... Install the most recent pre-built binary package of Emacs: _(must be up to v26.1 by now - 2019-May)_
 
-    pkg_add -r emacs
+```bash
+    $_ pkg_add -r emacs
+```
 
 ### `NODE.js` with `NVM` & `NPM`:
 
@@ -185,8 +189,10 @@ Not only is it always **WYSIWYG** _(on the side)_, Your rendered markdown will a
 
 With Node.js, NVM, and NPM already installed _(from above)_ you can easily install VMD with the following command: _(from your home directory):_
 
-    cd ~
-    npm install -g vmd
+```bash
+    $_  cd ~
+    $_  npm install -g vmd
+```
 
 That's it... What??? Were you thinking you had to do a huge devOps operation again? Nope... not this time little ninja grasshopper... You already did your work when you installed `NODE` `NVM` and `NPM` above... Whew! :octocat:
 
@@ -206,15 +212,16 @@ If you are on Mac OS you can install MultiMarkdown via MacPorts or Homebrew:
 
 - **MacPorts:** - For some reason, Fletcher's MultiMarkdown guide does not recommend using MacPorts to install MultiMarkdown??? The docs says "I don't recommend it" This is not good advise... He should check with the MacPorts maintainer because last time I checked the MacPorts version was step in sync with the latest MultiMarkdown: `multimarkdown @6.4.0 (textproc)` Here is how to install it:
 
-```yaml
-    sudo port install multimarkdown      # to install it
-    port echo requested                  # to see it in the list of installed packages
+```bash
+  $_  sudo port install multimarkdown  # To install it...
+  $_  port echo requested              # To see it in the list 
+                                       # of installed packages.
 ```
 
 - **HomeBrew:** - Using Homebrew is equally simple... 
 
-```yaml
-    brew install multimarkdown
+```bash
+  $_  brew install multimarkdown
 ```
 
 That's it... Easy!  
@@ -245,15 +252,16 @@ As with MultiMarkdown, Emacs will run fine without Pandoc installed on your mach
 - **MacPorts:** - Install the latest MultiMarkdown: `V2.7.3`_(as of this writing)_  
 Here is how to install it:
 
-```yaml
-    sudo port install pandoc      # to install it
-    port echo requested           # to see it in the list of installed packages
+```bash
+  $_  sudo port install pandoc      # To install it...
+  $_  port echo requested           # To see it in the list 
+                                    # of installed packages.
 ```
 
 - **HomeBrew:** - If you use Homebrew do this instead:  
 
-```yaml
-    brew install pandoc
+```bash
+  $_  brew install pandoc
 ```
 
 That's it... Easy Peazy!
@@ -266,14 +274,14 @@ Pandoc is in the Debian, Ubuntu, Slackware, Arch, Fedora, NiXOS, openSUSE, and g
 
 - **Debian, Ubuntu flavors:**  
 
-```yaml
-    sudo apt install pandoc  
+```bash
+  $_  sudo apt install pandoc  
 ```
 
 - **RedHat, Fedora flavors:**
 
-```yaml
-    sudo dnf install pandoc
+```bash
+  $_  sudo dnf install pandoc
 ```
 
 The pandoc package installs a lot of sub-packages and can take some time to install.   Please be patient...  Updates won't take so long...
@@ -281,6 +289,60 @@ The pandoc package installs a lot of sub-packages and can take some time to inst
 #### Pandoc Usage:
 
 Now that you have Pandoc installed, **[Download The Manual Here](https://pandoc.org/MANUAL.pdf)**
+
+
+### Python and Pip:
+
+Some of the newer packages to be enabled will require Python packages to be installed... This is especially true of new **_Emacs MultiMedia System_** packages...
+
+In my DOTFILES repository, on Mac OS, I have a **README** for setting up Python and Pip with the aid of initially installing Python and matching PIP using MacPorts... After that, everything is handled outside of MacPorts using PIP alone.  Handling convoluted package managers on Mac OS is confusing at best! :octocat:  
+
+On linux things are a bit more reasonable...  Here is what I am doing thus far to manage Python on Linux...  I may add this information to my DOTFILES documentation later as well...
+
+#### Install Python & PIP on Fedora:
+
+> **Note:** If you use: `dnf install python` on Fedora you get Python 3 by default.  Below I am explicitly installing `Python 2` and `Python 3` with matching `PIP`:   
+
+```bash
+$_  sudo dnf install python2        # This installs Python 2.
+$_  sudo dnf install python2-pip    # This installs Python 2 pip.
+
+$_  sudo dnf install python3        # This installs Python 3.
+$_  sudo dnf install python3-pip    # This installs Python 3 pip.
+```
+
+Just as on **MacOS**, on **Fedora**, **Python** and **PIP** are both installed and upgraded using the **dnf** package manager system wide...  Beyond that, all package management with **PIP** is done locally within your user's **`$HOME`** environment...  Not using **`sudo`** or **Qubes** Template VMs...
+
+#### PIP Management:
+
+Done within your local user's `$HOME` environment.  _(e.g., Not within Qubes Template VMs or with `sudo`, etc.)_
+
+> **Note:** The commands below also work as: `pip2 <command>` etc.    
+_(for managing Python 2 packages)_...
+
+- **Search for Package:**
+
+```bash
+  $_  pip3 search <PACKAGE_NAME>
+```
+
+- **Install Package:**
+
+```bash
+  $_  pip3 install <PACKAGE_NAME>
+```
+
+- **Upgrade Package:**
+
+```bash
+  $_  pip3 install --upgrade <PACKAGE_NAME>
+```
+
+- **Uninstall Package:**
+
+```bash
+  $_  pip3 uninstall <PACKAGE_NAME>
+```
 
 ### Extra for Experts - LaTeX
 
@@ -310,15 +372,16 @@ You better send me an email to show me the cool thing you made on **Github** aft
 
 - **MacPorts:** - Install Graphviz: `V2.40.1_2` _(as of this writing)_  
 
-```yaml
-    sudo port install graphviz      # to install it
-    port echo requested             # to see it in the list of installed packages
+```bash
+ $_  sudo port install graphviz   # To install it...
+ $_  port echo requested          # To see it in the list 
+                                  # of installed packages.
 ```
 
-If you use Homebrew, do this instaed:  
+- If you use **Homebrew**, do this instead:  
 
-```yaml
-    brew install graphviz
+```bash
+ $_  brew install graphviz
 ```
 
 That's it... Easy!  
@@ -329,14 +392,14 @@ Graphviz is in the Debian, Ubuntu, Slackware, Arch, Fedora, NiXOS, openSUSE, and
 
 - **Debian, Ubuntu flavors:**  
 
-```yaml
-    sudo apt install graphviz  
+```bash
+ $_  sudo apt install graphviz  
 ```
 
 - **RedHat, Fedora flavors:**
 
-```yaml
-    sudo dnf install graphviz
+```bash
+ $_  sudo dnf install graphviz
 ```
 
 That's it... Easy Peazy!
@@ -350,21 +413,27 @@ That's it... Easy Peazy!
 
 This file keeps **Emacs Internal "Customize"** saved settings separate from **Modular Emacs constructs**...and outside of your .init.el file! _(so you won't have to worry about tiptoeing over it)_ Emacs will use this file _(initially empty)_ behind the scenes to save your Emacs internal "customizations"...  Git ignores this file.  _(Which is why we have to create it here now)_  You will not need to mess with this file after creating it, _(unless you want to empty it out and start over when Emacs "customized" things get out of hand)_...  
 
-     touch ~/me.emacs.d/custom.el  
+```bash
+$_  touch ~/me.emacs.d/custom.el  
+```
 
 #### Clone `mmd-mode.git` into `my-modules`:
 
 You need this for Emacs to work with Multimarkdown well... Even if you did not install Multimarkdown on your system, this mode will provide some of the extra Github and extra Multimarkdown meta-data features that are nice to already have in place once you do start using Multimarkdown as part of your publishing stack...
 
-    cd ~/me.emacs.d/lisp/my-modules
-    git clone https://github.com/harmonicalchemy/mmd-mode.git  
+```bash
+$_  cd ~/me.emacs.d/lisp/my-modules
+$_  git clone https://github.com/harmonicalchemy/mmd-mode.git  
+```
 
 
 #### Copy/Clone `me.init.el` to: `init.el`:
 
 **`me.init.el`** is a template for reference only...  I did it this way, _(adding `init.el` to `.gitignore`)_ for the purpose of providing more flexible ways to manage your local install of Modular Emacs...  me.init.el will stay in sync with the remote origin while your local clone: **`init.el`** runs the show _(with any changes you might add)_ without triggering git to complain about new un-tracked files etc...
 
-    cp ~/me.emacs.d/me.init.el ~/me.emacs.d/init.el
+```bash
+$_  cp ~/me.emacs.d/me.init.el ~/me.emacs.d/init.el
+```
 
 Later... You may want to edit your fresh new init.d and change the Banner Message to be more specific to your installation...  Also, later we will discuss different strategies of management that will hopefully allow you to build your own setup concurrently and in harmony with Modular Emacs, and be able to easily share any extra features/modules of your own that you may wish to bring to the rest of the Modular Emacs user community!
 
@@ -375,7 +444,7 @@ First be sure to rename _(save)_ your existing:  **`~/.emacs.d`** to: **`~/save.
 Now you are ready to **rename `~/me.emacs.d`** to: **`~/.emacs.d`**  
 
 ```bash
-    mv ~/me.emacs.d ~/.emacs.d
+$_  mv ~/me.emacs.d ~/.emacs.d
 ```
 
 _(This is now your new **Modular Emacs Local Repository** which is also now your default_ **`.emacs.d`** _home directory!)_  
@@ -411,7 +480,9 @@ You can also use the Modular Emacs \*scratch\* buffer to paste experimental lisp
 
 If your customization proves stable, and you like it, you could then save your scratch buffer (as is) to a new file, for example:
 
-    ~/.emacs.d/lisp/my-modules/00-my-new-module.el
+```bash
+$_  ~/.emacs.d/lisp/my-modules/00-my-new-module.el
+```
 
 In all cases you would also be wise to also create and checkout your own private local `test` branch _(call it what you wish)_ and keep all your custom changes in there separate from the `master` or `origin:develop` branch...
 
@@ -576,7 +647,7 @@ Above I kept going on and on about setting up the Default version of Modular Ema
     - [Try Harmonic Alchemy Modular Emacs:](#try-harmonic-alchemy-modular-emacs)
         - [Microsoft Windows Support](#microsoft-windows-support)
         - [My Commitment:](#my-commitment)
-- [Start Here: _(Modular Emacs Default Installation)_](#start-here-modular-emacs-default-installation)
+- [Start Here:](#start-here)
     - [Requirements:](#requirements)
         - [Emacs: V26.1+](#emacs-v261)
             - [Commands to install Emacs on various unix platforms:](#commands-to-install-emacs-on-various-unix-platforms)
@@ -594,6 +665,9 @@ Above I kept going on and on about setting up the Default version of Modular Ema
             - [Install Pandoc on Mac OS:](#install-pandoc-on-mac-os)
             - [Install Pandoc on Linux:](#install-pandoc-on-linux)
             - [Pandoc Usage:](#pandoc-usage)
+        - [Python and Pip:](#python-and-pip)
+            - [Install Python & PIP on Fedora:](#install-python--pip-on-fedora)
+            - [PIP Management:](#pip-management)
         - [Extra for Experts - LaTeX](#extra-for-experts---latex)
         - [Graphviz:](#graphviz)
             - [Install Graphviz on Mac OS:](#install-graphviz-on-mac-os)
