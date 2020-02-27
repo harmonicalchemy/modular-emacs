@@ -290,62 +290,11 @@ The pandoc package installs a lot of sub-packages and can take some time to inst
 
 Now that you have Pandoc installed, **[Download The Manual Here](https://pandoc.org/MANUAL.pdf)**
 
-
 ### Python and Pip:
 
-Some of the newer packages to be enabled will require Python packages to be installed... This is especially true of new **_Emacs MultiMedia System_** packages...
+Some of the newer modules to be enabled within **Harmonic Alchemy Modular Emacs** will require Python packages to be installed... This is especially true of **_Emacs MultiMedia System_ (EMMS)** enabled within optional module: **[`11-games-pkg-conf.el`](./lisp/modules/11-games-pkg-conf.el)**
 
-In my DOTFILES repository, on Mac OS, I have a **README** for setting up Python and Pip with the aid of initially installing Python and matching PIP using MacPorts... After that, everything is handled outside of MacPorts using PIP alone.  Handling convoluted package managers on Mac OS is confusing at best! :octocat:  
-
-On linux things are a bit more reasonable...  Here is what I am doing thus far to manage Python on Linux...  I may add this information to my DOTFILES documentation later as well...
-
-#### Install Python & PIP on Fedora:
-
-> **Note:** If you use: `dnf install python` on Fedora you get Python 3 by default.  Below I am explicitly installing `Python 2` and `Python 3` with matching `PIP`:   
-
-```bash
-$_  sudo dnf install python2        # This installs Python 2.
-$_  sudo dnf install python2-pip    # This installs Python 2 pip.
-
-$_  sudo dnf install python3        # This installs Python 3.
-$_  sudo dnf install python3-pip    # This installs Python 3 pip.
-```
-
-Just as on **MacOS**, on **Fedora**, **Python** and **PIP** are both installed and upgraded using the **dnf** package manager system wide...  Beyond that, all package management with **PIP** is done locally within your user's **`$HOME`** environment...  Not using **`sudo`** or **Qubes** Template VMs...
-
-#### PIP Management:
-
-Done within your normal user's `$HOME/.local` environment.  _(e.g., Not within Qubes Template VMs or with `sudo`, etc.)_
-
-> **Note:** The commands below also work as: `pip2 <command>` etc.    
-_(for managing Python 2 packages)_...
-
-- **Search for Package:**
-
-```bash
- $_ pip3 search <PACKAGE_NAME>
-```
-
-- **Install Package:**
-
-```bash
- $_ pip3 install --user <PACKAGE_NAME>   # Installs package 
-                                         # in: ~/.local/bin
-```
-
-- **Upgrade Package:**
-
-```bash
- $_ pip3 install --upgrade <PACKAGE_NAME>  # --user option would
-                                           # be redundant here...
-```
-
-- **Uninstall Package:**
-
-```bash
- $_ pip3 uninstall <PACKAGE_NAME>     # --user option would
-                                      # be redundant here...
-```
+**[Follow this guide](./Docs/ModE-Install-Python-PIP.md)** to get Python & PIP set up within your local environment so you will be ready when python packages are needed to be installed now, or later...
 
 ### Extra for Experts - LaTeX
 
@@ -669,8 +618,6 @@ Above I kept going on and on about setting up the Default version of Modular Ema
             - [Install Pandoc on Linux:](#install-pandoc-on-linux)
             - [Pandoc Usage:](#pandoc-usage)
         - [Python and Pip:](#python-and-pip)
-            - [Install Python & PIP on Fedora:](#install-python--pip-on-fedora)
-            - [PIP Management:](#pip-management)
         - [Extra for Experts - LaTeX](#extra-for-experts---latex)
         - [Graphviz:](#graphviz)
             - [Install Graphviz on Mac OS:](#install-graphviz-on-mac-os)
