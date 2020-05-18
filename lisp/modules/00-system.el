@@ -62,5 +62,33 @@
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/lisp/themes/")
 
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; Enable, Force UTF8 encoding EVERYWHERE in Emacs:
+;; Set the default encoding system to UTF8
+;; Explicitly & Redundantly for all these below...
+;; (even though Emacs may already have done it)
+
+(set-language-environment 'utf-8)
+(set-default-coding-systems 'utf-8)
+(setq default-file-name-coding-system 'utf-8)
+(setq locale-coding-system 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(set-selection-coding-system 'utf-8)
+(prefer-coding-system 'utf-8)
+(when (display-graphic-p)
+   (setq x-select-request-type '(UTF8_STRING COMPOUND_TEXT TEXT STRING)))
+
+;; disable CJK coding/encoding - not needed (yet)
+;; (Chinese/Japanese/Korean characters)
+
+(setq utf-translate-cjk-mode nil)
+
+;; backwards compatibility as default-buffer-file-coding-system
+;; is deprecated in 23.2.
+(if (boundp buffer-file-coding-system)
+    (setq buffer-file-coding-system 'utf-8)
+  (setq default-buffer-file-coding-system 'utf-8))
+
 ;; END: [modular-emacs]:~/.emacs.d/lisp/modules/00-system.el
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

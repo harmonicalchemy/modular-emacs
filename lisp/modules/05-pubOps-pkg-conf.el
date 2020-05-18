@@ -31,7 +31,6 @@
     fountain-mode
     olivetti
     graphviz-dot-mode
-    org-bullets
     vmd-mode))
 
 ;;;
@@ -40,6 +39,7 @@
 (mapc (lambda (p)
         (package-install p))
       me--req-pubops-packages)
+
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  AucTeX: LaTeX configuration:
@@ -57,9 +57,6 @@
 ;; Set default compile to PDF:
 
 (setq TeX-PDF-mode t)
-
-;; If the above did’t work, try this instead:
-;(setq TeX-global-PDF-mode t)
 
 ;;;
 ;; LaTeX Mode Hook tweaks:
@@ -178,73 +175,6 @@
 ;; Ref: https://joostkremers.github.io/pandoc-mode/
 
 (add-hook 'markdown-mode-hook 'pandoc-mode)
-
-;;;; ~~~~~~~~~~~~~~~~~~~~~~~~
-;;   Org-Mode Configurations:
-;;;; ~~~~~~~~~~~~~~~~~~~~~~~~
-
-;;;
-;; Org Mode Exporters:
-
-(require 'ox-md)
-(require 'ox-latex)
-
-;;;
-;; speed keys for quick navigation:
-
-(setq org-use-speed-commands 1)
-
-;;;
-;; set maximum indentation for org-mode description lists:
-
-(setq org-list-description-max-indent 5)
-
-;;;
-;; prevent org-mode demoting heading also shifting text inside sections:
-
-(setq org-adapt-indentation nil)
-
-;;;
-;; Stop Inline Images Being Too Big:
-
-(setq org-image-actual-width '(500))
-
-;;;
-;; Automatically Refresh Inline Images:
-;; REF: http://emacs.stackexchange.com/questions/3302/live-refresh-of-inline-images-with-org-display-inline-images
-
-(defun shk-fix-inline-images ()
-  (when org-inline-image-overlays
-    (org-redisplay-inline-images)))
-
-(add-hook 'org-babel-after-execute-hook 'shk-fix-inline-images)
-
-;;;; ~~~~~~~~~~~~~~~~~~~~~~~~
-;;   Org Mode Export Options:
-;;;; ~~~~~~~~~~~~~~~~~~~~~~~~
-
-;;;
-;; syntax highlight code blocks:
-
-(setq org-src-fontify-natively t)
-
-;;;
-;; put caption below in tables:
-
-(setq org-export-latex-table-caption-above nil)
-(setq org-latex-table-caption-above nil)
-
-;;;
-;; don't export tags:
-
-(setq org-export-with-tags nil)
-
-;;;; ~~~~~~~~~~~~~~~~~
-;;   Org-Bullets Mode:
-;;;; ~~~~~~~~~~~~~~~~~
-
-(require 'org-bullets)
-(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
 ;;;; ~~~~~~~~~
 ;;   VMD Mode:

@@ -24,7 +24,9 @@
 ;;
 
 (defvar me--req-org-packages
-  '(gnuplot-mode
+  '(org-bullets
+    emojify
+    gnuplot-mode
     sass-mode
     abc-mode
     org-mind-map))
@@ -35,7 +37,12 @@
 (mapc (lambda (p) (package-install p))
       me--req-org-packages)
 
-;;;
+;; Summon the Org-mode Gods to be ready to grant your Mod requests...
+
+(require 'org)
+
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Define LOCAL USER MASTER ORG FILES DIRECTORY:
 ;; The place where you will be keeping all your private org files and
 ;; sub-directories... You may already have a special directory for your
@@ -91,7 +98,8 @@
 ;; I may change how this works later to make it much easier to integrate...
 ;; For now, it's all kind of hard-wired...  Until I myself get a handle on it... %^)
 
-;;;
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Define LOCAL USER ORG FILES SUB Directories:
 ;;
 ;; Note: These constants are also used by 15-Accounting-pkg-conf.el
@@ -109,60 +117,315 @@
   (file-name-as-directory
    (expand-file-name "03-Private" my-org-dir)))
 
+
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;   Advanced Org-Mode Configurations: (currently under development)
+;;   Beautify Settings for Org-Mode: (constantly under revision %^)
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-(require 'org)
 (require 'org-faces)
 
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;   Org-Bullets:
+;;
+;;  NOTE:
+;;    After setting up my Book Publishing Project
+;;    Templates, I realized that showing any bullets
+;;    at all, (even the last one) clutters up my nice
+;;    Headings Display (which use variable scale fonts
+;;    etc.) So now I am not actually displaying any of
+;;    the fancy bullets below... I left this code in
+;;    however to allow them to show should you choose
+;;    to make the last bullet visible again...
+;;    (see function:  me_hide-org-bullets () below)
+
+;; Use org-bullets-mode for utf8 symbols as org bullets
+
+(require 'org-bullets)
+
+;; make available "org-bullet-face" allowing control of the font
+;; sizes individually:
+
+(setq org-bullets-face-name (quote org-bullet-face))
+
 ;;;
-;; Enable extra org-babel language-specific packages:
+;; Bullet options to try out: (commented out)
+;; Enable the one you like... Add more choices below if you find them...
 
-(require 'ob-lisp)
+;(setq org-bullets-bullet-list '("✙" "♱" "♰" "☥" "✞" "✟" "✝" "†" "✠" "✚" "✜" "✛" "✢" "✣" "✤" "✥"))
 
-;;;;
-;; Org Mind Map Configuration:
-;; Note:  Graphviz must be installed on your system before enabling these next
-;;        Forms!!!
+;; Hexagrams:
+;(setq org-bullets-bullet-list '("✡" "⎈" "✽" "✲" "✱" "✻" "✼" "✽" "✾" "✿" "❀" "❁" "❂" "❃" "❄" "❅" "❆" "❇"))
 
-(require 'ox-org)
+;; Special Symbols:
+(setq org-bullets-bullet-list '("☀" "♼" "☼" "☾" "☽" "☣" "§" "¶" "‡" "※" "✕" "△" "◇" "▶" "◀" "◈"))
 
-(setq org-mind-map-engine "dot")      ; Default. Directed Graph
-(setq org-mind-map-engine "neato")    ; Undirected Spring Graph
-(setq org-mind-map-engine "twopi")    ; Radial Layout
-(setq org-mind-map-engine "fdp")      ; Undirected Spring Force-Directed
-(setq org-mind-map-engine "sfdp")     ; Multiscale version of fdp for the 
-                                      ; layout of large graphs
-(setq org-mind-map-engine "twopi")    ; Radial layouts
-(setq org-mind-map-engine "circo")    ; Circular Layout
 
-;;;
-;; Make sure TEXINPUTS is set to: elpa/auctex-nn.nn.n/latex
-;; require 'preview below should set this as long as auctex is installed...
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; Org ellipsis options, other than the default Go to Node...
+;; not supported in common font, but supported in Symbola font. ⬎, ⤷, ⤵
 
-(unless (require 'latex nil t)
-  (message "MELPA package 'latex not yet installed..."))
+(setq org-ellipsis "⤵")
 
-(require 'preview)
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; Show nice chosen symbols instead of a dash in bulleted lists.
+;; If you don't like these, either disable the next two forms or
+;; change the characters at the end of each expression to something
+;; that fits your style...
+
+(font-lock-add-keywords
+ 'org-mode
+ '(("^ *\\([-]\\) "
+    (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "🍥"))))))
+
+(font-lock-add-keywords
+ 'org-mode
+ '(("^ *\\([+]\\) "
+    (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "🞜"))))))
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; Emojify for Org-Mode - Information Only:
+;;
+;; Searching emojis:
+;;
+;;   The command:
+;;
+;;       emojify-apropos-emoji
+;;
+;;   can be used to display emojis that match given regexp/apropos pattern.
+;;   The results are displayed in a specialized buffer, where 'w' or 'c' can be
+;;   used to copy emojis to the kill ring.
+;;
+;; Inserting emojis:
+;;
+;;   The command:
+;;
+;;       emojify-insert-emoji
+;;
+;;   can be used to insert emojis interactively. While the command works with
+;;   vanilla Emacs completion system, the experience would be better with
+;;   something like Helm, Ivy, Icicles or Ido depending on you preference.
+;;
+;; Describing emojis:
+;;
+;;   The command:
+;;
+;;       emojify-describe-emoji-at-point
+;;
+;;   can be used to view explanation about the command displayed at point.
+;;   Additionally the command emojify-describe-emoji can be used to display
+;;   description for an arbitrary emoji.
+;;
+;; Listing all emojis:
+;;
+;;   The command:
+;;
+;;       emojify-list-emojis
+;;
+;;   can be used to view all the available emojis in a list form.
+;;
+;; Configuring how emojis are displayed:
+;;
+;;   By default emojis are displayed using images. However you can instruct
+;;   emojify to display it using unicode characters or ascii characters.
+;;   To do so, customize the variable:
+;;
+;;       emojify-display-style
+;;
+;;   You can set it one of the following values:
+;;
+;;      image - Display emojis using images, obviously this requires the Emacs
+;;              instance to support image
+;;
+;;     unicode - Display emojis using unicode characters, this might be a good
+;;               option on platforms with good emoji fonts
+;;
+;;     ascii - This is simplest and does not require any external dependencies
+;;             In this case emojify will display ascii equivalents of github
+;;             style emojis.
+;;
+;;  More Info At:
+;;
+;;      https://github.com/iqbalansari/emacs-emojify
+;;
+;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+;; I have chosen to leave Emojify Mode disabled and 
+;; instead only use the option to enable it manually
+;; if needed.   I find using the Symbola unicode font
+;; by itself, without using emojify mode, works fine...
+;; So far, I am sourcing all my symbols and icons from
+;; the Symbola font... Symbola contains simple clear
+;; line drawing representations of all the standard
+;; emojis... and Symbola is available on all platforms!
+;;
+;; If you would rather, or also wish to use Emojify mode,
+;; Un-comment the single line form below...  This will 
+;; enable Emojify Mode Globally at Emacs Startup...
+
+;(add-hook 'after-init-hook #'global-emojify-mode)
+
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; Make better Org-Mode Headers:
+;;
+;; This rather complicated eLisp code came from:
+;; http://www.howardism.org/Technical/Emacs/orgmode-wordprocessor.html
+;; It may need some improvements (simplifications) as Howard said in his post...
+
+;; Set default faces: (disabled... I don't need this.  It's for experiments)
+;; Instead set these in your custom Blackboard Theme... I was testing them here...
+;(custom-theme-set-faces
+; 'user
+; '(org-default ((t (:family "Advent Pro Light" :height 125 :weight light))))
+; '(variable-pitch ((t (:family "Averia Serif Libre" :height 120 :weight light))))
+; '(fixed-pitch ((t ( :family "Go Mono for Powerline" :slant normal :weight normal :height 1.0 :width normal)))))
+
+;; Customize Org headings:
+
+(let* ((variable-tuple (cond ((x-list-fonts "Averia Serif Libre") '(:font "Averia Serif Libre"))
+                             ((x-list-fonts "Averia Libre Light") '(:font "Averia Libre Light"))
+                             (nil (warn "Cannot find a Sans Serif Font.  Trying to Install Averia Serif Libre."))))
+       (base-font-color     (face-foreground 'default nil 'default))
+       (headline           `(:inherit default :weight normal )))
+  
+  (custom-theme-set-faces 'user
+                          `(org-level-8 ((t (,@headline ,@variable-tuple :height 1.13 :foreground "AntiqueWhite" ))))
+                          `(org-level-7 ((t (,@headline ,@variable-tuple :height 1.17 :foreground "AntiqueWhite" ))))
+                          `(org-level-6 ((t (,@headline ,@variable-tuple :height 1.20 :foreground "AntiqueWhite" ))))
+                          `(org-level-5 ((t (,@headline ,@variable-tuple :height 1.23 :foreground "AntiqueWhite" ))))
+                          `(org-level-4 ((t (,@headline ,@variable-tuple :height 1.28 :foreground "AntiqueWhite" ))))
+                          `(org-level-3 ((t (,@headline ,@variable-tuple :height 1.38 :foreground "AntiqueWhite" ))))
+                          `(org-level-2 ((t (,@headline ,@variable-tuple :height 1.62 :foreground "AntiqueWhite" ))))
+                          `(org-level-1 ((t (,@headline ,@variable-tuple :height 1.88 :foreground "AntiqueWhite" ))))
+                          `(org-document-title
+                            ((t (,@headline ,@variable-tuple :height 1.5 :foreground "AntiqueWhite" :underline nil))))))
+
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Hide all bullets/asterisks etc. in Org mode:
+;;
+;;  For writing books, docs, etc. I decided showing
+;;  the bullets, (even the last one) clutters up my
+;;  nice variable scale headings outline display...
+;;  This function was written to perform that service
+;;  globally in org mode... It is added to the my
+;;  org-mode hook function below...
+;;
+;;  NOTE: if you want to see the fancy bullets in your
+;;  outline headings, than don't call this function
+;;  from the org-mode hook below...
+;;
+;;  I also have a Xfk Cmd-Mode key "p" defined
+;;  to invoke this function... (turning off bullets)
+;;  But no way to turn them back on...
+;;  TODO: Make this a toggle so you can turn them
+;;        back on for other non writing related work.
+;;        Then you don't have to mess with it here...
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+(defun me_hide-org-bullets ()
+  "Hide the Org Bullets... TODO: make this into a toggle"
+  (interactive)
+  (font-lock-add-keywords
+   'org-mode `(("\\(?:^\\(?1:\\*+\\)[[:blank:]]\\)"
+              (0 (progn (compose-region
+                         (match-beginning 1) (match-end 1)
+                         (pcase (length (match-string 1))
+                           (1 ?\u2219)
+                           (2 ?\u2022)
+                           (3 ?\u25c9)
+                           (_ ?\u25CB)))
+                        nil))))))
+
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Modular Emacs - Org Mode Hook:
+
+(defun me_org-mode-hook ()
+  ;; Set default face to Go Mono for Powerline (A nice mono serif for writing)...
+  (set-face-attribute 'default nil
+                      :family "Go Mono for Powerline"
+                      :slant 'normal
+                      :height 120
+                      :weight 'normal
+                      :width 'normal)
+  (me_hide-org-bullets))   ;; Remove this last element if you want to see fancy bullets...
+
+(add-hook 'org-mode-hook 'me_org-mode-hook)
+
 
 ;;;
 ;; Setup my Default Org-Mode Keywords:
-;; (adjust this list to fit your planning style)
+;; The above are based on general GTD schemes I am using...
+;; (adjust this list to fit your own planning style)
+
+(setq org-todo-keywords
+      (quote ( (sequence "TODO(t)" "NEXT(x)" "|" "DONE(d!/!)")
+               (sequence "ACTIVE(a)" "REPEATING(r)" "WAITING(w@/!)" "HOLD(h@/!)" "|" "CANCELLED(c@/!)" "PHONE")
+	       (sequence  "NEW(n)" "NOW(o)" "SOMEDAY(s)"  "|" "ARCHIVED(a)"))))
+
+;;;
+;; Setup my Default Org-Mode Keywords: (with fancy UTF 8 symbols)
+;; NOTE: I decided this was cluttering things up to much so I disabled it...
+;(setq org-todo-keywords
+;      (quote ( (sequence "☞ TODO(t)" "⚡ NEXT(x)" "|" "✔ DONE(d!/!)")
+;               (sequence "ACTIVE(a)" "↺ REPEATING(r)" "⚑ WAITING(w@/!)" "⨂ HOLD(h@/!)" "|" "✘ CANCELLED(c@/!)" "PHONE(p)")
+;	       (sequence  "NEW(n)" "⦾ NOW(o)" "SOMEDAY(s)"  "|" "ARCHIVED(a)"))))
+
+;;;
+;; Set Org TODO keyword faces:
+;; (don't settle for boring red, green, blue... Be creative!)
+;; INFO:  To lookup the list of Emacs colours that can be used by name use:
+;;
+;;                         M-x list-colors-display
+;;
+;; NOTE:  You can also do this for tag faces:
+;;        Copy this form when you are ready to do that and add in your tags as a new element in the list...
+;;
+;(setq org-tag-faces
+;      (quote (
+;              ( "TAG-NAME" . (:family "Hermit" :height 100 :foreground "red" :weight bold))
+;              ;; Add More Tag Elements to the list...
+;              ;;
+;              )))
 
 (setq org-todo-keyword-faces
-      (setq org-todo-keywords
-	    (quote ((sequence "NEXT(n)" "TODO(t)" "NOW(o)" "ACTIVE(a)" "REPEATING(r)" "WAITING(w)" "SOMEDAY(s)" "HOME(h)" "|" "DONE(d)" "CANCELLED(c)" "ARCHIVED(a)")
-		    (sequence "WAITING(w@/!)" "HOLD(h@/!)" "|" "CANCELLED(c@/!)" "PHONE")))))
+      (quote (
+              ("TODO" . (:family "Hermit" :height 100 :foreground "red" :weight bold))
+              ("NEXT" . (:family "Hermit" :height 100 :foreground "BlueViolet" :weight bold))
+              ("DONE" . (:family "Hermit" :height 100 :foreground "green2" :weight bold))
+              ("ACTIVE" . (:family "Hermit" :height 100 :foreground "chocolate1" :weight bold))
+              ("REPEATING" . (:family "Hermit" :height 100 :foreground "DeepSkyBlue" :weight bold))
+              ("WAITING" . (:family "Hermit" :height 100 :foreground "lavender" :weight bold))
+              ("HOLD" . (:family "Hermit" :height 100 :foreground "gray62" :weight bold))
+              ("CANCELLED" . (:family "Hermit" :height 100 :foreground "SlateGray" :weight bold))
+              ("PHONE" . (:family "Hermit" :height 100 :foreground "DarkOrange" :weight bold))
+              ("NEW" . (:family "Hermit" :height 100 :foreground "DodgerBlue" :weight bold))
+              ("NOW" . (:family "Hermit" :height 100 :foreground "HotPink" :weight bold))
+              ("SOMEDAY" . (:family "Hermit" :height 100 :foreground "gold" :weight bold))
+              ("ARCHIVED" . (:family "Hermit" :height 100 :foreground "AntiqueWhite" :weight bold)))))
 
-(setq org-todo-keyword-faces
-      (quote (("TODO" :foreground "red" :weight bold)
-	      ("NEXT" :foreground "blue" :weight bold)
-	      ("DONE" :foreground "forest green" :weight bold)
-	      ("WAITING" :foreground "orange" :weight bold)
-	      ("HOLD" :foreground "magenta" :weight bold)
-	      ("CANCELLED" :foreground "forest green" :weight bold)
-	      ("PHONE" :foreground "forest green" :weight bold))))
+;; For some reason trying to do this with custom-theme-set-faces did not work... But the above does...
+;; I need to come back and re-examine this code later...
+;;
+;(let* ((fixed-tuple (cond ((x-list-fonts "Hermit") '(:face "Hermit"))
+;                          (nil (warn "Cannot find Hermit Font. Is it installed on this system?")))))
+;  (custom-theme-set-faces 'user
+;                          '(org-todo-keyword-faces (("TODO" :face "Hermit" :height 100 :foreground "red" :weight bold)))
+;                          '(org-todo-keyword-faces (("NEXT" :face "Hermit" :height 100 :foreground "BlueViolet" :weight bold)))
+;                          '(org-todo-keyword-faces (("DONE" :face "Hermit" :height 100 :foreground "green2" :weight bold)))
+;                          '(org-todo-keyword-faces (("ACTIVE" :face "Hermit" :height 100 :foreground "chocolate1" :weight bold)))
+;                          '(org-todo-keyword-faces (("REPEATING" :face "Hermit" :height 100 :foreground "DeepSkyBlue" :weight bold)))
+;                          '(org-todo-keyword-faces (("WAITING" :face "Hermit" :height 100 :foreground "lavender" :weight bold)))
+;                          '(org-todo-keyword-faces (("HOLD" :face "Hermit" :height 100 :foreground "gray62" :weight bold)))
+;                          '(org-todo-keyword-faces (("CANCELLED" :face "Hermit" :height 100 :foreground "SlateGray" :weight bold)))
+;                          '(org-todo-keyword-faces (("PHONE" :face "Hermit" :height 100 :foreground "DarkOrange" :weight bold)))
+;                          '(org-todo-keyword-faces (("NEW" :face "Hermit" :height 100 :foreground "DodgerBlue" :weight bold)))
+;                          '(org-todo-keyword-faces (("NOW" :face "Hermit" :height 100 :foreground "HotPink" :weight bold)))
+;                          '(org-todo-keyword-faces (("SOMEDAY" :face "Hermit" :height 100 :foreground "gold" :weight bold)))
+;                          '(org-todo-keyword-faces (("ARCHIVED" :family "Hermit" :height 100 :foreground "AntiqueWhite" :weight bold)))))
+
 
 ;;;
 ;; Define Custom Org-files:
@@ -320,13 +583,15 @@
                                    (gnus . org-gnus-no-new-news)
                                    (file . find-file))))
  
+
 ;; Use the current window for C-c ' source editing
+
 (setq org-src-window-setup 'current-window)
 
 (setq org-log-done (quote time))
 (setq org-log-into-drawer "LOGBOOK")
 
-(setq org-startup-folded 'content)
+(setq org-startup-folded 'overview)
 
 (setq org-alphabetical-lists t)
 
@@ -415,9 +680,150 @@
 		(org-agenda-skip-function 'bh/skip-non-archivable-tasks)
 		(org-tags-match-list-sublevels nil))))))
 
-;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; Org Mind Map Configuration:
+;; Note:  Graphviz must be installed on your system before enabling these next
+;;        Forms!!!
+
+(setq org-mind-map-engine "dot")      ; Default. Directed Graph
+(setq org-mind-map-engine "neato")    ; Undirected Spring Graph
+(setq org-mind-map-engine "twopi")    ; Radial Layout
+(setq org-mind-map-engine "fdp")      ; Undirected Spring Force-Directed
+(setq org-mind-map-engine "sfdp")     ; Multiscale version of fdp for the 
+                                      ; layout of large graphs
+(setq org-mind-map-engine "twopi")    ; Radial layouts
+(setq org-mind-map-engine "circo")    ; Circular Layout
+
+
+;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;   Alisha's Advanced Org-Mode Configurations:
-;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Org Outline Tree on left | content on 
+;;  right Functions...
+;;
+;; Open sub elements in right window pane,
+;; move cursor focus to right window pane...
+
+(defun me_org-tree-open-in-right-win ()
+  (interactive)
+  (org-tree-to-indirect-buffer)
+  (windmove-right))
+
+;; Open sub elements in right window pane,
+;; Leave cursor in left outline window pane...
+;; This one is redundant... I could just assign a key
+;; right? lol, but maybe I will expand this into something
+;; useful later...
+
+(defun me_org-tree-open-in-right-no-focus ()
+  (interactive)
+  (org-tree-to-indirect-buffer))
+
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Org Mode Export Section - Settings:
+
+;; Exporters:
+
+(require 'ox-md)
+(require 'ox-latex)
+
+;;;
+;; Hide the Emphasis Markup:
+;; (e.g., /.../ for italics, *...* for bold, etc.)
+;;
+;; Disable this form if you want to see them...
+;;
+;; TIP: The invisible characters are easy enough to remove
+;;      as there will be a small space in its place...
+;;      You can backspace over it to remove it and then
+;;      you will be able to see and remove the other one as well...
+
+(setq org-hide-emphasis-markers t)
+
+;;;
+;; Position tags right after last char of headline:
+;; (This is mostly to fix problems with variable-pitch
+;; It does not seem to be a problem with fixed-pitch)
+;; NOTE: I disabled this thing... It was causing an
+;;       error on load!  I need to look into this
+;;       later and fix it, or get rid of it...
+;;       I am not even sure if I need it as I am
+;;       not using Emacs in global scaled mode, or
+;;       what ever that's called... lol...
+;;       There may be more to this than I realized! %^)
+;;       I will get to it later when I start messing with org tags...
+;(org-tags-column 0)
+
+;;;
+;; speed keys for quick navigation:
+
+(setq org-use-speed-commands 1)
+
+;;;
+;; set maximum indentation for org-mode description lists:
+
+(setq org-list-description-max-indent 5)
+
+;;;
+;; prevent org-mode demoting heading also shifting text inside sections:
+
+(setq org-adapt-indentation nil)
+
+;;;
+;; Stop Inline Images Being Too Big:
+
+(setq org-image-actual-width '(500))
+
+;;;
+;; Automatically Refresh Inline Images:
+;; REF: http://emacs.stackexchange.com/questions/3302/live-refresh-of-inline-images-with-org-display-inline-images
+
+(defun shk-fix-inline-images ()
+  (when org-inline-image-overlays
+    (org-redisplay-inline-images)))
+
+(add-hook 'org-babel-after-execute-hook 'shk-fix-inline-images)
+
+
+;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;   Org Mode Export Options:
+
+;;;
+;; syntax highlight code blocks:
+
+(setq org-src-fontify-natively t)
+
+;;;
+;; put caption below in tables:
+
+(setq org-export-latex-table-caption-above nil)
+(setq org-latex-table-caption-above nil)
+
+;;;
+;; don't export tags:
+;;
+;; Note: You may want to change this later if tags are important
+;;       to your exported docs...
+
+(setq org-export-with-tags nil)
+
+;;;
+;; Enable extra org-babel language-specific packages:
+
+(require 'ob-lisp)
+
+;;;
+;; Make sure TEXINPUTS is set to: elpa/auctex-nn.nn.n/latex
+;; require 'preview below should set this as long as auctex is installed...
+
+(unless (require 'latex nil t)
+  (message "MELPA package 'latex not yet installed..."))
+
+(require 'preview)
+
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Org Babel Active Language Configurations:

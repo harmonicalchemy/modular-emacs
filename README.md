@@ -15,9 +15,11 @@ tags: Emacs, 2020, apps-tools, SysAdmin, HA-ModEmacs, how-to, README
 
 ## Introduction:
 
-**_Welcome to Harmonic Alchemy Modular Emacs - V3!_ (Currently in Beta)**
+**_Welcome to Harmonic Alchemy Modular Emacs - V3.1!_ (Currently in Beta)**
 
 **Current Status:**
+
+- Version 3.1 adds a bunch of new Org-Mode tweaks... I am setting up my Org-Mode based Book Publishing System _(my **pubOps**)_ now... There will be some included examples addes to this a bit later...  The org-mode module is disabled by default... To use it you will need to read the docs provided...  I plan to make a branch (fork) for Org-Mode where you can try this out without having to go in and enable/disable modules etc... That will be coming next... I will update this doc when that is ready...  The Blackboard Color Theme was also updated _(to accomodate prettifying Org-Mode)_.  Also, I am back to using the standard mode line.  I got tired of **powerline** _(It felt too cluttered and also seemed to have bugs)_... Then I tried **smart-mode-line** to see if I could make things look better and simpler... I got frustrated with it as well and after mucking around I realized there is nothing wrong with the Emacs standard mode-line and you can tweak it to fit exactly your needs... So now that is the new plan... You can see changes to that in **`02-package-conf.el`**... Everything else stays pretty much the same as Version 3.0...
 
 - Version 3.0 merges a few new features, as well as bugfixes from the **Lisp IDE** fork back into the master and develop branches of Harmonic Alchemy Modular Emacs.
 
@@ -440,7 +442,7 @@ In all cases you would also be wise to also create and checkout your own private
 
 ### Blackboard Color Theme:  
 
-Modular Emacs comes with my slightly customized version of the **Blackboard color theme** which I like for the _pedagogic essence_ it inspires...  If you would like to add more custom themes or a different theme than `blackboard.el`, you can replace it or add additional themes into your local branch's: `~/.emacs.d/lisp/themes` directory and they will also will work with this setup by choosing `M-x load-theme` or changing the last line within `~/.emacs.d/lisp/modules/06-interface.el` to: `(load-theme 'your-chosen-theme-name t)`
+Modular Emacs comes with my new customized version of the **Blackboard color theme** _(patterned after the famous Textmate Blackboard Theme)_ which I like for the _pedagogic essence_ it inspires...  If you would like to add more custom themes or a different theme than `blackboard.el`, you can replace it or add additional themes into your local branch's: `~/.emacs.d/lisp/themes` directory and they will also will work with this setup by choosing `M-x load-theme` or changing the last line within `~/.emacs.d/lisp/modules/06-interface.el` to: `(load-theme 'your-chosen-theme-name t)`
 
 > **Note:** _Obviously if you add more themes to your **Modular Emacs** **themes** directory you will be adding new un-tracked files to your cloned git repository!  Make sure you have checked out your own local branch before adding new themes or doing any customization outside the init.el file or the `my-modules` directory.  Then you will have proper management of your local custom changes and also have all that in code revision as well!_
 
@@ -588,9 +590,9 @@ Use Scratch buffer to evaluate snippets of `lisp` without having to remove the w
 
 Above I kept going on and on about setting up the Default version of Modular Emacs... Now it's time to forget boring defaults and really tune this baby up to be the best **DevOps** , **PubOPs** , **Lisp IDE** that it can be!  The following doc with guide you through that process:  **[Modular Emacs Customization](./Docs/ModE-Optional-Packages-y-Customization.md)**
 
-# Table of Contents:
+# Table of Contents: 
 
-<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-generate-toc again -->
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 **Table of Contents**
 
 - [Modular Emacs README](#modular-emacs-readme)
@@ -608,7 +610,7 @@ Above I kept going on and on about setting up the Default version of Modular Ema
                 - [Mac OS:](#mac-os)
                 - [FreeBSD & OpenBSD:](#freebsd--openbsd)
         - [`NODE.js` with `NVM` & `NPM`:](#nodejs-with-nvm--npm)
-        - [VMD: _(Visual MarkDown App)_](#vmd-visual-markdown-app)
+        - [VMD: _(Visual MarkDown App)_](#vmd-_visual-markdown-app_)
         - [MultiMarkdown:](#multimarkdown)
             - [Install Multimarkdown on Mac OS:](#install-multimarkdown-on-mac-os)
             - [Install Multimarkdown on Linux:](#install-multimarkdown-on-linux)
@@ -623,13 +625,13 @@ Above I kept going on and on about setting up the Default version of Modular Ema
             - [Install Graphviz on Mac OS:](#install-graphviz-on-mac-os)
             - [Install Graphviz on Linux:](#install-graphviz-on-linux)
     - [Get Ready to Start up Modular Emacs for the first time!](#get-ready-to-start-up-modular-emacs-for-the-first-time)
-        - [First Some Initial House Keeping: _before we move in_](#first-some-initial-house-keeping-before-we-move-in)
+        - [First Some Initial House Keeping: _before we move in_](#first-some-initial-house-keeping-_before-we-move-in_)
             - [Create an empty file named `custom.el`:](#create-an-empty-file-named-customel)
             - [Clone `mmd-mode.git` into `my-modules`:](#clone-mmd-modegit-into-my-modules)
             - [Copy/Clone `me.init.el` to: `init.el`:](#copyclone-meinitel-to-initel)
         - [Final Step - Make Modular Emacs folder the default `~/.emacs.d` folder:](#final-step---make-modular-emacs-folder-the-default-emacsd-folder)
     - [Ready Set Go!  Start Up Modular Emacs:](#ready-set-go--start-up-modular-emacs)
-    - [Usage:](#usage)
+    - [Usage:](#usage-1)
         - [Blackboard Color Theme:](#blackboard-color-theme)
     - [Default Packages & Features (built in):](#default-packages--features-built-in)
         - [Pre-configured packages - Comprehensive list:](#pre-configured-packages---comprehensive-list)

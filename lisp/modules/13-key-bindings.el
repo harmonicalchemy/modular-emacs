@@ -2,7 +2,7 @@
 ;;;; [Modular-Emacs]:~/.emacs.d/lisp/modules/13-key-bindings.el
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-;;;
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Map Modular Emacs General Keys:
 
 (defvar me--my-keyboard-bindings
@@ -31,47 +31,146 @@
 (mapc 'me-apply-keyboard-bindings
       me--my-keyboard-bindings)
 
-;;;
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Flyspell Correct Previous - Helm key binding:
 
 (require 'flyspell-correct-helm)
 (define-key flyspell-mode-map (kbd "C-;") 'flyspell-correct-previous)
 
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; Modular Emacs - Set Default Face Functions:
+;;
+;; Purpose:
+;;
+;;  I like to use a serif mono font for writing paragraphs...
+;;  but I use Hermit or other similar font for Coding...
+;;  This provides a way to go back and fourth from one
+;;  face (which is Emacs Default) to another depending on
+;;  my current work mode (writing or coding)...
+;;
+;; Usage:
+;;
+;;   Adjust face dimensions and weight within forms below as needed.
+;;   Note: Linux vs Mac, Big screen vs Laptop, may require
+;;         sub cases to handle... %^)
+;;
+;;   Xah Fly Key Assigned: Command Mode "p"
+;;
+;; NOTE: Currently there is no check to see if these fonts are 
+;;       installed on your system! This is still alpha test stage..."
+;;
+
+(defun me_set-org-face ()
+  ;; Set default face to Go Mono for Powerline (A nice mono serif for writing)...
+  (interactive)
+  (progn
+    (set-face-attribute 'default nil
+                        :family "Go Mono for Powerline"
+                        :slant 'normal
+                        :height 123
+                        :weight 'normal
+                        :width 'normal)
+    (setq-default 'me--default nil)))
+
+(defun me_set-default-face ()
+  ;; Set default font to Hermit Medium (my favorite mono font for everything)...
+  (interactive)
+  (progn
+    (set-face-attribute 'default nil
+                        :family "Hermit"
+                        :foundry "PfEd"
+                        :slant 'normal
+                        :height 120
+                        :weight 'normal
+                        :width 'normal)
+    (setq-default 'me--default t)))
+
 ;;;
+;; Toggle Default Face... This one gets bound to Xah Fly Command Key:  "p"
+;; This one calls one of the two above depending on test variable:  me--default
+;; if me--default is t,
+;;   Switch to Org Mode;
+;;   Change me--default to nil;
+;; Otherwise
+;;   Switch back to default face;
+;;   Change me--default to t;
+;;   
+
+(defvar me--default t "Test variable for me_toggle-default-face")
+
+(defun me_toggle-default-face ()
+  "Toggle default face, depending on current need...
+   Purpose: I like to use a serif mono font for writing
+   paragraphs, but I need to use Hermit etc. for Coding
+   This provides a way to toggle from one to the other"
+  (interactive)
+  (if (eq me--default t)
+      'me_set-org-face
+    'me_set-default-face))
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Add New key(s) to xah fly command mode keys:
 
 (defun me-xfk-cmd-keys-add ()
   "Add or Modify xah fly keys - Command Mode Keys
-  To be added to `xah-fly-command-mode-activate-hook'. 
-  NOTE: It appears you have to toggle from command mode to insert mode 
+  To be added to `xah-fly-command-mode-activate-hook'.
+  NOTE: It appears you have to toggle from command mode to insert mode
     and back at least one time after closing and reopening Emacs before
     these custom keys take hold...  I need to troubleshoot this hook to
-    discover the cause.  For some reason this hook is not being called 
-    the very first time... Also, there seem to be some quirks with 
-    deleting frames, causing Emacs to loose focus requiring clicking 
+    discover the cause.  For some reason this hook is not being called
+    the very first time... Also, there seem to be some quirks with
+    deleting frames, causing Emacs to loose focus requiring clicking
     mouse outside, and then back to window frame to get it back in focus."
   (interactive)
+
+;;;
   ;; Add more key definitions here if needed.
   ;; Options not used by xfkeys:  ~  `  1  2  0  \  -  =
-  ;; I need easy keys to create and switch frames, (not just windows)
+  ;; In addition you may use "p" as a command mode key.  I never use
+  ;; it to insert a space before.  typing p is harder to reach than
+  ;; going into insert mode "f" and hitting the space bar.  IMHO
+
+  ;; Set easy keys to create and switch frames, (not just windows)
   (define-key xah-fly-key-map (kbd "b") 'other-frame)
   (define-key xah-fly-key-map (kbd "2") 'make-frame)
-  ;; Added olivetti-mode key since I have a new custom other-frame key...
+
+  ;; Change default olivetti-mode key (because I have conflicting other-frame key)
   (define-key xah-fly-key-map (kbd "`") 'olivetti-mode)
-  ;; Added neotree key to primary KFKeys Command Mode Map...
+
+  ;; Set neotree key to primary KFKeys Command Mode Map...
   (define-key xah-fly-key-map (kbd "'") 'neotree-toggle)
-  ;; Added key to primary KFKeys Command Mode Map to invoke deft-mode...
+
+  ;; Set Invoke Daft key to primary KFKeys Command Mode Map...
   (define-key xah-fly-key-map (kbd "0") 'deft)
-  ;; I need easy keys for HLedger Mode:
-  (define-key xah-fly-key-map (kbd "s") 'hledger-jentry)
+
+  ;; Set Key to Hide Org Tree Heading Bullets:
+  (define-key xah-fly-key-map (kbd "p") 'me_toggle-default-face)
+
+  ;; Set Keys to open Org Tree Element(s) in Right window pane...
+  ;; This first key also moves cursor to right window
+  ;;   TODO: Position cursor for instant writing, (i.e., continuing
+  ;;         at last edited cursor location)
+  (define-key xah-fly-key-map (kbd "1") 'me_org-tree-open-in-right-win)
+
+  ;; This key opens Elements(s) in Right window Pane But leaves the
+  ;; cursor in the left outline window pane (it stays where it was)
+  (define-key xah-fly-key-map (kbd "s") 'org-tree-to-indirect-buffer)
+
+  ;; Set key to run HLedger Mode command:
   (define-key xah-fly-key-map (kbd "=") 'hledger-run-command)
-  ;; Added KFKeys Leader Sequence to expand and shrink olivetti...
+
+  ;; Set KFKeys Leader Sequence to expand and shrink olivetti...
   (define-key xah-fly-leader-key-map (kbd "]") 'olivetti-expand)
   (define-key xah-fly-leader-key-map (kbd "[") 'olivetti-shrink)
-  ;; Added KFKeys Leader Sequence to toggle case (three choices)...
+
+  ;; Set KFKeys Leader Sequence to toggle case (three choices)...
   (define-key xah-fly-leader-key-map (kbd "u") 'me_toggle-letter-case)
-  ;; leader-key delete-frame key mirrors direct make-frame key...
+
+  ;; This leader-key delete-frame key mirrors direct make-frame key above...
   (define-key xah-fly-leader-key-map (kbd "2") 'delete-frame)
+
   ;; Added VMD mode leader key sequence: SPC "v" ("k" Dvorak)
   ;; since I already have that paste key in normal Command mode...
   (define-key xah-fly-leader-key-map (kbd "v") 'vmd-mode))

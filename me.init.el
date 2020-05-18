@@ -217,7 +217,7 @@
         ";; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
         ";; Welcome to: [Your-Machine-Name-Here]                    \n"
         ";;             Harmonic Alchemy - Modular Emacs!           \n"
-        ";; Version:    3.0 (beta) [Q4 2019]                        \n"
+        ";; Version:    3.1 (beta) [Q4 2019]                        \n"
         ";;                                                         \n"
         ";; Today's date: " (format-time-string "%Y %B %d") "       \n"
         ";; Startup completed in "

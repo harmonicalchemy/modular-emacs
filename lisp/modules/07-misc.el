@@ -26,10 +26,6 @@
 (setq initial-scratch-message 
       "")
 
-;; Enable show-paren-mode
-
-(show-paren-mode)
-
 ;;Enable winner-mode
 
 (winner-mode t)
@@ -41,14 +37,6 @@
 ;; Turn off highlight long lines
 
 (setq whitespace-line-column 10000)
-
-;; Change all prompts to y or n
-
-(fset 'yes-or-no-p 'y-or-n-p)
-
-;; Turn on Visual Line Mode for text modes only
-
-(add-hook 'text-mode-hook 'turn-on-visual-line-mode)
 
 ;; Turn highlight matching brackets ON when cursor is on one.
 
@@ -63,6 +51,14 @@
 ;; highlight brackets if visible, else entire expression
 
 (setq show-paren-style 'mixed)
+
+;; Change all prompts to y or n
+
+(fset 'yes-or-no-p 'y-or-n-p)
+
+;; Turn on Visual Line Mode for text modes only
+
+(add-hook 'text-mode-hook 'turn-on-visual-line-mode)
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; The default visible bell actually startles me when it occurs!

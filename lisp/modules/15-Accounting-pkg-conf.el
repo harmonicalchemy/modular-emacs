@@ -43,8 +43,8 @@
 (add-to-list 'auto-mode-alist '("\\.journal\\'" . hledger-mode))
 
 ;;;
-;; Kindly Provide the path to your local journal file here...
-;; (forcing a default location here would be too opinionated %^)
+;; Kindly Provide the path to your local journal file...
+;; (a default location would be too opinionated %^)
 
 (setq hledger-jfile "~/Path/To/Your/Personal/HLedger-Accounting/.hledger.journal")
 

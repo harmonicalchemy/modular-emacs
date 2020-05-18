@@ -30,6 +30,7 @@ abbrev_defs
 auto-save-list/*
 transient/*
 games/*
+emojis/*
 recentf
 abbrev_defs
 *.temp
