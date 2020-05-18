@@ -32,6 +32,16 @@
 ;;
 ;; Change Log: (descending chronological order)
 ;;
+;;   2020-005-18 - Harmonic Alchemy Modular-Emacs V3.1 (beta) [Q2 2020]
+;;      Org Mode has been heavily customized!  Also some of the Module
+;;      files were re-organized. (In particular 12-Xah-Fly-Keys.el
+;;      and 13-key-bindings.el) Added some tweaks to improve package
+;;      management...  I am prepairing to fork this generic version
+;;      that has the optional modules disabled (not loaded) to create
+;;      a new branch or branches which have some options turned on...
+;;      This will make it easier for anyone wishing to try out some of
+;;      the optional features...
+;;
 ;;   2019-011-12 - Harmonic Alchemy Modular-Emacs V3.0 (beta) [Q4 2019]
 ;;      This represents mostly updated docs which has been needed for a while!
 ;;      there were also many bug fixes brought over from the Lisp IDE fork,
@@ -217,7 +227,7 @@
         ";; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
         ";; Welcome to: [Your-Machine-Name-Here]                    \n"
         ";;             Harmonic Alchemy - Modular Emacs!           \n"
-        ";; Version:    3.1 (beta) [Q4 2019]                        \n"
+        ";; Version:    3.1 (beta) [Q2 2020]                        \n"
         ";;                                                         \n"
         ";; Today's date: " (format-time-string "%Y %B %d") "       \n"
         ";; Startup completed in "
