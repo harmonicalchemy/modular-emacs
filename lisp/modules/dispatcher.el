@@ -113,7 +113,7 @@
 ;;              *** Optional Feature ***
 ;; Load Harmonic Alchemy Modular Emacs - Org Mode module:
 
-;(load-file "~/.emacs.d/lisp/modules/09-org-mode-pkg-conf.el")
+(load-file "~/.emacs.d/lisp/modules/09-org-mode-pkg-conf.el")
 
 ;;;;
 ;;              *** Optional Feature ***
@@ -139,7 +139,7 @@
 ;;              *** Optional Feature ***
 ;; Load Harmonic Alchemy Modular Emacs - Xah Fly Keys module:
 
-;(load-file "~/.emacs.d/lisp/modules/12-Xah-Fly-Keys.el")
+(load-file "~/.emacs.d/lisp/modules/12-Xah-Fly-Keys.el")
 
 ;;;
 ;; Load Harmonic Alchemy Modular Emacs - Key Bindings module:

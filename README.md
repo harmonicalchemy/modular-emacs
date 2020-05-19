@@ -9,35 +9,27 @@ tags: Emacs, 2020, apps-tools, SysAdmin, HA-ModEmacs, how-to, README
 
 ![Banner](./Docs/media/Modular-Emacs-Github-Banner-v3.png)
 
-# Modular Emacs README
+# Org Mode Publishing with Xah Fly Keys - README
 
 **[\[Table Of Contents\]](#table-of-contents)**
 
 ## Introduction:
 
-**[Q2 2020] _Welcome to Harmonic Alchemy Modular Emacs - V3.1!_ (Currently in Beta)**
+**_Welcome to Harmonic Alchemy Modular Emacs_** - V3.1 [Q2 2020] _(Currently in Beta)_.  
+
+This **`org-pub-ops`** branch/fork enables **Xah-Fly-Keys** as well as my **Org Mode book publishing** tweaks.  
+
+**Warning:** Getting used to **`Xah-Fly-Keys`** can take some time...
 
 **Current Status:**
 
-- **2020 May 18:** Org Mode has been heavily customized!  Also some of the Module files were re-organized... (In particular 12-Xah-Fly-Keys.el and 13-key-bindings.el)... Tweaks were added to improve package management as well...  I am prepairing to fork this generic version that has the optional modules disabled (not loaded) to create a new branch or branches which have some options turned on... This will make it easier for anyone wishing to try out some of the optional features...
+- **2020 May 18:** Org Mode has been heavily customized!  Also some of the Module files were re-organized... (In particular `12-Xah-Fly-Keys.el` and `13-key-bindings.el)`... Tweaks were added to improve package management as well...  
+
+
+- In this fork, the optional modules: `09-org-mode-pkg-conf.el`, `12-Xah-Fly-Keys.el`, and `13-key-bindings.el` have been enabled (loaded) i.e., turned on... This will make it easier for anyone wishing to try out some of my Org Mode publishing features but it also requires you to learn how to use Xah-Fly-Keys which this fork is heavely invested on for quick operation...
+
 
 - **2020 May 17 - Fancy Org Mode:** This commit adds a bunch of new Org-Mode tweaks... I am setting up my Org-Mode based Book Publishing System _(my **pubOps**)_ now... There will be some included examples addes to this a bit later...  The org-mode module is disabled by default... To use it you will need to read the docs provided...  I plan to make a branch (fork) for Org-Mode where you can try this out without having to go in and enable/disable modules etc... That will be coming next... I will update this doc when that is ready...  The Blackboard Color Theme was also updated _(to accomodate prettifying Org-Mode)_.  Also, I am back to using the standard mode line.  I got tired of **powerline** _(It felt too cluttered and also seemed to have bugs)_... Then I tried **smart-mode-line** to see if I could make things look better and simpler... I got frustrated with it as well and after mucking around I realized there is nothing wrong with the Emacs standard mode-line and you can tweak it to fit exactly your needs... So now that is the new plan... You can see changes to that in **`02-package-conf.el`**... Everything else stays pretty much the same as Version 3.0...
-
-- Version 3.0 merges a few new features, as well as bugfixes from the **Lisp IDE** fork back into the master and develop branches of Harmonic Alchemy Modular Emacs.
-
-- This single README doc was completely overhauled and made into separate indexed documents kept in the `./Docs` directory... As promised before, this is the main reason for this new version release...
-
-- Many bugs were previously fixed in the Lisp IDE branch... Those fixes have now migrated out globally to all branches...  
-
-- The Default Install of Harmonic Alchemy Emacs _(from the `master` branch)_ has been made as simple as possible without any bells or whistles...  However it is set up nicely at that point to be easily customized in different ways, depending on your personal needs and choices.  This is a more practical approach.  That is the aim of the basic default install of **_Harmonic Alchemy Modular Emacs_**...
-
-- None of the optional features from the Lisp IDE branch or elsewhere are enabled in the default install... If you are interested in trying any of the optional features, you must install the default Modular Emacs first...  That is how it works now...  I like it..  I think you will too...
-
-- A new optional **[Accounting Module](./Docs/ModE-Accounting-Module-Configuration.md)** _(currently an experimental feature)_ has been added.  The accounting module will enable `hledger-mode`, an Emacs interface to **hledger** _(a fork of_ **ledger** _completely rewritten in Haskell with hopeful improvements)_ ...
-
-> Note: One place where modular-emacs is not yet modular are the key-binding modules...  All key-bindings for everything are in those key-bindings .el files. I plan to modularize key-bindings as well by moving related key commands into the modules they exclusively belong to.  This way, removing any single module will also remove everthing exclusively related to it, seamlessly from Emacs without leaving behind artifacts...  For now I need to test things as they are because I have added a lot of new Xaw-Fly-Keys things and need to get that working stable first... (also learn how to use the damn thing! LOL) I'm still cursing myself after accidentally hitting "V" for paste, when I thought I was in insert mode typing plain text!  But I am getting better.  
-
-> This is why it is so important to start out slowly, like learning a new musical instrument... But worse... If you play a wrong note in music, its just a hiccup.. No damage done, except a little embarrassment... On the other hand, if you are typing real fast... _(and you will once you start getting cocky with your Xah-Fly-Keys-FU! They are not called Fly for nuttin! ;-)_ If you hit the wrong key you won't realize it until you have typed a whole wrong chord! You won't hear a sound, but the damage will be done and you won't know what the heck happened or how to get back! Slow Down! Drive Safely... Get those keys well established in muscle memory first...
 
 To install Harmonic Alchemy Modular Emacs for the first time, follow this guide _(in a top down fashion)_... Do not skip to any of the other install guides until you have the basic default configuration of Modular Emacs installed and running _(without errors)_ in your home directory... 
 
@@ -460,16 +452,15 @@ Use Scratch buffer to evaluate snippets of `lisp` without having to remove the w
 
 #### Misc. Packages:
 
-- [powerline](https://github.com/milkypostman/powerline) Decorate `mode-line` & make it More Informative.  You can customize options and use themes etc...
+- [powerline](https://github.com/milkypostman/powerline) Decorate `mode-line` & make it More Informative.  You can customize options and use themes etc... This theme is disabled by default.  I am back to the Emacs default mode line and I customize that instead.  I did not remove the code to enable powerline though.  If you like powerline, the code for enabling it is located within **`02-package-conf.el`** Read the comments in that file to find it...
 
 
 - [auto-complete](https://github.com/auto-complete/auto-complete) Easy Text Editing with suggested word completion.   
-**Update 2020:** I believe this may be a bit buggy at the moment... I have neglected it and some update or debugging may be needed... Currently when entering code if I enter a function name and completion pops up.. If I want to keep typing _(not accepting the default, or maybe what I want is different than what it thinks)_... It fights me...  I have to fool it by typing some junk and then pull off a text switch game.... LOL  I will fix this later...  If you hate it, you can comment it out in 02-package-conf.el I may end up doing that myself... `%^)`
+**Update 2020:** I believe this may be a bit buggy at the moment... I have neglected it and some update or debugging may be needed... Currently when entering code if I enter a function name and completion pops up.. If I want to keep typing _(not accepting the default, or maybe what I want is different than what it thinks)_... It fights me...  I have to fool it by typing some junk and then pull off a text switch game.... LOL  I will fix this later...  If you hate it, you can comment it out in 02-package-conf.el I may end up doing that myself... `%^)` Maybe I need to learn how to use this feature better and or tweak it to work better... lol
 
 #### Core Emacs System Related Packages:
 
-- [exec-path-from-shell](https://github.com/purcell/exec-path-from-shell) Get environment variables such as $PATH from the shell.  btw, this can be a tricky thing to do in emacs!  I have struggled with this on Mac OS for a while!  You may find you have to start Emacs from the terminal to get all your environment vars into Emacs!  More about that later.. A continuing saga!   
-**Update 2020:** This has been working fine on my iMac since completely replacing Homebrew with MacPorts.  IMHO _(biased by a host of irritant issues using Homebrew over the years)_  MacPorts is a much better package manager all around...  But not the popular one...  Oh Well... %^) Also, since building my own Emacs from GNU source tree on my iMac, configured just how I like it, I have had no more nagging MacOS related issues... And I can have the latest Emacs the second it is released _(one build cycle away, or choose to go back to my archived app if they introduce some bug or someting)_! :octocat:
+- [exec-path-from-shell](https://github.com/purcell/exec-path-from-shell) Get environment variables such as $PATH from the shell.  btw, this can be a tricky thing to do in emacs!  I have struggled with this on Mac OS for a while!  You may find you have to start Emacs from the terminal to get all your environment vars into Emacs!  More about that later.. A continuing saga! **Update 2020:** This has been working fine on my iMac since completely replacing Homebrew with MacPorts.  IMHO _(biased by a host of irritant issues using Homebrew over the years)_  MacPorts is a much better package manager all around...  But not the popular one...  Oh Well... %^) Also, since building my own Emacs from GNU source tree on my iMac, configured just how I like it, I have had no more nagging MacOS related issues... And I can have the latest Emacs the second it is released _(one build cycle away, or choose to go back to my archived app if they introduce some bug or someting)_! :octocat:
 
 #### Emacs Helm & Extras:
 
@@ -489,7 +480,7 @@ Use Scratch buffer to evaluate snippets of `lisp` without having to remove the w
 - [ztree](https://github.com/fourier/ztree) An efficient directory tree comparison utility. Invaluable for visually oriented thinkers! Integrates directly with ediff files!
 
 
-- [imenu-list](https://github.com/bmag/imenu-list) Right panel Menu and Variable list.  You can toggle an imenu list right panel window (for example within an elisp, Python, etc. file) with: `C-'`
+- [imenu-list](https://github.com/bmag/imenu-list) Right panel Menu and Variable list.  You can toggle an imenu list right panel window (for example within an elisp, Python, etc. file) with: `C-'`...  If you have **Xah Fly Keys** enabled, you can simpley type "**`'`**" to open iMenu List in a narrow window on the left side...
 
 #### Dired Related Packages:
 

@@ -75,7 +75,7 @@
   (define-key xah-fly-command-map (kbd "`") 'olivetti-mode)
 
   ;; Set neotree key to primary KFKeys Command Mode Map...
-  (define-key xah-fly-command-map (kbd "'") 'neotree-toggle)
+  (define-key xah-fly-command-map (kbd "'") 'imenu)
 
   ;; Set Invoke Daft key to primary KFKeys Command Mode Map...
   (define-key xah-fly-command-map (kbd "0") 'deft)
