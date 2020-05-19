@@ -283,23 +283,25 @@
 
 ;; Customize Org headings:
 
-(let* ((variable-tuple (cond ((x-list-fonts "Averia Serif Libre") '(:font "Averia Serif Libre"))
-                             ((x-list-fonts "Averia Libre Light") '(:font "Averia Libre Light"))
-                             (nil (warn "Cannot find a Sans Serif Font.  Trying to Install Averia Serif Libre."))))
+(let* ((variable-tuple
+        (cond ((x-list-fonts "Averia Serif Libre") '(:font "Averia Serif Libre"))
+              ((x-list-fonts "Averia Libre Light") '(:font "Averia Libre Light"))
+              (nil (warn "Cannot find Averia Serif Libre, or Averia Libre Light. Did you install them?"))))
        (base-font-color     (face-foreground 'default nil 'default))
        (headline           `(:inherit default :weight normal )))
-  
-  (custom-theme-set-faces 'user
-                          `(org-level-8 ((t (,@headline ,@variable-tuple :height 1.13 :foreground "AntiqueWhite" ))))
-                          `(org-level-7 ((t (,@headline ,@variable-tuple :height 1.17 :foreground "AntiqueWhite" ))))
-                          `(org-level-6 ((t (,@headline ,@variable-tuple :height 1.20 :foreground "AntiqueWhite" ))))
-                          `(org-level-5 ((t (,@headline ,@variable-tuple :height 1.23 :foreground "AntiqueWhite" ))))
-                          `(org-level-4 ((t (,@headline ,@variable-tuple :height 1.28 :foreground "AntiqueWhite" ))))
-                          `(org-level-3 ((t (,@headline ,@variable-tuple :height 1.38 :foreground "AntiqueWhite" ))))
-                          `(org-level-2 ((t (,@headline ,@variable-tuple :height 1.62 :foreground "AntiqueWhite" ))))
-                          `(org-level-1 ((t (,@headline ,@variable-tuple :height 1.88 :foreground "AntiqueWhite" ))))
-                          `(org-document-title
-                            ((t (,@headline ,@variable-tuple :height 1.5 :foreground "AntiqueWhite" :underline nil))))))
+
+  (custom-theme-set-faces
+   'user
+   `(org-level-8 ((t (,@headline ,@variable-tuple :height 1.13 :foreground "AntiqueWhite" ))))
+   `(org-level-7 ((t (,@headline ,@variable-tuple :height 1.17 :foreground "AntiqueWhite" ))))
+   `(org-level-6 ((t (,@headline ,@variable-tuple :height 1.20 :foreground "AntiqueWhite" ))))
+   `(org-level-5 ((t (,@headline ,@variable-tuple :height 1.23 :foreground "AntiqueWhite" ))))
+   `(org-level-4 ((t (,@headline ,@variable-tuple :height 1.28 :foreground "AntiqueWhite" ))))
+   `(org-level-3 ((t (,@headline ,@variable-tuple :height 1.38 :foreground "AntiqueWhite" ))))
+   `(org-level-2 ((t (,@headline ,@variable-tuple :height 1.62 :foreground "AntiqueWhite" ))))
+   `(org-level-1 ((t (,@headline ,@variable-tuple :height 1.88 :foreground "AntiqueWhite" ))))
+   `(org-document-title
+     ((t (,@headline ,@variable-tuple :height 1.5 :foreground "AntiqueWhite" :underline nil))))))
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
