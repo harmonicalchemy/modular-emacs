@@ -112,9 +112,8 @@
 ;; Set default font to Hermit Medium (my favorite mono font for everything)...
 (set-face-attribute 'default nil
                     :family "Hermit"
-                    :foundry "PfEd"
                     :slant 'normal
-                    :height 111
+                    :height 120
                     :weight 'normal
                     :width 'normal)
 

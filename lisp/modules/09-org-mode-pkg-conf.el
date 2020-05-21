@@ -118,9 +118,9 @@
    (expand-file-name "03-Private" my-org-dir)))
 
 
-;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;   Beautify Settings for Org-Mode: (constantly under revision %^)
-;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 (require 'org-faces)
 
@@ -182,6 +182,7 @@
  'org-mode
  '(("^ *\\([+]\\) "
     (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "🞜"))))))
+
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Emojify for Org-Mode - Information Only:
@@ -267,19 +268,39 @@
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; Make better Org-Mode Headers:
+;; Make Attractive Org-Mode Headers, blocks, keywords etc:
 ;;
-;; This rather complicated eLisp code came from:
-;; http://www.howardism.org/Technical/Emacs/orgmode-wordprocessor.html
-;; It may need some improvements (simplifications) as Howard said in his post...
+;; The inspiration for this rather complicated eLisp code comes from:
+;;   "Beautifying Org Mode in Emacs"
+;;      https://zzamboni.org/post/beautifying-org-mode-in-emacs/
 
-;; Set default faces: (disabled... I don't need this.  It's for experiments)
-;; Instead set these in your custom Blackboard Theme... I was testing them here...
-;(custom-theme-set-faces
-; 'user
-; '(org-default ((t (:family "Advent Pro Light" :height 125 :weight light))))
-; '(variable-pitch ((t (:family "Averia Serif Libre" :height 120 :weight light))))
-; '(fixed-pitch ((t ( :family "Go Mono for Powerline" :slant normal :weight normal :height 1.0 :width normal)))))
+;; Set default faces:
+
+(set-face-attribute 'fixed-pitch nil :family "Courier Prime Emacs" :height 131 :width 'normal)
+(set-face-attribute 'variable-pitch nil :family "Averia Serif Libre" :height 128 :width 'normal)
+
+(custom-theme-set-faces
+ 'user
+ `(code ((t ( :family "Hermit" :slant normal :weight normal :height 1.0 :width normal)))))
+
+;; Set Org Mode Faces:
+
+(custom-theme-set-faces
+ 'user
+ `(default ((t (:inherit fixed-pitch :height 128 :weight normal))))
+ `(org-default ((t (:inherit fixed-pitch :height 128 :weight normal))))
+ `(org-block ((t (:inherit code))))
+ `(org-code ((t (:inherit (shadow code)))))
+ `(org-document-info ((t (:foreground "dark orange"))))
+ `(org-document-info-keyword ((t (:inherit (shadow fixed-pitch)))))
+ `(org-indent ((t (:inherit (org-hide fixed-pitch)))))
+ `(org-link ((t (:foreground "royal blue" :underline t))))
+ `(org-meta-line ((t (:inherit (font-lock-comment-face fixed-pitch)))))
+ `(org-property-value ((t (:inherit fixed-pitch))) t)
+ `(org-special-keyword ((t (:inherit (font-lock-comment-face fixed-pitch)))))
+ `(org-table ((t (:inherit code :foreground "#83a598"))))
+ `(org-tag ((t (:inherit (shadow code) :weight bold :height 0.8))))
+ `(org-verbatim ((t (:inherit (shadow code))))))
 
 ;; Customize Org headings:
 
@@ -341,23 +362,28 @@
                         nil))))))
 
 
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Modular Emacs - Org Mode Hook:
 
 (defun me_org-mode-hook ()
-  ;; Set default face to Go Mono for Powerline (A nice mono serif for writing)...
+  ;; Set default face to Courier Prime Emacs
+  ;; (A nice mono block serif typewriter look for writing)...
   (set-face-attribute 'default nil
-                      :family "Go Mono for Powerline"
+                      :family "Courier Prime Emacs"
                       :slant 'normal
-                      :height 120
+                      :height 131
                       :weight 'normal
                       :width 'normal)
-  (me_hide-org-bullets))   ;; Remove this last element if you want to see fancy bullets...
+  (setq me--def-face 2)
+  (olivetti-mode)
+  ;; Add olivetti mode options for fountain mode here:
+  (olivetti-set-width 88)
+  (me_hide-org-bullets)) ;; Remove this last element in list if you like to see fancy bullets...
 
 (add-hook 'org-mode-hook 'me_org-mode-hook)
 
 
-;;;
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Setup my Default Org-Mode Keywords:
 ;; The above are based on general GTD schemes I am using...
 ;; (adjust this list to fit your own planning style)
@@ -375,10 +401,11 @@
 ;               (sequence "ACTIVE(a)" "↺ REPEATING(r)" "⚑ WAITING(w@/!)" "⨂ HOLD(h@/!)" "|" "✘ CANCELLED(c@/!)" "PHONE(p)")
 ;	       (sequence  "NEW(n)" "⦾ NOW(o)" "SOMEDAY(s)"  "|" "ARCHIVED(a)"))))
 
-;;;
-;; Set Org TODO keyword faces:
-;; (don't settle for boring red, green, blue... Be creative!)
-;; INFO:  To lookup the list of Emacs colours that can be used by name use:
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Set Org TODO keyword faces:
+;;  (don't settle for boring red, green, blue... Be creative!)
+;;  INFO:  To lookup the list of Emacs colours that can be used by name use:
 ;;
 ;;                         M-x list-colors-display
 ;;
@@ -408,28 +435,8 @@
               ("SOMEDAY" . (:family "Hermit" :height 100 :foreground "gold" :weight bold))
               ("ARCHIVED" . (:family "Hermit" :height 100 :foreground "AntiqueWhite" :weight bold)))))
 
-;; For some reason trying to do this with custom-theme-set-faces did not work... But the above does...
-;; I need to come back and re-examine this code later...
-;;
-;(let* ((fixed-tuple (cond ((x-list-fonts "Hermit") '(:face "Hermit"))
-;                          (nil (warn "Cannot find Hermit Font. Is it installed on this system?")))))
-;  (custom-theme-set-faces 'user
-;                          '(org-todo-keyword-faces (("TODO" :face "Hermit" :height 100 :foreground "red" :weight bold)))
-;                          '(org-todo-keyword-faces (("NEXT" :face "Hermit" :height 100 :foreground "BlueViolet" :weight bold)))
-;                          '(org-todo-keyword-faces (("DONE" :face "Hermit" :height 100 :foreground "green2" :weight bold)))
-;                          '(org-todo-keyword-faces (("ACTIVE" :face "Hermit" :height 100 :foreground "chocolate1" :weight bold)))
-;                          '(org-todo-keyword-faces (("REPEATING" :face "Hermit" :height 100 :foreground "DeepSkyBlue" :weight bold)))
-;                          '(org-todo-keyword-faces (("WAITING" :face "Hermit" :height 100 :foreground "lavender" :weight bold)))
-;                          '(org-todo-keyword-faces (("HOLD" :face "Hermit" :height 100 :foreground "gray62" :weight bold)))
-;                          '(org-todo-keyword-faces (("CANCELLED" :face "Hermit" :height 100 :foreground "SlateGray" :weight bold)))
-;                          '(org-todo-keyword-faces (("PHONE" :face "Hermit" :height 100 :foreground "DarkOrange" :weight bold)))
-;                          '(org-todo-keyword-faces (("NEW" :face "Hermit" :height 100 :foreground "DodgerBlue" :weight bold)))
-;                          '(org-todo-keyword-faces (("NOW" :face "Hermit" :height 100 :foreground "HotPink" :weight bold)))
-;                          '(org-todo-keyword-faces (("SOMEDAY" :face "Hermit" :height 100 :foreground "gold" :weight bold)))
-;                          '(org-todo-keyword-faces (("ARCHIVED" :family "Hermit" :height 100 :foreground "AntiqueWhite" :weight bold)))))
 
-
-;;;
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Define Custom Org-files:
 
 (setq default-org-note "refile.org")
@@ -437,7 +444,7 @@
 
 (setq org-default-notes-file (expand-file-name default-org-note my-org-dir))
 
-;;;
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Set Up Capture templates for: TODO tasks, Notes, appointments, phone calls, and org-protocol
 
 (setq org-capture-templates
@@ -597,7 +604,7 @@
 
 (setq org-alphabetical-lists t)
 
-;;; 
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Custom agenda command definitions
 
 (setq org-agenda-custom-commands
@@ -683,7 +690,7 @@
 		(org-tags-match-list-sublevels nil))))))
 
 
-;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Org Mind Map Configuration:
 ;; Note:  Graphviz must be installed on your system before enabling these next
 ;;        Forms!!!
@@ -700,6 +707,7 @@
 
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;   Alisha's Advanced Org-Mode Configurations:
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Org Outline Tree on left | content on 
@@ -726,6 +734,7 @@
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Org Mode Export Section - Settings:
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;; Exporters:
 

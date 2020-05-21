@@ -139,7 +139,7 @@
 ;;              *** Optional Feature ***
 ;; Load Harmonic Alchemy Modular Emacs - Xah Fly Keys module:
 
-(load-file "~/.emacs.d/lisp/modules/12-Xah-Fly-Keys.el")
+;(load-file "~/.emacs.d/lisp/modules/12-Xah-Fly-Keys.el")
 
 ;;;
 ;; Load Harmonic Alchemy Modular Emacs - Key Bindings module:

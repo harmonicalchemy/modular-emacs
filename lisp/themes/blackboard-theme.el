@@ -46,8 +46,8 @@
    This new 2020 version changes the background blackboard colour to a deep dark indigo rather than all black")
 
 (custom-theme-set-faces
- `blackboard
- `(default ((t (:background "#180028" :foreground "#F8F4FB" ))))
+ 'blackboard
+ `(default ((t (:family "Hermit" :height 118 :weight light :background "#180028" :foreground "#F8F4FB"))))
  `(bold ((t (:bold t))))
  `(bold-italic ((t (:bold t))))
  `(border-glyph ((t (nil))))
@@ -65,7 +65,7 @@
 
  ;; org-mode
 
- '(org-default ((t (:family "Go Mono for Powerline" :height 125 :weight light))))
+ `(org-default ((t (:family "Courier Prime Emacs" :height 131 :weight light))))
  `(org-hide ((t (:foreground "#2e3436"))))
  `(org-level-1 ((t (:bold nil :foreground "dodger blue" :height 1.3))))
  `(org-level-2 ((t (:bold nil :foreground "#edd400" :height 1.2))))

@@ -9,13 +9,15 @@
   '(("C-c l" . org-store-link)
     ("C-c a" . org-agenda)
     ("C-c c" . org-capture)
+    ("C-c d" . neotree-toggle)
     ("C-x C-g" . deft-find-file)
     ("C-c m" . org-md-export-to-markdown)
     ("C-c s" . flyspell-auto-correct-word) 
     ("C-c v" . vmd-mode)
     ("C-c r" . view-mode)
-    ("C-c '" . imenu-list-smart-toggle)
+    ("C-c '" . imenu)
     ("C-c b" . other-frame)
+    ("C-c p" . me_toggle-default-face)
     ("C-c u" . me_toggle-letter-case)
     ("M-x" . helm-M-x)
     ("C-x b" . helm-mini)
@@ -38,78 +40,6 @@
 
 (require 'flyspell-correct-helm)
 (define-key flyspell-mode-map (kbd "C-;") 'flyspell-correct-previous)
-
-
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; Modular Emacs - Set Default Face Functions:
-;;
-;; Purpose:
-;;
-;;  I like to use a serif mono font for writing paragraphs...
-;;  but I use Hermit or other similar font for Coding...
-;;  This provides a way to go back and fourth from one
-;;  face (which is Emacs Default) to another depending on
-;;  my current work mode (writing or coding)...
-;;
-;; Usage:
-;;
-;;   Adjust face dimensions and weight within forms below as needed.
-;;   Note: Linux vs Mac, Big screen vs Laptop, may require
-;;         sub cases to handle... %^)
-;;
-;;   Xah Fly Key Assigned: Command Mode "p"
-;;
-;; NOTE: Currently there is no check to see if these fonts are 
-;;       installed on your system! This is still alpha test stage..."
-;;
-
-(defun me_set-org-face ()
-  ;; Set default face to Go Mono for Powerline (A nice mono serif for writing)...
-  (interactive)
-  (progn
-    (set-face-attribute 'default nil
-                        :family "Go Mono for Powerline"
-                        :slant 'normal
-                        :height 123
-                        :weight 'normal
-                        :width 'normal)
-    (setq-default 'me--default nil)))
-
-(defun me_set-default-face ()
-  ;; Set default font to Hermit Medium (my favorite mono font for everything)...
-  (interactive)
-  (progn
-    (set-face-attribute 'default nil
-                        :family "Hermit"
-                        :foundry "PfEd"
-                        :slant 'normal
-                        :height 120
-                        :weight 'normal
-                        :width 'normal)
-    (setq-default 'me--default t)))
-
-;;;
-;; Toggle Default Face... This one gets bound to Xah Fly Command Key:  "p"
-;; This one calls one of the two above depending on test variable:  me--default
-;; if me--default is t,
-;;   Switch to Org Mode;
-;;   Change me--default to nil;
-;; Otherwise
-;;   Switch back to default face;
-;;   Change me--default to t;
-;;   
-
-(defvar me--default t "Test variable for me_toggle-default-face")
-
-(defun me_toggle-default-face ()
-  "Toggle default face, depending on current need...
-   Purpose: I like to use a serif mono font for writing
-   paragraphs, but I need to use Hermit etc. for Coding
-   This provides a way to toggle from one to the other"
-  (interactive)
-  (if (eq me--default t)
-      'me_set-org-face
-    'me_set-default-face))
 
 
 ;;;

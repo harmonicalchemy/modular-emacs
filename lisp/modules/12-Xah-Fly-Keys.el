@@ -50,6 +50,82 @@
 
 
 
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; Modular Emacs - Set Default Face Functions:
+;;
+;; Purpose:
+;;
+;;  I like to use a serif mono font for writing paragraphs...
+;;  but I use Hermit or other similar font for Coding...
+;;  This provides a way to go back and fourth from one
+;;  face (which is Emacs Default) to another depending on
+;;  my current work mode (writing or coding)...
+;;
+;; Usage:
+;;
+;;   Adjust face dimensions and weight within forms below as needed.
+;;   Note: Linux vs Mac, Big screen vs Laptop, may require
+;;         sub cases to handle... %^)
+;;
+;;   Xah Fly Key Assigned: Command Mode "p"
+;;
+;; NOTE: Currently there is no check to see if these fonts are 
+;;       installed on your system! This is still alpha test stage..."
+;;
+
+(defun me_set-org-face ()
+  ;; Set default face to Courier Prime Emacs (A nice mono serif for writing)...
+  (interactive)
+  (progn
+    (set-face-attribute 'default nil
+                        :family "Courier Prime Emacs"
+                        :slant 'normal
+                        :height 131
+                        :weight 'normal
+                        :width 'normal)))
+
+(defun me_set-default-face ()
+  ;; Set default font to Hermit Medium (my favorite mono font for everything)...
+  (interactive)
+  (progn
+    (set-face-attribute 'default nil
+                        :family "Hermit"
+                        :slant 'normal
+                        :height 118
+                        :weight 'normal
+                        :width 'normal)))
+
+;;;
+;; Toggle Default Face... This one gets bound to Xah Fly Command Key:  "p"
+;; This one calls one of the two above depending on test variable:  me--default
+;; if me--default is t,
+;;   Switch to Org Mode;
+;;   Change me--default to nil;
+;; Otherwise
+;;   Switch back to default face;
+;;   Change me--default to t;
+;;
+
+(defvar me--def-face 1 "Test variable for me_toggle-default-face")
+
+(defun me_toggle-default-face ()
+  "Toggle default face, depending on current need...
+   Purpose: I like to use a serif mono font for writing
+   paragraphs, but I need to use Hermit etc. for Coding
+   This provides a way to toggle from one to the other"
+  (interactive)
+  (cond
+   ((= me--def-face 1)
+    (message "Set default face to Courier Prime Emacs")
+    (me_set-org-face)
+    (setq me--def-face 2))
+   ((= me--def-face 2)
+    (message "Set default face back to normal code font")
+    (me_set-default-face)
+    (setq me--def-face 1))))
+
+
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;           CUSTOM Xah Fly KEY BINDINGS
 ;;  Add Personalized keybindings to Xah fly Keys:
@@ -71,10 +147,15 @@
   (define-key xah-fly-command-map (kbd "b") 'other-frame)
   (define-key xah-fly-command-map (kbd "2") 'make-frame)
 
+  ;; Set easy key to toggle neotree in left window pane:
+  ;; Note: This disables (default Xfk to run command delete-char)
+  ;;       I don't need that as the "D" key works fine for me...
+  (define-key xah-fly-command-map (kbd "5") 'neotree-toggle)
+
   ;; Change default olivetti-mode key (because I have conflicting other-frame key)
   (define-key xah-fly-command-map (kbd "`") 'olivetti-mode)
 
-  ;; Set neotree key to primary KFKeys Command Mode Map...
+  ;; Set global key to toggle imenu (pops up in Helm window)...
   (define-key xah-fly-command-map (kbd "'") 'imenu)
 
   ;; Set Invoke Daft key to primary KFKeys Command Mode Map...

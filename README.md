@@ -2,40 +2,42 @@
 file: README.md
 author: Alisha Awen
 created: 2019-010-20
-updated: 2019-011-14
+updated: 2020-005-18
 tags: Emacs, 2020, apps-tools, SysAdmin, HA-ModEmacs, how-to, README 
 ---
 <!-- #Emacs #2020 #apps-tools #SysAdmin #HA-ModEmacs #how-to #README -->
 
 ![Banner](./Docs/media/Modular-Emacs-Github-Banner-v3.png)
 
-# Org Mode Publishing with Xah Fly Keys - README
+# Version 3.1 (beta) - README
 
 **[\[Table Of Contents\]](#table-of-contents)**
 
 ## Introduction:
 
-**_Welcome to Harmonic Alchemy Modular Emacs_** - V3.1 [Q2 2020] _(Currently in Beta)_.  
-
-This **`org-pub-ops`** branch/fork enables **Xah-Fly-Keys** as well as my **Org Mode book publishing** tweaks.  
-
-**Warning:** Getting used to **`Xah-Fly-Keys`** can take some time...
+**_Welcome to Harmonic Alchemy Modular Emacs_** - V3.1 [Q2 2020] _(Currently in Beta)_.
 
 **Current Status:**
 
-- **2020 May 18:** Org Mode has been heavily customized!  Also some of the Module files were re-organized... (In particular `12-Xah-Fly-Keys.el` and `13-key-bindings.el)`... Tweaks were added to improve package management as well...  
+- **2020 May 18:** Org Mode has been heavily customized!  Also some of the Module files were re-organized... (In particular `12-Xah-Fly-Keys.el` and `13-key-bindings.el)`... Tweaks were added to improve package management as well...
 
+- In the Master Branch, optional modules are disabled _(see details below)_...  Not having Xah-Fly-Keys enabled kind of cripples things for me now that I am used to them... Going back to the old way is painful! It is hard to test my setup using the old C-x and M-x keys etc... %^) Last year at this time I was complaing about the opposite... _(i.e., having to learn Xah-Fly-Keys and using Emacs as a Modal editor like **vi**)_
 
-- In this fork, the optional modules: `09-org-mode-pkg-conf.el`, `12-Xah-Fly-Keys.el`, and `13-key-bindings.el` have been enabled (loaded) i.e., turned on... This will make it easier for anyone wishing to try out some of my Org Mode publishing features but it also requires you to learn how to use Xah-Fly-Keys which this fork is heavely invested on for quick operation...
+- **2020 May 17 - Fancy Org Mode:** This commit adds a bunch of new Org-Mode tweaks... I am setting up my Org-Mode based Book Publishing System _(my **pubOps**)_ now... There will be some included examples added to this a bit later...  The org-mode module is NOW enabled by default... To use it you will need to edit the file: **`09-org-mode-pag-conf.el`** and depending on your OS, (Mac or Linux) change the dummy placeholder path to your REAL **org docs** directory path.  There are two options allowing you to run this on both MacOS and Linux if you are a multi OS kind of person. :octocat:
 
+- I created a branch _(fork)_ where you can try out my **Fancy Org Mode PubOps environment** using: **Xah-Fly-Keys** with out without having to go in and enable/disable these modules as instructed further down within this doc...
 
-- **2020 May 17 - Fancy Org Mode:** This commit adds a bunch of new Org-Mode tweaks... I am setting up my Org-Mode based Book Publishing System _(my **pubOps**)_ now... There will be some included examples addes to this a bit later...  The org-mode module is disabled by default... To use it you will need to read the docs provided...  I plan to make a branch (fork) for Org-Mode where you can try this out without having to go in and enable/disable modules etc... That will be coming next... I will update this doc when that is ready...  The Blackboard Color Theme was also updated _(to accomodate prettifying Org-Mode)_.  Also, I am back to using the standard mode line.  I got tired of **powerline** _(It felt too cluttered and also seemed to have bugs)_... Then I tried **smart-mode-line** to see if I could make things look better and simpler... I got frustrated with it as well and after mucking around I realized there is nothing wrong with the Emacs standard mode-line and you can tweak it to fit exactly your needs... So now that is the new plan... You can see changes to that in **`02-package-conf.el`**... Everything else stays pretty much the same as Version 3.0...
+- **Note:** I am still working on custom Export options for Modular Emacs Fancy Org Mode...  But everything else is working nicely now... Export features will be forthcomming over the next few months!  Stay tuned...  Book publishing time!
+
+- The **Blackboard** Color Theme was also updated _(to accomodate prettifying Org-Mode)_.  Also, I am back to using the standard mode line.  I got tired of **powerline** _(It felt too cluttered and also seemed to have bugs)_... Then I tried **smart-mode-line** to see if I could make things look better and simpler... I got frustrated with it as well and after mucking around I realized there is nothing wrong with the Emacs standard mode-line and you can tweak it to fit exactly your needs... So now that is the new plan... I left the old code for both `powerline` and `smart-mode-line` in place _(commented out)_ making it easy for you to enable either of them, if you like them better... You can see changes to mode line features in **`02-package-conf.el`**... 
+
+- **_Everything else stays pretty much the same as Version 3.0..._**
 
 To install Harmonic Alchemy Modular Emacs for the first time, follow this guide _(in a top down fashion)_... Do not skip to any of the other install guides until you have the basic default configuration of Modular Emacs installed and running _(without errors)_ in your home directory... 
 
 > **Exception: _Debian and Mac users will have to follow a linked doc that guides you through building and maintaining your own Official GNU Emacs from source first!_** Building from source is tedious, _especially if you are doing it for the first time, you WILL have to try many times before getting all those "twisty little snippets all different", sorted out and resolved._  If you stick to your guns and stay persistant, you will be awesome!  You will also be in total control of your personal and OFFICIAL build of GNU Emacs, how it works, and what it does!  Your second build experience will go much more smoothly...  By the third build the process will become the boring routine of typing a few commands, and then waiting as your machine cranks away a brand new version for you...  Play **_mind_ sweeper** with your smart spyPhone, or read a book about exploding brain synapses while your computer's busy making free-as-in-liberated Emacs... :trollface:
 
-Once the above is done, visit the _**optional section headings**_ below to find links to install guides for optional modules you may be interested in trying out...  Consult the **[\[Table Of Contents\]](#table-of-contents)** for quick access if you are coming back to this doc later... You will see a link to the **Table of Contents** placed approximately one page or half page apart continuing down this document as well for easy quick reference...
+Once you have the basics running smoothly, then it will be safe to visit the _**optional section headings**_ below to find links to install guides for optional modules you may be interested in trying out...  Consult the **[\[Table Of Contents\]](#table-of-contents)** for quick access if you are coming back to this doc later... You will see a link to the **Table of Contents** placed approximately one page or half page apart continuing down this document as well for easy quick reference... _(kind of reminds me of the old web days before JavaScript exploded on the scene ;-)_
 
 > **Warning:** Enabling optional features may require you to remap some of your keys and also change Emacs into a modal editor _(similar to Vi but more Emacs like)_  Read carefully before making that commitment...
 
@@ -477,18 +479,28 @@ Use Scratch buffer to evaluate snippets of `lisp` without having to remove the w
 **Note:** **_xah-fly-keys_** also uses helm to pop up leader key choices and extended menu...  Hit the `SPACEBAR` _(LEADER KEY)_ and wait a second for helm to pop up the list of options... _(with help feature and pagination! Vital for learning all those keys!)_
 #### Tree & Menu Related Packages:
 
-- [ztree](https://github.com/fourier/ztree) An efficient directory tree comparison utility. Invaluable for visually oriented thinkers! Integrates directly with ediff files!
+- [ztree](https://github.com/fourier/ztree) An efficient directory tree comparison utility. Invaluable for visually oriented thinkers! Integrates directly with ediff files! **To use** type: **`M-x`** _(or simply **"a"** from **Xah-Fly-Keys Command Mode**)_ and then start typing: **"`ztr...`"** etc. and choose **`ztree-diff`** from the popup **Helm** menu.  Then choose directory "A" & "B" _(as prompted)_ to compare.  Make your screen wide to see both directories listed side by side with color coded files indicating status/differences within in two side by side buffer lists of all the files that can be navigated in a similar way you navigate a dired buffer...  Putting cursor on any filename and hitting RET key will open the two files within an **eDiff** session... I used to use external diff/merge tools like **kdiff-3** but I find Emacs to be superior (if not quite as slick GUI looking) but that does not bother me in the slightest... The powerful user configurable functions made available within Emacs are (to my eyes) the Beauty of Form and Function in action! **_"Form follows function - that has been misunderstood. Form and function should be one, joined in a spiritual union."_** - **Frank Lloyd Wright**
 
 
-- [imenu-list](https://github.com/bmag/imenu-list) Right panel Menu and Variable list.  You can toggle an imenu list right panel window (for example within an elisp, Python, etc. file) with: `C-'`...  If you have **Xah Fly Keys** enabled, you can simpley type "**`'`**" to open iMenu List in a narrow window on the left side...
+- [imenu-list](https://github.com/bmag/imenu-list) Right panel Menu and Variable list.  You can toggle an imenu list right panel window to view variables, functions, headings, etc. **iMenu List** uses **iMenu** and displays the listing in a narrow window on the left side...    
+**Note:** For some reason `imenu-list` is not working currently.  There seems to be a problem with: `window--display-buffer` call returning nil with the classic: `wrong number of arguments` error...  I am currently troubleshooting this...  For now simply use **`imenu`** by typing **`C-c '`**, _(or by typing the single character: **'** from **Xah-Fly-Keys command mode**)_... 
 
 #### Dired Related Packages:
 
-- [dired-launch](https://github.com/thomp/dired-launch) Open files directly within `dired` using default applications. Great for quick viewing PDF or Image files with your OS default viewer app!
+- [dired-launch](https://github.com/thomp/dired-launch) Open files directly within `dired` using default applications. Great for quick viewing PDF or Image files with your OS default viewer app! To open a PDF for viewing outside of Emacs type: `SPC i w` _(Xah Fly Keys must be enabled for this leader key sequence in Commnd Mode)_
 
 
-- [neotree](https://github.com/jaypei/emacs-neotree) Spawn a tree at any directory. You can toggle a `neotree` left side panel window within `dired-mode` from Xah Fly Keys Command mode by hitting **`'`**    
-**Note:** I have been using bookmarks pretty nicely for a while now and not using this neotree feature all that much... but it is a nice way to navigate from your current location when you are NOT within dired... Your mileage may vary...
+- [neotree](https://github.com/jaypei/emacs-neotree) Spawn a directory
+tree relative your current working directory location. You can toggle a
+`neotree` left side panel window from any open buffer window using a single
+key... Type: **`C-d`** _(normal Emacs mode)_ or type: **`5`** _(from **Xah
+Fly Keys Command mode**)_ to do the same... Within the neotree panel you
+can navigate and open a dired buffer to the directory where your cursor
+is by hitting RET.     
+**Note:** I have been using bookmarks pretty nicely for a while now and
+not using this neotree feature all that much... but it is a quick way to navigate
+from your current buffer/location when you are NOT within dired... Your mileage
+may vary...
 
 #### dev§Ops, sys§Admin, info✷Sec Related Packages:
 
@@ -522,7 +534,8 @@ Use Scratch buffer to evaluate snippets of `lisp` without having to remove the w
 - [pandoc-mode](https://joostkremers.github.io/pandoc-mode/) `pandoc-mode` is an Emacs mode for interacting with Pandoc. Pandoc is a program _(plus libraries)_ created by John MacFarlane that can convert a text written in one markup language into another markup language. This is one of the tools that will help me get off proprietary Scrivener on **Mac OS** and finally be able to use Emacs for all my **Pub§Ops**!
 
 
-- [fountain-mode](https://github.com/rnkn/fountain-mode) For **writers, screenwriters** A markdown mode for writing screenplays! Fantastic!!! Fountain together with pandoc, allows you to do many conversions for screenplays to industry formats like **Final Draft** etc. but the best part is the text highlighting and colors make it very easy to read/rehearse dialog and cues right from an Emacs buffer!  Writing scripts in this mode is as natural as typing `INT` _(your line instantly turns into a scene heading!)_ Try it! Just start typing your script and find out what happens!
+- [fountain-mode](https://github.com/rnkn/fountain-mode) For **writers, screenwriters** A markdown mode for writing screenplays! Fantastic!!! Fountain together with pandoc, allows you to do many conversions for screenplays to industry formats like **Final Draft** etc. but the best part is the text highlighting and colors make it very easy to read/rehearse dialog and cues right from an Emacs buffer!  Writing scripts in this mode is as natural as typing `INT` _(your line instantly turns into a scene heading!)_ Try it! Just start typing your script and find out what happens!  Modular Emacs Fountain Mode has been customized to use a nice looking Typewriter style mono font! It also opens up in olivetti mode _(next item below)_ automatically setting the line width to 100 chars...      
+**Update 2020:** I am currently writing some docs for using fountain-mode within Emacs, as well as provide some example screenplay scripts and instructions on how to publish them to PDF using a tool called Afterwriting... Stay tuned for that...
 
 
 - [olivetti](https://github.com/rnkn/olivetti) Adjust margins with word wrap. _(great with fountain mode!)_ Perfect for distraction free writing! I also enable this within `rmoo` _(if you have the **games module** enabled)..._  Toggle it on and off within Xah Fly Keys Command Mode by hitting: **\`** key.  Adjust the margin width within Xah Fly Keys Command Mode by hitting: `SPACEBAR [` or: `SPACEBAR ]` to shrink or grow respectively.
@@ -543,7 +556,9 @@ Use Scratch buffer to evaluate snippets of `lisp` without having to remove the w
 
 #### Project Management Tools:
 
-- [org-bullets](https://github.com/emacsorphanage/org-bullets) Fancy UTF-8 bullet fonts for Org Mode... This is an old emacs package but looks like it still works fine in Emacs 26... If there are problems, it's a pretty short lisp file and easy to maintain. ;-)
+- [org-bullets](https://github.com/emacsorphanage/org-bullets) Fancy UTF-8 bullet fonts for Org Mode... This is an old emacs package that hides all but the last single bullet.  It still works fine in Emacs 27... If there are problems, it's a pretty short lisp file and easy to maintain or be hacked to your likings. ;-)    
+**Note:** I am no longer interested in even the last single bullet showing, and actually am hiding all org bullets now. _(Now my org-mode shows **Outline Headings** in a beautiful scalable font. Headings are indented and scaled from large to small just like: `H1`, `H2`, `H3`, etc. in HTML)_...  The `org-bullets` package still remains and does not conflict with any of my extra tweaks.  However you may wish to un-hide the last bullet and show different headings with a different color etc. _(consult the code within **`09-org-mode-pkg-conf.el`** to see the disabled forms and to re-enable them to try them out)_.      
+Org-Bullets works fine with the rest of my Org-Mode tweaks but the last bullet being visible clutters things up a bit in my configuration where I have all my headings of decreasing scale, _(from title, to level-8)_ set to **Antique White** which looks fantastic on my modified **Blackboard** theme, IMHO)_...
 
 #### Git \- `magit` & Related:
 
@@ -575,11 +590,11 @@ Use Scratch buffer to evaluate snippets of `lisp` without having to remove the w
 
 ### Key-bindings:
 
-> **NOTE:** I have changed some of these since last documented here.  Some of the keys below have changed.  I will update this README.md once I sort that all out... You can always consult HELM with a prefix key however... _(which works fine right there when you need it without having to manually open this README.md just to see what keys are bound! OMG!)_
+> **NOTE:** These keep changing _(as I use them and realize I need to change something etc.)_.  Therefore, I have given up trying to document or list them here.  Instead you can consult two files: (**`12-Xah-Fly-Keys.el`** and **`13-Key-bindings.el`**) to see them and how they are set:  Also, simply typing a prefix key _(e.g., **`C-x`**, **`C-c`**, or **`M-x`**, etc.)_ will pop up all the key commands available to choose from... No guessing needed... The Helm Popup has a menu to see the whole list as well... Try it!
 
-**_[See: 10-key-bindings.el](.emacs.d/lisp/modules/10-key-bindings.el)_**
+Key commands change too much to make it worth the effort of updating this README.
 
-## Optional Packages & Customization:
+## Optional Packages & Customization: _(still being documented)_
 
 Above I kept going on and on about setting up the Default version of Modular Emacs... Now it's time to forget boring defaults and really tune this baby up to be the best **DevOps** , **PubOPs** , **Lisp IDE** that it can be!  The following doc with guide you through that process:  **[Modular Emacs Customization](./Docs/ModE-Optional-Packages-y-Customization.md)**
 

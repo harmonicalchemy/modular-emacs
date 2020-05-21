@@ -41,6 +41,28 @@
       me--req-pubops-packages)
 
 
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Fountain Mode Tweaks:
+
+(custom-set-faces
+ '(fountain ((t (:height 131 :family "Courier Prime Emacs")))))
+
+;;;
+;;  ME Fountain Mode Hook Function:
+
+(defun me_fountain-mode-hook ()
+  "Customize some things to do when fountain mode starts up"
+  (interactive)
+  (imenu-add-menubar-index)
+  (fountain-completion-update)
+  (fountain-outline-hide-custom-level)
+  (olivetti-mode)
+  ;; Add olivetti mode options for fountain mode here:
+  (olivetti-set-width 88))
+
+(add-hook 'fountain-mode-hook 'me_fountain-mode-hook)
+
+
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  AucTeX: LaTeX configuration:
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
