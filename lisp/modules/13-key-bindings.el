@@ -90,16 +90,6 @@
 
 (define-key key-translation-map (kbd "ESC") (kbd "C-g"))
 
-;;;
-;; Bind M-h key to Invoke Slime Doc Lookup:
-;; You don't need this unless you have enabled the optional ProgLang module
-;; and its associated sub modules... But leaving this enabled does not hurt
-;; if you are not using those modules... Best to leave this alone... It
-;; does not activate until slime-mode is loaded...
-
-(eval-after-load 'slime
-  `(define-key slime-prefix-map (kbd "M-h") 'slime-documentation-lookup))
-
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; END: [modular-emacs]:~/.emacs.d/lisp/modules/13-key-bindings.el
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

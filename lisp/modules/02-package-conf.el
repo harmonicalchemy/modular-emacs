@@ -28,11 +28,9 @@
     helm
 ;    powerline
 ;    smart-mode-line
+    imenu-list
     auto-complete
     which-key
-    xah-fly-keys
-    xah-elisp-mode
-    xah-find
     flyspell-correct-helm))
 
 ;;;
@@ -50,6 +48,16 @@
 ;; Install: from MELPA exec-path-from-shell
 
 (when *is-posix* (exec-path-from-shell-initialize))
+
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  imenu and imenu-list configuration:
+
+;(require imenu-list)
+
+(setq imenu-auto-rescan t)
+;(setq imenu-list-focus-after-activation t)
+;(setq imenu-list-auto-resize nil)
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -171,6 +179,92 @@
 (helm-mode 1)
 (helm-autoresize-mode 1)
 (setq helm-split-window-in-side-p t)
+
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Modular Emacs - Set Default Face Functions:
+;;
+;;  Purpose:
+;;
+;;    I like to use a serif mono font for writing paragraphs...
+;;    but I use Hermit or other similar font for Coding...
+;;    This provides a way to go back and fourth from one
+;;    face (which is Emacs Default) to another depending on
+;;    my current work mode (writing or coding)...
+;;
+;;  Usage:
+;;
+;;    Adjust face dimensions and weight within forms below as needed.
+;;    Note: Linux vs Mac, Big screen vs Laptop, may require
+;;          sub cases to handle... %^)
+;;
+;;    Xah Fly Key Assigned: Command Mode "p"
+;;
+;;  NOTE: Currently there is no check to see if these fonts are 
+;;        installed on your system! This is still alpha test stage..."
+;;
+
+;; Set Default face to Org face Function:
+
+(defun me_set-org-face ()
+  ;; Set default face to Courier Prime Emacs (A nice mono serif for writing)
+  ;; NOTE: This only sets the face for the currently Selected Frame...
+  ;;       (other frames are not affected) 
+  (interactive)
+  (progn
+    (set-face-attribute 'default (selected-frame)
+                        :family "Courier Prime Emacs"
+                        :slant 'normal
+                        :height 130
+                        :weight 'normal
+                        :width 'normal)))
+
+;; Restore Default Face Function:
+
+(defun me_set-default-face ()
+  ;; Set default font to Hermit Medium (my favorite mono font for everything)...
+  ;; NOTE: This only sets the face for the currently Selected Frame...
+  ;;       (other frames are not affected) 
+  (interactive)
+  (progn
+    (set-face-attribute 'default (selected-frame) 
+                        :family "Hermit"
+                        :slant 'normal
+                        :height 120
+                        :weight 'normal
+                        :width 'normal)))
+;;;
+;;  Toggle Default Face...
+;;  NOTE: This only sets the face for the currently Selected Frame...
+;;       (other frames are not affected) 
+;;
+;;  This one gets bound to Xah Fly Command Key:  "p"
+;;  This one calls one of the two above depending on test variable:  me--default
+;;  if me--default is t
+;;    Switch to Org Mode
+;;    Change me--default to nil
+;;  Otherwise
+;;    Switch back to default face
+;;    Change me--default to t
+
+(defvar me--def-face 1 "Test variable for me_toggle-default-face")
+
+(defun me_toggle-default-face ()
+  "Toggle default face for selected frame only,
+   depending on current editing needs...
+   Purpose: I like to use a serif mono font for writing
+   paragraphs, but I need to use Hermit etc. for Coding
+   This provides a way to toggle from one to the other"
+  (interactive)
+  (cond
+   ((= me--def-face 1)
+    (message "Setting default face to Courier Prime Emacs")
+    (me_set-org-face)
+    (setq me--def-face 2))
+   ((= me--def-face 2)
+    (message "Setting default face back to normal code font")
+    (me_set-default-face)
+    (setq me--def-face 1))))
 
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; END: [modular-emacs]:~/.emacs.d/lisp/modules/02-package-conf.el

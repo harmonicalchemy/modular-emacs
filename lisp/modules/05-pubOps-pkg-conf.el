@@ -45,7 +45,7 @@
 ;;  Fountain Mode Tweaks:
 
 (custom-set-faces
- '(fountain ((t (:height 131 :family "Courier Prime Emacs")))))
+ '(fountain ((t (:height 130 :family "Courier Prime Emacs")))))
 
 ;;;
 ;;  ME Fountain Mode Hook Function:
@@ -218,10 +218,10 @@
 ;; If there are any custom keys set for graphviz-dot-mode, you will find
 ;; those defined within 10-key-bindings.el...
 
-(defun my-graphviz-tweaks ()
+(defun me_graphviz-tweaks ()
   (setq graphviz-dot-preview-extension "svg"))
 
-(add-hook 'graphviz-dot-mode-hook 'my-graphviz-tweaks)
+(add-hook 'graphviz-dot-mode-hook 'me_graphviz-tweaks)
 
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;   END: [modular-emacs]:~/.emacs.d/lisp/modules/05-pubOps-pkg-conf.el

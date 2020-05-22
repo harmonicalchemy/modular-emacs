@@ -62,6 +62,7 @@
     (file-name-as-directory
      (expand-file-name "~/Path/To/Your-MacOS-Org-Docs"))))
 
+
 ;;;
 ;; Path to Your ORG Docs on Linux:
 
@@ -275,38 +276,35 @@
 ;;      https://zzamboni.org/post/beautifying-org-mode-in-emacs/
 
 ;; Set default faces:
-
-(set-face-attribute 'fixed-pitch nil :family "Courier Prime Emacs" :height 131 :width 'normal)
-(set-face-attribute 'variable-pitch nil :family "Averia Serif Libre" :height 128 :width 'normal)
-
-(custom-theme-set-faces
- 'user
- `(code ((t ( :family "Hermit" :slant normal :weight normal :height 1.0 :width normal)))))
+;(set-face-attribute 'default t :font "Courier Prime Emacs" :height 130 :width 'normal)
+(set-face-attribute 'fixed-pitch t :family "Hermit" :height 120 :width 'normal)
+(set-face-attribute 'fixed-pitch-serif t :family "Courier Prime Emacs" :height 130 :width 'normal)
+(set-face-attribute 'variable-pitch t :family "Averia Serif Libre" :height 130 :width 'normal)
 
 ;; Set Org Mode Faces:
 
 (custom-theme-set-faces
  'user
- `(default ((t (:inherit fixed-pitch :height 128 :weight normal))))
- `(org-default ((t (:inherit fixed-pitch :height 128 :weight normal))))
- `(org-block ((t (:inherit code))))
- `(org-code ((t (:inherit (shadow code)))))
+ `(default ((t (:inherit fixed-pitch-serif :height 120 :weight normal))))
+ `(org-default ((t (:inherit fixed-pitch-serif :height 120 :weight normal))))
+ `(org-block ((t (:inherit fixed-pitch))))
+ `(org-code ((t (:inherit fixed-pitch))))
  `(org-document-info ((t (:foreground "dark orange"))))
- `(org-document-info-keyword ((t (:inherit (shadow fixed-pitch)))))
- `(org-indent ((t (:inherit (org-hide fixed-pitch)))))
+ `(org-document-info-keyword ((t (:inherit (shadow fixed-pitch-serif)))))
+ `(org-indent ((t (:inherit (org-hide fixed-pitch-serif)))))
  `(org-link ((t (:foreground "royal blue" :underline t))))
- `(org-meta-line ((t (:inherit (font-lock-comment-face fixed-pitch)))))
- `(org-property-value ((t (:inherit fixed-pitch))) t)
- `(org-special-keyword ((t (:inherit (font-lock-comment-face fixed-pitch)))))
- `(org-table ((t (:inherit code :foreground "#83a598"))))
- `(org-tag ((t (:inherit (shadow code) :weight bold :height 0.8))))
- `(org-verbatim ((t (:inherit (shadow code))))))
+ `(org-meta-line ((t (:inherit (font-lock-comment-face fixed-pitch-serif)))))
+ `(org-property-value ((t (:inherit fixed-pitch-serif))) t)
+ `(org-special-keyword ((t (:inherit (font-lock-comment-face fixed-pitch-serif)))))
+ `(org-table ((t (:inherit fixed-pitch :foreground "#83a598"))))
+ `(org-tag ((t (:inherit (shadow fixed-pitch) :weight bold :height 0.8))))
+ `(org-verbatim ((t (:inherit (shadow fixed-pitch))))))
 
 ;; Customize Org headings:
 
 (let* ((variable-tuple
         (cond ((x-list-fonts "Averia Serif Libre") '(:font "Averia Serif Libre"))
-              ((x-list-fonts "Averia Libre Light") '(:font "Averia Libre Light"))
+              ((x-list-fonts "Averia Libre Light")   '(:font "Averia Libre Light"))
               (nil (warn "Cannot find Averia Serif Libre, or Averia Libre Light. Did you install them?"))))
        (base-font-color     (face-foreground 'default nil 'default))
        (headline           `(:inherit default :weight normal )))
@@ -368,30 +366,32 @@
 (defun me_org-mode-hook ()
   ;; Set default face to Courier Prime Emacs
   ;; (A nice mono block serif typewriter look for writing)...
-  (set-face-attribute 'default nil
+  (set-face-attribute 'default (selected-frame)
                       :family "Courier Prime Emacs"
                       :slant 'normal
-                      :height 131
+                      :height 137
                       :weight 'normal
                       :width 'normal)
   (setq me--def-face 2)
   (olivetti-mode)
-  ;; Add olivetti mode options for fountain mode here:
-  (olivetti-set-width 88)
-  (me_hide-org-bullets)) ;; Remove this last element in list if you like to see fancy bullets...
+  ;; Set olivetti line width for org mode here:
+  (olivetti-set-width 100)
+  (me_hide-org-bullets))
+;; Remove call to hide-org-bullets in function list above
+;; if you would like to see fancy org bullet headings...
 
 (add-hook 'org-mode-hook 'me_org-mode-hook)
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; Setup my Default Org-Mode Keywords:
-;; The above are based on general GTD schemes I am using...
-;; (adjust this list to fit your own planning style)
+;;  Setup my Default Org-Mode Keywords:
+;;  The above are based on general GTD schemes I am using...
+;;  (adjust this list to fit your own planning style)
 
 (setq org-todo-keywords
       (quote ( (sequence "TODO(t)" "NEXT(x)" "|" "DONE(d!/!)")
                (sequence "ACTIVE(a)" "REPEATING(r)" "WAITING(w@/!)" "HOLD(h@/!)" "|" "CANCELLED(c@/!)" "PHONE")
-	       (sequence  "NEW(n)" "NOW(o)" "SOMEDAY(s)"  "|" "ARCHIVED(a)"))))
+	       (sequence  "NEW(n)" "NOW(o)" "SOMEDAY(s)"  "|" "ARCHIVED(v)"))))
 
 ;;;
 ;; Setup my Default Org-Mode Keywords: (with fancy UTF 8 symbols)
@@ -409,7 +409,7 @@
 ;;
 ;;                         M-x list-colors-display
 ;;
-;; NOTE:  You can also do this for tag faces:
+;;  NOTE:  You can also do this for tag faces:
 ;;        Copy this form when you are ready to do that and add in your tags as a new element in the list...
 ;;
 ;(setq org-tag-faces
