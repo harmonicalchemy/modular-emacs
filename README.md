@@ -2,7 +2,7 @@
 file: README.md
 author: Alisha Awen
 created: 2019-010-20
-updated: 2020-005-18
+updated: 2020-005-22
 tags: Emacs, 2020, apps-tools, SysAdmin, HA-ModEmacs, how-to, README 
 ---
 <!-- #Emacs #2020 #apps-tools #SysAdmin #HA-ModEmacs #how-to #README -->
@@ -19,15 +19,46 @@ tags: Emacs, 2020, apps-tools, SysAdmin, HA-ModEmacs, how-to, README
 
 **Current Status:**
 
-- **2020 May 18:** Org Mode has been heavily customized!  Also some of the Module files were re-organized... (In particular `12-Xah-Fly-Keys.el` and `13-key-bindings.el)`... Tweaks were added to improve package management as well...
+> **Note:** Skip to **[Start Here:](#start-here)** if you just need to get this going now. :trollface:
 
-- In the Master Branch, optional modules are disabled _(see details below)_...  Not having Xah-Fly-Keys enabled kind of cripples things for me now that I am used to them... Going back to the old way is painful! It is hard to test my setup using the old C-x and M-x keys etc... %^) Last year at this time I was complaing about the opposite... _(i.e., having to learn Xah-Fly-Keys and using Emacs as a Modal editor like **vi**)_
+- **2020 May 22:** Org Mode has been heavily customized!  I am calling it **_Fancy Org Mode_**.  Also some of the Module files were re-organized... (In particular `12-Xah-Fly-Keys.el` and `13-key-bindings.el)`... Tweaks were added to improve package management and minimize the effects of load errors etc.  Keybindings for both Xah-Fly-Keys mode as well as normal mode were added/changed... 
 
-- **2020 May 17 - Fancy Org Mode:** This commit adds a bunch of new Org-Mode tweaks... I am setting up my Org-Mode based Book Publishing System _(my **pubOps**)_ now... There will be some included examples added to this a bit later...  The org-mode module is NOW enabled by default... To use it you will need to edit the file: **`09-org-mode-pag-conf.el`** and depending on your OS, (Mac or Linux) change the dummy placeholder path to your REAL **org docs** directory path.  There are two options allowing you to run this on both MacOS and Linux if you are a multi OS kind of person. :octocat:
 
-- I created a branch _(fork)_ where you can try out my **Fancy Org Mode PubOps environment** using: **Xah-Fly-Keys** with out without having to go in and enable/disable these modules as instructed further down within this doc...
+- The file: **`dispatcher.el`** got more automated as well.  Any module within the **`lisp/modules`** directory will be automatically overrided simply by making a copy of it _(using same file name of course)_ to: **`lisp/my-modules`** where the file will not be tracked by git and you can make any local modifications or additions without upsetting the original files that get updated periodically as new git commits are pulled down...  
 
-- **Note:** I am still working on custom Export options for Modular Emacs Fancy Org Mode...  But everything else is working nicely now... Export features will be forthcomming over the next few months!  Stay tuned...  Book publishing time!
+> **Note:** _New changes emerging within new pulled down files which you have previously overridden will be shadowed of course!_    
+If you need the updates, you will need to merge those changes into your overrides...
+
+
+- In addition, you no longer have to copy **`dispatcher.el`** into **`my-modules`** either _(except to enable normally disabled optional modules)_...     
+
+
+- In case you do have to copy **`dispatcher.el`** into **`my-modules`** _(e.g., To enable the optional Common Lisp related modules, etc.)_ you won't have to edit **`init.el`** anymore to change the location of **`dispatcher.el`**.  That part has been automated as well. **`modules/dispatcher.el`** will be  overridden by your custom copy in: **`my-modules`** automagically.
+
+
+- Now, the only reason to edit **init.el** is to add your own custom heading and/or body to the Welcome Screen Message... _(If and when you care to do that, now or later...)_
+
+
+- I created a branch _(fork)_ where you can try out: **Xah-Fly-Keys** without having to go in to override **`dispatcher.el`** manually...
+
+
+- In the Master Branch, optional modules are disabled _(see details below)_...  Not having Xah-Fly-Keys enabled kind of cripples things for me for running tests within normal Emacs mode now that my fingers are used to flying with a spacebar leader key!  Going back to the old way is painful! It is hard to test my setup using the old C-x and M-x keys etc... %^) Last year at this time I was complaing about the opposite... _(i.e., having to learn Xah-Fly-Keys and using Emacs as a Modal editor like **vi**)_  
+
+
+- You have two editor mode options available to choose now, _(and it's easy to switch back and forth)_.   Choose between using **Normal Emacs** edit mode **_or_** **Xah Fly Keys** modal edit mode simply by switching git branches...
+
+
+- Making the switch to a model editor is a BIG HUGE commitment... But it has its BIG HUGE payoff at the end of that bumpy road! Trust me on that! :trollface:
+
+
+- **2020 May 17 - Fancy Org Mode:** This commit adds a bunch of new Org-Mode tweaks... I am setting up my Org-Mode based Book Publishing System _(my **pubOps**)_ now... There will be some included examples added to this a bit later...  **_Fancy Org Mode is now enabled by default_**... 
+
+
+- To use **Fancy Org Mode** you will need to override and edit the file: **`09-org-mode-pkg-conf.el`** and depending on your OS, (Mac or Linux) change the dummy placeholder path to your REAL **org docs** directory path.  There are two options allowing you to run this on both MacOS and Linux if you are a multi OS kind of person that is... :octocat:
+
+> **Note 1:** I am implementing a cleaner way to get all local directory path and user specific meta data into the load process rather than having to override and edit indvidual files as in the above bullet...  This will all be done in one file that you will override during your initial install... Once it is set with your specific edits it will stay that way and you will never have to touch it again...
+
+> **Note 2:** I am still working on custom Export options for Modular Emacs Fancy Org Mode...  But everything else is working nicely now... Export features will be forthcomming over the next few months!  Stay tuned...  Book publishing time!
 
 - The **Blackboard** Color Theme was also updated _(to accomodate prettifying Org-Mode)_.  Also, I am back to using the standard mode line.  I got tired of **powerline** _(It felt too cluttered and also seemed to have bugs)_... Then I tried **smart-mode-line** to see if I could make things look better and simpler... I got frustrated with it as well and after mucking around I realized there is nothing wrong with the Emacs standard mode-line and you can tweak it to fit exactly your needs... So now that is the new plan... I left the old code for both `powerline` and `smart-mode-line` in place _(commented out)_ making it easy for you to enable either of them, if you like them better... You can see changes to mode line features in **`02-package-conf.el`**... 
 
@@ -222,18 +253,18 @@ If you are on Mac OS you can install MultiMarkdown via MacPorts or Homebrew:
   $_  brew install multimarkdown
 ```
 
-That's it... Easy!  
+That's it... Easy Peasy!  :octocat:
 
 **[\[Table of Contents\]](#table-of-contents)**
 
 #### Install Multimarkdown on Linux:  
 
-On Linux you will have to clone/configure/make/build & maintain Multimarkdown yourself... No package managers for this on Linux baby.  Sorry...  Hey... You wanted to be cool like the hackers and use Linux?  OK then... You don't need no stinking binary package managers anymore...  Right!  :octocat:  Follow this link to: **[Build MultiMarkdown from Source!](./Docs/ModE-Build-MultiMarkdown-from-Src.md)**
+On Linux you will have to clone/configure/make/build & maintain Multimarkdown yourself... No package managers for this on Linux baby.  Sorry...  Hey... You wanted to be cool like the hackers and use Linux?  OK then... You don't need no stinking binary package managers anymore...  Right?  :trollface:  Follow this link to: **[Build MultiMarkdown from Source!](./Docs/ModE-Build-MultiMarkdown-from-Src.md)**
 
 > **Note:** if you run into trouble building Multimarkdown, you can probably skip that as well for later... _Pandoc, (install below) will serve your **Plan B** when such **"Murphys"** happen..._
 
 #### Usage:
-MultiMarkdown will provide more than enough conversion power for you as you also will be using **Pandoc** to convert to some of these same output formats... You may later also have TeX and LaTeX mode hooks to use as well...
+MultiMarkdown will provide more than enough conversion power for you as you also will be using **Pandoc** to convert to some of these same output formats... You will later also have TeX and LaTeX mode hooks to use as well...
 
 Now that you have Multimarkdown installed, **[Download The Manual Here](https://fletcher.github.io/MultiMarkdown-5/MMD_Users_Guide.pdf)**
 
@@ -262,7 +293,7 @@ Here is how to install it:
   $_  brew install pandoc
 ```
 
-That's it... Easy Peazy!
+That's it... Easy Peasy!  :octocat:
 
 **[\[Table of Contents\]](#table-of-contents)**
 
@@ -334,7 +365,7 @@ You better send me an email to show me the cool thing you made on **Github** aft
  $_  brew install graphviz
 ```
 
-That's it... Easy!  
+That's it... Easy Peasy!  :octocat:
 
 #### Install Graphviz on Linux:
 
@@ -352,7 +383,7 @@ Graphviz is in the Debian, Ubuntu, Slackware, Arch, Fedora, NiXOS, openSUSE, and
  $_  sudo dnf install graphviz
 ```
 
-That's it... Easy Peazy!
+That's it... Easy Peasy!  :octocat:
 
 **[\[Table of Contents\]](#table-of-contents)**
 
@@ -405,20 +436,21 @@ One last check... Make sure you no longer have a `~/.emacs` file still in your h
 
 **_Start up GNU Emacs from the menu or command line and hold your breath!_**
 
-> **Note:** You no longer have to start Modular Emacs on Mac OS from the command line, and you probably never had to do that anyway... I got it working on my Mac now... There were multiple issues...  My problem started when Homebrew changed a bunch of things and did not bother to tell me..  Not knowing any better, I had three different versions of Emacs installed on Mac OS at one point.  I finally got all that sorted out.  Nothing in Modular Emacs caused any of my previous problems running Emacs on Mac OS! So this was never really an inssue with Modular Emacs in the first place! :trollface:
-
 After a lot of super computing lisp number crunching flashing away in your mini buffer _(wait wait wait... the first time can take up to a minute! After that no more than 7 or 8 seconds at most...)_ Then **Bam!** You should now see your new emacs pop up with the **Welcome to Harmonic Alchemy Modular Emacs!** scratch buffer in a frame with a pre-determined row/column initial size! 
 
-**No?** Broken? Oh My! What a freaking let down!  I feel your pain!  OK... Don't worry if all you see are only numerous compiler warnings... _(those are hard to avoid upon first startup with all the new packages compiling etc. Not much you can do about that... The developers who made the packages need to clean that up, you could help them though.  You can safely kill that message buffer and move on... ;-)_
+**No?** Broken? Oh My! What a freaking let down!  I feel your pain!  OK... Don't worry if all you see are only numerous compiler warnings... _(those are hard to avoid upon first startup with all the new packages compiling etc. Not much you can do about that... The developers who made the packages need to clean that up, you could help them though.  You can safely kill that message buffer and move on...)_
 
-If you got an error and see the default emacs screen, try to retrace your steps or try running emacs with the debugger turned on...  Its probably something dumb and easy to fix...  _(happens to us all the first time, most of the time)_
+> **Note:** I am currently chasing an issue with some functions _(not mine)_ calling the old depreciated **`cl`** _(common lisp library)_.  These will be replaced with calls to the new **`cl-lib`** replacement...  When that happens you will no longer see the warning: **_"cl lib is depreciated"_** at startup...
+
+If you got an error that halted loads and you have an incomplete emacs startup init screen, try to retrace your steps or try running emacs with `--debug-init` turned on...  Its probably something dumb and easy to fix...  _(This happens to us all the first few times, and comes back again later as well most of the time.  Other errors only come up in a blue moon, and then mysterously go away and hide before you can catch them! DOH! Log files are a hacker's best friend... :trollface:)_
 
 **Yes?** It worked!  **Yay!** What a fantastic feeling the first time eh?
 
 > **Note1:** Fetching/pulling new changes from the master `modular-emacs` GitHub repository to your local `~/.emacs.d/` directory will automatically be reflected within your emacs configurations... No need to copy any more files... But you may be surprised to see some new feature or something working differently.  If that bothers you, you may wish to keep your changes separate from the remote master branch.  Therefore create your own local `test` branch _(or call it what you like)_ and maintain your local changes in parallel... Change your local branch's .gitignore to accommodate your needs...
 
-> **Note2:** The remote `modular-emacs` Github repository also maintains a `develop` branch where new ideas and features are tried out before folding them into the master branch which maintains the Modular Emacs stable release.  You could also create a local branch that tracks origin:develop if you would like to participate in any new things I am trying out before final release... Earlier point versions of Modular Emacs were first staged and tested within the develop branch.  Version 2.0.0 is currently being tested on the develop branch. _(if not already merged into master by now)_...  Any time a final release of new features is ready, the develop branch will be merged back into master branch, tagged as a new point release _(or major release when a lot of new features have been added to warrant it)_...
+> **Note2:** The remote `modular-emacs` Github repository also maintains a `develop` branch where new ideas and features are tried out before folding them into the master branch which maintains the Modular Emacs stable release.  You could also create a local branch that tracks origin:develop if you would like to participate in any new things I am trying out before final release... Earlier point versions of Modular Emacs were first staged and tested within the develop branch.  Version 3.x is tested on the develop branch currengly. _(if not already merged into master by now)_...  Any time a final release of new features is ready, the develop branch will be merged back into master branch, tagged as a new point release _(or major release when a lot of new features have been added to warrant it)_... maybe not this time eh?  LOL
 
+> **Note3:** I have created a new branch called: **`xah-fly-keys`** where the optional module: `12-Xah-Fly-Keys.el` has been enabled by default.  You don't have to make any modifications in order to try this otherwize optional feature when you are on this branch.  Try it out! It's easy to switch back and forth now...
 
 ## Usage:
 
@@ -431,20 +463,20 @@ You can also use the Modular Emacs \*scratch\* buffer to paste experimental lisp
 If your customization proves stable, and you like it, you could then save your scratch buffer (as is) to a new file, for example:
 
 ```bash
-$_  ~/.emacs.d/lisp/my-modules/00-my-new-module.el
+$_  ~/.emacs.d/lisp/my-modules/xx-my-new-module.el
 ```
 
 In all cases you would also be wise to also create and checkout your own private local `test` branch _(call it what you wish)_ and keep all your custom changes in there separate from the `master` or `origin:develop` branch...
 
 ### Blackboard Color Theme:  
 
-Modular Emacs comes with my new customized version of the **Blackboard color theme** _(patterned after the famous Textmate Blackboard Theme)_ which I like for the _pedagogic essence_ it inspires...  If you would like to add more custom themes or a different theme than `blackboard.el`, you can replace it or add additional themes into your local branch's: `~/.emacs.d/lisp/themes` directory and they will also will work with this setup by choosing `M-x load-theme` or changing the last line within `~/.emacs.d/lisp/modules/06-interface.el` to: `(load-theme 'your-chosen-theme-name t)`
+Modular Emacs comes with my new customized version of the **Blackboard color theme** _(patterned after the famous Textmate Blackboard Theme)_ which I like for the _pedagogic essence_ it inspires... I have also tweaked it to look good under my **Fancy Org Mode** colors and faces.  If you would like to add more custom themes or a different theme than `blackboard.el`, you can replace it or add additional themes into your local branch's: `~/.emacs.d/lisp/themes` directory and they will also will work with this setup by choosing `M-x load-theme` or changing the last line within `~/.emacs.d/lisp/modules/06-interface.el` to: `(load-theme 'your-chosen-theme-name t)`
 
-> **Note:** _Obviously if you add more themes to your **Modular Emacs** **themes** directory you will be adding new un-tracked files to your cloned git repository!  Make sure you have checked out your own local branch before adding new themes or doing any customization outside the init.el file or the `my-modules` directory.  Then you will have proper management of your local custom changes and also have all that in code revision as well!_
+> **Note:** _Obviously if you add more themes to your **Modular Emacs** **themes** directory you will be adding new un-tracked files to your cloned git repository!  Make sure you have checked out your own local branch before adding new themes or doing any customization outside the init.el file or the `my-modules` directory.  Then you will have proper code management of your own local custom changes tracked seporately under your own code revision schemes in place ready to merge any changes in from the remote Modular Emacs branches any time you feel that may be necessary...
 
 ## Default Packages & Features (built in):
 
-> **Note:** This section needs an update... Many new features have been added.  Documentation for them is still an on-going process...  Please be patient... Or open an issue... Our conversation may end up being part of this doc. :octocat:
+> **Note:** This section almost always needs an update! Many new features keep being added, removed, or changed as this beast evolves!  Documentation for them is still an on-going process...  Please be patient... Or open an issue... Our conversation may end up being part of this doc. :octocat:
 
 **Default Emacs welcome screen replaced with custom greeting:** Prints current emacs configuration, and date... With a famous Mark Twain quote _(My Favorite author. This quote may change from time to time with new updates)_.  
 
@@ -466,7 +498,7 @@ Use Scratch buffer to evaluate snippets of `lisp` without having to remove the w
 
 #### Emacs Helm & Extras:
 
-- [helm](https://github.com/emacs-helm/helm) Helm is an Emacs incremental and narrowing framework that helps speed up operations on commands with structured command completions and more.  It is a programmable interface (API) as well. To see how HELM can speed things up try a prefix key like: `C-x` or `C-c` or `M-x` and just wait before typing any more keys... You will see all the possible key-combos currently associated with that prefix key pop up in the HELM mini-buffer!  Fantastic! No more guessing!   
+- [helm](https://github.com/emacs-helm/helm) Helm is an Emacs incremental and narrowing framework that helps speed up operations on commands with structured command completions and more.  It is a programmable interface (API) as well. To see how HELM can speed things up try a prefix key like: `C-x` or `C-c` or `M-x` and just wait before typing any more keys... You will see all the possible key-combos currently associated with that prefix key pop up in the HELM mini-buffer!  Fantastic! No more guessing! _("Oops! What did I just do? OMG! LOL")_
 
 
 - [helm-core](https://emacs-helm.github.io/helm/) Development files for Helm (API)... Installed as dependency.   
@@ -479,15 +511,31 @@ Use Scratch buffer to evaluate snippets of `lisp` without having to remove the w
 **Note:** **_xah-fly-keys_** also uses helm to pop up leader key choices and extended menu...  Hit the `SPACEBAR` _(LEADER KEY)_ and wait a second for helm to pop up the list of options... _(with help feature and pagination! Vital for learning all those keys!)_
 #### Tree & Menu Related Packages:
 
-- [ztree](https://github.com/fourier/ztree) An efficient directory tree comparison utility. Invaluable for visually oriented thinkers! Integrates directly with ediff files! **To use** type: **`M-x`** _(or simply **"a"** from **Xah-Fly-Keys Command Mode**)_ and then start typing: **"`ztr...`"** etc. and choose **`ztree-diff`** from the popup **Helm** menu.  Then choose directory "A" & "B" _(as prompted)_ to compare.  Make your screen wide to see both directories listed side by side with color coded files indicating status/differences within in two side by side buffer lists of all the files that can be navigated in a similar way you navigate a dired buffer...  Putting cursor on any filename and hitting RET key will open the two files within an **eDiff** session... I used to use external diff/merge tools like **kdiff-3** but I find Emacs to be superior (if not quite as slick GUI looking) but that does not bother me in the slightest... The powerful user configurable functions made available within Emacs are (to my eyes) the Beauty of Form and Function in action! **_"Form follows function - that has been misunderstood. Form and function should be one, joined in a spiritual union."_** - **Frank Lloyd Wright**
+- [ztree](https://github.com/fourier/ztree) An efficient directory tree comparison utility. Invaluable for visually oriented thinkers! Integrates directly with ediff files! 
+
+- **To invoke Ztree Diff** type: **`C-z`** _(normal Emacs edit mode)_ _(or  **"[SPACE] a"** from **Xah-Fly-Keys Command Mode**)_ and then choose directory "A" & "B" _(as prompted)_ to compare.      
+Make your screen wide to see both directories listed side by side with color coded files indicating status/differences within in two side by side buffer lists of all the files that can be navigated in a similar way you navigate a dired buffer...  Putting cursor on any filename and hitting RET key will open the two files within an **eDiff** session... I used to use external diff/merge tools like **kdiff-3** but I find Emacs to be superior (if not quite as slick GUI looking) but that does not bother me in the slightest... The powerful user configurable functions made available within Emacs are (to my eyes) the Beauty of Form and Function in action! **_"Form follows function - that has been misunderstood. Form and function should be one, joined in a spiritual union."_** - **Frank Lloyd Wright**
 
 
-- [imenu-list](https://github.com/bmag/imenu-list) Right panel Menu and Variable list.  You can toggle an imenu list right panel window to view variables, functions, headings, etc. **iMenu List** uses **iMenu** and displays the listing in a narrow window on the left side...    
-**Note:** For some reason `imenu-list` is not working currently.  There seems to be a problem with: `window--display-buffer` call returning nil with the classic: `wrong number of arguments` error...  I am currently troubleshooting this...  For now simply use **`imenu`** by typing **`C-c '`**, _(or by typing the single character: **'** from **Xah-Fly-Keys command mode**)_... 
+- [imenu-list](https://github.com/bmag/imenu-list) Right panel Menu and Variable list.  You can toggle an imenu list right panel window to view variables, functions, headings, etc. **iMenu List** uses **iMenu** and displays the listing in a narrow window on the left side...
+
+> **Note:** For some reason `imenu-list` is not working currently.  There seems to be a problem with: `window--display-buffer` call returning nil with the classic: `wrong number of arguments` error...  I am currently troubleshooting this...  For now simply use **`imenu`** by typing **`C-c '`**, _(or by typing the single character: **'** from **Xah-Fly-Keys command mode**)_... 
 
 #### Dired Related Packages:
 
-- [dired-launch](https://github.com/thomp/dired-launch) Open files directly within `dired` using default applications. Great for quick viewing PDF or Image files with your OS default viewer app! To open a PDF for viewing outside of Emacs type: `SPC i w` _(Xah Fly Keys must be enabled for this leader key sequence in Commnd Mode)_
+- [dired-launch](https://github.com/thomp/dired-launch) Open files directly within `dired` using default applications. Great for quick viewing PDF or Image files with your OS default viewer app! You can use **`dired-launch-extensions-map`** to specify, for a given file extension, one or more preferred applications by simply specifying the application as a string.  _(see example below)_  
+
+```elisp
+   (setf dired-launch-extensions-map
+         '(;; specify LibreOffice as the preferred application for
+           ;; a Microsoft Excel file with the xslx extension
+           ("xlsx" ("libreofficedev5.3"))
+           ;; specify LibreOffice and Abiword as preferred applications for
+           ;; an OpenDocument text file with the odt extension
+           ("odt" ("libreofficedev5.3" "abiword"))))
+```  
+
+> **Note:** There are many ways to skin this external app launch business... the following commands will launch a file in an external application whilst your cursor is positioned on a file in a dired buffer:  **`W`**, **`J`**, or **`SPC i w`** in **Xah Fly Keys** command mode... _(Xah Fly Keys must be enabled for this leader key sequence in Commnd Mode)_
 
 
 - [neotree](https://github.com/jaypei/emacs-neotree) Spawn a directory
@@ -501,6 +549,7 @@ is by hitting RET.
 not using this neotree feature all that much... but it is a quick way to navigate
 from your current buffer/location when you are NOT within dired... Your mileage
 may vary...
+
 
 #### dev§Ops, sys§Admin, info✷Sec Related Packages:
 
@@ -525,7 +574,7 @@ may vary...
 
 
 - [markdown-toc](https://github.com/ardumont/markdown-toc) Generate a TOC in a markdown file. This is a simple but powerful mode to create a TOC in a well-formed markdown file. In other words: The generated TOC will be well-formed if your markdown file is also well formed. ;-)    
-**Note:** I like to place my toc at the bottom, and provide a simple link named: `table-of-contents` or `index` and put that link at the top, as well as strategic places down within the body of the markdown file... This README is structured in that style... It reminds me of the way we used to do a similar thing in HTML before fancy CSS menus started popping up...
+**Note:** I like to place my toc at the bottom, and provide a simple link named: `table-of-contents` or `index` and put that link at the top, as well as strategic places down within the body of the markdown file... This README is structured in that style... It reminds me of the way we used to do a similar thing in HTML before Javascript enabled fancy CSS menus started popping up... Now we have mobile menus to contend with.  Oh My!
 
 
 - [deft](https://jblevins.org/projects/deft/) Major mode for quickly browsing, filtering, and editing directories of plain text notes. Created by Jason Blevins _(the same statistics economics professor at Ohio State who also created Emacs Markdown Mode)_ This guy is wicked clever!  Looks like he has some nice algorithms for studying the cryptocurrency and smart contracts world as well!  Invoke Deft Mode with custom Xah Fly Keys Command Mode key: **`0`**
@@ -557,8 +606,10 @@ may vary...
 #### Project Management Tools:
 
 - [org-bullets](https://github.com/emacsorphanage/org-bullets) Fancy UTF-8 bullet fonts for Org Mode... This is an old emacs package that hides all but the last single bullet.  It still works fine in Emacs 27... If there are problems, it's a pretty short lisp file and easy to maintain or be hacked to your likings. ;-)    
-**Note:** I am no longer interested in even the last single bullet showing, and actually am hiding all org bullets now. _(Now my org-mode shows **Outline Headings** in a beautiful scalable font. Headings are indented and scaled from large to small just like: `H1`, `H2`, `H3`, etc. in HTML)_...  The `org-bullets` package still remains and does not conflict with any of my extra tweaks.  However you may wish to un-hide the last bullet and show different headings with a different color etc. _(consult the code within **`09-org-mode-pkg-conf.el`** to see the disabled forms and to re-enable them to try them out)_.      
-Org-Bullets works fine with the rest of my Org-Mode tweaks but the last bullet being visible clutters things up a bit in my configuration where I have all my headings of decreasing scale, _(from title, to level-8)_ set to **Antique White** which looks fantastic on my modified **Blackboard** theme, IMHO)_...
+
+> **Note:** I am no longer interested in even the last single bullet showing, and actually am hiding all org bullets now. _(Now my org-mode shows **Outline Headings** in a beautiful scalable font. Headings are indented and scaled from large to small just like: `H1`, `H2`, `H3`, etc. in HTML)_...  The `org-bullets` package still remains and does not conflict with any of my extra tweaks.  However you may wish to un-hide the last bullet and show different headings with a different color etc. _(consult the code within **`09-org-mode-pkg-conf.el`** to see the disabled forms and to re-enable them if you are interested in trying them out)_.
+      
+- Org-Bullets works fine with the rest of my Org-Mode tweaks but the last bullet being visible clutters things up a bit in my configuration where I have all my headings of decreasing scale, _(from title, to level-8) set to **Antique White** which looks fantastic on my modified **Blackboard** theme, IMHO)_...
 
 #### Git \- `magit` & Related:
 
@@ -592,18 +643,18 @@ Org-Bullets works fine with the rest of my Org-Mode tweaks but the last bullet b
 
 > **NOTE:** These keep changing _(as I use them and realize I need to change something etc.)_.  Therefore, I have given up trying to document or list them here.  Instead you can consult two files: (**`12-Xah-Fly-Keys.el`** and **`13-Key-bindings.el`**) to see them and how they are set:  Also, simply typing a prefix key _(e.g., **`C-x`**, **`C-c`**, or **`M-x`**, etc.)_ will pop up all the key commands available to choose from... No guessing needed... The Helm Popup has a menu to see the whole list as well... Try it!
 
-Key commands change too much to make it worth the effort of updating this README.
+Key commands change too much to make it worth the effort of updating this README in one place like this.  However in the documentation about specific Modular Emacs features, you will see the related Key commands listed there... _(hopefuly)_
 
 ## Optional Packages & Customization: _(still being documented)_
 
 Above I kept going on and on about setting up the Default version of Modular Emacs... Now it's time to forget boring defaults and really tune this baby up to be the best **DevOps** , **PubOPs** , **Lisp IDE** that it can be!  The following doc with guide you through that process:  **[Modular Emacs Customization](./Docs/ModE-Optional-Packages-y-Customization.md)**
 
-# Table of Contents: 
+# Table of Contents:
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 **Table of Contents**
 
-- [Modular Emacs README](#modular-emacs-readme)
+- [Version 3.1 (beta) - README](#version-31-beta---readme)
     - [Introduction:](#introduction)
         - [History & Purpose:](#history--purpose)
     - [Try Harmonic Alchemy Modular Emacs:](#try-harmonic-alchemy-modular-emacs)
@@ -655,7 +706,9 @@ Above I kept going on and on about setting up the Default version of Modular Ema
             - [Project Management Tools:](#project-management-tools)
             - [Git \- `magit` & Related:](#git---magit--related)
         - [Key-bindings:](#key-bindings)
-    - [Optional Packages & Customization:](#optional-packages--customization)
+    - [Optional Packages & Customization: _(still being documented)_](#optional-packages--customization-_still-being-documented_)
 - [Table of Contents:](#table-of-contents)
 
 <!-- markdown-toc end -->
+
+

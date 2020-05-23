@@ -7,6 +7,8 @@
 
 (defvar me--my-keyboard-bindings
   '(("C-c l" . org-store-link)
+    ("C-c 1" . me_org-tree-open-in-right-win)
+    ("C-c f" . org-tree-to-indirect-buffer)
     ("C-c a" . org-agenda)
     ("C-c c" . org-capture)
     ("C-c d" . neotree-toggle)
@@ -19,6 +21,7 @@
     ("C-c b" . other-frame)
     ("C-c p" . me_toggle-default-face)
     ("C-c u" . me_toggle-letter-case)
+    ("C-c z" . ztree-diff)
     ("M-x" . helm-M-x)
     ("C-x b" . helm-mini)
     ("C-x C-f" . helm-find-files)

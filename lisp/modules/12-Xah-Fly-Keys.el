@@ -89,7 +89,7 @@
   ;; it to insert a space before.  typing p is harder to reach than
   ;; going into insert mode "f" and hitting the space bar.  IMHO
 
-  ;;;
+;;;
   ;; Command mode keybindings:
   ;; Add more key definitions to this list when needed:
 
@@ -124,10 +124,13 @@
   ;; cursor in the left outline window pane (it stays where it was)
   (define-key xah-fly-command-map (kbd "s") 'org-tree-to-indirect-buffer)
 
+  ;; Set key to run a ztree-diff session:
+  (define-key xah-fly-command-map (kbd "z") 'ztree-diff)
+
   ;; Set key to run HLedger Mode command:
   (define-key xah-fly-command-map (kbd "=") 'hledger-run-command)
 
-  ;;;
+;;;
   ;; Insert mode keybindings:
   ;; Add more key definitions to this list when needed:
 
@@ -136,7 +139,7 @@
   (define-key xah-fly-leader-key-map (kbd "[") 'olivetti-shrink)
 
   ;; Set KFKeys Leader Sequence to toggle case (three choices)...
-;  (define-key xah-fly-leader-key-map (kbd "u") 'me_toggle-letter-case)
+  ;  (define-key xah-fly-leader-key-map (kbd "u") 'me_toggle-letter-case)
 
   ;; This leader-key delete-frame key mirrors direct make-frame key above...
   (define-key xah-fly-leader-key-map (kbd "2") 'delete-frame)

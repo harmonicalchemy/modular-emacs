@@ -94,7 +94,37 @@
  ;; Run above lisp-hook function on startup:
  (add-hook 'lisp-mode-hook 'lisp-hook-fn)
 
-;;;;
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; Function slime-space() is called from SPC key when in slime-mode!
+;; This cripples my Xah Fly Keys Global SPC Leader key which needs to
+;; be established while in COMMAND mode! I use Xah-Fly-Keys (both modes)
+;; pretty much all the time.  The xah SPC leader key cannot get shadowed
+;; by other modes when I am in xah-fly-keys-command-mode.
+;;
+;; You care about this if:  You use the extra Common Lisp Prog Lang modules,
+;; AND you also wish to enable Xah-Fly-Keys...
+;;
+;; If Both Cases above are True, Enable ALL forms below:
+;; Otherwise, Leave everything below commented out as it is...
+;;
+
+;;; Set slime SPC key to xah-fly-leader-key when activating xah fly command mode:
+
+; (defun override-slime-space-key-binding ()
+;   (define-key slime-mode-indirect-map (kbd "SPC") 'xah-fly-insert-map))
+
+; (add-hook 'xah-fly-command-mode-activate-hook 'override-slime-space-key-binding)
+
+;;; Set Slime SPC key back to slime-space() when activating xah fly insert mode:
+
+; (defun restore-slime-space-key-binding ()
+;   (define-key slime-mode-indirect-map (kbd "SPC") 'slime-space))
+
+; (add-hook 'xah-fly-insert-mode-activate-hook 'restore-slime-space-key-binding)
+
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; EXPERIMENTAL STUFF:
 ;;   The code below is mostly for performance tuning and smart tabs for languages...
 ;;   So far nothing is working for me here... I need to consult Stack Overflow etc...

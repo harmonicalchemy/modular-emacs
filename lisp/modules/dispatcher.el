@@ -67,53 +67,88 @@
 ;;;
 ;; Load Harmonic Alchemy Modular Emacs - Main system.el configuration module:
 
-(load-file "~/.emacs.d/lisp/modules/00-system.el")
+(if (file-exists-p "~/.emacs.d/lisp/my-modules/00-system.el")
+    (load-file "~/.emacs.d/lisp/my-modules/00-system.el")
+  (load-file "~/.emacs.d/lisp/modules/00-system.el"))
 
 ;;;
 ;; Load (default) Super Emacs repositories configuration module:
 
-(load-file "~/.emacs.d/lisp/modules/01-repositories.el")
+(if (file-exists-p "~/.emacs.d/lisp/my-modules/01-repositories.el")
+    (load-file "~/.emacs.d/lisp/my-modules/01-repositories.el")
+  (load-file "~/.emacs.d/lisp/modules/01-repositories.el"))
 
 ;;;
 ;; Load Harmonic Alchemy Modular Emacs - Standard Packages module:
 
-(load-file "~/.emacs.d/lisp/modules/02-package-conf.el")
+(if (file-exists-p "~/.emacs.d/lisp/my-modules/02-package-conf.el")
+    (load-file "~/.emacs.d/lisp/my-modules/02-package-conf.el")
+  (load-file "~/.emacs.d/lisp/modules/02-package-conf.el"))
+
+;;;;
+;;              *** Optional Feature ***
+;; Load Harmonic Alchemy Modular Emacs - Xah Fly Keys module:
+
+;(if (file-exists-p "~/.emacs.d/lisp/my-modules/12-Xah-Fly-Keys.el")
+;    (load-file "~/.emacs.d/lisp/my-modules/12-Xah-Fly-Keys.el")
+;  (load-file "~/.emacs.d/lisp/modules/12-Xah-Fly-Keys.el"))
 
 ;;;
-;; Load Harmonic Alchemy Modular Emacs - Dired Extras module:
+;; Load Harmonic Alchemy Modular Emacs - Key Bindings module:
 
-(load-file "~/.emacs.d/lisp/modules/03-dired-pkg-conf.el")
-
-;;;
-;; Load Harmonic Alchemy Modular Emacs - devOps module:
-
-(load-file "~/.emacs.d/lisp/modules/04-devOps-pkg-conf.el")
-
-;;;
-;; Load Harmonic Alchemy Modular Emacs - pubOps module:
-
-(load-file "~/.emacs.d/lisp/modules/05-pubOps-pkg-conf.el")
+(if (file-exists-p "~/.emacs.d/lisp/my-modules/13-key-bindings.el")
+    (load-file "~/.emacs.d/lisp/my-modules/13-key-bindings.el")
+  (load-file "~/.emacs.d/lisp/modules/13-key-bindings.el"))
 
 ;;;
 ;; Load Harmonic Alchemy Modular Emacs - Interface module:
 
-(load-file "~/.emacs.d/lisp/modules/06-interface.el")
+(if (file-exists-p "~/.emacs.d/lisp/my-modules/06-interface.el")
+    (load-file "~/.emacs.d/lisp/my-modules/06-interface.el")
+  (load-file "~/.emacs.d/lisp/modules/06-interface.el"))
+
+;;;
+;; Load Harmonic Alchemy Modular Emacs - Dired Extras module:
+
+(if (file-exists-p "~/.emacs.d/lisp/my-modules/03-dired-pkg-conf.el")
+    (load-file "~/.emacs.d/lisp/my-modules/03-dired-pkg-conf.el")
+  (load-file "~/.emacs.d/lisp/modules/03-dired-pkg-conf.el"))
+
+;;;
+;; Load Harmonic Alchemy Modular Emacs - devOps module:
+
+(if (file-exists-p "~/.emacs.d/lisp/my-modules/04-devOps-pkg-conf.el")
+    (load-file "~/.emacs.d/lisp/my-modules/04-devOps-pkg-conf.el")
+  (load-file "~/.emacs.d/lisp/modules/04-devOps-pkg-conf.el"))
+
+;;;
+;; Load Harmonic Alchemy Modular Emacs - pubOps module:
+
+(if (file-exists-p "~/.emacs.d/lisp/my-modules/05-pubOps-pkg-conf.el")
+    (load-file "~/.emacs.d/lisp/my-modules/05-pubOps-pkg-conf.el")
+  (load-file "~/.emacs.d/lisp/modules/05-pubOps-pkg-conf.el"))
 
 ;;;
 ;; Load Harmonic Alchemy Modular Emacs - Misc Configs module:
 
-(load-file "~/.emacs.d/lisp/modules/07-misc.el")
+(if (file-exists-p "~/.emacs.d/lisp/my-modules/07-misc.el")
+    (load-file "~/.emacs.d/lisp/my-modules/07-misc.el")
+  (load-file "~/.emacs.d/lisp/modules/07-misc.el"))
 
 ;;;
 ;; Load Harmonic Alchemy Modular Emacs - Spelling module:
 
-(load-file "~/.emacs.d/lisp/modules/08-spelling.el")
+(if (file-exists-p "~/.emacs.d/lisp/my-modules/08-spelling.el")
+    (load-file "~/.emacs.d/lisp/my-modules/08-spelling.el")
+  (load-file "~/.emacs.d/lisp/modules/08-spelling.el"))
 
 ;;;;
 ;;              *** Optional Feature ***
 ;; Load Harmonic Alchemy Modular Emacs - Org Mode module:
 
-(load-file "~/.emacs.d/lisp/modules/09-org-mode-pkg-conf.el")
+(if (file-exists-p "~/.emacs.d/lisp/my-modules/09-org-mode-pkg-conf.el")
+    (load-file "~/.emacs.d/lisp/my-modules/09-org-mode-pkg-conf.el")
+  (load-file "~/.emacs.d/lisp/modules/09-org-mode-pkg-conf.el"))
 
 ;;;;
 ;;              *** Optional Feature ***
@@ -123,7 +158,9 @@
 ;; branch instead if you want to stay up with the programming stuff as
 ;; it takes time for that to filter into the main branches...
 
-;(load-file "~/.emacs.d/lisp/modules/10-progLang-pkg-conf.el")
+;(if (file-exists-p "~/.emacs.d/lisp/my-modules/10-progLang-pkg-conf.el")
+;    (load-file "~/.emacs.d/lisp/my-modules/10-progLang-pkg-conf.el")
+;  (load-file "~/.emacs.d/lisp/modules/10-progLang-pkg-conf.el"))
 
 ;;;;
 ;;              *** Optional Feature ***
@@ -133,32 +170,26 @@
 ;; within the ~/.emacs.d/README.md to install the RMOO package first...
 ;; Load Harmonic Alchemy Modular Emacs - Games module:
 
-;(load-file "~/.emacs.d/lisp/modules/11-games-pkg-conf.el")
-
-;;;;
-;;              *** Optional Feature ***
-;; Load Harmonic Alchemy Modular Emacs - Xah Fly Keys module:
-
-;(load-file "~/.emacs.d/lisp/modules/12-Xah-Fly-Keys.el")
-
-;;;
-;; Load Harmonic Alchemy Modular Emacs - Key Bindings module:
-
-(load-file "~/.emacs.d/lisp/modules/13-key-bindings.el")
+; (if (file-exists-p "~/.emacs.d/lisp/my-modules/11-games-pkg-conf.el")
+;     (load-file "~/.emacs.d/lisp/my-modules/11-games-pkg-conf.el")
+;   (load-file "~/.emacs.d/lisp/modules/11-games-pkg-conf.el"))
 
 ;;;;
 ;;              *** Optional / Experimental Feature ***
 ;; Load Modular Emacs S/W Programmer's Key Bindings module:
 
-;(load-file "~/.emacs.d/lisp/modules/14-progLang-key-bindings.el")
+; (if (file-exists-p "~/.emacs.d/lisp/my-modules/14-progLang-key-bindings.el")
+;     (load-file "~/.emacs.d/lisp/my-modules/14-progLang-key-bindings.el")
+;   (load-file "~/.emacs.d/lisp/modules/14-progLang-key-bindings.el"))
 
 ;;;;
 ;;              *** Optional / Experimental Feature ***
 ;; Load Modular Emacs Accounting module:
 
-;(load-file "~/.emacs.d/lisp/modules/15-Accounting-pkg-conf.el")
+;(if (file-exists-p "~/.emacs.d/lisp/my-modules/15-Accounting-pkg-conf.el")
+;    (load-file "~/.emacs.d/lisp/my-modules/15-Accounting-pkg-conf.el")
+;  (load-file "~/.emacs.d/lisp/modules/15-Accounting-pkg-conf.el"))
 
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; END: [modular-emacs]:~/.emacs.d/lisp/modules/dispatcher.el
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
