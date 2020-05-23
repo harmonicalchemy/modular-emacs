@@ -60,8 +60,7 @@
 (when *is-darwin*
   (defconst my-org-dir
     (file-name-as-directory
-     (expand-file-name "~/Path/To/Your-MacOS-Org-Docs"))))
-
+     (expand-file-name "~/Path/To/Your/Mac-OS/Org-Docs"))))
 
 ;;;
 ;; Path to Your ORG Docs on Linux:
@@ -69,7 +68,7 @@
 (when *is-linux*
   (defconst my-org-dir
     (file-name-as-directory
-     (expand-file-name "~/Path/To/Your-Linux-Org-Docs"))))
+     (expand-file-name "~/Path/To/Your/Linux/Org-Docs"))))
 
 ;;;
 ;; The rest of the definitions below depend on above "my-org-dir" being set
@@ -360,22 +359,59 @@
                         nil))))))
 
 
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Open Org File in new frame from Dired and set its width to 180:
+;;  (no checks are made to be sure this is a .org file but no matter...
+
+(defun me_dired-find-org-file-other-frame ()
+  "In Dired, visit this file or directory in a new frame that has its
+   dimensions set to fit an org file in Fancy Org Mode with split
+   narrow left outline pane, and wider right pane for content editing"
+  (interactive)
+  (find-file-other-frame (dired-get-file-for-visit))
+  (modify-frame-parameters selected-frame nil
+                           '((name . "Fancy Org Mode"))
+                           '((height . 45))
+                           '((width . -180)))
+  ;; Still coding this one up... Don't use it yet.. It does not work correctly %^)
+  ) 
+
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  Modular Emacs - Org Mode Hook:
+;;  Modular Emacs - Fancy Org Mode Hook:
+;;  This Fancy Org Mode hook takes care of setting your writing/publishing
+;;  environment nicely, however there are some caveats:
+;;
+;;    1. Stretch your current frame "double-wide" before opening an org file
+;;       from Dired. (I find a width of 180 to be optimal) You won't have to
+;;       adjust the width of the split windows after that.
+;;    2. If your initial frame is too narrow, the function will not split it at
+;;       all and you will have to do that too manually...  Oh well....
+;;
+;;  Even with the above caveats, I believe at this point this Emacs Org Mode
+;;  based publishing environment is working just as well as my Scrivener Projects
+;;  were in the past!  It will soon be exceeding anything that I could do with
+;;  Scrivener and be future proof to boot!  Combined with Fountain mode for
+;;  screenwriting, audio and VR scripting etc... When this project is done
+;;  we will have "all your base are now covered!" %^)
+;;
+;;  Ref to me_set-org-face ():  
+;;
+;;    (set-face-attribute 'default (selected-frame)
+;;                        :family "Courier Prime Emacs"
+;;                        :slant 'normal
+;;                        :height 137
+;;                        :weight 'normal
+;;                        :width 'normal)
 
 (defun me_org-mode-hook ()
   ;; Set default face to Courier Prime Emacs
   ;; (A nice mono block serif typewriter look for writing)...
-  (set-face-attribute 'default (selected-frame)
-                      :family "Courier Prime Emacs"
-                      :slant 'normal
-                      :height 137
-                      :weight 'normal
-                      :width 'normal)
+  (me_set-org-face)
   (setq me--def-face 2)
   (olivetti-mode)
   ;; Set olivetti line width for org mode here:
   (olivetti-set-width 100)
+  (split-window-right -120)
   (me_hide-org-bullets))
 ;; Remove call to hide-org-bullets in function list above
 ;; if you would like to see fancy org bullet headings...

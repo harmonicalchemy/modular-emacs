@@ -166,15 +166,14 @@
   (current-time))
 
 ;; Load: Harmonic Alchemy Modular Emacs - Dispatcher
-(load-file "~/.emacs.d/lisp/modules/dispatcher.el")
+
+(if (file-exists-p "~/.emacs.d/lisp/my-modules/dispatcher.el")
+    (load-file "~/.emacs.d/lisp/my-modules/dispatcher.el")
+  (load-file "~/.emacs.d/lisp/modules/dispatcher.el"))
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; BEGIN Emacs Manual Configurations: (Add your test scripts below this banner)
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-
 
 ;; Save your testing or custom scripts in here to be persistant across restarts.
 ;;
