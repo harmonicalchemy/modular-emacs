@@ -9,7 +9,7 @@ tags: Emacs, 2020, apps-tools, SysAdmin, HA-ModEmacs, how-to, README
 
 ![Banner](./Docs/media/Modular-Emacs-Github-Banner-v3.png)
 
-# Version 3.1 (beta) - README
+# Version 3.1 - _Xah Fly Keys Fork_ (beta) - README
 
 **[\[Table Of Contents\]](#table-of-contents)**
 
@@ -20,6 +20,9 @@ tags: Emacs, 2020, apps-tools, SysAdmin, HA-ModEmacs, how-to, README
 **Current Status:**
 
 > **Note:** Skip to **[Start Here:](#start-here)** if you just need to get this going now. :trollface:
+
+- **_You are currently on the branch/fork that enables the optional Xah Fly Keys Emacs modal editor mode_**
+
 
 - **2020 May 22:** Org Mode has been heavily customized!  I am calling it **_Fancy Org Mode_**.  Also some of the Module files were re-organized... (In particular `12-Xah-Fly-Keys.el` and `13-key-bindings.el)`... Tweaks were added to improve package management and minimize the effects of load errors etc.  Keybindings for both Xah-Fly-Keys mode as well as normal mode were added/changed... 
 
