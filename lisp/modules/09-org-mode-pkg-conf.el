@@ -60,7 +60,7 @@
 (when *is-darwin*
   (defconst my-org-dir
     (file-name-as-directory
-     (expand-file-name "~/Path/To/Your/Mac-OS/Org-Docs"))))
+     (expand-file-name "~/Path/To/Your-Mac-OS/Org-Docs"))))
 
 ;;;
 ;; Path to Your ORG Docs on Linux:
@@ -68,7 +68,7 @@
 (when *is-linux*
   (defconst my-org-dir
     (file-name-as-directory
-     (expand-file-name "~/Path/To/Your/Linux/Org-Docs"))))
+     (expand-file-name "~/Path/To/Your-Linux-Org-Docs"))))
 
 ;;;
 ;; The rest of the definitions below depend on above "my-org-dir" being set
@@ -117,635 +117,76 @@
   (file-name-as-directory
    (expand-file-name "03-Private" my-org-dir)))
 
-
-;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;   Beautify Settings for Org-Mode: (constantly under revision %^)
-;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-(require 'org-faces)
-
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;   Org-Bullets:
-;;
-;;  NOTE:
-;;    After setting up my Book Publishing Project
-;;    Templates, I realized that showing any bullets
-;;    at all, (even the last one) clutters up my nice
-;;    Headings Display (which use variable scale fonts
-;;    etc.) So now I am not actually displaying any of
-;;    the fancy bullets below... I left this code in
-;;    however to allow them to show should you choose
-;;    to make the last bullet visible again...
-;;    (see function:  me_hide-org-bullets () below)
+;;  Set default Org Mode directories:
 
-;; Use org-bullets-mode for utf8 symbols as org bullets
+(setq org-directory my-org-dir)
+(setq org-default-notes-file (concat org-directory "/autofocus.org"))
 
-(require 'org-bullets)
+;; Load Default Org Agenda Files (directories) that are permanent...
+;; NOTE:  This list is mostly updated from within org files
+;;        or by manually inserting them while you use org-mode...
 
-;; make available "org-bullet-face" allowing control of the font
-;; sizes individually:
-
-(setq org-bullets-face-name (quote org-bullet-face))
-
-;;;
-;; Bullet options to try out: (commented out)
-;; Enable the one you like... Add more choices below if you find them...
-
-;(setq org-bullets-bullet-list '("✙" "♱" "♰" "☥" "✞" "✟" "✝" "†" "✠" "✚" "✜" "✛" "✢" "✣" "✤" "✥"))
-
-;; Hexagrams:
-;(setq org-bullets-bullet-list '("✡" "⎈" "✽" "✲" "✱" "✻" "✼" "✽" "✾" "✿" "❀" "❁" "❂" "❃" "❄" "❅" "❆" "❇"))
-
-;; Special Symbols:
-(setq org-bullets-bullet-list '("☀" "♼" "☼" "☾" "☽" "☣" "§" "¶" "‡" "※" "✕" "△" "◇" "▶" "◀" "◈"))
-
-
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; Org ellipsis options, other than the default Go to Node...
-;; not supported in common font, but supported in Symbola font. ⬎, ⤷, ⤵
-
-(setq org-ellipsis "⤵")
-
-
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; Show nice chosen symbols instead of a dash in bulleted lists.
-;; If you don't like these, either disable the next two forms or
-;; change the characters at the end of each expression to something
-;; that fits your style...
-
-(font-lock-add-keywords
- 'org-mode
- '(("^ *\\([-]\\) "
-    (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "🍥"))))))
-
-(font-lock-add-keywords
- 'org-mode
- '(("^ *\\([+]\\) "
-    (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "🞜"))))))
-
-
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; Emojify for Org-Mode - Information Only:
-;;
-;; Searching emojis:
-;;
-;;   The command:
-;;
-;;       emojify-apropos-emoji
-;;
-;;   can be used to display emojis that match given regexp/apropos pattern.
-;;   The results are displayed in a specialized buffer, where 'w' or 'c' can be
-;;   used to copy emojis to the kill ring.
-;;
-;; Inserting emojis:
-;;
-;;   The command:
-;;
-;;       emojify-insert-emoji
-;;
-;;   can be used to insert emojis interactively. While the command works with
-;;   vanilla Emacs completion system, the experience would be better with
-;;   something like Helm, Ivy, Icicles or Ido depending on you preference.
-;;
-;; Describing emojis:
-;;
-;;   The command:
-;;
-;;       emojify-describe-emoji-at-point
-;;
-;;   can be used to view explanation about the command displayed at point.
-;;   Additionally the command emojify-describe-emoji can be used to display
-;;   description for an arbitrary emoji.
-;;
-;; Listing all emojis:
-;;
-;;   The command:
-;;
-;;       emojify-list-emojis
-;;
-;;   can be used to view all the available emojis in a list form.
-;;
-;; Configuring how emojis are displayed:
-;;
-;;   By default emojis are displayed using images. However you can instruct
-;;   emojify to display it using unicode characters or ascii characters.
-;;   To do so, customize the variable:
-;;
-;;       emojify-display-style
-;;
-;;   You can set it one of the following values:
-;;
-;;      image - Display emojis using images, obviously this requires the Emacs
-;;              instance to support image
-;;
-;;     unicode - Display emojis using unicode characters, this might be a good
-;;               option on platforms with good emoji fonts
-;;
-;;     ascii - This is simplest and does not require any external dependencies
-;;             In this case emojify will display ascii equivalents of github
-;;             style emojis.
-;;
-;;  More Info At:
-;;
-;;      https://github.com/iqbalansari/emacs-emojify
-;;
-;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-;; I have chosen to leave Emojify Mode disabled and 
-;; instead only use the option to enable it manually
-;; if needed.   I find using the Symbola unicode font
-;; by itself, without using emojify mode, works fine...
-;; So far, I am sourcing all my symbols and icons from
-;; the Symbola font... Symbola contains simple clear
-;; line drawing representations of all the standard
-;; emojis... and Symbola is available on all platforms!
-;;
-;; If you would rather, or also wish to use Emojify mode,
-;; Un-comment the single line form below...  This will 
-;; enable Emojify Mode Globally at Emacs Startup...
-
-;(add-hook 'after-init-hook #'global-emojify-mode)
-
-
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; Make Attractive Org-Mode Headers, blocks, keywords etc:
-;;
-;; The inspiration for this rather complicated eLisp code comes from:
-;;   "Beautifying Org Mode in Emacs"
-;;      https://zzamboni.org/post/beautifying-org-mode-in-emacs/
-
-;; Set default faces:
-;(set-face-attribute 'default t :font "Courier Prime Emacs" :height 130 :width 'normal)
-(set-face-attribute 'fixed-pitch t :family "Hermit" :height 120 :width 'normal)
-(set-face-attribute 'fixed-pitch-serif t :family "Courier Prime Emacs" :height 130 :width 'normal)
-(set-face-attribute 'variable-pitch t :family "Averia Serif Libre" :height 130 :width 'normal)
-
-;; Set Org Mode Faces:
-
-(custom-theme-set-faces
- 'user
- `(default ((t (:inherit fixed-pitch-serif :height 120 :weight normal))))
- `(org-default ((t (:inherit fixed-pitch-serif :height 120 :weight normal))))
- `(org-block ((t (:inherit fixed-pitch))))
- `(org-code ((t (:inherit fixed-pitch))))
- `(org-document-info ((t (:foreground "dark orange"))))
- `(org-document-info-keyword ((t (:inherit (shadow fixed-pitch-serif)))))
- `(org-indent ((t (:inherit (org-hide fixed-pitch-serif)))))
- `(org-link ((t (:foreground "royal blue" :underline t))))
- `(org-meta-line ((t (:inherit (font-lock-comment-face fixed-pitch-serif)))))
- `(org-property-value ((t (:inherit fixed-pitch-serif))) t)
- `(org-special-keyword ((t (:inherit (font-lock-comment-face fixed-pitch-serif)))))
- `(org-table ((t (:inherit fixed-pitch :foreground "#83a598"))))
- `(org-tag ((t (:inherit (shadow fixed-pitch) :weight bold :height 0.8))))
- `(org-verbatim ((t (:inherit (shadow fixed-pitch))))))
-
-;; Customize Org headings:
-
-(let* ((variable-tuple
-        (cond ((x-list-fonts "Averia Serif Libre") '(:font "Averia Serif Libre"))
-              ((x-list-fonts "Averia Libre Light")   '(:font "Averia Libre Light"))
-              (nil (warn "Cannot find Averia Serif Libre, or Averia Libre Light. Did you install them?"))))
-       (base-font-color     (face-foreground 'default nil 'default))
-       (headline           `(:inherit default :weight normal )))
-
-  (custom-theme-set-faces
-   'user
-   `(org-level-8 ((t (,@headline ,@variable-tuple :height 1.13 :foreground "AntiqueWhite" ))))
-   `(org-level-7 ((t (,@headline ,@variable-tuple :height 1.17 :foreground "AntiqueWhite" ))))
-   `(org-level-6 ((t (,@headline ,@variable-tuple :height 1.20 :foreground "AntiqueWhite" ))))
-   `(org-level-5 ((t (,@headline ,@variable-tuple :height 1.23 :foreground "AntiqueWhite" ))))
-   `(org-level-4 ((t (,@headline ,@variable-tuple :height 1.28 :foreground "AntiqueWhite" ))))
-   `(org-level-3 ((t (,@headline ,@variable-tuple :height 1.38 :foreground "AntiqueWhite" ))))
-   `(org-level-2 ((t (,@headline ,@variable-tuple :height 1.62 :foreground "AntiqueWhite" ))))
-   `(org-level-1 ((t (,@headline ,@variable-tuple :height 1.88 :foreground "AntiqueWhite" ))))
-   `(org-document-title
-     ((t (,@headline ,@variable-tuple :height 1.5 :foreground "AntiqueWhite" :underline nil))))))
-
-
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  Hide all bullets/asterisks etc. in Org mode:
-;;
-;;  For writing books, docs, etc. I decided showing
-;;  the bullets, (even the last one) clutters up my
-;;  nice variable scale headings outline display...
-;;  This function was written to perform that service
-;;  globally in org mode... It is added to the my
-;;  org-mode hook function below...
-;;
-;;  NOTE: if you want to see the fancy bullets in your
-;;  outline headings, than don't call this function
-;;  from the org-mode hook below...
-;;
-;;  I also have a Xfk Cmd-Mode key "p" defined
-;;  to invoke this function... (turning off bullets)
-;;  But no way to turn them back on...
-;;  TODO: Make this a toggle so you can turn them
-;;        back on for other non writing related work.
-;;        Then you don't have to mess with it here...
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-(defun me_hide-org-bullets ()
-  "Hide the Org Bullets... TODO: make this into a toggle"
-  (interactive)
-  (font-lock-add-keywords
-   'org-mode `(("\\(?:^\\(?1:\\*+\\)[[:blank:]]\\)"
-              (0 (progn (compose-region
-                         (match-beginning 1) (match-end 1)
-                         (pcase (length (match-string 1))
-                           (1 ?\u2219)
-                           (2 ?\u2022)
-                           (3 ?\u25c9)
-                           (_ ?\u25CB)))
-                        nil))))))
-
-
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  Open Org File in new frame from Dired and set its width to 180:
-;;  (no checks are made to be sure this is a .org file but no matter...
-
-(defun me_dired-find-org-file-other-frame ()
-  "In Dired, visit this file or directory in a new frame that has its
-   dimensions set to fit an org file in Fancy Org Mode with split
-   narrow left outline pane, and wider right pane for content editing"
-  (interactive)
-  (find-file-other-frame (dired-get-file-for-visit))
-  (modify-frame-parameters selected-frame nil
-                           '((name . "Fancy Org Mode"))
-                           '((height . 45))
-                           '((width . -180)))
-  ;; Still coding this one up... Don't use it yet.. It does not work correctly %^)
-  ) 
-
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  Modular Emacs - Fancy Org Mode Hook:
-;;  This Fancy Org Mode hook takes care of setting your writing/publishing
-;;  environment nicely, however there are some caveats:
-;;
-;;    1. Stretch your current frame "double-wide" before opening an org file
-;;       from Dired. (I find a width of 180 to be optimal) You won't have to
-;;       adjust the width of the split windows after that.
-;;    2. If your initial frame is too narrow, the function will not split it at
-;;       all and you will have to do that too manually...  Oh well....
-;;
-;;  Even with the above caveats, I believe at this point this Emacs Org Mode
-;;  based publishing environment is working just as well as my Scrivener Projects
-;;  were in the past!  It will soon be exceeding anything that I could do with
-;;  Scrivener and be future proof to boot!  Combined with Fountain mode for
-;;  screenwriting, audio and VR scripting etc... When this project is done
-;;  we will have "all your base are now covered!" %^)
-;;
-;;  Ref to me_set-org-face ():  
-;;
-;;    (set-face-attribute 'default (selected-frame)
-;;                        :family "Courier Prime Emacs"
-;;                        :slant 'normal
-;;                        :height 137
-;;                        :weight 'normal
-;;                        :width 'normal)
-
-(defun me_org-mode-hook ()
-  ;; Set default face to Courier Prime Emacs
-  ;; (A nice mono block serif typewriter look for writing)...
-  (me_set-org-face)
-  (setq me--def-face 2)
-  (olivetti-mode)
-  ;; Set olivetti line width for org mode here:
-  (olivetti-set-width 100)
-  (split-window-right -120)
-  (me_hide-org-bullets))
-;; Remove call to hide-org-bullets in function list above
-;; if you would like to see fancy org bullet headings...
-
-(add-hook 'org-mode-hook 'me_org-mode-hook)
+(setq org-agenda-files '(my-org-dir
+                         my-org-agenda-files
+                         my-org-templates
+                         my-org-files))
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  Setup my Default Org-Mode Keywords:
-;;  The above are based on general GTD schemes I am using...
-;;  (adjust this list to fit your own planning style)
+;;  Configure Org Mode Beautify Settings: (constantly under revision %^)
+;;  Override the file below by putting it into "my-modules" then change it to
+;;  suit your needs and planning style...
 
-(setq org-todo-keywords
-      (quote ( (sequence "TODO(t)" "NEXT(x)" "|" "DONE(d!/!)")
-               (sequence "ACTIVE(a)" "REPEATING(r)" "WAITING(w@/!)" "HOLD(h@/!)" "|" "CANCELLED(c@/!)" "PHONE")
-	       (sequence  "NEW(n)" "NOW(o)" "SOMEDAY(s)"  "|" "ARCHIVED(v)"))))
-
-;;;
-;; Setup my Default Org-Mode Keywords: (with fancy UTF 8 symbols)
-;; NOTE: I decided this was cluttering things up to much so I disabled it...
-;(setq org-todo-keywords
-;      (quote ( (sequence "☞ TODO(t)" "⚡ NEXT(x)" "|" "✔ DONE(d!/!)")
-;               (sequence "ACTIVE(a)" "↺ REPEATING(r)" "⚑ WAITING(w@/!)" "⨂ HOLD(h@/!)" "|" "✘ CANCELLED(c@/!)" "PHONE(p)")
-;	       (sequence  "NEW(n)" "⦾ NOW(o)" "SOMEDAY(s)"  "|" "ARCHIVED(a)"))))
+(if (file-exists-p "~/.emacs.d/lisp/my-modules/09-1-org-beautify-conf.el")
+    (load-file "~/.emacs.d/lisp/my-modules/09-1-org-beautify-conf.el")
+  (load-file "~/.emacs.d/lisp/modules/09-1-org-beautify-conf.el"))
 
 
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  Set Org TODO keyword faces:
-;;  (don't settle for boring red, green, blue... Be creative!)
-;;  INFO:  To lookup the list of Emacs colours that can be used by name use:
-;;
-;;                         M-x list-colors-display
-;;
-;;  NOTE:  You can also do this for tag faces:
-;;        Copy this form when you are ready to do that and add in your tags as a new element in the list...
-;;
-;(setq org-tag-faces
-;      (quote (
-;              ( "TAG-NAME" . (:family "Hermit" :height 100 :foreground "red" :weight bold))
-;              ;; Add More Tag Elements to the list...
-;              ;;
-;              )))
-
-(setq org-todo-keyword-faces
-      (quote (
-              ("TODO" . (:family "Hermit" :height 100 :foreground "red" :weight bold))
-              ("NEXT" . (:family "Hermit" :height 100 :foreground "BlueViolet" :weight bold))
-              ("DONE" . (:family "Hermit" :height 100 :foreground "green2" :weight bold))
-              ("ACTIVE" . (:family "Hermit" :height 100 :foreground "chocolate1" :weight bold))
-              ("REPEATING" . (:family "Hermit" :height 100 :foreground "DeepSkyBlue" :weight bold))
-              ("WAITING" . (:family "Hermit" :height 100 :foreground "lavender" :weight bold))
-              ("HOLD" . (:family "Hermit" :height 100 :foreground "gray62" :weight bold))
-              ("CANCELLED" . (:family "Hermit" :height 100 :foreground "SlateGray" :weight bold))
-              ("PHONE" . (:family "Hermit" :height 100 :foreground "DarkOrange" :weight bold))
-              ("NEW" . (:family "Hermit" :height 100 :foreground "DodgerBlue" :weight bold))
-              ("NOW" . (:family "Hermit" :height 100 :foreground "HotPink" :weight bold))
-              ("SOMEDAY" . (:family "Hermit" :height 100 :foreground "gold" :weight bold))
-              ("ARCHIVED" . (:family "Hermit" :height 100 :foreground "AntiqueWhite" :weight bold)))))
-
-
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; Define Custom Org-files:
-
-(setq default-org-note "refile.org")
-(setq default-org-diary "diary.org")
-
-(setq org-default-notes-file (expand-file-name default-org-note my-org-dir))
-
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; Set Up Capture templates for: TODO tasks, Notes, appointments, phone calls, and org-protocol
-
-(setq org-capture-templates
-      (quote (("t" "todo" entry (file (expand-file-name default-org-note my-org-files)
-	       "* TODO %?\n%U\n%a\n" :clock-in t :clock-resume t))
-	       ("r" "respond" entry (file (expand-file-name default-org-note my-org-files) "* TODO Respond to %:from on %:subject\n%U\n%a\n" :clock-in t :clock-resume t :immediate-finish t))
-	        ("n" "note" entry (file (expand-file-name default-org-note my-org-files) "* %? :NOTE:\n%U\n%a\n" :clock-in t :clock-resume t))
-	      ("j" "Journal" entry (file+datetree (expand-file-name default-org-diary my-org-files)
-	       "* %?\n%U\n" :clock-in t :clock-resume t))
-	      ("w" "org-protocol" entry (file (expand-file-name default-org-note my-org-files))
-	       "* TODO Review %c\n%U\n" :immediate-finish t)
-	      ("p" "Phone call" entry (file (expand-file-name default-org-note my-org-files))
-	       "* PHONE %? :PHONE:\n%U" :clock-in t :clock-resume t)
-	      ("h" "Habit" entry (file (expand-file-name default-org-note my-org-files))
-	       "* NEXT %?\n%U\n%a\nSCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")\n:PROPERTIES:\n:STYLE: habit\n:REPEAT_TO_STATE: NEXT\n:END:\n"))))
-
-;;;
-;; Dim blocked tasks
-(setq org-agenda-dim-blocked-tasks t)
-
-;;; 
-;; Compact the block agenda view
-(setq org-agenda-compact-blocks t)
-
-;;; 
-;; Resume clocking task when emacs is restarted
-(org-clock-persistence-insinuate)
-
-;;; 
-;; Resume clocking task on clock-in if the clock is open
-(setq org-clock-in-resume t)
-
-;;; 
-;; Save clock data and state changes and notes in the LOGBOOK drawer
-(setq org-clock-into-drawer t)
-
-;;; 
-;; Clock out when moving task to a done state
-(setq org-clock-out-when-done t)
-
-;;; 
-;; Save the running clock and all clock history when exiting Emacs, load it on startup
-(setq org-clock-persist t)
-
-;;; 
-;; Do not prompt to resume an active clock
-(setq org-clock-persist-query-resume nil)
-
-;;; 
-;; Enable auto clock resolution for finding open clocks
-(setq org-clock-auto-clock-resolution (quote when-no-clock-is-running))
-
-;;; 
-;; Include current clocking task in clock reports
-(setq org-clock-report-include-clocking-task t)
-
-;;; 
-;; round time
-(setq org-time-stamp-rounding-minutes (quote (1 1)))
-
-;;; 
-;; Keep tasks with dates on the global todo lists
-(setq org-agenda-todo-ignore-with-date nil)
-
-;;; 
-;; Keep tasks with deadlines on the global todo lists
-(setq org-agenda-todo-ignore-deadlines nil)
-
-;;; 
-;; Keep tasks with scheduled dates on the global todo lists
-(setq org-agenda-todo-ignore-scheduled nil)
-
-;;; 
-;; Keep tasks with timestamps on the global todo lists
-(setq org-agenda-todo-ignore-timestamp nil)
-
-;;; 
-;; Remove completed deadline tasks from the agenda view
-(setq org-agenda-skip-deadline-if-done t)
-
-;;; 
-;; Remove completed scheduled tasks from the agenda view
-(setq org-agenda-skip-scheduled-if-done t)
-
-;;; 
-;; Remove completed items from search results
-(setq org-agenda-skip-timestamp-if-done t)
-
-;;; 
-;; Show all future entries for repeating tasks
-(setq org-agenda-repeating-timestamp-show-all t)
-
-;;; 
-;; Show all agenda dates - even if they are empty
-(setq org-agenda-show-all-dates t)
-
-;;; 
-;; Sorting order for tasks on the agenda
-(setq org-agenda-sorting-strategy
-      (quote ((agenda habit-down time-up user-defined-up priority-down effort-up category-keep)
-	      (todo category-up priority-down effort-up)
-	      (tags category-up priority-down effort-up)
-	      (search category-up))))
-
-;;; 
-;; Start the weekly agenda on Monday
-(setq org-agenda-start-on-weekday 1)
-
-;;; 
-;; Enable display of the time grid so we can see the marker for the current time
-(setq org-agenda-time-grid (quote ((daily today remove-match)
-				   #("----------------" 0 16 (org-heading t))
-				   (830 1000 1200 1300 1500 1700))))
-
-;;; 
-;; Display tags farther right
-(setq org-agenda-tags-column -102)
-
-(setq org-enforce-todo-dependencies t)
-
-(setq org-hide-leading-stars t)
-
-(setq org-startup-indented t)
-
-(setq org-cycle-separator-lines 0)
-
-(setq org-blank-before-new-entry (quote ((heading)
-                                         (plain-list-item . auto))))
-
-(setq org-insert-heading-respect-content nil)
-
-(setq org-reverse-note-order nil)
-
-(setq org-show-following-heading t)
-(setq org-show-hierarchy-above t)
-(setq org-show-siblings (quote ((default))))
-
-(setq org-id-method (quote uuidgen))
-
-(setq org-deadline-warning-days 30)
-
-(setq org-table-export-default-format "orgtbl-to-tsv")
-
-(setq org-link-frame-setup (quote ((vm . vm-visit-folder)
-                                   (gnus . org-gnus-no-new-news)
-                                   (file . find-file))))
- 
-
-;; Use the current window for C-c ' source editing
-
-(setq org-src-window-setup 'current-window)
-
-(setq org-log-done (quote time))
-(setq org-log-into-drawer "LOGBOOK")
-
-(setq org-startup-folded 'overview)
-
-(setq org-alphabetical-lists t)
-
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; Custom agenda command definitions
-
-(setq org-agenda-custom-commands
-      (quote (("N" "Notes" tags "NOTE"
-	       ((org-agenda-overriding-header "Notes")
-		(org-tags-match-list-sublevels t)))
-	      ("h" "Habits" tags-todo "STYLE=\"habit\""
-	       ((org-agenda-overriding-header "Habits")
-		(org-agenda-sorting-strategy
-		 '(todo-state-down effort-up category-keep))))
-	      (" " "Agenda"
-	       ((agenda "" nil)
-		(tags "REFILE"
-		      ((org-agenda-overriding-header "Tasks to Refile")
-		       (org-tags-match-list-sublevels nil)))
-		(tags-todo "-CANCELLED/!"
-			   ((org-agenda-overriding-header "Stuck Projects")
-			    (org-agenda-skip-function 'bh/skip-non-stuck-projects)))
-		(tags-todo "-WAITING-CANCELLED/!NEXT"
-			   ((org-agenda-overriding-header "Next Tasks")
-			    (org-agenda-skip-function 'bh/skip-projects-and-habits-and-single-tasks)
-			    (org-agenda-todo-ignore-scheduled t)
-			    (org-agenda-todo-ignore-deadlines t)
-			    (org-agenda-todo-ignore-with-date t)
-			    (org-tags-match-list-sublevels t)
-			    (org-agenda-sorting-strategy
-			     '(todo-state-down effort-up category-keep))))
-		(tags-todo "-REFILE-CANCELLED/!-HOLD-WAITING"
-			   ((org-agenda-overriding-header "Tasks")
-			    (org-agenda-skip-function 'bh/skip-project-tasks-maybe)
-			    (org-agenda-todo-ignore-scheduled t)
-			    (org-agenda-todo-ignore-deadlines t)
-			    (org-agenda-todo-ignore-with-date t)
-			    (org-agenda-sorting-strategy
-			     '(category-keep))))
-		(tags-todo "-HOLD-CANCELLED/!"
-			   ((org-agenda-overriding-header "Projects")
-			    (org-agenda-skip-function 'bh/skip-non-projects)
-			    (org-agenda-sorting-strategy
-			     '(category-keep))))
-		(tags-todo "-CANCELLED+WAITING/!"
-			   ((org-agenda-overriding-header "Waiting and Postponed Tasks")
-			    (org-agenda-skip-function 'bh/skip-stuck-projects)
-			    (org-tags-match-list-sublevels nil)
-			    (org-agenda-todo-ignore-scheduled 'future)
-			    (org-agenda-todo-ignore-deadlines 'future)))
-		(tags "-REFILE/"
-		      ((org-agenda-overriding-header "Tasks to Archive")
-		       (org-agenda-skip-function 'bh/skip-non-archivable-tasks)
-		       (org-tags-match-list-sublevels nil))))
-	       nil)
-	      ("r" "Tasks to Refile" tags "REFILE"
-	       ((org-agenda-overriding-header "Tasks to Refile")
-		(org-tags-match-list-sublevels nil)))
-	      ("#" "Stuck Projects" tags-todo "-CANCELLED/!"
-	       ((org-agenda-overriding-header "Stuck Projects")
-		(org-agenda-skip-function 'bh/skip-non-stuck-projects)))
-	      ("n" "Next Tasks" tags-todo "-WAITING-CANCELLED/!NEXT"
-	       ((org-agenda-overriding-header "Next Tasks")
-		(org-agenda-skip-function 'bh/skip-projects-and-habits-and-single-tasks)
-		(org-agenda-todo-ignore-scheduled t)
-		(org-agenda-todo-ignore-deadlines t)
-		(org-agenda-todo-ignore-with-date t)
-		(org-tags-match-list-sublevels t)
-		(org-agenda-sorting-strategy
-		 '(todo-state-down effort-up category-keep))))
-	      ("R" "Tasks" tags-todo "-REFILE-CANCELLED/!-HOLD-WAITING"
-	       ((org-agenda-overriding-header "Tasks")
-		(org-agenda-skip-function 'bh/skip-project-tasks-maybe)
-		(org-agenda-sorting-strategy
-		 '(category-keep))))
-	      ("p" "Projects" tags-todo "-HOLD-CANCELLED/!"
-	       ((org-agenda-overriding-header "Projects")
-		(org-agenda-skip-function 'bh/skip-non-projects)
-		(org-agenda-sorting-strategy
-		 '(category-keep))))
-	      ("w" "Waiting Tasks" tags-todo "-CANCELLED+WAITING/!"
-	       ((org-agenda-overriding-header "Waiting and Postponed tasks"))
-	       (org-tags-match-list-sublevels nil))
-	      ("A" "Tasks to Archive" tags "-REFILE/"
-	       ((org-agenda-overriding-header "Tasks to Archive")
-		(org-agenda-skip-function 'bh/skip-non-archivable-tasks)
-		(org-tags-match-list-sublevels nil))))))
-
-
-;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; Org Mind Map Configuration:
-;; Note:  Graphviz must be installed on your system before enabling these next
-;;        Forms!!!
-
-(setq org-mind-map-engine "dot")      ; Default. Directed Graph
-(setq org-mind-map-engine "neato")    ; Undirected Spring Graph
-(setq org-mind-map-engine "twopi")    ; Radial Layout
-(setq org-mind-map-engine "fdp")      ; Undirected Spring Force-Directed
-(setq org-mind-map-engine "sfdp")     ; Multiscale version of fdp for the 
-                                      ; layout of large graphs
-(setq org-mind-map-engine "twopi")    ; Radial layouts
-(setq org-mind-map-engine "circo")    ; Circular Layout
-
-
-;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;   Alisha's Advanced Org-Mode Configurations:
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Defined Variable:  ME--YT-iFrame-format
+;;  For embedding YouTube Links in Org Files:
+;;
+;;  Ref:
+;;     https://endlessparentheses.com/embedding-youtube-videos-with-org-mode-links.html
+;;
+;;  Usage:
+;;     To use this, just write your org links in the following way
+;;     (optionally adding a description).
+;;
+;;                     [[yt:A3JAlWM8qRM]]
+;;
+;; When you export to HTML, the above will produce an inline snippet that Youtube
+;; specifies. The advantage (over simply writing out the iframe) is that this link
+;; can also be clicked in org-mode, and can be exported to other formats as well.
+
+(defvar me--yt-iframe-format
+  ;; You may want to change your width and height.
+  (concat "<iframe width=\"440\""
+          " height=\"335\""
+          " src=\"https://www.youtube.com/embed/%s\""
+          " frameborder=\"0\""
+          " allowfullscreen>%s</iframe>"))
+
+(org-add-link-type
+ "yt"
+ (lambda (handle)
+   (browse-url
+    (concat "https://www.youtube.com/embed/"
+            handle)))
+ (lambda (path desc backend)
+   (cl-case backend
+     (html (format me--yt-iframe-format
+                   path (or desc "")))
+     (latex (format "\href{%s}{%s}"
+                    path (or desc "video"))))))
+
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Org Outline Tree on left | content on 
 ;;  right Functions...
 ;;
@@ -759,174 +200,175 @@
 
 ;; Open sub elements in right window pane,
 ;; Leave cursor in left outline window pane...
-;; This one is redundant... I could just assign a key
-;; right? lol, but maybe I will expand this into something
+;; This one is redundant... I could simply call the function
+;; directly right? lol, but maybe I will expand this into something
 ;; useful later...
 
 (defun me_org-tree-open-in-right-no-focus ()
   (interactive)
   (org-tree-to-indirect-buffer))
 
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Open Org File in new frame from Dired and set its width to 180:
+;;  (no checks are made to be sure this is a .org file but no matter...
+;;  NOTE:  Coding / debugging of this function is not complete yet
+;;         Don't use it unless you modify it to work first...
+;;         To be continued...
+(defun me_dired-find-org-file-other-frame ()
+  "In Dired, visit this file or directory in a new frame that has its
+   dimensions set to fit an org file in Fancy Org Mode with split
+   narrow left outline pane, and wider right pane for content editing"
+  (interactive)
+  (find-file-other-frame (dired-get-file-for-visit))
+  
+  (modify-frame-parameters nil
+                           (quote
+                            ((name . "Fancy Org Mode")
+                             (height . 45)
+                             (width . 175))))
+  ;; NOTE: Still coding this one up... Don't use it yet.. It is unfinished...
+  ;;       I don't need it yet... Maybe i will later and then I will finish it %^)
+  )
+
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  Org Mode Export Section - Settings:
+;;  Modular Emacs - Fancy Org Mode Hook function:
+;;  This Fancy Org Mode hook takes care of setting your writing/publishing
+;;  environment nicely...
+;;
+;;  USEAGE Notes:
+;;
+;;    1. Do you want a nice environment for writing / publishing in
+;;       "Wide Screen" mode right and left panes? i.e.:
+;;         * Narrow Outline Headings (collapsed) on Left side...
+;;         * Wide distraction free Olivetti Content Editor on Right side...
+;;       Yes? - Do the following Before opening a .org file for editing/viewing:
+;;         * Stretch your window frame out beyond 150 columns...
+;;       The frame width will be automagically detected by this function...
+;;       You will get a "double-wide" window frame with auto
+;;       adjusted right / left panes with title bar: "Fancy Org Mode"
+;;
+;;    2. If you don't want Fancy Org Mode (double wide split panes) than keep
+;;       your window narrow (i.e., the default 100 columns or less than 130)...
+;;       In this mode, you still get the nicer mono font for writing, etc...
+;;       but you don't get split panes or olivetti mode... This mode is better
+;;       for things like finances, general org-mode planning, etc...
+;;       This mode will automagically be set if you start with an initial frame
+;;       width of less than 130 columns...  That's it...
+;;
+;;  With the two options above, I believe at this point this Emacs Org Mode
+;;  based publishing environment is working just as well as my Scrivener Projects
+;;  were in the past!  It will soon be exceeding anything that I could do with
+;;  Scrivener and be future proof to boot!  Combined with Fountain mode for
+;;  screenwriting, audio and VR scripting etc... When this project is done
+;;  you will be glad to know "all your base are belong to" Emacs Org Mode! %^)
+
+(defun me_org-mode-hook-func ()
+  "Harmonic Alchemy Modular Emacs Fancy Org Mode Hook Function.  This function
+takes care of setting up a nice org-mode writing environment for both planning
+and / or writing-publishing"
+
+  ;; Set default face to Courier Prime Emacs (A nice mono serif for writing)
+  ;; NOTE: All settings below change the currently selected frame only...
+  ;;       (other existing and future frames are not affected)
+  (set-face-attribute 'default (selected-frame)
+                      :family "Courier Prime Emacs"
+                      :slant 'normal
+                      :height 138
+                      :weight 'normal
+                      :width 'normal)
+
+  ;; Set Default Face Flag (2 = org-mode face):
+  (setq me--def-face 2)
+
+  ;;  Test for "Wide Screen" (i.e., The user has set the frame
+  ;;  wider than 130 columns). If true, Set up a split screen
+  ;;  session with outline in left pane and content in right pane
+  ;;  Resize frame & window dimensions for best fit..
+  ;;  Set Frame Title to "HA Mod Emacs Fancy Org Mode"
+  ;;  Enable olivetti-mode for distraction free writing...
+  (if (> (frame-parameter nil 'width) 130)
+      (progn
+
+        ;; Set up WIDE SCREEN Frame size for writing/composition:
+        (modify-frame-parameters nil
+                                 (quote
+                                  ((name   . "HA Mod Emacs - Fancy Org Mode")
+                                   (height . 50)
+                                   (width  . 155))))
+
+        ;; Split Windows with narrow pane on right for outline headings..
+        (split-window-right -105)
+
+        ;; Enable Olivetti Mode (100 column wide)
+
+        (olivetti-mode)
+        (olivetti-set-width 100))
+
+    ;; OTHERWISE - Set NORMAL SCREEN Org Mode Frame size for org-mode
+    ;; planning, finances, TODOs, etc. (no split windows)
+    (progn
+      (modify-frame-parameters nil
+                               (quote
+                                ((name   . "HA Mod Emacs - Normal Org Mode")
+                                 (height . 42)
+                                 (width  . 100))))))
+
+  ;; Set Default Face Flag (to org-face) and Allways hide bullets no matter what...
+  (setq me--def-face 2)
+  (me_hide-org-bullets))
+
+;;;
+;; More Usage Notes for above hook function:
+;;
+;; NOTE1: Remove call to hide-org-bullets in function list above if you
+;;        would like to see fancy org bullet headings instead...
+;; NOTE2: This looks ugly if you are still using fancy scaleable
+;;        fonts for headings as well, (IMHO)...  IF you want to try using
+;;        Fancy Coloured Bullets etc., you most likely will want to disable
+;;        Fancy scaleable fonts as well... To do that you will have to
+;;        play around with org mode font styles in:
+;;                      09-1-org-beautify-conf.el
+;;        You will also find different org bullet styles within the above
+;;        file as well.... (go ahead... hack away!)
+
+;;;
+;;  Add Above Hook Function to Org Mode startup list:
+
+(add-hook 'org-mode-hook 'me_org-mode-hook-func)
+
+
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Setup my Default Org-Mode Keywords and Tags:
+;;  Schemes are based on the general GTD process I am using...
+;;  Override the file below by putting it into my-modules then change it to
+;;  suit your needs and planning style...
 
-;; Exporters:
-
-(require 'ox-md)
-(require 'ox-latex)
-
-;;;
-;; Hide the Emphasis Markup:
-;; (e.g., /.../ for italics, *...* for bold, etc.)
-;;
-;; Disable this form if you want to see them...
-;;
-;; TIP: The invisible characters are easy enough to remove
-;;      as there will be a small space in its place...
-;;      You can backspace over it to remove it and then
-;;      you will be able to see and remove the other one as well...
-
-(setq org-hide-emphasis-markers t)
-
-;;;
-;; Position tags right after last char of headline:
-;; (This is mostly to fix problems with variable-pitch
-;; It does not seem to be a problem with fixed-pitch)
-;; NOTE: I disabled this thing... It was causing an
-;;       error on load!  I need to look into this
-;;       later and fix it, or get rid of it...
-;;       I am not even sure if I need it as I am
-;;       not using Emacs in global scaled mode, or
-;;       what ever that's called... lol...
-;;       There may be more to this than I realized! %^)
-;;       I will get to it later when I start messing with org tags...
-;(org-tags-column 0)
-
-;;;
-;; speed keys for quick navigation:
-
-(setq org-use-speed-commands 1)
-
-;;;
-;; set maximum indentation for org-mode description lists:
-
-(setq org-list-description-max-indent 5)
-
-;;;
-;; prevent org-mode demoting heading also shifting text inside sections:
-
-(setq org-adapt-indentation nil)
-
-;;;
-;; Stop Inline Images Being Too Big:
-
-(setq org-image-actual-width '(500))
-
-;;;
-;; Automatically Refresh Inline Images:
-;; REF: http://emacs.stackexchange.com/questions/3302/live-refresh-of-inline-images-with-org-display-inline-images
-
-(defun shk-fix-inline-images ()
-  (when org-inline-image-overlays
-    (org-redisplay-inline-images)))
-
-(add-hook 'org-babel-after-execute-hook 'shk-fix-inline-images)
+(if (file-exists-p "~/.emacs.d/lisp/my-modules/09-2-org-keywords-tags-conf.el")
+    (load-file "~/.emacs.d/lisp/my-modules/09-2-org-keywords-tags-conf.el")
+  (load-file "~/.emacs.d/lisp/modules/09-2-org-keywords-tags-conf.el"))
 
 
-;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;   Org Mode Export Options:
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Setup my Org-Mode Project Management (Capture, GTD, TODO, Tasks, Agenda, etc.
+;;  Schemes are based on the "Autofocus GTD Process" I use along with the
+;;  Timesheets emacs package and a few other things like mind maps etc...
+;;  Override the file below by putting it into my-modules then change it to
+;;  suit your needs and planning style...
 
-;;;
-;; syntax highlight code blocks:
-
-(setq org-src-fontify-natively t)
-
-;;;
-;; put caption below in tables:
-
-(setq org-export-latex-table-caption-above nil)
-(setq org-latex-table-caption-above nil)
-
-;;;
-;; don't export tags:
-;;
-;; Note: You may want to change this later if tags are important
-;;       to your exported docs...
-
-(setq org-export-with-tags nil)
-
-;;;
-;; Enable extra org-babel language-specific packages:
-
-(require 'ob-lisp)
-
-;;;
-;; Make sure TEXINPUTS is set to: elpa/auctex-nn.nn.n/latex
-;; require 'preview below should set this as long as auctex is installed...
-
-(unless (require 'latex nil t)
-  (message "MELPA package 'latex not yet installed..."))
-
-(require 'preview)
+(if (file-exists-p "~/.emacs.d/lisp/my-modules/09-3-org-PM-conf.el")
+    (load-file "~/.emacs.d/lisp/my-modules/09-3-org-PM-conf.el")
+  (load-file "~/.emacs.d/lisp/modules/09-3-org-PM-conf.el"))
 
 
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; Org Babel Active Language Configurations:
-;;      t = enable     nil = disable
-;;
-;; Prerequisites:
-;;   ABC requires: abc-mode and the following
-;;   external programs:
-;;     abcm2ps (Install with Macports on MacOS)
-;;     ps2pdf (bundled with GhostScript)
-;; Usage:
-;;    Babel adds some new elements to code blocks.
-;;    The basic structure becomes:
-;;
-;;      #+BEGIN_SRC language  org-switches header-arguments
-;;      ,body
-;;      #+END_SRC
-;;
-;;    Compile Babel Code blocks in the standard way using
-;;    C-c C-c while the cursor is within the code block.
-;;    For Example:
-;;      C-c C-c within an ABC block will compile the block.
-;;      into nice music notation...
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Configure Org-Mode Export Settings:
+;;  Override the file below by putting it into my-modules then change it to
+;;  fit your desired Org Mode Export features...
 
-(org-babel-do-load-languages
- 'org-babel-load-languages
- '((R . t)
-   (abc . t)
-   (asymptote . t)
-   (awk . t)
-   (calc . t)
-   (css . t)
-   (ditaa . t)
-   (dot . t)
-   (emacs-lisp . t)
-   (gnuplot . t)
-   (haskell . nil)
-   (java . t)
-   (js . t)
-   (latex . t)
-   (ledger . t) ;This adds support for hledger hopefully...
-   (lilypond . t)
-   (lua . nil)
-   (ocaml . nil)
-   (octave . t)
-   (org . t)
-   (perl . t)
-   (python . t)
-   (ruby . t)
-   (sass . t)
-   (sed . t)
-   (screen . nil)
-   (shell . t)
-   (sql . nil)
-   (sqlite . t)))
+(if (file-exists-p "~/.emacs.d/lisp/my-modules/09-4-org-export-conf.el")
+    (load-file "~/.emacs.d/lisp/my-modules/09-4-org-export-conf.el")
+  (load-file "~/.emacs.d/lisp/modules/09-4-org-export-conf.el"))
 
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;   END: [modular-emacs]:~/.emacs.d/lisp/modules/09-org-mode-pkg-conf.el

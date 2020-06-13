@@ -207,32 +207,60 @@
 ;; Set Default face to Org face Function:
 
 (defun me_set-org-face ()
-  ;; Set default face to Courier Prime Emacs (A nice mono serif for writing)
+  "Set default face to Courier Prime Emacs (A nice mono serif for writing)"
   ;; NOTE: This only sets the face for the currently Selected Frame...
-  ;;       (other frames are not affected) 
+  ;;       (other frames are not affected)
   (interactive)
   (progn
     (set-face-attribute 'default (selected-frame)
                         :family "Courier Prime Emacs"
                         :slant 'normal
-                        :height 130
+                        :height 138
                         :weight 'normal
-                        :width 'normal)))
+                        :width 'normal)
+    ;; Modify Frame dimensions for Writing with Olivetti mode enabled...
+    (modify-frame-parameters nil
+                             (quote
+                              ((name . "HA Mod Emacs - Writing Mode")
+                               (height . 38)
+                               (width . 100))))
+    ;;;
+    ;; Enable Olivetti Mode with "normal line width" for writing:
+    ;; Note:  I disabled this for Normal Writing mode.  Decided the
+    ;;        User instead can decide if they need it.  Olivetti can be
+    ;;        toggled with the single backquote "`" key if Xah-Fly-Keys
+    ;;        Command Mode is enabled...
+
+    ;; (if olivetti-mode
+    ;;     (progn
+    ;;       (olivetti-set-width 88))
+    ;;   (progn
+    ;;     (olivetti-mode)
+    ;;     (olivetti-set-width 88)))
+   ))
+
 
 ;; Restore Default Face Function:
 
 (defun me_set-default-face ()
-  ;; Set default font to Hermit Medium (my favorite mono font for everything)...
+  "Set default font to Hermit Medium (my faverite mono font for coding)"
   ;; NOTE: This only sets the face for the currently Selected Frame...
-  ;;       (other frames are not affected) 
+  ;;       (other frames are not affected)
   (interactive)
   (progn
-    (set-face-attribute 'default (selected-frame) 
+    (set-face-attribute 'default (selected-frame)
                         :family "Hermit"
                         :slant 'normal
                         :height 120
                         :weight 'normal
-                        :width 'normal)))
+                        :width 'normal)
+    (modify-frame-parameters nil
+                             (quote
+                              ((name . "HA Mod Emacs - Coding Mode")
+                               (height . 32)
+                               (width . 105))))))
+
+
 ;;;
 ;;  Toggle Default Face...
 ;;  NOTE: This only sets the face for the currently Selected Frame...
