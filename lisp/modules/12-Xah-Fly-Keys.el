@@ -111,17 +111,17 @@
   ;; Set Invoke Daft key to primary KFKeys Command Mode Map...
   (define-key xah-fly-command-map (kbd "0") 'deft)
 
-  ;; Set Key to Hide Org Tree Heading Bullets:
-  (define-key xah-fly-command-map (kbd "p") 'me_toggle-default-face)
+  ;; Set Key to recenter top to bottom (as C-l does):
+  (define-key xah-fly-command-map (kbd "p") 'recenter-top-bottom)
 
   ;; Set Keys to open Org Tree Element(s) in Right window pane...
   ;; This first key also moves cursor to right window
-  ;;   TODO: Position cursor for instant writing, (i.e., continuing
-  ;;         at last edited cursor location)
+  ;; i.e. Edit content in right pane Mode...
   (define-key xah-fly-command-map (kbd "1") 'me_org-tree-open-in-right-win)
 
   ;; This key opens Elements(s) in Right window Pane But leaves the
   ;; cursor in the left outline window pane (it stays where it was)
+  ;; i.e. Navigation Browse Mode...
   (define-key xah-fly-command-map (kbd "s") 'org-tree-to-indirect-buffer)
 
   ;; Set key to run a ztree-diff session:
@@ -153,6 +153,9 @@
   ;; Added VMD mode leader key sequence: SPC "v" ("k" Dvorak)
   ;; since I already have that paste key in normal Command mode...
   (define-key xah-fly-leader-key-map (kbd "v") 'vmd-mode))
+
+  ;; Set Key to Toggle Default face between coding mode and writing mode:
+  (define-key xah-fly-leader-key-map (kbd "p") 'me_toggle-default-face)
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; END: [modular-emacs]:~/.emacs.d/lisp/modules/12-Xah-Fly-Keys.el

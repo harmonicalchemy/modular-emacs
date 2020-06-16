@@ -61,9 +61,23 @@
 (setq org-adapt-indentation nil)
 
 ;;;
-;;  Stop Inline Images Being Too Big:
+;;  Inline Images:
+;;  Set Inline Images here to nil so that they will display with their original
+;;  sizes...
+;;  NOTE:  To keep very large images to a reasonable size within org-mode, and
+;;         also for exporting to HTML, LaTeX, etc.  Set the following properties
+;;         on the inline image link within the file where it is placed...
+;;         You only need to do this for HUGE files though...
+;;         Example: (adjust Name, Figure, and Sizes as needed)
+;;
+;;                #+NAME: fig:figure name
+;;                #+CAPTION: figure name
+;;                #+ATTR_ORG: :width 200/250/300/400/500/600
+;;                #+ATTR_LATEX: :width 2.0in
+;;                #+ATTR_HTML: :width 200/250/300/400/500/600px
+;;                [[file:./file.png]]
 
-(setq org-image-actual-width '(500))
+(setq org-image-actual-width nil)
 
 ;;;
 ;;  Automatically Refresh Inline Images:
