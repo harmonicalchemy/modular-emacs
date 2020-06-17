@@ -8,7 +8,7 @@ tags: Emacs, 2020, apps-tools, SysAdmin, HA-ModEmacs, how-to, README
 
 ![Banner](./Docs/media/Modular-Emacs-Github-Banner-v3.png)
 
-# Version 3.1.1 (beta) - README
+# Version 3.1.2 (beta) - README
 
 **[\[Table Of Contents\]](#table-of-contents)**
 
