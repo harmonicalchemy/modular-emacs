@@ -2,10 +2,9 @@
 file: README.md
 author: Alisha Awen
 created: 2019-010-20
-updated: 2020-005-22
+updated: 2020-006-16
 tags: Emacs, 2020, apps-tools, SysAdmin, HA-ModEmacs, how-to, README 
 ---
-<!-- #Emacs #2020 #apps-tools #SysAdmin #HA-ModEmacs #how-to #README -->
 
 ![Banner](./Docs/media/Modular-Emacs-Github-Banner-v3.png)
 
