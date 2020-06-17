@@ -9,63 +9,82 @@ tags: Emacs, 2020, apps-tools, SysAdmin, HA-ModEmacs, how-to, README
 
 ![Banner](./Docs/media/Modular-Emacs-Github-Banner-v3.png)
 
-# Version 3.1 - _Xah Fly Keys Fork_ (beta) - README
+# Version 3.1.1 (beta) - README
 
 **[\[Table Of Contents\]](#table-of-contents)**
 
 ## Introduction:
 
-**_Welcome to Harmonic Alchemy Modular Emacs_** - V3.1 [Q2 2020] _(Currently in Beta)_.
+**_Welcome to Harmonic Alchemy Modular Emacs_** - V3.1.1 [Q2 2020] _(still in Beta)_.
 
-**Current Status:**
+### Current Status:
 
 > **Note:** Skip to **[Start Here:](#start-here)** if you just need to get this going now. :trollface:
 
-- **_You are currently on the branch/fork that enables the optional Xah Fly Keys Emacs modal editor mode_**
+#### 2020 June 16:
 
+I have been using **_"Fancy Org Mode"_** with **`Xah-Fly-Keys`** enabled for a several months now. Since the beginning of 2020 many refinements have been made.  I have been mucking around with custom key-bindings and modified many of the default key-bindings that come with **`Xah-Fly-Keys`** mode by default...   The primary incentive is to put your most often used key commands as close as possible to the **_"home row"_** to speed up productivity, and also save your fingers from doing stressful things repeatedly which is the main cause of tendenitis.  
 
-- **2020 May 22:** Org Mode has been heavily customized!  I am calling it **_Fancy Org Mode_**.  Also some of the Module files were re-organized... (In particular `12-Xah-Fly-Keys.el` and `13-key-bindings.el)`... Tweaks were added to improve package management and minimize the effects of load errors etc.  Keybindings for both Xah-Fly-Keys mode as well as normal mode were added/changed... 
+There is a second insentive to NOT assign keys close to the home row that evoke radical transformations, or do things that could get you totally hosed and confused if you hit that key by accident! If you hit it by accident while editing an important doc _(or not so important)_, messing up like that is frustrating to say the least!  
 
+Needless to say... I have been modifying these keys based on the above experiences I have had with it since around Novemember of 2019... Things are working much better for me now but I am not done...
 
-- The file: **`dispatcher.el`** got more automated as well.  Any module within the **`lisp/modules`** directory will be automatically overrided simply by making a copy of it _(using same file name of course)_ to: **`lisp/my-modules`** where the file will not be tracked by git and you can make any local modifications or additions without upsetting the original files that get updated periodically as new git commits are pulled down...  
+Since I also have to support folks who do not care to use Emacs as a **_"modal editor"_** like **vi**, I am committed to mapping custom key bindings using the **`Control`** and **`Meta`** keys that match things I can do when I am in Xah-Fly-Keys mode...
+
+Unfortunately, I have been using **`Xah-Fly-Keys`** for over 6 months and my fingers _(muscle memory)_ are constantly tripping when I am in regular Emacs mode... _(This also happens to me outside of emacs, editing documents in Libre Office, copy-and-pasting, or something as simple as renaming a file, Etc. My fingers forget they are not in Emacs and un-counscously try command keys that produce error messages etc. This is the downside of using modal editors.  If the entire computing experience was configured modally like this, I would not have that problem. LOL "The bane of doing things differently" eh?)_ Keep this in mind when trying to decide whether or not to use Emacs as a "modal editor" there a pluses and minuses... Nothing is perfect...
+
+**Please Help!**
+
+ At this point I need some folks to try Harmonic Alchemy Modular Emacs _(normal key bindings mode)_ to give me some feedback about their user experience (**UX**). Please! Where are you?  Come try this stuff out! Thousands of man-hours have been put into it and more to come!  All Free-as-in-freedom... What are you waiting for?
+
+> **Warning!** This year is the year of key-bindings refinement...  Key bindings defined within the module: **`12-Xah-Fly-Keys.el`** will most likely be changing several times this year... If you are already using this project and are used to the way things were set up before now, it would be wise to copy, **`lisp/modules/12-Xah-Fly-Keys.el`** into: **`lisp/my-modules/12-Xah-Fly-Keys.el`** and also copy: **`lisp/modules/13-key-bindings.el`** to: **`lisp/my-modules/13-key-bindings.el`** to override the ones that get updated when you pull down new changes from the master branch...  
+That way if key-bindings change, you will stil have your old ones to keep (if you like) and you can also try out the new keybindings for size as well... No pain or disruptions...
+
+#### 2020 May 22:
+
+Org Mode has been heavily customized!  I am calling it **_Fancy Org Mode_**.  Also some of the Module files were re-organized... (In particular `12-Xah-Fly-Keys.el` and `13-key-bindings.el)`... Tweaks were added to improve package management and minimize the effects of load errors etc.  Keybindings for both Xah-Fly-Keys mode as well as normal mode were added/changed...
+
+The file: **`dispatcher.el`** got more automated as well.  Any module within the **`lisp/modules`** directory will be automatically overrided simply by making a copy of it _(using same file name of course)_ to: **`lisp/my-modules`** where the file will not be tracked by git and you can make any local modifications or additions without upsetting the original files that get updated periodically as new git commits are pulled down...  
 
 > **Note:** _New changes emerging within new pulled down files which you have previously overridden will be shadowed of course!_    
 If you need the updates, you will need to merge those changes into your overrides...
 
 
-- In addition, you no longer have to copy **`dispatcher.el`** into **`my-modules`** either _(except to enable normally disabled optional modules)_...     
+In addition, you no longer have to copy **`dispatcher.el`** into **`my-modules`** either _(except to enable normally disabled optional modules)_...     
 
 
-- In case you do have to copy **`dispatcher.el`** into **`my-modules`** _(e.g., To enable the optional Common Lisp related modules, etc.)_ you won't have to edit **`init.el`** anymore to change the location of **`dispatcher.el`**.  That part has been automated as well. **`modules/dispatcher.el`** will be  overridden by your custom copy in: **`my-modules`** automagically.
+In case you do have to copy **`dispatcher.el`** into **`my-modules`** _(e.g., To enable the optional Common Lisp related modules, etc.)_ you won't have to edit **`init.el`** anymore to change the location of **`dispatcher.el`**.  That part has been automated as well. **`modules/dispatcher.el`** will be  overridden by your custom copy in: **`my-modules`** automagically.
 
 
-- Now, the only reason to edit **init.el** is to add your own custom heading and/or body to the Welcome Screen Message... _(If and when you care to do that, now or later...)_
+Now, the only reason to edit **init.el** is to add your own custom heading and/or body to the Welcome Screen Message... _(If and when you care to do that, now or later...)_
 
 
-- I created a branch _(fork)_ where you can try out: **Xah-Fly-Keys** without having to go in to override **`dispatcher.el`** manually...
+I created a branch _(fork)_ where you can try out: **Xah-Fly-Keys** without having to go in to override **`dispatcher.el`** manually...
 
 
-- In the Master Branch, optional modules are disabled _(see details below)_...  Not having Xah-Fly-Keys enabled kind of cripples things for me for running tests within normal Emacs mode now that my fingers are used to flying with a spacebar leader key!  Going back to the old way is painful! It is hard to test my setup using the old C-x and M-x keys etc... %^) Last year at this time I was complaing about the opposite... _(i.e., having to learn Xah-Fly-Keys and using Emacs as a Modal editor like **vi**)_  
+In the Master Branch, optional modules are disabled _(see details below)_...  Not having Xah-Fly-Keys enabled kind of cripples things for me for running tests within normal Emacs mode now that my fingers are used to flying with a spacebar leader key!  Going back to the old way is painful! It is hard to test my setup using the old C-x and M-x keys etc... %^) Last year at this time I was complaing about the opposite... _(i.e., having to learn Xah-Fly-Keys and using Emacs as a Modal editor like **vi**)_  
 
 
-- You have two editor mode options available to choose now, _(and it's easy to switch back and forth)_.   Choose between using **Normal Emacs** edit mode **_or_** **Xah Fly Keys** modal edit mode simply by switching git branches...
+You have two editor mode options available to choose now, _(and it's easy to switch back and forth)_.   Choose between using **Normal Emacs** edit mode **_or_** **Xah Fly Keys** modal edit mode simply by switching git branches...
 
 
-- Making the switch to a model editor is a BIG HUGE commitment... But it has its BIG HUGE payoff at the end of that bumpy road! Trust me on that! :trollface:
+**Note:** Making the switch to a model editor is a BIG HUGE commitment... But it has its BIG HUGE payoff at the end of that bumpy road! Trust me on that!  There are also caveats as well though.  _(arent there always?)_ :trollface:
 
 
-- **2020 May 17 - Fancy Org Mode:** This commit adds a bunch of new Org-Mode tweaks... I am setting up my Org-Mode based Book Publishing System _(my **pubOps**)_ now... There will be some included examples added to this a bit later...  **_Fancy Org Mode is now enabled by default_**... 
+#### 2020 May 17 - Fancy Org Mode:
+
+This commit adds a bunch of new Org-Mode tweaks... I am setting up my Org-Mode based Book Publishing System _(my **pubOps**)_ now... There will be some included examples added to this a bit later...  **_Fancy Org Mode is now enabled by default_**... 
 
 
-- To use **Fancy Org Mode** you will need to override and edit the file: **`09-org-mode-pkg-conf.el`** and depending on your OS, (Mac or Linux) change the dummy placeholder path to your REAL **org docs** directory path.  There are two options allowing you to run this on both MacOS and Linux if you are a multi OS kind of person that is... :octocat:
+To use **Fancy Org Mode** you will need to override and edit the file: **`09-org-mode-pkg-conf.el`** and depending on your OS, (Mac or Linux) change the dummy placeholder path to your REAL **org docs** directory path.  There are two options allowing you to run this on both MacOS and Linux if you are a multi OS kind of person that is... :octocat:
 
 > **Note 1:** I am implementing a cleaner way to get all local directory path and user specific meta data into the load process rather than having to override and edit indvidual files as in the above bullet...  This will all be done in one file that you will override during your initial install... Once it is set with your specific edits it will stay that way and you will never have to touch it again...
 
 > **Note 2:** I am still working on custom Export options for Modular Emacs Fancy Org Mode...  But everything else is working nicely now... Export features will be forthcomming over the next few months!  Stay tuned...  Book publishing time!
 
-- The **Blackboard** Color Theme was also updated _(to accomodate prettifying Org-Mode)_.  Also, I am back to using the standard mode line.  I got tired of **powerline** _(It felt too cluttered and also seemed to have bugs)_... Then I tried **smart-mode-line** to see if I could make things look better and simpler... I got frustrated with it as well and after mucking around I realized there is nothing wrong with the Emacs standard mode-line and you can tweak it to fit exactly your needs... So now that is the new plan... I left the old code for both `powerline` and `smart-mode-line` in place _(commented out)_ making it easy for you to enable either of them, if you like them better... You can see changes to mode line features in **`02-package-conf.el`**... 
+The **Blackboard** Color Theme was also updated _(to accomodate prettifying Org-Mode)_.  Also, I am back to using the standard mode line.  I got tired of **powerline** _(It felt too cluttered and also seemed to have bugs)_... Then I tried **smart-mode-line** to see if I could make things look better and simpler... I got frustrated with it as well and after mucking around I realized there is nothing wrong with the Emacs standard mode-line and you can tweak it to fit exactly your needs... So now that is the new plan... I left the old code for both `powerline` and `smart-mode-line` in place _(commented out)_ making it easy for you to enable either of them, if you like them better... You can see changes to mode line features in **`02-package-conf.el`**... 
 
-- **_Everything else stays pretty much the same as Version 3.0..._**
+**_Everything else stays pretty much the same as Version 3.0..._**
 
 To install Harmonic Alchemy Modular Emacs for the first time, follow this guide _(in a top down fashion)_... Do not skip to any of the other install guides until you have the basic default configuration of Modular Emacs installed and running _(without errors)_ in your home directory... 
 
@@ -83,7 +102,7 @@ Once you have the basics running smoothly, then it will be safe to visit the _**
 
 The history of **Harmonic Alchemy Modular Emacs** is _"a confusing journey through many little twisty passages, all alike..."_ [Everything is documented here now](./Docs/ModE-History.md)...  Read it at your leasure...  It provides some perspective, insight, and purpose behind how and why things are done here in the present time...
 
-The present is a continuum... Therefore this history document will also be updated over time, to record _"our new enlightened adventure through many interesting little twisty passages, all different!"_
+The present is a continuum... Therefore the above linked history document will also be updated over time, to record _"our new enlightened adventure through many interesting little twisty passages, all different!"_ When the **Current Status** section gets too long, older date entries will be moved into the above History document _(it's getting too long already lol)_... This README.md would get too lengthy otherwise...
 
 ## Try Harmonic Alchemy Modular Emacs:
 
@@ -209,7 +228,7 @@ Follow this link to: **[Install NODE.js with NVM and NPM](./Docs/ModE-Install-NO
 
 **[\[Table of Contents\]](#table-of-contents)**
 
-### VMD: _(Visual MarkDown App)_
+### VMD: (Visual MarkDown App)
 
 **_The following instructions are for ALL platforms..._**
 
@@ -346,7 +365,7 @@ When you are visiting a **`.dot`** file, you can compile it with **`C-c C-C`** w
 
 You could create a nice workflow that **_starts programmatically_** within some program or language, invoke **graphviz** to produce some diagrams, export to **`SVG`**, then edit the resulting `.svg` in **inkscape** to add some fancy graphics or other things, Lastly import the final `.svg` into **Blender** to add animations, 3D, etc...  **_The sky is the limit!_**  
 
-You better send me an email to show me the cool thing you made on **Github** after reading this! :octocat:  
+**Note:** You better send me an email to show me the cool thing you made on **Github** after reading this! :octocat:  
 
 **[\[Table of Contents\]](#table-of-contents)**
 
@@ -433,7 +452,7 @@ $_  mv ~/me.emacs.d ~/.emacs.d
 
 _(This is now your new **Modular Emacs Local Repository** which is also now your default_ **`.emacs.d`** _home directory!)_  
 
-One last check... Make sure you no longer have a `~/.emacs` file still in your home directory...  You should now only have an: `~/.emacs.d/` directory... 
+One last check... Make sure you no longer have a `~/.emacs` file still in your home directory...  You should now only have a: `~/.emacs.d/` directory... 
 
 ## Ready Set Go!  Start Up Modular Emacs:
 
@@ -516,13 +535,18 @@ Use Scratch buffer to evaluate snippets of `lisp` without having to remove the w
 
 - [ztree](https://github.com/fourier/ztree) An efficient directory tree comparison utility. Invaluable for visually oriented thinkers! Integrates directly with ediff files! 
 
-- **To invoke Ztree Diff** type: **`C-z`** _(normal Emacs edit mode)_ _(or  **"[SPACE] a"** from **Xah-Fly-Keys Command Mode**)_ and then choose directory "A" & "B" _(as prompted)_ to compare.      
-Make your screen wide to see both directories listed side by side with color coded files indicating status/differences within in two side by side buffer lists of all the files that can be navigated in a similar way you navigate a dired buffer...  Putting cursor on any filename and hitting RET key will open the two files within an **eDiff** session... I used to use external diff/merge tools like **kdiff-3** but I find Emacs to be superior (if not quite as slick GUI looking) but that does not bother me in the slightest... The powerful user configurable functions made available within Emacs are (to my eyes) the Beauty of Form and Function in action! **_"Form follows function - that has been misunderstood. Form and function should be one, joined in a spiritual union."_** - **Frank Lloyd Wright**
+- **To invoke Ztree Diff** type: **`C-c z`** _(normal Emacs edit mode)_ or symply type  **"z"** from **Xah-Fly-Keys Command Mode**, and then choose directory "A" & "B" _(as prompted)_ to compare all files within both directories.  
+
+- Make your screen wide to see both directories listed side by side. The file names are color coded, indicating status/differences within in two side by side buffer lists of all the files within both directories.
+
+- This list of files can be navigated in a similar way you navigate a dired buffer...  Putting cursor on any filename and hitting RET key will open the two files within an **eDiff** session... 
+
+- I used to use external diff/merge tools like **kdiff-3** but I find Emacs to be superior (if not quite as slick GUI looking) but that does not bother me in the slightest... The powerful user configurable functions made available within Emacs are (to my eyes) the Beauty of Form and Function in action! **_"Form follows function - that has been misunderstood. Form and function should be one, joined in a spiritual union."_** - **Frank Lloyd Wright**
 
 
-- [imenu-list](https://github.com/bmag/imenu-list) Right panel Menu and Variable list.  You can toggle an imenu list right panel window to view variables, functions, headings, etc. **iMenu List** uses **iMenu** and displays the listing in a narrow window on the left side...
+- **[imenu-list](https://github.com/bmag/imenu-list)** Right panel Menu and Variable list.  You can toggle an imenu list right panel window to view variables, functions, headings, etc. **iMenu List** uses **iMenu** and displays the listing in a narrow window on the left side...
 
-> **Note:** For some reason `imenu-list` is not working currently.  There seems to be a problem with: `window--display-buffer` call returning nil with the classic: `wrong number of arguments` error...  I am currently troubleshooting this...  For now simply use **`imenu`** by typing **`C-c '`**, _(or by typing the single character: **'** from **Xah-Fly-Keys command mode**)_... 
+> **Note:** For some reason `imenu-list` is not working currently.  There seems to be a problem with: `window--display-buffer` returning nil with the classic: `wrong number of arguments` error...  I am currently troubleshooting this...  For now simply use **`imenu`** by typing **`C-c '`**, or by typing the single quote character: **'** by itself _(when you are in **Xah-Fly-Keys** command mode)_... When I have **iMenu-list** working again those keybindings will call it instead... It provides a nice side bar that you can navigate. The side bar stays there for you to use over and over again until you toggle it back off again... This is much better than using iMenu alone which pops up in HELM but goes away as soon as you use it...
 
 #### Dired Related Packages:
 
@@ -538,13 +562,13 @@ Make your screen wide to see both directories listed side by side with color cod
            ("odt" ("libreofficedev5.3" "abiword"))))
 ```  
 
-> **Note:** There are many ways to skin this external app launch business... the following commands will launch a file in an external application whilst your cursor is positioned on a file in a dired buffer:  **`W`**, **`J`**, or **`SPC i w`** in **Xah Fly Keys** command mode... _(Xah Fly Keys must be enabled for this leader key sequence in Commnd Mode)_
+> **Note:** The above is for launching apps _(inline your emacs buffer)_ but there are many ways to skin this external app launch business... the following commands will launch a file in an external application whilst your cursor is positioned on a file in a dired buffer:  **`W`**, or **`SPC i w`** in **Xah Fly Keys** command mode... _(Xah Fly Keys must be enabled for this leader key sequence in Commnd Mode)_ but simply typing upper case W is easier IMHO.
 
 
 - [neotree](https://github.com/jaypei/emacs-neotree) Spawn a directory
 tree relative your current working directory location. You can toggle a
 `neotree` left side panel window from any open buffer window using a single
-key... Type: **`C-d`** _(normal Emacs mode)_ or type: **`5`** _(from **Xah
+key... Type: **`C-c d`** _(normal Emacs mode)_ or type: **`5`** _(from **Xah
 Fly Keys Command mode**)_ to do the same... Within the neotree panel you
 can navigate and open a dired buffer to the directory where your cursor
 is by hitting RET.     
@@ -590,10 +614,10 @@ may vary...
 **Update 2020:** I am currently writing some docs for using fountain-mode within Emacs, as well as provide some example screenplay scripts and instructions on how to publish them to PDF using a tool called Afterwriting... Stay tuned for that...
 
 
-- [olivetti](https://github.com/rnkn/olivetti) Adjust margins with word wrap. _(great with fountain mode!)_ Perfect for distraction free writing! I also enable this within `rmoo` _(if you have the **games module** enabled)..._  Toggle it on and off within Xah Fly Keys Command Mode by hitting: **\`** key.  Adjust the margin width within Xah Fly Keys Command Mode by hitting: `SPACEBAR [` or: `SPACEBAR ]` to shrink or grow respectively.
+- [olivetti](https://github.com/rnkn/olivetti) Adjust margins with word wrap. _(great with fountain mode!)_ Perfect for distraction free writing! I also enable this within `rmoo` _(if you have the **games module** enabled)..._  Toggle it on and off within Xah Fly Keys Command Mode by hitting the backtick character: **\`** key.  Adjust the margin width within Xah Fly Keys Command Mode by hitting: `SPACEBAR [` or: `SPACEBAR ]` to shrink or grow respectively.
 
 
-- [vmd-mode],(https://github.com/blak3mill3r/vmd-mode) Fast Github-flavored Markdown previews synchronized with changes to an emacs buffer (no need to save).  Renders org files _(and normal markdown)_ in an external VMD App that automatically shows changes in real-time as you type! _(You need to install this external app separately, and make sure Emacs knows where to find it.  See: `exec-path-from-shell` below)_  Toggle `vmd-mode` on and off within Xah Fly Keys Command Mode by hitting leader key sequence:  `SPACEBAR-v`
+- [vmd-mode](https://github.com/blak3mill3r/vmd-mode) Fast Github-flavored Markdown previews synchronized with changes to an emacs buffer (no need to save).  Renders org files _(and normal markdown)_ in an external VMD App that automatically shows changes in real-time as you type! _(You need to install this external app separately, and make sure Emacs knows where to find it.  See: `exec-path-from-shell` below)_  Toggle `vmd-mode` on and off within Xah Fly Keys Command Mode by hitting leader key sequence:  `SPACEBAR-v`
 
 
 #### Spelling:
@@ -615,6 +639,8 @@ may vary...
 - Org-Bullets works fine with the rest of my Org-Mode tweaks but the last bullet being visible clutters things up a bit in my configuration where I have all my headings of decreasing scale, _(from title, to level-8) set to **Antique White** which looks fantastic on my modified **Blackboard** theme, IMHO)_...
 
 #### Git \- `magit` & Related:
+
+> **Note:** I am still doing git from the command line, and have set up shortcut aliases in the Z shell to speed up the process of managing git repositories on the command line.  I am pretty profieient with that and so far, have not tried to use magit all that much in Emacs... Your mileage may very.  If you like using this package help me make it work well here... (I don't know if it works all that well yet because I have not been using it... 
 
 - [magit](https://github.com/magit/magit) A `git` porcelain inside Emacs. _(the main package)_
 
@@ -655,10 +681,13 @@ Above I kept going on and on about setting up the Default version of Modular Ema
 # Table of Contents:
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
-**Table of Contents**
 
-- [Version 3.1 (beta) - README](#version-31-beta---readme)
+- [Version 3.1.1 (beta) - README](#version-311-beta---readme)
     - [Introduction:](#introduction)
+        - [Current Status:](#current-status)
+            - [2020 June 16:](#2020-june-16)
+            - [2020 May 22:](#2020-may-22)
+            - [2020 May 17 - Fancy Org Mode:](#2020-may-17---fancy-org-mode)
         - [History & Purpose:](#history--purpose)
     - [Try Harmonic Alchemy Modular Emacs:](#try-harmonic-alchemy-modular-emacs)
         - [Microsoft Windows Support](#microsoft-windows-support)
@@ -672,7 +701,7 @@ Above I kept going on and on about setting up the Default version of Modular Ema
                 - [Mac OS:](#mac-os)
                 - [FreeBSD & OpenBSD:](#freebsd--openbsd)
         - [`NODE.js` with `NVM` & `NPM`:](#nodejs-with-nvm--npm)
-        - [VMD: _(Visual MarkDown App)_](#vmd-_visual-markdown-app_)
+        - [VMD: (Visual MarkDown App)](#vmd-visual-markdown-app)
         - [MultiMarkdown:](#multimarkdown)
             - [Install Multimarkdown on Mac OS:](#install-multimarkdown-on-mac-os)
             - [Install Multimarkdown on Linux:](#install-multimarkdown-on-linux)
@@ -713,5 +742,3 @@ Above I kept going on and on about setting up the Default version of Modular Ema
 - [Table of Contents:](#table-of-contents)
 
 <!-- markdown-toc end -->
-
-
