@@ -15,7 +15,7 @@ tags: Emacs, 2020, apps-tools, SysAdmin, HA-ModEmacs, how-to, README
 
 ## Introduction:
 
-**_Welcome to Harmonic Alchemy Modular Emacs_** - V3.1.1 [Q2 2020] _(still in Beta)_.
+**_Welcome to Harmonic Alchemy Modular Emacs_** - V3.1.2 [Q2 2020] _(still in Beta)_.
 
 ### Current Status:
 
