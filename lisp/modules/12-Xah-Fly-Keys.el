@@ -80,21 +80,28 @@
 ;;           CUSTOM Xah Fly KEY BINDINGS
 ;;  Add Personalized keybindings to Xah fly Keys:
 ;;  Both command and insert mode keys...
+;;
+;;  Options not used by Xah fly keys:  ~  `  1  2  0  \  -  =
+;;
+;;  In addition you could use "p" as a command mode key.  I never use
+;;  it to insert a space before.  typing p is harder to reach than
+;;  going into insert mode "f" and hitting the space bar.  IMHO
 
 (with-eval-after-load 'xah-fly-keys
-  ;;
-  ;; Options not used by Xah fly keys:  ~  `  1  2  0  \  -  =
-  ;;
-  ;; In addition you could use "p" as a command mode key.  I never use
-  ;; it to insert a space before.  typing p is harder to reach than
-  ;; going into insert mode "f" and hitting the space bar.  IMHO
 
-  ;;;
-  ;; Command mode keybindings:
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ;; Xah-Fly-Keys "Command Mode" keybindings:
+  ;; (Xah-Fly-Keys Command Map)
   ;; Add more key definitions to this list when needed:
 
-  ;; Set easy keys to create and switch frames, (not just windows)
+  ;; Set easy key to switch frames:
+  ;; This enhances functionality of Xah-Fly-Keys
+  ;; default xah-next-window-or-frame: "," key.
   (define-key xah-fly-command-map (kbd "b") 'other-frame)
+
+  ;; Make Frame:
+  ;; This "Command Mode" make-frame key mirrors "Insert Mode"
+  ;; delete-frame "2" key below... (which does the opposite)
   (define-key xah-fly-command-map (kbd "2") 'make-frame)
 
   ;; Set easy key to toggle neotree in left window pane:
@@ -102,60 +109,95 @@
   ;;       I don't need that as the "D" key works fine for me...
   (define-key xah-fly-command-map (kbd "5") 'neotree-toggle)
 
-  ;; Change default olivetti-mode key (because I have conflicting other-frame key)
+  ;; Change default olivetti-mode key:
+  ;; (back tick)
+  ;; (because I have conflicting other-frame key)
   (define-key xah-fly-command-map (kbd "`") 'olivetti-mode)
 
-  ;; Set global key to toggle imenu (pops up in Helm window)...
+  ;; Set global key to toggle imenu:
+  ;; (single quote)
+  ;; (pops up in Helm window)...
+  ;; NOTE: this used to run: imenu-list but I am
+  ;;       experiencing a problem with imenu-list right now.
+  ;;       When that is fixed... This key will run that
+  ;;       function instead...
   (define-key xah-fly-command-map (kbd "'") 'imenu)
+  ;;  (define-key xah-fly-command-map (kbd "'") 'imenu-list)
 
-  ;; Set Invoke Daft key to primary KFKeys Command Mode Map...
+  ;; Invoke Daft:
   (define-key xah-fly-command-map (kbd "0") 'deft)
 
-  ;; Set Key to recenter top to bottom (as C-l does):
+  ;; Recenter top to bottom:
+  ;; (Standard Emacs "C-l" does this as well):
   (define-key xah-fly-command-map (kbd "p") 'recenter-top-bottom)
 
-  ;; Set Keys to open Org Tree Element(s) in Right window pane...
-  ;; This first key also moves cursor to right window
-  ;; i.e. Edit content in right pane Mode...
-  (define-key xah-fly-command-map (kbd "1") 'me_org-tree-open-in-right-win)
+  ;; TOGGLE Org Sidebar Tree:
+  ;; (opens or closes tree window on Left Side)
+  ;; Note: This is not Sidebar (i.e., on right side)
+  ;;       "Insert Mode" "1" (below) toggles sidebar (not tree).
+  (define-key xah-fly-command-map (kbd "1") 'org-sidebar-tree-toggle)
 
   ;; This key opens Elements(s) in Right window Pane But leaves the
-  ;; cursor in the left outline window pane (it stays where it was)
-  ;; i.e. Navigation Browse Mode...
-  (define-key xah-fly-command-map (kbd "s") 'org-tree-to-indirect-buffer)
+  ;; cursor in the left outline window pane (it stays on outline
+  ;; heading where it was) i.e. for navigation (Browse Mode)...
+  ;; NOTE: To Jump to the expanded element in right (or middle) window,
+  ;;       (for editing the expanded content) simply hit the RET key
+  ;;       while sitting on any heading in the left tree window.
+  (define-key xah-fly-command-map (kbd "s") 'me_org-tree-open-in-right-no-focus)
 
-  ;; Set key to run a ztree-diff session:
+  ;; Run a ztree-diff session:
+  ;; (you will be prompted for right and left directories)
   (define-key xah-fly-command-map (kbd "z") 'ztree-diff)
 
-  ;; Set key to run HLedger Mode command:
+  ;; Set key to run HLedger Command:
   (define-key xah-fly-command-map (kbd "=") 'hledger-run-command)
 
-  ;; Save the current location as bookmark:  SAVED (overwrites last setting)
-  (define-key xah-fly-command-map (kbd "-") '(bookmark-set "SAVED"))
+  ;; Save the current location as bookmark:  SAVED
+  ;; (overwrites the last saved setting)
+  ;; This "Command Mode" bookmark-set mirrors "Insert Mode"
+  ;; bookmark-jump "-" key below... (which jumps to the bookmark)
+  (define-key xah-fly-command-map (kbd "-") 'bookmark-set)
 
-  ;; Set key to toggle case (three choices)...
+  ;; TOGGLE Case of Character, Word, or Selection:
+  ;; (There are three possibilities. Typing "\" key multiple
+  ;; times cycles through them)... This is important as I have
+  ;; disabled the Caps-Lock key (which is mapped to HOME now)
   (define-key xah-fly-command-map (kbd "\\") 'me_toggle-letter-case)
 
-  ;;;
-  ;; Insert mode keybindings:
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ;; Xah-Fly-Keys "Insert Mode" keybindings:
+  ;; (Xah-Fly-Keys Leader Key Map)
   ;; Add more key definitions to this list when needed:
 
-  ;; Jump back to previously SAVED bookmark: (see: last command map key above)
-  (define-key xah-fly-command-map (kbd "-") '(bookmark-jump "SAVED"))
+  ;; Jump back to previously SAVED bookmark:
+  ;; This "Insert Mode" bookmark-jump mirrors "Command Mode"
+  ;; bookmark-set "-" key above... (which sets the bookmark)
+  (define-key xah-fly-leader-key-map (kbd "-") 'bookmark-jump)
 
-  ;; Set KFKeys Leader Sequence to expand and shrink olivetti...
+  ;; Set KFKeys Insert Mode Sequence to expand and shrink olivetti...
   (define-key xah-fly-leader-key-map (kbd "]") 'olivetti-expand)
   (define-key xah-fly-leader-key-map (kbd "[") 'olivetti-shrink)
 
-  ;; This leader-key delete-frame key mirrors direct make-frame key above...
+  ;; TOGGLE Org Sidebar (opens or closes window on Right Side)
+  ;; Note: This is not Sidebar Tree (i.e., on left side)
+  ;;       "Command Mode" "1" (above toggles sidebar tree)
+  (define-key xah-fly-leader-key-map (kbd "1") 'org-sidebar-toggle)
+
+  ;; Delete Frame:
+  ;; This "Insert Mode" delete-frame mirrors "Command Mode"
+  ;; make-frame "2" key above... (which does the opposite)
   (define-key xah-fly-leader-key-map (kbd "2") 'delete-frame)
 
-  ;; Added VMD mode leader key sequence: SPC "v" ("k" Dvorak)
-  ;; since I already have that paste key in normal Command mode...
-  (define-key xah-fly-leader-key-map (kbd "v") 'vmd-mode))
+  ;; Export Org file to Markdown File:
+  (define-key xah-fly-leader-key-map (kbd "m") 'org-md-export-to-markdown)
 
-  ;; Set Key to Toggle Default face between coding mode and writing mode:
+  ;; TOGGLE Default face between coding mode and writing mode:
   (define-key xah-fly-leader-key-map (kbd "p") 'me_toggle-default-face)
+
+  ;; VMD-Mode "Insert Mode" key sequence: SPC "v" ("k" Dvorak)
+  ;; (Since there already is a default paste "v" key in Command
+  ;; mode and it's easy enough to switch to Command Mode to paste)
+  (define-key xah-fly-leader-key-map (kbd "v") 'vmd-mode))
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; END: [modular-emacs]:~/.emacs.d/lisp/modules/12-Xah-Fly-Keys.el

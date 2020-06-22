@@ -6,15 +6,17 @@
 ;; Map Modular Emacs General Keys:
 
 (defvar me--my-keyboard-bindings
-  '(("C-c l" . org-store-link)
-    ("C-c 1" . me_org-tree-open-in-right-win)
-    ("C-c f" . org-tree-to-indirect-buffer)
+  '(("C-c 0" . deft)
+    ("C-c 1" . org-sidebar-tree-toggle)
+    ("C-c 3" . org-sidebar-toggle)
+    ("C-c 2" . make-frame)
+    ("C-c o" . olivetti-mode)
     ("C-c a" . org-agenda)
     ("C-c c" . org-capture)
     ("C-c d" . neotree-toggle)
     ("C-x C-g" . deft-find-file)
     ("C-c m" . org-md-export-to-markdown)
-    ("C-c s" . flyspell-auto-correct-word) 
+    ("C-c s" . me_org-tree-open-in-right-no-focus) 
     ("C-c v" . vmd-mode)
     ("C-c r" . view-mode)
     ("C-c '" . imenu)
