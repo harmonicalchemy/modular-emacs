@@ -29,6 +29,7 @@
     gnuplot-mode
     sass-mode
     abc-mode
+    org-sidebar
     org-mind-map))
 
 ;;;
@@ -60,7 +61,8 @@
 (when *is-darwin*
   (defconst my-org-dir
     (file-name-as-directory
-     (expand-file-name "~/Path/To/Your-Mac-OS/Org-Docs"))))
+     (expand-file-name "~/Documents/000-Alisha/000-GIT/My-Docs/Org-Docs"))))
+     (expand-file-name "~/Path/To/Your-MacOS-Org-Docs"))))
 
 ;;;
 ;; Path to Your ORG Docs on Linux:
@@ -192,6 +194,12 @@
 ;;
 ;; Open sub elements in right window pane,
 ;; move cursor focus to right window pane...
+;; NOTE: I am not using this anymore because
+;;       I changed to using org-sidebar which
+;;       does this by defult when you hit RET
+;;       while your cursor is on an outline
+;;       heading within the leftmost
+;;       org-sidebar-tree window pane.
 
 (defun me_org-tree-open-in-right-win ()
   (interactive)
@@ -200,13 +208,11 @@
 
 ;; Open sub elements in right window pane,
 ;; Leave cursor in left outline window pane...
-;; This one is redundant... I could simply call the function
-;; directly right? lol, but maybe I will expand this into something
-;; useful later...
 
 (defun me_org-tree-open-in-right-no-focus ()
   (interactive)
-  (org-tree-to-indirect-buffer))
+  (org-sidebar-tree-jump-indirect)
+  (windmove-left))
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Open Org File in new frame from Dired and set its width to 180:
@@ -297,11 +303,9 @@ and / or writing-publishing"
                                    (height . 50)
                                    (width  . 155))))
 
-        ;; Split Windows with narrow pane on right for outline headings..
-        (split-window-right -105)
-
+        ;; Split Windows with org outline tree in narrow left window...
+        (org-sidebar-tree)
         ;; Enable Olivetti Mode (100 column wide)
-
         (olivetti-mode)
         (olivetti-set-width 100))
 

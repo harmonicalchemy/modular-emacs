@@ -17,7 +17,7 @@
 ;;                       This is an updated LambdaMOO with multiple inheritance,
 ;;                       anonymous objects, HTTP, JSON <-> MOO translations
 ;;                       better crypto, a map datatype and a RESTful interface.
-;;                           (A great place to start a MOO server in 2019)
+;;                           (A great place to start a MOO server beyond 2019)
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;; Create repositories cache for games, if required:
@@ -34,7 +34,7 @@
       me--req-games-packages)
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; RMOO - A MOO client for Emacs:
+;; Configure RMOO - A MOO client for Emacs:
 ;; Reference: Github.com/lisdude/rmoo.git
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 (add-to-list 'load-path "~/.emacs.d/lisp/my-modules/rmoo")
@@ -47,6 +47,16 @@
 (olivetti-mode)
 (olivetti-set-width 102)
 (goto-address-mode t)))          ;; ... clickable links
+
+;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; Setup & Configure GNU EMMS (Emacs Multimedia System)
+;; Reference: https://www.gnu.org/software/emms
+;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+(add-to-list 'load-path "~/.emacs.d/lisp/my-modules/emms")
+(require 'emms-setup)
+(emms-all)
+(emms-default-players)
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; END: [modular-emacs]:~/.emacs.d/lisp/modules/11-games-pkg-conf.el
