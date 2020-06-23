@@ -44,8 +44,17 @@
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Fountain Mode Tweaks:
 
-(custom-set-faces
- '(fountain ((t (:height 130 :family "Courier Prime Emacs")))))
+;; Linux Case:
+
+(when *is-linux*
+  (custom-set-faces
+   '(fountain ((t (:height 130 :family "Courier Prime"))))))
+
+;; Mac OS Case:
+
+(when *is-darwin*
+  (custom-set-faces
+   '(fountain ((t (:height 130 :family "Courier Prime Emacs"))))))
 
 ;;;
 ;;  ME Fountain Mode Hook Function:
@@ -183,6 +192,8 @@
 ;; NOTE: On Mac OS, Depending on how you installed PanDoc,
 ;; you may need one of the following: (I enabled the MacPorts form for my setup)
 
+;; Mac OS Case:
+
 (when *is-darwin*
   ;; You may need to enable the first form if you used HomeBrew
   ;; to install Pandoc...  If you enable the first form, be sure to comment
@@ -191,6 +202,11 @@
   ;(setq pandoc-binary "/usr/local/bin/pandoc"))
   ;; Your Pandoc was installed by MacPorts.  Ensure Emacs gets the path...
   (setq pandoc-binary "/opt/local/bin/pandoc"))
+
+;; Linux Case:
+
+(when *is-linux*
+  (setq pandoc-binary "/usr/bin/pandoc"))
 
 ;;;
 ;; Add Pandoc Mode to all Markdown Files:

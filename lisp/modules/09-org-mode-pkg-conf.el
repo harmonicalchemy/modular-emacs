@@ -62,7 +62,6 @@
   (defconst my-org-dir
     (file-name-as-directory
      (expand-file-name "~/Documents/000-Alisha/000-GIT/My-Docs/Org-Docs"))))
-     (expand-file-name "~/Path/To/Your-Linux-Org-Docs"))))
 
 ;;;
 ;; Path to Your ORG Docs on Linux:
