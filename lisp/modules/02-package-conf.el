@@ -212,32 +212,28 @@
   ;;       (other frames are not affected)
   (interactive)
   (progn
-    (set-face-attribute 'default (selected-frame)
-                        :family "Courier Prime Emacs"
-                        :slant 'normal
-                        :height 138
-                        :weight 'normal
-                        :width 'normal)
+    (when *is-darwin*
+      (set-face-attribute 'default (selected-frame)
+                          :family "Courier Prime Emacs"
+                          :slant 'normal
+                          :height 138
+                          :weight 'normal
+                          :width 'normal))
+
+    (when *is-linux*
+      (set-face-attribute 'default (selected-frame)
+                          :family "Courier Prime"
+                          :slant 'normal
+                          :height 138
+                          :weight 'normal
+                          :width 'normal))
+
     ;; Modify Frame dimensions for Writing with Olivetti mode enabled...
     (modify-frame-parameters nil
                              (quote
                               ((name . "HA Mod Emacs - Writing Mode")
                                (height . 38)
-                               (width . 100))))
-    ;;;
-    ;; Enable Olivetti Mode with "normal line width" for writing:
-    ;; Note:  I disabled this for Normal Writing mode.  Decided the
-    ;;        User instead can decide if they need it.  Olivetti can be
-    ;;        toggled with the single backquote "`" key if Xah-Fly-Keys
-    ;;        Command Mode is enabled...
-
-    ;; (if olivetti-mode
-    ;;     (progn
-    ;;       (olivetti-set-width 88))
-    ;;   (progn
-    ;;     (olivetti-mode)
-    ;;     (olivetti-set-width 88)))
-   ))
+                               (width . 100))))))
 
 
 ;; Restore Default Face Function:
@@ -257,8 +253,8 @@
     (modify-frame-parameters nil
                              (quote
                               ((name . "HA Mod Emacs - Coding Mode")
-                               (height . 32)
-                               (width . 105))))))
+                               (height . 38)
+                               (width . 88))))))
 
 
 ;;;
@@ -286,11 +282,11 @@
   (interactive)
   (cond
    ((= me--def-face 1)
-    (message "Setting default face to Courier Prime Emacs")
+    (message "Setting default face to Courier Prime for Writing")
     (me_set-org-face)
     (setq me--def-face 2))
    ((= me--def-face 2)
-    (message "Setting default face back to normal code font")
+    (message "Setting default face to Hermit for Coding")
     (me_set-default-face)
     (setq me--def-face 1))))
 

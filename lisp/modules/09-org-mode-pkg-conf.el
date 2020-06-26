@@ -69,7 +69,7 @@
 (when *is-linux*
   (defconst my-org-dir
     (file-name-as-directory
-     (expand-file-name "~/Path/To/Your-Linux-Org-Docs"))))
+     (expand-file-name "~/Path/To/Your-Linu-Org-Docs"))))
 
 ;;;
 ;; The rest of the definitions below depend on above "my-org-dir" being set
@@ -272,16 +272,29 @@
   "Harmonic Alchemy Modular Emacs Fancy Org Mode Hook Function.  This function
 takes care of setting up a nice org-mode writing environment for both planning
 and / or writing-publishing"
-
-  ;; Set default face to Courier Prime Emacs (A nice mono serif for writing)
+  ;; Set default face to Courier Prime (A nice mono serif for writing)
   ;; NOTE: All settings below change the currently selected frame only...
   ;;       (other existing and future frames are not affected)
-  (set-face-attribute 'default (selected-frame)
-                      :family "Courier Prime Emacs"
-                      :slant 'normal
-                      :height 138
-                      :weight 'normal
-                      :width 'normal)
+
+  ;; Mac OS Case:
+  (when *is-darwin*
+    (set-face-attribute 'default
+                        (selected-frame)
+                        :family "Courier Prime Emacs"
+                        :slant 'normal
+                        :height 138
+                        :weight 'normal
+                        :width 'normal))
+
+  ;; Linux Case:
+  (when *is-linux*
+    (set-face-attribute 'default
+                        (selected-frame)
+                        :family "Courier Prime"
+                        :slant 'normal
+                        :height 138
+                        :weight 'normal
+                        :width 'normal))
 
   ;; Set Default Face Flag (2 = org-mode face):
   (setq me--def-face 2)
@@ -299,8 +312,8 @@ and / or writing-publishing"
         (modify-frame-parameters nil
                                  (quote
                                   ((name   . "HA Mod Emacs - Fancy Org Mode")
-                                   (height . 50)
-                                   (width  . 155))))
+                                   (height . 38)
+                                   (width  . 150))))
 
         ;; Split Windows with org outline tree in narrow left window...
         (org-sidebar-tree)
@@ -314,11 +327,10 @@ and / or writing-publishing"
       (modify-frame-parameters nil
                                (quote
                                 ((name   . "HA Mod Emacs - Normal Org Mode")
-                                 (height . 42)
-                                 (width  . 100))))))
+                                 (height . 38)
+                                 (width  . 88))))))
 
-  ;; Set Default Face Flag (to org-face) and Allways hide bullets no matter what...
-  (setq me--def-face 2)
+  ;; Allways hide bullets no matter what...
   (me_hide-org-bullets))
 
 ;;;

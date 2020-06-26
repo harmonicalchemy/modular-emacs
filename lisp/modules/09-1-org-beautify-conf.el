@@ -160,18 +160,43 @@
 ;;   "Beautifying Org Mode in Emacs"
 ;;      https://zzamboni.org/post/beautifying-org-mode-in-emacs/
 
-;; Set default faces:
-;(set-face-attribute 'default t :font "Courier Prime Emacs" :height 130 :width 'normal)
-(set-face-attribute 'fixed-pitch t :family "Hermit" :height 120 :width 'normal)
-(set-face-attribute 'fixed-pitch-serif t :family "Courier Prime Emacs" :height 130 :width 'normal)
-(set-face-attribute 'variable-pitch t :family "Averia Serif Libre" :height 130 :width 'normal)
+;;;
+;;  Set default faces:
+
+(set-face-attribute
+ 'fixed-pitch t
+ :family "Hermit"
+ :height 120
+ :width 'normal)
+
+(when *is-darwin*
+  (set-face-attribute
+   'fixed-pitch-serif t
+   :family "Courier Prime Emacs"
+   :height 130
+   :width 'normal))
+
+(when *is-linux*
+  (set-face-attribute
+   'fixed-pitch-serif t
+   :family "Courier Prime"
+   :height 130
+   :width 'normal))
+
+;; Variable Pitch Face:
+
+(set-face-attribute
+ 'variable-pitch t
+ :family "Averia Serif Libre"
+ :height 130
+ :width 'normal)
 
 ;; Set Org Mode Faces:
 
 (custom-theme-set-faces
  'user
- `(default ((t (:inherit fixed-pitch-serif :height 120 :weight normal))))
- `(org-default ((t (:inherit fixed-pitch-serif :height 120 :weight normal))))
+ `(default ((t (:inherit fixed-pitch-serif :height 120))))
+ `(org-default ((t (:inherit fixed-pitch-serif :height 120))))
  `(org-block ((t (:inherit fixed-pitch))))
  `(org-code ((t (:inherit fixed-pitch))))
  `(org-document-info ((t (:foreground "dark orange"))))
@@ -181,33 +206,89 @@
  `(org-meta-line ((t (:inherit (font-lock-comment-face fixed-pitch-serif)))))
  `(org-property-value ((t (:inherit fixed-pitch-serif))) t)
  `(org-special-keyword ((t (:inherit (font-lock-comment-face fixed-pitch-serif)))))
- `(org-table ((t (:inherit fixed-pitch :foreground "#83a598"))))
+ `(org-table ((t (:inherit fixed-pitch :foreground "#98a583"))))
  `(org-tag ((t (:inherit (shadow fixed-pitch) :weight bold :height 0.8))))
  `(org-verbatim ((t (:inherit (shadow fixed-pitch))))))
 
 ;; Customize Org headings:
 
 (let* ((variable-tuple
-        (cond ((x-list-fonts "Averia Serif Libre") '(:font "Averia Serif Libre"))
-              ((x-list-fonts "Averia Libre Light")   '(:font "Averia Libre Light"))
-              (nil (warn "Cannot find Averia Serif Libre, or Averia Libre Light. Did you install them?"))))
+        (cond
+         ((x-list-fonts "Averia Serif Libre")
+          '(:font "Averia Serif Libre"))
+         ((x-list-fonts "Averia Libre Light")
+          '(:font "Averia Libre Light"))
+         (nil (warn "Averia Fonts Not Found! Did you install them?"))))
        (base-font-color     (face-foreground 'default nil 'default))
        (headline           `(:inherit default :weight normal )))
 
   (custom-theme-set-faces
    'user
-   `(org-level-10 ((t (,@headline ,@variable-tuple :height 1.11 :foreground "AntiqueWhite" ))))
-   `(org-level-9 ((t (,@headline ,@variable-tuple :height 1.12 :foreground "AntiqueWhite" ))))
-   `(org-level-8 ((t (,@headline ,@variable-tuple :height 1.13 :foreground "AntiqueWhite" ))))
-   `(org-level-7 ((t (,@headline ,@variable-tuple :height 1.17 :foreground "AntiqueWhite" ))))
-   `(org-level-6 ((t (,@headline ,@variable-tuple :height 1.20 :foreground "AntiqueWhite" ))))
-   `(org-level-5 ((t (,@headline ,@variable-tuple :height 1.23 :foreground "AntiqueWhite" ))))
-   `(org-level-4 ((t (,@headline ,@variable-tuple :height 1.28 :foreground "AntiqueWhite" ))))
-   `(org-level-3 ((t (,@headline ,@variable-tuple :height 1.38 :foreground "AntiqueWhite" ))))
-   `(org-level-2 ((t (,@headline ,@variable-tuple :height 1.62 :foreground "AntiqueWhite" ))))
-   `(org-level-1 ((t (,@headline ,@variable-tuple :height 1.88 :foreground "AntiqueWhite" ))))
+   `(org-level-10
+     ((t (,@headline
+          ,@variable-tuple
+          :height 1.11
+          :foreground "AntiqueWhite" ))))
+
+   `(org-level-9
+     ((t (,@headline
+          ,@variable-tuple
+          :height 1.12
+          :foreground "AntiqueWhite" ))))
+
+   `(org-level-8
+     ((t (,@headline
+          ,@variable-tuple
+          :height 1.13
+          :foreground "AntiqueWhite" ))))
+
+   `(org-level-7
+     ((t (,@headline
+          ,@variable-tuple
+          :height 1.17
+          :foreground "AntiqueWhite" ))))
+
+   `(org-level-6
+     ((t (,@headline
+          ,@variable-tuple
+          :height 1.20
+          :foreground "AntiqueWhite" ))))
+
+   `(org-level-5
+     ((t (,@headline
+          ,@variable-tuple
+          :height 1.23
+          :foreground "AntiqueWhite" ))))
+
+   `(org-level-4
+     ((t (,@headline
+          ,@variable-tuple
+          :height 1.28
+          :foreground "AntiqueWhite" ))))
+
+   `(org-level-3
+     ((t (,@headline
+          ,@variable-tuple
+          :height 1.38
+          :foreground "AntiqueWhite" ))))
+
+   `(org-level-2
+     ((t (,@headline
+          ,@variable-tuple
+          :height 1.62
+          :foreground "AntiqueWhite" ))))
+
+   `(org-level-1
+     ((t (,@headline
+          ,@variable-tuple
+          :height 1.88
+          :foreground "AntiqueWhite" ))))
+
    `(org-document-title
-     ((t (,@headline ,@variable-tuple :height 1.5 :foreground "AntiqueWhite" :underline nil))))))
+     ((t (,@headline
+          ,@variable-tuple
+          :height 1.5
+          :foreground "AntiqueWhite" :underline nil))))))
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

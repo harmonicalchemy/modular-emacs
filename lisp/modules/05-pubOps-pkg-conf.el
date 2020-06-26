@@ -67,7 +67,7 @@
   (fountain-outline-hide-custom-level)
   (olivetti-mode)
   ;; Add olivetti mode options for fountain mode here:
-  (olivetti-set-width 88))
+  (olivetti-set-width 80))
 
 (add-hook 'fountain-mode-hook 'me_fountain-mode-hook)
 
