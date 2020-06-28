@@ -200,16 +200,29 @@
 ;;
 ;;    Xah Fly Key Assigned: Command Mode "p"
 ;;
-;;  NOTE: Currently there is no check to see if these fonts are 
-;;        installed on your system! This is still alpha test stage..."
+;;  NOTE1:  Currently there is no check to see if these fonts are 
+;;          installed on your system! This is still alpha test stage..."
 ;;
-
+;;  NOTE2:  It appears that Courier Prime Emacs is required to prevent
+;;          D o u b l e  W i d e rendering of certain Emacs faces! This
+;;          was a problem on Linux.  Not sure about Mac OS yet as I
+;;          installed Courier Prime Emacs there first and it "just worked" ;-)
+;;          This is the reason I have two cases below in the function.
+;;          Currently the cases produce redundant results, but i left them in
+;;          in case I need to play around with this later...
+;;
+;;  NOTE3:  If I get fancy with fonts, I will provide them in this repo for easy
+;;          installations. In fact I have already gotten fancy with fonts eh? LOL
+;;
 ;; Set Default face to Org face Function:
 
 (defun me_set-org-face ()
   "Set default face to Courier Prime Emacs (A nice mono serif for writing)"
-  ;; NOTE: This only sets the face for the currently Selected Frame...
-  ;;       (other frames are not affected)
+  ;; NOTE1: This only sets the face for the currently Selected Frame...
+  ;;        (other frames are not affected)
+  ;; NOTE2: The flag that gets set to check whether coding or writing mode
+  ;;        DOES effect other frames!  This is a side effect, but the remedy
+  ;;        is to simply toggle the key twice.  A silly fix is too complicated imho!
   (interactive)
   (progn
     (when *is-darwin*
@@ -222,7 +235,7 @@
 
     (when *is-linux*
       (set-face-attribute 'default (selected-frame)
-                          :family "Courier Prime"
+                          :family "Courier Prime Emacs"
                           :slant 'normal
                           :height 138
                           :weight 'normal
@@ -279,6 +292,20 @@
    Purpose: I like to use a serif mono font for writing
    paragraphs, but I need to use Hermit etc. for Coding
    This provides a way to toggle from one to the other"
+  ;; NOTE: The flag me--def-face DOES effect other frames!
+  ;;       Therefore, For example: If you are editing code in one frame
+  ;;       and writing a screenplay in another frame, if you switch to
+  ;;       writing mode in the coding frame, that will also reset the
+  ;;       flag in your screenplay frame.  It will not effect the display
+  ;;       of the screenplay frame, only the flag.  This results in you
+  ;;       needing to hit the toggle key twice if, for instance, you needed
+  ;;       to change from writing a screenplay to doing some coding...
+  ;;                             No Problemo! %^)
+  ;;       The complicated code needed to have a local flag for each frame
+  ;;       is too much worry over the silly fix it would provide...
+  ;;       Simply toggle the key a second time if you do not see the font
+  ;;       change etc. Note, this will reset the flag in your coding frame,
+  ;;       but no worries there either.. (the woes of multitasking lol)
   (interactive)
   (cond
    ((= me--def-face 1)

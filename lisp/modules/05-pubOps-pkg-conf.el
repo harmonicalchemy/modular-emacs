@@ -48,7 +48,7 @@
 
 (when *is-linux*
   (custom-set-faces
-   '(fountain ((t (:height 130 :family "Courier Prime"))))))
+   '(fountain ((t (:height 130 :family "Courier Prime Emacs"))))))
 
 ;; Mac OS Case:
 

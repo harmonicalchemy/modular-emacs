@@ -2,7 +2,7 @@
 file: README.md
 author: Alisha Awen
 created: 2019-010-20
-updated: 2020-006-16
+updated: 2020-006-27
 tags: Emacs, 2020, apps-tools, SysAdmin, HA-ModEmacs, how-to, README 
 ---
 
@@ -19,6 +19,10 @@ tags: Emacs, 2020, apps-tools, SysAdmin, HA-ModEmacs, how-to, README
 ### Current Status:
 
 > **Note:** Skip to **[Start Here:](#start-here)** if you just need to get this going now. :trollface:
+
+#### 2020 June 27:
+
+Updated the docs... Added a new section below about installing fonts for use with Modular Emacs, and also created a how-to doc for you to follow along to get that important task done...
 
 #### 2020 June 16:
 
@@ -343,50 +347,9 @@ Now that you have Pandoc installed, **[Download The Manual Here](https://pandoc.
 
 ### Fonts:
 
-**Harmonic Alchemy Modular Emacs** requires better fonts installed on your system _(especially to get your Org-Mode buffers looking as good and "readable" as they possibly can)_.  Other fonts will be required by **LaTeX** _(for exporting to external document types)_ which will be covered in a seporate doc.
+**Harmonic Alchemy Modular Emacs** requires a few fonts installed on your system to get Fancy Org-Mode, Fountain Screenplay, and coding frames/windows/mode-lines, etc. looking as good and "readable" as they possibly can.  Other fonts will be required by **LaTeX** _(for exporting to external document types)_.  That process will be covered in a seporate doc.
 
-It's best to try your platform's package managers to install fonts globally system wide, and then if you cannot find the fonts needed, install them locally (manually) into your $HOME directory.  Both methods will be covered here.
-
-#### Mac OS:
-
-_(instructions comming soon)_
-
-#### Fedora:
-
-##### Install Better Looking Fonts for Fedora:
-
-The **`better_fonts`** repo aims at providing better looking fonts for **Fedora** the easiest way possible. You don't need to configure anything... Simply add **COPR** repository, install two packages and you're done! The added benifit is these packages will be kept automatically up to date for you _(when you update your system software, which you should on a regular basis)_...
-
-- Enable RPM Fusion repo
-
-```yaml
-sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-```
-
-- More info about RPM Fusion can be found here:
-https://rpmfusion.org/Configuration
-
-
-- Enable **`better_fonts` COPR** repo:
-
-```yaml
-dnf copr enable dawid/better_fonts
-```
-
-- Install Packages: 
-
-```yaml
-dnf install fontconfig-enhanced-defaults fontconfig-font-replacements
-```
-
-- **Log out and log in again**
-
-
-
-
-#### Debian & Ubuntu:
-
-_(instructions comming soon)_
+**[Follow this Link to Get This Task Done...](./Docs/ModE-Install-Fonts.md)** Afterwards, you will see some nice looking "writers" fonts in Org-Mode as well as while editing Fountain drama scripts! :octocat:
 
 ### Python and Pip:
 
@@ -729,7 +692,7 @@ Above I kept going on and on about setting up the Default version of Modular Ema
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 
-- [Version 3.1.1 (beta) - README](#version-311-beta---readme)
+- [Version 3.1.2 (beta) - README](#version-312-beta---readme)
     - [Introduction:](#introduction)
         - [Current Status:](#current-status)
             - [2020 June 16:](#2020-june-16)
@@ -757,6 +720,7 @@ Above I kept going on and on about setting up the Default version of Modular Ema
             - [Install Pandoc on Mac OS:](#install-pandoc-on-mac-os)
             - [Install Pandoc on Linux:](#install-pandoc-on-linux)
             - [Pandoc Usage:](#pandoc-usage)
+        - [Fonts:](#fonts)
         - [Python and Pip:](#python-and-pip)
         - [Extra for Experts - LaTeX](#extra-for-experts---latex)
         - [Graphviz:](#graphviz)

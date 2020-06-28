@@ -69,7 +69,7 @@
 (when *is-linux*
   (defconst my-org-dir
     (file-name-as-directory
-     (expand-file-name "~/Path/To/Your-Linu-Org-Docs"))))
+     (expand-file-name "~/Path/To/Your-Linux-Org-Docs"))))
 
 ;;;
 ;; The rest of the definitions below depend on above "my-org-dir" being set
@@ -290,7 +290,7 @@ and / or writing-publishing"
   (when *is-linux*
     (set-face-attribute 'default
                         (selected-frame)
-                        :family "Courier Prime"
+                        :family "Courier Prime Emacs"
                         :slant 'normal
                         :height 138
                         :weight 'normal
