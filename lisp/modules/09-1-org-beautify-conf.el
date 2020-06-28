@@ -179,7 +179,7 @@
 (when *is-linux*
   (set-face-attribute
    'fixed-pitch-serif t
-   :family "Courier Prime"
+   :family "Courier Prime Emacs"
    :height 130
    :width 'normal))
 
