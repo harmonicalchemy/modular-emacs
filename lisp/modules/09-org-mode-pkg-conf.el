@@ -311,7 +311,7 @@ and / or writing-publishing"
         ;; Set up WIDE SCREEN Frame size for writing/composition:
         (modify-frame-parameters nil
                                  (quote
-                                  ((name   . "HA Mod Emacs - Fancy Org Mode")
+                                  ((name   . "HA Mod Emacs v3.2 - Fancy Org Mode")
                                    (height . 38)
                                    (width  . 150))))
 
@@ -326,7 +326,7 @@ and / or writing-publishing"
     (progn
       (modify-frame-parameters nil
                                (quote
-                                ((name   . "HA Mod Emacs - Normal Org Mode")
+                                ((name   . "HA Mod Emacs v3.2 - Normal Org Mode")
                                  (height . 38)
                                  (width  . 88))))))
 

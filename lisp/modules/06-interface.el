@@ -49,7 +49,7 @@
 
 ;; Change title-bar text
 (setq frame-title-format
-      "Harmonic Alchemy Modular Emacs - Version 3.1.2 (still in beta) [Q2 2020]")
+      "Harmonic Alchemy Modular Emacs - Version 3.2 (still in beta) [Q2 2020]")
 
 ;; Disable tool-bar - I could care less about tool bars in emacs!
 ;; An oxymoron! But you may feel differently.  Comment this out if you like them.
@@ -110,7 +110,7 @@
 ;; You may have to play with this depending on your total screen size etc...
 
 (setq initial-frame-alist
-      '( (name . "HA Mod Emacs - Coding Mode")
+      '( (name . "HA Mod Emacs v3.2 - Coding Mode")
          (font . "Hermit")
          (height . 38)
          (width . 88)
@@ -124,7 +124,7 @@
 ;; You may have to play with this depending on your total screen size etc...
 
 (setq default-frame-alist
-      '( (name . "HA Mod Emacs - Coding Mode")
+      '( (name . "HA Mod Emacs v3.2 - Coding Mode")
          (font . "Hermit")
          (height . 38)
          (width . 88)

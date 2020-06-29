@@ -261,7 +261,7 @@
     ;; Modify Frame dimensions for Writing with Olivetti mode enabled...
     (modify-frame-parameters nil
                              (quote
-                              ((name . "HA Mod Emacs - Writing Mode")
+                              ((name . "HA Mod Emacs v3.2 - Writing Mode")
                                (height . 38)
                                (width . 100))))))
 
@@ -283,7 +283,7 @@
 
     (modify-frame-parameters nil
                              (quote
-                              ((name . "HA Mod Emacs - Coding Mode")
+                              ((name . "HA Mod Emacs v3.2 - Coding Mode")
                                (height . 38)
                                (width . 88))))))
 
