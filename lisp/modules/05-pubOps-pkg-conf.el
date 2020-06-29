@@ -44,17 +44,17 @@
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Fountain Mode Tweaks:
 
-;; Linux Case:
+(custom-set-faces
+ '(fountain ((t (
+                 :height 130
+                 :family "Courier Prime Emacs")))))
 
-(when *is-linux*
-  (custom-set-faces
-   '(fountain ((t (:height 130 :family "Courier Prime Emacs"))))))
-
-;; Mac OS Case:
-
-(when *is-darwin*
-  (custom-set-faces
-   '(fountain ((t (:height 130 :family "Courier Prime Emacs"))))))
+(custom-set-faces
+ '(fountain-dialog ((t (
+                        :height 130
+                        :family "Courier Prime Emacs"
+                        :inherit
+                        (font-lock-string-face))))))
 
 ;;;
 ;;  ME Fountain Mode Hook Function:
