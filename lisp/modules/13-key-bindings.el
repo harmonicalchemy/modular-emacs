@@ -15,6 +15,7 @@
     ("C-c c" . org-capture)
     ("C-c d" . neotree-toggle)
     ("C-x C-g" . deft-find-file)
+    ("C-c i" . bookmark-bmenu-list)
     ("C-c m" . org-md-export-to-markdown)
     ("C-c s" . me_org-tree-open-in-right-no-focus) 
     ("C-c v" . vmd-mode)
