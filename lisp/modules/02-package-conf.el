@@ -182,6 +182,23 @@
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Modular Emacs - Make Frame Function:
+;;  This simply makes new frames to match 
+;;  HA Modular Emacs Coding Mode Specification
+;;  using Hermit font with dimensions that fit
+;;  best for coding on both iMac 27" screens
+;;  and small Linux Laptops... (a tough juggle)
+
+(defun me_make-default-frame ()
+  "Create Frames using ME default coding face
+   and ME default coding frame dimensions"
+  (interactive)
+  (progn
+    (make-frame)
+    (me_set-default-face)))
+
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Modular Emacs - Set Default Face Functions:
 ;;
 ;;  Purpose:
@@ -263,12 +280,12 @@
                         :height 120
                         :weight 'normal
                         :width 'normal)
+
     (modify-frame-parameters nil
                              (quote
                               ((name . "HA Mod Emacs - Coding Mode")
                                (height . 38)
                                (width . 88))))))
-
 
 ;;;
 ;;  Toggle Default Face...

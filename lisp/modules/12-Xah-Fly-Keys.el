@@ -102,7 +102,7 @@
   ;; Make Frame:
   ;; This "Command Mode" make-frame key mirrors "Insert Mode"
   ;; delete-frame "2" key below... (which does the opposite)
-  (define-key xah-fly-command-map (kbd "2") 'make-frame)
+  (define-key xah-fly-command-map (kbd "2") 'me_make-default-frame)
 
   ;; Set easy key to toggle neotree in left window pane:
   ;; Note: This disables (default Xfk to run command delete-char)

@@ -95,27 +95,44 @@
 
 ;(global-set-key [mouse-yank-at-point] 'ignore)
 ;(setq mouse-yank-at-point nil)
-
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-;; Set default Frame Dimensions:
-;; You may have to play with this depending on your total screen size etc...
-(setq default-frame-alist
-      '( (width . 88)
-         (height . 38)
-         (menu-bar-lines . 1)
-         (vertical-scroll-bars . nil)
-         (horizontal-scroll-bars . nil)
-         (left-fringe . 1)
-         (right-fringe . 1)))
+;; Set default font to Hermit Medium:
 
-;; Set default font to Hermit Medium (my favorite mono font for everything)...
 (set-face-attribute 'default nil
                     :family "Hermit"
                     :slant 'normal
                     :height 120
                     :weight 'normal
                     :width 'normal)
+
+;; Set Initial Startup Frame Dimensions:
+;; You may have to play with this depending on your total screen size etc...
+
+(setq initial-frame-alist
+      '( (name . "HA Mod Emacs - Coding Mode")
+         (font . "Hermit")
+         (height . 38)
+         (width . 88)
+         (menu-bar-lines . 1)
+         (vertical-scroll-bars . nil)
+         (horizontal-scroll-bars . nil)
+         (left-fringe . 1)
+         (right-fringe . 1)))
+
+;; Set default Frame Dimensions:
+;; You may have to play with this depending on your total screen size etc...
+
+(setq default-frame-alist
+      '( (name . "HA Mod Emacs - Coding Mode")
+         (font . "Hermit")
+         (height . 38)
+         (width . 88)
+         (menu-bar-lines . 1)
+         (vertical-scroll-bars . nil)
+         (horizontal-scroll-bars . nil)
+         (left-fringe . 1)
+         (right-fringe . 1)))
 
 ;; Disable scrollbar on new frame (all frames no matter what)
 ;; Scroll bars in Emacs are strange animals.. They don't belong here.
