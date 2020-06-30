@@ -65,33 +65,34 @@
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;;;
-;; Load Harmonic Alchemy Modular Emacs - Main system.el configuration module:
+;; Load Harmonic Alchemy Modular Emacs Main Config Module:
 
 (if (file-exists-p "~/.emacs.d/lisp/my-modules/00-system.el")
     (load-file "~/.emacs.d/lisp/my-modules/00-system.el")
   (load-file "~/.emacs.d/lisp/modules/00-system.el"))
 
 ;;;
-;; Load (default) Super Emacs repositories configuration module:
+;; Load (default) Emacs Package Repositories Config Module:
 
 (if (file-exists-p "~/.emacs.d/lisp/my-modules/01-repositories.el")
     (load-file "~/.emacs.d/lisp/my-modules/01-repositories.el")
   (load-file "~/.emacs.d/lisp/modules/01-repositories.el"))
 
 ;;;
-;; Load Harmonic Alchemy Modular Emacs - Standard Packages module:
+;; Load Emacs Standard Packages Module:
 
 (if (file-exists-p "~/.emacs.d/lisp/my-modules/02-package-conf.el")
     (load-file "~/.emacs.d/lisp/my-modules/02-package-conf.el")
   (load-file "~/.emacs.d/lisp/modules/02-package-conf.el"))
 
 ;;;;
-;;              *** Optional Feature ***
-;; Load Harmonic Alchemy Modular Emacs - Xah Fly Keys module:
+;;           *** Optional Xah Fly Keys Feature ***
+;;
+;; Load - Xah Fly Keys module:
 
-;(if (file-exists-p "~/.emacs.d/lisp/my-modules/12-Xah-Fly-Keys.el")
-;    (load-file "~/.emacs.d/lisp/my-modules/12-Xah-Fly-Keys.el")
-;  (load-file "~/.emacs.d/lisp/modules/12-Xah-Fly-Keys.el"))
+(if (file-exists-p "~/.emacs.d/lisp/my-modules/12-Xah-Fly-Keys.el")
+    (load-file "~/.emacs.d/lisp/my-modules/12-Xah-Fly-Keys.el")
+  (load-file "~/.emacs.d/lisp/modules/12-Xah-Fly-Keys.el"))
 
 ;;;
 ;; Load Harmonic Alchemy Modular Emacs - Key Bindings module:
@@ -143,7 +144,6 @@
   (load-file "~/.emacs.d/lisp/modules/08-spelling.el"))
 
 ;;;;
-;;              *** Optional Feature ***
 ;; Load Harmonic Alchemy Modular Emacs - Org Mode module:
 
 (if (file-exists-p "~/.emacs.d/lisp/my-modules/09-org-mode-pkg-conf.el")
@@ -151,7 +151,8 @@
   (load-file "~/.emacs.d/lisp/modules/09-org-mode-pkg-conf.el"))
 
 ;;;;
-;;              *** Optional Feature ***
+;;             *** Optional Programming IDE Features ***
+;;
 ;; Load Harmonic Alchemy Modular Emacs - Programming Languages module:
 ;; This is for using Emacs as a full fledged Common Lisp IDE!
 ;; This module is enabled by default on the ME lisp-ide branch.  Pull that
@@ -163,7 +164,7 @@
 ;  (load-file "~/.emacs.d/lisp/modules/10-progLang-pkg-conf.el"))
 
 ;;;;
-;;              *** Optional Feature ***
+;;         *** Optional Games & Multi Media Feature ***
 ;; Un-comment the load file line below if you would like
 ;; to explore MOOs or MUDs using a customized Emacs MOO client! ;-)
 ;; This option is OFF by default.  Make sure to follow the instructions
@@ -175,15 +176,7 @@
 ;   (load-file "~/.emacs.d/lisp/modules/11-games-pkg-conf.el"))
 
 ;;;;
-;;              *** Optional / Experimental Feature ***
-;; Load Modular Emacs S/W Programmer's Key Bindings module:
-
-; (if (file-exists-p "~/.emacs.d/lisp/my-modules/14-progLang-key-bindings.el")
-;     (load-file "~/.emacs.d/lisp/my-modules/14-progLang-key-bindings.el")
-;   (load-file "~/.emacs.d/lisp/modules/14-progLang-key-bindings.el"))
-
-;;;;
-;;              *** Optional / Experimental Feature ***
+;;              *** Optional Accounting Feature ***
 ;; Load Modular Emacs Accounting module:
 
 ;(if (file-exists-p "~/.emacs.d/lisp/my-modules/15-Accounting-pkg-conf.el")
