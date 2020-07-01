@@ -90,9 +90,9 @@
 ;;
 ;; Load - Xah Fly Keys module:
 
-;(if (file-exists-p "~/.emacs.d/lisp/my-modules/12-Xah-Fly-Keys.el")
-;    (load-file "~/.emacs.d/lisp/my-modules/12-Xah-Fly-Keys.el")
-;  (load-file "~/.emacs.d/lisp/modules/12-Xah-Fly-Keys.el"))
+(if (file-exists-p "~/.emacs.d/lisp/my-modules/12-Xah-Fly-Keys.el")
+    (load-file "~/.emacs.d/lisp/my-modules/12-Xah-Fly-Keys.el")
+  (load-file "~/.emacs.d/lisp/modules/12-Xah-Fly-Keys.el"))
 
 ;;;
 ;; Load Harmonic Alchemy Modular Emacs - Key Bindings module:
