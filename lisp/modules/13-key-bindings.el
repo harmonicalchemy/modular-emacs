@@ -10,6 +10,8 @@
     ("C-c 1" . org-sidebar-tree-toggle)
     ("C-c 3" . org-sidebar-toggle)
     ("C-c 2" . me_make-default-frame)
+    ("C-c =" . emms-volume-mode-plus)
+    ("C-c -" . emms-volume-mode-minus)
     ("C-c o" . olivetti-mode)
     ("C-c a" . org-agenda)
     ("C-c c" . org-capture)
