@@ -8,7 +8,7 @@
 #+KEYWORDS:
 #+FILETAGS:
 
-* 💡 Ideas Scratchpad Refile:
+* 💡 Scratchpad Refile:
 ** ☞ Start Here!
 
 :README:
@@ -47,11 +47,11 @@ From Isaac Asimov's science fiction series 'Foundation', specifically the sectio
 
 Unlike most instruments, this one does not achieve its effect by using sonic effects but, instead, directly stimulates the listeners' mental well-being. The number of people and level of effect depends on the skill level of the player. As this was a device from the First Empire, there were not that many people around with any skill at all. However, the Mule's clown, Magnifico, had some skill with the instrument and was asked to play for select parties on the Foundation and for large groups of workers on Haven. This may not have been a good idea...
 * 📖 Book:
-** 📃 Synopsis:
+** NEW 📃 Synopsis:
 
 The Adventures of yadda... yadda... yadda...
 
-** 📃 Front Matter:
+** NEW 📃 Front Matter:
 
 Front Matter... yadda... yadda... yadda...
 
@@ -252,7 +252,7 @@ Note: This is an example of a back story plot related to your book... Write it d
 
 Note: This is an example of a back story plot related to your book... Write it down in the rough here and then later you can develop it further if needed.
 
-** 🗡 Plot Summaries:
+** 🗡 Chapter Plot Summaries:
 
 Gather all the plot ideas that have been building over the years and put them in here... then you can decide how and when to present them within the unfolding story.
 
@@ -270,70 +270,64 @@ In this chapter we are dealing with  yadda yadda yadda which must be resolved wi
 * 📒 Research:
 ** 💡 New Episode Ideas:
 ** 👤 Characters:
-** 👥 Groups - Factions:
+** DONE 🗡 Plots:
+CLOSED: [2020-07-01 Wed 14:30]
+:LOGBOOK:
+- State "DONE"       from              [2020-07-01 Wed 14:30]
+:END:
+
+:README:
+- Use this space to add plot information as it develops within your book.
+
+- First time only... Initially: Copy/Clone the "Back Story Plots" and "Chapter Plot Summaries" outline headings (and all of their contents) from the "Templates:" section as outline sub-headings here to be repurposed for actual work...
+
+- After the two outline headings above have been copy/cloned as a sub headings here under this "Plots:" parent section, you will have three example sub-headings to re-use with your specifics below... After that you can go back to your Templates section to copy/clone one or more individual "Back Story Plot Example" outline headings to re-purpose and add to your existing list...
+
+- It's a good idea to keep things organized (based on evolving existing and new emerging events within your book). The following tips will help you:
+
+    + Keep your outline sub-headings timestamped below.
+
+    + Keep track of your plot summaries by adding "GTD TODO" keywords.
+
+    + Prioritize the plot summaries as well if needed.
+
+The above will help you get better organized about how your book is developing, what areas need the most work, etc.  Most importantly, this will help prevent you from making any grave mistakes causing any contradictions within your story later... (unless that was your intention "Alfred Hitchcock")... In any case you will be better informed by keeping all your plot tasks here where you can see them and resolve them quickly...
+:END:
+**  👥 Groups - Factions:
 ** 🌐 Locations - Worlds:
 ** 🎪 Major Events:
 ** 🏞 Scenes:
 ** ❝ Quotations:
 ** 🖍 Styles:
-* ACTIVE ⎘ Templates:
-:README:
-This section provides skeleton templates to use to start real sections within your book.  Any sub heading under this *Templates:* group can be utilized by copy-pasting it anywhere you need to create a new section based on its structure... 
-
-Or... You could try mashing several cloned templates together to create a totally new project with a different structure... The intent of this is to save lots of time Starting up a new writing project.  Lets see if it helps. :trollface:
-
-Instructions:
-   - Choose one of the templates below and copy it (folded).  Paste the copied template as a new clone within your project's book, planning, or research section...  Change the name of the template to its specific element name needed within your project's story-structure...
-:END:
-** DONE ✎ Log:
-CLOSED: [2020-06-29 Mon 23:14]
+* DONE ⏰ Tasks:
+CLOSED: [2020-07-01 Wed 14:36]
 :LOGBOOK:
-- State "DONE"       from              [2020-06-29 Mon 23:14]
-:END:
-
-:README:
-- Use this space to add time stamped log note entries for any pourpose you may need...
-
-- To create a time stamped entry, use key command:
-
-   + "C-c ."
-
-   + Make your new entry an outline sub-heading of a Log section heading (as above but, wherever else you may need a collection of log entries).
-
-- Keep your Log Entries in Decending Chronological Order.
-   (i.e., put your newest entries on top)
-
-This serves as a replacement for my Scrivener planning Logs /(Currently implemented as markdown files outside of Scrivener)/... Each Org-based Writing project will have one or more of these logs right inside of it close to the things the logs are actually about...  No more fumbling and guessing which log was I useing for what? Now, not only can I find them, I can make them into tasks, TODOS, and prioritize them to boot! Consider this my new official general template for logs going forward... Onward we row mates... Over the log jam!
-:END:
-
-*** <2020-06-19 Fri> ✎ Example Log Entry:
-
-Yadda, yadda, yadda...
-
-** DONE ⏰ Tasks:
-CLOSED: [2020-06-30 Tue 05:46]
-:LOGBOOK:
+- State "DONE"       from "ACTIVE"     [2020-07-01 Wed 14:36]
+- State "ACTIVE"     from "DONE"       [2020-07-01 Wed 11:00]
 - State "DONE"       from              [2020-06-30 Tue 05:46]
 :END:
 
 :README:
-- Use this space to add time stamped Tasks for any pourpose you may need...
+- Use this space to add time stamped Tasks below for any pourpose you may need...
 
 - To create a time stamped task entry, use key command:
 
    + "C-c ."
 
-   + Make your new entry an outline sub-heading of a "Tasks:" section heading (as above, but wherever else you may need a collection of task entries).
+   + Make your new entry an outline sub-heading of this project's general "Tasks:" section heading above (or optionally you could create another more specific Tasks: section wherever else you may need a collection of task entries...
 
 - Keep your Tasks in Decending Chronological Order.
    (i.e., put your newest tasks on top)
+
+- The three provided tasks below are general default tasks that should be started as soon as you create a new project based on this HAP-Book-Project-Skeleton... They appear here offering a "bootstrapped" head start and also to provide some guidance about starting your new book projects with a fresh better organized process... 
 :END:
 
-*** DONE Synopsis Tasks:
+*** DONE 📃 Synopsis Tasks:
 CLOSED: [2020-06-20 Sat 17:19]
 :LOGBOOK:
 - State "DONE"       from "NEXT"       [2020-06-20 Sat 17:19]
 :END:
+
 **** DONE Write a Single Sentence summary
 CLOSED: [2020-05-25 Mon 10:04]
 :LOGBOOK:
@@ -402,73 +396,111 @@ This is a lot of fun, and at the end of the exercise, you have a pretty decent o
 :END:
 
 *** DONE 👤 Character Tasks:
-CLOSED: [2020-06-30 Tue 05:38]
+CLOSED: [2020-07-01 Wed 11:17]
 :LOGBOOK:
+- State "DONE"       from "ACTIVE"     [2020-07-01 Wed 11:17]
+- State "ACTIVE"     from "DONE"       [2020-07-01 Wed 10:59]
 - State "DONE"       from "NEW"        [2020-06-30 Tue 05:38]
 :END:
 
-**** 📃 Write a Character Synopsis:
+**** 📃 Character Synopsis tasks:
 
 :README:
-For each character in your story, write a "character synopsis" about "them" that tells the story from their individual point of view. Character Soap Box Time!
+- Write a Short Character Synopsis about each Character in your Story:
+
+   + Each Character Synopsis is to be written in first person, (i.e., The character is talking about "themselves", telling the story from their individual point of view, life experiences, emotions, words, as opposed to how others may view them).
+
+   + This is about the character on a rant, talking all about herself, bringing the subject always back to personal perspective and personal truths... Soap Box time!
+
+- Add Each Character Synopsis below as a separate outline sub heading (C-c RET) using the character's name as the title.
+
+- Later... Use the character synopsis created here to complete "Character Profiles" within your projects main "Research:/Characters:" section...
 :END:
 
-****** Major characters:
+***** 📃 Huckleberry Finn (example character synopsis - replace name and content)
+
+Hi! My name is Huckleberry Finn... you can call me "Huck" for short if you like...  Don't pay no attention to anything that famous man behind the curtain may have said about me... That man Samuel Langhorne Clemens, who calls himself Mark Twain... He may know some things about me but he ain't never walked in my shoes!  That's for sure!  Rich author riverboat caption and all... Let me tell you a few things he don't know about me!
+
+For instance... Yadda yadda yadda...  Folks may call me a vagabond, but they don't know the truth of my story... If they knew about the time I had to... blah, blah, blah, ... They would change their minds and see me in a completely different light...  etc...
+
+*(On and On... Huck goes on a personal rant all about himself!)*
+
+***** 📃 Your Next Character Name Here: (add more character headings below until all are done)
+
+Add your character's personal dialog in this space... Rename title above to your character's name...
+
+**** 👥 Major Characters Summary:
 
 :README:
-Write one page or a 600 word summary about the major characters in your story...
+Write a one page synopsis (or 600 words) about the major characters in your story...
 :END:
 
-****** Minor characters:
+**** 👥 Minor Characters Summary:
 
 :README:
-Write half a page or a 300 word summary about the minor characters in your story...
+Write a half page synopsis (or 300 words) about the minor characters in your story...
 :END:
-*** DONE 🕸 Plot Tasks:
-CLOSED: [2020-05-24 Sun 22:59]
+
+
+
+* ACTIVE ⎘ Templates:
+
+** DONE Introduction:
+CLOSED: [2020-07-02 Thu 00:36]
 :LOGBOOK:
-- State "DONE"       from "ACTIVE"     [2020-05-24 Sun 22:59]
+- State "DONE"       from              [2020-07-02 Thu 00:36]
+:END:
+
+This section provides skeleton templates for use within your project(s).  Any sub heading under this parent "*Templates:"* group can be utilized by copy-pasting the collapsed heading into any of your existing project sections (i.e., making a clone anywhere you need to create a new section based on the template's structure)... 
+
+Or... You could try mashing several cloned templates together to create a totally new project heading with a totally different structure... The intent of this is to save lots of time starting up a new custom writing project.  Lets see if it helps. :trollface:
+
+** DONE Instructions:
+CLOSED: [2020-07-02 Thu 00:37]
+:LOGBOOK:
+- State "DONE"       from              [2020-07-02 Thu 00:37]
+:END:
+
+- Choose one of the templates below and copy it (folded).  
+
+- Paste the copied template as a new clone within your project's book, planning, or research section...  
+
+- Change the name of your copied template to a specific title needed to fit in with your project's story-structure...  In the case of Logs or Tasks, you probably will keep those titles as they are universal... but you may wish to further qualify them by adding a prefixed category word.
+
+** DONE ✎ Log:
+CLOSED: [2020-06-29 Mon 23:14]
+:LOGBOOK:
+- State "DONE"       from              [2020-06-29 Mon 23:14]
 :END:
 
 :README:
-This space is a bit of internal project management where you can keep track, and manage tasks relating to plots emerging within your book as you are writing... 
+- Use this space to add time stamped log note entries for any pourpose you may need...
 
-Copy this section to the project management area of your project...  Keep the heading above "Plot Tasks:  That's exactly what it is...
+- To create a time stamped entry, use key command:
 
- As you use an instance of this template somewhere, It's a good idea to keep your tasks enumerated below as TODO headings for easy reference , and also so you don't end up making a grave mistake causing a contradiction within your story later... (unless that was your intention)... In any case you will be better informed by keeping all your plot tasks here where you can see them and resolve them quickly...
+   + "C-c ."
 
-Use the forms below for your first three tasks... Just change the heading and content to suit your specific task...
+   + Make your new entry an outline sub-heading of a Log section heading (as above but, wherever else you may need a collection of log entries).
+
+- Keep your Log Entries in Decending Chronological Order.
+   (i.e., put your newest entries on top)
+
+This serves as a replacement for my Scrivener planning Logs /(Currently implemented as markdown files outside of Scrivener)/... Each Org-based Writing project will have one or more of these logs right inside of it close to the things the logs are actually about...  No more fumbling and guessing which log was I useing for what? Now, not only can I find them, I can make them into tasks, TODOS, and prioritize them to boot! Consider this my new official general template for logs going forward... Onward we row mates... Over the log jam!
 :END:
 
-**** DONE 🕸 Example Plot Task 1:  Re-Use these example headings:
-CLOSED: [2020-05-24 Sun 22:58]
-:LOGBOOK:
-- State "DONE"       from "NEW"        [2020-05-24 Sun 22:58]
-:END:
+*** <2020-06-19 Fri> ✎ Example Log Entry:
 
-Copy these headings and change them into your real plot tasks.  The structure has already been done... complete with a cute icon of a spider's web.  Copy/Paste is your friend...
-
-**** DONE 🕸 Example Plot Task 2:  Write a back story chapter explaining yadda... yadda... yadda...
-CLOSED: [2020-05-24 Sun 22:58]
-:LOGBOOK:
-- State "DONE"       from "NEW"        [2020-05-24 Sun 22:58]
-:END:
-
-You need to come up with a conflict between, so-and-so and the main character... This must happen before... yadda yadda yadda.... down at the fish market...
-
-**** DONE 🕸 Resolve issue #13
-CLOSED: [2020-05-24 Sun 22:58]
-:LOGBOOK:
-- State "DONE"       from "NEW"        [2020-05-24 Sun 22:58]
-:END:
-
-Within plot #13 you have a problem yadda, yadda, yadda, you need to introduce yadda, yadda, yadda, first... yadda yadda yadda...
+Yadda, yadda, yadda...
 
 ** NEW 🗓 Editorial Calendar
 
 Make an editorial Calendar for this project right here where it belongs!  You won't loose it! and you can access it quickly without having to search for it elsewhere. Org-Mode excels for this task!  Take advantage of its powerful scheduling, agenda, and filtering capabilities!
 
-** 👤 New Character
+** DONE 👤 New Character
+CLOSED: [2020-07-01 Wed 11:41]
+:LOGBOOK:
+- State "DONE"       from              [2020-07-01 Wed 11:41]
+:END:
 
 *** 💬 Profile:
 
@@ -592,34 +624,28 @@ Character’s personal history. Yadda yadda yadda...
 *** 📃 Character Synopsis:
 
 :README:
-Write a character synopsis that tells the story from the point of view of the character.
+- Add the Character Synopsis you wrote about this character in your project's main "Tasks:" section, which was a Snowflake Method step you completed if you are using this Project Skeleton the way it was designed to be used...
+
+   + Each Character Synopsis has been written in first person, (i.e., from the character's own life experiences, emotions, words). This is about the character on a rant, talking all about herself, bringing the subject always back to personal perspective and personal truths... Soap Box time!
 :END:
 
-***** Major characters
-
-:README:
-Write one page or 600 words about the major characters in this story...
-:END:
-
-***** Minor characters
-
-:README:
-Write half a page or 300 words about the minor characters in this story...
-:END:
 
 *** 🗒 Worksheet:
 
 :README:
 This is your scratch pad worksheet for loosely drafting up new characters before organizing all the information into a Character Profile and Character Synopsis... Free form in here... Let the muses take complete control in this space...
 :END:
-** 👥 New Group or Faction
+** DONE 👥 New Group or Faction
+CLOSED: [2020-07-01 Wed 18:51]
+:LOGBOOK:
+- State "DONE"       from              [2020-07-01 Wed 18:51]
+:END:
 *** ⚛ Interstellar Nation <The Galactic Empire>
 
 :README:
 Definition:
 
 - A Spacefaring kingdom, empire, country, etc (like Asimov's Galactic Empire, or the Romulan Empire etc.) This type of nation may extend out through a galactic cluster or quadrant, etc.
-
 :END:
 
 **** 📃 Summary:
@@ -974,26 +1000,62 @@ Few people bother to look at this aspect of world-building, and they really shou
 
 
 
-** 🌐 New World
-*** 🏞 Location
+** DONE 🌐 New World
+CLOSED: [2020-07-02 Thu 00:40]
+:LOGBOOK:
+- State "DONE"       from "ACTIVE"     [2020-07-02 Thu 00:40]
+:END:
+*** DONE 🏞 Location
+CLOSED: [2020-07-02 Thu 00:39]
+:LOGBOOK:
+- State "DONE"       from "ACTIVE"     [2020-07-02 Thu 00:39]
+:END:
 
-**** Summary
+**** DONE Summary
+CLOSED: [2020-07-01 Wed 19:53]
+:LOGBOOK:
+- State "DONE"       from              [2020-07-01 Wed 19:53]
+:END:
 
 :README:
 Write your Location Summary here. Use what ever sub headings, and or formatting you need to accomplish this but don't make it too long...  The next sections are for drilling down...
 :END:
 
-**** Setting Detail
+**** DONE Setting Detail
+CLOSED: [2020-07-02 Thu 00:39]
+:LOGBOOK:
+- State "DONE"       from "ACTIVE"     [2020-07-02 Thu 00:39]
+:END:
 
-***** Overall Feeling:
+***** DONE Overall Feeling:
+CLOSED: [2020-07-02 Thu 00:39]
+:LOGBOOK:
+- State "DONE"       from "NEW"        [2020-07-02 Thu 00:39]
+:END:
 
-***** Sights:
+***** DONE Sights:
+CLOSED: [2020-07-02 Thu 00:39]
+:LOGBOOK:
+- State "DONE"       from "NEW"        [2020-07-02 Thu 00:39]
+:END:
 
-***** Sounds:
+***** DONE Sounds:
+CLOSED: [2020-07-02 Thu 00:39]
+:LOGBOOK:
+- State "DONE"       from "NEW"        [2020-07-02 Thu 00:39]
+:END:
 
-***** Smells:
+***** DONE Smells:
+CLOSED: [2020-07-02 Thu 00:39]
+:LOGBOOK:
+- State "DONE"       from "NEW"        [2020-07-02 Thu 00:39]
+:END:
 
-*** ∅ Planet/Satellite
+*** DONE ∅ Planet/Satellite
+CLOSED: [2020-07-01 Wed 19:49]
+:LOGBOOK:
+- State "DONE"       from "ACTIVE"     [2020-07-01 Wed 19:49]
+:END:
 
 :README:
 Rename Planet/Satellite heading above to the actual name of the planet or satellite of your specific case...
@@ -1005,7 +1067,11 @@ http://droemar.deviantart.com/journal/5-Tips-World-Building-Template-224630229
 Much more information can be obtained by visiting the above website!!!
 :END:
 
-**** System, Sector/quadrant
+**** DONE System, Sector/quadrant
+CLOSED: [2020-07-01 Wed 19:11]
+:LOGBOOK:
+- State "DONE"       from              [2020-07-01 Wed 19:11]
+:END:
 
 :README:
 Rename System, Sector/quadrant heading above with the actual name of your system, with its specific sector and quadrant coordinates...
@@ -1037,7 +1103,11 @@ Rename Controlling party/faction heading above with the actual name of your part
 |              |              |             | plutocracy, etc. |                |
 |--------------+--------------+-------------+------------------+----------------|
 
-**** Major cities
+**** DONE Major cities
+CLOSED: [2020-07-01 Wed 19:13]
+:LOGBOOK:
+- State "DONE"       from              [2020-07-01 Wed 19:13]
+:END:
 
 ***** City (continent/region)
 
@@ -1053,7 +1123,11 @@ Do this to get a feel for the areas the characters will be visiting.
 
 # Add Description Here:
 
-**** Population
+**** DONE Population
+CLOSED: [2020-07-01 Wed 19:26]
+:LOGBOOK:
+- State "DONE"       from              [2020-07-01 Wed 19:26]
+:END:
 
 ***** Races:
 
@@ -1073,7 +1147,11 @@ Monotheism?  Pantheism?  Atheism? Name and describe them as needed.
 List the common physical characteristics of long-term inhabitants and native peoples: skin colour, hair colour, build, dress
 :END:
 
-**** Culture
+**** DONE Culture
+CLOSED: [2020-07-01 Wed 19:28]
+:LOGBOOK:
+- State "DONE"       from              [2020-07-01 Wed 19:28]
+:END:
 
 ***** Mannerisms:
 
@@ -1141,41 +1219,59 @@ Birth? Coming-of-age?  Marriage?  Death?  Justice?
 What do people celebrate?  What are considered holidays?  Why?
 :END:
 
-**** Transport
+**** DONE Transport
+CLOSED: [2020-07-01 Wed 19:29]
+:LOGBOOK:
+- State "DONE"       from              [2020-07-01 Wed 19:29]
+:END:
 
 :README:
 How do people move things?  Armies?  Crowds?  Goods?  Animals?
 :END:
 
-**** Weather patterns
+**** DONE Weather patterns
+CLOSED: [2020-07-01 Wed 19:30]
+:LOGBOOK:
+- State "DONE"       from              [2020-07-01 Wed 19:30]
+:END:
 
 :README:
 Tropical?  Stormy?  Cold?  Earthquakes?  Climate in general?
 :END:
 
-**** Resources
+**** DONE Resources
+CLOSED: [2020-07-01 Wed 19:30]
+:LOGBOOK:
+- State "DONE"       from              [2020-07-01 Wed 19:30]
+:END:
 
 :README:
 What does the planet export?  Import?  Make?  Is famous for?
 :END:
 
-**** History
+**** DONE History
+CLOSED: [2020-07-01 Wed 19:48]
+:LOGBOOK:
+- State "DONE"       from              [2020-07-01 Wed 19:48]
+:END:
 
 :README:
 Everyone comes from somewhere.  People just don’t up and appear on islands and such.  I mean, even Native Americans walked across a land bridge way back in the day. Europeans came from Romans and Greeks and Celts and Gauls and more.  Very few people bother to look at this aspect of world-building, and they really should.  Even if a civilization has been around for two thousand years and are elven dragon riders, they came from somewhere.  Even if their mythology says they crawled out of the earth: they came from somewhere.  Examine it here in this space!
 :END:
 
 
-
-
-:README:
-I am still working out how to set up my drama script template...  I am using fountain mode to create audio dramas with sound and music cues etc.  This is semi automated using Afterwriting python script.  I edit all the files in Emacs but it is easier to run the build script on the command line.  The build script creates a new PDF file.
-
-I have plans to create all that automation within Org-Mode and that is what this template should be about... The fountain files could also be created programmatically here from their project folder... There would be some way to click on a link to the script, *(a .fountain file) and then it would automatically open up in another frame of the proper dimensions for editing a screenplay in Modular Emacs...
+** DONE 🔖 New Chapter #
+CLOSED: [2020-07-01 Wed 21:25]
+:LOGBOOK:
+- State "DONE"       from              [2020-07-01 Wed 21:25]
 :END:
 
-** 🔖 New Chapter ?
-*** 📄 Episode - <replace w/ chapter name>
+*** DONE 📄 Episode - <replace w/ chapter name>
+CLOSED: [2020-07-01 Wed 21:17]
+:LOGBOOK:
+- State "DONE"       from              [2020-07-01 Wed 21:17]
+:END:
+
 :README:
 Episodes or Scenes are the DNA that make up the chapters in a novel...  
 
@@ -1192,9 +1288,17 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
 
 # End of Chapter:
 
-*** 🗒 Background Notes:
+*** DONE 🗒 Background Notes:
+CLOSED: [2020-07-01 Wed 21:24]
+:LOGBOOK:
+- State "DONE"       from              [2020-07-01 Wed 21:24]
+:END:
 
-**** 🗒 Note 1: <2020-05-10 Sun>
+**** DONE 🗒 Note 1: <2020-05-10 Sun>
+CLOSED: [2020-07-01 Wed 21:21]
+:LOGBOOK:
+- State "DONE"       from              [2020-07-01 Wed 21:21]
+:END:
 
 + Mark each note's timestamp to its initial creation time. This will enable emerging notes for chapters to be searched chronologically, and to give you an idea of how things evolve over time...
 
@@ -1212,15 +1316,27 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
 
 Do any or all the above to help get the concepts and images of your book clear in mind...
 
-**** 🗒 Note 2: <2020-05-10 Sun>
+**** DONE 🗒 Note 2: <2020-05-10 Sun>
+CLOSED: [2020-07-01 Wed 21:22]
+:LOGBOOK:
+- State "DONE"       from              [2020-07-01 Wed 21:22]
+:END:
 
 Each new note needs to get its own heading and initial timestamp...
 
-****** Quid Novi?
+****** DONE Quid Novi?
+CLOSED: [2020-07-01 Wed 21:26]
+:LOGBOOK:
+- State "DONE"       from              [2020-07-01 Wed 21:26]
+:END:
 
 Quid Novi? Lorem Ipsum dolor sit amet,consectetur adipisicing elit, sed doeiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim adminim veniam, quis nostrudexercitation ullamco laboris nisi utaliquip ex ea commodo consequat.Duis aute irure dolor inreprehenderit in coluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatatnon proident, sunt in culpa quiofficia deserunt mollit anim id estlaborum.
 
-**** 🗒 Phasellus orci: <2020-05-10 Sun>
+**** DONE 🗒 Phasellus orci: <2020-05-10 Sun>
+CLOSED: [2020-07-01 Wed 21:26]
+:LOGBOOK:
+- State "DONE"       from              [2020-07-01 Wed 21:26]
+:END:
 
 Etiam tempor elit auctor magna. Nullam nibh velit, vestibulum ut, eleifend non, pulvinar eget, enim. Classaptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer velit mauris, convallis acongue sed, placerat id, odio. Etiam venenatis tortor sed lectus. Nulla non orci. In egestas porttitor quam. Duis nec diameget nibh mattis tempus. Curabitus accumsan pede id odio. Nunc vitae libero. Aenean condimentum diam et turpis.Vestibulum non risus. Ut consectetuer gravida elit. Aenean est nunc, varius sed, alquam eu, feugiat sit amet, metus. Sedvenenatis odio id eros.
 
@@ -1231,23 +1347,61 @@ Etiam tempor elit auctor magna. Nullam nibh velit, vestibulum ut, eleifend non, 
 |----------+-----------+-----------+-----------+-------------------|
 
 Yadda, yadda, yadda. etc...
-** 📒 Back Story Plots:
+** DONE 📒 Back Story Plots:
+CLOSED: [2020-07-01 Wed 12:41]
+:LOGBOOK:
+- State "DONE"       from              [2020-07-01 Wed 12:41]
+:END:
 
-*** Plot Example One:
+:README:
+This template section contains a few example Back Story Plots which you can copy/clone into the "Back Story Plots:" sub-section of your main "Book:" section as needed for repourposing.
+
+- It's a good idea to keep things organized (based on evolving existing and new emerging chapters within your book). The following tips will help you:
+
+    + Keep your outline sub-headings timestamped below.
+
+    + Keep track of your plot summaries by adding "GTD TODO" keywords.
+
+    + Prioritize the plot summaries as well if needed. 
+
+The above will help you get better organized about how your book is developing, what areas need the most work, etc.  Most importantly, this will help prevent you from making any grave mistakes causing any contradictions within your story later... (unless that was your intention "Alfred Hitchcock")... In any case you will be better informed by keeping all your plot tasks here where you can see them and resolve them quickly...
+
+- Use the forms below when you need to make new Back Story Plots... Change the heading and content with the real "Back Story Plot" content for your book...
+:END:
+
+*** 📒 Back Story Plot Example One:
 
 Note: This is an example of a back story plot related to your book... Write it down in the rough here and then later you can develop it further if needed.
 
-*** Plot Example Two:
+*** 📒 Back Story Plot Example Two:
 
 Note: This is an example of a back story plot related to your book... Write it down in the rough here and then later you can develop it further if needed.
 
-*** Add more Plots like this:
+*** 📒 Add more Back Story Plots like this:
 
 Note: This is an example of a back story plot related to your book... Write it down in the rough here and then later you can develop it further if needed.
 
-** 🗡 Plot Summaries:
+** DONE 🗡 Chapter Plot Summaries:
+CLOSED: [2020-07-01 Wed 12:43]
+:LOGBOOK:
+- State "DONE"       from              [2020-07-01 Wed 12:43]
+:END:
 
-Gather all the plot ideas that have been building over the years and put them in here... then you can decide how and when to present them within the unfolding story.
+:README:
+This template section contains a few example Chapter Plot Summaries which you can copy/clone into the "Chapter Plot Summaries:", sub-section of your main "Book:" section as needed for repourposing.
+
+- It's a good idea to keep things organized (based on evolving existing and new emerging chapters within your book). The following tips will help you:
+
+    + Keep your outline sub-headings timestamped below.
+
+    + Keep track of your plot summaries by adding "GTD TODO" keywords.
+
+    + Prioritize the plot summaries as well if needed. 
+
+The above will help you get better organized about how your book is developing, what areas need the most work, etc.  Most importantly, this will help prevent you from making any grave mistakes causing any contradictions within your story later... (unless that was your intention "Alfred Hitchcock")... In any case you will be better informed by keeping all your plot tasks here where you can see them and resolve them quickly...
+
+- Use the forms below when you need to make new Chapter Plots... Change the heading and content with the real "Chapter # Plot" content for your book...
+:END:
 
 *** Chapter # Plots
 
@@ -1259,8 +1413,5 @@ In this chapter we are dealing with  yadda yadda yadda which must be resolved wi
 
 *** Chapter # Plots
 
-In this chapter we are dealing with  yadda yadda yadda which must be resolved with yadda yadda yadda. 
-
-
-
+In this chapter we are dealing with  yadda yadda yadda which must be resolved with yadda yadda yadda.
 

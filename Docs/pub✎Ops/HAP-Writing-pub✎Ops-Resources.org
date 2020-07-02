@@ -8,7 +8,392 @@
 #+KEYWORDS:
 #+FILETAGS: :HAP-how-to:
 
-* ✎ Writers Resources:
+
+* 💡 Scratchpad Refile:
+
+** NEXT ☞ Start Here!
+
+:README:
+It's a probably a real good idea to have one of these *Ideas / Scratchpad / Refile sections in all of your projects! That way no matter where you are, if inspiration comes along, you have a quick place to document the event!  You can refile it later.. Knowing that every project you work on has this sort of thing that you would check from time to time to see what to do... (even if it is intended for elsewhere)...  Parallel universe?  Sure.. we got that covered... %^)
+
+- Use this section to quickly capture inspired at-the-moment ideas While they are still fresh in mind...
+
+  + Come directly here... 
+
+  + Advance your cursor a few newlines down (just below this README drawer) blinking all alone on a fresh clean line with some space below it... (above any previously time stamped entries)...  You are at the top and the time is the present...  There won't be any future entries ahead of you... (maybe next decade? time travel?)
+
+  + Enter a new timestamp with "C-c .", Hit enter to auto accept today's date and time AND then start typing away before you forget your fantastic idea!!!
+
+  + You can organize everything later...  Don't scare away the muses! Get your story down now!  I actually used this space (raw) to create my first inspired entry below...  Then I created this ☞ *Start Here* sub-section to accommodate such needs in the future... This will all be ready and waiting the next time I or YOU need to write something inspired, Immediately! No distractions!
+
+  + When you are done writing Put a title right after the time stamp and make it into a heading... Then you may go out to play elsewhere little grasshopper... But come back later and organize things... OK? Don't create a swamp! And don't forget to take your bath tonight... ;-)
+:END:
+
+*** DONE <2020-06-07 Sun> Visisonar - Object from Asimov's Foundation Series
+CLOSED: [2020-06-08 Mon 15:02]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2020-06-08 Mon 15:02]
+:END:
+
+:README:
+File this in a research folder of a Sci-Fi related project...
+:END:
+
+From Isaac Asimov's science fiction series 'Foundation', specifically the section of 'Foundation and Empire' entitled 'The Mule', the visisonar is considered a musical instrument.
+
+Unlike most instruments, this one does not achieve its effect by using sonic effects but, instead, directly stimulates the listeners' mental well-being. The number of people and level of effect depends on the skill level of the player. As this was a device from the First Empire, there were not that many people around with any skill at all. However, the Mule's clown, Magnifico, had some skill with the instrument and was asked to play for select parties on the Foundation and for large groups of workers on Haven. This may not have been a good idea...
+
+*** SOMEDAY <2020-05-14 Thu> 🔖 Jessica Was Not Afraid of Spiders
+
+# This template example is actually the beginning of a real story! It started out as a flash idea for a quick story that just came to me while I was working on this new Emacs Org-mode based Writing/Publishing environment... (that happens a lot to me)... I wrote it down quick first while it was still fresh in my mind!  btw, I added all these notes later...  Don't do this stuff while you are in an inspired mood!  Now I have the seed when the bug comes back later... I can continue...  I will leave it here as an example... Copyright restrictions apply of course... "for personal private use only" Not for public re-display etc.  Here is where your fresh new inpired ideas may begin below unrestricted:
+
+# Begin Story:
+
+Every morning down at Donnavan's Diner it's the same...  Jessica... an inquisitive 8 year old (overly intelligent even on adult standards) is dragged in by her surviving Uncle Bob, a fat faced, thick bearded man in his 40's and very overweight due to his obsession with sweet sticky cinnamon buns...  Sticky buns... the subject of which both Bob and Jessica are classically in the mood for at this very moment... just about 48 minutes before Bob has to drop Jessica off for school...
+
+Letting go of Bob's hand, Jessica skips straight away to her favourite spot in the sunny corner window booth, the seat closest to the window well where cute little cactus and succulents are planted in round clay pots lining the edge of the window... From this position, Jessica can see and feel the warm morning sun pouring out over the apple orchard beyond and streaming into the diner window giving suspended dust particles an iridescent glow...
+
+This is a repeating scene every day...  The owner, Donnavan tries his best to reserve the corner booth for Jessica and her uncle, every day at this same time...  It's a small town... 
+
+# yadda yadda yadda... (fix this part)
+
+Outside, it is fall, but summer lingers and holds fast... The apples are bright red... Jessica muses over all the pretty cactus pot plants lined up along the windows edge next to her.  The morning sun pours in between long dark shadows and bright iridescently illuminated leaves...  
+
+There...  Right there...  Smugly prancing about inside the last flower pot in the corner of the window well...
+
+There... Smugly basking in rays of sun filtered by a mini succulent serving as its shade tree... 
+
+There... Looking right back up at Jessica with eight pearly black bolling ball eyes curiously studying her almost as intently as she was studying it'self (or Herself in the Charlotte sense)... There... was a Black Stripped Jumping Spider... Quite large for its species... Much larger than usual... 
+
+Jessica was not afraid...
+
+"Why Hello Ms. Spider!", exclaimed Jessica with inquisitive wonder in her eyes, intently engaging her new found friend!  "How are you this morning?  You look like you are having fun in that sunny spot there! Is that your home? I can't even imagine what it's like to have eight eyes!  I think it would make me quite dizzy if I had to sort out eight different points of view of the world all at the same time!  How do you do that?  It drives me crazy to see my big brother playing video games... Not on just one monitor, but 5 very large screens all panned out in front of him in the gaming room that uncle bob built for us... Uncle Bob calls it the Holodeck (Uncle Bob likes that old show Star Trek a lot!"
+
+On and on she goes...  Yadda Yadda Yadda... Jessica was not afraid of her spider friend one bit in the slightest! On the contrary, Jessica treated her new found spider friend with the same respect she gave her uncle Bob!  To Jessica, all creatures are just as intelligent as humans, and in some cases may even be smarter than us humans...  "You just need to learn how to talk to them.  They are listening to you whether you realize it or not." She informs her uncle who was now sitting across the table from her.
+
+# More to add in here... Below is a new scene...
+
+At school, all the other kids made fun of Jessica... To Jessica's peers, she was pretty weird and definitely did not fit into their set... They would tease her cruelly saying: "You are half alien, and your alien dad killed your mom after you were born!"  In truth her father was a scientist who died in a horrible accident at an underground research lab when Jessica was not even two years old yet, (the job was top secret and full of mystery and rumours - hence the kids made up scary cruel alien stories to tease her)...  
+
+Jessica's mom died of cancer several years later to add more insult to injury...  The silver lining is now Jessica lives with her Uncle Bob (who is the sweetest guy on the planet, married to the meanest woman on the planet).  
+
+These short stops at the diner serve as Bob and Jessica's brief escape from the bad stuff in life before dropping her off for school and also after picking her up after school... Sometimes after school they go wandering off exploring in the woods beyond the huge apple orchard across the street from Donnavans Diner...
+
+# To be continued.... (I have no idea where this is going. %^) 
+There will be a typical scene at school...  And a later scene where Jessica and Bob discover something interesting in the deep woods behind the orchard...
+We need an antagonist... (her teacher? Step Mother? A mean kid?)
+
+There will be the mentor... (an imaginary or real "invisible" being? or Angel?
+
+Etc...  Jessica will encounter something big and challenging about her new found abilities... the rest is foggy... But it will eventually end happily ever after... This is not to be a tragedy! There should be a lot of comic relief after all the troubles Jessica meets trying to cope within the small minded hick town she and uncle Bob live in...
+* 📖 Book (example):
+** NEW 📃 Synopsis:
+
+The Adventures of yadda... yadda... yadda...
+
+** NEW 📃 Front Matter:
+
+Front Matter... yadda... yadda... yadda...
+** DONE 🔖 Chapter 1:
+CLOSED: [2020-06-08 Mon 15:07]
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2020-06-08 Mon 15:07]
+:END:
+
+*** 📄 Episode - <Put New Episode Title Here>
+
+<Start Chapeter Text here...>
+
+End of Chapter 1
+
+
+*** 📔 Background Notes:
+
+*<Book Title (sub title)>*
+
+*Chapter One - Background Notes*
+
+<Add Background Notes below using time stamps, TODO bullet points, etc...>
+
+**** Notes:
+
+<2020-05-07 Thu> I just got the idea that blah, blah, blah is another chapter in the book where we introduce Yadda, Yadda, Yadda. Integrate this new idea before introducing this chapter... yadda, yadda, yadda...
+
+
+
+
+
+
+** DONE 🔖 Chapter 2:
+CLOSED: [2020-06-08 Mon 15:07]
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2020-06-08 Mon 15:07]
+:END:
+
+*** 📄 Episode - <Put New Episode Title Here>
+
+<Start Chapeter Text here...>
+
+End of Chapter 2
+
+
+*** 📔 Background Notes:
+
+*<Book Title (sub title)>*
+
+*Chapter Two - Background Notes*
+
+<Add Background Notes below using time stamps, TODO bullet points, etc...>
+
+**** Notes:
+
+<2020-05-07 Thu> I just got the idea that blah, blah, blah is another chapter in the book where we introduce Yadda, Yadda, Yadda. Integrate this new idea before introducing this chapter... yadda, yadda, yadda...
+
+** DONE 🔖 Chapter 3:
+CLOSED: [2020-06-08 Mon 15:06]
+:LOGBOOK:
+- State "DONE"       from "NEW"        [2020-06-08 Mon 15:06]
+:END:
+
+*** 📄 Episode - <Put New Episode Title Here>
+
+<Start Chapeter Text here...>
+
+End of Chapter 3
+
+
+*** 📔 Background Notes:
+
+*<Book Title (sub title)>*
+
+*Chapter Three - Background Notes*
+
+<Add Background Notes below using time stamps, TODO bullet points, etc...>
+
+**** Notes:
+
+<2020-05-07 Thu> I just got the idea that blah, blah, blah is another chapter in the book where we introduce Yadda, Yadda, Yadda. Integrate this new idea before introducing this chapter... yadda, yadda, yadda...
+** DONE 🔖 Chapter ?:
+CLOSED: [2020-06-08 Mon 15:06]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2020-06-08 Mon 15:06]
+:END:
+
+*** 📄 Episode - <Put New Episode Title Here>
+
+<Start Chapeter Text here...>
+
+End of Chapter ?
+
+*** 📔 Background Notes:
+
+*<Book Title (sub title)>*
+
+*Chapter ??? - Background Notes*
+
+<Add Background Notes below using time stamps, TODO bullet points, etc...>
+
+**** Notes:
+
+<2020-05-07 Thu> I just got the idea that blah, blah, blah is another chapter in the book where we introduce Yadda, Yadda, Yadda. Integrate this new idea before introducing this chapter... yadda, yadda, yadda...
+** DONE 📒 Back Story Plots:
+CLOSED: [2020-06-08 Mon 15:06]
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2020-06-08 Mon 15:06]
+:END:
+
+:README:
+- Use this section to keep Back Story Plots organized...
+
+- It's a good idea to keep things organized (based on evolving existing and new emerging chapters within your book). The following tips will help you:
+
+    + Keep your outline sub-headings timestamped below.
+
+    + Keep track of your plot summaries by adding "GTD TODO" keywords.
+
+    + Prioritize the plot summaries as well if needed. 
+
+The above will help you get better organized about how your book is developing, what areas need the most work, etc.  Most importantly, this will help prevent you from making any grave mistakes causing any contradictions within your story later... (unless that was your intention "Alfred Hitchcock")... In any case you will be better informed by keeping all your plot tasks here where you can see them and resolve them quickly...
+
+- Use the three example forms below for your first three actual Back Story Plots... Change the heading and content with real "Back Story Plot" content for your book...
+
+- You may copy more of these plot headings from the "Templates:" section as needed to make it faster work for you..
+:END:
+
+*** Plot Example One:
+
+Note: This is an example of a back story plot related to your book... Write it down in the rough here and then later you can develop it further if needed.
+
+*** Plot Example Two:
+
+Note: This is an example of a back story plot related to your book... Write it down in the rough here and then later you can develop it further if needed.
+
+
+*** Add more Plots like this:
+
+Note: This is an example of a back story plot related to your book... Write it down in the rough here and then later you can develop it further if needed.
+
+** DONE 🗡 Chapter Plot Summaries:
+CLOSED: [2020-06-08 Mon 15:06]
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2020-06-08 Mon 15:06]
+:END:
+
+Gather all the plot ideas that have been building over the years and put them in here... then you can decide how and when to present them within the unfolding story.
+
+*** Chapter # Plots
+
+In this chapter we are dealing with  yadda yadda yadda which must be resolved with yadda yadda yadda.
+
+*** Chapter # Plots
+
+In this chapter we are dealing with  yadda yadda yadda which must be resolved with yadda yadda yadda.
+
+*** Chapter # Plots
+
+In this chapter we are dealing with  yadda yadda yadda which must be resolved with yadda yadda yadda. 
+
+* 📒 Research (example):
+** NEW 💡 New Episode Ideas:
+
+** NEXT 👤 Characters:
+*** NEXT 👤  Hugh Owen Finnegan
+**** NEW 💬 Profile:
+***** Name, Rank, S/N:
+
+| Name:  | put name here  |
+| AKA:   | put alias here |
+| Title: | put title here |
+| Rank:  | put rank here  |
+
+***** Summary (Paragraph):  
+
+Put a single paragraph summary of the character's storyline, motivation and description. Loosely based on what you will write from the snowflake steps.
+
+***** Summary (Sentence):  
+
+Put a single sentence summary of the character's storyline here.
+
+***** Motivation
+
+The character's motivation /(what does he/she want abstractly?)/
+
+***** Goal
+
+The character's goal (what does he/she want concretely?)
+
+***** conflict
+
+The character's conflict (what prevents him/her from reaching this goal?)
+
+***** Epiphany
+
+The character's epiphany (what will he/she learn, how will he/she change?
+
+***** Basics:
+
+| Age | Gender | Species | Height | Hair   | Complexion | Nationality |
+|-----+--------+---------+--------+--------+------------+-------------|
+|     |        |         |        | color, |            |             |
+|     |        |         |        | etc... |            |             |
+
+
+| DOB | Birthplace | Race | Weight | Eyes | Handedness | Ethnicity |
+|-----+------------+------+--------+------+------------+-----------|
+|     |            |      |        |      | right      |           |
+|     |            |      |        |      | left etc.  |           |
+
+
+***** Family
+
+| Marital status | Spouse(s)/Partner(s) | Children | Bio Father | Bio Mother | Siblings |
+|----------------+----------------------+----------+------------+------------+----------|
+|                |                      |          |            |            |          |
+
+***** Social
+
+| Citizenship | Social status          | Job/career | Position/role | Rank |
+|-------------+------------------------+------------+---------------+------|
+|             | Fugitive, criminal,    |            |               |      |
+|             | up-standing            |            |               |      |
+|             | member of public, etc. |            |               |      |
+
+***** Skills Etc.
+
+| Skills | Hobbies | Talents / Gifts | Languages |
+|--------+---------+-----------------+-----------|
+|        |         |                 |           |
+
+
+***** Physical Attributes
+
+Physical description.... 
+
+
+***** Personality
+
+The Character's Personality... yadda yadda yadda
+
+****** Likes / Dislikes
+
+Yadda yadda yadda...
+
+ 
+***** Personal History
+
+Character’s personal history. Yadda yadda yadda...
+
+
+**** NEW 📃 Synopsis:
+
+***** Snowflake method Step 5 - Character Synopsis
+
+Write a character synopsis that tells the story from the point of view of the character.
+
+****** Major characters
+
+one page or 600 words
+
+****** Minor characters
+
+half a page or 300 words
+
+
+**** ACTIVE 🗒 Worksheet:
+
+Hugh Owen Finnegan, a "southie" boy turned 5 star chef who specializes in South Louisiana Cajun cuisine appears curious, mild mannered, and likable upon first glance but you soon begin to sense this guy hides a dark mysterious secret.
+
+Hugh Owen Finnegan is the main character and superhero in The Adventures of Hugh Finnegan - (Inter-dimensional Traveler), although Huge starts out more or less absent of any “heroic” much less “superhero” qualities! 
+
+Hugh, is a goodhearted Irish lad and recovering Catholic who managed to escape his "Southie roots" to become a 5 star gourmet chef in Boston Massachusetts.  His curiosity to adventure down the rabbit hole of multidimensional travel ironically conflicts with his religious beliefs causing a degree of shame for his temptations to explore the unknown.  Hugh feels like Adam all over again giving in to the temptation to eat the apple.  The possible consequences of demise are not clear to Hugh, which makes it all the more scary for him… But the unknown possibilities of wild adventure and his desire to explore and find truth lure him on just the same… 
+
+Hugh's conscience, warped by the distorted moral world he has grown up in, often bothers him most when he is doing his heroic best!  Ironically, he is all to willing to do good, while believing it to be wrong.
+
+It will take quite a while and a huge personal transformation over many future episodes before Hugh can be considered a true hero and later “superhero”, although from the very start of the series he is quite likable, charming, and curious with a dark, mysterious, mystical side that keeps surprising us along the way!
+
+On the surface Hugh is a chip off the ole block Boston Southie, a good talker, a great cook, a die-hard entrepreneur, and in spite of his poor South Boston childhood, Hugh was able to carve out a nice career for himself as head chef of two major 5 star Boston restaurants. 
+
+Hugh is extremely popular but there is something different about him that keeps one constantly guessing and/or re-evaluating.  Something below the surface that even he himself is unaware of.  This mysterious quality only increases his attractive nature but he himself feels inside that he is doing wrong and may be punished by the hand of god someday for asking too many questions and opening pandora's box… These kinds of things plagues him with guilt all the time…
+
+All of these things combined manifest with a fool/wizard ambiguity.  Hugh appears to have the knowledge of the universe just within his grasp without any conscious knowledge of it.  Like a guardian angel always by your side, but instead on the inside, well hidden from your awareness…
+
+As the course of the story develops, we encounter other parallel versions of Hugh Finnegan Characters from time to time…  Their middle names give away something about their particular traits that are unique from our hero.
+
+Our Hero’s middle name is Owen (Irish/Welsh for “noble born”) to distinguish him from other versions of himself as he travels from world to world.
+
+
+** NEW 👥 Groups - Factions:
+
+** NEW 🌐 Locations - Worlds:
+
+** NEW 🎪 Major Events:
+
+** NEW 🏞 Scenes:
+
+** NEW ❝ Quotations:
+
+** NEW 🖍 Styles:
+* ✎ Writers Guide:
 ** Color Symbolism
 *** Introduction:
 
@@ -652,1085 +1037,43 @@ Amanda Patterson also teaches an on-line course...  If you are +"very" serious+ 
 I plan to add additional links to articles on Amanda's website and other great writer's resource websites I find to be extremely helpful...  Here is a link to a great resources at Perdue University:  (more to come later)
 
 - [[https://owl.purdue.edu/owl/general_writing/academic_writing/conciseness/eliminating_words.html][Perdue OWL - Eliminating Words]]
-* ACTIVE ⎘ Templates:
-
-** Introduction:
-
-This section provides skeleton templates for use within other projects.  Any sub heading under this parent "*Templates:"* group can be utilized by copy-pasting the collapsed heading into any of your existing projects (i.e., making a clone anywhere you need to create a new section based on the template's structure)... 
-
-Or... You could try mashing several cloned templates together to create a totally new project with a different structure... The intent of this is to save lots of time starting up a new custom writing project.  Lets see if it helps. :trollface:
-
-** Instructions:
-
-Choose one of the templates below and copy it (folded).  Paste the copied template as a new clone within your project's book, planning, or research section...  Change the name of the template to a specific title needed to fit in with your project's story-structure...  In the case of Logs or Tasks, you probably will keep those titles as they are universal... but you may with to further qualify them by adding a category word.
-
-** DONE ✎ Log:
-CLOSED: [2020-06-29 Mon 23:14]
-:LOGBOOK:
-- State "DONE"       from "NEW"        [2020-06-29 Mon 23:14]
-:END:
-
-:README:
-- Use this space to add time stamped log note entries for any pourpose you may need...
-
-- To create a time stamped entry, use key command:
-
-   + "C-c ."
-
-   + Make your new entry an outline sub-heading of a Log section heading (as above, but wherever else you may need a collection of log entries).
-
-- Keep your Log Entries in Decending Chronological Order.
-   (i.e., put your newest entries on top)
-
-This serves as a replacement for my Scrivener planning Logs /(Currently implemented as markdown files outside of Scrivener)/... Each Org-based Writing project will have one or more of these logs right inside of it close to the things the logs are actually about...  No more fumbling and guessing which log was I useing for what? Now, not only can I find them, I can make them into tasks, TODOS, and prioritize them to boot! Consider this my new official general template for logs going forward... Onward we row mates... Over the log jam!
-:END:
-
-*** <2020-06-19 Fri> ✎ Example Log Entry:
-
-Yadda, yadda, yadda...
-** DONE ⏰ Tasks:
-CLOSED: [2020-06-30 Tue 05:45]
-:LOGBOOK:
-- State "DONE"       from "NEXT"       [2020-06-30 Tue 05:45]
-:END:
-
-:README:
-- Use this space to add time stamped Tasks for any pourpose you may need...
-
-- To create a time stamped task entry, use key command:
-
-   + "C-c ."
-
-   + Make your new entry an outline sub-heading of a "Tasks:" section heading (as above, but wherever else you may need a collection of task entries).
-
-- Keep your Tasks in Decending Chronological Order.
-   (i.e., put your newest tasks on top)
-:END:
-
-*** DONE Synopsis Tasks:
-CLOSED: [2020-06-20 Sat 17:19]
-:LOGBOOK:
-- State "DONE"       from "NEXT"       [2020-06-20 Sat 17:19]
-:END:
-**** DONE Write a Single Sentence summary
-CLOSED: [2020-05-25 Mon 10:04]
-:LOGBOOK:
-- State "DONE"       from "ACTIVE"     [2020-05-25 Mon 10:04]
-- State "ACTIVE"     from "DONE"       [2020-05-24 Sun 22:23]
-:END:
-
-:README:
-Take an hour and write a one-sentence summary of your novel. Something like this: 
-
-"A rogue physicist travels back in time to kill the apostle Paul." 
-
-The sentence will serve you forever as a ten-second selling tool. This is the big picture, the analog of that big starting triangle in the snowflake picture.
-
-When you later write your book proposal, this sentence should appear very early in the proposal. It's the hook that will sell your book to your editor, to your committee, to the sales force, to bookstore owners, and ultimately to readers. So make the best one you can!
-
-Some hints on what makes a good sentence:
-
-- Shorter is better. Try for fewer than 15 words.
-
-- No character names, please! Better to say "a handicapped trapeze artist" than "Jane Doe".
-
-- Tie together the big picture and the personal picture. Which character has the most to lose in this story? Now tell me what he or she wants to win.
-
-- Read the one-line blurbs on the New York Times Bestseller list to learn how to do this. Writing a one-sentence description is an art form.
-:END:
-
-**** DONE Expand Summary to Paragraph
-CLOSED: [2020-05-25 Mon 10:21]
-:LOGBOOK:
-- State "DONE"       from "ACTIVE"     [2020-05-25 Mon 10:21]
-:END:
-
-:README:
-*Step 2:* Take another hour and expand that sentence to a full paragraph describing the story setup, major disasters, and ending of the novel. This is the analog of the second stage of the snowflake. 
-
-I like to structure a story as "three disasters plus an ending". Each of the disasters takes a quarter of the book to develop and the ending takes the final quarter. I don't know if this is the ideal structure, it's just my personal taste.
-
-If you believe in the Three-Act structure, then:
-
-- The first disaster corresponds to the end of Act 1.
-
-- The second disaster is the mid-point of Act 2. 
-
-- The third disaster is the end of Act 2, and forces Act 3 which wraps things up. 
-
-It is OK if the first disaster is caused by external circumstances, but I think that the second and third disasters should be caused by the protagonist's attempts to "fix things". Things just get worse and worse.
-
-You can also use this paragraph in your proposal. Ideally, your paragraph will have about five sentences. One sentence to give you the backdrop and story setup. Then one sentence each for your three disasters. Then one more sentence to tell the ending. 
-
-If this sounds suspiciously like back-cover copy, it's because . . . that's what it is and that's where it's going to appear someday.
-:END:
-
-**** DONE Expand Paragraph to Synopsis
-CLOSED: [2020-06-08 Mon 11:36]
-:LOGBOOK:
-- State "DONE"       from "ACTIVE"     [2020-06-08 Mon 11:36]
-:END:
-
-:README:
-Take several hours and expand each sentence of your summary paragraph into a full paragraph. All but the last paragraph should end in a disaster. The final paragraph should tell how the book ends.
-
-Step 4) By this stage, you should have a good idea of the large-scale structure of your novel, and you have only spent a day or two. Well, truthfully, you may have spent as much as a week, but it doesn't matter. If the story is broken, you know it now, rather than after investing 500 hours in a rambling first draft. So now just keep growing the story. Take several hours and expand each sentence of your summary paragraph into a full paragraph. All but the last paragraph should end in a disaster. The final paragraph should tell how the book ends.
-
-This is a lot of fun, and at the end of the exercise, you have a pretty decent one-page skeleton of your novel. It's okay if you can't get it all onto one single-spaced page. What matters is that you are growing the ideas that will go into your story. You are expanding the conflict. You should now have a synopsis suitable for a proposal, although there is a better alternative for proposals . . .
-:END:
-
-*** DONE 👤 Character Tasks:
-CLOSED: [2020-06-30 Tue 05:38]
-:LOGBOOK:
-- State "DONE"       from "NEW"        [2020-06-30 Tue 05:38]
-:END:
-
-**** 📃 Write a Character Synopsis:
-
-:README:
-For each character in your story, write a "character synopsis" about "them" that tells the story from their individual point of view. Character Soap Box Time!
-:END:
-
-****** Major characters:
-
-:README:
-Write one page or a 600 word summary about the major characters in your story...
-:END:
-
-****** Minor characters:
-
-:README:
-Write half a page or a 300 word summary about the minor characters in your story...
-:END:
-*** DONE 🕸 Plot Tasks:
-CLOSED: [2020-05-24 Sun 22:59]
-:LOGBOOK:
-- State "DONE"       from "ACTIVE"     [2020-05-24 Sun 22:59]
-:END:
-
-:README:
-This space is a bit of internal project management where you can keep track, and manage tasks relating to plots emerging within your book as you are writing... 
-
-Copy this section to the project management area of your project...  Keep the heading above "Plot Tasks:  That's exactly what it is...
-
- As you use an instance of this template somewhere, It's a good idea to keep your tasks enumerated below as TODO headings for easy reference , and also so you don't end up making a grave mistake causing a contradiction within your story later... (unless that was your intention)... In any case you will be better informed by keeping all your plot tasks here where you can see them and resolve them quickly...
-
-Use the forms below for your first three tasks... Just change the heading and content to suit your specific task...
-:END:
-
-**** DONE 🕸 Example Plot Task 1:  Re-Use these example headings:
-CLOSED: [2020-05-24 Sun 22:58]
-:LOGBOOK:
-- State "DONE"       from "NEW"        [2020-05-24 Sun 22:58]
-:END:
-
-Copy these headings and change them into your real plot tasks.  The structure has already been done... complete with a cute icon of a spider's web.  Copy/Paste is your friend...
-
-**** DONE 🕸 Example Plot Task 2:  Write a back story chapter explaining yadda... yadda... yadda...
-CLOSED: [2020-05-24 Sun 22:58]
-:LOGBOOK:
-- State "DONE"       from "NEW"        [2020-05-24 Sun 22:58]
-:END:
-
-You need to come up with a conflict between, so-and-so and the main character... This must happen before... yadda yadda yadda.... down at the fish market...
-
-**** DONE 🕸 Resolve issue #13
-CLOSED: [2020-05-24 Sun 22:58]
-:LOGBOOK:
-- State "DONE"       from "NEW"        [2020-05-24 Sun 22:58]
-:END:
-
-Within plot #13 you have a problem yadda, yadda, yadda, you need to introduce yadda, yadda, yadda, first... yadda yadda yadda...
-
-
-
-
-** NEW 🗓 Editorial Calendar:
-
-Make an editorial Calendar for this project right here where it belongs!  You won't loose it! and you can access it quickly without having to search for it elsewhere. Org-Mode excels for this task!  Take advantage of its powerful scheduling, agenda, and filtering capabilities!
-
-** DONE 👤 New Character
-
-*** 💬 Profile:
-
-**** Name, Rank, S/N:
-
-|--------+----------------|
-| Name:  | put name here  |
-|--------+----------------|
-| AKA:   | put alias here |
-|--------+----------------|
-| Title: | put title here |
-|--------+----------------|
-| Rank:  | put rank here  |
-|--------+----------------|
-
-**** Summary (Paragraph):  
-
-:README:
-Put a single paragraph summary of the character's storyline, motivation and description. Loosely based on what you will write from the snowflake steps.
-:END:
-
-**** Summary (Sentence):  
-
-:README:
-Put a single sentence summary of the character's storyline here.
-:END:
-
-**** Motivation
-
-:README:
-The character's motivation /(what does he/she want abstractly?)/
-:END:
-
-**** Goal
-
-:README:
-The character's goal (what does he/she want concretely?)
-:END:
-
-**** Conflict
-
-:README:
-The character's conflict (what prevents him/her from reaching this goal?)
-:END:
-
-**** Epiphany
-
-:README:
-The character's epiphany (what will he/she learn, how will he/she change?
-:END:
-
-**** Basics:
-
-|-----+--------+---------+--------+--------+------------+-------------|
-| Age | Gender | Species | Height | Hair   | Complexion | Nationality |
-|-----+--------+---------+--------+--------+------------+-------------|
-|     |        |         |        | color, |            |             |
-|     |        |         |        | etc... |            |             |
-|-----+--------+---------+--------+--------+------------+-------------|
-
-|-----+------------+------+--------+------+------------+-----------|
-| DOB | Birthplace | Race | Weight | Eyes | Handedness | Ethnicity |
-|-----+------------+------+--------+------+------------+-----------|
-|     |            |      |        |      | right      |           |
-|     |            |      |        |      | left etc.  |           |
-|-----+------------+------+--------+------+------------+-----------|
-
-**** Family
-
-|----------------+----------------------+----------+------------+------------+----------|
-| Marital status | Spouse(s)/Partner(s) | Children | Bio Father | Bio Mother | Siblings |
-|----------------+----------------------+----------+------------+------------+----------|
-|                |                      |          |            |            |          |
-|                |                      |          |            |            |          |
-|----------------+----------------------+----------+------------+------------+----------|
-
-
-**** Social
-
-|-------------+------------------------+------------+---------------+------|
-| Citizenship | Social status          | Job/career | Position/role | Rank |
-|-------------+------------------------+------------+---------------+------|
-|             | Fugitive, criminal,    |            |               |      |
-|             | up-standing            |            |               |      |
-|             | member of public, etc. |            |               |      |
-|-------------+------------------------+------------+---------------+------|
-
-**** Skills Etc.
-
-|--------+---------+-----------------+-----------|
-| Skills | Hobbies | Talents / Gifts | Languages |
-|--------+---------+-----------------+-----------|
-|        |         |                 |           |
-|        |         |                 |           |
-|--------+---------+-----------------+-----------|
-
-**** Physical Attributes
-
-:README:
-The Character's Physical description.... 
-:END:
-
-**** Personality
-
-:README:
-The Character's Personality... yadda yadda yadda
-:END:
-
-***** Likes / Dislikes
-
-:README:
-The Character's Likes / dislikes, yadda yadda yadda...
-:END:
-
-**** Personal History
-
-:README:
-Character’s personal history. Yadda yadda yadda...
-:END:
-*** 📃 Synopsis:
-
-**** Snowflake method Step 5 - Character Synopsis
-
-:README:
-Write a character synopsis that tells the story from the point of view of the character.
-:END:
-
-***** Major characters
-
-:README:
-Write one page or 600 words about the major characters in this story...
-:END:
-
-***** Minor characters
-
-:README:
-Write half a page or 300 words about the minor characters in this story...
-:END:
-*** 🗒 Worksheet:
-
-:README:
-This is your scratch pad worksheet for loosely drafting up new characters before organizing all the information into a Character Profile and Character Synopsis... Free form in here... Let the muses take complete control in this space...
-:END:
-
-
-** DONE 👥 New Group or Faction
-:LOGBOOK:
-- State "DONE"       from "ACTIVE"     [2020-05-16 Sat 16:04]
-:END:
-*** DONE ⚛ Interstellar Nation <The Galactic Empire>
-
-:README:
-Definition:
-
-- A Spacefaring kingdom, empire, country, etc (like Asimov's Galactic Empire, or the Romulan Empire etc.) This type of nation may extend out through a galactic cluster or quadrant, etc.
-
-:END:
-
-**** 📃 Summary:
-
-:README:
-This section is the executive summary (abstract) of a longer full story chapter within your book.  Stories like the Finnegan Series are fully invested on not one but many Interstellar Nations!  Your mileage may vary... %^)
-
-You need to incorporate all the results of your research here in a similar way that Isaac Asimov wrote chapters undergoing many iterations over time about the Galactic Empire in his Foundation Series... 
-
-This abstract, is a short historical and present summary only... It should include the major goals, motivations... who they’re at war with, etc. i.e., It should include the news headlines, and ledelines...  but not the full story... Results of your research below this summary should be as rich and detailed as you can make it... (but also indexed!)
-
-The Ideas and Notes here were adapted from Droemar’s article “5 Tips: World-Building Template”.
-
-http://droemar.deviantart.com/journal/5-Tips-World-Building-Template-224630229
-
-Much more information can be obtained by visiting the above website!!!  
-
-I learned about this Snowflake Idea several years ago when I was first learning how to use the structure to build my Scrivener Projects starting out on a Macbook Pro 2011 model... 
-
-# This Emacs Org Mode based Book Publishing project has been initially modelled upon my Scrivener Project but it will soon outgrow more and do much more than Scrivener could ever dream of!  I am sure of it! I have already discovered much. The Learning curve is levelling off finally!  Writing this now in my fancy Emacs buffer specifically designed for distraction free writing mode is a dream! All my edits are made very close to the typewriter home row!  No reaching for any mice or hard to reach keys while the stream of consciousness flows!  Much of that typing ease is thanks to the detailed and structured eLisp programming work of Xah Lee!  OMG! You did a ton of great things!  No Troll in my book! You are the Knight in Armour for the weak of tendons! Fantastic! Thanks Dude!
-:END:
-
-**** 🔤 Basics:
-
-:README:
-- Fill in the tables below... Pretty much self explanatory...  Do your research first though!
-:END:
-
-|------------+---------+--------+----------+-----------------------+----------------|
-| Home World | Colours | Symbol | Currency | Official Languages(s) | Galactic Scope |
-|------------+---------+--------+----------+-----------------------+----------------|
-|            |         |        |          |                       | number of      |
-|            |         |        |          |                       | systems, etc.  |
-|            |         |        |          |                       |                |
-|            |         |        |          |                       |                |
-|------------+---------+--------+----------+-----------------------+----------------|
-
-
-|------------------+---------------------+-------------------+-----------+----------------|
-| Type Government  | Current Gov'ng Body | Cur Head of State | Military  | Affiliation(s) |
-|------------------+---------------------+-------------------+-----------+----------------|
-| <fudal, castle,  | <party name>        |                   | What's it |                |
-| democracy, etc.> |                     |                   | called?   |                |
-|                  |                     |                   |           |                |
-|                  |                     |                   |           |                |
-|------------------+---------------------+-------------------+-----------+----------------|
-
-**** 𐇑 Social Structure:
-
-:README:
-Who holds power, and how does it affect the way the society works? Is there an aristocracy? If so, how are its ranks structured?
-:END:
-
-**** 🏛 Government:
-
-:README:
-Describe the Structure and general procedures here...
-:END:
-
-**** ⚖ Taxation:
-
-:README:
-Write a brief overview of how the people are taxed, and where that money goes.
-:END:
-
-**** 💵 Currency:
-
-:README:
-What is the currency? What are its sub-denominations?
-:END:
-
-**** 👥 Population:
-
-***** Races
-
-:README:
-Describe the races that inhabit the area, and whether or not they’re native, etc...
-:END:
-
-***** Common physical characteristics
-
-:README:
-Describe the common physical characteristics of long-term inhabitants and native peoples: skin colour, hair colour, build, dress, etc...
-:END:
-
-***** Predominant religion(s)
-
-:README:
-Describe the perdominant religion here... Is it Monotheism?  Pantheism?  Atheism? Name and describe them as needed.)
-:END:
-
-**** ⛩ Culture:
-
-***** Mannerisms
-
-:README:
-Use this space to illustrate the typical way individuals or groups from this place behave... (e.g, A fur-wrapped barbarian behaves in a very different way than a Greek statesman.)
-:END:
-
-***** Greetings
-
-:README:
-Provide some examples of typical greetings here... (e.g, What is considered an acceptable greeting? In formal setting? Among friends? Family?, etc.)
-:END:
-
-***** Customs
-
-:README:
-List the habits of a people that make them unique in this space...
-:END:
-
-***** Superstitions
-
-:README:
-(Knowing the power irrational explanations have over a populace can sometimes be good story material.)
-:END:
-
-***** Beliefs
-
-:README:
-Do I really have to explain this one?  This alone could end up being your entire story...
-:END:
-
-***** Rituals
-
-:README:
-(e.g., Birth? Coming-of-age? Marriage? Death? Justice? etc.)
-:END:
-
-***** Festivals
-
-:README:
-(e.g., What do people celebrate? What are considered holidays? Why?, etc.)
-:END:
-
-**** 🕉 Language
-
-:README:
-This is kind of a big one! Be very careful to point how and why your characters can understand each other, especially if they are from different countries. Language in the real world is a hell of a barrier, but even if you have a Chinese dragon, an Arabian unicorn, a French knight, a Mayan princess, and a Japanese ninja, they can all talk to and understand each other without explanation. Double I-call-BS-points for someone from another world or time!  Anyone who has ever toured Europe can tell you why this is complete bull.  Take a closer look, especially if you’re modeling anything after medieval Europe; only the Church had a universal language: Latin.
-:END:
-
-**** ⚗ Education
-
-:README:
-(How are children taught?  Skilled workers, like architects or brewers?  Is there public education?  Higher education?)
-:END:
-
-**** 🚉 Transportation - Shipping
-
-:README:
-Here is where you talk about, how "people" and "things" are moved/transported from one "place" to another. (e.g., The logistics... Armies? Crowds? Goods? Animals? etc.)
-:END:
-
-**** ⚔ Military
-
-:README:
-Write about the military is all about here... What real world military is/can it be based upon? What’s it’s structure?
-:END:
-
-**** 🏙 Major sectors and systems
-
-|--------+----------+--------+-----------------------------------------|
-| Sector | Quadrant | System | Description:                            |
-|--------+----------+--------+-----------------------------------------|
-|        |          |        | One or two paragraphs only here.        |
-|        |          |        | Reference link to longer doc is better. |
-|        |          |        |                                         |
-|        |          |        |                                         |
-|        |          |        |                                         |
-|--------+----------+--------+-----------------------------------------|
-
-**** 📖 History
-
-:README:
-Everyone comes from somewhere.  People just don’t up and appear on islands and such.  The Native Americans walked across a land bridge way back in the day... Europeans came from Romans and Greeks and Celts and Gauls and more... Very few people bother to look at this aspect of world-building, and they really should.  Even if a civilization has been around for two thousand years and are elven dragon riders, they came from somewhere.  Even if their mythology says they crawled out of the earth: they came from somewhere.  Examine it!
-:END:
-
-*** DONE 🛡 Nation <The Roman Empire, etc.>
-CLOSED: [2020-05-16 Sat 15:55]
-:LOGBOOK:
-- State "DONE"       from "NEXT"       [2020-05-16 Sat 15:55]
-:END:
-:README:
-Nation Definition:
-
-   - A Non-spacefaring kingdom, empire, country, etc.
-
-   - A Continent, Country, Nomadic Diaspora or Clan... (e.g., Asia, Europe, The Roman Empire, The Gypsies, The Isle of Mann, or the Ba Aka Pygmys, etc.) not to be limited to groups living on Planet Earth only of course...
-
-# NOTE: Change the heading title "Nation" above to the actual name of your specific group...
-
-# This template was originally adapted from Droemar’s article “5 Tips: World-Building Template”:
-
-        http://droemar.deviantart.com/journal/5-Tips-World-Building-Template-224630229
-
-# Originally created as an Evernote template, later moved to and overhauled within Scrivener, and now living her third incarnation within a future proof plain text .org file that is parsed, hosted, and rendered by my fancy Emacs pubOps environment... %^) 
-:END:
-**** 📃 Summary:
-
-:README:
-Goals, motivations, who they’re at war with, etc.
-:END:
-
-**** 🔤 Basics:
-
-|----------------+---------+--------+----------+----------------------|
-| Home Country   | Colours | Symbol | Currency | Official language(s) |
-|----------------+---------+--------+----------+----------------------|
-| <country name> |         |        |          |                      |
-|                |         |        |          |                      |
-|----------------+---------+--------+----------+----------------------|
-
-|-------------------+------------------------+-----------------------|
-| Government type   | Current governing body | Current head of state |
-|-------------------+------------------------+-----------------------|
-| Feudal, caste,    | Party name.            |                       |
-| democracy, etc... |                        |                       |
-|                   |                        |                       |
-|-------------------+------------------------+-----------------------|
-
-|-------------------+----------------+-----------------------|
-| Military          | Affiliation(s) | Number of territories |
-|-------------------+----------------+-----------------------|
-| What’s it called? |                |                       |
-|                   |                |                       |
-|-------------------+----------------+-----------------------|
-
-**** 𐇑 Social Structure
-
-:README:
-Who holds power, and how does it affect the way the society works? Is there an aristocracy? If so, how are its ranks structured?
-:END:
-
-**** 🏛 Government
-
-:README:
-Structure and general procedures
-:END:
-
-**** ⚖ Taxation
-
-:README:
-A brief overview of how the people are taxed, and where that money goes.
-:END:
-
-**** 💵 Currency
-
-:README:
-What is the currency? What are its sub-denominations?
-:END:
-
-**** 👥 Population
-***** Common physical characteristics
-
-:README:
-Common physical characteristics of long-term inhabitants and native peoples: skin colour, hair colour, build, dress
-:END:
-
-***** Races 
-
-:README:
-The races that inhabit the area, whether or not they’re native.
-:END:
-
-***** Predominant religion(s)
-
-:README:
-Monotheism?  Pantheism?  Atheism? Name and describe them as needed.
-:END:
-
-**** ⛩ Culture
-***** Mannerisms
-
-:README:
-The likely way someone behaves if they’re from this place. Because believe me, a fur-wrapped barbarian behaves in a very different way than a Greek statesman.
-:END:
-
-***** Greetings
-
-:README:
-What is considered an acceptable greeting?  In formal setting?  Among friends? Family?
-:END:
-
-***** Customs
-
-:README:
-The habits of a people that make them unique.  Google it if you’re confused.
-:END:
-
-***** Superstitions
-
-:README:
-Knowing the power irrational explanations have over a populace can sometimes be good story material.
-:END:
-
-***** Beliefs
-
-:README:
-Do I really have to explain this one?  This alone can be your story.
-:END:
-
-***** Rituals
-
-:README:
-Birth? Coming-of-age?  Marriage?  Death?  Justice?
-:END:
-
-***** Festivals
-
-:README:
-What do people celebrate?  What are considered holidays?  Why?
-:END:
-
-**** 🕉 Language
-
-:README:
-This is kind of a big one for me, because I’m always very careful to point how and why my characters can understand each other, especially if they are from different countries. Language in the real world is a hell of a barrier, but even if you have a Chinese dragon, an Arabian unicorn, a French knight, a Mayan princess, and a Japanese ninja, they can all talk to and understand each other without explanation. Double I-call-BS-points for someone from another world or time!  Anyone who has ever toured Europe can tell you why this is complete bull.  Take a closer look, especially if you’re modeling anything after medieval Europe; only the Church had a universal language: Latin.
-:END:
-
-**** ⚗ Education
-
-:README:
-How are children taught?  Skilled workers, like architects or brewers?  Is there public education?  
-Higher education?
-:END:
-
-**** 🚉︎Transportation
-
-:README:
-How do people move things?  Armies?  Crowds?  Goods?  Animals?
-:END:
-
-**** ⚔ Military
-
-:README:
-What is their military like? What real world military is/can it be based upon? What’s it’s structure?
-:END:
-
-**** 🏙 Major territories and cities
-
-***** Territory:
-
-****** City <name of major city>:
-
-Description...
-
-**** 📖 History
-
-:README:
-Everyone comes from somewhere.  People just don’t up and appear on islands and such.  Even Native Americans walked across a land bridge way back in the day. Europeans came from Romans and Greeks and Celts and Gauls and more.  
-
-Few people bother to look at this aspect of world-building, and they really should.  Even if a civilization has been around for two thousand years and are elven dragon riders, they came from somewhere.  Even if their mythology says they crawled out of the earth: they came from somewhere.  Examine it!
-:END:
-
-
-
-** DONE 🌐 New World
-:LOGBOOK:
-- State "DONE"       from "ACTIVE"     [2020-05-20 Wed 22:46]
-:END:
-*** DONE 🏞 Location
-CLOSED: [2020-05-16 Sat 18:26]
-:LOGBOOK:
-- State "DONE"       from "ACTIVE"     [2020-05-16 Sat 18:26]
-:END:
-
-**** Summary
-
-:README:
-Write your Location Summary here. Use what ever sub headings, and or formatting you need to accomplish this but don't make it too long...  The next sections are for drilling down...
-:END:
-
-**** Setting Detail
-
-***** Overall Feeling:
-
-***** Sights:
-
-***** Sounds:
-
-***** Smells:
-
-*** DONE ∅ Planet/Satellite
-CLOSED: [2020-05-20 Wed 22:46]
-:LOGBOOK:
-- State "DONE"       from "ACTIVE"     [2020-05-20 Wed 22:46]
-:END:
-
-:README:
-Rename Planet/Satellite heading above to the actual name of the planet or satellite of your specific case...
-
-The Ideas and Notes here were adapted from Droemar’s article “5 Tips: World-Building Template”.
-
-http://droemar.deviantart.com/journal/5-Tips-World-Building-Template-224630229
-
-Much more information can be obtained by visiting the above website!!!
-:END:
-
-**** System, Sector/quadrant
-
-:README:
-Rename System, Sector/quadrant heading above with the actual name of your system, with its specific sector and quadrant coordinates...
-:END:
-
-***** Controlling party/faction
-
-:README:
-Rename Controlling party/faction heading above with the actual name of your party/or faction...  Fill in key facts in the tables below...
-:END:
-
-
-|-------+------+-------------+----------------+------------|
-| Class | Type | Satellites  | Native species | Population |
-|-------+------+-------------+----------------+------------|
-|       |      | Moons, etc. |                |            |
-|       |      |             |                |            |
-|-------+------+-------------+----------------+------------|
-
-|--------------+--------------+-------------+------------------+----------------|
-| Capital city | Colours      | Symbol      | Government       | Affiliation(s) |
-|--------------+--------------+-------------+------------------+----------------|
-|              | Example:     | Example:    | Example:         |                |
-|              | red, white   | stars,      | Feudal system,   |                |
-|              | & blue, etc. | and stripes | caste system,    |                |
-|              |              |             | oligarchy,       |                |
-|              |              |             | parliament,      |                |
-|              |              |             | democracy,       |                |
-|              |              |             | plutocracy, etc. |                |
-|--------------+--------------+-------------+------------------+----------------|
-
-**** Major cities
-
-***** City (continent/region)
-
-:README:
-Change Heading City (continent/region) above to the name of your specific city, continent, or region...
-
-Then add a detailed description below...  
-
-Do this to get a feel for the areas the characters will be visiting.
-:END:
-
-****** Description:
-
-# Add Description Here:
-
-**** Population
-
-***** Races:
-
-:README:
-List all the races that inhabit the area, whether or not they’re native.
-:END:
-
-***** Predominant religion(s):
-
-:README:
-Monotheism?  Pantheism?  Atheism? Name and describe them as needed.
-:END:
-
-***** Common physical characteristics:
-
-:README:
-List the common physical characteristics of long-term inhabitants and native peoples: skin colour, hair colour, build, dress
-:END:
-
-**** Culture
-
-***** Mannerisms:
-
-:README:
-Use this space to illustrate the likely way someone behaves if they’re from this place. Because believe me, a fur-wrapped barbarian behaves in a very different way than a Greek statesman.
-:END:
-
-***** Cuisine:
-
-:README:
-Write about what most people on this planet eat every day?  On festival days?  As delicacies? Taboo?
-:END:
-
-***** Leisure:
-
-:README:
-What do people here do in their spare time?  For fun?
-:END:
-
-***** Greetings:
-
-:README:
-What is considered an acceptable greeting?  In formal setting?  Among friends? Family?
-:END:
-
-***** Customs:
-
-:README:
-The habits of a people that make them unique.  Google it if you’re confused.
-:END:
-
-***** Quotes:
-
-:README:
-Write about how someone from this planet would talk like, or talk about.
-:END:
-
-***** Superstitions:
-
-:README:
-Knowing the power irrational explanations have over a populace can sometimes be good story material.
-:END:
-
-***** Magic:
-
-:README:
-How it is treated by the country.  Whether hated and feared, harnessed for industry, or nonexistent within it’s borders, if magic has a presence in your story you ought to look at how it affects the larger picture than just your heroes and their journey.
-:END:
-
-***** Beliefs:
-
-:README:
-Do I really have to explain this one?  This alone can be your story.
-:END:
-
-***** Rituals:
-
-:README:
-Birth? Coming-of-age?  Marriage?  Death?  Justice?
-:END:
-
-***** Festivals:
-
-:README:
-What do people celebrate?  What are considered holidays?  Why?
-:END:
-
-**** Transport
-
-:README:
-How do people move things?  Armies?  Crowds?  Goods?  Animals?
-:END:
-
-**** Weather patterns
-
-:README:
-Tropical?  Stormy?  Cold?  Earthquakes?  Climate in general?
-:END:
-
-**** Resources
-
-:README:
-What does the planet export?  Import?  Make?  Is famous for?
-:END:
-
-**** History
-
-:README:
-Everyone comes from somewhere.  People just don’t up and appear on islands and such.  I mean, even Native Americans walked across a land bridge way back in the day. Europeans came from Romans and Greeks and Celts and Gauls and more.  Very few people bother to look at this aspect of world-building, and they really should.  Even if a civilization has been around for two thousand years and are elven dragon riders, they came from somewhere.  Even if their mythology says they crawled out of the earth: they came from somewhere.  Examine it here in this space!
-:END:
-
-
-** NEXT 🎙 New Drama Script
-
-:README:
-I am still working out how to set up my drama script template...  I am using fountain mode to create audio dramas with sound and music cues etc.  This is semi automated using Afterwriting python script.  I edit all the files in Emacs but it is easier to run the build script on the command line.  The build script creates a new PDF file.
-
-I have plans to create all that automation within Org-Mode and that is what this template should be about... The fountain files could also be created programmatically here from their project folder... There would be some way to click on a link to the script, *(a .fountain file) and then it would automatically open up in another frame of the proper dimensions for editing a screenplay in Modular Emacs... :END:
-
-** DONE 🔖 New Chapter ?:
-*** 📄 Episode - <replace w/ chapter name>
-:README:
-Episodes or Scenes are the DNA that make up the chapters in a novel...  
-
-Chapters can contain several scenes or episodes... There can be many twisty paths all alike (or all different)... %~)
-:END:
-
-# Begin Chapter:
-
-<insert chapter / episode text here>
-
-Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo. Fusce tincidunt, lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante. 
-
-At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus. 
-
-Morbi dictum. Vestibulum adipiscing pulvinar quam. In aliquam rhoncus sem. In mi erat, sodaleseget, pretium interdum, malesuada ac, augue. Aliquam sollicitudin, massa ut vestibulum posuere, massa arcu elementumpurus, eget vehicula lorem metus vel libero. Sed in dui id lectus commodo elementum. Etiam rhoncus tortor. Proin alorem. Ut nec velit. Quisque varius. Proin nonummy justo dictum sapien tincidunt iaculis. Duis lobortis pellentesque risus.Aenean ut tortor imperdiet dolor scelerisque bibendum. Fusce metus nibh, adipiscing id, ullamcorper at, consequat a,nulla. 
-
-Quid Novi? Lorem Ipsum dolor sit amet,consectetur adipisicing elit, sed doeiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim adminim veniam, quis nostrudexercitation ullamco laboris nisi utaliquip ex ea commodo consequat.Duis aute irure dolor inreprehenderit in coluptate velit essecillum dolore eu fugiat nulla 
-
-pariatur.Excepteur sint occaecat cupidatatnon proident, sunt in culpa quiofficia deserunt mollit anim id estlaborum. Phasellus orci. Etiam tempor elit auctor magna. Nullam nibh velit, vestibulum ut, eleifend non, pulvinar eget, enim. Classaptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer velit mauris, convallis acongue sed, placerat id, odio. Etiam venenatis tortor sed lectus. Nulla non orci. In egestas porttitor quam. Duis nec diameget nibh mattis tempus. Curabitus accumsan pede id odio. Nunc vitae libero. Aenean condimentum diam et turpis.Vestibulum non risus. Ut consectetuer gravida elit. Aenean est nunc, varius sed, alquam eu, feugiat sit amet, metus. Sedvenenatis odio id eros. Phasellus placerat purus vel mi. In hac habitasse platea dictumst. Donec aliquam porta odio. Ut facilisis. Donec ornareipsum ut massa. In tellus tellus, imperdiet ac, accumsan at, aliquam vitae, velit.
-
-# End of Chapter:
-
-
-*** 🗒 Background Notes:
-
-**** 🗒 Note 1: <2020-05-10 Sun>
-
-+ Mark each note's timestamp to its initial creation time. This will enable emerging notes for chapters to be searched chronologically, and to give you an idea of how things evolve over time...
-
-+ Add anything you need here under this heading formatted any way needed to present the data... Sub levels are fine, tables are fine... etc.  This is your chapter's Notebook, Scrapbook, whatever any extra info/metadata you feel is important to record...
-
-  + Use bulleted lists/sublist etc. if needed...
-
-1. Or Numbered Lists...
-
-|----+--------|
-| Or | Tables |
-|----+--------|
-|  1 |    2.3 |
-|----+--------|
-
-Do any or all the above to help get the concepts and images of your book clear in mind...
-
-**** 🗒 Note 2: <2020-05-10 Sun>
-
-Each new note needs to get its own heading and initial timestamp...
-
-****** Quid Novi?
-
-Quid Novi? Lorem Ipsum dolor sit amet,consectetur adipisicing elit, sed doeiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim adminim veniam, quis nostrudexercitation ullamco laboris nisi utaliquip ex ea commodo consequat.Duis aute irure dolor inreprehenderit in coluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatatnon proident, sunt in culpa quiofficia deserunt mollit anim id estlaborum.
-
-**** 🗒 Phasellus orci: <2020-05-10 Sun>
-
-Etiam tempor elit auctor magna. Nullam nibh velit, vestibulum ut, eleifend non, pulvinar eget, enim. Classaptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer velit mauris, convallis acongue sed, placerat id, odio. Etiam venenatis tortor sed lectus. Nulla non orci. In egestas porttitor quam. Duis nec diameget nibh mattis tempus. Curabitus accumsan pede id odio. Nunc vitae libero. Aenean condimentum diam et turpis.Vestibulum non risus. Ut consectetuer gravida elit. Aenean est nunc, varius sed, alquam eu, feugiat sit amet, metus. Sedvenenatis odio id eros.
-
-|----------+-----------+-----------+-----------+-------------------|
-| Inceptos | Venenatis | Convallis | Curabitus | Nunc vitae libero |
-|----------+-----------+-----------+-----------+-------------------|
-| test 1   | test 2    | test 3    | test 4    | test 5            |
-|----------+-----------+-----------+-----------+-------------------|
-
-Yadda, yadda, yadda. etc... 
-
-* 💡 Ideas Scratchpad Refile:
-** NEXT ☞ Start Here!
-
-:README:
-It's a probably a real good idea to have one of these *Ideas / Scratchpad / Refile sections in all of your projects! That way no matter where you are, if inspiration comes along, you have a quick place to document the event!  You can refile it later.. Knowing that every project you work on has this sort of thing that you would check from time to time to see what to do... (even if it is intended for elsewhere)...  Parallel universe?  Sure.. we got that covered... %^)
-
-- Use this section to quickly capture inspired at-the-moment ideas While they are still fresh in mind...
-
-  + Come directly here... 
-
-  + Advance your cursor a few newlines down (just below this README drawer) blinking all alone on a fresh clean line with some space below it... (above any previously time stamped entries)...  You are at the top and the time is the present...  There won't be any future entries ahead of you... (maybe next decade? time travel?)
-
-  + Enter a new timestamp with "C-c .", Hit enter to auto accept today's date and time AND then start typing away before you forget your fantastic idea!!!
-
-  + You can organize everything later...  Don't scare away the muses! Get your story down now!  I actually used this space (raw) to create my first inspired entry below...  Then I created this ☞ *Start Here* sub-section to accommodate such needs in the future... This will all be ready and waiting the next time I or YOU need to write something inspired, Immediately! No distractions!
-
-  + When you are done writing Put a title right after the time stamp and make it into a heading... Then you may go out to play elsewhere little grasshopper... But come back later and organize things... OK? Don't create a swamp! And don't forget to take your bath tonight... ;-)
-:END:
-
-*** DONE <2020-06-07 Sun> Visisonar - Object from Asimov's Foundation Series
-CLOSED: [2020-06-08 Mon 15:02]
-:LOGBOOK:
-- State "DONE"       from "TODO"       [2020-06-08 Mon 15:02]
-:END:
-
-:README:
-File this in a research folder of a Sci-Fi related project...
-:END:
-
-From Isaac Asimov's science fiction series 'Foundation', specifically the section of 'Foundation and Empire' entitled 'The Mule', the visisonar is considered a musical instrument.
-
-Unlike most instruments, this one does not achieve its effect by using sonic effects but, instead, directly stimulates the listeners' mental well-being. The number of people and level of effect depends on the skill level of the player. As this was a device from the First Empire, there were not that many people around with any skill at all. However, the Mule's clown, Magnifico, had some skill with the instrument and was asked to play for select parties on the Foundation and for large groups of workers on Haven. This may not have been a good idea...
-
-*** SOMEDAY <2020-05-14 Thu> 🔖 Jessica Was Not Afraid of Spiders
-
-# This template example is actually the beginning of a real story! It started out as a flash idea for a quick story that just came to me while I was working on this new Emacs Org-mode based Writing/Publishing environment... (that happens a lot to me)... I wrote it down quick first while it was still fresh in my mind!  btw, I added all these notes later...  Don't do this stuff while you are in an inspired mood!  Now I have the seed when the bug comes back later... I can continue...  I will leave it here as an example... Copyright restrictions apply of course... "for personal private use only" Not for public re-display etc.  Here is where your fresh new inpired ideas may begin below unrestricted:
-
-# Begin Story:
-
-Every morning down at Donnavan's Diner it's the same...  Jessica... an inquisitive 8 year old (overly intelligent even on adult standards) is dragged in by her surviving Uncle Bob, a fat faced, thick bearded man in his 40's and very overweight due to his obsession with sweet sticky cinnamon buns...  Sticky buns... the subject of which both Bob and Jessica are classically in the mood for at this very moment... just about 48 minutes before Bob has to drop Jessica off for school...
-
-Letting go of Bob's hand, Jessica skips straight away to her favourite spot in the sunny corner window booth, the seat closest to the window well where cute little cactus and succulents are planted in round clay pots lining the edge of the window... From this position, Jessica can see and feel the warm morning sun pouring out over the apple orchard beyond and streaming into the diner window giving suspended dust particles an iridescent glow...
-
-This is a repeating scene every day...  The owner, Donnavan tries his best to reserve the corner booth for Jessica and her uncle, every day at this same time...  It's a small town... 
-
-# yadda yadda yadda... (fix this part)
-
-Outside, it is fall, but summer lingers and holds fast... The apples are bright red... Jessica muses over all the pretty cactus pot plants lined up along the windows edge next to her.  The morning sun pours in between long dark shadows and bright iridescently illuminated leaves...  
-
-There...  Right there...  Smugly prancing about inside the last flower pot in the corner of the window well...
-
-There... Smugly basking in rays of sun filtered by a mini succulent serving as its shade tree... 
-
-There... Looking right back up at Jessica with eight pearly black bolling ball eyes curiously studying her almost as intently as she was studying it'self (or Herself in the Charlotte sense)... There... was a Black Stripped Jumping Spider... Quite large for its species... Much larger than usual... 
-
-Jessica was not afraid...
-
-"Why Hello Ms. Spider!", exclaimed Jessica with inquisitive wonder in her eyes, intently engaging her new found friend!  "How are you this morning?  You look like you are having fun in that sunny spot there! Is that your home? I can't even imagine what it's like to have eight eyes!  I think it would make me quite dizzy if I had to sort out eight different points of view of the world all at the same time!  How do you do that?  It drives me crazy to see my big brother playing video games... Not on just one monitor, but 5 very large screens all panned out in front of him in the gaming room that uncle bob built for us... Uncle Bob calls it the Holodeck (Uncle Bob likes that old show Star Trek a lot!"
-
-On and on she goes...  Yadda Yadda Yadda... Jessica was not afraid of her spider friend one bit in the slightest! On the contrary, Jessica treated her new found spider friend with the same respect she gave her uncle Bob!  To Jessica, all creatures are just as intelligent as humans, and in some cases may even be smarter than us humans...  "You just need to learn how to talk to them.  They are listening to you whether you realize it or not." She informs her uncle who was now sitting across the table from her.
-
-# More to add in here... Below is a new scene...
-
-At school, all the other kids made fun of Jessica... To Jessica's peers, she was pretty weird and definitely did not fit into their set... They would tease her cruelly saying: "You are half alien, and your alien dad killed your mom after you were born!"  In truth her father was a scientist who died in a horrible accident at an underground research lab when Jessica was not even two years old yet, (the job was top secret and full of mystery and rumours - hence the kids made up scary cruel alien stories to tease her)...  
-
-Jessica's mom died of cancer several years later to add more insult to injury...  The silver lining is now Jessica lives with her Uncle Bob (who is the sweetest guy on the planet, married to the meanest woman on the planet).  
-
-These short stops at the diner serve as Bob and Jessica's brief escape from the bad stuff in life before dropping her off for school and also after picking her up after school... Sometimes after school they go wandering off exploring in the woods beyond the huge apple orchard across the street from Donnavans Diner...
-
-# To be continued.... (I have no idea where this is going. %^) 
-There will be a typical scene at school...  And a later scene where Jessica and Bob discover something interesting in the deep woods behind the orchard...
-We need an antagonist... (her teacher? Step Mother? A mean kid?)
-
-There will be the mentor... (an imaginary or real "invisible" being? or Angel?
-
-Etc...  Jessica will encounter something big and challenging about her new found abilities... the rest is foggy... But it will eventually end happily ever after... This is not to be a tragedy! There should be a lot of comic relief after all the troubles Jessica meets trying to cope within the small minded hick town she and uncle Bob live in...
-
 * 🔍 Snowflake Method (guide):
-** NEW 📃 Acknowledgements:
+** DONE 📃 Acknowledgements:
+CLOSED: [2020-07-01 Wed 17:17]
+:LOGBOOK:
+- State "DONE"       from "NEW"        [2020-07-01 Wed 17:17]
+:END:
 *** Snowflake method:
 
-This guide is based on and inspired by the wonderful (and freely distributed) work of the following people.
+The snowflake method, DEVELOPED by writer Randy Ingermanson, can be particularly helpful to writers who prefer to plan extensively before setting out to write a novel or to help sort out a writing project that has gotten way to out of control with many sections completely unorganized beyond the general thread kept in the authors mind...
 
-- How to Write a Novel Using the Snowflake Method by Randy Ingermanson from: (http://www.advancedfictionwriting.com/art/snowflake.php)
+The mini Snowflake guide embedded within this pubOps Resources guide is based on and inspired by many sources.  Many but not all of them are listed below: (initially just the original author but later when I find the references I used, I will add those below as well)...
+
+I strongly encourage you to buy his book listed as the first link below... Cheap on Amazon!
+
+- Book: [[https://www.amazon.com/Snowflake-Method-Advanced-Fiction-Writing-ebook/dp/B00LWBZ696][How to Write a Novel Using the Snowflake Method - By Randy Ingermanson]] - an Invaluable resource!
+
+- [[https://www.advancedfictionwriting.com/articles/snowflake-method/][The Snowflake Method for Designing a Novel]]: Randy Ingermanson's original definitive on-line guide...
+
+- [[https://www.advancedfictionwriting.com/][Randy Ingermanson's Main website]]: More great articles, e-zine, and books...
+
+
+
 
 *** Templates:
 
-- Template by Roelani from WordInProgress.com - (http://wordinprogress.com/2010/04/technology/scrivener-tutorial-how-i-write)
+A few years ago when I get serious about getting a novel I have been writing since 2005 better organized and finished (still working on that), I started looking for a better way to do that.  I soon found Scrivener and started using that. My writing tools previous to that amounted to using Open Office, LibreOffice, and possibly a spreadsheet etc. with no other project management or outlining features...
 
-*** Template sheets
+Later on, sometime in 2013 I discovered a few Scrivener templates designed after the Snowflake Method which got me really interested so I cloned that template to make one that fit my writing style... Many if not all the examples within this Emacs Org-Mode guide originally came from the websites linked below, designed for useing in Scrivener... 
 
-- 5 Tips: World-Building Template - by Droemar from DeviantArt.com (http://droemar.deviantart.com/journal/5-Tips-World-Building-Template-224630229)
+The original Scrivener Templates (linked below) were modified to suit my needs now within Emacs Org-Mode, however much of the wording may still be the unchanged from the original, except for places where I have elaborated or changed it to better fit with purposes using it in Emacs Org-Mode...
 
-** TODO 📃 Template Notes:
+- [[http://wordinprogress.com/2018/09/technology/snowflake-method-template-update][Snowflake method template update for Scrivener 3.x]]: This is a much updated version of an older Scrivener Tempate I used back in 2014 by author Roelani, now, posted on her fancy Wordpress.com website...
+
+- [[https://belindacrawford.com/2012/12/27/5-more-scrivener-templates/][5 more Scrivener templates]] - by: Belinda Crawford - [[https://belindacrawford.com/about/][BelindaCrawford.com]] These are very sci-fi orientated which is mostly the style I write within...
+
+If you use Scrivener, I highly encourage you to try out the templates linked above.  They have been been in development for several years now!
+ ** TODO 📃 Template Notes:
 
 All of the Snowflake Method related Templates within this guide originally came from Belinda Crawford at:
 
@@ -1749,8 +1092,6 @@ For your convenience, there are notes, copied directly from the aforementioned w
 A number of the template sheets have document references. Follow these links for information about things like systems of government and planetary classifications.
 
 For anyone writing military sci-fi, there’s also a link in Project References.
-
-*** TODO To-Be-Implemented:
 
 - [ ] Template sheets
 
@@ -1774,7 +1115,52 @@ For anyone writing military sci-fi, there’s also a link in Project References.
   + [ ] Species
 ** ACTIVE 👤 Characters:
 
-*** ACTIVE Interview Questions
+*** DONE 👤 Character Tasks:
+
+**** 📃 Character Synopsis tasks:
+
+:README:
+- Write a Short Character Synopsis about each Character in your Story:
+
+   + Each Character Synopsis is to be written in first person, (i.e., The character is talking about "themselves", telling the story from their individual point of view, life experiences, emotions, words, as opposed to how others may view them).
+
+   + This is about the character on a rant, talking all about herself, bringing the subject always back to personal perspective and personal truths... Soap Box time!
+
+- Add Each Character Synopsis below as a separate outline sub heading (C-c RET) using the character's name as the title.
+
+- Later... Use the character synopsis created here to complete "Character Profiles" within your projects main "Research:/Characters:" section...
+:END:
+
+***** Huckleberry Finn (example character synopsis - replace name and content)
+
+Hi! My name is Huckleberry Finn... you can call me "Huck" for short if you like...  Don't pay no attention to anything that famous man behind the curtain may have said about me... That man Samuel Langhorne Clemens, who calls himself Mark Twain... He may know some things about me but he ain't never walked in my shoes!  That's for sure!  Rich author riverboat caption and all... Let me tell you a few things he don't know about me!
+
+For instance... Yadda yadda yadda...  Folks may call me a vagabond, but they don't know the truth of my story... If they knew about the time I had to... blah, blah, blah, ... They would change their minds and see me in a completely different light...  etc...
+
+*(On and On... Huck goes on a personal rant all about himself!)*
+
+***** Your Next Character Name Here: (add more character headings below until all are done)
+
+Add your character's personal dialog in this space... Rename title above to your character's name...
+
+
+
+**** 👥 Major Characters Summary:
+
+:README:
+Write a one page synopsis (or 600 words) about the major characters in your story...
+:END:
+
+**** 👥 Minor Characters Summary:
+
+:README:
+Write a half page synopsis (or 300 words) about the minor characters in your story...
+:END:
+
+
+
+
+*** ACTIVE 👤 Interview Questions
 
 :CREDITS:
 I initially found my interview methods from these articles:
@@ -2465,7 +1851,7 @@ Yes, check your bookstore for "His Brother's Baby," coming from Silhouette Speci
 
 #+END_SRC
 
-*** ACTIVE Enneagram Personality Types
+*** ACTIVE 👤 Enneagram Personality Types
 
 :CREDITS:
 Most of the examples and diagrams below were taken from various selected pages on: http://9types.com/ and a few other websites (mentioned within the content). Many of these sources in turn credit a host of great books on the subject... Full credit goes to the original author(s) for the currated content within this guide...  
@@ -3184,7 +2570,7 @@ Each one of us could sit down and write nine books where the heroes and heroines
 
 I wish that kind of fun for each of us, and I'll look forward to reading how all our characters overcome their fatal flaws!
 
-*** Enneagram Type Tests:
+*** 👤 Enneagram Type Tests:
 **** Introduction & Example Tests:
 
 If you are super serious about doing this, you must purchase the official tests
@@ -3240,7 +2626,6 @@ As you can see… my current journey into fulfilling my life long dream of produ
 Definition:
 
 - A Spacefaring kingdom, empire, country, etc (like Asimov's Galactic Empire, or the Romulan Empire etc.) This type of nation may extend out through a galactic cluster or quadrant, etc.
-
 :END:
 
 ***** 📃 Summary:
@@ -3604,31 +2989,36 @@ Few people bother to look at this aspect of world-building, and they really shou
 
 
 
-** DONE 🌐 Locations - Worlds
+** ACTIVE 🌐 Locations - Worlds
 :LOGBOOK:
+- State "ACTIVE"     from "DONE"       [2020-07-01 Wed 19:53]
 - State "DONE"       from "ACTIVE"     [2020-05-20 Wed 22:46]
 :END:
-**** DONE 🏞 Locations
-CLOSED: [2020-05-16 Sat 18:26]
+**** ACTIVE 🏞 Locations
 :LOGBOOK:
+- State "ACTIVE"     from "DONE"       [2020-07-01 Wed 19:51]
 - State "DONE"       from "ACTIVE"     [2020-05-16 Sat 18:26]
 :END:
 
-***** Summary
+***** DONE Summary
+CLOSED: [2020-07-01 Wed 19:52]
+:LOGBOOK:
+- State "DONE"       from              [2020-07-01 Wed 19:52]
+:END:
 
 :README:
 Write your Location Summary here. Use what ever sub headings, and or formatting you need to accomplish this but don't make it too long...  The next sections are for drilling down...
 :END:
 
-***** Setting Detail
+***** ACTIVE Setting Detail
 
-****** Overall Feeling:
+****** NEW Overall Feeling:
 
-****** Sights:
+****** NEW Sights:
 
-****** Sounds:
+****** NEW Sounds:
 
-****** Smells:
+****** NEW Smells:
 
 **** DONE ∅ Planets or Satellites
 CLOSED: [2020-05-20 Wed 22:46]
@@ -3646,7 +3036,11 @@ http://droemar.deviantart.com/journal/5-Tips-World-Building-Template-224630229
 Much more information can be obtained by visiting the above website!!!
 :END:
 
-***** System, Sector/quadrant
+***** DONE System, Sector/quadrant
+CLOSED: [2020-07-01 Wed 19:09]
+:LOGBOOK:
+- State "DONE"       from              [2020-07-01 Wed 19:09]
+:END:
 
 :README:
 Rename System, Sector/quadrant heading above with the actual name of your system, with its specific sector and quadrant coordinates...
@@ -3678,7 +3072,11 @@ Rename Controlling party/faction heading above with the actual name of your part
 |              |              |             | plutocracy, etc. |                |
 |--------------+--------------+-------------+------------------+----------------|
 
-***** Major cities
+***** DONE Major cities
+CLOSED: [2020-07-01 Wed 19:13]
+:LOGBOOK:
+- State "DONE"       from              [2020-07-01 Wed 19:13]
+:END:
 
 ****** City (continent/region)
 
@@ -3694,7 +3092,11 @@ Do this to get a feel for the areas the characters will be visiting.
 
 # Add Description Here:
 
-***** Population
+***** DONE Population
+CLOSED: [2020-07-01 Wed 19:26]
+:LOGBOOK:
+- State "DONE"       from              [2020-07-01 Wed 19:26]
+:END:
 
 ****** Races:
 
@@ -3714,7 +3116,11 @@ Monotheism?  Pantheism?  Atheism? Name and describe them as needed.
 List the common physical characteristics of long-term inhabitants and native peoples: skin colour, hair colour, build, dress
 :END:
 
-***** Culture
+***** DONE Culture
+CLOSED: [2020-07-01 Wed 19:29]
+:LOGBOOK:
+- State "DONE"       from              [2020-07-01 Wed 19:29]
+:END:
 
 ****** Mannerisms:
 
@@ -3782,25 +3188,41 @@ Birth? Coming-of-age?  Marriage?  Death?  Justice?
 What do people celebrate?  What are considered holidays?  Why?
 :END:
 
-***** Transport
+***** DONE Transport
+CLOSED: [2020-07-01 Wed 19:29]
+:LOGBOOK:
+- State "DONE"       from              [2020-07-01 Wed 19:29]
+:END:
 
 :README:
 How do people move things?  Armies?  Crowds?  Goods?  Animals?
 :END:
 
-***** Weather patterns
+***** DONE Weather patterns
+CLOSED: [2020-07-01 Wed 19:30]
+:LOGBOOK:
+- State "DONE"       from              [2020-07-01 Wed 19:30]
+:END:
 
 :README:
 Tropical?  Stormy?  Cold?  Earthquakes?  Climate in general?
 :END:
 
-***** Resources
+***** DONE Resources
+CLOSED: [2020-07-01 Wed 19:31]
+:LOGBOOK:
+- State "DONE"       from              [2020-07-01 Wed 19:31]
+:END:
 
 :README:
 What does the planet export?  Import?  Make?  Is famous for?
 :END:
 
-***** History
+***** DONE History
+CLOSED: [2020-07-01 Wed 19:48]
+:LOGBOOK:
+- State "DONE"       from              [2020-07-01 Wed 19:48]
+:END:
 
 :README:
 Everyone comes from somewhere.  People just don’t up and appear on islands and such.  I mean, even Native Americans walked across a land bridge way back in the day. Europeans came from Romans and Greeks and Celts and Gauls and more.  Very few people bother to look at this aspect of world-building, and they really should.  Even if a civilization has been around for two thousand years and are elven dragon riders, they came from somewhere.  Even if their mythology says they crawled out of the earth: they came from somewhere.  Examine it here in this space!
@@ -3878,295 +3300,6 @@ Class Y planets are referred to as "Demon" worlds, where surface conditions do n
 ***** Class X and Z 
 
 Reserved for other designations of "demon" planets.
-* 📒 Research (example):
-** NEW 💡 New Episode Ideas:
-
-** NEXT 👤 Characters:
-*** NEXT 👤  Hugh Owen Finnegan
-**** NEW 💬 Profile:
-***** Name, Rank, S/N:
-
-| Name:  | put name here  |
-| AKA:   | put alias here |
-| Title: | put title here |
-| Rank:  | put rank here  |
-
-***** Summary (Paragraph):  
-
-Put a single paragraph summary of the character's storyline, motivation and description. Loosely based on what you will write from the snowflake steps.
-
-***** Summary (Sentence):  
-
-Put a single sentence summary of the character's storyline here.
-
-***** Motivation
-
-The character's motivation /(what does he/she want abstractly?)/
-
-***** Goal
-
-The character's goal (what does he/she want concretely?)
-
-***** conflict
-
-The character's conflict (what prevents him/her from reaching this goal?)
-
-***** Epiphany
-
-The character's epiphany (what will he/she learn, how will he/she change?
-
-***** Basics:
-
-| Age | Gender | Species | Height | Hair   | Complexion | Nationality |
-|-----+--------+---------+--------+--------+------------+-------------|
-|     |        |         |        | color, |            |             |
-|     |        |         |        | etc... |            |             |
-
-
-| DOB | Birthplace | Race | Weight | Eyes | Handedness | Ethnicity |
-|-----+------------+------+--------+------+------------+-----------|
-|     |            |      |        |      | right      |           |
-|     |            |      |        |      | left etc.  |           |
-
-
-***** Family
-
-| Marital status | Spouse(s)/Partner(s) | Children | Bio Father | Bio Mother | Siblings |
-|----------------+----------------------+----------+------------+------------+----------|
-|                |                      |          |            |            |          |
-
-***** Social
-
-| Citizenship | Social status          | Job/career | Position/role | Rank |
-|-------------+------------------------+------------+---------------+------|
-|             | Fugitive, criminal,    |            |               |      |
-|             | up-standing            |            |               |      |
-|             | member of public, etc. |            |               |      |
-
-***** Skills Etc.
-
-| Skills | Hobbies | Talents / Gifts | Languages |
-|--------+---------+-----------------+-----------|
-|        |         |                 |           |
-
-
-***** Physical Attributes
-
-Physical description.... 
-
-
-***** Personality
-
-The Character's Personality... yadda yadda yadda
-
-****** Likes / Dislikes
-
-Yadda yadda yadda...
-
- 
-***** Personal History
-
-Character’s personal history. Yadda yadda yadda...
-
-
-**** NEW 📃 Synopsis:
-
-***** Snowflake method Step 5 - Character Synopsis
-
-Write a character synopsis that tells the story from the point of view of the character.
-
-****** Major characters
-
-one page or 600 words
-
-****** Minor characters
-
-half a page or 300 words
-
-
-**** ACTIVE 🗒 Worksheet:
-
-Hugh Owen Finnegan, a "southie" boy turned 5 star chef who specializes in South Louisiana Cajun cuisine appears curious, mild mannered, and likable upon first glance but you soon begin to sense this guy hides a dark mysterious secret.
-
-Hugh Owen Finnegan is the main character and superhero in The Adventures of Hugh Finnegan - (Inter-dimensional Traveler), although Huge starts out more or less absent of any “heroic” much less “superhero” qualities! 
-
-Hugh, is a goodhearted Irish lad and recovering Catholic who managed to escape his "Southie roots" to become a 5 star gourmet chef in Boston Massachusetts.  His curiosity to adventure down the rabbit hole of multidimensional travel ironically conflicts with his religious beliefs causing a degree of shame for his temptations to explore the unknown.  Hugh feels like Adam all over again giving in to the temptation to eat the apple.  The possible consequences of demise are not clear to Hugh, which makes it all the more scary for him… But the unknown possibilities of wild adventure and his desire to explore and find truth lure him on just the same… 
-
-Hugh's conscience, warped by the distorted moral world he has grown up in, often bothers him most when he is doing his heroic best!  Ironically, he is all to willing to do good, while believing it to be wrong.
-
-It will take quite a while and a huge personal transformation over many future episodes before Hugh can be considered a true hero and later “superhero”, although from the very start of the series he is quite likable, charming, and curious with a dark, mysterious, mystical side that keeps surprising us along the way!
-
-On the surface Hugh is a chip off the ole block Boston Southie, a good talker, a great cook, a die-hard entrepreneur, and in spite of his poor South Boston childhood, Hugh was able to carve out a nice career for himself as head chef of two major 5 star Boston restaurants. 
-
-Hugh is extremely popular but there is something different about him that keeps one constantly guessing and/or re-evaluating.  Something below the surface that even he himself is unaware of.  This mysterious quality only increases his attractive nature but he himself feels inside that he is doing wrong and may be punished by the hand of god someday for asking too many questions and opening pandora's box… These kinds of things plagues him with guilt all the time…
-
-All of these things combined manifest with a fool/wizard ambiguity.  Hugh appears to have the knowledge of the universe just within his grasp without any conscious knowledge of it.  Like a guardian angel always by your side, but instead on the inside, well hidden from your awareness…
-
-As the course of the story develops, we encounter other parallel versions of Hugh Finnegan Characters from time to time…  Their middle names give away something about their particular traits that are unique from our hero.
-
-Our Hero’s middle name is Owen (Irish/Welsh for “noble born”) to distinguish him from other versions of himself as he travels from world to world.
-
-
-** NEW 👥 Groups - Factions:
-
-** NEW 🌐 Locations - Worlds:
-
-** NEW 🎪 Major Events:
-
-** NEW 🏞 Scenes:
-
-** NEW ❝ Quotations:
-
-** NEW 🖍 Styles:
-* 📖 Book (example):
-** NEW 📃 Synopsis:
-
-The Adventures of yadda... yadda... yadda...
-
-** NEW 📃 Front Matter:
-
-Front Matter... yadda... yadda... yadda...
-** DONE 🔖 Chapter 1:
-CLOSED: [2020-06-08 Mon 15:07]
-:LOGBOOK:
-- State "DONE"       from "NEXT"       [2020-06-08 Mon 15:07]
-:END:
-
-*** 📄 Episode - <Put New Episode Title Here>
-
-<Start Chapeter Text here...>
-
-End of Chapter 1
-
-
-*** 📔 Background Notes:
-
-*<Book Title (sub title)>*
-
-*Chapter One - Background Notes*
-
-<Add Background Notes below using time stamps, TODO bullet points, etc...>
-
-**** Notes:
-
-<2020-05-07 Thu> I just got the idea that blah, blah, blah is another chapter in the book where we introduce Yadda, Yadda, Yadda. Integrate this new idea before introducing this chapter... yadda, yadda, yadda...
-
-
-
-
-
-
-** DONE 🔖 Chapter 2:
-CLOSED: [2020-06-08 Mon 15:07]
-:LOGBOOK:
-- State "DONE"       from "NEXT"       [2020-06-08 Mon 15:07]
-:END:
-
-*** 📄 Episode - <Put New Episode Title Here>
-
-<Start Chapeter Text here...>
-
-End of Chapter 2
-
-
-*** 📔 Background Notes:
-
-*<Book Title (sub title)>*
-
-*Chapter Two - Background Notes*
-
-<Add Background Notes below using time stamps, TODO bullet points, etc...>
-
-**** Notes:
-
-<2020-05-07 Thu> I just got the idea that blah, blah, blah is another chapter in the book where we introduce Yadda, Yadda, Yadda. Integrate this new idea before introducing this chapter... yadda, yadda, yadda...
-
-** DONE 🔖 Chapter 3:
-CLOSED: [2020-06-08 Mon 15:06]
-:LOGBOOK:
-- State "DONE"       from "NEW"        [2020-06-08 Mon 15:06]
-:END:
-
-*** 📄 Episode - <Put New Episode Title Here>
-
-<Start Chapeter Text here...>
-
-End of Chapter 3
-
-
-*** 📔 Background Notes:
-
-*<Book Title (sub title)>*
-
-*Chapter Three - Background Notes*
-
-<Add Background Notes below using time stamps, TODO bullet points, etc...>
-
-**** Notes:
-
-<2020-05-07 Thu> I just got the idea that blah, blah, blah is another chapter in the book where we introduce Yadda, Yadda, Yadda. Integrate this new idea before introducing this chapter... yadda, yadda, yadda...
-** DONE 🔖 Chapter ?:
-CLOSED: [2020-06-08 Mon 15:06]
-:LOGBOOK:
-- State "DONE"       from "TODO"       [2020-06-08 Mon 15:06]
-:END:
-
-*** 📄 Episode - <Put New Episode Title Here>
-
-<Start Chapeter Text here...>
-
-End of Chapter ?
-
-*** 📔 Background Notes:
-
-*<Book Title (sub title)>*
-
-*Chapter ??? - Background Notes*
-
-<Add Background Notes below using time stamps, TODO bullet points, etc...>
-
-**** Notes:
-
-<2020-05-07 Thu> I just got the idea that blah, blah, blah is another chapter in the book where we introduce Yadda, Yadda, Yadda. Integrate this new idea before introducing this chapter... yadda, yadda, yadda...
-** DONE 📒 Back Story Plots:
-CLOSED: [2020-06-08 Mon 15:06]
-:LOGBOOK:
-- State "DONE"       from "NEXT"       [2020-06-08 Mon 15:06]
-:END:
-
-*** Plot Example One:
-
-Note: This is an example of a back story plot related to your book... Write it down in the rough here and then later you can develop it further if needed.
-
-*** Plot Example Two:
-
-Note: This is an example of a back story plot related to your book... Write it down in the rough here and then later you can develop it further if needed.
-
-
-*** Add more Plots like this:
-
-Note: This is an example of a back story plot related to your book... Write it down in the rough here and then later you can develop it further if needed.
-
-** DONE 🗡 Plot Summaries:
-CLOSED: [2020-06-08 Mon 15:06]
-:LOGBOOK:
-- State "DONE"       from "NEXT"       [2020-06-08 Mon 15:06]
-:END:
-
-Gather all the plot ideas that have been building over the years and put them in here... then you can decide how and when to present them within the unfolding story.
-
-*** Chapter # Plots
-
-In this chapter we are dealing with  yadda yadda yadda which must be resolved with yadda yadda yadda.
-
-*** Chapter # Plots
-
-In this chapter we are dealing with  yadda yadda yadda which must be resolved with yadda yadda yadda.
-
-*** Chapter # Plots
-
-In this chapter we are dealing with  yadda yadda yadda which must be resolved with yadda yadda yadda. 
-
 * 🎙 Audio Drama (guide):
 ** DONE How to Write Radio Drama Cues
 CLOSED: [2020-06-18 Thu 01:43]
@@ -5670,3 +4803,954 @@ how can a murderer vanish into thin air?
 
 #+END_SRC
 ** NEW Exporting & Publishing
+* ACTIVE ⎘ Templates:
+
+** DONE Introduction:
+CLOSED: [2020-07-02 Thu 00:37]
+:LOGBOOK:
+- State "DONE"       from              [2020-07-02 Thu 00:37]
+:END:
+
+This section provides skeleton templates for use within your project(s).  Any sub heading under this parent "*Templates:"* group can be utilized by copy-pasting the collapsed heading into any of your existing project sections (i.e., making a clone anywhere you need to create a new section based on the template's structure)... 
+
+Or... You could try mashing several cloned templates together to create a totally new project heading with a totally different structure... The intent of this is to save lots of time starting up a new custom writing project.  Lets see if it helps. :trollface:
+
+** DONE Instructions:
+CLOSED: [2020-07-02 Thu 00:37]
+:LOGBOOK:
+- State "DONE"       from              [2020-07-02 Thu 00:37]
+:END:
+
+- Choose one of the templates below and copy it (folded).  
+
+- Paste the copied template as a new clone within your project's book, planning, or research section...  
+
+- Change the name of your copied template to a specific title needed to fit in with your project's story-structure...  In the case of Logs or Tasks, you probably will keep those titles as they are universal... but you may wish to further qualify them by adding a prefixed category word.
+
+** DONE ✎ Log:
+CLOSED: [2020-06-29 Mon 23:14]
+:LOGBOOK:
+- State "DONE"       from "NEW"        [2020-06-29 Mon 23:14]
+:END:
+
+:README:
+- Use this space to add time stamped log note entries for any pourpose you may need...
+
+- To create a time stamped entry, use key command:
+
+   + "C-c ."
+
+   + Make your new entry an outline sub-heading of a Log section heading (as above, but wherever else you may need a collection of log entries).
+
+- Keep your Log Entries in Decending Chronological Order.
+   (i.e., put your newest entries on top)
+
+This serves as a replacement for my Scrivener planning Logs /(Currently implemented as markdown files outside of Scrivener)/... Each Org-based Writing project will have one or more of these logs right inside of it close to the things the logs are actually about...  No more fumbling and guessing which log was I useing for what? Now, not only can I find them, I can make them into tasks, TODOS, and prioritize them to boot! Consider this my new official general template for logs going forward... Onward we row mates... Over the log jam!
+:END:
+
+*** <2020-06-19 Fri> ✎ Example Log Entry:
+
+Yadda, yadda, yadda...
+
+
+** NEW 🗓 Editorial Calendar:
+
+Make an editorial Calendar for this project right here where it belongs!  You won't loose it! and you can access it quickly without having to search for it elsewhere. Org-Mode excels for this task!  Take advantage of its powerful scheduling, agenda, and filtering capabilities!
+
+** DONE 👤 New Character
+
+*** 💬 Profile:
+
+**** Name, Rank, S/N:
+
+|--------+----------------|
+| Name:  | put name here  |
+|--------+----------------|
+| AKA:   | put alias here |
+|--------+----------------|
+| Title: | put title here |
+|--------+----------------|
+| Rank:  | put rank here  |
+|--------+----------------|
+
+**** Summary (Paragraph):  
+
+:README:
+Put a single paragraph summary of the character's storyline, motivation and description. Loosely based on what you will write from the snowflake steps.
+:END:
+
+**** Summary (Sentence):  
+
+:README:
+Put a single sentence summary of the character's storyline here.
+:END:
+
+**** Motivation
+
+:README:
+The character's motivation /(what does he/she want abstractly?)/
+:END:
+
+**** Goal
+
+:README:
+The character's goal (what does he/she want concretely?)
+:END:
+
+**** Conflict
+
+:README:
+The character's conflict (what prevents him/her from reaching this goal?)
+:END:
+
+**** Epiphany
+
+:README:
+The character's epiphany (what will he/she learn, how will he/she change?
+:END:
+
+**** Basics:
+
+|-----+--------+---------+--------+--------+------------+-------------|
+| Age | Gender | Species | Height | Hair   | Complexion | Nationality |
+|-----+--------+---------+--------+--------+------------+-------------|
+|     |        |         |        | color, |            |             |
+|     |        |         |        | etc... |            |             |
+|-----+--------+---------+--------+--------+------------+-------------|
+
+|-----+------------+------+--------+------+------------+-----------|
+| DOB | Birthplace | Race | Weight | Eyes | Handedness | Ethnicity |
+|-----+------------+------+--------+------+------------+-----------|
+|     |            |      |        |      | right      |           |
+|     |            |      |        |      | left etc.  |           |
+|-----+------------+------+--------+------+------------+-----------|
+
+**** Family
+
+|----------------+----------------------+----------+------------+------------+----------|
+| Marital status | Spouse(s)/Partner(s) | Children | Bio Father | Bio Mother | Siblings |
+|----------------+----------------------+----------+------------+------------+----------|
+|                |                      |          |            |            |          |
+|                |                      |          |            |            |          |
+|----------------+----------------------+----------+------------+------------+----------|
+
+
+**** Social
+
+|-------------+------------------------+------------+---------------+------|
+| Citizenship | Social status          | Job/career | Position/role | Rank |
+|-------------+------------------------+------------+---------------+------|
+|             | Fugitive, criminal,    |            |               |      |
+|             | up-standing            |            |               |      |
+|             | member of public, etc. |            |               |      |
+|-------------+------------------------+------------+---------------+------|
+
+**** Skills Etc.
+
+|--------+---------+-----------------+-----------|
+| Skills | Hobbies | Talents / Gifts | Languages |
+|--------+---------+-----------------+-----------|
+|        |         |                 |           |
+|        |         |                 |           |
+|--------+---------+-----------------+-----------|
+
+**** Physical Attributes
+
+:README:
+The Character's Physical description.... 
+:END:
+
+**** Personality
+
+:README:
+The Character's Personality... yadda yadda yadda
+:END:
+
+***** Likes / Dislikes
+
+:README:
+The Character's Likes / dislikes, yadda yadda yadda...
+:END:
+
+**** Personal History
+
+:README:
+Character’s personal history. Yadda yadda yadda...
+:END:
+*** 📃 Character Synopsis:
+
+:README:
+- Add the Character Synopsis you wrote about this character in your project's main "Tasks:" section.
+
+   + Each Character Synopsis has been written in first person, (i.e., from the character's own life experiences, emotions, words). This is about the character on a rant, talking all about herself, bringing the subject always back to personal perspective and personal truths... Soap Box time!
+:END:
+*** 🗒 Worksheet:
+
+:README:
+This is your scratch pad worksheet for loosely drafting up new characters before organizing all the information into a Character Profile and Character Synopsis... Free form in here... Let the muses take complete control in this space...
+:END:
+
+
+** DONE 👥 New Group or Faction
+:LOGBOOK:
+- State "DONE"       from "ACTIVE"     [2020-05-16 Sat 16:04]
+:END:
+*** DONE ⚛ Interstellar Nation <The Galactic Empire>
+
+:README:
+Definition:
+
+- A Spacefaring kingdom, empire, country, etc (like Asimov's Galactic Empire, or the Romulan Empire etc.) This type of nation may extend out through a galactic cluster or quadrant, etc.
+
+:END:
+
+**** 📃 Summary:
+
+:README:
+This section is the executive summary (abstract) of a longer full story chapter within your book.  Stories like the Finnegan Series are fully invested on not one but many Interstellar Nations!  Your mileage may vary... %^)
+
+You need to incorporate all the results of your research here in a similar way that Isaac Asimov wrote chapters undergoing many iterations over time about the Galactic Empire in his Foundation Series... 
+
+This abstract, is a short historical and present summary only... It should include the major goals, motivations... who they’re at war with, etc. i.e., It should include the news headlines, and ledelines...  but not the full story... Results of your research below this summary should be as rich and detailed as you can make it... (but also indexed!)
+
+The Ideas and Notes here were adapted from Droemar’s article “5 Tips: World-Building Template”.
+
+http://droemar.deviantart.com/journal/5-Tips-World-Building-Template-224630229
+
+Much more information can be obtained by visiting the above website!!!  
+
+I learned about this Snowflake Idea several years ago when I was first learning how to use the structure to build my Scrivener Projects starting out on a Macbook Pro 2011 model... 
+
+# This Emacs Org Mode based Book Publishing project has been initially modelled upon my Scrivener Project but it will soon outgrow more and do much more than Scrivener could ever dream of!  I am sure of it! I have already discovered much. The Learning curve is levelling off finally!  Writing this now in my fancy Emacs buffer specifically designed for distraction free writing mode is a dream! All my edits are made very close to the typewriter home row!  No reaching for any mice or hard to reach keys while the stream of consciousness flows!  Much of that typing ease is thanks to the detailed and structured eLisp programming work of Xah Lee!  OMG! You did a ton of great things!  No Troll in my book! You are the Knight in Armour for the weak of tendons! Fantastic! Thanks Dude!
+:END:
+
+**** 🔤 Basics:
+
+:README:
+- Fill in the tables below... Pretty much self explanatory...  Do your research first though!
+:END:
+
+|------------+---------+--------+----------+-----------------------+----------------|
+| Home World | Colours | Symbol | Currency | Official Languages(s) | Galactic Scope |
+|------------+---------+--------+----------+-----------------------+----------------|
+|            |         |        |          |                       | number of      |
+|            |         |        |          |                       | systems, etc.  |
+|            |         |        |          |                       |                |
+|            |         |        |          |                       |                |
+|------------+---------+--------+----------+-----------------------+----------------|
+
+
+|------------------+---------------------+-------------------+-----------+----------------|
+| Type Government  | Current Gov'ng Body | Cur Head of State | Military  | Affiliation(s) |
+|------------------+---------------------+-------------------+-----------+----------------|
+| <fudal, castle,  | <party name>        |                   | What's it |                |
+| democracy, etc.> |                     |                   | called?   |                |
+|                  |                     |                   |           |                |
+|                  |                     |                   |           |                |
+|------------------+---------------------+-------------------+-----------+----------------|
+
+**** 𐇑 Social Structure:
+
+:README:
+Who holds power, and how does it affect the way the society works? Is there an aristocracy? If so, how are its ranks structured?
+:END:
+
+**** 🏛 Government:
+
+:README:
+Describe the Structure and general procedures here...
+:END:
+
+**** ⚖ Taxation:
+
+:README:
+Write a brief overview of how the people are taxed, and where that money goes.
+:END:
+
+**** 💵 Currency:
+
+:README:
+What is the currency? What are its sub-denominations?
+:END:
+
+**** 👥 Population:
+
+***** Races
+
+:README:
+Describe the races that inhabit the area, and whether or not they’re native, etc...
+:END:
+
+***** Common physical characteristics
+
+:README:
+Describe the common physical characteristics of long-term inhabitants and native peoples: skin colour, hair colour, build, dress, etc...
+:END:
+
+***** Predominant religion(s)
+
+:README:
+Describe the perdominant religion here... Is it Monotheism?  Pantheism?  Atheism? Name and describe them as needed.)
+:END:
+
+**** ⛩ Culture:
+
+***** Mannerisms
+
+:README:
+Use this space to illustrate the typical way individuals or groups from this place behave... (e.g, A fur-wrapped barbarian behaves in a very different way than a Greek statesman.)
+:END:
+
+***** Greetings
+
+:README:
+Provide some examples of typical greetings here... (e.g, What is considered an acceptable greeting? In formal setting? Among friends? Family?, etc.)
+:END:
+
+***** Customs
+
+:README:
+List the habits of a people that make them unique in this space...
+:END:
+
+***** Superstitions
+
+:README:
+(Knowing the power irrational explanations have over a populace can sometimes be good story material.)
+:END:
+
+***** Beliefs
+
+:README:
+Do I really have to explain this one?  This alone could end up being your entire story...
+:END:
+
+***** Rituals
+
+:README:
+(e.g., Birth? Coming-of-age? Marriage? Death? Justice? etc.)
+:END:
+
+***** Festivals
+
+:README:
+(e.g., What do people celebrate? What are considered holidays? Why?, etc.)
+:END:
+
+**** 🕉 Language
+
+:README:
+This is kind of a big one! Be very careful to point how and why your characters can understand each other, especially if they are from different countries. Language in the real world is a hell of a barrier, but even if you have a Chinese dragon, an Arabian unicorn, a French knight, a Mayan princess, and a Japanese ninja, they can all talk to and understand each other without explanation. Double I-call-BS-points for someone from another world or time!  Anyone who has ever toured Europe can tell you why this is complete bull.  Take a closer look, especially if you’re modeling anything after medieval Europe; only the Church had a universal language: Latin.
+:END:
+
+**** ⚗ Education
+
+:README:
+(How are children taught?  Skilled workers, like architects or brewers?  Is there public education?  Higher education?)
+:END:
+
+**** 🚉 Transportation - Shipping
+
+:README:
+Here is where you talk about, how "people" and "things" are moved/transported from one "place" to another. (e.g., The logistics... Armies? Crowds? Goods? Animals? etc.)
+:END:
+
+**** ⚔ Military
+
+:README:
+Write about the military is all about here... What real world military is/can it be based upon? What’s it’s structure?
+:END:
+
+**** 🏙 Major sectors and systems
+
+|--------+----------+--------+-----------------------------------------|
+| Sector | Quadrant | System | Description:                            |
+|--------+----------+--------+-----------------------------------------|
+|        |          |        | One or two paragraphs only here.        |
+|        |          |        | Reference link to longer doc is better. |
+|        |          |        |                                         |
+|        |          |        |                                         |
+|        |          |        |                                         |
+|--------+----------+--------+-----------------------------------------|
+
+**** 📖 History
+
+:README:
+Everyone comes from somewhere.  People just don’t up and appear on islands and such.  The Native Americans walked across a land bridge way back in the day... Europeans came from Romans and Greeks and Celts and Gauls and more... Very few people bother to look at this aspect of world-building, and they really should.  Even if a civilization has been around for two thousand years and are elven dragon riders, they came from somewhere.  Even if their mythology says they crawled out of the earth: they came from somewhere.  Examine it!
+:END:
+
+*** DONE 🛡 Nation <The Roman Empire, etc.>
+CLOSED: [2020-05-16 Sat 15:55]
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2020-05-16 Sat 15:55]
+:END:
+:README:
+Nation Definition:
+
+   - A Non-spacefaring kingdom, empire, country, etc.
+
+   - A Continent, Country, Nomadic Diaspora or Clan... (e.g., Asia, Europe, The Roman Empire, The Gypsies, The Isle of Mann, or the Ba Aka Pygmys, etc.) not to be limited to groups living on Planet Earth only of course...
+
+# NOTE: Change the heading title "Nation" above to the actual name of your specific group...
+
+# This template was originally adapted from Droemar’s article “5 Tips: World-Building Template”:
+
+        http://droemar.deviantart.com/journal/5-Tips-World-Building-Template-224630229
+
+# Originally created as an Evernote template, later moved to and overhauled within Scrivener, and now living her third incarnation within a future proof plain text .org file that is parsed, hosted, and rendered by my fancy Emacs pubOps environment... %^) 
+:END:
+**** 📃 Summary:
+
+:README:
+Goals, motivations, who they’re at war with, etc.
+:END:
+
+**** 🔤 Basics:
+
+|----------------+---------+--------+----------+----------------------|
+| Home Country   | Colours | Symbol | Currency | Official language(s) |
+|----------------+---------+--------+----------+----------------------|
+| <country name> |         |        |          |                      |
+|                |         |        |          |                      |
+|----------------+---------+--------+----------+----------------------|
+
+|-------------------+------------------------+-----------------------|
+| Government type   | Current governing body | Current head of state |
+|-------------------+------------------------+-----------------------|
+| Feudal, caste,    | Party name.            |                       |
+| democracy, etc... |                        |                       |
+|                   |                        |                       |
+|-------------------+------------------------+-----------------------|
+
+|-------------------+----------------+-----------------------|
+| Military          | Affiliation(s) | Number of territories |
+|-------------------+----------------+-----------------------|
+| What’s it called? |                |                       |
+|                   |                |                       |
+|-------------------+----------------+-----------------------|
+
+**** 𐇑 Social Structure
+
+:README:
+Who holds power, and how does it affect the way the society works? Is there an aristocracy? If so, how are its ranks structured?
+:END:
+
+**** 🏛 Government
+
+:README:
+Structure and general procedures
+:END:
+
+**** ⚖ Taxation
+
+:README:
+A brief overview of how the people are taxed, and where that money goes.
+:END:
+
+**** 💵 Currency
+
+:README:
+What is the currency? What are its sub-denominations?
+:END:
+
+**** 👥 Population
+***** Common physical characteristics
+
+:README:
+Common physical characteristics of long-term inhabitants and native peoples: skin colour, hair colour, build, dress
+:END:
+
+***** Races 
+
+:README:
+The races that inhabit the area, whether or not they’re native.
+:END:
+
+***** Predominant religion(s)
+
+:README:
+Monotheism?  Pantheism?  Atheism? Name and describe them as needed.
+:END:
+
+**** ⛩ Culture
+***** Mannerisms
+
+:README:
+The likely way someone behaves if they’re from this place. Because believe me, a fur-wrapped barbarian behaves in a very different way than a Greek statesman.
+:END:
+
+***** Greetings
+
+:README:
+What is considered an acceptable greeting?  In formal setting?  Among friends? Family?
+:END:
+
+***** Customs
+
+:README:
+The habits of a people that make them unique.  Google it if you’re confused.
+:END:
+
+***** Superstitions
+
+:README:
+Knowing the power irrational explanations have over a populace can sometimes be good story material.
+:END:
+
+***** Beliefs
+
+:README:
+Do I really have to explain this one?  This alone can be your story.
+:END:
+
+***** Rituals
+
+:README:
+Birth? Coming-of-age?  Marriage?  Death?  Justice?
+:END:
+
+***** Festivals
+
+:README:
+What do people celebrate?  What are considered holidays?  Why?
+:END:
+
+**** 🕉 Language
+
+:README:
+This is kind of a big one for me, because I’m always very careful to point how and why my characters can understand each other, especially if they are from different countries. Language in the real world is a hell of a barrier, but even if you have a Chinese dragon, an Arabian unicorn, a French knight, a Mayan princess, and a Japanese ninja, they can all talk to and understand each other without explanation. Double I-call-BS-points for someone from another world or time!  Anyone who has ever toured Europe can tell you why this is complete bull.  Take a closer look, especially if you’re modeling anything after medieval Europe; only the Church had a universal language: Latin.
+:END:
+
+**** ⚗ Education
+
+:README:
+How are children taught?  Skilled workers, like architects or brewers?  Is there public education?  
+Higher education?
+:END:
+
+**** 🚉︎Transportation
+
+:README:
+How do people move things?  Armies?  Crowds?  Goods?  Animals?
+:END:
+
+**** ⚔ Military
+
+:README:
+What is their military like? What real world military is/can it be based upon? What’s it’s structure?
+:END:
+
+**** 🏙 Major territories and cities
+
+***** Territory:
+
+****** City <name of major city>:
+
+Description...
+
+**** 📖 History
+
+:README:
+Everyone comes from somewhere.  People just don’t up and appear on islands and such.  Even Native Americans walked across a land bridge way back in the day. Europeans came from Romans and Greeks and Celts and Gauls and more.  
+
+Few people bother to look at this aspect of world-building, and they really should.  Even if a civilization has been around for two thousand years and are elven dragon riders, they came from somewhere.  Even if their mythology says they crawled out of the earth: they came from somewhere.  Examine it!
+:END:
+
+
+
+** DONE 🌐 New World
+CLOSED: [2020-07-02 Thu 00:20]
+:LOGBOOK:
+- State "DONE"       from "ACTIVE"     [2020-07-02 Thu 00:20]
+- State "ACTIVE"     from "DONE"       [2020-07-01 Wed 20:14]
+- State "DONE"       from "ACTIVE"     [2020-05-20 Wed 22:46]
+:END:
+*** DONE 🏞 Location
+CLOSED: [2020-07-02 Thu 00:20]
+:LOGBOOK:
+- State "DONE"       from "ACTIVE"     [2020-07-02 Thu 00:20]
+- State "ACTIVE"     from "DONE"       [2020-07-01 Wed 20:14]
+- State "DONE"       from "ACTIVE"     [2020-05-16 Sat 18:26]
+:END:
+
+**** DONE Summary
+CLOSED: [2020-07-01 Wed 20:13]
+:LOGBOOK:
+- State "DONE"       from              [2020-07-01 Wed 20:13]
+:END:
+
+:README:
+Write your Location Summary here. Use what ever sub headings, and or formatting you need to accomplish this but don't make it too long...  The next sections are for drilling down...
+:END:
+
+**** DONE Setting Detail
+CLOSED: [2020-07-02 Thu 00:20]
+:LOGBOOK:
+- State "DONE"       from "ACTIVE"     [2020-07-02 Thu 00:20]
+:END:
+
+***** DONE Overall Feeling:
+CLOSED: [2020-07-02 Thu 00:19]
+:LOGBOOK:
+- State "DONE"       from "NEW"        [2020-07-02 Thu 00:19]
+:END:
+
+***** DONE Sights:
+CLOSED: [2020-07-02 Thu 00:19]
+:LOGBOOK:
+- State "DONE"       from "NEW"        [2020-07-02 Thu 00:19]
+:END:
+
+***** DONE Sounds:
+CLOSED: [2020-07-02 Thu 00:19]
+:LOGBOOK:
+- State "DONE"       from "NEW"        [2020-07-02 Thu 00:19]
+:END:
+
+***** DONE Smells:
+CLOSED: [2020-07-02 Thu 00:19]
+:LOGBOOK:
+- State "DONE"       from "NEW"        [2020-07-02 Thu 00:19]
+:END:
+
+*** DONE ∅ Planet/Satellite
+CLOSED: [2020-05-20 Wed 22:46]
+:LOGBOOK:
+- State "DONE"       from "ACTIVE"     [2020-05-20 Wed 22:46]
+:END:
+
+:README:
+Rename Planet/Satellite heading above to the actual name of the planet or satellite of your specific case...
+
+The Ideas and Notes here were adapted from Droemar’s article “5 Tips: World-Building Template”.
+
+http://droemar.deviantart.com/journal/5-Tips-World-Building-Template-224630229
+
+Much more information can be obtained by visiting the above website!!!
+:END:
+
+**** System, Sector/quadrant
+
+:README:
+Rename System, Sector/quadrant heading above with the actual name of your system, with its specific sector and quadrant coordinates...
+:END:
+
+***** Controlling party/faction
+
+:README:
+Rename Controlling party/faction heading above with the actual name of your party/or faction...  Fill in key facts in the tables below...
+:END:
+
+
+|-------+------+-------------+----------------+------------|
+| Class | Type | Satellites  | Native species | Population |
+|-------+------+-------------+----------------+------------|
+|       |      | Moons, etc. |                |            |
+|       |      |             |                |            |
+|-------+------+-------------+----------------+------------|
+
+|--------------+--------------+-------------+------------------+----------------|
+| Capital city | Colours      | Symbol      | Government       | Affiliation(s) |
+|--------------+--------------+-------------+------------------+----------------|
+|              | Example:     | Example:    | Example:         |                |
+|              | red, white   | stars,      | Feudal system,   |                |
+|              | & blue, etc. | and stripes | caste system,    |                |
+|              |              |             | oligarchy,       |                |
+|              |              |             | parliament,      |                |
+|              |              |             | democracy,       |                |
+|              |              |             | plutocracy, etc. |                |
+|--------------+--------------+-------------+------------------+----------------|
+
+**** Major cities
+
+***** City (continent/region)
+
+:README:
+Change Heading City (continent/region) above to the name of your specific city, continent, or region...
+
+Then add a detailed description below...  
+
+Do this to get a feel for the areas the characters will be visiting.
+:END:
+
+****** Description:
+
+# Add Description Here:
+
+**** Population
+
+***** Races:
+
+:README:
+List all the races that inhabit the area, whether or not they’re native.
+:END:
+
+***** Predominant religion(s):
+
+:README:
+Monotheism?  Pantheism?  Atheism? Name and describe them as needed.
+:END:
+
+***** Common physical characteristics:
+
+:README:
+List the common physical characteristics of long-term inhabitants and native peoples: skin colour, hair colour, build, dress
+:END:
+
+**** Culture
+
+***** Mannerisms:
+
+:README:
+Use this space to illustrate the likely way someone behaves if they’re from this place. Because believe me, a fur-wrapped barbarian behaves in a very different way than a Greek statesman.
+:END:
+
+***** Cuisine:
+
+:README:
+Write about what most people on this planet eat every day?  On festival days?  As delicacies? Taboo?
+:END:
+
+***** Leisure:
+
+:README:
+What do people here do in their spare time?  For fun?
+:END:
+
+***** Greetings:
+
+:README:
+What is considered an acceptable greeting?  In formal setting?  Among friends? Family?
+:END:
+
+***** Customs:
+
+:README:
+The habits of a people that make them unique.  Google it if you’re confused.
+:END:
+
+***** Quotes:
+
+:README:
+Write about how someone from this planet would talk like, or talk about.
+:END:
+
+***** Superstitions:
+
+:README:
+Knowing the power irrational explanations have over a populace can sometimes be good story material.
+:END:
+
+***** Magic:
+
+:README:
+How it is treated by the country.  Whether hated and feared, harnessed for industry, or nonexistent within it’s borders, if magic has a presence in your story you ought to look at how it affects the larger picture than just your heroes and their journey.
+:END:
+
+***** Beliefs:
+
+:README:
+Do I really have to explain this one?  This alone can be your story.
+:END:
+
+***** Rituals:
+
+:README:
+Birth? Coming-of-age?  Marriage?  Death?  Justice?
+:END:
+
+***** Festivals:
+
+:README:
+What do people celebrate?  What are considered holidays?  Why?
+:END:
+
+**** Transport
+
+:README:
+How do people move things?  Armies?  Crowds?  Goods?  Animals?
+:END:
+
+**** Weather patterns
+
+:README:
+Tropical?  Stormy?  Cold?  Earthquakes?  Climate in general?
+:END:
+
+**** Resources
+
+:README:
+What does the planet export?  Import?  Make?  Is famous for?
+:END:
+
+**** History
+
+:README:
+Everyone comes from somewhere.  People just don’t up and appear on islands and such.  I mean, even Native Americans walked across a land bridge way back in the day. Europeans came from Romans and Greeks and Celts and Gauls and more.  Very few people bother to look at this aspect of world-building, and they really should.  Even if a civilization has been around for two thousand years and are elven dragon riders, they came from somewhere.  Even if their mythology says they crawled out of the earth: they came from somewhere.  Examine it here in this space!
+:END:
+
+
+
+
+** NEXT 🎙 New Drama Script
+
+:README:
+I am still working out how to set up my drama script template...  I am using fountain mode to create audio dramas with sound and music cues etc.  This is semi automated using Afterwriting python script.  I edit all the files in Emacs but it is easier to run the build script on the command line.  The build script creates a new PDF file.
+
+I have plans to create all that automation within Org-Mode and that is what this template should be about... The fountain files could also be created programmatically here from their project folder... There would be some way to click on a link to the script, *(a .fountain file) and then it would automatically open up in another frame of the proper dimensions for editing a screenplay in Modular Emacs... :END:
+
+** DONE 🔖 New Chapter #:
+*** DONE 📄 Episode - <replace w/ chapter name>
+CLOSED: [2020-07-01 Wed 21:16]
+:LOGBOOK:
+- State "DONE"       from              [2020-07-01 Wed 21:16]
+:END:
+
+:README:
+Episodes or Scenes are the DNA that make up the chapters in a novel...  
+
+Chapters can contain several scenes or episodes... There can be many twisty paths all alike (or all different)... %~)
+:END:
+
+# Begin Chapter:
+
+<insert chapter / episode text here>
+
+Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo. Fusce tincidunt, lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante. 
+
+At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus. 
+
+Morbi dictum. Vestibulum adipiscing pulvinar quam. In aliquam rhoncus sem. In mi erat, sodaleseget, pretium interdum, malesuada ac, augue. Aliquam sollicitudin, massa ut vestibulum posuere, massa arcu elementumpurus, eget vehicula lorem metus vel libero. Sed in dui id lectus commodo elementum. Etiam rhoncus tortor. Proin alorem. Ut nec velit. Quisque varius. Proin nonummy justo dictum sapien tincidunt iaculis. Duis lobortis pellentesque risus.Aenean ut tortor imperdiet dolor scelerisque bibendum. Fusce metus nibh, adipiscing id, ullamcorper at, consequat a,nulla. 
+
+Quid Novi? Lorem Ipsum dolor sit amet,consectetur adipisicing elit, sed doeiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim adminim veniam, quis nostrudexercitation ullamco laboris nisi utaliquip ex ea commodo consequat.Duis aute irure dolor inreprehenderit in coluptate velit essecillum dolore eu fugiat nulla 
+
+pariatur.Excepteur sint occaecat cupidatatnon proident, sunt in culpa quiofficia deserunt mollit anim id estlaborum. Phasellus orci. Etiam tempor elit auctor magna. Nullam nibh velit, vestibulum ut, eleifend non, pulvinar eget, enim. Classaptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer velit mauris, convallis acongue sed, placerat id, odio. Etiam venenatis tortor sed lectus. Nulla non orci. In egestas porttitor quam. Duis nec diameget nibh mattis tempus. Curabitus accumsan pede id odio. Nunc vitae libero. Aenean condimentum diam et turpis.Vestibulum non risus. Ut consectetuer gravida elit. Aenean est nunc, varius sed, alquam eu, feugiat sit amet, metus. Sedvenenatis odio id eros. Phasellus placerat purus vel mi. In hac habitasse platea dictumst. Donec aliquam porta odio. Ut facilisis. Donec ornareipsum ut massa. In tellus tellus, imperdiet ac, accumsan at, aliquam vitae, velit.
+
+# End of Chapter:
+
+*** DONE 🗒 Background Notes:
+CLOSED: [2020-07-01 Wed 21:24]
+:LOGBOOK:
+- State "DONE"       from              [2020-07-01 Wed 21:24]
+:END:
+
+**** DONE 🗒 Note 1: <2020-05-10 Sun>
+CLOSED: [2020-07-01 Wed 21:22]
+:LOGBOOK:
+- State "DONE"       from              [2020-07-01 Wed 21:22]
+:END:
+
++ Mark each note's timestamp to its initial creation time. This will enable emerging notes for chapters to be searched chronologically, and to give you an idea of how things evolve over time...
+
++ Add anything you need here under this heading formatted any way needed to present the data... Sub levels are fine, tables are fine... etc.  This is your chapter's Notebook, Scrapbook, whatever any extra info/metadata you feel is important to record...
+
+  + Use bulleted lists/sublist etc. if needed...
+
+1. Or Numbered Lists...
+
+|----+--------|
+| Or | Tables |
+|----+--------|
+|  1 |    2.3 |
+|----+--------|
+
+Do any or all the above to help get the concepts and images of your book clear in mind...
+
+**** DONE 🗒 Note 2: <2020-05-10 Sun>
+CLOSED: [2020-07-01 Wed 21:22]
+:LOGBOOK:
+- State "DONE"       from              [2020-07-01 Wed 21:22]
+:END:
+
+Each new note needs to get its own heading and initial timestamp...
+
+****** DONE Quid Novi?
+CLOSED: [2020-07-01 Wed 21:27]
+:LOGBOOK:
+- State "DONE"       from              [2020-07-01 Wed 21:27]
+:END:
+
+Quid Novi? Lorem Ipsum dolor sit amet,consectetur adipisicing elit, sed doeiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim adminim veniam, quis nostrudexercitation ullamco laboris nisi utaliquip ex ea commodo consequat.Duis aute irure dolor inreprehenderit in coluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatatnon proident, sunt in culpa quiofficia deserunt mollit anim id estlaborum.
+
+**** DONE 🗒 Phasellus orci: <2020-05-10 Sun>
+CLOSED: [2020-07-01 Wed 21:27]
+:LOGBOOK:
+- State "DONE"       from              [2020-07-01 Wed 21:27]
+:END:
+
+Etiam tempor elit auctor magna. Nullam nibh velit, vestibulum ut, eleifend non, pulvinar eget, enim. Classaptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer velit mauris, convallis acongue sed, placerat id, odio. Etiam venenatis tortor sed lectus. Nulla non orci. In egestas porttitor quam. Duis nec diameget nibh mattis tempus. Curabitus accumsan pede id odio. Nunc vitae libero. Aenean condimentum diam et turpis.Vestibulum non risus. Ut consectetuer gravida elit. Aenean est nunc, varius sed, alquam eu, feugiat sit amet, metus. Sedvenenatis odio id eros.
+
+|----------+-----------+-----------+-----------+-------------------|
+| Inceptos | Venenatis | Convallis | Curabitus | Nunc vitae libero |
+|----------+-----------+-----------+-----------+-------------------|
+| test 1   | test 2    | test 3    | test 4    | test 5            |
+|----------+-----------+-----------+-----------+-------------------|
+
+Yadda, yadda, yadda. etc... 
+
+** DONE 📒 Back Story Plots:
+CLOSED: [2020-07-01 Wed 12:41]
+:LOGBOOK:
+- State "DONE"       from              [2020-07-01 Wed 12:41]
+:END:
+
+:README:
+This template section contains a few example Back Story Plots which you can copy/clone into the "Back Story Plots:" sub-section of your main "Book:" section as needed for repourposing.
+
+- It's a good idea to keep things organized (based on evolving existing and new emerging chapters within your book). The following tips will help you:
+
+    + Keep your outline sub-headings timestamped below.
+
+    + Keep track of your plot summaries by adding "GTD TODO" keywords.
+
+    + Prioritize the plot summaries as well if needed. 
+
+The above will help you get better organized about how your book is developing, what areas need the most work, etc.  Most importantly, this will help prevent you from making any grave mistakes causing any contradictions within your story later... (unless that was your intention "Alfred Hitchcock")... In any case you will be better informed by keeping all your plot tasks here where you can see them and resolve them quickly...
+
+- Use the forms below when you need to make new Back Story Plots... Change the heading and content with the real "Back Story Plot" content for your book...
+:END:
+
+*** 📒 Back Story Plot Example One:
+
+Note: This is an example of a back story plot related to your book... Write it down in the rough here and then later you can develop it further if needed.
+
+*** 📒 Back Story Plot Example Two:
+
+Note: This is an example of a back story plot related to your book... Write it down in the rough here and then later you can develop it further if needed.
+
+*** 📒 Add more Back Story Plots like this:
+
+Note: This is an example of a back story plot related to your book... Write it down in the rough here and then later you can develop it further if needed.* 💡 Ideas Scratchpad Refile:
+** DONE 🗡 Chapter Plot Summaries:
+CLOSED: [2020-07-01 Wed 12:43]
+:LOGBOOK:
+- State "DONE"       from              [2020-07-01 Wed 12:43]
+:END:
+
+:README:
+This template section contains a few example Chapter Plot Summaries which you can copy/clone into the "Chapter Plot Summaries:", sub-section of your main "Book:" section as needed for repourposing.
+
+- It's a good idea to keep things organized (based on evolving existing and new emerging chapters within your book). The following tips will help you:
+
+    + Keep your outline sub-headings timestamped below.
+
+    + Keep track of your plot summaries by adding "GTD TODO" keywords.
+
+    + Prioritize the plot summaries as well if needed. 
+
+The above will help you get better organized about how your book is developing, what areas need the most work, etc.  Most importantly, this will help prevent you from making any grave mistakes causing any contradictions within your story later... (unless that was your intention "Alfred Hitchcock")... In any case you will be better informed by keeping all your plot tasks here where you can see them and resolve them quickly...
+
+- Use the forms below when you need to make new Chapter Plots... Change the heading and content with the real "Chapter # Plot" content for your book...
+:END:
+
+*** Chapter # Plots
+
+In this chapter we are dealing with  yadda yadda yadda which must be resolved with yadda yadda yadda.
+
+*** Chapter # Plots
+
+In this chapter we are dealing with  yadda yadda yadda which must be resolved with yadda yadda yadda.
+
+*** Chapter # Plots
+
+In this chapter we are dealing with  yadda yadda yadda which must be resolved with yadda yadda yadda.
