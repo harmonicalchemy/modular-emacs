@@ -47,10 +47,22 @@ From Isaac Asimov's science fiction series 'Foundation', specifically the sectio
 
 Unlike most instruments, this one does not achieve its effect by using sonic effects but, instead, directly stimulates the listeners' mental well-being. The number of people and level of effect depends on the skill level of the player. As this was a device from the First Empire, there were not that many people around with any skill at all. However, the Mule's clown, Magnifico, had some skill with the instrument and was asked to play for select parties on the Foundation and for large groups of workers on Haven. This may not have been a good idea...
 * 📖 Book:
-** NEW 📃 Synopsis:
+** DONE 📃 Synopsis:
+CLOSED: [2020-07-02 Thu 18:11]
+:LOGBOOK:
+- State "DONE"       from "ACTIVE"     [2020-07-02 Thu 18:11]
+:END:
 
-The Adventures of yadda... yadda... yadda...
+:README:
+This section has been purposefully left blank for you to fill in...
 
+Use this space to write the main synopsis of your work... You can write anything you want here but it is recommended to use the award winning "Snowflake Method" created by [[https://www.advancedfictionwriting.com/][Randy Ingermanson]] of Ingermanson Communications, Inc.  These steps have been provided for you in the main "Tasks:" section...
+
+- Go to the "⏰ Tasks:" section and do the: "📃 Synopsis Tasks:"
+
+
+- After completing those tasks mark them "DONE" and place your resulting synopsis notes in here... You will be coming back here to consult these notes for many things as you promote and publish your book.
+:END:
 ** NEW 📃 Front Matter:
 
 Front Matter... yadda... yadda... yadda...
@@ -299,9 +311,9 @@ The above will help you get better organized about how your book is developing, 
 ** 🏞 Scenes:
 ** ❝ Quotations:
 ** 🖍 Styles:
-* DONE ⏰ Tasks:
-CLOSED: [2020-07-01 Wed 14:36]
+* ACTIVE ⏰ Tasks:
 :LOGBOOK:
+- State "ACTIVE"     from "DONE"       [2020-07-02 Thu 17:36]
 - State "DONE"       from "ACTIVE"     [2020-07-01 Wed 14:36]
 - State "ACTIVE"     from "DONE"       [2020-07-01 Wed 11:00]
 - State "DONE"       from              [2020-06-30 Tue 05:46]
@@ -319,32 +331,72 @@ CLOSED: [2020-07-01 Wed 14:36]
 - Keep your Tasks in Decending Chronological Order.
    (i.e., put your newest tasks on top)
 
-- The three provided tasks below are general default tasks that should be started as soon as you create a new project based on this HAP-Book-Project-Skeleton... They appear here offering a "bootstrapped" head start and also to provide some guidance about starting your new book projects with a fresh better organized process... 
+- The three provided tasks below are important first steps to take when first starting a novel.  They are based on the "Snowflake Method" by Randy Ingermanson. 
+
+- These tasks should be started as soon as you create a new project using this HAP-Book-Project-Skeleton... 
+
+- It is hoped that this process will give you a faster, efficient, organized "bootstrapped" head start and teach some guidance about how to properly organize and write your books with a clearer mind, inspired outlook, and renewed motivation...
 :END:
 
-*** DONE 📃 Synopsis Tasks:
-CLOSED: [2020-06-20 Sat 17:19]
+*** ACTIVE 📃 Synopsis Tasks:
 :LOGBOOK:
+- State "ACTIVE"     from "DONE"       [2020-07-02 Thu 17:36]
 - State "DONE"       from "NEXT"       [2020-06-20 Sat 17:19]
 :END:
 
-**** DONE Write a Single Sentence summary
-CLOSED: [2020-05-25 Mon 10:04]
+:README:
+The Synopsis Tasks below are based on The Award winning Snowflake Method created by [[https://www.advancedfictionwriting.com/][Randy Ingermanson]] of Ingermanson Communications, Inc. You could write anything you want for a synopsis, but it is recommended to use the steps below first before doing any other writing!  This advise comes from many highly acclaimed master authors! (including Mark Twain himself!)
+:END:
+
+**** DONE Important Before you start!
+CLOSED: [2020-07-02 Thu 17:40]
 :LOGBOOK:
+- State "DONE"       from "ACTIVE"     [2020-07-02 Thu 17:40]
+:END:
+
+NOTE: Before you start you need to answer the following questions:
+
+- What is your main category or genera? ______________...
+
+- You write within this genera because? ______________...
+
+- Readers will be attracted to and enjoy your stories because? _____________________...
+
+After completing above, follow the steps below... 
+
+when you are done with these Synopsis tasks, you will have completed half the battle of writing your novel! The other half is getting to know your characters... Plots and chapters will flow from that effortlessly...
+
+**** ACTIVE Step One - Write a Single Sentence Summary:
+:LOGBOOK:
+- State "NEW"        from "DONE"       [2020-07-02 Thu 17:37]
 - State "DONE"       from "ACTIVE"     [2020-05-25 Mon 10:04]
 - State "ACTIVE"     from "DONE"       [2020-05-24 Sun 22:23]
 :END:
 
-:README:
-Take an hour and write a one-sentence summary of your novel. Something like this: 
+1. Take an hour and write a one-sentence summary of your novel:   
+   
+   Something like this: 
 
-"A rogue physicist travels back in time to kill the apostle Paul." 
+   "A gourmet chef from Boston acedentally falls into a parallel world, chased by enemies not even his own and almost dies, but then discovers he is immortal, meets-re-discovers his ancient soul mate of eons, and together they save the universe after all else fails!" 
 
-The sentence will serve you forever as a ten-second selling tool. This is the big picture, the analog of that big starting triangle in the snowflake picture.
+       OK I know... I cheated... that long sentence above should be broken up... The last phrase is the stinger that needs to stand alone... I often buck the rules... lol
+
+The sentence you end up writing above will serve you forever as a ten-second selling tool. This exercise defines the big picture illustrated by the first simple triangle in the snowflake diagram (as explained to Goldilocks by Baby Bear in Randy Ingermanson
+
+
+book:
+
+
+
+. It will be your pitch... To see if there is more interest...  Important closing rules for sales! The law of attraction always applies.. no pushing... 
+
+Memorize this line to the point you can say it in your sleep... Turn it into a "slogan" (hopefully a meme if you are the lucky type). Your goal is that others will remember and tell all their friends (word for word).  
+
+Always lead with this line alone when opening a dialog engagement with a stranger or even your mother. Remain silent after that... Wait to see if there is interest before diving deeper... That and your good body language "posture" will take care of everything...
 
 When you later write your book proposal, this sentence should appear very early in the proposal. It's the hook that will sell your book to your editor, to your committee, to the sales force, to bookstore owners, and ultimately to readers. So make the best one you can!
 
-Some hints on what makes a good sentence:
+****** Here are some tips:
 
 - Shorter is better. Try for fewer than 15 words.
 
@@ -352,12 +404,11 @@ Some hints on what makes a good sentence:
 
 - Tie together the big picture and the personal picture. Which character has the most to lose in this story? Now tell me what he or she wants to win.
 
-- Read the one-line blurbs on the New York Times Bestseller list to learn how to do this. Writing a one-sentence description is an art form.
-:END:
+- Read the one-line blurbs on the New York Times Bestseller list to learn how to do this. Writing a one-sentence description is an art form. If you become a master at this marketing firms will want you madly!
 
-**** DONE Expand Summary to Paragraph
-CLOSED: [2020-05-25 Mon 10:21]
+**** NEW Step Two - Expand Summary to Paragraph
 :LOGBOOK:
+- State "NEW"        from "DONE"       [2020-07-02 Thu 17:38]
 - State "DONE"       from "ACTIVE"     [2020-05-25 Mon 10:21]
 :END:
 
@@ -381,9 +432,9 @@ You can also use this paragraph in your proposal. Ideally, your paragraph will h
 If this sounds suspiciously like back-cover copy, it's because . . . that's what it is and that's where it's going to appear someday.
 :END:
 
-**** DONE Expand Paragraph to Synopsis
-CLOSED: [2020-06-08 Mon 11:36]
+**** NEW Expand Paragraph to Synopsis
 :LOGBOOK:
+- State "NEW"        from "DONE"       [2020-07-02 Thu 17:38]
 - State "DONE"       from "ACTIVE"     [2020-06-08 Mon 11:36]
 :END:
 
