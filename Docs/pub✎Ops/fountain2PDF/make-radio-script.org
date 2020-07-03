@@ -1,0 +1,261 @@
+#+STARTUP: showall
+#+TITLE: Make New Radio Script Project
+#+AUTHOR: Alisha Awen
+#+REVEAL_TRANS: default
+#+REVEAL_THEME: beige
+#+OPTIONS: num:nil
+
+* Rules:
+** Copy this TEMPLATE file to the directory of your new podcast or audio theatre project...
+** Setup Constants below...
+
+* Setup These Constants First:
+
+# TITLE:       "**The Ivory Tower**"
+# EPISODE:     "101"
+# CREDIT:      "*A Fountain TEMPLATE for Audio Drama Scripts*"
+# AUTHOR:      "by **Alisha Awen**"
+# DRAFT_DATE:  "PRODUCTION SCRIPT"
+# HEADER:      "The Ivory Tower          Episode 001",
+# FOOTER:      "Harmonic Alchemy Productions - siren1@HarmonicAlchemy.productions",
+
+#+NAME: const-1
+
+#+PROPERTY: header-args:var title="<ADD RADIO SCRIPT TITLE HERE>"
+#+PROPERTY: header-args:var+ episode="<ADD EPISODE NUMBER HERE e.g., 101>"
+#+PROPERTY: header-args:var+ credit="<ADD CREDIT LINE HERE>"
+#+PROPERTY: header-args:var+ author="<ADD AUTHOR HERE>"
+#+PROPERTY: header-args:var+ ddate="<ADD DRAFT DATE HERE>"
+#+PROPERTY: header-args:var+ header="<ADD RADIO SCRIPT HEADER HERE>"
+#+PROPERTY: header-args:var+ footer="<ADD RADIO SCRIPT FOOTER HERE>"
+#+PROPERTY: header-args:var+ print="usletter"
+#+PROPERTY: header-args      :tangle yes  
+#+PROPERTY: header-args      :eval never  
+#+PROPERTY: header-args      :results output replace
+
+* Make ~awc-config.json~ file:
+
+#+BEGIN_SRC emacs-lisp :tangle awc-config.json
+(require 'json)
+(json-encode `(("embolden_scene_headers" . ,"true")))
+(json-encode `(("show_page_numbers" . ,"true")))
+(json-encode `(("split_dialogue" . ,"false")))
+(json-encode `(("print_title_page" . ,"true")))
+(json-encode `(("print_profile" . ,(print))))
+(json-encode `(("double_space_between_scenes" . ,"false")))
+(json-encode `(("print_sections" . ,"false")))
+(json-encode `(("print_synopsis" . ,"true")))
+(json-encode `(("print_actions" . ,"true")))
+(json-encode `(("print_headers" . ,"true")))
+(json-encode `(("print_dialogues" . ,"true")))
+(json-encode `(("number_sections" . ,"false")))
+(json-encode `(("use_dual_dialogue" . ,"true")))
+(json-encode `(("print_notes" . ,"false")))
+(json-encode `(("print_footer" . ,(footer))))
+(json-encode `(("print_watermark" . ,"")))
+(json-encode `(("scenes_numbers" . ,"both")))
+(json-encode `(("each_scene_on_new_page" . ,"true")))
+(json-encode `(("print_header" . ,(header))))
+
+(json-encode `(("snippets" . , ((json-encode `(("HEADER" . ,"$TITLE          $EPISODE")))
+(json-encode `(("TITLE" . ,(title))))
+(json-encode `(("EPISODE" . ,(episode))))
+(json-encode `(("CREDIT" . ,(credit))))
+(json-encode `(("AUTHOR" . ,(author)))) 
+(json-encode `(("DRAFT_DATE" . ,(ddate))))))))
+
+#+END_SRC
+
+#+results:
+
+* Make Fountain Script Skeleton:
+
+#+BEGIN_SRC fountain :tangle screenplay.fountain
+Title: $TITLE
+Episode: $EPISODE
+Credit: $CREDIT
+Author: $AUTHOR
+Contact:
+  Harmonic Alchemy Productions
+  PO Box 138, Eastsound WA 98245
+  (360) 320-6363
+  siren1@HarmonicAlchemy.productions
+Draft date: $DRAFT_DATE
+Copyright: © 2019 Harmonic Alchemy Productions,
+  All rights reserved
+Tags:
+  #Emergent-Anomalies.com
+  #EA-New-Ideas #unpublished
+  #audio-theatre #screenwriting
+  #2019 #drafts #not-in-ed-cal 
+  #Fountain #Fiction #sci-fi
+  #templates #Writing-Resources
+  #Emacs #RuyaSonic
+
+Add synopsis and other general notes here on second page...
+
+**Note:** *(This template Loosly conforms to Tony Palermo's radio drama script style guides)*
+
+>**_Reference_**<
+
+Main Fountain website and docs: **"www.fountain.io"**
+
+Tony Palemro's Website: **"www.ruyasonic.com"**
+
+>**_CAST_**<
+
+CHARACTER-#1
+Add character description here:  yadda yadda yadda (all about this character etc.)
+
+CHARACTER-#2
+Add character description here:  yadda yadda yadda (all about this character etc.)
+
+====
+
+## BEGIN SCRIPT:
+
+>**_BEGIN EPISODE_**<
+
+### Example 02: Music Cue
+
+_MUSIC: [MUS-01]    STEAM PUNK STORY THEME "The Ivory Tower" (ESTABLISH)  CONTINUE UNDER_
+
+ANNOUNCER:
+Welcome to another episode of...
+(HOLD BREATH FOR 5 SECONDS WHILE STING PLAYS)
+
+_MUSIC: [MUS-02] THE IVORY TOWER TITLE SUSPENSE CLIP (STING) (1950s style SPOKEN WORDS ECHOING)_
+
+ANNOUNCER:
+Yes folks, it's time for another exiting episode of The Ivory Tower, a paranormal series by Alisha Awen.  Produced by Harmonic Alchemy Productions on Orcas Island, in the middle of the enchanted Salish Sea!
+
+ANNOUNCER:
+In this episode, Dr Jeznik and his assistant Peter are on a path destined to explore an old lighthouse with strange anomoluus features... Dr Jesnik knows about the lighthouse's secrets but Peter has no idea. Together they are about to embark on the adventure of of their lives!
+
+### Example 03: Tony Palermo Style Scene Heading
+
+EXT. LIGHTHOUSE ISLAND - DAY 1
+
+                    (Dr. Jeznik, Peter)
+
+_MUSIC: [MUS-03] MYSTERIOUS EPISODE INTRO THEME (CROSSFADE AND DUCK UNDER)_
+
+### Example 04: Sound Effect Ques
+
+_SOUND: [SFX-03] (CROSSFADE IN) SEAGULLS, WITH WAVES AND LIGHT BREEZE IN DISTANCE (CONTINUE SOFTLY AS SCENE BACKGROUND ENVIRONMENT - LONG AMBIENCE LOOP)_
+
+_SOUND: [SFX-01] DR. JEZNIK'S FOOT SETPS ALONG ROCKY PATH TO OLD LIGHTHOUSE, [SFX-02] AIRPLANE PASSES BY FAR DISTANCE, [SFX-03] SEAGULLS. CONTINUE UNDER_
+
+DR. JEZNIK
+(DIRECT - DRY - RAISED VOICE TO CARRY BACK DOWN THE PATH TO PETER - OUTSIDE ROCKY ISLAND ENVIRONMENT)
+Come along Peter, we're almost there.
+
+PETER
+(OFF - BACK FURTHER DOWN THE PATH - RAISED VOICE TO CARRY OVER SOUND OF DISTANT WAVES, SEAGULLS, WIND)
+Where Dr. Jeznik? All I can see is the remains of the old crashed down lighthouse scattered about the rocky knoll ahead of you.
+
+DR. JEZNIK
+(DIRECT - DRY - LESS BACKGROUND NOISE DR JEZNIK'S LOCAL POSITION IN FRONT OF THE IVORY TOWER)
+Well my boy, that's it!  Hurry up!  I'm already there... 
+
+_SOUND: [SFX-04] DR. JEZNIK'S FOOTSTEPS SHIFT FROM ROCKY PATH TO WOODEN STAIRS [SFX-03] SEAGULLS CONTINUE DUCK MORE_
+
+PETER
+(OFF - FROM BACK FURTHER ON THE TRAIL)
+What? All I see is you standing alone next to the remaining chunks and base of the old lighthouse that was destroyed by the BIG storm of 2019...
+
+DR. JEZNIK
+(DIRECT - ON WOODEN THRESHOLD IN FRONT OF HEAVY IRON DOOR)
+Just come along boy, I cannot go any farther or show you until you reach me...
+
+_SOUND:   	[SFX-05] PETERS FOOTSTEPS GETTING CLOSER ALONG ROCKY PATH, THEN SHIFT FROM ROCKY PATH TO WOODEN STAIRS [SFX-03] SEAGULLS. CONTINUE_
+
+PETER
+(DIRECT - NOW WITH DR. JEZNIK AT OPEN IRON DOOR)
+(GASPS) What's all the fuss about that big old iron hatch which used to open into what used to be the basement access to the Lighthouse?  Why are you trying to open it? There's nothing but thick vines and blackberry canes all overgrown over the top of this broken Lighthouse base and it's for sure to be a tangled mess on the other side of that door as well!  We can crawl around to the other side where the entire wall is missing and I will show you!
+
+DR. JEZNIK
+(TO PETER)
+Don't worry Peter, you will see shortly... There are no vines... Now help me open this heavy door!
+
+_SOUND: [SFX-06] SHUFFLING FOOTSTEPS ON WOODEN THRESHOLD (CONTINUE AND FADE) [SFX-07] METAL SQUEAK AND CLANG OF LATCH HANDLE TWISTING ON IRON DOOR_
+
+WALLA
+(PETER, DR. JEZNIK - AD LIB - GROANS - CUE)
+Umf! ... Ugh! ... Etc.
+(CUT WALLA DIALOG AT SOUND OF THUD)
+
+[SFX-08] DOOR CREAKING AS IT SLOWLY OPENS, THEN CUT WITH SHORT THUD [SFX-09] SLIGHT BACKGROUND REVERB ADDED (FROM WITHIN NOW OPEN CHAMBER) TO ALL DIALOG - MIXED UNDER WITH OUTSIDE DRY EFFECT WHICH STAYS UP AND PRIMARY (CONTINUE)
+
+PETER
+(TO DR. JEZNIK - PARTIALLY REVERBRATED BY CHAMBER BEYOND DOOR)
+Hey!  What's all that mist blocking the opening?  I would call it sea fog but it looks much thicker and iridescent cobalt blue?  I am also feeling an uncomfortable prickly feeling... (PAUSE) ([SFX-06] FOOTSTEPS AS PETER BACKS AWAY FROM DOOR)
+(NERVOUSLY) Yikes!  Dr. J ... Um... the hair on my arm went all static electricity like until I let go of that door!  That fog feels tingly and very thick and sticky!  I don't feel good about this!  (GASP) What's Happening?
+
+DR. JEZNIK
+(TO PETER - PARTIALLY REVERBRATED BY CHAMBER BEYOND DOOR)
+Hold fast to my hand boy!  We need to be grounded before coming in contact with the event horizon... I am putting my right hand through now...  Just stay close behind me and you will be fine...
+
+_SOUND: [SFX-13] STATIC ELECTRIC SPARK SNAP SOUND AS DR. JEZNIK REACHES OUT AND MAKES CONTACT WITH THE EVENT HORIZON FLUSH WITH THE DOOR OPENING_
+
+PETER
+(TO DR. JEZNIK - ALARMING TONE - PARTIALLY REVERBRATED BY CHAMBER BEYOND DOOR)
+Yikes! Did you just get a shock from that cloud? Maybe we shouldn't go any...
+(PAUSE - AD LIB RELUCTANCE TO ENTER CHAMBER - FADE UNDER) 
+
+### Example 04: Production Notes
+
+!PRODUCTION NOTE:
+Peter and Dr. Jeznik enter the chamber, the sound effects of their footsteps changes dramatically as they enter the door, and then the sound changes dramatically again as Dr. Jeznik closes the iron door behind them.
+
+DR. JEZNIK
+(TO PETER - FADE WHILE PASSING THROUGH EVENT HORIZON)
+Just a bit of static discharge at the threshold between our world and where we are going... not to worry my boy, not to worry... Hold tight to my hand and stay right behind me...  Were almost through...
+
+_SOUND: [SFX-11] SHUFFLING FOOTSTEPS CHANGE ABRUPTLY CROSSING THROUGH THE OPEN CHAMBER DOOR (REVERBERATED BY INSIDE CHAMBER) [SFX-03] SEAGULLS FADE INTO DISTANCE_
+
+DR. JEZNIK
+(TO PETER - INSIDE CHAMBER REVERB)
+Ok, we're in... (PAUSE) Peter are you ok? ... Hold on there a bit and let your brain recover and re-organize ... I have to close this heavy door ...
+
+_SOUND: [SFX-14]  CREAKING OF CHAMBER DOOR CLOSING, CONTINUE [SFX-03] SEAGULLS FADE EVEN FARTHER INTO DISTANCE (CUE ON FIRST AD LIB DIALOG GRUNT BELOW)_
+
+DR. JEZNIK
+(DIRECT - INSIDE CHAMBER REVERB - AD LIB)
+Now to...
+(GRUNTS)
+Ugh!... pull... this... heavy... door... shut!
+(AD LIB - SIGH AFTER SOUND OF DOOR CLANGS SHUT - CUE)
+
+_SOUND: [SFX-15] SHARP CLANG AS HEAVY IRON DOOR SHUTS COMPLETELY (REVERBERATED BY INSIDE CHAMBER), ([SFX-03] SEAGULLS CUT ABRUPTLY)_
+
+INT. - INSIDE LIGHTHOUSE - DAY 1
+
+PETER
+(DIRECT - INSIDE CHAMBER REVERB)
+(RUBBING EYES GASPING AS IF JUST AWAKENED) Ugh! Er... Hey!... What happened?  Where are we now? Where did all that creepy fog go? Um... I feel funny... Did I? uh..... no... na... NO!!!
+(BEGIN TO WHISPER AND LOOSE CONSCIOUSNESS WAVERING SPEECH)
+Um... I feel rearllry... dizzy.... (ETC) My ears ringing like crazy... Ringing! Ringinggggggg! Make it STOP!  Please!!!
+(LOOSE CONSCIOUSNESS FOR 5 SECOND PAUSE - GAIN FACULTIES - REGAIN NORMAL SPEECH)
+Uh... hmmm.... Oh... Oh My! ... That was a strange feeling ... (RECOVERING) like my brain just dissapeared and reappeared several times and leapfrogged around all the while my ears were ringing like crazy!  Faint echos of ringing still remain... fading in and then going away...
+
+>TO BE CONTINUED<
+
+#+END_SRC
+
+* Make PDF:
+
+Copy HAP-Radio-Script-Template to #+Title .fountain
+
+#+NAME: make-script1
+#+BEGIN_SRC sh :results org :exports both
+
+afterwriting --source HAP-Radio-Script-Template.fountain --pdf HAP-Radio-Script-Template.pdf --config awc-config.json
+
+#+END_SRC
+
+#+RESULTS: make-script1
+
+#+BEGIN_SRC org
+
+#+END_SRC

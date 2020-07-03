@@ -1,0 +1,1080 @@
+#+TITLE: HAP - Audio Project Skeleton
+#+AUTHOR: Alisha Awen - Harmonic Alchemy Productions
+#+CATEGORY: 
+#+STARTUP: all
+#+STARTUP: inlineimages
+#+DESCRIPTION: HAP - Bare Bones Skeleton with generic basics already done for.  Great for Authors to use when starting a new Radio Drama or any kind of Audio Production project from scratch...
+#+EXPORT_FILE_NAME: My-New-Book.pdf
+#+KEYWORDS:
+#+FILETAGS:
+
+* 💡 Ideas Scratchpad Refile:
+** ☞ Start Here!
+
+:README:
+Use this *Ideas / Scratchpad / Refile section as a quick place to document ideas and inspirations as they come alone.  You can refile them later... (even if it is intended for elsewhere) Parallel universe? Sure... You got that covered. %^)
+
+- Use this section to quickly capture inspired at-the-moment ideas While they are still fresh in mind...
+
+  + Come directly here... 
+
+  + Advance your cursor a few newlines below this README drawer on a fresh clean line with some extra space below it as well... (above any previously time stamped entries you may already have placed)... (get rid of the "Visisonar - Object" Example Entry below... That is only for the template to illustrate these instructions by example...  
+
+  + You are now at the top of the list and the time is the present...  There won't be any future entries ahead of you... (maybe next decade? time travel?)
+
+  + Enter a new timestamp with "C-c .", Hit enter to auto accept today's date and time.
+
+  + Give it a quick title and make this new line an outline heading at the proper level. 
+
+  + Advance your cursor two lines below your new heading and begin typing away before you forget your fantastic idea!!!
+
+  + You can organize everything else later...  Don't scare away the muses! Get your story down now!
+
+  + Then you may go out to play elsewhere little grasshopper... But come back later and organize things... OK? Don't create a swamp in here! And don't forget to take your bath tonight... ;-) 
+
+  + Having done the simple steps above any time you get inspired, you will be able to tell your grand children.. "I got my first spark of an idea for that book back in Year, Month, Day, time, second" (50 years later!) Now that is being organized! LOL
+:END:
+
+*** <2020-06-07 Sun> Visisonar - Object from Asimov's Foundation Series
+
+:README:
+This is a dummy example of some crazy idea that you may have gotten at the spur of the moment, while you were doing something elsewhere within this project...  After you are done getting as much of the idea as you initally can then you can simply go back to what you were doing before the inspiration segue tore you away... you might want to schedule this as a todo item before leaving though...
+
+Later when you are free you can come back to file this or place it where it belongs.  In the case of the note below it would probably go in a research folder of a Sci-Fi related project...
+:END:
+
+From Isaac Asimov's science fiction series 'Foundation', specifically the section of 'Foundation and Empire' entitled 'The Mule', the visisonar is considered a musical instrument.
+
+Unlike most instruments, this one does not achieve its effect by using sonic effects but, instead, directly stimulates the listeners' mental well-being. The number of people and level of effect depends on the skill level of the player. As this was a device from the First Empire, there were not that many people around with any skill at all. However, the Mule's clown, Magnifico, had some skill with the instrument and was asked to play for select parties on the Foundation and for large groups of workers on Haven. This may not have been a good idea...
+* 🎙Audio Production:
+** 📃 Synopsis:
+
+The Adventures of yadda... yadda... yadda...
+
+** 📃 Front Matter:
+
+Front Matter... yadda... yadda... yadda...
+** 🎙 Episodes:
+*** 🎙 Episode 1:
+:README:
+I am still working out how to set up my drama script template...  I am using fountain mode to create audio dramas with sound and music cues etc.  This is semi automated using Afterwriting python script.  I edit all the files in Emacs but it is easier to run the build script on the command line.  The build script creates a new PDF file.
+
+I have plans to create all that automation within Org-Mode and that is what this template should be about... The fountain files could also be created programmatically here from their project folder... There would be some way to click on a link to the script, *(a .fountain file) and then it would automatically open up in another frame of the proper dimensions for editing a screenplay in Modular Emacs...
+:END:
+**** 🎙 Title - <replace w/ actual episode name>
+
+:README:
+Episodes are composed of many scenes relating to a single airing of some aspect of a series of audio or radio programs...
+:END:
+
+<insert new episode fountain script below>
+
+#+BEGIN_SRC fountain
+
+#+END_SRC
+
+**** 🗒 Background Notes:
+:README:
+
+:END:
+
+***** 🗒 Note 1: <2020-05-10 Sun>
+
++ Mark each note's timestamp to its initial creation time. This will enable emerging notes for episodes to be searched chronologically, and to give you an idea of how things evolve over time...
+
++ Add anything you need here under this heading formatted any way needed to present the data... Sub levels are fine, tables are fine... etc.  This is the Notebook, Scrapbook, whatever any extra info/metadata you feel is important to record for this particular episode...
+
+  + Use bulleted lists/sublist etc. if needed...
+
+1. Or Numbered Lists...
+
+|----+--------|
+| Or | Tables |
+|----+--------|
+|  1 |    2.3 |
+|----+--------|
+
+Do any or all the above to help get the concepts and images of your radio production clear in mind...
+
+***** 🗒 Note 2: <2020-05-10 Sun>
+
+Each new note needs to get its own heading and initial timestamp...
+
+******* Quid Novi?
+
+Quid Novi? Lorem Ipsum dolor sit amet,consectetur adipisicing elit, sed doeiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim adminim veniam, quis nostrudexercitation ullamco laboris nisi utaliquip ex ea commodo consequat.
+
+***** 🗒 Phasellus orci: <2020-05-10 Sun>
+
+Etiam tempor elit auctor magna. Nullam nibh velit, vestibulum ut, eleifend non, pulvinar eget, enim. Classaptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer velit mauris, convallis acongue sed, placerat id, odio. Etiam venenatis tortor sed lectus. Nulla non orci.
+
+|----------+-----------+-----------+-----------+-------------------|
+| Inceptos | Venenatis | Convallis | Curabitus | Nunc vitae libero |
+|----------+-----------+-----------+-----------+-------------------|
+| test 1   | test 2    | test 3    | test 4    | test 5            |
+|----------+-----------+-----------+-----------+-------------------|
+
+Yadda, yadda, yadda. etc...
+*** 🎙 Episode 2:
+:README:
+Add any general purpose readme information about this particular episode here, caveats, meta-data, etc...
+:END:
+**** 🎙 Title - <replace w/ actual episode name>
+
+:README:
+Episodes are composed of many scenes relating to a single airing of some aspect of a series of audio or radio programs...
+:END:
+
+<insert new episode fountain script below>
+
+#+BEGIN_SRC fountain
+
+#+END_SRC
+
+**** 🗒 Background Notes:
+
+***** 🗒 Note 1: <2020-05-10 Sun>
+
++ Mark each note's timestamp to its initial creation time. This will enable emerging notes for episodes to be searched chronologically, and to give you an idea of how things evolve over time...
+
++ Add anything you need here under this heading formatted any way needed to present the data... Sub levels are fine, tables are fine... etc.  This is the Notebook, Scrapbook, whatever any extra info/metadata you feel is important to record for this particular episode...
+
+  + Use bulleted lists/sublist etc. if needed...
+
+1. Or Numbered Lists...
+
+|----+--------|
+| Or | Tables |
+|----+--------|
+|  1 |    2.3 |
+|----+--------|
+
+Do any or all the above to help get the concepts and images of your radio production clear in mind...
+
+***** 🗒 Note 2: <2020-05-10 Sun>
+
+Each new note needs to get its own heading and initial timestamp...
+
+******* Quid Novi?
+
+Quid Novi? Lorem Ipsum dolor sit amet,consectetur adipisicing elit, sed doeiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim adminim veniam, quis nostrudexercitation ullamco laboris nisi utaliquip ex ea commodo consequat.
+
+***** 🗒 Phasellus orci: <2020-05-10 Sun>
+
+Etiam tempor elit auctor magna. Nullam nibh velit, vestibulum ut, eleifend non, pulvinar eget, enim. Classaptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer velit mauris, convallis acongue sed, placerat id, odio. Etiam venenatis tortor sed lectus. Nulla non orci.
+
+|----------+-----------+-----------+-----------+-------------------|
+| Inceptos | Venenatis | Convallis | Curabitus | Nunc vitae libero |
+|----------+-----------+-----------+-----------+-------------------|
+| test 1   | test 2    | test 3    | test 4    | test 5            |
+|----------+-----------+-----------+-----------+-------------------|
+
+Yadda, yadda, yadda. etc...
+
+** 📒 Back Story Plots:
+
+*** Plot Example One:
+
+Note: This is an example of a back story plot related to your story... Write it down in the rough here and then later you can develop it further if needed.
+
+*** Plot Example Two:
+
+Note: This is an example of a back story plot related to your story... Write it down in the rough here and then later you can develop it further if needed.
+
+*** Add more Plots like this:
+
+Note: This is an example of a back story plot related to your story... Write it down in the rough here and then later you can develop it further if needed.
+
+
+** 🗡 Plot Summaries:
+
+Gather all the plot ideas that have been building over the years and put them in here... then you can decide how and when to present them within the unfolding story.
+
+*** Chapter # Plots
+
+In this chapter we are dealing with  yadda yadda yadda which must be resolved with yadda yadda yadda.
+
+*** Chapter # Plots
+
+In this chapter we are dealing with  yadda yadda yadda which must be resolved with yadda yadda yadda.
+
+*** Chapter # Plots
+
+In this chapter we are dealing with  yadda yadda yadda which must be resolved with yadda yadda yadda.
+* 📒 Research:
+** 💡 New Episode Ideas:
+** 👤 Characters:
+** 👥 Groups - Factions:
+** 🌐 Locations - Worlds:
+** 🎪 Major Events:
+** 🏞 Scenes:
+** ❝ Quotations:
+** 🖍 Styles:
+* ⎘ Templates:
+
+This section provides skeleton templates to use to start real sections within your audio production.  Any sub heading under this *Templates:* group can be utilized by copy-pasting it anywhere you need to create a new section based on its structure... 
+
+Some of the templates below have already been used and appear as placeholders in their proper default locations. (this does not keep you from putting them in other places, or customizing things to be completely different of course).  However, since they already exist as placeholders where they normally belong, you can fill in those ones with your real details, and then copy more from here when you need to add more later... The purpose of the placeholders is to get you off to a good start... Once you have done that you will have a much better idea where things go...
+
+Or... You could try mashing several cloned templates together to create a totally new project with a different structure... The intent of this is to save lots of time Starting up a new writing project.  Lets see if it helps. :trollface:
+
+Instructions:
+   - Choose one of the templates below and copy it (folded).  Paste the copied template as a new clone within your project's "Audio Production" section, or "Research" section...  Change the name of the template to its specific element name needed within your project's structure...
+
+** ✎ Log:
+
+:README:
+- Use this space to add time stamped log note entries for any pourpose you may need...
+
+- Create a time stamped entry.  Use key command:
+   + "C-c ."
+   + Make your new entry an outline sub-heading of this Log.
+
+- Keep your Log Entries in Decending Chronological Order.
+   (i.e., put your newest entries on top)
+:END:
+
+*** <2020-06-19 Fri> New Log Entry Example:
+
+Yadda, yadda, yadda...
+** ⏰ Tasks:
+
+:README:
+- Use this space to add time stamped Tasks for any pourpose you may need...
+
+- Create a time stamped Task entry.  Use key command:
+   + "C-c ."
+   + Make your new entry an outline sub-heading of this Tasks: Section.
+
+- Keep your Tasks in Decending Chronological Order.
+   (i.e., put your newest tasks on top)
+:END:
+
+*** TODO <2020-06-19 Fri> New Task Example:
+
+Yadda, yadda, yadda...
+
+** 🗓 Editorial Calendar
+
+Make an editorial Calendar for this project right here where it belongs!  You won't loose it! and you can access it quickly without having to search for it elsewhere. Org-Mode excels for this task!  Take advantage of its powerful scheduling, agenda, and filtering capabilities!
+
+** 👤 New Character
+*** 💬 Profile:
+
+**** Name, Rank, S/N:
+
+|--------+----------------|
+| Name:  | put name here  |
+|--------+----------------|
+| AKA:   | put alias here |
+|--------+----------------|
+| Title: | put title here |
+|--------+----------------|
+| Rank:  | put rank here  |
+|--------+----------------|
+
+**** Summary (Paragraph):  
+
+:README:
+Put a single paragraph summary of the character's storyline, motivation and description. Loosely based on what you will write from the snowflake steps.
+:END:
+
+**** Summary (Sentence):  
+
+:README:
+Put a single sentence summary of the character's storyline here.
+:END:
+
+**** Motivation
+
+:README:
+The character's motivation /(what does he/she want abstractly?)/
+:END:
+
+**** Goal
+
+:README:
+The character's goal (what does he/she want concretely?)
+:END:
+
+**** Conflict
+
+:README:
+The character's conflict (what prevents him/her from reaching this goal?)
+:END:
+
+**** Epiphany
+
+:README:
+The character's epiphany (what will he/she learn, how will he/she change?
+:END:
+
+**** Basics:
+
+|-----+--------+---------+--------+--------+------------+-------------|
+| Age | Gender | Species | Height | Hair   | Complexion | Nationality |
+|-----+--------+---------+--------+--------+------------+-------------|
+|     |        |         |        | color, |            |             |
+|     |        |         |        | etc... |            |             |
+|-----+--------+---------+--------+--------+------------+-------------|
+
+|-----+------------+------+--------+------+------------+-----------|
+| DOB | Birthplace | Race | Weight | Eyes | Handedness | Ethnicity |
+|-----+------------+------+--------+------+------------+-----------|
+|     |            |      |        |      | right      |           |
+|     |            |      |        |      | left etc.  |           |
+|-----+------------+------+--------+------+------------+-----------|
+
+**** Family
+
+|----------------+----------------------+----------+------------+------------+----------|
+| Marital status | Spouse(s)/Partner(s) | Children | Bio Father | Bio Mother | Siblings |
+|----------------+----------------------+----------+------------+------------+----------|
+|                |                      |          |            |            |          |
+|                |                      |          |            |            |          |
+|----------------+----------------------+----------+------------+------------+----------|
+
+
+**** Social
+
+|-------------+------------------------+------------+---------------+------|
+| Citizenship | Social status          | Job/career | Position/role | Rank |
+|-------------+------------------------+------------+---------------+------|
+|             | Fugitive, criminal,    |            |               |      |
+|             | up-standing            |            |               |      |
+|             | member of public, etc. |            |               |      |
+|-------------+------------------------+------------+---------------+------|
+
+**** Skills Etc.
+
+|--------+---------+-----------------+-----------|
+| Skills | Hobbies | Talents / Gifts | Languages |
+|--------+---------+-----------------+-----------|
+|        |         |                 |           |
+|        |         |                 |           |
+|--------+---------+-----------------+-----------|
+
+**** Physical Attributes
+
+:README:
+The Character's Physical description.... 
+:END:
+
+**** Personality
+
+:README:
+The Character's Personality... yadda yadda yadda
+:END:
+
+***** Likes / Dislikes
+
+:README:
+The Character's Likes / dislikes, yadda yadda yadda...
+:END:
+
+**** Personal History
+
+:README:
+Character’s personal history. Yadda yadda yadda...
+:END:
+
+*** 📃 Character Synopsis:
+
+:README:
+Write a character synopsis that tells the story from the point of view of the character.
+:END:
+
+***** Major characters
+
+:README:
+Write one page or 600 words about the major characters in this story...
+:END:
+
+***** Minor characters
+
+:README:
+Write half a page or 300 words about the minor characters in this story...
+:END:
+
+*** 🗒 Worksheet:
+
+:README:
+This is your scratch pad worksheet for loosely drafting up new characters before organizing all the information into a Character Profile and Character Synopsis... Free form in here... Let the muses take complete control in this space...
+:END:
+** 👥 New Group or Faction
+*** ⚛ Interstellar Nation <The Galactic Empire>
+
+:README:
+Definition:
+
+- A Spacefaring kingdom, empire, country, etc (like Asimov's Galactic Empire, or the Romulan Empire etc.) This type of nation may extend out through a galactic cluster or quadrant, etc.
+
+:END:
+
+**** 📃 Summary:
+
+:README:
+This section is the executive summary (abstract) of a longer full story chapter within your book.  Stories like the Finnegan Series are fully invested on not one but many Interstellar Nations!  Your mileage may vary... %^)
+
+You need to incorporate all the results of your research here in a similar way that Isaac Asimov wrote chapters undergoing many iterations over time about the Galactic Empire in his Foundation Series... 
+
+This abstract, is a short historical and present summary only... It should include the major goals, motivations... who they’re at war with, etc. i.e., It should include the news headlines, and ledelines...  but not the full story... Results of your research below this summary should be as rich and detailed as you can make it... (but also indexed!)
+
+The Ideas and Notes here were adapted from Droemar’s article “5 Tips: World-Building Template”.
+
+http://droemar.deviantart.com/journal/5-Tips-World-Building-Template-224630229
+
+Much more information can be obtained by visiting the above website!!!  
+
+I learned about this Snowflake Idea several years ago when I was first learning how to use the structure to build my Scrivener Projects starting out on a Macbook Pro 2011 model... 
+
+# This Emacs Org Mode based Book Publishing project has been initially modelled upon my Scrivener Project but it will soon outgrow more and do much more than Scrivener could ever dream of!  I am sure of it! I have already discovered much. The Learning curve is levelling off finally!  Writing this now in my fancy Emacs buffer specifically designed for distraction free writing mode is a dream! All my edits are made very close to the typewriter home row!  No reaching for any mice or hard to reach keys while the stream of consciousness flows!  Much of that typing ease is thanks to the detailed and structured eLisp programming work of Xah Lee!  OMG! You did a ton of great things!  No Troll in my book! You are the Knight in Armour for the weak of tendons! Fantastic! Thanks Dude!
+:END:
+
+**** 🔤 Basics:
+
+:README:
+- Fill in the tables below... Pretty much self explanatory...  Do your research first though!
+:END:
+
+|------------+---------+--------+----------+-----------------------+----------------|
+| Home World | Colours | Symbol | Currency | Official Languages(s) | Galactic Scope |
+|------------+---------+--------+----------+-----------------------+----------------|
+|            |         |        |          |                       | number of      |
+|            |         |        |          |                       | systems, etc.  |
+|            |         |        |          |                       |                |
+|            |         |        |          |                       |                |
+|------------+---------+--------+----------+-----------------------+----------------|
+
+
+|------------------+---------------------+-------------------+-----------+----------------|
+| Type Government  | Current Gov'ng Body | Cur Head of State | Military  | Affiliation(s) |
+|------------------+---------------------+-------------------+-----------+----------------|
+| <fudal, castle,  | <party name>        |                   | What's it |                |
+| democracy, etc.> |                     |                   | called?   |                |
+|                  |                     |                   |           |                |
+|                  |                     |                   |           |                |
+|------------------+---------------------+-------------------+-----------+----------------|
+
+**** 𐇑 Social Structure:
+
+:README:
+Who holds power, and how does it affect the way the society works? Is there an aristocracy? If so, how are its ranks structured?
+:END:
+
+**** 🏛 Government:
+
+:README:
+Describe the Structure and general procedures here...
+:END:
+
+**** ⚖ Taxation:
+
+:README:
+Write a brief overview of how the people are taxed, and where that money goes.
+:END:
+
+**** 💵 Currency:
+
+:README:
+What is the currency? What are its sub-denominations?
+:END:
+
+**** 👥 Population:
+
+***** Races
+
+:README:
+Describe the races that inhabit the area, and whether or not they’re native, etc...
+:END:
+
+***** Common physical characteristics
+
+:README:
+Describe the common physical characteristics of long-term inhabitants and native peoples: skin colour, hair colour, build, dress, etc...
+:END:
+
+***** Predominant religion(s)
+
+:README:
+Describe the perdominant religion here... Is it Monotheism?  Pantheism?  Atheism? Name and describe them as needed.)
+:END:
+
+**** ⛩ Culture:
+
+***** Mannerisms
+
+:README:
+Use this space to illustrate the typical way individuals or groups from this place behave... (e.g, A fur-wrapped barbarian behaves in a very different way than a Greek statesman.)
+:END:
+
+***** Greetings
+
+:README:
+Provide some examples of typical greetings here... (e.g, What is considered an acceptable greeting? In formal setting? Among friends? Family?, etc.)
+:END:
+
+***** Customs
+
+:README:
+List the habits of a people that make them unique in this space...
+:END:
+
+***** Superstitions
+
+:README:
+(Knowing the power irrational explanations have over a populace can sometimes be good story material.)
+:END:
+
+***** Beliefs
+
+:README:
+Do I really have to explain this one?  This alone could end up being your entire story...
+:END:
+
+***** Rituals
+
+:README:
+(e.g., Birth? Coming-of-age? Marriage? Death? Justice? etc.)
+:END:
+
+***** Festivals
+
+:README:
+(e.g., What do people celebrate? What are considered holidays? Why?, etc.)
+:END:
+
+**** 🕉 Language
+
+:README:
+This is kind of a big one! Be very careful to point how and why your characters can understand each other, especially if they are from different countries. Language in the real world is a hell of a barrier, but even if you have a Chinese dragon, an Arabian unicorn, a French knight, a Mayan princess, and a Japanese ninja, they can all talk to and understand each other without explanation. Double I-call-BS-points for someone from another world or time!  Anyone who has ever toured Europe can tell you why this is complete bull.  Take a closer look, especially if you’re modeling anything after medieval Europe; only the Church had a universal language: Latin.
+:END:
+
+**** ⚗ Education
+
+:README:
+(How are children taught?  Skilled workers, like architects or brewers?  Is there public education?  Higher education?)
+:END:
+
+**** 🚉 Transportation - Shipping
+
+:README:
+Here is where you talk about, how "people" and "things" are moved/transported from one "place" to another. (e.g., The logistics... Armies? Crowds? Goods? Animals? etc.)
+:END:
+
+**** ⚔ Military
+
+:README:
+Write about the military is all about here... What real world military is/can it be based upon? What’s it’s structure?
+:END:
+
+**** 🏙 Major sectors and systems
+
+|--------+----------+--------+-----------------------------------------|
+| Sector | Quadrant | System | Description:                            |
+|--------+----------+--------+-----------------------------------------|
+|        |          |        | One or two paragraphs only here.        |
+|        |          |        | Reference link to longer doc is better. |
+|        |          |        |                                         |
+|        |          |        |                                         |
+|        |          |        |                                         |
+|--------+----------+--------+-----------------------------------------|
+
+**** 📖 History
+
+:README:
+Everyone comes from somewhere.  People just don’t up and appear on islands and such.  The Native Americans walked across a land bridge way back in the day... Europeans came from Romans and Greeks and Celts and Gauls and more... Very few people bother to look at this aspect of world-building, and they really should.  Even if a civilization has been around for two thousand years and are elven dragon riders, they came from somewhere.  Even if their mythology says they crawled out of the earth: they came from somewhere.  Examine it!
+:END:
+
+*** 🛡 Nation <The Roman Empire, etc.>
+
+:README:
+Nation Definition:
+
+   - A Non-spacefaring kingdom, empire, country, etc.
+
+   - A Continent, Country, Nomadic Diaspora or Clan... (e.g., Asia, Europe, The Roman Empire, The Gypsies, The Isle of Mann, or the Ba Aka Pygmys, etc.) not to be limited to groups living on Planet Earth only of course...
+
+# NOTE: Change the heading title "Nation" above to the actual name of your specific group...
+
+# This template was originally adapted from Droemar’s article “5 Tips: World-Building Template”:
+
+        http://droemar.deviantart.com/journal/5-Tips-World-Building-Template-224630229
+
+# Originally created as an Evernote template, later moved to and overhauled within Scrivener, and now living her third incarnation within a future proof plain text .org file that is parsed, hosted, and rendered by my fancy Emacs pubOps environment... %^) 
+:END:
+
+**** 📃 Summary:
+
+:README:
+Goals, motivations, who they’re at war with, etc.
+:END:
+
+**** 🔤 Basics:
+
+|----------------+---------+--------+----------+----------------------|
+| Home Country   | Colours | Symbol | Currency | Official language(s) |
+|----------------+---------+--------+----------+----------------------|
+| <country name> |         |        |          |                      |
+|                |         |        |          |                      |
+|----------------+---------+--------+----------+----------------------|
+
+|-------------------+------------------------+-----------------------|
+| Government type   | Current governing body | Current head of state |
+|-------------------+------------------------+-----------------------|
+| Feudal, caste,    | Party name.            |                       |
+| democracy, etc... |                        |                       |
+|                   |                        |                       |
+|-------------------+------------------------+-----------------------|
+
+|-------------------+----------------+-----------------------|
+| Military          | Affiliation(s) | Number of territories |
+|-------------------+----------------+-----------------------|
+| What’s it called? |                |                       |
+|                   |                |                       |
+|-------------------+----------------+-----------------------|
+
+**** 𐇑 Social Structure
+
+:README:
+Who holds power, and how does it affect the way the society works? Is there an aristocracy? If so, how are its ranks structured?
+:END:
+
+**** 🏛 Government
+
+:README:
+Structure and general procedures
+:END:
+
+**** ⚖ Taxation
+
+:README:
+A brief overview of how the people are taxed, and where that money goes.
+:END:
+
+**** 💵 Currency
+
+:README:
+What is the currency? What are its sub-denominations?
+:END:
+
+**** 👥 Population
+***** Common physical characteristics
+
+:README:
+Common physical characteristics of long-term inhabitants and native peoples: skin colour, hair colour, build, dress
+:END:
+
+***** Races 
+
+:README:
+The races that inhabit the area, whether or not they’re native.
+:END:
+
+***** Predominant religion(s)
+
+:README:
+Monotheism?  Pantheism?  Atheism? Name and describe them as needed.
+:END:
+
+**** ⛩ Culture
+***** Mannerisms
+
+:README:
+The likely way someone behaves if they’re from this place. Because believe me, a fur-wrapped barbarian behaves in a very different way than a Greek statesman.
+:END:
+
+***** Greetings
+
+:README:
+What is considered an acceptable greeting?  In formal setting?  Among friends? Family?
+:END:
+
+***** Customs
+
+:README:
+The habits of a people that make them unique.  Google it if you’re confused.
+:END:
+
+***** Superstitions
+
+:README:
+Knowing the power irrational explanations have over a populace can sometimes be good story material.
+:END:
+
+***** Beliefs
+
+:README:
+Do I really have to explain this one?  This alone can be your story.
+:END:
+
+***** Rituals
+
+:README:
+Birth? Coming-of-age?  Marriage?  Death?  Justice?
+:END:
+
+***** Festivals
+
+:README:
+What do people celebrate?  What are considered holidays?  Why?
+:END:
+
+**** 🕉 Language
+
+:README:
+This is kind of a big one for me, because I’m always very careful to point how and why my characters can understand each other, especially if they are from different countries. Language in the real world is a hell of a barrier, but even if you have a Chinese dragon, an Arabian unicorn, a French knight, a Mayan princess, and a Japanese ninja, they can all talk to and understand each other without explanation. Double I-call-BS-points for someone from another world or time!  Anyone who has ever toured Europe can tell you why this is complete bull.  Take a closer look, especially if you’re modeling anything after medieval Europe; only the Church had a universal language: Latin.
+:END:
+
+**** ⚗ Education
+
+:README:
+How are children taught?  Skilled workers, like architects or brewers?  Is there public education?  
+Higher education?
+:END:
+
+**** 🚉︎Transportation
+
+:README:
+How do people move things?  Armies?  Crowds?  Goods?  Animals?
+:END:
+
+**** ⚔ Military
+
+:README:
+What is their military like? What real world military is/can it be based upon? What’s it’s structure?
+:END:
+
+**** 🏙 Major territories and cities
+
+***** Territory:
+
+****** City <name of major city>:
+
+Description...
+
+**** 📖 History
+
+:README:
+Everyone comes from somewhere.  People just don’t up and appear on islands and such.  Even Native Americans walked across a land bridge way back in the day. Europeans came from Romans and Greeks and Celts and Gauls and more.  
+
+Few people bother to look at this aspect of world-building, and they really should.  Even if a civilization has been around for two thousand years and are elven dragon riders, they came from somewhere.  Even if their mythology says they crawled out of the earth: they came from somewhere.  Examine it!
+:END:
+
+
+
+** 🌐 New World
+*** 🏞 Location
+
+**** Summary
+
+:README:
+Write your Location Summary here. Use what ever sub headings, and or formatting you need to accomplish this but don't make it too long...  The next sections are for drilling down...
+:END:
+
+**** Setting Detail
+
+***** Overall Feeling:
+
+***** Sights:
+
+***** Sounds:
+
+***** Smells:
+
+*** ∅ Planet/Satellite
+
+:README:
+Rename Planet/Satellite heading above to the actual name of the planet or satellite of your specific case...
+
+The Ideas and Notes here were adapted from Droemar’s article “5 Tips: World-Building Template”.
+
+http://droemar.deviantart.com/journal/5-Tips-World-Building-Template-224630229
+
+Much more information can be obtained by visiting the above website!!!
+:END:
+
+**** System, Sector/quadrant
+
+:README:
+Rename System, Sector/quadrant heading above with the actual name of your system, with its specific sector and quadrant coordinates...
+:END:
+
+***** Controlling party/faction
+
+:README:
+Rename Controlling party/faction heading above with the actual name of your party/or faction...  Fill in key facts in the tables below...
+:END:
+
+
+|-------+------+-------------+----------------+------------|
+| Class | Type | Satellites  | Native species | Population |
+|-------+------+-------------+----------------+------------|
+|       |      | Moons, etc. |                |            |
+|       |      |             |                |            |
+|-------+------+-------------+----------------+------------|
+
+|--------------+--------------+-------------+------------------+----------------|
+| Capital city | Colours      | Symbol      | Government       | Affiliation(s) |
+|--------------+--------------+-------------+------------------+----------------|
+|              | Example:     | Example:    | Example:         |                |
+|              | red, white   | stars,      | Feudal system,   |                |
+|              | & blue, etc. | and stripes | caste system,    |                |
+|              |              |             | oligarchy,       |                |
+|              |              |             | parliament,      |                |
+|              |              |             | democracy,       |                |
+|              |              |             | plutocracy, etc. |                |
+|--------------+--------------+-------------+------------------+----------------|
+
+**** Major cities
+
+***** City (continent/region)
+
+:README:
+Change Heading City (continent/region) above to the name of your specific city, continent, or region...
+
+Then add a detailed description below...  
+
+Do this to get a feel for the areas the characters will be visiting.
+:END:
+
+****** Description:
+
+# Add Description Here:
+
+**** Population
+
+***** Races:
+
+:README:
+List all the races that inhabit the area, whether or not they’re native.
+:END:
+
+***** Predominant religion(s):
+
+:README:
+Monotheism?  Pantheism?  Atheism? Name and describe them as needed.
+:END:
+
+***** Common physical characteristics:
+
+:README:
+List the common physical characteristics of long-term inhabitants and native peoples: skin colour, hair colour, build, dress
+:END:
+
+**** Culture
+
+***** Mannerisms:
+
+:README:
+Use this space to illustrate the likely way someone behaves if they’re from this place. Because believe me, a fur-wrapped barbarian behaves in a very different way than a Greek statesman.
+:END:
+
+***** Cuisine:
+
+:README:
+Write about what most people on this planet eat every day?  On festival days?  As delicacies? Taboo?
+:END:
+
+***** Leisure:
+
+:README:
+What do people here do in their spare time?  For fun?
+:END:
+
+***** Greetings:
+
+:README:
+What is considered an acceptable greeting?  In formal setting?  Among friends? Family?
+:END:
+
+***** Customs:
+
+:README:
+The habits of a people that make them unique.  Google it if you’re confused.
+:END:
+
+***** Quotes:
+
+:README:
+Write about how someone from this planet would talk like, or talk about.
+:END:
+
+***** Superstitions:
+
+:README:
+Knowing the power irrational explanations have over a populace can sometimes be good story material.
+:END:
+
+***** Magic:
+
+:README:
+How it is treated by the country.  Whether hated and feared, harnessed for industry, or nonexistent within it’s borders, if magic has a presence in your story you ought to look at how it affects the larger picture than just your heroes and their journey.
+:END:
+
+***** Beliefs:
+
+:README:
+Do I really have to explain this one?  This alone can be your story.
+:END:
+
+***** Rituals:
+
+:README:
+Birth? Coming-of-age?  Marriage?  Death?  Justice?
+:END:
+
+***** Festivals:
+
+:README:
+What do people celebrate?  What are considered holidays?  Why?
+:END:
+
+**** Transport
+
+:README:
+How do people move things?  Armies?  Crowds?  Goods?  Animals?
+:END:
+
+**** Weather patterns
+
+:README:
+Tropical?  Stormy?  Cold?  Earthquakes?  Climate in general?
+:END:
+
+**** Resources
+
+:README:
+What does the planet export?  Import?  Make?  Is famous for?
+:END:
+
+**** History
+
+:README:
+Everyone comes from somewhere.  People just don’t up and appear on islands and such.  I mean, even Native Americans walked across a land bridge way back in the day. Europeans came from Romans and Greeks and Celts and Gauls and more.  Very few people bother to look at this aspect of world-building, and they really should.  Even if a civilization has been around for two thousand years and are elven dragon riders, they came from somewhere.  Even if their mythology says they crawled out of the earth: they came from somewhere.  Examine it here in this space!
+:END:
+
+
+
+
+:README:
+I am still working out how to set up my drama script template...  I am using fountain mode to create audio dramas with sound and music cues etc.  This is semi automated using Afterwriting python script.  I edit all the files in Emacs but it is easier to run the build script on the command line.  The build script creates a new PDF file.
+
+I have plans to create all that automation within Org-Mode and that is what this template should be about... The fountain files could also be created programmatically here from their project folder... There would be some way to click on a link to the script, *(a .fountain file) and then it would automatically open up in another frame of the proper dimensions for editing a screenplay in Modular Emacs...
+:END:
+
+
+*** NEXT 🎙 New Drama Script
+
+:README:
+I am still working out how to set up my drama script template...  I am using fountain mode to create audio dramas with sound and music cues etc.  This is semi automated using Afterwriting python script.  I edit all the files in Emacs but it is easier to run the build script on the command line.  The build script creates a new PDF file.
+
+I have plans to create all that automation within Org-Mode and that is what this template should be about... The fountain files could also be created programmatically here from their project folder... There would be some way to click on a link to the script, *(a .fountain file) and then it would automatically open up in another frame of the proper dimensions for editing a screenplay in Modular Emacs...
+:END:
+** 🎙 Audio Episodes:
+*** 🎙 New Episode #:
+:README:
+I am still working out how to set up my drama script template...  I am using fountain mode to create audio dramas with sound and music cues etc.  This is semi automated using Afterwriting python script.  I edit all the files in Emacs but it is easier to run the build script on the command line.  The build script creates a new PDF file.
+
+I have plans to create all that automation within Org-Mode and that is what this template should be about... The fountain files could also be created programmatically here from their project folder... There would be some way to click on a link to the script, *(a .fountain file) and then it would automatically open up in another frame of the proper dimensions for editing a screenplay in Modular Emacs...
+:END:
+**** 🎙 Title
+
+- NOTE: <replace w/ actual episode name>
+
+:README:
+Episodes are composed of many scenes relating to a single airing of some aspect of a series of audio or radio programs...
+:END:
+
+<insert new episode fountain script below>
+
+#+BEGIN_SRC fountain
+
+#+END_SRC
+
+**** 🗒 Background Notes:
+
+:README:
+- Use this space to add time stamped background note entries related to this episode...
+
+- The note entries below are examples with dummy data to give you an idea how this is done.
+
+- Each new note needs to get its own heading and initial timestamp... You may delete the example notes below, or you could rename them and update their timestamps to reuse them...
+
+- To create a time stamped note entry from scratch, use key command:
+   + "C-c ."
+   + Give this note a title...
+   + Make this note into a new outline sub-heading of this parent section.
+
+- Keep your note entries in Decending Chronological Order.
+   (i.e., put your newest entries on top)
+:END:
+
+***** 🗒 Note 1: <2020-05-10 Sun>
+
+- This is an example note to help get you started... You can re-purpose this note by changing its title, and replacing the old timestamp above with current time/date. Then repace this content with your own content.
+
+   + Marking each note with initial creation time/date will enable emerging notes to be searched chronologically, and to give you an idea of how things evolve over time...
+
+   + Add anything you need here under this heading formatted any way needed to present the data... Sub levels are fine, tables are fine... etc.
+
+   + Use bulleted lists/sublist etc. if needed...
+
+1. Or Numbered Lists...
+
+|----+--------|
+| Or | Tables |
+|----+--------|
+|  1 |    2.3 |
+|----+--------|
+
+Do any or all the above to help get the concepts and images of your radio production clear in mind...
+
+***** 🗒 Note 2: <2020-05-10 Sun>
+
+Each new note needs to get its own heading and initial timestamp... You may delete these example notes, or you could rename them and update the timestamp to reuse them...
+
+******* Quid Novi?
+
+Quid Novi? Lorem Ipsum dolor sit amet,consectetur adipisicing elit, sed doeiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim adminim veniam, quis nostrudexercitation ullamco laboris nisi utaliquip ex ea commodo consequat.
+
+***** 🗒 Phasellus orci: <2020-05-10 Sun>
+
+Etiam tempor elit auctor magna. Nullam nibh velit, vestibulum ut, eleifend non, pulvinar eget, enim. Classaptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer velit mauris, convallis acongue sed, placerat id, odio. Etiam venenatis tortor sed lectus. Nulla non orci.
+
+|----------+-----------+-----------+-----------+-------------------|
+| Inceptos | Venenatis | Convallis | Curabitus | Nunc vitae libero |
+|----------+-----------+-----------+-----------+-------------------|
+| test 1   | test 2    | test 3    | test 4    | test 5            |
+|----------+-----------+-----------+-----------+-------------------|
+
+Yadda, yadda, yadda. etc...
+** 📒 Back Story Plots:
+
+*** Plot Example One:
+
+Note: This is an example of a back story plot related to your main story or episode... Write it down in the rough here and then later you can develop it further if needed.
+
+*** Plot Example Two:
+
+Note: This is an example of a back story plot related to your main story or episode... Write it down in the rough here and then later you can develop it further if needed.
+
+*** Add more Plots like this:
+
+Note: This is an example of a back story plot related to your main story or episode... Write it down in the rough here and then later you can develop it further if needed.
+
+** 🗡 Plot Summaries:
+
+Gather all the plot ideas that have been building over the years and put them in here... then you can decide how and when to present them within the unfolding story.
+
+*** Episode # Plots
+
+In this episode we are dealing with  yadda yadda yadda which must be resolved with yadda yadda yadda.
+
+*** Episode # Plots
+
+In this episode we are dealing with  yadda yadda yadda which must be resolved with yadda yadda yadda.
+
+*** Episode # Plots
+
+In this episode we are dealing with  yadda yadda yadda which must be resolved with yadda yadda yadda.
