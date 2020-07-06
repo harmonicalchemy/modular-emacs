@@ -523,13 +523,11 @@ Your process now is to grow these ideas as chapters of your story. You are expan
 - State "DONE"       from "NEW"        [2020-06-30 Tue 05:38]
 :END:
 
-**** ACTIVE 📃 Character Synopsis tasks:
-
-The following Character Synopsis tasks are based on the Snowflake Method outlined in Randy Ingermanson's book: "How to Write a Novel Using the Snowflake Method"
+Some of these Character tasks are based on the Snowflake Method as outlined in Randy Ingermanson's book: [[https://www.advancedfictionwriting.com/articles/snowflake-method/]["How to Write a Novel Using the Snowflake Method"]].  Other tasks are based on concepts outlined within the book: [[https://www.kmweiland.com/wp-content/uploads/crafting-unforgettable-characters.pdf]["Crafting Unforgettable Characters" by; K.M. Weiland]]... The second book is a free download from: [[https://www.kmweiland.com/][K.M. Weilands Website]] where you can find other great books and writers resources...
 
 Complete the following tasks for each and every character in your story...
 
-***** Prepare a Summary Sheet for Each Character:
+**** ACTIVE 📒 Prepare Character Summary Sheet:
 
 |                   |                                                          |
 |-------------------+----------------------------------------------------------|
@@ -567,11 +565,155 @@ Complete the following tasks for each and every character in your story...
 |                   |                                                          |
 |-------------------+----------------------------------------------------------|
 
-****** Write One Sentence Character Summaries:
 
-***** Exercises:
+**** ACTIVE 👤 Detailed Character Interview:
 
-****** Write a Short Character Synopsis in 3rd person for each character: 
+Expand Above Summary Sheet to Detailed Character Interview
+
+***** *Name:*
+
+Put full name here.  Names are important! If you name your character incorrectly based on your desired personality type you will get into trouble!  Names must match the personality! It makes a big difference... Do your names research... Unless of course you need that "Boy named Sue" effect...
+
+***** *Background:*
+
+- Birthday:
+
+- Place of Birth:
+
+- Parents:
+
+   What was important to the character's parents?
+
+- Siblings:
+
+- Economic/Social Status Growing Up?
+
+- Ethnic Background:
+
+- Places Lived:
+
+  + Current Address:
+
+- Education:
+
+  + Favourite Subject:
+
+  + Special Training:
+
+- Jobs:
+
+  + Salary:
+
+- Travel:
+
+- Friends:
+
+  + How do people view this character?
+
+  + Lives with:
+
+  + Fights with:
+
+  + Spends time with:
+
+  + Wishes to spend time with:
+
+  + Who depends on this character?
+
+  + Who does this character most admire?
+
+- Enemies:
+
+- Dating, Marriage:
+
+- Children:
+
+- Relationship with God:
+
+- Overall Outlook on Life:
+
+  + Self Like/love?
+
+  + Things this Character would like to Improve about their life:
+
+  + Personal Demons:
+
+  + Delusions, Denials:
+
+  + Optimistic or Pessimistic?
+
+  + Real or Feigned?
+
+  + Morality:
+
+  + Confidence Level:
+
+- How your Character is viewed by others:
+
+- A Typical Day:
+
+- Physical Appearance:
+
+  + Body Type:
+
+  + Posture:
+  
+  + Head Shape:
+
+  + Eyes:
+
+  + Nose:
+
+  + Mouth:
+
+  + Hair:
+
+  + Skin:
+
+  + Tattoos/Piercings/Scars:
+
+  + Voice:
+
+  + What People Notice First:
+
+  + Clothing:
+
+  + How the Character Describes Themselves:
+
+- Health/Disabilities/Handicaps:
+
+- Characteristics:
+
+  + Personality Type:
+    (choleric, sanguine, phlegmatic, melancholy) 
+
+  + Strongest Character Trait:
+
+    (How can flip side of strong point be a weakness)
+
+  + Weakest Character Trait:
+
+  + Self Control:
+
+  + Self Discipline:
+
+  + what makes this person cry?
+
+  + Fears:
+
+  + Talents:
+
+  + What People Like about this character:
+
+  + 
+
+
+
+**** ACTIVE 📃 Write Character Synopsis:
+
+***** Write a One Sentence Character Summary:
+
+Write a Short Character Synopsis in 3rd person for each character: 
 
 (*Warning!* This is all about the character on a monologue, talking about themselves)
 
@@ -579,15 +721,9 @@ Each Character Synopsis is to be written in first person, (i.e., The character i
 
 Our character is on a rant, talking all about herself..., always bringing the subject back to personal perspective and personal truths. Soap Box time!
 
-******* Instructions:
+****** Examples:
 
-- Add Each Character Synopsis below as a separate outline sub heading (C-c RET) using the character's name as the title.
-
-- Later... Use the individual character synopsis created here to complete your "Character Profiles" within your projects main "Research:/Characters:" section...
-
-******** Examples:
-
-********** 📃 Huckleberry Finn (example character synopsis - replace name and content)
+******* 📃 Huckleberry Finn (example character synopsis - replace name and content)
 
 Hi! My name is Huckleberry Finn... you can call me "Huck" for short if you like...  Don't pay no attention to anything that famous man behind the curtain may have said about me... That man Samuel Langhorne Clemens, who calls himself Mark Twain... He may know some things about me but he ain't never walked in my shoes!  That's for sure!  Rich author riverboat caption and all... Let me tell you a few things he don't know about me!
 
@@ -595,8 +731,7 @@ For instance... Yadda yadda yadda...  Folks may call me a vagabond, but they don
 
 *(On and On... Huck goes on a personal rant all about himself!)*
 
-
-********** 📃 Your Next Character Name Here: (add more character headings below until all are done)
+******* 📃 Your Next Character Name Here: (add more character headings below until all are done)
 
 Add your character's personal dialog in this space... Rename title above to your character's name...
 
