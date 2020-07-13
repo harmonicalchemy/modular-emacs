@@ -11,7 +11,9 @@ tags: LaTeX, apps-tools, SysAdmin, HA-ModEmacs, how-to, README
 
 # Install Modular Emacs LaTeX pubOps Environment
 
-**[\[Back To Top README\]](../README.md)**
+**[\[Table of Contents\]](#table-of-contents)**
+
+**[\[Back to MAIN Modular Emacs README\]](../README.md)**
 
 ## Introduction:
 
@@ -19,15 +21,93 @@ tags: LaTeX, apps-tools, SysAdmin, HA-ModEmacs, how-to, README
 
 However you do need to install the required TeXShop and external Editor Packages...  Without that Emacs won't have any TeX engines to use... You will see errors if you try to do things like compile LaTeX docs within emacs... Follow the instructions below to finish getting the required packages in place first...  Then you will be all set!
 
+## Install TeX Live:
 
 ### Mac OS:
 
-On Mac OS go to the MacTeX website and follow instructions to install MacTeX and set up your environment with TeXShop as your default stand alone TeX editor/compiler/IDE... I am currently using MacPorts to install dependencies for things, but many of the things like this which have their own built in package managers are installed and maintained outside of MacPorts... My HomeBrew days are over... Many of the advise I gave for HomeBrew in the past may now need to be updated... I will need help with that now as I don't use HomeBrew anymore... Also, as mentioned elsewhere, on Mac OS I maintain my own build of Emacs from the latest commits of the GNU Emacs dev team. ;-)
+#### Update:
 
-#### MacTeX:
+> **Update 2020:** The new MacTeX package install runs on Mac OS High Sierra, and higher... I need to support down to El Capitan, so I added two options below...
 
-Follow instructions, including the **_Please Read_** section on: **[Tug.org/mactex/](https://tug.org/mactex/)** to install what you need... There are two options, the BIG everything, and a more reasonable BasicTeX... I went ahead and installed the big one... _(plenty of disk space)_ and I aim to be a publishing wizard!
-Once you have this, MacTeX has utilities for self update as well as TeXLive etc...  You don't need Apple, HomeBrew, or MacPorts for any of this... Got that?
+#### High Sierra and Later Users:
+
+If you use High Sierra or later, go to: **[Downloading MacTeX 2020](https://www.tug.org/mactex/mactex-download.html)** and follow instructions, or simply click: **[MacTeX.pkg](http://tug.org/cgi-bin/mactex-download/MacTeX.pkg)** right here to download and install the latest binary from same... _(Skip the Legacy Instructions below.  You are all set after opening and installing the pkg file above)_...
+
+Now continue on to the **MacTeX Usage:** heading to follow the rest of the LaTeX environment setup instructions _(post MacTeX install)_
+
+#### Sierra & Earlier Users:
+
+##### Download Unix Install Archive:
+
+All Mac Sierra and older users must go to the **MacTeX** website and follow instructions for: **[Unix Install of TeXLive 2020](https://www.tug.org/mactex/mactex-unix-download.html)**...  The instructions from Tug.org are very detailed, thorough, and informative.  
+
+Below are the [**_Tl;DR (def: 2)_**](https://www.merriam-webster.com/dictionary/TL%3BDR) instructions we will use for our specific Mac OS case, _(supporting Mac OS back to El Capitan V10.11.6)_ 
+
+You are strongly advised to consult the above link however to gain a deeper understanding of how all this TeX / LaTeX stuff works _(in particular for Mac users)_...
+
+To Get Started Click this link: 
+
+**[install-tl-unx.tar.gz](http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz)** to download it.  Your Mac should automatically unzip it and you will find a file named **`install-tl-unx.tar`** in your downloads folder.
+
+Move this `.tar` or `.tar.gz` file to your desktop or your home folder and double-click it to un-compress it, producing a folder inside. It is very important to check the name of this folder. A typical name is **`"install-tl-20200527"`**. The numbers at the end give a date in the form **`year:month:day`**. Check that the year is **2020**. If it is **2019**, then you received last year's install script because the mirror assigned to you was not yet updated. Wait a few days and try again.
+
+##### Install with Terminal App _(or xTerm2)_:
+
+Type the following but do not hit the return key yet:
+
+```yaml
+$>  cd         # <- Type cd command, but DO NOT hit RET key!
+```
+
+While the above Terminal line is sitting there waiting, take your mouse to the GUI _(finder)_,  and drag **`install-tl-2020xxxx`** _(i.e., the folder you just created previously)_ into the terminal window and drop it there. This will automagically add some more text after the "cd".
+
+Now, activate the Terminal command by pressing the RETURN key... This will "change directory" to the `install-tl` folder...
+
+Now type:
+
+```yaml
+$>  sudo ./install-tl --gui tcl
+```
+
+This time press the RET key.
+
+You will be asked for your password _(sudo)_. If you have admin status _(as most users on single owner machines do)_, type your ordinary password.
+
+An Install Window will appear showing the **TeX Lion**. After a few moments, it will be replaced with a window titled **"TeX Live 2020 Installer"**. This window contains a pull down menu labeled **"Default paper size"** with default value **A4**. 
+
+If you live in a region where Letter Size paper is used, change **A4** to **Letter** in this menu. All other defaults will be correct for the Macintosh. 
+
+If your system is **`v10.12`** or earlier, the **`x86_64-darwinlegacy`** binaries will be selected for installation; otherwise the **`x86_64-darwin`** binaries will be selected. 
+
+No worries... **_Just Push the Install Button_**.
+
+The install window will display a long list of packages as each is downloaded, uncompressed, and installed.
+
+> **Note:** This process will take one to two hours or more to complete, especially on older Macs!! In the end, additional messages will be printed, but these can be ignored because the final step will do them automatically.  Please be patient... Do NOT click Abort! OK? :trollface:
+
+When all is done you will have **TeX Live 2020!** Yay! :octocat: You may now skip to the **MacTeX Usage:** heading below and follow next steps from there...
+
+> **Note:** Occasionally, users have reported an error when using the above **`install-tl`** command. If that happens to you, do the following: _(otherwise skip below to **MacTeX Usage:**)_
+
+Type:
+
+```yaml
+$> sudo ./install-tl --gui text
+```
+
+and press RETURN...
+
+The TeX Lion described in the following paragraph will NOT appear, and you'll get a slightly longer display with several questions. But all of the default answers are correct, so the only question which matters is the one about paper size. If you use **letter** size rather than **A4**, select that answer. Then select **install** and skip the next paragraph. Everything else will work the same.
+
+###### Almost Done:
+
+> **Note:** Installation is not quite done... A small data structure must be added so the GUI applications can easily find the **TeX** distribution. Click the link [**`TeXDist-2020`**](https://www.tug.org/mactex/TeXDist-2020.pkg) to download a small install package. Find this package in your Downloads Folder and drag it to the desktop. Double click to install it. Installation takes only a minute and then your TeX Live 2020 installation is complete! :octocat:
+
+Now continue on to the next **MacTeX Usage:** heading to follow the rest of the LaTeX environment setup instructions _(post MacTeX install)_
+
+#### MacTeX Usage:
+
+> **Note:** This doc is not quite fully updated yet!  Some steps below must change now in 2020.  I am still in the process of updating all of this... Please be patient!  (use instructions below at your own risk... They may not be correct anymore...)
 
 To make **MadTex** _(lol "a typo" but decided to leave it cause it made me laugh!)_ binaries available on the command line, _(for Pandoc etc.)_ you have to set the following in your `$PATH` definition within your shells...
 
@@ -104,17 +184,6 @@ While you are still here, there are additional _(optional)_ packages that may be
     sudo dnf install python3-pylatex
     ```
 
-
-
-
-
-
-
-
-
-
-
-
 > **Note:** On Fedora, individual LaTeX packages can also be installed as required:   
 **_example:_**   
 ```yaml
@@ -122,3 +191,29 @@ sudo dnf install 'tex(beamer.cls)'
 sudo dnf install 'tex(hyperref.sty)'
 # etc...
 ```
+
+
+
+## Table Of Contents:
+
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+
+- [Install Modular Emacs LaTeX pubOps Environment](#install-modular-emacs-latex-pubops-environment)
+    - [Introduction:](#introduction)
+    - [Install TeX Live:](#install-tex-live)
+        - [Mac OS:](#mac-os)
+            - [Update:](#update)
+            - [High Sierra and Later Users:](#high-sierra-and-later-users)
+            - [Sierra & Earlier Users:](#sierra--earlier-users)
+                - [Download Unix Install Archive:](#download-unix-install-archive)
+                - [Install with Terminal App _(or xTerm2)_:](#install-with-terminal-app-_or-xterm2_)
+                    - [Almost Done:](#almost-done)
+            - [MacTeX Usage:](#mactex-usage)
+        - [Linux:](#linux)
+            - [TexLive Package _(three choices/sizes)_](#texlive-package-_three-choicessizes_)
+            - [TeXStudio](#texstudio)
+            - [Rubber](#rubber)
+            - [Additional Packages _(optional)_](#additional-packages-_optional_)
+    - [Table Of Contents:](#table-of-contents)
+
+<!-- markdown-toc end -->
