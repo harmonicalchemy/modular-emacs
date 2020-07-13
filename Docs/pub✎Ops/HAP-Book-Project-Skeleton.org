@@ -12,7 +12,7 @@
 ** ☞ Start Here!
 
 :README:
-Use this *Ideas / Scratchpad / Refile section as a quick place to document ideas and inspirations as they come alone.  You can refile them later... (even if it is intended for elsewhere) Parallel universe? Sure... You got that covered. %^)
+This Section is mainly to accommodate "seat-of-pants" writers (of which I have been accused of but I also crave the planning stuff).  Use this *Ideas / Scratchpad / Refile section as a quick place to document ideas and inspirations as they come alone.  You can refile them later... (even if it is intended for elsewhere) Parallel universe? Sure... You got that covered. %^)
 
 - Use this section to quickly capture inspired at-the-moment ideas While they are still fresh in mind...
 
@@ -338,8 +338,10 @@ The above will help you get better organized about how your book is developing, 
 - It is hoped that this process will give you a faster, efficient, organized "bootstrapped" head start and teach some guidance about how to properly organize and write your books with a clearer mind, inspired outlook, and renewed motivation...
 :END:
 
-*** ACTIVE 📃 Synopsis Tasks:
+*** DONE 📃 Synopsis Tasks:
+CLOSED: [2020-07-04 Sat 15:58]
 :LOGBOOK:
+- State "DONE"       from "ACTIVE"     [2020-07-04 Sat 15:58]
 - State "ACTIVE"     from "DONE"       [2020-07-02 Thu 17:36]
 - State "DONE"       from "NEXT"       [2020-06-20 Sat 17:19]
 :END:
@@ -366,33 +368,67 @@ After completing above, follow the steps below...
 
 when you are done with these Synopsis tasks, you will have completed half the battle of writing your novel! The other half is getting to know your characters... Plots and chapters will flow from that effortlessly...
 
-**** ACTIVE Step One - Write a Single Sentence Summary:
+**** DONE Step One - Write a Single Sentence Summary:
+CLOSED: [2020-07-03 Fri 19:44]
 :LOGBOOK:
+- State "DONE"       from "ACTIVE"     [2020-07-03 Fri 19:44]
 - State "NEW"        from "DONE"       [2020-07-02 Thu 17:37]
 - State "DONE"       from "ACTIVE"     [2020-05-25 Mon 10:04]
 - State "ACTIVE"     from "DONE"       [2020-05-24 Sun 22:23]
 :END:
 
-1. Take an hour and write a one-sentence summary of your novel:   
+Take an hour and write a one-sentence summary of your novel:   
    
-   Something like this: 
+Something like this:
 
-   "A gourmet chef from Boston acedentally falls into a parallel world, chased by enemies not even his own and almost dies, but then discovers he is immortal, meets-re-discovers his ancient soul mate of eons, and together they save the universe after all else fails!" 
+    "A gourmet chef from Boston acedentally falls into a parallel world, almost destroyed by an arch enemy he did not even know he had, then he discovers he is immortal and meets-re-discovers his ancient soul mate of eons. Together they save the universe after all else fails!"
 
-       OK I know... I cheated... that long sentence above should be broken up... The last phrase is the stinger that needs to stand alone... I often buck the rules... lol
+OK I know... I cheated. The second sentence is a stinger. It needs to stand alone... I often buck the rules... lol
 
-The sentence you end up writing above will serve you forever as a ten-second selling tool. This exercise defines the big picture illustrated by the first simple triangle in the snowflake diagram (as explained to Goldilocks by Baby Bear in Randy Ingermanson
+The sentence you end up writing above will serve you forever as a ten-second selling tool. This exercise defines the big picture illustrated by the first simple triangle in the snowflake diagram (as explained to Goldilocks and classmates by Baby Bear in chapter 4 of Randy Ingermanson's book: "How to Write a Novel Using the Snowflake Method"
 
+Within that same chapter, Baby Bear also pointed out this important fact to keep in mind:
 
-book:
+(illustrated "Radio Drama" style" just for fun, Because we can!)
 
+#+BEGIN_SRC fountain
 
+            A screenplay adaptation of an excerpt of dialog witin chapter 4 of:
+                   "How to Write a Novel Using the Snowflake Method"
+                                by: Randy Ingermanson
 
-. It will be your pitch... To see if there is more interest...  Important closing rules for sales! The law of attraction always applies.. no pushing... 
+# Somewhere in the middle of Scene One:
 
-Memorize this line to the point you can say it in your sleep... Turn it into a "slogan" (hopefully a meme if you are the lucky type). Your goal is that others will remember and tell all their friends (word for word).  
+INT. (BABY BEAR'S CLASSROOM - DAY)
 
-Always lead with this line alone when opening a dialog engagement with a stranger or even your mother. Remain silent after that... Wait to see if there is interest before diving deeper... That and your good body language "posture" will take care of everything...
+_1. SOUND [CREAKING & THUD OF TABLE AS BABY BEAR JUMPS UP ON TOP]_
+
+2.
+
+BABY BEAR
+(RECOVERING BALANCE, GRUNT, DEEP ENHALE)
+    
+This is important, you novelists!
+   
+You're going to get lots of advice on how to write a novel.  
+    
+But that's all it is. Advice. If you don't like that advice, 
+    
+if it doesn't work for you, then ignore it.  
+    
+If it does work for you, then run with it.
+
+#+END_SRC
+
+I agree... Don't let anybody steer you away from your muses! But at the same time don't ignore the basics!
+
+This synopsis stuff is basic to the bone! It is universal... We cannot buck it!  It's based on human nature... Your sentence above, will serve as a pitch during normal conversations (to see if there is any interest)...
+
+Memorize "your line" to the point that you can say it in your sleep! Turn it into a "slogan" (hopefully a "meme" if you are the lucky type). Your goal is that others will remember and be able to easily tell all their friends (word for word). Networking is the key! You can't do it alone... (songs are also great help) (cartoons and songs are killer!) Social networks open you up to sky limit possibilities!
+
+Lead with your story line when opening a dialog with a total stranger or even your mother. Remain silent after that... Wait to see if there is interest before diving deeper... That and your good body language "posture" will take care of everything...
+
+Important! Closing rules of sales dictate the law of attraction always applies.. Pushing yields negative results... If you push people, they push back.  If you run away from people, they chase you... To eat, or to be eaten... That's what it all comes down to. lol Wait to see if there is interest, if not, move on... If yes, do the next step...
 
 When you later write your book proposal, this sentence should appear very early in the proposal. It's the hook that will sell your book to your editor, to your committee, to the sales force, to bookstore owners, and ultimately to readers. So make the best one you can!
 
@@ -406,69 +442,288 @@ When you later write your book proposal, this sentence should appear very early 
 
 - Read the one-line blurbs on the New York Times Bestseller list to learn how to do this. Writing a one-sentence description is an art form. If you become a master at this marketing firms will want you madly!
 
-**** NEW Step Two - Expand Summary to Paragraph
+- Check out [[yt:feD-dImM4a8][LEGO Star Wars: The Last Jedi in 60 Seconds]] (and other 60 second movies like it) for a completely different audio/visual parallel to this literary concept...
+
+**** DONE Step Two - Expand Summary to Paragraph
+CLOSED: [2020-07-04 Sat 15:31]
 :LOGBOOK:
+- State "DONE"       from "NEW"        [2020-07-04 Sat 15:31]
 - State "NEW"        from "DONE"       [2020-07-02 Thu 17:38]
 - State "DONE"       from "ACTIVE"     [2020-05-25 Mon 10:21]
 :END:
 
-:README:
-*Step 2:* Take another hour and expand that sentence to a full paragraph describing the story setup, major disasters, and ending of the novel. This is the analog of the second stage of the snowflake. 
+Take another hour and expand your sentence from step one into a full paragraph describing the story setup, major disasters, and ending of the novel.
 
-I like to structure a story as "three disasters plus an ending". Each of the disasters takes a quarter of the book to develop and the ending takes the final quarter. I don't know if this is the ideal structure, it's just my personal taste.
+This step defines the second stage of the snowflake model... as illustrated by further trisections of the triangle producing the snowflake diagram (as explained to Goldilocks and classmates by Baby Bear in chapter 5, "The Importance of being Disastrous" in Randy Ingermanson's book: "How to Write a Novel Using the Snowflake Method"
+
+For this step, visualize the story as having "three disasters plus an ending". Each of the disasters takes a quarter of the book to develop and the ending takes the final quarter. 
+
+No one claims this to be an absolute ideal structure, but it's the one that Randy Ingermanson uses, and it has a strong basis in psychology.
 
 If you believe in the Three-Act structure, then:
 
-- The first disaster corresponds to the end of Act 1.
+- The first disaster would correspond to the end of Act 1.
 
-- The second disaster is the mid-point of Act 2. 
+- The second disaster would be the mid-point of Act 2.
 
-- The third disaster is the end of Act 2, and forces Act 3 which wraps things up. 
+- The third disaster would come at the end of Act 2, and force Act 3,
 
-It is OK if the first disaster is caused by external circumstances, but I think that the second and third disasters should be caused by the protagonist's attempts to "fix things". Things just get worse and worse.
+- Act 4 wraps everything up.
 
-You can also use this paragraph in your proposal. Ideally, your paragraph will have about five sentences. One sentence to give you the backdrop and story setup. Then one sentence each for your three disasters. Then one more sentence to tell the ending. 
+***** Make 5 Sentences:
 
-If this sounds suspiciously like back-cover copy, it's because . . . that's what it is and that's where it's going to appear someday.
-:END:
+1. Exposition: 
 
-**** NEW Expand Paragraph to Synopsis
+   This sentence's purpose is to paint the story setting, backdrop and mention leading characters within a descriptive role... The mood is set here briefly, dripping with consentrated visions of expectation!
+
+2. Act One - First Disaster Summary:
+
+   The first disaster emerges out of circumstance. This is the key event that motivates our lead character (hero) to find a remedy.  This disaster must hit home to our readers as well, inspiring them along side our hero as faithful evangelists... 
+
+3. First Half of Act Two - Second Disaster Summary:
+
+   The second disaster is the result of our budding hero's attempt to "fix things" after the first disaster in Act One. But things keep getting worse, not better.  As a result, our hero experiences an epiphany, realizing the errors of her ways, and resolves to do things the correct way from that moment on... (the music changes, new hope emerges)
+
+4. Second Half of Act Two - Third Disaster & Standoff Summary:
+
+   The last half of Act 2 is the standoff between your hero and villain or obstacle... Here is where your hero's new resolve to doing the right thing begins to pay off.  However this act ends with the third disaster...  Act 3 will determine the final outcome.
+
+5. Act 3 Summary: (conclusion)
+
+   This is where it all previous conflicts are finally resolved, one way or the other... Whether or not the lead character (hero) whatever succeeds or fails.  The story once resolved ends as a comedy, tragedy, or mellowdrama.  you decide on that...
+
+***** Using Your One-Paragraph Summary:
+
+You will be using this paragraph in your proposals. It is only for your agents etc.  Not for your readers who need to be kept in the dark about how the story develops before reading the book! Spoilers!
+
+However, Some of this paragraph (written with parts pourposefully left out or with questions put in place) may end up back-cover copy for your book's promotion.
+
+**** DONE Step Three - Expand Paragraph to Synopsis:
+CLOSED: [2020-07-04 Sat 15:54]
 :LOGBOOK:
+- State "DONE"       from "NEW"        [2020-07-04 Sat 15:54]
 - State "NEW"        from "DONE"       [2020-07-02 Thu 17:38]
 - State "DONE"       from "ACTIVE"     [2020-06-08 Mon 11:36]
 :END:
 
-:README:
-Take several hours and expand each sentence of your summary paragraph into a full paragraph. All but the last paragraph should end in a disaster. The final paragraph should tell how the book ends.
+Take several hours and expand each sentence of your summary paragraph into a full paragraph. All but the last paragraph should end in a disaster. The final paragraph is the final conclusion to those disasters bringing your book to a close.
 
-Step 4) By this stage, you should have a good idea of the large-scale structure of your novel, and you have only spent a day or two. Well, truthfully, you may have spent as much as a week, but it doesn't matter. If the story is broken, you know it now, rather than after investing 500 hours in a rambling first draft. So now just keep growing the story. Take several hours and expand each sentence of your summary paragraph into a full paragraph. All but the last paragraph should end in a disaster. The final paragraph should tell how the book ends.
+You can employ the snowflake method at finer levels here... Breaking each paragraph into mini disasters or turning points within the main disaster, etc.
 
-This is a lot of fun, and at the end of the exercise, you have a pretty decent one-page skeleton of your novel. It's okay if you can't get it all onto one single-spaced page. What matters is that you are growing the ideas that will go into your story. You are expanding the conflict. You should now have a synopsis suitable for a proposal, although there is a better alternative for proposals . . .
-:END:
+By this stage, you should have a good idea of the large-scale structure of your novel, and you have only spent a day or two, or at most, a week or two, but all that time will not have been wasted! You will now have a good idea if there are problems with your story. This is good knowledge to have now, rather than after investing 500 hours in a rambling first draft.
 
-*** DONE 👤 Character Tasks:
-CLOSED: [2020-07-01 Wed 11:17]
+At the end of this exercise, you will have a nice one-page skeleton of your novel. It's fine if your skeleton does not fit all on one single-spaced page as long as it does not go beyond that... 
+
+Your process now is to grow these ideas as chapters of your story. You are expanding the conflict. You have a synopsis suitable for a proposal, and you are well on your way to doing extended promotion...
+*** ACTIVE 👤 Character Tasks:
 :LOGBOOK:
+- State "ACTIVE"     from "DONE"       [2020-07-04 Sat 15:59]
 - State "DONE"       from "ACTIVE"     [2020-07-01 Wed 11:17]
 - State "ACTIVE"     from "DONE"       [2020-07-01 Wed 10:59]
 - State "DONE"       from "NEW"        [2020-06-30 Tue 05:38]
 :END:
 
-**** 📃 Character Synopsis tasks:
+Some of these Character tasks are based on the Snowflake Method as outlined in Randy Ingermanson's book: [[https://www.advancedfictionwriting.com/articles/snowflake-method/]["How to Write a Novel Using the Snowflake Method"]].  Other tasks are based on concepts outlined within the book: [[https://www.kmweiland.com/wp-content/uploads/crafting-unforgettable-characters.pdf]["Crafting Unforgettable Characters" by; K.M. Weiland]]... The second book is a free download from: [[https://www.kmweiland.com/][K.M. Weilands Website]] where you can find other great books and writers resources...
 
-:README:
-- Write a Short Character Synopsis about each Character in your Story:
+Complete the following tasks for each and every character in your story...
 
-   + Each Character Synopsis is to be written in first person, (i.e., The character is talking about "themselves", telling the story from their individual point of view, life experiences, emotions, words, as opposed to how others may view them).
+**** ACTIVE 📒 Prepare Character Summary Sheet:
 
-   + This is about the character on a rant, talking all about herself, bringing the subject always back to personal perspective and personal truths... Soap Box time!
+|                   |                                                          |
+|-------------------+----------------------------------------------------------|
+| *Name:*             |                                                          |
+|                   |                                                          |
+|-------------------+----------------------------------------------------------|
+| *Role:*             | (hero, heroine, villain, mentor, sidekick, friend, etc.) |
+|                   |                                                          |
+|-------------------+----------------------------------------------------------|
+| *Goal:*             |                                                          |
+|                   |                                                          |
+|-------------------+----------------------------------------------------------|
+| *Ambition:*         |                                                          |
+|                   |                                                          |
+|-------------------+----------------------------------------------------------|
+| *Values:*           |                                                          |
+|                   |                                                          |
+|-------------------+----------------------------------------------------------|
+| *Attracted To:*     |                                                          |
+|                   |                                                          |
+|-------------------+----------------------------------------------------------|
+| *Empathetic With:*  |                                                          |
+|                   |                                                          |
+|-------------------+----------------------------------------------------------|
+| *Has Vendetta For:* |                                                          |
+|                   |                                                          |
+|-------------------+----------------------------------------------------------|
+| *Fears:*            |                                                          |
+|                   |                                                          |
+|-------------------+----------------------------------------------------------|
+| *Conflicts:*        |                                                          |
+|                   |                                                          |
+|-------------------+----------------------------------------------------------|
+| *Epiphany:*         |                                                          |
+|                   |                                                          |
+|-------------------+----------------------------------------------------------|
 
-- Add Each Character Synopsis below as a separate outline sub heading (C-c RET) using the character's name as the title.
 
-- Later... Use the character synopsis created here to complete "Character Profiles" within your projects main "Research:/Characters:" section...
-:END:
+**** ACTIVE 👤 Detailed Character Interview:
 
-***** 📃 Huckleberry Finn (example character synopsis - replace name and content)
+Expand Above Summary Sheet to Detailed Character Interview
+
+***** *Name:*
+
+Put full name here.  Names are important! If you name your character incorrectly based on your desired personality type you will get into trouble!  Names must match the personality! It makes a big difference... Do your names research... Unless of course you need that "Boy named Sue" effect...
+
+***** *Background:*
+
+- Birthday:
+
+- Place of Birth:
+
+- Parents:
+
+   What was important to the character's parents?
+
+- Siblings:
+
+- Economic/Social Status Growing Up?
+
+- Ethnic Background:
+
+- Places Lived:
+
+  + Current Address:
+
+- Education:
+
+  + Favourite Subject:
+
+  + Special Training:
+
+- Jobs:
+
+  + Salary:
+
+- Travel:
+
+- Friends:
+
+  + How do people view this character?
+
+  + Lives with:
+
+  + Fights with:
+
+  + Spends time with:
+
+  + Wishes to spend time with:
+
+  + Who depends on this character?
+
+  + Who does this character most admire?
+
+- Enemies:
+
+- Dating, Marriage:
+
+- Children:
+
+- Relationship with God:
+
+- Overall Outlook on Life:
+
+  + Self Like/love?
+
+  + Things this Character would like to Improve about their life:
+
+  + Personal Demons:
+
+  + Delusions, Denials:
+
+  + Optimistic or Pessimistic?
+
+  + Real or Feigned?
+
+  + Morality:
+
+  + Confidence Level:
+
+- How your Character is viewed by others:
+
+- A Typical Day:
+
+- Physical Appearance:
+
+  + Body Type:
+
+  + Posture:
+  
+  + Head Shape:
+
+  + Eyes:
+
+  + Nose:
+
+  + Mouth:
+
+  + Hair:
+
+  + Skin:
+
+  + Tattoos/Piercings/Scars:
+
+  + Voice:
+
+  + What People Notice First:
+
+  + Clothing:
+
+  + How the Character Describes Themselves:
+
+- Health/Disabilities/Handicaps:
+
+- Characteristics:
+
+  + Personality Type:
+    (choleric, sanguine, phlegmatic, melancholy) 
+
+  + Strongest Character Trait:
+
+    (How can flip side of strong point be a weakness)
+
+  + Weakest Character Trait:
+
+  + Self Control:
+
+  + Self Discipline:
+
+  + what makes this person cry?
+
+  + Fears:
+
+  + Talents:
+
+  + What People Like about this character:
+
+  + 
+
+
+
+**** ACTIVE 📃 Write Character Synopsis:
+
+***** Write a One Sentence Character Summary:
+
+Write a Short Character Synopsis in 3rd person for each character: 
+
+(*Warning!* This is all about the character on a monologue, talking about themselves)
+
+Each Character Synopsis is to be written in first person, (i.e., The character is talking about "themselves", telling the story from their individual point of view, life experiences, emotions, words, as opposed to how others may view them).
+
+Our character is on a rant, talking all about herself..., always bringing the subject back to personal perspective and personal truths. Soap Box time!
+
+****** Examples:
+
+******* 📃 Huckleberry Finn (example character synopsis - replace name and content)
 
 Hi! My name is Huckleberry Finn... you can call me "Huck" for short if you like...  Don't pay no attention to anything that famous man behind the curtain may have said about me... That man Samuel Langhorne Clemens, who calls himself Mark Twain... He may know some things about me but he ain't never walked in my shoes!  That's for sure!  Rich author riverboat caption and all... Let me tell you a few things he don't know about me!
 
@@ -476,17 +731,17 @@ For instance... Yadda yadda yadda...  Folks may call me a vagabond, but they don
 
 *(On and On... Huck goes on a personal rant all about himself!)*
 
-***** 📃 Your Next Character Name Here: (add more character headings below until all are done)
+******* 📃 Your Next Character Name Here: (add more character headings below until all are done)
 
 Add your character's personal dialog in this space... Rename title above to your character's name...
 
-**** 👥 Major Characters Summary:
+**** NEW 👥 Major Characters Summary:
 
 :README:
 Write a one page synopsis (or 600 words) about the major characters in your story...
 :END:
 
-**** 👥 Minor Characters Summary:
+**** NEW 👥 Minor Characters Summary:
 
 :README:
 Write a half page synopsis (or 300 words) about the minor characters in your story...
