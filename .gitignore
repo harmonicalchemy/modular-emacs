@@ -8,32 +8,15 @@
 ## repository...
 ## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+#################
+# Modular Emacs #
+#################
+
 # Exclude init.el (your custom copy of: me.init.el will not be tracked)
 init.el
 
 # Exclude custom.el (Emacs Customize features are ignored)
 custom.el
-
-# Exclude entire elpa directory and it's contents.
-# Emacs Packages contain git repositories!
-elpa/*
-
-# Exclude EMMS directory and it's contents
-# (keep local media manangement out of git revision).
-emms/*
-
-# exclude other auto emacs files:
-bookmarks
-.mc-lists.el
-ac-comphist.dat
-abbrev_defs
-auto-save-list/*
-transient/*
-games/*
-emojis/*
-recentf
-abbrev_defs
-*.temp
 
 # exclude everything within my-custom-modules folder...
 # This is for you to add your own modules and git won't complain
@@ -44,4 +27,69 @@ lisp/my-modules/*
 # exception to the rule so git keeps the folder containing this empty file...
 !lisp/my-modules/.gitkeep
 
+#################
+# GENERAL Emacs #
+#################
+
+## Emacs Packages contain git repositories!
+## Exclude entire elpa directory and it's contents.
+
+elpa/*
+
+# Exclude EMMS directory and it's contents
+# (keep local media manangement out of git revision).
+emms/*
+
+##
+# Various trashy files that Emacs uses to do house keeping...
+# You don't want these cluttering your repos!
+
+*~
+\#*\#
+\#.*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+auto-save-list/*
+tramp
+.\#*
+
+## Auto Generated Org-mode artifacts:
+
+.org-id-locations
+*_archive
+org-clock-save.el
+
+## flymake-mode
+*_flymake.*
+
+## eshell files
+/eshell/history
+/eshell/lastdir
+
+## reftex files
+*.rel
+
+## AUCTeX auto folder
+/auto/
+
+## cask packages
+.cask/
+dist/
+
+## Flycheck
+flycheck_*.el
+
+# exclude other auto emacs files:
+bookmarks
+.mc-lists.el
+ac-comphist.dat
+abbrev_defs
+transient/*
+games/*
+emojis/*
+recentf
+abbrev_defs
+*.temp
 
