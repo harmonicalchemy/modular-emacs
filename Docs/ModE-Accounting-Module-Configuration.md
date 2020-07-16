@@ -1,8 +1,8 @@
 ---
 file: ModE-Accounting-Module-Configuration.md
-author: Alisha Awen Sheppard
+author: Alisha Awen
 created: 2019-010-30
-updated: 2019-011-14
+updated: 2020-007-16
 tags: Emacs, apps-tools, SysAdmin, HA-ModEmacs, MWM-how-to, how-to, README 
 ---
 <!-- #Emacs #apps-tools #SysAdmin #HA-ModEmacs #MWM-how-to #how-to #README -->
@@ -11,7 +11,7 @@ tags: Emacs, apps-tools, SysAdmin, HA-ModEmacs, MWM-how-to, how-to, README
 
 # Modular Emacs Accounting Module Install Guide
 
-**[\[Back To Top README\]](../README.md)**
+**[\[Back To MAIN Modular Emacs README\]](../README.md)**
 
 ## Introduction:
 

@@ -2,6 +2,7 @@
 file: $GIT/Doc-Templates/HAP-templates/Fountain-2-PDF/README.md
 author: Alisha Awen
 created: 2019-010-01
+updated: 2020-007-16
 tags: Emergent-Anomalies.com, EA-New-Ideas, unpublished, 2019, drafts, not-in-ed-cal, synopsis, stories, Fiction, sci-fi, README, Writing-Resources, screenwriting, audio-theater, Fountain, templates
 ---
 <!-- #Emergent-Anomalies.com #EA-New-Ideas #unpublished #2019 #drafts #not-in-ed-cal #synopsis #stories #Fiction #sci-fi #README #Writing-Resources #screenwriting #audio-theater #Fountain #templates -->

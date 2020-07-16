@@ -1,6 +1,6 @@
 ---
 file: ModE-Optional-Packages-y-Customization.md
-author: Alisha Awen Sheppard
+author: Alisha Awen
 created: 2019-010-30
 updated: 2019-011-14
 tags: Emacs, Xah-Fly-Keys, apps-tools, SysAdmin, HA-ModEmacs, how-to, README 
@@ -11,7 +11,7 @@ tags: Emacs, Xah-Fly-Keys, apps-tools, SysAdmin, HA-ModEmacs, how-to, README
 
 # Modular Emacs Optional Packages & Features
 
-**[\[Back To Top README\]](../README.md)**
+**[\[Back To MAIN Modular Emacs README\]](../README.md)**
 
 ## New _(changed/replaced)_ Tools for Writers:
 

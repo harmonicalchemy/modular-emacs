@@ -1,8 +1,8 @@
 ---
 file: ModE-Install-NODE.md
-author: Alisha Awen Sheppard
+author: Alisha Awen
 created: 2019-010-24
-updated: 2019-011-14
+updated: 2020-007-16
 tags: NODE, NVM, NPM, Emacs, apps-tools, SysAdmin, HA-ModEmacs, how-to, README 
 ---
 <!-- #NODE #NVM #NPM #Emacs #apps-tools #SysAdmin #HA-ModEmacs #how-to #README -->
@@ -11,7 +11,9 @@ tags: NODE, NVM, NPM, Emacs, apps-tools, SysAdmin, HA-ModEmacs, how-to, README
 
 # Modular Emacs Install NODE.js Guide
 
-**[\[Back To Top README\]](../README.md)**
+**[\[Table of Contents\]](#table-of-contents)**
+
+**[\[Back To MAIN Modular Emacs README\]](../README.md)**
 
 ## Introduction:
 
@@ -21,7 +23,9 @@ tags: NODE, NVM, NPM, Emacs, apps-tools, SysAdmin, HA-ModEmacs, how-to, README
 
 The easiest way to install NODE.js _(as of this writing May 2019)_ is to install the **NODE Version Manager (NVM)** by running the following command within your HOME directory:
 
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+```bash
+$_  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+```
 
 > **Note:** The same command above can also be used later to **Update NVM**... You can always find and review the latest version of this script (and command) within the README file located in: [NVM's Github Repository](https://github.com/nvm-sh/nvm)...:octocat:
 
@@ -31,14 +35,25 @@ After running the above `curl` command you will have **Node Version Manager (NVM
 
 **Run the following NVM Commands from the terminal:**
 
-- List available **Node.js** versions using ls-remote:   
-$> `nvm ls-remote`  
-Jot down the version number from the (Latest LTS: ...) line...
+- List available **Node.js** versions using ls-remote:
 
-- Install Latest LTS version from the list. _(V10.15.3 As of 2019-005-22)_   
-$> `nvm install 10.15.3`  
+```bash
+  $_ nvm ls-remote
+
+  # Jot down the version number from the (Latest LTS: ...) line...
+```
+
+- Install Latest LTS version from the list. _(V10.15.3 As of 2019-005-22)_
+
+```bash
+  $_ nvm install 10.15.3
+```
 
 OK... Now you have the latest LTS version of **Node.js** installed. **Yay!**.  You also have a nifty new package manager called **NPM** that comes with Node.js...  You will be using **NPM** to install useful utilities like **Visual Markdown (VMD)**.
+
+**[\[Table of Contents\]](#table-of-contents)**
+
+**[\[Back To MAIN Modular Emacs README\]](../README.md)**
 
 ## Managing Updates:
 
@@ -55,23 +70,25 @@ Here are a few commands that will be helpful:
 In the example below `$prev_ver` = any previous versions you had installed before update:
 
 ```bash
-    $_ nvm install --lts
-    $_ nvm use --lts
-    $_ nvm ls     # List versions you now have 
-                  # installed for next commands
-    $_ nvm alias default <lts version number you just installed>
-    $_ nvm reinstall-packages $prev_ver
-    $_ nvm uninstall $prev_ver
-    $_ nvm cache clear
+$_ nvm install --lts
+$_ nvm use --lts
+
+$_ nvm ls     # List versions you now have 
+              # installed for next commands
+
+$_ nvm alias default <lts version number you just installed>
+$_ nvm reinstall-packages $prev_ver
+$_ nvm uninstall $prev_ver
+$_ nvm cache clear
 ```
 
 ### Upgrade NPM itself to latest version:
 
 ```bash
-    $_ npm install -g npm@latest        # Install Latest NPM version
-    $_ npm list --global --depth=0      # Shows tree of currently 
-                                        # installed package names
-                                        # only without dependencies.
+$_ npm install -g npm@latest        # Install Latest NPM version
+$_ npm list --global --depth=0      # Shows tree of currently 
+                                    # installed package names
+                                    # only without dependencies.
 ```
 
 ### Update NPM Packages:
@@ -81,21 +98,41 @@ In the example below `$prev_ver` = any previous versions you had installed befor
 Navigate to any directory containing a package.json file _(the presence of which means it was installed by npm)_.  Then run the update command...
 
 ```bash
-    $_ cd /path/to/project      # Must contain a package.json file...
-    $_ npm update               # Update the package...
-    $_ npm outdated             # No output means all packages in
-                                # this project directory have been 
-                                # updated...
+$_ cd /path/to/project      # Must contain a package.json file...
+$_ npm update               # Update the package...
+$_ npm outdated             # No output means all packages in
+                            # this project directory have been 
+                            # updated...
 ```
 
 #### Globally installed Packages:
 
 ```bash
-    $_ npm outdated -g --depth=0  # No output means all globally 
-                                  # installed packages been updated.
-                                  # Otherwise, jot down the names of 
-                                  # packages listed and update them.
-    $_ npm update -g <package>    # Update a package 
-                                  # (Do this command on each package 
-                                  # listed from output of above)...
+$_ npm outdated -g --depth=0  # No output means all globally 
+                              # installed packages been updated.
+                              # Otherwise, jot down the names of 
+                              # packages listed and update them.
+$_ npm update -g <package>    # Update a package 
+                              # (Do this command on each package 
+                              # listed from output of above)...
 ```
+
+**[\[Back To MAIN Modular Emacs README\]](../README.md)**
+
+## Table of Contents:
+
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+
+- [Modular Emacs Install NODE.js Guide](#modular-emacs-install-nodejs-guide)
+    - [Introduction:](#introduction)
+    - [Install Node Version Manager `NVM` with `curl` first:](#install-node-version-manager-nvm-with-curl-first)
+    - [Now install `NODE` with `NVM`:](#now-install-node-with-nvm)
+    - [Managing Updates:](#managing-updates)
+        - [Upgrade to Latest NVM _(LTS)_ & reinstall/upgrade all previous packages:](#upgrade-to-latest-nvm-_lts_--reinstallupgrade-all-previous-packages)
+        - [Upgrade NPM itself to latest version:](#upgrade-npm-itself-to-latest-version)
+        - [Update NPM Packages:](#update-npm-packages)
+            - [Locally installed Packages:](#locally-installed-packages)
+            - [Globally installed Packages:](#globally-installed-packages)
+
+<!-- markdown-toc end -->
+

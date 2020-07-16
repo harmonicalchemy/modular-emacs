@@ -1,8 +1,8 @@
 ---
 file: ModE-History.md
-author: Alisha Awen Sheppard
+author: Alisha Awen
 created: 2019-010-19
-updated: 2019-011-14
+updated: 2020-007-16
 tags: Emacs, Xah-Fly-Keys, apps-tools, SysAdmin, HA-ModEmacs, how-to, README 
 ---
 <!-- #Emacs #Xah-Fly-Keys #apps-tools #SysAdmin #HA-ModEmacs #how-to #README -->
@@ -11,7 +11,7 @@ tags: Emacs, Xah-Fly-Keys, apps-tools, SysAdmin, HA-ModEmacs, how-to, README
 
 # The History of Harmonic Alchemy Modular Emacs
 
-**[\[Back To Top README\]](../README.md)**
+**[\[Back To MAIN Modular Emacs README\]](../README.md)**
 
 ## Introduction:
 
@@ -25,7 +25,9 @@ However as a result of that saga, I learned a lot about **`SH`**, **`BASH`**, an
 
 As a result of the mess above, I decided to start over from scratch and modularize everything with the purpose of preventing tangled messes like this from happening within your own Emacs setups! _(and mine as well..._ `%^)`
 
-**Modular Emacs** is more than just Emacs with configurable modules... It is also designed to be the centerpiece **_(command central)_** of a larger **_Extremely Personalized, Extremely Extensible_: ** **DevOps** / **PubOps** **IDE** workstation and/or companion **IDE** workstation **laptop**.  I am a devOps engineer, computer scientist, composer/musician, sound designer, architect, writer/publisher.  I wear a lot of hats! My Emacs needs to wear a lot of hats as well!  The central focus of **Modular Emacs** is to build empowering features into **Emacs** utilizing a modular framework that facilitates all the above without becoming an over complicated mess to manage! **_"good luck with that"_**  :octocat:  
+**Modular Emacs** is more than just Emacs with configurable modules... It is also designed to be the centerpiece _(command central)_ of a larger _personalized, extensible_: **Dev♺Ops** / **Pub✎Ops** workstation **IDE** capable of running on older but reasonably powerful **laptops/desktops** _(that would otherwise be considered legacy by most other standards)_.  
+
+I am a systems architect, dev♺Ops engineer, computer scientist, composer/musician, sound designer, writer/publisher.  I wear a lot of hats! My Emacs needs to wear a lot of hats as well!  The central focus of **Modular Emacs** is to build empowering features into **Emacs** utilizing a modular framework that facilitates all the above without becoming an over complicated mess to manage! **_"good luck with that"_**  :octocat:
 
 ## Why Modular?
 

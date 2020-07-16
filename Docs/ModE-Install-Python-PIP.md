@@ -1,8 +1,8 @@
 ---
 file: ModE-Install-Python-PIP.md
-author: Alisha Awen Sheppard
+author: Alisha Awen
 created: 2020-002-26
-updated: 2020-002-26
+updated: 2020-007-16
 tags: Python3, Python2, PIP, Emacs, apps-tools, SysAdmin, HA-ModEmacs, how-to, README 
 ---
 <!-- #Python3 #Python2 #PIP #Emacs #apps-tools #SysAdmin #HA-ModEmacs #how-to #README -->
@@ -13,8 +13,10 @@ tags: Python3, Python2, PIP, Emacs, apps-tools, SysAdmin, HA-ModEmacs, how-to, R
 
 **[\[Table of Contents\]](#table-of-contents)**
 
+**[\[Back To MAIN Modular Emacs README\]](../README.md)**
+
 ## Introduction:
-Some of the newer modules to be enabled within **Harmonic Alchemy Modular Emacs** will require Python packages to be installed... This is especially true of the **_Emacs MultiMedia System_ (EMMS)** enabled within optional module: **[`11-games-pkg-conf.el`](./lisp/modules/11-games-pkg-conf.el)**
+Some of the newer modules to be enabled within **Harmonic Alchemy Modular Emacs** will require Python packages to be installed... This is especially true of the **_Emacs MultiMedia System_ (EMMS)** enabled within optional module: **[`11-games-pkg-conf.el`](../lisp/modules/11-games-pkg-conf.el)**
 
 Follow this guide to get Python & PIP set up within your local environment so you will be ready when python packages are needed to be installed now, or later for Modular Emacs or anything...
 
@@ -70,7 +72,7 @@ _(for managing Python 2 packages)_...
 
 **[\[Table of Contents\]](#table-of-contents)**
 
-**[\[Back To Top README\]](../README.md)**
+**[\[Back To MAIN Modular Emacs README\]](../README.md)**
 
 ### Install Python & PIP on Mac OS:
 
@@ -114,7 +116,7 @@ The following examples are for setting your Global System Wide Python... To set 
 
 **[\[Table of Contents\]](#table-of-contents)**
 
-**[\[Back To Top README\]](../README.md)**
+**[\[Back To MAIN Modular Emacs README\]](../README.md)**
 
 #### Global `python`/ `pip` Examples:
 
@@ -152,7 +154,7 @@ After doing the above, make sure your Macports bin dir is in your PATH and stand
 
 **[\[Table of Contents\]](#table-of-contents)**
 
-**[\[Back To Top README\]](../README.md)**
+**[\[Back To MAIN Modular Emacs README\]](../README.md)**
 
 #### Virtual Envronment `python` / `pip` Examples:  
 
@@ -209,7 +211,7 @@ Any time you need to run the `wormhole` command you need to go to it's project d
 
 > **Note:** _(More Instructions for managing virtual environments may be added later... I need a good use-case project to build first then this will get written as I push through sand bars and untangle snags...)_
 
-**[\[Back To Top README\]](../README.md)**
+**[\[Back To MAIN Modular Emacs README\]](../README.md)**
 
 # Table of Contents:
 

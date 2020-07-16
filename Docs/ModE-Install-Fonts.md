@@ -2,7 +2,7 @@
 file: ModE-Install-Fonts.md
 author: Alisha Awen
 created: 2020-006-27
-updated: 2020-006-27
+updated: 2020-007-16
 tags: Fonts, Emacs, apps-tools, SysAdmin, HA-ModEmacs, how-to, README 
 ---
 <!-- #Fonts #Emacs #apps-tools #SysAdmin #HA-ModEmacs #how-to #README -->
@@ -11,7 +11,7 @@ tags: Fonts, Emacs, apps-tools, SysAdmin, HA-ModEmacs, how-to, README
 
 # Modular Emacs Install Fonts Guide
 
-**[\[Table of Contents Below\]](#table-of-contents)**
+**[\[Table of Contents\]](#table-of-contents)**
 
 **[\[Back To Main Modular Emacs README\]](../README.md)**
 
@@ -21,22 +21,17 @@ tags: Fonts, Emacs, apps-tools, SysAdmin, HA-ModEmacs, how-to, README
 
 It's best to try your platform's package managers to install fonts globally system wide, and then if you cannot find the fonts needed, install them locally (manually) into your $HOME directory.
 
-There is one special case where you need to specify and use one specific font: **_Currier Prime Emacs_** which is provided for you within this repository making it easy to install. **_(in your user's local `$HOME` environment)_** 
+In addition to getting these fonts from package managers, I have also included them within this repository for your convenience.
 
+There is one special case where you need to specify and use one specific font: **_Currier Prime Emacs_** _(rather than the more common Courier Prime)_, This font is also provided for you within this repository making it easy to install.
 
 ## Mac OS:
 
-_(instructions comming soon, but similar to Fedora / Linux below)_
+Mac Users are encouraged to simply install all of the fonts provided within this repository's **`./Fonts`** folder, using **Font Book**, or simply manually by dragging them into your **System Fonts** folder. Once they are installed, open **Font Book** and look to see that they are all present and accounted for...
 
+**[\[Table of Contents\]](#table-of-contents)**
 
-
-
-
-
-
-
-
-
+**[\[Back To Main Modular Emacs README\]](../README.md)**
 
 ## Fedora:
 
@@ -57,15 +52,11 @@ That's it.. you are all set for Hermit as your default "coding" font in Emacs.
 
 > **Edit your Cloned Files:** Search for every instance of: **`:family "Hermit"`** and replace the single word `Hermit` with: 'Your-Chosen-coding-font'. Make sure you have changed every instance of the word Hermit.  Some files contain it more than once... Also, make sure you have also installed your chosen coding font on your machine as well of course...
 
-**[\[Table of Contents Below\]](#table-of-contents)**
+**[\[Table of Contents\]](#table-of-contents)**
 
 **[\[Back To Main Modular Emacs README\]](../README.md)**
 
-### Install Courier Prime Emacs:
-
-**_Currier Prime_** is the recommended font for professional screenplays... This font is provided by the standard distro package managers, however those packages appear to cause font spacing problems in Emacs.  
-
-I found an alternate version of Currier Prime called "**_Currier Prime Emacs_**", which is provided for you here within this repository making it easy to install in your user's `$HOME` directory...
+### Install Font Manager to Install the Rest:
 
 To install this and the other fonts provided, use the **Font Manager** app as shown below _(or use another font utility if that is your preference, not shown here, as that would be TMI)_ If you don't have Font Manager already installed on Fefora, install it with the following command:
 
@@ -76,22 +67,26 @@ As of this writing the above will install Font Manager v0.7.2
 
 #### Install "Courier Prime Emacs" Font w/ Font Manager:
 
+**_Currier Prime_** is the recommended font for professional screenplays... This font is provided by the standard distro package managers, however those packages appear to cause font spacing problems in Emacs.  
+
+I found an alternate version of Currier Prime called "**_Currier Prime Emacs_**", which is provided for you here within this repository making it easy to install in your user's `$HOME` directory...
+
 - Run the **Font Manager App** and choose the **`+`** button in the tool bar _(top left)_, _(Select files to install - window pops up)_.
 
-- Navigate to the folder `~/.emacs.d/Fonts` and choose: **`CourierPrimeEmacs.ttf`**
+- Navigate to the folder `~/.emacs.d/Fonts/Courier-Prime-Emacs` and choose: **`CourierPrimeEmacs.ttf`**
 
 - **Font Manager** will install it as a _User Installed_ font... and you will see it in Font Manager's **User** folder if you select that folder from the left navigation pane...
 
-> **Note:** _(You could install these fonts manually without the aid of a Font Manager Utility, but that would require extra steps on your part so I am not including those instructios.  I leave it up to you to find out on your own how to do that, if you are interested.)_  
+> **Note:** _(You could install these fonts manually without the aid of a Font Manager Utility, but that would require extra steps on your part so I am not including those instructions.  I leave it up to you to find out on your own how to do that, if you are interested.)_  
 Google search these terms: **["install fonts manually Linux"](https://startpage.com/sp/search)**
 
-### Install Averia and Symbola Fonts w/ Font Manager:
+#### Install Averia and Symbola Fonts w/ Font Manager:
 
 - Run the **Font Manager App** and choose the **`+`** button in the tool bar _(top left)_
 
 - The _"Select files to install"_ window pops up...
 
-- Navigate to the folder `~/.emacs.d/Fonts` and choose all remaining **`.ttf`** and `.otf` files... _(you already installed `CourierPrimeEmacs.ttf`)_
+- Navigate to the folder `~/.emacs.d/Fonts/` and choose all remaining font folders _(of the fonts you have not yet installed)_ and install all **`.ttf`** and/or `.otf` files you find... _(you already installed `CourierPrimeEmacs.ttf` btw)_
 
 - **Font Manager** will install all of them one by one as _User Installed_ fonts. 
 
@@ -99,46 +94,32 @@ Google search these terms: **["install fonts manually Linux"](https://startpage.
 
 - You will see your newly installed fonts listed in there...
 
-
-
-
-
-
-
-
-**[\[Table of Contents Below\]](#table-of-contents)**
+**[\[Table of Contents\]](#table-of-contents)**
 
 **[\[Back To Main Modular Emacs README\]](../README.md)**
 
 ## Debian & Ubuntu:
 
-_(instructions comming soon, but similar to Fedora / Linux above)_
+I have not used the package managers to install fonts for Debian and Ubuntu because I chose to instead install them directly from this repository's **`./Fonts`** folder using Debian's standard font install utilities...  Therefore I have not yet looked up the names for the proper font packages to install system wide.  I may update this doc later with more detailed instructions for installing from package managers...
 
+For now, install these fonts manually in a similar way that they are installed on a Mac... The name of your font manager is not **Font Book** though... ;-)
 
-
-
-
-
-
-
-
-
-**[\[Table of Contents Below\]](#table-of-contents)**
-
-**[\[Back To Main Modular Emacs README\]](../README.md)**
+Once they are installed, open **your font manager of choice** and look to see that they are all present and accounted for...
 
 ## Table of Contents:
+
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 
 - [Modular Emacs Install Fonts Guide](#modular-emacs-install-fonts-guide)
     - [Introduction:](#introduction)
     - [Mac OS:](#mac-os)
     - [Fedora:](#fedora)
         - [Install Hermit Code Font:](#install-hermit-code-font)
-        - [Install Courier Prime Emacs:](#install-courier-prime-emacs)
+        - [Install Font Manager to Install the Rest:](#install-font-manager-to-install-the-rest)
             - [Install "Courier Prime Emacs" Font w/ Font Manager:](#install-courier-prime-emacs-font-w-font-manager)
-        - [Install Averia and Symbola Fonts w/ Font Manager:](#install-averia-and-symbola-fonts-w-font-manager)
+            - [Install Averia and Symbola Fonts w/ Font Manager:](#install-averia-and-symbola-fonts-w-font-manager)
     - [Debian & Ubuntu:](#debian--ubuntu)
 
-**[\[Back To Main Modular Emacs README\]](../README.md)**
-
 <!-- markdown-toc end -->
+
+**[\[Back To Main Modular Emacs README\]](../README.md)**

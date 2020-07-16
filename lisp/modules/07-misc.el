@@ -9,6 +9,23 @@
 ;; exec-path-from-shell did solve some environment problems on Linux however...
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Insert Date Function:
+;;  Insert Date at point using format:  yyyy-mmm-dd
+;;  If a region has been selected, delete that first...
+
+(defun me_insert-date ()
+  "Insert current date in this format: 2020-012-25.
+   I do it with three digit months to further distinguish from
+   days..."
+  (interactive)
+  (when (use-region-p) (delete-region (region-beginning) (region-end)))
+
+  (insert           ;; "2016-010-10"
+   (format-time-string "%Y-%03m-%d")))
+
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Reload File Function:
 
 (defun me-reload-current-file ()
