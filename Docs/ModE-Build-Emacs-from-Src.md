@@ -1,8 +1,8 @@
 ---
 file: ModE-Build-Emacs-from-Src.md
-author: Alisha Awen Sheppard
+author: Alisha Awen
 created: 2019-010-19
-updated: 2019-011-14
+updated: 2020-007-16
 tags: Emacs, apps-tools, SysAdmin, HA-ModEmacs, how-to, README 
 ---
 <!-- #Emacs #apps-tools #SysAdmin #HA-ModEmacs #how-to #README -->
@@ -11,7 +11,13 @@ tags: Emacs, apps-tools, SysAdmin, HA-ModEmacs, how-to, README
 
 # Modular Emacs - Optional Build Emacs from Source
 
-**[\[Back To Top README\]](../README.md)**
+**[\[Mac OS Users Start Here\]](#mac-os)**
+
+**[\[Linux Users Start Here\]](#linux)**
+
+**[\[Table of Contents\]](#table-of-contents)**
+
+**[\[Back To MAIN Modular Emacs README\]](../README.md)**
 
 ## Introduction:
 
@@ -39,65 +45,106 @@ Long story short... My Emacs install was causing all my woes... Homebrew stopped
 
 #### Prerequisites:
 
-- **Install Autoconf & Automake:**  
-`autoconf` is a dependency of `automake`  
-You can install both packages by installing Automake alone...   
-Install Automake _(and Autoconf)_ via Homebrew:  
-**`$> brew install autoconf automake`**  
-Install Automake _(and Autoconf)_ via Macports:  
-**`$> sudo port install automake`**  
+##### Install Autoconf & Automake:
 
+`autoconf` is a dependency of `automake`  
+You can install both packages by installing Automake alone...
+
+Install Automake _(and Autoconf)_ via Homebrew:
+
+```yaml
+$>  brew install autoconf automake
+```
+
+Install Automake _(and Autoconf)_ via Macports:
+
+```yaml
+$>  sudo port install automake
+```
 
 - **Check `autoconf` version:**  - Check that it is at least the version specified near the start of **`configure.ac`** _(in the_ **`AC_PREREQ`** _command)._  **`V2.65`** or greater is required as of `2019-006-01`.  The Homebrew version at same time is: **`V2.69`** Whew! That was close! :trollface:
 
+##### git:
 
-- **git:** - Check that `git` is at least **`Git 1.7.1`**.  If you cloned this repository with an older **Git** version, you may need to reclone it after upgrading `git`.  The current version of `git` at **Homebrew** is **`V2.21.0`** so you are all set if you **`update/upgrade`** Homebrew...  
-`brew install git`  
--or-   
-`brew update`   
-`brew upgrade`  
+Check that `git` is at least **`Git 1.7.1`**.  If you cloned this repository with an older **Git** version, you may need to reclone it after upgrading `git`.  The current version of `git` at **Homebrew** is **`V2.21.0`** so you are all set if you **`update/upgrade`** Homebrew...
 
+```yaml
+$>  brew install git
+```
 
-- **GNU Make** - `gmake V4.2.1` or later is currently available via MacPorts.  It is   required to build Emacs from source.  _(any version)_    
-**`$> sudo port install gmake`**
+-or-
 
+```yaml
+$>  brew update
+$>  brew upgrade
+```
 
-- **makeinfo:** - This is not strictly necessary, but highly recommended, so that you can build the manuals. **makeinfo** is bundled as part of **GNU Texinfo**.  You can install **texinfo** with **Homebrew** as well:  
-`brew install texinfo`  
-Make sure your installed **Texinfo** is: **`V4.13`** or later to work with this build... No problem... Homebrew version is currently **`V6.6`**   _(as of 2019-006-01)_
+##### GNU Make
 
-##### Prerequisites for Emacs V27:
+`gmake V4.2.1` or later is currently available via MacPorts.  It is   required to build Emacs from source.  _(any version)_
 
-- **GMP** - The GNU Multiple Precision Library `libgmp` is now needed.   
-Install `gmp` via macports:   
-**`$> sudo port install gmp`**
+```yaml
+$> sudo port install gmake
+```
 
+##### makeinfo:
 
-###### Emacs now supports resizing and rotating images without ImageMagick.
-All modern systems support this feature.  (On GNU and Unix systems,
-Cairo drawing or the XRender extension to X11 is required for this to
-be available; the configure script will test for it and, if found,
-enable scaling.)
+This is not strictly necessary, but highly recommended, so that you can build the manuals. **makeinfo** is bundled as part of **GNU Texinfo**.  You can install **texinfo** with **Homebrew** as well:
 
-The new function 'image-transforms-p' can be used to test whether any
+```yaml
+$>  brew install texinfo
+```
+
+Make sure your installed **Texinfo** is: **`V4.13`** or later to work with this build... No problem... Homebrew version is currently **`V6.6`**   _(as of 2019-006-01 - I have not looked at what Homebrew currently provides for newer Emacs builds, but I am fairly confident the above will still work fine for you.)_
+
+##### Prerequisites for Emacs V27+:
+
+###### GMP:
+
+The GNU Multiple Precision Library `libgmp` is now needed.
+
+Install `gmp` via macports:
+
+```yaml
+$> sudo port install gmp
+```
+
+###### Without ImageMagick Default!
+
+Emacs 27+ now supports resizing & rotating images without ImageMagick... All modern systems support this new feature.  
+
+Emacs no longer defaults to using ImageMagick to display images.
+This is due to security and stability concerns with ImageMagick.  To override the default, use `configure --with-imagemagick`.  
+
+I'm not sure what to make of this...  Imagemagick was important to Modular Emacs working correctly in Emacs V26...  I will leave the option out for my Version 27 build and use Cairo _(next item below)_ to see what happens... Maybe this is a non-issue now? Maybe it is even better now?  Hopefully...
+
+- **Note:** On GNU and Unix systems, Cairo drawing or the XRender extension to X11 is required for this to be available; the configure script will test for it and, if found,
+enable scaling. The new function 'image-transforms-p' can be used to test whether any
 given frame supports these capabilities.
 
-- **ImageMagic** - Emacs no longer defaults to using ImageMagick to display images.
-This is due to security and stability concerns with ImageMagick.  To
-override the default, use `configure --with-imagemagick`.  I'm not sure what to make of this...  Imagemagick was important to Modular Emacs working correctly in Emacs V26...  I will leave the option out for my Version 27 build and use Cairo _(next item below)_ to see what happens... Maybe this is a non-issue now? Maybe it is even better now?  Hopefully...
+###### Cairo
 
-- **Cairo** The configure option: `--with-cairo` is no longer experimental. This builds Emacs with Cairo drawing, and supports built-in printing when Emacs is built with GTK+.  Some severe bugs in this build were fixed, and we can therefore offer this to users without caveats.  Note that building with Cairo enabled results in using Pango instead of
-libXft for font support, and that Pango 1.44 has removed support for bitmapped fonts.
+The configure option: `--with-cairo` is no longer experimental. This builds Emacs with Cairo drawing, and supports built-in printing when Emacs is built with GTK+.  Some severe bugs in this build were fixed, and we can therefore offer this to users without caveats.  Note that building with Cairo enabled results in using `Pango` instead of `libXft` for font support, and that `Pango v1.44` has removed support for bitmapped fonts.
 
-- **GTK** - Emacs now requires >GTK 2.24 or >GTK 3.10 for the GTK 2 and GTK 3
-builds respectively.    
-Install `gtk2` via macports:    
-**`$> sudo port install gtk2`**   
-Install `gtk3` via macports:    
-**`$> sudo port install gtk3`**
+###### GTK
 
+Emacs now requires >GTK 2.24 or >GTK 3.10 for the GTK 2 and GTK 3 builds respectively.
 
-###### Emacs can now be configured using an early init file:
+Install `gtk2` via macports:
+
+```yaml
+$> sudo port install gtk2
+```
+
+Install `gtk3` via macports:
+
+```yaml
+$> sudo port install gtk3
+```
+
+##### Emacs can now be configured using an early init file!
+
+> **Important Note:** This is important news and needs to be paid attention to in order to ensure your system starts up properly!
 
 The file is called **`early-init.el`**, in: `user-emacs-directory`.  It is loaded very early in the startup process: before graphical elements such as the tool bar are initialized, and before the package manager is initialized.  The primary purpose is to allow customizing how the package system is initialized given that initialization now happens before loading the regular init file (see below).
 
@@ -113,7 +160,7 @@ As a result of this change, it is no longer necessary to call
 Previously, a call to `package-initialize` was automatically inserted
 into the init file when Emacs was started.  This call can now safely
 be removed.  Alternatively, if you want to ensure that your init file
-is still compatible with earlier versions of Emacs, change it to:  
+is still compatible with earlier versions of Emacs, change it to
 
 ```lisp
    (when (< emacs-major-version 27)
@@ -122,7 +169,7 @@ is still compatible with earlier versions of Emacs, change it to:
 
 However, if your init file changes the values of `package-load-list`
 or `package-user-dir`, or sets `package-enable-at-startup` to nil then
-it won't work right without some adjustment:  
+it won't work right without some adjustment:
 
 - You can move that code to the early init file (see above), so those
   settings apply before Emacs tries to activate the packages.
@@ -130,16 +177,13 @@ it won't work right without some adjustment:
 - You can use the new 'package-quickstart' so activation of packages
   does not need to pay attention to 'package-load-list' or
   'package-user-dir' any more.
- 
 
 #### Clone `GNU Emacs Repo @ Savannah.gnu.org:`
 
 You could do this within a dedicated **`Dev`** folder because you will most likely want to maintain a local clone so you can come back later to build again when you need to upgrade or drop back to a more stable version...  I created my own local _untracked_ branch and keep my local `tracking` branch clean...   This helps speed up the build-problems-debug-re-build-till-it-works cycle...  
 
-```bash
-
-git clone https://git.savannah.gnu.org/git/emacs.git
-
+```yaml
+$>  git clone https://git.savannah.gnu.org/git/emacs.git
 ```
 
 > **_btw:_**  So far all these instructions are universal to build the entire Emacs world on any platform, Mac, Linux, BSD, Windows, Tests, etc.  You have the cloned repo.  Try: **`git branch -a`** and you will see what I mean!
@@ -148,11 +192,9 @@ git clone https://git.savannah.gnu.org/git/emacs.git
 
 To use the autotools: Run the following shell command within your cloned **`emacs`** directory:  
 
-``` bash
-
-$> cd emacs 
-$> ./autogen.sh
-
+```yaml
+$>  cd emacs 
+$>  ./autogen.sh
 ```
 
 This will generate the **`configure`** script and some related files, and to set up your git configuration...  
@@ -161,34 +203,39 @@ This will generate the **`configure`** script and some related files, and to set
 
 To get all the features I wish Homebrew would give us, run `configure` with the following switches set:
 
-```
-$> ./configure --with-ns --with-imagemagick --with-mailutils\
-   --with-gnutils --with-modules --with-rsvg --with-dbus\
-   --with-xml2
+```yaml
+$>  ./configure --with-ns --with-imagemagick --with-mailutils\
+    --with-gnutils --with-modules --with-rsvg --with-dbus\
+    --with-xml2
 ```
 
 For building the new Emacs 27.1 version use this instead:
 
-```
-$> ./configure --with-ns --with-mailutils
+```yaml
+$>  ./configure --with-ns --with-mailutils
 ```
 
 Actually you can simply run `./configure` alone those options are default for a new Mac that has GNU mailutils installed, as well as all the required graphics libraries etc. on it...  If those things are not installed, it does not matter if you require them on the configure line... Your build will fail if make cannot find needed libraries etc...
-
 
 #### Make Bootstrap: _(does a more thourough job)_
 
 The **Bootstrap make** is quite **`CPU`** intensive... If your Mac can _(4 cores? no prob!)_ fan won't even twitch? Maybe... :octocat: So if you don't mind waiting, this is the best way to build according to the GNU dudes...
 
-    make bootstrap
+```yaml
+$>  make bootstrap
+```
 
 #### Make Install! _(Make the Emacs Mac App package!)_
 
-    make install
+```yaml
+$>  make install
+```
 
 #### Move your shiny new Emacs.app to: `$HOME/Applications:`
 
-    mv nextstep/Emacs.app ~/Applications
+```yaml
+$>  mv nextstep/Emacs.app ~/Applications
+```
 
 #### Launch Emacs from your Apps Folder/Menu:
 
@@ -198,160 +245,170 @@ Launch Emacs for the first time...  If it runs you can check the version with **
 
 If your build was successful, you don't need to do this now... Wait until you need to build again...  However if your build went bad... This is the way to start completely over... 
 
-    git clean -fdx
-        
+```yaml
+$> git clean -fdx
+```
 
 #### Troubleshooting Debugging:
 
 My build went well because I planned well this time... _(i.e., you did not see the big goofs I made before writing this... lol)_  Because of that I am now running Emacs V26.2.50 on my iMac now with Imagemagick, and all my favorite bells and whistles!  **_Caveat:_** I have to manage builds now.. Oh well... it felt good getting that monster to build!   :octocat:
 
-
-
-
-
-
-
-
-
-
 ## Linux:
 
 ### Install Emacs from Source - Debian & Ubuntu: ###
 
-###### Prerequisites  
+#### Prerequisites  
 
-- **`git`:** - Check that `git` is at least **`Git 1.7.1`**.  If you already cloned the Emacs repository with an older **Git** version, you may need to reclone it after upgrading `git`.  
+##### Install `git`
 
-- _Install `Autoconf`:_    
-Make sure `Autoconf` is at least the version specified near the start of **`configure.ac`** _(in the_ **`AC_PREREQ`** _command)._  **`V2.65`** or greater is required as of `2019-006-16`.  
-```bash
-        sudo apt install autoconf
+Check that `git` is at least **`Git 1.7.1`**.  If you already cloned the Emacs repository with an older **Git** version, you may need to reclone it after upgrading `git`.
+
+##### Install `Autoconf`:
+
+Make sure `Autoconf` is at least the version specified near the start of **`configure.ac`** _(in the_ **`AC_PREREQ`** _command)._  **`V2.65`** or greater is required as of `2019-006-16`.
+
+```yaml
+$>  sudo apt install autoconf
 ```
 
-- _Install `Automake`:_  
-```bash
-    sudo apt install automake
+##### Install `Automake`:
+
+```yaml
+$>  sudo apt install automake
 ```
 
-- _Install `autotools-dev`:_  
-```bash
-    sudo apt install autotools-dev
+##### Install `autotools-dev`:
+
+```yaml
+$>  sudo apt install autotools-dev
 ```
 
-- _Install `libtool`:_  
-```bash
-    sudo apt install libtool
+##### Install `libtool`:
+
+```yaml
+$>  sudo apt install libtool
 ```
 
-- _Install `makeinfo`:_  This is not strictly necessary, but highly recommended, so that you can build the manuals. **makeinfo** is bundled as part of **GNU Texinfo**.  Make sure your installed **Texinfo** is: **`V4.13`** or later to work with this build...  
-```bash
-    sudo apt install texinfo
+##### Install `makeinfo`:
+
+This is not strictly necessary, but highly recommended, so that you can build the manuals. **makeinfo** is bundled as part of **GNU Texinfo**.  Make sure your installed **Texinfo** is: **`V4.13`** or later to work with this build...  
+
+```yaml
+$>  sudo apt install texinfo
 ```
 
-- _Install `build-essential`:_  
-```bash
-    sudo apt install build-essential
+##### Install `build-essential`:
+
+```yaml
+$>  sudo apt install build-essential
 ```
 
-- _Install `xorg-dev`:_  
-```bash
-    sudo apt install xorg-dev
+##### Install `xorg-dev`:
+
+```yaml
+$>  sudo apt install xorg-dev
 ```
 
-- _Install `libgtk2.0-dev`:_  
-```bash
-    sudo apt install libgtk2.0-dev
+##### Install `libgtk2.0-dev`:
+
+```yaml
+$>  sudo apt install libgtk2.0-dev
 ```
 
-- _Install `libjpeg-dev`:_  
-```bash
-    sudo apt install libjpeg-dev
+##### Install `libjpeg-dev`:
+
+```yaml
+$>  sudo apt install libjpeg-dev
 ```
 
-- _Install `libncurses5-dev`:_  
-```bash
-    sudo apt install libncurses5-dev
+##### Install `libncurses5-dev`:
+
+```yaml
+$>  sudo apt install libncurses5-dev
 ```
 
-- _Install `libdbus-1-dev`:_  
-```bash
-    sudo apt install libdbus-1-dev
+##### Install `libdbus-1-dev`:
+
+```yaml
+$>  sudo apt install libdbus-1-dev
 ```
 
-- _Install `libgif-dev`:_  
-```bash
-    sudo apt install libgif-dev
+##### Install `libgif-dev`:
+
+```yaml
+$>  sudo apt install libgif-dev
 ```
 
-- _Install `libtiff-dev`:_  
-```bash
-    sudo apt install libtiff-dev
+##### Install `libtiff-dev`:
+
+```yaml
+$>  sudo apt install libtiff-dev
 ```
 
-- _Install `libm17n-dev`:_  
-```bash
-    sudo apt install libm17n-dev
+##### Install `libm17n-dev`:
+
+```yaml
+$>  sudo apt install libm17n-dev
 ```
 
-- _Install `libpng-dev`:_  
-```bash
-    sudo apt install libpng-dev
+##### Install `libpng-dev`:
+
+```yaml
+$>  sudo apt install libpng-dev
 ```
 
-- _Install `librsvg2-dev`:_  
-```bash
-    sudo apt install librsvg2-dev
+##### Install `librsvg2-dev`:
+
+```yaml
+$>  sudo apt install librsvg2-dev
 ```
 
-- _Install `libotf-dev`:_  
-```bash
-    sudo apt install libotf-dev
+##### Install `libotf-dev`:
+
+```yaml
+$>  sudo apt install libotf-dev
 ```
 
-- _Install `libgnutls28-dev`:_  
-```bash
-    sudo apt install libgnutls28-dev
+##### Install `libgnutls28-dev`:
+
+```yaml
+$>  sudo apt install libgnutls28-dev
 ```
 
-- _Install `libxml2-dev`:_  
-```bash
-    sudo apt install libxml2-dev
+##### Install `libxml2-dev`:
+
+```yaml
+$>  sudo apt install libxml2-dev
 ```
 
-
-
-
-
-
-
-###### Clone `GNU Emacs Repo @ Savannah.gnu.org:`  
+#### Clone `GNU Emacs Repo @ Savannah.gnu.org`:
 
 You could do this within a dedicated **`Dev`** folder because you will most likely want to maintain a local clone so you can come back later to build again when you need to upgrade or drop back to a more stable version...  I created my own local _untracked_ branch and keep my local `tracking` branch clean...   This helps speed up the build-problems-debug-re-build-till-it-works cycle...  
 
-```bash
-    git clone https://git.savannah.gnu.org/git/emacs.git
-    cd emacs
-    git branch -a                         # prints a long list of remote branches...
-    git fetch origin emacs-26             # we are interested in building emacs 26
-    git checkout --track origin/emacs-26
-    git pull origin emacs-26
-    git checkout -b my-local-branch       # A smart git practice to get into habit...
+```yaml
+$>  git clone https://git.savannah.gnu.org/git/emacs.git
+$>  cd emacs
+$>  git branch -a                         # prints a long list of remote branches...
+$>  git fetch origin emacs-26             # we are interested in building emacs 26
+$>  git checkout --track origin/emacs-26
+$>  git pull origin emacs-26
+$>  git checkout -b my-local-branch       # A smart git practice to get into habit...
 ```
 
 > **_btw:_**  **`git branch -a`** will reveal all the universal build options for the entire Emacs world on any platform, Mac, Linux, BSD, Windows, Tests, etc. You could build it all from here I imagine!  But here we are only interested in the latest stable Linux release at the time of cloning...
 
-###### Set up Autotools:  
+#### Set up Autotools:  
 
 To use the autotools: Run the following shell command within your cloned **`emacs`** directory:  
 
-``` bash
-    cd emacs 
-    ./autogen.sh
+```yaml
+$>  cd emacs 
+$>  ./autogen.sh
 ```
 
 The last bit of output of the above running shell script should look like this:
 
-```bash
+```yaml
     Installing git hooks...
     'build-aux/git-hooks/commit-msg' -> '.git/hooks/commit-msg'
     'build-aux/git-hooks/pre-commit' -> '.git/hooks/pre-commit'
@@ -363,70 +420,127 @@ The last bit of output of the above running shell script should look like this:
 
 If you see the above it was successful!  The above script generated the **`configure`** script and some related files, and set up your git configuration...    Now you can move on to configure your specific build...
 
-###### Run Configure:  
+#### Run Configure:  
 
 To get all the features I wish package managers would take the time to compile in for us, run **`configure`** with the following switches set:
 
-```make
-    ./configure --with-imagemagick --with-mailutils\
-    --with-gnutils --with-modules --with-rsvg --with-dbus\
-    --with-xml2
+```yaml
+$> ./configure --with-imagemagick --with-mailutils\
+   --with-gnutils --with-modules --with-rsvg --with-dbus\
+   --with-xml2
 ```
+
 You probably don't have to be so specific  _(as above)_ and probably could just get away with using `./configure` alone... The build process is smart and most likely will give you all the things you need without asking explicitly...  But I asked explicitly above anyway...  Then I know for sure. 
 
 _To see a list of other available options, run this command:_
 
-```make
-    ./configure --help
+```yaml
+./configure --help
 ```
 
-###### Make Bootstrap: _(does a more thourough job)_  
+#### Make Bootstrap: _(does a more thourough job)
 
 The **Bootstrap make** is quite **`CPU`** intensive... If your laptop can do it... _(4 cores? no prob!)_ fan won't even twitch? Maybe... :octocat: So if you don't mind waiting, this is the best way to build according to the GNU dudes...
 
-```make
-    make bootstrap
+```yaml
+$>  make bootstrap
 ```
 
-###### Make Install! _(Make the Linux App!)_  
+#### Make Install! _(Make the Linux App!)
 
 Do this with `"sudo"` to get the Linux Emacs app installed in `/usr/local/bin`
 
-```make
-    sudo make install
+```yaml
+$>  sudo make install
 ```
 
 Occasionally the file `lisp/loaddefs.el` (and similar automatically generated files, such as `esh-groups.el` and `*-loaddefs.el` in some subdirectories of 'lisp/', e.g., 'mh-e/' and 'calendar/') will need to be updated to reflect new autoloaded functions.  If you see errors (rather than warnings) about undefined lisp functions during compilation, that may be the reason.  Finally, sometimes there can be build failures related to `*loaddefs.el` _(e.g., "required feature ‘esh-groups’ was not provided")_.  In that case, update loaddefs.el (and similar files), as follows:
 
-```bash
-    cd lisp
-    make autoloads
+```yaml
+$>  cd lisp
+$>  make autoloads
 ```
 
 doing `make bootstrap` as above should eliminate any of the above problems however...
 
-
-###### Launch Emacs:
+#### Launch Emacs:
 
 With Emacs installed in /usr/local/bin, you can launch Emacs from any command line.  You could also create a start menu item/icon as well.  I don't bother with that in a Qubes environment... So no write-up on that for now... Start Emacs from the terminal.  It will pop up the GUI window... No problem... Once your Emacs build is running, you can check the version with **`C-h C-a`**...
 
 If you have problems with your build?  Oh My! Do the next step below and then Go back to the top of this **_squirrel cage_** and start over fresh.  Read carefully... :trollface:
 
-###### Revert Repo back to fresh clone state to start over:  
+#### Revert Repo back to fresh clone state to start over:  
 
 If your build was successful, you don't need to do this now... Wait until you need to build again...  However if your build went bad... This is the way to start completely over... 
 
-```bash
-    git clean -fdx
+```yaml
+$>  git clean -fdx
 ```
 
-###### Troubleshooting Debugging:
+#### Troubleshooting Debugging:
 
-My build went well because I planned well this time... _(i.e., you did not see the big goofs I made trying to build this on a Mac! lol)_ Also I was very explicit about required developer libraries which probably stopped a lot of problems!  Because of that I am now running Emacs V26.2.90 on Debian 9 now with Imagemagick, and all my favorite bells and whistles!  **_Caveat:_** I have to manage builds now.. Oh well... it felt good getting that monster to build! _(even after the second, third, times)_   :octocat:  
+My build went well because I planned well this time... _(i.e., you did not see the big goofs I made trying to build this on a Mac! lol)_ Also I was very explicit about required developer libraries which probably stopped a lot of problems!  Because of that I am now running Emacs V26.2.90 on Debian 9 now with Imagemagick, and all my favorite bells and whistles!  **_Caveat:_** I have to manage builds now.. Oh well... it felt good getting that monster to build! _(even after the second, third, times)_  :octocat:
 
+## Table of Contents:
 
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 
+- [Modular Emacs - Optional Build Emacs from Source](#modular-emacs---optional-build-emacs-from-source)
+    - [Introduction:](#introduction)
+    - [Mac OS:](#mac-os)
+        - [Install Emacs from Source - Mac OS](#install-emacs-from-source---mac-os)
+            - [Prerequisites:](#prerequisites)
+                - [Install Autoconf & Automake:](#install-autoconf--automake)
+                - [git:](#git)
+                - [GNU Make](#gnu-make)
+                - [makeinfo:](#makeinfo)
+                - [Prerequisites for Emacs V27+:](#prerequisites-for-emacs-v27)
+                    - [GMP:](#gmp)
+                    - [Without ImageMagick Default!](#without-imagemagick-default)
+                    - [Cairo](#cairo)
+                    - [GTK](#gtk)
+                - [Emacs can now be configured using an early init file!](#emacs-can-now-be-configured-using-an-early-init-file)
+                    - [Installed packages are now activated _before_ loading init:](#installed-packages-are-now-activated-_before_-loading-init)
+            - [Clone `GNU Emacs Repo @ Savannah.gnu.org:`](#clone-gnu-emacs-repo--savannahgnuorg)
+            - [Set up Autotools:](#set-up-autotools)
+            - [Run Configure:](#run-configure)
+            - [Make Bootstrap: _(does a more thourough job)_](#make-bootstrap-_does-a-more-thourough-job_)
+            - [Make Install! _(Make the Emacs Mac App package!)_](#make-install-_make-the-emacs-mac-app-package_)
+            - [Move your shiny new Emacs.app to: `$HOME/Applications:`](#move-your-shiny-new-emacsapp-to-homeapplications)
+            - [Launch Emacs from your Apps Folder/Menu:](#launch-emacs-from-your-apps-foldermenu)
+            - [Revert Repo back to fresh clone state to start over:](#revert-repo-back-to-fresh-clone-state-to-start-over)
+            - [Troubleshooting Debugging:](#troubleshooting-debugging)
+    - [Linux:](#linux)
+        - [Install Emacs from Source - Debian & Ubuntu:](#install-emacs-from-source---debian--ubuntu)
+            - [Prerequisites](#prerequisites)
+                - [Install `git`](#install-git)
+                - [Install `Autoconf`:](#install-autoconf)
+                - [Install `Automake`:](#install-automake)
+                - [Install `autotools-dev`:](#install-autotools-dev)
+                - [Install `libtool`:](#install-libtool)
+                - [Install `makeinfo`:](#install-makeinfo)
+                - [Install `build-essential`:](#install-build-essential)
+                - [Install `xorg-dev`:](#install-xorg-dev)
+                - [Install `libgtk2.0-dev`:](#install-libgtk20-dev)
+                - [Install `libjpeg-dev`:](#install-libjpeg-dev)
+                - [Install `libncurses5-dev`:](#install-libncurses5-dev)
+                - [Install `libdbus-1-dev`:](#install-libdbus-1-dev)
+                - [Install `libgif-dev`:](#install-libgif-dev)
+                - [Install `libtiff-dev`:](#install-libtiff-dev)
+                - [Install `libm17n-dev`:](#install-libm17n-dev)
+                - [Install `libpng-dev`:](#install-libpng-dev)
+                - [Install `librsvg2-dev`:](#install-librsvg2-dev)
+                - [Install `libotf-dev`:](#install-libotf-dev)
+                - [Install `libgnutls28-dev`:](#install-libgnutls28-dev)
+                - [Install `libxml2-dev`:](#install-libxml2-dev)
+            - [Clone `GNU Emacs Repo @ Savannah.gnu.org`:](#clone-gnu-emacs-repo--savannahgnuorg)
+            - [Set up Autotools:](#set-up-autotools-1)
+            - [Run Configure:](#run-configure-1)
+            - [Make Bootstrap: _(does a more thourough job)](#make-bootstrap-_does-a-more-thourough-job)
+            - [Make Install! _(Make the Linux App!)](#make-install-_make-the-linux-app)
+            - [Launch Emacs:](#launch-emacs)
+            - [Revert Repo back to fresh clone state to start over:](#revert-repo-back-to-fresh-clone-state-to-start-over-1)
+            - [Troubleshooting Debugging:](#troubleshooting-debugging-1)
+    - [Table of Contents:](#table-of-contents)
 
-
-
-
+<!-- markdown-toc end -->

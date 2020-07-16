@@ -2,7 +2,7 @@
 file: README.md
 author: Alisha Awen
 created: 2019-010-20
-updated: 2020-006-27
+updated: 2020-007-16
 tags: Emacs, 2020, apps-tools, SysAdmin, HA-ModEmacs, how-to, README 
 ---
 
@@ -12,100 +12,23 @@ tags: Emacs, 2020, apps-tools, SysAdmin, HA-ModEmacs, how-to, README
 
 **[\[Table Of Contents\]](#table-of-contents)**
 
+**Note:** _Skip to **[Start Here:](#start-here)** if you just need to get this going now._ :trollface:
+
 ## Introduction:
 
 **_Welcome to Harmonic Alchemy Modular Emacs_** - V3.1.2 [Q2 2020] _(still in Beta)_.
 
-### Current Status:
+**Modular Emacs** is more than just Emacs with configurable modules... It is also designed to be the centerpiece _(command central)_ of a larger _personalized, extensible_: **Dev♺Ops** / **Pub✎Ops** workstation **IDE** capable of running on older but reasonably powerful **laptops/desktops** _(that would otherwise be considered legacy by most other standards)_.  
 
-> **Note:** Skip to **[Start Here:](#start-here)** if you just need to get this going now. :trollface:
+I am a systems architect, dev♺Ops engineer, computer scientist, composer/musician, sound designer, writer/publisher.  I wear a lot of hats! My Emacs needs to wear a lot of hats as well!  The central focus of **Modular Emacs** is to build empowering features into **Emacs** utilizing a modular framework that facilitates all the above without becoming an over complicated mess to manage! **_"good luck with that"_**  :octocat:
 
-#### 2020 June 27:
-
-Updated the docs... Added a new section below about installing fonts for use with Modular Emacs, and also created a how-to doc for you to follow along to get that important task done...
-
-#### 2020 June 16:
-
-I have been using **_"Fancy Org Mode"_** with **`Xah-Fly-Keys`** enabled for a several months now. Since the beginning of 2020 many refinements have been made.  I have been mucking around with custom key-bindings and modified many of the default key-bindings that come with **`Xah-Fly-Keys`** mode by default...   The primary incentive is to put your most often used key commands as close as possible to the **_"home row"_** to speed up productivity, and also save your fingers from doing stressful things repeatedly which is the main cause of tendenitis.  
-
-There is a second insentive to NOT assign keys close to the home row that evoke radical transformations, or do things that could get you totally hosed and confused if you hit that key by accident! If you hit it by accident while editing an important doc _(or not so important)_, messing up like that is frustrating to say the least!  
-
-Needless to say... I have been modifying these keys based on the above experiences I have had with it since around Novemember of 2019... Things are working much better for me now but I am not done...
-
-Since I also have to support folks who do not care to use Emacs as a **_"modal editor"_** like **vi**, I am committed to mapping custom key bindings using the **`Control`** and **`Meta`** keys that match things I can do when I am in Xah-Fly-Keys mode...
-
-Unfortunately, I have been using **`Xah-Fly-Keys`** for over 6 months and my fingers _(muscle memory)_ are constantly tripping when I am in regular Emacs mode... _(This also happens to me outside of emacs, editing documents in Libre Office, copy-and-pasting, or something as simple as renaming a file, Etc. My fingers forget they are not in Emacs and un-counscously try command keys that produce error messages etc. This is the downside of using modal editors.  If the entire computing experience was configured modally like this, I would not have that problem. LOL "The bane of doing things differently" eh?)_ Keep this in mind when trying to decide whether or not to use Emacs as a "modal editor" there a pluses and minuses... Nothing is perfect...
-
-**Please Help!**
-
- At this point I need some folks to try Harmonic Alchemy Modular Emacs _(normal key bindings mode)_ to give me some feedback about their user experience (**UX**). Please! Where are you?  Come try this stuff out! Thousands of man-hours have been put into it and more to come!  All Free-as-in-freedom... What are you waiting for?
-
-> **Warning!** This year is the year of key-bindings refinement...  Key bindings defined within the module: **`12-Xah-Fly-Keys.el`** will most likely be changing several times this year... If you are already using this project and are used to the way things were set up before now, it would be wise to copy, **`lisp/modules/12-Xah-Fly-Keys.el`** into: **`lisp/my-modules/12-Xah-Fly-Keys.el`** and also copy: **`lisp/modules/13-key-bindings.el`** to: **`lisp/my-modules/13-key-bindings.el`** to override the ones that get updated when you pull down new changes from the master branch...  
-That way if key-bindings change, you will stil have your old ones to keep (if you like) and you can also try out the new keybindings for size as well... No pain or disruptions...
-
-#### 2020 May 22:
-
-Org Mode has been heavily customized!  I am calling it **_Fancy Org Mode_**.  Also some of the Module files were re-organized... (In particular `12-Xah-Fly-Keys.el` and `13-key-bindings.el)`... Tweaks were added to improve package management and minimize the effects of load errors etc.  Keybindings for both Xah-Fly-Keys mode as well as normal mode were added/changed...
-
-The file: **`dispatcher.el`** got more automated as well.  Any module within the **`lisp/modules`** directory will be automatically overrided simply by making a copy of it _(using same file name of course)_ to: **`lisp/my-modules`** where the file will not be tracked by git and you can make any local modifications or additions without upsetting the original files that get updated periodically as new git commits are pulled down...  
-
-> **Note:** _New changes emerging within new pulled down files which you have previously overridden will be shadowed of course!_    
-If you need the updates, you will need to merge those changes into your overrides...
-
-
-In addition, you no longer have to copy **`dispatcher.el`** into **`my-modules`** either _(except to enable normally disabled optional modules)_...     
-
-
-In case you do have to copy **`dispatcher.el`** into **`my-modules`** _(e.g., To enable the optional Common Lisp related modules, etc.)_ you won't have to edit **`init.el`** anymore to change the location of **`dispatcher.el`**.  That part has been automated as well. **`modules/dispatcher.el`** will be  overridden by your custom copy in: **`my-modules`** automagically.
-
-
-Now, the only reason to edit **init.el** is to add your own custom heading and/or body to the Welcome Screen Message... _(If and when you care to do that, now or later...)_
-
-
-I created a branch _(fork)_ where you can try out: **Xah-Fly-Keys** without having to go in to override **`dispatcher.el`** manually...
-
-
-In the Master Branch, optional modules are disabled _(see details below)_...  Not having Xah-Fly-Keys enabled kind of cripples things for me for running tests within normal Emacs mode now that my fingers are used to flying with a spacebar leader key!  Going back to the old way is painful! It is hard to test my setup using the old C-x and M-x keys etc... %^) Last year at this time I was complaing about the opposite... _(i.e., having to learn Xah-Fly-Keys and using Emacs as a Modal editor like **vi**)_  
-
-
-You have two editor mode options available to choose now, _(and it's easy to switch back and forth)_.   Choose between using **Normal Emacs** edit mode **_or_** **Xah Fly Keys** modal edit mode simply by switching git branches...
-
-
-**Note:** Making the switch to a model editor is a BIG HUGE commitment... But it has its BIG HUGE payoff at the end of that bumpy road! Trust me on that!  There are also caveats as well though.  _(arent there always?)_ :trollface:
-
-
-#### 2020 May 17 - Fancy Org Mode:
-
-This commit adds a bunch of new Org-Mode tweaks... I am setting up my Org-Mode based Book Publishing System _(my **pubOps**)_ now... There will be some included examples added to this a bit later...  **_Fancy Org Mode is now enabled by default_**... 
-
-
-To use **Fancy Org Mode** you will need to override and edit the file: **`09-org-mode-pkg-conf.el`** and depending on your OS, (Mac or Linux) change the dummy placeholder path to your REAL **org docs** directory path.  There are two options allowing you to run this on both MacOS and Linux if you are a multi OS kind of person that is... :octocat:
-
-> **Note 1:** I am implementing a cleaner way to get all local directory path and user specific meta data into the load process rather than having to override and edit indvidual files as in the above bullet...  This will all be done in one file that you will override during your initial install... Once it is set with your specific edits it will stay that way and you will never have to touch it again...
-
-> **Note 2:** I am still working on custom Export options for Modular Emacs Fancy Org Mode...  But everything else is working nicely now... Export features will be forthcomming over the next few months!  Stay tuned...  Book publishing time!
-
-The **Blackboard** Color Theme was also updated _(to accomodate prettifying Org-Mode)_.  Also, I am back to using the standard mode line.  I got tired of **powerline** _(It felt too cluttered and also seemed to have bugs)_... Then I tried **smart-mode-line** to see if I could make things look better and simpler... I got frustrated with it as well and after mucking around I realized there is nothing wrong with the Emacs standard mode-line and you can tweak it to fit exactly your needs... So now that is the new plan... I left the old code for both `powerline` and `smart-mode-line` in place _(commented out)_ making it easy for you to enable either of them, if you like them better... You can see changes to mode line features in **`02-package-conf.el`**... 
-
-**_Everything else stays pretty much the same as Version 3.0..._**
-
-To install Harmonic Alchemy Modular Emacs for the first time, follow this guide _(in a top down fashion)_... Do not skip to any of the other install guides until you have the basic default configuration of Modular Emacs installed and running _(without errors)_ in your home directory... 
-
-> **Exception: _Debian and Mac users will have to follow a linked doc that guides you through building and maintaining your own Official GNU Emacs from source first!_** Building from source is tedious, _especially if you are doing it for the first time, you WILL have to try many times before getting all those "twisty little snippets all different", sorted out and resolved._  If you stick to your guns and stay persistant, you will be awesome!  You will also be in total control of your personal and OFFICIAL build of GNU Emacs, how it works, and what it does!  Your second build experience will go much more smoothly...  By the third build the process will become the boring routine of typing a few commands, and then waiting as your machine cranks away a brand new version for you...  Play **_mind_ sweeper** with your smart spyPhone, or read a book about exploding brain synapses while your computer's busy making free-as-in-liberated Emacs... :trollface:
-
-Once you have the basics running smoothly, then it will be safe to visit the _**optional section headings**_ below to find links to install guides for optional modules you may be interested in trying out...  Consult the **[\[Table Of Contents\]](#table-of-contents)** for quick access if you are coming back to this doc later... You will see a link to the **Table of Contents** placed approximately one page or half page apart continuing down this document as well for easy quick reference... _(kind of reminds me of the old web days before JavaScript exploded on the scene ;-)_
-
-> **Warning:** Enabling optional features may require you to remap some of your keys and also change Emacs into a modal editor _(similar to Vi but more Emacs like)_  Read carefully before making that commitment...
-
-> **Note:** If you are on Mac OS or some flavor of Debian, you may have to build Emacs from source _(as mentioned above)_ to enable extra features support _(like VMD-Mode which needs special libraries linked in during the Emacs build process)_...  Full instructions are provided for those sections...
+> **Note:** Read more detail about this project and keep up with current status **[HERE](./Docs/ModE-Current-Status.md)**
 
 **[\[Table of Contents\]](#table-of-contents)**
 
 ### History & Purpose:
 
-The history of **Harmonic Alchemy Modular Emacs** is _"a confusing journey through many little twisty passages, all alike..."_ [Everything is documented here now](./Docs/ModE-History.md)...  Read it at your leasure...  It provides some perspective, insight, and purpose behind how and why things are done here in the present time...
-
-The present is a continuum... Therefore the above linked history document will also be updated over time, to record _"our new enlightened adventure through many interesting little twisty passages, all different!"_ When the **Current Status** section gets too long, older date entries will be moved into the above History document _(it's getting too long already lol)_... This README.md would get too lengthy otherwise...
+The history of **Harmonic Alchemy Modular Emacs** is _"a confusing journey through many little twisty passages, all alike"_... **[Everything is documented here now](./Docs/ModE-History.md)**...  Read it at your leasure.  It provides some perspective, insight, and purpose behind how and why things are done here in the present time.
 
 ## Try Harmonic Alchemy Modular Emacs:
 
@@ -123,13 +46,19 @@ For the rest of us... For now... Let's learn this together... Please give feedba
 
 > **_"Always do what is right. It will gratify half of mankind and astound the other."_** - Mark Twain  
 
+One of the main reasons created this project was to empower lots of creative folks out there who have more brains than money.  This project is 100% open-source and Free to download, install, and use independently, _(both as in "Free Beer" and also as in having "Freedom of Choice and Control" over your Computing Infrastructures)_.
+
+I have been testing this project to see if it can successfully run on older legacy hardware as well.  My aim is to make it possible for anyone, no matter what their economic or social status is, to be empowered to use this... To give you a voice, to give you more control over your digital life operations, and provide you with a portable/inexpensive way to publish your ideas, stories, projects for the rest of the world to see. All under your independent and private control (no middle men dictating rules)..
+
 I am committed to making this **process/journey** as painless as possible for you as I have found many other Emacs setups to be way to complicated to make it easy for adoption into my workflow, and you are probably experiencing the same!  On the other end of the spectrum... Installing basic Emacs alone is not enough to get you started _(IMHO)_...  I set it up that way to get you up and running with a simple setup first... You should quickly outgrow that and certainly want to enable the extra features!  
 
-Therefore I made that process easy to do!  The whole purpose of this project is to be able to easily grow and shrink features as needed in any combination thereof... Without _"getting lost in a tangled mess of twisty little passages all alike!"_
+Therefore I hope to make that process reasonably easy to do!  The whole purpose of this project is to be able to easily grow and shrink features as needed in any combination thereof... Without _"getting lost in a tangled mess of twisty little passages all alike!"_
 
 If you end up liking **Harmonic Alchemy Modular Emacs**, please drop me a note to let me know! Please do ask questions, open issues, etc.  Thanks!  I have been using Emacs since around 1986/87 _(OMG that long! off-and-on with gaps in between ;-)_ but I never shared any of that Emacs knowledge with anyone before now... :heart_decoration:  
 
 Therefore: **Here is Modular Emacs!** I hope my long years of **devOps** experience will turn out a nice jewel for new comers to try out and succeed with!  **Good Luck and God Speed!**  
+
+**_Don't Panic...  Organize!_** _(Note to self: Put your Cartoon SVG here)_
 
 **[\[Table of Contents\]](#table-of-contents)**
 
@@ -137,89 +66,40 @@ Therefore: **Here is Modular Emacs!** I hope my long years of **devOps** experie
 
 **_(Modular Emacs Default Installation)_**
 
+To install Harmonic Alchemy Modular Emacs for the first time, follow this guide _(in a top down fashion)_... Do not skip to any of the other _(optional)_ install guides until you have the basic default configuration of Modular Emacs installed and running _(without errors)_ in your home directory... 
+
+> **Note:** It is entirely possible that Modular Emacs will still run reasonably without installing some of the basic requirements listed below as well.  For example, if you get stuck trying to install **`NODE`**, that will only cripple your ability to edit your Markdown pages using **VMD** _(Visual Markdown Display - a nice thing to have for WYSIWYG editing)_ but it won't stop you from getting a basic Modular Emacs successfully installed.
+
+> If you get stuck, go ahead and keep going to see if you can get Modular Emacs up and running anyway... You can dig into fixing the details later after you got your basic environment all set up...
+
 ## Requirements:  
 
-### Emacs: V26.1+  
+### Clone This Repository:
 
-Many of the default packages installed with this project will not work with older versions of Emacs. Also the security of older Emacs and packages is Horrendous! Recently, some of the older packages were removed from the updated MELPA and moved to other less-secure repositories. The entire MELPA site is TLS enabled now but these other repos are not very secure...  Updated features _(acquired securely)_ are vital for being reasonably safe going forward from 2020 onward...  Therefore, I decided not to support older versions of Emacs...  
+Clone this repository into your **`$HOME`** directory as:  **`me.init.d`**.   The `me.` prefix _(for Modular Emacs)_ is put there so that it will not overwrite your existing ~/.emacs.d directory _(if you already use Emacs, which you will still need operational)_.  We will rename this folder later after all other requirements are complete...
 
-> **Warning:** If you have a really old version of Emacs currently installed, it may break after you update Emacs below... Therefore before trying any of this out, first you should record the current version of Emacs you are using, and backup all previous emacs related files: _(i.e.,_ `.emacs` `.emacs.d`_)_ located in your $HOME directory.  
+Issue the following command within your default **terminal** application:
 
-> Simply COPY your entire: **`~/.emacs.d`** directory _(and/or_ **`~/.emacs`** _file)_ into a temporary directory of your choice before upgrading below... _(or compress and make a `.zip` or `.gz` archive file)_  This will be your safety net for coming back later if you decide you are not ready to upgrade.  Don't move or touch your original Emacs files, as you will try them out with your new Upgraded version of Emacs...  If anything goes wrong, you will be able to reverse everythig back no problem! _(Note: before restoring your backups, you will have to downgrade your Emacs back to the original version you were using before doing all this)_ 
-
-**[\[Table of Contents\]](#table-of-contents)**
-
-#### Commands to install Emacs on various unix platforms:  
-
-_(Choose your Flavor)_  
-
-##### Fedora 27-29:  
-
-```bash
-   $_  sudo dnf install emacs
+```yaml
+$>  git clone https://github.com/harmonicalchemy/modular-emacs.git ~/me.emacs.d
 ```
 
-That's it! Red Hat takes care of you lucky Fedora users...  
+After the above is done, leave things here as they are and go do the rest of the steps below... We will come back to this later when we are just about ready to launch **Harmonic Alchemy - Modular Emacs** for the first time...
+
+### Install Emacs: V26.1+  
+
+Many of the default packages installed with this project will not work with older versions of Emacs. Also the security older Emacs packages is horrendous! Recently, some of the older packages were removed from the updated MELPA and moved to other less-secure repositories. The entire MELPA site is TLS enabled now but these other repos are not very secure...  Updated features _(acquired securely)_ are vital for being reasonably safe going forward from 2020 onward...  Therefore, I decided not to support versions of Emacs prior to V26 and prefer to only support Emacs V26.1 and up...  
+
+> **Warning:** If you have a really old version of Emacs currently installed, it may break after you update Emacs below... Therefore before installing a brand new version of Emacs it may be a wise idea to save your current emacs environment, _(e.g.,_ `~/.emacs` _,_ `~/.emacs.d`_, etc.)_. as well as a copy of your old **Emacs** Application... This is for a safety net, Do NOT delete your existing setup... You still need your existing Emacs working wile you are getting all the requirements below together for Modular Emacs... 
+
+> Simply Copy/Clone your entire: **`~/.emacs.d`** directory _(and/or_ **`~/.emacs`** _file)_, as well as a copy of your old **Emacs** application into a temporary directory of your choice before upgrading below... _(or compress and make a `.zip` or `.gz` archive file)_  
+
+> This will be your safety net for coming back later if you decide you are not ready to upgrade. If anything goes wrong, you will be able to reverse everythig back no problem!
+
+Once your house is in order as above, follow this link to: **[Install and/or Build/Install Emacs 26+ on Your Platform](./Docs/ModE-Install-Emacs.md)**
 
 **[\[Table of Contents\]](#table-of-contents)**
 
-##### Debian9 Stretch & Ubuntu 18.04+:  
-
-You Debian/Ubuntu users don't get it so easy... Hope you got your hacker shoes on...
-I tried all the normal ways to get the latest binary build of Emacs installed for Debian based Linux but none of those options are able to satisfy Harmonic Alchemy Modular Emacs basic default needs 100%... Follow this link to: **[Build Emacs from Source](./Docs/ModE-Build-Emacs-from-Src.md)** and then come back here to continue below...
-
-> **Warning:** This will take a bit of up-front work...  I hope you don't mind staying up all night digging deep and scratching your eyes a lot! Not for the faint at heart!  If you never built software from source before you may want to try something like **`"Hello World"`** first... _(just kidding)_ :trollface:  No..  you stay right here soldier! We will get you up to speed soon enough... 
-    **Harmonic Alchemy Modular Emacs** may still work if you give up and use the latest builds from the package managers, but you may not be able to use many of the nice extra features that Modular Emacs provides...
-
-**_Was your Emacs Build Saga Successful?_**  
-
-**Yes?:**  Little grasshopper... You are awesome! Now you may now call yourself a devOps engineer _(to friends and family only... Don't put it on your resume LOL)_.  Now you will no longer be dependent on the mercy of wining sniveling package archive build engineers! Worse than anything Monty Python ever made fun of! LOL  Welcome to DevOps heaven you pirate! Arr! :octocat:  Continue bravely on below with your next steps _(challenges)_...
-
-**No?:** OK, You are wicked frustrated trying to build Emacs eh?  No problem... I feel your pain. Take a rest...  You can still get Modular Emacs installed below, _(with a few caveats of missing features of course...)_ Just use your default package manager to install the latest version of Emacs you can find there and continue on below...  You will have gotten your winning attitude back by that time.  Later on, when you are itching to get Emacs updated, come back to this doc and read **[Optional Packages & Customization:](#optional-packages--customization)** below where you will be given instructions for that and any of the other things you missed during the default install here... _(plus more goodies ;-)_
-
-You will be surprised at your devOps abilities after a long rest! Your psychology needs a few gains first... Get the rest done and you will feel better! I promise! :purple_heart:
-
-**[\[Table of Contents\]](#table-of-contents)**
-
-##### Mac OS: 
-
-> **Update 2019** _It looks like **Build-from-Source** or **Macports** is our only option now..._  
-
-If you have MacPorts installed simply use this command and you will be all set:
-
-```bash
-    $_ sudo port install emacs
-```
-
-If you don't have Homebrew or MacPorts installed, Don't even think about HomeBrew!  Instead, Install MacPorts: **[Follow instructions on the MacPorts website](https://guide.macports.org/#installing)**...  Then use the above command to install Emacs...  Then you will be all set...
-
-MacPorts will get you Emacs version 26.3+ which should work fine... I have not tested it however because when I first started out, I was using Homebrew...  I have since switched to MacPorts, but a year before that, I spent the time to build Emacs from source, and that is the best option...
-
-If instead you have HomeBrew installed?  Do like I did and install Emacs from source... We Macolites have been abandoned by both Apple and Homebrew!  What a mess... and What a shame! **_Linux dudes roll eyes and wonder why MacRats don't jump ship?_**  
-
-Follow this link to: **[Build Emacs from Source](./Docs/ModE-Build-Emacs-from-Src.md)** Follow that guide, and then come back here to continue below...
-
-**_Were you successful after only a few tries?_**  
-
-**Wow!** You are better than I was the first time! Fantastic! You have the Best option possible now!  And you can change any feature at will, even customize the base code if you so wish!
-
-**What?**  You were not successful even after many tries?  OMG! Now all eight of your arms are wicked tired and you are frustrated beyond all means eh? That's Happened to me many times... No problem... I feel your pain. Take a rest...  Install the latest version you can currently get from HomeBrew, realizing that some features of Modular Emacs will not work correctly until you upgrade Emacs later...
-
-Later on, when you are itching to get Emacs updated, come back to this doc and read **[Optional Packages & Customization:](#optional-packages--customization)** where you will find links to instructions for building Emacs from source once more. There you will also find links to guides for installing optional packages... 
-
-You will be surprised at your devOps abilities after a long rest! Your psychology needs a few gains first... Get the rest done and you will feel better! I promise! :purple_heart:
-
-Alternately, if you are willing to go through the pain of completely un-installing HomeBrew, and replacing it with MacPorts that would be the next best thing to building from source... _(although building from source is an easier task than completely switching package managers on Mac OS, in my opinion)_  If you have to remove HomeBrew... Better think long and hard and make good plans for it... It will take you a few days at least to get your system back in working order with all packages from HomeBrew removed and then re-installed via MacPorts!  I may write up a doc that guides you through that painful process... Not soon though... Too many other things on my plate...  Note if you can do all that by your lonesome, you can surely follow a `.configure` file, or `make` file to build and install something from source like Emacs!  Food for thought... :octocat:
-
-**[\[Table of Contents\]](#table-of-contents)**
-
-##### FreeBSD & OpenBSD:  
-
-I have not tried this yet with a Qubes configured BSD VM... Hopefully the FreeBSD world knows how to do Emacs correctly... Install the most recent pre-built binary package of Emacs: _(must be up to v26.1 by now - 2019-May)_
-
-```bash
-    $_ pkg_add -r emacs
-```
 
 ### `NODE.js` with `NVM` & `NPM`:
 
@@ -228,8 +108,6 @@ I have not tried this yet with a Qubes configured BSD VM... Hopefully the FreeBS
 > **Note: _(Debian, Ubuntu, & Mac Users)_** If you were unsuccessful attempting to build Emacs from Source _(above)_ you can skip this section and wait to come back here later to install `NODE` as well.  The features NODE provides may not be accessable from Emacs if it was installed from the package managers on your platforms _(exception MacPorts)_. Therefore you can wait to install this later after you have built your own custom Emacs first... enuff said...
 
 Follow this link to: **[Install NODE.js with NVM and NPM](./Docs/ModE-Install-NODE.md)** and then come back here to continue below...
-
-**[\[Table of Contents\]](#table-of-contents)**
 
 ### VMD: (Visual MarkDown App)
 
@@ -723,23 +601,14 @@ Above I kept going on and on about setting up the Default version of Modular Ema
 
 - [Version 3.1.2 (beta) - README](#version-312-beta---readme)
     - [Introduction:](#introduction)
-        - [Current Status:](#current-status)
-            - [2020 June 27:](#2020-june-27)
-            - [2020 June 16:](#2020-june-16)
-            - [2020 May 22:](#2020-may-22)
-            - [2020 May 17 - Fancy Org Mode:](#2020-may-17---fancy-org-mode)
         - [History & Purpose:](#history--purpose)
     - [Try Harmonic Alchemy Modular Emacs:](#try-harmonic-alchemy-modular-emacs)
         - [Microsoft Windows Support](#microsoft-windows-support)
         - [My Commitment:](#my-commitment)
 - [Start Here:](#start-here)
     - [Requirements:](#requirements)
-        - [Emacs: V26.1+](#emacs-v261)
-            - [Commands to install Emacs on various unix platforms:](#commands-to-install-emacs-on-various-unix-platforms)
-                - [Fedora 27-29:](#fedora-27-29)
-                - [Debian9 Stretch & Ubuntu 18.04+:](#debian9-stretch--ubuntu-1804)
-                - [Mac OS:](#mac-os)
-                - [FreeBSD & OpenBSD:](#freebsd--openbsd)
+        - [Clone This Repository:](#clone-this-repository)
+        - [Install Emacs: V26.1+](#install-emacs-v261)
         - [`NODE.js` with `NVM` & `NPM`:](#nodejs-with-nvm--npm)
         - [VMD: (Visual MarkDown App)](#vmd-visual-markdown-app)
         - [MultiMarkdown:](#multimarkdown)

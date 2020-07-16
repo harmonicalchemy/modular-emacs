@@ -1,6 +1,6 @@
 ---
 file: ModE-Note-2-MS-Windows-Users.md
-author: Alisha Awen Sheppard
+author: Alisha Awen
 created: 2019-010-30
 updated: 2019-011-14
 tags: MS-Windows, Emacs, apps-tools, SysAdmin, HA-ModEmacs, how-to, README 
@@ -11,7 +11,7 @@ tags: MS-Windows, Emacs, apps-tools, SysAdmin, HA-ModEmacs, how-to, README
 
 # Will Modular Emacs Work with MS Windows?
 
-**[\[Back To Top README\]](../README.md)**
+**[\[Back To MAIN Modular Emacs README\]](../README.md)**
 
 I have no idea whether this project will work on **Windows** and I have no experience using **Emacs** on **Windows** or **Cygwin**...  When I was working at **IBM/Lotus** we were building major IBM/Lotus middleware software systems using the full premium stack of **Microsoft Developer Works** tools, as well as a full stack of **IBM Developer tools** to boot!  **Emacs** would have felt quite out of place among those monsters, not knowing how to integrate with MS Win based tools, but instead expecting standard unix tools and apps to interface with!  Re Tooling Emacs for MS Windows _(GUI not Cygwin)_, would be a HUGE undertaking!  Has it been done? I don't know...  
 

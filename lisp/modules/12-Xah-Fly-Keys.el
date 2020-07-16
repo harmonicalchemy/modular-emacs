@@ -79,17 +79,25 @@
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;           CUSTOM Xah Fly KEY BINDINGS
 ;;  Add Personalized keybindings to Xah fly Keys:
-;;  Both command and insert mode keys...
+;;  For:
+;;       DIRECT Command Mode keybindings,
+;;       PRIMARY Leader-Key keybindings,
+;;       -and-
+;;       SECONDARY Leader-Key keybindings...
 ;;
 ;;  Options not used by Xah fly keys:  ~  `  1  2  0  \  -  =
-;;
-;;  In addition you could use "p" as a command mode key.  I never use
-;;  it to insert a space before.  typing p is harder to reach than
-;;  going into insert mode "f" and hitting the space bar.  IMHO
+;;  (I have commandeered some of these already if not all of them!)
+;;  In addition I have also remapped the "p" command mode key.
+;;  I never used it to insert a space so no loss for me.
+;;  Typing p is harder to reach than going into insert mode "f"
+;;  and hitting the space bar.  IMHO %^) But of course you will have
+;;  to type Caps_Lock (HOME) once more if you needed to stay in Command Mode...
+;;  This does not bother me... I need that p for repositioning the cursor
+;;  which is much more important to me...
 
 (with-eval-after-load 'xah-fly-keys
 
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   ;; Xah-Fly-Keys "Command Mode" keybindings:
   ;; (Xah-Fly-Keys Command Map)
   ;; Add more key definitions to this list when needed:
@@ -100,8 +108,9 @@
   (define-key xah-fly-command-map (kbd "b") 'other-frame)
 
   ;; Make Frame:
-  ;; This "Command Mode" make-frame key mirrors "Insert Mode"
-  ;; delete-frame "2" key below... (which does the opposite)
+  ;; This DIRECT Command Mode make-frame key mirrors
+  ;; PRIMARY Leader-Key keybinding delete-frame "2" key below...
+  ;; (which does the opposite)
   (define-key xah-fly-command-map (kbd "2") 'me_make-default-frame)
 
   ;; Set easy key to toggle neotree in left window pane:
@@ -133,8 +142,9 @@
 
   ;; TOGGLE Org Sidebar Tree:
   ;; (opens or closes tree window on Left Side)
-  ;; Note: This is not Sidebar (i.e., on right side)
-  ;;       "Insert Mode" "1" (below) toggles sidebar (not tree).
+  ;; Note: This is Sidebar TREE not Sidebar (i.e., on right side)
+  ;;       PRIMARY Leader-Key keybinding "1" (below) toggles
+  ;;       sidebar (not the same as tree).
   (define-key xah-fly-command-map (kbd "1") 'org-sidebar-tree-toggle)
 
   ;; This key opens Elements(s) in Right window Pane But leaves the
@@ -154,8 +164,9 @@
 
   ;; Save the current location as bookmark:  SAVED
   ;; (overwrites the last saved setting)
-  ;; This "Command Mode" bookmark-set mirrors "Insert Mode"
-  ;; bookmark-jump "-" key below... (which jumps to the bookmark)
+  ;; This DIRECT Command Mode bookmark-set key mirrors
+  ;; PRIMARY Leader-Key keybinding bookmark-jump "-" key below...
+  ;; (which jumps to this saved bookmark)
   (define-key xah-fly-command-map (kbd "-") 'bookmark-set)
 
   ;; TOGGLE Case of Character, Word, or Selection:
@@ -164,28 +175,33 @@
   ;; disabled the Caps-Lock key (which is mapped to HOME now)
   (define-key xah-fly-command-map (kbd "\\") 'me_toggle-letter-case)
 
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ;; Xah-Fly-Keys "Insert Mode" keybindings:
-  ;; (Xah-Fly-Keys Leader Key Map)
+  ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ;; Xah-Fly-Keys PRIMARY Leader-Key keybindings:
+  ;; (xah-fly-leader-key-map)
   ;; Add more key definitions to this list when needed:
 
   ;; Jump back to previously SAVED bookmark:
-  ;; This "Insert Mode" bookmark-jump mirrors "Command Mode"
-  ;; bookmark-set "-" key above... (which sets the bookmark)
+  ;; This PRIMARY Leader-Key bookmark-jump "-" mirrors
+  ;; DIRECT Command Mode bookmark-set "-" key above...
+  ;; (which sets the bookmark)
   (define-key xah-fly-leader-key-map (kbd "-") 'bookmark-jump)
 
-  ;; Set KFKeys Insert Mode Sequence to expand and shrink olivetti...
+  ;; Set KFKeys Primary Leader-Key Sequence to expand and shrink olivetti...
   (define-key xah-fly-leader-key-map (kbd "]") 'olivetti-expand)
   (define-key xah-fly-leader-key-map (kbd "[") 'olivetti-shrink)
 
-  ;; TOGGLE Org Sidebar (opens or closes window on Right Side)
-  ;; Note: This is not Sidebar Tree (i.e., on left side)
-  ;;       "Command Mode" "1" (above toggles sidebar tree)
+  ;; TOGGLE Org Sidebar:
+  ;; (opens or closes special SIDEBAR window on Right Side)
+  ;; You can configure the SIDEBAR to display agenda items etc.
+  ;; Note: This is NOT Sidebar TREE (i.e., on left side)
+  ;;       DIRECT Command Mode "1" (above toggles sidebar TREE)
+  ;;       SIDEBAR-TREE is not the same as "SIDEBAR"...
   (define-key xah-fly-leader-key-map (kbd "1") 'org-sidebar-toggle)
 
   ;; Delete Frame:
-  ;; This "Insert Mode" delete-frame mirrors "Command Mode"
-  ;; make-frame "2" key above... (which does the opposite)
+  ;; This PRIMARY Leader-Key delete-frame "2" mirrors
+  ;; DIRECT Command Mode make-frame "2" key above...
+  ;; (which does the opposite)
   (define-key xah-fly-leader-key-map (kbd "2") 'delete-frame)
 
   ;; Export Org file to Markdown File:
@@ -194,10 +210,22 @@
   ;; TOGGLE Default face between coding mode and writing mode:
   (define-key xah-fly-leader-key-map (kbd "p") 'me_toggle-default-face)
 
-  ;; VMD-Mode "Insert Mode" key sequence: SPC "v" ("k" Dvorak)
+  ;; VMD-Mode Primary Leader-Key Sequence: SPC "v" ("k" Dvorak)
   ;; (Since there already is a default paste "v" key in Command
   ;; mode and it's easy enough to switch to Command Mode to paste)
-  (define-key xah-fly-leader-key-map (kbd "v") 'vmd-mode))
+  (define-key xah-fly-leader-key-map (kbd "v") 'vmd-mode)
+
+  ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ;; Xah-Fly-Keys SECONDARY Leader-Key keybindings:
+  ;; For secondary leader key: "d" (dvorak "e")
+  ;; (xah-fly-e-keymap Leader Key Map)
+  ;; Add more key definitions to this list when needed:
+  ;; Many of these default "insert" keybindings are not needed.
+
+  ;; Override default xah-insert-date () func with my own
+  ;; simpler version that simply formats the date as I like to do it:
+  ;; (i.e., "yyyy-mmm-dd" digits)
+  (define-key xah-fly-e-keymap (kbd "f") 'me_insert-date))
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; END: [modular-emacs]:~/.emacs.d/lisp/modules/12-Xah-Fly-Keys.el

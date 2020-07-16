@@ -1,8 +1,8 @@
 ---
 file: ModE-Install-LaTeX-pubOps-Env.md
-author: Alisha Awen Sheppard
+author: Alisha Awen
 created: 2019-011-13
-updated: 2019-011-14
+updated: 2020-007-16
 tags: LaTeX, apps-tools, SysAdmin, HA-ModEmacs, how-to, README 
 ---
 <!-- #LaTeX #apps-tools #SysAdmin #HA-ModEmacs #how-to #README -->
@@ -51,7 +51,9 @@ To Get Started Click this link:
 
 Move this `.tar` or `.tar.gz` file to your desktop or your home folder and double-click it to un-compress it, producing a folder inside. It is very important to check the name of this folder. A typical name is **`"install-tl-20200527"`**. The numbers at the end give a date in the form **`year:month:day`**. Check that the year is **2020**. If it is **2019**, then you received last year's install script because the mirror assigned to you was not yet updated. Wait a few days and try again.
 
-##### Install with Terminal App _(or xTerm2)_:
+##### Install with Terminal App:
+
+_(or use_ **_xTerm2_** _which is better)_
 
 Type the following but do not hit the return key yet:
 
@@ -92,7 +94,7 @@ When all is done you will have **TeX Live 2020!** Yay! :octocat: You may now ski
 Type:
 
 ```yaml
-$> sudo ./install-tl --gui text
+$>  sudo ./install-tl --gui text
 ```
 
 and press RETURN...
@@ -130,9 +132,9 @@ On Linux, _(currently Fedora)_ see: **[Fedora DOCS: LaTeX page](https://docs.fed
 Choose one of the 3 following commands _(depending on needs, disk space, etc.)_:
 
 ```yaml
-    sudo dnf install texlive-scheme-basic
-    sudo dnf install texlive-scheme-medium
-    sudo dnf install texlive-scheme-full
+$>  sudo dnf install texlive-scheme-basic
+$>  sudo dnf install texlive-scheme-medium
+$>  sudo dnf install texlive-scheme-full
 ```
 
 #### TeXStudio
@@ -140,9 +142,9 @@ Choose one of the 3 following commands _(depending on needs, disk space, etc.)_:
 TeXStudio is a fully featured LaTeX editor that will be helpful for working on documents to make touch ups etc. _(outside of using Emacs for the same purposes)_ but it is nice to have alternates when things arn't going quite right and you are in troubleshooting mode, or maybe you just need to get a doc finished in a hurry and nothing else seems to be working for you! it's good to have options... _(open source options)_
 
 - **Install TeXStudio on Fedora:**     
-    ```yaml
-    sudo dnf install TeXStudio
-    ```
+```yaml
+$>  sudo dnf install TeXStudio
+```
 
 #### Rubber
 
@@ -152,47 +154,54 @@ More specifically, `rubber` is a wrapper for LaTeX and companion programs. Its p
 
 After rubber is installed, read the info/man pages to find out what you can do with it...  
 
-- **Install `rubber` on Fedora:**    
-    ```yaml
-    sudo dnf install rubber
+- **Install `rubber` on Fedora:**
 
-    info rubber    # read the docs
-    ```
+```yaml
+$>  sudo dnf install rubber
+
+# read the docs
+$>  info rubber
+```
 
 At this point you should be good to go... The Linux package managers take care of making sure executable paths are standard and accessable from Emacs... Most of that will be going on in the background while you are working within a **`.ORG`** file in **Emacs** to **_produce / export_** something typeset nicely with images placed, footnotes, TOC, etc.  
 
 While you are still here, there are additional _(optional)_ packages that may be helpful as well. Feel free to install these too:
 
-#### Additional Packages _(optional)_
+#### Additional Optional Packages:
 
-- **`chkTeX`** LaTex semantic checker    
-   ```yaml
-   sudo dnf install texlive-chktex
-   ```
+- **`chkTeX`** LaTex semantic checker
 
-- **`LaTeXML`**  LaTeXML is a converter that transforms TeX and LaTeX into XML/HTML/ePub/MathML and other formats.   
-   ```yaml
-   sudo dnf install LaTeXML
-   ```
-
-- **`LyX`** WYSIWYM (What You See Is What You Mean) document processor.    
-    ```yaml
-    sudo dnf install lyx
-    ```
-- **`PyLaTeX`** Library for creating LaTeX files and snippets.    
-    ```yaml
-    sudo dnf install python3-pylatex
-    ```
-
-> **Note:** On Fedora, individual LaTeX packages can also be installed as required:   
-**_example:_**   
 ```yaml
-sudo dnf install 'tex(beamer.cls)' 
-sudo dnf install 'tex(hyperref.sty)'
-# etc...
+$>  sudo dnf install texlive-chktex
 ```
 
+- **`LaTeXML`**  LaTeXML is a converter that transforms TeX and LaTeX into XML/HTML/ePub/MathML and other formats.
 
+```yaml
+$>  sudo dnf install LaTeXML
+```
+
+- **`LyX`** WYSIWYM (What You See Is What You Mean) document processor.
+
+```yaml
+$>  sudo dnf install lyx
+```
+
+- **`PyLaTeX`** Library for creating LaTeX files and snippets.
+
+```yaml
+$>  sudo dnf install python3-pylatex
+```
+
+**Note:** On Fedora, individual LaTeX packages can also be installed as required:
+
+**_example:_**
+
+```yaml
+$>  sudo dnf install 'tex(beamer.cls)' 
+$>  sudo dnf install 'tex(hyperref.sty)'
+# etc...
+```
 
 ## Table Of Contents:
 
@@ -206,14 +215,13 @@ sudo dnf install 'tex(hyperref.sty)'
             - [High Sierra and Later Users:](#high-sierra-and-later-users)
             - [Sierra & Earlier Users:](#sierra--earlier-users)
                 - [Download Unix Install Archive:](#download-unix-install-archive)
-                - [Install with Terminal App _(or xTerm2)_:](#install-with-terminal-app-_or-xterm2_)
+                - [Install with Terminal App:](#install-with-terminal-app)
                     - [Almost Done:](#almost-done)
             - [MacTeX Usage:](#mactex-usage)
         - [Linux:](#linux)
             - [TexLive Package _(three choices/sizes)_](#texlive-package-_three-choicessizes_)
             - [TeXStudio](#texstudio)
             - [Rubber](#rubber)
-            - [Additional Packages _(optional)_](#additional-packages-_optional_)
-    - [Table Of Contents:](#table-of-contents)
+            - [Additional Optional Packages:](#additional-optional-packages)
 
 <!-- markdown-toc end -->
