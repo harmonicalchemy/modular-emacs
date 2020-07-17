@@ -32,6 +32,16 @@
 ;;
 ;; Change Log: (descending chronological order)
 ;;
+;;   2020-007-16 - Harmonic Alchemy Modular-Emacs V3.2 (beta) [Q3 2020]
+;;      This has been tested on the develop branch long enough... I am
+;;      still calling it "beta" because there is still a lot of work
+;;      still unfinished... (mostly peripheral support files, templates, etc.
+;;      and the Docs are still being updated... (does documentation ever end? lol)
+;;      I will be calling this Beta for a while i guess... But version numbers
+;;      will continue to advance...  The nature of Emacs is "always in Beta"
+;;      because it is so powerful and flexible, and empowers the user who can
+;;      not only use and customize it but can also completely change functionality!
+;;
 ;;   2020-005-18 - Harmonic Alchemy Modular-Emacs V3.1 (beta) [Q2 2020]
 ;;      Org Mode has been heavily customized!  Also some of the Module
 ;;      files were re-organized. (In particular 12-Xah-Fly-Keys.el
@@ -223,56 +233,60 @@
 ;; Print Welcome With Computed Emacs Load Time this configuration took:
 (princ (cl-concatenate
         'string
-        ";; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
-        ";; Welcome to: [Your-Machine-Name-Here]                    \n"
-        ";;             Harmonic Alchemy - Modular Emacs!           \n"
-        ";; Version:    3.1.2 (beta) [Q2 2020]                      \n"
-        ";;                                                         \n"
-        ";; Today's date: " (format-time-string "%Y %B %d") "       \n"
+        ";; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
+        ";; Welcome to: [Your-Machine-Name-Here]                                    \n"
+        ";;             Harmonic Alchemy - Modular Emacs!                           \n"
+        ";; Version:    3.2 (beta) [Q3 2020]                                        \n"
+        ";;                                                                         \n"
+        ";; Today's date: " (format-time-string "%Y %B %d") "                       \n"
         ";; Startup completed in "
         (number-to-string (cadr (time-subtract (current-time)
                                                config-start-time)))
-        " seconds                                                   \n"
-        ";;                                                         \n"
-        ";;   \"Its name is Public Opinion.                         \n"
-        ";;    It is held in reverence.                             \n"
-        ";;    It settles everything.                                 \n"
-        ";;    Some think it is the voice of God.\"                       \n"
-        ";;                         -- Mark Twain                             \n"
-        ";;                                                                        \n"
-        ";; More Mark Twain quotes can be found here:                                 \n"
+        " seconds                                                                   \n"
+        ";; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
+        ";;                                                                         \n"
+        ";;   \"Its name is Public Opinion.                                         \n"
+        ";;    It is held in reverence.                                             \n"
+        ";;    It settles everything.                                               \n"
+        ";;    Some think it is the voice of God.\"                                 \n"
+        ";;                         -- Mark Twain                                   \n"
+        ";;                                                                         \n"
+        ";; More Mark Twain quotes can be found here:                                \n"
         ";; https://www.writerswrite.co.za/literary-birthday-30-november-mark-twain/  \n"
-        ";;                                                                           \n"
-        ";; If Mark Twain was an 80's New Orleans Lisp Hacker/DJ:                  \n"
-        ";;                                                                   \n"
-        ";;   \"I yous'ta be a river boat pilot until dis crafty          \n"
-        ";;   gambler CONs me out of averyting, including me CAR,     \n"
-        ";;   CDR, and me entire Michael Jackson CD collection      \n"
-        ";;   mon!!!  Tank god, he didn't find me old IBM 704 in    \n"
-        ";;   da basement!!! That's cuz he spied me big bulldog     \n"
-        ";;   sleepin back in da corner... He decided his gains     \n"
-        ";;   would be NIL down dare after dat...                   \n"
-        ";;                                                         \n"
-        ";;   Well, dey finally caught em...  Now e's a CONvict...  \n"
-        ";;   locked away in a CON'S cell. Being (evaluated) for:    \n"
-        ";;   (constructive . rehabilitation)!\"                       \n"
-        ";;                    LOL! -- Alisha Awen %^)                   \n"
-        ";;                                                                \n"
-        ";; Evaluate lisp expressions below within this buffer                \n"
-        ";; Check Out: GNU.org's Intro to Programming Emacs Lisp:               \n"
-        ";; https://www.gnu.org/software/emacs/manual/html_node/eintr/index.html  \n"
-        ";;                                                                      \n"
-        ";; This entire message is a lisp comment!                              \n"
-        ";; Emacs makes a Great S-exPs (S Expressions) IDE!                    \n"
-        ";; Our Universe is a Great Big Sex PistolS IDE ;-)                  \n"
-        ";; Evaluate this entire buffer as a test...  Of the universe?    \n"
-        ";; Why not? Go for it... You may have super powers!           \n"
-        ";; Be sure to debug it well before committing it as your:   \n"
-        ";; \"new-way-cool-custom-parallel-world-module.el\" %^)    \n"
-        ";;                        -- Cheers!                       \n"
-        ";; Alisha Awen: @harmonicalchemy (Github, twitter etc.)    \n"
-        ";; PGP Pubkey: 0x922CC456F48355A8D9B2E044C9E6CD44A817E7BF  \n"
-        ";; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
+        ";; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
+        ";;                                                                         \n"
+        ";; If Mark Twain was an 80's New Orleans Lisp Hacker/DJ:                   \n"
+        ";;                                                                         \n"
+        ";;   \"I yous'ta be a river boat pilot until dis crafty                    \n"
+        ";;   gambler CONs me out of averyting, including me CAR,                   \n"
+        ";;   CDR, and me entire Michael Jackson CD collection                      \n"
+        ";;   mon!!!  Tank god, he didn't find me old IBM 704 in                    \n"
+        ";;   da basement!!! That's cuz he spied me big bulldog                     \n"
+        ";;   sleepin back in da corner... He decided his gains                     \n"
+        ";;   would be NIL down dare after dat...                                   \n"
+        ";;                                                                         \n"
+        ";;   Well, dey finally caught em...  Now e's a CONvict...                  \n"
+        ";;   locked away in a CON'S cell. Being (evaluated) for:                   \n"
+        ";;   (constructive . rehabilitation)!\"                                    \n"
+        ";;                    LOL! -- Alisha Awen %^)                              \n"
+        ";;                                                                         \n"
+        ";; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
+        ";; Evaluate lisp expressions below within this buffer                      \n"
+        ";; Check Out: GNU.org's Intro to Programming Emacs Lisp:                   \n"
+        ";; https://www.gnu.org/software/emacs/manual/html_node/eintr/index.html    \n"
+        ";;                                                                         \n"
+        ";; This entire message is a lisp comment!                                  \n"
+        ";; Emacs makes a Great S-exPs (S Expressions) IDE!                         \n"
+        ";; Our Universe is a Great Big Sex PistolS IDE ;-)                         \n"
+        ";; Evaluate this entire buffer as a test...  Of the universe?              \n"
+        ";; Why not? Go for it... You may have super powers!                        \n"
+        ";; Be sure to debug it well before committing it as your:                  \n"
+        ";; \"new-way-cool-custom-parallel-world-module.el\" %^)                    \n"
+        ";;                        -- Cheers!                                       \n"
+        ";; Alisha Awen: @harmonicalchemy (Github, twitter etc.)                    \n"
+        ";; PGP Pubkey: 0x922CC456F48355A8D9B2E044C9E6CD44A817E7BF                  \n"
+        ";; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
+
        (get-buffer-create (current-buffer)))
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

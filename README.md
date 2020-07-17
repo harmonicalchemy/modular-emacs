@@ -8,7 +8,7 @@ tags: Emacs, 2020, apps-tools, SysAdmin, HA-ModEmacs, how-to, README
 
 ![Banner](./Docs/media/Modular-Emacs-Github-Banner-v3.png)
 
-# Version 3.1.2 (beta) - README
+# Version 3.2 (beta) - README
 
 **[\[Table Of Contents\]](#table-of-contents)**
 
@@ -16,15 +16,13 @@ tags: Emacs, 2020, apps-tools, SysAdmin, HA-ModEmacs, how-to, README
 
 ## Introduction:
 
-**_Welcome to Harmonic Alchemy Modular Emacs_** - V3.1.2 [Q2 2020] _(still in Beta)_.
+**_Welcome to Harmonic Alchemy Modular Emacs_** - V3.2 [Q3 2020] _(still in Beta)_.
 
-**Modular Emacs** is more than just Emacs with configurable modules... It is also designed to be the centerpiece _(command central)_ of a larger _personalized, extensible_: **Dev♺Ops** / **Pub✎Ops** workstation **IDE** capable of running on older but reasonably powerful **laptops/desktops** _(that would otherwise be considered legacy by most other standards)_.  
+**Modular Emacs** is more than just Emacs with configurable modules... It is also designed to be the centerpiece _(command central)_ of a larger _personalized, extensible_: **Dev♺Ops** / **Pub✎Ops** / **Multi🎥Media** workstation **IDE** capable of running on older but reasonably powerful **laptops/desktops** _(that would otherwise be considered legacy by most other standards)_.  
 
 I am a systems architect, dev♺Ops engineer, computer scientist, composer/musician, sound designer, writer/publisher.  I wear a lot of hats! My Emacs needs to wear a lot of hats as well!  The central focus of **Modular Emacs** is to build empowering features into **Emacs** utilizing a modular framework that facilitates all the above without becoming an over complicated mess to manage! **_"good luck with that"_**  :octocat:
 
-> **Note:** Read more detail about this project and keep up with current status **[HERE](./Docs/ModE-Current-Status.md)**
-
-**[\[Table of Contents\]](#table-of-contents)**
+> **Note:** **_Current Status_** of this project as well as past **_Release Notes_** are documented **[HERE](./Docs/ModE-Current-Status.md)**
 
 ### History & Purpose:
 
@@ -35,6 +33,8 @@ The history of **Harmonic Alchemy Modular Emacs** is _"a confusing journey throu
 For those of you who feel **[Harmonic Alchemy Modular Emacs](https://github.com/harmonicalchemy/modular-emacs)** may be exactly what you were looking for: **_By all means... Lets Dive in!_**
 
 There are some external requirements... It may take a while... If that's OK with you, Great!... Lets go...  Eventually I will script this up so you can just enter this at the command prompt: **`./install.sh`** and be done with it... Keep your fingers crossed on that but don't get your hopes up... I am a busy girl!!! :octocat:  That script will have to install a lot of things! It will have to check a lot of system states!  I have to work all that out as a **non-interactive** process.  It should install everything _(transparently non-interactively)_ from that single running shell script...  If you have to answer questions and make decisions... Better that you execute manually instead, and read the docs first...  Right?
+
+**[\[Table of Contents\]](#table-of-contents)**
 
 ### Microsoft Windows Support
 
@@ -136,127 +136,23 @@ MultiMarkdown is a utility which is used to export from Markdown to other format
 
 Some of the publishing-format conversion functionality of **Multimarkdown** overlaps with **Pandoc** as well. If you experience problems installing one of these, you will still have the other one to use.
 
-It doesn't hurt to have both of these technologies installed on your machine for the above reasons...  You will most likely need one or the other at some point to publish something somewhere in some fancy format like **LaTeX** or an **eBook**...  
+It doesn't hurt to have both of these technologies installed on your machine for the above reasons...  You will most likely need one or the other at some point to publish something somewhere in some fancy format like **LaTeX** or an **eBook**...
 
-#### Install Multimarkdown on Mac OS:  
-
-If you are on Mac OS you can install MultiMarkdown via MacPorts or Homebrew:  
-
-- **MacPorts:** - For some reason, Fletcher's MultiMarkdown guide does not recommend using MacPorts to install MultiMarkdown??? The docs says "I don't recommend it" This is not good advise... He should check with the MacPorts maintainer because last time I checked the MacPorts version was step in sync with the latest MultiMarkdown: `multimarkdown @6.4.0 (textproc)` Here is how to install it:
-
-```bash
-  $_  sudo port install multimarkdown  # To install it...
-  $_  port echo requested              # To see it in the list 
-                                       # of installed packages.
-```
-
-- **HomeBrew:** - Using Homebrew is equally simple... 
-
-```bash
-  $_  brew install multimarkdown
-```
-
-That's it... Easy Peasy!  :octocat:
+Follow this link to: **[Install MultiMarkdown - All Platforms](./Docs/ModE-Install-MultiMarkdown.md)**
 
 **[\[Table of Contents\]](#table-of-contents)**
-
-#### Install Multimarkdown on Linux:  
-
-On Linux you will have to clone/configure/make/build & maintain Multimarkdown yourself... No package managers for this on Linux baby.  Sorry...  Hey... You wanted to be cool like the hackers and use Linux?  OK then... You don't need no stinking binary package managers anymore...  Right?  :trollface:  Follow this link to: **[Build MultiMarkdown from Source!](./Docs/ModE-Build-MultiMarkdown-from-Src.md)**
-
-> **Note:** if you run into trouble building Multimarkdown, you can probably skip that as well for later... _Pandoc, (install below) will serve your **Plan B** when such **"Murphys"** happen..._
-
-#### Usage:
-MultiMarkdown will provide more than enough conversion power for you as you also will be using **Pandoc** to convert to some of these same output formats... You will later also have TeX and LaTeX mode hooks to use as well...
-
-Now that you have Multimarkdown installed, **[Download The Manual Here](https://fletcher.github.io/MultiMarkdown-5/MMD_Users_Guide.pdf)**
 
 ### Pandoc: 
+
 As with MultiMarkdown, Emacs will run fine without Pandoc installed on your machine, However Harmonic Alchemy Modular Emacs will not be able to export to all those fancy document formats without Pandoc _(or Multimarkdown)_ installed...  You will consider this a broken feature once you have written something _(within Emacs)_ that needs to be exported to **LaTeX** or some fancy eBook format.  **_Read the docs for both Multimarkdown and Pandoc_** to decide how to use them.  More instructions for installing and using Pandoc can be found on their official website here: <https://pandoc.org/installing.html> The Pandoc.org website has most everything you will need all in one place!
 
-#### Install Pandoc on Mac OS:  
-
-**You have 2 options:** HomeBrew, or build from source. I am not sure about Homebrew anymore as I don't use it, but I have found problems trying to install it with MacPorts as well now so it may be best to install from source.
-
-- **HomeBrew:** - If you use Homebrew try this:  
-
-```bash
-  $_  brew install pandoc
-```
-
-> **Note:** If Homebrew install works for you let me know by opening an issue. Thanks!
-
-- **Build from Source**:
-
-After deciding not to install **HLedger** _(Haskell Stack dependent)_ via **MacPorts**, _(due to some issues I did not document)_ I will not be installing Pandoc via **MacPorts** either for the same reason... _(Pandoc was written in Haskell)_...
-
-Now I am having issues installing Pandoc via Macports on Mac OS El Capitan as well _(testing if_ **Harmonic Alchemy Modular Emacs** _can run on older Mac machines)_... 
-
-Therefore going forward, **Haskell Stack IDE**, **HLedger**, and **Pandoc** will all be installed via source on ALL my platforms... _(your mileage may vary)_
-
-> **Note:** _(Haskell Stack IDE must be installed first before Pandoc or HLedger!)_
-
-##### Install Haskell Stack IDE
-
-**`haskellstack.org`'s** recommended way for Mac OS (and all nx platforms for that matter) is to run the following script to install the full **Haskell** Dev Stack...
-
-```yaml
-    curl -sSL https://get.haskellstack.org/ | sh
-```
-> **Note:** This script will ask for root access using sudo in order to install dependencies and to install the binaries to `/usr/local/bin`.
-
-##### Clone Pandoc Repo:
-
-```yaml
-$>  git clone https://github.com/jgm/pandoc
-```
-##### Build Pandoc from source using Haskell Stack:
-
-```yaml
-$>  cd pandoc
-$>  stack setup
-$>  stack install
-```
-
-> **Note:** Stack setup will automatically download the **ghc** compiler if you don’t have it. Stack install will install the pandoc executable into: **`~/.local/bin`**, which you should add to your **`PATH`**. This process will take a while, and will consume a considerable amount of disk space.  Also... If this is the first time you used Stack, a new full index will also be downloaded to be installed for the first time... That will take even more time! Later installs only update the index...
-
-After all the above is done, Pandoc will be installed in: `$HOME/.local/bin`.  You may need to add that to your $PATH environment variable...
-
-**[\[Table of Contents\]](#table-of-contents)**
-
-#### Install Pandoc on Linux:  
-
-> **Note:** I have been experiencing problems with Pandoc installed from package managers... Pandoc is built with Haskell.  HLedger is also written in Haskell, I had to install HLedger from source, and to do that I also installed the Haskell Stack IDE straight from Hascall.org rather than using package managers... Therefore going forward I have decided to install, **Haskell Stack IDE**, **HLedger**, and **Pandoc** locally from source on ALL my platforms going forward.  Not using package managers for any Haskell related projects... _(your mileage may vary)_
-
-> **Note:** _(Haskell Stack IDE must be installed first before Pandoc or HLedger!)_
-
-> Having said all the above, Pandoc is in the Debian, Ubuntu, Slackware, Arch, Fedora, NiXOS, openSUSE, and gentoo repositories so you don't have to build from source if you don't want to. Try any of the methods below and see if it works for you... _(Let me know how things go... Open up an issue about your setup...  Thanks! :octocat:)_   
-Otherwise, Follow the instructions for Installing from source on Mac OS (for your Linux platform as well, skipping the instructions below)
-
-- **Debian, Ubuntu flavors:**  
-
-```bash
-  $_  sudo apt install pandoc  
-```
-
-- **RedHat, Fedora flavors:**
-
-```bash
-  $_  sudo dnf install pandoc
-```
-
-The pandoc package installs a lot of sub-packages and can take some time to install.   Please be patient...  Updates won't take so long...
-
-#### Pandoc Usage:
-
-Now that you have Pandoc installed, **[Download The Manual Here](https://pandoc.org/MANUAL.pdf)**
-
+Follow this link to: **[Install Pandoc - All Platforms](./Docs/ModE-Install-Pandoc.md)**
 
 ### Fonts:
 
 **Harmonic Alchemy Modular Emacs** requires a few fonts installed on your system to get Fancy Org-Mode, Fountain Screenplay, and coding frames/windows/mode-lines, etc. looking as good and "readable" as they possibly can.  Other fonts will be required by **LaTeX** _(for exporting to external document types)_.  That process will be covered in a seporate doc.
 
-**[Follow this Link to Get This Task Done...](./Docs/ModE-Install-Fonts.md)** Afterwards, you will see some nice looking "writers" fonts in Org-Mode as well as while editing Fountain drama scripts! :octocat:
+Follow this link to: **[Install Modular Emacs Required Fonts - All Platforms](./Docs/ModE-Install-Fonts.md)** Afterwards, you will see some nice looking "writers" fonts in Org-Mode as well as while editing Fountain drama scripts! :octocat:
 
 ### Python and Pip:
 
@@ -280,49 +176,7 @@ Modular Emacs invokes: **`graphviz-dot-mode`** when you visit files ending in ei
 
 When you are visiting a **`.dot`** file, you can compile it with **`C-c C-C`** which will produce a **`.svg`** file along side...  By default, Modular Emacs produces **SVG vector files** _(instead of `.png` files)_... which is my preference because if you add one to a markdown file and then view it using **VMD-Mode** you can expand the resulting rendered chart or graph full screen and it will still look very sharp! Not to mention you can edit the resulting SVG file within **inkscape** to add things to it that Graphviz cannot...  Don't underestimate the power of **Graphviz** though!  **[Read the docs!](https://graphviz.org/documentation/)**  
 
-You could create a nice workflow that **_starts programmatically_** within some program or language, invoke **graphviz** to produce some diagrams, export to **`SVG`**, then edit the resulting `.svg` in **inkscape** to add some fancy graphics or other things, Lastly import the final `.svg` into **Blender** to add animations, 3D, etc...  **_The sky is the limit!_**  
-
-**Note:** You better send me an email to show me the cool thing you made on **Github** after reading this! :octocat:  
-
-**[\[Table of Contents\]](#table-of-contents)**
-
-#### Install Graphviz on Mac OS:
-
-**You have 2 options:** HomeBrew, or MacPorts... _(building from source is not necessary)_
-
-- **MacPorts:** - Install Graphviz: `V2.40.1_2` _(as of this writing)_  
-
-```bash
- $_  sudo port install graphviz   # To install it...
- $_  port echo requested          # To see it in the list 
-                                  # of installed packages.
-```
-
-- If you use **Homebrew**, do this instead:  
-
-```bash
- $_  brew install graphviz
-```
-
-That's it... Easy Peasy!  :octocat:
-
-#### Install Graphviz on Linux:
-
-Graphviz is in the Debian, Ubuntu, Slackware, Arch, Fedora, NiXOS, openSUSE, and gentoo repositories so you don't have to build this one either. ;-)
-
-- **Debian, Ubuntu flavors:**  
-
-```bash
- $_  sudo apt install graphviz  
-```
-
-- **RedHat, Fedora flavors:**
-
-```bash
- $_  sudo dnf install graphviz
-```
-
-That's it... Easy Peasy!  :octocat:
+Follow this link to: **[Install Graphviz - All Platforms](./Docs/ModE-Install-Graphviz.md)**
 
 **[\[Table of Contents\]](#table-of-contents)**
 
@@ -359,7 +213,9 @@ Later... You may want to edit your fresh new init.d and change the Banner Messag
 
 ### Final Step - Make Modular Emacs folder the default `~/.emacs.d` folder:  
 
-First be sure to rename _(save)_ your existing:  **`~/.emacs.d`** to: **`~/save.emacs.d`** _(You may have already done this in the beginning)_  You may also have a `.emacs` init file outside of the `.emacs.d` folder that also needs to be renamed!    **This is very important!  Becase the next steps will overwrite them if you did not change their names!!!**
+At the very beginning of this guide, you were advised to copy your existing Emacs setup first.  I hope you did that because now you are going to over-write your old installed Emacs configuration with Harmonic Alchemy Modular Emacs!  
+
+Therefore if you did not backup, FIRST make sure to rename _(save)_ your existing:  **`~/.emacs.d`** to: **`~/save.emacs.d`** _(if you did not do this in the beginning)_  You may also have a `.emacs` init file outside of the `.emacs.d` folder that also needs to be renamed!    **This is very important!  Becase the next steps will overwrite them if you did not change their names!!!**
 
 Now you are ready to **rename `~/me.emacs.d`** to: **`~/.emacs.d`**  
 
@@ -369,7 +225,7 @@ $_  mv ~/me.emacs.d ~/.emacs.d
 
 _(This is now your new **Modular Emacs Local Repository** which is also now your default_ **`.emacs.d`** _home directory!)_  
 
-One last check... Make sure you no longer have a `~/.emacs` file still in your home directory...  You should now only have a: `~/.emacs.d/` directory... 
+One last sanity check... Make sure you no longer have a `~/.emacs` file still in your home directory...  You should now only have a: `~/.emacs.d/` directory... OK? Great!
 
 ## Ready Set Go!  Start Up Modular Emacs:
 
@@ -379,7 +235,7 @@ After a lot of super computing lisp number crunching flashing away in your mini 
 
 **No?** Broken? Oh My! What a freaking let down!  I feel your pain!  OK... Don't worry if all you see are only numerous compiler warnings... _(those are hard to avoid upon first startup with all the new packages compiling etc. Not much you can do about that... The developers who made the packages need to clean that up, you could help them though.  You can safely kill that message buffer and move on...)_
 
-> **Note:** I am currently chasing an issue with some functions _(not mine)_ calling the old depreciated **`cl`** _(common lisp library)_.  These will be replaced with calls to the new **`cl-lib`** replacement...  When that happens you will no longer see the warning: **_"cl lib is depreciated"_** at startup...
+> **Note:** I am currently chasing an issue with some functions _(not mine)_ calling the old depreciated **`cl`** _(common lisp library)_.  These will be replaced with calls to the new **`cl-lib`** replacement...  When that happens you will no longer see the warning: **_"cl lib is depreciated"_** at startup...  There are several other warnings like this I will eventually chase down as well...
 
 If you got an error that halted loads and you have an incomplete emacs startup init screen, try to retrace your steps or try running emacs with `--debug-init` turned on...  Its probably something dumb and easy to fix...  _(This happens to us all the first few times, and comes back again later as well most of the time.  Other errors only come up in a blue moon, and then mysterously go away and hide before you can catch them! DOH! Log files are a hacker's best friend... :trollface:)_
 
@@ -599,7 +455,7 @@ Above I kept going on and on about setting up the Default version of Modular Ema
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 
-- [Version 3.1.2 (beta) - README](#version-312-beta---readme)
+- [Version 3.2 (beta) - README](#version-32-beta---readme)
     - [Introduction:](#introduction)
         - [History & Purpose:](#history--purpose)
     - [Try Harmonic Alchemy Modular Emacs:](#try-harmonic-alchemy-modular-emacs)
@@ -612,22 +468,11 @@ Above I kept going on and on about setting up the Default version of Modular Ema
         - [`NODE.js` with `NVM` & `NPM`:](#nodejs-with-nvm--npm)
         - [VMD: (Visual MarkDown App)](#vmd-visual-markdown-app)
         - [MultiMarkdown:](#multimarkdown)
-            - [Install Multimarkdown on Mac OS:](#install-multimarkdown-on-mac-os)
-            - [Install Multimarkdown on Linux:](#install-multimarkdown-on-linux)
-            - [Usage:](#usage)
         - [Pandoc:](#pandoc)
-            - [Install Pandoc on Mac OS:](#install-pandoc-on-mac-os)
-                - [Install Haskell Stack IDE](#install-haskell-stack-ide)
-                - [Clone Pandoc Repo:](#clone-pandoc-repo)
-                - [Build Pandoc from source using Haskell Stack:](#build-pandoc-from-source-using-haskell-stack)
-            - [Install Pandoc on Linux:](#install-pandoc-on-linux)
-            - [Pandoc Usage:](#pandoc-usage)
         - [Fonts:](#fonts)
         - [Python and Pip:](#python-and-pip)
         - [Extra for Experts - LaTeX](#extra-for-experts---latex)
         - [Graphviz:](#graphviz)
-            - [Install Graphviz on Mac OS:](#install-graphviz-on-mac-os)
-            - [Install Graphviz on Linux:](#install-graphviz-on-linux)
     - [Get Ready to Start up Modular Emacs for the first time!](#get-ready-to-start-up-modular-emacs-for-the-first-time)
         - [First Some Initial House Keeping: _before we move in_](#first-some-initial-house-keeping-_before-we-move-in_)
             - [Create an empty file named `custom.el`:](#create-an-empty-file-named-customel)
@@ -635,7 +480,7 @@ Above I kept going on and on about setting up the Default version of Modular Ema
             - [Copy/Clone `me.init.el` to: `init.el`:](#copyclone-meinitel-to-initel)
         - [Final Step - Make Modular Emacs folder the default `~/.emacs.d` folder:](#final-step---make-modular-emacs-folder-the-default-emacsd-folder)
     - [Ready Set Go!  Start Up Modular Emacs:](#ready-set-go--start-up-modular-emacs)
-    - [Usage:](#usage-1)
+    - [Usage:](#usage)
         - [Blackboard Color Theme:](#blackboard-color-theme)
     - [Default Packages & Features (built in):](#default-packages--features-built-in)
         - [Pre-configured packages - Comprehensive list:](#pre-configured-packages---comprehensive-list)
@@ -652,6 +497,5 @@ Above I kept going on and on about setting up the Default version of Modular Ema
             - [Git \- `magit` & Related:](#git---magit--related)
         - [Key-bindings:](#key-bindings)
     - [Optional Packages & Customization: _(still being documented)_](#optional-packages--customization-_still-being-documented_)
-- [Table of Contents:](#table-of-contents)
 
 <!-- markdown-toc end -->

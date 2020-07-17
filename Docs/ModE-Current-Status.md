@@ -15,7 +15,17 @@ tags: Emacs, apps-tools, SysAdmin, HA-ModEmacs, how-to, README
 
 **[\[Back To MAIN Modular Emacs README\]](../README.md)**
 
-## Change Log:
+## Release Notes:
+
+### 2020 July 16:
+
+Modular Emacs is now at Version 3.2. This has been tested on the develop branch long enough... I am still calling it "beta" because there is still a lot of work still unfinished... (mostly peripheral support files, templates, etc. and the Docs are still being updated... (does documentation ever end? lol).  Lots of improvements with the docs has been done however...
+
+Testing all of the features on different platforms has proven it to be stable enough to merge back into the Master branch...  This commit adds new improved docs.  Also templates for authors, publishers, and screenwriters has been included.  Those templates are still being refined.  I will be using org-mode to do the exports and publishing automations... Final stages of exporting and publishing are now the main focus...  All of the basic editing features are mature now...
+
+Although this project is "beta", version numbers will continue to advance...  The nature of Emacs is "always in Beta" because it is so powerful and flexible, and empowers the user who can not only use and customize it but can also completely change functionality!  Any new features I end up trying out do not get merged into the Master branch until I have used them for a while, they are stable, and I like the new added features...
+
+More to come later of course!
 
 ### 2020 June 27:
 
@@ -93,7 +103,8 @@ Once you have the basics running smoothly, then it will be safe to visit the _**
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 
 - [Modular Emacs - Current Status](#modular-emacs---current-status)
-    - [Change Log:](#change-log)
+    - [Release Notes:](#release-notes)
+        - [2020 July 16:](#2020-july-16)
         - [2020 June 27:](#2020-june-27)
         - [2020 June 16:](#2020-june-16)
         - [2020 May 22:](#2020-may-22)
