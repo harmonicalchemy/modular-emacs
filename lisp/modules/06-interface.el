@@ -15,6 +15,16 @@
 ;;
 ;; Change Log: (descending chronological order)
 ;;
+;;   2020-007-16 - Harmonic Alchemy Modular-Emacs V3.2 (beta) [Q3 2020]
+;;      This has been tested on the develop branch long enough... I am
+;;      still calling it "beta" because there is still a lot of work
+;;      still unfinished... (mostly peripheral support files, templates, etc.
+;;      and the Docs are still being updated... (does documentation ever end? lol)
+;;      I will be calling this Beta for a while i guess... But version numbers
+;;      will continue to advance...  The nature of Emacs is "always in Beta"
+;;      because it is so powerful and flexible, and empowers the user who can
+;;      not only use and customize it but can also completely change functionality!
+;;
 ;;   2019-007-05 - Harmonic Alchemy Modular-Emacs Lisp IDE Fork v2.2.0 [Q3 2019]
 ;;      v2.0.1 [Q3 2019] Final testing period over... Version 2.0.1 is stable.
 ;;      This fork represents new commented out features added from Lisp-IDE
@@ -49,7 +59,7 @@
 
 ;; Change title-bar text
 (setq frame-title-format
-      "Harmonic Alchemy Modular Emacs - Version 3.2 (still in beta) [Q2 2020]")
+      "Harmonic Alchemy Modular Emacs - Version 3.2 (still in beta) [Q3 2020]")
 
 ;; Disable tool-bar - I could care less about tool bars in emacs!
 ;; An oxymoron! But you may feel differently.  Comment this out if you like them.
