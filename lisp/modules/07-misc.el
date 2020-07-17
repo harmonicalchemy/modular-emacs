@@ -37,11 +37,9 @@
 
 ;;Disable splash message, start *scratch* buffer by default
 
-(setq initial-buffer-choice 
-      t)
+(setq initial-buffer-choice t)
 
-(setq initial-scratch-message 
-      "")
+(setq initial-scratch-message "")
 
 ;;Enable winner-mode
 

@@ -285,7 +285,7 @@
         ";;                        -- Cheers!                                       \n"
         ";; Alisha Awen: @harmonicalchemy (Github, twitter etc.)                    \n"
         ";; PGP Pubkey: 0x922CC456F48355A8D9B2E044C9E6CD44A817E7BF                  \n"
-        ";; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
+        ";; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
 
        (get-buffer-create (current-buffer)))
 
