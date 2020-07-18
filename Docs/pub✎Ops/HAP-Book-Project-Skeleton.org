@@ -16,25 +16,36 @@ This Section is mainly to accommodate "seat-of-pants" writers (of which I have b
 
 Use this: "💡 Scratchpad Refile ☞ Start Here!" section as a quick place to document ideas and inspirations as they come alone.  You can refile them later... (even if it is intended for elsewhere) Parallel universe? Sure... You got that covered. %^)
 
-- Use this section to quickly capture inspired at-the-moment ideas While they are still fresh in mind...
+- Use this section to quickly capture inspired at-the-moment ideas While they are still fresh in mind.
 
-  + Come directly here... 
+- Come directly here:
 
-  + Advance your cursor a few newlines below this README drawer on a fresh clean line with some extra space below it as well... (above any previously time stamped entries you may already have placed)... (if this is the first time, get rid of the "Visisonar - Object" Example Entry below... That is only for the template to illustrate these instructions by example...  
+  + Advance your cursor a few newlines below this README drawer on a fresh clean line with some extra space below it as well... (above any previously time stamped entries you may already have placed)... If this is the first time, get rid of the "Visisonar - Object" example entry below... That is only for the template to illustrate these instructions by example.
 
-  + You are now at the top of the list, (a few lines below this README drawer). The time is the present. -and- You are fired up with an idea to write about now!
+  + You are now at the top of the list, (a few lines below this README drawer). The time is the present. -and- You are all fired up with an idea to write about!
 
-  + Enter a new timestamp with "C-c .", (that's Ctrl-c and then typing a Period .) Press ENTER to auto accept today's date and time.  A new timestamped line will appear with your cursor blinking on the right of it... There won't be any future entries above you... (maybe next decade? time travel?)
+  + Enter a new timestamp with "C-c .", (that's: Press Ctrl-c, let go, and then type a Period .)  A date chooser panel will pop up...
 
-  + Advance your cursor a few more lines down to some fresh empty space and start typing your idea like mad... Don't stop and don't worry about formatting or organizing it until later, after all your inspiration has passed and you are ready to organize...
+  + Press ENTER to auto accept today's date and time.  A new timestamped line will appear with your cursor blinking on the right of it... There won't be any future entries above you... (maybe next decade? time travel?)
+
+  + Advance your cursor a few more lines down to some fresh empty space -and- 
+
+  + Start Typing Your Idea Like Mad! 
+
+  + Don't stop and don't worry about formatting or organizing it until later, after all your inspiration has passed and you are ready to organize...
 
 - After You are Done Writing:
 
-  + Go back to the timestamp line when you first started... make sure it has at lease one empty line above it and below it...  Give the timestamp line a title and make this new line an outline heading with: "C-c RETURN".  (make sure this new heading has empty lines above and below it)...
+  + Come back to the timestamp line where you first started... make sure the timestamp has at least one empty line above and below it.
+
+  + Give the timestamp line a title to the right of the timestamp.
+
+  + Make this timestamped line an outline heading with: "C-c ENTER" (that's Press Ctrl-c, let go and then press ENTER)
+     (make sure this new heading has empty lines above and below it)
 
   + Adjust this new outline heading level with: M-▷ (this will make it a child of ☞ Start Here! heading above, rather than a sibling).
 
-  + Advance your cursor two lines below your new heading and begin typing away before you forget your fantastic idea!!!
+  + Adjust the space between your heading and your fantastic idea below it to one single blank line.
 
   + You can organize everything else later...  Don't scare away the muses! Get your story down now!
 
