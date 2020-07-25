@@ -182,18 +182,38 @@
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  Modular Emacs - Make Frame Function:
+;;  Modular Emacs - Make Writer's Frame Function:
+;;  This simply makes new frames to match 
+;;  HA Modular Emacs Writing Mode Specification
+;;  using Courier Prime Emacs font with dimensions
+;;  that fit best for authors/publishers on both
+;;  iMac 27" screens and small Linux Laptops...
+;;  (a tough juggle)
+
+(defun me_make-writing-frame ()
+  "Create Frames using ME default writer's face
+   and ME default writing/authoring frame dimensions"
+  (interactive)
+  (progn
+    (set-buffer "*scratch*")
+    (make-frame)
+    (me_set-org-face)))
+
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Modular Emacs - Make Coder's Frame Function:
 ;;  This simply makes new frames to match 
 ;;  HA Modular Emacs Coding Mode Specification
 ;;  using Hermit font with dimensions that fit
 ;;  best for coding on both iMac 27" screens
 ;;  and small Linux Laptops... (a tough juggle)
 
-(defun me_make-default-frame ()
+(defun me_make-coding-frame ()
   "Create Frames using ME default coding face
    and ME default coding frame dimensions"
   (interactive)
   (progn
+    (set-buffer "*scratch*")
     (make-frame)
     (me_set-default-face)))
 

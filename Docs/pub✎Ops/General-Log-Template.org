@@ -1,0 +1,126 @@
+#+TITLE: HAP - General LOG (template)
+#+AUTHOR: Alisha Awen - Harmonic Alchemy Productions
+#+CATEGORY: 
+#+STARTUP: overview
+#+STARTUP: inlineimages
+#+DESCRIPTION: HAP - Emacs Org Mode General Log Template.  This is the replacement for the Markdown Mode templates I was using previously, which were in turn replacements for templates I made originally for Evernote...
+#+EXPORT_FILE_NAME: General-Log-Template.pdf
+#+KEYWORDS:
+#+FILETAGS:
+
+* HAP - General LOG (template)
+
+- [Link to Autofocus Notebook]
+
+:README:
+Use this Standard Log (template) as a multi purpose time card/log entry vehicle...
+Use it for work, home, play, creative projects, pretty much anything that needs to be recorded with time and events in a log...
+
+This Template utilizes the basic "Ctrl-C ." command (i.e., enter a timestamp range at cursor position, and uses org-evaluate-time-range command to compute time on task, (for timesheets etc.) 
+
+If I get this new scheme working well it will become my new General Purpose Log Note Template for everything... I will stop using Markdown files for this purpose... This makes total sense as Org-Mode was designed exclusively for such things!
+
+Instructions:
+
+- Copy/Clone the outline heading below titled "Log Entry (template)" and all of its contents to your paste buffer... 
+
+   + To do this, set the mark one blank line above the "Log Entry (template) heading using the "t" key (xah-fly-keys Command Mode) and then move your cursor down one single line (type the "k" key, xah-fly-keys Command Mode) to select it to the next heading line.  Make sure your cursor is only on the first bullet in the first column of the next heading line... Otherwise, anything else selected on the next heading line will also be copied!
+
+- Type "c" (xah-fly-keys Command Mode) to copy this selection for pasting later... (You should have gotten only the Log Entry and not anything from the heading below it)
+
+- Advance your cursor a few newlines below the main heading: "Begin Log Notebook:" and then press enter a couple times to get your cursor on a fresh clean line with some extra space above and below it... (above any previously time stamped entries you may already have placed)...
+
+- Press "v" (xah-fly-keys Command Mode) to paste your copied Log Entry template... If you find out that what you copied also copied some of the heading below it, no problems... Just delete that part now... (realize that if you accidentally copied one or more invisible bullets to column one on a blank line they will create an invisible heading that you will need to delete... You will only see the symbol on a line by itself indicating a heading but no text... Delete that whole line and it will go away... Now you are ready to do your new log entry...
+
+- Follow the directions within the Time Card section to set up a time range to record the time you are on task...
+
+  + Advance your cursor a few more lines down to some fresh empty space -and- 
+
+  + Start Typing Your Idea Like Mad! 
+
+  + Don't stop and don't worry about formatting or organizing it until later, after all your inspiration has passed and you are ready to organize...
+
+- After You are Done Writing:
+
+  + Come back to the timestamp line where you first started... make sure the timestamp has at least one empty line above and below it.
+
+  + Give the timestamp line a title to the right of the timestamp.
+
+  + Make this timestamped line an outline heading with: "C-c ENTER" (that's Press Ctrl-c, let go and then press ENTER)
+     (make sure this new heading has empty lines above and below it)
+
+  + Adjust this new outline heading level with: M-▷ (this will make it a child of ☞ Start Here! heading above, rather than a sibling).
+
+  + Adjust the space between your heading and your fantastic idea below it to one single blank line.
+
+  + You can organize everything else later...  Don't scare away the muses! Get your story down now!
+
+  + Then you may go out to play elsewhere little grasshopper... But come back later and organize things... OK? Don't create a swamp in here! And don't forget to take your bath tonight... ;-) 
+
+  + Having done the simple steps above any time you get inspired, you will be able to tell your grand children.. "I got my first spark of an idea for that book back in Year, Month, Day, time, second" (50 years later!) Now that is being organized! LOL
+:END:
+
+
+
+** Log Entry (template)
+
+
+
+**** Time Card:
+
+:README:
+- When you first create this log put your cursor on the timestamp (under the Start: / Stop: heading in the table below) It looks like this: <2020-07-24 Fri>-
+
+  + Use the key binding:  C-c . (i.e., press ctrl key while holding "c", and then type a period) A date chooser panel will pop up...
+
+  + Press ENTER to auto accept today's date and time... This will update the timestamp to the current date/time... The dash after the timestamp indicates a time range that you will complete once your done recording time for tasks related to this log entry...
+
+- You are now at the top of the list, (a few lines below the main "*Begin Log Notebook:"* heading), your timestamp indicates the present, -and- You are ready to record a log of your current activities! This way, your most recent log entries will be on the top and descend down from there...
+
+- Continue to fill in your log entry below the timestamp... (follow the README instructions within those headings)
+
+- Later When you are finished adding your log entry and ready to go do something else, place your cursor right after the dash after the first timestamp in table under the Start: / Stop: heading...
+
+  + Use the key binding:  C-c . (i.e., press ctrl key while holding "c", and then type a period) A date chooser panel will pop up...
+
+  + Press ENTER to auto accept current time... This will create a new timestamp after the dash connecting the two timestamps together as a time/date range.
+
+  + Now with the date range in place and your cursor right after it or on it, press: C-u 1, then press C-c C-Y 
+
+
+ The dash after the timestamp indicates a time range that you will complete once your done recording time for tasks related to this log entry...
+
+  + 
+
+
+
+:END:
+
+|-------------------+--------|
+| Start: / Stop:    | Hours: |
+|-------------------+--------|
+| <2020-07-24 Fri>- |        |
+|-------------------+--------|
+| *Total Time:*       |        |
+|-------------------+--------|
+
+**** Main Points:
+
+1. Yadda Yadda Yadda
+2. Yadda Yadda Yadda
+3. Yadda yadda yadda
+
+**** Details:
+
+Yadda, Yadda, Yadda... etc...
+
+
+
+
+
+
+
+
+* Begin Log Notebook: 
+
+
