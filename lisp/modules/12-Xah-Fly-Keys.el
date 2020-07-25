@@ -111,8 +111,8 @@
   ;; This DIRECT Command Mode make-frame key mirrors
   ;; PRIMARY Leader-Key keybinding delete-frame "2" key below...
   ;; (which does the opposite)
-;  (define-key xah-fly-command-map (kbd "2") 'me_make-writing-frame)
-  (define-key xah-fly-command-map (kbd "2") 'me_make-coding-frame)
+  (define-key xah-fly-command-map (kbd "2") 'me_make-writing-frame)
+;  (define-key xah-fly-command-map (kbd "2") 'me_make-coding-frame)
 
   ;; Set easy key to toggle neotree in left window pane:
   ;; Note: This disables (default Xfk to run command delete-char)

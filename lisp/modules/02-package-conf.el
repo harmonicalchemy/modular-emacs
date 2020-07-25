@@ -198,6 +198,7 @@
 ;    (set-buffer "*scratch*")
     (bookmark-bmenu-list)
     (make-frame)
+    (me_set-default-face)
     (me_set-org-face)))
 
 
@@ -217,6 +218,7 @@
 ;    (set-buffer "*scratch*")
     (bookmark-bmenu-list)
     (make-frame)
+    (me_set-default-face)
     (me_set-default-face)))
 
 
