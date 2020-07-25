@@ -195,7 +195,8 @@
    and ME default writing/authoring frame dimensions"
   (interactive)
   (progn
-    (set-buffer "*scratch*")
+;    (set-buffer "*scratch*")
+    (bookmark-bmenu-list)
     (make-frame)
     (me_set-org-face)))
 
@@ -213,7 +214,8 @@
    and ME default coding frame dimensions"
   (interactive)
   (progn
-    (set-buffer "*scratch*")
+;    (set-buffer "*scratch*")
+    (bookmark-bmenu-list)
     (make-frame)
     (me_set-default-face)))
 
