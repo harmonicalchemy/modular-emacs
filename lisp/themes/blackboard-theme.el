@@ -42,12 +42,22 @@
 ;;; Code:
 
 (deftheme blackboard
-  "Based on Color theme by JD Huntington, which based off the TextMate Blackboard theme, created 2008-11-27
-   This new 2020 version changes the background blackboard colour to a deep dark indigo rather than all black")
+  "Based on Color theme by JD Huntington, which based off the 
+   TextMate Blackboard theme, created 2008-11-27. This new 2020 
+   version changes the background blackboard colour to a deep 
+   dark indigo rather than all black")
 
 (custom-theme-set-faces
  'blackboard
- `(default ((t (:family "Hermit" :height 118 :weight light :background "#180028" :foreground "#F8F4FB"))))
+ `(default ((t (
+                :family "Hermit"
+                :slant normal
+                :height 120
+                :weight normal
+                :width normal
+                :background "#180028"
+                :foreground "#F8F4FB"))))
+
  `(bold ((t (:bold t))))
  `(bold-italic ((t (:bold t))))
  `(border-glyph ((t (nil))))
@@ -65,7 +75,13 @@
 
  ;; org-mode
 
- `(org-default ((t (:family "Courier Prime Emacs" :height 131 :weight light))))
+ `(org-default ((t (
+                    :family "Courier Prime Emacs"
+                    :slant normal
+                    :height 138
+                    :weight normal
+                    :width normal))))
+
  `(org-hide ((t (:foreground "#2e3436"))))
  `(org-level-1 ((t (:bold nil :foreground "dodger blue" :height 1.3))))
  `(org-level-2 ((t (:bold nil :foreground "#edd400" :height 1.2))))
@@ -87,7 +103,7 @@
  `(org-agenda-date-today ((t (:weight bold :foreground "#edd400"))))
 
  ;; Misc:
- 
+
  `(font-lock-string-face ((t (:foreground "#61CE3C"))))
  `(font-lock-type-face ((t (:foreground "#8DA6CE"))))
  `(font-lock-variable-name-face ((t (:foreground "#FF6400"))))
@@ -99,6 +115,7 @@
  `(highline-face ((t (:background "SeaGreen"))))
  `(italic ((t (nil))))
  `(left-margin ((t (nil))))
+  ; `(text-cursor ((t (:background "white" :foreground "red"))))
  `(text-cursor ((t (:background "yellow" :foreground "black"))))
  `(toolbar ((t (nil))))
  `(underline ((nil (:underline nil))))

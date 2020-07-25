@@ -11,47 +11,90 @@
 ;;   settings below to suit your needs and planning style...
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+;;;
+;; Settings made within top level: 09-org-mode-pkg-conf.el
+;; before this file was loaded:
+;;
+;;      my-org-dir            = Top Level Org Directory
+;;      my-org-agenda-files   = my-org-dir/00-Agenda-files
+;;      my-org-templates      = my-org-dir/02-Templates
+;;      my-org-files          = my-org-dir/03-Private
+
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Define Custom Org-files:
 
 (setq default-org-note "refile.org")
 (setq default-org-diary "diary.org")
+(setq private-org-note "private.org")
+(setq work-log "logbook-work.org")
+(setq personal-log "logbook-personal.org")
+(setq autofocus-notebook "Autofocus-notebook.org")
 
-(setq org-default-notes-file (expand-file-name default-org-note my-org-dir))
+;; Capture Template Files:
+
+(setq org-todo-template "t-private-todo.txt")
+
+;; Set my-org-files/refile.org as Default Org Note:
+
+(setq org-default-notes-file (expand-file-name default-org-note my-org-files))
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; Set Up Capture templates for: TODO tasks, Notes, appointments, phone calls, and org-protocol
+;; Set Up Capture templates for: TODO tasks, Notes,
+;; appointments, phone calls, and org-protocol
 
-(setq org-capture-templates
-      (quote
-       (("t" "todo" entry
-         (file
-          (expand-file-name default-org-note my-org-files)
-	  "* TODO %?\n%U\n%a\n" :clock-in t :clock-resume t))
-	("r" "respond" entry
-         (file
-          (expand-file-name default-org-note my-org-files)
-          "* TODO Respond to %:from on %:subject\n%U\n%a\n"
-          :clock-in t :clock-resume t :immediate-finish t))
-	("n" "note" entry
-         (file (expand-file-name default-org-note my-org-files)
-               "* %? :NOTE:\n%U\n%a\n"
-               :clock-in t :clock-resume t))
-	("j" "Journal" entry
-         (file+datetree (expand-file-name default-org-diary my-org-files)
-	                "* %?\n%U\n"
-                        :clock-in t :clock-resume t))
-	("w" "org-protocol" entry
-         (file (expand-file-name default-org-note my-org-files))
-	 "* TODO Review %c\n%U\n"
-         :immediate-finish t)
-	("p" "Phone call" entry
-         (file (expand-file-name default-org-note my-org-files))
-	 "* PHONE %? :PHONE:\n%U"
-         :clock-in t :clock-resume t)
-	("h" "Habit" entry
-         (file (expand-file-name default-org-note my-org-files))
-	 "* NEXT %?\n%U\n%a\nSCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")\n:PROPERTIES:\n:STYLE: habit\n:REPEAT_TO_STATE: NEXT\n:END:\n"))))
+(setq
+ org-capture-templates
+ (quote
+  (
+   ("p" "Private Templates")
+
+   ("pt" "ToDo Entry" entry
+    (file+headline
+     (expand-file-name private-org-note my-org-files)
+     "Capture")
+    (file (expand-file-name org-todo-template my-org-templates))
+    :empty-lines-before 1)
+
+   ("wl" "Logbook entry" entry
+    (file+datetree "logbook-work.org") "** %U - %^{Activity}  :LOG:")
+
+   ;;; This section commented out until later configuration...
+   ;; ("t" "todo" entry
+   ;;  (file
+   ;;   (expand-file-name default-org-note my-org-files)
+   ;;   "* TODO %?\n%U\n%a\n" :clock-in t :clock-resume t))
+
+   ;; ("r" "respond" entry
+   ;;  (file
+   ;;   (expand-file-name default-org-note my-org-files)
+   ;;   "* TODO Respond to %:from on %:subject\n%U\n%a\n"
+   ;;   :clock-in t :clock-resume t :immediate-finish t))
+
+   ;; ("n" "note" entry
+   ;;  (file (expand-file-name default-org-note my-org-files)
+   ;;        "* %? :NOTE:\n%U\n%a\n"
+   ;;        :clock-in t :clock-resume t))
+
+   ;; ("j" "Journal" entry
+   ;;  (file+datetree (expand-file-name default-org-diary my-org-files)
+   ;;                 "* %?\n%U\n"
+   ;;                 :clock-in t :clock-resume t))
+
+   ;; ("w" "org-protocol" entry
+   ;;  (file (expand-file-name default-org-note my-org-files))
+   ;;  "* TODO Review %c\n%U\n"
+   ;;  :immediate-finish t)
+
+   ;; ("p" "Phone call" entry
+   ;;  (file (expand-file-name default-org-note my-org-files))
+   ;;  "* PHONE %? :PHONE:\n%U"
+   ;;  :clock-in t :clock-resume t)
+
+   ;; ("h" "Habit" entry
+   ;;  (file (expand-file-name default-org-note my-org-files))
+   ;;  "* NEXT %?\n%U\n%a\nSCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")\n:PROPERTIES:\n:STYLE: habit\n:REPEAT_TO_STATE: NEXT\n:END:\n")
+
+   )))
 
 ;;;
 ;; Dim blocked tasks

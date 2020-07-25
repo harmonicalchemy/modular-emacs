@@ -58,16 +58,18 @@
 
 (xah-fly-keys-set-layout "qwerty") ; My keyboard layout...
 
-;;;
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Call xah-fly-keys Function:
 
 (xah-fly-keys 1)
 
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Enable Xah eLisp Mode in eLisp files:
 
 (add-to-list 'auto-mode-alist '("\\.el\\'" . xah-elisp-mode))
 
-;; Load Xah Find functions:
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Load Xah Find functions:
 
 (autoload 'xah-find-text "xah-find" "find replace" t)
 (autoload 'xah-find-text-regex "xah-find" "find replace" t)
@@ -75,9 +77,22 @@
 (autoload 'xah-find-replace-text-regex "xah-find" "find replace" t)
 (autoload 'xah-find-count "xah-find" "find replace" t)
 
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Xah Fly Keys Command and Insert Mode Hook Functions:
 
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;           CUSTOM Xah Fly KEY BINDINGS
+(defun me_xfk-command-color () (set-background-color "#280028"))
+(defun me_xfk-insert-color () (set-background-color "#180028"))
+
+;(custom-theme-set-faces
+; 'user
+; `(text-cursor ((t (:background "red" :foreground "white")))))
+
+(add-hook 'xah-fly-command-mode-activate-hook 'me_xfk-command-color)
+(add-hook 'xah-fly-insert-mode-activate-hook  'me_xfk-insert-color)
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;                      Xah Fly KEY BINDINGS
+;;
 ;;  Add Personalized keybindings to Xah fly Keys:
 ;;  For:
 ;;       DIRECT Command Mode keybindings,
@@ -111,8 +126,7 @@
   ;; This DIRECT Command Mode make-frame key mirrors
   ;; PRIMARY Leader-Key keybinding delete-frame "2" key below...
   ;; (which does the opposite)
-  (define-key xah-fly-command-map (kbd "2") 'me_make-writing-frame)
-;  (define-key xah-fly-command-map (kbd "2") 'me_make-coding-frame)
+  (define-key xah-fly-command-map (kbd "2") 'me_make-frame)
 
   ;; Set easy key to toggle neotree in left window pane:
   ;; Note: This disables (default Xfk to run command delete-char)

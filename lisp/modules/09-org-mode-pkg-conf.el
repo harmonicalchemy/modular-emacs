@@ -85,10 +85,11 @@
 ;;   Your-Org-Docs-dir/      # This must match (my-org-dir) set above!
 ;;     |__00-Agenda-files/   # All others must match exactly as shown!
 ;;     |__03-Private/        # Create your files folders following this diagram. 
-;;     |   |____diary.org
-;;     |   |____refile.org
-;;     |   |____Timesheet/
-;;     |__refile.org
+;;         |____diary.org
+;;         |____refile.org
+;;         |____Timesheet/
+;;         |____refile.org
+;;         |____Autofocus-notebook.org
 ;;
 ;; EXISTING ORG USERS NOTE! For existing org-files directory structures,
 ;; unfortunately you may need to adjust the file/folder names below within 
@@ -121,8 +122,8 @@
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Set default Org Mode directories:
 
-(setq org-directory my-org-dir)
-(setq org-default-notes-file (concat org-directory "/autofocus.org"))
+(setq org-dir my-org-files)
+(setq org-default-notes-file (concat org-dir "/refile.org"))
 
 ;; Load Default Org Agenda Files (directories) that are permanent...
 ;; NOTE:  This list is mostly updated from within org files
