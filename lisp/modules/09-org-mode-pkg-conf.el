@@ -119,20 +119,16 @@
   (file-name-as-directory
    (expand-file-name "03-Private" my-org-dir)))
 
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  Set default Org Mode directories:
-
-(setq org-dir my-org-files)
-(setq org-default-notes-file (concat org-dir "/refile.org"))
-
 ;; Load Default Org Agenda Files (directories) that are permanent...
 ;; NOTE:  This list is mostly updated from within org files
 ;;        or by manually inserting them while you use org-mode...
 
-(setq org-agenda-files '(my-org-dir
-                         my-org-agenda-files
-                         my-org-templates
-                         my-org-files))
+(setq org-agenda-files
+      (quote
+       (my-org-dir
+        my-org-agenda-files
+        my-org-templates
+        my-org-files)))
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -249,7 +245,9 @@
 ;;         * Narrow Outline Headings (collapsed) on Left side...
 ;;         * Wide distraction free Olivetti Content Editor on Right side...
 ;;       Yes? - Do the following Before opening a .org file for editing/viewing:
+;;
 ;;         * Stretch your window frame out beyond 150 columns...
+;;
 ;;       The frame width will be automagically detected by this function...
 ;;       You will get a "double-wide" window frame with auto
 ;;       adjusted right / left panes with title bar: "Fancy Org Mode"
@@ -257,8 +255,9 @@
 ;;    2. If you don't want Fancy Org Mode (double wide split panes) than keep
 ;;       your window narrow (i.e., the default 100 columns or less than 130)...
 ;;       In this mode, you still get the nicer mono font for writing, etc...
-;;       but you don't get split panes or olivetti mode... This mode is better
-;;       for things like finances, general org-mode planning, etc...
+;;       but you don't get split panes... This mode is better for things like
+;;       finances, general org-mode planning, etc...
+;;
 ;;       This mode will automagically be set if you start with an initial frame
 ;;       width of less than 130 columns...  That's it...
 ;;
@@ -269,36 +268,22 @@
 ;;  screenwriting, audio and VR scripting etc... When this project is done
 ;;  you will be glad to know "all your base are belong to" Emacs Org Mode! %^)
 
-(defun me_org-mode-hook-func ()
-  "Harmonic Alchemy Modular Emacs Fancy Org Mode Hook Function.  This function
-takes care of setting up a nice org-mode writing environment for both planning
-and / or writing-publishing"
+(defun me_fancy-org-mode-hook ()
+  "Harmonic Alchemy Modular Emacs Fancy Org Mode Hook Function.
+   This function takes care of setting up a nice org-mode writing
+   environment for both planning and / or writing-publishing"
+
   ;; Set default face to Courier Prime (A nice mono serif for writing)
   ;; NOTE: All settings below change the currently selected frame only...
   ;;       (other existing and future frames are not affected)
 
-  ;; Mac OS Case:
-  (when *is-darwin*
-    (set-face-attribute 'default
-                        (selected-frame)
-                        :family "Courier Prime Emacs"
-                        :slant 'normal
-                        :height 138
-                        :weight 'normal
-                        :width 'normal))
-
-  ;; Linux Case:
-  (when *is-linux*
-    (set-face-attribute 'default
-                        (selected-frame)
-                        :family "Courier Prime Emacs"
-                        :slant 'normal
-                        :height 138
-                        :weight 'normal
-                        :width 'normal))
-
-  ;; Set Default Face Flag (2 = org-mode face):
-  (setq me--def-face 2)
+  (set-face-attribute 'default
+                      (selected-frame)
+                      :family "Courier Prime Emacs"
+                      :slant 'normal
+                      :height 138
+                      :weight 'normal
+                      :width 'normal)
 
   ;;  Test for "Wide Screen" (i.e., The user has set the frame
   ;;  wider than 130 columns). If true, Set up a split screen
@@ -306,6 +291,7 @@ and / or writing-publishing"
   ;;  Resize frame & window dimensions for best fit..
   ;;  Set Frame Title to "HA Mod Emacs Fancy Org Mode"
   ;;  Enable olivetti-mode for distraction free writing...
+
   (if (> (frame-parameter nil 'width) 130)
       (progn
 
@@ -318,6 +304,7 @@ and / or writing-publishing"
 
         ;; Split Windows with org outline tree in narrow left window...
         (org-sidebar-tree)
+
         ;; Enable Olivetti Mode (100 column wide)
         (olivetti-mode)
         (olivetti-set-width 100))
@@ -329,7 +316,11 @@ and / or writing-publishing"
                                (quote
                                 ((name   . "HA Mod Emacs v3.2 - Normal Org Mode")
                                  (height . 38)
-                                 (width  . 88))))))
+                                 (width  . 100))))
+
+      ;; Enable Olivetti Mode (100 column wide)
+      (olivetti-mode)
+      (olivetti-set-width 88)))
 
   ;; Allways hide bullets no matter what...
   (me_hide-org-bullets))
@@ -348,10 +339,56 @@ and / or writing-publishing"
 ;;        You will also find different org bullet styles within the above
 ;;        file as well.... (go ahead... hack away!)
 
-;;;
-;;  Add Above Hook Function to Org Mode startup list:
 
-(add-hook 'org-mode-hook 'me_org-mode-hook-func)
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Modular Emacs - Org Mode Hook function For EDIFF:
+;;
+;;  This EDIFF Org Mode hook puts Org Mode in bare
+;;  bones, single pane mode, which works fine for
+;;  using tools that operate on .org files and also
+;;  need to controll splitting of windows etc...
+;;
+;;  WARNING:  Don't do eDiff-files on .org files
+;;            while Fancy Org Mode is set...
+;;            Fancy Org Mode Breaks eDiff!!!
+;;            Instead... Use THIS Hook Function if
+;;            you need to perfrom an eDiff on one or
+;;            more .org files...
+;;
+;;  USEAGE Notes:
+;;
+;;    1. No Notes... Just use as is...  It just works...
+;;       What it says on the tin...  %^)
+;;
+;;       Oh... Right....  Don't forget to switch forms
+;;       below to register THIS hook instead of the Fancy
+;;       Org Mode Hook (above) Right? "That's how you turn
+;;       it on honey...  And make sure it's plugged in!"
+;;       LOL - OK... ready eddy?  let's dance...
+
+(defun me_normal-org-mode-hook ()
+  "Harmonic Alchemy Modular Emacs Simple Org Mode Hook Function.
+   This function configures org-mode to work better while using
+   diff tools like eDiff to compare .org files.  Fancy Org Mode
+   breaks eDiff and other tools that split windows..."
+  ;; All this Function does is Set default face to Courier Prime
+  (set-face-attribute 'default
+                      (selected-frame)
+                      :family "Courier Prime Emacs"
+                      :slant 'normal
+                      :height 138
+                      :weight 'normal
+                      :width 'normal))
+
+;;;              FANCY ORG MODE INIT
+;;  Add Fancy Org Mode Hook Function to Org Mode startup list:
+
+(add-hook 'org-mode-hook 'me_fancy-org-mode-hook)
+
+;;;              NORMAL ORG MODE INIT
+;;  Add Normal Org Mode Hook Function to Org Mode startup list:
+
+;(add-hook 'org-mode-hook 'me_normal-org-mode-hook)
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
