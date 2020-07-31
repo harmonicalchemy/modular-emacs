@@ -190,7 +190,7 @@
   ;; disabled the Caps-Lock key (which is mapped to HOME now)
   (define-key xah-fly-command-map (kbd "\\") 'me_toggle-letter-case)
 
-  ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   ;; Xah-Fly-Keys PRIMARY Leader-Key keybindings:
   ;; (xah-fly-leader-key-map)
   ;; Add more key definitions to this list when needed:
@@ -230,9 +230,9 @@
   ;; mode and it's easy enough to switch to Command Mode to paste)
   (define-key xah-fly-leader-key-map (kbd "v") 'vmd-mode)
 
-  ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   ;; Xah-Fly-Keys SECONDARY Leader-Key keybindings:
-  ;; For secondary leader key: "d" (dvorak "e")
+  ;; For secondary leader key: QWERTY "d" (dvorak "e")
   ;; (xah-fly-e-keymap Leader Key Map)
   ;; Add more key definitions to this list when needed:
   ;; Many of these default "insert" keybindings are not needed.
@@ -240,7 +240,20 @@
   ;; Override default xah-insert-date () func with my own
   ;; simpler version that simply formats the date as I like to do it:
   ;; (i.e., "yyyy-mmm-dd" digits)
-  (define-key xah-fly-e-keymap (kbd "f") 'me_insert-date))
+  (define-key xah-fly-e-keymap (kbd "f") 'me_insert-date)
+
+  ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ;; Xah-Fly-Keys SECONDARY Leader-Key keybindings:
+  ;; For secondary leader key: QWERTY "e" (dvorak "." dot)
+  ;; (xah-fly-e-keymap Leader Key Map)
+  ;; Add more key definitions to this list when needed:
+  ;; None of these keys are used by xah-fly-keys. You can use
+  ;; anything here...
+
+  ;; Override default xah-insert-date () func with my own
+  ;; simpler version that simply formats the date as I like to do it:
+  ;; (i.e., "yyyy-mmm-dd" digits)
+  (define-key xah-fly-dot-keymap (kbd "p") 'org-latex-export-to-pdf))
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; END: [modular-emacs]:~/.emacs.d/lisp/modules/12-Xah-Fly-Keys.el

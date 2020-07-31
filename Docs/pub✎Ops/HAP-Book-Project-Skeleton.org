@@ -1,12 +1,42 @@
 #+TITLE: HAP - Book Project Skeleton
 #+AUTHOR: Alisha Awen - Harmonic Alchemy Productions
-#+CATEGORY: 
+#+EMAIL: Siren1@disroot.org
+#+DATE: <2020-07-30 Thu>
+#+CATEGORY: book-templates
 #+STARTUP: overview
+#+STARTUP: indent
+#+STARTUP: align
 #+STARTUP: inlineimages
 #+DESCRIPTION: HAP - Bare Bones Skeleton with generic basics already done for.  Great for Authors to use when starting a new book project from scratch...
-#+EXPORT_FILE_NAME: My-New-Book.pdf
+#+EXPORT_FILE_NAME: New-Untitled-Book.pdf
+#+OPTIONS: inline:nil
+#+OPTIONS: tasks:nil
+#+OPTIONS: tags:nil
 #+KEYWORDS:
-#+FILETAGS:
+
+:README:
+To use this Book Project Skeleton (template) for your own projects, perform the following three steps:
+
+1. *Clone a Copy of this File:* Put it where you normally organize your writing projects.  Place it within its own folder named after your intended project title...
+
+2. *Copy/Clone ./media _(and all its contents)_:* To your new project's folder _(where you copied this file)_...  Any external documents or images referenced by your book project should be placed within this ./media/ directory... All of the external links, images, within the boilerplate examples may be used as examples for getting your own images, and external attachments linked properly...  This single ./media directory serves media and external attachments for all of the .org files contained within this .emacs.d/Docs/pub✎Ops directory... Cloning any of the other .org files will also require copy/cloning the ./media directory relative to them...
+
+3. *Start Writing Your Book:*  Change headings and structure to match your books outline Sections/Chapters/Scenes/ Plots, Characters, etc. Start doing the Tasks within the Tasks section... Have fun doing this...
+
+The In-Buffer Settings and KEYWORDS specified above are configured to get this file looking good when exported as a Standard PDF file:  To make a PDF out of this file issue the following Emacs command:
+
+     M-x org-latex-export-to-pdf
+
+After AucTeX is done parsing/compiling etc., a new PDF by the name of New-Untitled-Book.pdf -and- New-Untitled-Book.tex will appear within the same directory as this file...  
+
+Subsequent repeated calls to the above command will overwrite your existing New-Untitled-Book.pdf -and- New-Untitled-Book.tex files! 
+
+Change the #+EXPORT_FILE_NAME: directive at the top of this file to "Your-Book's-Title.pdf" That will be the file name produced thence forward...
+
+<2020-07-30 Thu> So far things are pretty basic PDF... We will get fancy with other formats later... I promice... I have to do all this documentation first!
+
+Enjoy! - Alisha Awen
+:END:
 
 * 💡 Scratchpad Refile:
 ** ☞ Start Here!
