@@ -65,7 +65,7 @@
 ;; This form will be enabled, (with the right settings) once I get all this working!
 ;; Stay Tuned...
 
-;(when *is-linux*
+;(when LINUX
   ;(define-key key-translation-map (kbd "Control_L") (kbd "Alt_L"))
   ;(define-key key-translation-map (kbd "Alt_L") (kbd "Ccontrol_L"))
   ;(define-key key-translation-map (kbd "Control_R") (kbd "Alt_R"))
@@ -87,7 +87,7 @@
 ;; stressed, and I can edit code, compose documents or write fiction faster than
 ;; ever!
 
-(when *is-darwin*
+(when DARWIN
   (setq mac-command-modifier 'control)
   (setq mac-control-modifier 'meta))
 

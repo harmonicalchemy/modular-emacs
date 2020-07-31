@@ -23,20 +23,32 @@
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Define Custom Org-files:
 
-(setq default-org-note "refile.org")
-(setq default-org-diary "diary.org")
-(setq private-org-note "private.org")
-(setq work-log "logbook-work.org")
-(setq personal-log "logbook-personal.org")
-(setq autofocus-notebook "Autofocus-notebook.org")
+(defconst default-org-note
+  (expand-file-name "refile.org" my-org-files))
+
+(defconst default-org-diary
+  (expand-file-name "diary.org" my-org-files))
+
+(defconst private-org-note
+  (expand-file-name "private.org" my-org-files))
+
+(defconst work-log
+  (expand-file-name "logbook-work.org" my-org-files))
+
+(defconst personal-log
+  (expand-file-name "logbook-personal.org" my-org-files))
+
+(defconst autofocus-notebook
+  (expand-file-name "Autofocus-notebook.org" my-org-files))
 
 ;; Capture Template Files:
 
-(setq org-todo-template "t-private-todo.txt")
+(defconst org-todo-template
+  (expand-file-name "t-private-todo.txt" my-org-templates))
 
 ;; Set my-org-files/refile.org as Default Org Note:
 
-(setq org-default-notes-file (expand-file-name default-org-note my-org-files))
+(setq org-default-notes-file default-org-note)
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Set Up Capture templates for: TODO tasks, Notes,
@@ -49,16 +61,14 @@
    ("p" "Private Templates")
 
    ("pt" "ToDo Entry" entry
-    (file+headline
-     (expand-file-name private-org-note my-org-files)
-     "Capture")
-    (file (expand-file-name org-todo-template my-org-templates))
+    (file+headline private-org-note "Capture")
+    (file org-todo-template)
     :empty-lines-before 1)
 
    ("wl" "Logbook entry" entry
-    (file+datetree "logbook-work.org") "** %U - %^{Activity}  :LOG:")
+    (file+datetree work-log) "** %U - %^{Activity}  :LOG:")
 
-   ;;; This section commented out until later configuration...
+;;; This section commented out until later configuration...
    ;; ("t" "todo" entry
    ;;  (file
    ;;   (expand-file-name default-org-note my-org-files)
@@ -114,7 +124,7 @@
 
 ;;; 
 ;; Save clock data and state changes and notes in the LOGBOOK drawer
-(setq org-clock-into-drawer t)
+(setq org-clock-into-drawer "CLOCKING")
 
 ;;; 
 ;; Clock out when moving task to a done state
@@ -196,30 +206,18 @@
 
 ;;; 
 ;; Display tags farther right
+
 (setq org-agenda-tags-column -102)
 
 (setq org-enforce-todo-dependencies t)
 
-(setq org-hide-leading-stars t)
-
-(setq org-startup-indented t)
-
-(setq org-cycle-separator-lines 0)
-
-(setq org-blank-before-new-entry (quote ((heading)
-                                         (plain-list-item . auto))))
-
-(setq org-insert-heading-respect-content nil)
-
-(setq org-reverse-note-order nil)
-
-(setq org-show-following-heading t)
-(setq org-show-hierarchy-above t)
-(setq org-show-siblings (quote ((default))))
+;; Set Method to be used to create new IDs. (org-id.el)
 
 (setq org-id-method (quote uuidgen))
 
 (setq org-deadline-warning-days 30)
+
+;; Export Org Tables to Tab Seporated Values:
 
 (setq org-table-export-default-format "orgtbl-to-tsv")
 
@@ -233,9 +231,8 @@
 (setq org-src-window-setup 'current-window)
 
 (setq org-log-done (quote time))
-(setq org-log-into-drawer "LOGBOOK")
 
-(setq org-startup-folded 'overview)
+(setq org-log-into-drawer "LOGBOOK")
 
 (setq org-alphabetical-lists t)
 

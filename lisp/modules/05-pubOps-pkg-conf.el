@@ -137,13 +137,13 @@
 ;;;
 ;; Path to My-Docs on Mac OS:
 
-(when *is-darwin*
+(when DARWIN
   (setq deft-directory "~/change-this-path/to/your-Docs"))
 
 ;;;
 ;; Path to My-Docs on Linux:
 
-(when *is-linux*
+(when LINUX
   (setq deft-directory "~/change-this-path/to/your-Docs"))
 
 (setq deft-recursive t)
@@ -194,7 +194,7 @@
 
 ;; Mac OS Case:
 
-(when *is-darwin*
+(when DARWIN
   ;; You may need to enable the first form if you used HomeBrew
   ;; to install Pandoc...  If you enable the first form, be sure to comment
   ;; out (disable) the second form below it and visa-versa!!
@@ -205,7 +205,7 @@
 
 ;; Linux Case:
 
-(when *is-linux*
+(when LINUX
   (setq pandoc-binary "/usr/bin/pandoc"))
 
 ;;;
