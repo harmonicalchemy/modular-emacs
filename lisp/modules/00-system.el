@@ -44,9 +44,9 @@
 ;;   forever now new...
 ;;                  - Alisha Awen
 
-(defconst DARWIN (eq system-type 'darwin))
-(defconst LINUX (eq system-type 'gnu/linux))
-(defconst POSIX (memq window-system `(ns x)))
+(defconst ME--DARWIN (eq system-type 'darwin))
+(defconst ME--LINUX (eq system-type 'gnu/linux))
+(defconst ME--POSIX (memq window-system `(ns x)))
 
 ;;;
 ;; Configure custom elisp library load path.

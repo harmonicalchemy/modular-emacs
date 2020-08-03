@@ -112,7 +112,7 @@
 
 (with-eval-after-load 'xah-fly-keys
 
-  ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   ;; Xah-Fly-Keys "Command Mode" keybindings:
   ;; (Xah-Fly-Keys Command Map)
   ;; Add more key definitions to this list when needed:
@@ -131,6 +131,11 @@
   ;; Set easy key to toggle neotree in left window pane:
   ;; Note: This disables (default Xfk to run command delete-char)
   ;;       I don't need that as the "D" key works fine for me...
+
+  ;; Switch to Modular Emacs Org Mode Wide Screen View:
+  ;; This DIRECT Command Mode "5" key mirrors
+  ;; PRIMARY Leader-Key "5" key below...
+  ;; (which Switches to Org Mode back to Normal Screen View)
   (define-key xah-fly-command-map (kbd "5") 'me_org-wide-screen)
 
   ;; Change default olivetti-mode key:
@@ -219,6 +224,12 @@
   ;; (which does the opposite)
   (define-key xah-fly-leader-key-map (kbd "2") 'delete-frame)
 
+  ;; Switch to Modular Emacs Normal Org Mode View:
+  ;; This PRIMARY Leader-Key "5" key mirrors
+  ;; DIRECT Command Mode "5" key above...
+  ;; (which Switches to Org Mode Wide Screen View)
+  (define-key xah-fly-leader-key-map (kbd "5") 'me_org-narrow-screen)
+
   ;; Export Org file to Markdown File:
   (define-key xah-fly-leader-key-map (kbd "m") 'org-md-export-to-markdown)
 
@@ -242,7 +253,7 @@
   ;; (i.e., "yyyy-mmm-dd" digits)
   (define-key xah-fly-e-keymap (kbd "f") 'me_insert-date)
 
-  ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   ;; Xah-Fly-Keys SECONDARY Leader-Key keybindings:
   ;; For secondary leader key: QWERTY "e" (dvorak "." dot)
   ;; (xah-fly-e-keymap Leader Key Map)

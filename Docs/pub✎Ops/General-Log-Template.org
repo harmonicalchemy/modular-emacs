@@ -2,20 +2,20 @@
 #+AUTHOR: Alisha Awen - Harmonic Alchemy Productions
 #+EMAIL: Siren1@disroot.org
 #+CATEGORY: templates
-#+STARTUP: overview
-#+STARTUP: inlineimages
 #+DESCRIPTION: HAP - Emacs Org Mode General Log Template.  This is the replacement for the Markdown Mode templates I was using previously, which were in turn replacements for templates I made originally for Evernote...
 #+EXPORT_FILE_NAME: General-Log-Template.pdf
+#+KEYWORDS:
+#+FILETAGS:
+#+STARTUP: overview
+#+STARTUP: inlineimages
 #+OPTIONS: date:nil
 #+OPTIONS: c:t
 #+OPTIONS: toc:nil
 #+OPTIONS: num:nil
 #+OPTIONS: inline:nil
 #+OPTIONS: d:nil
-#+KEYWORDS:
-#+FILETAGS:
 
-* How To Use This Template: :noexport:
+* How to Use this Template: :noexport:
 
 - [Add Link to Autofocus Notebook Here]
 
@@ -30,15 +30,19 @@ Once I get this new scheme working well it will become my new General Purpose Lo
 
 *** Copy/Clone heading below titled: Log Entry (template)
 
-- *Note:* If this is the first time using this log, Don't copy the template.  Instead edit the dummy boilerplate placeholderlog entry already in place.  That was just for example and can be changed/commandeered for your purposes...
+- *Note:* If this is the first time using this log, Don't copy the template.  Instead edit the dummy boilerplate placeholder Log Entry (with timestamp) already in place.  That was just for an example to show you how your log book will look with one entry in it already.  You can change/commandeer it for your purposes... Otherwise you will end up deleting it later...  (Don't be wasteful... Recycle! lol ;-)
 
-- Otherwise Copy the Log Entry (template) and all of its sub-contents to your paste buffer... 
+- Otherwise, (if you already have one or more log entries from before) Copy the Log Entry (template) and all of its sub-contents to your paste buffer: 
 
-   + To do this, place your cursor alone on one blank line above the "Log Entry (template) heading and then type the "t" key to set the mark for selection, (xah-fly-keys Command Mode)
+   + To do this, place your cursor alone on one blank line above the "Log Entry (template) heading _(collapsed)_ and then type the "t" key to set the mark for selection, (xah-fly-keys Command Mode)
 
-   + Next, move your cursor down one single line (i.e., use the "k" key, xah-fly-keys Command Mode) to select the entire heading down so that your cursor is left on the first bullet of the next heading line.   Make sure your cursor is only on the first bullet in the first column of the next heading line... Otherwise, anything else selected on the next heading line will also be copied!
+   + Next, move your cursor down one single line, i.e., use the "k" key (xah-fly-keys Command Mode), to move down one single line (selecting/highlighting the text). 
 
-- Type "c" (xah-fly-keys Command Mode) to copy this selection for pasting later... (You should have gotten only the Log Entry and not anything from the heading below it)
+   + Leave your cursor on the first _(leftmost)_ column of the very next line. DO not advance it any more columns to the right! Otherwise, anything else selected on the next line will also be copied!
+
+     *Note:* Selected text will be highlighted, but your cursor at the end of it will not be part of that selection. Placing your cursor on the first column of the next line will include the invisible new-line character which is what you want, but any text directly under the cursor will not be copied...  Later, after pasting this text somewhere else, your cursor will end up sitting on the first column of a blank line under the pasted text.  (exactly as intended)
+
+- Type "c" (xah-fly-keys Command Mode) to copy this selection for pasting later... (The highlighted text will go back to normal... You should have gotten only the Log Entry and not anything from the heading below it)  If you type: Spacebar "t" (xah-fly-keys leader key command) it will show you the contents of your paste buffer...  You can see what you copied in there...  To get out of the paste buffer view, type: Spacebar "u" and it will return you to where you were before...
 
 *** Paste your Cloned Log Entry:
 
@@ -46,40 +50,51 @@ Once I get this new scheme working well it will become my new General Purpose Lo
 
 - Advance your cursor on a blank line just below the main heading: "Begin Log Notebook:" and then press enter a couple times to get your cursor on a fresh clean line with some extra space above and below it... (above any previously time stamped entries you may already have placed)...
 
-- Press "v" (xah-fly-keys Command Mode) to paste your cloned Log Entry template... If you find out that what you copied also copied some of the heading below it, no problems... Just delete that part now... (realize that if you accidentally copied one or more invisible bullets to column one on a blank line they will create an invisible heading that you will need to delete... You will know this if you see an org-ellipsis "⤵" symbol on a line by itself indicating a heading but no text... Simply delete that whole line and it will go away... Now you are ready to do your new log entry...
+- Press "v" (xah-fly-keys Command Mode) to paste your cloned Log Entry template... If you find out that what you copied also included some unwanted text directly below it, no problems... Just delete that part now... (realize that if you accidentally copied one or more previously invisible bullets to column one on a blank line they will create an invisible "ghost" heading that you will now need to delete... You will know this if you see an org-ellipsis "⤵" symbol on a line by itself indicating a heading but no text... Simply delete that whole line and it will go away... Now you are ready to do your new log entry...
 
-- Place your cursor to the right of your newly cloned Log Entry heading by one space, (or directly on the existing timestamp if using the dummy placeholder entry the very first time) and then use the key binding:  C-c . (i.e., press ctrl key while holding "c", and then type a period) A date chooser panel will pop up... *Note:* If this is the first time there will already be a date time stamp... In that case put your cursor inside of it before typing C-c .
+- Place your cursor to the right of your newly cloned Log Entry heading by one space, (or directly on the existing timestamp if you are using the dummy placeholder entry the very first time) and then use the key binding:  C-c . (i.e., press ctrl key while holding "c", and then type a period) A date chooser panel will pop up...
 
-
-
-
-
-- Press ENTER to auto accept today's date and time... This will create a new timestamp, or update the existing timestamp to the current date/time...
+- Press ENTER to auto accept today's date and time... This will create a new timestamp, (or update the existing timestamp) with the current date/time...
 
 - You are now at the top of the list, (a few lines below the main "*Begin Log Notebook:"* heading), on a fresh new Log Entry Heading... Your timestamp indicates the present, -and- You are ready to record a log of your current activities! This way, your most recent log entries will be on the top and descend down from there...
 
+- Follow the :README: directions within the Time Card section contained within your fresh new log entry to learn how to "clock in" and "clock out" of your log entry as you are on the task of entering your log data... *Note:* Standard Emacs Key Conventions:  C-c C-x M-x etc. mean hold the Control (or META) key down while typing the key connected to it with the dash...   If you have a command that includes many C-key in succession simply hold the Control key down the entire time you type the keys...  If you see a key alone by itself not connected with a dash, that key must be typed AFTER letting go of the Control or Meta keys...  Got it? That's the key notation system we use here...  This is for new Emacs users... You veterans just shuddup and greet cha teeth! Arrr! ;-)
 
-
-
-
-
-- Follow the directions within the Time Card section to learn how to "clock in" and "clock out" of your log entry as you are on the task of entering your log data...
-
-- Continue to fill in your log data and when you are done go back to the Log Entry Heading and "clock out"
-
-** Log Entry (template)
+** Log Entry (template) <2020-08-01 Sat>
 
 :README:
+- Since you created this new log entry you are probably in the middle of a task related to it right now!  Go ahead and punch the clock right now as well, to start recording your time! The following Commands are defined below for you to remember and use to track your time:
 
-- With your cursor still sitting on your new Log Entry Heading, Start the time clock for this log entry by typing:   C-c C-x C-i
-   + A new drawer named *:CLOCKING:* will appear where all your clocked times for this heading will be recorded...
+  + *C-c C-x C-i* - Start The Clock _(to begin or resume clocking your current work)_
+      This creates a new :CLOCKING: Time Card Entry that looks like this:
+            CLOCK: [2020-08-02 Sun 12:04]
+      Do this now... Start recording your time girl!  Be in control of your life! 
+    
+     After doing the above, you can go away and do some work, leaving this log note to visit other files and work on them etc. The clock will be recording your time all the while... You will see in your mode line the elapsed clock time as you work...
 
-- Later When you are finished adding your log entry and ready to go do something else, place your cursor back on the *Log-Entry* heading and Stop the clock (clock out) by typing:  C-c C-x C-o
+  + *C-c C-x C-j* - Return back to the Heading where you started the clock...
+      You do this after you have worked on a task for a while and you need to come back to the time card (this Log Entry Heading) and stop the clock before going off to do something unrelated to the log entry...
+
+  + *C-c C-x C-o* - *Stop the Clock* (to stop clocking your time on task)
+       This finalizes the Time Card Entry (within :CLOCKING: that you created earlier when you started the clock).  The completed time card entry looks like this:
+            CLOCK: [2020-08-02 Sun 12:04]--[2020-08-03 Mon 00:23] => 12:19
+       The above entry shows start timestamp, end timestamp, and total time worked during this segment...  As you can see from the example above I left the clock running all day by accident.  If you do something like that you can always come back and directly edit the clock times by hand to amend them...  After changing clock times or dates, etc. type the following to update the Time Card Entry:
+            *C-c C-c*
+       and the total time will change at the end showing your new calculated time...
+
+       If you need to go away and do something else before finishing this task, you can do so after clocking out... When you come back simply clock back in again to start another Time Card Entry just as before... The new time card entry will appear above the earlier one within the :CLOCKING: drawer... When you clock out of this task it will look just like the entry below it with a total time worked tagged on the end...
+
+       When you are all done with this Log Entry mark it :DONE: 
+
+  + *C-c C-c C-q* - Cancel Current Clock (in case you accidentally started it)
+       This removes currently running clock and forgets it...
+
+  + C-x C-x C-d - Display Clocking Info:
+       This will show
+
 
 - Once all of this has become routine for you, go ahead and remove this README drawer from this template... That way it does not get copied when you need to clone new log entries... 
 :END:
-
-**** Time Card: <2020-07-30 Thu>
 
 **** Main Points:
 
@@ -89,29 +104,25 @@ Once I get this new scheme working well it will become my new General Purpose Lo
 
 **** Details:
 
-Yadda, Yadda, Yadda... etc...
+Yadda, Yadda, Yadda... etc... 
 
 * Begin Log Notebook:
-** Log Entry <2020-07-30 Thu>
+
+** Log Entry <2020-08-01 Sat>
 :CLOCKING:
-CLOCK: [2020-07-30 Thu 21:51]--[2020-07-30 Thu 22:06] =>  0:15
+CLOCK: [2020-08-02 Sun 12:04]--[2020-08-03 Mon 00:23] => 12:19
+CLOCK: [2020-08-01 Sat 19:34]--[2020-08-02 Sun 12:03] => 16:29
+CLOCK: [2020-08-01 Sat 19:17]--[2020-08-01 Sat 19:29] =>  0:12
 :END:
 
-**** Time Card:
-
-|--------+-------+--------|
-| *Start:* | *Stop:* | *Hours:* |
-|--------+-------+--------|
-|        |       |        |
-
-
-|-------------------+--------|
-| Start: / Stop:    | Hours: |
-|-------------------+--------|
-| -07-24 Fri>- |        |
-|-------------------+--------|
-| *Total Time:*       |        |
-|-------------------+--------|
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+#+CAPTION: Clock summary at [2020-08-03 Mon 02:15]
+| Headline                       | Time    |         |
+|--------------------------------+---------+---------|
+| *Total time*                     | *1d 5:00* |         |
+|--------------------------------+---------+---------|
+| \_  Log Entry <2020-08-01 Sat> |         | 1d 5:00 |
+#+END:
 
 **** TODO Main Points:
 

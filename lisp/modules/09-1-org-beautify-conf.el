@@ -225,14 +225,14 @@
  :height 120
  :width 'normal)
 
-(when DARWIN
+(when ME--DARWIN
   (set-face-attribute
    'fixed-pitch-serif t
    :family "Courier Prime Emacs"
    :height 130
    :width 'normal))
 
-(when LINUX
+(when ME--LINUX
   (set-face-attribute
    'fixed-pitch-serif t
    :family "Courier Prime Emacs"

@@ -46,7 +46,7 @@
 ;; Reference: GitHub:Purcell/exec-path-from-shell
 ;; Install: from MELPA exec-path-from-shell
 
-(when POSIX (exec-path-from-shell-initialize))
+(when ME--POSIX (exec-path-from-shell-initialize))
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; imenu-list configuration:
@@ -149,7 +149,7 @@
 ;
 ;; Platform Specific SML directory abbreviations:
 ;;                  (DISABLED)
-;(when DARWIN
+;(when ME--DARWIN
 ;  (add-to-list 'sml/replacer-regexp-list '("^~/\\.emacs\\.d/" ":EMACS:"))
 ;  (add-to-list 'sml/replacer-regexp-list '("^~/Documents/" ":DOCS:"))
 ;  ;; Add more platform specific directory shortcut abbreviations to this list here as needed....
@@ -157,7 +157,7 @@
 ;  ;; final parenthesis below to tidy up %^)...
 ;  )
 ;
-;(when LINUX
+;(when ME--LINUX
 ;  (add-to-list 'sml/replacer-regexp-list '("^~/\\.emacs\\.d/" ":EMACS:"))
 ;  (add-to-list 'sml/replacer-regexp-list '("^~/Documents/" ":DOCS:"))
 ;  ;; Add more platform specific directory shortcut abbreviations to this list here as needed....

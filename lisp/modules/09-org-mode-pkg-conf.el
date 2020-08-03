@@ -58,7 +58,7 @@
 ;;;
 ;; Path to Your ORG Docs on Mac OS:
 
-(when DARWIN
+(when ME--DARWIN
   (defconst my-org-dir
     (file-name-as-directory
      (expand-file-name "~/Path/To/Your-MacOS-Org-Docs"))))
@@ -66,7 +66,7 @@
 ;;;
 ;; Path to Your ORG Docs on Linux:
 
-(when LINUX
+(when ME--LINUX
   (defconst my-org-dir
     (file-name-as-directory
      (expand-file-name "~/Path/To/Your-Linux-Org-Docs"))))
@@ -209,40 +209,80 @@
   (org-sidebar-tree-jump-indirect)
   (windmove-left))
 
+
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  Set up Fancy Org Mode in W I D E  S C R E E N
+;;  Set up Normal Org View in Single Window Frame
+;;  NO Org Sidebar Tree Left navigation pane...
+
+(defun me_org-narrow-screen ()
+  "Set up Org View in Single Window Frame with
+   dimensions set to work fine as a single window only
+   session"
+  (interactive)
+  ;; Test to make sure we are in Org Mode, if not print a warning...
+  (if (equal 'org-mode major-mode)
+      (progn
+        (when (= (length (window-list)) 2)
+          (if (eq 'selected-window 'window-left-child)
+              () ;; Do nothing...
+            (progn
+              ;; Else Move to left most window:
+              (windmove-left)
+              ;; Remove Split Windows...
+              (org-sidebar-tree-toggle))))
+
+        ;; Make NORMAL ORG MODE Frame size for writing/composition:
+        (modify-frame-parameters nil
+                                 (quote
+                                  ((name   . "HA Mod Emacs v3.2 - Normal Org Mode")
+                                   (height . 38)
+                                   (width  . 100))))
+
+        ;; Set Olivetti Width (88 column wide)
+        (olivetti-set-width 88))
+
+    ;; ELSE print warning about buffer not being an Org File...
+    (message "Warning: You are NOT visiting a .ORG file!")))
+
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Set up Fancy Org View in W I D E  S C R E E N
 ;;  mode with Org Sidebar Tree in Left pane and
 ;;  Content window on right... (i.e., Like Scrivener)
 
 (defun me_org-wide-screen ()
-  "Set up Fancy Org Mode in W I D E  S C R E E N view with frame
+  "Set up Fancy Org View in W I D E  S C R E E N view with frame
    dimensions set to work nicely with split windows:  A navigation
    window pane on left side showing the Org Tree headings only, and a content
    window on the right side showing everything (for editing)"
   (interactive)
+  ;; Test to make sure we are in Org Mode, if not print a warning...
+  (if (equal 'org-mode major-mode)
+      (progn
+          ;; Make Wide Screen Fancy Org View View:
+            (modify-frame-parameters nil
+                                     (quote
+                                      ((name   . "HA Mod Emacs v3.2 - Fancy Org View")
+                                       (height . 38)
+                                       (width  . 150))))
+            ;; Split Windows with org outline tree in narrow left window...
+            (org-sidebar-tree)
+            ;; Set Olivetti Width (100 column wide)
+            (olivetti-set-width 100))
 
-  ;; Set up WIDE SCREEN Frame size for writing/composition:
-  (modify-frame-parameters nil
-                           (quote
-                            ((name   . "HA Mod Emacs v3.2 - Fancy Org Mode")
-                             (height . 38)
-                             (width  . 150))))
-  ;; Split Windows with org outline tree in narrow left window...
-  (org-sidebar-tree)
-
-  ;; Enable Olivetti Mode (100 column wide)
-  (olivetti-mode)
-  (olivetti-set-width 100))
+    ;; ELSE print warning about buffer not being an Org File...
+    (progn
+      (message "Warning: You are NOT visiting a .ORG file!"))))
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  Modular Emacs - Fancy Org Mode Hook function:
+;;  Modular Emacs - Fancy Org View Hook function:
 ;;  This Fancy Org Mode hook takes care of setting your writing/publishing
 ;;  environment nicely...
 ;;
 ;;  Using this mode you can have two different Screen Layouts via a Toggle key..
 ;;  Normal Layout for general purpose Org mode work in a single window...  and
-;;  Fancy Org Mode W I D E  S C R E E N layout with navigation tree window on
+;;  Fancy Org View W I D E  S C R E E N layout with navigation tree window on
 ;;  left side and content window on right side for adding content.  The wide screen
 ;;  based publishing environment is working just as well as my Scrivener Projects
 ;;  were in the past!  It will soon be exceeding anything that I could do with
