@@ -39,8 +39,9 @@
 ;;
 ;;                         M-x list-colors-display
 ;;
-;;  NOTE:  You can also do this for tag faces:
-;;        Copy this form when you are ready to do that and add in your tags as a new element in the list...
+;;  NOTE: You can also do this for tag faces:
+;;        Copy this form when you are ready to do that and add in your tags
+;;        as a new element in the list...
 ;;
 ;(setq org-tag-faces
 ;      (quote (
@@ -124,19 +125,9 @@
 ;;       TOP LEVEL Group Tags for quick access:
 ;;       (see dotted pairs (cons cells) below in org-tag-alist)
 ;;
-;;    @HA                 "h"
-;;    @HAP                "p"
-;;    @EA                 "e"
-;;    @OMAN               "o"
-;;    @MWM                "m"
-;;    @SOI                "s"
-;;    @MCM                "c"
-;;    @DOCS               "d"
 ;;    @Qubes              "q"
 ;;    @Alisha             "a"
 ;;    Family              "f"
-;;    @HAP-Clients        "i"
-;;    @MWM-Clients        "n"
 ;;    @LIBRARY            "l"
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -144,6 +135,7 @@
 ;;  These will be appended later to create the full
 ;;  org-tags-alist...
 
+;;;
 ;; Create TOP LEVEL TAGS (specific tags for different parts of my life)
 ;; Note:  These tags are mutually exclusive...
 
@@ -153,72 +145,51 @@
     ("@Qubes" . ?q)   ;; Qubes OS - VM compartmentalization management...
     ("@Alisha" . ?a)  ;; Me %^)  (change to your name)
     ("@Family" . ?f)  ;; My Relatives...  (or yours - keep it)
-    (:startgroup)     ;; BEGIN mutually exclusive tags:
-    ("@HA" . ?h)         ;; Harmonic Alchemy
-    ("@HAP" . ?p)        ;; Harmonic Alchemy Productions
-    ("@EA" . ?e)         ;; Emergent Anomalies eZine, podcast
-    ("@OMAN" . ?o)       ;; Open Media Arts Metwork
-    ("@MWM" . ?m)        ;; Marketing Web Media
-    ("@SOI" . ?s)        ;; Sustainable Orcas Island
-    ("@MCM" . ?c)        ;; Marketing Content Media
-    (:endgroup)       ;; END mutually exclusive tags...
    )))                ;; END me--top-tags
 
-;;  NOTE: TOP LEVEL TAGS above stands alone...
-;;        It does not depend on any of the lists below...
-
-
-;;  Create @HAP_Clients Top Level Tags Group:
-
-(defvar me--hap-clients-tags
-  (quote
-   ((:startgrouptag)          ;; BEGIN TOP LEVEL @HAP_Clients Tag Group:
-    ("@HAP_Clients" . ?i)
-    (:grouptags)
-    (:startgroup)                 ;; BEGIN Mutually Exclusive @HAP_Clients group members:
-    ("Carolyn_Cruso")
-    ("Turtleback")
-    ("Samara_Shaw")
-    ("Elder_Pritchard")
-    ("Matthew_Sheppard")
-    ("Randy_Smith")
-    ("Fun_House")
-    (:endgroup)                   ;; END Mutually Exclusive @HAP_Clients group members:
-    (:endgrouptag))))         ;; END HAP_Clients Tag Group
-
-;;  NOTE: The TOP LEVEL @HAP_Clients Tag Group above stands alone...
-;;        It does not depend on any of the lists below...
-
-
-;;  Create @MWM_Clients Top Level Tags Group:
-
-(defvar me--mwm-clients
-  (quote
-   ((:startgrouptag)          ;; BEGIN TOP LEVEL @MWM_Clients Tag Group:
-    ("@MWM_Clients" . ?n)
-    (:grouptags)
-    (:startgroup)                 ;; BEGIN Mutually Exclusive @MWM_Clients group members:
-    ("Heather_Wolfe")
-    ("Jim_Litch")
-    ("Tom_Ely")
-    ("UNCA")
-    ("Kyria_Mystica")
-    (:endgroup)                   ;; END Mutually Exclusive @MWM_Clients group members:
-    (:endgrouptag))))         ;; END @MWM_Clients Tag Group
-
-;;  NOTE: The TOP LEVEL @MWM_Clients Tag Group above stands alone...
-;;        It does not depend on any of the lists above or below...
-
-
-;;  Create TOP LEVEL General Tags for everything else:
-;; NOTE:   Possibly break these up into separate categories
-;;         to use selectively directly within related .org files
-;;         where they may be loaded via eLisp code blocks at the
-;;         top of the .org files...
+;;;
+;; Create TOP LEVEL General Tags for everything else:
+;;
+;; NOTE: There are way too many tags below... And that is my public list!
+;;       I have overridden this file in /my-modules/ with even more tags!
+;;       I don't expect to use all of these in any practical way via any
+;;       pop-up HELM views etc.  There are just too many to make that useful!
+;;
+;;       If you find any of the tags below useful to you, it may be wise to break
+;;       them up into categories or use them as file tags for specific groups of
+;;       files, or load them via eLisp code blocks, etc. That way you will have
+;;       a way to use different agendas designed to match a subset group
+;;       containing no more than say 10 or 15 tags for each category, max.
+;;
+;; The List below has a long history!  I started this list by using tags in
+;; Firefox to organize bookmarks maybe 15 or so years ago... I think it was
+;; still called Netscape back then actually...  The list migrated later to
+;; Evernote, (which was way cool because the tags were hierarchical).  I wrote
+;; an article about that wishing for a file system to designed like that.  No...
+;; Apple did not do it... They have a tag system in the Finder, but it is lame...
+;;
+;; Later, I ditched Evernote for simple Markdown Notes in Emacs, using DEFT
+;; for organization.  That lasted for about a year... I knew I would eventually
+;; be doing this in org-mode but I had a lot to learn first... And I still have
+;; a LOT to learn... This stuff is vast! OMG!
+;;
+;; The real reason I put all these tags in here is to maintain my master list
+;; of tags, #Hashtags, etc. for everything I do, with reasonable consistency in
+;; one single place where I have programmatic control over them to help keep them
+;; unique and not duplicated with different versions/spellings of the same tag!
+;;
+;; Lisp is the best place, for things like that. Eventually I will come up with an
+;; efficient scheme in Org-Mode to manage all of them with the ability to do
+;; quick lookups and assignments.  Many of which will of course be automatic,
+;; based on work processes...
 
 (defvar me--general-tags
   (quote
-   (("Gen💡Ops")
+
+   ;; Major Categories:
+
+   (("GenRef")
+    ("Gen💡Ops")
     ("Pub✎Ops")
     ("Dev§Ops")
     ("git")
@@ -230,6 +201,31 @@
     ("GTD")
     ("Autofocus")
 
+    ;; Personal:
+
+    ("Friends")
+    ("Personal")
+    ("photos")
+
+    ;; Reference - Research
+
+    ("Science")
+    ("emotional_intelligence")
+    ("Nikola_Tesla")
+    ("permaculture")
+    ("seasteading")
+    ("seed_freedom")
+    ("sustainability")
+    ("economics")
+    ("cryptocurrency")
+    ("government")
+    ("politics")
+
+    ;; Tech Stuff:
+
+    ("progLangs")
+    ("Lisp")
+    ("eLisp")
     ("apps_tools")
     ("Emacs")
     ("email")
@@ -254,28 +250,38 @@
     ("Xah_Fly_Keys")
     ("zsh")
 
+    ;; Security Related:
+
     ("Info✴Sec")
     ("GnuPG")
     ("OpenSSL")
     ("passwords")
     ("OpenSSH")
 
+    ;; Business - Marketing:
+
     ("Market$Ops")
+    ("sales")
+    ("invoices")
+    ("bills")
+    ("transactions")
+    ("timesheets")
+    ("banking")
+    ("legal")
+
+    ;; Creative - Design:
 
     ("Graphic_Arts")
+    ("animation")
+    ("Blender")
+    ("images")
+    ("svg")
+    ("inkscape")
+    ("gimp")
+
+    ;; Writing Publishing:
 
     ("Writing_Resources")
-    ("Esoteric")
-    ("HarmonicAlchemy")
-    ("Shamanism")
-    ("sound_healing")
-    ("fringe_science")
-    ("paranormal")
-    ("parallel_worlds")
-    ("simulation_hypothesis")
-    ("seti")
-    ("ufo")
-    ("time_travel")
     ("journalism")
     ("copyright")
     ("drafts")
@@ -288,46 +294,22 @@
     ("fonts")
     ("Fountain")
     ("symbolism")
-    ("cheatsheets")
-    ("diagrams")
 
-    ("GenRef")
+    ;; Productions - Games:
 
     ("Productions")
     ("pre_production")
     ("post_production")
     ("audio")
     ("music_audio_tech")
-    ("music_instruments")
     ("codecs")
     ("audio_equipment")
     ("audio_theatre")
     ("podcast")
-    ("animation")
-    ("Blender")
     ("VR")
-    ("Kitely")
-    ("Second_Life")
-    ("OpenSim")
-    ("Sinespace")
-    ("Unity")
 
-    ("Science")
-    ("fringe_science")
-    ("emotional_intelligence")
-    ("progLangs")
-    ("Lisp")
-    ("eLisp")
-    ("Nikola_Tesla")
-    ("permaculture")
-    ("seasteading")
-    ("seed_freedom")
-    ("sustainability")
-    ("economics")
-    ("cryptocurrency")
-    ("government")
-    ("politics")
-    
+    ;; Music - Sound Design:
+
     ("Composing")
     ("arranging")
     ("orchestration")
@@ -335,23 +317,26 @@
     ("film_scoring")
     ("sound_design")
     ("Music_Apps")
+    ("music_instruments")
+
+    ;; General Purpose:
 
     ("@TAGS")
     ("hashtags")
+    ("cheatsheets")
+    ("diagrams")
     ("how_to")
     ("logs")
     ("scratchpads")
-    ("photos")
     ("quotes")
     ("README")
     ("templates")
     ("tools")
-    ("transactions")
+    ("presets")
     ("tutorials")
     ("videos")
 
-    ("Friends")
-    ("Personal")
+    ;; Culinary Arts:
 
     ("Culinary")
     ("baking")
@@ -371,86 +356,6 @@
 
 ;;  NOTE: The TOP LEVEL GENERAL TAGS above stands alone...
 ;;        It does not depend on any of the lists above or below...
-
-
-;; Create TOP LEVEL TAROT TAG GROUP for my Tarot Guide.
-;; NOTE:  Possibly put these directly within Tarot & Mystical
-;;        related .org files instead...
-
-(defvar me--tarot-tags
-  (quote
-   ((:startgrouptag)          ;; BEGIN TOP LEVEL - @Tarot Tag Group:
-    ("@Tarot")
-    (:grouptags)
-    (:startgroup)             ;; BEGIN TOP LEVEL @Tarot mutually exclusive groups:
-
-    ("tarot_general")
-
-    ("tarot_readings")
-
-    (:startgrouptag)              ;; BEGIN @Tarot sub group - Major_Arcana Tag Group:
-    ("Major_Arcana")
-    (:grouptags)
-    (:startgroup)                     ;; BEGIN Major_Arcana mutually exclusive group:
-    ("Majarc_00_Fool")
-    ("Majarc_01_Magician")
-    ("Majarc_02_High_Priestess")
-    ("Majarc_03_Empress")
-    ("Majarc_04_Emperor")
-    ("Majarc_05_Hierophant")
-    ("Majarc_06_Lovers")
-    ("Majarc_07_Chariot")
-    ("Majarc_08_Justice_Strength")
-    ("Majarc_09_Hermit")
-    ("Majarc_10_Wheel_of_Fortune")
-    ("Majarc_11_Strength_Justice")
-    ("Majarc_12_Hanged_Man")
-    ("Majarc_13_Death")    
-    ("Majarc_14_Temperance")
-    ("Majarc_15_Devil")
-    ("Majarc_16_Tower")
-    ("Majarc_17_Star")
-    ("Majarc_18_Moon")
-    ("Majarc_19_Sun")
-    ("Majarc_20_Judgment")
-    ("Majarc_21_World")
-    (:endgroup)                       ;; END mutually exclusive group:
-    (:endgrouptag)                ;; END Major-Arcana Tag Group
-
-    (:startgrouptag)              ;; BEGIN @Tarot sub group -  Minor_Arcana Tag Group:
-    ("Minor_Arcana")
-    (:grouptags)
-    (:startgroup)                     ;; BEGIN Minor_Arcana mutually exclusive group:
-    ("minArc_Cups")
-    ("minArc_Pentacles")
-    ("minArc_Swords")
-    ("minArc_Wands")
-    (:endgroup)                       ;; END mutually exclusive group:
-    (:startgroup)                     ;; BEGIN Minor_Arcana mutually exclusive group:
-    ("minArc_King")
-    ("minArc_Queen")
-    ("minArc_Knight")
-    ("minArc_Page")
-    ("minArc_Ace")
-    ("minArc_02")
-    ("minArc_03")
-    ("minArc_04")
-    ("minArc_05")
-    ("minArc_06")
-    ("minArc_07")
-    ("minArc_08")
-    ("minArc_09")
-    ("minArc_10")
-    (:endgroup)                       ;; END mutually exclusive group:
-    (:endgrouptag)                ;; END Minor Arcana Tag Group
-
-    (:endgroup)               ;; END TOP LEVEL @Tarot mutually exclusive groups:
-    (:endgrouptag)            ;; END TOP LEVEL @Tarot Tag Group
-   ))) ;; END Tarot
-
-;;  NOTE: The TOP LEVEL Tarot Tag Group above stands alone...
-;;        It does not depend on any of the lists above or below...
-
 
 ;; Create TOP LEVEL @LIBRARY TAG GROUP:
 ;; NOTE:  Possibly put these directly within "Books & Library"
@@ -486,9 +391,16 @@
     (:grouptags)
     (:startgroup)                 ;; BEGIN Mutually Exclusive Group Tags
     ("Mark_Twain")
+    ("Charles_Dickens")
+    ("Jonathan_Swift")
     ("Arthour_C_Clark")
+    ("William_Butler_Yeats")
+    ("George_Bernard_Shaw")
+    ("T_S_Eliot")
     ("Isaac_Asimov")
     ("Ray_Bradbury")
+    ("George_Orwell")
+    ("Aldous_Huxley")
     ("Philip_K_Dick")
     ("Robert_Heinlein")
     ("Orson_Welles")
@@ -499,18 +411,14 @@
     (:endgrouptag)         ;; END TOP LEVEL @LIBRARY Tag Group:
    ))) ;; END me--library-tags
 
-
 ;;  NOTE: The TOP LEVEL @LIBRARY Tag Group above stands alone...
 ;;        It does not depend on any of the lists above or below...
-
 
 ;;;
 ;;  Append all TOP LEVEL tag lists together for org-mode quick set tags....
 
 (setq org-tag-alist (append
                      me--top-tags
-                     me--hap-clients-tags
-                     me--mwm-clients
                      nil))
 
 ;;;
@@ -518,13 +426,11 @@
 
 (setq org-tag-persistent-alist (append
                                 me--general-tags
-                                me--tarot-tags
                                 me--library-tags
                                 nil))
 
-
+;;;
 ;; Here is some code I snarfed from the web that may help simplify the above...
-
 ;; The code below is not finished... It is supposed to save org-tag-alist to a file.
 ;; I am not sure if I need to save to a file, as I am doing the opposite; i.e.,
 ;; reading this file and then loading org-tags-alist with data stored here...
