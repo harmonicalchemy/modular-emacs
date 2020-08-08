@@ -39,7 +39,6 @@
 (mapc (lambda (p) (package-install p))
       me--required-packages)
 
-
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Load Environment Vars from shell:
 ;; If we are using unix in a POSIX compliant shell...
@@ -47,30 +46,31 @@
 ;; Reference: GitHub:Purcell/exec-path-from-shell
 ;; Install: from MELPA exec-path-from-shell
 
-(when *is-posix* (exec-path-from-shell-initialize))
-
+(when ME--POSIX (exec-path-from-shell-initialize))
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  imenu and imenu-list configuration:
-
+;; imenu-list configuration:
+;;                 (DISABLED)
+;;  Note:  I am currently experiencing problems
+;;         with imenu-list.  It is disabled until
+;;         that can be sorted out...
+;
 ;(require imenu-list)
-
-(setq imenu-auto-rescan t)
 ;(setq imenu-list-focus-after-activation t)
 ;(setq imenu-list-auto-resize nil)
 
+;; imenu tweaks:
+(setq imenu-auto-rescan t)
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Load default auto-complete configs
 
 (ac-config-default)
 
-
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Start which-key-mode
 
 (which-key-mode)
-
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Default Mode Line Tweaks:
@@ -105,22 +105,23 @@
 ;; DISABLED - I no longer wish to mess with fancy
 ;;            mode lines... The default works fine
 ;;            for me. ;-) Your mileage may vary...
-
+;
 ;;  Choose SML Theme:
 ;;  NOTE:   THIS IS DISABLED
 ;;    (I am no longer using mode-line packages)
 ;;    (pick one and enable it if you like but also
 ;;    load the theme at top first!)
-
+;
 ;(setq sml/theme 'dark)
 ;(setq sml/theme 'light)
 ;(setq sml/theme 'respectful)
-
+;
 ;; Enable Smart Mode Line after Emacs Startup:
 ;; NOTE: THIS IS DISABLED (see above note)
 ;(add-hook 'after-init-hook 'sml/setup)
-
-;;; POWERLINE MODE DISABLED
+;
+;;; POWERLINE MODE
+;;                          (DISABLED)
 ;;  If you would rather use powerline, enable the three forms below
 ;;  and disable the above smart-mode-line section if you enabled it
 ;;  previously...
@@ -131,8 +132,8 @@
 ;(require 'powerline)
 ;(powerline-center-theme)
 ;(setq powerline-default-separator 'slant)
-
-
+;
+;
 ;; Platform Specific SML directory abbreviations:
 ;; NOTE: THIS IS DISABLED - Just as above you need to
 ;;       un-comment this section and make sure other smart-mode-line
@@ -145,29 +146,29 @@
 ;;  (one which you would like to make a shortcut abbreviation for...
 ;;  Add more just like that to the end of the list (as instructed in the
 ;;  comment at the end of the list)
-
+;
 ;; Platform Specific SML directory abbreviations:
-
-;(when *is-darwin*
+;;                  (DISABLED)
+;(when ME--DARWIN
 ;  (add-to-list 'sml/replacer-regexp-list '("^~/\\.emacs\\.d/" ":EMACS:"))
 ;  (add-to-list 'sml/replacer-regexp-list '("^~/Documents/" ":DOCS:"))
 ;  ;; Add more platform specific directory shortcut abbreviations to this list here as needed....
 ;  ;; When you are done adding new abbreviations, get rid of this comment and pull up the
 ;  ;; final parenthesis below to tidy up %^)...
 ;  )
-
-;(when *is-linux*
+;
+;(when ME--LINUX
 ;  (add-to-list 'sml/replacer-regexp-list '("^~/\\.emacs\\.d/" ":EMACS:"))
 ;  (add-to-list 'sml/replacer-regexp-list '("^~/Documents/" ":DOCS:"))
 ;  ;; Add more platform specific directory shortcut abbreviations to this list here as needed....
 ;  ;; When you are done adding new abbreviations, get rid of this comment and pull up the
 ;  ;; final parenthesis below to tidy up %^)...
 ;  )
-
+;
 ;; Platform Independent SML directory abbreviations:
-
+;
 ;  (add-to-list 'sml/replacer-regexp-list '("^:DOCS:/Path/To/Your/Other/Docs/" ":My-Other-Docs:"))
-
+;
 ;; Add more platform independent directory shortcut abbreviations just like the last form above...
 ;; These are invoked independently as complete forms here... No cleanup or closing paren needed when
 ;; adding to the end of this list...
@@ -182,21 +183,111 @@
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  Modular Emacs - Make Frame Function:
+;;  Modular Emacs - Make Writer's Frame Function:
+;;  This simply makes new frames to match 
+;;  HA Modular Emacs Writing Mode Specification
+;;  using Courier Prime Emacs font with dimensions
+;;  that fit best for authors/publishers on both
+;;  iMac 27" screens and small Linux Laptops...
+;;  The new frame opens with initial buffer set
+;;  to: *Bookmark List*
+
+(defun me_make-writing-frame ()
+  "Create Frames using ME default writer's face
+   and ME default writing/authoring frame dimensions.
+   Frame opens with buffer set to *Bookmark List*"
+  (interactive)
+  (progn
+    ;; Set buffer to *Bookmark List*
+    (bookmark-bmenu-list)
+
+    ;; Make New Writer's Frame:
+    (make-frame
+     (quote
+      ;; Modify Frame dimensions for Writing with Olivetti mode enabled...
+      ((name . "HA Mod Emacs v3.2 - Writer's Frame")
+       (height . 38)
+       (width . 100))))
+
+    ;; Select this new frame:
+    (select-frame-by-name "HA Mod Emacs v3.2 - Writer's Frame")
+
+    ;; Set Default Face to Courier Prime Emacs:
+    (set-face-attribute 'default (selected-frame)
+                        :family "Courier Prime Emacs"
+                        :slant 'normal
+                        :height 138
+                        :weight 'normal
+                        :width 'normal)
+
+    ;; Call Xah-Fly-Keys (resets some face attributes)
+    (xah-fly-keys 1)))
+
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Modular Emacs - Make Coder's Frame Function:
 ;;  This simply makes new frames to match 
 ;;  HA Modular Emacs Coding Mode Specification
 ;;  using Hermit font with dimensions that fit
 ;;  best for coding on both iMac 27" screens
-;;  and small Linux Laptops... (a tough juggle)
+;;  and small Linux Laptops...
+;;  The new frame opens with initial buffer set
+;;  to: *scratch*
 
-(defun me_make-default-frame ()
+(defun me_make-coding-frame ()
   "Create Frames using ME default coding face
-   and ME default coding frame dimensions"
+   and ME default coding frame dimensions
+   Frame opens with buffer set to *scratch*"
   (interactive)
   (progn
-    (make-frame)
-    (me_set-default-face)))
+    ;; Set Buffer to *scratch*;
+    (set-buffer "*scratch*")
 
+    ;; Make New Coder's Frame:
+    (make-frame
+     (quote
+      ;; Modify Frame dimensions for coding...
+      ((name . "HA Mod Emacs v3.2 - Coder's Frame")
+       (height . 38)
+       (width . 88))))
+
+    ;; Select this new frame:
+    (select-frame-by-name "HA Mod Emacs v3.2 - Coder's Frame")
+
+    ;; Set Default Face to Hermit for coding:
+    (set-face-attribute 'default (selected-frame)
+                        :family "Hermit"
+                        :slant 'normal
+                        :height 120
+                        :weight 'normal
+                        :width 'normal)
+
+    ;; Call Xah-Fly-Keys (resets some face attributes)
+    (xah-fly-keys 1)))
+
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Modular Emacs - Make Frame Function:
+;;  This simply makes new frames to match 
+;;  HA Modular Emacs current me--def-face flag setting.
+;;  If the flag is set to: 1, mw_make-writing-frame
+;;  function above is called...
+;;  If the flag is set to: 2,  mw_make-coding-frame
+;;  function above is called...
+
+(defun me_make-frame ()
+  "Create Frames depending on the current setting of
+   the me--def-face flag. If flag = 2 make writer's 
+   frame. If flag = 1, make coder's frame..."
+  (interactive)
+  (progn
+    (cond
+     ((= me--def-face 2)
+      (message "Creating Writer's Frame")
+      (me_make-writing-frame))
+     ((= me--def-face 1)
+      (message "Creating Coder's Frame")
+      (me_make-coding-frame)))))
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Modular Emacs - Set Default Face Functions:
@@ -233,7 +324,7 @@
 ;;
 ;; Set Default face to Org face Function:
 
-(defun me_set-org-face ()
+(defun me_set-writing-face ()
   "Set default face to Courier Prime Emacs (A nice mono serif for writing)"
   ;; NOTE1: This only sets the face for the currently Selected Frame...
   ;;        (other frames are not affected)
@@ -242,21 +333,12 @@
   ;;        is to simply toggle the key twice.  A silly fix is too complicated imho!
   (interactive)
   (progn
-    (when *is-darwin*
-      (set-face-attribute 'default (selected-frame)
-                          :family "Courier Prime Emacs"
-                          :slant 'normal
-                          :height 138
-                          :weight 'normal
-                          :width 'normal))
-
-    (when *is-linux*
-      (set-face-attribute 'default (selected-frame)
-                          :family "Courier Prime Emacs"
-                          :slant 'normal
-                          :height 138
-                          :weight 'normal
-                          :width 'normal))
+    (set-face-attribute 'default (selected-frame)
+                        :family "Courier Prime Emacs"
+                        :slant 'normal
+                        :height 138
+                        :weight 'normal
+                        :width 'normal)
 
     ;; Modify Frame dimensions for Writing with Olivetti mode enabled...
     (modify-frame-parameters nil
@@ -268,7 +350,7 @@
 
 ;; Restore Default Face Function:
 
-(defun me_set-default-face ()
+(defun me_set-coding-face ()
   "Set default font to Hermit Medium (my faverite mono font for coding)"
   ;; NOTE: This only sets the face for the currently Selected Frame...
   ;;       (other frames are not affected)
@@ -327,11 +409,11 @@
   (cond
    ((= me--def-face 1)
     (message "Setting default face to Courier Prime for Writing")
-    (me_set-org-face)
+    (me_set-writing-face)
     (setq me--def-face 2))
    ((= me--def-face 2)
     (message "Setting default face to Hermit for Coding")
-    (me_set-default-face)
+    (me_set-coding-face)
     (setq me--def-face 1))))
 
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -17,6 +17,12 @@ tags: Emacs, apps-tools, SysAdmin, HA-ModEmacs, how-to, README
 
 ## Release Notes:
 
+
+### 2020 July 25:
+
+Refactored many things, created new functions, etc. to fix buggy behaviour around making new frames, changing default faces, org-mode faces, etc.  Also made Xha-Fly-Keys Command Mode background a lighter more 'red' background than Insert Mode background which stays the dark indigo slate blackboard colour.  Thinks are looking and behaving much better now...  This will be tagged as Version 3.2.1   Docs, _(as usual, are still being updated)_ More about doc updates will be logged here later...
+
+
 ### 2020 July 16:
 
 Modular Emacs is now at Version 3.2. This has been tested on the develop branch long enough... I am still calling it "beta" because there is still a lot of work still unfinished... (mostly peripheral support files, templates, etc. and the Docs are still being updated... (does documentation ever end? lol).  Lots of improvements with the docs has been done however...
@@ -104,6 +110,7 @@ Once you have the basics running smoothly, then it will be safe to visit the _**
 
 - [Modular Emacs - Current Status](#modular-emacs---current-status)
     - [Release Notes:](#release-notes)
+        - [2020 July 25:](#2020-july-25)
         - [2020 July 16:](#2020-july-16)
         - [2020 June 27:](#2020-june-27)
         - [2020 June 16:](#2020-june-16)

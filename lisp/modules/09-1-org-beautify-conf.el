@@ -52,6 +52,62 @@
 
 (setq org-ellipsis "⤵")
 
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Hide all bullets/asterisks etc. in Org mode:
+;;
+;;  For writing books, docs, etc. I decided showing
+;;  the bullets, (even the last one) clutters up my
+;;  nice variable scale headings outline display...
+;;  This function was written to perform that service
+;;  globally in org mode... It is added to the my
+;;  org-mode hook function below...
+;;
+;;  NOTE: if you want to see the fancy bullets in your
+;;  outline headings, than don't call this function
+;;  in any org-mode hook functions...
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+(defun me_hide-org-bullets ()
+  "Hide the Org Bullets..."
+  (interactive)
+  (font-lock-add-keywords
+   'org-mode `(("\\(?:^\\(?1:\\*+\\)[[:blank:]]\\)"
+              (0 (progn (compose-region
+                         (match-beginning 1) (match-end 1)
+                         (pcase (length (match-string 1))
+                           (1 ?\u2219)
+                           (2 ?\u2022)
+                           (3 ?\u25c9)
+                           (_ ?\u25CB)))
+                        nil))))))
+
+;; Open Org Files initially folded in Overview Mode:
+
+(setq org-startup-folded 'overview)
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Force org-mode to auto insert single blank lines
+;;  around headings...
+
+(setq org-ascii-headline-spacing (quote (1 . 1)))
+
+(setq org-startup-indented t)
+
+(setq org-cycle-separator-lines 0)
+
+(setq org-blank-before-new-entry (quote ((heading)
+                                         (plain-list-item . auto))))
+
+(setq org-insert-heading-respect-content nil)
+
+(setq org-reverse-note-order nil)
+
+(setq org-show-following-heading t)
+
+(setq org-show-hierarchy-above t)
+
+(setq org-show-siblings (quote ((default))))
+
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Show nice chosen symbols instead of a dash in bulleted lists.
@@ -169,14 +225,14 @@
  :height 120
  :width 'normal)
 
-(when *is-darwin*
+(when ME--DARWIN
   (set-face-attribute
    'fixed-pitch-serif t
    :family "Courier Prime Emacs"
    :height 130
    :width 'normal))
 
-(when *is-linux*
+(when ME--LINUX
   (set-face-attribute
    'fixed-pitch-serif t
    :family "Courier Prime Emacs"
@@ -289,50 +345,6 @@
           ,@variable-tuple
           :height 1.5
           :foreground "AntiqueWhite" :underline nil))))))
-
-
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  Force org-mode to auto insert single blank lines
-;;  around headings...
-
-(setq org-ascii-headline-spacing (quote (1 . 1)))
-
-
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  Hide all bullets/asterisks etc. in Org mode:
-;;
-;;  For writing books, docs, etc. I decided showing
-;;  the bullets, (even the last one) clutters up my
-;;  nice variable scale headings outline display...
-;;  This function was written to perform that service
-;;  globally in org mode... It is added to the my
-;;  org-mode hook function below...
-;;
-;;  NOTE: if you want to see the fancy bullets in your
-;;  outline headings, than don't call this function
-;;  from the org-mode hook below...
-;;
-;;  I also have a Xfk Cmd-Mode key "p" defined
-;;  to invoke this function... (turning off bullets)
-;;  But no way to turn them back on...
-;;  TODO: Make this a toggle so you can turn them
-;;        back on for other non writing related work.
-;;        Then you don't have to mess with it here...
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-(defun me_hide-org-bullets ()
-  "Hide the Org Bullets... TODO: make this into a toggle"
-  (interactive)
-  (font-lock-add-keywords
-   'org-mode `(("\\(?:^\\(?1:\\*+\\)[[:blank:]]\\)"
-              (0 (progn (compose-region
-                         (match-beginning 1) (match-end 1)
-                         (pcase (length (match-string 1))
-                           (1 ?\u2219)
-                           (2 ?\u2022)
-                           (3 ?\u25c9)
-                           (_ ?\u25CB)))
-                        nil))))))
 
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;   END: [modular-emacs]:~/.emacs.d/lisp/modules/09-1-org-beautify-conf.el

@@ -1,32 +1,81 @@
 #+TITLE: HAP - Book Project Skeleton
 #+AUTHOR: Alisha Awen - Harmonic Alchemy Productions
-#+CATEGORY: 
+#+EMAIL: Siren1@disroot.org
+#+DATE: <2020-07-30 Thu>
+#+CATEGORY: book-templates
 #+STARTUP: overview
+#+STARTUP: indent
+#+STARTUP: align
 #+STARTUP: inlineimages
 #+DESCRIPTION: HAP - Bare Bones Skeleton with generic basics already done for.  Great for Authors to use when starting a new book project from scratch...
-#+EXPORT_FILE_NAME: My-New-Book.pdf
+#+EXPORT_FILE_NAME: New-Untitled-Book.pdf
+#+OPTIONS: inline:nil
+#+OPTIONS: tasks:nil
+#+OPTIONS: tags:nil
 #+KEYWORDS:
-#+FILETAGS:
+
+:README:
+To use this Book Project Skeleton (template) for your own projects, perform the following three steps:
+
+1. *Clone a Copy of this File:* Put it where you normally organize your writing projects.  Place it within its own folder named after your intended project title...
+
+2. *Copy/Clone ./media _(and all its contents)_:* To your new project's folder _(where you copied this file)_...  Any external documents or images referenced by your book project should be placed within this ./media/ directory... All of the external links, images, within the boilerplate examples may be used as examples for getting your own images, and external attachments linked properly...  This single ./media directory serves media and external attachments for all of the .org files contained within this .emacs.d/Docs/pub✎Ops directory... Cloning any of the other .org files will also require copy/cloning the ./media directory relative to them...
+
+3. *Start Writing Your Book:*  Change headings and structure to match your books outline Sections/Chapters/Scenes/ Plots, Characters, etc. Start doing the Tasks within the Tasks section... Have fun doing this...
+
+The In-Buffer Settings and KEYWORDS specified above are configured to get this file looking good when exported as a Standard PDF file:  To make a PDF out of this file issue the following Emacs command:
+
+     M-x org-latex-export-to-pdf
+
+After AucTeX is done parsing/compiling etc., a new PDF by the name of New-Untitled-Book.pdf -and- New-Untitled-Book.tex will appear within the same directory as this file...  
+
+Subsequent repeated calls to the above command will overwrite your existing New-Untitled-Book.pdf -and- New-Untitled-Book.tex files! 
+
+Change the #+EXPORT_FILE_NAME: directive at the top of this file to "Your-Book's-Title.pdf" That will be the file name produced thence forward...
+
+<2020-07-30 Thu> So far things are pretty basic PDF... We will get fancy with other formats later... I promice... I have to do all this documentation first!
+
+Enjoy! - Alisha Awen
+:END:
 
 * 💡 Scratchpad Refile:
 ** ☞ Start Here!
 
 :README:
-This Section is mainly to accommodate "seat-of-pants" writers (of which I have been accused of but I also crave the planning stuff).  Use this *Ideas / Scratchpad / Refile section as a quick place to document ideas and inspirations as they come alone.  You can refile them later... (even if it is intended for elsewhere) Parallel universe? Sure... You got that covered. %^)
+This Section is mainly to accommodate "seat-of-pants" writers (of which I have been accused of but I also crave the planning stuff).  I often come here for my [[https://projects.csail.mit.edu/gsb/old-archive/gsb-archive/gsb2000-02-11.html]["yak shaving"]] adventures...
 
-- Use this section to quickly capture inspired at-the-moment ideas While they are still fresh in mind...
+Use this: "💡 Scratchpad Refile ☞ Start Here!" section as a quick place to document ideas and inspirations as they come alone.  You can refile them later... (even if it is intended for elsewhere) Parallel universe? Sure... You got that covered. %^)
 
-  + Come directly here... 
+- Use this section to quickly capture inspired at-the-moment ideas While they are still fresh in mind.
 
-  + Advance your cursor a few newlines below this README drawer on a fresh clean line with some extra space below it as well... (above any previously time stamped entries you may already have placed)... (get rid of the "Visisonar - Object" Example Entry below... That is only for the template to illustrate these instructions by example...  
+- Come directly here:
 
-  + You are now at the top of the list and the time is the present...  There won't be any future entries ahead of you... (maybe next decade? time travel?)
+  + Advance your cursor a few newlines below this README drawer on a fresh clean line with some extra space below it as well... (above any previously time stamped entries you may already have placed)... If this is the first time, get rid of the "Visisonar - Object" example entry below... That is only for the template to illustrate these instructions by example.
 
-  + Enter a new timestamp with "C-c .", Hit enter to auto accept today's date and time.
+  + You are now at the top of the list, (a few lines below this README drawer). The time is the present. -and- You are all fired up with an idea to write about!
 
-  + Give it a quick title and make this new line an outline heading at the proper level. 
+  + Enter a new timestamp with "C-c .", (that's: Press Ctrl-c, let go, and then type a Period .)  A date chooser panel will pop up...
 
-  + Advance your cursor two lines below your new heading and begin typing away before you forget your fantastic idea!!!
+  + Press ENTER to auto accept today's date and time.  A new timestamped line will appear with your cursor blinking on the right of it... There won't be any future entries above you... (maybe next decade? time travel?)
+
+  + Advance your cursor a few more lines down to some fresh empty space -and- 
+
+  + Start Typing Your Idea Like Mad! 
+
+  + Don't stop and don't worry about formatting or organizing it until later, after all your inspiration has passed and you are ready to organize...
+
+- After You are Done Writing:
+
+  + Come back to the timestamp line where you first started... make sure the timestamp has at least one empty line above and below it.
+
+  + Give the timestamp line a title to the right of the timestamp.
+
+  + Make this timestamped line an outline heading with: "C-c ENTER" (that's Press Ctrl-c, let go and then press ENTER)
+     (make sure this new heading has empty lines above and below it)
+
+  + Adjust this new outline heading level with: M-▷ (this will make it a child of ☞ Start Here! heading above, rather than a sibling).
+
+  + Adjust the space between your heading and your fantastic idea below it to one single blank line.
 
   + You can organize everything else later...  Don't scare away the muses! Get your story down now!
 
@@ -523,11 +572,27 @@ Your process now is to grow these ideas as chapters of your story. You are expan
 - State "DONE"       from "NEW"        [2020-06-30 Tue 05:38]
 :END:
 
-Some of these Character tasks are based on the Snowflake Method as outlined in Randy Ingermanson's book: [[https://www.advancedfictionwriting.com/articles/snowflake-method/]["How to Write a Novel Using the Snowflake Method"]].  Other tasks are based on concepts outlined within the book: [[https://www.kmweiland.com/wp-content/uploads/crafting-unforgettable-characters.pdf]["Crafting Unforgettable Characters" by; K.M. Weiland]]... The second book is a free download from: [[https://www.kmweiland.com/][K.M. Weilands Website]] where you can find other great books and writers resources...
+:README:
+Some of these Character tasks are based on the Snowflake Method as outlined in Randy Ingermanson's book: [[https://www.advancedfictionwriting.com/articles/snowflake-method/]["How to Write a Novel Using the Snowflake Method"]].  Other tasks are based on concepts outlined within the book: [[https://www.kmweiland.com/wp-content/uploads/crafting-unforgettable-characters.pdf]["Crafting Unforgettable Characters" by; K.M. Weiland]]... The second book is a free download from: [[https://www.kmweiland.com/][K.M. Weilands Website]] where you can find other great books and writers resources... 
 
-Complete the following tasks for each and every character in your story...
+Much of what you will be filling in below is based on the above two books but no more instruction is given here as to the why or how... Only the dry forms are included here to make it convenient for you to complete this process...  You are strongly encouraged to purchase and read the above two books so that you will have a deeper understanding while you do this process...
 
-**** ACTIVE 📒 Prepare Character Summary Sheet:
+The tasks within this section will be used to produce a *"Character Bible"* for each character in your story.
+
+A character bible is the private lifetime personell file of that character...  Containing scrapbook items of importance throughout the character's life...  There is a new TV show on Amazon called: "Hanna" where this concept has been illustrated perfectly! In this CIA black ops thriller, Babies DNA are enhanced with wolf genes to make them grow up into super soldiers...  When they get deployed (looking as normal youths in high school, they each get a scrap-book containing all of their *"character's"* vital details.  There are pictures of family, best friends, past events, etc.  Their photo is on the front cover...
+
+All of it is fake, but as these secret CIA teens carry out roll play _(within their fake role as normal high school students)_, they begin to believe more and more that they actually "are" who their profiles say they are and not trained CIA agents anymore!  This TV series illustrates the power of getting immersed emphatically with your characters!
+:END:
+
+**** ACTIVE 📒 Create Character Bible for Each Character:
+
+***** DONE 📒 Prepare Character Summary Sheet:
+CLOSED: [2020-07-07 Tue 15:31]
+:LOGBOOK:
+- State "DONE"       from "ACTIVE"     [2020-07-07 Tue 15:31]
+:END:
+
+Take an hour to produce the following summary sheet.  This sheet will provide all the vital essentials for this character for easy reference later... This sheet will show up in the beginning of the "Character Bible" binder.
 
 |                   |                                                          |
 |-------------------+----------------------------------------------------------|
@@ -566,152 +631,303 @@ Complete the following tasks for each and every character in your story...
 |-------------------+----------------------------------------------------------|
 
 
-**** ACTIVE 👤 Detailed Character Interview:
+***** DONE 👤 Detailed Character Interview:
+CLOSED: [2020-07-07 Tue 21:58]
+:LOGBOOK:
+- State "DONE"       from "ACTIVE"     [2020-07-07 Tue 21:58]
+:END:
 
-Expand Above Summary Sheet to Detailed Character Interview
+:README:
+Perform a Detailed Character Interview.  This is best done as a "role play" exercise where you become "the character" who is having an interview with a doctor, or lawyer, or someone qualified to keep secrets confidential etc. Some of the information below would be provided via written examination... Other things would be done face to face... You will know the context when you get to those points...
 
-***** *Name:*
+Doing it this way will put you in the right emotional framework.  You will adopt this character's normal anxiety, expectations, assumptions, prejustice etc. You will end up feeling this character's impressions of the various questions on the forms, and you will feel this persons emotions and expectations going into a face to face interview... The results will be more authentic about the character and less, if anything at all about you the author...
+:END:
+
+****** *Name:*
 
 Put full name here.  Names are important! If you name your character incorrectly based on your desired personality type you will get into trouble!  Names must match the personality! It makes a big difference... Do your names research... Unless of course you need that "Boy named Sue" effect...
 
-***** *Background:*
+****** *Background:*
 
+******* Birth:
 - Birthday:
 
 - Place of Birth:
 
-- Parents:
+******* Parents:
 
-   What was important to the character's parents?
+- What was important to the character's parents?
 
-- Siblings:
+******* Siblings:
 
-- Economic/Social Status Growing Up?
+<add information about siblings here>
 
-- Ethnic Background:
+******* Economic/Social Status Growing Up?
 
-- Places Lived:
+<info>
 
-  + Current Address:
+******* Ethnic Background:
 
-- Education:
+<info>
 
-  + Favourite Subject:
+******* Places Lived:
 
-  + Special Training:
+- Previous Places Lived:
 
-- Jobs:
+- Current Address:
 
-  + Salary:
+******* Education:
 
-- Travel:
+- Favourite Subject:
 
-- Friends:
+- Special Training:
 
-  + How do people view this character?
+******* Jobs:
+- Salary:
 
-  + Lives with:
+******* Travel:
 
-  + Fights with:
+<info>
 
-  + Spends time with:
+****** Friends:
 
-  + Wishes to spend time with:
+- How do people view this character?
 
-  + Who depends on this character?
+- Lives with:
 
-  + Who does this character most admire?
+- Fights with:
 
-- Enemies:
+- Spends time with:
 
-- Dating, Marriage:
+- Wishes to spend time with:
 
-- Children:
+- Who depends on this character?
 
-- Relationship with God:
+- Who does this character most admire?
 
-- Overall Outlook on Life:
+****** Enemies:
 
-  + Self Like/love?
+<Add information about this characters enemies, etc.>
 
-  + Things this Character would like to Improve about their life:
+****** Dating, Marriage:
 
-  + Personal Demons:
+<Add information about this characters love life>
 
-  + Delusions, Denials:
+****** Children:
 
-  + Optimistic or Pessimistic?
+<Add information about this characters children>
 
-  + Real or Feigned?
+****** Relationship with God:
 
-  + Morality:
+<Add Information here>
 
-  + Confidence Level:
+****** Overall Outlook on Life:
 
-- How your Character is viewed by others:
+- Self Like/love?
 
-- A Typical Day:
+- Things this Character would like to Improve about their life:
 
-- Physical Appearance:
+- Personal Demons:
 
-  + Body Type:
+- Delusions, Denials:
 
-  + Posture:
+- Optimistic or Pessimistic?
+
+- Real or Feigned?
+
+- Morality Level:
+
+- Confidence Level:
+
+****** How Character is Viewed by Others:
+
+<Add Information here>
+
+****** A Typical Day:
+
+<Add Information here>
+
+****** Physical Appearance:
+
++ Body Type:
+
++ Posture:
   
-  + Head Shape:
++ Head Shape:
 
-  + Eyes:
++ Eyes:
 
-  + Nose:
++ Nose:
 
-  + Mouth:
++ Mouth:
 
-  + Hair:
++ Hair:
 
-  + Skin:
++ Skin:
 
-  + Tattoos/Piercings/Scars:
++ Tattoos/Piercings/Scars:
 
-  + Voice:
++ Voice:
 
-  + What People Notice First:
++ What People Notice First:
 
-  + Clothing:
++ Clothing:
 
-  + How the Character Describes Themselves:
++ How the Character Describes Themsel:
 
-- Health/Disabilities/Handicaps:
+****** Health/Disabilities/Handicaps:
 
-- Characteristics:
+<Add information here>
 
-  + Personality Type:
+****** Characteristics:
+******* General:
+
++ Personality Type:
+
     (choleric, sanguine, phlegmatic, melancholy) 
 
-  + Strongest Character Trait:
++ Strongest Character Trait:
 
     (How can flip side of strong point be a weakness)
 
-  + Weakest Character Trait:
++ Weakest Character Trait:
 
-  + Self Control:
++ Self Control:
 
-  + Self Discipline:
++ Self Discipline:
 
-  + what makes this person cry?
++ what makes this person cry?
 
-  + Fears:
++ Fears:
 
-  + Talents:
++ Talents:
 
-  + What People Like about this character:
++ What People Like about this character:
 
-  + 
+******* Interests and Favorites:
+
+- Political Leaning:
+
+- Collections:
+
+- Food, Drink:
+
+- Music:
+
+- Books:
+
+- Movies:
+
+- Sports, Recreation:
+
+  + Did this character play in school?
+
+- Colour:
+
+- Best way to spend a weekend:
+
+- A great gift for this person:
+
+- Pets:
+
+- Vehicles:
+
+  + What large possessions does this person own?
+     (car, home, furnishings, boat, etc.)
+
+******* Typical Expressions:
+
+- When Happy:
+
+- When Angry:
+
+- When Frustrated:
+
+- When Sad:
+
+******* Idiosyncrasies:
+
+<Add information here>
+
+******* Laughs or Jeers At:
+
+<Add information here>
+
+******* Ways to Cheer this Person Up:
+
+<Add information here>
+
+******* Ways to Annoy this Person:
+
+<Add information here>
+
+******* Hopes and Dreams:
+
+- What are this character's life-long dreams?
+
+- How do they see themselves accomplishing these dreams?
+
+******* Greatest Success:
+
+<Add information here>
+
+******* Biggest Trauma:
+
+<Add information here>
+
+******* Most Embarrassing Thing:
+
+<Add embarrassing story here>
+
+******* What this Character Cares About the Most:
+
+<Add most important cares in the world here>
+
+******* Any Secrets?
+
+- Does this character have a big secret?
+
+- Are we allowed to know what that secret is on this private interview?
+
+******* If Allowed to do One Thing and Succeed,  What is That?
+
+<Add one thing to do to succeed here>
+
+******* This is the kind of person who:
+
+<put what they would do here>
+
+******* The most loveable thing about this person:
+
+<remark about the things you love the most about this character>
+
+******* Why the Reader will Sympathize with this Character Immediately?
+
+<put reasons here>
+
+****** Ordinary or Extraordinary?:
+
+- How is this Character is Ordinary or Extraordinary?
+
+- Is this character's situation ordinary or extraordinary?
+
+****** Core Need:
+
+- List corresponding psychological evaluation: (delusions, obsessions, compulsions, addictions, denials, hysterical ailments, hypochondria, illnesses, behaviours harming the self, behaviours harming others, manias, and phobias):
+
+****** Anecdote: (Defining Moment or Epiphany)
+
+<Add information here>
+
+****** History:
+
+<Add history here>
 
 
 
-**** ACTIVE 📃 Write Character Synopsis:
+***** ACTIVE 📃 Write Character Synopsis:
 
-***** Write a One Sentence Character Summary:
+****** Write a One Sentence Character Summary:
 
 Write a Short Character Synopsis in 3rd person for each character: 
 
@@ -721,9 +937,9 @@ Each Character Synopsis is to be written in first person, (i.e., The character i
 
 Our character is on a rant, talking all about herself..., always bringing the subject back to personal perspective and personal truths. Soap Box time!
 
-****** Examples:
+******* Examples:
 
-******* 📃 Huckleberry Finn (example character synopsis - replace name and content)
+******** 📃 Huckleberry Finn (example character synopsis - replace name and content)
 
 Hi! My name is Huckleberry Finn... you can call me "Huck" for short if you like...  Don't pay no attention to anything that famous man behind the curtain may have said about me... That man Samuel Langhorne Clemens, who calls himself Mark Twain... He may know some things about me but he ain't never walked in my shoes!  That's for sure!  Rich author riverboat caption and all... Let me tell you a few things he don't know about me!
 
@@ -731,7 +947,7 @@ For instance... Yadda yadda yadda...  Folks may call me a vagabond, but they don
 
 *(On and On... Huck goes on a personal rant all about himself!)*
 
-******* 📃 Your Next Character Name Here: (add more character headings below until all are done)
+******** 📃 Your Next Character Name Here: (add more character headings below until all are done)
 
 Add your character's personal dialog in this space... Rename title above to your character's name...
 

@@ -9,7 +9,8 @@
 ;;   You now hove in your hands Publishing Abilities Way Beyond Scrivener!
 ;;
 ;;   Override this file by placing a copy of it into "my-modules" then change
-;;   settings below to suit your org mode export needs...
+;;   settings below *within your cloned copy* to suit your own particular
+;;   org mode export needs...
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;;;

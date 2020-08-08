@@ -1607,11 +1607,27 @@ History:
 
 These are the kind of questions you couldn’t ask anyone except a very close friend or counseling client!
 
-1. What do you want?
+#+BEGIN_SRC fountain
 
-Jennifer Crusie says to give them some time to answer this, then ask: Okay, but what do you really want?
-Give them some time to answer this, then ask: That's fine, but what do you REALLY want?
-(Keep asking this until they reveal something that, on the surface, sounds pretty shameful—that's what they're hiding from themselves. And that's what makes them human...we all want things we don't like to admit, like "to be loved better than my sister" or "to show the world I'm more powerful than Joe" or "to get back at my mom" or whatever. Readers are gonna sympathize with this, and even if the desire doesn't ever show up during the book, you'll know what's making the character tick.)
+1. _**WHAT DO YOU WANT**_
+
+COUNSELOR
+What do you want?
+
+CLIENT
+(RAMBLING ANSWER - WALLA)
+Um... I yadda yadda yadda... you know... 
+yadda ya know?...  And you know, yadda yadda...
+
+COUNSELOR
+(GIVING CLIENT TIME TO ANSWER)
+That's fine, but what do you REALLY want?
+
+= (Keep asking this until they reveal something that, on the surface, sounds pretty shameful—that's what they're hiding from themselves. And that's what makes them human...we all want things we don't like to admit, like "to be loved better than my sister" or "to show the world I'm more powerful than Joe" or "to get back at my mom" or whatever. Readers are gonna sympathize with this, and even if the desire doesn't ever show up during the book, you'll know what's making the character tick.)
+
+#+END_SRC
+
+
 
 2. Say you're using [other character] for something...what would it be?
 

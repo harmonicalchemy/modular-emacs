@@ -35,10 +35,10 @@
 ;;;;
 ;; BEGIN: Platform Specific Rules:
 
-(when *is-darwin*
+(when ME--DARWIN
   (setq inferior-lisp-program "/opt/local/bin/sbcl"))
 
-(when *is-linux*
+(when ME--LINUX
   (setq inferior-lisp-program "/usr/bin/sbcl"))
 
 ;; END: Platform Specific Rules...

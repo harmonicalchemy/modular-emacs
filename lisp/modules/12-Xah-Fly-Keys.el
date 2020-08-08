@@ -58,16 +58,18 @@
 
 (xah-fly-keys-set-layout "qwerty") ; My keyboard layout...
 
-;;;
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Call xah-fly-keys Function:
 
 (xah-fly-keys 1)
 
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Enable Xah eLisp Mode in eLisp files:
 
 (add-to-list 'auto-mode-alist '("\\.el\\'" . xah-elisp-mode))
 
-;; Load Xah Find functions:
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Load Xah Find functions:
 
 (autoload 'xah-find-text "xah-find" "find replace" t)
 (autoload 'xah-find-text-regex "xah-find" "find replace" t)
@@ -75,9 +77,22 @@
 (autoload 'xah-find-replace-text-regex "xah-find" "find replace" t)
 (autoload 'xah-find-count "xah-find" "find replace" t)
 
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Xah Fly Keys Command and Insert Mode Hook Functions:
 
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;           CUSTOM Xah Fly KEY BINDINGS
+(defun me_xfk-command-color () (set-background-color "#280028"))
+(defun me_xfk-insert-color () (set-background-color "#180028"))
+
+;(custom-theme-set-faces
+; 'user
+; `(text-cursor ((t (:background "red" :foreground "white")))))
+
+(add-hook 'xah-fly-command-mode-activate-hook 'me_xfk-command-color)
+(add-hook 'xah-fly-insert-mode-activate-hook  'me_xfk-insert-color)
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;                      Xah Fly KEY BINDINGS
+;;
 ;;  Add Personalized keybindings to Xah fly Keys:
 ;;  For:
 ;;       DIRECT Command Mode keybindings,
@@ -97,7 +112,7 @@
 
 (with-eval-after-load 'xah-fly-keys
 
-  ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   ;; Xah-Fly-Keys "Command Mode" keybindings:
   ;; (Xah-Fly-Keys Command Map)
   ;; Add more key definitions to this list when needed:
@@ -111,12 +126,17 @@
   ;; This DIRECT Command Mode make-frame key mirrors
   ;; PRIMARY Leader-Key keybinding delete-frame "2" key below...
   ;; (which does the opposite)
-  (define-key xah-fly-command-map (kbd "2") 'me_make-default-frame)
+  (define-key xah-fly-command-map (kbd "2") 'me_make-frame)
 
   ;; Set easy key to toggle neotree in left window pane:
   ;; Note: This disables (default Xfk to run command delete-char)
   ;;       I don't need that as the "D" key works fine for me...
-  (define-key xah-fly-command-map (kbd "5") 'neotree-toggle)
+
+  ;; Switch to Modular Emacs Org Mode Wide Screen View:
+  ;; This DIRECT Command Mode "5" key mirrors
+  ;; PRIMARY Leader-Key "5" key below...
+  ;; (which Switches to Org Mode back to Normal Screen View)
+  (define-key xah-fly-command-map (kbd "5") 'me_org-wide-screen)
 
   ;; Change default olivetti-mode key:
   ;; (back tick)
@@ -175,7 +195,7 @@
   ;; disabled the Caps-Lock key (which is mapped to HOME now)
   (define-key xah-fly-command-map (kbd "\\") 'me_toggle-letter-case)
 
-  ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   ;; Xah-Fly-Keys PRIMARY Leader-Key keybindings:
   ;; (xah-fly-leader-key-map)
   ;; Add more key definitions to this list when needed:
@@ -204,6 +224,12 @@
   ;; (which does the opposite)
   (define-key xah-fly-leader-key-map (kbd "2") 'delete-frame)
 
+  ;; Switch to Modular Emacs Normal Org Mode View:
+  ;; This PRIMARY Leader-Key "5" key mirrors
+  ;; DIRECT Command Mode "5" key above...
+  ;; (which Switches to Org Mode Wide Screen View)
+  (define-key xah-fly-leader-key-map (kbd "5") 'me_org-narrow-screen)
+
   ;; Export Org file to Markdown File:
   (define-key xah-fly-leader-key-map (kbd "m") 'org-md-export-to-markdown)
 
@@ -215,9 +241,9 @@
   ;; mode and it's easy enough to switch to Command Mode to paste)
   (define-key xah-fly-leader-key-map (kbd "v") 'vmd-mode)
 
-  ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   ;; Xah-Fly-Keys SECONDARY Leader-Key keybindings:
-  ;; For secondary leader key: "d" (dvorak "e")
+  ;; For secondary leader key: QWERTY "d" (dvorak "e")
   ;; (xah-fly-e-keymap Leader Key Map)
   ;; Add more key definitions to this list when needed:
   ;; Many of these default "insert" keybindings are not needed.
@@ -225,7 +251,20 @@
   ;; Override default xah-insert-date () func with my own
   ;; simpler version that simply formats the date as I like to do it:
   ;; (i.e., "yyyy-mmm-dd" digits)
-  (define-key xah-fly-e-keymap (kbd "f") 'me_insert-date))
+  (define-key xah-fly-e-keymap (kbd "f") 'me_insert-date)
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ;; Xah-Fly-Keys SECONDARY Leader-Key keybindings:
+  ;; For secondary leader key: QWERTY "e" (dvorak "." dot)
+  ;; (xah-fly-e-keymap Leader Key Map)
+  ;; Add more key definitions to this list when needed:
+  ;; None of these keys are used by xah-fly-keys. You can use
+  ;; anything here...
+
+  ;; Override default xah-insert-date () func with my own
+  ;; simpler version that simply formats the date as I like to do it:
+  ;; (i.e., "yyyy-mmm-dd" digits)
+  (define-key xah-fly-dot-keymap (kbd "p") 'org-latex-export-to-pdf))
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; END: [modular-emacs]:~/.emacs.d/lisp/modules/12-Xah-Fly-Keys.el

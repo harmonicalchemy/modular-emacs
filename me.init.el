@@ -241,8 +241,7 @@
         ";; Today's date: " (format-time-string "%Y %B %d") "                       \n"
         ";; Startup completed in "
         (number-to-string (cadr (time-subtract (current-time)
-                                               config-start-time)))
-        " seconds                                                                   \n"
+                                               config-start-time)))       " seconds \n"
         ";; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
         ";;                                                                         \n"
         ";;   \"Its name is Public Opinion.                                         \n"
@@ -251,8 +250,8 @@
         ";;    Some think it is the voice of God.\"                                 \n"
         ";;                         -- Mark Twain                                   \n"
         ";;                                                                         \n"
-        ";; More Mark Twain quotes can be found here:                                \n"
-        ";; https://www.writerswrite.co.za/literary-birthday-30-november-mark-twain/  \n"
+        ";; More Mark Twain quotes can be found here:                               \n"
+        ";; https://www.writerswrite.co.za/literary-birthday-30-november-mark-twain/ \n"
         ";; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
         ";;                                                                         \n"
         ";; If Mark Twain was an 80's New Orleans Lisp Hacker/DJ:                   \n"
