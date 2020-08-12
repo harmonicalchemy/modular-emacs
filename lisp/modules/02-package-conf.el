@@ -181,7 +181,6 @@
 (helm-autoresize-mode 1)
 (setq helm-split-window-in-side-p t)
 
-
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Modular Emacs - Make Writer's Frame Function:
 ;;  This simply makes new frames to match 
@@ -220,6 +219,9 @@
                         :weight 'normal
                         :width 'normal)
 
+    ;; Set Olivetti Width (88 column wide)
+    (olivetti-set-width 88)
+
     ;; Call Xah-Fly-Keys (resets some face attributes)
     (xah-fly-keys 1)))
 
@@ -249,7 +251,7 @@
       ;; Modify Frame dimensions for coding...
       ((name . "HA Mod Emacs v3.2 - Coder's Frame")
        (height . 38)
-       (width . 88))))
+       (width . 96))))
 
     ;; Select this new frame:
     (select-frame-by-name "HA Mod Emacs v3.2 - Coder's Frame")
@@ -367,7 +369,7 @@
                              (quote
                               ((name . "HA Mod Emacs v3.2 - Coding Mode")
                                (height . 38)
-                               (width . 88))))))
+                               (width . 96))))))
 
 ;;;
 ;;  Toggle Default Face...
