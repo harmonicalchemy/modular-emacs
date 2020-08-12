@@ -44,9 +44,22 @@
 
 ;;;
 ;; Kindly Provide the path to your local journal file...
-;; (a default location would be too opinionated %^)
+;; (providing a default location and filename would be too
+;;  opinionated, IMHO %^)
+;;
+;;  btw %^) is my default Picasso cubist smiling emoji..
+;;  I have been using this same text emoji since the early 80's!
+;;  Maybe I should trade mark it... That's opinionated. lol
 
-(setq hledger-jfile "~/Path/To/Your/Personal/HLedger-Accounting/.hledger.journal")
+(when ME--LINUX
+  (setq
+   hledger-jfile
+   "~/000-GIT/My-Docs/Org-Docs/03-Private/.hledger.journal"))
+
+(when ME--DARWIN
+  (setq
+   hledger-jfile
+   "~/Path/To/Your/Personal/HLedger-Accounting/.hledger.journal"))
 
 ;;;
 ;; Auto-completion for account names
