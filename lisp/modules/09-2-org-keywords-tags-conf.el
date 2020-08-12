@@ -189,11 +189,11 @@
    ;; Major Categories:
 
    (("GenRef")
-    ("Gen💡Ops")
-    ("Pub✎Ops")
-    ("Dev§Ops")
+    ("GenOps")
+    ("PubOps")
+    ("DevOps")
     ("git")
-    ("Sys§Admin")
+    ("SysAdmin")
     ("Research")
     ("Blog_Ideas")
     ("New_Ideas")
@@ -252,7 +252,7 @@
 
     ;; Security Related:
 
-    ("Info✴Sec")
+    ("InfoSec")
     ("GnuPG")
     ("OpenSSL")
     ("passwords")
@@ -260,7 +260,7 @@
 
     ;; Business - Marketing:
 
-    ("Market$Ops")
+    ("MarketOps")
     ("sales")
     ("invoices")
     ("bills")

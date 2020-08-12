@@ -75,6 +75,11 @@
 
 (add-hook 'text-mode-hook 'turn-on-visual-line-mode)
 
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Set Olivetti Mode Default Width to 88 columns:
+
+(setq olivetti-body-width 88)
+
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; The default visible bell actually startles me when it occurs!
 ;; This is a much better way... Only the mode line flashes!  Great.

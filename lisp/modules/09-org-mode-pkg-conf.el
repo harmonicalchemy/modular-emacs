@@ -59,76 +59,23 @@
 ;; Path to Your ORG Docs on Mac OS:
 
 (when ME--DARWIN
-  (defconst my-org-dir
+  (defconst me--org-dir
     (file-name-as-directory
-     (expand-file-name "~/Path/To/Your-MacOS-Org-Docs"))))
+     (expand-file-name "~/Path/To/Your/MacOS/Org-Docs"))))
 
 ;;;
 ;; Path to Your ORG Docs on Linux:
 
 (when ME--LINUX
-  (defconst my-org-dir
+  (defconst me--org-dir
     (file-name-as-directory
-     (expand-file-name "~/Path/To/Your-Linux-Org-Docs"))))
+     (expand-file-name "~/Path/To/Your/Linux/Org-Docs"))))
 
 ;;;
-;; The rest of the definitions below depend on above "my-org-dir" being set
-;; correctly to an existing directory on your file system where you will be
-;; storing all your important org related files...
-;;
-;; NEW ORG USERS NOTE: If you don't allready have an org-files system structure
-;; set up, it is highly recommended to create your directory structure exactly as
-;; below, (replacing "Your-Org-Docs-dir" with the directory path where you will
-;; be setting up the structure below it... The symbol defined above:
-;; "my-org-dir" must match the path to Your Org Docs Master directory.
-;;
-;;   Your-Org-Docs-dir/      # This must match (my-org-dir) set above!
-;;     |__00-Agenda-files/   # All others must match exactly as shown!
-;;     |__03-Private/        # Create your files folders following this diagram. 
-;;         |____diary.org
-;;         |____refile.org
-;;         |____Timesheet/
-;;         |____refile.org
-;;         |____Autofocus-notebook.org
-;;
-;; EXISTING ORG USERS NOTE! For existing org-files directory structures,
-;; unfortunately you may need to adjust the file/folder names below within 
-;; all related setq forms before this will work for your already existing setup...
-;; It's probably best to try doing all this (as is) outside of your normal Org Files
-;; directory first...  Once you have a good handle on this it will be easier to
-;; adjust the code to fit into your existing org-mode configuration...
-;; I may change how this works later to make it much easier to integrate...
-;; For now, it's all kind of hard-wired...  Until I myself get a handle on it... %^)
+;; Use above local Constants to Define Org Mode Default "Org Directory":
 
+(setq org-directory me--org-dir)
 
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; Define LOCAL USER ORG FILES SUB Directories:
-;;
-;; Note: These constants are also used by 15-Accounting-pkg-conf.el
-;;       which gets loaded later in the module chain...
-
-(defconst my-org-agenda-files
-  (file-name-as-directory
-   (expand-file-name "00-Agenda-files" my-org-dir)))
-
-(defconst my-org-templates
-  (file-name-as-directory
-   (expand-file-name "02-Templates" my-org-dir)))
-
-(defconst my-org-files
-  (file-name-as-directory
-   (expand-file-name "03-Private" my-org-dir)))
-
-;; Load Default Org Agenda Files (directories) that are permanent...
-;; NOTE:  This list is mostly updated from within org files
-;;        or by manually inserting them while you use org-mode...
-
-(setq org-agenda-files
-      (list
-       my-org-dir
-       my-org-agenda-files
-       my-org-templates
-       my-org-files))
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Configure Org Mode Beautify Settings: (constantly under revision %^)
@@ -143,6 +90,39 @@
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;   Alisha's Advanced Org-Mode Configurations:
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;            Mobile Org Configuration
+
+;; Set up MobileOrg Staging Area:
+
+(when ME--DARWIN
+  (defconst me--mobile-org-dir
+    (file-name-as-directory
+     (expand-file-name "/Volumes/Maneri/000-Alisha/Dropbox/Apps/MobileOrg"))))
+
+;;;
+;; Path to Your ORG Docs on Linux:
+
+(when ME--LINUX
+  (defconst me--mobile-org-dir
+    (file-name-as-directory
+     (expand-file-name "~/Path/To/Your-Linux/Dropbox/Apps/MobileOrg"))))
+
+(setq org-mobile-directory me--mobile-org-dir)
+
+;; Set Name of file where new notes will be stored:
+
+(setq org-mobile-inbox-for-pull (expand-file-name  "flagged.org" me--org-dir))
+
+;; Enable MobileOrg Encryption:
+
+(setq org-mobile-use-encryption t)
+
+;; Set MobileOrg Password:
+
+(setq org-mobile-encryption-password "w1sIw1m2.0r9")
+
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Defined Variable:  ME--YT-iFrame-format
@@ -222,13 +202,16 @@
   ;; Test to make sure we are in Org Mode, if not print a warning...
   (if (equal 'org-mode major-mode)
       (progn
+        ;; Make sure we are in Split Window Fancy Org View First!
         (when (= (length (window-list)) 2)
           (if (eq 'selected-window 'window-left-child)
-              () ;; Do nothing...
+              ;; Remove Split Sidebar Tree Window:
+              (progn
+                (org-sidebar-tree-toggle))
             (progn
               ;; Else Move to left most window:
               (windmove-left)
-              ;; Remove Split Windows...
+              ;; And now Remove Split Sidebar Tree Window...
               (org-sidebar-tree-toggle))))
 
         ;; Make NORMAL ORG MODE Frame size for writing/composition:
@@ -315,7 +298,6 @@
                              (width  . 100))))
 
   ;; Enable Olivetti Mode (100 column wide)
-  (olivetti-mode)
   (olivetti-set-width 88)
 
   ;; Hide bullets...
