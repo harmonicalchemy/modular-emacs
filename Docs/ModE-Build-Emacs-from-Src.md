@@ -27,19 +27,23 @@ Go ahead... bite the bullet and install the latest Emacs from source. Building f
 
 The Mac OS was, and still is a nice environment to work _(and create)_ in... I loved the NextStep `NS` environment all the way back to when it was first created at **NeXT** And... Being a musician, composer, programmer and member of the **BCS NeXT SIG**, in those early days, I was in collaboration with the digital audio developers at NeXT during that time as well! _(I typed that from memory... hope I got the camel case right. lol)_.
 
-Now, I am not sure which direction Apple is taking...  The design of Mac OS morphing into iOS and visa versa makes it not so much of a unix anymore (also Mac OS never had a proper unix File System anyway)... I remember it was the file system and risky R/W optical disks which were the Achelies heel of the **NeXT** computer.  I am quite frightened by the new **APFS** spec Apple is throwing out! I have not upgraded past regular **Sierra** either... Time is running out?  What to do?  The new Mac Pros look way cool with probably more super-computing power than one of the older gen (pre-millennium) Cray super computers I bet! Seriously!  Thank God no more Trash Can! LOL What were they thinking? Cylinder does not = Cray super power... You abandoned all us Music Hackers! I hope you are back now...  And can you stay closer to standard unix? Thanks! Convince me your APFS is not evil or dangerous! Oh right... Can it be case sensitive too?
+Now, I am not sure which direction Apple is taking...  The design of Mac OS morphing into iOS and visa versa makes it not so much of a unix anymore (also Mac OS never had a proper unix File System anyway)... I remember it was the file system and risky R/W optical disks which were the Achelies heel of the **NeXT** computer.  I am quite frightened by the new **APFS** spec Apple is throwing out!
 
 Unfortunately I am dependent on Mac OS For digital music/sound, video, graphic design, etc. I currently use a late 2015 27" retina iMac.  All of my other computing work is done on a reasonably secure Qubes _(personal hypervisor)_ Laptop that runs different flavors of Linux as App VMs... My Qubes laptop is used for writing, coding, business, personal...  
+
+> **Update 2020-009-11:** _I upgraded my iMac [Rodrigo] to High Sierra v10.13.6 in August! So far, it has been a mess to reconfigure things.  I have to upgrade my current Emacs 27 now.  The new Emacs beyond V27.1 is supposed to be a long awaited update to past versions of Emacs.  Imagmagick and Ghostscript are no longer used, and they are buggy and introduce security holes! No problems with APFS so far, so that may not be an issue for me.  Compatability with DAW software will be critical to test though!_
 
 On my Qubes Laptop, Emacs works great, straight from any of the above package managers _(as you can see above...)_  
 
 Mac OS (**Darwin**) has always been a mongrel cross-breed of different unix flavors. _(by now all the unix are mixed up pretty much however... so that's not it...)_  The problem is all the non-standard junk that Apple does that tends to break standard unix things if those are also installed!  OMG! Hair pulling time!
 
-Long story short... My Emacs install was causing all my woes... Homebrew stopped building versions that I needed for my Emacs configuration to work correctly. _(some of the problems were also shell startup related)_.  After experiencing of all of that over the past year, and coming to the realization that I shoulda/coulda used MacPorts instead of Homebrew, but not daring to change all that now mid stream of course... So... I am building Emacs from source... Straight from a cloned repository from Gnu's Git Server!  I can get the bleeding edge if I want now... :stuck_out_tongue:
+Long story short... My older Emacs install was causing all my woes... Homebrew stopped building versions that I needed for my Emacs configuration to work correctly. _(some of the problems were also shell startup related)_.  After experiencing of all of that over the past year, and coming to the realization that I shoulda/coulda used **MacPorts** instead of Homebrew, but not daring to change all that now mid stream of course... So... on MacOS I build Emacs from source from now on... Straight from a cloned repository from Gnu's Git Server!  I can get the bleeding edge if I want now... :stuck_out_tongue:
 
 ### Install Emacs from Source - Mac OS
 
-> **2020 Update:**  This doc is currently being changed as I go through the process of building Emacs V27.  The information although updated may also work for building Version 26.  In that case the requirements will most likely be easier to meet since all those libraries have been out there for a while...  Also, later in 2019 I switched from Homebrew to MacPorts as my Mac OS package manager...  That was quite disruptive.  With MacPorts hopefully building Emacs on Mac OS won't be any more difficult...  Possibly easier...  I could just go with MacPorts emacs version but since I have this project all set up I am building it myself...  I like it that way... All dependencies get installed via MacPorts now... For you Homebrew users, all the instructions below are a year old... I have no way to easily test if the instructions still work... If you use Homebrew and run into problems please open up an issue about it.  This will allow us both, and others to come up with solutions... Thanks!
+> **Sept 2020 Update:**  This doc is currently being changed as I go through the process of building/upgrading my current Emacs on Mac OS from v27 to v28 on Mac OS High Sierra v10.13.6.  (I may decide to upgrade my mac to the latest OS and have to do this all over again... Whatever...)  The updated environment will not work for building Emacs 26 because I removed many requirements that introduce security holes... From now on, at least on Mac OS it will be at least Emacs v27.1 or rather the latest bleeding edge from the repo...
+
+> Also, since I no longer use Homebrew the instructions for Homebrew users below has not been updated since 2019! I am not sure those instructions are valid anymore and they have not been tested as well.. Some of the Homebrew commands for installing libraries etc. are missing from this doc now... Sorry.. I need help with this now... Any takers?  Thanks! Homebrew is still a viable option for most users... I like **MacPorts**...
 
 > **Note:** We are going to build a fast moving/changing target: Monster Lisp Machine with lots of little bitty _loaded.el bugs_ they are fixing and working on all the time! It's important to set up a scheme allowing for quick updates to keep in sync and get those bug fixes, _(possibly bugs that are blocking you from making a successful build!)_  OK **_MacCowboys_** and **_MacCowgirls_**... Are you ready for this? Strap in... Or should I say.. Bootstrap! :octocat:
 
@@ -56,7 +60,7 @@ Install Automake _(and Autoconf)_ via Homebrew:
 $>  brew install autoconf automake
 ```
 
-Install Automake _(and Autoconf)_ via Macports:
+Install Automake _(and Autoconf)_ via **MacPorts**:
 
 ```yaml
 $>  sudo port install automake
@@ -66,22 +70,24 @@ $>  sudo port install automake
 
 ##### git:
 
-Check that `git` is at least **`Git 1.7.1`**.  If you cloned this repository with an older **Git** version, you may need to reclone it after upgrading `git`.  The current version of `git` at **Homebrew** is **`V2.21.0`** so you are all set if you **`update/upgrade`** Homebrew...
+Check that `git` is at least **`Git 1.7.1`**.  If you cloned this repository with an older **Git** version, you may need to reclone it after upgrading `git`.  The version of `git` at the time I had **Homebrew** installed back in 2019 was **`V2.21.0`** so you are all set if you **`update/upgrade`** Homebrew today!
 
 ```yaml
 $>  brew install git
 ```
 
--or-
+Install `git` via **MacPorts**:
 
 ```yaml
-$>  brew update
-$>  brew upgrade
+$> sudo port install git
 ```
+
+You should be all set with **git** in 2020 now...
+
 
 ##### GNU Make
 
-`gmake V4.2.1` or later is currently available via MacPorts.  It is   required to build Emacs from source.  _(any version)_
+`gmake V4.2.1` or later is currently available via **MacPorts**.  It is   required to build Emacs from source.  _(any version)_
 
 ```yaml
 $> sudo port install gmake
@@ -95,15 +101,21 @@ This is not strictly necessary, but highly recommended, so that you can build th
 $>  brew install texinfo
 ```
 
+Install `texinfo` via **MacPorts**:
+
+```yaml
+$>  sudo port install texinfo
+```
+
 Make sure your installed **Texinfo** is: **`V4.13`** or later to work with this build... No problem... Homebrew version is currently **`V6.6`**   _(as of 2019-006-01 - I have not looked at what Homebrew currently provides for newer Emacs builds, but I am fairly confident the above will still work fine for you.)_
 
-##### Prerequisites for Emacs V27+:
+##### Prerequisites for Emacs V27.1+:
 
 ###### GMP:
 
 The GNU Multiple Precision Library `libgmp` is now needed.
 
-Install `gmp` via macports:
+Install `gmp` via **MacPorts**:
 
 ```yaml
 $> sudo port install gmp
@@ -111,35 +123,51 @@ $> sudo port install gmp
 
 ###### Without ImageMagick Default!
 
-Emacs 27+ now supports resizing & rotating images without ImageMagick... All modern systems support this new feature.  
+Emacs 27+ now supports resizing & rotating images without ImageMagick... All modern systems support this new feature.  You no longer need to install ImageMagick or use it ever again... Makes me sad as this was the only really nice command line image manipulation software for a long long time!
 
 Emacs no longer defaults to using ImageMagick to display images.
-This is due to security and stability concerns with ImageMagick.  To override the default, use `configure --with-imagemagick`.  
+This is due to security and stability concerns with ImageMagick.  To override the default, use `configure --with-imagemagick`.  But don't do that... Go with the new image configuration for Emacs 27.1 and newer...
 
-I'm not sure what to make of this...  Imagemagick was important to Modular Emacs working correctly in Emacs V26...  I will leave the option out for my Version 27 build and use Cairo _(next item below)_ to see what happens... Maybe this is a non-issue now? Maybe it is even better now?  Hopefully...
-
-- **Note:** On GNU and Unix systems, Cairo drawing or the XRender extension to X11 is required for this to be available; the configure script will test for it and, if found,
-enable scaling. The new function 'image-transforms-p' can be used to test whether any
-given frame supports these capabilities.
+- **Note:** On GNU and Unix systems, Cairo drawing or the XRender extension to X11 is now required for image manipulation to be available in Emacs; the configure script will test for it and, if found, enable scaling. The new function 'image-transforms-p' can be used to test whether any given frame supports these capabilities.
 
 ###### Cairo
 
 The configure option: `--with-cairo` is no longer experimental. This builds Emacs with Cairo drawing, and supports built-in printing when Emacs is built with GTK+.  Some severe bugs in this build were fixed, and we can therefore offer this to users without caveats.  Note that building with Cairo enabled results in using `Pango` instead of `libXft` for font support, and that `Pango v1.44` has removed support for bitmapped fonts.
 
+You will need to install Cairo Runtime for Emacs to link up with during the build...
+
+Install `cairo` via **MacPorts**:
+
+```yaml
+$> sudo port install cairo
+```
+
 ###### GTK
 
 Emacs now requires >GTK 2.24 or >GTK 3.10 for the GTK 2 and GTK 3 builds respectively.
 
-Install `gtk2` via macports:
+Install `gtk2` via **MacPorts**:
 
 ```yaml
 $> sudo port install gtk2
 ```
 
-Install `gtk3` via macports:
+Install `gtk3` via **MacPorts**:
 
 ```yaml
 $> sudo port install gtk3
+```
+
+Install `libpng` via **MacPorts**:
+
+```yaml
+$> sudo port install libpng
+```
+
+Install `librsvg` via **MacPorts**:
+
+```yaml
+$> sudo port install librsvg
 ```
 
 ##### Emacs can now be configured using an early init file!
@@ -188,7 +216,20 @@ $>  git clone https://git.savannah.gnu.org/git/emacs.git
 
 > **_btw:_**  So far all these instructions are universal to build the entire Emacs world on any platform, Mac, Linux, BSD, Windows, Tests, etc.  You have the cloned repo.  Try: **`git branch -a`** and you will see what I mean!
 
-#### Set up Autotools:
+#### Create Local Build Branch for Emacs:
+
+```yaml
+$>  git fetch master
+$>  git pull master
+$>  git pull --tags
+$>  git branch -d rodrigo  # create local un-tracked branch in sync with HEAD...
+```
+
+You are now in sync with the latest commits to Emacs Latest Bleeding Edge from the Developers! _(commits beyond the last tag release)_ so you have the latest possible build! You can see the latest tags with:
+
+```yaml
+$>  git tag
+```
 
 To use the autotools: Run the following shell command within your cloned **`emacs`** directory:  
 
@@ -201,18 +242,10 @@ This will generate the **`configure`** script and some related files, and to set
 
 #### Run Configure:
 
-To get all the features I wish Homebrew would give us, run `configure` with the following switches set:
+To get all the needed features for **Harmonic Alchemy Modular Emacs** run `configure` with the following switches set for building the new Emacs 27.1:
 
 ```yaml
-$>  ./configure --with-ns --with-imagemagick --with-mailutils\
-    --with-gnutils --with-modules --with-rsvg --with-dbus\
-    --with-xml2
-```
-
-For building the new Emacs 27.1 version use this instead:
-
-```yaml
-$>  ./configure --with-ns --with-mailutils
+$>  ./configure --with-ns --with-mailutils --with-cairo
 ```
 
 Actually you can simply run `./configure` alone those options are default for a new Mac that has GNU mailutils installed, as well as all the required graphics libraries etc. on it...  If those things are not installed, it does not matter if you require them on the configure line... Your build will fail if make cannot find needed libraries etc...
@@ -234,7 +267,8 @@ $>  make install
 #### Move your shiny new Emacs.app to: `$HOME/Applications:`
 
 ```yaml
-$>  mv nextstep/Emacs.app ~/Applications
+$>  mv nextstep/Emacs.app ~/Applications/Emacs-Vxx.app    
+# where xx=the version number of this Emacs build...
 ```
 
 #### Launch Emacs from your Apps Folder/Menu:
@@ -251,7 +285,7 @@ $> git clean -fdx
 
 #### Troubleshooting Debugging:
 
-My build went well because I planned well this time... _(i.e., you did not see the big goofs I made before writing this... lol)_  Because of that I am now running Emacs V26.2.50 on my iMac now with Imagemagick, and all my favorite bells and whistles!  **_Caveat:_** I have to manage builds now.. Oh well... it felt good getting that monster to build!   :octocat:
+My build went well because I planned well this time... _(i.e., you did not see the big goofs I made before writing this... lol)_  Because of that I am now running Emacs v28.0.50 on my iMac without Imagemagick or any of the older less secure dependencies involved... Lets see how this works on Mac OS now... To Be Continued...
 
 ## Linux:
 

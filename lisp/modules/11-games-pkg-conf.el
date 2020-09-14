@@ -69,30 +69,42 @@
   ;; Yes... Do Change This Next Path Definition to the
   ;;        Location of: Your Own Media Library. ;-)
 
-  (setq emms-source-file-default-directory
-        "~/Documents/DATA/000-HAP-Media-Library/010-MP3-Library"
-        ;; And please don't try to hack my music library, lol!
-        ;; I would share it with the world if I could do so without
-        ;; getting in trouble though... lol   Beautiful art should
-        ;; be free access like clean clear water and air...
-        ;; We desperately need it to survive and stay peaceful!
-        ;; Yeah.. that second part especially!  Make dance not war!
-        ;; Be warriors of the dance rather than warriors of blood...
-        ;; Doing it that way keeps us strong...
-        ;; (just in case attacked from elsewhere)
-        ;; nevermind, I'm rambling now... in a Lisp comment at that...
-        ;; lol (who will read this except Lisp nerds? that counts though)
+  ;; And please don't try to hack my music library, lol!
+  ;; I would share it with the world if I could do so without
+  ;; getting in trouble though... lol   Beautiful art should
+  ;; be free access like clean clear water and air...
+  ;; We desperately need it to survive and stay peaceful!
+  ;; Yeah.. that second part especially!  Make dance not war!
+  ;; Be warriors of the dance rather than warriors of blood...
+  ;; Doing it that way keeps us strong...
+  ;; (just in case attacked from elsewhere)
+  ;; nevermind, I'm rambling now... in a Lisp comment at that...
+  ;; lol (who will read this except Lisp nerds? that counts though)
 
-        emms-info-asynchronously t
-        emms-show-format "♪ %s")
+  ;; For My Mac OS (Your path is different. Change this...)
+  (when ME--DARWIN
+    (setq emms-source-file-default-directory
+          "~/Documents/DATA/000-HAP-Media-Library/010-MP3-Library"))
+
+  ;; For My Linux (Your path is different. Change this...)
+  (when ME--LINUX
+    (setq emms-source-file-default-directory
+          "~/000-GIT/Media-Archive/Music-Audio"))
+
+  (emms-info-asynchronously t)
+  (emms-show-format "♪ %s")
 
   ;; You might want to check out:
   ;;   emms-info-functions
   ;;   emms-info-libtag-program-name
   ;;   emms-source-file-directory-tree-function
-  ;; as well.
+  ;;   as well.
 
   (require 'emms-setup)
+
+  (emms-all)
+  (emms-mode-line nil)
+  (require 'helm)
 
   (setq emms-seek-seconds 5)
   (setq emms-player-mpd-server-name "localhost")
@@ -103,21 +115,22 @@
   ;; exotic files from the past (wma) `emms-default-players`
   ;; is probably all you need.
 
-  (emms-default-players)
-
   (if (executable-find "mpd")
       (progn
         (require 'emms-player-mpd)
         (add-to-list 'emms-player-list 'emms-player-mpd)
         (require 'emms-volume)
-        (setq emms-player-list '(emms-player-mpd))
         (setq emms-info-functions '(emms-info-mpd))
-        (setq emms-volume-change-function 'emms-volume-mpd-change)))
+        (setq emms-volume-change-function 'emms-volume-mpd-change)
+        (emms-default-players)))
 
   ;; For libre.fm see `emms-librefm-scrobbler-username' and
   ;; `emms-librefm-scrobbler-password'.
   ;; Future versions will use .authoinfo.gpg.
-  )
+  ) ;; END: with-eval-after-load 'ems
+    ;; NOTE: (move this closing parenthesis to its proper
+    ;;        position after all elements are placed...
+    ;;        Still coding this)
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Start MPD from within Emacs...
