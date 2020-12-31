@@ -251,7 +251,7 @@
       ;; Modify Frame dimensions for coding...
       ((name . "HA Mod Emacs v3.2 - Coder's Frame")
        (height . 38)
-       (width . 96))))
+       (width . 93))))
 
     ;; Select this new frame:
     (select-frame-by-name "HA Mod Emacs v3.2 - Coder's Frame")
@@ -369,7 +369,7 @@
                              (quote
                               ((name . "HA Mod Emacs v3.2 - Coding Mode")
                                (height . 38)
-                               (width . 96))))))
+                               (width . 93))))))
 
 ;;;
 ;;  Toggle Default Face...
