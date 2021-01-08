@@ -15,6 +15,8 @@
 ;;
 ;; Change Log: (descending chronological order)
 ;;
+;;   2021-001-07 - Modified width of initial and default frames to 88.
+;;
 ;;   2020-007-16 - Harmonic Alchemy Modular-Emacs V3.2 (beta) [Q3 2020]
 ;;      This has been tested on the develop branch long enough... I am
 ;;      still calling it "beta" because there is still a lot of work
@@ -120,10 +122,10 @@
 ;; You may have to play with this depending on your total screen size etc...
 
 (setq initial-frame-alist
-      '( (name . "HA Mod Emacs v3.2 - Coding Mode")
+      '( (name . "HA Mod Emacs v3.2 - Coder's Frame")
          (font . "Hermit")
          (height . 38)
-         (width . 96)
+         (width . 88)
          (menu-bar-lines . 1)
          (vertical-scroll-bars . nil)
          (horizontal-scroll-bars . nil)
@@ -134,10 +136,10 @@
 ;; You may have to play with this depending on your total screen size etc...
 
 (setq default-frame-alist
-      '( (name . "HA Mod Emacs v3.2 - Coding Mode")
+      '( (name . "HA Mod Emacs v3.2 - Coder's Frame")
          (font . "Hermit")
          (height . 38)
-         (width . 96)
+         (width . 88)
          (menu-bar-lines . 1)
          (vertical-scroll-bars . nil)
          (horizontal-scroll-bars . nil)
