@@ -1,5 +1,5 @@
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; [modular-emacs]:~/.emacs.d/lisp/modules/02-package-conf.el
+;; [modula-emacs]:~/.emacs.d/lisp/modules/02-package-conf.el
 ;;
 ;; This module provides the basic modules that most likely will be needed
 ;; by most all use-cases...  Modular Emacs default packages so-to-speak...
@@ -251,7 +251,7 @@
       ;; Modify Frame dimensions for coding...
       ((name . "HA Mod Emacs v3.2 - Coder's Frame")
        (height . 38)
-       (width . 96))))
+       (width . 88))))
 
     ;; Select this new frame:
     (select-frame-by-name "HA Mod Emacs v3.2 - Coder's Frame")
@@ -367,9 +367,9 @@
 
     (modify-frame-parameters nil
                              (quote
-                              ((name . "HA Mod Emacs v3.2 - Coding Mode")
+                              ((name . "HA Mod Emacs v3.2 - Coder's Frame")
                                (height . 38)
-                               (width . 96))))))
+                               (width . 88))))))
 
 ;;;
 ;;  Toggle Default Face...
