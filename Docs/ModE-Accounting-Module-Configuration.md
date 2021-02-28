@@ -64,31 +64,7 @@ After that is done, you will be `git` cloning the **HLedger Project** to build i
 
 Before cloning **HLedger**, first install necessary **Haskell build tools**... You can build `HLedger` using either `stack` or `cabal`...  I choose to use **`Stack`** as this is what the HLedger docs recommend as the best way.
 
-#### All `NX` environments, including Mac OS:
-
-After reading a bunch of scary posts about **MacPorts** causing problems with **`GHC`** I consulted the main `haskellstack.org` website to find out what to do... Their recommended way for Mac OS _(and all `nx` platforms for that matter)_ is to run the following:
-
-```yaml
-    curl -sSL https://get.haskellstack.org/ | sh
-``` 
-One single command for all platforms... That is great! I will build it on both Mac OS, and Fedora for my first test cases...
-
-> **Note:** This script will ask for root access using sudo in order to install dependencies and to install the binaries to `/usr/local/bin`.
-
-Installing within **`/usr/local/bin`** is fine for me on all platforms!  It won't interfere with packages installed by MacPorts within **`/opt/local/bin`**  
-
-After installing _(above)_ make sure your `$PATH` includes: `/usr/local/bin` after any `bin` paths within your local home directory, and before `/opt/local`, `/usr/bin`, `/bin` etc...
-
-Once you have that done execute the following to upgrade `stack`:
-
-```yaml
-    stack upgrade
-```
-
-You may get a message telling you stack is already up to date... In that case you are all set... You will need to issue this command again later when an upgrade is available...
-
-Now it is time to clone and build HLedger...
-
+Follow this link to: **[Install Haskell IDE, All Platforms](./ModE-Haskell-IDE-Configuration.md)**
 
 
 ### Clone HLedger Project from GitHub:

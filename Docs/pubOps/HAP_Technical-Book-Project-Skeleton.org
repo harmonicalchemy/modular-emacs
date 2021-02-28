@@ -191,6 +191,8 @@ Yadda, yadda, yadda. etc...
 
 
 
+* NEW 📒 Research:
+** 💡 New Topic Ideas:
 ** DONE 📒 Yak Shaving:
 CLOSED: [2021-02-19 Fri 16:42]
 :LOGBOOK:
@@ -198,9 +200,11 @@ CLOSED: [2021-02-19 Fri 16:42]
 :END:
 
 :README:
-What is Yak Shaving doing in your book?  Just as the name implies, this is a place that has no business being in your book, but nevertheless may be something you need to research on the side in order to get your book written.. Things to put here may end up in chapters in fact but you don't know which chapters that may be at this point, so you cannot use a Chapter's Background Notes section for these cases...
+What is Yak Shaving doing in your Research Folder?  Just as the name implies, this is a place that may have no business being in your book, but nevertheless may be something you need to research on the side in order to get your book written.. 
 
-Use this section as a secondary place to save new-ideas... New ideas that should not go into your main Research Section (outside of the book)...
+Things to put here may end up in chapters but you don't know which chapters that may be at this point, so you cannot use a Chapter's Background Notes section for these cases...
+
+Use this section as a place to save and organize new-ideas while you figur out what they may be for, and where they may eventually go...  This section is a great place to start if your are importing existing docs written in markdown, or Open Office, or what ever... import the text from those external docs here first... Then you can organize them here while you figure out how they fit in the larger context of a book project...
 
 The format for this section is anything you like.. And you may put anything you like in here.. (unlike the Start Here section above for seat-of-the-pants writing, this section should be much more organized... Some of the things written seat-of-the-pants within the Start Here section may end up in this Yak Shaving section later when you are ready to structure them further... (after inspiration)
 :END:
@@ -225,9 +229,6 @@ Create sub-level outlines below each heading as needed for your purposes.
 
 Anything goes here... You can make this into what ever you want..
 
-
-* NEW 📒 Research:
-** 💡 New Topic Ideas:
 * DONE ⏰ Tasks:
 CLOSED: [2021-02-19 Fri 17:12]
 :LOGBOOK:

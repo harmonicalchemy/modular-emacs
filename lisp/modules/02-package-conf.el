@@ -242,8 +242,8 @@
    Frame opens with buffer set to *scratch*"
   (interactive)
   (progn
-    ;; Set Buffer to *scratch*;
-    (set-buffer "*scratch*")
+    ;; Set buffer to *Bookmark List*
+    (bookmark-bmenu-list)
 
     ;; Make New Coder's Frame:
     (make-frame

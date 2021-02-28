@@ -25,7 +25,6 @@
 
 (defvar me--req-org-packages
   '(org-bullets
-    emojify
     gnuplot-mode
     sass-mode
     abc-mode
@@ -90,6 +89,21 @@
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;   Alisha's Advanced Org-Mode Configurations:
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;             Org Mind Map Configuration
+
+(require 'ox-org)
+
+(setq org-mind-map-engine "dot")       ; Default. Directed Graph
+;; (setq org-mind-map-engine "neato")  ; Undirected Spring Graph
+;; (setq org-mind-map-engine "twopi")  ; Radial Layout
+;; (setq org-mind-map-engine "fdp")    ; Undirected Spring Force-Directed
+;; (setq org-mind-map-engine "sfdp")   ; Multiscale version of fdp for the layout of large graphs
+;; (setq org-mind-map-engine "twopi")  ; Radial layouts
+;; (setq org-mind-map-engine "circo")  ; Circular Layout
+
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;            Mobile Org Configuration
