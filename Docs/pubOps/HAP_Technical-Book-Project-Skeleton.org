@@ -127,31 +127,65 @@ Use this space to write the main synopsis of your work... You can write anything
 
 Front Matter... yadda... yadda... yadda...
 
-** DONE 🔖 Chapter 1
-CLOSED: [2021-02-19 Fri 16:23]
+** DONE 🔖 Chapter # -  <chapter name>
+CLOSED: [2021-03-02 Tue 17:51]
+
 :LOGBOOK:
-- State "DONE"       from              [2021-02-19 Fri 16:23]
+- State "DONE"       from "ACTIVE"     [2021-03-02 Tue 17:51]
+- State "ACTIVE"     from "DONE"       [2021-02-28 Sun 12:45]
+- State "DONE"       from              [2020-07-01 Wed 21:25]
 :END:
 
-*** 📄 Topic - <replace w/ topic name>
 :README:
-Topics are the DNA that make up the chapters in a book...  
-Chapters may contain several Topics, sub-Topics, tables, figures, examples, etc...
+Chapters are the *Top Level Headings* within the *Book: Section* of this Org Book Publishing project...  Clone this *Chapter #* Template and paste it under your Book: outline heading whenever you need to start a new chapter...
+
+The structure of this template is all set up for you ahead of time to allow you to immediately begin writing...  Replace titles to suit your needs, but keep the structure of *Chapter / Topic (sub-chapter)* intact... i.e., change names only...
+
+You may create any structure you need under the Topic Headings beginning at the next outline level below it...  This will ensure your book gets properly set up for LaTeX exporting to PDF and / or eBook formats with proper table of contents and book structure. 
+
+*Topics* or (sub-chapters) are the *DNA* that make up the chapters in a book...  
+Chapters may contain several Topics. Topics may contain sub headings, tables, figures, examples, etc...
 :END:
 
-# Begin Chapter:
+### BEGIN CHAPTER:
 
-<insert chapter / episode text here>
+*** 📄 Introduction <replace with topic name if needed>
+
+## BEGIN SUB-CHAPTER TEXT
 
 Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo. Fusce tincidunt, lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante. 
 
+**** References:
+
+Add links to other reference, source docs, requirements, back stories, whatever, here...
+
+## END SUB-CHAPTER TEXT
+
+*** 📄 New Topic <replace with topic name>
+
+## BEGIN SUB-CHAPTER TEXT
+
 At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
 
-# End of Chapter:
+## END SUB-CHAPTER TEXT
+
+### END CHAPTER:
 
 *** 🗒 Background Notes:
 
+:README:
+The *Background Notes* section of a chapter is a place where you can add notes, ideas, instructions, whatever... close at hand within the chapter, and not have to worry about any of it getting exported and or published to the final output product...  
+
+Nothing within this section will be exported... not even the Background Notes Heading itself.  Use this section any way and for any purpose you wish for things related to the chapter heading that contains it...
+
+The example Notes below have been timestamped as a way to suggest organizing TODO items for a particular chapter you may find yourself working on, or researching... *Use / replace the notes below with / for your own schemes*...
+:END:
+
+### BEGIN CHAPTER BACKGROUND NOTES
+
 **** 🗒 Note 1: <2020-05-10 Sun>
+
+## BEGIN BACKGROUND NOTE
 
 + Mark each note's timestamp to its initial creation time. This will enable emerging notes for chapters to be searched chronologically, and to give you an idea of how things evolve over time...
 
@@ -169,7 +203,11 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
 
 Do any or all the above to help get the concepts and images of your book clear in mind...
 
+## END BACKGROUND NOTE
+
 **** 🗒 Note 2: <2020-05-10 Sun>
+
+## BEGIN BACKGROUND NOTE
 
 Each new note needs to get its own heading and initial timestamp...
 
@@ -177,7 +215,11 @@ Each new note needs to get its own heading and initial timestamp...
 
 Quid Novi? Lorem Ipsum dolor sit amet,consectetur adipisicing elit, sed doeiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim adminim veniam, quis nostrudexercitation ullamco laboris nisi utaliquip ex ea commodo consequat.Duis aute irure dolor inreprehenderit in coluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatatnon proident, sunt in culpa quiofficia deserunt mollit anim id estlaborum.
 
+## END BACKGROUND NOTE
+
 **** 🗒 Phasellus orci: <2020-05-10 Sun>
+
+## BEGIN BACKGROUND NOTE
 
 Etiam tempor elit auctor magna. Nullam nibh velit, vestibulum ut, eleifend non, pulvinar eget, enim. Classaptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer velit mauris, convallis acongue sed, placerat id, odio. Etiam venenatis tortor sed lectus. Nulla non orci. In egestas porttitor quam. Duis nec diameget nibh mattis tempus. Curabitus accumsan pede id odio. Nunc vitae libero. Aenean condimentum diam et turpis.Vestibulum non risus. Ut consectetuer gravida elit. Aenean est nunc, varius sed, alquam eu, feugiat sit amet, metus. Sedvenenatis odio id eros.
 
@@ -187,10 +229,11 @@ Etiam tempor elit auctor magna. Nullam nibh velit, vestibulum ut, eleifend non, 
 | test 1   | test 2    | test 3    | test 4    | test 5            |
 |----------+-----------+-----------+-----------+-------------------|
 
-Yadda, yadda, yadda. etc...
+Yadda, yadda, yadda. etc... 
 
+## END BACKGROUND NOTE
 
-
+### END CHAPTER BACKGROUND NOTES
 * NEW 📒 Research:
 ** 💡 New Topic Ideas:
 ** DONE 📒 Yak Shaving:
@@ -442,31 +485,65 @@ Yadda, yadda, yadda...
 
 Make an editorial Calendar for this project right here where it belongs!  You won't loose it! and you can access it quickly without having to search for it elsewhere. Org-Mode excels for this task!  Take advantage of its powerful scheduling, agenda, and filtering capabilities!
 
-** DONE 🔖 New Chapter #
-CLOSED: [2020-07-01 Wed 21:25]
+** DONE 🔖 Chapter # -  <chapter name>
+CLOSED: [2021-03-02 Tue 17:51]
+
 :LOGBOOK:
+- State "DONE"       from "ACTIVE"     [2021-03-02 Tue 17:51]
+- State "ACTIVE"     from "DONE"       [2021-02-28 Sun 12:45]
 - State "DONE"       from              [2020-07-01 Wed 21:25]
 :END:
 
-*** 📄 Topic - <replace w/ topic name>
 :README:
-Topics are the DNA that make up the chapters in a book...  
-Chapters may contain several Topics, sub-Topics, tables, figures, examples, etc...
+Chapters are the *Top Level Headings* within the *Book: Section* of this Org Book Publishing project...  Clone this *Chapter #* Template and paste it under your Book: outline heading whenever you need to start a new chapter...
+
+The structure of this template is all set up for you ahead of time to allow you to immediately begin writing...  Replace titles to suit your needs, but keep the structure of *Chapter / Topic (sub-chapter)* intact... i.e., change names only...
+
+You may create any structure you need under the Topic Headings beginning at the next outline level below it...  This will ensure your book gets properly set up for LaTeX exporting to PDF and / or eBook formats with proper table of contents and book structure. 
+
+*Topics* or (sub-chapters) are the *DNA* that make up the chapters in a book...  
+Chapters may contain several Topics. Topics may contain sub headings, tables, figures, examples, etc...
 :END:
 
-# Begin Chapter:
+### BEGIN CHAPTER:
 
-<insert chapter / episode text here>
+*** 📄 Introduction <replace with topic name if needed>
+
+## BEGIN SUB-CHAPTER TEXT
 
 Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo. Fusce tincidunt, lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante. 
 
+**** References:
+
+Add links to other reference, source docs, requirements, back stories, whatever, here...
+
+## END SUB-CHAPTER TEXT
+
+*** 📄 New Topic <replace with topic name>
+
+## BEGIN SUB-CHAPTER TEXT
+
 At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
 
-# End of Chapter:
+## END SUB-CHAPTER TEXT
+
+### END CHAPTER:
 
 *** 🗒 Background Notes:
 
+:README:
+The *Background Notes* section of a chapter is a place where you can add notes, ideas, instructions, whatever... close at hand within the chapter, and not have to worry about any of it getting exported and or published to the final output product...  
+
+Nothing within this section will be exported... not even the Background Notes Heading itself.  Use this section any way and for any purpose you wish for things related to the chapter heading that contains it...
+
+The example Notes below have been timestamped as a way to suggest organizing TODO items for a particular chapter you may find yourself working on, or researching... *Use / replace the notes below with / for your own schemes*...
+:END:
+
+### BEGIN CHAPTER BACKGROUND NOTES
+
 **** 🗒 Note 1: <2020-05-10 Sun>
+
+## BEGIN BACKGROUND NOTE
 
 + Mark each note's timestamp to its initial creation time. This will enable emerging notes for chapters to be searched chronologically, and to give you an idea of how things evolve over time...
 
@@ -484,7 +561,11 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
 
 Do any or all the above to help get the concepts and images of your book clear in mind...
 
+## END BACKGROUND NOTE
+
 **** 🗒 Note 2: <2020-05-10 Sun>
+
+## BEGIN BACKGROUND NOTE
 
 Each new note needs to get its own heading and initial timestamp...
 
@@ -492,7 +573,11 @@ Each new note needs to get its own heading and initial timestamp...
 
 Quid Novi? Lorem Ipsum dolor sit amet,consectetur adipisicing elit, sed doeiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim adminim veniam, quis nostrudexercitation ullamco laboris nisi utaliquip ex ea commodo consequat.Duis aute irure dolor inreprehenderit in coluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatatnon proident, sunt in culpa quiofficia deserunt mollit anim id estlaborum.
 
+## END BACKGROUND NOTE
+
 **** 🗒 Phasellus orci: <2020-05-10 Sun>
+
+## BEGIN BACKGROUND NOTE
 
 Etiam tempor elit auctor magna. Nullam nibh velit, vestibulum ut, eleifend non, pulvinar eget, enim. Classaptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer velit mauris, convallis acongue sed, placerat id, odio. Etiam venenatis tortor sed lectus. Nulla non orci. In egestas porttitor quam. Duis nec diameget nibh mattis tempus. Curabitus accumsan pede id odio. Nunc vitae libero. Aenean condimentum diam et turpis.Vestibulum non risus. Ut consectetuer gravida elit. Aenean est nunc, varius sed, alquam eu, feugiat sit amet, metus. Sedvenenatis odio id eros.
 
@@ -504,3 +589,6 @@ Etiam tempor elit auctor magna. Nullam nibh velit, vestibulum ut, eleifend non, 
 
 Yadda, yadda, yadda. etc... 
 
+## END BACKGROUND NOTE
+
+### END CHAPTER BACKGROUND NOTES

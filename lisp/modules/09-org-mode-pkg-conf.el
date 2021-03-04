@@ -40,7 +40,7 @@
 ;; Summon the Org-mode Gods to be ready to grant your Mod requests...
 
 (require 'org)
-
+(require 'org-tempo)
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Define LOCAL USER MASTER ORG FILES DIRECTORY:
@@ -113,7 +113,7 @@
 (when ME--DARWIN
   (defconst me--mobile-org-dir
     (file-name-as-directory
-     (expand-file-name "/Volumes/Maneri/000-Alisha/Dropbox/Apps/MobileOrg"))))
+     (expand-file-name "~/Path/To/Your-MacOS/Dropbox/Apps/MobileOrg"))))
 
 ;;;
 ;; Path to Your ORG Docs on Linux:
@@ -135,7 +135,7 @@
 
 ;; Set MobileOrg Password:
 
-(setq org-mobile-encryption-password "w1sIw1m2.0r9")
+(setq org-mobile-encryption-password "<enter-password-here>")
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

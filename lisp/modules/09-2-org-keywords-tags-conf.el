@@ -141,11 +141,11 @@
 
 (defvar me--top-tags
   (quote
-   (("@DOCS" . ?d)    ;; General Docs
-    ("@Qubes" . ?q)   ;; Qubes OS - VM compartmentalization management...
-    ("@Alisha" . ?a)  ;; Me %^)  (change to your name)
-    ("@Family" . ?f)  ;; My Relatives...  (or yours - keep it)
-   )))                ;; END me--top-tags
+   (("@DOCS" . ?d)     ;; General Docs
+    ("@Qubes" . ?q)    ;; Qubes OS - VM compartmentalization management...
+    ("@Alisha" . ?a)   ;; Me %^)  (change to your name)
+    ("@Family" . ?f)   ;; My Relatives...  (or yours - keep it)
+   )))                 ;; END me--top-tags
 
 ;;;
 ;; Create TOP LEVEL General Tags for everything else:
@@ -188,7 +188,9 @@
 
    ;; Major Categories:
 
-   (("GenRef")
+   (("export" . ?x)    ;; Export Flag.. Explicit Export flag for outline trees...  
+    ("noexport" . ?n)  ;; DO NOT Export Flag... Exclude flag for outline trees...
+    ("GenRef")
     ("GenOps")
     ("PubOps")
     ("DevOps")
@@ -425,6 +427,7 @@
 ;;  Append these general tags to Org Tag Persistent alist
 
 (setq org-tag-persistent-alist (append
+                                me--top-tags
                                 me--general-tags
                                 me--library-tags
                                 nil))
