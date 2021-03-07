@@ -297,7 +297,7 @@
   ;;       (other existing and future frames are not affected)
   (set-face-attribute 'default
                       (selected-frame)
-                      :family "Courier Prime Emacs"
+                      :family "Courier Prime"
                       :slant 'normal
                       :height 138
                       :weight 'normal
@@ -359,7 +359,7 @@
   ;; All this Function does is Set default face to Courier Prime
   (set-face-attribute 'default
                       (selected-frame)
-                      :family "Courier Prime Emacs"
+                      :family "Courier Prime"
                       :slant 'normal
                       :height 138
                       :weight 'normal

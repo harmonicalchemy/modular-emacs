@@ -125,6 +125,29 @@
  '(("^ *\\([+]\\) "
     (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "🞜"))))))
 
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; Customize look of emphasized text in org-mode 
+;; This is for how markup will look in an org-mode
+;; buffer.  Not what it may or may not look like
+;; after exported to HTML or LaTeX etc...
+;; Experiment with this until you have something
+;; you like...
+
+;(add-to-list 'org-emphasis-alist
+;             '("*" (:foreground "DarkOrange"))
+;             '("/" (:foreground "LimeGreen")))
+
+(setq org-emphasis-alist
+  '(("*" (bold :foreground "chocolate" ))                          ;; *BOLD*
+    ("/" (italic :foreground "LimeGreen" :family "Courier Prime")) ;; /Italic/
+    ("_" underline)                                                ;; _underline_
+    ("=" (:background "maroon" :foreground "white"))               ;; =org-verbatim=
+    ("~" (:background "LemonChiffon" :foreground "IndianRed"))     ;; ~org-code~
+    ("+" (:strike-through t))))                                    ;; +strike-through+
+
+
+
+   
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Make Attractive Org-Mode Headers, blocks, keywords etc:
@@ -145,14 +168,14 @@
 (when ME--DARWIN
   (set-face-attribute
    'fixed-pitch-serif t
-   :family "Courier Prime Emacs"
+   :family "Courier Prime"
    :height 130
    :width 'normal))
 
 (when ME--LINUX
   (set-face-attribute
    'fixed-pitch-serif t
-   :family "Courier Prime Emacs"
+   :family "Courier Prime"
    :height 130
    :width 'normal))
 
@@ -170,7 +193,7 @@
  'user
  `(default ((t (:inherit fixed-pitch-serif :height 120))))
  `(org-default ((t (:inherit fixed-pitch-serif :height 120))))
- `(org-block ((t (:inherit fixed-pitch))))
+ `(org-block ((t (:inherit fixed-pitch-serif))))
  `(org-code ((t (:inherit fixed-pitch))))
  `(org-document-info ((t (:foreground "dark orange"))))
  `(org-document-info-keyword ((t (:inherit (shadow fixed-pitch-serif)))))

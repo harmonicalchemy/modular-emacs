@@ -47,12 +47,12 @@
 (custom-set-faces
  '(fountain ((t (
                  :height 130
-                 :family "Courier Prime Emacs")))))
+                 :family "Courier Prime")))))
 
 (custom-set-faces
  '(fountain-dialog ((t (
                         :height 130
-                        :family "Courier Prime Emacs"
+                        :family "Courier Prime"
                         :inherit
                         (font-lock-string-face))))))
 
@@ -206,7 +206,7 @@
 ;; Linux Case:
 
 (when ME--LINUX
-  (setq pandoc-binary "/usr/bin/pandoc"))
+  (setq pandoc-binary "~/.local/bin/pandoc"))
 
 ;;;
 ;; Add Pandoc Mode to all Markdown Files:

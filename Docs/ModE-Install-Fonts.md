@@ -52,20 +52,50 @@ That's it.. you are all set for Hermit as your default "coding" font in Emacs.
 
 > **Edit your Cloned Files:** Search for every instance of: **`:family "Hermit"`** and replace the single word `Hermit` with: 'Your-Chosen-coding-font'. Make sure you have changed every instance of the word Hermit.  Some files contain it more than once... Also, make sure you have also installed your chosen coding font on your machine as well of course...
 
+
+### Install Better Looking Fonts for Fedora:
+
+
+I was having problems with Courier Prime Emacs _(default for `org-mode` on Fedora)_... Seems there is no Italic option...  I could not find a way to install Courier Prime _(the original)_ on Fedora until **[I found this post on Reddit:](https://www.reddit.com/r/Fedora/comments/5nfenw/better_looking_fonts_for_fedora/)**
+
+**[Here is the Github Project Page - Better fonts for Fedora](https://github.com/silenc3r/fedora-better-fonts)**
+
+#### Install Better Looking Fonts for Fedora:
+
+This will install the original Courier Prime (with italic face) and a bunch of other great font replacements for default system installed fonts!  To do this you have to enable RPM Fusion Repo and then enable the COPR repo...
+
+``` conf
+## Enable RPM Fusion Repo first:
+
+alice@home$ sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
+## Next Enable COPR Better Fonts Repo:
+
+alice@home$ sudo dnf copr enable dawid/better_fonts
+
+## Install the Font Packages:
+
+alice@home$ sudo dnf install fontconfig-enhanced-defaults fontconfig-font-replacements
+```
+
+The above replaced many System level fonts, etc...  To ensure all changes are set, you need to log out and back in or _(better)_ reboot your computer to ensure all new fonts are properly set and old ones are not...  
+
+> **Note:** I changed **`09-1-org-beautify-conf.el`** so that **Courier Prime** _(not Courier Prime Emacs)_ is used on Linux now... On **Fedora** you need to have the above fonts package installed in order to see **`org-mode`** default text correctly... I have not tried this on Debian yet... _(next on my list for 2021)_
+
 **[\[Table of Contents\]](#table-of-contents)**
 
 **[\[Back To Main Modular Emacs README\]](../README.md)**
 
-### Install Font Manager to Install the Rest:
+### Install Font Manager GUI (optional):
 
-To install this and the other fonts provided, use the **Font Manager** app as shown below _(or use another font utility if that is your preference, not shown here, as that would be TMI)_ If you don't have Font Manager already installed on Fefora, install it with the following command:
+**Font Manager** is an option if you like installing fonts via a **GUI**.  As of this writing I don't think Font Manager is available on Fedora via DNF.  However by default, you can double click on any font in the file manager that you downloaded and unzipped, etc. and that will bring up the default "Fonts" app where you can choose to install the font...
 
-```yaml
-$> sudo dnf install font-manager
-```
-As of this writing the above will install Font Manager v0.7.2
+I will write up more about using Font Manager and/or other ways to install fonts on Debian later in 2021...
+
 
 #### Install "Courier Prime Emacs" Font w/ Font Manager:
+
+> **Note:** On Fedora, it is better to install "Better Fonts" as above... These instructions are for other Linux based OSs...
 
 **_Currier Prime_** is the recommended font for professional screenplays... This font is provided by the standard distro package managers, however those packages appear to cause font spacing problems in Emacs.  
 
@@ -115,11 +145,16 @@ Once they are installed, open **your font manager of choice** and look to see th
     - [Mac OS:](#mac-os)
     - [Fedora:](#fedora)
         - [Install Hermit Code Font:](#install-hermit-code-font)
-        - [Install Font Manager to Install the Rest:](#install-font-manager-to-install-the-rest)
+        - [Install Better Looking Fonts for Fedora:](#install-better-looking-fonts-for-fedora)
+            - [Install Better Looking Fonts for Fedora:](#install-better-looking-fonts-for-fedora-1)
+        - [Install Font Manager GUI (optional):](#install-font-manager-gui-optional)
             - [Install "Courier Prime Emacs" Font w/ Font Manager:](#install-courier-prime-emacs-font-w-font-manager)
             - [Install Averia and Symbola Fonts w/ Font Manager:](#install-averia-and-symbola-fonts-w-font-manager)
     - [Debian & Ubuntu:](#debian--ubuntu)
+    - [Table of Contents:](#table-of-contents)
 
 <!-- markdown-toc end -->
+
+
 
 **[\[Back To Main Modular Emacs README\]](../README.md)**

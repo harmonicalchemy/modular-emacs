@@ -153,7 +153,7 @@ Chapters may contain several Topics. Topics may contain sub headings, tables, fi
 
 ## BEGIN SUB-CHAPTER TEXT
 
-Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo. Fusce tincidunt, lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante. 
+*Lorem Ipsum Lorem Ipsum dolor sit amet*, /consectetuer adipiscingelit/. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo. Fusce tincidunt, lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante. 
 
 **** References:
 
@@ -511,7 +511,47 @@ Chapters may contain several Topics. Topics may contain sub headings, tables, fi
 
 ## BEGIN SUB-CHAPTER TEXT
 
-Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo. Fusce tincidunt, lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante. 
+#+begin_src conf
+alice@home$ 
+alice@CA1$ 
+alice@VPN1 
+alice@vps1$ 
+root@Vvps1# 
+#+end_src
+
+*Lorem Ipsum *Lorem Ipsum dolor sit amet*, consectetuer adipiscingelit. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo. Fusce tincidunt, /lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante./ 
+
+- Run: ~/usr/local/bin/my-app~  Then...
+
+- Test 1 :: This is a test...
+
+- *Test 2:* /This is a test.../
+
+- _underlined text..._  Oops! Not working!
+
+  + /Italic Text is not Italic either!/
+
+- *BOLD* ***
+
+- /Italic/ */*
+
+- _underline_ *_*
+
+- =org-verbatim= *=*
+
+- ~org-code~ *~*
+
+- +strike-through+ *+*
+
+#+begin_src lisp
+;; Dummy Lisp File
+(defconst ("JUNK"))
+#+end_src
+
+#+begin_src yaml
+test1 : ONE
+test2 : TWO
+#+end_src
 
 **** References:
 
@@ -519,11 +559,35 @@ Add links to other reference, source docs, requirements, back stories, whatever,
 
 ## END SUB-CHAPTER TEXT
 
-*** 📄 New Topic <replace with topic name>
+*** 📄 New Topic <clone this>
 
 ## BEGIN SUB-CHAPTER TEXT
 
 At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
+
+#+begin_src conf
+alice@home$ 
+alice@CA1$ 
+alice@VPN1 
+alice@vps1$ 
+root@Vvps1# 
+#+end_src
+
+## END SUB-CHAPTER TEXT
+
+*** 📄 New Topic <master template do not clone>
+
+## BEGIN SUB-CHAPTER TEXT
+
+At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
+
+#+begin_src conf
+alice@home$ 
+alice@CA1$ 
+alice@VPN1 
+alice@vps1$ 
+root@Vvps1# 
+#+end_src
 
 ## END SUB-CHAPTER TEXT
 
@@ -541,53 +605,19 @@ The example Notes below have been timestamped as a way to suggest organizing TOD
 
 ### BEGIN CHAPTER BACKGROUND NOTES
 
-**** 🗒 Note 1: <2020-05-10 Sun>
-
-## BEGIN BACKGROUND NOTE
-
-+ Mark each note's timestamp to its initial creation time. This will enable emerging notes for chapters to be searched chronologically, and to give you an idea of how things evolve over time...
-
-+ Add anything you need here under this heading formatted any way needed to present the data... Sub levels are fine, tables are fine... etc.  This is your chapter's Notebook, Scrapbook, whatever any extra info/metadata you feel is important to record...
-
-  + Use bulleted lists/sublist etc. if needed...
-
-1. Or Numbered Lists...
-
-|----+--------|
-| Or | Tables |
-|----+--------|
-|  1 |    2.3 |
-|----+--------|
-
-Do any or all the above to help get the concepts and images of your book clear in mind...
-
-## END BACKGROUND NOTE
-
-**** 🗒 Note 2: <2020-05-10 Sun>
+**** 🗒 Note # <clone this>: <2020-05-10 Sun>
 
 ## BEGIN BACKGROUND NOTE
 
 Each new note needs to get its own heading and initial timestamp...
 
-****** Quid Novi?
-
-Quid Novi? Lorem Ipsum dolor sit amet,consectetur adipisicing elit, sed doeiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim adminim veniam, quis nostrudexercitation ullamco laboris nisi utaliquip ex ea commodo consequat.Duis aute irure dolor inreprehenderit in coluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatatnon proident, sunt in culpa quiofficia deserunt mollit anim id estlaborum.
-
 ## END BACKGROUND NOTE
 
-**** 🗒 Phasellus orci: <2020-05-10 Sun>
+**** 🗒 Note # <master template do not clone>: <2020-05-10 Sun>
 
 ## BEGIN BACKGROUND NOTE
 
-Etiam tempor elit auctor magna. Nullam nibh velit, vestibulum ut, eleifend non, pulvinar eget, enim. Classaptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer velit mauris, convallis acongue sed, placerat id, odio. Etiam venenatis tortor sed lectus. Nulla non orci. In egestas porttitor quam. Duis nec diameget nibh mattis tempus. Curabitus accumsan pede id odio. Nunc vitae libero. Aenean condimentum diam et turpis.Vestibulum non risus. Ut consectetuer gravida elit. Aenean est nunc, varius sed, alquam eu, feugiat sit amet, metus. Sedvenenatis odio id eros.
-
-|----------+-----------+-----------+-----------+-------------------|
-| Inceptos | Venenatis | Convallis | Curabitus | Nunc vitae libero |
-|----------+-----------+-----------+-----------+-------------------|
-| test 1   | test 2    | test 3    | test 4    | test 5            |
-|----------+-----------+-----------+-----------+-------------------|
-
-Yadda, yadda, yadda. etc... 
+Each new note needs to get its own heading and initial timestamp...
 
 ## END BACKGROUND NOTE
 
