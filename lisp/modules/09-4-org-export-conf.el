@@ -18,6 +18,31 @@
 
 (require 'ox-md)
 (require 'ox-latex)
+(require 'tex)
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  AucTeX: LaTeX configuration:
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+(setq TeX-auto-save t)
+(setq TeX-fold-mode 1)
+(setq TeX-parse-self t)
+(setq-default TeX-master nil)
+(setq reftex-plug-into-AUCTeX t)
+
+;;;
+;; Set default compile to PDF:
+
+(setq TeX-PDF-mode t)
+
+;;;
+;; LaTeX Mode Hook tweaks:
+
+(add-hook 'LaTeX-mode-hook 'visual-line-mode)
+(add-hook 'LaTeX-mode-hook 'flyspell-mode)
+(add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
+(add-hook 'LaTeX-mode-hook 'turn-on-reftex)
+
 
 ;;;
 ;;  Hide the Emphasis Markup:
@@ -113,10 +138,6 @@
 
 (setq org-export-with-tags nil)
 
-;;;
-;;  Enable extra org-babel language-specific packages:
-
-(require 'ob-lisp)
 
 ;;;
 ;;  Make sure TEXINPUTS is set to: elpa/auctex-nn.nn.n/latex
@@ -151,6 +172,10 @@
 ;;       C-c C-c within an ABC block will compile the block.
 ;;       into nice music notation...
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+;;  Enable extra org-babel language-specific packages:
+
+(require 'ob-lisp)
 
 (org-babel-do-load-languages
  'org-babel-load-languages

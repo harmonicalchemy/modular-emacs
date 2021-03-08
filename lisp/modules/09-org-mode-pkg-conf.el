@@ -85,11 +85,40 @@
     (load-file "~/.emacs.d/lisp/my-modules/09-1-org-beautify-conf.el")
   (load-file "~/.emacs.d/lisp/modules/09-1-org-beautify-conf.el"))
 
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Setup my Default Org-Mode Keywords and Tags:
+;;  Schemes are based on the general GTD process I am using...
+;;  Override the file below by putting it into my-modules then change it to
+;;  suit your needs and planning style...
+
+(if (file-exists-p "~/.emacs.d/lisp/my-modules/09-2-org-keywords-tags-conf.el")
+    (load-file "~/.emacs.d/lisp/my-modules/09-2-org-keywords-tags-conf.el")
+  (load-file "~/.emacs.d/lisp/modules/09-2-org-keywords-tags-conf.el"))
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Setup my Org-Mode Project Management (Capture, GTD, TODO, Tasks, Agenda, etc.
+;;  Schemes are based on the "Autofocus GTD Process" I use along with the
+;;  Timesheets emacs package and a few other things like mind maps etc...
+;;  Override the file below by putting it into my-modules then change it to
+;;  suit your needs and planning style...
+
+(if (file-exists-p "~/.emacs.d/lisp/my-modules/09-3-org-PM-conf.el")
+    (load-file "~/.emacs.d/lisp/my-modules/09-3-org-PM-conf.el")
+  (load-file "~/.emacs.d/lisp/modules/09-3-org-PM-conf.el"))
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Configure Org-Mode Export Settings:
+;;  Override the file below by putting it into my-modules then change it to
+;;  fit your desired Org Mode Export features...
+
+(if (file-exists-p "~/.emacs.d/lisp/my-modules/09-4-org-export-conf.el")
+    (load-file "~/.emacs.d/lisp/my-modules/09-4-org-export-conf.el")
+  (load-file "~/.emacs.d/lisp/modules/09-4-org-export-conf.el"))
+
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;   Alisha's Advanced Org-Mode Configurations:
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;             Org Mind Map Configuration
@@ -273,8 +302,8 @@
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  Modular Emacs - Fancy Org View Hook function:
-;;  This Fancy Org Mode hook takes care of setting your writing/publishing
+;;  Modular Emacs - Fancy Org View - org-mode Hook Function:
+;;  This Fancy Org View hook takes care of setting your writing/publishing
 ;;  environment nicely...
 ;;
 ;;  Using this mode you can have two different Screen Layouts via a Toggle key..
@@ -295,19 +324,18 @@
   ;; Set default face to Courier Prime (A nice mono serif for writing)
   ;; NOTE: All settings below change the currently selected frame only...
   ;;       (other existing and future frames are not affected)
+
   (set-face-attribute 'default
                       (selected-frame)
                       :family "Courier Prime"
-                      :slant 'normal
-                      :height 138
-                      :weight 'normal
-                      :width 'normal)
+                      :height 130)
 
-  ;; Set NORMAL SCREEN Org Mode Frame size for org-mode
-  ;; planning, finances, TODOs, etc. (no split windows)
+  ;; Set SCREEN Frame size for org-mode planning,
+  ;; finances, TODOs, etc. (no split windows)
+
   (modify-frame-parameters nil
                            (quote
-                            ((name   . "HA Mod Emacs v3.2 - Normal Org Mode")
+                            ((name   . "HA Mod Emacs v3.3 - Normal Org Mode")
                              (height . 38)
                              (width  . 100))))
 
@@ -317,21 +345,10 @@
   ;; Hide bullets...
   (me_hide-org-bullets))
 
-;; Usage Notes for above hook function:
-;;
-;; NOTE1: Remove call to hide-org-bullets in function list above if you
-;;        would like to see fancy org bullet headings instead...
-;; NOTE2: This looks ugly if you are still using fancy scaleable
-;;        fonts for headings as well, (IMHO)...  IF you want to try using
-;;        Fancy Coloured Bullets etc., you most likely will want to disable
-;;        Fancy scaleable fonts as well... To do that you will have to
-;;        play around with org mode font styles in:
-;;                      09-1-org-beautify-conf.el
-;;        You will also find different org bullet styles within the above
-;;        file as well.... (go ahead... hack away!)
+;; END Fancy Org View - org-mode Hook function...
 
 
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Modular Emacs - Org Mode Hook function For EDIFF:
 ;; (EXPIRIMENTAL for Debugging only - Don't Use this)
 ;;
@@ -356,15 +373,15 @@
    This function configures org-mode to work better while using
    diff tools like eDiff to compare .org files.  Fancy Org Mode
    breaks eDiff and other tools that split windows..."
-  ;; All this Function does is Set default face to Courier Prime
-  (set-face-attribute 'default
-                      (selected-frame)
-                      :family "Courier Prime"
-                      :slant 'normal
-                      :height 138
-                      :weight 'normal
-                      :width 'normal))
 
+  ;; All this Function does is Set default face to Courier Prime
+
+  (set-face-attribute 'default (selected-frame)
+                      :family "Courier Prime"
+                      :height 130))
+
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;;              FANCY ORG MODE INIT
 ;;  Add Fancy Org Mode Hook Function to Org Mode startup list:
 
@@ -375,39 +392,6 @@
 ;;  NOTE:  Don't enable this unless you are troubleshooting Org Mode or something...
 ;;         And if you do enable this form, you need to disable the form above it...
 ;(add-hook 'org-mode-hook 'me_normal-org-mode-hook)
-
-
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  Setup my Default Org-Mode Keywords and Tags:
-;;  Schemes are based on the general GTD process I am using...
-;;  Override the file below by putting it into my-modules then change it to
-;;  suit your needs and planning style...
-
-(if (file-exists-p "~/.emacs.d/lisp/my-modules/09-2-org-keywords-tags-conf.el")
-    (load-file "~/.emacs.d/lisp/my-modules/09-2-org-keywords-tags-conf.el")
-  (load-file "~/.emacs.d/lisp/modules/09-2-org-keywords-tags-conf.el"))
-
-
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  Setup my Org-Mode Project Management (Capture, GTD, TODO, Tasks, Agenda, etc.
-;;  Schemes are based on the "Autofocus GTD Process" I use along with the
-;;  Timesheets emacs package and a few other things like mind maps etc...
-;;  Override the file below by putting it into my-modules then change it to
-;;  suit your needs and planning style...
-
-(if (file-exists-p "~/.emacs.d/lisp/my-modules/09-3-org-PM-conf.el")
-    (load-file "~/.emacs.d/lisp/my-modules/09-3-org-PM-conf.el")
-  (load-file "~/.emacs.d/lisp/modules/09-3-org-PM-conf.el"))
-
-
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  Configure Org-Mode Export Settings:
-;;  Override the file below by putting it into my-modules then change it to
-;;  fit your desired Org Mode Export features...
-
-(if (file-exists-p "~/.emacs.d/lisp/my-modules/09-4-org-export-conf.el")
-    (load-file "~/.emacs.d/lisp/my-modules/09-4-org-export-conf.el")
-  (load-file "~/.emacs.d/lisp/modules/09-4-org-export-conf.el"))
 
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;   END: [modular-emacs]:~/.emacs.d/lisp/modules/09-org-mode-pkg-conf.el

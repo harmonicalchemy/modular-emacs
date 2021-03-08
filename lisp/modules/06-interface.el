@@ -12,11 +12,11 @@
 ;; for 30 years and like it that way.  I tried CUA mode for a while once and my
 ;; fingers got confused and typed other non-emacs keys within Emacs, and also
 ;; accidentlay typed Emacs key commands when I was in other apps!  OMG!
-;;
+
 ;; Change Log: (descending chronological order)
-;;
+
 ;;   2021-001-07 - Modified width of initial and default frames to 88.
-;;
+
 ;;   2020-007-16 - Harmonic Alchemy Modular-Emacs V3.2 (beta) [Q3 2020]
 ;;      This has been tested on the develop branch long enough... I am
 ;;      still calling it "beta" because there is still a lot of work
@@ -26,34 +26,34 @@
 ;;      will continue to advance...  The nature of Emacs is "always in Beta"
 ;;      because it is so powerful and flexible, and empowers the user who can
 ;;      not only use and customize it but can also completely change functionality!
-;;
+
 ;;   2019-007-05 - Harmonic Alchemy Modular-Emacs Lisp IDE Fork v2.2.0 [Q3 2019]
 ;;      v2.0.1 [Q3 2019] Final testing period over... Version 2.0.1 is stable.
 ;;      This fork represents new commented out features added from Lisp-IDE
 ;;      branch/fork back into the develop branch so they can be kept up to
 ;;      date when the time comes for these features to be turned on within
 ;;      the develop or master branch at a later date...
-;;
+
 ;;   2019-007-05 - Harmonic Alchemy Modular-Emacs Official Release:
 ;;      v2.0.1 [Q3 2019] Final testing period over... Version 2.0.1 is stable.
-;;
+
 ;;   2019-006-23 - Harmonic Alchemy Modular-Emacs Official Release:
 ;;      v1.0.0 [Q2 2019] Final testing period over... Version 2 is stable.
-;;
+
 ;;   2019-004-24 - Harmonic Alchemy Modular-Emacs Official Point Release:
 ;;      v1.0.0 [Q2 2019] Final testing a new point release within the develop
 ;;      branch... After testing period is over a final commit will be made and
 ;;      merged back into master...  Master still holds Official Release: 1.0...
-;;
+
 ;;   2019-003-04 - Harmonic Alchemy Modular-Emacs Official Release v1.0 [Q1 2019]
 ;;      Final test of release candidates is over now... the develop
 ;;      branch has been merged back into master... (after this commit)...
 ;;      This commit will be tagged as Harmonic Alchemy Modular Emacs Version 1.0
 ;;      Official Release [Q1-2019]...
-;;
+
 ;;   2019-002-21 - Updated to Release Candidate 3 for Modular Emacs
 ;;      Version: 1.0 (Q1-2019)
-;;
+
 ;;   2019-001-21 - This file marks the first Release Candidate for Version
 ;;      1 of: Harmonic Alchemy Modular Emacs (displayed in the default Emacs
 ;;      frame title) 
@@ -61,7 +61,7 @@
 
 ;; Change title-bar text
 (setq frame-title-format
-      "Harmonic Alchemy Modular Emacs - Version 3.2 (still in beta) [Q3 2020]")
+      "Harmonic Alchemy Modular Emacs - Version 3.3 (still in beta) [Q2 2021]")
 
 ;; Disable tool-bar - I could care less about tool bars in emacs!
 ;; An oxymoron! But you may feel differently.  Comment this out if you like them.
@@ -107,19 +107,12 @@
 
 ;(global-set-key [mouse-yank-at-point] 'ignore)
 ;(setq mouse-yank-at-point nil)
-;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-;; Set default font to Hermit Medium:
 
-(set-face-attribute 'default nil
-                    :family "Hermit"
-                    :slant 'normal
-                    :height 120
-                    :weight 'normal
-                    :width 'normal)
-
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Set Initial Startup Frame Dimensions:
-;; You may have to play with this depending on your total screen size etc...
+;; You may have to play with this depending on your total
+;; screen size, etc...
 
 (setq initial-frame-alist
       '( (name . "HA Mod Emacs v3.2 - Coder's Frame")
@@ -132,8 +125,11 @@
          (left-fringe . 1)
          (right-fringe . 1)))
 
-;; Set default Frame Dimensions:
-;; You may have to play with this depending on your total screen size etc...
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; Set Default Frame Dimensions:
+;; You may have to play with this depending on your total
+;; screen size, etc...
 
 (setq default-frame-alist
       '( (name . "HA Mod Emacs v3.2 - Coder's Frame")
@@ -146,6 +142,11 @@
          (left-fringe . 1)
          (right-fringe . 1)))
 
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; NOT USED and possibly buggy anyway... (this mess from before
+;; not quite ready to delete yet for some reason)...
+;;
 ;; Disable scrollbar on new frame (all frames no matter what)
 ;; Scroll bars in Emacs are strange animals.. They don't belong here.
 ;; There seems to be a bug in the standard Emacs way to do this as
@@ -160,10 +161,13 @@
 ;  (modify-frames-parameters frame
 ;                            '((vertical-scroll-bars . nil)
 ;                                (horizontal-scroll-bars . nil))))
-
+;
 ;(add-hook 'after-make-frame-functions 'me-disable-scroll-bars)
 
-;; Activate blackbord theme...
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; Activate Blackboard theme:
+
 (load-theme 'blackboard t)
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

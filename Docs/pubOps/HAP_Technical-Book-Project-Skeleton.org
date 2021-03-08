@@ -9,6 +9,7 @@
 #+STARTUP: inlineimages
 #+DESCRIPTION: HAP - Bare Bones Tech Manual or Book Skeleton with generic basics already done for.  Great for documenting technical projects, large or small... Also great for organizing, handling caveats, trying different methods, etc. All while building a sound outline of support docs, steps, best practices... and publishable as a PDF Book suitable for eBook readers... (could also be published in other eBook formats or for the web)
 #+EXPORT_FILE_NAME: New-Untitled-Tech-Manual.pdf
+#+OPTIONS: H: 3 toc: 2
 #+OPTIONS: inline:nil
 #+OPTIONS: tasks:nil
 #+OPTIONS: tags:nil
@@ -127,37 +128,53 @@ Use this space to write the main synopsis of your work... You can write anything
 
 Front Matter... yadda... yadda... yadda...
 
-** DONE 🔖 Chapter # -  <chapter name>
-CLOSED: [2021-03-02 Tue 17:51]
-
-:LOGBOOK:
-- State "DONE"       from "ACTIVE"     [2021-03-02 Tue 17:51]
-- State "ACTIVE"     from "DONE"       [2021-02-28 Sun 12:45]
-- State "DONE"       from              [2020-07-01 Wed 21:25]
-:END:
-
-:README:
-Chapters are the *Top Level Headings* within the *Book: Section* of this Org Book Publishing project...  Clone this *Chapter #* Template and paste it under your Book: outline heading whenever you need to start a new chapter...
-
-The structure of this template is all set up for you ahead of time to allow you to immediately begin writing...  Replace titles to suit your needs, but keep the structure of *Chapter / Topic (sub-chapter)* intact... i.e., change names only...
-
-You may create any structure you need under the Topic Headings beginning at the next outline level below it...  This will ensure your book gets properly set up for LaTeX exporting to PDF and / or eBook formats with proper table of contents and book structure. 
-
-*Topics* or (sub-chapters) are the *DNA* that make up the chapters in a book...  
-Chapters may contain several Topics. Topics may contain sub headings, tables, figures, examples, etc...
-:END:
+** ACTIVE 🔖 Chapter # - Org-Mode Publishing Tricks
 
 ### BEGIN CHAPTER:
 
-*** 📄 Introduction <replace with topic name if needed>
+*** 📄 Introduction
 
 ## BEGIN SUB-CHAPTER TEXT
 
-*Lorem Ipsum Lorem Ipsum dolor sit amet*, /consectetuer adipiscingelit/. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo. Fusce tincidunt, lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante. 
+Here are some *publishing tips and snippits* I have found along the way...  Some of them may get incorporated more formally later /(with docs, etc.),/ but for now... you will have to discover these treasures below within this example chapter...
 
 **** References:
 
-Add links to other reference, source docs, requirements, back stories, whatever, here...
+:README:
+Add links to other reference, source docs, requirements, back stories, whatever, here...  
+
+To Create a Link Type: ~C-c C-l~ /(then paste: ~link~ & type: "description")/
+
+To Open a Link Type: ~C-c C-o~
+:END:
+
+- *[[https://orgmode.org/worg/org-contrib/babel/examples/fontify-src-code-blocks.html#org42aa49f][Pretty fontification of source code blocks - WORG]]*
+
+- *[[https://orgmode.org/manual/Working-with-Source-Code.html#Working-with-Source-Code][Working with Source Code - Org Manual]]*
+
+- *[[https://orgmode.org/worg/library-of-babel.html][Org Library of Babel]]*
+
+- *[[https://github.com/jkitchin/org-ref][JKitchin - org-ref @Github]]*
+
+- *[[https://youtu.be/fgizHHd7nOo][JKitchin - Org Mode is Awesome! - YouTube]]*
+
+- *[[https://youtu.be/SzA2YODtgK4][Harry Schwartz - Getting Started with Org Mode - YouTube]]*
+
+- *[[http://howardism.org/Technical/Emacs/literate-devops.html][Howard Abrams - Literate DevOps - Article]]*
+
+- *[[https://youtu.be/dljNabciEGg][Howard Abrams - Literate DevOps with Emacs - YouTube]]*
+
+- *[[https://zzamboni.org/post/beautifying-org-mode-in-emacs/][Diego Zamboni - Beautifying Org Mode in Emacs]]*
+
+- *       *
+
+- *       *
+
+- *       *
+
+- *       *
+
+- *       *
 
 ## END SUB-CHAPTER TEXT
 
@@ -516,7 +533,7 @@ alice@home$
 alice@CA1$ 
 alice@VPN1 
 alice@vps1$ 
-root@Vvps1# 
+root@vps1# 
 #+end_src
 
 *Lorem Ipsum *Lorem Ipsum dolor sit amet*, consectetuer adipiscingelit. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo. Fusce tincidunt, /lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante./ 
@@ -527,9 +544,9 @@ root@Vvps1#
 
 - *Test 2:* /This is a test.../
 
-- _underlined text..._  Oops! Not working!
+- _underlined text..._  Oops! Not working! Ahh.. Fixed it ;-)
 
-  + /Italic Text is not Italic either!/
+  + /Italic Text is not Italic either!/ Fixed It!
 
 - *BOLD* ***
 

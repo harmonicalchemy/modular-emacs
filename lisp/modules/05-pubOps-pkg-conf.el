@@ -71,33 +71,6 @@
 
 (add-hook 'fountain-mode-hook 'me_fountain-mode-hook)
 
-
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  AucTeX: LaTeX configuration:
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-(require 'tex)
-
-(setq TeX-auto-save t)
-(setq TeX-fold-mode 1)
-(setq TeX-parse-self t)
-(setq-default TeX-master nil)
-(setq reftex-plug-into-AUCTeX t)
-
-;;;
-;; Set default compile to PDF:
-
-(setq TeX-PDF-mode t)
-
-;;;
-;; LaTeX Mode Hook tweaks:
-
-(add-hook 'LaTeX-mode-hook 'visual-line-mode)
-(add-hook 'LaTeX-mode-hook 'flyspell-mode)
-(add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
-(add-hook 'LaTeX-mode-hook 'turn-on-reftex)
-
-
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; mmd-mode - Multimarkdown extensions to markdown-mode:
 ;; Reference: GitHub:jmquigley/mmd-mode

@@ -106,7 +106,7 @@
 
 (setq org-show-hierarchy-above t)
 
-(setq org-show-siblings (quote ((default))))
+(setq org-show-siblings (quote (default)))
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -125,98 +125,72 @@
  '(("^ *\\([+]\\) "
     (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "🞜"))))))
 
+
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Customize look of emphasized text in org-mode 
 ;; This is for how markup will look in an org-mode
 ;; buffer.  Not what it may or may not look like
 ;; after exported to HTML or LaTeX etc...
+;;
 ;; Experiment with this until you have something
-;; you like...
-
-;(add-to-list 'org-emphasis-alist
-;             '("*" (:foreground "DarkOrange"))
-;             '("/" (:foreground "LimeGreen")))
+;; you like... so far it's angry fruit salad! ;-)
+;; It took me so long to get around to fixing
+;; this... So now I will live with these settings
+;; until they drive me crazy!  LOL
 
 (setq org-emphasis-alist
-  '(("*" (bold :foreground "chocolate" ))                          ;; *BOLD*
-    ("/" (italic :foreground "LimeGreen" :family "Courier Prime")) ;; /Italic/
-    ("_" underline)                                                ;; _underline_
-    ("=" (:background "maroon" :foreground "white"))               ;; =org-verbatim=
-    ("~" (:background "LemonChiffon" :foreground "IndianRed"))     ;; ~org-code~
-    ("+" (:strike-through t))))                                    ;; +strike-through+
+      '(("*" (bold
+              :foreground "chocolate" ))            ;; *BOLD*
 
+        ("/" (italic
+              :family "Courier Prime"
+              :slant italic
+              :foreground "LimeGreen"))             ;; /Italic/
 
+        ("_" (
+              :underline (
+                          :color foreground-color
+                          :style line)))            ;; _underline_
 
-   
+        ("=" (
+              :family "Hermit"
+              :background "maroon"
+              :foreground "white"))                 ;; =org-verbatim=
+
+        ("~" (
+              :family "Hermit"
+              :background "LemonChiffon"
+              :foreground "IndianRed"))             ;; ~org-code~
+
+        ("+" (:strike-through t))))                 ;; +strike-through+
+
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; Make Attractive Org-Mode Headers, blocks, keywords etc:
+;; Customize Org headings:
+;; The fonts listed below will be tried in sequence,
+;; and the first one found will be used...
 ;;
 ;; The inspiration for this rather complicated eLisp code comes from:
 ;;   "Beautifying Org Mode in Emacs"
 ;;      https://zzamboni.org/post/beautifying-org-mode-in-emacs/
 
-;;;
-;;  Set default faces:
-
-(set-face-attribute
- 'fixed-pitch t
- :family "Hermit"
- :height 120
- :width 'normal)
-
-(when ME--DARWIN
-  (set-face-attribute
-   'fixed-pitch-serif t
-   :family "Courier Prime"
-   :height 130
-   :width 'normal))
-
-(when ME--LINUX
-  (set-face-attribute
-   'fixed-pitch-serif t
-   :family "Courier Prime"
-   :height 130
-   :width 'normal))
-
-;; Variable Pitch Face:
-
-(set-face-attribute
- 'variable-pitch t
- :family "Averia Serif Libre"
- :height 130
- :width 'normal)
-
-;; Set Org Mode Faces:
-
-(custom-theme-set-faces
- 'user
- `(default ((t (:inherit fixed-pitch-serif :height 120))))
- `(org-default ((t (:inherit fixed-pitch-serif :height 120))))
- `(org-block ((t (:inherit fixed-pitch-serif))))
- `(org-code ((t (:inherit fixed-pitch))))
- `(org-document-info ((t (:foreground "dark orange"))))
- `(org-document-info-keyword ((t (:inherit (shadow fixed-pitch-serif)))))
- `(org-indent ((t (:inherit (org-hide fixed-pitch-serif)))))
- `(org-link ((t (:foreground "royal blue" :underline t))))
- `(org-meta-line ((t (:inherit (font-lock-comment-face fixed-pitch-serif)))))
- `(org-property-value ((t (:inherit fixed-pitch-serif))) t)
- `(org-special-keyword ((t (:inherit (font-lock-comment-face fixed-pitch-serif)))))
- `(org-table ((t (:inherit fixed-pitch :foreground "#98a583"))))
- `(org-tag ((t (:inherit (shadow fixed-pitch) :weight bold :height 0.8))))
- `(org-verbatim ((t (:inherit (shadow fixed-pitch))))))
-
-;; Customize Org headings:
-
 (let* ((variable-tuple
         (cond
-         ((x-list-fonts "Averia Serif Libre")
-          '(:font "Averia Serif Libre"))
+         ((x-list-fonts "Averia Libre Regular")
+          '(:font "Averia Libre Regular"))
          ((x-list-fonts "Averia Libre Light")
           '(:font "Averia Libre Light"))
+         ((x-list-fonts "Averia Sans Libre Regular")
+          '(:font "Averia Libre Regular"))
+         ((x-list-fonts "Averia Sans Libre Light")
+          '(:font "Averia Libre Regular"))
+         ((x-list-fonts "Averia Serif Libre Regular")
+          '(:font "Averia Libre Regular"))
+         ((x-list-fonts "Averia Serif Libre Light")
+          '(:font "Averia Libre Regular"))
          (nil (warn "Averia Fonts Not Found! Did you install them?"))))
        (base-font-color     (face-foreground 'default nil 'default))
-       (headline           `(:inherit default :weight normal )))
+       (headline           `(:inherit 'default )))
 
   (custom-theme-set-faces
    'user

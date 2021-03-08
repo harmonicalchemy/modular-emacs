@@ -185,11 +185,11 @@
 ;;  Modular Emacs - Make Writer's Frame Function:
 ;;  This simply makes new frames to match 
 ;;  HA Modular Emacs Writing Mode Specification
-;;  using Courier Prime Emacs font with dimensions
-;;  that fit best for authors/publishers on both
-;;  iMac 27" screens and small Linux Laptops...
-;;  The new frame opens with initial buffer set
-;;  to: *Bookmark List*
+;;  using Courier Prime font with dimensions
+;;  that fit best for screenwriters, authors,
+;;  publishers on both iMac 27" screens and small
+;;  Linux Laptops...  The new frame opens with
+;;  initial buffer set to: *Bookmark List*
 
 (defun me_make-writing-frame ()
   "Create Frames using ME default writer's face
@@ -211,13 +211,10 @@
     ;; Select this new frame:
     (select-frame-by-name "HA Mod Emacs v3.2 - Writer's Frame")
 
-    ;; Set Default Face to Courier Prime Emacs:
+    ;; Set Default Face to Courier Prime:
     (set-face-attribute 'default (selected-frame)
-                        :family "Courier Prime Emacs"
-                        :slant 'normal
-                        :height 138
-                        :weight 'normal
-                        :width 'normal)
+                        :family "Courier Prime"
+                        :height 130)
 
     ;; Set Olivetti Width (88 column wide)
     (olivetti-set-width 88)
@@ -259,10 +256,7 @@
     ;; Set Default Face to Hermit for coding:
     (set-face-attribute 'default (selected-frame)
                         :family "Hermit"
-                        :slant 'normal
-                        :height 120
-                        :weight 'normal
-                        :width 'normal)
+                        :height 120)
 
     ;; Call Xah-Fly-Keys (resets some face attributes)
     (xah-fly-keys 1)))
@@ -313,10 +307,10 @@
 ;;  NOTE1:  Currently there is no check to see if these fonts are 
 ;;          installed on your system! This is still alpha test stage..."
 ;;
-;;  NOTE2:  It appears that Courier Prime Emacs is required to prevent
+;;  NOTE2:  It appears that Courier Prime is required to prevent
 ;;          D o u b l e  W i d e rendering of certain Emacs faces! This
 ;;          was a problem on Linux.  Not sure about Mac OS yet as I
-;;          installed Courier Prime Emacs there first and it "just worked" ;-)
+;;          installed Courier Prime there first and it "just worked" ;-)
 ;;          This is the reason I have two cases below in the function.
 ;;          Currently the cases produce redundant results, but i left them in
 ;;          in case I need to play around with this later...
@@ -327,7 +321,7 @@
 ;; Set Default face to Org face Function:
 
 (defun me_set-writing-face ()
-  "Set default face to Courier Prime Emacs (A nice mono serif for writing)"
+  "Set default face to Courier Prime (A nice mono serif for writing)"
   ;; NOTE1: This only sets the face for the currently Selected Frame...
   ;;        (other frames are not affected)
   ;; NOTE2: The flag that gets set to check whether coding or writing mode
@@ -336,11 +330,8 @@
   (interactive)
   (progn
     (set-face-attribute 'default (selected-frame)
-                        :family "Courier Prime Emacs"
-                        :slant 'normal
-                        :height 138
-                        :weight 'normal
-                        :width 'normal)
+                        :family "Courier Prime"
+                        :height 130)
 
     ;; Modify Frame dimensions for Writing with Olivetti mode enabled...
     (modify-frame-parameters nil
@@ -360,10 +351,7 @@
   (progn
     (set-face-attribute 'default (selected-frame)
                         :family "Hermit"
-                        :slant 'normal
-                        :height 120
-                        :weight 'normal
-                        :width 'normal)
+                        :height 120)
 
     (modify-frame-parameters nil
                              (quote
