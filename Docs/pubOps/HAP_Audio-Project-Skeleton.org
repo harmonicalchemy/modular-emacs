@@ -1,7 +1,7 @@
 #+TITLE: HAP - Audio Project Skeleton
 #+AUTHOR: Alisha Awen - Harmonic Alchemy Productions
 #+CATEGORY: 
-#+STARTUP: all
+#+STARTUP: overview
 #+STARTUP: inlineimages
 #+DESCRIPTION: HAP - Bare Bones Skeleton with generic basics already done for.  Great for Authors to use when starting a new Radio Drama or any kind of Audio Production project from scratch...
 #+EXPORT_FILE_NAME: My-New-Book.pdf
