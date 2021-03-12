@@ -152,43 +152,51 @@
    ;; Major Categories:
 
    ((:startgroup     . nil) ;; BEGIN: Mutually Exclusive Group:
-    ("@home"         . ?H)  ;; Top Level @home Tag. (personal stuff, banking, health, etc.)
-    ("@work"         . ?W)  ;; Top Level @work Tag. (devOps, sysAdmin, clients, community, sales, etc.)
+    ("@home"         . ?H)  ;; FLAG: @home Tag. (personal stuff, banking, health, etc.)
+    ("@work"         . ?W)  ;; FLAG: @work Tag. (devOps, sysAdmin, clients, community, sales)
     (:endgroup       . nil) ;; END Group:
     (:startgroup     . nil) ;; BEGIN: Mutually Exclusive Group:
-    ("export"       . ?x)  ;; Export Flag.. Explicit Export flag for outline trees...
-    ("noexport"     . ?n)  ;; DO NOT Export Flag... Exclude flag for outline trees...
+    ("export"        . ?x)  ;; FLAG: "Export outline tree"
+    ("noexport"      . ?n)  ;; FLAG: "Exclude outline tree from Export" 
     (:endgroup       . nil) ;; END Group:
-    ("@projects"     . ?p)  ;; Top Level @projects Tag.  (productions, creative, SOI, OMAN, MWM, )
-    ("git"          . ?g)
+    (:startgroup     . nil) ;; BEGIN: Mutually Exclusive Group:
+    ("in_ed_cal"     . ?1)  ;; FLAG: "In Editorial Calendar"
+    ("not_in_ed_cal" . ?0) ;; FLAG: "NOT In Editorial Calendar"
+    (:endgroup       . nil) ;; END Group:
+    (:startgroup     . nil) ;; BEGIN: Mutually Exclusive Group:
+    ("published"     . ?+)  ;; FLAG: "IS Published"
+    ("unpublished"   . ?-) ;; FLAG: "NOT Published"
+    (:endgroup       . nil) ;; END Group:
+    ("@projects"     . ?p)  ;; @projects Tag.  (productions, creative, SOI, OMAN, MWM, )
+    ("git"           . ?g)
     ("research"      . ?r)
-    ("@autofocus"    . ?A)  ;; Top Level @AutoFocus Notebook Tag. (GTD)
-    ("devOps"       . ?D)
-    ("gtd"          . ?G)
-    ("newIdeas"     . ?N)
-    ("genOps"       . ?O)
-    ("pubOps"       . ?P)
-    ("genRef"       . ?R)
-    ("sysAdmin"     . ?S)
-    ("@tags"        . ?T)
+    ("@autofocus"    . ?A)  ;; @AutoFocus Notebook Tag. (GTD)
+    ("devOps"        . ?D)
+    ("gtd"           . ?G)
+    ("newIdeas"      . ?N)
+    ("genOps"        . ?O)
+    ("pubOps"        . ?P)
+    ("genRef"        . ?R)
+    ("sysAdmin"      . ?S)
+    ("@tags"         . ?T)
 
     ;; General Purpose:
 
-    ("cheatsheets"  . ?c)
-    ("diagrams"     . ?d)
-    ("logs"        . ?L)
-    ("scratchpads"  . ?s)
-    ("quotes"      . ?q)
-    ("README"      . ?1)
-    ("templates"   . ?t)
-    ("tools"       . ?2)
-    ("presets"     . ?3)
-    ("tutorials"   . ?4)
-    ("videos"      . ?v)
-    ("how_to"      . ??))))
+    ("cheatsheets"   . ?c)
+    ("diagrams"      . ?d)
+    ("logs"          . ?L)
+    ("scratchpads"   . ?s)
+    ("quotes"        . ?q)
+    ("README"        . ?5)
+    ("templates?"    . ?t)
+    ("tools"         . ?2)
+    ("presets"       . ?3)
+    ("tutorials"     . ?4)
+    ("videos"        . ?v)
+    ("how_to"        . ??))))
 
     ;; Keys Used So Far:
-    ;; c d g n p q r s t v x A D G H L N O P R S T W 1 2 3 4 ?
+    ;; c d g n p q r s t v x A D G H L N O P R S T W 0 1 2 3 4 5 + - ?
 
     ;; END GENERAL TAGS
 

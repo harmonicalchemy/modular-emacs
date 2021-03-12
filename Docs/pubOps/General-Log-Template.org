@@ -6,8 +6,23 @@
 #+DESCRIPTION: HAP - Modular Emacs Org Mode General Log Template.  This is the replacement for the Markdown Mode templates I was using previously, which were in turn replacements for even older templates I made originally for Evernote/Trello/Scrivener...
 #+EXPORT_FILE_NAME: General-Log-Template.pdf
 #+KEYWORDS:
-#+TAGS: logs GTD Autofocus Org_Mode Writing_Resources scratchpads templates
-#+FILETAGS: templates published unpublished in_ed_cal not_in_ed_cal Pub✎Ops
+
+;;;
+;; Setup Tag File with Category: 
+;;   (replace path below with path to setup file 
+;;    for your chosen category for Logging)
+;#+SETUPFILE: ~/Org-Docs/00-Agenda-files/<category>-tags.org
+
+#+SETUPFILE: ~/Documents/000-Alisha/000-GIT/My-Docs/Org-Docs/00-Agenda-files/infotech-tags.org
+
+;;; 
+;; Don't mess with these unless you have good reason, (e.g., testing).
+;;   (use Setup Tag File above to specify tags for this file to use)
+; #+STARTUP: noptag
+; #+TAGS:
+
+#+TAGS: templates { published unpublished } { in_ed_cal not_in_ed_cal } logs GTD Autofocus Org_Mode Writing_Resources scratchpads templates
+#+FILETAGS:
 #+STARTUP: overview
 #+STARTUP: inlineimages
 #+OPTIONS: c:t
@@ -19,7 +34,7 @@
 #+OPTIONS: inline:nil
 #+OPTIONS: d:nil
 
-* How to Use this Template: :noexport:
+* How to Use this Notebook:
 
 ** Introduction:
 
@@ -27,9 +42,9 @@ Use this Standard Log /(template)/ as a multi purpose time card/log entry vehicl
 
 Use one for work, one for home, one for play, for creative projects, for pretty much anything that needs to be recorded with time and events in a log... I am honing this new scheme to be the General Purpose Log Note Template for everything that I ever dreamed of having.  And for you too!
 
-I have already stopped using Markdown files for this purpose... This makes total sense as Org-Mode was designed exclusively for such things! Using Markdown after the fact for such things would be like going back to a /"*Dec VT220* green screen *dumb terminal*"/ after experiencing *X Windows* on a Big *HP-UX Workstation*!
+I have already stopped using Markdown files for this purpose... This makes total sense as Org-Mode was designed exclusively for such things! Using Markdown after the fact for such things would be like going back to a /"*Dec VT220* green screen *dumb terminal*"/ after experiencing *X Windows* on a Big *HP-UX Workstation*
 
-Yeah, that's a personal story from the past, lol... All you Mac users out there, please realize that your beautiful Apple desktop is in fact an HP-UX Motif X-Windows widget set clone!  That's what Steve Jobs believed to be the best X-Windows tool-kit of the day /(when he was building the NeXT computer)/...  So... Yup he copied that! The Applications Doc at the bottom of your screen is a dead giveaway. Hewlet Packard was first to use such UI concepts...
+Yeah, that's a personal story from the past, lol... All you Mac users out there, please realize that your beautiful Apple desktop is in fact an HP-UX Motif X-Windows widget set clone!  That's what Steve Jobs believed to be the best X-Windows tool-kit of the day /(when he was building the NeXT computer)/...  So... Yup he copied that! The Applications Doc at the bottom of your screen is a dead giveaway. Hewlet Packard was first to use such UI concepts... /(back before the dawning of the web we loved those HPUX Workstations!)/
 
 \newpage
 
@@ -196,10 +211,13 @@ Yadda, Yadda, Yadda... etc...
 
 \newpage
 
+* Introduction:
 
+:README:
+Use this section as Front Matter for your Log Book...
+:END:
 
-
-
+This Log Book was created for...  Yadda Yadda... Yadda...
 * Begin Log Notebook:
 :PROPERTIES:
 :CUSTOM_ID: log-notebook-1
