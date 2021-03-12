@@ -31,7 +31,6 @@
 ;                  "|" "✘ CANCELLED(c@/!)" "PHONE(p)")
 ;	(sequence  "NEW(n)" "⦾ NOW(o)" "SOMEDAY(s)"  "|" "ARCHIVED(a)"))))
 
-
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Set Org TODO keyword faces:
 ;;  (don't settle for boring red, green, blue... Be creative!)
@@ -41,14 +40,14 @@
 ;;
 ;;  NOTE: You can also do this for tag faces:
 ;;        Copy this form when you are ready to do that and add in your tags
-;;        as a new element in the list...
+;;        as new elements in the list...
 ;;
-;(setq org-tag-faces
-;      (quote (
-;              ( "TAG-NAME" . (:family "Hermit" :height 100 :foreground "red" :weight bold))
-;              ;; Add More Tag Elements to the list...
-;              ;;
-;              )))
+;;   (setq org-tag-faces
+;;      (quote
+;;       (
+;;        ("TAG-NAME" . (:family "Hermit" :height 100 :foreground "red" :weight bold))
+;;        Add More Tag Elements to this list using above form as example member...
+;;        )))
 
 (setq org-todo-keyword-faces
       (quote
@@ -139,17 +138,6 @@
 ;;       )))
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; Global TAGS: (hierarchical list)
-;;
-;; NOTE: Single keys are assigned to the following
-;;       TOP LEVEL Group Tags for quick access:
-;;       (see dotted pairs (cons cells) below in org-tag-alist)
-;;
-;;    @Alisha             "a"
-;;    Family              "f"
-;;    @LIBRARY            "l"
-
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Create General Tags for everything else:
 ;;
 ;; NOTE: 2021-003-10 - This general tag list has been greatly shortened...
@@ -163,54 +151,57 @@
 
    ;; Major Categories:
 
-   (("export" . ?x)    ;; Export Flag.. Explicit Export flag for outline trees...  
-    ("noexport" . ?n)  ;; DO NOT Export Flag... Exclude flag for outline trees...
-    ("GenRef")
-    ("GenOps")
-    ("PubOps")
-    ("DevOps")
-    ("git")
-    ("SysAdmin")
-    ("Research")
-    ("Blog_Ideas")
-    ("New_Ideas")
-    ("Projects")
-    ("GTD")
-    ("Autofocus")
+   (("git"         . ?g)
+    ("noexport"    . ?n) ;; DO NOT Export Flag... Exclude flag for outline trees...
+    ("Projects"    . ?p)
+    ("Research"    . ?r)
+    ("export"      . ?x)   ;; Export Flag.. Explicit Export flag for outline trees...
+    ("Autofocus"   . ?A)
+    ("Blog_Ideas"  . ?B)
+    ("DevOps"      . ?D)
+    ("GTD"         . ?G)
+    ("New_Ideas"   . ?N)
+    ("GenOps"      . ?O)
+    ("PubOps"      . ?P)
+    ("GenRef"      . ?R)
+    ("SysAdmin"    . ?S)
 
     ;; General Purpose:
 
-    ("@TAGS")
-    ("hashtags")
-    ("cheatsheets")
-    ("diagrams")
-    ("how_to")
-    ("logs")
-    ("scratchpads")
-    ("quotes")
-    ("README")
-    ("templates")
-    ("tools")
-    ("presets")
-    ("tutorials")
-    ("videos"))))
+    ("@TAGS"       . ?T)
+    ("hashtags"    . ?h)
+    ("cheatsheets" . ?c)
+    ("diagrams"    . ?d)
+    ("how_to"      . ?H)
+    ("logs"        . ?L)
+    ("scratchpads" . ?s)
+    ("quotes"      . ?q)
+    ("README"      . ?1)
+    ("templates"   . ?t)
+    ("tools"       . ?2)
+    ("presets"     . ?3)
+    ("tutorials"   . ?4)
+    ("videos"      . ?v))))
+
+    ;; Keys Used So Far:
+    ;; c d g h n p q r s t v x A B D G H L N O P R S T 1 2 3 4
 
     ;; END GENERAL TAGS
 
-;; COMMENTED OUT FOR TESTING...
-;; ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; ;;  Append all TOP LEVEL tag lists together for org-mode quick set tags....
-;;
-;; (setq org-tag-alist (append
-;;                      me--general-tags
-;;                      nil))
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Append all TOP LEVEL tag lists together for org-mode quick set tags....
+
+(setq org-tag-alist (append
+                     me--general-tags
+                     nil))
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Append General Tags to Org Tag Persistent alist
-
-(setq org-tag-persistent-alist (append
-                                me--general-tags
-                                nil))
+;;  NOTE:  I am not using this at present...
+;;
+;; (setq org-tag-persistent-alist (append
+;;                                 me--general-tags
+;;                                 nil))
 
 ;;;
 ;; Here is some code I snarfed from the web that may help simplify the above...
