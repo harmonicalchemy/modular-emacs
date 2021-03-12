@@ -151,57 +151,58 @@
 
    ;; Major Categories:
 
-   (("git"         . ?g)
-    ("noexport"    . ?n) ;; DO NOT Export Flag... Exclude flag for outline trees...
-    ("Projects"    . ?p)
-    ("Research"    . ?r)
-    ("export"      . ?x)   ;; Export Flag.. Explicit Export flag for outline trees...
-    ("Autofocus"   . ?A)
-    ("Blog_Ideas"  . ?B)
-    ("DevOps"      . ?D)
-    ("GTD"         . ?G)
-    ("New_Ideas"   . ?N)
-    ("GenOps"      . ?O)
-    ("PubOps"      . ?P)
-    ("GenRef"      . ?R)
-    ("SysAdmin"    . ?S)
+   ((:startgroup     . nil) ;; BEGIN: Mutually Exclusive Group:
+    ("@home"         . ?H)  ;; Top Level @home Tag. (personal stuff, banking, health, etc.)
+    ("@work"         . ?W)  ;; Top Level @work Tag. (devOps, sysAdmin, clients, community, sales, etc.)
+    (:endgroup       . nil) ;; END Group:
+    (:startgroup     . nil) ;; BEGIN: Mutually Exclusive Group:
+    ("export"       . ?x)  ;; Export Flag.. Explicit Export flag for outline trees...
+    ("noexport"     . ?n)  ;; DO NOT Export Flag... Exclude flag for outline trees...
+    (:endgroup       . nil) ;; END Group:
+    ("@projects"     . ?p)  ;; Top Level @projects Tag.  (productions, creative, SOI, OMAN, MWM, )
+    ("git"          . ?g)
+    ("research"      . ?r)
+    ("@autofocus"    . ?A)  ;; Top Level @AutoFocus Notebook Tag. (GTD)
+    ("devOps"       . ?D)
+    ("gtd"          . ?G)
+    ("newIdeas"     . ?N)
+    ("genOps"       . ?O)
+    ("pubOps"       . ?P)
+    ("genRef"       . ?R)
+    ("sysAdmin"     . ?S)
+    ("@tags"        . ?T)
 
     ;; General Purpose:
 
-    ("@TAGS"       . ?T)
-    ("hashtags"    . ?h)
-    ("cheatsheets" . ?c)
-    ("diagrams"    . ?d)
-    ("how_to"      . ?H)
+    ("cheatsheets"  . ?c)
+    ("diagrams"     . ?d)
     ("logs"        . ?L)
-    ("scratchpads" . ?s)
+    ("scratchpads"  . ?s)
     ("quotes"      . ?q)
     ("README"      . ?1)
     ("templates"   . ?t)
     ("tools"       . ?2)
     ("presets"     . ?3)
     ("tutorials"   . ?4)
-    ("videos"      . ?v))))
+    ("videos"      . ?v)
+    ("how_to"      . ??))))
 
     ;; Keys Used So Far:
-    ;; c d g h n p q r s t v x A B D G H L N O P R S T 1 2 3 4
+    ;; c d g n p q r s t v x A D G H L N O P R S T W 1 2 3 4 ?
 
     ;; END GENERAL TAGS
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Append all TOP LEVEL tag lists together for org-mode quick set tags....
 
-(setq org-tag-alist (append
-                     me--general-tags
-                     nil))
+;(setq org-tag-alist (append me--general-tags nil))
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  Append General Tags to Org Tag Persistent alist
-;;  NOTE:  I am not using this at present...
-;;
-;; (setq org-tag-persistent-alist (append
-;;                                 me--general-tags
-;;                                 nil))
+;;  Reset Org Tag Persistent alist with General Tags: 
+
+(setq org-tag-persistent-alist nil) ;; Start with empty list... Don't save between Inits...
+
+(setq org-tag-persistent-alist (append me--general-tags nil))
 
 ;;;
 ;; Here is some code I snarfed from the web that may help simplify the above...
@@ -210,15 +211,15 @@
 ;; reading this file and then loading org-tags-alist with data stored here...
 ;; This function may be modified to do something else though... Don't delete it yet...
 
-(defun me_org-persist-new-tags ()
-  (interactive)
-  (let ((known-tags (append org-tag-persistent-alist org-tag-alist))
-        (item-tags (split-string (org-get-tags))))
-    (setq org-tag-alist
-          (append org-tag-alist
-                  (-filter (lambda (tag) (assoc tag known-tags)) item-tags)))
-    ;; TODO: write out to a file the org-tag-alist
-    ))
+;; (defun me_org-persist-new-tags ()
+;;   (interactive)
+;;   (let ((known-tags (append org-tag-persistent-alist org-tag-alist))
+;;         (item-tags (split-string (org-get-tags))))
+;;     (setq org-tag-alist
+;;           (append org-tag-alist
+;;                   (-filter (lambda (tag) (assoc tag known-tags)) item-tags)))
+;;     ;; TODO: write out to a file the org-tag-alist
+;;     ))
 
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;   END: [modular-emacs]:~/.emacs.d/lisp/modules/09-2-org-keywords-tags-conf.el
