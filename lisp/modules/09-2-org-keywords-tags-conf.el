@@ -149,28 +149,34 @@
 (defvar me--general-tags
   (quote
 
-   ;; Major Categories:
+   ;; Mutually Exclusive Tags:
 
-   ((:startgroup     . nil) ;; BEGIN: Mutually Exclusive Group:
-    ("@home"         . ?H)  ;; FLAG: @home Tag. (personal stuff, banking, health, etc.)
-    ("@work"         . ?W)  ;; FLAG: @work Tag. (devOps, sysAdmin, clients, community, sales)
-    (:endgroup       . nil) ;; END Group:
-    (:startgroup     . nil) ;; BEGIN: Mutually Exclusive Group:
-    ("export"        . ?x)  ;; FLAG: "Export outline tree"
-    ("noexport"      . ?n)  ;; FLAG: "Exclude outline tree from Export" 
-    (:endgroup       . nil) ;; END Group:
-    (:startgroup     . nil) ;; BEGIN: Mutually Exclusive Group:
-    ("in_ed_cal"     . ?1)  ;; FLAG: "In Editorial Calendar"
-    ("not_in_ed_cal" . ?0) ;; FLAG: "NOT In Editorial Calendar"
-    (:endgroup       . nil) ;; END Group:
-    (:startgroup     . nil) ;; BEGIN: Mutually Exclusive Group:
-    ("published"     . ?+)  ;; FLAG: "IS Published"
-    ("unpublished"   . ?-) ;; FLAG: "NOT Published"
-    (:endgroup       . nil) ;; END Group:
-    ("@projects"     . ?p)  ;; @projects Tag.  (productions, creative, SOI, OMAN, MWM, )
+   ((:startgroup     . nil)   ;; BEGIN: Mutually Exclusive Group:
+    ("@home"         . ?H)    ;; FLAG: (personal stuff, banking, health, etc.)
+    ("@work"         . ?W)    ;; FLAG: (devOps, sysAdmin, clients, community, sales)
+    (:endgroup       . nil)   ;; END Group:
+
+    (:startgroup     . nil)   ;; BEGIN: Mutually Exclusive Group:
+    ("export"        . ?x)    ;; FLAG: "Export Outline Tree"
+    ("noexport"      . ?n)    ;; FLAG: "Exclude Outline Tree from Export" 
+    (:endgroup       . nil)   ;; END Group:
+
+    (:startgroup     . nil)   ;; BEGIN: Mutually Exclusive Group:
+    ("in_ed_cal"     . ?1)    ;; FLAG: "In Editorial Calendar"
+    ("not_in_ed_cal" . ?0)    ;; FLAG: "NOT In Editorial Calendar"
+    (:endgroup       . nil)   ;; END Group:
+
+    (:startgroup     . nil)   ;; BEGIN: Mutually Exclusive Group:
+    ("published"     . ?+)    ;; FLAG: "IS Published"
+    ("unpublished"   . ?-)    ;; FLAG: "NOT Published"
+    (:endgroup       . nil)   ;; END Group:
+
+    ;; General Purpose:
+
+    ("@projects"     . ?p)    ;; @projects Tag.  (productions, creative, SOI, OMAN, MWM, )
     ("git"           . ?g)
     ("research"      . ?r)
-    ("@autofocus"    . ?A)  ;; @AutoFocus Notebook Tag. (GTD)
+    ("@autofocus"    . ?A)    ;; @AutoFocus Notebook Tag. (GTD)
     ("devOps"        . ?D)
     ("gtd"           . ?G)
     ("newIdeas"      . ?N)
@@ -179,8 +185,6 @@
     ("genRef"        . ?R)
     ("sysAdmin"      . ?S)
     ("@tags"         . ?T)
-
-    ;; General Purpose:
 
     ("cheatsheets"   . ?c)
     ("diagrams"      . ?d)

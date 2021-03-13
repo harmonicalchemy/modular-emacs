@@ -1,28 +1,38 @@
 #+LATEX: \setlength\parindent{0pt}
+
+# Change Title, Author, Email from cloned versions of this log...
 #+TITLE: HAP - General LOG (template)
 #+AUTHOR: Alisha Awen - Harmonic Alchemy Productions
 #+EMAIL: Siren1@disroot.org
-#+CATEGORY: templates
+
+# Change Description of cloned versions of this log to what ever you need...
+
 #+DESCRIPTION: HAP - Modular Emacs Org Mode General Log Template.  This is the replacement for the Markdown Mode templates I was using previously, which were in turn replacements for even older templates I made originally for Evernote/Trello/Scrivener...
+
+# Change Export File Name of cloned versions of this log to what ever you need...
+
 #+EXPORT_FILE_NAME: General-Log-Template.pdf
 #+KEYWORDS:
 
-;;;
-;; Setup Tag File with Category: 
-;;   (replace path below with path to setup file 
-;;    for your chosen category for Logging)
-;#+SETUPFILE: ~/Org-Docs/00-Agenda-files/<category>-tags.org
+# Setup Tag File includes "Category":
+#    For Cloned Versions of this log, replace path below with path to your
+#    own custom setup file (which will also be a clone of default-tags.org
+#    below - where you will also be changing the category and tags to fit 
+#    context of file your cloned version of this log file).
 
-#+SETUPFILE: ~/Documents/000-Alisha/000-GIT/My-Docs/Org-Docs/00-Agenda-files/infotech-tags.org
+#+SETUPFILE: ~/.emacs.d/Docs/pubOps/default-tags.org
 
-;;; 
-;; Don't mess with these unless you have good reason, (e.g., testing).
-;;   (use Setup Tag File above to specify tags for this file to use)
-; #+STARTUP: noptag
-; #+TAGS:
+# Don't mess with these unless you have good reason, (e.g., testing).
+#   (use Setup Tag File above to specify tags for this file to use)
+# #+STARTUP: noptag
+# #+TAGS:
 
-#+TAGS: templates { published unpublished } { in_ed_cal not_in_ed_cal } logs GTD Autofocus Org_Mode Writing_Resources scratchpads templates
-#+FILETAGS:
+# Remove templates tag from cloned logs... 
+# Keep logs of course... 
+# Add your own file tags as needed...
+
+#+FILETAGS: templates logs
+
 #+STARTUP: overview
 #+STARTUP: inlineimages
 #+OPTIONS: c:t
@@ -42,9 +52,9 @@ Use this Standard Log /(template)/ as a multi purpose time card/log entry vehicl
 
 Use one for work, one for home, one for play, for creative projects, for pretty much anything that needs to be recorded with time and events in a log... I am honing this new scheme to be the General Purpose Log Note Template for everything that I ever dreamed of having.  And for you too!
 
-I have already stopped using Markdown files for this purpose... This makes total sense as Org-Mode was designed exclusively for such things! Using Markdown after the fact for such things would be like going back to a /"*Dec VT220* green screen *dumb terminal*"/ after experiencing *X Windows* on a Big *HP-UX Workstation*
+I stopped using Markdown files for this purpose... This makes total sense as *Org-Mode* was designed exclusively for such things! Using *Markdown* after the fact for such things would be like going back to a /"*Dec VT220* green screen *dumb terminal*"/ after experiencing *X Windows* on a Big *HP-UX Workstation*
 
-Yeah, that's a personal story from the past, lol... All you Mac users out there, please realize that your beautiful Apple desktop is in fact an HP-UX Motif X-Windows widget set clone!  That's what Steve Jobs believed to be the best X-Windows tool-kit of the day /(when he was building the NeXT computer)/...  So... Yup he copied that! The Applications Doc at the bottom of your screen is a dead giveaway. Hewlet Packard was first to use such UI concepts... /(back before the dawning of the web we loved those HPUX Workstations!)/
+Yeah, that's a personal story from the past, lol... All you Mac users out there, please realize that your beautiful Apple desktop is in fact an *HP-UX Motif X-Windows widget set clone*!  That's what Steve Jobs believed to be the best X-Windows tool-kit of the day /(when he was building the NeXT computer)/...  So... Yup he copied that! The Applications Doc at the bottom of your screen is a dead giveaway. Hewlet Packard was first to use such UI concepts... /(back before the dawning of the web we loved those HPUX Workstations!)/
 
 \newpage
 
@@ -52,13 +62,15 @@ Yeah, that's a personal story from the past, lol... All you Mac users out there,
 
 The command key conventions used in the instructions below, /(as well as all *Harmonic Alchemy Productions* docs)/, follow *Standard Emacs* command key naming conventions.
 
-Official GNU Emacs documentation uses a shorthand notation to indicate the *Ctrl* key as upper case *C-* (/with dash/). Upper case *M-* (/with dash/) is the shorthand notation for the Emacs *META* key...
+Official GNU Emacs documentation uses a shorthand notation to indicate the *Ctrl* key as an upper case *C-* (/with minus appended/). Upper case *M-* (/with minus appended/) is the shorthand notation for the Emacs *META* key...
 
 *** Important Note For Mac Users:
 
 On Mac OS, *Modular Emacs* maps your *Ctrl* key to the *Apple Command* key. Emacs *META* is mapped to both *Alt* and *Ctrl* keys... Outside of Emacs all those keys function normally.  
 
-Therefore, for Mac users, anytime you see *C-* or *Ctrl* below, use your *Apple Command* key for that when using Modular Emacs.  Anytime you see *M-* or *META* below, use *Alt* or *Ctrl* keys for that when using Modular Emacs. Anytime you are using Modular Emacs with any other Docs that instruct you to use the above standard keys, understand that you have swapped them to the alternates above, and must use your alternate keys instead...
+Therefore, for Mac users, anytime you either see *C-* or *Ctrl* below, use your *Apple Command* key for that when using Modular Emacs.  Anytime you see either *M-* or *META* below, use *Alt* or *Ctrl* keys for that when using Modular Emacs. 
+
+Anytime you are using Modular Emacs following instructions from standard vanilla Emacs docs, keep in mind your ~Ctrl~ and ~META~ keys are not /"standard"/ anymore and you must make a mental translation.  Beyond that, you will be fine following other emacs tutorials etc.  Hey... you Mac enthusiasts are used to that kind of /"being different"/ stuff anyway, right? Being one of /"the rest of us"/ that is... What the heck does that mean anyway? LOL
 
 The above key assignments were done to get the *Emacs C-* key closer to the space bar where it can be activated with your left thumb instead of contorting to get at it with your pinkie finger. This makes using *Xah Fly Keys* even easier to use and less stressful on your fingers...
 
@@ -86,15 +98,15 @@ Additional commands for using *Org-Mode* with Modular Emacs will be explained he
 
 This Log Notebook is being designed as these docs are being written...  At first much of the design is being done /manually/ while formats, concepts, are tried and tested.  Eventually much of the instructions below will become much simpler as there will be capture templates, and processes in place that replace the need to manually copy/paste things as we are doing initially below...  
 
-Please bear with the author/architect as she makes up her mind about how to do things in here...  The Org-mode, LaTeX options are vast! Not to mention a sea of extra packages that could be tried out... I feel like I am re-inventing wheels within rabbit holes! lol
+Please bear with the author/architect as she makes up her mind about how to do things in here...  The Org-mode, LaTeX options are vast! Not to mention a sea of extra packages that could be tried out... /I feel like I am re-inventing wheels within rabbit holes!/ lol
 
-*Note:* If this is the first time using this log, Don't copy the *Log Entry (template)*.  Instead edit the dummy boilerplate placeholder Log Entry /(with timestamp)/ already in place as the first heading under the *Begin Log Notebook:* heading. 
+*Note:* If you are making your very first log entry within a brand new clone of this template, DON'T use a clone from the *Log Entry (template)* just yet.  Instead use the dummy boilerplate placeholder Log Entry /(with timestamp)/ already in place as your first heading under the *Begin Log Notebook:* heading. 
 
-That first log entry is there only as an example to show you what a completed log book entry might look like.  You may rename/commandeer it for your purposes now... Otherwise you will end up deleting it later... (Don't be wasteful... Recycle! lol ;-)
+That first boilerplate log entry is there only as an example to show you what a completed log book entry might look like.  You may rename/commandeer it for your purposes now... Otherwise you will end up deleting it later... /Don't be wasteful... Recycle!/ lol ;-)
 
-First time only, Skip the next two headings below /(copy and paste instructions)/ and continue following instructions under the: *Edit-Compose your new Log Entry:* heading.  Instructions for working on a new Cloned Log Entry are the same as for updating/emending an existing one from that point on...
+Also for first time entry within your brand new log book, Skip the next two headings below /(copy and paste instructions)/ and continue following instructions under the: *Edit-Compose your new Log Entry:* heading /(as you will be commandeering the dummy boilerplate log entry as your first log entry)/.  Instructions for working on a new Cloned Log Entry are the same as for updating/emending an existing one from that point on...
 
-*Otherwise*, if you already have one or more existing log entries from before, continue following instructions immediately below to copy the *Log Entry (template)* /(collapsed with all of its sub-contents)/ to your paste buffer:
+*Otherwise*, if you already have one or more existing log entries from before, continue following instructions immediately below beginning with: *Copy/Clone Log Entry (template)*
 
 *** Copy/Clone Log Entry (template)
 
@@ -118,7 +130,7 @@ First time only, Skip the next two headings below /(copy and paste instructions)
 
    *Note:* If you accidentally copied one or more previously invisible bullets to column one on a blank line they will create an invisible "ghost" heading that you will now need to delete... You will know this if you see an org-ellipsis "⤵" symbol on a line by itself indicating a heading but no text... Simply delete that whole line and it will go away... Now you are ready to compose your new log entry...
 
-*** Edit-Update the New Log Entry:
+*** Edit-Compose your New Log Entry:
 
 *Note:* If this is your first time using this log, you will be editing the dummy boilerplate placeholder *Log Entry* /(with timestamp)/ already in place as your first log entry heading under the main *Begin Log Notebook:* heading.  
 
@@ -132,9 +144,9 @@ The instructions below for working on a new Cloned Log Entry are pretty much the
 
 - At this point, type one more *dot* to force the calendar selection to the current time and date and then, Press *ENTER* to accept your choice... This will create a new timestamp, /(or update the existing timestamp)/ with the current date/time... Check to make sure the timestamp was properly updated and then move on to the next step... This timestamp will not be updated after that.  It records the initial time of your new log entry to the Day and time you first created it...
 
-- You are now at the top of the list, (a few lines below the main "*Begin Log Notebook:"* heading), on a fresh new Log Entry Heading... Your timestamp indicates the present, -and- You are ready to record a log of your current activities! This way, your most recent log entries will be on the top and descend down from there...
+- You are now at the top of the list, (a few lines below the main "*Begin Log Notebook:"* heading), on a fresh new Log Entry Heading... Your timestamp indicates the present, -and- You are ready to record a log of your current activities! This way, your most recent log entries will be on the top and descend down historically from there...
 
-- Follow the :README: directions within the Time Card section contained within your fresh new log entry to learn how to "clock in" and "clock out" of your log entry as you are on the task of entering your log data...
+- Follow the ~:README:~ directions within the Time Card section contained within your fresh new log entry to learn how to /"clock in"/ and /"clock out"/ of your log entry as you are on the task of entering your log data...
 
 \newpage
 
