@@ -1,8 +1,8 @@
-#+CATEGORY: default-org-mode
+# -**- mode: org; coding: utf-8 -**-
 
-#+TAGS: apps(a) macOS(b) emacs(e) hosting(h) IMAP(i) progLangs(l) email(m)
-#+TAGS: open_source(o) unix(u) www(w) hypervisor(y) NODE(E) ISPs(I) SMTP(M)
-#+TAGS: VPS(V) Xah_Fly_Keys(X) multiMarkdown(6) shells(7) org_mode(*)
+#+TAGS: health(h) drafts(3) synopsis(i) fonts(;) hardware(#)
+#+TAGS: computers(=) web(w) Cloud(9) email(m) apps(4) open_source(g)
+#+TAGS: banking($) taxes(%) auto(v) travel(y) utilities(u) must_read(!)
 
 * Default Tags:
 
@@ -14,13 +14,14 @@ This file is included as part of *Harmonic Alchemy Modular Emacs* to provide an 
 
 - *Copy/Clone* this file to create new ~<your_category>-tags.org~ files of your own design...
 
-- *Use the Global Defined Tag Keys selection keys listed below* when creating new tags for your custom tags file...  Replace Local Defined Tags below with your changed tags selection characters. (for quick tagging)... 
+- *Use the Global Defined Tag Keys selection keys listed below* when creating new tags for your custom tags file...  Replace Local Defined Tags below with your changed tags selection characters. (for quick tagging)...
+
+- *You could use a custom SETUPFILE in addition to this default setupfile*. In that case, consider ALL of the keys below, (global & local) to be already used. If you wish to have speed keys for your new custom tags, they will have to be unique /(different from the keys defined below)/...  
 
 ** Defined Tag Keys:
 
-/(These are from above local file settings, as well as global ones set by ~09-2-org-keywords-tags-conf.el~)/
+/(These are from above local file settings, as well as global ones set by HA Mod Emacs Org Mode Module: ~09-2-org-keywords-tags-conf.el~)/
 
--  Globall :: ~c d g n p q r s t v x A D G H L N O P R S T W 0 1 2 3 4 5 + - ?~
+- *Globall:* /a b c d e f l n o p q r s t x A G H I L N R T V W 0 1 2 5 + - ?/
 
--  Local :: ~a b e h i l m o u w y E I M V X 6 7 *~ 
-
+- *Local:* /g h i m u v w y ; ! # $ % 3 4 9 =/ 

@@ -173,34 +173,35 @@
 
     ;; General Purpose:
 
-    ("@projects"     . ?p)    ;; @projects Tag.  (productions, creative, SOI, OMAN, MWM, )
-    ("git"           . ?g)
-    ("research"      . ?r)
-    ("@autofocus"    . ?A)    ;; @AutoFocus Notebook Tag. (GTD)
-    ("devOps"        . ?D)
-    ("gtd"           . ?G)
-    ("newIdeas"      . ?N)
-    ("genOps"        . ?O)
-    ("pubOps"        . ?P)
-    ("genRef"        . ?R)
-    ("sysAdmin"      . ?S)
-    ("@tags"         . ?T)
+    ("@projects"     . ?p)    ;; All Projects Large or Small... Play or Work...
+    ("research"      . ?r)    ;; Ditto for research...
+    ("@autofocus"    . ?A)    ;; @AutoFocus Notebook Tag. (Smart GTD)
+    ("@GTD"          . ?G)    ;; OK then... here is plain old GTD too. %^)
 
+    ("business"      . ?b)
+    ("legal"         . ?l)
+    ("accounting"    . ?a)
+    ("finance"       . ?f)
+    ("economics"     . ?e)
+    ("transactions"  . ?t)
+
+    ("docs"          . ?o)
     ("cheatsheets"   . ?c)
     ("diagrams"      . ?d)
     ("logs"          . ?L)
+    ("newIdeas"      . ?N)
     ("scratchpads"   . ?s)
     ("quotes"        . ?q)
     ("README"        . ?5)
-    ("templates?"    . ?t)
+    ("templates"     . ?T)
     ("tools"         . ?2)
-    ("presets"       . ?3)
-    ("tutorials"     . ?4)
-    ("videos"        . ?v)
-    ("how_to"        . ??))))
+    ("tutorials"     . ??)
+    ("images"        . ?I)
+    ("recordings"    . ?R)
+    ("videos"        . ?V))))
 
     ;; Keys Used So Far:
-    ;; c d g n p q r s t v x A D G H L N O P R S T W 0 1 2 3 4 5 + - ?
+    ;; a b c d e f l n o p q r s t x A G H I L N R T V W 0 1 2 5 + - ?
 
     ;; END GENERAL TAGS
 
@@ -212,7 +213,7 @@
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Reset Org Tag Persistent alist with General Tags: 
 
-(setq org-tag-persistent-alist nil) ;; Start with empty list... Don't save between Inits...
+(setq org-tag-persistent-alist nil) ;; Start with empty list...
 
 (setq org-tag-persistent-alist (append me--general-tags nil))
 
