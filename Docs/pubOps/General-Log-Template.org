@@ -1,9 +1,11 @@
 #+LATEX: \setlength\parindent{0pt}
 
-# Change Title, Author, Email from cloned versions of this log...
+# Change Title, Author, Email, and Created Date to suit your needs...
+
 #+TITLE: HAP - General LOG (template)
 #+AUTHOR: Alisha Awen - Harmonic Alchemy Productions
 #+EMAIL: Siren1@disroot.org
+#+TEXT: Created: <2021-02-11 Thu>
 
 # Change Description of cloned versions of this log to what ever you need...
 
@@ -14,13 +16,34 @@
 #+EXPORT_FILE_NAME: General-Log-Template.pdf
 #+KEYWORDS:
 
-# Setup Tag File includes "Category":
+# Setup Tag File may also include "Category":
 #    For Cloned Versions of this log, replace path below with path to your
 #    own custom setup file (which will also be a clone of default-tags.org
 #    below - where you will also be changing the category and tags to fit 
 #    context of file your cloned version of this log file).
 
 #+SETUPFILE: ~/.emacs.d/Docs/pubOps/default-tags.org
+
+#+STARTUP: overview
+#+STARTUP: H:1
+#+STARTUP: inlineimages
+#+OPTIONS: c:t
+#+OPTIONS: ^:t
+#+OPTIONS: |:t
+#+OPTIONS: *:t
+#+OPTIONS: author:t
+#+OPTIONS: email:nil
+#+OPTIONS: timestamp:t
+#+OPTIONS: f:nil
+#+OPTIONS: todo:t
+#+OPTIONS: tasks:t
+#+OPTIONS: tags:t
+#+OPTIONS: \n:t
+#+OPTIONS: date:nil
+#+OPTIONS: toc:nil
+#+OPTIONS: num:nil
+#+OPTIONS: inline:nil
+#+OPTIONS: d:nil
 
 # Don't mess with these unless you have good reason, (e.g., testing).
 #   (use Setup Tag File above to specify tags for this file to use)
@@ -33,18 +56,7 @@
 
 #+FILETAGS: templates logs
 
-#+STARTUP: overview
-#+STARTUP: inlineimages
-#+OPTIONS: c:t
-#+OPTIONS: |:t
-#+OPTIONS: \n:t
-#+OPTIONS: date:nil
-#+OPTIONS: toc:nil
-#+OPTIONS: num:nil
-#+OPTIONS: inline:nil
-#+OPTIONS: d:nil
-
-* How to Use this Notebook:
+* How to Use this Notebook:                                        :noexport:
 
 ** Introduction:
 
@@ -82,6 +94,8 @@ If you see other keys alone separated by a space after the *C-x* or *M-x* /(e.g.
 
 *Got that?* That's the key notation system we use here... It is all standard Emacs...  The above paragraphs are mostly for the benefit of new Emacs users! And there is more to learn below. If you are an Emacs/Org-Mode veteran please bear with us...
 
+\newpage
+
 *** Org Mode Timestamps and Clocking:
 
 This Template utilizes the default *Org-Mode:* "*C-c* ." command /(i.e., That's Ctrl-c and then type a dot. This Enters a timestamp range at the cursor position)/. The command employs *org-evaluate-time-range* to compute time on task.  This is useful for timesheets etc. 
@@ -108,6 +122,8 @@ Also for first time entry within your brand new log book, Skip the next two head
 
 *Otherwise*, if you already have one or more existing log entries from before, continue following instructions immediately below beginning with: *Copy/Clone Log Entry (template)*
 
+\newpage
+
 *** Copy/Clone Log Entry (template)
 
 - Place your cursor on the *Log Entry (template)* heading and type *TAB* to collapse all of its contents into the heading alone. Then move your cursor to the first column on the empty line above the heading and type the "*t*" key to set the mark for selection, /(xah-fly-keys Command Mode)/.
@@ -122,6 +138,8 @@ Also for first time entry within your brand new log book, Skip the next two head
 
    *Note:* If you type: "*spacebar t*" /(xah-fly-keys leader key command)/ it will show you the contents of your paste buffer...  You can see what you copied in there...  To get out of the paste buffer view, type: "*spacebar u*" and it will return you to where you were before...
 
+\newpage
+
 *** Paste your Cloned Log Entry:
 
 - *To Paste:* Advance your cursor to a blank line just below the main heading: *Begin Log Notebook:* and then press *enter* a couple times to get your cursor on a fresh clean line with some extra space above and below it... /(above any previously time stamped entries you may already have placed)/...
@@ -129,6 +147,8 @@ Also for first time entry within your brand new log book, Skip the next two head
 - Press "*v*" /(xah-fly-keys Command Mode)/ to paste your cloned Log Entry template... If you find out that what you copied also included some unwanted text directly below it, no problems... Just delete that part now... 
 
    *Note:* If you accidentally copied one or more previously invisible bullets to column one on a blank line they will create an invisible "ghost" heading that you will now need to delete... You will know this if you see an org-ellipsis "⤵" symbol on a line by itself indicating a heading but no text... Simply delete that whole line and it will go away... Now you are ready to compose your new log entry...
+
+\newpage
 
 *** Edit-Compose your New Log Entry:
 
@@ -196,8 +216,7 @@ Anytime you need to see your Log Notebook as a nicely printed PDF report, you ca
        This removes currently running clock and forgets it...
 
  + C-c C-x C-d - Display Clocking Info:
-       This will show
-
+       This will show elapsed times to the right of headings...
 
 - Once all of this has become routine for you, go ahead and remove this README drawer from this template... That way it does not get copied when you need to clone new log entries... 
 :END:
@@ -222,7 +241,7 @@ Anytime you need to see your Log Notebook as a nicely printed PDF report, you ca
 Yadda, Yadda, Yadda... etc...
 
 \newpage
-
+\newpage
 * Introduction:
 
 :README:
@@ -230,12 +249,13 @@ Use this section as Front Matter for your Log Book...
 :END:
 
 This Log Book was created for...  Yadda Yadda... Yadda...
+
 * Begin Log Notebook:
 :PROPERTIES:
 :CUSTOM_ID: log-notebook-1
 :END:
 
-** Log Entry <2020-08-11 Tue> /(Test1)/                              :@DOCS:
+** Log Entry <2020-08-11 Tue> /(Test1)/
 :CLOCKING:
 CLOCK: [2020-08-11 Tue 20:24]--[2020-08-11 Tue 20:28] =>  0:04
 :END:
@@ -268,7 +288,7 @@ CLOSED: [2020-08-11 Tue 21:39]
    + [X] Data Table Filled?
    + [X] Final Conclusion Made?
 
-*** ACTIVE Details:                                                :noexport:
+*** ACTIVE Details:
 
 **** DONE Starting Clock on this first sub-task
 CLOSED: [2020-08-11 Tue 20:35]
