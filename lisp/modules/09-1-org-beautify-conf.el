@@ -2,13 +2,28 @@
 ;;   [modular-emacs]:~/.emacs.d/lisp/modules/09-1-org-beautify-conf.el
 ;;
 ;;   This is a sub module of 09-org-mode-pkg-conf.el which configures Org Mode
-;;   Beautify Settings:          (constantly under revision %^)
+;;   Beautify Settings:          (constantly under evolving revision %^)
 ;;
 ;;   Override this file by placing a copy of it into "my-modules" then change
 ;;   it to suit your personal org-mode look and feel...
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 (require 'org-faces)
+
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Set Fallback Font:
+;;  This is critical to ensure unicode symbols always
+;;  display correctly...
+;;  Note: Setting 'nil' below makes it the fallback
+;;        font.  Other values allow you to set a range
+;;        of gliphs...
+;;  Reference:
+;;  http://endlessparentheses.com/manually-choose-a-fallback-font-for-unicode.html
+
+(set-fontset-font "fontset-default" nil
+                  (font-spec :size 20 :name "Symbola"))
+
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;   Org-Bullets:
@@ -28,8 +43,8 @@
 
 (require 'org-bullets)
 
-;; make available "org-bullet-face" allowing control of the font
-;; sizes individually:
+;; Make "org-bullet-face" available allowing control of the font
+;; sizes individually:  (NOTE: I don't really use this but it's here)
 
 (setq org-bullets-face-name (quote org-bullet-face))
 
@@ -45,10 +60,19 @@
 ;; Special Symbols:
 (setq org-bullets-bullet-list '("☀" "♼" "☼" "☾" "☽" "☣" "§" "¶" "‡" "※" "✕" "△" "◇" "▶" "◀" "◈"))
 
+;; NOTE: I find Org Outline Bullets in general to be cluttering and non-essential. ;;       I make my outline bullets in Modular Emacs default to "invisible" and
+;;       instead focus on heading indentation, size, and font style.
+;;       (like a real doc should look)
+;;
+;;       Hiding Outline bullets also aids visibility of plain list bullets and
+;;       enumerations, (which traditionally are expected to have bullets in
+;;       front of them...
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Org ellipsis options, other than the default Go to Node...
 ;; not supported in common font, but supported in Symbola font. ⬎, ⤷, ⤵
+;;
+;; I LOVE This One:
 
 (setq org-ellipsis "⤵")
 
@@ -65,6 +89,15 @@
 ;;  NOTE: if you want to see the fancy bullets in your
 ;;  outline headings, than don't call this function
 ;;  in any org-mode hook functions...
+;;
+;;  NOTE: I am now trying this in my org-mode hook:
+;
+;   (after! org
+;     (setq org-hide-leading-stars nil
+;           org-indent-mode-turns-on-hiding-stars nil))
+;
+;;  As an alternative way no longer needing the
+;;  explicit function call below...
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 (defun me_hide-org-bullets ()
@@ -124,6 +157,27 @@
  'org-mode
  '(("^ *\\([+]\\) "
     (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "🞜"))))))
+
+;; Automatically demote / promote list items with different characters...
+
+(setq org-list-demote-modify-bullet
+      (quote (("+"  . "-")
+              ("-"  . "+")
+              ("*"  . "-")
+              ("1." . "-")
+              ("1)" . "-")
+              ("A)" . "-")
+              ("B)" . "-")
+              ("a)" . "-")
+              ("b)" . "-")
+              ("A." . "-")
+              ("B." . "-")
+              ("a." . "-")
+              ("b." . "-"))))
+
+;; Increase offset a wee bit more between plain list levels... 
+
+(setq-default org-list-indent-offset 1)
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -1,12 +1,33 @@
+# -**- mode: org; coding: utf-8 -**-
+#+LATEX_HEADER: \usepackage{parskip}
+#+LaTeX_HEADER: \usepackage{paralist}
+#+LATEX_HEADER: \usepackage[hyperref,x11names]{xcolor}
+#+LATEX_HEADER: \usepackage[colorlinks=true,urlcolor=SteelBlue4,linkcolor=Firebrick4]{hyperref}
+
+# Setup Files:
+#    For Cloned Versions of this template, replace file/paths below with file/paths
+#    to your own custom setup files (which you could convienently clone from
+#    the example setup files provided in ../org-templates/ directory...
+
+#+SETUPFILE: ~/.emacs.d/Docs/pubOps/org-templates/audio-book.org
+#+SETUPFILE: ~/.emacs.d/Docs/pubOps/org-templates/default-tags.org
+
+# Don't mess with these unless you have good reason, (e.g., testing).
+#   (use Setup Tag File above to specify tags for this file to use)
+# #+STARTUP: noptag
+# #+TAGS:
+
 #+TITLE: HAP - Audio Project Skeleton
-#+AUTHOR: Alisha Awen - Harmonic Alchemy Productions
-#+CATEGORY: 
-#+STARTUP: overview
-#+STARTUP: inlineimages
-#+DESCRIPTION: HAP - Bare Bones Skeleton with generic basics already done for.  Great for Authors to use when starting a new Radio Drama or any kind of Audio Production project from scratch...
-#+EXPORT_FILE_NAME: My-New-Book.pdf
+#+EXPORT_FILE_NAME: My-New-Audio-Drama.pdf
 #+KEYWORDS:
-#+FILETAGS:
+#+AUTHOR: Sirena256 - Harmonic Alchemy Productions
+#+EMAIL: Siren1@disroot.org
+#+DATE: <2021-02-18 Thu>
+#+TEXT: Created: <2021-02-18 Thu>
+#+TEXT: Last Published: <2021-03-21 Sun>
+#+FILETAGS: templates screenwriting audio_theatre
+
+#+DESCRIPTION: HAP - Bare Bones Skeleton with generic basics already done for.  Great for Authors to use when starting a new Radio Drama or any kind of Audio Production project from scratch...
 
 * 💡 Ideas Scratchpad Refile:
 ** ☞ Start Here!

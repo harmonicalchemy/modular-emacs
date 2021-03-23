@@ -310,6 +310,14 @@ CLOSED: [2020-08-11 Tue 21:29]
 CLOCK: [2020-08-11 Tue 20:32]--[2020-08-11 Tue 21:27] =>  0:55
 :END:
 
+
+- Test One
+
+- Test Two
+
+- Test Three
+
+
 - [X] Now I am working on this task
 
 - [X] I marked the first task DONE
@@ -319,6 +327,7 @@ CLOCK: [2020-08-11 Tue 20:32]--[2020-08-11 Tue 21:27] =>  0:55
 - [X] Make Summary into Checkbox list
 
 - [X] Mark this task DONE & Start work on Another Sub Task Below
+**** 
 
 **** DONE Another Sub Task to do even later [4/4]
 CLOSED: [2020-08-11 Tue 21:37]

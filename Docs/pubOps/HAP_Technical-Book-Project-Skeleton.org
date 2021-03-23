@@ -1,19 +1,33 @@
+# -**- mode: org; coding: utf-8 -**-
+#+LATEX_HEADER: \usepackage{parskip}
+#+LaTeX_HEADER: \usepackage{paralist}
+#+LATEX_HEADER: \usepackage[hyperref,x11names]{xcolor}
+#+LATEX_HEADER: \usepackage[colorlinks=true,urlcolor=SteelBlue4,linkcolor=Firebrick4]{hyperref}
+
+# Setup Files:
+#    For Cloned Versions of this template, replace file/paths below with file/paths
+#    to your own custom setup files (which you could convienently clone from
+#    the example setup files provided in ../org-templates/ directory...
+
+#+SETUPFILE: ~/.emacs.d/Docs/pubOps/org-templates/ref-book.org
+#+SETUPFILE: ~/.emacs.d/Docs/pubOps/org-templates/default-tags.org
+
 #+TITLE: HAP - Technical Book Project Skeleton
+#+EXPORT_FILE_NAME: New-Untitled-Tech-Manual.pdf
+#+KEYWORDS:
 #+AUTHOR: Alisha Awen - Harmonic Alchemy Productions
 #+EMAIL: Siren1@disroot.org
 #+DATE: <2021-02-18 Thu>
-#+CATEGORY: book-templates
-#+STARTUP: overview
-#+STARTUP: indent
-#+STARTUP: align
-#+STARTUP: inlineimages
-#+DESCRIPTION: HAP - Bare Bones Tech Manual or Book Skeleton with generic basics already done for.  Great for documenting technical projects, large or small... Also great for organizing, handling caveats, trying different methods, etc. All while building a sound outline of support docs, steps, best practices... and publishable as a PDF Book suitable for eBook readers... (could also be published in other eBook formats or for the web)
-#+EXPORT_FILE_NAME: New-Untitled-Tech-Manual.pdf
-#+OPTIONS: H: 3 toc: 2
-#+OPTIONS: inline:nil
-#+OPTIONS: tasks:nil
-#+OPTIONS: tags:nil
-#+KEYWORDS:
+#+TEXT: Created: <2021-02-18 Thu>
+#+TEXT: Last Published: <2021-03-21 Sun>
+#+FILETAGS: templates books
+
+#+DESCRIPTION: HAP - Tech Manual Book Skeleton. Great for documenting technical projects, large or small... Also great for organizing, handling caveats, trying different methods, etc. All while building a sound outline of support docs, steps, best practices... and publishable as a PDF Book suitable for eBook readers... (easily modified for publishing in other eBook formats or for the web)
+
+# Don't mess with these unless you have good reason, (e.g., testing).
+#   (use Setup Tag File above to specify tags for this file to use)
+# #+STARTUP: noptag
+# #+TAGS:
 
 :README:
 To use this Book Project Skeleton (template) for your own projects, perform the following three steps:
@@ -97,7 +111,7 @@ Sure! You can put anything in here! We've got that covered for you in this Start
   + Having done the simple steps above any time you get inspired, you will be able to tell your grand children.. "I got my first spark of an idea for that book back in Year, Month, Day, time, second" (50 years later!) Now that is being organized! LOL
 :END:
 
-*** <2020-06-07 Sun> My New Business Idea! - "yeah we've heard that one before 
+*** My New Business Idea! <2020-06-07 Sun> "yeah we've heard that one before"
 
 :README:
 This is a dummy example of some crazy idea that you may have gotten at the spur of the moment, while you were doing something elsewhere within this project...  After you are done getting as much of the idea as you initally can then you can simply go back to what you were doing before the inspiration segue tore you away... you might want to schedule this as a todo item before leaving though...
@@ -105,8 +119,25 @@ This is a dummy example of some crazy idea that you may have gotten at the spur 
 Later when you are free you can come back to file this or place it where it belongs.  In the case of the note below it would probably go in a research folder of a Sci-Fi related project...
 :END:
 
-No you have not heard this one yet!!!!  This is it!!! I'm telling ya!  yadda... yadda...  yadda...
+**** Heading 4:
 
+This is a Heading 4 test...
+
+***** Heading 5:
+
+This is a Heading 5 test...
+
+****** Heading 6:
+
+This is a Heading 6 test...
+
+******* Heading 7:
+
+This is a Heading 7 test...
+
+******** Heading 8:
+
+This is a Heading 8 test...
 
 * ACTIVE 📖 Book:
 ** DONE 📃 Synopsis:
@@ -203,6 +234,39 @@ The example Notes below have been timestamped as a way to suggest organizing TOD
 **** 🗒 Note 1: <2020-05-10 Sun>
 
 ## BEGIN BACKGROUND NOTE
+
+
+1. Enumerated List Item A
+
+    * Enumerated List Item B
+
+       + Enumerated List Item C
+
+       + Enumerated List Item D
+
+2. 
+
+
+- Test one...
+
+   + [ ] Checkbox List:
+
+   + [ ] 
+
+- Test
+
+
+- test
+
+- 
+
+   - Test two...
+
+- 
+
+- Test three...
+
+
 
 + Mark each note's timestamp to its initial creation time. This will enable emerging notes for chapters to be searched chronologically, and to give you an idea of how things evolve over time...
 
