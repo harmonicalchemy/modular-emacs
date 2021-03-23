@@ -345,6 +345,12 @@
   ;; Hide bullets...
   (me_hide-org-bullets))
 
+  ;; The below alternate method to above "me_hide-org-bullets"
+  ;; does not seem to work for me (yet): FIXME
+;  (after! org
+;          (setq org-hide-leading-stars nil
+;                org-indent-mode-turns-on-hiding-stars nil)))
+
 ;; END Fancy Org View - org-mode Hook function...
 
 
