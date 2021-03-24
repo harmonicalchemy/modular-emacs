@@ -25,8 +25,8 @@ custom.el
 Docs/pubOps/auto/*
 !Docs/pubOps/auto/.gitkeep
 
-Docs/pubOps/fountain2PDF/auto/*
-!Docs/pubOps/fountain2PDF/auto/.gitkeep
+Docs/pubOps/Audio-Drama/auto/*
+!Docs/pubOps/Audio-Drama/auto/.gitkeep
 
 ## exclude everything within my-custom-modules folder...
 ## This is for you to add your own modules and git won't complain
