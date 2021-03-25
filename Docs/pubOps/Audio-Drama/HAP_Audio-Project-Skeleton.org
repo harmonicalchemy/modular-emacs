@@ -9,7 +9,7 @@
 #    to your own custom setup files (which you could convienently clone from
 #    the example setup files provided in ../org-templates/ directory...
 
-#+SETUPFILE: ~/.emacs.d/Docs/pubOps/org-templates/audio-book.org
+#+SETUPFILE: ~/.emacs.d/Docs/pubOps/Audio-Drama/org-templates/audio-book.org
 #+SETUPFILE: ~/.emacs.d/Docs/pubOps/org-templates/default-tags.org
 
 # Don't mess with these unless you have good reason, (e.g., testing).
