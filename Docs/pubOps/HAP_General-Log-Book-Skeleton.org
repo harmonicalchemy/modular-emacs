@@ -1,60 +1,34 @@
-#+LATEX: \setlength\parindent{0pt}
+# -**- mode: org; coding: utf-8 -**-
+#+LATEX_HEADER: \usepackage{parskip}
+#+LaTeX_HEADER: \usepackage{paralist}
+#+LATEX_HEADER: \usepackage[hyperref,x11names]{xcolor}
+#+LATEX_HEADER: \usepackage[colorlinks=true,urlcolor=SteelBlue4,linkcolor=Firebrick4]{hyperref}
 
-# Change Title, Author, Email, and Created Date to suit your needs...
+# Setup Files:
+#    For Cloned Versions of this template, replace file/paths below
+#    with file/paths to your own custom setup files (which you could 
+#    convienently clone from the example setup files provided in
+#    ../org-templates/ directory...
 
-#+TITLE: HAP - General LOG (template)
+#+SETUPFILE: ~/.emacs.d/Docs/pubOps/org-templates/log-book.org
+#+SETUPFILE: ~/.emacs.d/Docs/pubOps/org-templates/default-tags.org
+
+#+TITLE: HAP - General LOG Notebook Skeleton
+#+EXPORT_FILE_NAME: HAP_General-Log-Notebook-Skeleton.pdf
+#+KEYWORDS:
 #+AUTHOR: Alisha Awen - Harmonic Alchemy Productions
 #+EMAIL: Siren1@disroot.org
+#+DATE: <2021-03-26 Fri>
 #+TEXT: Created: <2021-02-11 Thu>
+#+TEXT: Last Published: <2021-03-26 Fri>
+#+FILETAGS: templates logs
 
-# Change Description of cloned versions of this log to what ever you need...
-
-#+DESCRIPTION: HAP - Modular Emacs Org Mode General Log Template.  This is the replacement for the Markdown Mode templates I was using previously, which were in turn replacements for even older templates I made originally for Evernote/Trello/Scrivener...
-
-# Change Export File Name of cloned versions of this log to what ever you need...
-
-#+EXPORT_FILE_NAME: General-Log-Template.pdf
-#+KEYWORDS:
-
-# Setup Tag File may also include "Category":
-#    For Cloned Versions of this log, replace path below with path to your
-#    own custom setup file (which will also be a clone of default-tags.org
-#    below - where you will also be changing the category and tags to fit 
-#    context of file your cloned version of this log file).
-
-#+SETUPFILE: ~/.emacs.d/Docs/pubOps/default-tags.org
-
-#+STARTUP: overview
-#+STARTUP: H:1
-#+STARTUP: inlineimages
-#+OPTIONS: c:t
-#+OPTIONS: ^:t
-#+OPTIONS: |:t
-#+OPTIONS: *:t
-#+OPTIONS: author:t
-#+OPTIONS: email:nil
-#+OPTIONS: timestamp:t
-#+OPTIONS: f:nil
-#+OPTIONS: todo:t
-#+OPTIONS: tasks:t
-#+OPTIONS: tags:t
-#+OPTIONS: \n:t
-#+OPTIONS: date:nil
-#+OPTIONS: toc:nil
-#+OPTIONS: num:nil
-#+OPTIONS: inline:nil
-#+OPTIONS: d:nil
+#+DESCRIPTION: HAP - Modular Emacs Org Mode General Log Notebook Template.  This is the replacement for the Markdown Mode templates I was using previously, which were in turn replacements for even older templates I made originally for Evernote/Trello/Scrivener...
 
 # Don't mess with these unless you have good reason, (e.g., testing).
 #   (use Setup Tag File above to specify tags for this file to use)
 # #+STARTUP: noptag
 # #+TAGS:
-
-# Remove templates tag from cloned logs... 
-# Keep logs of course... 
-# Add your own file tags as needed...
-
-#+FILETAGS: templates logs
 
 * How to Use this Notebook:                                        :noexport:
 

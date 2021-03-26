@@ -1,13 +1,34 @@
-#+TITLE: HAP Writing & pub✎Ops Resources 
-#+AUTHOR: Alisha Awen - Harmonic Alchemy Productions
-#+CATEGORY: 
-#+STARTUP: overview
-#+STARTUP: inlineimages
-#+DESCRIPTION: HAP official guide for independent writers/publishers. Everything you need to run your own independent Writing & Publishing Operation, employing professional publishing industry standards, within a 100% free as in Freedom software infrastructure environment i.e., IPE (Integrated Publishing Environment). This implements common "IDE" concepts as applied to writing, planning, and publishing of written and/or performed literary works...  This guide also includes Templates and Instructions for using the Snowflake Method of story development taking advantage of org-mode features to facilitate that process...
-#+EXPORT_FILE_NAME: My-New-Book.pdf
-#+KEYWORDS:
-#+FILETAGS: :HAP-how-to:
+# -**- mode: org; coding: utf-8 -**-
+#+LATEX_HEADER: \usepackage{parskip}
+#+LaTeX_HEADER: \usepackage{paralist}
+#+LATEX_HEADER: \usepackage[hyperref,x11names]{xcolor}
+#+LATEX_HEADER: \usepackage[colorlinks=true,urlcolor=SteelBlue4,linkcolor=Firebrick4]{hyperref}
 
+# Setup Files:
+#    For Cloned Versions of this template, replace file/paths below
+#    with file/paths to your own custom setup files (which you could 
+#    convienently clone from the example setup files provided in
+#    ../org-templates/ directory...
+
+#+SETUPFILE: ~/.emacs.d/Docs/pubOps/org-templates/ref-book.org
+#+SETUPFILE: ~/.emacs.d/Docs/pubOps/org-templates/default-tags.org
+
+#+TITLE: HAP Writing & pub✎Ops Resources 
+#+EXPORT_FILE_NAME: HAP_pubOps-Resources.pdf
+#+KEYWORDS:
+#+AUTHOR: Alisha Awen - Harmonic Alchemy Productions
+#+EMAIL: Siren1@disroot.org
+#+DATE: <2021-03-25 Thu>
+#+TEXT: Created: <2020-07-30 Thu>
+#+TEXT: Last Published: <2021-03-25 Thu>
+#+FILETAGS: reference_books
+
+#+DESCRIPTION: HAP - Official Guide for independent writers/publishers. Everything you need to run your own independent Writing & Publishing Operation, employing professional publishing industry standards, within a 100% free as in Freedom software infrastructure environment i.e., IPE (Integrated Publishing Environment). This implements common "IDE" concepts as applied to writing, planning, and publishing of written and/or performed literary works...  This guide also includes Templates and Instructions for using the Snowflake Method of story development taking advantage of org-mode features to facilitate that process...
+
+# Don't mess with these unless you have good reason, (e.g., testing).
+#   (use Setup Tag File above to specify tags for this file to use)
+# #+STARTUP: noptag
+# #+TAGS:
 
 * 💡 Scratchpad Refile:
 
@@ -120,10 +141,6 @@ End of Chapter 1
 <2020-05-07 Thu> I just got the idea that blah, blah, blah is another chapter in the book where we introduce Yadda, Yadda, Yadda. Integrate this new idea before introducing this chapter... yadda, yadda, yadda...
 
 
-
-
-
-
 ** DONE 🔖 Chapter 2:
 CLOSED: [2020-06-08 Mon 15:07]
 :LOGBOOK:
@@ -227,7 +244,6 @@ Note: This is an example of a back story plot related to your book... Write it d
 *** Plot Example Two:
 
 Note: This is an example of a back story plot related to your book... Write it down in the rough here and then later you can develop it further if needed.
-
 
 *** Add more Plots like this:
 
@@ -2615,7 +2631,7 @@ You can take these tests for yourself, but most importantly as a tool to dive de
 |--------+--------+--------+--------+--------+--------+--------+--------+--------|
 | Type 1 | Type 2 | Type 3 | Type 4 | Type 5 | Type 6 | Type 7 | Type 8 | Type 9 |
 |--------+--------+--------+--------+--------+--------+--------+--------+--------|
-|      0 |      1 |     -2 |      6 |      3 |      1 |      3 |     -5 | -7     |
+|      0 |      1 |     -2 |      6 |      3 |      1 |      3 |     -5 |     -7 |
 |--------+--------+--------+--------+--------+--------+--------+--------+--------|
 
 ***** Test Results on: <2016-04-24 Sun> 

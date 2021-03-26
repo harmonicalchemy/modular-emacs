@@ -1,12 +1,12 @@
 # -**- mode: org; coding: utf-8 -**-
 #+begin_comment
-# File:   ref-book.org - SETUPFILE for Tech Manuals etc...
+# File:   log-book.org - SETUPFILE for Log Notebooks...
 # Usage:  Clone this file and adjust to suit your needs...
-#        Include this file within org files destined to become Tech Docs...
-#        i.e., #+SETUPFILE: ~/.emacs.d/Docs/pubOps/org-templates/ref-book.org
+#        Include this file within org files destined to become Log Notebooks...
+#        i.e., #+SETUPFILE: ~/.emacs.d/Docs/pubOps/org-templates/log-book.org
 #+end_comment
 
-#+CATEGORY: @Reference_Books
+#+CATEGORY: @Log_Books
 #+LANGUAGE: en
 #+STARTUP:  overview
 #+STARTUP:  indent
@@ -43,19 +43,19 @@
                         # TODO: Play around with this one...
 
 #+OPTIONS: email:t      # Include Author’s e-mail (org-export-with-email)
-#+OPTIONS: f:t          # Include Footnotes (org-export-with-footnotes)
+#+OPTIONS: f:nil        # Do NOT Include Footnotes (org-export-with-footnotes)
 #+OPTIONS: H:4          # Set Headline Levels for Export to 4
 #+OPTIONS: tasks:t      # Include any TODO or other Task related keywords...
-#+OPTIONS: inline:t     # Include Inline Tasks...
-#+OPTIONS: num:2        # Set Section Numbering to two levels deep.
+#+OPTIONS: inline:nil   # Do NOT Include Inline Tasks...
+#+OPTIONS: num:nil      # Do NOT Use Section Numbering.
 #+OPTIONS: p:nil        # NO Planning Info (org-export-with-planning)
 #+OPTIONS: pri:nil      # NO priority cookies (org-export-with-priority)
 #+OPTIONS: prop:nil     # No Property Drawers (org-export-with-properties)
 #+OPTIONS: stat:nil     # No Stastic cookies (org-export-with-statistics-cookies)
-#+OPTIONS: tags:nil     # No Tags (org-export-with-tags)
+#+OPTIONS: tags:t       # Export Tags (org-export-with-tags)
 #+OPTIONS: tex:t        # Export LaTeX (org-export-with-latex)
 #+OPTIONS: timestamp:t  # Include Creation Time (org-export-time-stamp-file)
 #+OPTIONS: title:t      # Include Title (org-export-with-title)
-#+OPTIONS: toc:3        # Include TOC (level 3) (org-export-with-toc)
-#+OPTIONS: todo:nil     # DONT Include TODO keywords (org-export-with-todo-keywords)
+#+OPTIONS: toc:nil      # Do NOT Include TOC (org-export-with-toc)
+#+OPTIONS: todo:t       # DONT Include TODO keywords (org-export-with-todo-keywords)
 #+OPTIONS: |:t          # Include Tables (org-export-with-tables)

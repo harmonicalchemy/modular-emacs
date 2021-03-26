@@ -12,22 +12,68 @@
 #+SETUPFILE: ~/.emacs.d/Docs/pubOps/Audio-Drama/org-templates/audio-book.org
 #+SETUPFILE: ~/.emacs.d/Docs/pubOps/org-templates/default-tags.org
 
-# Don't mess with these unless you have good reason, (e.g., testing).
-#   (use Setup Tag File above to specify tags for this file to use)
-# #+STARTUP: noptag
-# #+TAGS:
-
 #+TITLE: HAP - Audio Project Skeleton
 #+EXPORT_FILE_NAME: My-New-Audio-Drama.pdf
 #+KEYWORDS:
 #+AUTHOR: Sirena256 - Harmonic Alchemy Productions
 #+EMAIL: Siren1@disroot.org
-#+DATE: <2021-02-18 Thu>
+#+DATE: <2021-03-25 Thu>
 #+TEXT: Created: <2021-02-18 Thu>
-#+TEXT: Last Published: <2021-03-21 Sun>
+#+TEXT: Last Published: <2021-03-25 Thu>
 #+FILETAGS: templates screenwriting audio_theatre
 
-#+DESCRIPTION: HAP - Bare Bones Skeleton with generic basics already done for.  Great for Authors to use when starting a new Radio Drama or any kind of Audio Production project from scratch...
+#+DESCRIPTION: HAP - Bare Bones Audio Theatre Project Skeleton with generic basics already done.  Great for Authors to use when starting a new Radio Drama or any kind of Audio Production project from scratch...
+
+# Don't mess with these unless you have good reason, (e.g., testing).
+#   (use Setup Tag File above to specify tags for this file to use)
+# #+STARTUP: noptag
+# #+TAGS:
+
+:README:
+
+To use this Audio Drama Project Skeleton /(template)/ for your own projects, perform the following steps:
+
+1. *Clone a Copy of this File:* Put it where you normally organize your writing projects.  *Place it within its own folder* named after your intended project title...
+
+2. *Change the* ~#+TITLE:~ *directive at the top of this file* to /"Your Audio Drama Project's Title"/
+
+3. *Change the* ~#+EXPORT_FILE_NAME:~ *directive at the top of this file* to /"Your-Audio-Drama-Project's-Title.pdf"/ That will be the file name produced on export thence forward...
+
+4. *Change the* ~#+DESCRIPTION:~ *directive at the top of this file* to /Your-Audio-Drama-Project's Description/ etc...
+
+2. *Copy/Clone ./media* /(and all its contents):/ To your new project's folder /(where you copied this file).../  Any external documents or images referenced by your book project should be placed within this ~./media/~ directory... All of the external links, images, within the boilerplate examples may be used as examples for getting your own images, and external attachments linked properly...  This single *./media* directory serves media and external attachments for all of the *.org* files contained within: ~.emacs.d/Docs/pubOps~ directory... Cloning any of the other *.org* files will also require copy/cloning the ./media directory relative to them...
+
+3. *Copy/Clone ./bin* /(and all its contents):/ To your new project's folder /(where you copied this file).../  This is needed for running scripts that convert your ~.fountain~ scripts into PDF or other formats...
+
+4. You don't need to copy the ~./auto/~ directory...  That will be created for you automacally the first time you export this ~.org~ file to ~.PDF~.
+
+5. You also don't need to copy the ~./org-templates~ directory... The files in there are automatically linked and included within this template. You don't need to change those settings unless you wish to customize the already customized tags, and export options. /They are allready set up correctly for the audio drama genre, and the category is all set as well... But if you must, you can modify the original files to make your changes rather than cloning to your project directory.../  Realize that if you do that while on the master branch it will get out of sync with origin, check out a local branch to make it easier to get back to defaults if you change your mind later. %^)
+
+6. *Start Planning / Writing Your Audio Drama:* /Change headings and structure to match your project's outline sections-chapters-scenes-plots-characters, etc./ Start doing the Tasks within the Tasks section... Have fun doing this...
+
+The *In-Buffer Settings* specified by the setupfiles above will get this file looking good when exported as a Standard PDF file.  Once you have your project directory all set up as above you are ready to export your first PDF as a test run...  
+
+- *To export a PDF issue the following Emacs command:*
+
+   #+begin_src conf
+      M-x org-latex-export-to-pdf
+   #+end_src
+
+   *-or-* If You Enabled *Xah-Fly-Keys* /"Command Mode"/ Try:
+
+   #+begin_src conf
+      SPACE e p
+   #+end_src
+
+After *AucTeX* is done parsing/compiling etc., a new *PDF* by the name of ~My-New-Audio-Drama.pdf~ -and- ~My-New-Audio-Drama.tex~ will appear within the same directory as this file...
+
+Subsequent repeated calls to the above command will overwrite your existing ~New-Untitled-Book.pdf~ -and- ~New-Untitled-Book.tex~ files! You should probably copy these files to the ~./auto/~ directory as well for safe keeping as backups...
+
+*Last Modified: <2021-03-25 Thu>* So far things are pretty basic PDF... We will get fancy with other formats later... I promice... I have to do all this documentation first! /(As you can see, if you been following for the past couple years, things are getting done! Albeit Slowly)/
+
+Enjoy! - Alisha Awen
+
+:END:
 
 * 💡 Ideas Scratchpad Refile:
 ** ☞ Start Here!
