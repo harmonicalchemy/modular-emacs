@@ -206,7 +206,7 @@
       ;; Modify Frame dimensions for Writing with Olivetti mode enabled...
       ((name . "HA Mod Emacs v3.2 - Writer's Frame")
        (height . 38)
-       (width . 100))))
+       (width . 88))))
 
     ;; Select this new frame:
     (select-frame-by-name "HA Mod Emacs v3.2 - Writer's Frame")
@@ -217,7 +217,7 @@
                         :height 130)
 
     ;; Set Olivetti Width (88 column wide)
-    (olivetti-set-width 88)
+    (olivetti-set-width 82)
 
     ;; Call Xah-Fly-Keys (resets some face attributes)
     (xah-fly-keys 1)))
@@ -338,7 +338,7 @@
                              (quote
                               ((name . "HA Mod Emacs v3.2 - Writing Mode")
                                (height . 38)
-                               (width . 100))))))
+                               (width . 88))))))
 
 
 ;; Restore Default Face Function:

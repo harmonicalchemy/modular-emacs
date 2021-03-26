@@ -262,10 +262,10 @@
                                  (quote
                                   ((name   . "HA Mod Emacs v3.2 - Normal Org Mode")
                                    (height . 38)
-                                   (width  . 100))))
+                                   (width  . 88))))
 
         ;; Set Olivetti Width (88 column wide)
-        (olivetti-set-width 88))
+        (olivetti-set-width 82))
 
     ;; ELSE print warning about buffer not being an Org File...
     (message "Warning: You are NOT visiting a .ORG file!")))
@@ -290,11 +290,11 @@
                                      (quote
                                       ((name   . "HA Mod Emacs v3.2 - Fancy Org View")
                                        (height . 38)
-                                       (width  . 150))))
+                                       (width  . 138))))
             ;; Split Windows with org outline tree in narrow left window...
             (org-sidebar-tree)
             ;; Set Olivetti Width (100 column wide)
-            (olivetti-set-width 100))
+            (olivetti-set-width 82))
 
     ;; ELSE print warning about buffer not being an Org File...
     (progn
@@ -337,10 +337,10 @@
                            (quote
                             ((name   . "HA Mod Emacs v3.3 - Normal Org Mode")
                              (height . 38)
-                             (width  . 100))))
+                             (width  . 88))))
 
   ;; Enable Olivetti Mode (100 column wide)
-  (olivetti-set-width 88)
+  (olivetti-set-width 82)
 
   ;; Hide bullets...
   (me_hide-org-bullets))
