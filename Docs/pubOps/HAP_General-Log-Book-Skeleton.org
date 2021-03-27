@@ -224,6 +224,20 @@ Use this section as Front Matter for your Log Book...
 
 This Log Book was created for...  Yadda Yadda... Yadda...
 
+** References:
+
+Add links to other reference, source docs, requirements, back stories, whatever, here...
+
+- *[ [URL][Link Name] ]*
+
+- *[ [][] ]*
+
+- *[ [][] ]*
+
+- *[ [][] ]*
+
+- *[ [][] ]*
+
 * Begin Log Notebook:
 :PROPERTIES:
 :CUSTOM_ID: log-notebook-1

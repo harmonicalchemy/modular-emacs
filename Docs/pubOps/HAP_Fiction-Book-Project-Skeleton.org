@@ -1821,6 +1821,27 @@ CLOSED: [2020-07-01 Wed 21:25]
 :LOGBOOK:
 - State "DONE"       from              [2020-07-01 Wed 21:25]
 :END:
+*** 📄 Preface <optional - replace with episode name if needed>
+
+# BEGIN SUB-CHAPTER TEXT
+
+Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo. Fusce tincidunt, lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante. 
+
+**** References:
+
+Add links to other reference, source docs, requirements, back stories, whatever, here...
+
+- *[ [][] ]*
+
+- *[ [][] ]*
+
+- *[ [][] ]*
+
+- *[ [][] ]*
+
+- *[ [][] ]*
+
+# END SUB-CHAPTER TEXT
 
 *** DONE 📄 Episode - <replace w/ chapter name>
 CLOSED: [2020-07-01 Wed 21:17]

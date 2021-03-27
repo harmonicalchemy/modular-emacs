@@ -180,11 +180,11 @@ Front Matter... yadda... yadda... yadda...
 
 ** ACTIVE 🔖 Chapter # - Org-Mode Publishing Tricks
 
-### BEGIN CHAPTER:
+# BEGIN CHAPTER:
 
 *** 📄 Introduction
 
-## BEGIN SUB-CHAPTER TEXT
+# BEGIN SUB-CHAPTER TEXT
 
 Here are some *publishing tips and snippits* I have found along the way...  Some of them may get incorporated more formally later /(with docs, etc.),/ but for now... you will have to discover these treasures below within this example chapter...
 
@@ -226,17 +226,17 @@ To Open a Link Type: ~C-c C-o~
 
 - *       *
 
-## END SUB-CHAPTER TEXT
+# END SUB-CHAPTER TEXT
 
 *** 📄 New Topic <replace with topic name>
 
-## BEGIN SUB-CHAPTER TEXT
+# BEGIN SUB-CHAPTER TEXT
 
 At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
 
-## END SUB-CHAPTER TEXT
+# END SUB-CHAPTER TEXT
 
-### END CHAPTER:
+# END CHAPTER:
 
 *** 🗒 Background Notes:
 
@@ -248,11 +248,11 @@ Nothing within this section will be exported... not even the Background Notes He
 The example Notes below have been timestamped as a way to suggest organizing TODO items for a particular chapter you may find yourself working on, or researching... *Use / replace the notes below with / for your own schemes*...
 :END:
 
-### BEGIN CHAPTER BACKGROUND NOTES
+# BEGIN CHAPTER BACKGROUND NOTES
 
 **** 🗒 Note 1: <2020-05-10 Sun>
 
-## BEGIN BACKGROUND NOTE
+# BEGIN BACKGROUND NOTE
 
 
 1. Enumerated List Item A
@@ -303,11 +303,11 @@ The example Notes below have been timestamped as a way to suggest organizing TOD
 
 Do any or all the above to help get the concepts and images of your book clear in mind...
 
-## END BACKGROUND NOTE
+# END BACKGROUND NOTE
 
 **** 🗒 Note 2: <2020-05-10 Sun>
 
-## BEGIN BACKGROUND NOTE
+# BEGIN BACKGROUND NOTE
 
 Each new note needs to get its own heading and initial timestamp...
 
@@ -315,11 +315,11 @@ Each new note needs to get its own heading and initial timestamp...
 
 Quid Novi? Lorem Ipsum dolor sit amet,consectetur adipisicing elit, sed doeiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim adminim veniam, quis nostrudexercitation ullamco laboris nisi utaliquip ex ea commodo consequat.Duis aute irure dolor inreprehenderit in coluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatatnon proident, sunt in culpa quiofficia deserunt mollit anim id estlaborum.
 
-## END BACKGROUND NOTE
+# END BACKGROUND NOTE
 
 **** 🗒 Phasellus orci: <2020-05-10 Sun>
 
-## BEGIN BACKGROUND NOTE
+# BEGIN BACKGROUND NOTE
 
 Etiam tempor elit auctor magna. Nullam nibh velit, vestibulum ut, eleifend non, pulvinar eget, enim. Classaptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer velit mauris, convallis acongue sed, placerat id, odio. Etiam venenatis tortor sed lectus. Nulla non orci. In egestas porttitor quam. Duis nec diameget nibh mattis tempus. Curabitus accumsan pede id odio. Nunc vitae libero. Aenean condimentum diam et turpis.Vestibulum non risus. Ut consectetuer gravida elit. Aenean est nunc, varius sed, alquam eu, feugiat sit amet, metus. Sedvenenatis odio id eros.
 
@@ -331,9 +331,9 @@ Etiam tempor elit auctor magna. Nullam nibh velit, vestibulum ut, eleifend non, 
 
 Yadda, yadda, yadda. etc... 
 
-## END BACKGROUND NOTE
+# END BACKGROUND NOTE
 
-### END CHAPTER BACKGROUND NOTES
+# END CHAPTER BACKGROUND NOTES
 * NEW 📒 Research:
 ** 💡 New Topic Ideas:
 ** DONE 📒 Yak Shaving:
@@ -605,11 +605,11 @@ You may create any structure you need under the Topic Headings beginning at the 
 Chapters may contain several Topics. Topics may contain sub headings, tables, figures, examples, etc...
 :END:
 
-### BEGIN CHAPTER:
+# BEGIN CHAPTER:
 
 *** 📄 Introduction <replace with topic name if needed>
 
-## BEGIN SUB-CHAPTER TEXT
+# BEGIN SUB-CHAPTER TEXT
 
 #+begin_src conf
 alice@home$ 
@@ -657,11 +657,21 @@ test2 : TWO
 
 Add links to other reference, source docs, requirements, back stories, whatever, here...
 
-## END SUB-CHAPTER TEXT
+- *[ [][] ]*
+
+- *[ [][] ]*
+
+- *[ [][] ]*
+
+- *[ [][] ]*
+
+- *[ [][] ]*
+
+# END SUB-CHAPTER TEXT
 
 *** 📄 New Topic <clone this>
 
-## BEGIN SUB-CHAPTER TEXT
+# BEGIN SUB-CHAPTER TEXT
 
 At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
 
@@ -673,11 +683,11 @@ alice@vps1$
 root@Vvps1# 
 #+end_src
 
-## END SUB-CHAPTER TEXT
+# END SUB-CHAPTER TEXT
 
 *** 📄 New Topic <master template do not clone>
 
-## BEGIN SUB-CHAPTER TEXT
+# BEGIN SUB-CHAPTER TEXT
 
 At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
 
@@ -689,9 +699,9 @@ alice@vps1$
 root@Vvps1# 
 #+end_src
 
-## END SUB-CHAPTER TEXT
+# END SUB-CHAPTER TEXT
 
-### END CHAPTER:
+# END CHAPTER:
 
 *** 🗒 Background Notes:
 
@@ -703,22 +713,22 @@ Nothing within this section will be exported... not even the Background Notes He
 The example Notes below have been timestamped as a way to suggest organizing TODO items for a particular chapter you may find yourself working on, or researching... *Use / replace the notes below with / for your own schemes*...
 :END:
 
-### BEGIN CHAPTER BACKGROUND NOTES
+# BEGIN CHAPTER BACKGROUND NOTES
 
 **** 🗒 Note # <clone this>: <2020-05-10 Sun>
 
-## BEGIN BACKGROUND NOTE
+# BEGIN BACKGROUND NOTE
 
 Each new note needs to get its own heading and initial timestamp...
 
-## END BACKGROUND NOTE
+# END BACKGROUND NOTE
 
 **** 🗒 Note # <master template do not clone>: <2020-05-10 Sun>
 
-## BEGIN BACKGROUND NOTE
+# BEGIN BACKGROUND NOTE
 
 Each new note needs to get its own heading and initial timestamp...
 
-## END BACKGROUND NOTE
+# END BACKGROUND NOTE
 
-### END CHAPTER BACKGROUND NOTES
+# END CHAPTER BACKGROUND NOTES

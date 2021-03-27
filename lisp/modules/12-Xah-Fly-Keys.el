@@ -113,19 +113,21 @@
 (with-eval-after-load 'xah-fly-keys
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ;; Xah-Fly-Keys "Command Mode" keybindings:
-  ;; (Xah-Fly-Keys Command Map)
-  ;; Add more key definitions to this list when needed:
+;; Xah-Fly-Keys "Command Mode" keybindings:
+;; (Xah-Fly-Keys Command Map) (NO Leader key)
+;; Add more key definitions to this list when needed:
 
   ;; Set easy key to switch frames:
   ;; This enhances functionality of Xah-Fly-Keys
   ;; default xah-next-window-or-frame: "," key.
+
   (define-key xah-fly-command-map (kbd "b") 'other-frame)
 
   ;; Make Frame:
   ;; This DIRECT Command Mode make-frame key mirrors
   ;; PRIMARY Leader-Key keybinding delete-frame "2" key below...
   ;; (which does the opposite)
+
   (define-key xah-fly-command-map (kbd "2") 'me_make-frame)
 
   ;; Set easy key to toggle neotree in left window pane:
@@ -136,11 +138,13 @@
   ;; This DIRECT Command Mode "5" key mirrors
   ;; PRIMARY Leader-Key "5" key below...
   ;; (which Switches to Org Mode back to Normal Screen View)
+
   (define-key xah-fly-command-map (kbd "5") 'me_org-wide-screen)
 
   ;; Change default olivetti-mode key:
   ;; (back tick)
   ;; (because I have conflicting other-frame key)
+
   (define-key xah-fly-command-map (kbd "`") 'olivetti-mode)
 
   ;; Set global key to toggle imenu:
@@ -150,14 +154,17 @@
   ;;       experiencing a problem with imenu-list right now.
   ;;       When that is fixed... This key will run that
   ;;       function instead...
+
   (define-key xah-fly-command-map (kbd "'") 'imenu)
   ;;  (define-key xah-fly-command-map (kbd "'") 'imenu-list)
 
   ;; Invoke Daft:
+
   (define-key xah-fly-command-map (kbd "0") 'deft)
 
   ;; Recenter top to bottom:
   ;; (Standard Emacs "C-l" does this as well):
+
   (define-key xah-fly-command-map (kbd "p") 'recenter-top-bottom)
 
   ;; TOGGLE Org Sidebar Tree:
@@ -165,6 +172,7 @@
   ;; Note: This is Sidebar TREE not Sidebar (i.e., on right side)
   ;;       PRIMARY Leader-Key keybinding "1" (below) toggles
   ;;       sidebar (not the same as tree).
+
   (define-key xah-fly-command-map (kbd "1") 'org-sidebar-tree-toggle)
 
   ;; This key opens Elements(s) in Right window Pane But leaves the
@@ -173,13 +181,16 @@
   ;; NOTE: To Jump to the expanded element in right (or middle) window,
   ;;       (for editing the expanded content) simply hit the RET key
   ;;       while sitting on any heading in the left tree window.
+
   (define-key xah-fly-command-map (kbd "s") 'me_org-tree-open-in-right-no-focus)
 
   ;; Run a ztree-diff session:
   ;; (you will be prompted for right and left directories)
+
   (define-key xah-fly-command-map (kbd "z") 'ztree-diff)
 
   ;; Set key to run HLedger Command:
+
   (define-key xah-fly-command-map (kbd "=") 'hledger-run-command)
 
   ;; Save the current location as bookmark:  SAVED
@@ -187,26 +198,31 @@
   ;; This DIRECT Command Mode bookmark-set key mirrors
   ;; PRIMARY Leader-Key keybinding bookmark-jump "-" key below...
   ;; (which jumps to this saved bookmark)
+
   (define-key xah-fly-command-map (kbd "-") 'bookmark-set)
 
   ;; TOGGLE Case of Character, Word, or Selection:
   ;; (There are three possibilities. Typing "\" key multiple
   ;; times cycles through them)... This is important as I have
   ;; disabled the Caps-Lock key (which is mapped to HOME now)
+
   (define-key xah-fly-command-map (kbd "\\") 'me_toggle-letter-case)
 
+  
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ;; Xah-Fly-Keys PRIMARY Leader-Key keybindings:
-  ;; (xah-fly-leader-key-map)
-  ;; Add more key definitions to this list when needed:
+;; Xah-Fly-Keys PRIMARY Leader-Key keybindings:
+;; (xah-fly-leader-key-map) (the SPACE key)
+;; Add more key definitions to this list when needed:
 
   ;; Jump back to previously SAVED bookmark:
   ;; This PRIMARY Leader-Key bookmark-jump "-" mirrors
   ;; DIRECT Command Mode bookmark-set "-" key above...
   ;; (which sets the bookmark)
+
   (define-key xah-fly-leader-key-map (kbd "-") 'bookmark-jump)
 
   ;; Set KFKeys Primary Leader-Key Sequence to expand and shrink olivetti...
+
   (define-key xah-fly-leader-key-map (kbd "]") 'olivetti-expand)
   (define-key xah-fly-leader-key-map (kbd "[") 'olivetti-shrink)
 
@@ -216,54 +232,84 @@
   ;; Note: This is NOT Sidebar TREE (i.e., on left side)
   ;;       DIRECT Command Mode "1" (above toggles sidebar TREE)
   ;;       SIDEBAR-TREE is not the same as "SIDEBAR"...
+  
   (define-key xah-fly-leader-key-map (kbd "1") 'org-sidebar-toggle)
 
   ;; Delete Frame:
   ;; This PRIMARY Leader-Key delete-frame "2" mirrors
   ;; DIRECT Command Mode make-frame "2" key above...
   ;; (which does the opposite)
+  
   (define-key xah-fly-leader-key-map (kbd "2") 'delete-frame)
 
   ;; Switch to Modular Emacs Normal Org Mode View:
   ;; This PRIMARY Leader-Key "5" key mirrors
   ;; DIRECT Command Mode "5" key above...
   ;; (which Switches to Org Mode Wide Screen View)
+
   (define-key xah-fly-leader-key-map (kbd "5") 'me_org-narrow-screen)
 
+  ;; Org Toggle Hidden Formatting Characters:
+  ;; (emphasized text and hyperlink display)
+  ;; This makes it easy to edit them and then toggle back
+  ;; afterwards to hide the formatting and show Fontification.
+  ;; I overrode (stole) this from xah-toggle-previous-letter-case
+  ;; which I am willing to exchange for this more needed function.
+  ;; I have my own toggle letter case function and could incorporate
+  ;; toggling camel case characters to it as well if I really need that.
+  ;;
+  ;; NOTE: This Does NOT work if you are editing an org file within
+  ;;       an INDIRECT buffer. (i.e., you are using Modular Emacs
+  ;;       W I D E S C R E E N Org Mode - me_org-wide-screen and have
+  ;;       used the left outline panel to create indirect buffers
+  ;;       containing a subsets of your entire .org file.)  I am
+  ;;       looking into figuring out a way to fix this as it kind
+  ;;       of cripples things.  (I edit in small indirect buffers
+  ;;       a lot!!!)
+
+  (define-key xah-fly-leader-key-map (kbd "b") 'org-toggle-link-display)
+
   ;; Export Org file to Markdown File:
+
   (define-key xah-fly-leader-key-map (kbd "m") 'org-md-export-to-markdown)
 
   ;; TOGGLE Default face between coding mode and writing mode:
+
   (define-key xah-fly-leader-key-map (kbd "p") 'me_toggle-default-face)
 
   ;; VMD-Mode Primary Leader-Key Sequence: SPC "v" ("k" Dvorak)
   ;; (Since there already is a default paste "v" key in Command
   ;; mode and it's easy enough to switch to Command Mode to paste)
+
   (define-key xah-fly-leader-key-map (kbd "v") 'vmd-mode)
 
+  
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ;; Xah-Fly-Keys SECONDARY Leader-Key keybindings:
-  ;; For secondary leader key: QWERTY "d" (dvorak "e")
-  ;; (xah-fly-e-keymap Leader Key Map)
-  ;; Add more key definitions to this list when needed:
-  ;; Many of these default "insert" keybindings are not needed.
+;; Xah-Fly-Keys SECONDARY Leader-Key keybindings:
+;; For secondary leader key: QWERTY "d" (dvorak "e")
+;; (xah-fly-e-keymap Leader Key Map)
+;; Add more key definitions to this list when needed:
+;; Some of these default "insert" keybindings are not needed.
 
   ;; Override default xah-insert-date () func with my own
   ;; simpler version that simply formats the date as I like to do it:
   ;; (i.e., "yyyy-mmm-dd" digits)
+  
   (define-key xah-fly-e-keymap (kbd "f") 'me_insert-date)
 
+
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ;; Xah-Fly-Keys SECONDARY Leader-Key keybindings:
-  ;; For secondary leader key: QWERTY "e" (dvorak "." dot)
-  ;; (xah-fly-e-keymap Leader Key Map)
-  ;; Add more key definitions to this list when needed:
-  ;; None of these keys are used by xah-fly-keys. You can use
-  ;; anything here...
+;; Xah-Fly-Keys SECONDARY Leader-Key keybindings:
+;; For secondary leader key: QWERTY "e" (dvorak "." dot)
+;; (xah-fly-e-keymap Leader Key Map)
+;; Add more key definitions to this list when needed:
+;; None of these keys are used by xah-fly-keys. You can use
+;; anything here...
 
   ;; Override default xah-insert-date () func with my own
   ;; simpler version that simply formats the date as I like to do it:
   ;; (i.e., "yyyy-mmm-dd" digits)
+
   (define-key xah-fly-dot-keymap (kbd "p") 'org-latex-export-to-pdf))
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
