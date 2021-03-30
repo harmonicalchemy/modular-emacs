@@ -4,11 +4,18 @@
 #+LATEX_HEADER: \usepackage[hyperref,x11names]{xcolor}
 #+LATEX_HEADER: \usepackage[colorlinks=true,urlcolor=SteelBlue4,linkcolor=Firebrick4]{hyperref}
 
-# Setup Files:
-#    For Cloned Versions of this template, replace file/paths below
-#    with file/paths to your own custom setup files (which you could 
-#    convienently clone from the example setup files provided in
-#    ../org-templates/ directory...
+#+begin_comment
+ Setup Files:
+   For Cloned Versions of this template, replace file/paths below
+   with file/paths to your own custom setup files (which you could 
+   convienently clone from the example setup files provided in
+   ../org-templates/ directory...
+
+ NOTE: 
+   #+CATEGORY: is specified within log-book.org setupfile.
+   If you need to change the category do it in log-book.org
+   or your cloned version of it...
+#+end_comment
 
 #+SETUPFILE: ~/.emacs.d/Docs/pubOps/org-templates/log-book.org
 #+SETUPFILE: ~/.emacs.d/Docs/pubOps/org-templates/default-tags.org
@@ -25,13 +32,152 @@
 
 #+DESCRIPTION: HAP - Modular Emacs Org Mode General Log Notebook Template.  This is the replacement for the Markdown Mode templates I was using previously, which were in turn replacements for even older templates I made originally for Evernote/Trello/Scrivener...
 
-# Don't mess with these unless you have good reason, (e.g., testing).
-#   (use Setup Tag File above to specify tags for this file to use)
+#+begin_comment
+ Don't mess with these unless you have good reason, (e.g., testing).
+ Use Setup Tag File above to specify tags for this file...
+
 # #+STARTUP: noptag
 # #+TAGS:
+#+end_comment
+
+* NEW About:
+
+:README:
+Use this section as Front Matter for your Log Book...
+:END:
+
+This Log Book was created for...  Yadda Yadda... Yadda...
+
+** References:
+
+Add links to other reference, source docs, requirements, back stories, whatever, here...
+
+- *[ [URL][Link Name] ]*
+
+- *[ [][] ]*
+
+- *[ [][] ]*
+
+- *[ [][] ]*
+
+- *[ [][] ]*
+
+* Begin Log Notebook:
+:PROPERTIES:
+:CUSTOM_ID: log-notebook-1
+:END:
+
+** DONE Entry: <2021-03-29 Mon> My New Project
+CLOSED: [2021-03-29 Mon 17:35]
+:LOGBOOK:
+- State "DONE"       from "NEW"        [2021-03-29 Mon 17:35]
+:END:
+:CLOCKING:
+CLOCK: [2021-03-29 Mon 17:11]--[2021-03-29 Mon 17:14] =>  0:03
+:END:
+
+*** Time Card:
+
+#+BEGIN: clocktable :scope tree2 :maxlevel 4 :tstart "<-1m>" :tend "<+1d>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3
+
+Weekly report starting on: [2021-03-29 Mon]
+| L | Headline                                        | Time |      |      |
+|---+-------------------------------------------------+------+------+------|
+|   | *Total time*                                      | *0:22* |      |      |
+|---+-------------------------------------------------+------+------+------|
+| 2 | \_  /Entry: <2021-03-29 Mon> My New Project/      |      | /0:22/ |      |
+| 3 | \_    Summary: [3/3]                            |      |      | 0:03 |
+| 3 | \_    Details:                                  |      |      | 0:16 |
+| 4 | \_      Starting Clock on this first sub-task   |      |      | 0:05 |
+| 4 | \_      New Sub Task to do later [3/3]          |      |      | 0:03 |
+| 4 | \_      Another Sub Task to do even later [4/4] |      |      | 0:08 |
+#+END:
+
+*** DONE Summary: [3/3]
+CLOSED: [2021-03-29 Mon 17:34]
+:LOGBOOK:
+- State "DONE"       from "ACTIVE"     [2021-03-29 Mon 17:34]
+:END:
+:CLOCKING:
+CLOCK: [2021-03-29 Mon 17:33]--[2021-03-29 Mon 17:34] =>  0:01
+CLOCK: [2021-03-29 Mon 17:14]--[2021-03-29 Mon 17:16] =>  0:02
+:END:
+
+1. [X] First Sub-task Completed?
+2. [X] New Sub Task Completed?
+3. [X] Another Sub Task Completed? [2/2]
+    + [X] Data Table Filled?
+    + [X] Final Conclusion Made?
+
+*** Details:
+
+**** DONE Starting Clock on this first sub-task
+CLOSED: [2021-03-29 Mon 17:25]
+:LOGBOOK:
+- State "DONE"       from "NEW"        [2021-03-29 Mon 17:25]
+:END:
+:CLOCKING:
+CLOCK: [2021-03-29 Mon 17:23]--[2021-03-29 Mon 17:25] =>  0:02
+CLOCK: [2021-03-29 Mon 17:16]--[2021-03-29 Mon 17:19] =>  0:03
+:END:
+
+- [X] This Task is Done now...
+
+OK... This task is done now... I am going to start working on the New Sub Task below now...
+
+**** DONE New Sub Task to do later [3/3]
+CLOSED: [2021-03-29 Mon 17:22]
+:LOGBOOK:
+- State "DONE"       from "NEW"        [2021-03-29 Mon 17:22]
+:END:
+:CLOCKING:
+CLOCK: [2021-03-29 Mon 17:19]--[2021-03-29 Mon 17:22] =>  0:03
+:END:
+
+- [X] Test One [2/2]
+
+   + [X] Now I am working on this task
+
+   + [X] I marked the first task DONE
+
+- [X] Test Two [2/2]
+
+   + [X] Change Latin Headings in Summary to Real Headings
+
+   + [X] Make Summary into Checkbox list
+
+- [X] Test Three [1/1]
+
+   + [X] Mark this task DONE & Start work on Another Sub Task Below
+
+**** DONE Another Sub Task to do even later [4/4]
+CLOSED: [2021-03-29 Mon 17:33]
+:LOGBOOK:
+- State "DONE"       from "ACTIVE"     [2021-03-29 Mon 17:33]
+:END:
+:CLOCKING:
+CLOCK: [2021-03-29 Mon 17:25]--[2021-03-29 Mon 17:33] =>  0:08
+:END:
+
+- [X] Mark this Task ACTIVE & Clock into this task and begin work
+
+- [X] Update the table below
+
+     |-------------+-----------+-----------+-----------+---------|
+     |  *Test Date:* | *Test1 Dat* | *Test2 Dat* | *Test3 Dat* | *Results* |
+     |-------------+-----------+-----------+-----------+---------|
+     | 2021-003-29 |     1.276 |     3.932 |     1.007 |   2.618 |
+     |-------------+-----------+-----------+-----------+---------|
+
+- [X] Finalize the Data above and Make a Conclusion
+
+- [X] Mark this Task DONE and finalize this log for printing
+
+This concludes the tests above... The results were typical...
+
+\newpage
 
 * How to Use this Notebook:                                        :noexport:
-
 ** Introduction:
 
 Use this Standard Log /(template)/ as a multi purpose time card/log entry vehicle...
@@ -98,9 +244,9 @@ Also for first time entry within your brand new log book, Skip the next two head
 
 \newpage
 
-*** Copy/Clone Log Entry (template)
+*** Copy/Clone - Entry: /<timestamp>/ (template)
 
-- Place your cursor on the *Log Entry (template)* heading and type *TAB* to collapse all of its contents into the heading alone. Then move your cursor to the first column on the empty line above the heading and type the "*t*" key to set the mark for selection, /(xah-fly-keys Command Mode)/.
+- Place your cursor on the *Entry: /<timestamp>/ (template)* heading and type *TAB* to collapse all of its contents into the heading alone. Then move your cursor to the first column on the empty line above the heading and type the "*t*" key to set the mark for selection, /(xah-fly-keys Command Mode)/.
 
 - Now, move your cursor down one single line by typing the "*k*" key /(xah-fly-keys Command Mode)/, to move down one single line, selecting-highlighting the text in the process.
 
@@ -108,7 +254,7 @@ Also for first time entry within your brand new log book, Skip the next two head
 
   *Note:* Selected text will be highlighted, but your cursor at the end of it will not be part of that selection. Placing your cursor on the first column of the next line will include the invisible new-line character which is what you want, but any text directly under the cursor will not be copied...  Later, after pasting this text somewhere else, your cursor will end up sitting on the first column of a blank line under the pasted text.  /(exactly as intended)/
 
-- To complete the copy operation, type "*c*" /(xah-fly-keys Command Mode)/. This will save the selection for pasting later, /(the highlighted text will go back to normal)/... You should have gotten only the Log Entry and not anything from the heading below it. 
+- To complete the copy operation, type "*c*" /(xah-fly-keys Command Mode)/. This will save the selection for pasting later, /(the highlighted text will go back to normal)/... You should have gotten only the Entry: /<timestamp>/  and not anything from the heading below it. 
 
    *Note:* If you type: "*spacebar t*" /(xah-fly-keys leader key command)/ it will show you the contents of your paste buffer...  You can see what you copied in there...  To get out of the paste buffer view, type: "*spacebar u*" and it will return you to where you were before...
 
@@ -126,19 +272,17 @@ Also for first time entry within your brand new log book, Skip the next two head
 
 *** Edit-Compose your New Log Entry:
 
-*Note:* If this is your first time using this log, you will be editing the dummy boilerplate placeholder *Log Entry* /(with timestamp)/ already in place as your first log entry heading under the main *Begin Log Notebook:* heading.  
+Note:* If this is your first time using this log, you will be editing the dummy boilerplate placeholder *Entry:* /<with timestamp>/ already in place as your first log entry heading under the main *Begin Log Notebook:* heading.  
 
-Conversely, If you just pasted a new cloned copy of the: *Log Entry (template)* under the main *Begin Log Notebook:* heading, you will be editing that instead.
-
-Instructions are pretty much the same for both cases except the existing log entry will have timestamps already entered.  You will be updating those existing timestamps in place rather than creating brand new timestamps...
+Conversely, If you just pasted a new cloned copy of the: *Entry:* /<timestamp>/ *(template)* under the main *Begin Log Notebook:* heading, you will be editing that instead.
 
 The instructions below for working on a new Cloned Log Entry are pretty much the same as for updating-reusing an existing log entry... /(differences will be noted in instructions below)/
 
-- Place your cursor to the right of your newly cloned Log Entry heading by one space, /(or directly on the existing timestamp if you are using the dummy placeholder entry the very first time)/ and then use the key binding:  *C-c .* /(i.e., press *Ctrl* key while holding "*c*", and then type a dot)/ A date chooser panel will pop up...
+- Place your cursor directly on the existing timestamp of your new Log Entry, and enter the key binding:  *C-c .* /(i.e., press *Ctrl* key while holding "*c*", and then type a dot)/ A date chooser panel will pop up...
 
-- At this point, type one more *dot* to force the calendar selection to the current time and date and then, Press *ENTER* to accept your choice... This will create a new timestamp, /(or update the existing timestamp)/ with the current date/time... Check to make sure the timestamp was properly updated and then move on to the next step... This timestamp will not be updated after that.  It records the initial time of your new log entry to the Day and time you first created it...
+- At this point, type one more *dot* to force the calendar selection to the current time and date and then, Press *ENTER* to accept your choice... /This will update the existing older timestamp with the current date/time.../ Check to make sure the timestamp was properly updated and then move on to the next step... This timestamp will not be updated after that.  It records the initial time of your new log entry to the Day and time you first created it...
 
-- You are now at the top of the list, (a few lines below the main "*Begin Log Notebook:"* heading), on a fresh new Log Entry Heading... Your timestamp indicates the present, -and- You are ready to record a log of your current activities! This way, your most recent log entries will be on the top and descend down historically from there...
+- You are now at the top of the list, (a few lines below the main "*Begin Log Notebook:"* heading), on a fresh new Log Entry Heading... Your timestamp indicates the present, /-and-/ You are ready to record a log of your current activities! This way, your most recent log entries will be on the top and descend down historically from there...
 
 - Follow the ~:README:~ directions within the Time Card section contained within your fresh new log entry to learn how to /"clock in"/ and /"clock out"/ of your log entry as you are on the task of entering your log data...
 
@@ -160,190 +304,88 @@ Anytime you need to see your Log Notebook as a nicely printed PDF report, you ca
 
 \newpage
 
-** Log Entry (template) <2020-08-05 Wed>
+** NEW Entry: <2021-03-29 Mon> (template)
 
 :README:
+
 - Since you created this new log entry you are probably in the middle of a task related to it right now!  Go ahead and punch the clock right now as well, to start recording your time! The following Commands are defined below for you to remember and use to track your time:
 
-  + *C-c C-x C-i* - Start The Clock _(to begin or resume clocking your current work)_
+  + *C-c C-x C-i* - Start Clock /(Begin OR Resume Clocking Current task)/
+
       This creates a new :CLOCKING: Time Card Entry that looks like this:
-            CLOCK: [2020-08-02 Sun 12:04]--[2020-08-06 Thu 21:23] => 105:19
+
       Do this now... Start recording your time girl!  Be in control of your life! 
     
      After doing the above, you can go away and do some work, leaving this log note to visit other files and work on them etc. The clock will be recording your time all the while... You will see in your mode line the elapsed clock time as you work...
 
   + *C-c C-x C-j* - Return back to the Heading where you started the clock...
-      You do this after you have worked on a task for a while and you need to come back to the time card (this Log Entry Heading) and stop the clock before going off to do something unrelated to the log entry...
+      You do this after you have worked on a task for a while and you need to come back to the time card /(this Log Entry Heading)/ and stop the clock before going off to do something unrelated to the log entry...
 
-  + *C-c C-x C-o* - *Stop the Clock* (to stop clocking your time on task)
-       This finalizes the Time Card Entry (within :CLOCKING: that you created earlier when you started the clock).  The completed time card entry looks like this:
-            CLOCK: [2020-08-02 Sun 12:04]--[2020-08-03 Mon 00:23] => 12:19
-       The above entry shows start timestamp, end timestamp, and total time worked during this segment...  As you can see from the example above I left the clock running all day by accident.  If you do something like that you can always come back and directly edit the clock times by hand to amend them...  After changing clock times or dates, etc. type the following to update the Time Card Entry:
+  + *C-c C-x C-o* - *Stop the Clock* /(to stop clocking your time on task)/
+       This *Finalizes the Time Card Entry* within ~:CLOCKING:~ /(created earlier when you started the clock)/... The completed time card entry looks like this:
+
+       The above entry shows start timestamp, end timestamp, and total time worked during this segment...  As you can see from the example above I left the clock running all day by accident.  If you do something like that you can always come back and directly edit the clock times by hand to amend them...  After changing clock times or dates, etc. type the following to *Update the Time Card Entry*:
             *C-c C-c*
        and the total time will change at the end showing your new calculated time...
 
-       If you need to go away and do something else before finishing this task, you can do so after clocking out... When you come back simply clock back in again to start another Time Card Entry just as before... The new time card entry will appear above the earlier one within the :CLOCKING: drawer... When you clock out of this task it will look just like the entry below it with a total time worked tagged on the end...
+       If you need to go away and do something else before finishing this task, you can do so after clocking out... When you come back simply clock back in again to start another Time Card Entry just as before... The new time card entry will appear above the earlier one within the ~:CLOCKING:~ drawer... When you clock out of this task it will look just like the entry below it with a total time worked tagged on the end...
 
-       When you are all done with this Log Entry mark it :DONE: 
+       When you are all done with this Log Entry mark it *DONE*
 
-  + *C-c C-c C-q* - Cancel Current Clock (in case you accidentally started it)
+  + *C-c C-c C-q* - Cancel Current Clock /(in case you accidentally started it)/
+
        This removes currently running clock and forgets it...
 
- + C-c C-x C-d - Display Clocking Info:
-       This will show elapsed times to the right of headings...
+ + *C-c C-x C-d* - Display Clocking Info: /This will show elapsed times to the right of headings.../
 
-- Once all of this has become routine for you, go ahead and remove this README drawer from this template... That way it does not get copied when you need to clone new log entries... 
-:END:
+- Once all of this has become routine for you, go ahead and remove this ~README~ drawer from this template... That way it does not get copied when you need to clone new log entries... 
 
-#+BEGIN: clocktable :scope subtree :maxlevel 2
-#+CAPTION: Clock summary at [2020-08-05 Wed 17:52]
-| Headline                                  | Time  |       |
-|-------------------------------------------+-------+-------|
-| *Total time*                                | *12:19* |       |
-|-------------------------------------------+-------+-------|
-| \_  Log Entry (template) <2020-08-01 Sat> |       | 12:19 |
-#+END:
-
-**** Summary:
-
-1. Yadda Yadda Yadda
-2. Yadda Yadda Yadda
-3. Yadda yadda yadda
-
-**** Details:
-
-Yadda, Yadda, Yadda... etc...
-
-\newpage
-\newpage
-* Introduction:
-
-:README:
-Use this section as Front Matter for your Log Book...
-:END:
-
-This Log Book was created for...  Yadda Yadda... Yadda...
-
-** References:
-
-Add links to other reference, source docs, requirements, back stories, whatever, here...
-
-- *[ [URL][Link Name] ]*
-
-- *[ [][] ]*
-
-- *[ [][] ]*
-
-- *[ [][] ]*
-
-- *[ [][] ]*
-
-* Begin Log Notebook:
-:PROPERTIES:
-:CUSTOM_ID: log-notebook-1
-:END:
-
-** Log Entry <2020-08-11 Tue> /(Test1)/
-:CLOCKING:
-CLOCK: [2020-08-11 Tue 20:24]--[2020-08-11 Tue 20:28] =>  0:04
 :END:
 
 *** Time Card:
 
 #+BEGIN: clocktable :scope tree2 :maxlevel 4 :tstart "<-1m>" :tend "<+1d>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3
-
-Weekly report starting on: [2020-08-10 Mon]
-| L | Headline                                        | Time |      |      |
-|---+-------------------------------------------------+------+------+------|
-|   | *Total time*                                      | *1:13* |      |      |
-|---+-------------------------------------------------+------+------+------|
-| 2 | \_  /Log Entry <2020-08-11 Tue> /(Test1)//         |      | /1:13/ |      |
-| 3 | \_    Details:                                  |      |      | 1:09 |
-| 4 | \_      Starting Clock on this first sub-task   |      |      | 0:04 |
-| 4 | \_      New Sub Task to do later [5/5]          |      |      | 0:55 |
-| 4 | \_      Another Sub Task to do even later [4/4] |      |      | 0:10 |
 #+END:
 
-*** DONE Summary: [3/3]
-CLOSED: [2020-08-11 Tue 21:39]
-:LOGBOOK:
-- State "DONE"       from "TODO"       [2020-08-11 Tue 21:39]
-:END:
+*** NEW Summary: [0/3]
 
-1. [X] First Sub-task Completed?
-2. [X] New Sub Task Completed?
-3. [X] Another Sub Task Completed? [2/2]
-   + [X] Data Table Filled?
-   + [X] Final Conclusion Made?
+1. [ ] *[ [New Item 1 (placeholder)][Item One] ]*
 
-*** ACTIVE Details:
+2. [ ] *[ [New Item 2 (placeholder)][Item Two] ]*
 
-**** DONE Starting Clock on this first sub-task
-CLOSED: [2020-08-11 Tue 20:35]
-:LOGBOOK:
-- State "DONE"       from "ACTIVE"     [2020-08-11 Tue 20:35]
-:END:
-:CLOCKING:
-CLOCK: [2020-08-11 Tue 20:28]--[2020-08-11 Tue 20:32] =>  0:04
-:END:
+3. [ ] *[ [New Item 3 (placeholder)][Item Three] ]*
 
-OK... This task is done now... I am going to start working on the New Sub Task below now...
+*** Details:
 
-**** DONE New Sub Task to do later [5/5]
-CLOSED: [2020-08-11 Tue 21:29]
-:LOGBOOK:
-- State "DONE"       from "ACTIVE"     [2020-08-11 Tue 21:29]
-:END:
-:CLOCKING:
-CLOCK: [2020-08-11 Tue 20:32]--[2020-08-11 Tue 21:27] =>  0:55
-:END:
+**** NEW New Item 1 (placeholder) [0/1]
 
+- [ ]
 
-- Test One
+   #+begin_src conf
+   magos@ca1:~$ _
+   #+end_src
 
-- Test Two
+**** NEW New Item 2 (placeholder) [0/1]
 
-- Test Three
+- [ ]
+
+   #+begin_src conf
+   magos@ca1:~$ _
+   #+end_src
+
+**** NEW New Item 3 (placeholder) [0/1]
+
+- [ ]
+
+   #+begin_src conf
+   magos@ca1:~$ _
+   #+end_src
 
 
-- [X] Now I am working on this task
 
-- [X] I marked the first task DONE
 
-- [X] Change Latin Headings in Summary to Real Headings
 
-- [X] Make Summary into Checkbox list
 
-- [X] Mark this task DONE & Start work on Another Sub Task Below
-**** 
 
-**** DONE Another Sub Task to do even later [4/4]
-CLOSED: [2020-08-11 Tue 21:37]
-:CLOCKING:
-CLOCK: [2020-08-11 Tue 21:27]--[2020-08-11 Tue 21:37] =>  0:10
-:END:
-:LOGBOOK:
-- State "DONE"       from "ACTIVE"     [2020-08-11 Tue 21:37]
-- State "ACTIVE"     from "WAITING"    [2020-08-11 Tue 21:27]
-- State "WAITING"    from              [2020-08-11 Tue 20:29] \\
-  Waiting until two other tasks are done... Then start this one...
-:END:
-
-- [X] Mark this Task ACTIVE & Clock into this task and begin work
-
-- [X] Update the table below
-
-|-----------+-----------+-----------+---------|
-| *Test1 Dat* | *Test2 Dat* | *Test3 Dat* | *Results* |
-|-----------+-----------+-----------+---------|
-|     1.276 |     3.932 |     1.007 |   2.618 |
-|-----------+-----------+-----------+---------|
-
-- [X] Finalize the Data above and Make a Conclusion
-
-- [X] Mark this Task DONE and finalize this log for printing
-
-This concludes the tests above... The results were typical...
 
 \newpage
-
