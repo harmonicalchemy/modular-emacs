@@ -4,11 +4,18 @@
 #+LATEX_HEADER: \usepackage[hyperref,x11names]{xcolor}
 #+LATEX_HEADER: \usepackage[colorlinks=true,urlcolor=SteelBlue4,linkcolor=Firebrick4]{hyperref}
 
-# Setup Files:
-#    For Cloned Versions of this template, replace file/paths below
-#    with file/paths to your own custom setup files (which you could 
-#    convienently clone from the example setup files provided in
-#    ../org-templates/ directory...
+#+begin_comment
+ Setup Files:
+   For Cloned Versions of this template, replace file/paths below
+   with file/paths to your own custom setup files (which you could 
+   convienently clone from the example setup files provided in
+   ../org-templates/ directory...
+
+ NOTE: 
+   #+CATEGORY: is specified within log-book.org setupfile.
+   If you need to change the category do it in log-book.org
+   or your cloned version of it...
+#+end_comment
 
 #+SETUPFILE: ~/.emacs.d/Docs/pubOps/org-templates/ref-book.org
 #+SETUPFILE: ~/.emacs.d/Docs/pubOps/org-templates/default-tags.org
@@ -25,10 +32,13 @@
 
 #+DESCRIPTION: HAP - Tech Manual Book Project Skeleton with generic basics already done. Great for documenting technical projects, large or small... Also great for organizing, handling caveats, trying different methods, etc. All while building a sound outline of support docs, steps, best practices... and publishable as a PDF Book suitable for eBook readers... (easily modified for publishing in other eBook formats or for the web)
 
-# Don't mess with these unless you have good reason, (e.g., testing).
-#   (use Setup Tag File above to specify tags for this file to use)
+#+begin_comment
+ Don't mess with these unless you have good reason, (e.g., testing).
+ Use Setup Tag File above to specify tags for this file...
+
 # #+STARTUP: noptag
 # #+TAGS:
+#+end_comment
 
 :README:
 

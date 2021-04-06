@@ -113,9 +113,9 @@
 (with-eval-after-load 'xah-fly-keys
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; Xah-Fly-Keys "Command Mode" keybindings:
-;; (Xah-Fly-Keys Command Map) (NO Leader key)
-;; Add more key definitions to this list when needed:
+  ;; Xah-Fly-Keys "Command Mode" keybindings:
+  ;; (Xah-Fly-Keys Command Map) (NO Leader key)
+  ;; Add more key definitions to this list when needed:
 
   ;; Set easy key to switch frames:
   ;; This enhances functionality of Xah-Fly-Keys
@@ -208,11 +208,10 @@
 
   (define-key xah-fly-command-map (kbd "\\") 'me_toggle-letter-case)
 
-  
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; Xah-Fly-Keys PRIMARY Leader-Key keybindings:
-;; (xah-fly-leader-key-map) (the SPACE key)
-;; Add more key definitions to this list when needed:
+  ;; Xah-Fly-Keys PRIMARY Leader-Key keybindings:
+  ;; (xah-fly-leader-key-map) (the SPACE key)
+  ;; Add more key definitions to this list when needed:
 
   ;; Jump back to previously SAVED bookmark:
   ;; This PRIMARY Leader-Key bookmark-jump "-" mirrors
@@ -232,14 +231,14 @@
   ;; Note: This is NOT Sidebar TREE (i.e., on left side)
   ;;       DIRECT Command Mode "1" (above toggles sidebar TREE)
   ;;       SIDEBAR-TREE is not the same as "SIDEBAR"...
-  
+
   (define-key xah-fly-leader-key-map (kbd "1") 'org-sidebar-toggle)
 
   ;; Delete Frame:
   ;; This PRIMARY Leader-Key delete-frame "2" mirrors
   ;; DIRECT Command Mode make-frame "2" key above...
   ;; (which does the opposite)
-  
+
   (define-key xah-fly-leader-key-map (kbd "2") 'delete-frame)
 
   ;; Switch to Modular Emacs Normal Org Mode View:
@@ -283,34 +282,36 @@
 
   (define-key xah-fly-leader-key-map (kbd "v") 'vmd-mode)
 
-  
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; Xah-Fly-Keys SECONDARY Leader-Key keybindings:
-;; For secondary leader key: QWERTY "d" (dvorak "e")
-;; (xah-fly-e-keymap Leader Key Map)
-;; Add more key definitions to this list when needed:
-;; Some of these default "insert" keybindings are not needed.
+  ;; Xah-Fly-Keys SECONDARY Leader-Key keybindings:
+  ;; For secondary leader key: QWERTY "d" (dvorak "e")
+  ;; (xah-fly-e-keymap Leader Key Map)
+  ;; Add more key definitions to this list when needed:
+  ;; Some of these default "insert" keybindings are not needed.
 
   ;; Override default xah-insert-date () func with my own
   ;; simpler version that simply formats the date as I like to do it:
   ;; (i.e., "yyyy-mmm-dd" digits)
-  
+
   (define-key xah-fly-e-keymap (kbd "f") 'me_insert-date)
 
-
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; Xah-Fly-Keys SECONDARY Leader-Key keybindings:
-;; For secondary leader key: QWERTY "e" (dvorak "." dot)
-;; (xah-fly-e-keymap Leader Key Map)
-;; Add more key definitions to this list when needed:
-;; None of these keys are used by xah-fly-keys. You can use
-;; anything here...
+  ;; Xah-Fly-Keys SECONDARY Leader-Key keybindings:
+  ;; For secondary leader key: QWERTY "e" (dvorak "." dot)
+  ;; (xah-fly-e-keymap Leader Key Map)
+  ;; Add more key definitions to this list when needed:
+  ;; None of these keys are used by xah-fly-keys. You can use
+  ;; anything here...
 
   ;; Override default xah-insert-date () func with my own
   ;; simpler version that simply formats the date as I like to do it:
   ;; (i.e., "yyyy-mmm-dd" digits)
 
-  (define-key xah-fly-dot-keymap (kbd "p") 'org-latex-export-to-pdf))
+  (define-key xah-fly-dot-keymap (kbd "p") 'org-latex-export-to-pdf)
+
+  ;; Set Easy Keybinding to Insert Org README Drawer:
+
+  (define-key xah-fly-dot-keymap (kbd "r") 'me_org-insert-readme-drawer))
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; END: [modular-emacs]:~/.emacs.d/lisp/modules/12-Xah-Fly-Keys.el

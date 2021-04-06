@@ -4,11 +4,18 @@
 #+LATEX_HEADER: \usepackage[hyperref,x11names]{xcolor}
 #+LATEX_HEADER: \usepackage[colorlinks=true,urlcolor=SteelBlue4,linkcolor=Firebrick4]{hyperref}
 
-# Setup Files:
-#    For Cloned Versions of this template, replace file/paths below
-#    with file/paths to your own custom setup files (which you could 
-#    convienently clone from the example setup files provided in
-#    ../org-templates/ directory...
+#+begin_comment
+ Setup Files:
+   For Cloned Versions of this template, replace file/paths below
+   with file/paths to your own custom setup files (which you could 
+   convienently clone from the example setup files provided in
+   ../org-templates/ directory...
+
+ NOTE: 
+   #+CATEGORY: is specified within log-book.org setupfile.
+   If you need to change the category do it in log-book.org
+   or your cloned version of it...
+#+end_comment
 
 #+SETUPFILE: ~/.emacs.d/Docs/pubOps/org-templates/ref-book.org
 #+SETUPFILE: ~/.emacs.d/Docs/pubOps/org-templates/default-tags.org
@@ -25,10 +32,13 @@
 
 #+DESCRIPTION: HAP - Official Guide for independent writers/publishers. Everything you need to run your own independent Writing & Publishing Operation, employing professional publishing industry standards, within a 100% free as in Freedom software infrastructure environment i.e., IPE (Integrated Publishing Environment). This implements common "IDE" concepts as applied to writing, planning, and publishing of written and/or performed literary works...  This guide also includes Templates and Instructions for using the Snowflake Method of story development taking advantage of org-mode features to facilitate that process...
 
-# Don't mess with these unless you have good reason, (e.g., testing).
-#   (use Setup Tag File above to specify tags for this file to use)
+#+begin_comment
+ Don't mess with these unless you have good reason, (e.g., testing).
+ Use Setup Tag File above to specify tags for this file...
+
 # #+STARTUP: noptag
 # #+TAGS:
+#+end_comment
 
 * 💡 Scratchpad Refile:
 

@@ -207,6 +207,15 @@
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Modular Emacs Quick Insert Org :README: Drawer  
+;;  Function...
+
+(defun me_org-insert-readme-drawer ()
+  (interactive)
+  (org-insert-drawer nil "README"))
+
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Org Outline Tree on left | content on 
 ;;  right Functions...
 ;;
