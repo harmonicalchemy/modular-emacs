@@ -204,12 +204,12 @@
     (make-frame
      (quote
       ;; Modify Frame dimensions for Writing with Olivetti mode enabled...
-      ((name . "HA Mod Emacs v3.2 - Writer's Frame")
+      ((name . "HA Mod Emacs v3.4 - Writer's Frame")
        (height . 38)
        (width . 88))))
 
     ;; Select this new frame:
-    (select-frame-by-name "HA Mod Emacs v3.2 - Writer's Frame")
+    (select-frame-by-name "HA Mod Emacs v3.4 - Writer's Frame")
 
     ;; Set Default Face to Courier Prime:
     (set-face-attribute 'default (selected-frame)
@@ -246,12 +246,12 @@
     (make-frame
      (quote
       ;; Modify Frame dimensions for coding...
-      ((name . "HA Mod Emacs v3.2 - Coder's Frame")
+      ((name . "HA Mod Emacs v3.4 - Coder's Frame")
        (height . 38)
        (width . 88))))
 
     ;; Select this new frame:
-    (select-frame-by-name "HA Mod Emacs v3.2 - Coder's Frame")
+    (select-frame-by-name "HA Mod Emacs v3.4 - Coder's Frame")
 
     ;; Set Default Face to Hermit for coding:
     (set-face-attribute 'default (selected-frame)
@@ -336,7 +336,7 @@
     ;; Modify Frame dimensions for Writing with Olivetti mode enabled...
     (modify-frame-parameters nil
                              (quote
-                              ((name . "HA Mod Emacs v3.2 - Writing Mode")
+                              ((name . "HA Mod Emacs v3.4 - Writing Mode")
                                (height . 38)
                                (width . 88))))))
 
@@ -355,7 +355,7 @@
 
     (modify-frame-parameters nil
                              (quote
-                              ((name . "HA Mod Emacs v3.2 - Coder's Frame")
+                              ((name . "HA Mod Emacs v3.4 - Coder's Frame")
                                (height . 38)
                                (width . 88))))))
 
