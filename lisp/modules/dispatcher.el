@@ -43,11 +43,19 @@
 ;;
 ;; Change Log: (descending chronological order)
 ;;
+
+;;   2021-004-08 - Updated Modular Emacs to v3.4.0 [Q2 2021]
+;;       (still beta - working on updating many docs to org-mode and
+;;       publishing as PDFs) This version includes new feature additions &
+;;       bugfixes...  A few mentions of version updates are missing below...
+;;       Oh Well... All up to date now...
+
 ;;   2019-011-12 - Harmonic Alchemy Modular-Emacs V3.0 [Q4 2019]
 ;;      This represents mostly updated docs which has been needed for a while!
 ;;      there were also many bug fixes brought over from the Lisp IDE fork,
 ;;      where I have been living for most of the summer and fall!  Now the
 ;;      master and develop branches can benefit the gains...
+
 ;;
 ;;   2019-010-17 - Harmonic Alchemy Modular-Emacs Lisp IDE Fork v2.3.0 [Q3 2019]
 ;;      This final commit marks the latest sync between Master, Develop, and Lisp
