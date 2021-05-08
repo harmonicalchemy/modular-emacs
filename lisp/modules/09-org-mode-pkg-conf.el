@@ -269,7 +269,7 @@
         ;; Make NORMAL ORG MODE Frame size for writing/composition:
         (modify-frame-parameters nil
                                  (quote
-                                  ((name   . "HA Mod Emacs v3.2 - Normal Org Mode")
+                                  ((name   . "HA Mod Emacs v3.4 - Normal Org Mode")
                                    (height . 38)
                                    (width  . 88))))
 
@@ -297,7 +297,7 @@
           ;; Make Wide Screen Fancy Org View View:
             (modify-frame-parameters nil
                                      (quote
-                                      ((name   . "HA Mod Emacs v3.2 - Fancy Org View")
+                                      ((name   . "HA Mod Emacs v3.4 - Fancy Org View")
                                        (height . 38)
                                        (width  . 138))))
             ;; Split Windows with org outline tree in narrow left window...
@@ -344,7 +344,7 @@
 
   (modify-frame-parameters nil
                            (quote
-                            ((name   . "HA Mod Emacs v3.3 - Normal Org Mode")
+                            ((name   . "HA Mod Emacs v3.4 - Normal Org Mode")
                              (height . 38)
                              (width  . 88))))
 

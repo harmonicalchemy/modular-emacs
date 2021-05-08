@@ -15,6 +15,12 @@
 
 ;; Change Log: (descending chronological order)
 
+;;   2021-004-08 - Updated Modular Emacs to v3.4.0 [Q2 2021]
+;;                 (still beta - working on updating many docs to
+;;                  org-mode and publishing as PDFs)
+;;                 This version includes new feature additions &
+;;                 bugfixes...
+
 ;;   2021-001-07 - Modified width of initial and default frames to 88.
 
 ;;   2020-007-16 - Harmonic Alchemy Modular-Emacs V3.2 (beta) [Q3 2020]
@@ -61,7 +67,7 @@
 
 ;; Change title-bar text
 (setq frame-title-format
-      "Harmonic Alchemy Modular Emacs - Version 3.3 (still in beta) [Q2 2021]")
+      "Harmonic Alchemy Modular Emacs - Version 3.4 (still in beta) [Q2 2021]")
 
 ;; Disable tool-bar - I could care less about tool bars in emacs!
 ;; An oxymoron! But you may feel differently.  Comment this out if you like them.
@@ -115,7 +121,7 @@
 ;; screen size, etc...
 
 (setq initial-frame-alist
-      '( (name . "HA Mod Emacs v3.2 - Coder's Frame")
+      '( (name . "HA Mod Emacs v3.4 - Coder's Frame")
          (font . "Hermit")
          (height . 38)
          (width . 88)
@@ -132,7 +138,7 @@
 ;; screen size, etc...
 
 (setq default-frame-alist
-      '( (name . "HA Mod Emacs v3.2 - Coder's Frame")
+      '( (name . "HA Mod Emacs v3.4 - Coder's Frame")
          (font . "Hermit")
          (height . 38)
          (width . 88)
