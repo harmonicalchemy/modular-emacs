@@ -2,13 +2,28 @@
 ;;   [modular-emacs]:~/.emacs.d/lisp/modules/09-1-org-beautify-conf.el
 ;;
 ;;   This is a sub module of 09-org-mode-pkg-conf.el which configures Org Mode
-;;   Beautify Settings:          (constantly under revision %^)
+;;   Beautify Settings:          (constantly under evolving revision %^)
 ;;
 ;;   Override this file by placing a copy of it into "my-modules" then change
 ;;   it to suit your personal org-mode look and feel...
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 (require 'org-faces)
+
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Set Fallback Font:
+;;  This is critical to ensure unicode symbols always
+;;  display correctly...
+;;  Note: Setting 'nil' below makes it the fallback
+;;        font.  Other values allow you to set a range
+;;        of gliphs...
+;;  Reference:
+;;  http://endlessparentheses.com/manually-choose-a-fallback-font-for-unicode.html
+
+(set-fontset-font "fontset-default" nil
+                  (font-spec :size 20 :name "Symbola"))
+
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;   Org-Bullets:
@@ -28,8 +43,8 @@
 
 (require 'org-bullets)
 
-;; make available "org-bullet-face" allowing control of the font
-;; sizes individually:
+;; Make "org-bullet-face" available allowing control of the font
+;; sizes individually:  (NOTE: I don't really use this but it's here)
 
 (setq org-bullets-face-name (quote org-bullet-face))
 
@@ -45,10 +60,19 @@
 ;; Special Symbols:
 (setq org-bullets-bullet-list '("☀" "♼" "☼" "☾" "☽" "☣" "§" "¶" "‡" "※" "✕" "△" "◇" "▶" "◀" "◈"))
 
+;; NOTE: I find Org Outline Bullets in general to be cluttering and non-essential. ;;       I make my outline bullets in Modular Emacs default to "invisible" and
+;;       instead focus on heading indentation, size, and font style.
+;;       (like a real doc should look)
+;;
+;;       Hiding Outline bullets also aids visibility of plain list bullets and
+;;       enumerations, (which traditionally are expected to have bullets in
+;;       front of them...
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Org ellipsis options, other than the default Go to Node...
 ;; not supported in common font, but supported in Symbola font. ⬎, ⤷, ⤵
+;;
+;; I LOVE This One:
 
 (setq org-ellipsis "⤵")
 
@@ -65,6 +89,15 @@
 ;;  NOTE: if you want to see the fancy bullets in your
 ;;  outline headings, than don't call this function
 ;;  in any org-mode hook functions...
+;;
+;;  NOTE: I am now trying this in my org-mode hook:
+;
+;   (after! org
+;     (setq org-hide-leading-stars nil
+;           org-indent-mode-turns-on-hiding-stars nil))
+;
+;;  As an alternative way no longer needing the
+;;  explicit function call below...
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 (defun me_hide-org-bullets ()
@@ -106,7 +139,7 @@
 
 (setq org-show-hierarchy-above t)
 
-(setq org-show-siblings (quote ((default))))
+(setq org-show-siblings (quote (default)))
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -118,165 +151,100 @@
 (font-lock-add-keywords
  'org-mode
  '(("^ *\\([-]\\) "
-    (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "🍥"))))))
+    (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "🞜"))))))
 
 (font-lock-add-keywords
  'org-mode
  '(("^ *\\([+]\\) "
-    (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "🞜"))))))
+    (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "🍥"))))))
+
+;; Automatically demote / promote list items with different characters...
+
+(setq org-list-demote-modify-bullet
+      (quote (("+"  . "-")
+              ("-"  . "+")
+              ("*"  . "-")
+              ("1." . "-")
+              ("1)" . "-")
+              ("A)" . "-")
+              ("B)" . "-")
+              ("a)" . "-")
+              ("b)" . "-")
+              ("A." . "-")
+              ("B." . "-")
+              ("a." . "-")
+              ("b." . "-"))))
+
+;; Increase offset a wee bit more between plain list levels... 
+
+(setq-default org-list-indent-offset 1)
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; Emojify for Org-Mode - Information Only:
+;; Customize look of emphasized text in org-mode 
+;; This is for how markup will look in an org-mode
+;; buffer.  Not what it may or may not look like
+;; after exported to HTML or LaTeX etc...
 ;;
-;; Searching emojis:
-;;
-;;   The command:
-;;
-;;       emojify-apropos-emoji
-;;
-;;   can be used to display emojis that match given regexp/apropos pattern.
-;;   The results are displayed in a specialized buffer, where 'w' or 'c' can be
-;;   used to copy emojis to the kill ring.
-;;
-;; Inserting emojis:
-;;
-;;   The command:
-;;
-;;       emojify-insert-emoji
-;;
-;;   can be used to insert emojis interactively. While the command works with
-;;   vanilla Emacs completion system, the experience would be better with
-;;   something like Helm, Ivy, Icicles or Ido depending on you preference.
-;;
-;; Describing emojis:
-;;
-;;   The command:
-;;
-;;       emojify-describe-emoji-at-point
-;;
-;;   can be used to view explanation about the command displayed at point.
-;;   Additionally the command emojify-describe-emoji can be used to display
-;;   description for an arbitrary emoji.
-;;
-;; Listing all emojis:
-;;
-;;   The command:
-;;
-;;       emojify-list-emojis
-;;
-;;   can be used to view all the available emojis in a list form.
-;;
-;; Configuring how emojis are displayed:
-;;
-;;   By default emojis are displayed using images. However you can instruct
-;;   emojify to display it using unicode characters or ascii characters.
-;;   To do so, customize the variable:
-;;
-;;       emojify-display-style
-;;
-;;   You can set it one of the following values:
-;;
-;;      image - Display emojis using images, obviously this requires the Emacs
-;;              instance to support image
-;;
-;;     unicode - Display emojis using unicode characters, this might be a good
-;;               option on platforms with good emoji fonts
-;;
-;;     ascii - This is simplest and does not require any external dependencies
-;;             In this case emojify will display ascii equivalents of github
-;;             style emojis.
-;;
-;;  More Info At:
-;;
-;;      https://github.com/iqbalansari/emacs-emojify
-;;
-;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; Experiment with this until you have something
+;; you like... so far it's angry fruit salad! ;-)
+;; It took me so long to get around to fixing
+;; this... So now I will live with these settings
+;; until they drive me crazy!  LOL
 
-;; I have chosen to leave Emojify Mode disabled and 
-;; instead only use the option to enable it manually
-;; if needed.   I find using the Symbola unicode font
-;; by itself, without using emojify mode, works fine...
-;; So far, I am sourcing all my symbols and icons from
-;; the Symbola font... Symbola contains simple clear
-;; line drawing representations of all the standard
-;; emojis... and Symbola is available on all platforms!
-;;
-;; If you would rather, or also wish to use Emojify mode,
-;; Un-comment the single line form below...  This will 
-;; enable Emojify Mode Globally at Emacs Startup...
+(setq org-emphasis-alist
+      '(("*" (bold
+              :foreground "chocolate" ))            ;; *BOLD*
 
-;(add-hook 'after-init-hook #'global-emojify-mode)
+        ("/" (italic
+              :family "Courier Prime"
+              :slant italic
+              :foreground "LimeGreen"))             ;; /Italic/
+
+        ("_" (
+              :underline (
+                          :color foreground-color
+                          :style line)))            ;; _underline_
+
+        ("=" (
+              :family "Hermit"
+              :background "maroon"
+              :foreground "white"))                 ;; =org-verbatim=
+
+        ("~" (
+              :family "Hermit"
+              :background "LemonChiffon"
+              :foreground "IndianRed"))             ;; ~org-code~
+
+        ("+" (:strike-through t))))                 ;; +strike-through+
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; Make Attractive Org-Mode Headers, blocks, keywords etc:
+;; Customize Org headings:
+;; The fonts listed below will be tried in sequence,
+;; and the first one found will be used...
 ;;
 ;; The inspiration for this rather complicated eLisp code comes from:
 ;;   "Beautifying Org Mode in Emacs"
 ;;      https://zzamboni.org/post/beautifying-org-mode-in-emacs/
 
-;;;
-;;  Set default faces:
-
-(set-face-attribute
- 'fixed-pitch t
- :family "Hermit"
- :height 120
- :width 'normal)
-
-(when ME--DARWIN
-  (set-face-attribute
-   'fixed-pitch-serif t
-   :family "Courier Prime Emacs"
-   :height 130
-   :width 'normal))
-
-(when ME--LINUX
-  (set-face-attribute
-   'fixed-pitch-serif t
-   :family "Courier Prime Emacs"
-   :height 130
-   :width 'normal))
-
-;; Variable Pitch Face:
-
-(set-face-attribute
- 'variable-pitch t
- :family "Averia Serif Libre"
- :height 130
- :width 'normal)
-
-;; Set Org Mode Faces:
-
-(custom-theme-set-faces
- 'user
- `(default ((t (:inherit fixed-pitch-serif :height 120))))
- `(org-default ((t (:inherit fixed-pitch-serif :height 120))))
- `(org-block ((t (:inherit fixed-pitch))))
- `(org-code ((t (:inherit fixed-pitch))))
- `(org-document-info ((t (:foreground "dark orange"))))
- `(org-document-info-keyword ((t (:inherit (shadow fixed-pitch-serif)))))
- `(org-indent ((t (:inherit (org-hide fixed-pitch-serif)))))
- `(org-link ((t (:foreground "royal blue" :underline t))))
- `(org-meta-line ((t (:inherit (font-lock-comment-face fixed-pitch-serif)))))
- `(org-property-value ((t (:inherit fixed-pitch-serif))) t)
- `(org-special-keyword ((t (:inherit (font-lock-comment-face fixed-pitch-serif)))))
- `(org-table ((t (:inherit fixed-pitch :foreground "#98a583"))))
- `(org-tag ((t (:inherit (shadow fixed-pitch) :weight bold :height 0.8))))
- `(org-verbatim ((t (:inherit (shadow fixed-pitch))))))
-
-;; Customize Org headings:
-
 (let* ((variable-tuple
         (cond
-         ((x-list-fonts "Averia Serif Libre")
-          '(:font "Averia Serif Libre"))
+         ((x-list-fonts "Averia Libre Regular")
+          '(:font "Averia Libre Regular"))
          ((x-list-fonts "Averia Libre Light")
           '(:font "Averia Libre Light"))
+         ((x-list-fonts "Averia Sans Libre Regular")
+          '(:font "Averia Libre Regular"))
+         ((x-list-fonts "Averia Sans Libre Light")
+          '(:font "Averia Libre Regular"))
+         ((x-list-fonts "Averia Serif Libre Regular")
+          '(:font "Averia Libre Regular"))
+         ((x-list-fonts "Averia Serif Libre Light")
+          '(:font "Averia Libre Regular"))
          (nil (warn "Averia Fonts Not Found! Did you install them?"))))
        (base-font-color     (face-foreground 'default nil 'default))
-       (headline           `(:inherit default :weight normal )))
+       (headline           `(:inherit 'default )))
 
   (custom-theme-set-faces
    'user

@@ -31,7 +31,6 @@
 ;                  "|" "✘ CANCELLED(c@/!)" "PHONE(p)")
 ;	(sequence  "NEW(n)" "⦾ NOW(o)" "SOMEDAY(s)"  "|" "ARCHIVED(a)"))))
 
-
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Set Org TODO keyword faces:
 ;;  (don't settle for boring red, green, blue... Be creative!)
@@ -41,14 +40,14 @@
 ;;
 ;;  NOTE: You can also do this for tag faces:
 ;;        Copy this form when you are ready to do that and add in your tags
-;;        as a new element in the list...
+;;        as new elements in the list...
 ;;
-;(setq org-tag-faces
-;      (quote (
-;              ( "TAG-NAME" . (:family "Hermit" :height 100 :foreground "red" :weight bold))
-;              ;; Add More Tag Elements to the list...
-;              ;;
-;              )))
+;;   (setq org-tag-faces
+;;      (quote
+;;       (
+;;        ("TAG-NAME" . (:family "Hermit" :height 100 :foreground "red" :weight bold))
+;;        Add More Tag Elements to this list using above form as example member...
+;;        )))
 
 (setq org-todo-keyword-faces
       (quote
@@ -70,6 +69,25 @@
 ;;   My Specific Universal TAGS & Other Custom Global Configurations Section:
 ;;   (change theses as needed for your own specific individual setup)
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; Tagging Best Practice:
+;;
+;; Ref: https://media.ccc.de/v/GLT18_-_321_-_en_-_g_ap147_004_-_201804281550_-_the_advantages_of_file_name_conventions_and_tagging_-_karl_voit#t=1480
+;;
+;; - Use a controlled vocabulary and TAB-completion
+;; - Not more than 100 tags maximum - the less the better
+;; - Tags are always plural
+;; - Keep Tags General  (e.g., sports instead of vollyball etc.)
+;; - No Tags which can be derived from file extensions as follows:
+;;      Bad Examples: images, spreadsheets, photographs, PDFs, etc...
+;;      Recommended:  presentations instead of powerpoint, etc...
+;; - No Tags that are obvious. (as above)
+;; - Use mutually exclusive tags or datestamps instead of version numbers, etc.
+;;      Mutually Exclusive means entering a tag will remove another tag that
+;;      is set to be mutually exclusive of it. (and visa-versa)
+;;      Bad Examples:  almost-final, final, finished, etc...
+;;      Recommended Mutually Exclusive: draft|final, confidential|public|secret etc.
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Configure top-level universal tags with quick assign letters:
@@ -119,315 +137,85 @@
 ;;        ("Control")
 ;;       )))
 
-;; My Global TAGS: (hierarchical list)
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; Create General Tags for everything else:
 ;;
-;; NOTE: Single keys are assigned to the following
-;;       TOP LEVEL Group Tags for quick access:
-;;       (see dotted pairs (cons cells) below in org-tag-alist)
-;;
-;;    @Qubes              "q"
-;;    @Alisha             "a"
-;;    Family              "f"
-;;    @LIBRARY            "l"
-
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  Create separate lists for TOP Level Tags
-;;  These will be appended later to create the full
-;;  org-tags-alist...
-
-;;;
-;; Create TOP LEVEL TAGS (specific tags for different parts of my life)
-;; Note:  These tags are mutually exclusive...
-
-(defvar me--top-tags
-  (quote
-   (("@DOCS" . ?d)    ;; General Docs
-    ("@Qubes" . ?q)   ;; Qubes OS - VM compartmentalization management...
-    ("@Alisha" . ?a)  ;; Me %^)  (change to your name)
-    ("@Family" . ?f)  ;; My Relatives...  (or yours - keep it)
-   )))                ;; END me--top-tags
-
-;;;
-;; Create TOP LEVEL General Tags for everything else:
-;;
-;; NOTE: There are way too many tags below... And that is my public list!
-;;       I have overridden this file in /my-modules/ with even more tags!
-;;       I don't expect to use all of these in any practical way via any
-;;       pop-up HELM views etc.  There are just too many to make that useful!
-;;
-;;       If you find any of the tags below useful to you, it may be wise to break
-;;       them up into categories or use them as file tags for specific groups of
-;;       files, or load them via eLisp code blocks, etc. That way you will have
-;;       a way to use different agendas designed to match a subset group
-;;       containing no more than say 10 or 15 tags for each category, max.
-;;
-;; The List below has a long history!  I started this list by using tags in
-;; Firefox to organize bookmarks maybe 15 or so years ago... I think it was
-;; still called Netscape back then actually...  The list migrated later to
-;; Evernote, (which was way cool because the tags were hierarchical).  I wrote
-;; an article about that wishing for a file system to designed like that.  No...
-;; Apple did not do it... They have a tag system in the Finder, but it is lame...
-;;
-;; Later, I ditched Evernote for simple Markdown Notes in Emacs, using DEFT
-;; for organization.  That lasted for about a year... I knew I would eventually
-;; be doing this in org-mode but I had a lot to learn first... And I still have
-;; a LOT to learn... This stuff is vast! OMG!
-;;
-;; The real reason I put all these tags in here is to maintain my master list
-;; of tags, #Hashtags, etc. for everything I do, with reasonable consistency in
-;; one single place where I have programmatic control over them to help keep them
-;; unique and not duplicated with different versions/spellings of the same tag!
-;;
-;; Lisp is the best place, for things like that. Eventually I will come up with an
-;; efficient scheme in Org-Mode to manage all of them with the ability to do
-;; quick lookups and assignments.  Many of which will of course be automatic,
-;; based on work processes...
+;; NOTE: 2021-003-10 - This general tag list has been greatly shortened...
+;;       Instead, I am now using Org Categories with Tag Files of specific
+;;       categories instead.  These -tag.org files are imported by .org
+;;       files that need specific tags from specific categories. The result
+;;       is a much shorter general-tags list below... "Keep it Simple Stupid"
 
 (defvar me--general-tags
   (quote
 
-   ;; Major Categories:
+   ;; Mutually Exclusive Tags:
 
-   (("GenRef")
-    ("GenOps")
-    ("PubOps")
-    ("DevOps")
-    ("git")
-    ("SysAdmin")
-    ("Research")
-    ("Blog_Ideas")
-    ("New_Ideas")
-    ("Projects")
-    ("GTD")
-    ("Autofocus")
+   ((:startgroup     . nil)   ;; BEGIN: Mutually Exclusive Group:
+    ("@home"         . ?H)    ;; FLAG: (personal stuff, banking, health, etc.)
+    ("@work"         . ?W)    ;; FLAG: (devOps, sysAdmin, clients, community, sales)
+    (:endgroup       . nil)   ;; END Group:
 
-    ;; Personal:
+    (:startgroup     . nil)   ;; BEGIN: Mutually Exclusive Group:
+    ("export"        . ?x)    ;; FLAG: "Export Outline Tree"
+    ("noexport"      . ?n)    ;; FLAG: "Exclude Outline Tree from Export" 
+    (:endgroup       . nil)   ;; END Group:
 
-    ("Friends")
-    ("Personal")
-    ("photos")
+    (:startgroup     . nil)   ;; BEGIN: Mutually Exclusive Group:
+    ("in_ed_cal"     . ?1)    ;; FLAG: "In Editorial Calendar"
+    ("not_in_ed_cal" . ?0)    ;; FLAG: "NOT In Editorial Calendar"
+    (:endgroup       . nil)   ;; END Group:
 
-    ;; Reference - Research
-
-    ("Science")
-    ("emotional_intelligence")
-    ("Nikola_Tesla")
-    ("permaculture")
-    ("seasteading")
-    ("seed_freedom")
-    ("sustainability")
-    ("economics")
-    ("cryptocurrency")
-    ("government")
-    ("politics")
-
-    ;; Tech Stuff:
-
-    ("progLangs")
-    ("Lisp")
-    ("eLisp")
-    ("apps_tools")
-    ("Emacs")
-    ("email")
-    ("Email_SMTP_IMAP")
-    ("hosting")
-    ("hosts")
-    ("hypervisor")
-    ("Mac_OS")
-    ("MultiMarkdown")
-    ("NODE")
-    ("NPM")
-    ("NVM")
-    ("open_source_cloud")
-    ("open_source_ISP")
-    ("Org_Mode")
-    ("SBCL")
-    ("sh")
-    ("shell")
-    ("unix")
-    ("www")
-    ("VPS")
-    ("Xah_Fly_Keys")
-    ("zsh")
-
-    ;; Security Related:
-
-    ("InfoSec")
-    ("GnuPG")
-    ("OpenSSL")
-    ("passwords")
-    ("OpenSSH")
-
-    ;; Business - Marketing:
-
-    ("MarketOps")
-    ("sales")
-    ("invoices")
-    ("bills")
-    ("transactions")
-    ("timesheets")
-    ("banking")
-    ("legal")
-
-    ;; Creative - Design:
-
-    ("Graphic_Arts")
-    ("animation")
-    ("Blender")
-    ("images")
-    ("svg")
-    ("inkscape")
-    ("gimp")
-
-    ;; Writing Publishing:
-
-    ("Writing_Resources")
-    ("journalism")
-    ("copyright")
-    ("drafts")
-    ("synopsis")
-    ("published")
-    ("unpublished")
-    ("not_in_ed_cal")
-    ("in_ed_cal")
-    ("screenwriting")
-    ("fonts")
-    ("Fountain")
-    ("symbolism")
-
-    ;; Productions - Games:
-
-    ("Productions")
-    ("pre_production")
-    ("post_production")
-    ("audio")
-    ("music_audio_tech")
-    ("codecs")
-    ("audio_equipment")
-    ("audio_theatre")
-    ("podcast")
-    ("VR")
-
-    ;; Music - Sound Design:
-
-    ("Composing")
-    ("arranging")
-    ("orchestration")
-    ("notation")
-    ("film_scoring")
-    ("sound_design")
-    ("Music_Apps")
-    ("music_instruments")
+    (:startgroup     . nil)   ;; BEGIN: Mutually Exclusive Group:
+    ("published"     . ?+)    ;; FLAG: "IS Published"
+    ("unpublished"   . ?-)    ;; FLAG: "NOT Published"
+    (:endgroup       . nil)   ;; END Group:
 
     ;; General Purpose:
 
-    ("@TAGS")
-    ("hashtags")
-    ("cheatsheets")
-    ("diagrams")
-    ("how_to")
-    ("logs")
-    ("scratchpads")
-    ("quotes")
-    ("README")
-    ("templates")
-    ("tools")
-    ("presets")
-    ("tutorials")
-    ("videos")
+    ("@projects"     . ?p)    ;; All Projects Large or Small... Play or Work...
+    ("research"      . ?r)    ;; Ditto for research...
+    ("@autofocus"    . ?A)    ;; @AutoFocus Notebook Tag. (Smart GTD)
+    ("@GTD"          . ?G)    ;; OK then... here is plain old GTD too. %^)
 
-    ;; Culinary Arts:
+    ("business"      . ?b)
+    ("legal"         . ?l)
+    ("accounting"    . ?a)
+    ("finance"       . ?f)
+    ("economics"     . ?e)
+    ("transactions"  . ?t)
 
-    ("Culinary")
-    ("baking")
-    ("bread")
-    ("brewing")
-    ("chicken")
-    ("falafel")
-    ("frying")
-    ("herbs_spices")
-    ("lamb")
-    ("pastries")
-    ("probiotics")
-    ("recipes")
-    ("sourdough")
-    ("stews")
-    ("wild_levain")))) ;; END GENERAL TAGS
+    ("docs"          . ?o)
+    ("cheatsheets"   . ?c)
+    ("diagrams"      . ?d)
+    ("logs"          . ?L)
+    ("newIdeas"      . ?N)
+    ("scratchpads"   . ?s)
+    ("quotes"        . ?q)
+    ("README"        . ?5)
+    ("templates"     . ?T)
+    ("tools"         . ?2)
+    ("tutorials"     . ??)
+    ("images"        . ?I)
+    ("recordings"    . ?R)
+    ("videos"        . ?V))))
 
-;;  NOTE: The TOP LEVEL GENERAL TAGS above stands alone...
-;;        It does not depend on any of the lists above or below...
+    ;; Keys Used So Far:
+    ;; a b c d e f l n o p q r s t x A G H I L N R T V W 0 1 2 5 + - ?
 
-;; Create TOP LEVEL @LIBRARY TAG GROUP:
-;; NOTE:  Possibly put these directly within "Books & Library"
-;;        related .org files instead...
+    ;; END GENERAL TAGS
 
-(defvar me--library-tags
-  (quote
-   (("NEWS")
-    ("fiction")
-    ("reference")
-    ("biography")
-    ("humorous")
-    ("comic_books")
-    ("graphic_novels")
-    ("stories")
-    ("mystery")
-    ("sci_fi")
-
-    (:startgrouptag)          ;; BEGIN TOP LEVEL - @LIBRARY Tag Group:
-    ("@LIBRARY" . ?l)
-    (:grouptags)
-
-    (:startgroup)             ;; BEGIN Mutually Exclusive Group Tags
-    ("Books")
-    ("Abstracts")
-    ("Articles")
-    ("Papers")
-    ("Periodicals")
-    (:endgroup)               ;; END Mutually Exclusive Group Tags
-    
-    (:startgrouptag)              ;; BEGIN @LIBRARY Sub Group - Authors Tag Group:
-    ("Authors")
-    (:grouptags)
-    (:startgroup)                 ;; BEGIN Mutually Exclusive Group Tags
-    ("Mark_Twain")
-    ("Charles_Dickens")
-    ("Jonathan_Swift")
-    ("Arthour_C_Clark")
-    ("William_Butler_Yeats")
-    ("George_Bernard_Shaw")
-    ("T_S_Eliot")
-    ("Isaac_Asimov")
-    ("Ray_Bradbury")
-    ("George_Orwell")
-    ("Aldous_Huxley")
-    ("Philip_K_Dick")
-    ("Robert_Heinlein")
-    ("Orson_Welles")
-    ("Alfred_Hitchcock")
-    (:endgroup)                   ;; END Mutually Exclusive Group Tags
-    (:endgrouptag)                ;; END Authors Tag Group
-
-    (:endgrouptag)         ;; END TOP LEVEL @LIBRARY Tag Group:
-   ))) ;; END me--library-tags
-
-;;  NOTE: The TOP LEVEL @LIBRARY Tag Group above stands alone...
-;;        It does not depend on any of the lists above or below...
-
-;;;
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Append all TOP LEVEL tag lists together for org-mode quick set tags....
 
-(setq org-tag-alist (append
-                     me--top-tags
-                     nil))
+;(setq org-tag-alist (append me--general-tags nil))
 
-;;;
-;;  Append these general tags to Org Tag Persistent alist
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Reset Org Tag Persistent alist with General Tags: 
 
-(setq org-tag-persistent-alist (append
-                                me--general-tags
-                                me--library-tags
-                                nil))
+(setq org-tag-persistent-alist nil) ;; Start with empty list...
+
+(setq org-tag-persistent-alist (append me--general-tags nil))
 
 ;;;
 ;; Here is some code I snarfed from the web that may help simplify the above...
@@ -436,15 +224,15 @@
 ;; reading this file and then loading org-tags-alist with data stored here...
 ;; This function may be modified to do something else though... Don't delete it yet...
 
-(defun me_org-persist-new-tags ()
-  (interactive)
-  (let ((known-tags (append org-tag-persistent-alist org-tag-alist))
-        (item-tags (split-string (org-get-tags))))
-    (setq org-tag-alist
-          (append org-tag-alist
-                  (-filter (lambda (tag) (assoc tag known-tags)) item-tags)))
-    ;; TODO: write out to a file the org-tag-alist
-    ))
+;; (defun me_org-persist-new-tags ()
+;;   (interactive)
+;;   (let ((known-tags (append org-tag-persistent-alist org-tag-alist))
+;;         (item-tags (split-string (org-get-tags))))
+;;     (setq org-tag-alist
+;;           (append org-tag-alist
+;;                   (-filter (lambda (tag) (assoc tag known-tags)) item-tags)))
+;;     ;; TODO: write out to a file the org-tag-alist
+;;     ))
 
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;   END: [modular-emacs]:~/.emacs.d/lisp/modules/09-2-org-keywords-tags-conf.el

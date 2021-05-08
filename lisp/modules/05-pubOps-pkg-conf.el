@@ -47,12 +47,12 @@
 (custom-set-faces
  '(fountain ((t (
                  :height 130
-                 :family "Courier Prime Emacs")))))
+                 :family "Courier Prime")))))
 
 (custom-set-faces
  '(fountain-dialog ((t (
                         :height 130
-                        :family "Courier Prime Emacs"
+                        :family "Courier Prime"
                         :inherit
                         (font-lock-string-face))))))
 
@@ -70,33 +70,6 @@
   (olivetti-set-width 80))
 
 (add-hook 'fountain-mode-hook 'me_fountain-mode-hook)
-
-
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  AucTeX: LaTeX configuration:
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-(require 'tex)
-
-(setq TeX-auto-save t)
-(setq TeX-fold-mode 1)
-(setq TeX-parse-self t)
-(setq-default TeX-master nil)
-(setq reftex-plug-into-AUCTeX t)
-
-;;;
-;; Set default compile to PDF:
-
-(setq TeX-PDF-mode t)
-
-;;;
-;; LaTeX Mode Hook tweaks:
-
-(add-hook 'LaTeX-mode-hook 'visual-line-mode)
-(add-hook 'LaTeX-mode-hook 'flyspell-mode)
-(add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
-(add-hook 'LaTeX-mode-hook 'turn-on-reftex)
-
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; mmd-mode - Multimarkdown extensions to markdown-mode:
@@ -206,7 +179,7 @@
 ;; Linux Case:
 
 (when ME--LINUX
-  (setq pandoc-binary "/usr/bin/pandoc"))
+  (setq pandoc-binary "~/.local/bin/pandoc"))
 
 ;;;
 ;; Add Pandoc Mode to all Markdown Files:
