@@ -62,122 +62,94 @@ Add links to other reference, source docs, requirements, back stories, whatever,
 
 - *[ [][] ]*
 
-* Begin Log Notebook:
+* Begin Log:
 :PROPERTIES:
-:CUSTOM_ID: log-notebook-1
+:CUSTOM_ID: HAP-general-log-notebook-skeleton-1
+:END:
+** 2021:
+
+*** NEW log: <2021-05-13 Thu> Entry Title /(template)/
+
+:README:
+
+- Since you created this new log entry you are probably in the middle of a task related to it right now!  Go ahead and punch the clock right now as well, to start recording your time! The following Commands are defined below for you to remember and use to track your time:
+
+  + *C-c C-x C-i* - Start Clock /(Begin OR Resume Clocking Current task)/
+
+      This creates a new :CLOCKING: Time Card Entry that looks like this:
+
+      Do this now... Start recording your time girl!  Be in control of your life!
+
+     After doing the above, you can go away and do some work, leaving this log note to visit other files and work on them etc. The clock will be recording your time all the while... You will see in your mode line the elapsed clock time as you work...
+
+  + *C-c C-x C-j* - Return back to the Heading where you started the clock...
+      You do this after you have worked on a task for a while and you need to come back to the time card /(this Log Entry Heading)/ and stop the clock before going off to do something unrelated to the log entry...
+
+  + *C-c C-x C-o* - *Stop the Clock* /(to stop clocking your time on task)/
+       This *Finalizes the Time Card Entry* within ~:CLOCKING:~ /(created earlier when you started the clock)/... The completed time card entry looks like this:
+
+       The above entry shows start timestamp, end timestamp, and total time worked during this segment...  As you can see from the example above I left the clock running all day by accident.  If you do something like that you can always come back and directly edit the clock times by hand to amend them...  After changing clock times or dates, etc. type the following to *Update the Time Card Entry*:
+            *C-c C-c*
+       and the total time will change at the end showing your new calculated time...
+
+       If you need to go away and do something else before finishing this task, you can do so after clocking out... When you come back simply clock back in again to start another Time Card Entry just as before... The new time card entry will appear above the earlier one within the ~:CLOCKING:~ drawer... When you clock out of this task it will look just like the entry below it with a total time worked tagged on the end...
+
+       When you are all done with this Log Entry mark it *DONE*
+
+  + *C-c C-x C-q* - Cancel Current Clock /(in case you accidentally started it)/
+
+       This removes currently running clock and forgets it...
+
+ + *C-c C-x C-d* - Display Clocking Info: /This will show elapsed times to the right of headings.../
+
+- Once all of this has become routine for you, go ahead and remove this ~README~ drawer from this template... That way it does not get copied when you need to clone new log entries...
+
 :END:
 
-** DONE Entry: <2021-03-29 Mon> My New Project
-CLOSED: [2021-03-29 Mon 17:35]
-:LOGBOOK:
-- State "DONE"       from "NEW"        [2021-03-29 Mon 17:35]
-:END:
-:CLOCKING:
-CLOCK: [2021-03-29 Mon 17:11]--[2021-03-29 Mon 17:14] =>  0:03
-:END:
+**** Time Card:
 
-*** Time Card:
-
-#+BEGIN: clocktable :scope tree2 :maxlevel 4 :tstart "<-1m>" :tend "<+1d>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3
-
-Weekly report starting on: [2021-03-29 Mon]
-| L | Headline                                        | Time |      |      |
-|---+-------------------------------------------------+------+------+------|
-|   | *Total time*                                      | *0:22* |      |      |
-|---+-------------------------------------------------+------+------+------|
-| 2 | \_  /Entry: <2021-03-29 Mon> My New Project/      |      | /0:22/ |      |
-| 3 | \_    Summary: [3/3]                            |      |      | 0:03 |
-| 3 | \_    Details:                                  |      |      | 0:16 |
-| 4 | \_      Starting Clock on this first sub-task   |      |      | 0:05 |
-| 4 | \_      New Sub Task to do later [3/3]          |      |      | 0:03 |
-| 4 | \_      Another Sub Task to do even later [4/4] |      |      | 0:08 |
+#+BEGIN: clocktable :scope tree2 :maxlevel 4 :tstart "<-1d>" :tend "<+1m>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3
 #+END:
-
-*** DONE Summary: [3/3]
-CLOSED: [2021-03-29 Mon 17:34]
-:LOGBOOK:
-- State "DONE"       from "ACTIVE"     [2021-03-29 Mon 17:34]
-:END:
-:CLOCKING:
-CLOCK: [2021-03-29 Mon 17:33]--[2021-03-29 Mon 17:34] =>  0:01
-CLOCK: [2021-03-29 Mon 17:14]--[2021-03-29 Mon 17:16] =>  0:02
-:END:
-
-1. [X] First Sub-task Completed?
-2. [X] New Sub Task Completed?
-3. [X] Another Sub Task Completed? [2/2]
-    + [X] Data Table Filled?
-    + [X] Final Conclusion Made?
-
-*** Details:
-
-**** DONE Starting Clock on this first sub-task
-CLOSED: [2021-03-29 Mon 17:25]
-:LOGBOOK:
-- State "DONE"       from "NEW"        [2021-03-29 Mon 17:25]
-:END:
-:CLOCKING:
-CLOCK: [2021-03-29 Mon 17:23]--[2021-03-29 Mon 17:25] =>  0:02
-CLOCK: [2021-03-29 Mon 17:16]--[2021-03-29 Mon 17:19] =>  0:03
-:END:
-
-- [X] This Task is Done now...
-
-OK... This task is done now... I am going to start working on the New Sub Task below now...
-
-**** DONE New Sub Task to do later [3/3]
-CLOSED: [2021-03-29 Mon 17:22]
-:LOGBOOK:
-- State "DONE"       from "NEW"        [2021-03-29 Mon 17:22]
-:END:
-:CLOCKING:
-CLOCK: [2021-03-29 Mon 17:19]--[2021-03-29 Mon 17:22] =>  0:03
-:END:
-
-- [X] Test One [2/2]
-
-   + [X] Now I am working on this task
-
-   + [X] I marked the first task DONE
-
-- [X] Test Two [2/2]
-
-   + [X] Change Latin Headings in Summary to Real Headings
-
-   + [X] Make Summary into Checkbox list
-
-- [X] Test Three [1/1]
-
-   + [X] Mark this task DONE & Start work on Another Sub Task Below
-
-**** DONE Another Sub Task to do even later [4/4]
-CLOSED: [2021-03-29 Mon 17:33]
-:LOGBOOK:
-- State "DONE"       from "ACTIVE"     [2021-03-29 Mon 17:33]
-:END:
-:CLOCKING:
-CLOCK: [2021-03-29 Mon 17:25]--[2021-03-29 Mon 17:33] =>  0:08
-:END:
-
-- [X] Mark this Task ACTIVE & Clock into this task and begin work
-
-- [X] Update the table below
-
-     |-------------+-----------+-----------+-----------+---------|
-     |  *Test Date:* | *Test1 Dat* | *Test2 Dat* | *Test3 Dat* | *Results* |
-     |-------------+-----------+-----------+-----------+---------|
-     | 2021-003-29 |     1.276 |     3.932 |     1.007 |   2.618 |
-     |-------------+-----------+-----------+-----------+---------|
-
-- [X] Finalize the Data above and Make a Conclusion
-
-- [X] Mark this Task DONE and finalize this log for printing
-
-This concludes the tests above... The results were typical...
 
 \newpage
 
-* How to Use this Notebook:                                        :noexport:
+**** NEW Summary: [0/3]
+
+This Summary is mostly to help you find things later when you cannot remember when or where is was done... If you go to the top of this file and expand all headings to show ALL content, then do a search on "~Summary:~" you will be able to quickly scroll through and scan these summaries quickly to find what you were looking for... 
+
+Also the *Time Card* /displayed above/ each search hit will give more clues by showing important headings you worked on...  
+
+Below is an optional list /(that could also provide links)./ This list could be used to itemize things you worked on, but I personally find it easier to simply write a short one or two line description containing important keywords right here and nothing more. I think that is more useful...
+
+1. [ ] 
+
+2. [ ] 
+
+3. [ ]
+
+\newpage
+
+**** NEW Details:
+
+***** NEW New Item 1 /(placeholder)/ [0/1]
+
+- [ ]
+
+\newpage
+
+***** NEW New Item 2 /(placeholder)/ [0/1]
+
+- [ ]
+
+\newpage
+
+***** NEW New Item 3 /(placeholder)/ [0/1]
+
+- [ ]
+
+\newpage
+
+* HowTo:                                        :noexport:
 ** Introduction:
 
 Use this Standard Log /(template)/ as a multi purpose time card/log entry vehicle...
@@ -303,7 +275,9 @@ Place the *:noexport:* tag at the end of any org outline heading to exclude it a
 Anytime you need to see your Log Notebook as a nicely printed PDF report, you can export it using the following custom key command: *spacebar e p* /(i.e., press *spacebar*, type "*e*" and then "*p*" - *Xah-Fly-Keys Command Mode* extended leader key sequence)/
 
 \newpage
-** NEW log: <2021-03-29 Mon> Entry Title /(template)/
+** Templates:
+
+*** NEW log: <2021-03-29 Mon> Entry Title /(template)/
 
 :README:
 
@@ -341,12 +315,14 @@ Anytime you need to see your Log Notebook as a nicely printed PDF report, you ca
 
 :END:
 
-*** Time Card:
+**** Time Card:
 
-#+BEGIN: clocktable :scope tree2 :maxlevel 4 :tstart "<-1m>" :tend "<+1d>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3
+#+BEGIN: clocktable :scope tree2 :maxlevel 4 :tstart "<-1d>" :tend "<+1m>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3
 #+END:
 
-*** NEW Summary: [0/3]
+\newpage
+
+**** NEW Summary: [0/3]
 
 This Summary is mostly to help you find things later when you cannot remember when or where is was done... If you go to the top of this file and expand all headings to show ALL content, then do a search on "~Summary:~" you will be able to quickly scroll through and scan these summaries quickly to find what you were looking for... 
 
@@ -354,36 +330,30 @@ Also the *Time Card* /displayed above/ each search hit will give more clues by s
 
 Below is an optional list /(that could also provide links)./ This list could be used to itemize things you worked on, but I personally find it easier to simply write a short one or two line description containing important keywords right here and nothing more. I think that is more useful...
 
-1. [ ] *[ [New Item 1 (placeholder)][Item One] ]*
+1. [ ] 
 
-2. [ ] *[ [New Item 2 (placeholder)][Item Two] ]*
+2. [ ] 
 
-3. [ ] *[ [New Item 3 (placeholder)][Item Three] ]*
+3. [ ]
 
-*** Details:
+\newpage
 
-**** NEW New Item 1 (placeholder) [0/1]
+**** NEW Details: [0/3]
 
-- [ ]
-
-   #+begin_src conf
-   magos@ca1:~$ _
-   #+end_src
-
-**** NEW New Item 2 (placeholder) [0/1]
+***** NEW New Item 1 /(placeholder)/ [0/1]
 
 - [ ]
 
-   #+begin_src conf
-   magos@ca1:~$ _
-   #+end_src
+\newpage
 
-**** NEW New Item 3 (placeholder) [0/1]
+***** NEW New Item 2 /(placeholder)/ [0/1]
 
 - [ ]
 
-   #+begin_src conf
-   magos@ca1:~$ _
-   #+end_src
+\newpage
+
+***** NEW New Item 3 /(placeholder)/ [0/1]
+
+- [ ]
 
 \newpage
