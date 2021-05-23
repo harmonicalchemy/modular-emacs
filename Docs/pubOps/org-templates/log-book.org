@@ -57,5 +57,5 @@
 #+OPTIONS: timestamp:t  # Include Creation Time (org-export-time-stamp-file)
 #+OPTIONS: title:t      # Include Title (org-export-with-title)
 #+OPTIONS: toc:nil      # Do NOT Include TOC (org-export-with-toc)
-#+OPTIONS: todo:t       # DONT Include TODO keywords (org-export-with-todo-keywords)
+#+OPTIONS: todo:t       # Include TODO keywords (org-export-with-todo-keywords)
 #+OPTIONS: |:t          # Include Tables (org-export-with-tables)

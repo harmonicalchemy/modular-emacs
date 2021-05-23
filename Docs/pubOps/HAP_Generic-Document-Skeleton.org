@@ -1,0 +1,535 @@
+# -**- mode: org; coding: utf-8 -**-
+#+LATEX_HEADER: \usepackage{parskip}
+#+LaTeX_HEADER: \usepackage{paralist}
+#+LATEX_HEADER: \usepackage[hyperref,x11names]{xcolor}
+#+LATEX_HEADER: \usepackage[colorlinks=true,urlcolor=SteelBlue4,linkcolor=Firebrick4]{hyperref}
+
+#+begin_comment
+ Setup Files:
+   For Cloned Versions of this template, replace file/paths below
+   with file/paths to your own custom setup files (which you could 
+   convienently clone from the example setup files provided in
+   ../org-templates/ directory...
+
+ NOTE: 
+   #+CATEGORY: is specified within gen-doc.org setupfile.
+   If you need to change the category do it in gen-doc.org
+   or your cloned version of it...
+#+end_comment
+
+#+SETUPFILE: ~/.emacs.d/Docs/pubOps/org-templates/gen-doc.org
+#+SETUPFILE: ~/.emacs.d/Docs/pubOps/org-templates/default-tags.org
+
+#+TITLE: HAP - Generic Document Skeleton
+#+EXPORT_FILE_NAME: HAP_Generic-Document-Skeleton.pdf
+#+KEYWORDS:
+#+AUTHOR: Alisha Awen - Harmonic Alchemy Productions
+#+EMAIL: Siren1@disroot.org
+#+DATE: <2021-05-22 Sat>
+#+TEXT: Created: <2021-05-21 Fri>
+#+TEXT: Last Published: <2021-05-22 Sat>
+#+FILETAGS: templates docs
+
+#+DESCRIPTION: HAP - Generic Document Skeleton with basic structure for smaller documents that don't requre so much planning etc. Great for simple outlines, one page docs, short How-Tos, etc., (easily modified to make reports, charts, etc.)  Publishable as a PDF...
+
+#+begin_comment
+ Don't mess with these unless you have good reason, (e.g., testing).
+ Use Setup Tag File above to specify tags for this file...
+
+# #+STARTUP: noptag
+# #+TAGS:
+#+end_comment
+
+:README:
+To use this Generic Document Skeleton /(template)/ for your own documents, 
+*Perform the following steps:* [0/6]
+
+1. [ ] *Clone a Copy of this File:* Put it where you normally organize your writing documents.  *Place it within its own folder* named after your intended document title...
+
+2. [ ] *Change the Boilerplate Info at the Top of this file as follows:* [0/3]
+
+    - [ ] *Change the* ~#+TITLE:~ *Directive To:* 
+          /"your Generic Document's Title"/
+
+    - [ ] *Change the* ~#+EXPORT_FILE_NAME:~ *Directive to:*        
+           /"Your-New-Document-Title.pdf"/ 
+           /That will be the file name produced thence forward.../
+
+    - [ ] *Change the* ~#+DESCRIPTION:~ *Directive To:*
+           /"Your Generic Document's Description" etc.../
+
+3. [ ] *Copy/Clone ./media* /(and all its contents):/ To your new document's /(where you copied this file).../  Any external documents or images referenced by your document should be placed within this ~./media/~ directory... All of the external links, images, within the boilerplate examples may be used as examples for getting your own images, and external attachments linked properly...  This single *./media* directory serves media and external attachments for all of the *.org* files contained within: ~.emacs.d/Docs/pubOps~ directory... Cloning any of the other *.org* files will also require copy/cloning the ./media directory relative to them...
+
+4. [ ] You don't need to copy the ~./auto/~ directory...  That will be created for you automacally the first time you export this ~.org~ file to ~.PDF~.
+
+5. [ ] You also don't need to copy the ~./org-templates~ directory... The files in there are automatically linked and included within this template. You don't need to change those settings unless you wish to customize the already customized tags, and export options. /They are set up correctly for generic document genre already and the category is all set as well... But if you must, you can modify the original files to make your changes rather than cloning to your projec directory.../  Realize that if you do that while on the master branch it will get out of sync with origin, check out a local branch to make it easier to get back to defaults if you change your mind later. %^)
+
+6. [ ] *Start Planning / Writing Your Document:* /Change headings and structure to match your document's outline and purpose./
+
+The *In-Buffer Settings* and *KEYWORDS* specified above are configured to get this file looking good when exported as a Standard PDF file.  Once you have your project directory all set up as above you are ready to export your first PDF as a test run...  To make a PDF out of this file issue the following Emacs command:
+
+      ~M-x org-latex-export-to-pdf~
+
+*-or-* If You Enabled *Xah-Fly-Keys* /"Command Mode"/ Try:
+
+      ~SPACE e p~
+
+After *AucTeX* is done parsing/compiling etc., a new *PDF* by the name of ~New-Untitled-Document.pdf~ -and- ~New-Untitled-Document.tex~ will appear within the same directory as this file...
+
+Subsequent repeated calls to the above command will overwrite your existing ~New-Untitled-Document.pdf~ -and- ~New-Untitled-Document.tex~ files! You should probably copy these files to the ~./auto/~ directory as well for safe keeping as backups...
+
+*Last Modified: <2021-05-22 Sat>* So far things are pretty basic PDF... We will get fancy with other formats later... I promice... I have to do all this documentation first! /(As you can see, if you been following for the past couple years, things are getting done! Albeit Slowly)/
+
+Enjoy! - Alisha Awen
+:END:
+
+* NEW 💡 Scratchpad Refile:                                        :noexport:
+
+- *Note:* /This section is not published!/ Use this for scratch pad *private-notes*
+
+** NEW ☞ Start Here!
+:README:
+This Section is mainly to accommodate "seat-of-pants" writers /(of which I have been accused of... But I also crave the planning stuff)/.  I often come here for my [[https://projects.csail.mit.edu/gsb/old-archive/gsb-archive/gsb2000-02-11.html]["yak shaving"]] adventures...
+
+Use this: "*💡 Scratchpad Refile ☞ Start Here!*" section as a quick place to document ideas and inspirations as they come alone.  You can refile them later... 
+
+Even if your quick inspiration was intended for elsewhere?, /(e.g., You become bored documenting tedious technical information when suddenly, out-of-nowhere, an idea for a new sci-fi scene in that screenplay episode you had in the back of your mind all day!, etc.)/ *Ummm.... Parallel Universe?* 
+
+*Sure!* You can put anything in here! We've got that covered for you in this Start Here spot. %^)
+
+- Use this section to quickly capture inspired at-the-moment ideas While they are still fresh in mind.
+
+- *How to use?* /Simply Come directly here and do what ever you want... "Your Crazy Daze are Covered!" Yay!/
+
+  + Advance your cursor a few newlines below this README drawer on a fresh clean line with some extra space below it as well... (above any previously time stamped entries you may already have placed)... If this is the first time, get rid of the My New Business Idea! heading example entry below... That is only for the template to illustrate these instructions by example.
+
+  + You are now at the top of the list, (a few lines below this README drawer). The time is the present. -and- You are all fired up with an idea to write about!
+
+  + Enter a new timestamp with "C-c .", (that's: Press Ctrl-c, let go, and then type a Period .)  A date chooser panel will pop up...
+
+  + Press ENTER to auto accept today's date and time.  A new timestamped line will appear with your cursor blinking on the right of it... There won't be any future entries above you... (maybe next decade? time travel?)
+
+  + Advance your cursor a few more lines down to some fresh empty space -and- 
+
+  + Start Typing Your Idea Like Mad! 
+
+  + Don't stop and don't worry about formatting or organizing it until later, after all your inspiration has passed and you are ready to organize...
+
+- After You are Done Writing:
+
+  + Come back to the timestamp line where you first started... make sure the timestamp has at least one empty line above and below it.
+
+  + Give the timestamp line a title to the right of the timestamp.
+
+  + Make this timestamped line an outline heading with: "C-c ENTER" (that's Press Ctrl-c, let go and then press ENTER)
+     (make sure this new heading has empty lines above and below it)
+
+  + Adjust this new outline heading level with: M-▷ (this will make it a child of ☞ Start Here! heading above, rather than a sibling).
+
+  + Adjust the space between your heading and your fantastic idea below it to one single blank line.
+
+  + You can organize everything else later...  Don't scare away the muses! Get your story down now!
+
+  + Then you may go out to play elsewhere little grasshopper... But come back later and organize things... OK? Don't create a swamp in here! And don't forget to take your bath tonight... ;-) 
+
+  + Having done the simple steps above any time you get inspired, you will be able to tell your grand children.. "I got my first spark of an idea for that book back in Year, Month, Day, time, second" (50 years later!) Now that is being organized! LOL
+:END:
+
+*** NEW My New Business Idea! <2020-06-07 Sun> /"yeah we've heard that one before"/
+:README:
+This is a dummy example of some crazy idea that you may have gotten at the spur of the moment, while you were doing something elsewhere within this project...  After you are done getting as much of the idea as you initally can then you can simply go back to what you were doing before the inspiration segue tore you away... you might want to schedule this as a todo item before leaving though...
+
+Later when you are free you can come back to file this or place it where it belongs.  In the case of the note below it would probably go in a research folder of a Sci-Fi related project...
+:END:
+
+**** Heading 4:
+
+This is a Heading 4 test...
+
+***** Heading 5:
+
+This is a Heading 5 test...
+
+****** Heading 6:
+
+This is a Heading 6 test...
+
+******* Heading 7:
+
+This is a Heading 7 test...
+
+******** Heading 8:
+
+This is a Heading 8 test...
+
+\newpage
+
+* NEW 📖 Doc Title /(rename this)/                                     :export:
+:README:
+*This is the Main Body of your Document...* Everything under This Main heading will be published in your final PDF, or web page, etc., Including the Main Heading itself... 
+
+*Note:* /The Published Title of your document will NOT be this/ *Main Heading.* 
+      /Your published Title is specified at the top of this file.../ 
+
+Sub headings below are simply your first cloned headings from the Templates Section... Use them how ever you wish... They also have /:README:/ drawers like this to help guide you...
+
+*btw*, if you Have *Harmonic Alchemy Modular Emacs* fully installed and have enabled the ~Xah-Fly-Keys~ module, you can quickly and easily insert your own /:README:/ drawers for your own purposes by typing: ~SPACE e r~ on an empty line while in command mode... Type those two keys, and the drawer is created for you automatically and opened... Go into insert mode and start type your README content within the drawer.  Collapse it if you like after you are done...
+:END:
+
+** NEW 📃 Introduction: /(template)/
+:README:
+Use this space to write the main synopsis of your document... You can write anything you want here but it is recommended strongly to summarize the main points of your idea broken up in small outline if necessary...
+
+Keep things short and sweet here... The total *BIG picture*...
+
+If this is a *tutorial* or *how-to*, you might use this section to outline the main points of the document as *Heading Questions* and then *clone* this *Introduction section* to a *Summary*, *Conclusion*, or *What-We-Learned* section where the question headings are changed to final answer headings. /(also short and sweet and to the point)/ 
+
+/Putting the questions here as links to the body of your doc is sort-of the FAQ model that emerged organically on the Internet /(pre www daze).../
+:END:
+
+About this document... Yadda... Yadda... Yadda...
+
+**** NEW 📄 Reference:
+:README:
+Add links to other reference, source docs, requirements, back stories, whatever, here...  
+
+To Create a Link Type: ~C-c C-l~ /(then paste: ~link~ & type: "description")/
+
+To Open a Link Type: ~C-c C-o~
+:END:
+
+- [ [ ][ ] ]
+
+- [ [ ][ ] ]
+
+- [ [ ][ ] ]
+
+- [ [ ][ ] ]
+
+\newpage
+
+** NEW 📃 Main Body /(template - rename clones)/
+:README:
+Use this space to write the main body of your document... Here is where all the details happen... Your main headings here should follow what you have writtin in your Introduction above...
+
+If this is a *tutorial* or *how-to*, you might use this section to write your detailed answers to the Question Headings outlined in your Introduction section above...
+
+Summarize your answers within a new /main section/ titled: *"Conclusion"* or *"Summary"*, etc...
+:END:
+
+The following Points are ... yadda... yadda... yadda...
+
+*** NEW 📄 Heading X /(rename this)/
+
+At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
+
+\newpage
+
+*** NEW 📄 Heading Y /(rename clone of this)/
+
+At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
+
+\newpage
+
+* 📒 HowTo:                                                        :noexport:
+** About:
+
+The *Templates:* section provides skeleton templates for use within this document.  These /"meta-sections"/ do not show up in final published docs, /(e.g., .pdf or web etc)/...
+
+Any sub heading under the "*Templates:"* group can be utilized by copy-pasting the collapsed heading into your existing document sections (i.e., making a clone anywhere you need to create a new section based on the template's structure)... 
+
+In some cases you may have to adjust the heading level of your pasted content... To do that place your cursor at the very beginning of the pasted heading /(completely collapsed)/ and type: ~M-S-<right or left arrow>~  Using the Shift key changes the hierarchy level of the cloned heading as well as the relative sub level headings it may contain... if it is not collapsed first you only change the level of the selected heading but none of the headings below /(no matter if they are currently sub headings)/.
+
+The intent of these templates are to save lots of time starting up a new document or to quickly develop a new idea.  Lets see if it helps. :trollface:
+
+** Instructions:
+
+- Choose one of the templates /or sub templates/ from the *Templates* section below and copy it (folded).  
+
+- Paste your copied template as a new clone within your  book, planning, or research section...  If you have to adjust the heading level /(hierarchy position)/ of your pasted content, first make sure all the pasted content is collapsed to a single heading and then use: ~M-S-<right or left arrow>~ on your *Collapsed* pasted heading.  You can repeat this command as many times as needed to get your heading /(and all it's children)/ placed on the correct level. If you go to far you can easily switch arrows to correct your choice.
+
+- Change the name of your copied template to the specific title you need in your  document...
+
+- Start writing and finish your new section... basic structure is in place...
+
+* ✎ Templates:                                                     :noexport:
+** NEW 📃 Introduction: /(template)/
+:README:
+Use this space to write the main synopsis of your document... You can write anything you want here but it is recommended strongly to summarize the main points of your idea broken up in small outline if necessary...
+
+Keep things short and sweet here... The total *BIG picture*...
+
+If this is a *tutorial* or *how-to*, you might use this section to outline the main points of the document as *Heading Questions* and then *clone* this *Introduction section* to a *Summary*, *Conclusion*, or *What-We-Learned* section where the question headings are changed to final answer headings. /(also short and sweet and to the point)/ 
+
+/Putting the questions here as links to the body of your doc is sort-of the FAQ model that emerged organically on the Internet /(pre www daze).../
+:END:
+
+About this document... Yadda... Yadda... Yadda...
+
+**** NEW 📄 Reference:
+:README:
+Add links to other reference, source docs, requirements, back stories, whatever, here...  
+
+To Create a Link Type: ~C-c C-l~ /(then paste: ~link~ & type: "description")/
+
+To Open a Link Type: ~C-c C-o~
+:END:
+
+- [ [ ][ ] ]
+
+- [ [ ][ ] ]
+
+- [ [ ][ ] ]
+
+- [ [ ][ ] ]
+
+\newpage
+
+** NEW 📃 Main Body /(template - rename clones)/
+:README:
+Use this space to write the main body of your document... Here is where all the details happen... Your main headings here should follow what you have writtin in your Introduction above...
+
+If this is a *tutorial* or *how-to*, you might use this section to write your detailed answers to the Question Headings outlined in your Introduction section above...
+
+Summarize your answers within a new /main section/ titled: *"Conclusion"* or *"Summary"*, etc...
+:END:
+
+The following Points are ... yadda... yadda... yadda...
+
+*** NEW 📄 Heading G /(generic template - rename this)/
+
+At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
+
+\newpage
+
+*** NEW 📄 Heading T /(template with tables - rename this)/
+
+**** Basics:
+
+The following are example Tables you can use /(with some instructions)/ Use what you need and Remove the rest...
+
+- *Simple Basic*
+
+   | Item 1 | Item 2 | Item 3 | Item 4 |
+   |--------+--------+--------+--------|
+   |        |        |        |        |
+
+- *A Bit More than Basic*
+
+  | My Column 1 | My Column 2 | Last Column |
+  |-------------+-------------+-------------|
+  |          42 | foo         | bar         |
+  |          23 | baz         | abcdefg     |
+  |-------------+-------------+-------------|
+  |          65 |             |             |
+
+\newpage
+
+**** Column Allignment:
+
+- *Columns are automatically aligned by default as such:*
+
+   /Number-rich Columns to the Right/
+
+   /String-rich Columns to the Left/
+
+- *Override Automatic Alignment:*
+
+   /If you want to override the automatic alignment 
+   use:/ ~<r>~, ~<c>~ or ~<l>~.
+
+   #+CAPTION: Table with aligned columns
+   |              |     <c>      | <l>          |
+   | 1            |      2       | 3            |
+   | Right        |    Center    | Left         |
+   | xxxxxxxxxxxx | xxxxxxxxxxxx | xxxxxxxxxxxx |
+
+\newpage
+
+**** Header row
+
+- *You can create tables with a header row:* 
+
+   /(by using a horizontal line of dashes to separate/ 
+    /it from the rest of the table)/ 
+
+   *Like This:*
+
+   #+CAPTION: Table with an header row
+   | Name of column 1 | Name of column 2 | Name of column 3 |
+   |------------------+------------------+------------------|
+   | Top left         | Top middle       |                  |
+   |                  |                  | Right            |
+   | Bottom left      | Bottom middle    |                  |
+
+\newpage
+
+**** Table placement
+
+- *Align Table Centred:* 
+   /(the default)/
+
+   | a | b | c |
+   |---+---+---|
+   | 1 | 2 | 3 |
+   | 4 | 5 | 6 |
+
+- *Do NOT Align Center:*
+   /(overrides default)/
+
+   #+ATTR_LATEX: :center nil
+   | a | b |
+   | 1 | 2 |
+
+- *Align Table to Left Side:*
+
+   #+LATEX: \noindent
+   #+ATTR_LATEX: :center nil
+   | a | b | c |
+   |---+---+---|
+   | 1 | 2 | 3 |
+   | 4 | 5 | 6 |
+   #+LATEX: \hfill
+
+   /The noindent just gets rid of the indentation of the first line of a paragraph which in this case is the table. The hfill adds infinite stretch after the table, so it pushes the table to the left./
+
+- *Align Table to Right Side:*
+
+   #+LATEX: \hfill
+   #+ATTR_LATEX: :center nil
+   | a | b | c |
+   |---+---+---|
+   | 1 | 2 | 3 |
+   | 4 | 5 | 6 |
+
+   /Here the hfill adds infinite stretch before the table, so it pushes the table to the right./
+
+- *Table size:*
+
+   #+ATTR_HTML: :width 100%
+   | Cell in column 1, row 1 | Cell in column 2, row 1 |
+   | Cell in column 1, row 2 | Cell in column 2, row 2 |
+
+   *NOTE:* /You can do a whole lot more with org-tables /using/
+         /table.el but that information is too much to include/ 
+         /in this template.../ 
+
+         /Consult your Org-Mode cheat sheet instead/
+
+\newpage
+
+*** NEW 📄 Heading L /(template with links - rename this)/
+
+- [ [ ][ ] ]
+
+- [ [ ][ ] ]
+
+- [ [ ][ ] ]
+
+\newpage
+
+*** NEW 📄 Heading C /(template with checklists - rename this)/
+
+   - [ ] *yet to be done* /Hit ~C-c~ ~C-c~ to toggle Done/
+
+   - [-] *An item In Process* /Hit ~C-u~ ~C-u~ then ~C-c~ ~C-c~ to set/
+
+   - [X] *An item which is done* /Hit ~C-c~ ~C-c~ to toggle Not-Done/
+
+****** Insert a new item with a checkbox: ~M-S-RET~  
+
+- [ ] *Item One:*
+   Type: ~M-S-RET~ to Get Next Item with Checkbox:
+
+- [-] /<-(this is the result)/ [1/2]
+
+   + [-] *Second Level Item:*
+      Type: ~M-S-RET~ to Get Next Item with Checkbox:
+
+   + [X] /<-(this is the result)/
+
+\newpage
+
+*** NEW 📄 Heading S /(template with src-code blocks, etc. - rename this)/
+
+- *SysAdmin & Command Prompts:*
+
+   #+begin_src conf
+   admin@vps1:~$ sudo apt update
+   #+end_src
+
+   #+begin_src conf
+   user@home:~$ git status
+   #+end_src
+
+- *Evaluate some eLisp code:*
+
+   #+begin_src emacs-lisp
+   (defvar test1 "test1 value")
+   (defvar test2 "test2 value")
+   test2
+   #+end_src
+
+   #+results:
+   : test2 value
+
+   #+begin_src emacs-lisp
+   (defvar test1 "test1 value")
+   (defvar test2 "test2 value")
+   test1
+   #+end_src
+
+   #+results:
+   : test1 value
+
+\newpage
+
+**** Additional Admonitions
+***** Attention:
+
+#+begin_attention
+Attention
+#+end_attention
+
+***** Hint:
+
+#+begin_hint
+Hint
+#+end_hint
+
+***** Error:
+
+#+begin_error
+Error
+#+end_error
+
+***** Danger:
+
+#+begin_danger
+Danger!!!
+#+end_danger
+
+\newpage
+
+*** NEW 📄 Heading G /(drama script snippit template - rename this)/
+
+#+begin_src fountain 
+= This is a fountain formatted script snippit example / template
+
+EXT. (JUNKYARD) (NIGHT) 
+
+MARY
+(LAUGHING)
+    
+I Can't believe you are writing a screenplay
+   
+on that crappy dog chewed notebook...
+    
+what a geeky thing to do!
+    
+(LAUGHS EVEN LOUDER)
+
+>*THE END*<
+#+end_src
+
+\newpage
