@@ -2,24 +2,14 @@
 file: $GIT/Doc-Templates/HAP-templates/Fountain-2-PDF/README.md
 author: Alisha Awen
 created: 2019-010-01
-updated: 2020-007-16
+updated: 2021-008-01
 tags: Emergent-Anomalies.com, EA-New-Ideas, unpublished, 2019, drafts, not-in-ed-cal, synopsis, stories, Fiction, sci-fi, README, Writing-Resources, screenwriting, audio-theater, Fountain, templates
 ---
 <!-- #Emergent-Anomalies.com #EA-New-Ideas #unpublished #2019 #drafts #not-in-ed-cal #synopsis #stories #Fiction #sci-fi #README #Writing-Resources #screenwriting #audio-theater #Fountain #templates -->
 
 # Fountain to PDF:
 
-### Synopsis:
-
-**_Yadda, yadda, yadda..._**
-
-## Back Story:
-
-**_Yadda, yadda, yadda..._**
-
-# Instructions:
-
-## General Info:
+## Instructions:
 
 The radio script project folder that contains this README also contains aux files for exporting the project's fountain script to a PDF file formatted to HAP Radio Drama Script style.  Instructions and info for further customizations of your final output follow...
 
