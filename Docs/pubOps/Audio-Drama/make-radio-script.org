@@ -71,6 +71,7 @@
 * Make Fountain Script Skeleton:
 
 #+BEGIN_SRC fountain :tangle screenplay.fountain
+
 Title: $TITLE
 Episode: $EPISODE
 Credit: $CREDIT

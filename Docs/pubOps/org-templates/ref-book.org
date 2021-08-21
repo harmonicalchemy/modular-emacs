@@ -9,6 +9,7 @@
 #+CATEGORY: @Reference_Books
 #+LANGUAGE: en
 #+STARTUP:  overview
+#+STARTUP:  hideblocks
 #+STARTUP:  indent
 #+STARTUP:  align
 #+STARTUP:  inlineimages

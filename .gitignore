@@ -64,6 +64,7 @@ auto-save-list
 auto-save-list/*
 tramp
 .\#*
+url/*
 
 ### Auto Generated Org-mode artifacts:
 
