@@ -1,0 +1,1261 @@
+# -**- mode: org; coding: utf-8 -**-
+#+LATEX_HEADER: \usepackage{parskip}
+#+LaTeX_HEADER: \usepackage{paralist}
+#+LATEX_HEADER: \usepackage[hyperref,x11names]{xcolor}
+#+LATEX_HEADER: \usepackage[colorlinks=true,urlcolor=SteelBlue4,linkcolor=Firebrick4]{hyperref}
+
+#+begin_comment
+ *Setup Files:*
+
+   For Cloned Versions of this template, the file/paths below are relative
+   to your parent project directory and as such, should be all set to your new: ~./org-templates/~ directory...
+
+ *NOTE:* 
+
+   ~#+CATEGORY:~ is specified within ~audio-book.org~ setupfile.
+   If you need to change the category do it within ~audio-book.org~
+   or your cloned version of it...
+#+end_comment
+
+#+SETUPFILE: ./org-templates/audio-book.org
+#+SETUPFILE: ./org-templates/audio-tags.org
+#+TITLE: HAP - Audio Drama Project Template
+#+EXPORT_FILE_NAME: HAP_Audio-Drama-Project-Template.pdf
+#+KEYWORDS:
+#+AUTHOR: Sirena256 - Harmonic Alchemy Productions
+#+EMAIL: Siren1@disroot.org
+#+DATE: <2021-08-22 Sun>
+#+TEXT: Created: <2019-10-01 Tue>
+#+TEXT: Last Published: <Not Published>
+#+FILETAGS: templates drama_scripts audio_theatre @projects unpublished
+
+#+DESCRIPTION: HAP - Bare Bones Audio Theatre Project Skeleton with generic basics already done.  Great for Authors to use when starting a new Radio Drama, Podcast, News Program, or any kind of Audio-Only Production project from scratch...
+
+#+begin_comment
+ Don't mess with these unless you have good reason, (e.g., testing).
+ Use Setup Tag File above to specify tags for this file...
+
+ ## #+STARTUP: noptag
+ ## #+TAGS:
+#+end_comment
+
+* Instructions:                                                      :export:
+
+:README-FIRST:
+
+To use this Audio Drama Project Skeleton /(template)/ for your own projects, perform the following steps:
+
+1. *Clone a Copy of this File:* Put it where you normally organize your audio drama or podcast projects.  *Place it within its own folder* named after your intended project title...
+
+2. *NOTE:* You may be doing this because you have some fantastic story idea brewing in your mind and you need to write that down before you forget!  Right?  Therefore... as soon as you clone this file *STOP* and go immediately to the ~💡 Ideas Scratchpad Refile / ☞ Start Here!~ section and read the ~:README:~ directly under that heading...  Then write your idea down quickly /(as per README the instructions)/ to get your inspiration recorded before you forget it...  
+
+   Once that is done, come back here and finish setting up your project... 
+
+   This project template is *HUGE!* Your inspiration is *tiny* and *vulnerable* to getting lost forever!  The *☞ Start Here* section is your remedy... Do that first!    
+
+3. *Change the* ~#+TITLE:~ *directive at the top of this file* to /"Your Audio Drama Project's Title"/
+
+4. *Change the* ~#+EXPORT_FILE_NAME:~ *directive at the top of this file* to /"Your-Audio-Drama-Project's-Title.pdf"/ That will be the file name(s) produced during export thence forward /(including auto generated files: .tex, etc...)/
+
+5. *Change the* ~#+DESCRIPTION:~ *directive at the top of this file* to /Your-Audio-Drama-Project's Description/ etc...
+
+6. *Copy/Clone* ~./media~ /(and all its contents - currently empty but will contain media in future releases):/ *to:* your new project's folder /(where you copied this file).../  Any external documents or images referenced by your audio project should be placed within this ~./media/~ directory... External links to images, etc. within boilerplate examples of future versions of this ~.org~ file can be used as examples for getting your own images, and external attachments linked properly...  This single ~./media~ directory will serve media and external attachments for this and any other extra audio drama ~.org~ files you may end up creating here, as well as being the media repository used by LaTeX during publishing... You will also be using this ~./media/~ directory for all finished sound media, /(e.g., sound-effects, loops, music, etc.)/ that are called out within the cue sheets /(also contained within this ~.org~ project)/ 
+
+7. *Copy/Clone ./bin* /(and all its contents):/ *To:* your new project's folder /(where you copied this file).../  This is needed for running scripts that convert your ~.fountain~ scripts into PDF or other formats...
+
+8. *Copy/Clone ~./auto/~ /(and all its contents - which may or may not be empty):/ *To:* your new project's folder /(where you copied this file)/ This is where your output ~.PDF~ files will be placed during export. 
+
+9. *Copy/Clone* ~~./org-templates~~ /(and all its contents):/ *To:* your new project's folder /(where you copied this file).../ The files in there are automatically linked and included within this template. You don't need to change those settings unless you wish to customize the already customized tags, and export options. /They are allready set up correctly for the audio drama genre, and the category is all set as well... But you can and may modify the original files to fit your needs.../
+
+10. *Start Planning / Writing Your Audio Drama:* /Change headings and structure to match your project's outline episodes-scenes-plots-characters, etc./ Start doing the Tasks within the Tasks section... Have fun doing this...
+
+- =Instructions to Export a PDF of this Entire Project:=
+
+   The *In-Buffer Settings* specified by the setupfiles above will get this file looking good when exported as a Standard PDF file.  Once you have your project directory all set up as above you are ready to export your first PDF as a test run...
+
+      #+begin_src conf
+         M-x org-latex-export-to-pdf
+      #+end_src
+
+   *-or-* If You Enabled *Xah-Fly-Keys* /"Command Mode"/ Try:
+
+      #+begin_src conf
+         SPACE e p
+      #+end_src
+
+   After *AucTeX* is done parsing/compiling etc., a new *PDF* by the name of ~My-New-Audio-Drama.pdf~ -and- ~My-New-Audio-Drama.tex~ will appear within this project's directory...
+
+   Subsequent repeated calls to the above command will overwrite your existing ~My-New-Audio-Drama.pdf~ -and- ~My-New-Audio-Drama.tex~ files! /(make backups first if needed! - I put backups in the auto directory)/
+
+- =Instructions for Exporting Fountain Scripts:=
+
+   Fountain screenplay scripts created within this project can be exported using the *afterwriting* python tool... Follow Instructions section below under the *Instructions / Fountain 2 PDF:* section for more about how to do that...
+
+*This README was Last Modified: <2021-08-22 Sun>* So far things are pretty basic PDF... We will get fancy with other formats later... I promice... I have to do all this documentation first! /(As you can see, if you been following for the past couple years, things are getting done! Albeit Slowly)/
+
+Enjoy! - Alisha Awen
+:END:
+
+** Fountain 2 PDF:
+
+The ~Audio-Drama~ project folder that contains this file also contains external files for exporting the project's fountain script(s) to a PDF file formatted to HAP Radio Drama Script style. Instructions and info for further customizations of your final output follow...
+
+I am now employing Afterwriting to perform the conversion and export job... No longer needing to dip into the LaTeX bowels for screenplays... Thank God!
+
+[[https://github.com/ifrost/afterwriting-labs/blob/master/docs/clients.md]]
+
+I plan to interface Emacs org-mode with afterwriting to produce output PDFs with just a few keystrokes while editing this file in Emacs...
+
+Before using this you must have afterwriting globally installed on your machine using NPM
+
+Install afterwriting globally on your machine: (assuming you already have Node.js npm installed & updated to latest LTS):
+
+Most of the information below under the first sections starting with Afterwriting config file: was copied (reprinted from original markdown) from: Github:ifrost/afterwriting-labs/CLI Tool therefore due credit goes to ifrost for most of the instructions below...
+
+The sections below where I begin using the information above to customize my own config.json file are my own... Based on much trial and error, as well as reading other docs on the fountain.org website...
+
+*** Generic Afterwriting Config File:
+
+  The output can be customized using configuration file passed as --config parameter. Config should be a JSON with this structure:
+
+  #+begin_src js
+  {
+     "embolden_scene_headers": false,
+     "show_page_numbers": true,
+     "split_dialogue": true,
+     "print_title_page": true,
+     "print_profile": "a4",
+     "double_space_between_scenes": false,
+     "print_sections": false,
+     "print_synopsis": false,
+     "print_actions": true,
+     "print_headers": true,
+     "print_dialogues": true,
+     "number_sections": false,
+     "use_dual_dialogue": true,
+     "print_notes": false,
+     "print_header": "",
+     "print_footer": "",
+     "print_watermark": "",
+     "scenes_numbers": "none",
+     "each_scene_on_new_page": false
+  }
+  #+end_src
+
+**** Available Configuration Options:
+
+|-----------------------------+-------------------------+----------------------------------|
+| *Option*                      | *Value*                   | *Description*                      |
+|-----------------------------+-------------------------+----------------------------------|
+| embolden_scene_headers      | true/false              | -                                |
+| show_page_numbers           | true/false              | -                                |
+| split_dialogue              | true/false              | Split dialogue between pages?    |
+| print_title_page            | true/false              | -                                |
+| print_profile               | a4 or usletter          | paper size                       |
+| double_space_between_scenes | true/false              | -                                |
+| print_sections              | true/false              | print sections (marked with #)   |
+| print_synopsis              | true/false              | print synopsis (market with =)   |
+| print_actions               | true/false              | print action blocks              |
+| print_headers               | true/false              | print scene headers              |
+| print_dialogues             | true/false              | print dialogues                  |
+| number_sections             | true/false              | auto-numbering sections          |
+| use_dual_dialogue           | true/false              | print dual dialogue in 2 columns |
+| print_notes                 | true/false              | print notes                      |
+| print_header                | string                  | text to put on the top           |
+| print_footer                | string                  | text to put on the bottom        |
+| print_watermark             | string                  | watermark text                   |
+| scenes_numbers              | none, left, right, both | side of auto-numbering scenes    |
+| each_scene_on_new_page      | true/false              | break page after a scene         |
+|-----------------------------+-------------------------+----------------------------------|
+
+- *NOTE:* /Any Settings above may also be provided as extra options while evoking ~afterwriting~ 
+         on the command line.../
+
+         /There are other fancy things you can do like adding Snippets, etc. as well, which have been incorporated into this project template.../  
+
+         *See Github Link:*
+
+            [[https://github.com/ifrost/afterwriting-labs/blob/master/docs/clients.md]]
+
+            /for more information.../
+
+*** Harmonic Alchemy Modular Emacs - Afterwriting Custom Config file:
+
+Using the knowledge above, I created a custom file /(after a lot of trial and error)/ for exporting with *afterwriting* called: ~awc-config.json~
+
+- *This is what it currently looks like:* /(I am open to further expansion & automation ideas)/
+
+#+begin_src js
+{
+    "embolden_scene_headers": true,
+    "show_page_numbers": true,
+    "split_dialogue": false,
+    "print_title_page": true,
+    "print_profile": "usletter",
+    "double_space_between_scenes": false,
+    "print_sections": false,
+    "print_synopsis": true,
+    "print_actions": true,
+    "print_headers": true,
+    "print_dialogues": true,
+    "number_sections": false,
+    "use_dual_dialogue": true,
+    "print_notes": false,
+    "print_footer": "Harmonic Alchemy Productions - siren1@HarmonicAlchemy.productions",
+    "print_watermark": "",
+    "scenes_numbers": "both",
+    "each_scene_on_new_page": true,
+    "print_header": "The Ivory Tower          Episode 001",
+    "snippets": {
+        "HEADER": "$TITLE          $EPISODE",
+        "TITLE": "**The Ivory Tower**",
+        "EPISODE": "001",
+        "CREDIT": "*A Fountain TEMPLATE for Audio Drama Scripts*",
+        "AUTHOR": "by **Alisha Awen**",
+        "DRAFT_DATE": "PRODUCTION SCRIPT"
+    }
+}
+#+end_src
+
+* 💡 Ideas Scratchpad Refile:                                        :export:
+** NEW ☞ Start Here!
+
+:README:
+This section is intended to help you quickly capture inspired at-the-moment ideas While they are still fresh in mind...
+
+Use this *Ideas / Scratchpad / Refile* section as a quick place to instantly document ideas and inspirations as soon as they come up!  You can refile them later... /(even if it is intended for elsewhere)/ Parallel universe? Sure... You got that covered. %^)
+
+  + *Come directly here* 
+
+  + Advance your cursor a few newlines below this ~:README:~ drawer on a fresh clean line with some extra space below it as well... /(above any previously time stamped entries you may already have placed)/
+
+  + You are now at the top of the list and the time is the present...  There won't be any future entries ahead of you... (maybe next decade? time travel?)
+
+  + Enter a new timestamp with "C-c .", Hit enter to auto accept today's date and time.
+
+  + Give it a quick title and make this new line an outline heading at the proper level. /(There is already an example provided as an example)/
+
+  + Advance your cursor two lines below your new heading and begin typing away before you forget your fantastic idea!!!
+
+  + You can organize everything else later...  Don't scare away the muses! Get your story down now!
+
+  + Then you may go out to play elsewhere little grasshopper... But come back later and organize things... OK? Don't create a swamp in here! And don't forget to take your bath tonight... ;-) 
+
+  + Having done the simple steps above any time you get inspired, you will be able to tell your grand children.. "I got my first spark of an idea for that book back in Year, Month, Day, time, second" (50 years later!) Now that is being organized! LOL
+:END:
+
+*** <2020-06-07 Sun> New Episode / Scene Idea:
+
+:README:
+This is a dummy example of some crazy idea that you may have gotten at the spur of the moment, while you were doing something elsewhere within this project...  After you are done getting as much of the idea as you initally can then you can simply go back to what you were doing before the inspiration segue tore you away... you might want to schedule this as a todo item before leaving though...
+
+Later when you are free you can come back to file this or place it where it belongs.  
+:END:
+
+**** 🎙 Dialog /(mock script)/
+
+:README:
+Scenes are composed of isolated events relating to a single unique thread/picture knitted into the fabric of a series of episodes making up audio or radio programs...
+:END:
+
+Compose a new scene draft dialog fountain script in block below, or write up some plot ideas etc...
+
+#+BEGIN_SRC fountain
+CHARACTER NAME (dialog)
+Hey! Give me a real name already! Such an insult!
+#+END_SRC
+* 🎙Audio Production:                                                 :export:
+** 📃 Synopsis:
+
+:README:
+Write your initial synopsis for your audio project / series here...  Individual Episodes also have a section for writing synopsis...  This will be more or less a summary of the entire thing... You can use similar story building tools / exercises for writing your synopsis as you do for any typical fiction writing project...
+:END:
+
+** 🎙 Episodes:
+
+:README:
+This ~org-mode~ publishing project embeds ~fountain-mode~ to create audio drama scripts with sound and music cues etc.  This is currently semi automated using the *Afterwriting* python script.  I edit all the files in Emacs but it is easier to run the build script on the command line.  The build script creates a new PDF file.
+
+I have plans to implement all the automation within Org-Mode. That is what this template will be all about... Episodes / Scenes can be written and organized here... 
+
+The Entire Final draft fountain scripts will be generated programmatically here as needed during productions... /(not fully implemented yet)/
+
+There would also be some way to automatically compile the fountain script to PDF all from within this .org file... The other sections within this .org file could also be exported to PDF /(as a director's or sound-designer's script)/ with cue sheets, etc. all included AND full dialog script compiled below that...
+:END:
+
+*** 🎙Episode 01
+**** 📒 Episode Back Story
+
+:README:
+This section is for episode background planning and plot development which may or may not be included within the final story / production... It is different than the *Research:* section below as it involves creation of your actual story rather than generic examples of other stories or concepts that are only related to this genre but not directly connected to your story lines, back stories, or actual plots...
+:END:
+
+**** 📃 Episode Synopsis:
+
+:README:
+Write a short synopsis for this single Episode here... This will be more or less a summary of this single episode only... You can use similar story building tools / exercises for writing this synopsis as you do for any typical fiction writing project...
+:END:
+
+**** 🗡 Episode Plot Summary:
+
+:README:
+Write your episode's plot summary here: /(e.g., In this episode we are dealing with yadda... yadda... yadda... which must be resolved with yadda... yadda... yadda..., etc...)/
+:END:
+
+**** 🎙Scenes:
+***** 🎙Scene 1:
+******* 🎙 Dialog /(mock script)/
+
+:README:
+Scenes are composed of isolated events relating to a single unique thread/picture knitted into the fabric of a series of episodes making up audio or radio programs...
+
+/<compose new scene draft dialog fountain script in block below and / or write some scene related production notes, or instructions here as well>/
+:END:
+
+#+BEGIN_SRC fountain
+= **Production Notes:** 
+=     Yadda Yadda Yadda...
+
+CHARACTER (dialog)
+Dialog text... etc...
+ #+END_SRC
+
+******* 🗒 Background Notes:
+
+:README:
+This area could start out as this single scene's quick synopsis summarizing all of the actions / dialog etc. that take place during this particular scene and / or the place where you sketch these things out first before committing them to the actual scene dialog script heading...  This is also a place to add notes for this scene that will not become part of the final production fountain script...
+:END:
+
+***** 🎙Scene 2:
+****** 🎙 Dialog /(mock script)/
+
+:README:
+Scenes are composed of isolated events relating to a single unique thread/picture knitted into the fabric of a series of episodes making up audio or radio programs...
+
+/<compose new scene draft dialog fountain script in block below and / or write some scene related production notes, or instructions here as well>/
+:END:
+
+#+BEGIN_SRC fountain
+= **Production Notes:** 
+=     Yadda Yadda Yadda...
+
+CHARACTER (dialog)
+Dialog text... etc...
+ #+END_SRC
+
+****** 🗒 Background Notes:
+
+:README:
+This area could start out as this single scene's quick synopsis summarizing all of the actions / dialog etc. that take place during this particular scene and / or the place where you sketch these things out first before committing them to the actual scene dialog script heading...  This is also a place to add notes for this scene that will not become part of the final production fountain script...
+:END:
+***** 🎙Etc...
+****** 🎙 Dialog /(mock script)/
+
+:README:
+Scenes are composed of isolated events relating to a single unique thread/picture knitted into the fabric of a series of episodes making up audio or radio programs...
+
+/<compose new scene draft dialog fountain script in block below and / or write some scene related production notes, or instructions here as well>/
+:END:
+
+#+BEGIN_SRC fountain
+= **Production Notes:** 
+=     Yadda Yadda Yadda...
+
+CHARACTER (dialog)
+Dialog text... etc...
+ #+END_SRC
+
+****** 🗒 Background Notes:
+
+:README:
+This area could start out as this single scene's quick synopsis summarizing all of the actions / dialog etc. that take place during this particular scene and / or the place where you sketch these things out first before committing them to the actual scene dialog script heading...  This is also a place to add notes for this scene that will not become part of the final production fountain script...
+:END:
+*** 🎙Episode 02
+**** 📒 Episode Back Story
+
+:README:
+This section is for episode background planning and plot development which may or may not be included within the final story / production... It is different than the *Research:* section below as it involves creation of your actual story rather than generic examples of other stories or concepts that are only related to this genre but not directly connected to your story lines, back stories, or actual plots...
+:END:
+
+**** 📃 Episode Synopsis:
+
+:README:
+Write a short synopsis for this single Episode here... This will be more or less a summary of this single episode only... You can use similar story building tools / exercises for writing this synopsis as you do for any typical fiction writing project...
+:END:
+
+**** 🗡 Episode Plot Summary:
+
+:README:
+Write your episode's plot summary here: /(e.g., In this episode we are dealing with yadda... yadda... yadda... which must be resolved with yadda... yadda... yadda..., etc...)/
+:END:
+
+**** 🎙Scenes:
+***** 🎙Scene 1:
+******* 🎙 Dialog /(mock script)/
+
+:README:
+Scenes are composed of isolated events relating to a single unique thread/picture knitted into the fabric of a series of episodes making up audio or radio programs...
+
+/<compose new scene draft dialog fountain script in block below and / or write some scene related production notes, or instructions here as well>/
+:END:
+
+#+BEGIN_SRC fountain
+= **Production Notes:** 
+=     Yadda Yadda Yadda...
+
+CHARACTER (dialog)
+Dialog text... etc...
+#+END_SRC
+
+******* 🗒 Background Notes:
+
+:README:
+This area could start out as this single scene's quick synopsis summarizing all of the actions / dialog etc. that take place during this particular scene and / or the place where you sketch these things out first before committing them to the actual scene dialog script heading...  This is also a place to add notes for this scene that will not become part of the final production fountain script...
+:END:
+
+***** 🎙Scene 2:
+****** 🎙 Dialog /(mock script)/
+
+:README:
+Scenes are composed of isolated events relating to a single unique thread/picture knitted into the fabric of a series of episodes making up audio or radio programs...
+
+/<compose new scene draft dialog fountain script in block below and / or write some scene related production notes, or instructions here as well>/
+:END:
+
+#+BEGIN_SRC fountain
+= **Production Notes:** 
+=     Yadda Yadda Yadda...
+
+CHARACTER (dialog)
+Dialog text... etc...
+#+END_SRC
+
+****** 🗒 Background Notes:
+
+:README:
+This area could start out as this single scene's quick synopsis summarizing all of the actions / dialog etc. that take place during this particular scene and / or the place where you sketch these things out first before committing them to the actual scene dialog script heading...  This is also a place to add notes for this scene that will not become part of the final production fountain script...
+:END:
+***** 🎙Etc...
+****** 🎙 Dialog /(mock script)/
+
+:README:
+Scenes are composed of isolated events relating to a single unique thread/picture knitted into the fabric of a series of episodes making up audio or radio programs...
+
+/<compose new scene draft dialog fountain script in block below and / or write some scene related production notes, or instructions here as well>/
+:END:
+
+#+BEGIN_SRC fountain
+= **Production Notes:** 
+=     Yadda Yadda Yadda...
+
+CHARACTER (dialog)
+Dialog text... etc...
+#+END_SRC
+
+****** 🗒 Background Notes:
+
+:README:
+This area could start out as this single scene's quick synopsis summarizing all of the actions / dialog etc. that take place during this particular scene and / or the place where you sketch these things out first before committing them to the actual scene dialog script heading...  This is also a place to add notes for this scene that will not become part of the final production fountain script...
+:END:
+** ✎ Production Log:
+
+:README:
+Use this space to add time stamped log note entries for any pourpose you may need...
+
++ *Create a time stamped entry* /Use key command:/
+
+   - ~C-c .~
+
+   - /Make your new entry an outline sub-heading of this Log/
+:END:
+
+*** NEW Entry: <2020-06-19 Fri> <title> /(template)/
+
+Yadda, yadda, yadda...
+
+** ⏰ Tasks:
+
+:README:
+Use this space to add time stamped Task entries for any pourpose you may need...
+
++ *Create a time stamped entry* /Use key command:/
+
+   - ~C-c .~
+
+   - /Make your new entry an outline sub-heading of this Tasks Section/
+:END:
+
+**** TODO <2020-06-19 Fri> New Task Example:
+
+Yadda, yadda, yadda...
+
+** TODO 🗓 Editorial Calendar
+
+Make an editorial Calendar for this project right here where it belongs!  You won't loose it! and you can access it quickly without having to search for it elsewhere. Org-Mode excels for this task!  Take advantage of its powerful scheduling, agenda, and filtering capabilities!
+
+* 📒 Research:                                                       :export:
+** 💡 Episode Development:
+** 👤 Characters:
+** 👥 Groups - Factions:
+** 🌐 Locations - Worlds:
+** 🎪 Major Events:
+** 🏞 Scenes:
+** ❝ Quotations:
+** 🖍 Styles:
+* ⎘ Templates:                                                     :noexport:
+
+:README:
+This section provides skeleton templates to use to start real sections within your audio production.  Any sub heading under this *Templates:* group can be utilized by copy-pasting it anywhere you need to create a new section based on its structure... 
+
+Some of the templates below have already been used and appear as placeholders in their proper default locations. /(this does not keep you from putting them in other places, or customizing things to be completely different of course)/.  However, since they already exist as ~placeholders~ where they normally belong, you can fill in those ones with your real details, and then copy more from here when you need to add more later... 
+
+The purpose of the ~placeholders~ is to get you off to a good start and also show you where these templates were originally intended to go... Once you have seen this setup in action you will have a much better idea of how to customize things going forward...
+
+Later, you could try mashing a few cloned templates together to create a totally new project with a different structure... The intent of this is to save lots of time Starting up a new writing project.  Lets see if it helps. :trollface:
+
+*Instructions:*
+
+   - Choose one of the templates below and copy it (folded).  Paste the copied template as a new clone within your project's *Audio Production:* section, or *Research:* section as needed...  /Change the hierarchy of the copied heading(s) to fit where it was pasted if needed.../  Rename the cloned template to a specific name needed within your project's structure...
+:END:
+
+** For Audio Production - Episodes Folder:
+*** 🎙Episode 0X /(template)/
+**** 📒 Episode Back Story
+
+:README:
+This section is for episode background planning and plot development which may or may not be included within the final story / production... It is different than the *Research:* section below as it involves creation of your actual story rather than generic examples of other stories or concepts that are only related to this genre but not directly connected to your story lines, back stories, or actual plots...
+:END:
+
+**** 📃 Episode Synopsis:
+
+:README:
+Write a short synopsis for this single Episode here... This will be more or less a summary of this single episode only... You can use similar story building tools / exercises for writing this synopsis as you do for any typical fiction writing project...
+:END:
+
+**** 🗡 Episode Plot Summary:
+
+:README:
+Write your episode's plot summary here: /(e.g., In this episode we are dealing with yadda... yadda... yadda... which must be resolved with yadda... yadda... yadda..., etc...)/
+:END:
+
+**** 🎙Scenes:
+***** 🎙Scene 0X:
+******* 🎙 Dialog /(mock script)/
+
+:README:
+Scenes are composed of isolated events relating to a single unique thread/picture knitted into the fabric of a series of episodes making up audio or radio programs...
+
+/<compose new scene draft dialog fountain script in block below and / or write some scene related production notes, or instructions here as well>/
+:END:
+
+#+BEGIN_SRC fountain
+= **Production Notes:** 
+=     Yadda Yadda Yadda...
+
+CHARACTER (dialog)
+Dialog text... etc...
+ #+END_SRC
+
+******* 🗒 Background Notes:
+
+:README:
+This area could start out as this single scene's quick synopsis summarizing all of the actions / dialog etc. that take place during this particular scene and / or the place where you sketch these things out first before committing them to the actual scene dialog script heading...  This is also a place to add notes for this scene that will not become part of the final production fountain script...
+:END:
+
+** For Research Folder:
+*** 👤 New Character
+**** 💬 Profile:
+
+***** Name, Rank, S/N:
+
+|--------+----------------|
+| Name:  | put name here  |
+|--------+----------------|
+| AKA:   | put alias here |
+|--------+----------------|
+| Title: | put title here |
+|--------+----------------|
+| Rank:  | put rank here  |
+|--------+----------------|
+
+***** Summary (Paragraph):  
+
+:README:
+Put a single paragraph summary of the character's storyline, motivation and description. Loosely based on what you will write from the snowflake steps.
+:END:
+
+***** Summary (Sentence):  
+
+:README:
+Put a single sentence summary of the character's storyline here.
+:END:
+
+***** Motivation
+
+:README:
+The character's motivation /(what does he/she want abstractly?)/
+:END:
+
+***** Goal
+
+:README:
+The character's goal (what does he/she want concretely?)
+:END:
+
+***** Conflict
+
+:README:
+The character's conflict (what prevents him/her from reaching this goal?)
+:END:
+
+***** Epiphany
+
+:README:
+The character's epiphany (what will he/she learn, how will he/she change?
+:END:
+
+***** Basics:
+
+|-----+--------+---------+--------+--------+------------+-------------|
+| Age | Gender | Species | Height | Hair   | Complexion | Nationality |
+|-----+--------+---------+--------+--------+------------+-------------|
+|     |        |         |        | color, |            |             |
+|     |        |         |        | etc... |            |             |
+|-----+--------+---------+--------+--------+------------+-------------|
+
+|-----+------------+------+--------+------+------------+-----------|
+| DOB | Birthplace | Race | Weight | Eyes | Handedness | Ethnicity |
+|-----+------------+------+--------+------+------------+-----------|
+|     |            |      |        |      | right      |           |
+|     |            |      |        |      | left etc.  |           |
+|-----+------------+------+--------+------+------------+-----------|
+
+***** Family
+
+|----------------+----------------------+----------+------------+------------+----------|
+| Marital status | Spouse(s)/Partner(s) | Children | Bio Father | Bio Mother | Siblings |
+|----------------+----------------------+----------+------------+------------+----------|
+|                |                      |          |            |            |          |
+|                |                      |          |            |            |          |
+|----------------+----------------------+----------+------------+------------+----------|
+
+
+***** Social
+
+|-------------+------------------------+------------+---------------+------|
+| Citizenship | Social status          | Job/career | Position/role | Rank |
+|-------------+------------------------+------------+---------------+------|
+|             | Fugitive, criminal,    |            |               |      |
+|             | up-standing            |            |               |      |
+|             | member of public, etc. |            |               |      |
+|-------------+------------------------+------------+---------------+------|
+
+***** Skills Etc.
+
+|--------+---------+-----------------+-----------|
+| Skills | Hobbies | Talents / Gifts | Languages |
+|--------+---------+-----------------+-----------|
+|        |         |                 |           |
+|        |         |                 |           |
+|--------+---------+-----------------+-----------|
+
+***** Physical Attributes
+
+:README:
+The Character's Physical description.... 
+:END:
+
+***** Personality
+
+:README:
+The Character's Personality... yadda yadda yadda
+:END:
+
+****** Likes / Dislikes
+
+:README:
+The Character's Likes / dislikes, yadda yadda yadda...
+:END:
+
+***** Personal History
+
+:README:
+Character’s personal history. Yadda yadda yadda...
+:END:
+
+**** 📃 Character Synopsis:
+
+:README:
+Write a character synopsis that tells the story from the point of view of the character.
+:END:
+
+****** Major characters
+
+:README:
+Write one page or 600 words about the major characters in this story...
+:END:
+
+****** Minor characters
+
+:README:
+Write half a page or 300 words about the minor characters in this story...
+:END:
+
+**** 🗒 Worksheet:
+
+:README:
+This is your scratch pad worksheet for loosely drafting up new characters before organizing all the information into a Character Profile and Character Synopsis... Free form in here... Let the muses take complete control in this space...
+:END:
+*** 👥 New Group or Faction
+**** ⚛ Interstellar Nation /(The Galactic Empire)/
+
+:README:
+Definition:
+
+- A Spacefaring kingdom, empire, country, etc (like Asimov's Galactic Empire, or the Romulan Empire etc.) This type of nation may extend out through a galactic cluster or quadrant, etc.
+
+:END:
+
+***** 📃 Summary:
+
+:README:
+This section is the executive summary (abstract) of a longer full story chapter within your book.  Stories like the Finnegan Series are fully invested on not one but many Interstellar Nations!  Your mileage may vary... %^)
+
+You need to incorporate all the results of your research here in a similar way that Isaac Asimov wrote chapters undergoing many iterations over time about the Galactic Empire in his Foundation Series... 
+
+This abstract, is a short historical and present summary only... It should include the major goals, motivations... who they’re at war with, etc. i.e., It should include the news headlines, and ledelines...  but not the full story... Results of your research below this summary should be as rich and detailed as you can make it... (but also indexed!)
+
+The Ideas and Notes here were adapted from Droemar’s article “5 Tips: World-Building Template”.
+
+http://droemar.deviantart.com/journal/5-Tips-World-Building-Template-224630229
+
+Much more information can be obtained by visiting the above website!!!  
+
+I learned about this Snowflake Idea several years ago when I was first learning how to use the structure to build my Scrivener Projects starting out on a Macbook Pro 2011 model... 
+
+# This Emacs Org Mode based Book Publishing project has been initially modelled upon my Scrivener Project but it will soon outgrow more and do much more than Scrivener could ever dream of!  I am sure of it! I have already discovered much. The Learning curve is levelling off finally!  Writing this now in my fancy Emacs buffer specifically designed for distraction free writing mode is a dream! All my edits are made very close to the typewriter home row!  No reaching for any mice or hard to reach keys while the stream of consciousness flows!  Much of that typing ease is thanks to the detailed and structured eLisp programming work of Xah Lee!  OMG! You did a ton of great things!  No Troll in my book! You are the Knight in Armour for the weak of tendons! Fantastic! Thanks Dude!
+:END:
+
+***** 🔤 Basics:
+
+:README:
+- Fill in the tables below... Pretty much self explanatory...  Do your research first though!
+:END:
+
+|------------+---------+--------+----------+-----------------------+----------------|
+| Home World | Colours | Symbol | Currency | Official Languages(s) | Galactic Scope |
+|------------+---------+--------+----------+-----------------------+----------------|
+|            |         |        |          |                       | number of      |
+|            |         |        |          |                       | systems, etc.  |
+|            |         |        |          |                       |                |
+|            |         |        |          |                       |                |
+|------------+---------+--------+----------+-----------------------+----------------|
+
+
+|------------------+---------------------+-------------------+-----------+----------------|
+| Type Government  | Current Gov'ng Body | Cur Head of State | Military  | Affiliation(s) |
+|------------------+---------------------+-------------------+-----------+----------------|
+| <fudal, castle,  | <party name>        |                   | What's it |                |
+| democracy, etc.> |                     |                   | called?   |                |
+|                  |                     |                   |           |                |
+|                  |                     |                   |           |                |
+|------------------+---------------------+-------------------+-----------+----------------|
+
+***** 𐇑 Social Structure:
+
+:README:
+Who holds power, and how does it affect the way the society works? Is there an aristocracy? If so, how are its ranks structured?
+:END:
+
+***** 🏛 Government:
+
+:README:
+Describe the Structure and general procedures here...
+:END:
+
+***** ⚖ Taxation:
+
+:README:
+Write a brief overview of how the people are taxed, and where that money goes.
+:END:
+
+***** 💵 Currency:
+
+:README:
+What is the currency? What are its sub-denominations?
+:END:
+
+***** 👥 Population:
+
+****** Races
+
+:README:
+Describe the races that inhabit the area, and whether or not they’re native, etc...
+:END:
+
+****** Common physical characteristics
+
+:README:
+Describe the common physical characteristics of long-term inhabitants and native peoples: skin colour, hair colour, build, dress, etc...
+:END:
+
+****** Predominant religion(s)
+
+:README:
+Describe the perdominant religion here... Is it Monotheism?  Pantheism?  Atheism? Name and describe them as needed.)
+:END:
+
+***** ⛩ Culture:
+
+****** Mannerisms
+
+:README:
+Use this space to illustrate the typical way individuals or groups from this place behave... (e.g, A fur-wrapped barbarian behaves in a very different way than a Greek statesman.)
+:END:
+
+****** Greetings
+
+:README:
+Provide some examples of typical greetings here... (e.g, What is considered an acceptable greeting? In formal setting? Among friends? Family?, etc.)
+:END:
+
+****** Customs
+
+:README:
+List the habits of a people that make them unique in this space...
+:END:
+
+****** Superstitions
+
+:README:
+(Knowing the power irrational explanations have over a populace can sometimes be good story material.)
+:END:
+
+****** Beliefs
+
+:README:
+Do I really have to explain this one?  This alone could end up being your entire story...
+:END:
+
+****** Rituals
+
+:README:
+(e.g., Birth? Coming-of-age? Marriage? Death? Justice? etc.)
+:END:
+
+****** Festivals
+
+:README:
+(e.g., What do people celebrate? What are considered holidays? Why?, etc.)
+:END:
+
+***** 🕉 Language
+
+:README:
+This is kind of a big one! Be very careful to point how and why your characters can understand each other, especially if they are from different countries. Language in the real world is a hell of a barrier, but even if you have a Chinese dragon, an Arabian unicorn, a French knight, a Mayan princess, and a Japanese ninja, they can all talk to and understand each other without explanation. Double I-call-BS-points for someone from another world or time!  Anyone who has ever toured Europe can tell you why this is complete bull.  Take a closer look, especially if you’re modeling anything after medieval Europe; only the Church had a universal language: Latin.
+:END:
+
+***** ⚗ Education
+
+:README:
+(How are children taught?  Skilled workers, like architects or brewers?  Is there public education?  Higher education?)
+:END:
+
+***** 🚉 Transportation - Shipping
+
+:README:
+Here is where you talk about, how "people" and "things" are moved/transported from one "place" to another. (e.g., The logistics... Armies? Crowds? Goods? Animals? etc.)
+:END:
+
+***** ⚔ Military
+
+:README:
+Write about the military is all about here... What real world military is/can it be based upon? What’s it’s structure?
+:END:
+
+***** 🏙 Major sectors and systems
+
+|--------+----------+--------+-----------------------------------------|
+| Sector | Quadrant | System | Description:                            |
+|--------+----------+--------+-----------------------------------------|
+|        |          |        | One or two paragraphs only here.        |
+|        |          |        | Reference link to longer doc is better. |
+|        |          |        |                                         |
+|        |          |        |                                         |
+|        |          |        |                                         |
+|--------+----------+--------+-----------------------------------------|
+
+***** 📖 History
+
+:README:
+Everyone comes from somewhere.  People just don’t up and appear on islands and such.  The Native Americans walked across a land bridge way back in the day... Europeans came from Romans and Greeks and Celts and Gauls and more... Very few people bother to look at this aspect of world-building, and they really should.  Even if a civilization has been around for two thousand years and are elven dragon riders, they came from somewhere.  Even if their mythology says they crawled out of the earth: they came from somewhere.  Examine it!
+:END:
+
+**** 🛡 Nation /(The Roman Empire, etc.)/
+
+:README:
+Nation Definition:
+
+   - A Non-spacefaring kingdom, empire, country, etc.
+
+   - A Continent, Country, Nomadic Diaspora or Clan... (e.g., Asia, Europe, The Roman Empire, The Gypsies, The Isle of Mann, or the Ba Aka Pygmys, etc.) not to be limited to groups living on Planet Earth only of course...
+
+# NOTE: Change the heading title "Nation" above to the actual name of your specific group...
+
+# This template was originally adapted from Droemar’s article “5 Tips: World-Building Template”:
+
+        http://droemar.deviantart.com/journal/5-Tips-World-Building-Template-224630229
+
+# Originally created as an Evernote template, later moved to and overhauled within Scrivener, and now living her third incarnation within a future proof plain text .org file that is parsed, hosted, and rendered by my fancy Emacs pubOps environment... %^) 
+:END:
+
+***** 📃 Summary:
+
+:README:
+Goals, motivations, who they’re at war with, etc.
+:END:
+
+***** 🔤 Basics:
+
+|----------------+---------+--------+----------+----------------------|
+| Home Country   | Colours | Symbol | Currency | Official language(s) |
+|----------------+---------+--------+----------+----------------------|
+| <country name> |         |        |          |                      |
+|                |         |        |          |                      |
+|----------------+---------+--------+----------+----------------------|
+
+|-------------------+------------------------+-----------------------|
+| Government type   | Current governing body | Current head of state |
+|-------------------+------------------------+-----------------------|
+| Feudal, caste,    | Party name.            |                       |
+| democracy, etc... |                        |                       |
+|                   |                        |                       |
+|-------------------+------------------------+-----------------------|
+
+|-------------------+----------------+-----------------------|
+| Military          | Affiliation(s) | Number of territories |
+|-------------------+----------------+-----------------------|
+| What’s it called? |                |                       |
+|                   |                |                       |
+|-------------------+----------------+-----------------------|
+
+***** 𐇑 Social Structure
+
+:README:
+Who holds power, and how does it affect the way the society works? Is there an aristocracy? If so, how are its ranks structured?
+:END:
+
+***** 🏛 Government
+
+:README:
+Structure and general procedures
+:END:
+
+***** ⚖ Taxation
+
+:README:
+A brief overview of how the people are taxed, and where that money goes.
+:END:
+
+***** 💵 Currency
+
+:README:
+What is the currency? What are its sub-denominations?
+:END:
+
+***** 👥 Population
+****** Common physical characteristics
+
+:README:
+Common physical characteristics of long-term inhabitants and native peoples: skin colour, hair colour, build, dress
+:END:
+
+****** Races 
+
+:README:
+The races that inhabit the area, whether or not they’re native.
+:END:
+
+****** Predominant religion(s)
+
+:README:
+Monotheism?  Pantheism?  Atheism? Name and describe them as needed.
+:END:
+
+***** ⛩ Culture
+****** Mannerisms
+
+:README:
+The likely way someone behaves if they’re from this place. Because believe me, a fur-wrapped barbarian behaves in a very different way than a Greek statesman.
+:END:
+
+****** Greetings
+
+:README:
+What is considered an acceptable greeting?  In formal setting?  Among friends? Family?
+:END:
+
+****** Customs
+
+:README:
+The habits of a people that make them unique.  Google it if you’re confused.
+:END:
+
+****** Superstitions
+
+:README:
+Knowing the power irrational explanations have over a populace can sometimes be good story material.
+:END:
+
+****** Beliefs
+
+:README:
+Do I really have to explain this one?  This alone can be your story.
+:END:
+
+****** Rituals
+
+:README:
+Birth? Coming-of-age?  Marriage?  Death?  Justice?
+:END:
+
+****** Festivals
+
+:README:
+What do people celebrate?  What are considered holidays?  Why?
+:END:
+
+***** 🕉 Language
+
+:README:
+This is kind of a big one for me, because I’m always very careful to point how and why my characters can understand each other, especially if they are from different countries. Language in the real world is a hell of a barrier, but even if you have a Chinese dragon, an Arabian unicorn, a French knight, a Mayan princess, and a Japanese ninja, they can all talk to and understand each other without explanation. Double I-call-BS-points for someone from another world or time!  Anyone who has ever toured Europe can tell you why this is complete bull.  Take a closer look, especially if you’re modeling anything after medieval Europe; only the Church had a universal language: Latin.
+:END:
+
+***** ⚗ Education
+
+:README:
+How are children taught?  Skilled workers, like architects or brewers?  Is there public education?  
+Higher education?
+:END:
+
+***** 🚉︎Transportation
+
+:README:
+How do people move things?  Armies?  Crowds?  Goods?  Animals?
+:END:
+
+***** ⚔ Military
+
+:README:
+What is their military like? What real world military is/can it be based upon? What’s it’s structure?
+:END:
+
+***** 🏙 Major territories and cities
+
+****** Territory:
+
+******* City <name of major city>:
+
+Description...
+
+***** 📖 History
+
+:README:
+Everyone comes from somewhere.  People just don’t up and appear on islands and such.  Even Native Americans walked across a land bridge way back in the day. Europeans came from Romans and Greeks and Celts and Gauls and more.  
+
+Few people bother to look at this aspect of world-building, and they really should.  Even if a civilization has been around for two thousand years and are elven dragon riders, they came from somewhere.  Even if their mythology says they crawled out of the earth: they came from somewhere.  Examine it!
+:END:
+
+
+
+*** 🌐 Locations - Worlds:
+**** 🏞 New Terrestrial Location:
+
+***** Summary
+
+:README:
+Write your Location Summary here. Use what ever sub headings, and or formatting you need to accomplish this but don't make it too long...  The next sections are for drilling down...
+:END:
+
+***** Setting Detail
+
+****** Overall Feeling:
+
+****** Sights:
+
+****** Sounds:
+
+****** Smells:
+
+**** ∅ New Planet/Satellite Location:
+
+:README:
+Rename Planet/Satellite heading above to the actual name of the planet or satellite of your specific case...
+
+The Ideas and Notes here were adapted from Droemar’s article “5 Tips: World-Building Template”.
+
+http://droemar.deviantart.com/journal/5-Tips-World-Building-Template-224630229
+
+Much more information can be obtained by visiting the above website!!!
+:END:
+
+***** System, Sector/quadrant
+
+:README:
+Rename System, Sector/quadrant heading above with the actual name of your system, with its specific sector and quadrant coordinates...
+:END:
+
+****** Controlling party/faction
+
+:README:
+Rename Controlling party/faction heading above with the actual name of your party/or faction...  Fill in key facts in the tables below...
+:END:
+
+
+|-------+------+-------------+----------------+------------|
+| Class | Type | Satellites  | Native species | Population |
+|-------+------+-------------+----------------+------------|
+|       |      | Moons, etc. |                |            |
+|       |      |             |                |            |
+|-------+------+-------------+----------------+------------|
+
+|--------------+--------------+-------------+------------------+----------------|
+| Capital city | Colours      | Symbol      | Government       | Affiliation(s) |
+|--------------+--------------+-------------+------------------+----------------|
+|              | Example:     | Example:    | Example:         |                |
+|              | red, white   | stars,      | Feudal system,   |                |
+|              | & blue, etc. | and stripes | caste system,    |                |
+|              |              |             | oligarchy,       |                |
+|              |              |             | parliament,      |                |
+|              |              |             | democracy,       |                |
+|              |              |             | plutocracy, etc. |                |
+|--------------+--------------+-------------+------------------+----------------|
+
+***** Major cities
+
+****** City (continent/region)
+
+:README:
+Change Heading City (continent/region) above to the name of your specific city, continent, or region...
+
+Then add a detailed description below...  
+
+Do this to get a feel for the areas the characters will be visiting.
+:END:
+
+******* Description:
+
+# Add Description Here:
+
+***** Population
+
+****** Races:
+
+:README:
+List all the races that inhabit the area, whether or not they’re native.
+:END:
+
+****** Predominant religion(s):
+
+:README:
+Monotheism?  Pantheism?  Atheism? Name and describe them as needed.
+:END:
+
+****** Common physical characteristics:
+
+:README:
+List the common physical characteristics of long-term inhabitants and native peoples: skin colour, hair colour, build, dress
+:END:
+
+***** Culture
+
+****** Mannerisms:
+
+:README:
+Use this space to illustrate the likely way someone behaves if they’re from this place. Because believe me, a fur-wrapped barbarian behaves in a very different way than a Greek statesman.
+:END:
+
+****** Cuisine:
+
+:README:
+Write about what most people on this planet eat every day?  On festival days?  As delicacies? Taboo?
+:END:
+
+****** Leisure:
+
+:README:
+What do people here do in their spare time?  For fun?
+:END:
+
+****** Greetings:
+
+:README:
+What is considered an acceptable greeting?  In formal setting?  Among friends? Family?
+:END:
+
+****** Customs:
+
+:README:
+The habits of a people that make them unique.  Google it if you’re confused.
+:END:
+
+****** Quotes:
+
+:README:
+Write about how someone from this planet would talk like, or talk about.
+:END:
+
+****** Superstitions:
+
+:README:
+Knowing the power irrational explanations have over a populace can sometimes be good story material.
+:END:
+
+****** Magic:
+
+:README:
+How it is treated by the country.  Whether hated and feared, harnessed for industry, or nonexistent within it’s borders, if magic has a presence in your story you ought to look at how it affects the larger picture than just your heroes and their journey.
+:END:
+
+****** Beliefs:
+
+:README:
+Do I really have to explain this one?  This alone can be your story.
+:END:
+
+****** Rituals:
+
+:README:
+Birth? Coming-of-age?  Marriage?  Death?  Justice?
+:END:
+
+****** Festivals:
+
+:README:
+What do people celebrate?  What are considered holidays?  Why?
+:END:
+
+***** Transport
+
+:README:
+How do people move things?  Armies?  Crowds?  Goods?  Animals?
+:END:
+
+***** Weather patterns
+
+:README:
+Tropical?  Stormy?  Cold?  Earthquakes?  Climate in general?
+:END:
+
+***** Resources
+
+:README:
+What does the planet export?  Import?  Make?  Is famous for?
+:END:
+
+***** History
+
+:README:
+Everyone comes from somewhere.  People just don’t up and appear on islands and such.  I mean, even Native Americans walked across a land bridge way back in the day. Europeans came from Romans and Greeks and Celts and Gauls and more.  Very few people bother to look at this aspect of world-building, and they really should.  Even if a civilization has been around for two thousand years and are elven dragon riders, they came from somewhere.  Even if their mythology says they crawled out of the earth: they came from somewhere.  Examine it here in this space!
+:END:
+

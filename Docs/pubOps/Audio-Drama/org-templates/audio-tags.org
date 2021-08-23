@@ -1,10 +1,8 @@
 # -**- mode: org; coding: utf-8 -**-
 
-#+TAGS: health(h) drafts(3) synopsis(i) fonts(;) hardware(#)
-#+TAGS: computers(=) web(w) Cloud(9) email(m) apps(4) open_source(g)
-#+TAGS: banking($) taxes(%) auto(v) travel(y) utilities(u) must_read(!)
+#+TAGS: drafts(3) synopsis(i)
 
-* Default Tags:                                                    :noexport:
+* Audio Theatre Tags:                                              :noexport:
 
 ** Instructions:
 
@@ -24,4 +22,4 @@ This file is included as part of *Harmonic Alchemy Modular Emacs* to provide an 
 
 - *Globall:* /a b c d e f l n o p q r s t x A G H I L N R T V W 0 1 2 5 + - ?/
 
-- *Local:* /g h i m u v w y ; ! # $ % 3 4 9 =/ 
+- *Local:* /i 3/ 
