@@ -19,6 +19,7 @@
 
 #+SETUPFILE: ./org-templates/audio-book.org
 #+SETUPFILE: ./org-templates/audio-tags.org
+
 #+TITLE: HAP - Audio Drama Project Template
 #+EXPORT_FILE_NAME: HAP_Audio-Drama-Project-Template.pdf
 #+KEYWORDS:
@@ -40,14 +41,13 @@
 #+end_comment
 
 * Instructions:                                                      :export:
-
-:README-FIRST:
+** README-First
 
 To use this Audio Drama Project Skeleton /(template)/ for your own projects, perform the following steps:
 
 1. *Clone a Copy of this File:* Put it where you normally organize your audio drama or podcast projects.  *Place it within its own folder* named after your intended project title...
 
-2. *NOTE:* You may be doing this because you have some fantastic story idea brewing in your mind and you need to write that down before you forget!  Right?  Therefore... as soon as you clone this file *STOP* and go immediately to the ~💡 Ideas Scratchpad Refile / ☞ Start Here!~ section and read the ~:README:~ directly under that heading...  Then write your idea down quickly /(as per README the instructions)/ to get your inspiration recorded before you forget it...  
+2. *NOTE:* You may be doing this because you have some fantastic story idea brewing in your mind and you need to write that down before you forget!  Right?  Therefore... as soon as you clone this file *STOP* and go immediately to the ~💡 Ideas Scratchpad Refile / ☞ Start Here!~ section and read the ~:README:~ directly under that heading...  Then write your idea down quickly /(as per the README instructions)/ to get your inspiration recorded before you forget it...  
 
    Once that is done, come back here and finish setting up your project... 
 
@@ -94,7 +94,6 @@ To use this Audio Drama Project Skeleton /(template)/ for your own projects, per
 *This README was Last Modified: <2021-08-22 Sun>* So far things are pretty basic PDF... We will get fancy with other formats later... I promice... I have to do all this documentation first! /(As you can see, if you been following for the past couple years, things are getting done! Albeit Slowly)/
 
 Enjoy! - Alisha Awen
-:END:
 
 ** Fountain 2 PDF:
 
@@ -264,7 +263,7 @@ Compose a new scene draft dialog fountain script in block below, or write up som
 CHARACTER NAME (dialog)
 Hey! Give me a real name already! Such an insult!
 #+END_SRC
-* 🎙Audio Production:                                                 :export:
+* 🎙 Production:                                                      :export:
 ** 📃 Synopsis:
 
 :README:
@@ -283,7 +282,7 @@ The Entire Final draft fountain scripts will be generated programmatically here 
 There would also be some way to automatically compile the fountain script to PDF all from within this .org file... The other sections within this .org file could also be exported to PDF /(as a director's or sound-designer's script)/ with cue sheets, etc. all included AND full dialog script compiled below that...
 :END:
 
-*** 🎙Episode 01
+*** 🎙Episode 0X /(template)/
 **** 📒 Episode Back Story
 
 :README:
@@ -302,8 +301,30 @@ Write a short synopsis for this single Episode here... This will be more or less
 Write your episode's plot summary here: /(e.g., In this episode we are dealing with yadda... yadda... yadda... which must be resolved with yadda... yadda... yadda..., etc...)/
 :END:
 
+**** 📢 Sound Cues:
+***** Scene 01:
+****** 📢 ~[SFX-001-001-01]~ 
+
+/(template)/
+
+***** Scene 02:
+****** 📢 ~[SFX-001-002-01]~ 
+
+/(template)/
+
+**** 🎶 Music Cues:
+***** Scene 01:
+****** 🎶 ~[MUS-001-001-01]~ 
+
+/(template)/
+
+***** Scene 02:
+****** 🎶 ~[MUS-001-002-02]~ 
+
+/(template)/
+
 **** 🎙Scenes:
-***** 🎙Scene 1:
+***** 🎙Scene 0X /(template)/:
 ******* 🎙 Dialog /(mock script)/
 
 :README:
@@ -326,137 +347,6 @@ Dialog text... etc...
 This area could start out as this single scene's quick synopsis summarizing all of the actions / dialog etc. that take place during this particular scene and / or the place where you sketch these things out first before committing them to the actual scene dialog script heading...  This is also a place to add notes for this scene that will not become part of the final production fountain script...
 :END:
 
-***** 🎙Scene 2:
-****** 🎙 Dialog /(mock script)/
-
-:README:
-Scenes are composed of isolated events relating to a single unique thread/picture knitted into the fabric of a series of episodes making up audio or radio programs...
-
-/<compose new scene draft dialog fountain script in block below and / or write some scene related production notes, or instructions here as well>/
-:END:
-
-#+BEGIN_SRC fountain
-= **Production Notes:** 
-=     Yadda Yadda Yadda...
-
-CHARACTER (dialog)
-Dialog text... etc...
- #+END_SRC
-
-****** 🗒 Background Notes:
-
-:README:
-This area could start out as this single scene's quick synopsis summarizing all of the actions / dialog etc. that take place during this particular scene and / or the place where you sketch these things out first before committing them to the actual scene dialog script heading...  This is also a place to add notes for this scene that will not become part of the final production fountain script...
-:END:
-***** 🎙Etc...
-****** 🎙 Dialog /(mock script)/
-
-:README:
-Scenes are composed of isolated events relating to a single unique thread/picture knitted into the fabric of a series of episodes making up audio or radio programs...
-
-/<compose new scene draft dialog fountain script in block below and / or write some scene related production notes, or instructions here as well>/
-:END:
-
-#+BEGIN_SRC fountain
-= **Production Notes:** 
-=     Yadda Yadda Yadda...
-
-CHARACTER (dialog)
-Dialog text... etc...
- #+END_SRC
-
-****** 🗒 Background Notes:
-
-:README:
-This area could start out as this single scene's quick synopsis summarizing all of the actions / dialog etc. that take place during this particular scene and / or the place where you sketch these things out first before committing them to the actual scene dialog script heading...  This is also a place to add notes for this scene that will not become part of the final production fountain script...
-:END:
-*** 🎙Episode 02
-**** 📒 Episode Back Story
-
-:README:
-This section is for episode background planning and plot development which may or may not be included within the final story / production... It is different than the *Research:* section below as it involves creation of your actual story rather than generic examples of other stories or concepts that are only related to this genre but not directly connected to your story lines, back stories, or actual plots...
-:END:
-
-**** 📃 Episode Synopsis:
-
-:README:
-Write a short synopsis for this single Episode here... This will be more or less a summary of this single episode only... You can use similar story building tools / exercises for writing this synopsis as you do for any typical fiction writing project...
-:END:
-
-**** 🗡 Episode Plot Summary:
-
-:README:
-Write your episode's plot summary here: /(e.g., In this episode we are dealing with yadda... yadda... yadda... which must be resolved with yadda... yadda... yadda..., etc...)/
-:END:
-
-**** 🎙Scenes:
-***** 🎙Scene 1:
-******* 🎙 Dialog /(mock script)/
-
-:README:
-Scenes are composed of isolated events relating to a single unique thread/picture knitted into the fabric of a series of episodes making up audio or radio programs...
-
-/<compose new scene draft dialog fountain script in block below and / or write some scene related production notes, or instructions here as well>/
-:END:
-
-#+BEGIN_SRC fountain
-= **Production Notes:** 
-=     Yadda Yadda Yadda...
-
-CHARACTER (dialog)
-Dialog text... etc...
-#+END_SRC
-
-******* 🗒 Background Notes:
-
-:README:
-This area could start out as this single scene's quick synopsis summarizing all of the actions / dialog etc. that take place during this particular scene and / or the place where you sketch these things out first before committing them to the actual scene dialog script heading...  This is also a place to add notes for this scene that will not become part of the final production fountain script...
-:END:
-
-***** 🎙Scene 2:
-****** 🎙 Dialog /(mock script)/
-
-:README:
-Scenes are composed of isolated events relating to a single unique thread/picture knitted into the fabric of a series of episodes making up audio or radio programs...
-
-/<compose new scene draft dialog fountain script in block below and / or write some scene related production notes, or instructions here as well>/
-:END:
-
-#+BEGIN_SRC fountain
-= **Production Notes:** 
-=     Yadda Yadda Yadda...
-
-CHARACTER (dialog)
-Dialog text... etc...
-#+END_SRC
-
-****** 🗒 Background Notes:
-
-:README:
-This area could start out as this single scene's quick synopsis summarizing all of the actions / dialog etc. that take place during this particular scene and / or the place where you sketch these things out first before committing them to the actual scene dialog script heading...  This is also a place to add notes for this scene that will not become part of the final production fountain script...
-:END:
-***** 🎙Etc...
-****** 🎙 Dialog /(mock script)/
-
-:README:
-Scenes are composed of isolated events relating to a single unique thread/picture knitted into the fabric of a series of episodes making up audio or radio programs...
-
-/<compose new scene draft dialog fountain script in block below and / or write some scene related production notes, or instructions here as well>/
-:END:
-
-#+BEGIN_SRC fountain
-= **Production Notes:** 
-=     Yadda Yadda Yadda...
-
-CHARACTER (dialog)
-Dialog text... etc...
-#+END_SRC
-
-****** 🗒 Background Notes:
-
-:README:
-This area could start out as this single scene's quick synopsis summarizing all of the actions / dialog etc. that take place during this particular scene and / or the place where you sketch these things out first before committing them to the actual scene dialog script heading...  This is also a place to add notes for this scene that will not become part of the final production fountain script...
-:END:
 ** ✎ Production Log:
 
 :README:
@@ -538,8 +428,30 @@ Write a short synopsis for this single Episode here... This will be more or less
 Write your episode's plot summary here: /(e.g., In this episode we are dealing with yadda... yadda... yadda... which must be resolved with yadda... yadda... yadda..., etc...)/
 :END:
 
+**** 📢 Sound Cues:
+***** Scene 01:
+****** 📢 ~[SFX-001-001-01]~ 
+
+/(template)/
+
+***** Scene 02:
+****** 📢 ~[SFX-001-002-01]~ 
+
+/(template)/
+
+**** 🎶 Music Cues:
+***** Scene 01:
+****** 🎶 ~[MUS-001-001-01]~ 
+
+/(template)/
+
+***** Scene 02:
+****** 🎶 ~[MUS-001-002-02]~ 
+
+/(template)/
+
 **** 🎙Scenes:
-***** 🎙Scene 0X:
+***** 🎙Scene 0X /(template)/:
 ******* 🎙 Dialog /(mock script)/
 
 :README:
