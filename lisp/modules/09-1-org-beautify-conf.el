@@ -41,12 +41,12 @@
 
 ;; Use org-bullets-mode for utf8 symbols as org bullets
 
-(require 'org-bullets)
+;(require 'org-bullets)
 
 ;; Make "org-bullet-face" available allowing control of the font
 ;; sizes individually:  (NOTE: I don't really use this but it's here)
 
-(setq org-bullets-face-name (quote org-bullet-face))
+;(setq org-bullets-face-name (quote org-bullet-face))
 
 ;;;
 ;; Bullet options to try out: (commented out)
@@ -58,7 +58,7 @@
 ;(setq org-bullets-bullet-list '("✡" "⎈" "✽" "✲" "✱" "✻" "✼" "✽" "✾" "✿" "❀" "❁" "❂" "❃" "❄" "❅" "❆" "❇"))
 
 ;; Special Symbols:
-(setq org-bullets-bullet-list '("☀" "♼" "☼" "☾" "☽" "☣" "§" "¶" "‡" "※" "✕" "△" "◇" "▶" "◀" "◈"))
+;(setq org-bullets-bullet-list '("☀" "♼" "☼" "☾" "☽" "☣" "§" "¶" "‡" "※" "✕" "△" "◇" "▶" "◀" "◈"))
 
 ;; NOTE: I find Org Outline Bullets in general to be cluttering and non-essential. ;;       I make my outline bullets in Modular Emacs default to "invisible" and
 ;;       instead focus on heading indentation, size, and font style.
@@ -230,18 +230,18 @@
 
 (let* ((variable-tuple
         (cond
-         ((x-list-fonts "Averia Libre Regular")
-          '(:font "Averia Libre Regular"))
+         ((x-list-fonts "Averia Libre")
+          '(:font "Averia Libre"))
          ((x-list-fonts "Averia Libre Light")
           '(:font "Averia Libre Light"))
          ((x-list-fonts "Averia Sans Libre Regular")
-          '(:font "Averia Libre Regular"))
+          '(:font "Averia Sans Libre Regular"))
          ((x-list-fonts "Averia Sans Libre Light")
-          '(:font "Averia Libre Regular"))
+          '(:font "Averia Sans Libre Light"))
          ((x-list-fonts "Averia Serif Libre Regular")
-          '(:font "Averia Libre Regular"))
+          '(:font "Averia Serif Libre Regular"))
          ((x-list-fonts "Averia Serif Libre Light")
-          '(:font "Averia Libre Regular"))
+          '(:font "Averia Serif Libre Light"))
          (nil (warn "Averia Fonts Not Found! Did you install them?"))))
        (base-font-color     (face-foreground 'default nil 'default))
        (headline           `(:inherit 'default )))
