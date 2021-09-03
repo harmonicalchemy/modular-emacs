@@ -6,7 +6,7 @@
 ;; else, allowing you to use your normal init.el for local tests/customization.
 ;; You can use this file to turn off (or back on) extra features by placing
 ;; (or removing) comment marks in front of the module's load line below...
-;;
+
 ;; **NOTE:** Removing (commenting out) some of the default forms could possibly
 ;; break the default configuration and some key-bindings may cause an error buffer
 ;; to pop up...  So be careful if you are trying to hack this thing... I am not
@@ -15,11 +15,11 @@
 ;; yourself all at once!  Try removing only a few things and see how it works
 ;; afterwards for a while before removing more things...  Same thing applies to
 ;; adding new things of course.  Let developer common sense dictate your choices...
-;;
+
 ;; Encapsulating like features together into separate modules makes customization
 ;; easier to do.  Have fun hacking this!  Its the best way to learn IMHO ;-) 
 ;; Make a local topic fork of this so you have a safety net to fall back on...
-;;
+
 ;; NOTE: One place where modular-emacs is not yet modular are the key-binding
 ;; modules...  All key-bindings for everything are in those key-bindings .el files.
 ;; I plan to modularize key-bindings as well by moving related key commands
@@ -30,7 +30,7 @@
 ;; get that working stable first... (also learn how to use the damn thing! LOL)
 ;; I'm still cursing myself after accidentally hitting "V" for paste, when I
 ;; thought I was in insert mode typing plain text!  But I am getting better.
-;;
+
 ;; This is why it is so important to start out slowly, like learning a new
 ;; musical instrument... But worse... If you play a wrong note in music, its
 ;; just a hiccup.. No damage done, except a little embarrassment...
