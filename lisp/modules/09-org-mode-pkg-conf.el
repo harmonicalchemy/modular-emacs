@@ -40,7 +40,7 @@
 ;; Summon the Org-mode Gods to be ready to grant your Mod requests...
 
 (require 'org)
-;(require 'org-tempo)
+(require 'org-tempo)
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Define LOCAL USER MASTER ORG FILES DIRECTORY:
