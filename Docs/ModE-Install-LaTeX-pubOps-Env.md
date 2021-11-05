@@ -121,11 +121,11 @@ Put it after your `~/.bin` and `/opt` paths but before: `/usr/bin` and `/bin` et
 
 ### Linux:
 
-On Linux, _(currently Fedora)_ see: **[Fedora DOCS: LaTeX page](https://docs.fedoraproject.org/en-US/neurofedora/latex/)** for reference...
+#### Fedora:
 
-> **Note:** Other Linux platform instructions will be fourthcoming later in 2020 but it all amounts to sorting out the package manager commands etc.  Everything below is what you need on those other platforms but the package names may be different.  With a bit of research you may be able to translate the instructions below for your specific platform:
+**See: [Fedora DOCS: LaTeX page](https://docs.fedoraproject.org/en-US/neurofedora/latex/)** for reference...
 
-#### TexLive Package _(three choices/sizes)_
+##### TexLive Package _(three choices/sizes)_
 
 - **Install TexLive on Fedora:** Choose a package size that fits your needs... I went for `texlive-scheme-full` as I have plenty of disk space currently... The full package is over 3GB installed!  You may need to create an extended cache for DNF to use so it does not run out of disk space/memory while installing... This will take some time so you may want to plan other things to do in parallel to GTD...
 
@@ -137,7 +137,7 @@ $>  sudo dnf install texlive-scheme-medium
 $>  sudo dnf install texlive-scheme-full
 ```
 
-#### TeXStudio
+##### TeXStudio
 
 TeXStudio is a fully featured LaTeX editor that will be helpful for working on documents to make touch ups etc. _(outside of using Emacs for the same purposes)_ but it is nice to have alternates when things arn't going quite right and you are in troubleshooting mode, or maybe you just need to get a doc finished in a hurry and nothing else seems to be working for you! it's good to have options... _(open source options)_
 
@@ -145,8 +145,7 @@ TeXStudio is a fully featured LaTeX editor that will be helpful for working on d
 ```yaml
 $>  sudo dnf install TeXStudio
 ```
-
-#### Rubber
+##### Rubber
 
 For the **Modular Emacs Org Timesheet** Invoice feature to work correctly you need **`rubber`** installed... **Rubber** is a `make` like build utility for LaTeX.  It is written in Python and is not part of the packages above... 
 
@@ -167,7 +166,7 @@ At this point you should be good to go... The Linux package managers take care o
 
 While you are still here, there are additional _(optional)_ packages that may be helpful as well. Feel free to install these too:
 
-#### Additional Optional Packages:
+##### Additional Optional Packages:
 
 - **`chkTeX`** LaTex semantic checker
 
@@ -203,6 +202,23 @@ $>  sudo dnf install 'tex(hyperref.sty)'
 # etc...
 ```
 
+#### Debian:
+
+The following is a quick summary install for TeXLive and TeXstudio on Debian 10 (Buster). For older releases, your milage may vary. I will be adding notes for Debian 11 soon... When that happens this doc will also include more details for customization options, etc. 
+
+**See: [Debian Package: texlive-full page](https://packages.debian.org/buster/texlive-full)** metapackage pulling in all components of TeX Live for Debian 10...
+
+The TeX Live software distribution offers a complete TeX system. It encompasses programs for typesetting, previewing and printing of TeX documents in many different languages, and a large collection of TeX macros and font libraries. . The distribution also includes extensive general documentation about TeX, as well as the documentation accompanying the included software packages. 
+
+In addition to all the LaTeX software, also install TeXstudio editor... (although we will mostly be using Emacs Org-Mode - TeXstudio has its merits as well)
+
+> **Note:** The command below will install TeXLive FULL over 5GB package on your system! If you do that make sure you have allocated enough disk space for it... :trollface: Otherwise, you can try the lighter versions of the package... See link above for other package names...
+
+```yaml
+$>  sudo apt install texlive-full
+$>  sudo apt install texstudio
+```
+
 ## Table Of Contents:
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
@@ -219,9 +235,13 @@ $>  sudo dnf install 'tex(hyperref.sty)'
                     - [Almost Done:](#almost-done)
             - [MacTeX Usage:](#mactex-usage)
         - [Linux:](#linux)
-            - [TexLive Package _(three choices/sizes)_](#texlive-package-_three-choicessizes_)
-            - [TeXStudio](#texstudio)
-            - [Rubber](#rubber)
-            - [Additional Optional Packages:](#additional-optional-packages)
+            - [Fedora:](#fedora)
+                - [TexLive Package _(three choices/sizes)_](#texlive-package-_three-choicessizes_)
+                - [TeXStudio](#texstudio)
+                - [Rubber](#rubber)
+                - [Additional Optional Packages:](#additional-optional-packages)
+            - [Debian:](#debian)
+    - [Table Of Contents:](#table-of-contents)
 
 <!-- markdown-toc end -->
+
