@@ -40,17 +40,19 @@
 ;; Reference: Github.com/lisdude/rmoo.git
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+(require 'xterm-color)
 (add-to-list 'load-path "~/.emacs.d/lisp/my-modules/rmoo")
 (require 'rmoo-autoload)
 (require 'moocode-mode)
 (global-set-key (kbd "C-c C-r") 'rmoo)
 (add-to-list 'auto-mode-alist '("\\.moo$" . moocode-mode))
-(add-hook 'rmoo-interactive-mode-hooks (lambda ()
-(linum-mode -1)                  ;; ... no line numbers
-(olivetti-mode)
-(olivetti-set-width 102)
-(goto-address-mode t)))          ;; ... clickable links
 
+(add-hook 'rmoo-interactive-mode-hooks
+          (lambda ()
+            (linum-mode -1)            ;; no line numbers
+            (olivetti-mode)
+            (olivetti-set-width 80)
+            (goto-address-mode t)))    ;; clickable links
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;;             GNU - E. M. M. S. with M P D

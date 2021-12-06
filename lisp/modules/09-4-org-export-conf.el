@@ -209,6 +209,10 @@
    (sql . nil)
    (sqlite . t)))
 
+;;  Enable normal tab behaviour for SRC Block language Modes:
+
+(setq org-src-tab-acts-natively t)
+
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;   END: [modular-emacs]:~/.emacs.d/lisp/modules/09-4-org-export-conf.el
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

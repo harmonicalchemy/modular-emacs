@@ -42,11 +42,31 @@
 (add-to-list 'auto-mode-alist '("/authorized_keys2?\\'" . ssh-authorized-keys-mode))
 (add-hook 'ssh-config-mode-hook 'turn-on-font-lock)
 
-;; Enforce spaces for indentation, instead of tabs
+
+;;;
+;; Disable Tabs Globally (use spaces only), and reactivate them for
+;; modes with smart tabs handling:
 
 (setq-default indent-tabs-mode nil)
 
-;; Enable Smart Tabs for all supported languages:
+(add-hook 'c-mode-common-hook
+              (lambda () (setq indent-tabs-mode t)))
+
+;; Set Default Tab size to three spaces:
+
+(setq-default tabs-width 3)
+
+;; Add Language Support for Web Dev: (HTML, CSS, PHP, etc...)
+(setq c-basic-offset 3)
+
+(setq web-mode-markup-indent-offset 3)
+(setq web-mode-css-indent-offset 3)
+(setq web-mode-code-indent-offset 3)
+(setq web-mode-sql-indent-offset 3)
+
+(setq css-indent-offset 3)
+
+;; Enable Smart Tabs for all supported languages including above:
 
 (smart-tabs-insinuate 'c
                       'c++

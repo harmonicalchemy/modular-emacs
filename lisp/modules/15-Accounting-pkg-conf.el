@@ -22,7 +22,7 @@
 ;; Declare default accounting module list of required packages:
 
 (defvar me--acounting-packages
-  '(hledger-mode
+  '(ledger-mode
     timesheet))
 
 ;;;
@@ -32,55 +32,15 @@
       me--acounting-packages)
 
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;     *** Basic HLedger Mode Configuration ***
+;;     *** Basic Ledger Mode Configuration ***
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-(require 'hledger-mode)
+(require 'ledger-mode)
 
 ;;;
 ;; To open files with .journal extension in hledger-mode
 
-(add-to-list 'auto-mode-alist '("\\.journal\\'" . hledger-mode))
-
-;;;
-;; Kindly Provide the path to your local journal file...
-;; (providing a default location and filename would be too
-;;  opinionated, IMHO %^)
-;;
-;;  btw %^) is my default Picasso cubist smiling emoji..
-;;  I have been using this same text emoji since the early 80's!
-;;  Maybe I should trade mark it... That's opinionated. lol
-
-(when ME--LINUX
-  (setq
-   hledger-jfile
-   "~/000-GIT/My-Docs/Org-Docs/03-Private/.hledger.journal"))
-
-(when ME--DARWIN
-  (setq
-   hledger-jfile
-   "~/Path/To/Your/Personal/HLedger-Accounting/.hledger.journal"))
-
-;;;
-;; Auto-completion for account names
-;; For company-mode users,
-
-;(add-to-list 'company-backends 'hledger-company)
-
-;;;
-;; For auto-complete users,
-
-(add-to-list 'ac-modes 'hledger-mode)
-(add-hook 'hledger-mode-hook
-    (lambda ()
-        (setq-local ac-sources '(hledger-ac-source))))
-
-;;;
-;;  Key BIndings:
-
-(global-set-key (kbd "C-c e") 'hledger-jentry)
-(global-set-key (kbd "C-c j") 'hledger-run-command)
-
+(add-to-list 'auto-mode-alist '("\\.journal\\'" . ledger-mode))
 
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  *** Custom Functions for Timesheet.el ***

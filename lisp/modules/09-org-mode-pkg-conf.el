@@ -214,6 +214,75 @@
   (interactive)
   (org-insert-drawer nil "README"))
 
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Modular Emacs Quick Insert CUSTOM_ID for links
+;;  with Helper Functions...
+;;  Ref: https://writequit.org/articles/emacs-org-mode-generate-ids.html
+;;       This implements the initial set of functions etc. from Lee's
+;;       article.  He has revised his original due to some user input
+;;       etc...  I have not implemented that but if problems arise
+;;       as mentioned in the above article, go back and implement
+;;       those updates at the bottom of his article...
+
+;; Require the org-id library, which contains
+;; helpers. Use a CUSTOM_ID for links:
+
+(require 'org-id)
+(setq org-id-link-to-org-use-id 'create-if-interactive-and-no-custom-id)
+
+;; Define custom Modular Emacs version of org-custom-id-get
+;; that calls org-id-new and creates a new property if one
+;; doesn't already exist...
+
+(defun me_org-custom-id-get (&optional pom create prefix)
+  "Get the CUSTOM_ID property of the entry at point-or-marker POM.
+   If POM is nil, refer to the entry at point. If the entry does
+   not have an CUSTOM_ID, the function returns nil. However, when
+   CREATE is non nil, create a CUSTOM_ID if none is present
+   already. PREFIX will be passed through to `org-id-new'. In any
+   case, the CUSTOM_ID of the entry is returned."
+  (interactive)
+  (org-with-point-at pom
+    (let ((id (org-entry-get nil "CUSTOM_ID")))
+      (cond
+       ((and id (stringp id) (string-match "\\S-" id))
+        id)
+       (create
+        (setq id (org-id-new (concat prefix "h")))
+        (org-entry-put pom "CUSTOM_ID" id)
+        (org-id-add-location id (buffer-file-name (buffer-base-buffer)))
+        id)))))
+
+;; Add a helper function that's interactive to add custom ids to all
+;; headlines in the buffer if they don't already have one. 
+
+(defun me_org-add-ids-to-headlines-in-file ()
+  "Add CUSTOM_ID properties to all headlines in the
+   current file which do not already have one."
+  (interactive)
+  (org-map-entries (lambda () (me_org-custom-id-get (point) 'create))))
+
+;; Add a helper function that's interactive to add a custom id to 
+;; the headline at the current cursor location in buffer
+;; (if there isn't a custom ID set allready)...
+
+(defun me_org-add-id-to-headline ()
+  "Add CUSTOM_ID property to headline nearest to current cursor
+   location if the heading does not already have one."
+  (interactive)
+  (me_org-custom-id-get (point) 'create))
+
+;; Optional helper to add a CUSTOM_ID to headlines
+;; created when using an org-capture template: 
+
+(add-hook 'org-capture-prepare-finalize-hook
+          (lambda () (me_org-custom-id-get (point) 'create)))
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Org Outline Tree on left | content on 
@@ -311,6 +380,22 @@
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Modular Emacs - me_org-toggle-blocks Function:
+;;
+;;  With this in place, org-mode collapses SRC blocks by default and lets you
+;;  toggle visibility of all SRC blocks by hitting C-c t.
+
+(defvar me--org-blocks-hidden nil)
+
+(defun me_org-toggle-blocks ()
+  (interactive)
+  (if me--org-blocks-hidden
+      (org-show-block-all)
+    (org-hide-block-all))
+  (setq-local me--org-blocks-hidden (not me--org-blocks-hidden)))
+
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Modular Emacs - Fancy Org View - org-mode Hook Function:
 ;;  This Fancy Org View hook takes care of setting your writing/publishing
 ;;  environment nicely...
@@ -347,6 +432,9 @@
                             ((name   . "HA Mod Emacs v3.4 - Normal Org Mode")
                              (height . 38)
                              (width  . 88))))
+
+  ;; Collapse all source blocks;
+  (org-hide-block-all)
 
   ;; Enable Olivetti Mode (100 column wide)
   (olivetti-set-width 82)
