@@ -60,6 +60,7 @@
 ;(setq imenu-list-auto-resize nil)
 
 ;; imenu tweaks:
+
 (setq imenu-auto-rescan t)
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -87,12 +88,12 @@
 ;; Trim some minor mode’s display to a single unicode icon:
 
 (dolist (mim '((auto-revert-mode   . "♺")
-              (auto-fill-function . "⤶")
-              (visual-line-mode   . "⤵")
-              (isearch-mode       . "⁇")
-              (paredit-mode       . "⁐")
-              (xah-fly-keys       . "∑fk")
-              (smartparens-mode   . "⦅⦆")))
+               (auto-fill-function . "⤶")
+               (visual-line-mode   . "⤵")
+               (isearch-mode       . "⁇")
+               (paredit-mode       . "⁐")
+               (xah-fly-keys       . "∑fk")
+               (smartparens-mode   . "⦅⦆")))
 
   (let ((mode (car mim))
         (repl (list (concat " " (cdr mim)))))
@@ -105,21 +106,23 @@
 ;; DISABLED - I no longer wish to mess with fancy
 ;;            mode lines... The default works fine
 ;;            for me. ;-) Your mileage may vary...
-;
+;;
 ;;  Choose SML Theme:
 ;;  NOTE:   THIS IS DISABLED
 ;;    (I am no longer using mode-line packages)
 ;;    (pick one and enable it if you like but also
 ;;    load the theme at top first!)
-;
-;(setq sml/theme 'dark)
-;(setq sml/theme 'light)
-;(setq sml/theme 'respectful)
-;
+
+;;  ;(setq sml/theme 'dark)
+;;  ;(setq sml/theme 'light)
+;;  ;(setq sml/theme 'respectful)
+
+;;
 ;; Enable Smart Mode Line after Emacs Startup:
 ;; NOTE: THIS IS DISABLED (see above note)
-;(add-hook 'after-init-hook 'sml/setup)
-;
+
+;;  ;(add-hook 'after-init-hook 'sml/setup)
+
 ;;; POWERLINE MODE
 ;;                          (DISABLED)
 ;;  If you would rather use powerline, enable the three forms below
@@ -129,11 +132,11 @@
 ;;  section!
 ;;
 ;; Enable powerline:
-;(require 'powerline)
-;(powerline-center-theme)
-;(setq powerline-default-separator 'slant)
-;
-;
+
+  ;(require 'powerline)
+  ;(powerline-center-theme)
+  ;(setq powerline-default-separator 'slant)
+
 ;; Platform Specific SML directory abbreviations:
 ;; NOTE: THIS IS DISABLED - Just as above you need to
 ;;       un-comment this section and make sure other smart-mode-line
@@ -146,32 +149,40 @@
 ;;  (one which you would like to make a shortcut abbreviation for...
 ;;  Add more just like that to the end of the list (as instructed in the
 ;;  comment at the end of the list)
-;
+;;
 ;; Platform Specific SML directory abbreviations:
 ;;                  (DISABLED)
-;(when ME--DARWIN
-;  (add-to-list 'sml/replacer-regexp-list '("^~/\\.emacs\\.d/" ":EMACS:"))
-;  (add-to-list 'sml/replacer-regexp-list '("^~/Documents/" ":DOCS:"))
-;  ;; Add more platform specific directory shortcut abbreviations to this list here as needed....
-;  ;; When you are done adding new abbreviations, get rid of this comment and pull up the
-;  ;; final parenthesis below to tidy up %^)...
-;  )
-;
-;(when ME--LINUX
-;  (add-to-list 'sml/replacer-regexp-list '("^~/\\.emacs\\.d/" ":EMACS:"))
-;  (add-to-list 'sml/replacer-regexp-list '("^~/Documents/" ":DOCS:"))
-;  ;; Add more platform specific directory shortcut abbreviations to this list here as needed....
-;  ;; When you are done adding new abbreviations, get rid of this comment and pull up the
-;  ;; final parenthesis below to tidy up %^)...
-;  )
-;
+
+ ;(when ME--DARWIN
+ ;  (add-to-list 'sml/replacer-regexp-list '("^~/\\.emacs\\.d/" ":EMACS:"))
+ ;  (add-to-list 'sml/replacer-regexp-list '("^~/Documents/" ":DOCS:"))
+
+;; Add more platform specific directory shortcut abbreviations
+;; to this list here as needed....
+;; When you are done adding new abbreviations, get rid of this comment 
+;; and pull up the final parenthesis below to tidy up %^)...
+
+ ;)
+
+ ;(when ME--LINUX
+ ;(add-to-list 'sml/replacer-regexp-list '("^~/\\.emacs\\.d/" ":EMACS:"))
+ ;(add-to-list 'sml/replacer-regexp-list '("^~/Documents/" ":DOCS:"))
+
+;; Add more platform specific directory shortcut abbreviations
+;; to this list here as needed....
+;; When you are done adding new abbreviations, get rid of this comment
+;; and pull up the final parenthesis below to tidy up %^)...
+
+ ;)
+
 ;; Platform Independent SML directory abbreviations:
-;
-;  (add-to-list 'sml/replacer-regexp-list '("^:DOCS:/Path/To/Your/Other/Docs/" ":My-Other-Docs:"))
-;
-;; Add more platform independent directory shortcut abbreviations just like the last form above...
-;; These are invoked independently as complete forms here... No cleanup or closing paren needed when
-;; adding to the end of this list...
+
+ ;(add-to-list 'sml/replacer-regexp-list '("^:DOCS:/Path/To/Your/Other/Docs/" ":My-Other-Docs:"))
+
+;; Add more platform independent directory shortcut abbreviations
+;; just like the last form above...
+;; These are invoked independently as complete forms here...
+;; No cleanup or closing paren needed when adding to the end of this list...
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -182,98 +193,79 @@
 (setq helm-split-window-in-side-p t)
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  Modular Emacs - Make Writer's Frame Function:
-;;  This simply makes new frames to match 
-;;  HA Modular Emacs Writing Mode Specification
-;;  using Courier Prime font with dimensions
-;;  that fit best for screenwriters, authors,
-;;  publishers on both iMac 27" screens and small
-;;  Linux Laptops...  The new frame opens with
-;;  initial buffer set to: *Bookmark List*
+;;  Modular Emacs - Make NEW Writer's Frame:
+;;  This makes a brand new frame to match
+;;  HA Modular Emacs Default Writing Frame Specs...
+;;  The new frame opens with initial buffer set
+;;  to: Bookmark Menu List
 
 (defun me_make-writing-frame ()
-  "Create Frames using ME default writer's face
-   and ME default writing/authoring frame dimensions.
-   Frame opens with buffer set to *Bookmark List*"
+  "Create NEW Frame using ME default writer's face
+   and ME default writer's frame dimensions
+   Frame opens with buffer set to Bookmark Menu List"
   (interactive)
   (progn
     ;; Set buffer to *Bookmark List*
+
     (bookmark-bmenu-list)
 
     ;; Make New Writer's Frame:
+
     (make-frame
      (quote
-      ;; Modify Frame dimensions for Writing with Olivetti mode enabled...
-      ((name . "HA Mod Emacs v3.4 - Writer's Frame")
-       (height . 38)
-       (width . 88))))
+      ((name . "HA Mod Emacs v3.4 - Writer's Frame"))))
 
     ;; Select this new frame:
+
     (select-frame-by-name "HA Mod Emacs v3.4 - Writer's Frame")
 
     ;; Set Default Face to Courier Prime:
     (set-face-attribute 'default (selected-frame)
                         :family "Courier Prime"
-                        :height 130)
-
-    ;; Set Olivetti Width (88 column wide)
-    (olivetti-set-width 82)
-
-    ;; Call Xah-Fly-Keys (resets some face attributes)
-    (xah-fly-keys 1)))
-
+                        :height 135)))
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  Modular Emacs - Make Coder's Frame Function:
-;;  This simply makes new frames to match 
-;;  HA Modular Emacs Coding Mode Specification
-;;  using Hermit font with dimensions that fit
-;;  best for coding on both iMac 27" screens
-;;  and small Linux Laptops...
+;;  Modular Emacs - Make NEW Coder's Frame:
+;;  This makes a brand new frame to match
+;;  HA Modular Emacs Default Coding Frame Specs...
 ;;  The new frame opens with initial buffer set
-;;  to: *scratch*
+;;  to: Bookmark Menu List
 
 (defun me_make-coding-frame ()
-  "Create Frames using ME default coding face
+  "Create NEW Frame using ME default coding face
    and ME default coding frame dimensions
-   Frame opens with buffer set to *scratch*"
+   Frame opens with buffer set to Bookmark Menu List"
   (interactive)
   (progn
     ;; Set buffer to *Bookmark List*
     (bookmark-bmenu-list)
 
-    ;; Make New Coder's Frame:
+    ;; Make NEW Coder's Frame:
+
     (make-frame
      (quote
-      ;; Modify Frame dimensions for coding...
-      ((name . "HA Mod Emacs v3.4 - Coder's Frame")
-       (height . 38)
-       (width . 88))))
+      ((name . "HA Mod Emacs v3.4 - Coder's Frame"))))
 
-    ;; Select this new frame:
+    ;; Select this NEW Frame:
     (select-frame-by-name "HA Mod Emacs v3.4 - Coder's Frame")
 
-    ;; Set Default Face to Hermit for coding:
+    ;; Set Default Face for Coding:
     (set-face-attribute 'default (selected-frame)
                         :family "Hermit"
-                        :height 120)
-
-    ;; Call Xah-Fly-Keys (resets some face attributes)
-    (xah-fly-keys 1)))
-
+                        :height 120)))
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Modular Emacs - Make Frame Function:
-;;  This simply makes new frames to match 
-;;  HA Modular Emacs current me--def-face flag setting.
-;;  If the flag is set to: 1, mw_make-writing-frame
-;;  function above is called...
-;;  If the flag is set to: 2,  mw_make-coding-frame
-;;  function above is called...
+;;  This makes NEW frames to match HA Modular Emacs
+;;  current me--def-face flag setting...
+;;  If the flag is set to: 1
+;;     me_make-writing-frame is called...
+;;  If the flag is set to: 2
+;;     me_make-coding-frame is called...
 
 (defun me_make-frame ()
   "Create Frames depending on the current setting of
-   the me--def-face flag. If flag = 2 make writer's 
+   the me--def-face flag. If flag = 2 make writer's
    frame. If flag = 1, make coder's frame..."
   (interactive)
   (progn
@@ -286,97 +278,131 @@
       (me_make-coding-frame)))))
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  Modular Emacs - Set Default Face Functions:
-;;
-;;  Purpose:
-;;
-;;    I like to use a serif mono font for writing paragraphs...
-;;    but I use Hermit or other similar font for Coding...
-;;    This provides a way to go back and fourth from one
-;;    face (which is Emacs Default) to another depending on
-;;    my current work mode (writing or coding)...
-;;
-;;  Usage:
-;;
-;;    Adjust face dimensions and weight within forms below as needed.
-;;    Note: Linux vs Mac, Big screen vs Laptop, may require
-;;          sub cases to handle... %^)
-;;
-;;    Xah Fly Key Assigned: Command Mode "p"
-;;
-;;  NOTE1:  Currently there is no check to see if these fonts are 
-;;          installed on your system! This is still alpha test stage..."
-;;
-;;  NOTE2:  It appears that Courier Prime is required to prevent
-;;          D o u b l e  W i d e rendering of certain Emacs faces! This
-;;          was a problem on Linux.  Not sure about Mac OS yet as I
-;;          installed Courier Prime there first and it "just worked" ;-)
-;;          This is the reason I have two cases below in the function.
-;;          Currently the cases produce redundant results, but i left them in
-;;          in case I need to play around with this later...
-;;
-;;  NOTE3:  If I get fancy with fonts, I will provide them in this repo for easy
-;;          installations. In fact I have already gotten fancy with fonts eh? LOL
-;;
-;; Set Default face to Org face Function:
+  ;;  Modular Emacs - Set Default Face Functions:
+  ;;
+  ;;  Purpose:
+  ;;
+  ;;    I like to use a serif mono font for writing paragraphs...
+  ;;    but I use Hermit or other similar font for Coding...
+  ;;    This provides a way to go back and fourth from one
+  ;;    face (which is Emacs Default) to another depending on
+  ;;    my current work mode (writing or coding)...
+  ;;
+  ;;  Usage:
+  ;;
+  ;;    Adjust face dimensions and weight within forms below as needed.
+  ;;    Note: Linux vs Mac, Big screen vs Laptop, may require
+  ;;          sub cases to handle... %^)
+  ;;
+  ;;    Xah Fly Key Assigned: Command Mode "p"
+  ;;
+  ;;  NOTE1:  Currently there is no check to see if these fonts are
+  ;;          installed on your system! This is still alpha test stage..."
+  ;;
+  ;;  NOTE2:  It appears that Courier Prime is required to prevent
+  ;;          D o u b l e  W i d e rendering of certain Emacs faces! This
+  ;;          was a problem on Linux.  Not sure about Mac OS yet as I
+  ;;          installed Courier Prime there first and it "just worked" ;-)
+  ;;          This is the reason I have two cases below in the function.
+  ;;          Currently the cases produce redundant results, but i left them in
+  ;;          in case I need to play around with this later...
+  ;;
+  ;;  NOTE3:  If I get fancy with fonts, I will provide them in this repo for easy
+  ;;          installations. In fact I have already gotten fancy with fonts eh? LOL
+  ;;
 
-(defun me_set-writing-face ()
-  "Set default face to Courier Prime (A nice mono serif for writing)"
-  ;; NOTE1: This only sets the face for the currently Selected Frame...
-  ;;        (other frames are not affected)
-  ;; NOTE2: The flag that gets set to check whether coding or writing mode
-  ;;        DOES effect other frames!  This is a side effect, but the remedy
-  ;;        is to simply toggle the key twice.  A silly fix is too complicated imho!
+;;;
+;; Set Modular Emacs Writing Frame Function:
+;; NOTE: This only sets frame parameters
+;;       for the currently Selected Frame...
+;;        (other frames are not affected)
+
+(defun me_set-writing-frame ()
+  "Set Frame Font & Frame Dimensions for Writing"
   (interactive)
   (progn
     (set-face-attribute 'default (selected-frame)
                         :family "Courier Prime"
-                        :height 130)
+                        :height 135)
 
-    ;; Modify Frame dimensions for Writing with Olivetti mode enabled...
-    (modify-frame-parameters nil
-                             (quote
-                              ((name . "HA Mod Emacs v3.4 - Writing Mode")
-                               (height . 38)
-                               (width . 88))))))
+    (modify-frame-parameters
+     nil
+     (quote
+      ((name . "HA Mod Emacs v3.4 - Writer's Frame")
+       (height . 38)
+       (width  . 92))))))
 
 
-;; Restore Default Face Function:
+;;;
+;; Set Modular Emacs Coding Frame Function:
+;; NOTE: This only sets the frame parameters
+;;       for the currently Selected Frame...
+;;        (other frames are not affected)
 
-(defun me_set-coding-face ()
-  "Set default font to Hermit Medium (my faverite mono font for coding)"
-  ;; NOTE: This only sets the face for the currently Selected Frame...
-  ;;       (other frames are not affected)
+(defun me_set-coding-frame ()
+  "Set Frame Font & Frame Dimensions for Coding"
   (interactive)
   (progn
     (set-face-attribute 'default (selected-frame)
                         :family "Hermit"
                         :height 120)
 
-    (modify-frame-parameters nil
-                             (quote
-                              ((name . "HA Mod Emacs v3.4 - Coder's Frame")
-                               (height . 38)
-                               (width . 88))))))
+    (modify-frame-parameters
+     nil
+     (quote
+      ((name . "HA Mod Emacs v3.4 - Coder's Frame")
+       (height . 38)
+       (width  . 92))))))
+
 
 ;;;
-;;  Toggle Default Face...
-;;  NOTE: This only sets the face for the currently Selected Frame...
-;;       (other frames are not affected) 
+;; Set Modular Emacs Fancy Org-Mode WIDE Frame Function:
+;; NOTE: This only sets frame parameters
+;;       for the currently Selected Frame...
+;;        (other frames are not affected)
+
+(defun me_set-org-wide-frame ()
+  "Set Frame Font & Frame Dimensions for Modular Emacs Fancy WIDESCREEN Org-Mode"
+  (interactive)
+  (progn
+    (set-face-attribute 'default (selected-frame)
+                        :family "Courier Prime"
+                        :height 135)
+
+    ;; Modify Frame dimensions for Fancy WIDE Org-Mode:
+    (modify-frame-parameters
+     nil
+     (quote
+      ((name   . "HA Mod Emacs v3.4 - Fancy Wide Org-Mode Frame")
+       (height . 38)
+       (width  . 142))))))
+
+
+;;;
+;;  Toggle Default Face Function:
 ;;
-;;  This one gets bound to Xah Fly Command Key:  "p"
-;;  This one calls one of the two above depending on test variable:  me--default
-;;  if me--default is t
-;;    Switch to Org Mode
-;;    Change me--default to nil
-;;  Otherwise
-;;    Switch back to default face
-;;    Change me--default to t
+;;  Bound to Xah Fly Command Key:  "p"
+;;
+;;  NOTE1: This only sets the face for the currently Selected Frame...
+;;         (other frames are not affected)
+;;
+;;  This function calls one of the two above depending on test variable:  me--default
+;;    if me--default is t
+;;      Switch to Writer's Frame Style
+;;      Change me--default to nil
+;;    Otherwise
+;;      Switch to Coder's Frame Style
+;;      Change me--default to t
+;;
+;;  NOTE2: The flag that gets set to check whether coding or writing mode
+;;         DOES effect other frames!  This is a side effect, but the remedy
+;;         is to simply toggle the key twice.  A silly fix is too complicated imho!
+;;
 
 (defvar me--def-face 1 "Test variable for me_toggle-default-face")
 
 (defun me_toggle-default-face ()
-  "Toggle default face for selected frame only,
+  "Toggle default frame parameters for selected frame only,
    depending on current editing needs...
    Purpose: I like to use a serif mono font for writing
    paragraphs, but I need to use Hermit etc. for Coding
@@ -395,15 +421,21 @@
   ;;       Simply toggle the key a second time if you do not see the font
   ;;       change etc. Note, this will reset the flag in your coding frame,
   ;;       but no worries there either.. (the woes of multitasking lol)
+  ;;
+  ;;       UPDATE: Thinking on this further... It makes sense to do this
+  ;;               in a let form...  Then local variables will not effect
+  ;;               flag state in other frames... I was being lazy above. %~)
+  ;;               Still being lazy cause I have not put that let form in
+  ;;               below yet... LOL
   (interactive)
   (cond
    ((= me--def-face 1)
     (message "Setting default face to Courier Prime for Writing")
-    (me_set-writing-face)
+    (me_set-writing-frame)
     (setq me--def-face 2))
    ((= me--def-face 2)
     (message "Setting default face to Hermit for Coding")
-    (me_set-coding-face)
+    (me_set-coding-frame)
     (setq me--def-face 1))))
 
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

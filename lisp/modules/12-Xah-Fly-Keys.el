@@ -130,10 +130,6 @@
 
   (define-key xah-fly-command-map (kbd "2") 'me_make-frame)
 
-  ;; Set easy key to toggle neotree in left window pane:
-  ;; Note: This disables (default Xfk to run command delete-char)
-  ;;       I don't need that as the "D" key works fine for me...
-
   ;; Switch to Modular Emacs Org Mode Wide Screen View:
   ;; This DIRECT Command Mode "5" key mirrors
   ;; PRIMARY Leader-Key "5" key below...
