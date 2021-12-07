@@ -60,6 +60,7 @@
 ;(setq imenu-list-auto-resize nil)
 
 ;; imenu tweaks:
+
 (setq imenu-auto-rescan t)
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -87,12 +88,12 @@
 ;; Trim some minor mode’s display to a single unicode icon:
 
 (dolist (mim '((auto-revert-mode   . "♺")
-              (auto-fill-function . "⤶")
-              (visual-line-mode   . "⤵")
-              (isearch-mode       . "⁇")
-              (paredit-mode       . "⁐")
-              (xah-fly-keys       . "∑fk")
-              (smartparens-mode   . "⦅⦆")))
+               (auto-fill-function . "⤶")
+               (visual-line-mode   . "⤵")
+               (isearch-mode       . "⁇")
+               (paredit-mode       . "⁐")
+               (xah-fly-keys       . "∑fk")
+               (smartparens-mode   . "⦅⦆")))
 
   (let ((mode (car mim))
         (repl (list (concat " " (cdr mim)))))
@@ -105,21 +106,23 @@
 ;; DISABLED - I no longer wish to mess with fancy
 ;;            mode lines... The default works fine
 ;;            for me. ;-) Your mileage may vary...
-;
+;;
 ;;  Choose SML Theme:
 ;;  NOTE:   THIS IS DISABLED
 ;;    (I am no longer using mode-line packages)
 ;;    (pick one and enable it if you like but also
 ;;    load the theme at top first!)
-;
-;(setq sml/theme 'dark)
-;(setq sml/theme 'light)
-;(setq sml/theme 'respectful)
-;
+
+;;  ;(setq sml/theme 'dark)
+;;  ;(setq sml/theme 'light)
+;;  ;(setq sml/theme 'respectful)
+
+;;
 ;; Enable Smart Mode Line after Emacs Startup:
 ;; NOTE: THIS IS DISABLED (see above note)
-;(add-hook 'after-init-hook 'sml/setup)
-;
+
+;;  ;(add-hook 'after-init-hook 'sml/setup)
+
 ;;; POWERLINE MODE
 ;;                          (DISABLED)
 ;;  If you would rather use powerline, enable the three forms below
@@ -129,11 +132,11 @@
 ;;  section!
 ;;
 ;; Enable powerline:
-;(require 'powerline)
-;(powerline-center-theme)
-;(setq powerline-default-separator 'slant)
-;
-;
+
+  ;(require 'powerline)
+  ;(powerline-center-theme)
+  ;(setq powerline-default-separator 'slant)
+
 ;; Platform Specific SML directory abbreviations:
 ;; NOTE: THIS IS DISABLED - Just as above you need to
 ;;       un-comment this section and make sure other smart-mode-line
@@ -146,32 +149,40 @@
 ;;  (one which you would like to make a shortcut abbreviation for...
 ;;  Add more just like that to the end of the list (as instructed in the
 ;;  comment at the end of the list)
-;
+;;
 ;; Platform Specific SML directory abbreviations:
 ;;                  (DISABLED)
-;(when ME--DARWIN
-;  (add-to-list 'sml/replacer-regexp-list '("^~/\\.emacs\\.d/" ":EMACS:"))
-;  (add-to-list 'sml/replacer-regexp-list '("^~/Documents/" ":DOCS:"))
-;  ;; Add more platform specific directory shortcut abbreviations to this list here as needed....
-;  ;; When you are done adding new abbreviations, get rid of this comment and pull up the
-;  ;; final parenthesis below to tidy up %^)...
-;  )
-;
-;(when ME--LINUX
-;  (add-to-list 'sml/replacer-regexp-list '("^~/\\.emacs\\.d/" ":EMACS:"))
-;  (add-to-list 'sml/replacer-regexp-list '("^~/Documents/" ":DOCS:"))
-;  ;; Add more platform specific directory shortcut abbreviations to this list here as needed....
-;  ;; When you are done adding new abbreviations, get rid of this comment and pull up the
-;  ;; final parenthesis below to tidy up %^)...
-;  )
-;
+
+ ;(when ME--DARWIN
+ ;  (add-to-list 'sml/replacer-regexp-list '("^~/\\.emacs\\.d/" ":EMACS:"))
+ ;  (add-to-list 'sml/replacer-regexp-list '("^~/Documents/" ":DOCS:"))
+
+;; Add more platform specific directory shortcut abbreviations
+;; to this list here as needed....
+;; When you are done adding new abbreviations, get rid of this comment 
+;; and pull up the final parenthesis below to tidy up %^)...
+
+ ;)
+
+ ;(when ME--LINUX
+ ;(add-to-list 'sml/replacer-regexp-list '("^~/\\.emacs\\.d/" ":EMACS:"))
+ ;(add-to-list 'sml/replacer-regexp-list '("^~/Documents/" ":DOCS:"))
+
+;; Add more platform specific directory shortcut abbreviations
+;; to this list here as needed....
+;; When you are done adding new abbreviations, get rid of this comment
+;; and pull up the final parenthesis below to tidy up %^)...
+
+ ;)
+
 ;; Platform Independent SML directory abbreviations:
-;
-;  (add-to-list 'sml/replacer-regexp-list '("^:DOCS:/Path/To/Your/Other/Docs/" ":My-Other-Docs:"))
-;
-;; Add more platform independent directory shortcut abbreviations just like the last form above...
-;; These are invoked independently as complete forms here... No cleanup or closing paren needed when
-;; adding to the end of this list...
+
+ ;(add-to-list 'sml/replacer-regexp-list '("^:DOCS:/Path/To/Your/Other/Docs/" ":My-Other-Docs:"))
+
+;; Add more platform independent directory shortcut abbreviations
+;; just like the last form above...
+;; These are invoked independently as complete forms here...
+;; No cleanup or closing paren needed when adding to the end of this list...
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -195,31 +206,23 @@
   (interactive)
   (progn
     ;; Set buffer to *Bookmark List*
+
     (bookmark-bmenu-list)
 
     ;; Make New Writer's Frame:
-    (let ((frame-height ME--DOC-FRAME-HEIGHT)
-          (frame-width ME--DOC-FRAME-WIDTH))
-      ;; Set Frame Dimensions for Writing:
-      (make-frame
-       (quote
-        ((name   . "HA Mod Emacs v3.4 - Writer's Frame")
-         (height . 42)
-         (width  . 92)))))
+
+    (make-frame
+     (quote
+      ((name . "HA Mod Emacs v3.4 - Writer's Frame"))))
 
     ;; Select this new frame:
+
     (select-frame-by-name "HA Mod Emacs v3.4 - Writer's Frame")
 
     ;; Set Default Face to Courier Prime:
     (set-face-attribute 'default (selected-frame)
                         :family "Courier Prime"
-                        :height 130)
-
-    ;; Set Olivetti Default Width
-    (olivetti-set-width ME--DOC-OLIV-WIDTH)
-
-    ;; Call Xah-Fly-Keys (resets some face attributes)
-    (xah-fly-keys 1)))
+                        :height 135)))
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Modular Emacs - Make NEW Coder's Frame:
@@ -238,14 +241,10 @@
     (bookmark-bmenu-list)
 
     ;; Make NEW Coder's Frame:
-    (let ((frame-height ME--CODE-FRAME-HEIGHT)
-          (frame-width ME--CODE-FRAME-WIDTH))
-      ;; Set Frame Dimensions for Coding:
-      (make-frame
-       (quote
-        ((name . "HA Mod Emacs v3.4 - Coder's Frame")
-         (height . 42)
-         (width . 92)))))
+
+    (make-frame
+     (quote
+      ((name . "HA Mod Emacs v3.4 - Coder's Frame"))))
 
     ;; Select this NEW Frame:
     (select-frame-by-name "HA Mod Emacs v3.4 - Coder's Frame")
@@ -253,15 +252,7 @@
     ;; Set Default Face for Coding:
     (set-face-attribute 'default (selected-frame)
                         :family "Hermit"
-                        :height 120)
-
-    ;; Enable Olivetti Mode - Default Coding Width:
-    (olivetti-mode)
-    (olivetti-set-width ME--CODE-OLIV-WIDTH)
-
-    ;; Call Xah-Fly-Keys (resets some face attributes)
-    (xah-fly-keys 1)))
-
+                        :height 120)))
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Modular Emacs - Make Frame Function:
@@ -274,7 +265,7 @@
 
 (defun me_make-frame ()
   "Create Frames depending on the current setting of
-   the me--def-face flag. If flag = 2 make writer's 
+   the me--def-face flag. If flag = 2 make writer's
    frame. If flag = 1, make coder's frame..."
   (interactive)
   (progn
@@ -287,38 +278,38 @@
       (me_make-coding-frame)))))
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  Modular Emacs - Set Default Face Functions:
-;;
-;;  Purpose:
-;;
-;;    I like to use a serif mono font for writing paragraphs...
-;;    but I use Hermit or other similar font for Coding...
-;;    This provides a way to go back and fourth from one
-;;    face (which is Emacs Default) to another depending on
-;;    my current work mode (writing or coding)...
-;;
-;;  Usage:
-;;
-;;    Adjust face dimensions and weight within forms below as needed.
-;;    Note: Linux vs Mac, Big screen vs Laptop, may require
-;;          sub cases to handle... %^)
-;;
-;;    Xah Fly Key Assigned: Command Mode "p"
-;;
-;;  NOTE1:  Currently there is no check to see if these fonts are 
-;;          installed on your system! This is still alpha test stage..."
-;;
-;;  NOTE2:  It appears that Courier Prime is required to prevent
-;;          D o u b l e  W i d e rendering of certain Emacs faces! This
-;;          was a problem on Linux.  Not sure about Mac OS yet as I
-;;          installed Courier Prime there first and it "just worked" ;-)
-;;          This is the reason I have two cases below in the function.
-;;          Currently the cases produce redundant results, but i left them in
-;;          in case I need to play around with this later...
-;;
-;;  NOTE3:  If I get fancy with fonts, I will provide them in this repo for easy
-;;          installations. In fact I have already gotten fancy with fonts eh? LOL
-;;
+  ;;  Modular Emacs - Set Default Face Functions:
+  ;;
+  ;;  Purpose:
+  ;;
+  ;;    I like to use a serif mono font for writing paragraphs...
+  ;;    but I use Hermit or other similar font for Coding...
+  ;;    This provides a way to go back and fourth from one
+  ;;    face (which is Emacs Default) to another depending on
+  ;;    my current work mode (writing or coding)...
+  ;;
+  ;;  Usage:
+  ;;
+  ;;    Adjust face dimensions and weight within forms below as needed.
+  ;;    Note: Linux vs Mac, Big screen vs Laptop, may require
+  ;;          sub cases to handle... %^)
+  ;;
+  ;;    Xah Fly Key Assigned: Command Mode "p"
+  ;;
+  ;;  NOTE1:  Currently there is no check to see if these fonts are
+  ;;          installed on your system! This is still alpha test stage..."
+  ;;
+  ;;  NOTE2:  It appears that Courier Prime is required to prevent
+  ;;          D o u b l e  W i d e rendering of certain Emacs faces! This
+  ;;          was a problem on Linux.  Not sure about Mac OS yet as I
+  ;;          installed Courier Prime there first and it "just worked" ;-)
+  ;;          This is the reason I have two cases below in the function.
+  ;;          Currently the cases produce redundant results, but i left them in
+  ;;          in case I need to play around with this later...
+  ;;
+  ;;  NOTE3:  If I get fancy with fonts, I will provide them in this repo for easy
+  ;;          installations. In fact I have already gotten fancy with fonts eh? LOL
+  ;;
 
 ;;;
 ;; Set Modular Emacs Writing Frame Function:
@@ -332,16 +323,14 @@
   (progn
     (set-face-attribute 'default (selected-frame)
                         :family "Courier Prime"
-                        :height 130)
+                        :height 135)
 
-    ;; Modify Frame dimensions for Writing...
-    (let ((frame-height ME--DOC-FRAME-HEIGHT)
-          (frame-width ME--DOC-FRAME-WIDTH))
-      (modify-frame-parameters nil
-                               (quote
-                                ((name   . "HA Mod Emacs v3.4 - Writer's Frame")
-                                 (height . 42)
-                                 (width  . 92)))))))
+    (modify-frame-parameters
+     nil
+     (quote
+      ((name . "HA Mod Emacs v3.4 - Writer's Frame")
+       (height . 38)
+       (width  . 92))))))
 
 
 ;;;
@@ -358,14 +347,36 @@
                         :family "Hermit"
                         :height 120)
 
-    ;; Modify Frame dimensions for Coding...
-    (let ((frame-height ME--CODE-FRAME-HEIGHT)
-          (frame-width ME--CODE-FRAME-WIDTH))
-      (modify-frame-parameters nil
-                               (quote
-                                ((name   . "HA Mod Emacs v3.4 - Coder's Frame")
-                                 (height . 42)
-                                 (width  . 92)))))))
+    (modify-frame-parameters
+     nil
+     (quote
+      ((name . "HA Mod Emacs v3.4 - Coder's Frame")
+       (height . 38)
+       (width  . 92))))))
+
+
+;;;
+;; Set Modular Emacs Fancy Org-Mode WIDE Frame Function:
+;; NOTE: This only sets frame parameters
+;;       for the currently Selected Frame...
+;;        (other frames are not affected)
+
+(defun me_set-org-wide-frame ()
+  "Set Frame Font & Frame Dimensions for Modular Emacs Fancy WIDESCREEN Org-Mode"
+  (interactive)
+  (progn
+    (set-face-attribute 'default (selected-frame)
+                        :family "Courier Prime"
+                        :height 135)
+
+    ;; Modify Frame dimensions for Fancy WIDE Org-Mode:
+    (modify-frame-parameters
+     nil
+     (quote
+      ((name   . "HA Mod Emacs v3.4 - Fancy Wide Org-Mode Frame")
+       (height . 38)
+       (width  . 142))))))
+
 
 ;;;
 ;;  Toggle Default Face Function:
