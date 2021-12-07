@@ -123,7 +123,7 @@
 (setq initial-frame-alist
       '( (name . "HA Mod Emacs v3.4 - Coder's Frame")
          (font . "Hermit")
-         (height . 42)
+         (height . 38)
          (width . 92)
          (menu-bar-lines . 1)
          (vertical-scroll-bars . nil)
@@ -139,7 +139,7 @@
 (setq default-frame-alist
       '( (name . "HA Mod Emacs v3.4 - Coder's Frame")
          (font . "Hermit")
-         (height . 42)
+         (height . 38)
          (width . 92)
          (menu-bar-lines . 1)
          (vertical-scroll-bars . nil)

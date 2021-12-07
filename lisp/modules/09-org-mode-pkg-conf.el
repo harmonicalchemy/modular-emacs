@@ -70,6 +70,7 @@
     (file-name-as-directory
      (expand-file-name "~/Path/To/Your/Linux/Org-Docs"))))
 
+
 ;;;
 ;; Use above local Constants to Define Org Mode Default "Org Directory":
 
@@ -336,11 +337,8 @@
               (org-sidebar-tree-toggle))))
 
         ;; Make NORMAL ORG MODE Frame size for writing/composition:
-        (modify-frame-parameters nil
-                                 (quote
-                                  ((name   . "HA Mod Emacs v3.4 - Normal Org Mode")
-                                   (height . 42)
-                                   (width  . 92))))
+
+        (me_set-writing-frame)
 
         ;; Set Olivetti Width (88 column wide)
         (olivetti-mode)
@@ -364,14 +362,13 @@
   ;; Test to make sure we are in Org Mode, if not print a warning...
   (if (equal 'org-mode major-mode)
       (progn
-        ;; Make Wide Screen Fancy Org View View:
-        (modify-frame-parameters nil
-                                 (quote
-                                  ((name   . "HA Mod Emacs v3.4 - Fancy Org View")
-                                   (height . 42)
-                                   (width  . 152))))
+        (me_set-org-wide-frame)
+
         ;; Split Windows with org outline tree in narrow left window...
-        (org-sidebar-tree)
+
+        (org-sidebar-tree-toggle)
+        ;(org-sidebar-tree)
+
         ;; Set Olivetti Width (100 column wide)
         (olivetti-mode)
         (olivetti-set-width 88))
