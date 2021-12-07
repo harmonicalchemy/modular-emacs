@@ -67,7 +67,7 @@
 
 ;; Change title-bar text
 (setq frame-title-format
-      "Harmonic Alchemy Modular Emacs - Version 3.4 (still in beta) [Q2 2021]")
+      "Harmonic Alchemy Modular Emacs - Version 3.4 (still in beta) [Q4 2021]")
 
 ;; Disable tool-bar - I could care less about tool bars in emacs!
 ;; An oxymoron! But you may feel differently.  Comment this out if you like them.
@@ -123,14 +123,13 @@
 (setq initial-frame-alist
       '( (name . "HA Mod Emacs v3.4 - Coder's Frame")
          (font . "Hermit")
-         (height . 38)
-         (width . 88)
+         (height . 42)
+         (width . 92)
          (menu-bar-lines . 1)
          (vertical-scroll-bars . nil)
          (horizontal-scroll-bars . nil)
          (left-fringe . 1)
          (right-fringe . 1)))
-
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Set Default Frame Dimensions:
@@ -140,36 +139,13 @@
 (setq default-frame-alist
       '( (name . "HA Mod Emacs v3.4 - Coder's Frame")
          (font . "Hermit")
-         (height . 38)
-         (width . 88)
+         (height . 42)
+         (width . 92)
          (menu-bar-lines . 1)
          (vertical-scroll-bars . nil)
          (horizontal-scroll-bars . nil)
          (left-fringe . 1)
          (right-fringe . 1)))
-
-
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; NOT USED and possibly buggy anyway... (this mess from before
-;; not quite ready to delete yet for some reason)...
-;;
-;; Disable scrollbar on new frame (all frames no matter what)
-;; Scroll bars in Emacs are strange animals.. They don't belong here.
-;; There seems to be a bug in the standard Emacs way to do this as
-;; I originally tried at the top with: (scroll-bar-mode -1)
-;;
-;; Here is a custom function that takes care of that problem...
-;; Oops! Well that does not work for me either... It may be needed on
-;; Windows platforms however...  If you are trying this on Windows,
-;; you may try un-commenting the function and add-hook below if
-;; you are seeing scroll bars on a second frame...
-;(defun me-disable-scroll-bars (frame)
-;  (modify-frames-parameters frame
-;                            '((vertical-scroll-bars . nil)
-;                                (horizontal-scroll-bars . nil))))
-;
-;(add-hook 'after-make-frame-functions 'me-disable-scroll-bars)
-
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Activate Blackboard theme:

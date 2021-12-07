@@ -40,7 +40,7 @@
 ;; Summon the Org-mode Gods to be ready to grant your Mod requests...
 
 (require 'org)
-(require 'org-tempo)
+;(require 'org-tempo)
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Define LOCAL USER MASTER ORG FILES DIRECTORY:
@@ -164,7 +164,7 @@
 
 ;; Set MobileOrg Password:
 
-(setq org-mobile-encryption-password "<enter-password-here>")
+(setq org-mobile-encryption-password "w1sIw1m2.0r9")
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -339,11 +339,12 @@
         (modify-frame-parameters nil
                                  (quote
                                   ((name   . "HA Mod Emacs v3.4 - Normal Org Mode")
-                                   (height . 38)
-                                   (width  . 88))))
+                                   (height . 42)
+                                   (width  . 92))))
 
         ;; Set Olivetti Width (88 column wide)
-        (olivetti-set-width 82))
+        (olivetti-mode)
+        (olivetti-set-width 88))
 
     ;; ELSE print warning about buffer not being an Org File...
     (message "Warning: You are NOT visiting a .ORG file!")))
@@ -363,16 +364,17 @@
   ;; Test to make sure we are in Org Mode, if not print a warning...
   (if (equal 'org-mode major-mode)
       (progn
-          ;; Make Wide Screen Fancy Org View View:
-            (modify-frame-parameters nil
-                                     (quote
-                                      ((name   . "HA Mod Emacs v3.4 - Fancy Org View")
-                                       (height . 38)
-                                       (width  . 138))))
-            ;; Split Windows with org outline tree in narrow left window...
-            (org-sidebar-tree)
-            ;; Set Olivetti Width (100 column wide)
-            (olivetti-set-width 82))
+        ;; Make Wide Screen Fancy Org View View:
+        (modify-frame-parameters nil
+                                 (quote
+                                  ((name   . "HA Mod Emacs v3.4 - Fancy Org View")
+                                   (height . 42)
+                                   (width  . 152))))
+        ;; Split Windows with org outline tree in narrow left window...
+        (org-sidebar-tree)
+        ;; Set Olivetti Width (100 column wide)
+        (olivetti-mode)
+        (olivetti-set-width 88))
 
     ;; ELSE print warning about buffer not being an Org File...
     (progn
@@ -394,7 +396,6 @@
     (org-hide-block-all))
   (setq-local me--org-blocks-hidden (not me--org-blocks-hidden)))
 
-
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Modular Emacs - Fancy Org View - org-mode Hook Function:
 ;;  This Fancy Org View hook takes care of setting your writing/publishing
@@ -415,38 +416,26 @@
    This function takes care of setting up a nice org-mode writing
    environment for both planning and / or writing-publishing"
 
-  ;; Set default face to Courier Prime (A nice mono serif for writing)
   ;; NOTE: All settings below change the currently selected frame only...
   ;;       (other existing and future frames are not affected)
 
-  (set-face-attribute 'default
-                      (selected-frame)
-                      :family "Courier Prime"
-                      :height 130)
-
-  ;; Set SCREEN Frame size for org-mode planning,
-  ;; finances, TODOs, etc. (no split windows)
-
-  (modify-frame-parameters nil
-                           (quote
-                            ((name   . "HA Mod Emacs v3.4 - Normal Org Mode")
-                             (height . 38)
-                             (width  . 88))))
+  (me_set-writing-frame)
 
   ;; Collapse all source blocks;
+
   (org-hide-block-all)
 
-  ;; Enable Olivetti Mode (100 column wide)
-  (olivetti-set-width 82)
-
   ;; Hide bullets...
-  (me_hide-org-bullets))
 
-  ;; The below alternate method to above "me_hide-org-bullets"
-  ;; does not seem to work for me (yet): FIXME
-;  (after! org
-;          (setq org-hide-leading-stars nil
-;                org-indent-mode-turns-on-hiding-stars nil)))
+  (me_hide-org-bullets)
+
+  ;; Enable Olivetti Mode (88 column wide) (olivetti-mode) (olivetti-set-width 88)
+
+  (olivetti-mode)
+  (olivetti-set-width 88)
+
+  ;; Call Xah-Fly-Keys (resets some face attributes)
+  (xah-fly-keys 1))
 
 ;; END Fancy Org View - org-mode Hook function...
 
@@ -485,7 +474,7 @@
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;;              FANCY ORG MODE INIT
+;;;                      FANCY ORG MODE INIT
 ;;  Add Fancy Org Mode Hook Function to Org Mode startup list:
 
 (add-hook 'org-mode-hook 'me_fancy-org-mode-hook)

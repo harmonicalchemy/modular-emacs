@@ -32,7 +32,7 @@
 ;;   Nothing to compare,
 ;;   They are like the dead,
 ;;   Frozen in place,
-;;   Indellable stasis,
+;;   Indelible stasis,
 ;;   Even our dead contain life not ours,
 ;;   Only timeless skeletons remain,
 ;;   Fading and soon forgotten,
@@ -47,6 +47,21 @@
 (defconst ME--DARWIN (eq system-type 'darwin))
 (defconst ME--LINUX (eq system-type 'gnu/linux))
 (defconst ME--POSIX (memq window-system `(ns x)))
+
+;;;
+;; Default Frame and Text width Dimensions:
+
+(defconst ME--CODE-FRAME-HEIGHT (round 42) "Default Frame Height for Codeing. Defined in 00-system.el")
+(defconst ME--CODE-FRAME-WIDTH (round 92) "Default Frame Width for Codeing. Defined in 00-system.el")
+(defconst ME--CODE-OLIV-WIDTH (round 88) "Default Olivetti text width for Codeing. Defined in 00-system.el")
+
+(defconst ME--DOC-FRAME-HEIGHT (round 42) "Default Frame Height for Writing. Defined in 00-system.el")
+(defconst ME--DOC-FRAME-WIDTH (round 92) "Default Frame Width for Writing. Defined in 00-system.el")
+(defconst ME--DOC-OLIV-WIDTH (round 88) "Default Olivetti text width for Writing. Defined in 00-system.el")
+
+(defconst ME--FANCY-FRAME-HEIGHT (round 48) "Default Frame Height for Fancy Org Mode. Defined in 00-system.el")
+(defconst ME--FANCY-FRAME-WIDTH (round 142) "Default Frame Width for Fancy Org Mode. Defined in 00-system.el")
+(defconst ME--FANCY-OLIV-WIDTH (round 82) "Default Olivetti text width for Fancy Org Mode. Defined in 00-system.el")
 
 ;;;
 ;; Configure custom elisp library load path.

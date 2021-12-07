@@ -182,31 +182,30 @@
 (setq helm-split-window-in-side-p t)
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  Modular Emacs - Make Writer's Frame Function:
-;;  This simply makes new frames to match 
-;;  HA Modular Emacs Writing Mode Specification
-;;  using Courier Prime font with dimensions
-;;  that fit best for screenwriters, authors,
-;;  publishers on both iMac 27" screens and small
-;;  Linux Laptops...  The new frame opens with
-;;  initial buffer set to: *Bookmark List*
+;;  Modular Emacs - Make NEW Writer's Frame:
+;;  This makes a brand new frame to match
+;;  HA Modular Emacs Default Writing Frame Specs...
+;;  The new frame opens with initial buffer set
+;;  to: Bookmark Menu List
 
 (defun me_make-writing-frame ()
-  "Create Frames using ME default writer's face
-   and ME default writing/authoring frame dimensions.
-   Frame opens with buffer set to *Bookmark List*"
+  "Create NEW Frame using ME default writer's face
+   and ME default writer's frame dimensions
+   Frame opens with buffer set to Bookmark Menu List"
   (interactive)
   (progn
     ;; Set buffer to *Bookmark List*
     (bookmark-bmenu-list)
 
     ;; Make New Writer's Frame:
-    (make-frame
-     (quote
-      ;; Modify Frame dimensions for Writing with Olivetti mode enabled...
-      ((name . "HA Mod Emacs v3.4 - Writer's Frame")
-       (height . 38)
-       (width . 88))))
+    (let ((frame-height ME--DOC-FRAME-HEIGHT)
+          (frame-width ME--DOC-FRAME-WIDTH))
+      ;; Set Frame Dimensions for Writing:
+      (make-frame
+       (quote
+        ((name   . "HA Mod Emacs v3.4 - Writer's Frame")
+         (height . 42)
+         (width  . 92)))))
 
     ;; Select this new frame:
     (select-frame-by-name "HA Mod Emacs v3.4 - Writer's Frame")
@@ -216,47 +215,49 @@
                         :family "Courier Prime"
                         :height 130)
 
-    ;; Set Olivetti Width (88 column wide)
-    (olivetti-set-width 82)
+    ;; Set Olivetti Default Width
+    (olivetti-set-width ME--DOC-OLIV-WIDTH)
 
     ;; Call Xah-Fly-Keys (resets some face attributes)
     (xah-fly-keys 1)))
 
-
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  Modular Emacs - Make Coder's Frame Function:
-;;  This simply makes new frames to match 
-;;  HA Modular Emacs Coding Mode Specification
-;;  using Hermit font with dimensions that fit
-;;  best for coding on both iMac 27" screens
-;;  and small Linux Laptops...
+;;  Modular Emacs - Make NEW Coder's Frame:
+;;  This makes a brand new frame to match
+;;  HA Modular Emacs Default Coding Frame Specs...
 ;;  The new frame opens with initial buffer set
-;;  to: *scratch*
+;;  to: Bookmark Menu List
 
 (defun me_make-coding-frame ()
-  "Create Frames using ME default coding face
+  "Create NEW Frame using ME default coding face
    and ME default coding frame dimensions
-   Frame opens with buffer set to *scratch*"
+   Frame opens with buffer set to Bookmark Menu List"
   (interactive)
   (progn
     ;; Set buffer to *Bookmark List*
     (bookmark-bmenu-list)
 
-    ;; Make New Coder's Frame:
-    (make-frame
-     (quote
-      ;; Modify Frame dimensions for coding...
-      ((name . "HA Mod Emacs v3.4 - Coder's Frame")
-       (height . 38)
-       (width . 88))))
+    ;; Make NEW Coder's Frame:
+    (let ((frame-height ME--CODE-FRAME-HEIGHT)
+          (frame-width ME--CODE-FRAME-WIDTH))
+      ;; Set Frame Dimensions for Coding:
+      (make-frame
+       (quote
+        ((name . "HA Mod Emacs v3.4 - Coder's Frame")
+         (height . 42)
+         (width . 92)))))
 
-    ;; Select this new frame:
+    ;; Select this NEW Frame:
     (select-frame-by-name "HA Mod Emacs v3.4 - Coder's Frame")
 
-    ;; Set Default Face to Hermit for coding:
+    ;; Set Default Face for Coding:
     (set-face-attribute 'default (selected-frame)
                         :family "Hermit"
                         :height 120)
+
+    ;; Enable Olivetti Mode - Default Coding Width:
+    (olivetti-mode)
+    (olivetti-set-width ME--CODE-OLIV-WIDTH)
 
     ;; Call Xah-Fly-Keys (resets some face attributes)
     (xah-fly-keys 1)))
@@ -264,12 +265,12 @@
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Modular Emacs - Make Frame Function:
-;;  This simply makes new frames to match 
-;;  HA Modular Emacs current me--def-face flag setting.
-;;  If the flag is set to: 1, mw_make-writing-frame
-;;  function above is called...
-;;  If the flag is set to: 2,  mw_make-coding-frame
-;;  function above is called...
+;;  This makes NEW frames to match HA Modular Emacs
+;;  current me--def-face flag setting...
+;;  If the flag is set to: 1
+;;     me_make-writing-frame is called...
+;;  If the flag is set to: 2
+;;     me_make-coding-frame is called...
 
 (defun me_make-frame ()
   "Create Frames depending on the current setting of
@@ -318,65 +319,79 @@
 ;;  NOTE3:  If I get fancy with fonts, I will provide them in this repo for easy
 ;;          installations. In fact I have already gotten fancy with fonts eh? LOL
 ;;
-;; Set Default face to Org face Function:
 
-(defun me_set-writing-face ()
-  "Set default face to Courier Prime (A nice mono serif for writing)"
-  ;; NOTE1: This only sets the face for the currently Selected Frame...
-  ;;        (other frames are not affected)
-  ;; NOTE2: The flag that gets set to check whether coding or writing mode
-  ;;        DOES effect other frames!  This is a side effect, but the remedy
-  ;;        is to simply toggle the key twice.  A silly fix is too complicated imho!
+;;;
+;; Set Modular Emacs Writing Frame Function:
+;; NOTE: This only sets frame parameters
+;;       for the currently Selected Frame...
+;;        (other frames are not affected)
+
+(defun me_set-writing-frame ()
+  "Set Frame Font & Frame Dimensions for Writing"
   (interactive)
   (progn
     (set-face-attribute 'default (selected-frame)
                         :family "Courier Prime"
                         :height 130)
 
-    ;; Modify Frame dimensions for Writing with Olivetti mode enabled...
-    (modify-frame-parameters nil
-                             (quote
-                              ((name . "HA Mod Emacs v3.4 - Writing Mode")
-                               (height . 38)
-                               (width . 88))))))
+    ;; Modify Frame dimensions for Writing...
+    (let ((frame-height ME--DOC-FRAME-HEIGHT)
+          (frame-width ME--DOC-FRAME-WIDTH))
+      (modify-frame-parameters nil
+                               (quote
+                                ((name   . "HA Mod Emacs v3.4 - Writer's Frame")
+                                 (height . 42)
+                                 (width  . 92)))))))
 
 
-;; Restore Default Face Function:
+;;;
+;; Set Modular Emacs Coding Frame Function:
+;; NOTE: This only sets the frame parameters
+;;       for the currently Selected Frame...
+;;        (other frames are not affected)
 
-(defun me_set-coding-face ()
-  "Set default font to Hermit Medium (my faverite mono font for coding)"
-  ;; NOTE: This only sets the face for the currently Selected Frame...
-  ;;       (other frames are not affected)
+(defun me_set-coding-frame ()
+  "Set Frame Font & Frame Dimensions for Coding"
   (interactive)
   (progn
     (set-face-attribute 'default (selected-frame)
                         :family "Hermit"
                         :height 120)
 
-    (modify-frame-parameters nil
-                             (quote
-                              ((name . "HA Mod Emacs v3.4 - Coder's Frame")
-                               (height . 38)
-                               (width . 88))))))
+    ;; Modify Frame dimensions for Coding...
+    (let ((frame-height ME--CODE-FRAME-HEIGHT)
+          (frame-width ME--CODE-FRAME-WIDTH))
+      (modify-frame-parameters nil
+                               (quote
+                                ((name   . "HA Mod Emacs v3.4 - Coder's Frame")
+                                 (height . 42)
+                                 (width  . 92)))))))
 
 ;;;
-;;  Toggle Default Face...
-;;  NOTE: This only sets the face for the currently Selected Frame...
-;;       (other frames are not affected) 
+;;  Toggle Default Face Function:
 ;;
-;;  This one gets bound to Xah Fly Command Key:  "p"
-;;  This one calls one of the two above depending on test variable:  me--default
-;;  if me--default is t
-;;    Switch to Org Mode
-;;    Change me--default to nil
-;;  Otherwise
-;;    Switch back to default face
-;;    Change me--default to t
+;;  Bound to Xah Fly Command Key:  "p"
+;;
+;;  NOTE1: This only sets the face for the currently Selected Frame...
+;;         (other frames are not affected)
+;;
+;;  This function calls one of the two above depending on test variable:  me--default
+;;    if me--default is t
+;;      Switch to Writer's Frame Style
+;;      Change me--default to nil
+;;    Otherwise
+;;      Switch to Coder's Frame Style
+;;      Change me--default to t
+;;
+;;  NOTE2: The flag that gets set to check whether coding or writing mode
+;;         DOES effect other frames!  This is a side effect, but the remedy
+;;         is to simply toggle the key twice.  A silly fix is too complicated imho!
+;;
 
 (defvar me--def-face 1 "Test variable for me_toggle-default-face")
 
 (defun me_toggle-default-face ()
-  "Toggle default face for selected frame only,
+  "Toggle default frame parameters for selected frame only,
    depending on current editing needs...
    Purpose: I like to use a serif mono font for writing
    paragraphs, but I need to use Hermit etc. for Coding
@@ -395,15 +410,21 @@
   ;;       Simply toggle the key a second time if you do not see the font
   ;;       change etc. Note, this will reset the flag in your coding frame,
   ;;       but no worries there either.. (the woes of multitasking lol)
+  ;;
+  ;;       UPDATE: Thinking on this further... It makes sense to do this
+  ;;               in a let form...  Then local variables will not effect
+  ;;               flag state in other frames... I was being lazy above. %~)
+  ;;               Still being lazy cause I have not put that let form in
+  ;;               below yet... LOL
   (interactive)
   (cond
    ((= me--def-face 1)
     (message "Setting default face to Courier Prime for Writing")
-    (me_set-writing-face)
+    (me_set-writing-frame)
     (setq me--def-face 2))
    ((= me--def-face 2)
     (message "Setting default face to Hermit for Coding")
-    (me_set-coding-face)
+    (me_set-coding-frame)
     (setq me--def-face 1))))
 
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
