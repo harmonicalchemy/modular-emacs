@@ -34,6 +34,9 @@
         (package-install p))
       me--req-games-packages)
 
+;; This may help to connect rMOO (below) via TLS
+(setq network-security-level 'high)
+
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;                         R-MOO
 ;; Configure RMOO - A MOO client for Emacs:
@@ -41,12 +44,14 @@
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 (require 'xterm-color)
+(add-to-list 'auto-mode-alist '("\\.moo$" . moocode-mode))
 (add-to-list 'load-path "~/.emacs.d/lisp/my-modules/rmoo")
 (require 'rmoo-autoload)
 (require 'moocode-mode)
 (global-set-key (kbd "C-c C-r") 'rmoo)
-(add-to-list 'auto-mode-alist '("\\.moo$" . moocode-mode))
 
+
+;; RMOO Hook:
 (add-hook 'rmoo-interactive-mode-hooks
           (lambda ()
             (linum-mode -1)            ;; no line numbers
