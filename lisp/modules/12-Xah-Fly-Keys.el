@@ -137,6 +137,13 @@
 
   (define-key xah-fly-command-map (kbd "5") 'me_org-wide-screen)
 
+  ;; Switch to Modular Emacs Coding WIDE Screen View:
+  ;; This DIRECT Command Mode "6" key mirrors
+  ;; PRIMARY Leader-Key "6" key below...
+  ;; (which modifies coding frame back to Normal Screen View)
+
+  (define-key xah-fly-command-map (kbd "6") 'me_set-coding-wide-frame)
+
   ;; Change default olivetti-mode key:
   ;; (back tick)
   ;; (because I have conflicting other-frame key)
@@ -243,6 +250,13 @@
   ;; (which Switches to Org Mode Wide Screen View)
 
   (define-key xah-fly-leader-key-map (kbd "5") 'me_org-narrow-screen)
+
+  ;; Switch to Modular Emacs Normal Coder's Mode View:
+  ;; This PRIMARY Leader-Key "6" key mirrors
+  ;; DIRECT Command Mode "6" key above...
+  ;; (which Switches to Coding Wide Screen View)
+
+  (define-key xah-fly-leader-key-map (kbd "6") 'me_set-coding-default-frame)
 
   ;; Org Toggle Hidden Formatting Characters:
   ;; (emphasized text and hyperlink display)
