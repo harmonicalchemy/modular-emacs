@@ -231,7 +231,7 @@
 ;;  The new frame opens with initial buffer set
 ;;  to: Bookmark Menu List
 
-(defun me_make-coding-frame ()
+(defun me_make-default-frame ()
   "Create NEW Frame using ME default coding face
    and ME default coding frame dimensions
    Frame opens with buffer set to Bookmark Menu List"
@@ -244,10 +244,10 @@
 
     (make-frame
      (quote
-      ((name . "HA Mod Emacs v3.4 - Coder's Frame"))))
+      ((name . "HA Mod Emacs v3.4 - Default Frame"))))
 
     ;; Select this NEW Frame:
-    (select-frame-by-name "HA Mod Emacs v3.4 - Coder's Frame")
+    (select-frame-by-name "HA Mod Emacs v3.4 - Default Frame")
 
     ;; Set Default Face for Coding:
     (set-face-attribute 'default (selected-frame)
@@ -261,7 +261,7 @@
 ;;  If the flag is set to: 1
 ;;     me_make-writing-frame is called...
 ;;  If the flag is set to: 2
-;;     me_make-coding-frame is called...
+;;     me_make-default-frame is called...
 
 (defun me_make-frame ()
   "Create Frames depending on the current setting of
@@ -274,8 +274,8 @@
       (message "Creating Writer's Frame")
       (me_make-writing-frame))
      ((= me--def-face 1)
-      (message "Creating Coder's Frame")
-      (me_make-coding-frame)))))
+      (message "Creating Default Frame")
+      (me_make-default-frame)))))
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   ;;  Modular Emacs - Set Default Face Functions:
@@ -334,28 +334,6 @@
 
 
 ;;;
-;; Set Modular Emacs Coding Frame Function:
-;; NOTE: This only sets the frame parameters
-;;       for the currently Selected Frame...
-;;        (other frames are not affected)
-
-(defun me_set-coding-frame ()
-  "Set Frame Font & Frame Dimensions for Coding"
-  (interactive)
-  (progn
-    (set-face-attribute 'default (selected-frame)
-                        :family "Hermit"
-                        :height 120)
-
-    (modify-frame-parameters
-     nil
-     (quote
-      ((name . "HA Mod Emacs v3.4 - Coder's Frame")
-       (height . 38)
-       (width  . 92))))))
-
-
-;;;
 ;; Set Modular Emacs Fancy Org-Mode WIDE Frame Function:
 ;; NOTE: This only sets frame parameters
 ;;       for the currently Selected Frame...
@@ -376,6 +354,95 @@
       ((name   . "HA Mod Emacs v3.4 - Fancy Wide Org-Mode Frame")
        (height . 38)
        (width  . 142))))))
+
+
+;;;
+;; Set Modular Emacs Default Frame Function:
+;; NOTE: This only sets the frame parameters
+;;       for the currently Selected Frame...
+;;        (other frames are not affected)
+
+(defun me_set-default-frame ()
+  "Set Font & Frame Parameters back to HA Modular Emacs Default"
+  (interactive)
+  (progn
+
+    ;; Ensure default Coding Face:
+
+    (set-face-attribute 'default (selected-frame)
+                        :family "Hermit"
+                        :height 120)
+
+    ;; Change Frame Dimensions back to Normal Coding Frame:
+    
+    (modify-frame-parameters
+     nil
+     (quote
+      ((name . "HA Mod Emacs v3.4 - Default Frame")
+       (height . 47)
+       (width  . 92))))))
+
+
+;;;
+;; Set Modular Emacs WIDE Coding Frame Function:
+;; NOTE: This only sets the frame parameters
+;;       for the currently Selected Frame...
+;;        (other frames are not affected)
+
+(defun me_set-coding-wide-frame ()
+  "Set Frame Font & Frame Dimensions for Coding"
+  (interactive)
+  (progn
+    (set-face-attribute 'default (selected-frame)
+                        :family "Hermit"
+                        :height 120)
+
+    (modify-frame-parameters
+     nil
+     (quote
+      ((name . "HA Mod Emacs v3.4 - WIDE Coder's Frame")
+       (height . 47)
+       (width  . 184))))
+
+    ;; Enable Olivetti Mode (88 column wide)
+
+    (olivetti-mode)
+    (olivetti-set-width 88)
+
+    ;; Split Window Side by Side for Comparing code etc.
+
+    (split-window-right)))
+
+
+;;;
+;; Set Modular Emacs Default Coding Frame Function:
+;; NOTE: This only sets the frame parameters
+;;       for the currently Selected Frame...
+;;        (other frames are not affected)
+
+(defun me_set-coding-default-frame ()
+  "Set Frame Font & Frame Dimensions to Coding Default"
+  (interactive)
+  (progn
+
+    ;; Remove Split Windows (remaining window is where cursor is)
+
+    (delete-other-windows)
+
+    ;; Ensure Font is correct for Coding:
+    
+    (set-face-attribute 'default (selected-frame)
+                        :family "Hermit"
+                        :height 120)
+
+    ;; Set Frame Parameters to Default Coder's Frame:
+    
+    (modify-frame-parameters
+     nil
+     (quote
+      ((name . "HA Mod Emacs v3.4 - Default Coder's Frame")
+       (height . 47)
+       (width  . 92))))))
 
 
 ;;;
@@ -435,7 +502,7 @@
     (setq me--def-face 2))
    ((= me--def-face 2)
     (message "Setting default face to Hermit for Coding")
-    (me_set-coding-frame)
+    (me_set-default-frame)
     (setq me--def-face 1))))
 
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
