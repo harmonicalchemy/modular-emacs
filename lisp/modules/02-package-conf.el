@@ -379,7 +379,7 @@
      nil
      (quote
       ((name . "HA Mod Emacs v3.4 - Default Frame")
-       (height . 47)
+       (height . 38)
        (width  . 92))))))
 
 
@@ -401,7 +401,7 @@
      nil
      (quote
       ((name . "HA Mod Emacs v3.4 - WIDE Coder's Frame")
-       (height . 47)
+       (height . 38)
        (width  . 184))))
 
     ;; Enable Olivetti Mode (88 column wide)
@@ -441,7 +441,7 @@
      nil
      (quote
       ((name . "HA Mod Emacs v3.4 - Default Coder's Frame")
-       (height . 47)
+       (height . 38)
        (width  . 92))))))
 
 
