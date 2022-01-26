@@ -1,0 +1,452 @@
+# -**- mode: org; coding: utf-8 -**-
+#+begin_comment
+ Setup Files:
+   For Cloned Versions of this template, replace file/paths below
+   with file/paths to your own custom setup files (which you could 
+   convienently clone from the example setup files provided in
+   ../org-templates/ directory...
+
+ NOTE: 
+   #+CATEGORY: is specified within log-book.org setupfile.
+   If you need to change the category do it in log-book.org
+   or your cloned version of it...
+#+end_comment
+
+#+SETUPFILE: ~/.emacs.d/Docs/pubOps/org-templates/simple-log-book.org
+#+SETUPFILE: ~/.emacs.d/Docs/pubOps/org-templates/default-tags.org
+
+#+TITLE: HAP - Simple LOG Notebook Skeleton
+#+AUTHOR: Alisha Awen - Harmonic Alchemy Productions
+#+EMAIL: Siren1@disroot.org
+#+DATE: <2022-01-26 Wed>
+#+TEXT: Created: <2022-01-26 Wed>
+#+FILETAGS: templates logs
+
+#+DESCRIPTION: HAP - Modular Emacs Org Mode Simple Log Notebook Template.  This is a minimalist version of: HAP_General-Log-Book-Skeleton.org (a Full Featured Look Book Skeleton Template).  This log book does not have all the bells and whistles because sometimes you need a simple way to record your time on tasks, etc. but not necessarily for HUGE projects, etc... Use this for quick stuff... You are expected to know what is going on in here... (but if not you have the General Template to learn from)... This simplified log book skeleton is also not set up or intended to be exported to PDF and/or published... 
+
+* Begin Log:
+:PROPERTIES:
+:CUSTOM_ID: HAP-general-log-notebook-skeleton-1
+:END:
+** 2022:
+*** NEW log: <2021-03-29 Mon> Generic Title /(Simple Log Entry Template)/
+
+This new "Log Entry" is about: Yadda... Yadda... Yadda...
+
+\newpage
+
+**** NEW Reference:
+
++ [ [ <link> ][ <Item One> ] ]
+
++ [ [ <link> ][ <Item One> ] ]
+
++ [ [ <link> ][ <Item One> ] ]
+
++ [ [ <link> ][ <Item One> ] ]
+
++ [ [ <link> ][ <Item One> ] ]
+
+\newpage
+
+**** NEW Time Card:
+
+#+BEGIN: clocktable :scope tree3 :maxlevel 5 :tstart "<-1w>" :tend "<+1m>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3
+#+END:
+
+\newpage
+
+**** NEW Details:
+***** NEW New Item 1 /(placeholder)/ [0/6]
+
+- [ ] *___:*
+
+   Yadda Yadda Yadda...
+
+   #+begin_src conf
+     magos@ca1 $: _
+     Alisha@Rodrigo $: _
+   #+end_src
+
+- [ ] *___:*
+
+   Yadda Yadda Yadda...
+
+   #+begin_src conf
+     magos@ca1 $: _
+     Alisha@Rodrigo $: _
+   #+end_src
+
+- [ ] *___:*
+
+   Yadda Yadda Yadda...
+
+   #+begin_src conf
+     magos@ca1 $: _
+     Alisha@Rodrigo $: _
+   #+end_src
+
+- [ ] *___:*
+
+   Yadda Yadda Yadda...
+
+   #+begin_src conf
+     magos@ca1 $: _
+     Alisha@Rodrigo $: _
+   #+end_src
+
+- [ ] *___:*
+
+   Yadda Yadda Yadda...
+
+   #+begin_src conf
+     magos@ca1 $: _
+     Alisha@Rodrigo $: _
+   #+end_src
+
+- [ ] *___:*
+
+   Yadda Yadda Yadda...
+
+   #+begin_src conf
+     magos@ca1 $: _
+     Alisha@Rodrigo $: _
+   #+end_src
+
+\newpage
+
+***** NEW New Item 2 /(placeholder)/ [0/6]
+
+- [ ] *___:*
+
+   Yadda Yadda Yadda...
+
+   #+begin_src conf
+     magos@ca1 $: _
+     Alisha@Rodrigo $: _
+   #+end_src
+
+- [ ] *___:*
+
+   Yadda Yadda Yadda...
+
+   #+begin_src conf
+     magos@ca1 $: _
+     Alisha@Rodrigo $: _
+   #+end_src
+
+- [ ] *___:*
+
+   Yadda Yadda Yadda...
+
+   #+begin_src conf
+     magos@ca1 $: _
+     Alisha@Rodrigo $: _
+   #+end_src
+
+- [ ] *___:*
+
+   Yadda Yadda Yadda...
+
+   #+begin_src conf
+     magos@ca1 $: _
+     Alisha@Rodrigo $: _
+   #+end_src
+
+- [ ] *___:*
+   
+   Yadda Yadda Yadda...
+
+   #+begin_src conf
+     magos@ca1 $: _
+     Alisha@Rodrigo $: _
+   #+end_src
+
+- [ ] *___:*
+
+   Yadda Yadda Yadda...
+
+   #+begin_src conf
+     magos@ca1 $: _
+     Alisha@Rodrigo $: _
+   #+end_src
+
+\newpage
+
+***** NEW New Item 3 /(placeholder)/ [0/6]
+
+- [ ] *___:*
+
+   Yadda Yadda Yadda...
+
+   #+begin_src conf
+     magos@ca1 $: _
+     Alisha@Rodrigo $: _
+   #+end_src
+
+- [ ] *___:*
+
+   Yadda Yadda Yadda...
+
+   #+begin_src conf
+     magos@ca1 $: _
+     Alisha@Rodrigo $: _
+   #+end_src
+
+- [ ] *___:*
+
+   Yadda Yadda Yadda...
+
+   #+begin_src conf
+     magos@ca1 $: _
+     Alisha@Rodrigo $: _
+   #+end_src
+
+- [ ] *___:*
+
+   Yadda Yadda Yadda...
+
+   #+begin_src conf
+     magos@ca1 $: _
+     Alisha@Rodrigo $: _
+   #+end_src
+
+- [ ] *___:*
+
+   Yadda Yadda Yadda...
+
+   #+begin_src conf
+     magos@ca1 $: _
+     Alisha@Rodrigo $: _
+   #+end_src
+
+- [ ] *___:*
+
+   Yadda Yadda Yadda...
+
+   #+begin_src conf
+     magos@ca1 $: _
+     Alisha@Rodrigo $: _
+   #+end_src
+
+\newpage
+
+* Meta:
+
+This is a *simplified Log Book skeleton* for recording spur-of-the-moment tasks that may or may not be part of a larger project.  For simple tasks that may still need an easy way to record your time... 
+
+- *Note:* /If you do have tasks to record that are part of a much larger project you should probably be using: HAP_General-Log-Book-Skeleton.org /(which is also found within the same directory that this file is in)/
+
+Use this as a quick way to start logging things that may or may not be part of a Large Project, /(or possibly smaller "yak shaving" tasks that you don't want cluttering up your Larger Project's Log Notebook with)/.
+
+There are no instructions in here for how to use this skeleton... Use the *HowTO:* section within HAP_General-Log-Book-Skeleton.org from this same directory if you need help. /(both log book Skeletons work pretty much the same way in that respect)/
+
+In essence, you are expected to know what is going on in here... /(but if not you have the General Template to learn from)/... This simplified log book skeleton is also not set up or intended to be exported to PDF and/or published... It is for internal *Emacs Org-Mode* use only...
+
+\newpage
+
+** Templates:
+*** NEW log: <2021-03-29 Mon> Generic Title /(Simple Log Entry Template)/
+
+This new "Log Entry" is about: Yadda... Yadda... Yadda...
+
+\newpage
+
+**** NEW Reference:
+
++ [ [ <link> ][ <Item One> ] ]
+
++ [ [ <link> ][ <Item One> ] ]
+
++ [ [ <link> ][ <Item One> ] ]
+
++ [ [ <link> ][ <Item One> ] ]
+
++ [ [ <link> ][ <Item One> ] ]
+
+\newpage
+
+**** NEW Time Card:
+
+#+BEGIN: clocktable :scope tree3 :maxlevel 5 :tstart "<-1w>" :tend "<+1m>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3
+#+END:
+
+\newpage
+
+**** NEW Details:
+***** NEW New Item 1 /(placeholder)/ [0/6]
+
+- [ ] *___:*
+
+   Yadda Yadda Yadda...
+
+   #+begin_src conf
+     magos@ca1 $: _
+     Alisha@Rodrigo $: _
+   #+end_src
+
+- [ ] *___:*
+
+   Yadda Yadda Yadda...
+
+   #+begin_src conf
+     magos@ca1 $: _
+     Alisha@Rodrigo $: _
+   #+end_src
+
+- [ ] *___:*
+
+   Yadda Yadda Yadda...
+
+   #+begin_src conf
+     magos@ca1 $: _
+     Alisha@Rodrigo $: _
+   #+end_src
+
+- [ ] *___:*
+
+   Yadda Yadda Yadda...
+
+   #+begin_src conf
+     magos@ca1 $: _
+     Alisha@Rodrigo $: _
+   #+end_src
+
+- [ ] *___:*
+
+   Yadda Yadda Yadda...
+
+   #+begin_src conf
+     magos@ca1 $: _
+     Alisha@Rodrigo $: _
+   #+end_src
+
+- [ ] *___:*
+
+   Yadda Yadda Yadda...
+
+   #+begin_src conf
+     magos@ca1 $: _
+     Alisha@Rodrigo $: _
+   #+end_src
+
+\newpage
+
+***** NEW New Item 2 /(placeholder)/ [0/6]
+
+- [ ] *___:*
+
+   Yadda Yadda Yadda...
+
+   #+begin_src conf
+     magos@ca1 $: _
+     Alisha@Rodrigo $: _
+   #+end_src
+
+- [ ] *___:*
+
+   Yadda Yadda Yadda...
+
+   #+begin_src conf
+     magos@ca1 $: _
+     Alisha@Rodrigo $: _
+   #+end_src
+
+- [ ] *___:*
+
+   Yadda Yadda Yadda...
+
+   #+begin_src conf
+     magos@ca1 $: _
+     Alisha@Rodrigo $: _
+   #+end_src
+
+- [ ] *___:*
+
+   Yadda Yadda Yadda...
+
+   #+begin_src conf
+     magos@ca1 $: _
+     Alisha@Rodrigo $: _
+   #+end_src
+
+- [ ] *___:*
+   
+   Yadda Yadda Yadda...
+
+   #+begin_src conf
+     magos@ca1 $: _
+     Alisha@Rodrigo $: _
+   #+end_src
+
+- [ ] *___:*
+
+   Yadda Yadda Yadda...
+
+   #+begin_src conf
+     magos@ca1 $: _
+     Alisha@Rodrigo $: _
+   #+end_src
+
+\newpage
+
+***** NEW New Item 3 /(placeholder)/ [0/6]
+
+- [ ] *___:*
+
+   Yadda Yadda Yadda...
+
+   #+begin_src conf
+     magos@ca1 $: _
+     Alisha@Rodrigo $: _
+   #+end_src
+
+- [ ] *___:*
+
+   Yadda Yadda Yadda...
+
+   #+begin_src conf
+     magos@ca1 $: _
+     Alisha@Rodrigo $: _
+   #+end_src
+
+- [ ] *___:*
+
+   Yadda Yadda Yadda...
+
+   #+begin_src conf
+     magos@ca1 $: _
+     Alisha@Rodrigo $: _
+   #+end_src
+
+- [ ] *___:*
+
+   Yadda Yadda Yadda...
+
+   #+begin_src conf
+     magos@ca1 $: _
+     Alisha@Rodrigo $: _
+   #+end_src
+
+- [ ] *___:*
+
+   Yadda Yadda Yadda...
+
+   #+begin_src conf
+     magos@ca1 $: _
+     Alisha@Rodrigo $: _
+   #+end_src
+
+- [ ] *___:*
+
+   Yadda Yadda Yadda...
+
+   #+begin_src conf
+     magos@ca1 $: _
+     Alisha@Rodrigo $: _
+   #+end_src
+
+\newpage
+
+
+

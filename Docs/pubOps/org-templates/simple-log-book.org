@@ -1,0 +1,19 @@
+# -**- mode: org; coding: utf-8 -**-
+#+begin_comment
+# File:   simple-log-book.org - SETUPFILE for Minimalist Log Notebooks...
+# Usage:  Clone this file and adjust to suit your needs...
+#        Include this file within org files destined to become simple Log Notebooks...
+#        i.e., #+SETUPFILE: ~/.emacs.d/Docs/pubOps/org-templates/simple-log-book.org
+#+end_comment
+
+#+CATEGORY: @Log_Books
+#+LANGUAGE: en
+#+STARTUP:  overview
+#+STARTUP:  hideblocks
+#+STARTUP:  indent
+#+STARTUP:  align
+#+STARTUP:  inlineimages
+#+OPTIONS: ':nil          # Disable Smart Quotes! Use xah-fly insert funcs..
+#+OPTIONS: *:t            # Show Emphasized Text
+#+OPTIONS: -:t            # Convert Special Strings
+#+OPTIONS: ::nil          # Do NOT Export with fixed-width sections 
