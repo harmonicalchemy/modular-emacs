@@ -217,6 +217,17 @@
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Modular Emacs Org Mode Open File-link in Other
+;;  Frame Function...
+
+(defun me_org-open-other-frame ()
+  "Jump to bookmark in another frame. See `bookmark-jump' for more."
+  (interactive)
+  (let ((org-link-frame-setup (acons 'file 'find-file-other-frame org-link-frame-setup)))
+    (org-open-at-point)))
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Modular Emacs Quick Insert CUSTOM_ID for links

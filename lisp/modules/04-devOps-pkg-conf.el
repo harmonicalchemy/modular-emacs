@@ -10,15 +10,15 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
+;;;
 ;; Declare a list of required packages for programming, build/test, deploy, etc.:
+;; NOTE: I removed: gitconfig-mode, gitignore-mode & gitattributes-mode
+;;       No longer supported... (need magit/git-modes now) TODO later...
 
 (defvar me--req-devops-packages
   '(ztree
     smart-tabs-mode
     ssh-config-mode
-    gitconfig-mode
-    gitignore-mode
-    gitattributes-mode
     yaml-mode
     indent-tools
     hydra
@@ -30,6 +30,36 @@
         (package-install p))
       me--req-devops-packages)
 
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; Load xah-elisp-mode - (copy of last update on melpa (before he removed it)
+
+(add-to-list 'load-path "~/.emacs.d/lisp/my-modules/xah-elisp-mode")
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; Enable Xah eLisp Mode in eLisp files:
+
+(require 'xah-elisp-mode)
+
+(add-to-list 'auto-mode-alist '("\\.el\\'" . xah-elisp-mode))
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; Load xah-find - (copy of last update on melpa (before he removed it)
+
+(add-to-list 'load-path "~/.emacs.d/lisp/my-modules/xah-find")
+
+(require 'xah-find)
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Load Xah Find functions:
+
+(autoload 'xah-find-text "xah-find" "find replace" t)
+(autoload 'xah-find-text-regex "xah-find" "find replace" t)
+(autoload 'xah-find-replace-text "xah-find" "find replace" t)
+(autoload 'xah-find-replace-text-regex "xah-find" "find replace" t)
+(autoload 'xah-find-count "xah-find" "find replace" t)
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Load ssh-config-mode:
 
 (autoload 'ssh-config-mode "ssh-config-mode" t)
@@ -42,8 +72,7 @@
 (add-to-list 'auto-mode-alist '("/authorized_keys2?\\'" . ssh-authorized-keys-mode))
 (add-hook 'ssh-config-mode-hook 'turn-on-font-lock)
 
-
-;;;
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Disable Tabs Globally (use spaces only), and reactivate them for
 ;; modes with smart tabs handling:
 
@@ -56,6 +85,7 @@
 
 (setq-default tabs-width 3)
 
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Add Language Support for Web Dev: (HTML, CSS, PHP, etc...)
 (setq c-basic-offset 3)
 
@@ -63,9 +93,10 @@
 (setq web-mode-css-indent-offset 3)
 (setq web-mode-code-indent-offset 3)
 (setq web-mode-sql-indent-offset 3)
-
 (setq css-indent-offset 3)
 
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Enable Smart Tabs for all supported languages including above:
 
 (smart-tabs-insinuate 'c
@@ -77,6 +108,8 @@
                       'ruby
                       'nxml)
 
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Set C Lang Auto Mode for specific file extensions:
 
 (add-to-list 'auto-mode-alist '("\\.xkb\\'" . c-mode))

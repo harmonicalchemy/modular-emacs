@@ -20,10 +20,10 @@
 
 ;;;
 ;; Declare a list of required packages for writers, bloggers, publishers, etc.:
+;; NOTE: Removed: markdown-mode+ (no longer valid)
 
 (defvar me--req-pubops-packages
   '(markdown-mode
-    markdown-mode+
     markdown-toc
     deft
     auctex

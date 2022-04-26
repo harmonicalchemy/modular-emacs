@@ -54,6 +54,11 @@
 ;;       as there will be a small space in its place...
 ;;       You can backspace over it to remove it and then
 ;;       you will be able to see and remove the other one as well...
+;;
+;;       ALSO: I bound space-b (xah-fly-keys) which runs
+;;       (org-toggle-link-display) which exposes invisible
+;;       brackets around links, as well as the emphasis markup
+;;       which is the easiest way to see them when you need to...
 
 (setq org-hide-emphasis-markers t)
 
@@ -175,43 +180,50 @@
 
 ;;  Enable extra org-babel language-specific packages:
 
-(require 'ob-lisp)
+(add-to-list 'load-path "~/.emacs.d/lisp/my-modules/ob-html")
+(load-file "~/.emacs.d/lisp/my-modules/ob-html/ob-html.el")
 
-(org-babel-do-load-languages
- 'org-babel-load-languages
- '((R . t)
-   (abc . t)
-   (asymptote . t)
-   (awk . t)
-   (calc . t)
-   (css . t)
-   (ditaa . t)
-   (dot . t)
-   (emacs-lisp . t)
-   (gnuplot . t)
-   (haskell . nil)
-   (java . t)
-   (js . t)
-   (latex . t)
-   (ledger . t) ;This adds support for hledger hopefully...
-   (lilypond . t)
-   (lua . nil)
-   (ocaml . nil)
-   (octave . t)
-   (org . t)
-   (perl . t)
-   (python . t)
-   (ruby . t)
-   (sass . t)
-   (sed . t)
-   (screen . nil)
-   (shell . t)
-   (sql . nil)
-   (sqlite . t)))
+(with-eval-after-load "org"
+  (require 'ob-html) ;;Enable C-c C-o on html code block
+  (org-babel-html-enable-open-src-block-result-temporary)
+  (require 'ob-lisp)
 
-;;  Enable normal tab behaviour for SRC Block language Modes:
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   '((R . t)
+     (abc . t)
+     (asymptote . t)
+     (awk . t)
+     (calc . t)
+     (css . t)
+     (ditaa . t)
+     (dot . t)
+     (emacs-lisp . t)
+     (clojure . t)
+     (gnuplot . t)
+     (haskell . nil)
+     (java . t)
+     (js . t)
+     (latex . t)
+     (ledger . t) ;Hopefully this will add support for hledger too...
+     (lilypond . t)
+     (lua . nil)
+     (ocaml . nil)
+     (octave . t)
+     (org . t)
+     (perl . t)
+     (python . t)
+     (ruby . t)
+     (sass . t)
+     (sed . t)
+     (screen . nil)
+     (shell . t)
+     (sql . nil)
+     (sqlite . t)))
 
-(setq org-src-tab-acts-natively t)
+  ;; Enable normal tab behaviour for SRC Block language Modes:
+
+  (setq org-src-tab-acts-natively t))
 
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;   END: [modular-emacs]:~/.emacs.d/lisp/modules/09-4-org-export-conf.el

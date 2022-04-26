@@ -76,6 +76,22 @@
 
 (setq org-ellipsis "⤵")
 
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  SHOW all bullets/asterisks etc. in Org mode:
+;;
+;;  For certain reasons, you may wish to see the
+;;  heading bullets in org-mode...  (this sometimes
+;;  helps when you are unsure of a sub headings correct
+;;  level, etc...
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+(defun me_show-org-bullets ()
+  "Show All ORG Heading / Sub-Heading Bullets..."
+  (interactive)
+  (setq org-hide-leading-stars t))
+
+
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Hide all bullets/asterisks etc. in Org mode:
 ;;
@@ -113,6 +129,8 @@
                            (3 ?\u25c9)
                            (_ ?\u25CB)))
                         nil))))))
+
+
 
 ;; Open Org Files initially folded in Overview Mode:
 
