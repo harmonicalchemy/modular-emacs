@@ -29,205 +29,175 @@
 :CUSTOM_ID: HAP-general-log-notebook-skeleton-1
 :END:
 ** 2022:
-*** NEW log: <2021-03-29 Mon> Generic Title /(Simple Log Entry Template)/
+*** NEW log: <2021-03-29 Mon> Generic Title /(General Log Entry Template)/
+:README:
 
-This new "Log Entry" is about: Yadda... Yadda... Yadda...
+- Since you created this new log entry you are probably in the middle of a task related to it right now!  Go ahead and punch the clock right now as well, to start recording your time! The following Commands are defined below for you to remember and use to track your time:
+
+  + *C-c C-x C-i* - Start Clock /(Begin OR Resume Clocking Current task)/
+
+      This creates a new :CLOCKING: Time Card Entry that looks like this:
+
+      Do this now... Start recording your time girl!  Be in control of your life!
+
+     After doing the above, you can go away and do some work, leaving this log note to visit other files and work on them etc. The clock will be recording your time all the while... You will see in your mode line the elapsed clock time as you work...
+
+  + *C-c C-x C-j* - Return back to the Heading where you started the clock...
+      You do this after you have worked on a task for a while and you need to come back to the time card /(this Log Entry Heading)/ and stop the clock before going off to do something unrelated to the log entry...
+
+  + *C-c C-x C-o* - *Stop the Clock* /(to stop clocking your time on task)/
+       This *Finalizes the Time Card Entry* within ~:CLOCKING:~ /(created earlier when you started the clock)/... The completed time card entry looks like this:
+
+       The above entry shows start timestamp, end timestamp, and total time worked during this segment...  As you can see from the example above I left the clock running all day by accident.  If you do something like that you can always come back and directly edit the clock times by hand to amend them...  After changing clock times or dates, etc. type the following to *Update the Time Card Entry*:
+            *C-c C-c*
+       and the total time will change at the end showing your new calculated time...
+
+       If you need to go away and do something else before finishing this task, you can do so after clocking out... When you come back simply clock back in again to start another Time Card Entry just as before... The new time card entry will appear above the earlier one within the ~:CLOCKING:~ drawer... When you clock out of this task it will look just like the entry below it with a total time worked tagged on the end...
+
+       When you are all done with this Log Entry mark it *DONE*
+
+  + *C-c C-x C-q* - Cancel Current Clock /(in case you accidentally started it)/
+
+       This removes currently running clock and forgets it...
+
+ + *C-c C-x C-d* - Display Clocking Info: /This will show elapsed times to the right of headings.../
+
+- Once all of this has become routine for you, go ahead and remove this ~README~ drawer from this template... That way it does not get copied when you need to clone new log entries...
+
+:END:
+
+This Log Entry is about: Yadda... Yadda... Yadda...
 
 \newpage
 
 **** NEW Reference:
 
-+ [ [ <link> ][ <Item One> ] ]
+- *Link to Project:* [[][] ]
 
-+ [ [ <link> ][ <Item One> ] ]
+- [[URL][Link Name] ] *Heading:* /(comment)/
 
-+ [ [ <link> ][ <Item One> ] ]
+- [[][] ] - *_:* /(yadda...)/
 
-+ [ [ <link> ][ <Item One> ] ]
+- [[][] ] - *_:* /(yadda...)/
 
-+ [ [ <link> ][ <Item One> ] ]
+- [[][] ] - *_:* /(yadda...)/
+
+- [[][] ] /(_)/
+
+- [[][] ] /(_)/
+
+- [[][] ] /(_)/
 
 \newpage
 
 **** NEW Time Card:
 
-#+BEGIN: clocktable :scope tree3 :maxlevel 5 :tstart "<-1w>" :tend "<+1m>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3
+#+BEGIN: clocktable :scope tree2 :maxlevel 4 :tstart "<-1d>" :tend "<+1m>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3
 #+END:
 
 \newpage
 
+**** NEW Summary: [0/3]
+:README:
+   This Summary is mostly to help you find things later when you cannot remember when or where is was done... If you go to the top of this file and expand all headings to show ALL content, then do a search on "~Summary:~" you will be able to quickly scroll through and scan these summaries quickly to find what you were looking for... 
+
+   Also the *Time Card* /displayed above/ each search hit will give more clues by showing important headings you worked on...
+
+   Below is an optional list /(that could also provide links)./ This list could be used to itemize things you worked on, but I personally find it easier to simply write a short one or two line description containing important keywords right here and nothing more. I think that is more useful...
+:END:
+
+Yadda... Yadda... Yadda...
+
+1. [ ] *__:*
+
+2. [ ] *__:*
+
+3. [ ] *__:*
+
+\newpage
+
 **** NEW Details:
-***** NEW New Item 1 /(placeholder)/ [0/6]
+***** NEW New Item 1 /(placeholder)/ [0/3]
 
-- [ ] *___:*
+- [ ] *__:* /(__)/
 
-   Yadda Yadda Yadda...
+      #+begin_src conf
+       root@dev1:~$ 
+       root@dev1:~$ 
+       root@dev1:~$ 
+      #+end_src
 
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
+- [ ] *__:* /(__)/
 
-- [ ] *___:*
+      #+begin_src conf
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+      #+end_src
 
-   Yadda Yadda Yadda...
+- [ ] *__:* /(__)/
 
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
-
-- [ ] *___:*
-
-   Yadda Yadda Yadda...
-
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
-
-- [ ] *___:*
-
-   Yadda Yadda Yadda...
-
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
-
-- [ ] *___:*
-
-   Yadda Yadda Yadda...
-
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
-
-- [ ] *___:*
-
-   Yadda Yadda Yadda...
-
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
+      #+begin_src conf
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+      #+end_src
 
 \newpage
 
-***** NEW New Item 2 /(placeholder)/ [0/6]
+***** NEW New Item 1 /(placeholder)/ [0/3]
 
-- [ ] *___:*
+- [ ] *__:* /(__)/
 
-   Yadda Yadda Yadda...
+      #+begin_src conf
+       root@dev1:~$ 
+       root@dev1:~$ 
+       root@dev1:~$ 
+      #+end_src
 
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
+- [ ] *__:* /(__)/
 
-- [ ] *___:*
+      #+begin_src conf
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+      #+end_src
 
-   Yadda Yadda Yadda...
+- [ ] *__:* /(__)/
 
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
-
-- [ ] *___:*
-
-   Yadda Yadda Yadda...
-
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
-
-- [ ] *___:*
-
-   Yadda Yadda Yadda...
-
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
-
-- [ ] *___:*
-   
-   Yadda Yadda Yadda...
-
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
-
-- [ ] *___:*
-
-   Yadda Yadda Yadda...
-
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
+      #+begin_src conf
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+      #+end_src
 
 \newpage
 
-***** NEW New Item 3 /(placeholder)/ [0/6]
+***** NEW New Item 1 /(placeholder)/ [0/3]
 
-- [ ] *___:*
+- [ ] *__:* /(__)/
 
-   Yadda Yadda Yadda...
+      #+begin_src conf
+       root@dev1:~$ 
+       root@dev1:~$ 
+       root@dev1:~$ 
+      #+end_src
 
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
+- [ ] *__:* /(__)/
 
-- [ ] *___:*
+      #+begin_src conf
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+      #+end_src
 
-   Yadda Yadda Yadda...
+- [ ] *__:* /(__)/
 
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
-
-- [ ] *___:*
-
-   Yadda Yadda Yadda...
-
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
-
-- [ ] *___:*
-
-   Yadda Yadda Yadda...
-
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
-
-- [ ] *___:*
-
-   Yadda Yadda Yadda...
-
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
-
-- [ ] *___:*
-
-   Yadda Yadda Yadda...
-
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
+      #+begin_src conf
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+      #+end_src
 
 \newpage
 
@@ -246,207 +216,175 @@ In essence, you are expected to know what is going on in here... /(but if not yo
 \newpage
 
 ** Templates:
-*** NEW log: <2021-03-29 Mon> Generic Title /(Simple Log Entry Template)/
+*** NEW log: <2021-03-29 Mon> Generic Title /(General Log Entry Template)/
+:README:
 
-This new "Log Entry" is about: Yadda... Yadda... Yadda...
+- Since you created this new log entry you are probably in the middle of a task related to it right now!  Go ahead and punch the clock right now as well, to start recording your time! The following Commands are defined below for you to remember and use to track your time:
+
+  + *C-c C-x C-i* - Start Clock /(Begin OR Resume Clocking Current task)/
+
+      This creates a new :CLOCKING: Time Card Entry that looks like this:
+
+      Do this now... Start recording your time girl!  Be in control of your life!
+
+     After doing the above, you can go away and do some work, leaving this log note to visit other files and work on them etc. The clock will be recording your time all the while... You will see in your mode line the elapsed clock time as you work...
+
+  + *C-c C-x C-j* - Return back to the Heading where you started the clock...
+      You do this after you have worked on a task for a while and you need to come back to the time card /(this Log Entry Heading)/ and stop the clock before going off to do something unrelated to the log entry...
+
+  + *C-c C-x C-o* - *Stop the Clock* /(to stop clocking your time on task)/
+       This *Finalizes the Time Card Entry* within ~:CLOCKING:~ /(created earlier when you started the clock)/... The completed time card entry looks like this:
+
+       The above entry shows start timestamp, end timestamp, and total time worked during this segment...  As you can see from the example above I left the clock running all day by accident.  If you do something like that you can always come back and directly edit the clock times by hand to amend them...  After changing clock times or dates, etc. type the following to *Update the Time Card Entry*:
+            *C-c C-c*
+       and the total time will change at the end showing your new calculated time...
+
+       If you need to go away and do something else before finishing this task, you can do so after clocking out... When you come back simply clock back in again to start another Time Card Entry just as before... The new time card entry will appear above the earlier one within the ~:CLOCKING:~ drawer... When you clock out of this task it will look just like the entry below it with a total time worked tagged on the end...
+
+       When you are all done with this Log Entry mark it *DONE*
+
+  + *C-c C-x C-q* - Cancel Current Clock /(in case you accidentally started it)/
+
+       This removes currently running clock and forgets it...
+
+ + *C-c C-x C-d* - Display Clocking Info: /This will show elapsed times to the right of headings.../
+
+- Once all of this has become routine for you, go ahead and remove this ~README~ drawer from this template... That way it does not get copied when you need to clone new log entries...
+
+:END:
+
+This Log Entry is about: Yadda... Yadda... Yadda...
 
 \newpage
 
 **** NEW Reference:
 
-+ [ [ <link> ][ <Item One> ] ]
+- *Link to Project:* [[][] ]
 
-+ [ [ <link> ][ <Item One> ] ]
+- [[URL][Link Name] ] *Heading:* /(comment)/
 
-+ [ [ <link> ][ <Item One> ] ]
+- [[][] ] - *_:* /(yadda...)/
 
-+ [ [ <link> ][ <Item One> ] ]
+- [[][] ] - *_:* /(yadda...)/
 
-+ [ [ <link> ][ <Item One> ] ]
+- [[][] ] - *_:* /(yadda...)/
+
+- [[][] ] /(_)/
+
+- [[][] ] /(_)/
+
+- [[][] ] /(_)/
 
 \newpage
 
 **** NEW Time Card:
 
-#+BEGIN: clocktable :scope tree3 :maxlevel 5 :tstart "<-1w>" :tend "<+1m>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3
+#+BEGIN: clocktable :scope tree2 :maxlevel 4 :tstart "<-1d>" :tend "<+1m>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3
 #+END:
 
 \newpage
 
+**** NEW Summary: [0/3]
+:README:
+   This Summary is mostly to help you find things later when you cannot remember when or where is was done... If you go to the top of this file and expand all headings to show ALL content, then do a search on "~Summary:~" you will be able to quickly scroll through and scan these summaries quickly to find what you were looking for... 
+
+   Also the *Time Card* /displayed above/ each search hit will give more clues by showing important headings you worked on...
+
+   Below is an optional list /(that could also provide links)./ This list could be used to itemize things you worked on, but I personally find it easier to simply write a short one or two line description containing important keywords right here and nothing more. I think that is more useful...
+:END:
+
+Yadda... Yadda... Yadda...
+
+1. [ ] *__:*
+
+2. [ ] *__:*
+
+3. [ ] *__:*
+
+\newpage
+
 **** NEW Details:
-***** NEW New Item 1 /(placeholder)/ [0/6]
+***** NEW New Item 1 /(placeholder)/ [0/3]
 
-- [ ] *___:*
+- [ ] *__:* /(__)/
 
-   Yadda Yadda Yadda...
+      #+begin_src conf
+       root@dev1:~$ 
+       root@dev1:~$ 
+       root@dev1:~$ 
+      #+end_src
 
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
+- [ ] *__:* /(__)/
 
-- [ ] *___:*
+      #+begin_src conf
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+      #+end_src
 
-   Yadda Yadda Yadda...
+- [ ] *__:* /(__)/
 
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
-
-- [ ] *___:*
-
-   Yadda Yadda Yadda...
-
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
-
-- [ ] *___:*
-
-   Yadda Yadda Yadda...
-
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
-
-- [ ] *___:*
-
-   Yadda Yadda Yadda...
-
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
-
-- [ ] *___:*
-
-   Yadda Yadda Yadda...
-
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
+      #+begin_src conf
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+      #+end_src
 
 \newpage
 
-***** NEW New Item 2 /(placeholder)/ [0/6]
+***** NEW New Item 1 /(placeholder)/ [0/3]
 
-- [ ] *___:*
+- [ ] *__:* /(__)/
 
-   Yadda Yadda Yadda...
+      #+begin_src conf
+       root@dev1:~$ 
+       root@dev1:~$ 
+       root@dev1:~$ 
+      #+end_src
 
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
+- [ ] *__:* /(__)/
 
-- [ ] *___:*
+      #+begin_src conf
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+      #+end_src
 
-   Yadda Yadda Yadda...
+- [ ] *__:* /(__)/
 
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
-
-- [ ] *___:*
-
-   Yadda Yadda Yadda...
-
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
-
-- [ ] *___:*
-
-   Yadda Yadda Yadda...
-
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
-
-- [ ] *___:*
-   
-   Yadda Yadda Yadda...
-
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
-
-- [ ] *___:*
-
-   Yadda Yadda Yadda...
-
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
+      #+begin_src conf
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+      #+end_src
 
 \newpage
 
-***** NEW New Item 3 /(placeholder)/ [0/6]
+***** NEW New Item 1 /(placeholder)/ [0/3]
 
-- [ ] *___:*
+- [ ] *__:* /(__)/
 
-   Yadda Yadda Yadda...
+      #+begin_src conf
+       root@dev1:~$ 
+       root@dev1:~$ 
+       root@dev1:~$ 
+      #+end_src
 
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
+- [ ] *__:* /(__)/
 
-- [ ] *___:*
+      #+begin_src conf
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+      #+end_src
 
-   Yadda Yadda Yadda...
+- [ ] *__:* /(__)/
 
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
-
-- [ ] *___:*
-
-   Yadda Yadda Yadda...
-
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
-
-- [ ] *___:*
-
-   Yadda Yadda Yadda...
-
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
-
-- [ ] *___:*
-
-   Yadda Yadda Yadda...
-
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
-
-- [ ] *___:*
-
-   Yadda Yadda Yadda...
-
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
+      #+begin_src conf
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+      #+end_src
 
 \newpage
-
-
 

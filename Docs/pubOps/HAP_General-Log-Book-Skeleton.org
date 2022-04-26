@@ -52,24 +52,28 @@ This Log Book was created for...  Yadda Yadda... Yadda...
 
 Add links to other reference, source docs, requirements, back stories, whatever, here...
 
-- *[ [URL][Link Name] ]*
+- [[URL][Link Name] ] *Heading:* /(comment)/
 
-- *[ [][] ]*
+- [[][] ] - *_:* /(yadda...)/
 
-- *[ [][] ]*
+- [[][] ] - *_:* /(yadda...)/
 
-- *[ [][] ]*
+- [[][] ] - *_:* /(yadda...)/
 
-- *[ [][] ]*
+- [[][] ] /(_)/
+
+- [[][] ] /(_)/
+
+- [[][] ] /(_)/
+
+\newpage
 
 * Begin Log:
 :PROPERTIES:
 :CUSTOM_ID: HAP-general-log-notebook-skeleton-1
 :END:
-** 2021:
-
-*** NEW log: <2021-05-13 Thu> Entry Title /(template)/
-
+** 2022:
+*** NEW log: <2021-03-29 Mon> Generic Title /(General Log Entry Template)/
 :README:
 
 - Since you created this new log entry you are probably in the middle of a task related to it right now!  Go ahead and punch the clock right now as well, to start recording your time! The following Commands are defined below for you to remember and use to track your time:
@@ -106,7 +110,31 @@ Add links to other reference, source docs, requirements, back stories, whatever,
 
 :END:
 
-**** Time Card:
+This Log Entry is about: Yadda... Yadda... Yadda...
+
+\newpage
+
+**** NEW Reference:
+
+- *Link to Project:* [[][] ]
+
+- [[URL][Link Name] ] *Heading:* /(comment)/
+
+- [[][] ] - *_:* /(yadda...)/
+
+- [[][] ] - *_:* /(yadda...)/
+
+- [[][] ] - *_:* /(yadda...)/
+
+- [[][] ] /(_)/
+
+- [[][] ] /(_)/
+
+- [[][] ] /(_)/
+
+\newpage
+
+**** NEW Time Card:
 
 #+BEGIN: clocktable :scope tree2 :maxlevel 4 :tstart "<-1d>" :tend "<+1m>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3
 #+END:
@@ -114,38 +142,106 @@ Add links to other reference, source docs, requirements, back stories, whatever,
 \newpage
 
 **** NEW Summary: [0/3]
+:README:
+   This Summary is mostly to help you find things later when you cannot remember when or where is was done... If you go to the top of this file and expand all headings to show ALL content, then do a search on "~Summary:~" you will be able to quickly scroll through and scan these summaries quickly to find what you were looking for... 
 
-This Summary is mostly to help you find things later when you cannot remember when or where is was done... If you go to the top of this file and expand all headings to show ALL content, then do a search on "~Summary:~" you will be able to quickly scroll through and scan these summaries quickly to find what you were looking for... 
+   Also the *Time Card* /displayed above/ each search hit will give more clues by showing important headings you worked on...
 
-Also the *Time Card* /displayed above/ each search hit will give more clues by showing important headings you worked on...  
+   Below is an optional list /(that could also provide links)./ This list could be used to itemize things you worked on, but I personally find it easier to simply write a short one or two line description containing important keywords right here and nothing more. I think that is more useful...
+:END:
 
-Below is an optional list /(that could also provide links)./ This list could be used to itemize things you worked on, but I personally find it easier to simply write a short one or two line description containing important keywords right here and nothing more. I think that is more useful...
+Yadda... Yadda... Yadda...
 
-1. [ ] 
+1. [ ] *__:*
 
-2. [ ] 
+2. [ ] *__:*
 
-3. [ ]
+3. [ ] *__:*
 
 \newpage
 
 **** NEW Details:
+***** NEW New Item 1 /(placeholder)/ [0/3]
 
-***** NEW New Item 1 /(placeholder)/ [0/1]
+- [ ] *__:* /(__)/
 
-- [ ]
+      #+begin_src conf
+       root@dev1:~$ 
+       root@dev1:~$ 
+       root@dev1:~$ 
+      #+end_src
+
+- [ ] *__:* /(__)/
+
+      #+begin_src conf
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+      #+end_src
+
+- [ ] *__:* /(__)/
+
+      #+begin_src conf
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+      #+end_src
 
 \newpage
 
-***** NEW New Item 2 /(placeholder)/ [0/1]
+***** NEW New Item 1 /(placeholder)/ [0/3]
 
-- [ ]
+- [ ] *__:* /(__)/
+
+      #+begin_src conf
+       root@dev1:~$ 
+       root@dev1:~$ 
+       root@dev1:~$ 
+      #+end_src
+
+- [ ] *__:* /(__)/
+
+      #+begin_src conf
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+      #+end_src
+
+- [ ] *__:* /(__)/
+
+      #+begin_src conf
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+      #+end_src
 
 \newpage
 
-***** NEW New Item 3 /(placeholder)/ [0/1]
+***** NEW New Item 1 /(placeholder)/ [0/3]
 
-- [ ]
+- [ ] *__:* /(__)/
+
+      #+begin_src conf
+       root@dev1:~$ 
+       root@dev1:~$ 
+       root@dev1:~$ 
+      #+end_src
+
+- [ ] *__:* /(__)/
+
+      #+begin_src conf
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+      #+end_src
+
+- [ ] *__:* /(__)/
+
+      #+begin_src conf
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+      #+end_src
 
 \newpage
 
@@ -319,13 +415,21 @@ This Log Entry is about: Yadda... Yadda... Yadda...
 
 **** NEW Reference:
 
-+ *Link to Project:* [ [ ][ ] ]
+- *Link to Project:* [[][] ]
 
-+ [ [ <link> ][ Item One ] ]
+- [[URL][Link Name] ] *Heading:* /(comment)/
 
-+ [ [ <link> ][ Item Two ] ]
+- [[][] ] - *_:* /(yadda...)/
 
-+ [ [ <link> ][ Item Three ] ]
+- [[][] ] - *_:* /(yadda...)/
+
+- [[][] ] - *_:* /(yadda...)/
+
+- [[][] ] /(_)/
+
+- [[][] ] /(_)/
+
+- [[][] ] /(_)/
 
 \newpage
 
@@ -356,177 +460,95 @@ Yadda... Yadda... Yadda...
 \newpage
 
 **** NEW Details:
-***** NEW New Item 1 /(placeholder)/ [0/6]
+***** NEW New Item 1 /(placeholder)/ [0/3]
 
-- [ ] *___:*
+- [ ] *__:* /(__)/
 
-   Yadda Yadda Yadda...
+      #+begin_src conf
+       root@dev1:~$ 
+       root@dev1:~$ 
+       root@dev1:~$ 
+      #+end_src
 
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
+- [ ] *__:* /(__)/
 
-- [ ] *___:*
+      #+begin_src conf
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+      #+end_src
 
-   Yadda Yadda Yadda...
+- [ ] *__:* /(__)/
 
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
-
-- [ ] *___:*
-
-   Yadda Yadda Yadda...
-
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
-
-- [ ] *___:*
-
-   Yadda Yadda Yadda...
-
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
-
-- [ ] *___:*
-
-   Yadda Yadda Yadda...
-
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
-
-- [ ] *___:*
-
-   Yadda Yadda Yadda...
-
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
+      #+begin_src conf
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+      #+end_src
 
 \newpage
 
-***** NEW New Item 2 /(placeholder)/ [0/1]
 
-- [ ] *___:*
 
-   Yadda Yadda Yadda...
 
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
 
-- [ ] *___:*
+***** NEW New Item 1 /(placeholder)/ [0/3]
 
-   Yadda Yadda Yadda...
+- [ ] *__:* /(__)/
 
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
+      #+begin_src conf
+       root@dev1:~$ 
+       root@dev1:~$ 
+       root@dev1:~$ 
+      #+end_src
 
-- [ ] *___:*
+- [ ] *__:* /(__)/
 
-   Yadda Yadda Yadda...
+      #+begin_src conf
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+      #+end_src
 
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
+- [ ] *__:* /(__)/
 
-- [ ] *___:*
-
-   Yadda Yadda Yadda...
-
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
-
-- [ ] *___:*
-   
-   Yadda Yadda Yadda...
-
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
-
-- [ ] *___:*
-
-   Yadda Yadda Yadda...
-
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
+      #+begin_src conf
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+      #+end_src
 
 \newpage
 
-***** NEW New Item 3 /(placeholder)/ [0/1]
 
-- [ ] *___:*
 
-   Yadda Yadda Yadda...
 
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
 
-- [ ] *___:*
+***** NEW New Item 1 /(placeholder)/ [0/3]
 
-   Yadda Yadda Yadda...
+- [ ] *__:* /(__)/
 
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
+      #+begin_src conf
+       root@dev1:~$ 
+       root@dev1:~$ 
+       root@dev1:~$ 
+      #+end_src
 
-- [ ] *___:*
+- [ ] *__:* /(__)/
 
-   Yadda Yadda Yadda...
+      #+begin_src conf
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+      #+end_src
 
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
+- [ ] *__:* /(__)/
 
-- [ ] *___:*
-
-   Yadda Yadda Yadda...
-
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
-
-- [ ] *___:*
-
-   Yadda Yadda Yadda...
-
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
-
-- [ ] *___:*
-
-   Yadda Yadda Yadda...
-
-   #+begin_src conf
-     magos@ca1 $: _
-     Alisha@Rodrigo $: _
-   #+end_src
+      #+begin_src conf
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+      #+end_src
 
 \newpage
 
