@@ -20,7 +20,7 @@
 ;;;
 ;; Load xah-fly-keys - now a cloned repo in my-modules
 
-(add-to-list 'load-path "~/.emacs.d/lisp/my-modules/xah-fly-keys")
+(add-to-list 'load-path "~/.emacs.d/lisp/my-modules/XahEmacs/xah-fly-keys")
 
 ;;;
 ;;  Enable Xah Fly Keys:

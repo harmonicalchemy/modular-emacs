@@ -34,7 +34,7 @@
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Load xah-elisp-mode - (copy of last update on melpa (before he removed it)
 
-(add-to-list 'load-path "~/.emacs.d/lisp/my-modules/xah-elisp-mode")
+(add-to-list 'load-path "~/.emacs.d/lisp/my-modules/XahEmacs/xah-elisp-mode")
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Enable Xah eLisp Mode in eLisp files:
@@ -46,7 +46,7 @@
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Load xah-find - (copy of last update on melpa (before he removed it)
 
-(add-to-list 'load-path "~/.emacs.d/lisp/my-modules/xah-find")
+(add-to-list 'load-path "~/.emacs.d/lisp/my-modules/XahEmacs/xah-find")
 
 (require 'xah-find)
 

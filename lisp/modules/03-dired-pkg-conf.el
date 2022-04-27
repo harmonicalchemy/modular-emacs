@@ -22,6 +22,10 @@
         (package-install p))
       me--req-dired-packages)
 
+;;;
+;; Load xah-dired.el - from my-modules/XahEmacs/xah-dired
+
+(add-to-list 'load-path "~/.emacs.d/lisp/my-modules/XahEmacs/xah-dired")
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Dired Extras - (first added: 2018-011-04 - Alisha)
