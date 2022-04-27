@@ -104,21 +104,20 @@
 ;; Change the placeholder paths below to a location where you keep your library
 ;; of markdown files. If you don't have something like that set up already,
 ;; create a place for that now.  DEFT will give you a nice for navigating your
-;; markdown and/or org docs...  There are options below for both Mac OS and Linux
-;; systems.  If you Emacs on both systems set the paths below for both of them...
+;; markdown and/or org docs...  If you use Harmonic Alchemy .DOTFILES, You are
+;; all set with the definition below as you should (by folloing instructions
+;; within the .DOTFILES readime, will have ~/.MD properly defined for your
+;; environment for DEFT to work with.... The options below work on both MacOS
+;; and Linux systemsa...  *Your Mileage may Vary depending on your use-case
+;; however not something that could be more easily remedied with simple
+;; symlinks set up within your $HOME directory on each different platform
+;; you run Harmonic Alchemy Modular Emacs on...
 ;;;;
 
 ;;;
 ;; Path to My-Docs on Mac OS:
 
-(when ME--DARWIN
-  (setq deft-directory "~/change-this-path/to/your-Docs"))
-
-;;;
-;; Path to My-Docs on Linux:
-
-(when ME--LINUX
-  (setq deft-directory "~/change-this-path/to/your-Docs"))
+(setq deft-directory "~/.MD")
 
 (setq deft-recursive t)
 (setq deft-use-filename-as-title t)
