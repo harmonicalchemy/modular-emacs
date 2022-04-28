@@ -59,7 +59,9 @@
 
 ;; Virtual Path to ORG Docs on All Platforms: (a symlink)
 
-(setq org-directory "~/.OD")
+(defconst me--org-dir "~/.OD")
+
+(setq org-directory me--org-dir)
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Configure Org Mode Beautify Settings: (constantly under revision %^)
