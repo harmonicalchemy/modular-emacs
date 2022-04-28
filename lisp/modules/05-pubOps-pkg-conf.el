@@ -115,7 +115,7 @@
 ;;;;
 
 ;;;
-;; Path to My-Docs on Mac OS:
+;; Virtual Path to My-Docs on All Platforms:
 
 (setq deft-directory "~/.MD")
 

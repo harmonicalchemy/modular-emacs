@@ -48,34 +48,18 @@
 ;; sub-directories... You may already have a special directory for your
 ;; org files.  In that case be sure to read all the notes below!
 ;;
-;; IMPORTANT NOTE: Change the path in the first two forms below to match your
-;; Org-Files Home Directory. All path definitions below this form will be
-;; relative to this defined MY-ORG-DIR... (if you don't have a special
-;; org-notes directory on your file system yet, create that directory now and
-;; change this next form below to reflect your new directory's path)
-
+;; IMPORTANT NOTE: Create a symlink in your home directory: ~/.OD which
+;; points to the top level directory where you keep all your .ORG files...
+;; NOTE: If you don't have a master org-files directory on your file system
+;; yet, then go ahead and create that directory now... Make sure your
+;; newly created symlink:  ~/.OD points to your new org-files directory path
+;; organize your important org-files in this master directory... master agenda
+;; etc...
 ;;;
-;; Path to Your ORG Docs on Mac OS:
 
-(when ME--DARWIN
-  (defconst me--org-dir
-    (file-name-as-directory
-     (expand-file-name "~/Path/To/Your/MacOS/Org-Docs"))))
+;; Virtual Path to ORG Docs on All Platforms: (a symlink)
 
-;;;
-;; Path to Your ORG Docs on Linux:
-
-(when ME--LINUX
-  (defconst me--org-dir
-    (file-name-as-directory
-     (expand-file-name "~/Path/To/Your/Linux/Org-Docs"))))
-
-
-;;;
-;; Use above local Constants to Define Org Mode Default "Org Directory":
-
-(setq org-directory me--org-dir)
-
+(setq org-directory "~/.OD")
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Configure Org Mode Beautify Settings: (constantly under revision %^)
