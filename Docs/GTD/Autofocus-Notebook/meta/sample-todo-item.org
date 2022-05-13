@@ -1,4 +1,4 @@
-* Sample TODO Item With More details: /(rename this)/
+* Sample TODO Item With More details: /(TEMPLATE - clone & rename this file...)/
 
 This could be a quick condensed README or ABOUT detail relating to some project you are working on... /(which could per personal, clients, home, your projects, etc.)/
 
