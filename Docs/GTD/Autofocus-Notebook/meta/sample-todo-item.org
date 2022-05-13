@@ -1,0 +1,28 @@
+* Sample TODO Item With More details: /(rename this)/
+
+This could be a quick condensed README or ABOUT detail relating to some project you are working on... /(which could per personal, clients, home, your projects, etc.)/
+
+Clone this file to create more like this to link from Item headings within your Autofocus Notebook... /(it shall contain more details about what you are doing and how to proceed...)/ You can provide more links within this file to pertenant info or sections within a project, etc...
+
+You can also use this file to keep track of status & where you are currently working within the task it relates to as well...
+
+Doing this will help you to keep the Autofocus item headings short and provide a place to update what you are currently doing on this particular task close at hand during your AutoFocus sessions.. /(while staying out of your face until you decide to come here)/
+
+=Note:= You will not need this file for many Autofocus tasks, 
+       /(e.g., empty the compost, wash the car, etc.)/ However...
+       you WILL need it for large projects, or clients with follow up tasks etc.. 
+
+       Those kinds of things will benefit by having a good top level start-here thing like this.  It will  help you keep track while executing within large projects, and that will be convenient since there will be a direct link from its related heading within the associated Autofocus Notebook...
+
+Place clones of this file within a subfolder: ~meta~ as a sibling of the Autofocus Notebook it belongs to.. Then you simply link to it from an Autofocus heading like this:
+
+    ~[ [./meta/title-of-your-clone.org] [more-info] ]~
+
+    You can also link back to the Autofocus Notebook with this:
+
+    [[../Autofocus-notebook.org][Link to Autofocus Notebook Template]]
+
+This info is hidden from your AutoFocus sessions.. /(as it should be until you decide to come here and investigate further during a particular autofocus session)/
+
+This file could contain links to your personal projects, work projects, or client projects.  Consider it the first place to go whether you are starting out, or coming back to continue where you left off...
+
