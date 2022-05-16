@@ -1,16 +1,85 @@
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; [modula-emacs]:~/.emacs.d/lisp/modules/02-package-conf.el
+;; [modular-emacs]:~/.emacs.d/lisp/modules/02-common-conf.el
 ;;
-;; This module provides the basic modules that most likely will be needed
-;; by most all use-cases...  Modular Emacs default packages so-to-speak...
+;; This module provides the common modules needed by all use-cases...
+;; Many default parameters are set here, as well as different frame creation
+;; functions... All of the dimension settings for frames / windows etc. are
+;; defined within this module...
 ;;
-;; Change Log:
+;;; Change Log:
+
+;; 2022-005-15 - Alisha Awen, siren1@disroot.org
+;;   Renamed this file from; 02-package-conf.el to: 02-common-conf.el The
+;;   previous name was misleading and in fact incorrect as you would think
+;;   it is about configuring melpa / elpa packages etc. That stuff is
+;;   configured within module: 01-repositories.el... Also all the code from
+;;   06-interface.el has been moved into this file as well...
 ;;
+;;   06-interface.el will be removed...
+;;
+;;   ALSO: In order to make all this work, dispatcher.el will need to be
+;;   modified (i.e., the old name of this module within dispatcher.el needs to
+;;   be changed to this new file name and the form that loads 06-interface.el
+;;   removed alltoogether...
+
 ;; 2020-005-16 - Alisha Awen, siren1@disroot.org
-;;   disabled poserline mode-line stuff...  I got tired of it...  Too busy...
+;;   disabled powerline mode-line stuff...  I got tired of it...  Too busy...
 ;;   I found smart-mode-line to be better for my needs... That is the new
 ;;   default going forward.  I left the powerline code in, (disabled) in case
 ;;   you like it and would like to switch back...
+
+;;; OLD CHANGE LOG of 06-interface.el:
+;;      (before merging all its code into here)
+;;      (descending chronological order)
+;;
+;;   2021-004-08 - Updated Modular Emacs to v3.4.0 [Q2 2021]
+;;                 (still beta - working on updating many docs to
+;;                  org-mode and publishing as PDFs)
+;;                 This version includes new feature additions &
+;;                 bugfixes...
+
+;;   2021-001-07 - Modified width of initial and default frames to 88.
+
+;;   2020-007-16 - Harmonic Alchemy Modular-Emacs V3.2 (beta) [Q3 2020]
+;;      This has been tested on the develop branch long enough... I am
+;;      still calling it "beta" because there is still a lot of work
+;;      still unfinished... (mostly peripheral support files, templates, etc.
+;;      and the Docs are still being updated... (does documentation ever end? lol)
+;;      I will be calling this Beta for a while i guess... But version numbers
+;;      will continue to advance...  The nature of Emacs is "always in Beta"
+;;      because it is so powerful and flexible, and empowers the user who can
+;;      not only use and customize it but can also completely change functionality!
+
+;;   2019-007-05 - Harmonic Alchemy Modular-Emacs Lisp IDE Fork v2.2.0 [Q3 2019]
+;;      v2.0.1 [Q3 2019] Final testing period over... Version 2.0.1 is stable.
+;;      This fork represents new commented out features added from Lisp-IDE
+;;      branch/fork back into the develop branch so they can be kept up to
+;;      date when the time comes for these features to be turned on within
+;;      the develop or master branch at a later date...
+
+;;   2019-007-05 - Harmonic Alchemy Modular-Emacs Official Release:
+;;      v2.0.1 [Q3 2019] Final testing period over... Version 2.0.1 is stable.
+
+;;   2019-006-23 - Harmonic Alchemy Modular-Emacs Official Release:
+;;      v1.0.0 [Q2 2019] Final testing period over... Version 2 is stable.
+
+;;   2019-004-24 - Harmonic Alchemy Modular-Emacs Official Point Release:
+;;      v1.0.0 [Q2 2019] Final testing a new point release within the develop
+;;      branch... After testing period is over a final commit will be made and
+;;      merged back into master...  Master still holds Official Release: 1.0...
+
+;;   2019-003-04 - Harmonic Alchemy Modular-Emacs Official Release v1.0 [Q1 2019]
+;;      Final test of release candidates is over now... the develop
+;;      branch has been merged back into master... (after this commit)...
+;;      This commit will be tagged as Harmonic Alchemy Modular Emacs Version 1.0
+;;      Official Release [Q1-2019]...
+
+;;   2019-002-21 - Updated to Release Candidate 3 for Modular Emacs
+;;      Version: 1.0 (Q1-2019)
+
+;;   2019-001-21 - This file marks the first Release Candidate for Version
+;;      1 of: Harmonic Alchemy Modular Emacs (displayed in the default Emacs
+;;      frame title)
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;;;
@@ -29,6 +98,7 @@
 ;    powerline
 ;    smart-mode-line
     imenu-list
+    olivetti
     auto-complete
     which-key
     flyspell-correct-helm))
@@ -47,6 +117,56 @@
 ;; Install: from MELPA exec-path-from-shell
 
 (when ME--POSIX (exec-path-from-shell-initialize))
+
+
+;; Change title-bar text
+(setq frame-title-format
+      "Harmonic Alchemy Modular Emacs - Version 3.4 (still in beta) [Q4 2021]")
+
+;; Disable tool-bar - I could care less about tool bars in emacs!
+;; An oxymoron! But you may feel differently.  Comment this out if you like them.
+
+(tool-bar-mode -1)
+
+;; Disable scroll-bar - I use key commands to navigate in emacs.  Once you get
+;; used to the alternate methods you will throw your mouse away! The key commands
+;; are way faster and more accurate as well.  Some key commands take you right to
+;; the precise spot you want to go!
+;; NOTE: I got this to work below by setting the Default Frame alist after
+;; trying many other things that were not working...  I am leaving this here
+;; commented out to keep the option here in case I need it later, (or you do).
+
+;(scroll-bar-mode -1)
+
+;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; Disable this section if you like using the mouse wheel:
+;;
+;; On my laptop my palms get in the way and cause all kinds
+;; of scrolling crazy stuff. I hate it!!! Seriously. Key commands
+;; are best in Emacs.  Right? I Mean Right??? Yup. ;-)
+;; 
+;; Disable mouse wheel (and two finger swipe) scrolling because
+;; it scrolls horribly and I would rather work without it. %^)
+;; also disable the middle mouse (mouse-2) pasting text by accident
+;; really annoys me!
+
+(mouse-wheel-mode -1)
+(global-set-key [wheel-up] 'ignore)
+(global-set-key [wheel-down] 'ignore)
+(global-set-key [wheel-right] 'ignore)
+(global-set-key [wheel-left] 'ignore)
+(global-set-key [double-wheel-up] 'ignore)
+(global-set-key [double-wheel-down] 'ignore)
+(global-set-key [double-wheel-right] 'ignore)
+(global-set-key [double-wheel-left] 'ignore)
+(global-set-key [triple-wheel-up] 'ignore)
+(global-set-key [triple-wheel-down] 'ignore)
+(global-set-key [triple-wheel-right] 'ignore)
+(global-set-key [triple-wheel-left] 'ignore)
+(global-set-key [mouse-2] 'ignore)
+
+;(global-set-key [mouse-yank-at-point] 'ignore)
+;(setq mouse-yank-at-point nil)
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; imenu-list configuration:
@@ -101,88 +221,63 @@
     (when (assq (car mim) minor-mode-alist)
       (setf (cdr (assq (car mim) minor-mode-alist)) repl))))
 
+
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; Activate Blackboard theme:
+
+(load-theme 'blackboard t)
+
+
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; Set Initial Startup Frame Dimensions:
+;; You may have to play with this depending on your total
+;; screen size, etc...
+
+(setq initial-frame-alist
+      '( (name . "HA Mod Emacs v3.4 - Default Frame")
+         (font . "Hermit")
+         (height . 38)
+         (width . 88)
+         (menu-bar-lines . 1)
+         (vertical-scroll-bars . nil)
+         (horizontal-scroll-bars . nil)
+         (left-fringe . 1)
+         (right-fringe . 1)))
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; Set Default Frame Dimensions:
+;; You may have to play with this depending on your total
+;; screen size, etc...
+
+(setq default-frame-alist
+      '( (name . "HA Mod Emacs v3.4 - Default Frame")
+         (font . "Hermit")
+         (height . 38)
+         (width . 88)
+         (menu-bar-lines . 1)
+         (vertical-scroll-bars . nil)
+         (horizontal-scroll-bars . nil)
+         (left-fringe . 1)
+         (right-fringe . 1)))
+
+
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; Configure & Enable Smart-mode-line:
-;; DISABLED - I no longer wish to mess with fancy
-;;            mode lines... The default works fine
-;;            for me. ;-) Your mileage may vary...
-;;
-;;  Choose SML Theme:
-;;  NOTE:   THIS IS DISABLED
-;;    (I am no longer using mode-line packages)
-;;    (pick one and enable it if you like but also
-;;    load the theme at top first!)
+;; Toggle Olivetti Mode with default width: (86 col)
+;; The extra 6 chars over standard 80 col allows
+;; for code and org-mode indention (a compromise)
+;; My standard frame width is set to 88 columns)
+;; so this should just fit...
 
-;;  ;(setq sml/theme 'dark)
-;;  ;(setq sml/theme 'light)
-;;  ;(setq sml/theme 'respectful)
+(require 'olivetti)
 
-;;
-;; Enable Smart Mode Line after Emacs Startup:
-;; NOTE: THIS IS DISABLED (see above note)
-
-;;  ;(add-hook 'after-init-hook 'sml/setup)
-
-;;; POWERLINE MODE
-;;                          (DISABLED)
-;;  If you would rather use powerline, enable the three forms below
-;;  and disable the above smart-mode-line section if you enabled it
-;;  previously...
-;;  Also make sure to load the mode at the top in the package install
-;;  section!
-;;
-;; Enable powerline:
-
-  ;(require 'powerline)
-  ;(powerline-center-theme)
-  ;(setq powerline-default-separator 'slant)
-
-;; Platform Specific SML directory abbreviations:
-;; NOTE: THIS IS DISABLED - Just as above you need to
-;;       un-comment this section and make sure other smart-mode-line
-;;       sections above are enabled first... (also load the package
-;;       at the very top in the package install section)...
-;;
-;;  This is a demo list... It probably works for your .emacs.d directory
-;;  and standard Docs directory, but you will need to fill in the path to
-;;  the last element in the list to a real directory on your system
-;;  (one which you would like to make a shortcut abbreviation for...
-;;  Add more just like that to the end of the list (as instructed in the
-;;  comment at the end of the list)
-;;
-;; Platform Specific SML directory abbreviations:
-;;                  (DISABLED)
-
- ;(when ME--DARWIN
- ;  (add-to-list 'sml/replacer-regexp-list '("^~/\\.emacs\\.d/" ":EMACS:"))
- ;  (add-to-list 'sml/replacer-regexp-list '("^~/Documents/" ":DOCS:"))
-
-;; Add more platform specific directory shortcut abbreviations
-;; to this list here as needed....
-;; When you are done adding new abbreviations, get rid of this comment 
-;; and pull up the final parenthesis below to tidy up %^)...
-
- ;)
-
- ;(when ME--LINUX
- ;(add-to-list 'sml/replacer-regexp-list '("^~/\\.emacs\\.d/" ":EMACS:"))
- ;(add-to-list 'sml/replacer-regexp-list '("^~/Documents/" ":DOCS:"))
-
-;; Add more platform specific directory shortcut abbreviations
-;; to this list here as needed....
-;; When you are done adding new abbreviations, get rid of this comment
-;; and pull up the final parenthesis below to tidy up %^)...
-
- ;)
-
-;; Platform Independent SML directory abbreviations:
-
- ;(add-to-list 'sml/replacer-regexp-list '("^:DOCS:/Path/To/Your/Other/Docs/" ":My-Other-Docs:"))
-
-;; Add more platform independent directory shortcut abbreviations
-;; just like the last form above...
-;; These are invoked independently as complete forms here...
-;; No cleanup or closing paren needed when adding to the end of this list...
+(defun me_toggle-olivetti-mode ()
+  "Toggles olivetti-mode and sets default width back to 86 columns..."
+  (interactive)
+  (progn
+    (olivetti-mode 'toggle)
+    (olivetti-set-width 86)))
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -247,6 +342,7 @@
       ((name . "HA Mod Emacs v3.4 - Default Frame"))))
 
     ;; Select this NEW Frame:
+    
     (select-frame-by-name "HA Mod Emacs v3.4 - Default Frame")
 
     ;; Set Default Face for Coding:
@@ -278,38 +374,38 @@
       (me_make-default-frame)))))
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ;;  Modular Emacs - Set Default Face Functions:
-  ;;
-  ;;  Purpose:
-  ;;
-  ;;    I like to use a serif mono font for writing paragraphs...
-  ;;    but I use Hermit or other similar font for Coding...
-  ;;    This provides a way to go back and fourth from one
-  ;;    face (which is Emacs Default) to another depending on
-  ;;    my current work mode (writing or coding)...
-  ;;
-  ;;  Usage:
-  ;;
-  ;;    Adjust face dimensions and weight within forms below as needed.
-  ;;    Note: Linux vs Mac, Big screen vs Laptop, may require
-  ;;          sub cases to handle... %^)
-  ;;
-  ;;    Xah Fly Key Assigned: Command Mode "p"
-  ;;
-  ;;  NOTE1:  Currently there is no check to see if these fonts are
-  ;;          installed on your system! This is still alpha test stage..."
-  ;;
-  ;;  NOTE2:  It appears that Courier Prime is required to prevent
-  ;;          D o u b l e  W i d e rendering of certain Emacs faces! This
-  ;;          was a problem on Linux.  Not sure about Mac OS yet as I
-  ;;          installed Courier Prime there first and it "just worked" ;-)
-  ;;          This is the reason I have two cases below in the function.
-  ;;          Currently the cases produce redundant results, but i left them in
-  ;;          in case I need to play around with this later...
-  ;;
-  ;;  NOTE3:  If I get fancy with fonts, I will provide them in this repo for easy
-  ;;          installations. In fact I have already gotten fancy with fonts eh? LOL
-  ;;
+;;  Modular Emacs - Set Default Face Functions:
+;;
+;;  Purpose:
+;;
+;;    I like to use a serif mono font for writing paragraphs...
+;;    but I use Hermit or other similar font for Coding...
+;;    This provides a way to go back and fourth from one
+;;    face (which is Emacs Default) to another depending on
+;;    my current work mode (writing or coding)...
+;;
+;;  Usage:
+;;
+;;    Adjust face dimensions and weight within forms below as needed.
+;;    Note: Linux vs Mac, Big screen vs Laptop, may require
+;;          sub cases to handle... %^)
+;;
+;;    Xah Fly Key Assigned: Command Mode "p"
+;;
+;;  NOTE1:  Currently there is no check to see if these fonts are
+;;          installed on your system! This is still alpha test stage..."
+;;
+;;  NOTE2:  It appears that Courier Prime is required to prevent
+;;          D o u b l e  W i d e rendering of certain Emacs faces! This
+;;          was a problem on Linux.  Not sure about Mac OS yet as I
+;;          installed Courier Prime there first and it "just worked" ;-)
+;;          This is the reason I have two cases below in the function.
+;;          Currently the cases produce redundant results, but i left them in
+;;          in case I need to play around with this later...
+;;
+;;  NOTE3:  If I get fancy with fonts, I will provide them in this repo for easy
+;;          installations. In fact I have already gotten fancy with fonts eh? LOL
+;;
 
 ;;;
 ;; Set Modular Emacs Writing Frame Function:
@@ -330,7 +426,7 @@
      (quote
       ((name . "HA Mod Emacs v3.4 - Writer's Frame")
        (height . 38)
-       (width  . 92))))))
+       (width  . 88))))))
 
 
 ;;;
@@ -380,7 +476,7 @@
      (quote
       ((name . "HA Mod Emacs v3.4 - Default Frame")
        (height . 38)
-       (width  . 92))))))
+       (width  . 88))))))
 
 
 ;;;
@@ -403,11 +499,6 @@
       ((name . "HA Mod Emacs v3.4 - WIDE Coder's Frame")
        (height . 38)
        (width  . 184))))
-
-    ;; Enable Olivetti Mode (88 column wide)
-
-    (olivetti-mode)
-    (olivetti-set-width 88)
 
     ;; Split Window Side by Side for Comparing code etc.
 
@@ -440,9 +531,9 @@
     (modify-frame-parameters
      nil
      (quote
-      ((name . "HA Mod Emacs v3.4 - Default Coder's Frame")
+      ((name . "HA Mod Emacs v3.4 - Default Frame")
        (height . 38)
-       (width  . 92))))))
+       (width  . 88))))))
 
 
 ;;;

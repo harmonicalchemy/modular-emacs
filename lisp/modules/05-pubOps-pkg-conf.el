@@ -29,7 +29,6 @@
     auctex
     pandoc-mode
     fountain-mode
-    olivetti
     graphviz-dot-mode
     csv-mode
     vmd-mode))

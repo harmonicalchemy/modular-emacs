@@ -119,7 +119,7 @@
   ;; (back tick)
   ;; (because I have conflicting other-frame key)
 
-  (define-key xah-fly-command-map (kbd "`") 'olivetti-mode)
+  (define-key xah-fly-command-map (kbd "`") 'me_toggle-olivetti-mode)
 
   ;; Set global key to toggle imenu:
   ;; (single quote)
