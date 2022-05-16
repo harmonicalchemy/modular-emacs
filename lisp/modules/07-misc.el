@@ -75,6 +75,10 @@
 
 (add-hook 'text-mode-hook 'turn-on-visual-line-mode)
 
+;; Enable Generic Modes:
+
+(require 'generic-x)
+
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Set Olivetti Mode Default Width to 88 columns:
 

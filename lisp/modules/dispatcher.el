@@ -45,6 +45,30 @@
 ;; Change Log: (descending chronological order)
 ;;
 
+;; 2022-005-15 - Alisha Awen, siren1@disroot.org
+;;   Added a new form that invokes new file: 06-XahEmacs-conf.el...
+;;   This module is disabled by default (the form is commented out) You won't
+;;   be able to use it unless you have purchased XahEmacs...
+;;   IF YOU DO HAVE the PREMIUM XahEmacs PACKAGE, you will need to create a
+;;   sub-directory: i.e., ~/.emacs.d/lisp/my-modules/XahEmacs and then copy the
+;;   individual XahEmacs package directories into there in order to be able to
+;;   use them within Harmonic Alchemy Modular Emacs... (see CONFIGURATION notes
+;;   within 06-XahEmacs-conf.el for complet instructions...
+;;
+;;   After doing the above, edit this file and remove the comment characters
+;;   from the form titled: *** Optional XahEmacs Premium Features ***
+;;   That enables the module...
+;;
+;;   Currently the only XahEmacs modules enabled by Harmonic Alchemy Modular
+;;   Emacs are: xah-elisp-mode and xah-find, but more will be added as I evaluate
+;;   them and find a good use-case for them within the context of Harmonic Alchemy
+;;   Modular Emacs...
+
+;; 2022-005-15 - Alisha Awen, siren1@disroot.org
+;;   Renamed 02-package-conf.el to: 02-common-conf.el (See 02-common-conf.el
+;;   changelog for details)... Removed; 06-interface.el and the form here that
+;;   runs that file...
+
 ;;   2021-004-08 - Updated Modular Emacs to v3.4.0 [Q2 2021]
 ;;       (still beta - working on updating many docs to org-mode and
 ;;       publishing as PDFs) This version includes new feature additions &
@@ -87,20 +111,40 @@
   (load-file "~/.emacs.d/lisp/modules/01-repositories.el"))
 
 ;;;
-;; Load Emacs Standard Packages Module:
+;; Load Emacs Common Interface Configurations Module:
 
-(if (file-exists-p "~/.emacs.d/lisp/my-modules/02-package-conf.el")
-    (load-file "~/.emacs.d/lisp/my-modules/02-package-conf.el")
-  (load-file "~/.emacs.d/lisp/modules/02-package-conf.el"))
+(if (file-exists-p "~/.emacs.d/lisp/my-modules/02-common-conf.el")
+    (load-file "~/.emacs.d/lisp/my-modules/02-common-conf.el")
+  (load-file "~/.emacs.d/lisp/modules/02-common-conf.el"))
 
 ;;;;
 ;;           *** Optional Xah Fly Keys Feature ***
 ;;
+;; NOTE: You will need to clone:
+;;       https://github.com/harmonicalchemy/xah-fly-keys.git
+;;       or Clone: Xah's source repo (the above is a fork) before
+;;       enabling this form... (by un-commenting it)
+;;        
 ;; Load - Xah Fly Keys module:
 
 (if (file-exists-p "~/.emacs.d/lisp/my-modules/12-Xah-Fly-Keys.el")
     (load-file "~/.emacs.d/lisp/my-modules/12-Xah-Fly-Keys.el")
   (load-file "~/.emacs.d/lisp/modules/12-Xah-Fly-Keys.el"))
+
+;;;;
+;;           *** Optional XahEmacs Premium Features ***
+;;
+;;   DON'T ENABLE THIS UNLESS YOU HAVE PURCHASED THIS PACKAGE
+;;   If you did purchase the premium XahEmacs package, read
+;;   the instructions for getting these packages set up within
+;;   file: 06-XahEmacs-conf.el... and then enable this form by
+;;   un-commenting it...
+;;
+;; Load - XahEmacs module:
+
+;(if (file-exists-p "~/.emacs.d/lisp/my-modules/06-XahEmacs-conf.el")
+;    (load-file "~/.emacs.d/lisp/my-modules/06-XahEmacs-conf.el")
+;  (load-file "~/.emacs.d/lisp/modules/06-XahEmacs-conf.el"))
 
 ;;;
 ;; Load Harmonic Alchemy Modular Emacs - Key Bindings module:
@@ -108,13 +152,6 @@
 (if (file-exists-p "~/.emacs.d/lisp/my-modules/13-key-bindings.el")
     (load-file "~/.emacs.d/lisp/my-modules/13-key-bindings.el")
   (load-file "~/.emacs.d/lisp/modules/13-key-bindings.el"))
-
-;;;
-;; Load Harmonic Alchemy Modular Emacs - Interface module:
-
-(if (file-exists-p "~/.emacs.d/lisp/my-modules/06-interface.el")
-    (load-file "~/.emacs.d/lisp/my-modules/06-interface.el")
-  (load-file "~/.emacs.d/lisp/modules/06-interface.el"))
 
 ;;;
 ;; Load Harmonic Alchemy Modular Emacs - Dired Extras module:

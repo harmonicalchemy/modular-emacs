@@ -81,18 +81,8 @@ Subsequent repeated calls to the above command will overwrite your existing ~New
 Enjoy! - Alisha Awen
 
 :END:
-
-* DONE 💡 Scratchpad Refile:
-CLOSED: [2021-02-19 Fri 16:44]
-:LOGBOOK:
-- State "DONE"       from              [2021-02-19 Fri 16:44]
-:END:
-** DONE ☞ Start Here!
-CLOSED: [2021-02-19 Fri 16:11]
-:LOGBOOK:
-- State "DONE"       from              [2021-02-19 Fri 16:11]
-:END:
-
+* 💡 Scratchpad Refile:
+** ☞ Start Here!
 :README:
 This Section is mainly to accommodate "seat-of-pants" writers (of which I have been accused of but I also crave the planning stuff).  I often come here for my [[https://projects.csail.mit.edu/gsb/old-archive/gsb-archive/gsb2000-02-11.html]["yak shaving"]] adventures...
 
@@ -139,8 +129,7 @@ Sure! You can put anything in here! We've got that covered for you in this Start
 
   + Having done the simple steps above any time you get inspired, you will be able to tell your grand children.. "I got my first spark of an idea for that book back in Year, Month, Day, time, second" (50 years later!) Now that is being organized! LOL
 :END:
-
-*** My New Business Idea! <2020-06-07 Sun> "yeah we've heard that one before"
+*** NEW My New Business Idea! <2020-06-07 Sun> "yeah we've heard that one before"
 
 :README:
 This is a dummy example of some crazy idea that you may have gotten at the spur of the moment, while you were doing something elsewhere within this project...  After you are done getting as much of the idea as you initally can then you can simply go back to what you were doing before the inspiration segue tore you away... you might want to schedule this as a todo item before leaving though...
@@ -168,13 +157,10 @@ This is a Heading 7 test...
 
 This is a Heading 8 test...
 
-* ACTIVE 📖 Book:
-** DONE 📃 Synopsis:
-CLOSED: [2020-07-02 Thu 18:11]
-:LOGBOOK:
-- State "DONE"       from "ACTIVE"     [2020-07-02 Thu 18:11]
-:END:
+\newpage
 
+* 📖 Book:
+** NEW 📃 Synopsis:
 :README:
 This section has been purposefully left blank for you to fill in...
 
@@ -184,22 +170,22 @@ Use this space to write the main synopsis of your work... You can write anything
 
 - After completing those tasks mark them "DONE" and place your resulting synopsis notes in here... You will be coming back here to consult these notes for many things as you promote and publish your book.
 :END:
+
+\newpage
+
 ** NEW 📃 Front Matter:
 
 Front Matter... yadda... yadda... yadda...
 
-** ACTIVE 🔖 Chapter # - Org-Mode Publishing Tricks
+\newpage
 
-# BEGIN CHAPTER:
-
+** NEW 🔖 Chapter # - Org-Mode Publishing Tricks
 *** 📄 Introduction
-
-# BEGIN SUB-CHAPTER TEXT
-
 Here are some *publishing tips and snippits* I have found along the way...  Some of them may get incorporated more formally later /(with docs, etc.),/ but for now... you will have to discover these treasures below within this example chapter...
 
-**** References:
+\newpage
 
+**** References:
 :README:
 Add links to other reference, source docs, requirements, back stories, whatever, here...  
 
@@ -236,20 +222,15 @@ To Open a Link Type: ~C-c C-o~
 
 - *       *
 
-# END SUB-CHAPTER TEXT
+\newpage
 
 *** 📄 New Topic <replace with topic name>
 
-# BEGIN SUB-CHAPTER TEXT
-
 At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
 
-# END SUB-CHAPTER TEXT
-
-# END CHAPTER:
+\newpage
 
 *** 🗒 Background Notes:
-
 :README:
 The *Background Notes* section of a chapter is a place where you can add notes, ideas, instructions, whatever... close at hand within the chapter, and not have to worry about any of it getting exported and or published to the final output product...  
 
@@ -257,13 +238,7 @@ Nothing within this section will be exported... not even the Background Notes He
 
 The example Notes below have been timestamped as a way to suggest organizing TODO items for a particular chapter you may find yourself working on, or researching... *Use / replace the notes below with / for your own schemes*...
 :END:
-
-# BEGIN CHAPTER BACKGROUND NOTES
-
 **** 🗒 Note 1: <2020-05-10 Sun>
-
-# BEGIN BACKGROUND NOTE
-
 
 1. Enumerated List Item A
 
@@ -273,51 +248,17 @@ The example Notes below have been timestamped as a way to suggest organizing TOD
 
        + Enumerated List Item D
 
-2. 
+2. Something New...
 
-
-- Test one...
+- Bullet checkbox Test one...
 
    + [ ] Checkbox List:
 
    + [ ] 
 
-- Test
-
-
-- test
-
-- 
-
-   - Test two...
-
-- 
-
-- Test three...
-
-
-
-+ Mark each note's timestamp to its initial creation time. This will enable emerging notes for chapters to be searched chronologically, and to give you an idea of how things evolve over time...
-
-+ Add anything you need here under this heading formatted any way needed to present the data... Sub levels are fine, tables are fine... etc.  This is your chapter's Notebook, Scrapbook, whatever any extra info/metadata you feel is important to record...
-
-  + Use bulleted lists/sublist etc. if needed...
-
-1. Or Numbered Lists...
-
-|----+--------|
-| Or | Tables |
-|----+--------|
-|  1 |    2.3 |
-|----+--------|
-
-Do any or all the above to help get the concepts and images of your book clear in mind...
-
-# END BACKGROUND NOTE
+\newpage
 
 **** 🗒 Note 2: <2020-05-10 Sun>
-
-# BEGIN BACKGROUND NOTE
 
 Each new note needs to get its own heading and initial timestamp...
 
@@ -325,11 +266,9 @@ Each new note needs to get its own heading and initial timestamp...
 
 Quid Novi? Lorem Ipsum dolor sit amet,consectetur adipisicing elit, sed doeiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim adminim veniam, quis nostrudexercitation ullamco laboris nisi utaliquip ex ea commodo consequat.Duis aute irure dolor inreprehenderit in coluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatatnon proident, sunt in culpa quiofficia deserunt mollit anim id estlaborum.
 
-# END BACKGROUND NOTE
+\newpage
 
 **** 🗒 Phasellus orci: <2020-05-10 Sun>
-
-# BEGIN BACKGROUND NOTE
 
 Etiam tempor elit auctor magna. Nullam nibh velit, vestibulum ut, eleifend non, pulvinar eget, enim. Classaptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer velit mauris, convallis acongue sed, placerat id, odio. Etiam venenatis tortor sed lectus. Nulla non orci. In egestas porttitor quam. Duis nec diameget nibh mattis tempus. Curabitus accumsan pede id odio. Nunc vitae libero. Aenean condimentum diam et turpis.Vestibulum non risus. Ut consectetuer gravida elit. Aenean est nunc, varius sed, alquam eu, feugiat sit amet, metus. Sedvenenatis odio id eros.
 
@@ -339,19 +278,17 @@ Etiam tempor elit auctor magna. Nullam nibh velit, vestibulum ut, eleifend non, 
 | test 1   | test 2    | test 3    | test 4    | test 5            |
 |----------+-----------+-----------+-----------+-------------------|
 
-Yadda, yadda, yadda. etc... 
+Yadda, yadda, yadda. etc...
 
-# END BACKGROUND NOTE
+\newpage
 
-# END CHAPTER BACKGROUND NOTES
-* NEW 📒 Research:
-** 💡 New Topic Ideas:
-** DONE 📒 Yak Shaving:
-CLOSED: [2021-02-19 Fri 16:42]
-:LOGBOOK:
-- State "DONE"       from              [2021-02-19 Fri 16:42]
-:END:
+* 📒 Research:
+** 💡 Topic Ideas:
+*** NEW 📄 New Topic /(clone this)/
 
+At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
+
+** 📒 Yak Shaving:
 :README:
 What is Yak Shaving doing in your Research Folder?  Just as the name implies, this is a place that may have no business being in your book, but nevertheless may be something you need to research on the side in order to get your book written.. 
 
@@ -361,20 +298,19 @@ Use this section as a place to save and organize new-ideas while you figur out w
 
 The format for this section is anything you like.. And you may put anything you like in here.. (unlike the Start Here section above for seat-of-the-pants writing, this section should be much more organized... Some of the things written seat-of-the-pants within the Start Here section may end up in this Yak Shaving section later when you are ready to structure them further... (after inspiration)
 :END:
-
-*** Yak Shaving Heading One:
-
-Note: This is an example of some documentation or research you need to do, the result of which will not be included in your book but will be used as a resource necessary for the creation and or publishing of your book... Add what you need here... 
-
-Use this section's top level heading outline structure.. Create sub-level headings as needed for your purposes...
-
-*** Yak Shaving Heading Two:
+*** NEW Yak Shaving Heading One:
 
 Note: This is an example of some documentation or research you need to do, the result of which will not be included in your book but will be used as a resource necessary for the creation and or publishing of your book... Add what you need here... 
 
 Use this section's top level heading outline structure.. Create sub-level headings as needed for your purposes...
 
-*** Add more yak shaving headings as needed:
+*** NEW Yak Shaving Heading Two:
+
+Note: This is an example of some documentation or research you need to do, the result of which will not be included in your book but will be used as a resource necessary for the creation and or publishing of your book... Add what you need here... 
+
+Use this section's top level heading outline structure.. Create sub-level headings as needed for your purposes...
+
+*** NEW Add more yak shaving headings as needed:
 
 Duplicate the top level Outline above to create more headings here as needed... 
 
@@ -382,16 +318,7 @@ Create sub-level outlines below each heading as needed for your purposes.
 
 Anything goes here... You can make this into what ever you want..
 
-* DONE ⏰ Tasks:
-CLOSED: [2021-02-19 Fri 17:12]
-:LOGBOOK:
-- State "DONE"       from "ACTIVE"     [2021-02-19 Fri 17:12]
-- State "ACTIVE"     from "DONE"       [2020-07-02 Thu 17:36]
-- State "DONE"       from "ACTIVE"     [2020-07-01 Wed 14:36]
-- State "ACTIVE"     from "DONE"       [2020-07-01 Wed 11:00]
-- State "DONE"       from              [2020-06-30 Tue 05:46]
-:END:
-
+* ⏰ Tasks:
 :README:
 - Use this space to add time stamped Tasks below for any pourpose you may need...
 
@@ -410,30 +337,8 @@ CLOSED: [2021-02-19 Fri 17:12]
 
 - It is hoped that this process will give you a faster, efficient, organized "bootstrapped" head start and teach some guidance about how to properly organize and write your books with a clearer mind, inspired outlook, and renewed motivation...
 :END:
-
-*** DONE 📃 Synopsis Tasks:
-CLOSED: [2021-02-19 Fri 17:12]
-:LOGBOOK:
-- State "DONE"       from "NEW"        [2021-02-19 Fri 17:12]
-- State "NEW"        from "DONE"       [2021-02-19 Fri 17:04]
-- State "DONE"       from "NEW"        [2021-02-19 Fri 11:57]
-- State "NEW"        from "DONE"       [2021-02-18 Thu 19:15]
-- State "DONE"       from "ACTIVE"     [2020-07-04 Sat 15:58]
-- State "ACTIVE"     from "DONE"       [2020-07-02 Thu 17:36]
-- State "DONE"       from "NEXT"       [2020-06-20 Sat 17:19]
-:END:
-
-:README:
-yadda yadda yadda...
-:END:
-
-**** DONE Important Before you start!
-CLOSED: [2021-02-19 Fri 11:56]
-:LOGBOOK:
-- State "DONE"       from "NEW"        [2021-02-19 Fri 11:56]
-- State "NEW"        from "DONE"       [2021-02-18 Thu 19:15]
-- State "DONE"       from "ACTIVE"     [2020-07-02 Thu 17:40]
-:END:
+*** 📃 Synopsis Tasks:
+**** NEW Important Before you start!
 
 NOTE: Before you start you need to answer the following questions:
 
@@ -448,14 +353,9 @@ After completing above, follow the steps below...
 when you are done with these Synopsis tasks, you will have completed half the battle of writing a book! 
 Chapters and topics will flow effortlessly from that...
 
-**** DONE Step One - Write a Single Sentence Summary:
-CLOSED: [2020-07-03 Fri 19:44]
-:LOGBOOK:
-- State "DONE"       from "ACTIVE"     [2020-07-03 Fri 19:44]
-- State "NEW"        from "DONE"       [2020-07-02 Thu 17:37]
-- State "DONE"       from "ACTIVE"     [2020-05-25 Mon 10:04]
-- State "ACTIVE"     from "DONE"       [2020-05-24 Sun 22:23]
-:END:
+\newpage
+
+**** NEW Step One - Write a Single Sentence Summary:
 
 Take an hour and write a one-sentence summary of your book:   
    
@@ -477,6 +377,8 @@ Important! Closing rules of sales dictate the law of attraction always applies..
 
 When you later write your book proposal, this sentence should appear very early in the proposal. It's the hook that will sell your book to your editor, to your committee, to the sales force, to bookstore owners, and ultimately to readers. So make the best one you can!
 
+\newpage
+
 ****** Here are some tips:
 
 - Shorter is better. Try for fewer than 15 words.
@@ -489,15 +391,13 @@ When you later write your book proposal, this sentence should appear very early 
 
 - Check out [[yt:feD-dImM4a8][LEGO Star Wars: The Last Jedi in 60 Seconds]] (and other 60 second movies like it) for a completely different audio/visual parallel to this literary concept...
 
-**** DONE Step Two - Expand Summary to Paragraph
-CLOSED: [2020-07-04 Sat 15:31]
-:LOGBOOK:
-- State "DONE"       from "NEW"        [2020-07-04 Sat 15:31]
-- State "NEW"        from "DONE"       [2020-07-02 Thu 17:38]
-- State "DONE"       from "ACTIVE"     [2020-05-25 Mon 10:21]
-:END:
+\newpage
+
+**** NEW Step Two - Expand Summary to Paragraph
 
 Take another hour and expand your sentence from step one into a full paragraph describing brief overview, technical requirements or challenges, and ending with your proposed solution in a single sentence.
+
+\newpage
 
 ***** Make 5 Sentences:
 
@@ -527,13 +427,7 @@ You will be using this paragraph in your proposals. It is only for your agents e
 
 However, Some of this paragraph (written with parts pourposefully left out or with questions put in place) may end up back-cover copy for your book's promotion.
 
-**** DONE Step Three - Expand Paragraph to Synopsis:
-CLOSED: [2020-07-04 Sat 15:54]
-:LOGBOOK:
-- State "DONE"       from "NEW"        [2020-07-04 Sat 15:54]
-- State "NEW"        from "DONE"       [2020-07-02 Thu 17:38]
-- State "DONE"       from "ACTIVE"     [2020-06-08 Mon 11:36]
-:END:
+**** NEW Step Three - Expand Paragraph to Synopsis:
 
 Take several hours and expand each sentence of your summary paragraph into a full paragraph. All but the last paragraph should present challenges, pitfalls to overcome. The final paragraph is your proposed best-practice solution.
 
@@ -542,23 +436,16 @@ By this stage, you should have a good idea of the large-scale structure of your 
 At the end of this exercise, you will have a nice one-page skeleton of your book. It's fine if your skeleton does not fit all on one single-spaced page as long as it does not go beyond that... 
 
 Your process now is to grow these ideas as individual chapters and topics.  You have a synopsis "executive summary" suitable for a proposal, and you are well on your way to doing extended promotion...
-* ACTIVE ⎘ Templates:
 
-** DONE Introduction:
-CLOSED: [2020-07-02 Thu 00:36]
-:LOGBOOK:
-- State "DONE"       from              [2020-07-02 Thu 00:36]
-:END:
+\newpage
+
+* ⎘ Templates:
+** Introduction:
 
 This section provides skeleton templates for use within your project(s).  Any sub heading under this parent "*Templates:"* group can be utilized by copy-pasting the collapsed heading into any of your existing project sections (i.e., making a clone anywhere you need to create a new section based on the template's structure)... 
 
 Or... You could try mashing several cloned templates together to create a totally new project heading with a totally different structure... The intent of this is to save lots of time starting up a new custom writing project.  Lets see if it helps. :trollface:
-
-** DONE Instructions:
-CLOSED: [2020-07-02 Thu 00:37]
-:LOGBOOK:
-- State "DONE"       from              [2020-07-02 Thu 00:37]
-:END:
+** Instructions:
 
 - Choose one of the templates below and copy it (folded).  
 
@@ -566,12 +453,7 @@ CLOSED: [2020-07-02 Thu 00:37]
 
 - Change the name of your copied template to a specific title needed to fit in with your project's story-structure...  In the case of Logs or Tasks, you probably will keep those titles as they are universal... but you may wish to further qualify them by adding a prefixed category word.
 
-** DONE ✎ Log:
-CLOSED: [2020-06-29 Mon 23:14]
-:LOGBOOK:
-- State "DONE"       from              [2020-06-29 Mon 23:14]
-:END:
-
+** ✎ Log Templates:
 :README:
 - Use this space to add time stamped log note entries for any pourpose you may need...
 
@@ -586,24 +468,185 @@ CLOSED: [2020-06-29 Mon 23:14]
 
 This serves as a replacement for my Scrivener planning Logs /(Currently implemented as markdown files outside of Scrivener)/... Each Org-based Writing project will have one or more of these logs right inside of it close to the things the logs are actually about...  No more fumbling and guessing which log was I useing for what? Now, not only can I find them, I can make them into tasks, TODOS, and prioritize them to boot! Consider this my new official general template for logs going forward... Onward we row mates... Over the log jam!
 :END:
+*** NEW log: <2021-03-29 Mon> Generic Title /(General Log Entry Template)/
+:README:
 
-*** <2020-06-19 Fri> ✎ Example Log Entry:
+- Since you created this new log entry you are probably in the middle of a task related to it right now!  Go ahead and punch the clock right now as well, to start recording your time! The following Commands are defined below for you to remember and use to track your time:
 
-Yadda, yadda, yadda...
+  + *C-c C-x C-i* - Start Clock /(Begin OR Resume Clocking Current task)/
 
-** NEW 🗓 Editorial Calendar
+      This creates a new :CLOCKING: Time Card Entry that looks like this:
+
+      Do this now... Start recording your time girl!  Be in control of your life!
+
+     After doing the above, you can go away and do some work, leaving this log note to visit other files and work on them etc. The clock will be recording your time all the while... You will see in your mode line the elapsed clock time as you work...
+
+  + *C-c C-x C-j* - Return back to the Heading where you started the clock...
+      You do this after you have worked on a task for a while and you need to come back to the time card /(this Log Entry Heading)/ and stop the clock before going off to do something unrelated to the log entry...
+
+  + *C-c C-x C-o* - *Stop the Clock* /(to stop clocking your time on task)/
+       This *Finalizes the Time Card Entry* within ~:CLOCKING:~ /(created earlier when you started the clock)/... The completed time card entry looks like this:
+
+       The above entry shows start timestamp, end timestamp, and total time worked during this segment...  As you can see from the example above I left the clock running all day by accident.  If you do something like that you can always come back and directly edit the clock times by hand to amend them...  After changing clock times or dates, etc. type the following to *Update the Time Card Entry*:
+            *C-c C-c*
+       and the total time will change at the end showing your new calculated time...
+
+       If you need to go away and do something else before finishing this task, you can do so after clocking out... When you come back simply clock back in again to start another Time Card Entry just as before... The new time card entry will appear above the earlier one within the ~:CLOCKING:~ drawer... When you clock out of this task it will look just like the entry below it with a total time worked tagged on the end...
+
+       When you are all done with this Log Entry mark it *DONE*
+
+  + *C-c C-x C-q* - Cancel Current Clock /(in case you accidentally started it)/
+
+       This removes currently running clock and forgets it...
+
+ + *C-c C-x C-d* - Display Clocking Info: /This will show elapsed times to the right of headings.../
+
+- Once all of this has become routine for you, go ahead and remove this ~README~ drawer from this template... That way it does not get copied when you need to clone new log entries...
+
+:END:
+
+This Log Entry is about: Yadda... Yadda... Yadda...
+
+\newpage
+
+**** NEW Reference:
+
+- *Link to Project:* [[][] ]
+
+- [[URL][Link Name] ] *Heading:* /(comment)/
+
+- [[][] ] - *_:* /(yadda...)/
+
+- [[][] ] - *_:* /(yadda...)/
+
+- [[][] ] - *_:* /(yadda...)/
+
+- [[][] ] /(_)/
+
+- [[][] ] /(_)/
+
+- [[][] ] /(_)/
+
+\newpage
+
+**** NEW Time Card:
+
+#+BEGIN: clocktable :scope tree2 :maxlevel 4 :tstart "<-1d>" :tend "<+1m>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3
+#+END:
+
+\newpage
+
+**** NEW Summary: [0/3]
+:README:
+   This Summary is mostly to help you find things later when you cannot remember when or where is was done... If you go to the top of this file and expand all headings to show ALL content, then do a search on "~Summary:~" you will be able to quickly scroll through and scan these summaries quickly to find what you were looking for... 
+
+   Also the *Time Card* /displayed above/ each search hit will give more clues by showing important headings you worked on...
+
+   Below is an optional list /(that could also provide links)./ This list could be used to itemize things you worked on, but I personally find it easier to simply write a short one or two line description containing important keywords right here and nothing more. I think that is more useful...
+:END:
+
+Yadda... Yadda... Yadda...
+
+1. [ ] *__:*
+
+2. [ ] *__:*
+
+3. [ ] *__:*
+
+\newpage
+
+**** NEW Details:
+***** NEW New Item 1 /(placeholder)/ [0/3]
+
+- [ ] *__:* /(__)/
+
+      #+begin_src conf
+       root@dev1:~$ 
+       root@dev1:~$ 
+       root@dev1:~$ 
+      #+end_src
+
+- [ ] *__:* /(__)/
+
+      #+begin_src conf
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+      #+end_src
+
+- [ ] *__:* /(__)/
+
+      #+begin_src conf
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+      #+end_src
+
+\newpage
+
+***** NEW New Item 1 /(placeholder)/ [0/3]
+
+- [ ] *__:* /(__)/
+
+      #+begin_src conf
+       root@dev1:~$ 
+       root@dev1:~$ 
+       root@dev1:~$ 
+      #+end_src
+
+- [ ] *__:* /(__)/
+
+      #+begin_src conf
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+      #+end_src
+
+- [ ] *__:* /(__)/
+
+      #+begin_src conf
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+      #+end_src
+
+\newpage
+
+***** NEW New Item 1 /(placeholder)/ [0/3]
+
+- [ ] *__:* /(__)/
+
+      #+begin_src conf
+       root@dev1:~$ 
+       root@dev1:~$ 
+       root@dev1:~$ 
+      #+end_src
+
+- [ ] *__:* /(__)/
+
+      #+begin_src conf
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+      #+end_src
+
+- [ ] *__:* /(__)/
+
+      #+begin_src conf
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+       admin@dev1:~$ 
+      #+end_src
+
+\newpage
+
+** SOMEDAY 🗓 Editorial Calendar
 
 Make an editorial Calendar for this project right here where it belongs!  You won't loose it! and you can access it quickly without having to search for it elsewhere. Org-Mode excels for this task!  Take advantage of its powerful scheduling, agenda, and filtering capabilities!
 
-** DONE 🔖 Chapter # -  <chapter name>
-CLOSED: [2021-03-02 Tue 17:51]
+\newpage
 
-:LOGBOOK:
-- State "DONE"       from "ACTIVE"     [2021-03-02 Tue 17:51]
-- State "ACTIVE"     from "DONE"       [2021-02-28 Sun 12:45]
-- State "DONE"       from              [2020-07-01 Wed 21:25]
-:END:
-
+** 🔖 Chapter # -  <chapter name>
 :README:
 Chapters are the *Top Level Headings* within the *Book: Section* of this Org Book Publishing project...  Clone this *Chapter #* Template and paste it under your Book: outline heading whenever you need to start a new chapter...
 
@@ -614,54 +657,11 @@ You may create any structure you need under the Topic Headings beginning at the 
 *Topics* or (sub-chapters) are the *DNA* that make up the chapters in a book...  
 Chapters may contain several Topics. Topics may contain sub headings, tables, figures, examples, etc...
 :END:
-
-# BEGIN CHAPTER:
-
 *** 📄 Introduction <replace with topic name if needed>
 
-# BEGIN SUB-CHAPTER TEXT
+*Lorem Ipsum *Lorem Ipsum dolor sit amet*, consectetuer adipiscingelit. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo. Fusce tincidunt, /lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante./
 
-#+begin_src conf
-alice@home$ 
-alice@CA1$ 
-alice@VPN1 
-alice@vps1$ 
-root@vps1# 
-#+end_src
-
-*Lorem Ipsum *Lorem Ipsum dolor sit amet*, consectetuer adipiscingelit. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo. Fusce tincidunt, /lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante./ 
-
-- Run: ~/usr/local/bin/my-app~  Then...
-
-- Test 1 :: This is a test...
-
-- *Test 2:* /This is a test.../
-
-- _underlined text..._  Oops! Not working! Ahh.. Fixed it ;-)
-
-  + /Italic Text is not Italic either!/ Fixed It!
-
-- *BOLD* ***
-
-- /Italic/ */*
-
-- _underline_ *_*
-
-- =org-verbatim= *=*
-
-- ~org-code~ *~*
-
-- +strike-through+ *+*
-
-#+begin_src lisp
-;; Dummy Lisp File
-(defconst ("JUNK"))
-#+end_src
-
-#+begin_src yaml
-test1 : ONE
-test2 : TWO
-#+end_src
+\newpage
 
 **** References:
 
@@ -677,44 +677,15 @@ Add links to other reference, source docs, requirements, back stories, whatever,
 
 - *[ [][] ]*
 
-# END SUB-CHAPTER TEXT
+\newpage
 
-*** 📄 New Topic <clone this>
-
-# BEGIN SUB-CHAPTER TEXT
+*** 📄 New Topic /(template - clone as needed)/
 
 At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
 
-#+begin_src conf
-alice@home$ 
-alice@CA1$ 
-alice@VPN1 
-alice@vps1$ 
-root@Vvps1# 
-#+end_src
-
-# END SUB-CHAPTER TEXT
-
-*** 📄 New Topic <master template do not clone>
-
-# BEGIN SUB-CHAPTER TEXT
-
-At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
-
-#+begin_src conf
-alice@home$ 
-alice@CA1$ 
-alice@VPN1 
-alice@vps1$ 
-root@Vvps1# 
-#+end_src
-
-# END SUB-CHAPTER TEXT
-
-# END CHAPTER:
+\newpage
 
 *** 🗒 Background Notes:
-
 :README:
 The *Background Notes* section of a chapter is a place where you can add notes, ideas, instructions, whatever... close at hand within the chapter, and not have to worry about any of it getting exported and or published to the final output product...  
 
@@ -722,23 +693,14 @@ Nothing within this section will be exported... not even the Background Notes He
 
 The example Notes below have been timestamped as a way to suggest organizing TODO items for a particular chapter you may find yourself working on, or researching... *Use / replace the notes below with / for your own schemes*...
 :END:
-
-# BEGIN CHAPTER BACKGROUND NOTES
-
-**** 🗒 Note # <clone this>: <2020-05-10 Sun>
-
-# BEGIN BACKGROUND NOTE
+**** 🗒 Note #: <2020-05-10 Sun> /(template- clone this)/
 
 Each new note needs to get its own heading and initial timestamp...
 
-# END BACKGROUND NOTE
+\newpage
 
-**** 🗒 Note # <master template do not clone>: <2020-05-10 Sun>
-
-# BEGIN BACKGROUND NOTE
+**** 🗒 Note #: <2020-05-10 Sun> /(template- clone this)/
 
 Each new note needs to get its own heading and initial timestamp...
 
-# END BACKGROUND NOTE
-
-# END CHAPTER BACKGROUND NOTES
+\newpage

@@ -7,26 +7,6 @@
 ;; Ref:  http://ergoemacs.org/emacs/elisp_insert_brackets_by_pair.html
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-;;;
-;; Create repositories cache, if required
-
-(when (not package-archive-contents)
-  (package-refresh-contents))
-
-;;;
-;; Declare default modular-emacs list of required packages:
-
-(defvar me--fly-keys-packages
-  '(xah-fly-keys
-    xah-elisp-mode
-    xah-find))
-
-;;;
-;; Install required packages
-
-(mapc (lambda (p) (package-install p))
-      me--fly-keys-packages)
-
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Disable Xah's Control & Meta Key Functions:
 ;;  I don't need these as I am learning leader (SPACE) key
@@ -36,6 +16,11 @@
 
 (setq xah-fly-use-control-key nil)
 (setq xah-fly-use-meta-key nil)
+
+;;;
+;; Load xah-fly-keys - now a cloned repo in my-modules
+
+(add-to-list 'load-path "~/.emacs.d/lisp/my-modules/xah-fly-keys")
 
 ;;;
 ;;  Enable Xah Fly Keys:
@@ -62,20 +47,6 @@
 ;;  Call xah-fly-keys Function:
 
 (xah-fly-keys 1)
-
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; Enable Xah eLisp Mode in eLisp files:
-
-(add-to-list 'auto-mode-alist '("\\.el\\'" . xah-elisp-mode))
-
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  Load Xah Find functions:
-
-(autoload 'xah-find-text "xah-find" "find replace" t)
-(autoload 'xah-find-text-regex "xah-find" "find replace" t)
-(autoload 'xah-find-replace-text "xah-find" "find replace" t)
-(autoload 'xah-find-replace-text-regex "xah-find" "find replace" t)
-(autoload 'xah-find-count "xah-find" "find replace" t)
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Xah Fly Keys Command and Insert Mode Hook Functions:
@@ -148,7 +119,7 @@
   ;; (back tick)
   ;; (because I have conflicting other-frame key)
 
-  (define-key xah-fly-command-map (kbd "`") 'olivetti-mode)
+  (define-key xah-fly-command-map (kbd "`") 'me_toggle-olivetti-mode)
 
   ;; Set global key to toggle imenu:
   ;; (single quote)
@@ -211,7 +182,7 @@
 
   (define-key xah-fly-command-map (kbd "\\") 'me_toggle-letter-case)
 
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   ;; Xah-Fly-Keys PRIMARY Leader-Key keybindings:
   ;; (xah-fly-leader-key-map) (the SPACE key)
   ;; Add more key definitions to this list when needed:
@@ -303,7 +274,9 @@
   ;; simpler version that simply formats the date as I like to do it:
   ;; (i.e., "yyyy-mmm-dd" digits)
 
-  (define-key xah-fly-e-keymap (kbd "f") 'me_insert-date)
+  (define-key xah-fly-Lp2p0-key-map (kbd "f") 'me_insert-date))
+
+;; remove end paren (above line) after uncomment below... otherwize error parsing!
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   ;; Xah-Fly-Keys SECONDARY Leader-Key keybindings:
@@ -317,11 +290,15 @@
   ;; simpler version that simply formats the date as I like to do it:
   ;; (i.e., "yyyy-mmm-dd" digits)
 
-  (define-key xah-fly-dot-keymap (kbd "p") 'org-latex-export-to-pdf)
+;  (define-key xah-fly-dot-keymap (kbd "p") 'org-latex-export-to-pdf)
 
   ;; Set Easy Keybinding to Insert Org README Drawer:
 
-  (define-key xah-fly-dot-keymap (kbd "r") 'me_org-insert-readme-drawer))
+;  (define-key xah-fly-dot-keymap (kbd "r") 'me_org-insert-readme-drawer)
+
+  ;; Set Easy Keybinding to Open Org File Link Other Frame:
+
+;  (define-key xah-fly-dot-keymap (kbd "o") 'me_org-open-other-frame))
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; END: [modular-emacs]:~/.emacs.d/lisp/modules/12-Xah-Fly-Keys.el

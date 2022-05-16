@@ -3,6 +3,19 @@
 ;;
 ;; This module adds extra sysAdmin, programming, develop/test, and deployment
 ;; features to make Emacs the center of your development operations...
+
+;;
+;; Change Log: (descending chronological order)
+;;
+
+;; 2022-005-15 - Alisha Awen, siren1@disroot.org
+;;   Removed Premium XahEmacs package loads and created a dedicated conf.el file
+;;   for that: 06-XahEmacs-conf.el which is disabled by default within
+;;   dispatcher.el...  If you purchase XahEmacs you will need to create a
+;;   sub-directory: i.e., ~/.emacs.d/lisp/my-modules/XahEmacs and then copy the
+;;   individual XahEmacs package directories into there...  Currently the only
+;;   modules enabled are xah-elisp-mode and xah-find...  
+
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;; Create repositories cache for devOps extras, if required:
@@ -10,15 +23,15 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
+;;;
 ;; Declare a list of required packages for programming, build/test, deploy, etc.:
+;; NOTE: I removed: gitconfig-mode, gitignore-mode & gitattributes-mode
+;;       No longer supported... (need magit/git-modes now) TODO later...
 
 (defvar me--req-devops-packages
   '(ztree
     smart-tabs-mode
     ssh-config-mode
-    gitconfig-mode
-    gitignore-mode
-    gitattributes-mode
     yaml-mode
     indent-tools
     hydra
@@ -30,6 +43,7 @@
         (package-install p))
       me--req-devops-packages)
 
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Load ssh-config-mode:
 
 (autoload 'ssh-config-mode "ssh-config-mode" t)
@@ -42,8 +56,7 @@
 (add-to-list 'auto-mode-alist '("/authorized_keys2?\\'" . ssh-authorized-keys-mode))
 (add-hook 'ssh-config-mode-hook 'turn-on-font-lock)
 
-
-;;;
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Disable Tabs Globally (use spaces only), and reactivate them for
 ;; modes with smart tabs handling:
 
@@ -56,6 +69,7 @@
 
 (setq-default tabs-width 3)
 
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Add Language Support for Web Dev: (HTML, CSS, PHP, etc...)
 (setq c-basic-offset 3)
 
@@ -63,9 +77,10 @@
 (setq web-mode-css-indent-offset 3)
 (setq web-mode-code-indent-offset 3)
 (setq web-mode-sql-indent-offset 3)
-
 (setq css-indent-offset 3)
 
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Enable Smart Tabs for all supported languages including above:
 
 (smart-tabs-insinuate 'c
@@ -77,6 +92,8 @@
                       'ruby
                       'nxml)
 
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Set C Lang Auto Mode for specific file extensions:
 
 (add-to-list 'auto-mode-alist '("\\.xkb\\'" . c-mode))
