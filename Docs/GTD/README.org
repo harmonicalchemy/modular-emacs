@@ -1,0 +1,9 @@
+* GTD README
+
+There are many great GTD systems out there so I am not going to put those in here as they are all WELL documented and there are so many of them too!
+
+What I am doing here is putting an org-mode Template for the Autofocus Notebook system which does not seem to be as well known but something that works well integrated into what ever GTD system you may be currently using... 
+
+The =Autofocus Notebook Method is NOT a GTD System= but rather =Autofocus is a way to Increase your focus, motivation, and efficiency= while executing tasks and Getting Things Done in your life... 
+
+Have fun trying this out!!! And get things done!  Don't fret...
