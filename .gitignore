@@ -96,6 +96,7 @@ flycheck_*.el
 
 ## exclude other auto emacs files:
 bookmarks
+logview-cache.extmap
 .mc-lists.el
 ac-comphist.dat
 abbrev_defs
