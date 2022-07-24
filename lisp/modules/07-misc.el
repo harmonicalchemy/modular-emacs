@@ -80,9 +80,9 @@
 (require 'generic-x)
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  Set Olivetti Mode Default Width to 88 columns:
+;;  Set Olivetti Mode Default Width to 82 columns:
 
-(setq olivetti-body-width 88)
+(setq olivetti-body-width 82)
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; The default visible bell actually startles me when it occurs!

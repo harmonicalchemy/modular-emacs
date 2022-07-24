@@ -337,9 +337,9 @@
 
         (me_set-writing-frame)
 
-        ;; Set Olivetti Width (88 column wide)
+        ;; Set Olivetti Width (82 column wide)
         (olivetti-mode)
-        (olivetti-set-width 88))
+        (olivetti-set-width 82))
 
     ;; ELSE print warning about buffer not being an Org File...
     (message "Warning: You are NOT visiting a .ORG file!")))
@@ -368,7 +368,7 @@
 
         ;; Set Olivetti Width (100 column wide)
         (olivetti-mode)
-        (olivetti-set-width 88))
+        (olivetti-set-width 82))
 
     ;; ELSE print warning about buffer not being an Org File...
     (progn
@@ -426,7 +426,7 @@
   ;; Enable Olivetti Mode (88 column wide) (olivetti-mode) (olivetti-set-width 88)
 
   (olivetti-mode)
-  (olivetti-set-width 88)
+  (olivetti-set-width 82)
 
   ;; Call Xah-Fly-Keys (resets some face attributes)
   (xah-fly-keys 1))
