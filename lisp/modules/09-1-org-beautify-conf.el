@@ -209,15 +209,19 @@
 ;; It took me so long to get around to fixing
 ;; this... So now I will live with these settings
 ;; until they drive me crazy!  LOL
+;;
+;; For a nice visual reference of ALL available Emacs Colors
+;; See: http://www.raebear.net/computers/emacs-colors/
+;; (Jessica's Corner of Cyberspace)
 
 (setq org-emphasis-alist
       '(("*" (bold
-              :foreground "chocolate" ))            ;; *BOLD*
+              :foreground "DeepSkyBlue" ))          ;; *BOLD*
 
         ("/" (italic
               :family "Courier Prime"
               :slant italic
-              :foreground "LimeGreen"))             ;; /Italic/
+              :foreground "PaleGreen"))             ;; /Italic/
 
         ("_" (
               :underline (
@@ -232,7 +236,7 @@
         ("~" (
               :family "Hermit"
               :background "Ivory"
-              :foreground "tomato"))             ;; ~org-code~
+              :foreground "firebrick"))             ;; ~org-code~
 
         ("+" (:strike-through t))))                 ;; +strike-through+
 

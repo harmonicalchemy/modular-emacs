@@ -277,7 +277,7 @@
   (interactive)
   (progn
     (olivetti-mode 'toggle)
-    (olivetti-set-width 86)))
+    (olivetti-set-width 82)))
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -426,7 +426,7 @@
      (quote
       ((name . "HA Mod Emacs v3.4 - Writer's Frame")
        (height . 38)
-       (width  . 88))))))
+       (width  . 84))))))
 
 
 ;;;
