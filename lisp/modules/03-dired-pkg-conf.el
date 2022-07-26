@@ -59,7 +59,7 @@
 ;; Modular Emacs dired Mode Hook Function:
 ;;
 
-(defun me-dired-mode-hook-tweaks ()
+(defun me_dired-mode-hook-tweaks ()
   ;; Set dired-x buffer-local variables here:
   ;; For example:
   ;;   (dired-omit-mode 1)
@@ -73,15 +73,15 @@
   ;; Map 'h' key to dired omit mode:
   (define-key dired-mode-map (kbd "h") #'dired-omit-mode))
 
-;; Load dired-x mode hook (load dired-omit-mode, and a few more tweaks for every session.)
+;; Load Custom Dired Mode Tweaks:
 
-(add-hook 'dired-mode-hook 'me-dired-mode-hook-tweaks)        
+(add-hook 'dired-mode-hook 'me_dired-mode-hook-tweaks)        
 
 ;; Dired Sort Directories First... This function works and does not break after
 ;; adding marks and pressing 'g'.
 ;; From: https://www.emacswiki.org/emacs/DiredSortDirectoriesFirst
 
-(defun mydired-sort ()
+(defun me_dired-sort ()
   "Sort dired listings with directories first."
   (save-excursion
     (let (buffer-read-only)
@@ -92,7 +92,7 @@
 (defadvice dired-readin
     (after dired-after-updating-hook first () activate)
   "Sort dired listings with directories first before adding marks."
-  (mydired-sort))
+  (me_dired-sort))
 
 ;; Auto load dired-jump and dired-jump-other-window:
 

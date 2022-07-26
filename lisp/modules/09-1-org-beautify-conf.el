@@ -230,7 +230,7 @@
 
         ("=" (
               :family "Hermit"
-              :background "maroon"
+              :background "aquamarine4"
               :foreground "white"))                 ;; =org-verbatim=
 
         ("~" (

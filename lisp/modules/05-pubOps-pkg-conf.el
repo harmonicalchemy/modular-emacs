@@ -151,10 +151,10 @@
 ;; I tried everything else to no avail... This is a band-aid.  I need
 ;; to consult with Jason Blevins about this one %^)
 
-(defun me-deft-init ()
+(defun me_deft-init ()
   (setq truncate-lines t))
 
-(add-hook 'deft-mode-hook 'me-deft-init)
+(add-hook 'deft-mode-hook 'me_deft-init)
 
 ;;;; ~~~~~~~~~~~~
 ;;   Pandoc Mode:

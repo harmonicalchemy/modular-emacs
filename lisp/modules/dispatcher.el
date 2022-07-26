@@ -7,7 +7,7 @@
 ;; You can use this file to turn off (or back on) extra features by placing
 ;; (or removing) comment marks in front of the module's load line below...
 
-;; **NOTE:** Removing (commenting out) some of the default forms could possibly
+;; NOTE: Removing (commenting out) some of the default forms could possibly
 ;; break the default configuration and some key-bindings may cause an error buffer
 ;; to pop up...  So be careful if you are trying to hack this thing... I am not
 ;; discouraging you from doing that.. I would do it... Arr!  This is just a heads
@@ -69,31 +69,31 @@
 ;;   changelog for details)... Removed; 06-interface.el and the form here that
 ;;   runs that file...
 
-;;   2021-004-08 - Updated Modular Emacs to v3.4.0 [Q2 2021]
-;;       (still beta - working on updating many docs to org-mode and
-;;       publishing as PDFs) This version includes new feature additions &
-;;       bugfixes...  A few mentions of version updates are missing below...
-;;       Oh Well... All up to date now...
+;; 2021-004-08 - Updated Modular Emacs to v3.4.0 [Q2 2021]
+;;   (still beta - working on updating many docs to org-mode and
+;;   publishing as PDFs) This version includes new feature additions &
+;;   bugfixes...  A few mentions of version updates are missing below...
+;;   Oh Well... All up to date now...
 
-;;   2019-011-12 - Harmonic Alchemy Modular-Emacs V3.0 [Q4 2019]
-;;      This represents mostly updated docs which has been needed for a while!
-;;      there were also many bug fixes brought over from the Lisp IDE fork,
-;;      where I have been living for most of the summer and fall!  Now the
-;;      master and develop branches can benefit the gains...
+;; 2019-011-12 - Harmonic Alchemy Modular-Emacs V3.0 [Q4 2019]
+;;   This represents mostly updated docs which has been needed for a while!
+;;   there were also many bug fixes brought over from the Lisp IDE fork,
+;;   where I have been living for most of the summer and fall!  Now the
+;;   master and develop branches can benefit the gains...
 
-;;   2019-010-17 - Harmonic Alchemy Modular-Emacs Lisp IDE Fork v2.3.0 [Q3 2019]
-;;      This final commit marks the latest sync between Master, Develop, and Lisp
-;;      IDE Branches...  All common features and bug fixes have been updated to
-;;      all branches.  Lisp IDE branch continues to provide more features with
-;;      extra modules enabled...
+;; 2019-010-17 - Harmonic Alchemy Modular-Emacs Lisp IDE Fork v2.3.0 [Q3 2019]
+;;   This final commit marks the latest sync between Master, Develop, and Lisp
+;;   IDE Branches...  All common features and bug fixes have been updated to
+;;   all branches.  Lisp IDE branch continues to provide more features with
+;;   extra modules enabled...
 
-;;   2019-010-07 - Harmonic Alchemy Modular-Emacs Lisp IDE Fork v2.2.0 [Q4 2019]
-;;      I renumbered the module file names to match the exact order in which
-;;      they must be evaluated... This is important to prevent some packages
-;;      being shadowed by others due to reverse initialization...  This is a
-;;      symptom of Lisp being so flexible... "We wanna da flex in da right
-;;      places!" (what she said as she turned on the workout exercise machine)
-;;      Timing makes all the difference in the world! LOL
+;; 2019-010-07 - Harmonic Alchemy Modular-Emacs Lisp IDE Fork v2.2.0 [Q4 2019]
+;;   I renumbered the module file names to match the exact order in which
+;;   they must be evaluated... This is important to prevent some packages
+;;   being shadowed by others due to reverse initialization...  This is a
+;;   symptom of Lisp being so flexible... "We wanna da flex in da right
+;;   places!" (what she said as she turned on the workout exercise machine)
+;;   Timing makes all the difference in the world! LOL
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;;;

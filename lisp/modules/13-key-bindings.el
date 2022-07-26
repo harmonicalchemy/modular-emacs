@@ -34,15 +34,15 @@
     ("C-x b" . helm-mini)
     ("C-x C-f" . helm-find-files)
     ("C-x C-r" . helm-recentf)
-    ("<f5>" . me-reload-current-file)))
+    ("<f5>" . me_reload-current-file)))
 
-(defun me-apply-keyboard-bindings (pair)
+(defun me_apply-keyboard-bindings (pair)
   "Apply keyboard-bindings for supplied list of key-pair values"
   (interactive)
   (global-set-key (kbd (car pair))
                   (cdr pair)))
 
-(mapc 'me-apply-keyboard-bindings
+(mapc 'me_apply-keyboard-bindings
       me--my-keyboard-bindings)
 
 
