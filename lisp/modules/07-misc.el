@@ -28,7 +28,7 @@
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Reload File Function:
 
-(defun me-reload-current-file ()
+(defun me_reload-current-file ()
   "Reload the file loaded in current buffer from the disk"
   (interactive)
   (cond (buffer-file-name (progn (find-alternate-file buffer-file-name)

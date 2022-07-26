@@ -17,6 +17,13 @@
 (setq xah-fly-use-control-key nil)
 (setq xah-fly-use-meta-key nil)
 
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Change Mode Indicator In Mode Line:
+
+(setq xah-fly-command-mode-indicator "🔺")
+(setq xah-fly-insert-mode-indicator "✍" )
+
 ;;;
 ;; Load xah-fly-keys - now a cloned repo in my-modules
 
@@ -48,18 +55,38 @@
 
 (xah-fly-keys 1)
 
+(set-background-color "#280028")
+
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  Xah Fly Keys Command and Insert Mode Hook Functions:
+;; Set different Modeline Background Colors:
+;; For a nice visual reference of ALL available Emacs Colors
+;; See: http://www.raebear.net/computers/emacs-colors/
+;; (Jessica's Corner of Cyberspace)
 
-(defun me_xfk-command-color () (set-background-color "#280028"))
-(defun me_xfk-insert-color () (set-background-color "#180028"))
+(defun me_modeline-color-on () (set-face-background 'mode-line "orange"))
+(defun me_modeline-color-off () (set-face-background 'mode-line "LightPink"))
 
-;(custom-theme-set-faces
-; 'user
-; `(text-cursor ((t (:background "red" :foreground "white")))))
+(add-hook 'xah-fly-command-mode-activate-hook 'me_modeline-color-on)
+(add-hook 'xah-fly-insert-mode-activate-hook  'me_modeline-color-off)
 
-(add-hook 'xah-fly-command-mode-activate-hook 'me_xfk-command-color)
-(add-hook 'xah-fly-insert-mode-activate-hook  'me_xfk-insert-color)
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; Use Current Line Highlight in Command Mode ONLY: 
+
+(defun me_xfk-command-mode-tweaks ()
+  (global-hl-line-mode 1)
+  (set-background-color "Grey5"))
+
+(defun me_xfk-insert-mode-tweaks ()
+  (global-hl-line-mode 0)
+  (set-background-color "Grey15"))
+
+(add-hook 'xah-fly-command-mode-activate-hook 'me_xfk-command-mode-tweaks)
+(add-hook 'xah-fly-insert-mode-activate-hook  'me_xfk-insert-mode-tweaks)
+
+;; Remove Above XFKey Mode Tweeks If you Don't Like them...
+;; (remove-hook 'xah-fly-command-mode-activate-hook 'me_xfk-command-mode-tweaks)
+;; (remove-hook 'xah-fly-insert-mode-activate-hook  'me_xfk-insert-mode-tweaks)
+
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;                      Xah Fly KEY BINDINGS
