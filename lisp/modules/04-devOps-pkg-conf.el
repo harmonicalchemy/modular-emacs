@@ -34,6 +34,7 @@
     ssh-config-mode
     yaml-mode
     indent-tools
+    logview
     hydra
     magit))
 

@@ -17,19 +17,18 @@
 (setq xah-fly-use-control-key nil)
 (setq xah-fly-use-meta-key nil)
 
-
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Change Mode Indicator In Mode Line:
 
 (setq xah-fly-command-mode-indicator "🔺")
 (setq xah-fly-insert-mode-indicator "✍" )
 
-;;;
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Load xah-fly-keys - now a cloned repo in my-modules
 
 (add-to-list 'load-path "~/.emacs.d/lisp/my-modules/xah-fly-keys")
 
-;;;
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Enable Xah Fly Keys:
 
 (require 'xah-fly-keys)
@@ -87,18 +86,17 @@
 ;; (remove-hook 'xah-fly-command-mode-activate-hook 'me_xfk-command-mode-tweaks)
 ;; (remove-hook 'xah-fly-insert-mode-activate-hook  'me_xfk-insert-mode-tweaks)
 
-
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;                      Xah Fly KEY BINDINGS
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;                     CUSTOMIZED Xah Fly KEY BINDINGS
 ;;
-;;  Add Personalized keybindings to Xah fly Keys:
-;;  For:
-;;       DIRECT Command Mode keybindings,
-;;       PRIMARY Leader-Key keybindings,
+;;  (Personalized keybindings to Xah fly Keys:
+;;       DIRECT Command Mode bindings,
+;;       PRIMARY Leader-Key bindings,
 ;;       -and-
 ;;       SECONDARY Leader-Key keybindings...
 ;;
 ;;  Options not used by Xah fly keys:  ~  `  1  2  0  \  -  =
+;;  Options not used by Customizations:  ~
 ;;  (I have commandeered some of these already if not all of them!)
 ;;  In addition I have also remapped the "p" command mode key.
 ;;  I never used it to insert a space so no loss for me.
@@ -107,13 +105,15 @@
 ;;  to type Caps_Lock (HOME) once more if you needed to stay in Command Mode...
 ;;  This does not bother me... I need that p for repositioning the cursor
 ;;  which is much more important to me...
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 (with-eval-after-load 'xah-fly-keys
 
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ;; Xah-Fly-Keys "Command Mode" keybindings:
+  ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ;; Xah-Fly-Keys COMMAND MODE BINDINGS:
   ;; (Xah-Fly-Keys Command Map) (NO Leader key)
   ;; Add more key definitions to this list when needed:
+  ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
   ;; Set easy key to switch frames:
   ;; This enhances functionality of Xah-Fly-Keys
@@ -209,10 +209,12 @@
 
   (define-key xah-fly-command-map (kbd "\\") 'me_toggle-letter-case)
 
-  ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ;; Xah-Fly-Keys PRIMARY Leader-Key keybindings:
-  ;; (xah-fly-leader-key-map) (the SPACE key)
+  
+  ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ;; Xah-Fly-Keys PRIMARY LEADER-KEY BINDINGS:
+  ;; (xah-fly-leader-key-map) SPACEBAR
   ;; Add more key definitions to this list when needed:
+  ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
   ;; Jump back to previously SAVED bookmark:
   ;; This PRIMARY Leader-Key bookmark-jump "-" mirrors
@@ -290,42 +292,63 @@
 
   (define-key xah-fly-leader-key-map (kbd "v") 'vmd-mode)
 
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ;; Xah-Fly-Keys SECONDARY Leader-Key keybindings:
-  ;; For secondary leader key: QWERTY "d" (dvorak "e")
-  ;; (xah-fly-e-keymap Leader Key Map)
+  
+  ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ;; Xah-Fly-Keys SECONDARY LEADER-KEY BINDINGS:
+  ;; (xah-fly-Lp2p0-key-map) QWERTY "d"
   ;; Add more key definitions to this list when needed:
-  ;; Some of these default "insert" keybindings are not needed.
-
-  ;; Override default xah-insert-date () func with my own
-  ;; simpler version that simply formats the date as I like to do it:
-  ;; (i.e., "yyyy-mmm-dd" digits)
-
-  (define-key xah-fly-Lp2p0-key-map (kbd "f") 'me_insert-date))
-
-;; remove end paren (above line) after uncomment below... otherwize error parsing!
-
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ;; Xah-Fly-Keys SECONDARY Leader-Key keybindings:
-  ;; For secondary leader key: QWERTY "e" (dvorak "." dot)
-  ;; (xah-fly-e-keymap Leader Key Map)
-  ;; Add more key definitions to this list when needed:
-  ;; None of these keys are used by xah-fly-keys. You can use
-  ;; anything here...
-
-  ;; Override default xah-insert-date () func with my own
-  ;; simpler version that simply formats the date as I like to do it:
-  ;; (i.e., "yyyy-mmm-dd" digits)
-
-;  (define-key xah-fly-dot-keymap (kbd "p") 'org-latex-export-to-pdf)
+  ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
   ;; Set Easy Keybinding to Insert Org README Drawer:
+  ;; Overrides default binding: xah-insert <> bracket pair ()
 
-;  (define-key xah-fly-dot-keymap (kbd "r") 'me_org-insert-readme-drawer)
+  (define-key xah-fly-Lp2p0-key-map (kbd "r") 'me_org-insert-readme-drawer)
 
-  ;; Set Easy Keybinding to Open Org File Link Other Frame:
+  ;; ME INSERT DATE:
+  ;; Overrides default xah-insert-date () 
+  ;; A simpler version that simply formats the date as I like to do it:
+  ;; (i.e., "yyyy-mmm-dd" digits)
 
-;  (define-key xah-fly-dot-keymap (kbd "o") 'me_org-open-other-frame))
+  (define-key xah-fly-Lp2p0-key-map (kbd "f") 'me_insert-date)
+
+  
+  ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ;; Xah-Fly-Keys SECONDARY LEADER-KEY BINDINGS:
+  ;; (xah-fly-Lp2p1-key-map) QWERTY "e"
+  ;; Add more key definitions to this list when needed:
+  ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  ;; OPEN FILE OR DIR LINK IN NEW FRAME:
+  ;; (xah-fly-Lp2p1-key-map) QWERTY "o"
+
+  (define-key xah-fly-Lp2p1-key-map (kbd "o") 'me_org-open-other-frame)
+
+  
+  ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ;; Xah-Fly-Keys SECONDARY LEADER-KEY BINDINGS:
+  ;; (xah-fly-Rp2p1-key-map) QWERTY "i"
+  ;; Add more key definitions to this list when needed:
+  ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  ;; TOGGLE FRAME FULL SCREEN:
+  ;; (xah-fly-Rp2p1-key-map) QWERTY "2"
+  ;; This binding pairs well with other frame related key commands
+  ;; key commands on numbers: i.e., 1, 2, 3, 4, 5, & 6
+
+  (define-key xah-fly-Rp2p1-key-map (kbd "2") 'toggle-frame-fullscreen)
+
+) ;; <--WARNING! DO NOT REMOVE THIS END PARENTHESIS!!! It terminates
+  ;; the list above... I put it here on a line by itself so I won't
+  ;; accidentally break this config if I have to add a new binding to the
+  ;; end of the list (just above) and forget to relocate the terminating
+  ;; parenthesis... (Murphy's Law... it's a long long list that is easy
+  ;; to mess up).  Normal lisp style guides recommend putting end parenthesis
+  ;; immediately at the end of a line that may also contain a stack of other
+  ;; end parenthesis terminating sub-forms within the form...
+  ;; LISP = Lost Inside Spaghetti Parenthesis %^)
+
+  ;; END: CUSTOMIZED Xah Fly KEY BINDINGS
+  ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; END: [modular-emacs]:~/.emacs.d/lisp/modules/12-Xah-Fly-Keys.el

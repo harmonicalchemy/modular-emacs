@@ -85,61 +85,108 @@ Enjoy! - Alisha Awen
 
 * NEW 💡 Scratchpad Refile:                                        :noexport:
 
-- *Note:* /This section is not published!/ Use this for scratch pad *private-notes*
+=Note:= /This section is not published! Use this for scratch pad for/
+      /private-notes etc.../
 
 ** NEW ☞ Start Here!
+
 :README:
-This Section is mainly to accommodate "seat-of-pants" writers /(of which I have been accused of... But I also crave the planning stuff)/.  I often come here for my [[https://projects.csail.mit.edu/gsb/old-archive/gsb-archive/gsb2000-02-11.html]["yak shaving"]] adventures...
+   This Section is mainly to accommodate "seat-of-pants" writers
+   /(of which I have been accused of... But I also crave the planning stuff)/.  I often come here for my [[https://projects.csail.mit.edu/gsb/old-archive/gsb-archive/gsb2000-02-11.html]["yak shaving"]] adventures...
 
-Use this: "*💡 Scratchpad Refile ☞ Start Here!*" section as a quick place to document ideas and inspirations as they come alone.  You can refile them later... 
+   Use this: "*💡 Scratchpad Refile ☞ Start Here!*" section as a quick
+   place to document ideas and inspirations as they come alone.
+   You can refile them later... 
 
-Even if your quick inspiration was intended for elsewhere?, /(e.g., You become bored documenting tedious technical information when suddenly, out-of-nowhere, an idea for a new sci-fi scene in that screenplay episode you had in the back of your mind all day!, etc.)/ *Ummm.... Parallel Universe?* 
+   Even if your quick inspiration was intended for elsewhere?,
+   /(e.g., You become bored documenting tedious technical information/
+   /when suddenly, out-of-nowhere, an idea for a new sci-fi scene in/
+   /that screenplay episode you had in the back of your mind all day!,/
+   /etc.)/
 
-*Sure!* You can put anything in here! We've got that covered for you in this Start Here spot. %^)
+   =Ummm.... Parallel Universe?=
 
-- Use this section to quickly capture inspired at-the-moment ideas While they are still fresh in mind.
+   =Sure!= You can put anything in here! We've got that covered for you
+         in this Start Here spot. %^)
 
-- *How to use?* /Simply Come directly here and do what ever you want... "Your Crazy Daze are Covered!" Yay!/
+   Use this section to quickly capture inspired at-the-moment ideas
+   =While they are still fresh in mind=
 
-  + Advance your cursor a few newlines below this README drawer on a fresh clean line with some extra space below it as well... (above any previously time stamped entries you may already have placed)... If this is the first time, get rid of the My New Business Idea! heading example entry below... That is only for the template to illustrate these instructions by example.
+- =How to use?= /Simply Come directly here and do what ever you want.../
+              /"Your Crazy Daze are Covered!" Yay!/
 
-  + You are now at the top of the list, (a few lines below this README drawer). The time is the present. -and- You are all fired up with an idea to write about!
+  + *Advance your cursor* a few newlines below this README drawer on a
+         fresh clean line with some extra space below it as well...
+         /(above any previously time stamped entries you may already/
+         /have placed).../ If this is the first time, get rid of the
+         *"New Business Idea!"* heading example entry below... That
+         is only for the template to illustrate these instructions
+         by example.
 
-  + Enter a new timestamp with "C-c .", (that's: Press Ctrl-c, let go, and then type a Period .)  A date chooser panel will pop up...
+  + *You are now at the top of the list*, /(a few lines below this/
+         ~README~ /drawer)/. The time is the present. -and- You are all
+         fired up with an idea to write about!
 
-  + Press ENTER to auto accept today's date and time.  A new timestamped line will appear with your cursor blinking on the right of it... There won't be any future entries above you... (maybe next decade? time travel?)
+  + *Enter a new timestamp with* ~C-c .~, /(that's: Press ~Ctrl-c~, let go,/
+                                       /and then type a Period .)/  A
+                                       date chooser panel will pop up...
 
-  + Advance your cursor a few more lines down to some fresh empty space -and- 
+  + *Press ENTER to auto accept today's date and time.*  A new timestamped
+         line will appear with your cursor blinking on the right of it...
+         There won't be any future entries above you...
+         /(maybe next decade? time travel? %^)/
 
-  + Start Typing Your Idea Like Mad! 
+  + *Advance your cursor a few more lines down* to some fresh empty
+         space -and- Start Typing Your Idea Like Mad! 
 
-  + Don't stop and don't worry about formatting or organizing it until later, after all your inspiration has passed and you are ready to organize...
+  + *Don't stop* and don't worry about formatting or organizing it
+         until later, after all your inspiration has passed and you are
+         ready to organize...
 
-- After You are Done Writing:
+- =After You are Done Writing:=
 
-  + Come back to the timestamp line where you first started... make sure the timestamp has at least one empty line above and below it.
+  + *Come back to the timestamp line where you first started*
 
-  + Give the timestamp line a title to the right of the timestamp.
+          Make sure the timestamp has at least one empty line above
+          and below it.
 
-  + Make this timestamped line an outline heading with: "C-c ENTER" (that's Press Ctrl-c, let go and then press ENTER)
-     (make sure this new heading has empty lines above and below it)
+  + *Give the timestamp line a title to the right of the timestamp.*
 
-  + Adjust this new outline heading level with: M-▷ (this will make it a child of ☞ Start Here! heading above, rather than a sibling).
+  + *Make this timestamped line an outline heading*
 
-  + Adjust the space between your heading and your fantastic idea below it to one single blank line.
+          =Use:= ~C-c ENTER~ /(that's Press/ ~Ctrl-c~ /let go, and/
+                          /then press ~ENTER~)/
+          =Note:= make sure this new heading has empty lines above
+                and below it...
 
-  + You can organize everything else later...  Don't scare away the muses! Get your story down now!
+  + *Adjust this new outline heading level with:* ~M-▷~
+          /(this will make it a child of ☞ Start Here! heading above,/
+          /rather than a sibling)./
 
-  + Then you may go out to play elsewhere little grasshopper... But come back later and organize things... OK? Don't create a swamp in here! And don't forget to take your bath tonight... ;-) 
+  + *Adjust the space* between your heading and your fantastic idea
+          below it to one single blank line.
 
-  + Having done the simple steps above any time you get inspired, you will be able to tell your grand children.. "I got my first spark of an idea for that book back in Year, Month, Day, time, second" (50 years later!) Now that is being organized! LOL
+  + *You can organize everything else later...*
+
+          Don't scare away the muses! Get your story down now!
+
+  + *Then you may go out to play elsewhere little grasshopper...*
+
+          But come back later and organize things... OK? Don't
+          create a swamp in here! And don't forget to take your
+          bath tonight... ;-) 
+
+          
+  Having done the simple steps above any time you get inspired, you will be able to tell your grand children.. "I got my first spark of an idea for that book back in Year, Month, Day, time, second" (50 years later!) Now that is being organized! LOL
+
 :END:
 
-*** NEW My New Business Idea! <2020-06-07 Sun> /"yeah we've heard that one before"/
-:README:
-This is a dummy example of some crazy idea that you may have gotten at the spur of the moment, while you were doing something elsewhere within this project...  After you are done getting as much of the idea as you initally can then you can simply go back to what you were doing before the inspiration segue tore you away... you might want to schedule this as a todo item before leaving though...
+*** NEW New Business Idea! <2020-06-07 Sun> /"yeah we've heard that one before"/
 
-Later when you are free you can come back to file this or place it where it belongs.  In the case of the note below it would probably go in a research folder of a Sci-Fi related project...
+:README:
+   This is a dummy example of some crazy idea that you may have gotten at the spur of the moment, while you were doing something elsewhere within this project...  After you are done getting as much of the idea as you initally can then you can simply go back to what you were doing before the inspiration segue tore you away... you might want to schedule this as a todo item before leaving though...
+
+   Later when you are free you can come back to file this or place it where it belongs.  In the case of the note below it would probably go in a research folder of a Sci-Fi related project...
 :END:
 
 **** Heading 4:
@@ -164,38 +211,61 @@ This is a Heading 8 test...
 
 \newpage
 
-* NEW 📖 Doc Title /(rename this)/                                     :export:
+* NEW 📖 Doc Title /(rename this)/      :export:
+
 :README:
-*This is the Main Body of your Document...* Everything under This Main heading will be published in your final PDF, or web page, etc., Including the Main Heading itself... 
+   *This is the Main Body of your Document...* Everything under This Main
+   heading will be published in your final PDF, or web page, etc.,
+   Including the Main Heading itself... 
 
-*Note:* /The Published Title of your document will NOT be this/ *Main Heading.* 
-      /Your published Title is specified at the top of this file.../ 
+   =Note:= /The Published Title of your document will NOT be this/
+         *Main Heading.* /Your published Title is specified at the top/
+         /of this file.../ 
 
-Sub headings below are simply your first cloned headings from the Templates Section... Use them how ever you wish... They also have /:README:/ drawers like this to help guide you...
+   Sub headings below are simply your first cloned headings from the
+   Templates Section... Use them how ever you wish... They also have
+   /:README:/ drawers like this to help guide you...
 
-*btw*, if you Have *Harmonic Alchemy Modular Emacs* fully installed and have enabled the ~Xah-Fly-Keys~ module, you can quickly and easily insert your own /:README:/ drawers for your own purposes by typing: ~SPACE e r~ on an empty line while in command mode... Type those two keys, and the drawer is created for you automatically and opened... Go into insert mode and start type your README content within the drawer.  Collapse it if you like after you are done...
+   *btw*, if you Have *Harmonic Alchemy Modular Emacs* fully installed and
+   have enabled the ~Xah-Fly-Keys~ module, you can quickly and easily insert
+   your own /:README:/ drawers for your own purposes by typing: ~SPACE e r~ on
+   an empty line while in command mode... Type those two keys, and the
+   drawer is created for you automatically and opened... Go into insert
+   mode and start type your README content within the drawer.  Collapse
+   it if you like after you are done...
 :END:
 
 ** NEW 📃 Introduction: /(template)/
+
 :README:
-Use this space to write the main synopsis of your document... You can write anything you want here but it is recommended strongly to summarize the main points of your idea broken up in small outline if necessary...
+   *Use this space to write the main synopsis of your document...* You
+   can write anything you want here but it is recommended strongly
+   to summarize the main points of your idea broken up in small
+   outline if necessary...
 
-Keep things short and sweet here... The total *BIG picture*...
+   Keep things short and sweet here... The total *BIG picture*...
 
-If this is a *tutorial* or *how-to*, you might use this section to outline the main points of the document as *Heading Questions* and then *clone* this *Introduction section* to a *Summary*, *Conclusion*, or *What-We-Learned* section where the question headings are changed to final answer headings. /(also short and sweet and to the point)/ 
+   If this is a *tutorial* or *how-to*, you might use this section to
+   outline the main points of the document as *Heading Questions* and
+   then *clone* this *Introduction section* to a *Summary*, *Conclusion*,
+   or *What-We-Learned* section where the question headings are changed
+   to final answer headings. /(also short and sweet and to the point)/ 
 
-/Putting the questions here as links to the body of your doc is sort-of the FAQ model that emerged organically on the Internet /(pre www daze).../
+   /Putting the questions here as links to the body of your doc is/
+   /sort-of the FAQ model that emerged organically on the Internet/
+   /(pre www daze).../
 :END:
 
 About this document... Yadda... Yadda... Yadda...
 
 **** NEW 📄 Reference:
+
 :README:
-Add links to other reference, source docs, requirements, back stories, whatever, here...  
+   Add links to other reference, source docs, requirements, back stories, whatever, here...  
 
-To Create a Link Type: ~C-c C-l~ /(then paste: ~link~ & type: "description")/
+   To Create a Link Type: ~C-c C-l~ /(then paste: ~link~ & type: "description")/
 
-To Open a Link Type: ~C-c C-o~
+   To Open a Link Type: ~C-c C-o~
 :END:
 
 - [ [ ][ ] ]
@@ -209,12 +279,18 @@ To Open a Link Type: ~C-c C-o~
 \newpage
 
 ** NEW 📃 Main Body /(template - rename clones)/
+
 :README:
-Use this space to write the main body of your document... Here is where all the details happen... Your main headings here should follow what you have writtin in your Introduction above...
+   Use this space to write the main body of your document... Here is
+   where all the details happen... Your main headings here should
+   follow what you have writtin in your Introduction above...
 
-If this is a *tutorial* or *how-to*, you might use this section to write your detailed answers to the Question Headings outlined in your Introduction section above...
+   If this is a *tutorial* or *how-to*, you might use this section to
+   write your detailed answers to the Question Headings outlined in
+   your Introduction section above...
 
-Summarize your answers within a new /main section/ titled: *"Conclusion"* or *"Summary"*, etc...
+   Summarize your answers within a new /main section/ titled:
+   *"Conclusion"* or *"Summary"*, etc...
 :END:
 
 The following Points are ... yadda... yadda... yadda...
@@ -231,7 +307,7 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
 
 \newpage
 
-* 📒 HowTo:                                                        :noexport:
+* 📒 HowTo:                             :noexport:
 ** About:
 
 The *Templates:* section provides skeleton templates for use within this document.  These /"meta-sections"/ do not show up in final published docs, /(e.g., .pdf or web etc)/...
@@ -244,35 +320,43 @@ The intent of these templates are to save lots of time starting up a new documen
 
 ** Instructions:
 
-- Choose one of the templates /or sub templates/ from the *Templates* section below and copy it (folded).  
+*Choose one of the templates* /or sub templates/ from the *Templates* section below and copy it (folded).  
 
-- Paste your copied template as a new clone within your  book, planning, or research section...  If you have to adjust the heading level /(hierarchy position)/ of your pasted content, first make sure all the pasted content is collapsed to a single heading and then use: ~M-S-<right or left arrow>~ on your *Collapsed* pasted heading.  You can repeat this command as many times as needed to get your heading /(and all it's children)/ placed on the correct level. If you go to far you can easily switch arrows to correct your choice.
+*Paste your copied template as a new clone* within your  book, planning, or research section...  If you have to adjust the heading level /(hierarchy position)/ of your pasted content, first make sure all the pasted content is collapsed to a single heading and then use: ~M-S-<right or left arrow>~ on your *Collapsed* pasted heading.  You can repeat this command as many times as needed to get your heading /(and all it's children)/ placed on the correct level. If you go to far you can easily switch arrows to correct your choice.
 
-- Change the name of your copied template to the specific title you need in your  document...
+*Change the name of your copied template* to the specific title you need in your  document...
 
-- Start writing and finish your new section... basic structure is in place...
+*Start writing and finish your new section...* basic structure is in place...
 
-* ✎ Templates:                                                     :noexport:
+* ✎ Templates:                                :noexport:
 ** NEW 📃 Introduction: /(template)/
+
 :README:
-Use this space to write the main synopsis of your document... You can write anything you want here but it is recommended strongly to summarize the main points of your idea broken up in small outline if necessary...
+   Use this space to write the main synopsis of your document... You can write anything you want here but it is recommended strongly to summarize the main points of your idea broken up in small outline if necessary...
 
-Keep things short and sweet here... The total *BIG picture*...
+   Keep things short and sweet here... The total *BIG picture*...
 
-If this is a *tutorial* or *how-to*, you might use this section to outline the main points of the document as *Heading Questions* and then *clone* this *Introduction section* to a *Summary*, *Conclusion*, or *What-We-Learned* section where the question headings are changed to final answer headings. /(also short and sweet and to the point)/ 
+   If this is a *tutorial* or *how-to*, you might use this section to outline the main points of the document as *Heading Questions* and then *clone* this *Introduction section* to a *Summary*, *Conclusion*, or *What-We-Learned* section where the question headings are changed to final answer headings. /(also short and sweet and to the point)/ 
 
-/Putting the questions here as links to the body of your doc is sort-of the FAQ model that emerged organically on the Internet /(pre www daze).../
+   /Putting the questions here as links to the body of your doc is sort-of the FAQ model that emerged organically on the Internet /(pre www daze).../
 :END:
 
 About this document... Yadda... Yadda... Yadda...
 
 **** NEW 📄 Reference:
+
 :README:
-Add links to other reference, source docs, requirements, back stories, whatever, here...  
+   Add links to other reference, source docs, requirements,
+   back stories, whatever, here...  
 
-To Create a Link Type: ~C-c C-l~ /(then paste: ~link~ & type: "description")/
+   To Create a Link Type: ~C-c C-l~
+   /(then paste: ~link~ & type: "description")/
 
-To Open a Link Type: ~C-c C-o~
+   To Open a Link Type: ~C-c C-o~
+
+   You can also Open a link to a local file or dired listing
+   =Opening in Another FRAME= using the Custom *xah-fly-keys*
+   command: ~SPACE e o~
 :END:
 
 - [ [ ][ ] ]
@@ -286,12 +370,18 @@ To Open a Link Type: ~C-c C-o~
 \newpage
 
 ** NEW 📃 Main Body /(template - rename clones)/
+
 :README:
-Use this space to write the main body of your document... Here is where all the details happen... Your main headings here should follow what you have writtin in your Introduction above...
+   Use this space to write the main body of your document... Here is
+   where all the details happen... Your main headings here should
+   follow what you have writtin in your Introduction above...
 
-If this is a *tutorial* or *how-to*, you might use this section to write your detailed answers to the Question Headings outlined in your Introduction section above...
+   If this is a *tutorial* or *how-to*, you might use this section to
+   write your detailed answers to the Question Headings outlined
+   in your Introduction section above...
 
-Summarize your answers within a new /main section/ titled: *"Conclusion"* or *"Summary"*, etc...
+   Summarize your answers within a new /main section/
+   titled: *"Conclusion"* or *"Summary"*, etc...
 :END:
 
 The following Points are ... yadda... yadda... yadda...
@@ -513,23 +603,24 @@ Danger!!!
 
 *** NEW 📄 Heading G /(drama script snippit template - rename this)/
 
-#+begin_src fountain 
-= This is a fountain formatted script snippit example / template
+#+begin_src fountain
+  MARY
+  = This is a fountain formatted script snippit example / template
 
-EXT. (JUNKYARD) (NIGHT) 
+  EXT. (JUNKYARD) (NIGHT) 
 
-MARY
-(LAUGHING)
+  MARY
+  (LAUGHING)
     
-I Can't believe you are writing a screenplay
+  I Can't believe you are writing a screenplay
    
-on that crappy dog chewed notebook...
+  on that crappy dog chewed notebook...
     
-what a geeky thing to do!
+  what a geeky thing to do!
     
-(LAUGHS EVEN LOUDER)
+  (LAUGHS EVEN LOUDER)
 
->*THE END*<
+  >*THE END*<
 #+end_src
 
 \newpage
