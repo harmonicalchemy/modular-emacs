@@ -40,62 +40,125 @@
  ## #+TAGS:
 #+end_comment
 
-* ☞ Instructions                                                      :export:
-** README-First
+* ☞ Instructions: /(How to Install & Use This Template)/ :noexport:
+** =Read Me First!=
 
-To use this Audio Drama Project Skeleton /(template)/ for your own projects, perform the following steps:
+To use this Audio Drama Project Skeleton /(template)/ for your own projects, perform the following steps: /(use the org-mode checkboxes help you keep track of progress)/
 
-1. *Clone a Copy of this File:* Put it where you normally organize your audio drama or podcast projects.  *Place it within its own folder* named after your intended project title...
+1. [ ] *Copy/Clone ALL of the:* ~../Audio-Drama~ *Folder /(and its contents)/ as* 
+       *Your NEW Audio Project:* 
 
-2. *NOTE:* You may be doing this because you have some fantastic story idea brewing in your mind and you need to write that down before you forget!  Right?  Therefore... as soon as you clone this file *STOP* and go immediately to the ~💡 Ideas Scratchpad Refile / ☞ Start Here!~ section and read the ~:README:~ directly under that heading...  Then write your idea down quickly /(as per the README instructions)/ to get your inspiration recorded before you forget it...  
+       In order to use this Audio Drama Project Skeleton properly so that 
+       default Settings work, you need to *copy the ENTIRE folder* containing 
+       this file and *ALL its contents*, renaming it from: =Audio-Drama= to 
+       =Your Specific Name= or =Title= of your new Audio Drama Project...
 
-   Once that is done, come back here and finish setting up your project... 
+       Put your new renamed Audio Drama Project Skeleton /(folder)/ where 
+       you normally organize your audio drama or podcast projects.
 
-   This project template is *HUGE!* Your inspiration is *tiny* and *vulnerable* to getting lost forever!  The *☞ Start Here* section is your remedy... Do that first!    
+       =OK you did that?  Now You Are READY to Start your Story!=
 
-3. *Change the* ~#+TITLE:~ *directive at the top of this file* to /"Your Audio Drama Project's Title"/
+2. [ ] =Start Sketching Out Your Story NOW Before You Loose It!=
 
-4. *Change the* ~#+EXPORT_FILE_NAME:~ *directive at the top of this file* to /"Your-Audio-Drama-Project's-Title.pdf"/ That will be the file name(s) produced during export thence forward /(including auto generated files: .tex, etc...)/
+      =NOTE:= You may be doing this because you have some fantastic story idea
+             brewing in your mind and you need to write that down before you 
+             forget!  =Right?=  Therefore... as soon as you clone this file,
+             =STOP= and go immediately to the:
 
-5. *Change the* ~#+DESCRIPTION:~ *directive at the top of this file* to /Your-Audio-Drama-Project's Description/ etc...
+                   ~💡 Ideas Scratchpad Refile / ☞ Start Here!~ 
 
-6. *Copy/Clone* ~./media~ /(and all its contents - currently empty but will contain media in future releases):/ *to:* your new project's folder /(where you copied this file).../  Any external documents or images referenced by your audio project should be placed within this ~./media/~ directory... External links to images, etc. within boilerplate examples of future versions of this ~.org~ file can be used as examples for getting your own images, and external attachments linked properly...  This single ~./media~ directory will serve media and external attachments for this and any other extra audio drama ~.org~ files you may end up creating here, as well as being the media repository used by LaTeX during publishing... You will also be using this ~./media/~ directory for all finished sound media, /(e.g., sound-effects, loops, music, etc.)/ that are called out within the cue sheets /(also contained within this ~.org~ project)/ 
+             section and read the ~:README:~ directly under that heading...  
+             Then write your idea down quickly /(as per the README instructions)/ 
+             to get your inspiration recorded before you forget it...  
 
-7. *Copy/Clone ./bin* /(and all its contents):/ *To:* your new project's folder /(where you copied this file).../  This is needed for running scripts that convert your ~.fountain~ scripts into PDF or other formats...
+             Later, After you have all your ideas sketched out and you are ready to be in an ="organized mood"= /(rather than creative mood)/ Then it is
+             time to =Come back here and finish setting up your project...=
 
-8. *Copy/Clone ~./auto/~ /(and all its contents - which may or may not be empty):/ *To:* your new project's folder /(where you copied this file)/ This is where your output ~.PDF~ files will be placed during export. 
+             *This Project Template is HUGE!*
 
-9. *Copy/Clone* ~~./org-templates~~ /(and all its contents):/ *To:* your new project's folder /(where you copied this file).../ The files in there are automatically linked and included within this template. You don't need to change those settings unless you wish to customize the already customized tags, and export options. /They are allready set up correctly for the audio drama genre, and the category is all set as well... But you can and may modify the original files to fit your needs.../
+             *Your Muse Can Easily Loose Her Inspiration!*
 
-10. *Start Planning / Writing Your Audio Drama:* /Change headings and structure to match your project's outline episodes-scenes-plots-characters, etc./ Start doing the Tasks within the Tasks section... Have fun doing this...
+             =The ☞ Start Here Section is Your Remedy= 
 
-- =Instructions to Export a PDF of this Entire Project:=
+             =Do That first!=
 
-   The *In-Buffer Settings* specified by the setupfiles above will get this file looking good when exported as a Standard PDF file.  Once you have your project directory all set up as above you are ready to export your first PDF as a test run...
+3. [ ] =Finish Setting up this Project later...= [0/3]
 
-      #+begin_src conf
-         M-x org-latex-export-to-pdf
-      #+end_src
+    - [ ] *Change the* ~#+TITLE:~ *directive at the top of this file:* 
 
-   *-or-* If You Enabled *Xah-Fly-Keys* /"Command Mode"/ Try:
+           Change it to /"Your Audio Drama Project's Title"/
 
-      #+begin_src conf
-         SPACE e p
-      #+end_src
+    - [ ] *Change the* ~#+EXPORT_FILE_NAME:~ *directive at the top of this file:* 
 
-   After *AucTeX* is done parsing/compiling etc., a new *PDF* by the name of ~My-New-Audio-Drama.pdf~ -and- ~My-New-Audio-Drama.tex~ will appear within this project's directory...
+           Also change this directive to: /"Your-Audio-Drama-Project's-Title.pdf"/ 
+           That will be the file name(s) produced during export thence forward
+           /(including auto generated files: .tex, etc...)/
 
-   Subsequent repeated calls to the above command will overwrite your existing ~My-New-Audio-Drama.pdf~ -and- ~My-New-Audio-Drama.tex~ files! /(make backups first if needed! - I put backups in the auto directory)/
+    - [ ] *Change the* ~#+DESCRIPTION:~ *directive at the top of this file:* 
 
-- =Instructions for Exporting Fountain Scripts:=
+           Compose /Your-Audio-Drama-Project's Description/ as a short paragraph here...
 
-   Fountain screenplay scripts created within this project can be exported using the *afterwriting* python tool... Follow Instructions section below under the *Instructions / Fountain 2 PDF:* section for more about how to do that...
+    - *The* ~./media~ *Directory is ALL Set:* 
 
-*This README was Last Modified: <2021-08-22 Sun>* So far things are pretty basic PDF... We will get fancy with other formats later... I promice... I have to do all this documentation first! /(As you can see, if you been following for the past couple years, things are getting done! Albeit Slowly)/
+         Any external documents or images referenced by your audio project 
+         should be placed within this ~./media/~ directory... This single ~./media~ 
+         directory will serve media and external attachments for this and any 
+         other extra audio drama ~.org~ files you may end up creating here, as well 
+         as being the media repository used by LaTeX during publishing... You will 
+         also be using this ~./media/~ directory for all finished sound media, 
+         /(e.g., sound-effects, loops, music, etc.)/ that are called out within 
+         the cue sheets /(also contained within this ~.org~ project)/ 
+
+    - *Purpose of the:* ~./bin~ *Directory:*
+
+         This folder is needed to run programs that convert your ~.fountain~ scripts into PDF or other formats...
+
+    - *Purpose of the:* ~./auto/~ *Directory:*
+
+         This is where your output ~.PDF~ files will be placed during export. 
+
+    - *Purpose of the:* ~~./org-templates~~  *Directory:*
+
+         The files in here are automatically linked and included within this
+         template. You don't need to change those settings unless you wish to
+         customize the already customized tags, and export options.
+
+         /They are allready set up correctly for the audio drama genre, and the category is all set as well... But you can and may modify the original files to fit your needs.../
+
+=Ongoing Project TASKS:=
+
+1. [ ] *Planning / Writing Your Audio Drama:* 
+
+       /Change headings and structure to match your project's outline episodes-scenes-plots-characters, etc./ 
+
+       =Do the Tasks within the Tasks section...= 
+
+       *Have fun doing this...*
+** How To Export/Publish to PDF File:
+
+The *In-Buffer Settings* specified by the setupfiles above will get this file looking good when exported as a Standard PDF file.  Once you have your project directory all set up as above you are ready to export your first PDF as a test run...
+
+   #+begin_src conf
+      M-x org-latex-export-to-pdf
+   #+end_src
+   =-or-= If You Enabled *Xah-Fly-Keys Command Mode* Try:
+   #+begin_src conf
+      SPACE e p
+   #+end_src
+
+After *AucTeX* is done parsing/compiling etc., a new *PDF* by the name of ~My-New-Audio-Drama.pdf~ -and- ~My-New-Audio-Drama.tex~ will appear within this project's directory...
+
+Subsequent repeated calls to the above command will overwrite your existing ~My-New-Audio-Drama.pdf~ -and- ~My-New-Audio-Drama.tex~ files! /(make backups first if needed! - I put backups in the auto directory)/
+
+** Instructions for Exporting Fountain Scripts:
+
+Fountain screenplay scripts created within this project can be exported using the *afterwriting* python tool... Follow Instructions section below under the *Instructions / Fountain 2 PDF:* section for more about how to do that...
+
+*This README was Last Modified On:* <2021-08-22 Sun> So far things are pretty basic PDF... We will get fancy with other formats later... I promice... I have to do all this documentation first! /(As you can see, if you been following for the past couple years, things are getting done! Albeit Slowly)/
 
 Enjoy! - Alisha Awen
 
-** Fountain 2 PDF
+*** Fountain 2 PDF
 
 The ~Audio-Drama~ project folder that contains this file also contains external files for exporting the project's fountain script(s) to a PDF file formatted to HAP Radio Drama Script style. Instructions and info for further customizations of your final output follow...
 
@@ -113,35 +176,35 @@ Most of the information below under the first sections starting with Afterwritin
 
 The sections below where I begin using the information above to customize my own config.json file are my own... Based on much trial and error, as well as reading other docs on the fountain.org website...
 
-*** Generic Afterwriting Config File
+**** Generic Afterwriting Config File
 
-  The output can be customized using configuration file passed as --config parameter. Config should be a JSON with this structure:
+The output can be customized using configuration file passed as --config parameter. Config should be a JSON with this structure:
 
   #+begin_src js
-  {
-     "embolden_scene_headers": false,
-     "show_page_numbers": true,
-     "split_dialogue": true,
-     "print_title_page": true,
-     "print_profile": "a4",
-     "double_space_between_scenes": false,
-     "print_sections": false,
-     "print_synopsis": false,
-     "print_actions": true,
-     "print_headers": true,
-     "print_dialogues": true,
-     "number_sections": false,
-     "use_dual_dialogue": true,
-     "print_notes": false,
-     "print_header": "",
-     "print_footer": "",
-     "print_watermark": "",
-     "scenes_numbers": "none",
-     "each_scene_on_new_page": false
-  }
+    {
+        "embolden_scene_headers": false,
+        "show_page_numbers": true,
+        "split_dialogue": true,
+        "print_title_page": true,
+        "print_profile": "a4",
+        "double_space_between_scenes": false,
+        "print_sections": false,
+        "print_synopsis": false,
+        "print_actions": true,
+        "print_headers": true,
+        "print_dialogues": true,
+        "number_sections": false,
+        "use_dual_dialogue": true,
+        "print_notes": false,
+        "print_header": "",
+        "print_footer": "",
+        "print_watermark": "",
+        "scenes_numbers": "none",
+        "each_scene_on_new_page": false
+    }
   #+end_src
 
-**** Available Configuration Options:
+***** Available Configuration Options:
 
 |-----------------------------+-------------------------+----------------------------------|
 | *Option*                      | *Value*                   | *Description*                      |
@@ -167,91 +230,110 @@ The sections below where I begin using the information above to customize my own
 | each_scene_on_new_page      | true/false              | break page after a scene         |
 |-----------------------------+-------------------------+----------------------------------|
 
-- *NOTE:* /Any Settings above may also be provided as extra options while evoking ~afterwriting~ 
-         on the command line.../
+- =NOTE:= /Any Settings above may also be provided as extra options while/ 
+         /evoking/ ~afterwriting~ /on the command line.../
 
-         /There are other fancy things you can do like adding Snippets, etc. as well, which have been incorporated into this project template.../  
+         There are other fancy things you can do like adding Snippets, etc. as well, 
+         which have been incorporated into this project template...
 
          *See Github Link:*
 
             [[https://github.com/ifrost/afterwriting-labs/blob/master/docs/clients.md]]
 
-            /for more information.../
+         for more information...
 
-*** Harmonic Alchemy Modular Emacs - Afterwriting Custom Config file
+**** Harmonic Alchemy Modular Emacs - Afterwriting Custom Config file
 
 Using the knowledge above, I created a custom file /(after a lot of trial and error)/ for exporting with *afterwriting* called: ~awc-config.json~
 
-- *This is what it currently looks like:* /(I am open to further expansion & automation ideas)/
+*This is what it currently looks like:* /(I am open to further expansion & automation ideas)/
 
-#+begin_src js
-{
-    "embolden_scene_headers": true,
-    "show_page_numbers": true,
-    "split_dialogue": false,
-    "print_title_page": true,
-    "print_profile": "usletter",
-    "double_space_between_scenes": false,
-    "print_sections": false,
-    "print_synopsis": true,
-    "print_actions": true,
-    "print_headers": true,
-    "print_dialogues": true,
-    "number_sections": false,
-    "use_dual_dialogue": true,
-    "print_notes": false,
-    "print_footer": "Harmonic Alchemy Productions - siren1@HarmonicAlchemy.productions",
-    "print_watermark": "",
-    "scenes_numbers": "both",
-    "each_scene_on_new_page": true,
-    "print_header": "The Ivory Tower          Episode 001",
-    "snippets": {
-        "HEADER": "$TITLE          $EPISODE",
-        "TITLE": "**The Ivory Tower**",
-        "EPISODE": "001",
-        "CREDIT": "*A Fountain TEMPLATE for Audio Drama Scripts*",
-        "AUTHOR": "by **Alisha Awen**",
-        "DRAFT_DATE": "PRODUCTION SCRIPT"
-    }
-}
-#+end_src
+   #+begin_src js
+     {
+         "embolden_scene_headers": true,
+         "show_page_numbers": true,
+         "split_dialogue": false,
+         "print_title_page": true,
+         "print_profile": "usletter",
+         "double_space_between_scenes": false,
+         "print_sections": false,
+         "print_synopsis": true,
+         "print_actions": true,
+         "print_headers": true,
+         "print_dialogues": true,
+         "number_sections": false,
+         "use_dual_dialogue": true,
+         "print_notes": false,
+         "print_footer": "Harmonic Alchemy Productions - siren1@HarmonicAlchemy.productions",
+         "print_watermark": "",
+         "scenes_numbers": "both",
+         "each_scene_on_new_page": true,
+         "print_header": "The Ivory Tower          Episode 001",
+         "snippets": {
+             "HEADER": "$TITLE          $EPISODE",
+             "TITLE": "**The Ivory Tower**",
+             "EPISODE": "001",
+             "CREDIT": "*A Fountain TEMPLATE for Audio Drama Scripts*",
+             "AUTHOR": "by **Alisha Awen**",
+             "DRAFT_DATE": "PRODUCTION SCRIPT"
+         }
+     }
+   #+end_src
 
-* 💡 Ideas Scratchpad Refile                                        :export:
+* 💡 Ideas Scratchpad Refile                         :noexport:
 ** NEW ☞ Start Here!
 :README:
   This section is intended to help you quickly capture inspired at-the-moment ideas While they are still fresh in mind...
 
   Use this *Ideas / Scratchpad / Refile* section as a quick place to instantly document ideas and inspirations as soon as they come up!  You can refile them later... /(even if it is intended for elsewhere)/ Parallel universe? Sure... You got that covered. %^)
 
-    - *Come directly here* 
+    - [ ] =Come directly here=
 
-    - Advance your cursor a few newlines below this ~:README:~ drawer on a fresh clean line with some extra space below it as well... /(above any previously time stamped entries you may already have placed)/
+    - [ ] Advance your cursor a few newlines below this ~:README:~ drawer 
+           on a fresh clean line with some extra space below it as well... 
+           /(above any previously time stamped entries you may already/ 
+           /have placed)/
 
-    - You are now at the top of the list and the time is the present...  There won't be any future entries ahead of you... (maybe next decade? time travel?)
+    - [ ] You are now at the top of the list and the time is the present...  
 
-    - Enter a new timestamp with "C-c .", Hit enter to auto accept today's date and time.
+           There won't be any future entries ahead of you... 
+           /(maybe next decade? time travel?)/
 
-    - Give it a quick title and make this new line an outline heading at the proper level. /(There is already an example provided as an example)/
+    - [ ] Enter a new timestamp with: ~C-c .~ Then finish the command by 
+           pressing ~enter~ to auto accept today's date and time.
 
-    - Advance your cursor two lines below your new heading and begin typing away before you forget your fantastic idea!!!
+    - [ ] Give your new Time Stamped Entry a =Title= and make this new time 
+           stamped title into an outline heading at the proper level. 
+           /(There is already an example provided as an example)/
 
-    - You can organize everything else later...  Don't scare away the muses! Get your story down now!
+    - [ ] Advance your cursor two lines below your new heading and begin 
+           typing away before you forget your fantastic idea!!!
 
-    - Then you may go out to play elsewhere little grasshopper... But come back later and organize things... OK? Don't create a swamp in here! And don't forget to take your bath tonight... ;-) 
+  =Organize everything else later...= 
 
-    - Having done the simple steps above any time you get inspired, you will be able to tell your grand children.. "I got my first spark of an idea for that book back in Year, Month, Day, time, second" (50 years later!) Now that is being organized! LOL
+  Don't scare away the muses! Get your story down now!
+
+  After initial Inspiration quiets down, then and you will be ready for a change to more organized like activities...
+
+  Or... go out to play elsewhere little grasshopper... But come back later and organize things here... OK? Don't create a swamp in here! And don't forget to take your bath tonight... ;-) 
+
+  Having done the simple steps above any time you get inspired, you will be able to tell your grand children.. /"I got my first spark of an idea for that book back/ /in Year, Month, Day, time, second"/ (50 years later!) Now that is being organized! LOL
 :END:
 
 *** NEW <2020-06-07 Sun> New Episode / Scene Idea
 :README:
-  This is a dummy example of some crazy idea that you may have gotten at the spur of the moment, while you were doing something elsewhere within this project...  After you are done getting as much of the idea as you initally can then you can simply go back to what you were doing before the inspiration segue tore you away... you might want to schedule this as a todo item before leaving though...
+  This is a dummy example of some crazy idea that you may have gotten at the spur of the moment, while you were doing something elsewhere within this project...  
+
+  You may simply use this first time stamped heading for your own use... =Change it!!!=  
+
+  After you are done getting as much of your new idea as you initally can then you can simply go back to what you were doing before the inspiration segue tore you away... you might want to schedule this as a todo item before leaving though...
 
   Later when you are free you can come back to file this or place it where it belongs.  
 :END:
 
 **** 🎙Scene ??: /(template)/
 :README:
-  This is your workspace for developing a new scene... Add anything you need in this space outside of the *Dialog* heading /(Fountain script source block)/ to aid in development and production of your final draft...
+  This is a workspace template for developing a new scene... Add anything you need in this space outside of the *Dialog* heading /(Fountain script source block)/ to aid in development and production of your final draft...
 :END:
 
 ***** 🗒 Background Notes:
@@ -289,76 +371,77 @@ Please somebody write me into a real character... Thanks!
 
  #+END_SRC
 
-* 🎙 Production                                                      :export:
+* 🎙 Production:                                             :export:
 ** NEW 📃 Synopsis / Back Story
 :README:
   Write an initial synopsis for the entire audio project / series here...  Individual Episodes also have a section for writing synopsis...  This will be more or less a summary of the entire thing... You can use similar story building tools / exercises for writing your synopsis as you do for any typical fiction writing project...
 :END:
 
-** NEW 🎙 Episodes
-*** NEW 🎙 Episode 01:                                                :export:
-**** NEW 📒 Epi Back Story /(Optional For Series Intro)/
+\newpage
 
+** NEW 🎙 Episodes
+*** NEW 🎙 Episode ~001~:
+**** NEW 📒 Epi Back Story /(Optional For Series Intro)/
 :README:
   This section is for episode background planning and plot development which may or may not be included within the final production... Information contained here is more specific to this single episode than the more general *Synopsis / Back Story* section of this entire project, or what you may find within the *Research:* section which is more global in scope as well...
 
   Structure this section any way you wish or need...
 :END:
 
+\newpage
+
 **** NEW 📃 Epi Synopsis
 :README:
   Write a short synopsis for this single episode here... This will be more or less a summary of this single episode only... You can use similar story building tools / exercises for writing this synopsis as you do for any typical fiction writing project... A summary of your Synopsis will be added to the final draft fountain script...
 :END:
+
+\newpage
 
 **** NEW 🗡 Epi Plot Summary
 :README:
   Write your episode's plot summary here: /(e.g., In this episode we are dealing with yadda... yadda... yadda... which must be resolved with yadda... yadda... yadda..., etc...)/ This plot summary will probably not be added to the final draft fountain script... /(but there are exceptions of course)/
 :END:
 
-**** NEW 📢 Sound Cues
-:README:
+\newpage
 
-- *Sound Cue Numbering Convention:*
+**** NEW 📢 Sound Cues:
+***** Sound Cue /(clips)/ Numbering Convention:
 
-   The numbering and naming of sound cues for an entire audio drama project are limited to the scope of that project alone. Other projects may have similar or even the same sequence of sound cue names and numbers, but they are also only local to the scope of their project alone... 
+The numbering and naming of sound cues for an entire audio drama project are limited to the scope of that project alone. Other projects may have similar or even the same sequence of sound cue names and numbers, but they are also only local to the scope of their project alone... 
 
-   Therefore all sound files shall be kept in their accompanying project's ~media~ sub folder and not get mixed up into other projects or else confusion could arise!!! 
+Therefore all sound files shall be kept in their accompanying project's ~media~ sub folder and not get mixed up into other projects or else confusion could arise!!! 
 
-   All sound files should contain the unique /(within its project)/ number below, plus a descriptive but short title... /(this way sound files can be sorted alphabetically and found easily when called for in a script (or cue sheet) during rehearsal or production time...)/
+All sound files should contain the unique /(within its project)/ number below, plus a descriptive but short title... /(this way sound files can be sorted alphabetically and found easily when called for in a script (or cue sheet) during rehearsal or production time...)/
 
-   Its easy to call out these cues during a rehearsal... For instance, simply saying: "SFX 1, 12, 25" and everyone will know we are talking about Episode 1, Scene 12, Cue 25... 
+Its easy to call out these cues during a rehearsal... For instance, simply saying: /"SFX 102, 12, 25"/ and everyone will know we are talking about Episode 102, Scene 12, Cue 25... 
 
-    ~[SFX-E01-S01-01]~
-      |   |   |   |_____ /Sound Cue # (99 possible cues per scene)/
-      |   |   |_________ /Scene # (99 possible scenes per episode)/
-      |   |_____________ /Episode # (99 possible episodes per story)/
-      |_________________ /Mnemonic for: sound effect, environment sound, etc./
-
-:END:
+#+begin_src text
+  [SFX-E001-S01-01]
+    |   |   |   |---- Sound Cue # (99 possible cues per scene) 
+    |   |   |-------- Scene # (99 possible scenes per episode)
+    |   |------------ Episode # (999 possible episodes per story)
+    |---------------- Mnemonic for: sound effect, environment sound, etc.
+#+end_src
 
 ***** Scene 01:
-
-****** 📢 ~[SFX-E01-S01-01]~ "sound cue name" /(template)/
+****** 📢 ~[SFX-E001-S01-01]~ "sound cue name" /(template)/
 :README:
    WRITE SHORT SOUND DESCRIPTION IN ALL CAPS LIKE THIS
 
    /Example:/
    SCREAM - SMASH BATHROOM MIRROR - SHARDS FALL IN SINK - INTENSE SOBBING
 :END:
-
 ******* 📃 Fountain Script: /(example)/
 
 #+begin_src fountain
-
-nn     _SOUND: [SFX-E01-S01-01] ANGRY SCREAM! - SMASH BATHROOM MIRROR - SHARDS FALL IN SINK (CONTINUE AND FADE SLIGHTLY UNDER - INTENSE EMOTIONAL SILENCE) [SFX-E01-S01-02] WALLA - DEEP SOBBING EMOTIONAL BREAKDOWN_
-
+nn     _SOUND: [SFX-E001-S01-01] ANGRY SCREAM! - SMASH BATHROOM MIRROR - SHARDS FALL IN SINK (CONTINUE AND FADE SLIGHTLY UNDER - INTENSE EMOTIONAL SILENCE) [SFX-E01-S01-02] WALLA - DEEP SOBBING EMOTIONAL BREAKDOWN_
 #+end_src
 
 ******* 🗒 Notes: [0/2]
 :README:
    This part will not be added to the script, and you should probably start here first to get the rough idea sketched out...
 
-   /Example:/ Angry Scream, accompanied by crashing sound of both fists smashing into the bathroom mirror with aftershock of shards falling into the sink, and finally after an intense emotional silence play: ~[SFX-E01-S01-02]~ "Walla" (Deep Sobbing emotional breakdown sound)
+   /Example:/ Angry Scream, accompanied by crashing sound of both fists smashing into the bathroom mirror with aftershock of shards falling into the sink, and finally after an intense emotional silence play: ~[SFX-E001-S01-02]~ "Walla" (Deep Sobbing emotional breakdown sound)
 :END:
 
 - [ ] *Notes:*
@@ -367,7 +450,9 @@ nn     _SOUND: [SFX-E01-S01-01] ANGRY SCREAM! - SMASH BATHROOM MIRROR - SHARDS F
 
 - [ ] *File Created:* 
 
-     ~./media/SFX-E01-S01-01_Even-Shorter-Description.wav~
+     ~./media/SFX-E001-S01-01_Even-Shorter-Description.wav~
+
+\newpage
 
 ***** Scene 02:
 ****** 📢 ~[SFX-E01-S02-01]~ "sound cue name" /(template)/
@@ -381,9 +466,7 @@ nn     _SOUND: [SFX-E01-S01-01] ANGRY SCREAM! - SMASH BATHROOM MIRROR - SHARDS F
 ******* 📃 Fountain Script: /(example)/
 
 #+begin_src fountain
-
-nn     _SOUND: [SFX-E01-S02-01] DOG BARKING IN STREET! - CAR WHEELS SCREECH - THUD - DOG CRIES THEN WHIMPERS (CONTINUE AND FADE)_
-
+nn     _SOUND: [SFX-E001-S02-01] DOG BARKING IN STREET! - CAR WHEELS SCREECH - THUD - DOG CRIES THEN WHIMPERS (CONTINUE AND FADE)_
 #+end_src
 
 ******* 🗒 Notes:  [0/2]
@@ -397,45 +480,41 @@ nn     _SOUND: [SFX-E01-S02-01] DOG BARKING IN STREET! - CAR WHEELS SCREECH - TH
 
 - [ ] *File Created:* 
 
-       ~./media/SFX-E01-S02-01_Even-Shorter-Description.wav~
+       ~./media/SFX-E001-S02-01_Even-Shorter-Description.wav~
 
-**** NEW 🎶 Music Cues
-:README:
+\newpage
 
-- *Music Cues (clips) Numbering Convention:*
+**** NEW 🎶 Music Cues:
+***** Music Cue /(clips)/ Numbering Convention:
 
-   The numbering and naming of music cues /(clips)/ for an entire Audio Drama project are limited to the scope of that project alone. Other projects may have similar or even the same sequence of music cue names and numbers, but they are also only local to the scope of their projects alone...
+The numbering and naming of music cues /(clips)/ for an entire Audio Drama project are limited to the scope of that project alone. Other projects may have similar or even the same sequence of music cue names and numbers, but they are also only local to the scope of their projects alone...
 
-   Therefore all sound files for music shall be kept in their accompanying project's ~media~ sub folder and not get mixed up into other projects or else confusion could arise!!! 
+Therefore all sound files for music shall be kept in their accompanying project's ~media~ sub folder and not get mixed up into other projects or else confusion could arise!!! 
 
-   All music sound files should contain the unique /(within its project)/ number below, plus a descriptive but short title... /(this way music sound files can be sorted alphabetically and found easily when called for in a script (or cue sheet) during rehearsal or production time...)/
+All music sound files should contain the unique /(within its project)/ number below, plus a descriptive but short title... /(this way music sound files can be sorted alphabetically and found easily when called for in a script (or cue sheet) during rehearsal or production time...)/
 
-   It's easy to call out these music cues during a rehearsal... For instance, simply saying: "MUS 1, 12, 25" and everyone will know we are talking about Episode 1, Scene 12, Cue 25... /(25? That's a lot of music for just one scene! LOL)/
+It's easy to call out these music cues during a rehearsal... For instance, simply saying: /"MUS 102, 12, 25"/ and everyone will know we are talking about Episode 102, Scene 12, Cue 25... /(25? That's a lot of music for just one scene! LOL)/
 
- ~[MUS-E01-S01-01]~
-   |   |   |   |_____ /Music Cue # (99 possible music cues per scene)/
-   |   |   |_________ /Scene # (99 possible scenes per episode)/
-   |   |_____________ /Episode # (99 possible episodes per story)/
-   |_________________ /Mnemonic for: Music (clips, background, themes, etc.)/
+#+begin_src text
+  [MUS-E102-S12-25]
+    |   |   |   |---- Music Cue # (99 possible cues per scene) 
+    |   |   |-------- Scene # (99 possible scenes per episode)
+    |   |------------ Episode # (999 possible episodes per story)
+    |---------------- Mnemonic for: Music Cues.
+#+end_src
 
-:END:
 ***** Scene 01:
-
-****** 🎶 ~[MUS-E01-S01-01]~ "music cue name" /(template)/
-
+****** 🎶 ~[MUS-E101-S01-01]~ "music cue name" /(template)/
 :README:
     WRITE SHORT MUSIC DESCRIPTION IN ALL CAPS LIKE THIS
 
     /Example:/
     MYSTERIOUS INTRO THEME
 :END:
-
 ******* 📃 Fountain Script: /(example)/
 
 #+begin_src fountain
-
-nn      _MUSIC: [MUS-E01-S01-01] MYSTERIOUS INTRO THEME (CROSSFADE AND DUCK UNDER)_
-
+nn      _MUSIC: [MUS-E101-S01-01] MYSTERIOUS INTRO THEME (CROSSFADE AND DUCK UNDER)_
 #+end_src
 
 ******* 🗒 Notes: [0/2]
@@ -451,24 +530,20 @@ nn      _MUSIC: [MUS-E01-S01-01] MYSTERIOUS INTRO THEME (CROSSFADE AND DUCK UNDE
 
 - [ ] *File Created:* 
 
-     ~./media/MUS-E01-S01-01_Even-Shorter-Description.wav~
+     ~./media/MUS-E101-S01-01_Even-Shorter-Description.wav~
 
 ***** Scene 02:
-
-****** 🎶 ~[MUS-E01-S02-01]~ "music cue name" /(template)/
+****** 🎶 ~[MUS-E101-S02-01]~ "music cue name" /(template)/
 :README:
     WRITE SHORT MUSIC DESCRIPTION IN ALL CAPS LIKE THIS
 
     /Example:/
     OMINOUS HIGHLIGHT OVERLAY STING
 :END:
-
 ******* 📃 Fountain Script: /(example)/
 
 #+begin_src fountain
-
-nn     _MUSIC: [MUS-E01-S02-01] OPTIONAL OMINOUS HIGHLIGHT OVERLAY STING (SYNC TO DIALOG "Until now...", FADE FAST - ONLY HALL REVERB REMAINS THEN SILENCE)_
-
+nn     _MUSIC: [MUS-E101-S02-01] OPTIONAL OMINOUS HIGHLIGHT OVERLAY STING (SYNC TO DIALOG "Until now...", FADE FAST - ONLY HALL REVERB REMAINS THEN SILENCE)_
 #+end_src
 
 ******* 🗒 Notes: [0/3]
@@ -484,54 +559,57 @@ nn     _MUSIC: [MUS-E01-S02-01] OPTIONAL OMINOUS HIGHLIGHT OVERLAY STING (SYNC T
 
 - [ ] *File Created:*
 
-       ~./media/MUS-E01-S02-01_Even-Shorter-Description.wav~
+       ~./media/MUS-E101-S02-01_Even-Shorter-Description.wav~
 
 **** NEW 🎙Scenes
 :README:
- Here is the ultimate master source where you create and update your scenes...
+   Here is the ultimate master source where you create and update your scenes...
 
- All ideas, plots, dialog, sounds, music, production notes, etc. for a particular scene within this episode are developed here solely...
+   All ideas, plots, dialog, sounds, music, production notes, etc. for a particular scene within this episode are developed here solely...
 
- One of the accompanying fountain drama scripts for this *Audio Drama Project* ~.org~ file /(named after this episode)/ contains a compilation of all the /fountain script snippits/ for all scenes developed within this single episode...
+   One of the accompanying fountain drama scripts for this *Audio Drama Project* ~.org~ file /(named after this episode)/ contains a compilation of all the /fountain script snippits/ for all scenes developed within this single episode...
 
- Some elements created here will become part of the accompanying fountain drama script for this episode... /(e.g., dialog, notes, narration, etc.)/ 
+   Some elements created here will become part of the accompanying fountain drama script for this episode... /(e.g., dialog, notes, narration, etc.)/ 
 
- The accompanying fountain drama script for this episode must be kept up to date with final drafts and latest edits made solely here...
+   The accompanying fountain drama script for this episode must be kept up to date with final drafts and latest edits made solely here...
 
- The headings within this ~.org~ file can be tracked using ~GTD~ tags, and a *log* entry can keep track of time worked on them... Once a scene is in final draft stage, it can be marked *DONE* and the fountain script for the episode will be updated to reflect that scene's final draft state...
+   The headings within this ~.org~ file can be tracked using ~GTD~ tags, and a *log* entry can keep track of time worked on them... Once a scene is in final draft stage, it can be marked *DONE* and the fountain script for the episode will be updated to reflect that scene's final draft state...
 
- *What is a Scene?*
+   *What is a Scene?*
 
- Scenes form the fabric within episodes of audio or radio programs...
+   Scenes form the fabric within episodes of audio or radio programs...
 
- Scenes are small packages of isolated events relating to a single unique thread/picture knitted into a defined situation where particular events related to that situation play out...
+   Scenes are small packages of isolated events relating to a single unique thread/picture knitted into a defined situation where particular events related to that situation play out...
 
- The scenes don't necessarily follow in chronological order but they relate to each other in the mosaic fabric of the story as it develops... 
+   The scenes don't necessarily follow in chronological order but they relate to each other in the mosaic fabric of the story as it develops... 
 
- If a scene changes abruptly to some other situation, that may mean that the scene is over and a new one is starting... Usually a change of environment triggers a new scene...
+   If a scene changes abruptly to some other situation, that may mean that the scene is over and a new one is starting... Usually a change of environment triggers a new scene...
 :END:
-
 ***** NEW 🎙Scene nn: /(template)/:
 :README:
   This is your workspace for developing a new scene... Add anything you need in this space outside of the *Dialog* heading /(Fountain script source block)/ to aid in development and production of your final draft...
 :END:
+****** Location:
 
-- *Location:* 
+\newpage
 
-- *Summary:*
+****** Summary:
 
-******* 🗒 Background Notes:
+\newpage
+
+****** 🗒 Background Notes:
 :README:
   This area could start out as this single scene's quick synopsis summarizing all of the actions / dialog etc. that take place during this particular scene and / or the place where you sketch these things out first before committing them to the actual scene dialog script heading below...  This is also a place to add extra notes for this scene that will not become part of the final production fountain script...
 :END:
 
-******* 📃 Fountain Script: /(single scene script)/
+\newpage
+
+****** 📃 Fountain Script: /(single scene script)/
 :README:
   Compose a new draft scene fountain script in the block below... Write some scene related production notes, or instructions within the fountain script source block as well...
 :END:
 
 #+BEGIN_SRC fountain
-
 # Production Notes: (example)
 
 = Add instructions, and information here needed to develop this scene... Yadda Yadda Yadda...
@@ -554,54 +632,133 @@ Oh? I am just a template?  Whaaaat the heck is that?
 Please somebody write me into a real character... Thanks!
 
 >END of SCENE<
-
  #+END_SRC
 
-*** NEXT 🎙 Episode 02: /(to be added later)/
+\newpage
 
-** NEW ✎ Production Log                                           :noexport:
+** NEW ✎ Production LOG:                                         :noexport:
 :README:
-  Use this space to add time stamped log note entries for any pourpose you may need... Mostly to track time working on scene dialog, research, and other development tasks within this project...
+   Use this space to add time stamped log note entries for any pourpose you may need...
 
-  References to the headings within this file related to tasks can be added to the tasks which are tracked within this log... 
+   *To create a Time Stamped Entry, Use Key Command:* ~C-c .~
+
+   Make your new entry a =sub-heading under a Log section= heading /(as above but, wherever else you may need a collection of log entries)/.
+
+   Keep your Log Entries in Decending Chronological Order. /(i.e., put your newest entries on top)/
+
+   This serves as a replacement for my Scrivener planning Logs /(Currently implemented as markdown files outside of Scrivener)/... Each ~Org-based~ Writing project will have one or more of these logs right inside of it close to the things the logs are actually about...  No more fumbling and guessing which log was I useing for what? Now, not only can I find them, I can make them into tasks, TODOS, and prioritize them to boot! Consider this my new official general template for logs going forward...
+
+   ="Onward We Row Mates... Through the log jam!"=
+:END:
+*** NEW LOG: <2021-03-29 Mon> Generic Title /(General Log Entry Template)/
+:README:
+   - *Go To One of the HEADINGS Below:* /(Summary, Details, or Sub Headings)/
+
+      =Punch the Time Clock= At the heading And then begin working on a task related to that Heading... =Your Time IS being Recorded Now= 
+
+   - =Use These Commands:= /as you work to keep track your time.../
+
+      + *Clock IN:* ~C-c C-x C-i~ 
+
+                    /(Begin OR Resume Clocking Current task)/
+
+                    This creates a new :CLOCKING: Time Card Entry just
+                    underneath the HEADING...
+
+                    Do this just before starting work on the task... 
+                    Be in control of your life!
+
+                    After doing the above, you can go away and do some 
+                    work, leaving this heading, log note, etc. to visit 
+                    other files and/or work on them etc. The clock will 
+                    be recording your time all the while... You will see 
+                    in your mode line the elapsed clock time ticking away 
+                    as you work on a task /(hopefully related to this clock!)/
+                    and NOT Yac Shaving or being sidetracked!!!
+
+      + *RETURN to Clock Heading:* ~C-c C-x C-j~
+
+                        /Go back to the place where you started the clock.../
+
+                        You do this after you have worked on a task for a 
+                        while and you need to come back to update the item's
+                        info etc., and/or stop the clock before going off to 
+                        do something else unrelated to the log entry...
+
+      + *Clock OUT:* ~C-c C-x C-o~ /(to stop clocking your time on task)/
+
+                      This *Finalizes the Time Card Entry* within:
+                      ~:CLOCKING:~ /(created earlier when you started the/ 
+                      /clock)/...
+
+                      The Clock Entry changes showing start timestamp, end timestamp, and total time worked during this segment...  
+
+                      =Please DON'T Forget= /Like I often do, LOL.../ i.e.,
+                      Leaving a clock running all day by accident, or worse,
+                      leave it dangling with the file closed only to open it
+                      again and get that nasty *Org-Mode Message:* /"What do/
+                      /you want to do with this?"/ If you do something like 
+                      that you can always come back and directly edit the 
+                      clock times by hand to amend them...  After changing 
+                      clock times or dates, etc... Whatever...
+
+                      ="Onward We Row Mates... Through the log jam!"=
+
+      + *Update Time Card Entry:* ~C-c C-c~ 
+
+                  This command will change the total time at the end showing 
+                  your new calculated time...
+
+                  If you need to go away and do something else before finishing this task, you can do so after clocking out... When you come back simply clock back in again to start another Time Card Entry just as before... The new time card entry will appear above the earlier one within the ~:CLOCKING:~ drawer... When you clock out of this task it will look just like the entry below it with a total time worked tagged on the end...
+
+      + *Clock Out & Mark Items Done:* ~C-c C-t~
+
+            When you are all done with a Log Entry use the above key 
+            command to mark its Heading *TODO* tag to: *DONE* /(Most of the/ 
+            /time this will ALSO clock you out if you are still clocked/ 
+            /into the item... But not allways in my experience.../  
+            So make sure you are also clocked OUT of an Item After 
+            marking it DONE... Type: ~C-c C-x C-j~ to check this...
+            /(if no running clock it will tell you and place your/
+            /cursor at the heading where you LAST CLOCKED OUT)/
+
+      + ~C-c C-x C-q~ *Cancel Current Clock:* /(in case of accident)/
+
+                      This removes currently running clock and forgets 
+                      any time accrued or associated with it...
+
+      + ~C-c C-x C-d~ *Display Clocking Info:* 
+
+                      /This will show elapsed times to the right of headings.../
+                      =Warning!= Using this command will CLUTTER ALL the headings
+                                within your org file with those timestamps!!!
+
+   - Once all of this has become routine for you, =go ahead and remove this= ~README~ =drawer from this template=... That way it does not get copied when you need to clone new log entries...
 :END:
 
-*** NEW ✎ <2021-03-29 Mon> Title /(log entry template)/
-:README:
+This Log Entry is about: Yadda... Yadda... Yadda...
 
-- Since you created this new log entry you are probably in the middle of a task related to it right now!  Go ahead and punch the clock right now as well, to start recording your time! The following Commands are defined below for you to remember and use to track your time:
+\newpage
 
-  + *C-c C-x C-i* - Start Clock /(Begin OR Resume Clocking Current task)/
+**** Reference:
 
-      This creates a new :CLOCKING: Time Card Entry that looks like this:
+- *Link to Project:* [[][] ]
 
-      Do this now... Start recording your time girl!  Be in control of your life!
+- [[URL][Link Name] ] *Heading:* /(comment)/
 
-     After doing the above, you can go away and do some work, leaving this log note to visit other files and work on them etc. The clock will be recording your time all the while... You will see in your mode line the elapsed clock time as you work...
+- [[][] ] - *_:* /(yadda...)/
 
-  + *C-c C-x C-j* - Return back to the Heading where you started the clock...
-      You do this after you have worked on a task for a while and you need to come back to the time card /(this Log Entry Heading)/ and stop the clock before going off to do something unrelated to the log entry...
+- [[][] ] - *_:* /(yadda...)/
 
-  + *C-c C-x C-o* - *Stop the Clock* /(to stop clocking your time on task)/
-       This *Finalizes the Time Card Entry* within ~:CLOCKING:~ /(created earlier when you started the clock)/... The completed time card entry looks like this:
+- [[][] ] - *_:* /(yadda...)/
 
-       The above entry shows start timestamp, end timestamp, and total time worked during this segment...  As you can see from the example above I left the clock running all day by accident.  If you do something like that you can always come back and directly edit the clock times by hand to amend them...  After changing clock times or dates, etc. type the following to *Update the Time Card Entry*:
-            *C-c C-c*
-       and the total time will change at the end showing your new calculated time...
+- [[][] ] /(_)/
 
-       If you need to go away and do something else before finishing this task, you can do so after clocking out... When you come back simply clock back in again to start another Time Card Entry just as before... The new time card entry will appear above the earlier one within the ~:CLOCKING:~ drawer... When you clock out of this task it will look just like the entry below it with a total time worked tagged on the end...
+- [[][] ] /(_)/
 
-       When you are all done with this Log Entry mark it *DONE*
+- [[][] ] /(_)/
 
-  + *C-c C-x C-q* - Cancel Current Clock /(in case you accidentally started it)/
-
-       This removes currently running clock and forgets it...
-
- + *C-c C-x C-d* - Display Clocking Info: /This will show elapsed times to the right of headings.../
-
-- Once all of this has become routine for you, go ahead and remove this ~README~ drawer from this template... That way it does not get copied when you need to clone new log entries...
-
-:END:
+\newpage
 
 **** Time Card:
 
@@ -611,46 +768,158 @@ Please somebody write me into a real character... Thanks!
 \newpage
 
 **** NEW Summary: [0/3]
+:README:
+   This Summary is mostly to help you find things later when you cannot remember when or where is was done... If you go to the top of this file and expand all headings to show ALL content, then do a search on "~Summary:~" you will be able to quickly scroll through and scan these summaries quickly to find what you were looking for... 
 
-This Summary is mostly to help you find things later when you cannot remember when or where is was done... If you go to the top of this file and expand all headings to show ALL content, then do a search on "~Summary:~" you will be able to quickly scroll through and scan these summaries quickly to find what you were looking for... 
+   Also the *Time Card* /displayed above/ each search hit will give more clues by showing important headings you worked on...
 
-Also the *Time Card* /displayed above/ each search hit will give more clues by showing important headings you worked on...
+   Below is an optional list /(that could also provide links)./ This list could be used to itemize things you worked on, but I personally find it easier to simply write a short one or two line description containing important keywords right here and nothing more. I think that is more useful...
+:END:
 
-\newpage
+Yadda... Yadda... Yadda...
 
-**** NEW ⏰ Tasks: [0/3]
+1. [ ] *__:*
 
-***** NEW New Item 1 /(placeholder)/ [0/1]
+2. [ ] *__:*
 
-- [ ]
-
-\newpage
-
-***** NEW New Item 2 /(placeholder)/ [0/1]
-
-- [ ]
+3. [ ] *__:*
 
 \newpage
 
-***** NEW New Item 3 /(placeholder)/ [0/1]
+**** NEW Details:
+***** NEW New Item 1 /(placeholder)/ [0/3]
 
-- [ ]
+- [ ] *__:* /(__)/
+
+   #+BEGIN_SRC fountain
+# Production Notes: (example)
+
+= Add instructions, and information here needed to develop this scene... Yadda Yadda Yadda...
+# BEGIN SCENE: (example) 
+>END of SCENE<
+   #+END_SRC
 
 \newpage
 
+- [ ] *__:* /(__)/
 
-** TODO 🗓 Editorial Calendar                                      :noexport:
+   #+BEGIN_SRC fountain
+# Production Notes: (example)
+
+= Add instructions, and information here needed to develop this scene... Yadda Yadda Yadda...
+# BEGIN SCENE: (example) 
+>END of SCENE<
+   #+END_SRC
+
+\newpage
+
+- [ ] *__:* /(__)/
+
+   #+BEGIN_SRC fountain
+# Production Notes: (example)
+
+= Add instructions, and information here needed to develop this scene... Yadda Yadda Yadda...
+# BEGIN SCENE: (example) 
+>END of SCENE<
+   #+END_SRC
+
+\newpage
+
+***** NEW New Item 2 /(placeholder)/ [0/3]
+
+- [ ] *__:* /(__)/
+
+   #+BEGIN_SRC fountain
+# Production Notes: (example)
+
+= Add instructions, and information here needed to develop this scene... Yadda Yadda Yadda...
+# BEGIN SCENE: (example) 
+>END of SCENE<
+   #+END_SRC
+
+\newpage
+
+- [ ] *__:* /(__)/
+
+   #+BEGIN_SRC fountain
+# Production Notes: (example)
+
+= Add instructions, and information here needed to develop this scene... Yadda Yadda Yadda...
+# BEGIN SCENE: (example) 
+>END of SCENE<
+   #+END_SRC
+
+\newpage
+
+- [ ] *__:* /(__)/
+
+   #+BEGIN_SRC fountain
+# Production Notes: (example)
+
+= Add instructions, and information here needed to develop this scene... Yadda Yadda Yadda...
+# BEGIN SCENE: (example) 
+>END of SCENE<
+   #+END_SRC
+
+\newpage
+
+***** NEW New Item 3 /(placeholder)/ [0/3]
+
+- [ ] *__:* /(__)/
+
+   #+BEGIN_SRC fountain
+# Production Notes: (example)
+
+= Add instructions, and information here needed to develop this scene... Yadda Yadda Yadda...
+# BEGIN SCENE: (example) 
+>END of SCENE<
+   #+END_SRC
+
+\newpage
+
+- [ ] *__:* /(__)/
+   
+   #+BEGIN_SRC fountain
+# Production Notes: (example)
+
+= Add instructions, and information here needed to develop this scene... Yadda Yadda Yadda...
+# BEGIN SCENE: (example) 
+>END of SCENE<
+   #+END_SRC
+
+\newpage
+
+- [ ] *__:* /(__)/
+
+   #+BEGIN_SRC fountain
+# Production Notes: (example)
+
+= Add instructions, and information here needed to develop this scene... Yadda Yadda Yadda...
+# BEGIN SCENE: (example) 
+>END of SCENE<
+   #+END_SRC
+
+\newpage
+
+** SOMEDAY 🗓 Editorial Calendar                                 :noexport:
 :README:
   Make an editorial Calendar for this project right here where it belongs!  You won't loose it! and you can access it quickly without having to search for it elsewhere. Org-Mode excels for this task!  Take advantage of its powerful scheduling, agenda, and filtering capabilities!
 :END:
 
-* 📒 Research                                                       :export:
+\newpage
+
+* 📒 Research                                                 :noexport:
 ** TODO 💡 Episode Development
+
+\newpage
+
 ** NEW 👤 Characters
 *** 👥 Major characters
 :README:
   Write one page or 600 words about the major characters in this story and add it directly under this heading...
 :END:
+
+\newpage
 
 **** NEW 👤 Character Name /(template)/
 ***** 🗒 Worksheet
@@ -667,7 +936,6 @@ Also the *Time Card* /displayed above/ each search hit will give more clues by s
 :README:
   Fill in all that applies here, excluding /(and removing)/ what does not apply to this particular character... Again, all of this information should be from the character's point of view.  There are other places to add "reputations and the like"...
 :END:
-
 ****** Name, Rank, S/N
 
 |--------+----------------|
@@ -680,35 +948,49 @@ Also the *Time Card* /displayed above/ each search hit will give more clues by s
 | Rank:  | put rank here  |
 |--------+----------------|
 
+\newpage
+
 ****** Summary (Paragraph)
 :README:
    Put a single paragraph summary of the character's storyline, motivation and description. Loosely based on what you will write from the snowflake steps.
 :END:
+
+\newpage
 
 ****** Summary (Sentence) 
 :README:
    Put a single sentence summary of the character's storyline here.
 :END:
 
+\newpage
+
 ****** Motivation
 :README:
    The character's motivation /(what does he/she want abstractly?)/
 :END:
+
+\newpage
 
 ****** Goal
 :README:
    The character's goal (what does he/she want concretely?)
 :END:
 
+\newpage
+
 ****** Conflict
 :README:
    The character's conflict (what prevents him/her from reaching this goal?)
 :END:
 
+\newpage
+
 ****** Epiphany
 :README:
    The character's epiphany (what will he/she learn, how will he/she change?
 :END:
+
+\newpage
 
 ****** Basics
 
@@ -726,6 +1008,8 @@ Also the *Time Card* /displayed above/ each search hit will give more clues by s
 |     |            |      |        |      | left etc.  |           |
 |-----+------------+------+--------+------+------------+-----------|
 
+\newpage
+
 ****** Family
 
 |----------------+----------------------+----------+------------+------------+----------|
@@ -734,6 +1018,8 @@ Also the *Time Card* /displayed above/ each search hit will give more clues by s
 |                |                      |          |            |            |          |
 |                |                      |          |            |            |          |
 |----------------+----------------------+----------+------------+------------+----------|
+
+\newpage
 
 ****** Social
 
@@ -745,6 +1031,8 @@ Also the *Time Card* /displayed above/ each search hit will give more clues by s
 |             | member of public, etc. |            |               |      |
 |-------------+------------------------+------------+---------------+------|
 
+\newpage
+
 ****** Skills Etc.
 
 |--------+---------+-----------------+-----------|
@@ -754,30 +1042,42 @@ Also the *Time Card* /displayed above/ each search hit will give more clues by s
 |        |         |                 |           |
 |--------+---------+-----------------+-----------|
 
+\newpage
+
 ****** Physical Attributes
 :README:
    The Character's Physical description.... 
 :END:
+
+\newpage
 
 ****** Personality
 :README:
    The Character's Personality... yadda yadda yadda
 :END:
 
+\newpage
+
 ******* Likes / Dislikes
 :README:
    The Character's Likes / dislikes, yadda yadda yadda...
 :END:
+
+\newpage
 
 ****** Personal History
 :README:
    Character’s personal history. Yadda yadda yadda...
 :END:
 
+\newpage
+
 *** 👥 Minor characters
 :README:
   Write half a page or 300 words about the minor characters in this story and add it directly under this heading...
 :END:
+
+\newpage
 
 **** NEW 👤 Character Name /(template)/
 ***** 🗒 Worksheet
@@ -785,10 +1085,14 @@ Also the *Time Card* /displayed above/ each search hit will give more clues by s
    This is your scratch pad worksheet for loosely drafting up a new character before organizing all the information into a Character Profile and Character Synopsis... Free form in here... Let the muses take complete control in this space...
 :END:
 
+\newpage
+
 ***** 📃 Character Synopsis
 :README:
 Write a character synopsis that tells the story from the point of view of the character.
 :END:
+
+\newpage
 
 ***** 💬 Profile
 :README:
@@ -807,35 +1111,49 @@ Write a character synopsis that tells the story from the point of view of the ch
 | Rank:  | put rank here  |
 |--------+----------------|
 
+\newpage
+
 ****** Summary (Paragraph)
 :README:
    Put a single paragraph summary of the character's storyline, motivation and description. Loosely based on what you will write from the snowflake steps.
 :END:
+
+\newpage
 
 ****** Summary (Sentence) 
 :README:
    Put a single sentence summary of the character's storyline here.
 :END:
 
+\newpage
+
 ****** Motivation
 :README:
    The character's motivation /(what does he/she want abstractly?)/
 :END:
+
+\newpage
 
 ****** Goal
 :README:
    The character's goal (what does he/she want concretely?)
 :END:
 
+\newpage
+
 ****** Conflict
 :README:
    The character's conflict (what prevents him/her from reaching this goal?)
 :END:
 
+\newpage
+
 ****** Epiphany
 :README:
    The character's epiphany (what will he/she learn, how will he/she change?
 :END:
+
+\newpage
 
 ****** Basics
 
@@ -853,6 +1171,8 @@ Write a character synopsis that tells the story from the point of view of the ch
 |     |            |      |        |      | left etc.  |           |
 |-----+------------+------+--------+------+------------+-----------|
 
+\newpage
+
 ****** Family
 
 |----------------+----------------------+----------+------------+------------+----------|
@@ -861,6 +1181,8 @@ Write a character synopsis that tells the story from the point of view of the ch
 |                |                      |          |            |            |          |
 |                |                      |          |            |            |          |
 |----------------+----------------------+----------+------------+------------+----------|
+
+\newpage
 
 ****** Social
 
@@ -872,6 +1194,8 @@ Write a character synopsis that tells the story from the point of view of the ch
 |             | member of public, etc. |            |               |      |
 |-------------+------------------------+------------+---------------+------|
 
+\newpage
+
 ****** Skills Etc.
 
 |--------+---------+-----------------+-----------|
@@ -881,266 +1205,313 @@ Write a character synopsis that tells the story from the point of view of the ch
 |        |         |                 |           |
 |--------+---------+-----------------+-----------|
 
+\newpage
+
 ****** Physical Attributes
 :README:
    The Character's Physical description.... 
 :END:
+
+\newpage
 
 ****** Personality
 :README:
    The Character's Personality... yadda yadda yadda
 :END:
 
+\newpage
+
 ******* Likes / Dislikes
 :README:
 The Character's Likes / dislikes, yadda yadda yadda...
 :END:
+
+\newpage
 
 ****** Personal History
 :README:
    Character’s personal history. Yadda yadda yadda...
 :END:
 
+\newpage
+
 ** TODO 👥 Groups - Factions
+
+\newpage
+
 ** TODO 🌐 Locations - Worlds
+
+\newpage
+
 ** TODO 🎪 Major Events
+
+\newpage
+
 ** TODO 🏞 Sights
+
+\newpage
+
 ** TODO ❝ Quotations
+
+\newpage
+
 ** TODO 🖍 Styles
-* ⎘ Templates                                                     :noexport:
-:README:
-This section provides skeleton templates to use to start real sections within your audio production.  Any sub heading under this *Templates:* group can be utilized by copy-pasting it anywhere you need to create a new section based on its structure... 
 
-Some of the templates below have already been used and appear as placeholders in their proper default locations. /(this does not keep you from putting them in other places, or customizing things to be completely different of course)/.  However, since they already exist as ~placeholders~ where they normally belong, you can fill in those ones with your real details, and then copy more from here when you need to add more later... 
+\newpage
 
-The purpose of the ~placeholders~ is to get you off to a good start and also show you where these templates were originally intended to go... Once you have seen this setup in action you will have a much better idea of how to customize things going forward...
+* ⎘ Meta: /(templates etc.)/                                    :noexport:
+** Introduction:
 
-Later, you could try mashing a few cloned templates together to create a totally new project with a different structure... The intent of this is to save lots of time Starting up a new writing project.  Lets see if it helps. :trollface:
+This =Meta= section provides skeleton templates for use within your project(s).  Any sub heading under this Meta: group can be utilized by copy-pasting the collapsed heading into any of your existing project sections (i.e., making a clone anywhere you need to create a new section based on the template's structure)... 
 
-*Instructions:*
+Or... You could try mashing several cloned templates together to create a totally new project heading with a totally different structure... The intent of this is to save lots of time starting up a new custom writing project.  Lets see if it helps. :trollface:
 
-   - Choose one of the templates below and copy it (folded).  Paste the copied template as a new clone within your project's *Audio Production:* section, or *Research:* section as needed...  /Change the hierarchy of the copied heading(s) to fit where it was pasted if needed.../  Rename the cloned template to a specific name needed within your project's structure...
-:END:
+\newpage
 
-** ⎘ Production Templates
-*** NEW 🎙Episode nn: /(template)/
-**** NEW 📒 Epi Back Story
+** Instructions:
+
+- Choose one of the templates below and copy it (folded).  
+
+- Paste the copied template as a new clone within your project's Production, or Research section, or under a heading where it should belong...  
+
+- Change the name of your copied template to a specific title needed to fit in with Its purpose...
+
+\newpage
+
+** ⎘ Production Templates /(Master Template)/
+*** NEW 🎙 Episode ~nnn~:                                             :export:
+**** NEW 📒 Epi Back Story /(Optional For Series Intro)/
 :README:
   This section is for episode background planning and plot development which may or may not be included within the final production... Information contained here is more specific to this single episode than the more general *Synopsis / Back Story* section of this entire project, or what you may find within the *Research:* section which is more global in scope as well...
 
   Structure this section any way you wish or need...
 :END:
 
-**** NEW 📃 Epi Synopsis:
+\newpage
+
+**** NEW 📃 Epi Synopsis
 :README:
   Write a short synopsis for this single episode here... This will be more or less a summary of this single episode only... You can use similar story building tools / exercises for writing this synopsis as you do for any typical fiction writing project... A summary of your Synopsis will be added to the final draft fountain script...
 :END:
 
-**** NEW 🗡 Epi Plot Summary:
+\newpage
+
+**** NEW 🗡 Epi Plot Summary
 :README:
   Write your episode's plot summary here: /(e.g., In this episode we are dealing with yadda... yadda... yadda... which must be resolved with yadda... yadda... yadda..., etc...)/ This plot summary will probably not be added to the final draft fountain script... /(but there are exceptions of course)/
 :END:
 
-**** NEW 📢 Sound Cues
-:README:
+\newpage
 
-- *Sound Cue Numbering Convention:*
+**** NEW 📢 Sound Cues:
+***** Sound Cue /(clips)/ Numbering Convention:
 
-   The numbering and naming of sound cues for an entire audio drama project are limited to the scope of that project alone. Other projects may have similar or even the same sequence of sound cue names and numbers, but they are also only local to the scope of their project alone... 
+The numbering and naming of sound cues for an entire audio drama project are limited to the scope of that project alone. Other projects may have similar or even the same sequence of sound cue names and numbers, but they are also only local to the scope of their project alone... 
 
-   Therefore all sound files shall be kept in their accompanying project's ~media~ sub folder and not get mixed up into other projects or else confusion could arise!!! 
+Therefore all sound files shall be kept in their accompanying project's ~media~ sub folder and not get mixed up into other projects or else confusion could arise!!! 
 
-   All sound files should contain the unique /(within its project)/ number below, plus a descriptive but short title... /(this way sound files can be sorted alphabetically and found easily when called for in a script (or cue sheet) during rehearsal or production time...)/
+All sound files should contain the unique /(within its project)/ number below, plus a descriptive but short title... /(this way sound files can be sorted alphabetically and found easily when called for in a script (or cue sheet) during rehearsal or production time...)/
 
-   Its easy to call out these cues during a rehearsal... For instance, simply saying: "SFX 1, 12, 25" and everyone will know we are talking about Episode 1, Scene 12, Cue 25... 
+Its easy to call out these cues during a rehearsal... For instance, simply saying: /"SFX 102, 12, 25"/ and everyone will know we are talking about Episode 102, Scene 12, Cue 25... 
 
-    ~[SFX-E01-S01-01]~
-      |   |   |   |_____ /Sound Cue # (99 possible cues per scene)/
-      |   |   |_________ /Scene # (99 possible scenes per episode)/
-      |   |_____________ /Episode # (99 possible episodes per story)/
-      |_________________ /Mnemonic for: sound effect, environment sound, etc./
+#+begin_src text
+  [SFX-E001-S01-01]
+   |   |    |   |---- Sound Cue # (99 possible cues per scene) 
+   |   |    |-------- Scene # (99 possible scenes per episode)
+   |   |------------- Episode # (999 possible episodes per story)
+   |----------------- Mnemonic for: sound effect, environment sound, etc.
+#+end_src
 
-:END:
-                
 ***** Scene 01:
+****** 📢 ~[SFX-E001-S01-01]~ "sound cue name" /(template)/
+:README:
+   WRITE SHORT SOUND DESCRIPTION IN ALL CAPS LIKE THIS
 
-****** 📢 ~[SFX-E01-S01-01]~ "sound cue name" /(template)/
-
-WRITE SHORT SOUND DESCRIPTION IN ALL CAPS LIKE THIS
-
-/Example:/
-SCREAM - SMASH BATHROOM MIRROR - SHARDS FALL IN SINK - INTENSE SOBBING
-                        
+   /Example:/
+   SCREAM - SMASH BATHROOM MIRROR - SHARDS FALL IN SINK - INTENSE SOBBING
+:END:
 ******* 📃 Fountain Script: /(example)/
 
 #+begin_src fountain
-
-01     _SOUND: [SFX-E01-S01-01] ANGRY SCREAM! - SMASH BATHROOM MIRROR - SHARDS FALL IN SINK (CONTINUE AND FADE SLIGHTLY UNDER - INTENSE EMOTIONAL SILENCE) [SFX-E01-S01-02] WALLA - DEEP SOBBING EMOTIONAL BREAKDOWN_
-
+nn     _SOUND: [SFX-E001-S01-01] ANGRY SCREAM! - SMASH BATHROOM MIRROR - SHARDS FALL IN SINK (CONTINUE AND FADE SLIGHTLY UNDER - INTENSE EMOTIONAL SILENCE) [SFX-E01-S01-02] WALLA - DEEP SOBBING EMOTIONAL BREAKDOWN_
 #+end_src
 
 ******* 🗒 Notes: [0/2]
+:README:
+   This part will not be added to the script, and you should probably start here first to get the rough idea sketched out...
 
-- [ ] *Add more about this sound here:* 
-      /(This part will not be added to the script, and you should probably start here first to get the rough idea sketched out)/
+   /Example:/ Angry Scream, accompanied by crashing sound of both fists smashing into the bathroom mirror with aftershock of shards falling into the sink, and finally after an intense emotional silence play: ~[SFX-E001-S01-02]~ "Walla" (Deep Sobbing emotional breakdown sound)
+:END:
 
-      /Example:/ Angry Scream, accompanied by crashing sound of both fists smashing into the bathroom mirror with aftershock of shards falling into the sink, and finally after an intense emotional silence play: ~[SFX-E01-S01-02]~ "Walla" (Deep Sobbing emotional breakdown sound)
+- [ ] *Notes:*
+
+     Yadda... Yadda... Yadda...
 
 - [ ] *File Created:* 
 
-       ~./media/SFX-E01-S01-01_Even-Shorter-Description.wav~
+     ~./media/SFX-E001-S01-01_Even-Shorter-Description.wav~
+
+\newpage
 
 ***** Scene 02:
+****** 📢 ~[SFX-E001-S02-01]~ "sound cue name" /(template)/
+:README:
+   WRITE SHORT SOUND DESCRIPTION IN ALL CAPS LIKE THIS
 
-****** 📢 ~[SFX-E01-S02-01]~ "sound cue name" /(template)/
-
-WRITE SHORT SOUND DESCRIPTION IN ALL CAPS LIKE THIS
-
-/Example:/
-DOG BARKING - CAR WHEELS SCREECH - THUD - DOG CRIES THEN WHIMPERS
+   /Example:/
+   DOG BARKING - CAR WHEELS SCREECH - THUD - DOG CRIES THEN WHIMPERS
+:END:
 
 ******* 📃 Fountain Script: /(example)/
 
 #+begin_src fountain
-
-01     _SOUND: [SFX-E01-S02-01] DOG BARKING IN STREET! - CAR WHEELS SCREECH - THUD - DOG CRIES THEN WHIMPERS (CONTINUE AND FADE)_
-
+nn     _SOUND: [SFX-E001-S02-01] DOG BARKING IN STREET! - CAR WHEELS SCREECH - THUD - DOG CRIES THEN WHIMPERS (CONTINUE AND FADE)_
 #+end_src
 
 ******* 🗒 Notes:  [0/2]
+:README:
+   This part will not be added to the script, and you should probably start here first to get the rough idea sketched out...
 
-- [ ] *Add more about this sound here:* 
-      /(This part will not be added to the script, and you should probably start here first to get the rough idea sketched out)/
+   /Example:/ You hear a dog barking at cars in the street.... A passing car breaks to avoid hitting the dog...  Wheels Squeal, Car hits dog with a thud... Yadda... Yadda... Yadda...
+:END:
 
-      /Example:/ You hear a dog barking at cars in the street.... A passing car breaks to avoid hitting the dog...  Wheels Squeal, Car hits dog with a thud... Yadda... Yadda... Yadda...
+- [ ] *Notes:*
 
 - [ ] *File Created:* 
 
-       ~./media/SFX-E01-S02-01_Even-Shorter-Description.wav~
+       ~./media/SFX-E001-S02-01_Even-Shorter-Description.wav~
 
-**** NEW 🎶 Music Cues
-:README:
+\newpage
 
-- *Music Cues (clips) Numbering Convention:*
+**** NEW 🎶 Music Cues:
+***** Music Cue /(clips)/ Numbering Convention:
 
-   The numbering and naming of music cues /(clips)/ for an entire Audio Drama project are limited to the scope of that project alone. Other projects may have similar or even the same sequence of music cue names and numbers, but they are also only local to the scope of their projects alone...
+The numbering and naming of music cues /(clips)/ for an entire Audio Drama project are limited to the scope of that project alone. Other projects may have similar or even the same sequence of music cue names and numbers, but they are also only local to the scope of their projects alone...
 
-   Therefore all sound files for music shall be kept in their accompanying project's ~media~ sub folder and not get mixed up into other projects or else confusion could arise!!! 
+Therefore all sound files for music shall be kept in their accompanying project's ~media~ sub folder and not get mixed up into other projects or else confusion could arise!!! 
 
-   All music sound files should contain the unique /(within its project)/ number below, plus a descriptive but short title... /(this way music sound files can be sorted alphabetically and found easily when called for in a script (or cue sheet) during rehearsal or production time...)/
+All music sound files should contain the unique /(within its project)/ number below, plus a descriptive but short title... /(this way music sound files can be sorted alphabetically and found easily when called for in a script (or cue sheet) during rehearsal or production time...)/
 
-   It's easy to call out these music cues during a rehearsal... For instance, simply saying: "MUS 1, 12, 25" and everyone will know we are talking about Episode 1, Scene 12, Cue 25... /(25? That's a lot of music for just one scene! LOL)/
+It's easy to call out these music cues during a rehearsal... For instance, simply saying: /"MUS 102, 12, 25"/ and everyone will know we are talking about Episode 102, Scene 12, Cue 25... /(25? That's a lot of music for just one scene! LOL)/
 
- ~[MUS-E01-S01-01]~
-   |   |   |   |_____ /Music Cue # (99 possible music cues per scene)/
-   |   |   |_________ /Scene # (99 possible scenes per episode)/
-   |   |_____________ /Episode # (99 possible episodes per story)/
-   |_________________ /Mnemonic for: Music (clips, background, themes, etc.)/
-
-:END:
+#+begin_src text
+  [MUS-E102-S12-25]
+   |   |    |   |---- Music Cue # (99 possible cues per scene) 
+   |   |    |-------- Scene # (99 possible scenes per episode)    
+   |   |------------- Episode # (999 possible episodes per story)    |----------------- Mnemonic for: Music Cues.
+#+end_src
 
 ***** Scene 01:
+****** 🎶 ~[MUS-E101-S01-01]~ "music cue name" /(template)/
+:README:
+    WRITE SHORT MUSIC DESCRIPTION IN ALL CAPS LIKE THIS
 
-****** 🎶 ~[MUS-E01-S01-01]~ "music cue name" /(template)/
-
-WRITE SHORT MUSIC DESCRIPTION IN ALL CAPS LIKE THIS
-
-/Example:/
-MYSTERIOUS INTRO THEME
-                                                                        
+    /Example:/
+    MYSTERIOUS INTRO THEME
+:END:
 ******* 📃 Fountain Script: /(example)/
 
 #+begin_src fountain
-
-01      _MUSIC: [MUS-E01-S01-01] MYSTERIOUS INTRO THEME (CROSSFADE AND DUCK UNDER)_
-
+nn      _MUSIC: [MUS-E101-S01-01] MYSTERIOUS INTRO THEME (CROSSFADE AND DUCK UNDER)_
 #+end_src
 
 ******* 🗒 Notes: [0/2]
+:README:
+   This part will not be added to the script, and you should probably start here first to get the rough idea sketched out...
 
-- [ ] *Add more about this music here:* 
-      /(This part will not be added to the script, and you should probably start here first to get the rough idea sketched out)/
+   /Example:/ This is the main theme music for the show... Let it play in full at the begining... Use short excerpts of this music in other places and fade under when dialog starts, etc...
+:END:
 
-      /Example:/ This is the main theme music for the show... Let it play in full at the begining... Use short excerpts of this music in other places and fade under when dialog starts, etc...
+- [ ] *Notes:*
+
+     Yadda... Yadda... Yadda...
 
 - [ ] *File Created:* 
 
-       ~./media/SFX-E01-S01-01_Even-Shorter-Description.wav~
+     ~./media/MUS-E101-S01-01_Even-Shorter-Description.wav~
+
+\newpage
 
 ***** Scene 02:
+****** 🎶 ~[MUS-E101-S02-01]~ "music cue name" /(template)/
+:README:
+    WRITE SHORT MUSIC DESCRIPTION IN ALL CAPS LIKE THIS
 
-****** 🎶 ~[MUS-E01-S02-01]~ "music cue name" /(template)/
-
-WRITE SHORT MUSIC DESCRIPTION IN ALL CAPS LIKE THIS
-
-/Example:/
-OMINOUS HIGHLIGHT OVERLAY STING
-
+    /Example:/
+    OMINOUS HIGHLIGHT OVERLAY STING
+:END:
 ******* 📃 Fountain Script: /(example)/
 
 #+begin_src fountain
-
-01     _MUSIC: [MUS-E01-S02-01] OPTIONAL OMINOUS HIGHLIGHT OVERLAY STING (SYNC TO DIALOG "Until now...", FADE FAST - ONLY HALL REVERB REMAINS THEN SILENCE)_
-
+nn     _MUSIC: [MUS-E101-S02-01] OPTIONAL OMINOUS HIGHLIGHT OVERLAY STING (SYNC TO DIALOG "Until now...", FADE FAST - ONLY HALL REVERB REMAINS THEN SILENCE)_
 #+end_src
 
-******* 🗒 Notes:
+******* 🗒 Notes: [0/3]
+:README:
+   This part will not be added to the script, and you should probably start here first to get the rough idea sketched out...
 
-- [ ] *Add more about this music here:* 
-      /(This part will not be added to the script, and you should probably start here first to get the rough idea sketched out)/
+   /Example:/ This is a short symphonic "sting" to highlight and "showcase" some event or announcement during the show... Let it play in full /(it is short)/ and fade fast after initial reverb trail...
+:END:
 
-      /Example:/ This is a short symphonic "sting" to highlight and "showcase" some event or announcement during the show... Let it play in full /(it is short)/ and fade fast after initial reverb trail...
+- [ ] *Notes:*
+
+     Yadda... Yadda... Yadda...
 
 - [ ] *File Created:*
 
-       ~./media/SFX-E01-S02-01_Even-Shorter-Description.wav~
+       ~./media/MUS-E101-S02-01_Even-Shorter-Description.wav~
+
+\newpage
 
 **** NEW 🎙Scenes
 :README:
- Here is the ultimate master source where you create and update your scenes...
+   Here is the ultimate master source where you create and update your scenes...
 
- All ideas, plots, dialog, sounds, music, production notes, etc. for a particular scene within this episode are developed here solely...
+   All ideas, plots, dialog, sounds, music, production notes, etc. for a particular scene within this episode are developed here solely...
 
- One of the accompanying fountain drama scripts for this *Audio Drama Project* ~.org~ file /(named after this episode)/ contains a compilation of all the /fountain script snippits/ for all scenes developed within this single episode...
+   One of the accompanying fountain drama scripts for this *Audio Drama Project* ~.org~ file /(named after this episode)/ contains a compilation of all the /fountain script snippits/ for all scenes developed within this single episode...
 
- Some elements created here will become part of the accompanying fountain drama script for this episode... /(e.g., dialog, notes, narration, etc.)/ 
+   Some elements created here will become part of the accompanying fountain drama script for this episode... /(e.g., dialog, notes, narration, etc.)/ 
 
- The accompanying fountain drama script for this episode must be kept up to date with final drafts and latest edits made solely here...
+   The accompanying fountain drama script for this episode must be kept up to date with final drafts and latest edits made solely here...
 
- The headings within this ~.org~ file can be tracked using ~GTD~ tags, and a *log* entry can keep track of time worked on them... Once a scene is in final draft stage, it can be marked *DONE* and the fountain script for the episode will be updated to reflect that scene's final draft state...
+   The headings within this ~.org~ file can be tracked using ~GTD~ tags, and a *log* entry can keep track of time worked on them... Once a scene is in final draft stage, it can be marked *DONE* and the fountain script for the episode will be updated to reflect that scene's final draft state...
 
- *What is a Scene?*
+   *What is a Scene?*
 
- Scenes form the fabric within episodes of audio or radio programs...
+   Scenes form the fabric within episodes of audio or radio programs...
 
- Scenes are small packages of isolated events relating to a single unique thread/picture knitted into a defined situation where particular events related to that situation play out...
+   Scenes are small packages of isolated events relating to a single unique thread/picture knitted into a defined situation where particular events related to that situation play out...
 
- The scenes don't necessarily follow in chronological order but they relate to each other in the mosaic fabric of the story as it develops... 
+   The scenes don't necessarily follow in chronological order but they relate to each other in the mosaic fabric of the story as it develops... 
 
- If a scene changes abruptly to some other situation, that may mean that the scene is over and a new one is starting... Usually a change of environment triggers a new scene...
+   If a scene changes abruptly to some other situation, that may mean that the scene is over and a new one is starting... Usually a change of environment triggers a new scene...
 :END:
-
-***** 🎙Scene nn: /(template)/
+***** NEW 🎙Scene nn: /(template)/:
 :README:
   This is your workspace for developing a new scene... Add anything you need in this space outside of the *Dialog* heading /(Fountain script source block)/ to aid in development and production of your final draft...
 :END:
+****** Location:
 
-- *Location:* 
+\newpage
 
-- *Summary:*
+****** Summary:
+
+\newpage
 
 ****** 🗒 Background Notes:
 :README:
   This area could start out as this single scene's quick synopsis summarizing all of the actions / dialog etc. that take place during this particular scene and / or the place where you sketch these things out first before committing them to the actual scene dialog script heading below...  This is also a place to add extra notes for this scene that will not become part of the final production fountain script...
 :END:
 
-****** 🎙 Fountain Script: /(single scene script)/
+\newpage
+
+****** 📃 Fountain Script: /(single scene script)/
 :README:
   Compose a new draft scene fountain script in the block below... Write some scene related production notes, or instructions within the fountain script source block as well...
 :END:
 
 #+BEGIN_SRC fountain
-
 # Production Notes: (example)
 
 = Add instructions, and information here needed to develop this scene... Yadda Yadda Yadda...
@@ -1162,46 +1533,122 @@ Oh? I am just a template?  Whaaaat the heck is that?
 (LAUGHS)
 Please somebody write me into a real character... Thanks!
 
+>END of SCENE<
  #+END_SRC
 
-*** NEW ✎ <2021-03-29 Mon> Title /(log entry template)/
+\newpage
+
+*** NEW LOG: <2021-03-29 Mon> Generic Title /(General Log Entry Template)/
 :README:
+   - *Go To One of the HEADINGS Below:* /(Summary, Details, or Sub Headings)/
 
-- Since you created this new log entry you are probably in the middle of a task related to it right now!  Go ahead and punch the clock right now as well, to start recording your time! The following Commands are defined below for you to remember and use to track your time:
+      =Punch the Time Clock= At the heading And then begin working on a task related to that Heading... =Your Time IS being Recorded Now= 
 
-  + *C-c C-x C-i* - Start Clock /(Begin OR Resume Clocking Current task)/
+   - =Use These Commands:= /as you work to keep track your time.../
 
-      This creates a new :CLOCKING: Time Card Entry that looks like this:
+      + *Clock IN:* ~C-c C-x C-i~ 
 
-      Do this now... Start recording your time girl!  Be in control of your life!
+                    /(Begin OR Resume Clocking Current task)/
 
-     After doing the above, you can go away and do some work, leaving this log note to visit other files and work on them etc. The clock will be recording your time all the while... You will see in your mode line the elapsed clock time as you work...
+                    This creates a new :CLOCKING: Time Card Entry just
+                    underneath the HEADING...
 
-  + *C-c C-x C-j* - Return back to the Heading where you started the clock...
-      You do this after you have worked on a task for a while and you need to come back to the time card /(this Log Entry Heading)/ and stop the clock before going off to do something unrelated to the log entry...
+                    Do this just before starting work on the task... 
+                    Be in control of your life!
 
-  + *C-c C-x C-o* - *Stop the Clock* /(to stop clocking your time on task)/
-       This *Finalizes the Time Card Entry* within ~:CLOCKING:~ /(created earlier when you started the clock)/... The completed time card entry looks like this:
+                    After doing the above, you can go away and do some 
+                    work, leaving this heading, log note, etc. to visit 
+                    other files and/or work on them etc. The clock will 
+                    be recording your time all the while... You will see 
+                    in your mode line the elapsed clock time ticking away 
+                    as you work on a task /(hopefully related to this clock!)/
+                    and NOT Yac Shaving or being sidetracked!!!
 
-       The above entry shows start timestamp, end timestamp, and total time worked during this segment...  As you can see from the example above I left the clock running all day by accident.  If you do something like that you can always come back and directly edit the clock times by hand to amend them...  After changing clock times or dates, etc. type the following to *Update the Time Card Entry*:
-            *C-c C-c*
-       and the total time will change at the end showing your new calculated time...
+      + *RETURN to Clock Heading:* ~C-c C-x C-j~
 
-       If you need to go away and do something else before finishing this task, you can do so after clocking out... When you come back simply clock back in again to start another Time Card Entry just as before... The new time card entry will appear above the earlier one within the ~:CLOCKING:~ drawer... When you clock out of this task it will look just like the entry below it with a total time worked tagged on the end...
+                        /Go back to the place where you started the clock.../
 
-       When you are all done with this Log Entry mark it *DONE*
+                        You do this after you have worked on a task for a 
+                        while and you need to come back to update the item's
+                        info etc., and/or stop the clock before going off to 
+                        do something else unrelated to the log entry...
 
-  + *C-c C-x C-q* - Cancel Current Clock /(in case you accidentally started it)/
+      + *Clock OUT:* ~C-c C-x C-o~ /(to stop clocking your time on task)/
 
-       This removes currently running clock and forgets it...
+                      This *Finalizes the Time Card Entry* within:
+                      ~:CLOCKING:~ /(created earlier when you started the/ 
+                      /clock)/...
 
- + *C-c C-x C-d* - Display Clocking Info: /This will show elapsed times to the right of headings.../
+                      The Clock Entry changes showing start timestamp, end timestamp, and total time worked during this segment...  
 
-- Once all of this has become routine for you, go ahead and remove this ~README~ drawer from this template... That way it does not get copied when you need to clone new log entries...
+                      =Please DON'T Forget= /Like I often do, LOL.../ i.e.,
+                      Leaving a clock running all day by accident, or worse,
+                      leave it dangling with the file closed only to open it
+                      again and get that nasty *Org-Mode Message:* /"What do/
+                      /you want to do with this?"/ If you do something like 
+                      that you can always come back and directly edit the 
+                      clock times by hand to amend them...  After changing 
+                      clock times or dates, etc... Whatever...
 
+                      ="Onward We Row Mates... Through the log jam!"=
+
+      + *Update Time Card Entry:* ~C-c C-c~ 
+
+                  This command will change the total time at the end showing 
+                  your new calculated time...
+
+                  If you need to go away and do something else before finishing this task, you can do so after clocking out... When you come back simply clock back in again to start another Time Card Entry just as before... The new time card entry will appear above the earlier one within the ~:CLOCKING:~ drawer... When you clock out of this task it will look just like the entry below it with a total time worked tagged on the end...
+
+      + *Clock Out & Mark Items Done:* ~C-c C-t~
+
+            When you are all done with a Log Entry use the above key 
+            command to mark its Heading *TODO* tag to: *DONE* /(Most of the/ 
+            /time this will ALSO clock you out if you are still clocked/ 
+            /into the item... But not allways in my experience.../  
+            So make sure you are also clocked OUT of an Item After 
+            marking it DONE... Type: ~C-c C-x C-j~ to check this...
+            /(if no running clock it will tell you and place your/
+            /cursor at the heading where you LAST CLOCKED OUT)/
+
+      + ~C-c C-x C-q~ *Cancel Current Clock:* /(in case of accident)/
+
+                      This removes currently running clock and forgets 
+                      any time accrued or associated with it...
+
+      + ~C-c C-x C-d~ *Display Clocking Info:* 
+
+                      /This will show elapsed times to the right of headings.../
+                      =Warning!= Using this command will CLUTTER ALL the headings
+                                within your org file with those timestamps!!!
+
+   - Once all of this has become routine for you, =go ahead and remove this= ~README~ =drawer from this template=... That way it does not get copied when you need to clone new log entries...
 :END:
 
-**** Time Card:
+This Log Entry is about: Yadda... Yadda... Yadda...
+
+\newpage
+
+**** 📒 Reference:
+
+- *Link to Project:* [[][] ]
+
+- [[URL][Link Name] ] *Heading:* /(comment)/
+
+- [[][] ] - *_:* /(yadda...)/
+
+- [[][] ] - *_:* /(yadda...)/
+
+- [[][] ] - *_:* /(yadda...)/
+
+- [[][] ] /(_)/
+
+- [[][] ] /(_)/
+
+- [[][] ] /(_)/
+
+\newpage
+
+**** ⏰ Time Card:
 
 #+BEGIN: clocktable :scope tree2 :maxlevel 4 :tstart "<-1d>" :tend "<+1m>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3
 #+END:
@@ -1209,44 +1656,154 @@ Please somebody write me into a real character... Thanks!
 \newpage
 
 **** NEW Summary: [0/3]
+:README:
+   This Summary is mostly to help you find things later when you cannot remember when or where is was done... If you go to the top of this file and expand all headings to show ALL content, then do a search on "~Summary:~" you will be able to quickly scroll through and scan these summaries quickly to find what you were looking for... 
 
-This Summary is mostly to help you find things later when you cannot remember when or where is was done... If you go to the top of this file and expand all headings to show ALL content, then do a search on "~Summary:~" you will be able to quickly scroll through and scan these summaries quickly to find what you were looking for... 
+   Also the *Time Card* /displayed above/ each search hit will give more clues by showing important headings you worked on...
 
-Also the *Time Card* /displayed above/ each search hit will give more clues by showing important headings you worked on...
+   Below is an optional list /(that could also provide links)./ This list could be used to itemize things you worked on, but I personally find it easier to simply write a short one or two line description containing important keywords right here and nothing more. I think that is more useful...
+:END:
 
-\newpage
+Yadda... Yadda... Yadda...
 
-**** NEW ⏰ Tasks: [0/3]
+1. [ ] *__:*
 
-***** NEW New Item 1 /(placeholder)/ [0/1]
+2. [ ] *__:*
 
-- [ ]
-
-\newpage
-
-***** NEW New Item 2 /(placeholder)/ [0/1]
-
-- [ ]
+3. [ ] *__:*
 
 \newpage
 
-***** NEW New Item 3 /(placeholder)/ [0/1]
+**** NEW Details:
+***** NEW New Item 1 /(placeholder)/ [0/3]
 
-- [ ]
+- [ ] *__:* /(__)/
+
+   #+BEGIN_SRC fountain
+# Production Notes: (example)
+
+= Add instructions, and information here needed to develop this scene... Yadda Yadda Yadda...
+# BEGIN SCENE: (example) 
+>END of SCENE<
+   #+END_SRC
 
 \newpage
 
-** ⎘ Research Templates
+- [ ] *__:* /(__)/
+
+   #+BEGIN_SRC fountain
+# Production Notes: (example)
+
+= Add instructions, and information here needed to develop this scene... Yadda Yadda Yadda...
+# BEGIN SCENE: (example) 
+>END of SCENE<
+   #+END_SRC
+
+\newpage
+
+- [ ] *__:* /(__)/
+
+   #+BEGIN_SRC fountain
+# Production Notes: (example)
+
+= Add instructions, and information here needed to develop this scene... Yadda Yadda Yadda...
+# BEGIN SCENE: (example) 
+>END of SCENE<
+   #+END_SRC
+
+\newpage
+
+***** NEW New Item 2 /(placeholder)/ [0/3]
+
+- [ ] *__:* /(__)/
+
+   #+BEGIN_SRC fountain
+# Production Notes: (example)
+
+= Add instructions, and information here needed to develop this scene... Yadda Yadda Yadda...
+# BEGIN SCENE: (example) 
+>END of SCENE<
+   #+END_SRC
+
+\newpage
+
+- [ ] *__:* /(__)/
+
+   #+BEGIN_SRC fountain
+# Production Notes: (example)
+
+= Add instructions, and information here needed to develop this scene... Yadda Yadda Yadda...
+# BEGIN SCENE: (example) 
+>END of SCENE<
+   #+END_SRC
+
+\newpage
+
+- [ ] *__:* /(__)/
+
+   #+BEGIN_SRC fountain
+# Production Notes: (example)
+
+= Add instructions, and information here needed to develop this scene... Yadda Yadda Yadda...
+# BEGIN SCENE: (example) 
+>END of SCENE<
+   #+END_SRC
+
+\newpage
+
+***** NEW New Item 3 /(placeholder)/ [0/3]
+
+- [ ] *__:* /(__)/
+
+   #+BEGIN_SRC fountain
+# Production Notes: (example)
+
+= Add instructions, and information here needed to develop this scene... Yadda Yadda Yadda...
+# BEGIN SCENE: (example) 
+>END of SCENE<
+   #+END_SRC
+
+\newpage
+
+- [ ] *__:* /(__)/
+   
+   #+BEGIN_SRC fountain
+# Production Notes: (example)
+
+= Add instructions, and information here needed to develop this scene... Yadda Yadda Yadda...
+# BEGIN SCENE: (example) 
+>END of SCENE<
+   #+END_SRC
+
+\newpage
+
+- [ ] *__:* /(__)/
+
+   #+BEGIN_SRC fountain
+# Production Notes: (example)
+
+= Add instructions, and information here needed to develop this scene... Yadda Yadda Yadda...
+# BEGIN SCENE: (example) 
+>END of SCENE<
+   #+END_SRC
+
+\newpage
+
+** ⎘ Research Templates /(Master Template)/
 *** NEW 👤 Character Name /(template)/
 **** 🗒 Worksheet
 :README:
-This is your scratch pad worksheet for loosely drafting up a new character before organizing all the information into a Character Profile and Character Synopsis... Free form in here... Let the muses take complete control in this space...
+  This is your scratch pad worksheet for loosely drafting up a new character before organizing all the information into a Character Profile and Character Synopsis... Free form in here... Let the muses take complete control in this space...
 :END:
+
+\newpage
 
 **** 📃 Character Synopsis
 :README:
-Write a character synopsis that tells the story from the point of view of the character.
+   Write a character synopsis that tells the story from the point of view of the character.
 :END:
+
+\newpage
 
 **** 💬 Profile
 :README:
@@ -1265,11 +1822,15 @@ Write a character synopsis that tells the story from the point of view of the ch
 | Rank:  | put rank here  |
 |--------+----------------|
 
+\newpage
+
 ***** Summary (Paragraph)
 
 :README:
    Put a single paragraph summary of the character's storyline, motivation and description. Loosely based on what you will write from the snowflake steps.
 :END:
+
+\newpage
 
 ***** Summary (Sentence) 
 
@@ -1277,11 +1838,15 @@ Write a character synopsis that tells the story from the point of view of the ch
    Put a single sentence summary of the character's storyline here.
 :END:
 
+\newpage
+
 ***** Motivation
 
 :README:
    The character's motivation /(what does he/she want abstractly?)/
 :END:
+
+\newpage
 
 ***** Goal
 
@@ -1289,17 +1854,23 @@ Write a character synopsis that tells the story from the point of view of the ch
    The character's goal (what does he/she want concretely?)
 :END:
 
+\newpage
+
 ***** Conflict
 
 :README:
    The character's conflict (what prevents him/her from reaching this goal?)
 :END:
 
+\newpage
+
 ***** Epiphany
 
 :README:
    The character's epiphany (what will he/she learn, how will he/she change?
 :END:
+
+\newpage
 
 ***** Basics
 
@@ -1317,6 +1888,8 @@ Write a character synopsis that tells the story from the point of view of the ch
 |     |            |      |        |      | left etc.  |           |
 |-----+------------+------+--------+------+------------+-----------|
 
+\newpage
+
 ***** Family
 
 |----------------+----------------------+----------+------------+------------+----------|
@@ -1325,6 +1898,8 @@ Write a character synopsis that tells the story from the point of view of the ch
 |                |                      |          |            |            |          |
 |                |                      |          |            |            |          |
 |----------------+----------------------+----------+------------+------------+----------|
+
+\newpage
 
 ***** Social
 
@@ -1336,6 +1911,8 @@ Write a character synopsis that tells the story from the point of view of the ch
 |             | member of public, etc. |            |               |      |
 |-------------+------------------------+------------+---------------+------|
 
+\newpage
+
 ***** Skills Etc.
 
 |--------+---------+-----------------+-----------|
@@ -1345,38 +1922,54 @@ Write a character synopsis that tells the story from the point of view of the ch
 |        |         |                 |           |
 |--------+---------+-----------------+-----------|
 
-***** Physical Attributes
+\newpage
 
+***** Physical Attributes
 :README:
    The Character's Physical description.... 
 :END:
 
-***** Personality
+\newpage
 
+***** Personality
 :README:
    The Character's Personality... yadda yadda yadda
 :END:
 
-****** Likes / Dislikes
+\newpage
 
+****** Likes / Dislikes
 :README:
 The Character's Likes / dislikes, yadda yadda yadda...
 :END:
 
-***** Personal History
+\newpage
 
+***** Personal History
 :README:
    Character’s personal history. Yadda yadda yadda...
 :END:
 
-*** NEW 👥 New Group or Faction /(template)/
-**** ⚛ Interstellar Nation /(The Galactic Empire)/
+\newpage
+
+*** NEW 👥 Groups - Factions /(template)/
+:README:
+   =Note:= Example's (templates) for this section are still not quite 
+          done yet... But this should NOT stop you from using them 
+          and/or changing them to fit your needs...
+
+          =Put what ever you think would be important for your use-case=
+
+          At some point as I develop my own stories using this org-mode 
+          process... I may add some better examples under these headings, 
+          and, of course, you may have your own ideas.... The headings are 
+          pretty clear as far as their function...
+:END:
+**** ⚛ New Interstellar Nation /(The Galactic Empire)/
 :README:
   - *Definition:* A Spacefaring kingdom, empire, country, etc (like Asimov's Galactic Empire, or the Romulan Empire etc.) This type of nation may extend out through a galactic cluster or quadrant, etc.
 :END:
-
 ***** 📃 Summary:
-
 :README:
   This section is the executive summary (abstract) of a single nation within your story.  Some stories are fully invested on not one but many Interstellar Nations!
 
@@ -1385,8 +1978,9 @@ The Character's Likes / dislikes, yadda yadda yadda...
   This abstract, is a short historical and present summary only... It should include the major goals, motivations... who they’re at war with, etc. i.e., It should include the news headlines, and ledelines...  but not the full story... Results of your research below this summary should be as rich and detailed as you can make it... (but also indexed!)
 :END:
 
-***** 🔤 Basics:
+\newpage
 
+***** 🔤 Basics:
 :README:
   Fill in the tables below... Pretty much self explanatory...  Do your research first though!
 :END:
@@ -1410,117 +2004,135 @@ The Character's Likes / dislikes, yadda yadda yadda...
 |                  |                     |                   |           |                |
 |------------------+---------------------+-------------------+-----------+----------------|
 
-***** 𐇑 Social Structure:
+\newpage
 
+***** 👬 Social Structure:
 :README:
-  Who holds power, and how does it affect the way the society works? Is there an aristocracy? If so, how are its ranks structured?
+   Who holds power, and how does it affect the way the society works? Is there an aristocracy? If so, how are its ranks structured?
 :END:
+
+\newpage
 
 ***** 🏛 Government:
-
 :README:
-  Describe the Structure and general procedures here...
+   Describe the Structure and general procedures here...
 :END:
+
+\newpage
 
 ***** ⚖ Taxation:
-
 :README:
-  Write a brief overview of how the people are taxed, and where that money goes.
+   Write a brief overview of how the people are taxed, and where that money goes.
 :END:
+
+\newpage
 
 ***** 💵 Currency:
-
 :README:
-What is the currency? What are its sub-denominations?
+   What is the currency? What are its sub-denominations?
 :END:
 
+\newpage
+
 ***** 👥 Population:
-
-****** Races
-
+****** 𐇑 Races
 :README:
   Describe the races that inhabit the area, and whether or not they’re native, etc...
 :END:
 
-****** Common physical characteristics
+\newpage
 
+****** 👀 Common physical characteristics
 :README:
   Describe the common physical characteristics of long-term inhabitants and native peoples: skin colour, hair colour, build, dress, etc...
 :END:
 
-****** Predominant religion(s)
+\newpage
 
+****** 🛐 Predominant religion(s)
 :README:
   Describe the perdominant religion here... Is it Monotheism?  Pantheism?  Atheism? Name and describe them as needed.)
 :END:
 
+\newpage
+
 ***** ⛩ Culture:
-
-****** Mannerisms
-
+****** ✋ Mannerisms
 :README:
   Use this space to illustrate the typical way individuals or groups from this place behave... (e.g, A fur-wrapped barbarian behaves in a very different way than a Greek statesman.)
 :END:
 
-****** Greetings
+\newpage
 
+****** 🍻 Greetings
 :README:
   Provide some examples of typical greetings here... (e.g, What is considered an acceptable greeting? In formal setting? Among friends? Family?, etc.)
 :END:
 
-****** Customs
+\newpage
 
+****** 🎩 Customs
 :README:
   List the habits of a people that make them unique in this space...
 :END:
 
-****** Superstitions
+\newpage
 
+****** 🎃 Superstitions
 :README:
   (Knowing the power irrational explanations have over a populace can sometimes be good story material.)
 :END:
 
-****** Beliefs
+\newpage
 
+****** 🕎 Beliefs
 :README:
   Do I really have to explain this one?  This alone could end up being your entire story...
 :END:
 
-****** Rituals
+\newpage
 
+****** 🔮 Rituals
 :README:
   (e.g., Birth? Coming-of-age? Marriage? Death? Justice? etc.)
 :END:
 
-****** Festivals
+\newpage
 
+****** 💯 Festivals
 :README:
   (e.g., What do people celebrate? What are considered holidays? Why?, etc.)
 :END:
 
-***** 🕉 Language
+\newpage
 
+***** 🗣 Language
 :README:
   This is kind of a big one! Be very careful to point how and why your characters can understand each other, especially if they are from different countries. Language in the real world is a hell of a barrier, but even if you have a Chinese dragon, an Arabian unicorn, a French knight, a Mayan princess, and a Japanese ninja, they can all talk to and understand each other without explanation. Double I-call-BS-points for someone from another world or time!  Anyone who has ever toured Europe can tell you why this is complete bull.  Take a closer look, especially if you’re modeling anything after medieval Europe; only the Church had a universal language: Latin.
 :END:
 
-***** ⚗ Education
+\newpage
 
+***** ⚗ Education
 :README:
   (How are children taught?  Skilled workers, like architects or brewers?  Is there public education?  Higher education?)
 :END:
 
-***** 🚉 Transportation - Shipping
+\newpage
 
+***** 🚉 Transportation - Shipping
 :README:
   Here is where you talk about, how "people" and "things" are moved/transported from one "place" to another. (e.g., The logistics... Armies? Crowds? Goods? Animals? etc.)
 :END:
 
-***** ⚔ Military
+\newpage
 
+***** ⚔ Military
 :README:
   Write about the military is all about here... What real world military is/can it be based upon? What’s it’s structure?
 :END:
+
+\newpage
 
 ***** 🏙 Major sectors and systems
 
@@ -1534,13 +2146,16 @@ What is the currency? What are its sub-denominations?
 |        |          |        |                                         |
 |--------+----------+--------+-----------------------------------------|
 
-***** 📖 History
+\newpage
 
+***** 📖 History
 :README:
   Everyone comes from somewhere.  People just don’t up and appear on islands and such.  The Native Americans walked across a land bridge way back in the day... Europeans came from Romans and Greeks and Celts and Gauls and more... Very few people bother to look at this aspect of world-building, and they really should.  Even if a civilization has been around for two thousand years and are elven dragon riders, they came from somewhere.  Even if their mythology says they crawled out of the earth: they came from somewhere.  Examine it!
 :END:
 
-**** 🛡 Nation /(The Roman Empire, etc.)/
+\newpage
+
+**** 🛡 New Nation /(The Roman Empire, etc.)/
 :README:
   - *Nation Definition:*
 
@@ -1548,14 +2163,17 @@ What is the currency? What are its sub-denominations?
 
      + A Continent, Country, Nomadic Diaspora or Clan... (e.g., Asia, Europe, The Roman Empire, The Gypsies, The Isle of Mann, or the Ba Aka Pygmys, etc.) not to be limited to groups living on Planet Earth only of course...
 :END:
-
 ***** 📃 Summary:
-
 :README:
-Goals, motivations, who they’re at war with, etc.
+   Goals, motivations, who they’re at war with, etc.
 :END:
 
+\newpage
+
 ***** 🔤 Basics:
+:README:
+  Fill in the tables below... Pretty much self explanatory...  Do your research first though!
+:END:
 
 |----------------+---------+--------+----------+----------------------|
 | Home Country   | Colours | Symbol | Currency | Official language(s) |
@@ -1579,162 +2197,202 @@ Goals, motivations, who they’re at war with, etc.
 |                   |                |                       |
 |-------------------+----------------+-----------------------|
 
-***** 𐇑 Social Structure
+\newpage
 
+***** 👬 Social Structure
 :README:
-Who holds power, and how does it affect the way the society works? Is there an aristocracy? If so, how are its ranks structured?
+   Who holds power, and how does it affect the way the society works? Is there an aristocracy? If so, how are its ranks structured?
 :END:
+
+\newpage
 
 ***** 🏛 Government
-
 :README:
-Structure and general procedures
+   Structure and general procedures
 :END:
+
+\newpage
 
 ***** ⚖ Taxation
-
 :README:
-A brief overview of how the people are taxed, and where that money goes.
+   A brief overview of how the people are taxed, and where that money goes.
 :END:
+
+\newpage
 
 ***** 💵 Currency
-
 :README:
-What is the currency? What are its sub-denominations?
+   What is the currency? What are its sub-denominations?
 :END:
+
+\newpage
 
 ***** 👥 Population
-****** Common physical characteristics
-
-:README:
-Common physical characteristics of long-term inhabitants and native peoples: skin colour, hair colour, build, dress
-:END:
-
-****** Races 
-
+****** 𐇑 Races 
 :README:
 The races that inhabit the area, whether or not they’re native.
 :END:
 
-****** Predominant religion(s)
+\newpage
 
+****** 👀 Common physical characteristics
 :README:
-Monotheism?  Pantheism?  Atheism? Name and describe them as needed.
+Common physical characteristics of long-term inhabitants and native peoples: skin colour, hair colour, build, dress
 :END:
+
+\newpage
+
+****** 🛐 Predominant religion(s)
+:README:
+   Monotheism?  Pantheism?  Atheism? Name and describe them as needed.
+:END:
+
+\newpage
 
 ***** ⛩ Culture
-****** Mannerisms
-
+****** ✋ Mannerisms
 :README:
-The likely way someone behaves if they’re from this place. Because believe me, a fur-wrapped barbarian behaves in a very different way than a Greek statesman.
+   The likely way someone behaves if they’re from this place. Because believe me, a fur-wrapped barbarian behaves in a very different way than a Greek statesman.
 :END:
 
-****** Greetings
+\newpage
 
+****** 🍻 Greetings
 :README:
-What is considered an acceptable greeting?  In formal setting?  Among friends? Family?
+   What is considered an acceptable greeting?  In formal setting?  Among friends? Family?
 :END:
 
-****** Customs
+\newpage
 
+****** 🎩 Customs
 :README:
-The habits of a people that make them unique.  Google it if you’re confused.
+   The habits of a people that make them unique.  Google it if you’re confused.
 :END:
 
-****** Superstitions
+\newpage
 
+****** 🎃 Superstitions
 :README:
-Knowing the power irrational explanations have over a populace can sometimes be good story material.
+   Knowing the power irrational explanations have over a populace can sometimes be good story material.
 :END:
 
-****** Beliefs
+\newpage
 
+****** 🕎 Beliefs
 :README:
-Do I really have to explain this one?  This alone can be your story.
+   Do I really have to explain this one?  This alone can be your story.
 :END:
 
-****** Rituals
+\newpage
 
+****** 🔮 Rituals
 :README:
-Birth? Coming-of-age?  Marriage?  Death?  Justice?
+   Birth? Coming-of-age?  Marriage?  Death?  Justice?
 :END:
 
-****** Festivals
+\newpage
 
+****** 💯 Festivals
 :README:
-What do people celebrate?  What are considered holidays?  Why?
+   What do people celebrate?  What are considered holidays?  Why?
 :END:
 
-***** 🕉 Language
+\newpage
 
+***** 🗣 Language
 :README:
-This is kind of a big one for me, because I’m always very careful to point how and why my characters can understand each other, especially if they are from different countries. Language in the real world is a hell of a barrier, but even if you have a Chinese dragon, an Arabian unicorn, a French knight, a Mayan princess, and a Japanese ninja, they can all talk to and understand each other without explanation. Double I-call-BS-points for someone from another world or time!  Anyone who has ever toured Europe can tell you why this is complete bull.  Take a closer look, especially if you’re modeling anything after medieval Europe; only the Church had a universal language: Latin.
+   This is kind of a big one for me, because I’m always very careful to point how and why my characters can understand each other, especially if they are from different countries. Language in the real world is a hell of a barrier, but even if you have a Chinese dragon, an Arabian unicorn, a French knight, a Mayan princess, and a Japanese ninja, they can all talk to and understand each other without explanation. Double I-call-BS-points for someone from another world or time!  Anyone who has ever toured Europe can tell you why this is complete bull.  Take a closer look, especially if you’re modeling anything after medieval Europe; only the Church had a universal language: Latin.
 :END:
+
+\newpage
 
 ***** ⚗ Education
-
 :README:
-How are children taught?  Skilled workers, like architects or brewers?  Is there public education?  
-Higher education?
+   How are children taught?  Skilled workers, like architects or brewers?  Is there public education? Higher education?
 :END:
 
-***** 🚉︎Transportation
+\newpage
 
+***** 🚉 Transportation
 :README:
-How do people move things?  Armies?  Crowds?  Goods?  Animals?
+   How do people move things?  Armies?  Crowds?  Goods?  Animals?
 :END:
+
+\newpage
 
 ***** ⚔ Military
-
 :README:
-What is their military like? What real world military is/can it be based upon? What’s it’s structure?
+   What is their military like? What real world military is/can it be based upon? What’s it’s structure?
 :END:
 
+\newpage
+
 ***** 🏙 Major territories and cities
-
 ****** Territory:
-
 ******* City <name of major city>:
 
 Description...
 
+\newpage
+
 ***** 📖 History
-
 :README:
-Everyone comes from somewhere.  People just don’t up and appear on islands and such.  Even Native Americans walked across a land bridge way back in the day. Europeans came from Romans and Greeks and Celts and Gauls and more.  
+   Everyone comes from somewhere.  People just don’t up and appear on islands and such.  Even Native Americans walked across a land bridge way back in the day. Europeans came from Romans and Greeks and Celts and Gauls and more.  
 
-Few people bother to look at this aspect of world-building, and they really should.  Even if a civilization has been around for two thousand years and are elven dragon riders, they came from somewhere.  Even if their mythology says they crawled out of the earth: they came from somewhere.  Examine it!
+   Few people bother to look at this aspect of world-building, and they really should.  Even if a civilization has been around for two thousand years and are elven dragon riders, they came from somewhere.  Even if their mythology says they crawled out of the earth: they came from somewhere.  Examine it!
 :END:
 
-
+\newpage
 
 *** NEW 🌐 Locations - Worlds /(template)/
-**** 🏞 New Terrestrial Location
+:README:
+   =Note:= Example's (templates) for this section are still not quite 
+          done yet... But this should NOT stop you from using them 
+          and/or changing them to fit your needs...
 
-***** Summary
+          =Put what ever you think would be important for your use-case=
+
+          At some point as I develop my own stories using this org-mode 
+          process... I may add some better examples under these headings, 
+          and, of course, you may have your own ideas.... The headings are 
+          pretty clear as far as their function...
+:END:
+**** 🏞 New Terrestrial Location
+***** Summary:
 :README:
   Write your Location Summary here. Use what ever sub headings, and or formatting you need to accomplish this but don't make it too long...  The next sections are for drilling down...
 :END:
 
-***** Setting Detail
+\newpage
+
+***** Setting Detail:
 
 ****** Overall Feeling:
 
+\newpage
+
 ****** Sights:
+
+\newpage
 
 ****** Sounds:
 
+\newpage
+
 ****** Smells:
+
+\newpage
 
 **** ∅ New Planet/Satellite Location
 :README:
   Rename Planet/Satellite heading above to the actual name of the planet or satellite of your specific case...
 :END:
-
 ***** System, Sector/quadrant
 :README:
   Rename System, Sector/quadrant heading above with the actual name of your system, with its specific sector and quadrant coordinates...
 :END:
+
+\newpage
 
 ****** Controlling party/faction
 :README:
@@ -1760,10 +2418,8 @@ Few people bother to look at this aspect of world-building, and they really shou
 |              |              |             | plutocracy, etc. |                |
 |--------------+--------------+-------------+------------------+----------------|
 
-***** Major cities
-
+***** Major cities:
 ****** City (continent/region)
-
 :README:
   Change Heading City (continent/region) above to the name of your specific city, continent, or region...
 
@@ -1776,8 +2432,9 @@ Few people bother to look at this aspect of world-building, and they really shou
 
 # Add Description Here:
 
-***** Population
+\newpage
 
+***** Population
 ****** Races
 :README:
   List all the races that inhabit the area, whether or not they’re native.

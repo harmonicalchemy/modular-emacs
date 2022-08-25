@@ -44,27 +44,60 @@
 To use this Generic Document Skeleton /(template)/ for your own documents, 
 *Perform the following steps:* [0/6]
 
-1. [ ] *Clone a Copy of this File:* Put it where you normally organize your writing documents.  *Place it within its own folder* named after your intended document title...
+1. [ ] *Clone a Copy of this File:* 
+
+       Put it where you normally organize your writing documents. 
+       *Place it within its own folder* named after your intended 
+       document title...
 
 2. [ ] *Change the Boilerplate Info at the Top of this file as follows:* [0/3]
 
     - [ ] *Change the* ~#+TITLE:~ *Directive To:* 
+
           /"your Generic Document's Title"/
 
-    - [ ] *Change the* ~#+EXPORT_FILE_NAME:~ *Directive to:*        
+    - [ ] *Change the* ~#+EXPORT_FILE_NAME:~ *Directive to:*
+
            /"Your-New-Document-Title.pdf"/ 
            /That will be the file name produced thence forward.../
 
     - [ ] *Change the* ~#+DESCRIPTION:~ *Directive To:*
+
            /"Your Generic Document's Description" etc.../
 
-3. [ ] *Copy/Clone ./media* /(and all its contents):/ To your new document's /(where you copied this file).../  Any external documents or images referenced by your document should be placed within this ~./media/~ directory... All of the external links, images, within the boilerplate examples may be used as examples for getting your own images, and external attachments linked properly...  This single *./media* directory serves media and external attachments for all of the *.org* files contained within: ~.emacs.d/Docs/pubOps~ directory... Cloning any of the other *.org* files will also require copy/cloning the ./media directory relative to them...
+3. [ ] *Copy/Clone ./media* /(and all its contents):/ 
 
-4. [ ] You don't need to copy the ~./auto/~ directory...  That will be created for you automacally the first time you export this ~.org~ file to ~.PDF~.
+       Copy to your new document's /(where you copied this file).../  
+       Any external documents or images referenced by your document 
+       should be placed within this ~./media/~ directory... All of the 
+       external links, images, within the boilerplate examples may be 
+       used as examples for getting your own images, and external 
+       attachments linked properly...  This single *./media* directory 
+       serves media and external attachments for all of the *.org* files 
+       contained within: ~.emacs.d/Docs/pubOps~ directory... Cloning 
+       any of the other *.org* files will also require copy/cloning the 
+       ~./media~ directory relative to them...
 
-5. [ ] You also don't need to copy the ~./org-templates~ directory... The files in there are automatically linked and included within this template. You don't need to change those settings unless you wish to customize the already customized tags, and export options. /They are set up correctly for generic document genre already and the category is all set as well... But if you must, you can modify the original files to make your changes rather than cloning to your projec directory.../  Realize that if you do that while on the master branch it will get out of sync with origin, check out a local branch to make it easier to get back to defaults if you change your mind later. %^)
+4. [ ] You don't need to copy the ~./auto/~ directory...  
 
-6. [ ] *Start Planning / Writing Your Document:* /Change headings and structure to match your document's outline and purpose./
+       That will be created for you automacally the first time you export 
+       this ~.org~ file to ~.PDF~.
+
+5. [ ] You also don't need to copy the ~./org-templates~ directory... 
+
+       The files in there are automatically linked and included within this 
+       template. You don't need to change those settings unless you wish to 
+       customize the already customized tags, and export options. 
+       /They are set up correctly for generic document genre already/ and the 
+       category is all set as well... But if you must, you can modify the 
+       original files to make your changes rather than cloning to your project
+       directory... Realize that if you do that while on the master branch it 
+       will get out of sync with origin, check out a local branch to make it 
+       easier to get back to defaults if you change your mind later. %^)
+
+6. [ ] *Start Planning / Writing Your Document:* 
+
+       /Change headings and structure to match your document's outline and purpose./
 
 The *In-Buffer Settings* and *KEYWORDS* specified above are configured to get this file looking good when exported as a Standard PDF file.  Once you have your project directory all set up as above you are ready to export your first PDF as a test run...  To make a PDF out of this file issue the following Emacs command:
 
@@ -78,18 +111,17 @@ After *AucTeX* is done parsing/compiling etc., a new *PDF* by the name of ~New-U
 
 Subsequent repeated calls to the above command will overwrite your existing ~New-Untitled-Document.pdf~ -and- ~New-Untitled-Document.tex~ files! You should probably copy these files to the ~./auto/~ directory as well for safe keeping as backups...
 
-*Last Modified: <2021-05-22 Sat>* So far things are pretty basic PDF... We will get fancy with other formats later... I promice... I have to do all this documentation first! /(As you can see, if you been following for the past couple years, things are getting done! Albeit Slowly)/
+*Last Modified:* <2021-05-22 Sat> So far things are pretty basic PDF... We will get fancy with other formats later... I promice... I have to do all this documentation first! /(As you can see, if you been following for the past couple years, things are getting done! Albeit Slowly)/
 
 Enjoy! - Alisha Awen
 :END:
 
-* NEW 💡 Scratchpad Refile:                                        :noexport:
+* NEW 💡 Scratchpad Refile:                        :noexport:
 
-=Note:= /This section is not published! Use this for scratch pad for/
-      /private-notes etc.../
+=Note:= /This section is not published!/ 
+       /Use this scratch pad for private-notes etc.../
 
 ** NEW ☞ Start Here!
-
 :README:
    This Section is mainly to accommodate "seat-of-pants" writers
    /(of which I have been accused of... But I also crave the planning stuff)/.  I often come here for my [[https://projects.csail.mit.edu/gsb/old-archive/gsb-archive/gsb2000-02-11.html]["yak shaving"]] adventures...
@@ -180,9 +212,7 @@ Enjoy! - Alisha Awen
   Having done the simple steps above any time you get inspired, you will be able to tell your grand children.. "I got my first spark of an idea for that book back in Year, Month, Day, time, second" (50 years later!) Now that is being organized! LOL
 
 :END:
-
-*** NEW New Business Idea! <2020-06-07 Sun> /"yeah we've heard that one before"/
-
+*** NEW 💡 New Business Idea! <2020-06-07 Sun> /"yeah we've heard that one before"/
 :README:
    This is a dummy example of some crazy idea that you may have gotten at the spur of the moment, while you were doing something elsewhere within this project...  After you are done getting as much of the idea as you initally can then you can simply go back to what you were doing before the inspiration segue tore you away... you might want to schedule this as a todo item before leaving though...
 
@@ -211,8 +241,7 @@ This is a Heading 8 test...
 
 \newpage
 
-* NEW 📖 Doc Title /(rename this)/      :export:
-
+* NEW 📖 Main Document Title /(rename this)/   :export:
 :README:
    *This is the Main Body of your Document...* Everything under This Main
    heading will be published in your final PDF, or web page, etc.,
@@ -234,10 +263,7 @@ This is a Heading 8 test...
    mode and start type your README content within the drawer.  Collapse
    it if you like after you are done...
 :END:
-
-** NEW 📃 Introduction: /(template)/
-
-:README:
+** NEW 📃 Introduction:                     :README:
    *Use this space to write the main synopsis of your document...* You
    can write anything you want here but it is recommended strongly
    to summarize the main points of your idea broken up in small
@@ -258,8 +284,9 @@ This is a Heading 8 test...
 
 About this document... Yadda... Yadda... Yadda...
 
-**** NEW 📄 Reference:
+\newpage
 
+** NEW 📄 Reference:
 :README:
    Add links to other reference, source docs, requirements, back stories, whatever, here...  
 
@@ -278,8 +305,7 @@ About this document... Yadda... Yadda... Yadda...
 
 \newpage
 
-** NEW 📃 Main Body /(template - rename clones)/
-
+** NEW 📃 Topic /(main topic template - rename clones)/
 :README:
    Use this space to write the main body of your document... Here is
    where all the details happen... Your main headings here should
@@ -307,8 +333,8 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
 
 \newpage
 
-* 📒 HowTo:                             :noexport:
-** About:
+* ⎘ Meta: /(Usage & Templates)/         :noexport:
+** 📃 About:
 
 The *Templates:* section provides skeleton templates for use within this document.  These /"meta-sections"/ do not show up in final published docs, /(e.g., .pdf or web etc)/...
 
@@ -318,59 +344,20 @@ In some cases you may have to adjust the heading level of your pasted content...
 
 The intent of these templates are to save lots of time starting up a new document or to quickly develop a new idea.  Lets see if it helps. :trollface:
 
-** Instructions:
+\newpage
 
-*Choose one of the templates* /or sub templates/ from the *Templates* section below and copy it (folded).  
+** 📄 Instructions:
 
-*Paste your copied template as a new clone* within your  book, planning, or research section...  If you have to adjust the heading level /(hierarchy position)/ of your pasted content, first make sure all the pasted content is collapsed to a single heading and then use: ~M-S-<right or left arrow>~ on your *Collapsed* pasted heading.  You can repeat this command as many times as needed to get your heading /(and all it's children)/ placed on the correct level. If you go to far you can easily switch arrows to correct your choice.
+=Treat Anything Found Within This Section as a Potential TEMPLATE= which may be used repeatedly as you write your Document Above within the MAIN Document Section...
 
-*Change the name of your copied template* to the specific title you need in your  document...
+Change the Name, titles, and/or headings of Your Cloned Template to a specific title required within your document...
 
-*Start writing and finish your new section...* basic structure is in place...
-
-* ✎ Templates:                                :noexport:
-** NEW 📃 Introduction: /(template)/
-
-:README:
-   Use this space to write the main synopsis of your document... You can write anything you want here but it is recommended strongly to summarize the main points of your idea broken up in small outline if necessary...
-
-   Keep things short and sweet here... The total *BIG picture*...
-
-   If this is a *tutorial* or *how-to*, you might use this section to outline the main points of the document as *Heading Questions* and then *clone* this *Introduction section* to a *Summary*, *Conclusion*, or *What-We-Learned* section where the question headings are changed to final answer headings. /(also short and sweet and to the point)/ 
-
-   /Putting the questions here as links to the body of your doc is sort-of the FAQ model that emerged organically on the Internet /(pre www daze).../
-:END:
-
-About this document... Yadda... Yadda... Yadda...
-
-**** NEW 📄 Reference:
-
-:README:
-   Add links to other reference, source docs, requirements,
-   back stories, whatever, here...  
-
-   To Create a Link Type: ~C-c C-l~
-   /(then paste: ~link~ & type: "description")/
-
-   To Open a Link Type: ~C-c C-o~
-
-   You can also Open a link to a local file or dired listing
-   =Opening in Another FRAME= using the Custom *xah-fly-keys*
-   command: ~SPACE e o~
-:END:
-
-- [ [ ][ ] ]
-
-- [ [ ][ ] ]
-
-- [ [ ][ ] ]
-
-- [ [ ][ ] ]
+Start writing and finish your new section... /(the basic structure is already/
+/set for you/...
 
 \newpage
 
-** NEW 📃 Main Body /(template - rename clones)/
-
+** NEW 📃 Topic /(main or secondary topic template - rename clones)/
 :README:
    Use this space to write the main body of your document... Here is
    where all the details happen... Your main headings here should

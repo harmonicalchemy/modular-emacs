@@ -81,62 +81,102 @@ Subsequent repeated calls to the above command will overwrite your existing ~New
 Enjoy! - Alisha Awen
 
 :END:
-* 💡 Scratchpad Refile:
+* 💡 Scratchpad Refile:           :noexport:
 ** ☞ Start Here!
 :README:
-This Section is mainly to accommodate "seat-of-pants" writers (of which I have been accused of but I also crave the planning stuff).  I often come here for my [[https://projects.csail.mit.edu/gsb/old-archive/gsb-archive/gsb2000-02-11.html]["yak shaving"]] adventures...
+   This Section is mainly to accommodate "seat-of-pants" writers
+   /(of which I have been accused of... But I also crave the planning stuff)/.  I often come here for my [[https://projects.csail.mit.edu/gsb/old-archive/gsb-archive/gsb2000-02-11.html]["yak shaving"]] adventures...
 
-Use this: "💡 Scratchpad Refile ☞ Start Here!" section as a quick place to document ideas and inspirations as they come alone.  You can refile them later... 
+   Use this: "*💡 Scratchpad Refile ☞ Start Here!*" section as a quick
+   place to document ideas and inspirations as they come along...
+   You can refile them later... 
 
-Even if your quick inspiration was intended for elsewhere?, (e.g., You become bored documenting tedious technical information when suddenly, out-of-nowhere, an idea for a new sci-fi scene in that screenplay episode you had in the back of your mind all day!, etc.) Ummm.... Parallel universe? 
+   Even if your quick inspiration was intended for elsewhere?,
+   /(e.g., You become bored documenting tedious technical information/
+   /when suddenly, out-of-nowhere, an idea for a new sci-fi scene in/
+   /that screenplay episode you had in the back of your mind all day!,/
+   /etc.)/
 
-Sure! You can put anything in here! We've got that covered for you in this Start Here spot. %^)
+   =Ummm.... Parallel Universe?=
 
-- Use this section to quickly capture inspired at-the-moment ideas While they are still fresh in mind.
+   =Sure!= You can put anything in here! We've got that covered for you
+         in this Start Here spot. %^)
 
-- How to use? Simply Come directly here:
+   Use this section to quickly capture inspired at-the-moment ideas
+   =While they are still fresh in mind=
 
-  + Advance your cursor a few newlines below this README drawer on a fresh clean line with some extra space below it as well... (above any previously time stamped entries you may already have placed)... If this is the first time, get rid of the My New Business Idea! heading example entry below... That is only for the template to illustrate these instructions by example.
+- =How to use?= /Simply Come directly here and do what ever you want.../
+                /"Your Crazy Daze are Covered!" Yay!/
 
-  + You are now at the top of the list, (a few lines below this README drawer). The time is the present. -and- You are all fired up with an idea to write about!
+  + *Advance your cursor* a few newlines below this README drawer on a
+         fresh clean line with some extra space below it as well...
+         /(above any previously time stamped entries you may already/
+         /have placed).../ If this is the first time, get rid of the
+         *"New Business Idea!"* heading example entry below... That
+         is only for the template to illustrate these instructions
+         by example.
 
-  + Enter a new timestamp with "C-c .", (that's: Press Ctrl-c, let go, and then type a Period .)  A date chooser panel will pop up...
+  + *You are now at the top of the list*, /(a few lines below this/
+         ~README~ /drawer)/. The time is the present. -and- You are all
+         fired up with an idea to write about!
 
-  + Press ENTER to auto accept today's date and time.  A new timestamped line will appear with your cursor blinking on the right of it... There won't be any future entries above you... (maybe next decade? time travel?)
+  + *Enter a new timestamp with* ~C-c .~, /(that's: Press ~Ctrl-c~, let go,/
+                                       /and then type a Period .)/  A
+                                       date chooser panel will pop up...
 
-  + Advance your cursor a few more lines down to some fresh empty space -and- 
+  + *Press* ~ENTER~ *to auto accept today's date and time.*  A new timestamped
+         line will appear with your cursor blinking on the right of it...
+         There won't be any future entries above you...
+         /(maybe next decade? time travel? %^)/
 
-  + Start Typing Your Idea Like Mad! 
+  + *Advance your cursor a few more lines down* to some fresh empty
+         space and Start Typing Your Idea Like Mad!!! 
 
-  + Don't stop and don't worry about formatting or organizing it until later, after all your inspiration has passed and you are ready to organize...
+  + *Don't stop* and don't worry about formatting or organizing it
+         until later, after all your inspiration has passed and you are
+         ready to organize...
 
-- After You are Done Writing:
+- =After You are Done Writing:=
 
-  + Come back to the timestamp line where you first started... make sure the timestamp has at least one empty line above and below it.
+  + *Come back to the timestamp line where you first started*
 
-  + Give the timestamp line a title to the right of the timestamp.
+          Make sure the timestamp has at least one empty line above
+          and below it.
 
-  + Make this timestamped line an outline heading with: "C-c ENTER" (that's Press Ctrl-c, let go and then press ENTER)
-     (make sure this new heading has empty lines above and below it)
+  + *Give the timestamp line a title to the right of the timestamp.*
 
-  + Adjust this new outline heading level with: M-▷ (this will make it a child of ☞ Start Here! heading above, rather than a sibling).
+  + *Make this timestamped line an outline heading*
 
-  + Adjust the space between your heading and your fantastic idea below it to one single blank line.
+          =Use:= ~C-c ENTER~ /(that's Press/ ~Ctrl-c~ /let go, and/
+                          /then press ~ENTER~)/
+          =Note:= make sure this new heading has empty lines above
+                and below it...
 
-  + You can organize everything else later...  Don't scare away the muses! Get your story down now!
+  + *Adjust this new outline heading level with:* ~M-▷~
+          /(this will make it a child of ☞ Start Here! heading above,/
+          /rather than a sibling)./
 
-  + Then you may go out to play elsewhere little grasshopper... But come back later and organize things... OK? Don't create a swamp in here! And don't forget to take your bath tonight... ;-) 
+  + *Adjust the space* between your heading and your fantastic idea
+          below it to one single blank line.
 
-  + Having done the simple steps above any time you get inspired, you will be able to tell your grand children.. "I got my first spark of an idea for that book back in Year, Month, Day, time, second" (50 years later!) Now that is being organized! LOL
+  + *You can organize everything else later...*
+
+          Don't scare away the muses! Get your story down now!
+
+  + *Then you may go out to play elsewhere little grasshopper...*
+
+          But come back later and organize things... OK? Don't
+          create a swamp in here! And don't forget to take your
+          bath tonight... ;-)
+
+  Having done the simple steps above any time you get inspired, you will be able to tell your grand children.. "I got my first spark of an idea for that book back in Year, Month, Day, time, second" (50 years later!) Now that is being organized! LOL
 :END:
-*** NEW My New Business Idea! <2020-06-07 Sun> "yeah we've heard that one before"
-
+*** NEW 💡 <2020-06-07 Sun> My New Business Idea! /"yeah we've heard that one before"/
 :README:
-This is a dummy example of some crazy idea that you may have gotten at the spur of the moment, while you were doing something elsewhere within this project...  After you are done getting as much of the idea as you initally can then you can simply go back to what you were doing before the inspiration segue tore you away... you might want to schedule this as a todo item before leaving though...
+   This is a dummy example of some crazy idea that you may have gotten at the spur of the moment, while you were doing something elsewhere within this project...  After you are done getting as much of the idea as you initally can then you can simply go back to what you were doing before the inspiration segue tore you away... you might want to schedule this as a todo item before leaving though...
 
-Later when you are free you can come back to file this or place it where it belongs.  In the case of the note below it would probably go in a research folder of a Sci-Fi related project...
+   Later when you are free you can come back to file this or place it where it belongs.  In the case of the note below it would probably go in a research folder of a Sci-Fi related project...
 :END:
-
 **** Heading 4:
 
 This is a Heading 4 test...
@@ -159,78 +199,97 @@ This is a Heading 8 test...
 
 \newpage
 
-* 📖 Book:
-** NEW 📃 Synopsis:
+* 📖 Book: /(Name of Book)/
+** NEW 📃 Synopsis: /(or Introduction:)/
 :README:
-This section has been purposefully left blank for you to fill in...
+   This section has been purposefully left blank for you to fill in...
 
-Use this space to write the main synopsis of your work... You can write anything you want here but it is recommended strongly to summarize the main points of your book broken up in small outline if necessary...
+   Use this space to write the main synopsis of your technical work... You can write anything you want here but it is recommended to use the award winning *"Snowflake Method"* created by [[https://www.advancedfictionwriting.com/][Randy Ingermanson]] of Ingermanson Communications, Inc. YES use this method even for Reference or Tech Books.  The same ideas apply except you will be summarizing Real World things rather than make-believe... 
 
-- Go to the "⏰ Tasks:" section and do the: "📃 Synopsis Tasks:"
+   These steps have been provided for you in the main *"Tasks:"* section...
 
-- After completing those tasks mark them "DONE" and place your resulting synopsis notes in here... You will be coming back here to consult these notes for many things as you promote and publish your book.
+   - [ ] *Go to the:* =⏰ Tasks:= *Section and do the:* =📃 Synopsis Tasks:=
+
+   - [ ] *After Completing Tasks Mark Them:* ~DONE~
+
+   - [ ] *Place Resulting Synopsis Notes in Here:*
+
+          You will be coming back here to consult these notes for many 
+          things as you promote and publish your book.
 :END:
 
 \newpage
 
-** NEW 📃 Front Matter:
+** NEW 📃 Front Matter:                    :noexport:
 
 Front Matter... yadda... yadda... yadda...
 
 \newpage
 
-** NEW 🔖 Chapter # - Org-Mode Publishing Tricks
-*** 📄 Introduction
-Here are some *publishing tips and snippits* I have found along the way...  Some of them may get incorporated more formally later /(with docs, etc.),/ but for now... you will have to discover these treasures below within this example chapter...
+** NEW 🔖 Chapter 1: Org-Mode Publishing Tricks
+:README:
+   Chapters are the *Top Level Headings* within the *Book: Section* of this Org Book Publishing project...  Clone this *Chapter #* Template and paste it under your Book: outline heading whenever you need to start a new chapter...
+
+   The structure of this template is all set up for you ahead of time to allow you to immediately begin writing...  Replace titles to suit your needs, but keep the structure of *Chapter / Topic (sub-chapter)* intact... i.e., change names only...
+
+   You may create any structure you need under the Topic Headings beginning at the next outline level below it...  This will ensure your book gets properly set up for LaTeX exporting to PDF and / or eBook formats with proper table of contents and book structure. 
+
+   *Topics* or (sub-chapters) are the *DNA* that make up the chapters in a book... Chapters may contain several Topics. Topics may contain sub headings, tables, figures, examples, etc...
+:END:
+*** NEW 📄 Chapter Introduction: /<replace with topic name if needed>/
+
+Here are some *Org-Mode publishing tips and snippits* I have found along the way...  Some of them may get incorporated more formally later /(with docs, etc.),/ but for now... you will have to =discover these treasures below= within this =example chapter=...
 
 \newpage
 
-**** References:
+*** NEW ☞ Chapter References:
 :README:
-Add links to other reference, source docs, requirements, back stories, whatever, here...  
+   =Org Mode Links Tip:=
 
-To Create a Link Type: ~C-c C-l~ /(then paste: ~link~ & type: "description")/
+      To Create a Link Type: ~C-c C-l~ /(then paste: ~link~ & type: "description")/
+      To Open a Link Type: ~C-c C-o~
 
-To Open a Link Type: ~C-c C-o~
+      =-or-= Simply Fill in the Template Link Placeholders Below 
+           & copy/paste more placeholders as needed... ;-)
 :END:
 
-- *[[https://orgmode.org/worg/org-contrib/babel/examples/fontify-src-code-blocks.html#org42aa49f][Pretty fontification of source code blocks - WORG]]*
+- [[https://orgmode.org/worg/org-contrib/babel/examples/fontify-src-code-blocks.html#org42aa49f][Pretty fontification of source code blocks]] - *WORG*
 
-- *[[https://orgmode.org/manual/Working-with-Source-Code.html#Working-with-Source-Code][Working with Source Code - Org Manual]]*
+- [[https://orgmode.org/manual/Working-with-Source-Code.html#Working-with-Source-Code][Working with Source Code]] - *Org Manual*
 
-- *[[https://orgmode.org/worg/library-of-babel.html][Org Library of Babel]]*
+- [[https://orgmode.org/worg/library-of-babel.html][Org Library of Babel]]
 
-- *[[https://github.com/jkitchin/org-ref][JKitchin - org-ref @Github]]*
+- [[https://github.com/jkitchin/org-ref][ORG-REF]] - ~JKitchin@Github~
 
-- *[[https://youtu.be/fgizHHd7nOo][JKitchin - Org Mode is Awesome! - YouTube]]*
+- [[https://youtu.be/fgizHHd7nOo][Org Mode is Awesome!]] - ~JKitchin@YouTube~
 
-- *[[https://youtu.be/SzA2YODtgK4][Harry Schwartz - Getting Started with Org Mode - YouTube]]*
+- [[https://youtu.be/SzA2YODtgK4][Getting Started with Org Mode]] - ~Harry Schwartz@YouTube~
 
-- *[[http://howardism.org/Technical/Emacs/literate-devops.html][Howard Abrams - Literate DevOps - Article]]*
+- [[http://howardism.org/Technical/Emacs/literate-devops.html][Literate DevOps]] -  /Article by: Howard Abrams/
 
-- *[[https://youtu.be/dljNabciEGg][Howard Abrams - Literate DevOps with Emacs - YouTube]]*
+- [[https://youtu.be/dljNabciEGg][Literate DevOps with Emacs]] - ~Howard Abrams@YouTube~
 
-- *[[https://zzamboni.org/post/beautifying-org-mode-in-emacs/][Diego Zamboni - Beautifying Org Mode in Emacs]]*
+- [[https://zzamboni.org/post/beautifying-org-mode-in-emacs/][Beautifying Org Mode in Emacs]] - /Article by: Diego Zamboni/
 
-- *       *
+- [[][] ] - 
 
-- *       *
+- [[][] ] - 
 
-- *       *
+- [[][] ] - 
 
-- *       *
+- [[][] ] - 
 
-- *       *
+- [[][] ] -
 
 \newpage
 
-*** 📄 New Topic <replace with topic name>
+*** NEW 📄 New Topic <replace with topic name>
 
 At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
 
 \newpage
 
-*** 🗒 Background Notes:
+*** NEW 🗒 Background Notes:
 :README:
 The *Background Notes* section of a chapter is a place where you can add notes, ideas, instructions, whatever... close at hand within the chapter, and not have to worry about any of it getting exported and or published to the final output product...  
 
@@ -282,11 +341,13 @@ Yadda, yadda, yadda. etc...
 
 \newpage
 
-* 📒 Research:
-** 💡 Topic Ideas:
+* 📒 Research:                          :noexport:
+** 💡 New Topic Ideas:
 *** NEW 📄 New Topic /(clone this)/
 
 At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
+
+\newpage
 
 ** 📒 Yak Shaving:
 :README:
@@ -304,11 +365,15 @@ Note: This is an example of some documentation or research you need to do, the r
 
 Use this section's top level heading outline structure.. Create sub-level headings as needed for your purposes...
 
+\newpage
+
 *** NEW Yak Shaving Heading Two:
 
 Note: This is an example of some documentation or research you need to do, the result of which will not be included in your book but will be used as a resource necessary for the creation and or publishing of your book... Add what you need here... 
 
 Use this section's top level heading outline structure.. Create sub-level headings as needed for your purposes...
+
+\newpage
 
 *** NEW Add more yak shaving headings as needed:
 
@@ -318,25 +383,26 @@ Create sub-level outlines below each heading as needed for your purposes.
 
 Anything goes here... You can make this into what ever you want..
 
-* ⏰ Tasks:
+\newpage
+
+* ⏰ Tasks:                               :noexport:
 :README:
-- Use this space to add time stamped Tasks below for any pourpose you may need...
+   - Use this space to add time stamped Tasks below for any pourpose you may need...
 
-- To create a time stamped task entry, use key command:
+   - To create a time stamped task entry, use key command: ~C-c .~
 
-   + "C-c ."
+   - Make your new entry an outline sub-heading of this project's general *Tasks:* section heading above /(or optionally you could create another more specific Tasks: section wherever else you may need a collection of task entries)/...
 
-   + Make your new entry an outline sub-heading of this project's general "Tasks:" section heading above (or optionally you could create another more specific Tasks: section wherever else you may need a collection of task entries...
+   - Keep your Tasks in Decending Chronological Order. /(i.e., put your newest/ 
+      /tasks on top)/
 
-- Keep your Tasks in Decending Chronological Order.
-   (i.e., put your newest tasks on top)
+   - The three provided tasks below are important first steps to take when first starting a book.  They are based on the "Snowflake Method" by Randy Ingermanson. 
 
-- The three provided tasks below are important first steps to take when first starting a book.  They are based on the "Snowflake Method" by Randy Ingermanson. 
+   - These tasks should be started as soon as you create a new project...
 
-- These tasks should be started as soon as you create a new project using this HAP-Book-Project-Skeleton... 
-
-- It is hoped that this process will give you a faster, efficient, organized "bootstrapped" head start and teach some guidance about how to properly organize and write your books with a clearer mind, inspired outlook, and renewed motivation...
+   - It is hoped that this process will give you a faster, efficient, organized "bootstrapped" head start and teach some guidance about how to properly organize and write your books with a clearer mind, inspired outlook, and renewed motivation...
 :END:
+
 *** 📃 Synopsis Tasks:
 **** NEW Important Before you start!
 
@@ -421,11 +487,15 @@ Take another hour and expand your sentence from step one into a full paragraph d
 
    This last sentence wraps everything up, further supporting the first three sentences with one single statement.  An encouragement and also challenge for your readers to read this book to discover more.
 
+\newpage
+
 ***** Using Your One-Paragraph Summary:
 
 You will be using this paragraph in your proposals. It is only for your agents etc.  Not for your readers who need to be kept in the dark about too many details until they read the book...
 
 However, Some of this paragraph (written with parts pourposefully left out or with questions put in place) may end up back-cover copy for your book's promotion.
+
+\newpage
 
 **** NEW Step Three - Expand Paragraph to Synopsis:
 
@@ -439,12 +509,15 @@ Your process now is to grow these ideas as individual chapters and topics.  You 
 
 \newpage
 
-* ⎘ Templates:
+* ⎘ Meta: /(templates etc.)/              :noexport:
 ** Introduction:
 
-This section provides skeleton templates for use within your project(s).  Any sub heading under this parent "*Templates:"* group can be utilized by copy-pasting the collapsed heading into any of your existing project sections (i.e., making a clone anywhere you need to create a new section based on the template's structure)... 
+This =Meta= section provides skeleton templates for use within your project(s).  Any sub heading under this Meta: group can be utilized by copy-pasting the collapsed heading into any of your existing project sections (i.e., making a clone anywhere you need to create a new section based on the template's structure)... 
 
 Or... You could try mashing several cloned templates together to create a totally new project heading with a totally different structure... The intent of this is to save lots of time starting up a new custom writing project.  Lets see if it helps. :trollface:
+
+\newpage
+
 ** Instructions:
 
 - Choose one of the templates below and copy it (folded).  
@@ -453,56 +526,106 @@ Or... You could try mashing several cloned templates together to create a totall
 
 - Change the name of your copied template to a specific title needed to fit in with your project's story-structure...  In the case of Logs or Tasks, you probably will keep those titles as they are universal... but you may wish to further qualify them by adding a prefixed category word.
 
-** ✎ Log Templates:
+\newpage
+
+** ✎ Log Book: /(Master Template)/
 :README:
-- Use this space to add time stamped log note entries for any pourpose you may need...
+   Use this space to add time stamped log note entries for any pourpose you may need...
 
-- To create a time stamped entry, use key command:
+   *To create a Time Stamped Entry, Use Key Command:* ~C-c .~
 
-   + "C-c ."
+   Make your new entry a =sub-heading under a Log section= heading /(as above but, wherever else you may need a collection of log entries)/.
 
-   + Make your new entry an outline sub-heading of a Log section heading (as above but, wherever else you may need a collection of log entries).
+   Keep your Log Entries in Decending Chronological Order. /(i.e., put your newest entries on top)/
 
-- Keep your Log Entries in Decending Chronological Order.
-   (i.e., put your newest entries on top)
+   This serves as a replacement for my Scrivener planning Logs /(Currently implemented as markdown files outside of Scrivener)/... Each ~Org-based~ Writing project will have one or more of these logs right inside of it close to the things the logs are actually about...  No more fumbling and guessing which log was I useing for what? Now, not only can I find them, I can make them into tasks, TODOS, and prioritize them to boot! Consider this my new official general template for logs going forward...
 
-This serves as a replacement for my Scrivener planning Logs /(Currently implemented as markdown files outside of Scrivener)/... Each Org-based Writing project will have one or more of these logs right inside of it close to the things the logs are actually about...  No more fumbling and guessing which log was I useing for what? Now, not only can I find them, I can make them into tasks, TODOS, and prioritize them to boot! Consider this my new official general template for logs going forward... Onward we row mates... Over the log jam!
+   ="Onward We Row Mates... Through the log jam!"=
 :END:
 *** NEW log: <2021-03-29 Mon> Generic Title /(General Log Entry Template)/
 :README:
+   - *Go To One of the HEADINGS Below:* /(Summary, Details, or Sub Headings)/
 
-- Since you created this new log entry you are probably in the middle of a task related to it right now!  Go ahead and punch the clock right now as well, to start recording your time! The following Commands are defined below for you to remember and use to track your time:
+      =Punch the Time Clock= At the heading And then begin working on a task related to that Heading... =Your Time IS being Recorded Now= 
 
-  + *C-c C-x C-i* - Start Clock /(Begin OR Resume Clocking Current task)/
+   - =Use These Commands:= /as you work to keep track your time.../
 
-      This creates a new :CLOCKING: Time Card Entry that looks like this:
+      + *Clock IN:* ~C-c C-x C-i~ 
 
-      Do this now... Start recording your time girl!  Be in control of your life!
+                    /(Begin OR Resume Clocking Current task)/
 
-     After doing the above, you can go away and do some work, leaving this log note to visit other files and work on them etc. The clock will be recording your time all the while... You will see in your mode line the elapsed clock time as you work...
+                    This creates a new :CLOCKING: Time Card Entry just
+                    underneath the HEADING...
 
-  + *C-c C-x C-j* - Return back to the Heading where you started the clock...
-      You do this after you have worked on a task for a while and you need to come back to the time card /(this Log Entry Heading)/ and stop the clock before going off to do something unrelated to the log entry...
+                    Do this just before starting work on the task... 
+                    Be in control of your life!
 
-  + *C-c C-x C-o* - *Stop the Clock* /(to stop clocking your time on task)/
-       This *Finalizes the Time Card Entry* within ~:CLOCKING:~ /(created earlier when you started the clock)/... The completed time card entry looks like this:
+                    After doing the above, you can go away and do some 
+                    work, leaving this heading, log note, etc. to visit 
+                    other files and/or work on them etc. The clock will 
+                    be recording your time all the while... You will see 
+                    in your mode line the elapsed clock time ticking away 
+                    as you work on a task /(hopefully related to this clock!)/
+                    and NOT Yac Shaving or being sidetracked!!!
 
-       The above entry shows start timestamp, end timestamp, and total time worked during this segment...  As you can see from the example above I left the clock running all day by accident.  If you do something like that you can always come back and directly edit the clock times by hand to amend them...  After changing clock times or dates, etc. type the following to *Update the Time Card Entry*:
-            *C-c C-c*
-       and the total time will change at the end showing your new calculated time...
+      + *RETURN to Clock Heading:* ~C-c C-x C-j~
 
-       If you need to go away and do something else before finishing this task, you can do so after clocking out... When you come back simply clock back in again to start another Time Card Entry just as before... The new time card entry will appear above the earlier one within the ~:CLOCKING:~ drawer... When you clock out of this task it will look just like the entry below it with a total time worked tagged on the end...
+                        /Go back to the place where you started the clock.../
 
-       When you are all done with this Log Entry mark it *DONE*
+                        You do this after you have worked on a task for a 
+                        while and you need to come back to update the item's
+                        info etc., and/or stop the clock before going off to 
+                        do something else unrelated to the log entry...
 
-  + *C-c C-x C-q* - Cancel Current Clock /(in case you accidentally started it)/
+      + *Clock OUT:* ~C-c C-x C-o~ /(to stop clocking your time on task)/
 
-       This removes currently running clock and forgets it...
+                      This *Finalizes the Time Card Entry* within:
+                      ~:CLOCKING:~ /(created earlier when you started the/ 
+                      /clock)/...
 
- + *C-c C-x C-d* - Display Clocking Info: /This will show elapsed times to the right of headings.../
+                      The Clock Entry changes showing start timestamp, end timestamp, and total time worked during this segment...  
 
-- Once all of this has become routine for you, go ahead and remove this ~README~ drawer from this template... That way it does not get copied when you need to clone new log entries...
+                      =Please DON'T Forget= /Like I often do, LOL.../ i.e.,
+                      Leaving a clock running all day by accident, or worse,
+                      leave it dangling with the file closed only to open it
+                      again and get that nasty *Org-Mode Message:* /"What do/
+                      /you want to do with this?"/ If you do something like 
+                      that you can always come back and directly edit the 
+                      clock times by hand to amend them...  After changing 
+                      clock times or dates, etc... Whatever...
 
+                      ="Onward We Row Mates... Through the log jam!"=
+
+      + *Update Time Card Entry:* ~C-c C-c~ 
+
+                  This command will change the total time at the end showing 
+                  your new calculated time...
+
+                  If you need to go away and do something else before finishing this task, you can do so after clocking out... When you come back simply clock back in again to start another Time Card Entry just as before... The new time card entry will appear above the earlier one within the ~:CLOCKING:~ drawer... When you clock out of this task it will look just like the entry below it with a total time worked tagged on the end...
+
+      + *Clock Out & Mark Items Done:* ~C-c C-t~
+
+            When you are all done with a Log Entry use the above key 
+            command to mark its Heading *TODO* tag to: *DONE* /(Most of the/ 
+            /time this will ALSO clock you out if you are still clocked/ 
+            /into the item... But not allways in my experience.../  
+            So make sure you are also clocked OUT of an Item After 
+            marking it DONE... Type: ~C-c C-x C-j~ to check this...
+            /(if no running clock it will tell you and place your/
+            /cursor at the heading where you LAST CLOCKED OUT)/
+
+      + ~C-c C-x C-q~ *Cancel Current Clock:* /(in case of accident)/
+
+                      This removes currently running clock and forgets 
+                      any time accrued or associated with it...
+
+      + ~C-c C-x C-d~ *Display Clocking Info:* 
+
+                      /This will show elapsed times to the right of headings.../
+                      =Warning!= Using this command will CLUTTER ALL the headings
+                                within your org file with those timestamps!!!
+
+   - Once all of this has become routine for you, =go ahead and remove this= ~README~ =drawer from this template=... That way it does not get copied when you need to clone new log entries...
 :END:
 
 This Log Entry is about: Yadda... Yadda... Yadda...
@@ -640,52 +763,58 @@ Yadda... Yadda... Yadda...
 
 \newpage
 
-** SOMEDAY 🗓 Editorial Calendar
+** SOMEDAY 🗓 Editorial Calendar: /(Master Template)/ 
 
 Make an editorial Calendar for this project right here where it belongs!  You won't loose it! and you can access it quickly without having to search for it elsewhere. Org-Mode excels for this task!  Take advantage of its powerful scheduling, agenda, and filtering capabilities!
 
 \newpage
 
-** 🔖 Chapter # -  <chapter name>
+** NEW 🔖 Chapter #:  <chapter name> /(Master Template)/
 :README:
-Chapters are the *Top Level Headings* within the *Book: Section* of this Org Book Publishing project...  Clone this *Chapter #* Template and paste it under your Book: outline heading whenever you need to start a new chapter...
+   Chapters are the *Top Level Headings* within the *Book: Section* of this Org Book Publishing project...  Clone this *Chapter #* Template and paste it under your Book: outline heading whenever you need to start a new chapter...
 
-The structure of this template is all set up for you ahead of time to allow you to immediately begin writing...  Replace titles to suit your needs, but keep the structure of *Chapter / Topic (sub-chapter)* intact... i.e., change names only...
+   The structure of this template is all set up for you ahead of time to allow you to immediately begin writing...  Replace titles to suit your needs, but keep the structure of *Chapter / Topic (sub-chapter)* intact... i.e., change names only...
 
-You may create any structure you need under the Topic Headings beginning at the next outline level below it...  This will ensure your book gets properly set up for LaTeX exporting to PDF and / or eBook formats with proper table of contents and book structure. 
+   You may create any structure you need under the Topic Headings beginning at the next outline level below it...  This will ensure your book gets properly set up for LaTeX exporting to PDF and / or eBook formats with proper table of contents and book structure. 
 
-*Topics* or (sub-chapters) are the *DNA* that make up the chapters in a book...  
-Chapters may contain several Topics. Topics may contain sub headings, tables, figures, examples, etc...
+   *Topics* or (sub-chapters) are the *DNA* that make up the chapters in a book... Chapters may contain several Topics. Topics may contain sub headings, tables, figures, examples, etc...
 :END:
-*** 📄 Introduction <replace with topic name if needed>
+*** NEW 📄 Chapter Introduction: /<replace with topic name if needed>/
 
 *Lorem Ipsum *Lorem Ipsum dolor sit amet*, consectetuer adipiscingelit. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo. Fusce tincidunt, /lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante./
 
 \newpage
 
-**** References:
+*** NEW ☞ Chapter References:
+:README:
+   =Org Mode Links Tip:=
 
-Add links to other reference, source docs, requirements, back stories, whatever, here...
+      To Create a Link Type: ~C-c C-l~ /(then paste: ~link~ & type: "description")/
+      To Open a Link Type: ~C-c C-o~
 
-- *[ [][] ]*
+      =-or-= Simply Fill in the Template Link Placeholders Below 
+           & copy/paste more placeholders as needed... ;-)
+:END:
 
-- *[ [][] ]*
+- [[][] ] - 
 
-- *[ [][] ]*
+- [[][] ] - 
 
-- *[ [][] ]*
+- [[][] ] - 
 
-- *[ [][] ]*
+- [[][] ] - 
+
+- [[][] ] -
 
 \newpage
 
-*** 📄 New Topic /(template - clone as needed)/
+*** NEW 📄 New Topic /(template - clone as needed)/
 
 At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
 
 \newpage
 
-*** 🗒 Background Notes:
+*** NEW 🗒 Background Notes:
 :README:
 The *Background Notes* section of a chapter is a place where you can add notes, ideas, instructions, whatever... close at hand within the chapter, and not have to worry about any of it getting exported and or published to the final output product...  
 
