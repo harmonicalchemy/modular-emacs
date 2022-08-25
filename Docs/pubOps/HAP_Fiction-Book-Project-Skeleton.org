@@ -56,7 +56,9 @@ To use this *Fiction Book Project Skeleton* /(template)/ for your own projects, 
 
 4. You don't need to copy the ~./auto/~ directory...  That will be created for you automacally the first time you export this ~.org~ file to ~.PDF~.
 
-5. You also don't need to copy the ~./org-templates~ directory... The files in there are automatically linked and included within this template. You don't need to change those settings unless you wish to customize the already customized tags, and export options. /They are allready set up correctly for the Fiction Book genre, and the category is all set as well... But if you must, you can modify the original files to make your changes rather than cloning to your project directory.../  Realize that if you do that while on the master branch it will get out of sync with origin, check out a local branch to make it easier to get back to defaults if you change your mind later. %^)
+5. You also don't need to copy the ~./org-templates~ directory /(That is... If you have installed and are using Harmonic Alchemy Modular Emacs, and it is properly configured for publishing this file)/... The files in there are automatically linked and included within this template. You don't need to change those settings unless you wish to customize the already customized tags, and export options. /They are allready set up correctly for the Fiction Book genre, and the category is all set as well... But if you must, you can modify the original files to make your changes rather than cloning to your project directory.../  
+
+   Realize when you make any changes to your ~.emacs.d~ Configuration files while on the ~MASTER~ branch of your cloned repository, it will get out of sync with origin! To avoid this problem, check out a local branch for your own custom changes to make it easier to get back to defaults if you change your mind later. %^)
 
 6. *Start Planning / Writing Your Fiction Book:* /Change headings and structure to match your project's outline sections-chapters-scenes-plots-characters, etc./ Start doing the Tasks within the Tasks section... Have fun doing this...
 
@@ -79,108 +81,255 @@ Subsequent repeated calls to the above command will overwrite your existing ~New
 *Last Modified: <2021-03-25 Thu>* So far things are pretty basic PDF... We will get fancy with other formats later... I promice... I have to do all this documentation first! /(As you can see, if you been following for the past couple years, things are getting done! Albeit Slowly)/
 
 Enjoy! - Alisha Awen
-
 :END:
 
-* 💡 Scratchpad Refile:
+* 💡 Scratchpad Refile:       :noexport:
 ** ☞ Start Here!
-
 :README:
-This Section is mainly to accommodate "seat-of-pants" writers (of which I have been accused of but I also crave the planning stuff).  I often come here for my [[https://projects.csail.mit.edu/gsb/old-archive/gsb-archive/gsb2000-02-11.html]["yak shaving"]] adventures...
+   This Section is mainly to accommodate "seat-of-pants" writers
+   /(of which I have been accused of... But I also crave the planning stuff)/.  I often come here for my [[https://projects.csail.mit.edu/gsb/old-archive/gsb-archive/gsb2000-02-11.html]["yak shaving"]] adventures...
 
-Use this: "💡 Scratchpad Refile ☞ Start Here!" section as a quick place to document ideas and inspirations as they come alone.  You can refile them later... (even if it is intended for elsewhere) Parallel universe? Sure... You got that covered. %^)
+   Use this: "*💡 Scratchpad Refile ☞ Start Here!*" section as a quick
+   place to document ideas and inspirations as they come along...
+   You can refile them later... 
 
-- Use this section to quickly capture inspired at-the-moment ideas While they are still fresh in mind.
+   Even if your quick inspiration was intended for elsewhere?,
+   /(e.g., You become bored documenting tedious technical information/
+   /when suddenly, out-of-nowhere, an idea for a new sci-fi scene in/
+   /that screenplay episode you had in the back of your mind all day!,/
+   /etc.)/
 
-- Come directly here:
+   =Ummm.... Parallel Universe?=
 
-  + Advance your cursor a few newlines below this README drawer on a fresh clean line with some extra space below it as well... (above any previously time stamped entries you may already have placed)... If this is the first time, get rid of the "Visisonar - Object" example entry below... That is only for the template to illustrate these instructions by example.
+   =Sure!= You can put anything in here! We've got that covered for you
+         in this Start Here spot. %^)
 
-  + You are now at the top of the list, (a few lines below this README drawer). The time is the present. -and- You are all fired up with an idea to write about!
+   Use this section to quickly capture inspired at-the-moment ideas
+   =While they are still fresh in mind=
 
-  + Enter a new timestamp with "C-c .", (that's: Press Ctrl-c, let go, and then type a Period .)  A date chooser panel will pop up...
+   =How To Use ???= 
 
-  + Press ENTER to auto accept today's date and time.  A new timestamped line will appear with your cursor blinking on the right of it... There won't be any future entries above you... (maybe next decade? time travel?)
+      /Simply Come directly here and do what ever you want.../
+      /"Your Crazy Daze are Covered!" Yay!/ 
 
-  + Advance your cursor a few more lines down to some fresh empty space -and- 
+   The following Shortcuts will Help you get started as quickly 
+   as possible:
 
-  + Start Typing Your Idea Like Mad! 
+   - [ ] *Copy/Clone:* =Example Idea= *Heading Below:* 
 
-  + Don't stop and don't worry about formatting or organizing it until later, after all your inspiration has passed and you are ready to organize...
+         =Copy the Heading AND ALL ITS CONTENTS=
 
-- After You are Done Writing:
+         /Change your Clone's Title to Your Own Title/
 
-  + Come back to the timestamp line where you first started... make sure the timestamp has at least one empty line above and below it.
+   - [ ] *Change the timestamp on your Clone Entry:* [0/1]
 
-  + Give the timestamp line a title to the right of the timestamp.
+         =Type:= ~C-c .~ while cursor is sitting on the timestamp
 
-  + Make this timestamped line an outline heading with: "C-c ENTER" (that's Press Ctrl-c, let go and then press ENTER)
-     (make sure this new heading has empty lines above and below it)
+         /i.e., Press: ~Ctrl-c~, let go, and then type a Period/ ~.~
 
-  + Adjust this new outline heading level with: M-▷ (this will make it a child of ☞ Start Here! heading above, rather than a sibling).
+         A date chooser panel will pop up...
 
-  + Adjust the space between your heading and your fantastic idea below it to one single blank line.
+     + [ ] *Press* ~ENTER~ *to auto accept today's date and time.*  
 
-  + You can organize everything else later...  Don't scare away the muses! Get your story down now!
+            The existing timestamp will change to TODAY...
 
-  + Then you may go out to play elsewhere little grasshopper... But come back later and organize things... OK? Don't create a swamp in here! And don't forget to take your bath tonight... ;-) 
+   - [ ] *Advance your cursor and Start Writing!!!*
 
-  + Having done the simple steps above any time you get inspired, you will be able to tell your grand children.. "I got my first spark of an idea for that book back in Year, Month, Day, time, second" (50 years later!) Now that is being organized! LOL
+          Advance your cursor few more lines down to some fresh 
+          empty space and Start Typing Your Story Idea Like Mad!!! 
+
+   - [ ] *Don't stop Writing!* 
+
+          Don't worry about formatting or organizing it until later, 
+          after all your inspiration has passed and you are ready 
+          to organize...
+
+   - [ ] =TODO After You Are Done Writing:=
+
+        + [ ] *Adjust Space:* 
+
+               Adjust space between your headings and your fantastic ideas
+               below them it to one single blank line...
+
+        + [ ] *Further organize things as needed...*
+
+               If you become inspired to write while organizing.... 
+               Do that first and come back later... Don't scare away your 
+               muses when they beckon! Get your story down first! No matter 
+               what state it may be in at first... GET IT DOWN
+
+        + [ ] *You Are Free To Go Out And Play Elsewhere Little Grasshopper*
+
+               If after writing... You don't feel like organizing now?
+               NO PROBLEM... But come back later and organize things... 
+               OK? Don't create a swamp in here! /And don't forget to take/  
+               /your bath tonight... ;-)/
+
+   Having done the simple steps above any time you get inspired, you will be able to tell your grand children.. "I got my first spark of an idea for that book back in Year, Month, Day, time, second" (50 years later!) Now that is being organized! LOL
+:END:
+*** 💡 <2022-08-20 Sat> Example Idea /(clone this)/
+:README:
+   This is a dummy example of some crazy idea that you may have gotten at the spur of the moment, while you were doing something elsewhere within this project...  After you are done getting as much of the idea as you initally can then you can simply go back to what you were doing before the inspiration segue tore you away... you might want to schedule this as a todo item before leaving though...
+
+   Later when you are free you can come back to file this or place it where it belongs.  In the case of the note below it would probably go in a research folder of a Sci-Fi related project...
 :END:
 
-*** <2020-06-07 Sun> Visisonar - Object from Asimov's Foundation Series
+=Copy/Clone this Boilerplate Template NOW= And Change your clone's Title.. 
 
+=Then Quickly Get Started Writing Down your FRESH NEW IDEA=
+
+\newpage
+
+*** 💡 <2020-06-07 Sun> Visisonar - Object from Asimov's Foundation Series
 :README:
-This is a dummy example of some crazy idea that you may have gotten at the spur of the moment, while you were doing something elsewhere within this project...  After you are done getting as much of the idea as you initally can then you can simply go back to what you were doing before the inspiration segue tore you away... you might want to schedule this as a todo item before leaving though...
+   This is a dummy example of some crazy idea that you may have gotten at the spur of the moment, while you were doing something elsewhere within this project...  After you are done getting as much of the idea as you initally can then you can simply go back to what you were doing before the inspiration segue tore you away... you might want to schedule this as a todo item before leaving though...
 
-Later when you are free you can come back to file this or place it where it belongs.  In the case of the note below it would probably go in a research folder of a Sci-Fi related project...
+   Later when you are free you can come back to file this or place it where it belongs.  In the case of the note below it would probably go in a research folder of a Sci-Fi related project...
 :END:
 
 From Isaac Asimov's science fiction series 'Foundation', specifically the section of 'Foundation and Empire' entitled 'The Mule', the visisonar is considered a musical instrument.
 
 Unlike most instruments, this one does not achieve its effect by using sonic effects but, instead, directly stimulates the listeners' mental well-being. The number of people and level of effect depends on the skill level of the player. As this was a device from the First Empire, there were not that many people around with any skill at all. However, the Mule's clown, Magnifico, had some skill with the instrument and was asked to play for select parties on the Foundation and for large groups of workers on Haven. This may not have been a good idea...
-* 📖 Book:
-** DONE 📃 Synopsis:
-CLOSED: [2020-07-02 Thu 18:11]
-:LOGBOOK:
-- State "DONE"       from "ACTIVE"     [2020-07-02 Thu 18:11]
-:END:
 
+\newpage
+
+* 🕮 Book:
+** NEW 📃 Synopsis:
 :README:
-This section has been purposefully left blank for you to fill in...
+   This section has been purposefully left blank for you to fill in...
 
-Use this space to write the main synopsis of your work... You can write anything you want here but it is recommended to use the award winning "Snowflake Method" created by [[https://www.advancedfictionwriting.com/][Randy Ingermanson]] of Ingermanson Communications, Inc.  These steps have been provided for you in the main "Tasks:" section...
+   Use this space to write the main synopsis of your work... You can write anything you want here but it is recommended to use the award winning *"Snowflake Method"* created by [[https://www.advancedfictionwriting.com/][Randy Ingermanson]] of Ingermanson Communications, Inc. These steps have been provided for you in the main *"Tasks:"* section...
 
-- Go to the "⏰ Tasks:" section and do the: "📃 Synopsis Tasks:"
+   - [ ] *Go to the:* =⏰ Tasks:= *Section and do the:* =📃 Synopsis Tasks:=
 
+   - [ ] *After Completing Tasks Mark Them:* ~DONE~
 
-- After completing those tasks mark them "DONE" and place your resulting synopsis notes in here... You will be coming back here to consult these notes for many things as you promote and publish your book.
+   - [ ] *Place Resulting Synopsis Notes in Here:*
+
+          You will be coming back here to consult these notes for many 
+          things as you promote and publish your book.
 :END:
+
+=Synopsis Content:= Yadda... Yadda... Yadda...
+
+\newpage
+
 ** NEW 📃 Front Matter:
-
-Front Matter... yadda... yadda... yadda...
-
-** 🔖 Chapter 1
-
-*** 📄 Episode - <replace w/ chapter name>
 :README:
-Episodes or Scenes are the DNA that make up the chapters in a novel...  
+   This section has been purposefully left blank for you to fill in...
 
-Chapters can contain several scenes or episodes... There can be many twisty paths all alike (or all different)... %~)
+   Use this space for holding all of the Front Matter related content of your book... 
+
+   Add Book Cover Art, Copyright Info, Publishing Info, etc. here... Only these basic elements are included in this Front Matter section which may or may not be exported to published media...
 :END:
 
-# Begin Chapter:
+=Front Matter Content:= yadda... yadda... yadda...
 
-<insert chapter / episode text here>
+\newpage
 
-Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo. Fusce tincidunt, lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante. 
+** NEW 📃 Preface: /(or Introduction - Optional)/
+:README:
+   This section has been purposefully left blank for you to fill in...
+
+   Use this space to write the *Preface* / or *Introduction* to your book... 
+
+   Optionally you may wish to include a *Table of Contents*... However
+   there are automatic ways that =Emacs Org-Mode can configure TOCs= as well...
+:END:
+
+=Preface or Introduction Content:= 
+
+   yadda... yadda... yadda...
+
+\newpage
+** NEW 📖 Chapter: ~1~ /(Master Template)/
+:README:
+   *Chapters/Episodes* are the *Top Level Headings* within the =Book:= Section of this Org Book Publishing project...  Clone this *New Chapter/Episode #:* Master Template and paste it as a child under your =Book:= outline heading... Do this whenever you need to start a new chapter...
+
+   The structure of this template is all set up for you ahead of time to allow you to immediately begin writing...  Replace titles to suit your needs, but keep the structure of *Chapter / Scene (sub-chapter)* intact... i.e., change names only...
+:END:
+*** ☞ Chapter References:
+:README:
+   =Org Mode Links Tip:=
+
+      To Create a Link Type: ~C-c C-l~ /(then paste: ~link~ & type: "description")/
+      To Open a Link Type: ~C-c C-o~
+
+      =-or-= Simply Fill in the Template Link Placeholders Below 
+           & copy/paste more placeholders as needed... ;-)
+:END:
+
+*Add links to Anything Deemed Important to the Writing of This Chapter:*
+/(Links to Websites, Other Stories, Images, Sound, Video, Whatever...)/
+
+- [[][] ] - 
+
+- [[][] ] - 
+
+- [[][] ] - 
+
+- [[][] ] - 
+
+- [[][] ] -
+
+\newpage
+
+*** 🔖 Scene  1: /(Replace With Title or Simply Use:/ ~1.1.1~ /etc.)/
+:README:
+   Scenes are the DNA that make up the chapters in a novel or episodes in a production... Each Scene could have its own title or phrase or it could not have a title but instead sub chapter numbering only...
+
+   Chapters may contain several scenes... There can be many twisty paths all alike (or all different)... %~)
+
+   This *Scene Template* could =ALSO Serve As A CHAPTER INTRODUCTION= if you need one...
+
+   =Note:= /You also have options to export with TeX directives/ 
+          /to add sub chapter numbering e.g., ~1.1.1...~ etc.../
+          /and this could be added with or without inclusion of/
+          /the scene name headings.../
+:END:
+
+~<insert Scene Content Here>~
+
+Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo. Fusce tincidunt, lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante.
 
 At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
 
-# End of Chapter:
+\newpage
 
-*** 🗒 Background Notes:
+=Add More Scene Headings Below as Needed for Chapter=
 
+*** 🔖 Scene  2: /(Replace With Title or Simply Use:/ ~1.2.1~ /etc.)/
+:README:
+   Scenes are the DNA that make up the chapters in a novel or episodes in a production... Each Scene could have its own title or phrase or it could not have a title but instead sub chapter numbering only...
+
+   Chapters may contain several scenes... There can be many twisty paths all alike (or all different)... %~)
+
+   This *Scene Template* could =ALSO Serve As A CHAPTER INTRODUCTION= if you need one...
+
+   =Note:= /You also have options to export with TeX directives/ 
+          /to add sub chapter numbering e.g., ~1.1.1...~ etc.../
+          /and this could be added with or without inclusion of/
+          /the scene name headings.../
+:END:
+
+~<insert Scene Content Here>~
+
+Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo. Fusce tincidunt, lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante.
+
+At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
+
+\newpage
+
+=Add More Scene Headings Below as Needed for Chapter=
+
+*** 🗒 Background Notes: /(Chapter Template)/
+:README:
+   *Background Notes*, /(unlike Scenes, Back Stories, Summaries etc.)/ Should be written in =OUTLINE= form to aid in organization of events, etc... This section is =NOT the place to create NEW ideas=, but rather to =organize EXISTING ideas you have already written=...
+
+   =None of the Content Written Here Should be Added to any Chapter/Scenes within your Book= =(THIS IS A META PLACE)= 
+
+   /i.e., Your Books Internal Analyst Behind the Curtain So-To-Speak... %^)/
+:END:
 **** 🗒 Note 1: <2020-05-10 Sun>
 
 + Mark each note's timestamp to its initial creation time. This will enable emerging notes for chapters to be searched chronologically, and to give you an idea of how things evolve over time...
@@ -207,7 +356,7 @@ Each new note needs to get its own heading and initial timestamp...
 
 Quid Novi? Lorem Ipsum dolor sit amet,consectetur adipisicing elit, sed doeiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim adminim veniam, quis nostrudexercitation ullamco laboris nisi utaliquip ex ea commodo consequat.Duis aute irure dolor inreprehenderit in coluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatatnon proident, sunt in culpa quiofficia deserunt mollit anim id estlaborum.
 
-**** 🗒 Phasellus orci: <2020-05-10 Sun>
+**** 🗒 Phasellus orci: <2022-08-20 Sat>
 
 Etiam tempor elit auctor magna. Nullam nibh velit, vestibulum ut, eleifend non, pulvinar eget, enim. Classaptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer velit mauris, convallis acongue sed, placerat id, odio. Etiam venenatis tortor sed lectus. Nulla non orci. In egestas porttitor quam. Duis nec diameget nibh mattis tempus. Curabitus accumsan pede id odio. Nunc vitae libero. Aenean condimentum diam et turpis.Vestibulum non risus. Ut consectetuer gravida elit. Aenean est nunc, varius sed, alquam eu, feugiat sit amet, metus. Sedvenenatis odio id eros.
 
@@ -219,219 +368,147 @@ Etiam tempor elit auctor magna. Nullam nibh velit, vestibulum ut, eleifend non, 
 
 Yadda, yadda, yadda. etc...
 
+\newpage
 
-
-** 🔖 Chapter 2
-
-*** 📄 Episode - <replace w/ chapter name>
+*** 📒 Back Stories: /(Chapter Template)/
 :README:
-Episodes or Scenes are the DNA that make up the chapters in a novel...  
+   This section is for a chapter's Back Story development... The following tips will help you manage development of your back stories and how they will best fit into your evolving story... 
 
-Chapters can contain several scenes or episodes... There can be many twisty paths all alike (or all different)... %~)
+   - =Keep Things Organized:=
+
+      + *Add Time Stamped Background Notes:* /(within the Background Notes/
+          /section above)/ about new content added to this Back Stories
+          section as you progress over time...
+
+      + *Add Time Stamps to:* Sub-headings within the Background Notes 
+          Section that reflect back to paragraphs written within 
+          this section...
+
+      + *Add TODO Keywords* to sub-headings within the Background Notes 
+          Section reflecting back to paragraphs written within 
+          this section...
+
+   Doing the above steps will help you keep track of back story development and get better organized about how your book is developing, what areas need the most work, seeing problems that need to be resolved, etc.  Most importantly, this will help prevent you from making any grave mistakes causing contradictions within your story later... /(unless that was your intention "Alfred Hitchcock")/... In any case you will be better informed by keeping things organized here where you can see them and resolve them quickly...
+
+   =The Content Written Within This Section May or May Not be Added to actual Chapters/Scenes of your Book...=
+:END:
+**** 📒 Back Story Example One: <2020-05-10 Sun>
+
+=Note:= This is an example of a back story related to this chapter, 
+       or possibly connecting to another chapter in your book... 
+
+Write it down in the rough here and then later you can develop it further as needed. Keep Background Notes about this back story as well, AND keep them up to date as this story develops!
+
+\newpage
+
+**** 📒 Phasellus orci: <2022-08-20 Sat>
+
+=Note:= This is an example of a back story /(with an actual title)/ 
+       which has a companion Background Note /(by the same title)/ 
+       associated with it. Keep the companion Background Note up 
+       to date with developments happening in here...
+
+The following Back Story is related to this chapter, but ALSO possibly connecting with other chapters within this book... 
+
+Write it down in the rough here and then later you can develop it further as needed. Keep your Background Notes about this back story up to date as well...
+
+\newpage
+
+*** 🗡 Plot Summary: /(Chapter Template)/
+:README:
+   Plot Summaries, /(Just Like Background Notes)/ are ALSO =META DATA= Not Intended to be Added back to the Chapters/Scenes of your Book... The purpose of Plot Summaries are to help you during planning stages where you are trying to resolve that twisty mess you created... OMG!
+
+   Keeping the above in mind while writing the plot summary of a chapter, will help you get better organized about how your book is developing, what directions it is taking, what areas need the most work, where problems or inconsistencies may arise, etc.  
+
+   Most importantly, this will help prevent you from making any grave mistakes causing contradictions within your story later... /(unless that was your intention "Alfred Hitchcock")/... In any case you will be better informed by keeping all your plot tasks here where you can see them and resolve them quickly...
 :END:
 
-# Begin Chapter:
+=Plot Summary= /(example)/
 
-<insert chapter / episode text here>
+In this chapter we are dealing with yadda yadda yadda which must be resolved with yadda yadda yadda.  But be careful about Yadda Yadda Yadda as she does not exist in this book at all!  What?  Nevermind... She never existed... Only in your dreams...
 
-Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo. Fusce tincidunt, lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante. 
+\newpage
 
-At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
+* 🔍 Research:                      :noexport:
+** 🗓 Log Book:
 
-# End of Chapter:
+=Place New LOG Items= /(From Templates)/ =Here:=
 
-*** 🗒 Background Notes:
+\newpage
 
-**** 🗒 Note 1: <2020-05-10 Sun>
-
-+ Mark each note's timestamp to its initial creation time. This will enable emerging notes for chapters to be searched chronologically, and to give you an idea of how things evolve over time...
-
-+ Add anything you need here under this heading formatted any way needed to present the data... Sub levels are fine, tables are fine... etc.  This is your chapter's Notebook, Scrapbook, whatever any extra info/metadata you feel is important to record...
-
-  + Use bulleted lists/sublist etc. if needed...
-
-1. Or Numbered Lists...
-
-|----+--------|
-| Or | Tables |
-|----+--------|
-|  1 |    2.3 |
-|----+--------|
-
-Do any or all the above to help get the concepts and images of your book clear in mind...
-
-**** 🗒 Note 2: <2020-05-10 Sun>
-
-Each new note needs to get its own heading and initial timestamp...
-
-****** Quid Novi?
-
-Quid Novi? Lorem Ipsum dolor sit amet,consectetur adipisicing elit, sed doeiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim adminim veniam, quis nostrudexercitation ullamco laboris nisi utaliquip ex ea commodo consequat.Duis aute irure dolor inreprehenderit in coluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatatnon proident, sunt in culpa quiofficia deserunt mollit anim id estlaborum.
-
-**** 🗒 Phasellus orci: <2020-05-10 Sun>
-
-Etiam tempor elit auctor magna. Nullam nibh velit, vestibulum ut, eleifend non, pulvinar eget, enim. Classaptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer velit mauris, convallis acongue sed, placerat id, odio. Etiam venenatis tortor sed lectus. Nulla non orci. In egestas porttitor quam. Duis nec diameget nibh mattis tempus. Curabitus accumsan pede id odio. Nunc vitae libero. Aenean condimentum diam et turpis.Vestibulum non risus. Ut consectetuer gravida elit. Aenean est nunc, varius sed, alquam eu, feugiat sit amet, metus. Sedvenenatis odio id eros.
-
-|----------+-----------+-----------+-----------+-------------------|
-| Inceptos | Venenatis | Convallis | Curabitus | Nunc vitae libero |
-|----------+-----------+-----------+-----------+-------------------|
-| test 1   | test 2    | test 3    | test 4    | test 5            |
-|----------+-----------+-----------+-----------+-------------------|
-
-Yadda, yadda, yadda. etc...
-
-
-
-** 🔖 Chapter 3
-
-*** 📄 Episode - <replace w/ chapter name>
-:README:
-Episodes or Scenes are the DNA that make up the chapters in a novel...  
-
-Chapters can contain several scenes or episodes... There can be many twisty paths all alike (or all different)... %~)
-:END:
-
-# Begin Chapter:
-
-<insert chapter / episode text here>
-
-Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo. Fusce tincidunt, lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante. 
-
-At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
-
-# End of Chapter:
-
-*** 🗒 Background Notes:
-
-**** 🗒 Note 1: <2020-05-10 Sun>
-
-+ Mark each note's timestamp to its initial creation time. This will enable emerging notes for chapters to be searched chronologically, and to give you an idea of how things evolve over time...
-
-+ Add anything you need here under this heading formatted any way needed to present the data... Sub levels are fine, tables are fine... etc.  This is your chapter's Notebook, Scrapbook, whatever any extra info/metadata you feel is important to record...
-
-  + Use bulleted lists/sublist etc. if needed...
-
-1. Or Numbered Lists...
-
-|----+--------|
-| Or | Tables |
-|----+--------|
-|  1 |    2.3 |
-|----+--------|
-
-Do any or all the above to help get the concepts and images of your book clear in mind...
-
-**** 🗒 Note 2: <2020-05-10 Sun>
-
-Each new note needs to get its own heading and initial timestamp...
-
-****** Quid Novi?
-
-Quid Novi? Lorem Ipsum dolor sit amet,consectetur adipisicing elit, sed doeiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim adminim veniam, quis nostrudexercitation ullamco laboris nisi utaliquip ex ea commodo consequat.Duis aute irure dolor inreprehenderit in coluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatatnon proident, sunt in culpa quiofficia deserunt mollit anim id estlaborum.
-
-**** 🗒 Phasellus orci: <2020-05-10 Sun>
-
-Etiam tempor elit auctor magna. Nullam nibh velit, vestibulum ut, eleifend non, pulvinar eget, enim. Classaptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer velit mauris, convallis acongue sed, placerat id, odio. Etiam venenatis tortor sed lectus. Nulla non orci. In egestas porttitor quam. Duis nec diameget nibh mattis tempus. Curabitus accumsan pede id odio. Nunc vitae libero. Aenean condimentum diam et turpis.Vestibulum non risus. Ut consectetuer gravida elit. Aenean est nunc, varius sed, alquam eu, feugiat sit amet, metus. Sedvenenatis odio id eros.
-
-|----------+-----------+-----------+-----------+-------------------|
-| Inceptos | Venenatis | Convallis | Curabitus | Nunc vitae libero |
-|----------+-----------+-----------+-----------+-------------------|
-| test 1   | test 2    | test 3    | test 4    | test 5            |
-|----------+-----------+-----------+-----------+-------------------|
-
-Yadda, yadda, yadda. etc...
-
-
-
-** 📒 Back Story Plots:
-
-*** Plot Example One:
-
-Note: This is an example of a back story plot related to your book... Write it down in the rough here and then later you can develop it further if needed.
-
-*** Plot Example Two:
-
-Note: This is an example of a back story plot related to your book... Write it down in the rough here and then later you can develop it further if needed.
-
-*** Add more Plots like this:
-
-Note: This is an example of a back story plot related to your book... Write it down in the rough here and then later you can develop it further if needed.
-
-** 🗡 Chapter Plot Summaries:
-
-Gather all the plot ideas that have been building over the years and put them in here... then you can decide how and when to present them within the unfolding story.
-
-*** Chapter # Plots
-
-In this chapter we are dealing with  yadda yadda yadda which must be resolved with yadda yadda yadda.
-
-*** Chapter # Plots
-
-In this chapter we are dealing with  yadda yadda yadda which must be resolved with yadda yadda yadda.
-
-*** Chapter # Plots
-
-In this chapter we are dealing with  yadda yadda yadda which must be resolved with yadda yadda yadda.
-* 📒 Research:
-** 💡 New Episode Ideas:
 ** 👤 Characters:
-** DONE 🗡 Plots:
-CLOSED: [2020-07-01 Wed 14:30]
-:LOGBOOK:
-- State "DONE"       from              [2020-07-01 Wed 14:30]
-:END:
 
+=Place= *👤 New Character:* =Items= /(From Templates)/ =Here:=
+
+\newpage
+
+** ♾ Worlds:
+
+=Place= *♾ New World:* =Items= /(From Templates)/ =Here:=
+
+\newpage
+
+** ✨ Regions:
+
+=Place= *✨ New Region:* =Items= /(From Templates)/ =Here:=
+
+\newpage
+
+** ∅ Planets - Satellites:
+
+=Place= *∅ New Planet or Satellite:* =Items= /(From Templates)/ =Here:=
+
+\newpage
+
+** 👥 Groups - Factions:
+
+=Place= *👥 New Group or Faction:* =Items:= /(From Templates)/ =Here:=
+
+\newpage
+
+** 🗡 Plots:
 :README:
-- Use this space to add plot information as it develops within your book.
-
-- First time only... Initially: Copy/Clone the "Back Story Plots" and "Chapter Plot Summaries" outline headings (and all of their contents) from the "Templates:" section as outline sub-headings here to be repurposed for actual work...
-
-- After the two outline headings above have been copy/cloned as a sub headings here under this "Plots:" parent section, you will have three example sub-headings to re-use with your specifics below... After that you can go back to your Templates section to copy/clone one or more individual "Back Story Plot Example" outline headings to re-purpose and add to your existing list...
-
-- It's a good idea to keep things organized (based on evolving existing and new emerging events within your book). The following tips will help you:
-
-    + Keep your outline sub-headings timestamped below.
-
-    + Keep track of your plot summaries by adding "GTD TODO" keywords.
-
-    + Prioritize the plot summaries as well if needed.
-
-The above will help you get better organized about how your book is developing, what areas need the most work, etc.  Most importantly, this will help prevent you from making any grave mistakes causing any contradictions within your story later... (unless that was your intention "Alfred Hitchcock")... In any case you will be better informed by keeping all your plot tasks here where you can see them and resolve them quickly...
+   This Research/Plots section is for documenting or planning out plots that may or may not be related to the actual plots you are developing within the books chapters... This is for Research purposes... NOT for story development... But as research goes it will influence and or help you make your real plots more believable and/or accurate...
 :END:
-**  👥 Groups - Factions:
-** 🌐 Locations - Worlds:
-** 🎪 Major Events:
-** 🏞 Scenes:
+*** 🗡 Plot Idea: /(Or Research of Classic Plot - Clone This and Re-Purpose your copy)/
+:README:
+   This is All =META DATA= Not Intended to be Added to ANY Chapters/Scenes of your Book... This section is purely for research purposes... To help you while you are writing your book... You may have some classic plot outlined here that relates to your book, or it may be some general plot idea that you may wish to employ later...  These are general plots usually relating to the ENTIRE book, rather than any individual chapter...
+:END:
+
+=Plot IDEA= /(example to commendeer for your purposes)/
+
+I found this classic Plot... /(see details below...)/ dealing with yadda yadda yadda which could be modified and used to: yadda yadda yadda.... To be continued...
+
+\newpage
+
 ** ❝ Quotations:
+
+\newpage
+
 ** 🖍 Styles:
-* ACTIVE ⏰ Tasks:
-:LOGBOOK:
-- State "ACTIVE"     from "DONE"       [2020-07-02 Thu 17:36]
-- State "DONE"       from "ACTIVE"     [2020-07-01 Wed 14:36]
-- State "ACTIVE"     from "DONE"       [2020-07-01 Wed 11:00]
-- State "DONE"       from              [2020-06-30 Tue 05:46]
-:END:
 
+\newpage
+
+* ⏰ Tasks:                    :noexport:
 :README:
-- Use this space to add time stamped Tasks below for any pourpose you may need...
+   - Use this space to add time stamped Tasks below for any pourpose you may need...
 
-- To create a time stamped task entry, use key command:
+   - To create a time stamped task entry, use key command:
 
-   + "C-c ."
+      + "C-c ."
 
-   + Make your new entry an outline sub-heading of this project's general "Tasks:" section heading above (or optionally you could create another more specific Tasks: section wherever else you may need a collection of task entries...
+      + Make your new entry an outline sub-heading of this project's general "Tasks:" section heading above (or optionally you could create another more specific Tasks: section wherever else you may need a collection of task entries...
 
-- Keep your Tasks in Decending Chronological Order.
-   (i.e., put your newest tasks on top)
+   - Keep your Tasks in Decending Chronological Order.
+      (i.e., put your newest tasks on top)
 
-- The three provided tasks below are important first steps to take when first starting a novel.  They are based on the "Snowflake Method" by Randy Ingermanson. 
+   - The three provided tasks below are important first steps to take when first starting a novel.  They are based on the "Snowflake Method" by Randy Ingermanson. 
 
-- These tasks should be started as soon as you create a new project using this HAP-Book-Project-Skeleton... 
+   - These tasks should be started as soon as you create a new project using this HAP-Book-Project-Skeleton... 
 
-- It is hoped that this process will give you a faster, efficient, organized "bootstrapped" head start and teach some guidance about how to properly organize and write your books with a clearer mind, inspired outlook, and renewed motivation...
+   - It is hoped that this process will give you a faster, efficient, organized "bootstrapped" head start and teach some guidance about how to properly organize and write your books with a clearer mind, inspired outlook, and renewed motivation...
 :END:
-
-*** DONE 📃 Synopsis Tasks:
+** DONE 📃 Synopsis Tasks:
 CLOSED: [2020-07-04 Sat 15:58]
 :LOGBOOK:
 - State "DONE"       from "ACTIVE"     [2020-07-04 Sat 15:58]
@@ -443,7 +520,7 @@ CLOSED: [2020-07-04 Sat 15:58]
 The Synopsis Tasks below are based on The Award winning Snowflake Method created by [[https://www.advancedfictionwriting.com/][Randy Ingermanson]] of Ingermanson Communications, Inc. You could write anything you want for a synopsis, but it is recommended to use the steps below first before doing any other writing!  This advise comes from many highly acclaimed master authors! (including Mark Twain himself!)
 :END:
 
-**** DONE Important Before you start!
+*** DONE Important Before you start!
 CLOSED: [2020-07-02 Thu 17:40]
 :LOGBOOK:
 - State "DONE"       from "ACTIVE"     [2020-07-02 Thu 17:40]
@@ -461,7 +538,7 @@ After completing above, follow the steps below...
 
 when you are done with these Synopsis tasks, you will have completed half the battle of writing your novel! The other half is getting to know your characters... Plots and chapters will flow from that effortlessly...
 
-**** DONE Step One - Write a Single Sentence Summary:
+*** DONE Step One - Write a Single Sentence Summary:
 CLOSED: [2020-07-03 Fri 19:44]
 :LOGBOOK:
 - State "DONE"       from "ACTIVE"     [2020-07-03 Fri 19:44]
@@ -525,7 +602,7 @@ Important! Closing rules of sales dictate the law of attraction always applies..
 
 When you later write your book proposal, this sentence should appear very early in the proposal. It's the hook that will sell your book to your editor, to your committee, to the sales force, to bookstore owners, and ultimately to readers. So make the best one you can!
 
-****** Here are some tips:
+***** Here are some tips:
 
 - Shorter is better. Try for fewer than 15 words.
 
@@ -537,7 +614,7 @@ When you later write your book proposal, this sentence should appear very early 
 
 - Check out [[yt:feD-dImM4a8][LEGO Star Wars: The Last Jedi in 60 Seconds]] (and other 60 second movies like it) for a completely different audio/visual parallel to this literary concept...
 
-**** DONE Step Two - Expand Summary to Paragraph
+*** DONE Step Two - Expand Summary to Paragraph
 CLOSED: [2020-07-04 Sat 15:31]
 :LOGBOOK:
 - State "DONE"       from "NEW"        [2020-07-04 Sat 15:31]
@@ -563,7 +640,7 @@ If you believe in the Three-Act structure, then:
 
 - Act 4 wraps everything up.
 
-***** Make 5 Sentences:
+**** Make 5 Sentences:
 
 1. Exposition: 
 
@@ -585,13 +662,13 @@ If you believe in the Three-Act structure, then:
 
    This is where it all previous conflicts are finally resolved, one way or the other... Whether or not the lead character (hero) whatever succeeds or fails.  The story once resolved ends as a comedy, tragedy, or mellowdrama.  you decide on that...
 
-***** Using Your One-Paragraph Summary:
+**** Using Your One-Paragraph Summary:
 
 You will be using this paragraph in your proposals. It is only for your agents etc.  Not for your readers who need to be kept in the dark about how the story develops before reading the book! Spoilers!
 
 However, Some of this paragraph (written with parts pourposefully left out or with questions put in place) may end up back-cover copy for your book's promotion.
 
-**** DONE Step Three - Expand Paragraph to Synopsis:
+*** DONE Step Three - Expand Paragraph to Synopsis:
 CLOSED: [2020-07-04 Sat 15:54]
 :LOGBOOK:
 - State "DONE"       from "NEW"        [2020-07-04 Sat 15:54]
@@ -608,7 +685,7 @@ By this stage, you should have a good idea of the large-scale structure of your 
 At the end of this exercise, you will have a nice one-page skeleton of your novel. It's fine if your skeleton does not fit all on one single-spaced page as long as it does not go beyond that... 
 
 Your process now is to grow these ideas as chapters of your story. You are expanding the conflict. You have a synopsis suitable for a proposal, and you are well on your way to doing extended promotion...
-*** ACTIVE 👤 Character Tasks:
+** ACTIVE 👤 Character Tasks:
 :LOGBOOK:
 - State "ACTIVE"     from "DONE"       [2020-07-04 Sat 15:59]
 - State "DONE"       from "ACTIVE"     [2020-07-01 Wed 11:17]
@@ -628,9 +705,9 @@ A character bible is the private lifetime personell file of that character...  C
 All of it is fake, but as these secret CIA teens carry out roll play _(within their fake role as normal high school students)_, they begin to believe more and more that they actually "are" who their profiles say they are and not trained CIA agents anymore!  This TV series illustrates the power of getting immersed emphatically with your characters!
 :END:
 
-**** ACTIVE 📒 Create Character Bible for Each Character:
+*** ACTIVE 📒 Create Character Bible for Each Character:
 
-***** DONE 📒 Prepare Character Summary Sheet:
+**** DONE 📒 Prepare Character Summary Sheet:
 CLOSED: [2020-07-07 Tue 15:31]
 :LOGBOOK:
 - State "DONE"       from "ACTIVE"     [2020-07-07 Tue 15:31]
@@ -675,7 +752,7 @@ Take an hour to produce the following summary sheet.  This sheet will provide al
 |-------------------+----------------------------------------------------------|
 
 
-***** DONE 👤 Detailed Character Interview:
+**** DONE 👤 Detailed Character Interview:
 CLOSED: [2020-07-07 Tue 21:58]
 :LOGBOOK:
 - State "DONE"       from "ACTIVE"     [2020-07-07 Tue 21:58]
@@ -687,53 +764,53 @@ Perform a Detailed Character Interview.  This is best done as a "role play" exer
 Doing it this way will put you in the right emotional framework.  You will adopt this character's normal anxiety, expectations, assumptions, prejustice etc. You will end up feeling this character's impressions of the various questions on the forms, and you will feel this persons emotions and expectations going into a face to face interview... The results will be more authentic about the character and less, if anything at all about you the author...
 :END:
 
-****** *Name:*
+***** *Name:*
 
 Put full name here.  Names are important! If you name your character incorrectly based on your desired personality type you will get into trouble!  Names must match the personality! It makes a big difference... Do your names research... Unless of course you need that "Boy named Sue" effect...
 
-****** *Background:*
+***** *Background:*
 
-******* Birth:
+****** Birth:
 - Birthday:
 
 - Place of Birth:
 
-******* Parents:
+****** Parents:
 
 - What was important to the character's parents?
 
-******* Siblings:
+****** Siblings:
 
 <add information about siblings here>
 
-******* Economic/Social Status Growing Up?
+****** Economic/Social Status Growing Up?
 
 <info>
 
-******* Ethnic Background:
+****** Ethnic Background:
 
 <info>
 
-******* Places Lived:
+****** Places Lived:
 
 - Previous Places Lived:
 
 - Current Address:
 
-******* Education:
+****** Education:
 
 - Favourite Subject:
 
 - Special Training:
 
-******* Jobs:
+****** Jobs:
 - Salary:
 
-******* Travel:
+****** Travel:
 
 <info>
 
-****** Friends:
+***** Friends:
 
 - How do people view this character?
 
@@ -749,23 +826,23 @@ Put full name here.  Names are important! If you name your character incorrectly
 
 - Who does this character most admire?
 
-****** Enemies:
+***** Enemies:
 
 <Add information about this characters enemies, etc.>
 
-****** Dating, Marriage:
+***** Dating, Marriage:
 
 <Add information about this characters love life>
 
-****** Children:
+***** Children:
 
 <Add information about this characters children>
 
-****** Relationship with God:
+***** Relationship with God:
 
 <Add Information here>
 
-****** Overall Outlook on Life:
+***** Overall Outlook on Life:
 
 - Self Like/love?
 
@@ -783,15 +860,15 @@ Put full name here.  Names are important! If you name your character incorrectly
 
 - Confidence Level:
 
-****** How Character is Viewed by Others:
+***** How Character is Viewed by Others:
 
 <Add Information here>
 
-****** A Typical Day:
+***** A Typical Day:
 
 <Add Information here>
 
-****** Physical Appearance:
+***** Physical Appearance:
 
 + Body Type:
 
@@ -819,12 +896,12 @@ Put full name here.  Names are important! If you name your character incorrectly
 
 + How the Character Describes Themsel:
 
-****** Health/Disabilities/Handicaps:
+***** Health/Disabilities/Handicaps:
 
 <Add information here>
 
-****** Characteristics:
-******* General:
+***** Characteristics:
+****** General:
 
 + Personality Type:
 
@@ -848,7 +925,7 @@ Put full name here.  Names are important! If you name your character incorrectly
 
 + What People Like about this character:
 
-******* Interests and Favorites:
+****** Interests and Favorites:
 
 - Political Leaning:
 
@@ -879,7 +956,7 @@ Put full name here.  Names are important! If you name your character incorrectly
   + What large possessions does this person own?
      (car, home, furnishings, boat, etc.)
 
-******* Typical Expressions:
+****** Typical Expressions:
 
 - When Happy:
 
@@ -889,89 +966,89 @@ Put full name here.  Names are important! If you name your character incorrectly
 
 - When Sad:
 
-******* Idiosyncrasies:
+****** Idiosyncrasies:
 
 <Add information here>
 
-******* Laughs or Jeers At:
+****** Laughs or Jeers At:
 
 <Add information here>
 
-******* Ways to Cheer this Person Up:
+****** Ways to Cheer this Person Up:
 
 <Add information here>
 
-******* Ways to Annoy this Person:
+****** Ways to Annoy this Person:
 
 <Add information here>
 
-******* Hopes and Dreams:
+****** Hopes and Dreams:
 
 - What are this character's life-long dreams?
 
 - How do they see themselves accomplishing these dreams?
 
-******* Greatest Success:
+****** Greatest Success:
 
 <Add information here>
 
-******* Biggest Trauma:
+****** Biggest Trauma:
 
 <Add information here>
 
-******* Most Embarrassing Thing:
+****** Most Embarrassing Thing:
 
 <Add embarrassing story here>
 
-******* What this Character Cares About the Most:
+****** What this Character Cares About the Most:
 
 <Add most important cares in the world here>
 
-******* Any Secrets?
+****** Any Secrets?
 
 - Does this character have a big secret?
 
 - Are we allowed to know what that secret is on this private interview?
 
-******* If Allowed to do One Thing and Succeed,  What is That?
+****** If Allowed to do One Thing and Succeed,  What is That?
 
 <Add one thing to do to succeed here>
 
-******* This is the kind of person who:
+****** This is the kind of person who:
 
 <put what they would do here>
 
-******* The most loveable thing about this person:
+****** The most loveable thing about this person:
 
 <remark about the things you love the most about this character>
 
-******* Why the Reader will Sympathize with this Character Immediately?
+****** Why the Reader will Sympathize with this Character Immediately?
 
 <put reasons here>
 
-****** Ordinary or Extraordinary?:
+***** Ordinary or Extraordinary?:
 
 - How is this Character is Ordinary or Extraordinary?
 
 - Is this character's situation ordinary or extraordinary?
 
-****** Core Need:
+***** Core Need:
 
 - List corresponding psychological evaluation: (delusions, obsessions, compulsions, addictions, denials, hysterical ailments, hypochondria, illnesses, behaviours harming the self, behaviours harming others, manias, and phobias):
 
-****** Anecdote: (Defining Moment or Epiphany)
+***** Anecdote: (Defining Moment or Epiphany)
 
 <Add information here>
 
-****** History:
+***** History:
 
 <Add history here>
 
 
 
-***** ACTIVE 📃 Write Character Synopsis:
+**** ACTIVE 📃 Write Character Synopsis:
 
-****** Write a One Sentence Character Summary:
+***** Write a One Sentence Character Summary:
 
 Write a Short Character Synopsis in 3rd person for each character: 
 
@@ -981,9 +1058,9 @@ Each Character Synopsis is to be written in first person, (i.e., The character i
 
 Our character is on a rant, talking all about herself..., always bringing the subject back to personal perspective and personal truths. Soap Box time!
 
-******* Examples:
+****** Examples:
 
-******** 📃 Huckleberry Finn (example character synopsis - replace name and content)
+******* 📃 Huckleberry Finn (example character synopsis - replace name and content)
 
 Hi! My name is Huckleberry Finn... you can call me "Huck" for short if you like...  Don't pay no attention to anything that famous man behind the curtain may have said about me... That man Samuel Langhorne Clemens, who calls himself Mark Twain... He may know some things about me but he ain't never walked in my shoes!  That's for sure!  Rich author riverboat caption and all... Let me tell you a few things he don't know about me!
 
@@ -991,17 +1068,17 @@ For instance... Yadda yadda yadda...  Folks may call me a vagabond, but they don
 
 *(On and On... Huck goes on a personal rant all about himself!)*
 
-******** 📃 Your Next Character Name Here: (add more character headings below until all are done)
+******* 📃 Your Next Character Name Here: (add more character headings below until all are done)
 
 Add your character's personal dialog in this space... Rename title above to your character's name...
 
-**** NEW 👥 Major Characters Summary:
+*** NEW 👥 Major Characters Summary:
 
 :README:
 Write a one page synopsis (or 600 words) about the major characters in your story...
 :END:
 
-**** NEW 👥 Minor Characters Summary:
+*** NEW 👥 Minor Characters Summary:
 
 :README:
 Write a half page synopsis (or 300 words) about the minor characters in your story...
@@ -1009,23 +1086,21 @@ Write a half page synopsis (or 300 words) about the minor characters in your sto
 
 
 
-* ACTIVE ⎘ Templates:
+** SOMEDAY 🗓 Editorial Calendar /(Master Template)/
 
-** DONE Introduction:
-CLOSED: [2020-07-02 Thu 00:36]
-:LOGBOOK:
-- State "DONE"       from              [2020-07-02 Thu 00:36]
-:END:
+Make an editorial Calendar for this project right here where it belongs!  You won't loose it! and you can access it quickly without having to search for it elsewhere. Org-Mode excels for this task!  Take advantage of its powerful scheduling, agenda, and filtering capabilities!
 
-This section provides skeleton templates for use within your project(s).  Any sub heading under this parent "*Templates:"* group can be utilized by copy-pasting the collapsed heading into any of your existing project sections (i.e., making a clone anywhere you need to create a new section based on the template's structure)... 
+\newpage
+* ⎘ Meta: /(templates etc.)/   :noexport:
+** 📄 Introduction:
+
+This =Meta= section provides skeleton templates for use within your project(s).  Any sub heading under this Meta: group can be utilized by copy-pasting the collapsed heading into any of your existing project sections (i.e., making a clone anywhere you need to create a new section based on the template's structure)... 
 
 Or... You could try mashing several cloned templates together to create a totally new project heading with a totally different structure... The intent of this is to save lots of time starting up a new custom writing project.  Lets see if it helps. :trollface:
 
-** DONE Instructions:
-CLOSED: [2020-07-02 Thu 00:37]
-:LOGBOOK:
-- State "DONE"       from              [2020-07-02 Thu 00:37]
-:END:
+\newpage
+
+** 📄 Instructions:
 
 - Choose one of the templates below and copy it (folded).  
 
@@ -1033,44 +1108,379 @@ CLOSED: [2020-07-02 Thu 00:37]
 
 - Change the name of your copied template to a specific title needed to fit in with your project's story-structure...  In the case of Logs or Tasks, you probably will keep those titles as they are universal... but you may wish to further qualify them by adding a prefixed category word.
 
-** DONE ✎ Log:
-CLOSED: [2020-06-29 Mon 23:14]
-:LOGBOOK:
-- State "DONE"       from              [2020-06-29 Mon 23:14]
-:END:
-
+\newpage
+** NEW 📖 Chapter/Episode: ~#~ /(Master Template)/
 :README:
-- Use this space to add time stamped log note entries for any pourpose you may need...
+   *Chapters/Episodes* are the *Top Level Headings* within the =Book:= Section of this Org Book Publishing project...  Clone this *New Chapter/Episode #:* Master Template and paste it as a child under your =Book:= outline heading... Do this whenever you need to start a new chapter...
 
-- To create a time stamped entry, use key command:
+   The structure of this template is all set up for you ahead of time to allow you to immediately begin writing...  Replace titles to suit your needs, but keep the structure of *Chapter / Scene (sub-chapter)* intact... i.e., change names only...
+:END:
+*** ☞ Chapter References:
+:README:
+   =Org Mode Links Tip:=
 
-   + "C-c ."
+      To Create a Link Type: ~C-c C-l~ /(then paste: ~link~ & type: "description")/
+      To Open a Link Type: ~C-c C-o~
 
-   + Make your new entry an outline sub-heading of a Log section heading (as above but, wherever else you may need a collection of log entries).
-
-- Keep your Log Entries in Decending Chronological Order.
-   (i.e., put your newest entries on top)
-
-This serves as a replacement for my Scrivener planning Logs /(Currently implemented as markdown files outside of Scrivener)/... Each Org-based Writing project will have one or more of these logs right inside of it close to the things the logs are actually about...  No more fumbling and guessing which log was I useing for what? Now, not only can I find them, I can make them into tasks, TODOS, and prioritize them to boot! Consider this my new official general template for logs going forward... Onward we row mates... Over the log jam!
+      =-or-= Simply Fill in the Template Link Placeholders Below 
+           & copy/paste more placeholders as needed... ;-)
 :END:
 
-*** <2020-06-19 Fri> ✎ Example Log Entry:
+*Add links to Anything Deemed Important to the Writing of This Chapter:*
+/(Links to Websites, Other Stories, Images, Sound, Video, Whatever...)/
 
-Yadda, yadda, yadda...
+- [[][] ] - 
 
-** NEW 🗓 Editorial Calendar
+- [[][] ] - 
 
-Make an editorial Calendar for this project right here where it belongs!  You won't loose it! and you can access it quickly without having to search for it elsewhere. Org-Mode excels for this task!  Take advantage of its powerful scheduling, agenda, and filtering capabilities!
+- [[][] ] - 
 
-** DONE 👤 New Character
-CLOSED: [2020-07-01 Wed 11:41]
-:LOGBOOK:
-- State "DONE"       from              [2020-07-01 Wed 11:41]
+- [[][] ] - 
+
+- [[][] ] -
+
+\newpage
+
+*** 🔖 Scene  1: /(Replace With Title or Simply Use:/ ~#.1.1~ /etc.)/
+:README:
+   Scenes are the DNA that make up the chapters in a novel or episodes in a production... Each Scene could have its own title or phrase or it could not have a title but instead sub chapter numbering only...
+
+   Chapters may contain several scenes... There can be many twisty paths all alike (or all different)... %~)
+
+   This *Scene Template* could =ALSO Serve As A CHAPTER INTRODUCTION= if you need one...
+
+   =Note:= /You also have options to export with TeX directives/ 
+          /to add sub chapter numbering e.g., ~1.1.1...~ etc.../
+          /and this could be added with or without inclusion of/
+          /the scene name headings.../
 :END:
 
-*** 💬 Profile:
+~<insert Scene Content Here>~
 
-**** Name, Rank, S/N:
+Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo. Fusce tincidunt, lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante.
+
+At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
+
+\newpage
+
+=Add More Scene Headings Below as Needed for Chapter=
+
+*** 🔖 Scene  2: /(Replace With Title or Simply Use:/ ~#.2.1~ /etc.)/
+:README:
+   Scenes are the DNA that make up the chapters in a novel or episodes in a production... Each Scene could have its own title or phrase or it could not have a title but instead sub chapter numbering only...
+
+   Chapters may contain several scenes... There can be many twisty paths all alike (or all different)... %~)
+
+   This *Scene Template* could =ALSO Serve As A CHAPTER INTRODUCTION= if you need one...
+
+   =Note:= /You also have options to export with TeX directives/ 
+          /to add sub chapter numbering e.g., ~1.1.1...~ etc.../
+          /and this could be added with or without inclusion of/
+          /the scene name headings.../
+:END:
+
+~<insert Scene Content Here>~
+
+Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo. Fusce tincidunt, lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante.
+
+At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
+
+\newpage
+
+=Add More Scene Headings Below as Needed for Chapter=
+
+*** 🗒 Background Notes: /(Chapter Template)/
+:README:
+   *Background Notes*, /(unlike Scenes, Back Stories, Summaries etc.)/ Should be written in =OUTLINE= form to aid in organization of events, etc... This section is =NOT the place to create NEW ideas=, but rather to =organize EXISTING ideas you have already written=...
+
+   =None of the Content Written Here Should be Added to any Chapter/Scenes within your Book= =(THIS IS A META PLACE)= 
+
+   /i.e., Your Books Internal Analyst Behind the Curtain So-To-Speak... %^)/
+:END:
+**** 🗒 Note 1: <2020-05-10 Sun>
+
++ Mark each note's timestamp to its initial creation time. This will enable emerging notes for chapters to be searched chronologically, and to give you an idea of how things evolve over time...
+
++ Add anything you need here under this heading formatted any way needed to present the data... Sub levels are fine, tables are fine... etc.  This is your chapter's Notebook, Scrapbook, whatever any extra info/metadata you feel is important to record...
+
+  + Use bulleted lists/sublist etc. if needed...
+
+1. Or Numbered Lists...
+
+|----+--------|
+| Or | Tables |
+|----+--------|
+|  1 |    2.3 |
+|----+--------|
+
+Do any or all the above to help get the concepts and images of your book clear in mind...
+
+**** 🗒 Note 2: <2020-05-10 Sun>
+
+Each new note needs to get its own heading and initial timestamp...
+
+****** Quid Novi?
+
+Quid Novi? Lorem Ipsum dolor sit amet,consectetur adipisicing elit, sed doeiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim adminim veniam, quis nostrudexercitation ullamco laboris nisi utaliquip ex ea commodo consequat.Duis aute irure dolor inreprehenderit in coluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatatnon proident, sunt in culpa quiofficia deserunt mollit anim id estlaborum.
+
+**** 🗒 Phasellus orci: <2022-08-20 Sat>
+
+Etiam tempor elit auctor magna. Nullam nibh velit, vestibulum ut, eleifend non, pulvinar eget, enim. Classaptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer velit mauris, convallis acongue sed, placerat id, odio. Etiam venenatis tortor sed lectus. Nulla non orci. In egestas porttitor quam. Duis nec diameget nibh mattis tempus. Curabitus accumsan pede id odio. Nunc vitae libero. Aenean condimentum diam et turpis.Vestibulum non risus. Ut consectetuer gravida elit. Aenean est nunc, varius sed, alquam eu, feugiat sit amet, metus. Sedvenenatis odio id eros.
+
+|----------+-----------+-----------+-----------+-------------------|
+| Inceptos | Venenatis | Convallis | Curabitus | Nunc vitae libero |
+|----------+-----------+-----------+-----------+-------------------|
+| test 1   | test 2    | test 3    | test 4    | test 5            |
+|----------+-----------+-----------+-----------+-------------------|
+
+Yadda, yadda, yadda. etc...
+
+\newpage
+
+*** 📒 Back Stories: /(Chapter Template)/
+:README:
+   This section is for a chapter's Back Story development... The following tips will help you manage development of your back stories and how they will best fit into your evolving story... 
+
+   - =Keep Things Organized:=
+
+      + *Add Time Stamped Background Notes:* /(within the Background Notes/
+          /section above)/ about new content added to this Back Stories
+          section as you progress over time...
+
+      + *Add Time Stamps to:* Sub-headings within the Background Notes 
+          Section that reflect back to paragraphs written within 
+          this section...
+
+      + *Add TODO Keywords* to sub-headings within the Background Notes 
+          Section reflecting back to paragraphs written within 
+          this section...
+
+   Doing the above steps will help you keep track of back story development and get better organized about how your book is developing, what areas need the most work, seeing problems that need to be resolved, etc.  Most importantly, this will help prevent you from making any grave mistakes causing contradictions within your story later... /(unless that was your intention "Alfred Hitchcock")/... In any case you will be better informed by keeping things organized here where you can see them and resolve them quickly...
+
+   =The Content Written Within This Section May or May Not be Added to actual Chapters/Scenes of your Book...=
+:END:
+**** 📒 Back Story Example One: <2020-05-10 Sun>
+
+=Note:= This is an example of a back story related to this chapter, 
+       or possibly connecting to another chapter in your book... 
+
+Write it down in the rough here and then later you can develop it further as needed. Keep Background Notes about this back story as well, AND keep them up to date as this story develops!
+
+\newpage
+
+**** 📒 Phasellus orci: <2022-08-20 Sat>
+
+=Note:= This is an example of a back story /(with an actual title)/ 
+       which has a companion Background Note /(by the same title)/ 
+       associated with it. Keep the companion Background Note up 
+       to date with developments happening in here...
+
+The following Back Story is related to this chapter, but ALSO possibly connecting with other chapters within this book... 
+
+Write it down in the rough here and then later you can develop it further as needed. Keep your Background Notes about this back story up to date as well...
+
+\newpage
+
+*** 🗡 Plot Summary: /(Chapter Template)/
+:README:
+   Plot Summaries, /(Just Like Background Notes)/ are ALSO =META DATA= Not Intended to be Added back to the Chapters/Scenes of your Book... The purpose of Plot Summaries are to help you during planning stages where you are trying to resolve that twisty mess you created... OMG!
+
+   Keeping the above in mind while writing the plot summary of a chapter, will help you get better organized about how your book is developing, what directions it is taking, what areas need the most work, where problems or inconsistencies may arise, etc.  
+
+   Most importantly, this will help prevent you from making any grave mistakes causing contradictions within your story later... /(unless that was your intention "Alfred Hitchcock")/... In any case you will be better informed by keeping all your plot tasks here where you can see them and resolve them quickly...
+:END:
+
+=Plot Summary= /(example)/
+
+In this chapter we are dealing with yadda yadda yadda which must be resolved with yadda yadda yadda.  But be careful about Yadda Yadda Yadda as she does not exist in this book at all!  What?  Nevermind... She never existed... Only in your dreams...
+
+\newpage
+
+
+** ⎘ Templates:
+:README:
+   Use this space to add time stamped log note entries for any pourpose you may need...
+
+   *To create a Time Stamped Entry, Use Key Command:* ~C-c .~
+
+   Make your new entry a =sub-heading under a Log section= heading /(as above but, wherever else you may need a collection of log entries)/.
+
+   Keep your Log Entries in Decending Chronological Order. /(i.e., put your newest entries on top)/
+
+   This serves as a replacement for my Scrivener planning Logs /(Currently implemented as markdown files outside of Scrivener)/... Each ~Org-based~ Writing project will have one or more of these logs right inside of it close to the things the logs are actually about...  No more fumbling and guessing which log was I useing for what? Now, not only can I find them, I can make them into tasks, TODOS, and prioritize them to boot! Consider this my new official general template for logs going forward...
+
+   ="Onward We Row Mates... Through the log jam!"=
+:END:
+*** NEW 🗓 LOG: <2021-03-29 Mon> Generic Title /(General Log Entry Template)/
+:README:
+   - *Go To One of the HEADINGS Below:* /(Summary, Details, or Sub Headings)/
+
+      =Punch the Time Clock= At the heading And then begin working on a task related to that Heading... =Your Time IS being Recorded Now= 
+
+   - =Use These Commands:= /as you work to keep track your time.../
+
+      + *Clock IN:* ~C-c C-x C-i~ 
+
+                    /(Begin OR Resume Clocking Current task)/
+
+                    This creates a new :CLOCKING: Time Card Entry just
+                    underneath the HEADING...
+
+                    Do this just before starting work on the task... 
+                    Be in control of your life!
+
+                    After doing the above, you can go away and do some 
+                    work, leaving this heading, log note, etc. to visit 
+                    other files and/or work on them etc. The clock will 
+                    be recording your time all the while... You will see 
+                    in your mode line the elapsed clock time ticking away 
+                    as you work on a task /(hopefully related to this clock!)/
+                    and NOT Yac Shaving or being sidetracked!!!
+
+      + *RETURN to Clock Heading:* ~C-c C-x C-j~
+
+                        /Go back to the place where you started the clock.../
+
+                        You do this after you have worked on a task for a 
+                        while and you need to come back to update the item's
+                        info etc., and/or stop the clock before going off to 
+                        do something else unrelated to the log entry...
+
+      + *Clock OUT:* ~C-c C-x C-o~ /(to stop clocking your time on task)/
+
+                      This *Finalizes the Time Card Entry* within:
+                      ~:CLOCKING:~ /(created earlier when you started the/ 
+                      /clock)/...
+
+                      The Clock Entry changes showing start timestamp, end timestamp, and total time worked during this segment...  
+
+                      =Please DON'T Forget= /Like I often do, LOL.../ i.e.,
+                      Leaving a clock running all day by accident, or worse,
+                      leave it dangling with the file closed only to open it
+                      again and get that nasty *Org-Mode Message:* /"What do/
+                      /you want to do with this?"/ If you do something like 
+                      that you can always come back and directly edit the 
+                      clock times by hand to amend them...  After changing 
+                      clock times or dates, etc... Whatever...
+
+                      ="Onward We Row Mates... Through the log jam!"=
+
+      + *Update Time Card Entry:* ~C-c C-c~ 
+
+                  This command will change the total time at the end showing 
+                  your new calculated time...
+
+                  If you need to go away and do something else before finishing this task, you can do so after clocking out... When you come back simply clock back in again to start another Time Card Entry just as before... The new time card entry will appear above the earlier one within the ~:CLOCKING:~ drawer... When you clock out of this task it will look just like the entry below it with a total time worked tagged on the end...
+
+      + *Clock Out & Mark Items Done:* ~C-c C-t~
+
+            When you are all done with a Log Entry use the above key 
+            command to mark its Heading *TODO* tag to: *DONE* /(Most of the/ 
+            /time this will ALSO clock you out if you are still clocked/ 
+            /into the item... But not allways in my experience.../  
+            So make sure you are also clocked OUT of an Item After 
+            marking it DONE... Type: ~C-c C-x C-j~ to check this...
+            /(if no running clock it will tell you and place your/
+            /cursor at the heading where you LAST CLOCKED OUT)/
+
+      + ~C-c C-x C-q~ *Cancel Current Clock:* /(in case of accident)/
+
+                      This removes currently running clock and forgets 
+                      any time accrued or associated with it...
+
+      + ~C-c C-x C-d~ *Display Clocking Info:* 
+
+                      /This will show elapsed times to the right of headings.../
+                      =Warning!= Using this command will CLUTTER ALL the headings
+                                within your org file with those timestamps!!!
+
+   - Once all of this has become routine for you, =go ahead and remove this= ~README~ =drawer from this template=... That way it does not get copied when you need to clone new log entries...
+:END:
+
+This Log Entry is about: Yadda... Yadda... Yadda...
+
+\newpage
+
+**** 📚 Reference:
+
+- *Link to Project:* [[][] ]
+
+- [[URL][Link Name] ] *Heading:* /(comment)/
+
+- [[][] ] - *_:* /(yadda...)/
+
+- [[][] ] - *_:* /(yadda...)/
+
+- [[][] ] - *_:* /(yadda...)/
+
+- [[][] ] /(_)/
+
+- [[][] ] /(_)/
+
+- [[][] ] /(_)/
+
+\newpage
+
+**** ⏰ Time Card:
+
+#+BEGIN: clocktable :scope tree2 :maxlevel 4 :tstart "<-1d>" :tend "<+1m>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3
+#+END:
+
+\newpage
+
+**** NEW ✅ Summary: [0/3]
+:README:
+   This Summary is mostly to help you find things later when you cannot remember when or where is was done... If you go to the top of this file and expand all headings to show ALL content, then do a search on "~Summary:~" you will be able to quickly scroll through and scan these summaries quickly to find what you were looking for... 
+
+   Also the *Time Card* /displayed above/ each search hit will give more clues by showing important headings you worked on...
+
+   Below is an optional list /(that could also provide links)./ This list could be used to itemize things you worked on, but I personally find it easier to simply write a short one or two line description containing important keywords right here and nothing more. I think that is more useful...
+:END:
+
+Yadda... Yadda... Yadda...
+
+1. [ ] *__:*
+
+2. [ ] *__:*
+
+3. [ ] *__:*
+
+\newpage
+
+**** NEW 📒 Details:
+***** NEW New Item 1 /(placeholder)/ [0/3]
+
+- [ ] *__:* /(__)/
+
+- [ ] *__:* /(__)/
+
+- [ ] *__:* /(__)/
+
+\newpage
+
+***** NEW New Item 1 /(placeholder)/ [0/3]
+
+- [ ] *__:* /(__)/
+
+- [ ] *__:* /(__)/
+
+- [ ] *__:* /(__)/
+
+\newpage
+
+***** NEW New Item 1 /(placeholder)/ [0/3]
+
+- [ ] *__:* /(__)/
+
+- [ ] *__:* /(__)/
+
+- [ ] *__:* /(__)/
+
+\newpage
+
+*** NEW 👤 New Character: /(Master Template)/
+**** 💬 Profile:
+***** 🗂 Name, Rank, S/N:
 
 |--------+----------------|
 | Name:  | put name here  |
@@ -1082,43 +1492,51 @@ CLOSED: [2020-07-01 Wed 11:41]
 | Rank:  | put rank here  |
 |--------+----------------|
 
-**** Summary (Paragraph):  
+\newpage
 
+***** 📄 Summary (Sentence):  
 :README:
-Put a single paragraph summary of the character's storyline, motivation and description. Loosely based on what you will write from the snowflake steps.
+   Put a single sentence summary of the character's storyline here.
 :END:
 
-**** Summary (Sentence):  
+\newpage
 
+***** 📃 Summary (Paragraph):  
 :README:
-Put a single sentence summary of the character's storyline here.
+   Put a single paragraph summary of the character's storyline, motivation and description. Loosely based on what you will write from the snowflake steps.
 :END:
 
-**** Motivation
+\newpage
 
+***** 🍦 Motivation
 :README:
-The character's motivation /(what does he/she want abstractly?)/
+   The character's motivation /(what does he/she want abstractly?)/
 :END:
 
-**** Goal
+\newpage
 
+***** 🥇 Goal
 :README:
-The character's goal (what does he/she want concretely?)
+   The character's goal (what does he/she want concretely?)
 :END:
 
-**** Conflict
+\newpage
 
+***** 🤺 Conflict
 :README:
-The character's conflict (what prevents him/her from reaching this goal?)
+   The character's conflict (what prevents him/her from reaching this goal?)
 :END:
 
-**** Epiphany
+\newpage
 
+***** 💡 Epiphany
 :README:
-The character's epiphany (what will he/she learn, how will he/she change?
+   The character's epiphany (what will he/she learn, how will he/she change?
 :END:
 
-**** Basics:
+\newpage
+
+***** 🔤 Basics:
 
 |-----+--------+---------+--------+--------+------------+-------------|
 | Age | Gender | Species | Height | Hair   | Complexion | Nationality |
@@ -1134,7 +1552,9 @@ The character's epiphany (what will he/she learn, how will he/she change?
 |     |            |      |        |      | left etc.  |           |
 |-----+------------+------+--------+------+------------+-----------|
 
-**** Family
+\newpage
+
+***** 👪 Family
 
 |----------------+----------------------+----------+------------+------------+----------|
 | Marital status | Spouse(s)/Partner(s) | Children | Bio Father | Bio Mother | Siblings |
@@ -1143,8 +1563,9 @@ The character's epiphany (what will he/she learn, how will he/she change?
 |                |                      |          |            |            |          |
 |----------------+----------------------+----------+------------+------------+----------|
 
+\newpage
 
-**** Social
+***** 🥂 Social
 
 |-------------+------------------------+------------+---------------+------|
 | Citizenship | Social status          | Job/career | Position/role | Rank |
@@ -1154,7 +1575,9 @@ The character's epiphany (what will he/she learn, how will he/she change?
 |             | member of public, etc. |            |               |      |
 |-------------+------------------------+------------+---------------+------|
 
-**** Skills Etc.
+\newpage
+
+***** 🏹 Skills Etc.
 
 |--------+---------+-----------------+-----------|
 | Skills | Hobbies | Talents / Gifts | Languages |
@@ -1163,492 +1586,522 @@ The character's epiphany (what will he/she learn, how will he/she change?
 |        |         |                 |           |
 |--------+---------+-----------------+-----------|
 
-**** Physical Attributes
+\newpage
 
+***** 💪 Physical Attributes
 :README:
-The Character's Physical description.... 
+   The Character's Physical description.... 
 :END:
 
-**** Personality
+\newpage
 
+***** 😇 Personality
 :README:
-The Character's Personality... yadda yadda yadda
+   The Character's Personality... yadda yadda yadda
 :END:
 
-***** Likes / Dislikes
+\newpage
+
+****** Likes / Dislikes
 
 :README:
 The Character's Likes / dislikes, yadda yadda yadda...
 :END:
 
-**** Personal History
-
+***** 📈 Personal History
 :README:
-Character’s personal history. Yadda yadda yadda...
+   Character’s personal history. Yadda yadda yadda...
 :END:
 
-*** 📃 Character Synopsis:
+\newpage
 
+**** 📃 Character Synopsis:
 :README:
-- Add the Character Synopsis you wrote about this character in your project's main "Tasks:" section, which was a Snowflake Method step you completed if you are using this Project Skeleton the way it was designed to be used...
+   - Add the Character Synopsis you wrote about this character in your project's main "Tasks:" section, which was a Snowflake Method step you completed if you are using this Project Skeleton the way it was designed to be used...
 
-   + Each Character Synopsis has been written in first person, (i.e., from the character's own life experiences, emotions, words). This is about the character on a rant, talking all about herself, bringing the subject always back to personal perspective and personal truths... Soap Box time!
+      + Each Character Synopsis has been written in first person, (i.e., from the character's own life experiences, emotions, words). This is about the character on a rant, talking all about herself, bringing the subject always back to personal perspective and personal truths... Soap Box time!
 :END:
 
+\newpage
 
-*** 🗒 Worksheet:
-
+**** 🗒 Worksheet:
 :README:
-This is your scratch pad worksheet for loosely drafting up new characters before organizing all the information into a Character Profile and Character Synopsis... Free form in here... Let the muses take complete control in this space...
+   This is your scratch pad worksheet for loosely drafting up new characters before organizing all the information into a Character Profile and Character Synopsis... Free form in here... Let the muses take complete control in this space...
 :END:
-** DONE 👥 New Group or Faction
-CLOSED: [2020-07-01 Wed 18:51]
-:LOGBOOK:
-- State "DONE"       from              [2020-07-01 Wed 18:51]
-:END:
-*** ⚛ Interstellar Nation <The Galactic Empire>
 
+\newpage
+
+*** NEW ♾ New World: /(Master Template)/
 :README:
-Definition:
+   - *DEFINITION:*
 
-- A Spacefaring kingdom, empire, country, etc (like Asimov's Galactic Empire, or the Romulan Empire etc.) This type of nation may extend out through a galactic cluster or quadrant, etc.
+      =From Wikipedia:= "In its most general sense, the term "world" refers 
+      to the totality of entities, to the whole of reality or to everything 
+      that is. The nature of the world has been conceptualized differently 
+      in different fields."
+
+      *For Our Purposes as Fiction Authors:* Our Definition shall be a
+      *"plurality of worlds"* Worlds which are Still =ALL encompassing BUT=
+      =Not Encompassing ALL= so-to-speak...
+
+      Worlds are Different than Regions because Worlds simply "exist" 
+      without the influence of any outside artificial influence... 
+      Worlds can be quite "nebulous" ♾ creatures! Regions are based on 
+      defined formalized constraints...
+
+   - *World Creation can be Tricky:*
+
+      If you fall into a black rabbit hole through the centre of the earth,
+      /(Like Alice).../ What happens when you come out the other side?  
+      Will everyone in China be upside down?
+
+      Expanding on the confusing =ALL Encompassing= statement from our 
+      *World* definition above, The following ideas are assumed for:
+      *New Worlds Created Here:*
+
+      =A= *♾ New World* =May-Or-May-Not Contain One-Or-Many= *Locations/Regions* 
+
+      =A= *♾ New World* =May-Or-May-Not Contain One-Or-Many= *Planets or Satellites*
+
+      =A= *♾ New World* =May Be Something OTHER than:= *Planet or Satellite*
+
+      =A= *♾ New World* =May-Or-May-Not be BASED on= *Classical Euclidean Space*
+
+      =A= *♾ New World* =May CONTAIN or BE CONTAINED by OTHER WORLDS or THINGS!!!=
+
+      =And For-that-matter...= 
+
+      Worlds, Regions, Locations, Planets, Satellites, COULD 
+      ALL contain One or MORE New Worlds within them!
+
+      *New Worlds Containing Guess what?*
+
+      =OMG Girl! Do The Math! %^)=
+
+      /(If you write Sci-Fi, the possibilities are mind boggling!)/
+
+      /"Eat just a wee bit of the proper side of that mushroom and you/ 
+       /will be too big to be a dog's meal but small enough to follow/
+       /the rabbit through/ /that small door..."/
+
+      =For Most Cases= *♾ New World:* Items will be created in conjunction 
+      with corresponding Regions, Planets, Groups, etc... /(no matter what/
+      /their hierarchical relationship may be...)/
+
+   - [ ] *Usage:* [0/4]
+
+      For most common cases, you will need to create a New World as 
+      a container for any defined Regions, Planets, Groups, etc., 
+      Which... in turn were created because they are the reference 
+      source for elements within your evolving story (book)...
+
+      However, you may be inspired to create much more interesting Worlds
+      /(all by themselves unique jewels)/ that end up becoming Bizarr Cases 
+      that Do NOT Contain any of the classical kinds of things you might 
+      find normally within Euclidean space, depending on the nature of 
+      your story...
+
+      =Add:= As Many *♾ New World:* Headings As Needed And Are 
+           Important To Include As Reference For The Writing 
+           Of Your Book...
+
+      To Add More: *♾ New World* Entries to this Book Project:
+
+      + [ ] =COPY/CLONE This= *♾ New World* /(Master Template)/
+
+             =Include All Sub-Headings And Content= 
+
+      + [ ] =PASTE CLONE:= as: =New Entry= Under: *♾ Worlds:*
+
+             Paste directly under any Existing *♾ New World:* headings
+             already in place Under the general: *♾ Worlds:* Heading 
+             within the: *🔍 Research:* Section of this Book Project...
+
+      + [ ] =Edit Content to Fit Your Use Case=
+
+             Some Worlds may Contain Regions but NO Planets or 
+             Satellites... Other Possibilities abound... 
+             Included Templates cover the most general cases... 
+
+             /You are encouraged to customize these templates/
+             /for your own needs!/
+
+      + [ ] =Fill In Details Periodically:=
+
+             Add details as you are writing your book, or come back 
+             to fill in details later /as your Muses may be inspiring/ 
+             /you with visions about some new aspect of this new world/ 
+             /while you were off doing something completely different!/  
+
+             IF your muses reveal new ideas/concepts/visions not 
+             covered by an existing item below? *Fantastic!* You have 
+             a new category to add to this Template and that item will 
+             jog your imagination the next time you are describing a 
+             NEW WORLD in another Book!
+
 :END:
 
-**** 📃 Summary:
+This Section Defines a Particular & Unique *♾ New World*
 
+*Worlds* and *Regions* are more of an abstract concept than Geographical Planets, Satellites, Nebula, Gas Giants, etc., OR Sociological Groups, Factions, etc...
+
+\newpage
+
+**** 📃 Summary
 :README:
-This section is the executive summary (abstract) of a longer full story chapter within your book.  Stories like the Finnegan Series are fully invested on not one but many Interstellar Nations!  Your mileage may vary... %^)
+   =Usage:= Don't go into too much Detail here...  
 
-You need to incorporate all the results of your research here in a similar way that Isaac Asimov wrote chapters undergoing many iterations over time about the Galactic Empire in his Foundation Series... 
+           Drill Down into Details using sub-headings 
+           Under: *Region Details:* 
 
-This abstract, is a short historical and present summary only... It should include the major goals, motivations... who they’re at war with, etc. i.e., It should include the news headlines, and ledelines...  but not the full story... Results of your research below this summary should be as rich and detailed as you can make it... (but also indexed!)
-
-The Ideas and Notes here were adapted from Droemar’s article “5 Tips: World-Building Template”.
-
-http://droemar.deviantart.com/journal/5-Tips-World-Building-Template-224630229
-
-Much more information can be obtained by visiting the above website!!!  
-
-I learned about this Snowflake Idea several years ago when I was first learning how to use the structure to build my Scrivener Projects starting out on a Macbook Pro 2011 model... 
-
-# This Emacs Org Mode based Book Publishing project has been initially modelled upon my Scrivener Project but it will soon outgrow more and do much more than Scrivener could ever dream of!  I am sure of it! I have already discovered much. The Learning curve is levelling off finally!  Writing this now in my fancy Emacs buffer specifically designed for distraction free writing mode is a dream! All my edits are made very close to the typewriter home row!  No reaching for any mice or hard to reach keys while the stream of consciousness flows!  Much of that typing ease is thanks to the detailed and structured eLisp programming work of Xah Lee!  OMG! You did a ton of great things!  No Troll in my book! You are the Knight in Armour for the weak of tendons! Fantastic! Thanks Dude!
+           This Space Is For A Short Summary ONLY...
 :END:
 
-**** 🔤 Basics:
+=Write A Short One Or Two Paragraph Synopsis for a Single:= *Region* 
 
+\newpage
+
+**** 🗒 World Details:
+***** ⛮ Type-Class:
 :README:
-- Fill in the tables below... Pretty much self explanatory...  Do your research first though!
+
 :END:
 
-|------------+---------+--------+----------+-----------------------+----------------|
-| Home World | Colours | Symbol | Currency | Official Languages(s) | Galactic Scope |
-|------------+---------+--------+----------+-----------------------+----------------|
-|            |         |        |          |                       | number of      |
-|            |         |        |          |                       | systems, etc.  |
-|            |         |        |          |                       |                |
-|            |         |        |          |                       |                |
-|------------+---------+--------+----------+-----------------------+----------------|
+\newpage
 
-
-|------------------+---------------------+-------------------+-----------+----------------|
-| Type Government  | Current Gov'ng Body | Cur Head of State | Military  | Affiliation(s) |
-|------------------+---------------------+-------------------+-----------+----------------|
-| <fudal, castle,  | <party name>        |                   | What's it |                |
-| democracy, etc.> |                     |                   | called?   |                |
-|                  |                     |                   |           |                |
-|                  |                     |                   |           |                |
-|------------------+---------------------+-------------------+-----------+----------------|
-
-**** 𐇑 Social Structure:
-
+***** ⦝ Origin:
 :README:
-Who holds power, and how does it affect the way the society works? Is there an aristocracy? If so, how are its ranks structured?
+
 :END:
 
-**** 🏛 Government:
-
+\newpage
+***** ⚛ Physics:
 :README:
-Describe the Structure and general procedures here...
+
 :END:
 
-**** ⚖ Taxation:
+\newpage
 
+***** 📍 Location:
 :README:
-Write a brief overview of how the people are taxed, and where that money goes.
+
 :END:
 
-**** 💵 Currency:
+\newpage
 
+***** 📐 Dimensions:
 :README:
-What is the currency? What are its sub-denominations?
+
 :END:
 
-**** 👥 Population:
+\newpage
 
-***** Races
-
+***** ⌬ Shape:
 :README:
-Describe the races that inhabit the area, and whether or not they’re native, etc...
+
 :END:
 
-***** Common physical characteristics
+\newpage
 
+***** ✨ Regions:
 :README:
-Describe the common physical characteristics of long-term inhabitants and native peoples: skin colour, hair colour, build, dress, etc...
+
 :END:
 
-***** Predominant religion(s)
+\newpage
 
+***** ⌛ Timeline(s):
 :README:
-Describe the perdominant religion here... Is it Monotheism?  Pantheism?  Atheism? Name and describe them as needed.)
+
 :END:
 
-**** ⛩ Culture:
+\newpage
 
-***** Mannerisms
-
+***** 🦋 Dominant Species:
 :README:
-Use this space to illustrate the typical way individuals or groups from this place behave... (e.g, A fur-wrapped barbarian behaves in a very different way than a Greek statesman.)
+
 :END:
 
-***** Greetings
+\newpage
 
+***** 👥 Groups:
 :README:
-Provide some examples of typical greetings here... (e.g, What is considered an acceptable greeting? In formal setting? Among friends? Family?, etc.)
+
 :END:
 
-***** Customs
+\newpage
 
+*** NEW ✨ New Region: /(Master Template)/
 :README:
-List the habits of a people that make them unique in this space...
+   - *DEFINITION:*
+
+      A Region Is Defined As: An "area" or "space" which is broadly 
+      divided by physical characteristics /(physical geography)/, any 
+      impact characteristics of inhabitants /(bio geography)/, and the 
+      interaction of inhabitants with the area's environment 
+      /(environmental geography)/. 
+
+      The word *"region"* is taken from the Latin *regio* /(derived from/ 
+      /regere, 'to rule')/ In mathematics the term: *"domain"* is a similar 
+      concept to the generalized idea of *"regions"* as defined within 
+      various geographical sciences: /(e.g., physical geography, ecology,/ 
+      /biogeography, zoogeography, environmental geography, ethnography,/ 
+      /etc.)/ And of course all of the *Exo-* versions of these as well...
+
+      Geographic regions and sub-regions are mostly described by their 
+      imprecisely defined, and sometimes transitory boundaries, except 
+      in the case where some governing body has defined artificial borders.
+
+      Apart from geographic regions, there are also hydrospheric and 
+      atmospheric regions. /(e.g., oceans, lakes, rivers, discrete/ 
+      /climates of elevations above sea level)/... Add to this the 
+      infinite possibilities of *"exo-regions"* which are not even 
+      defined yet!
+
+            /That is... Until your Muses Inspire you to/
+                       /Define a NEW Exotic "exo-region"!/
+
+      Regions are Different than Worlds because they are defined by
+      consensus of some governing body or artificial principal...
+      Worlds simply "exist" without the influence of any outside 
+      artificial constraints... Worlds are "nebulous" creatures!
+
+   - *This Region Business Can Be Tricky:* 
+
+      =A Region Can Exist Such As:= *The French Quarter of New Orleans* 
+      which exists inside a *city* located within *yet another defined* 
+      *region* called: *"South LA Delta Region"* which could also be called 
+      part of the *"Deep South Region"* etc. etc. etc...
+
+      OK... =How About a Region Defined by a Street Intersection?=
+      *Times Square* region of *NYC*, /(which is a city but also a region/
+      /containing many regions which also contain regions)/...
+
+      If you are a Sci-Fi author the concept of a Location and/or region
+      can become even more convoluted... Interdimensional regions may
+      exist in fractal permutations all of them suspended in flux within
+      the space of a single but fancy space ship...  A space ship which 
+      also travels through multidimensional regions of space at the same
+      time in parallel with other instances of itself... =OMG!=
+
+      =And For-that-matter...= 
+
+      Worlds, Regions, Locations, Planets, Satellites, COULD 
+      ALL contain One or MORE New Worlds within them!
+
+      /(If you write Sci-Fi, the possibilities are mind boggling!)/
+
+      =For Most Cases:= Any *✨ New Region:* Items defined will have 
+      corresponding and related Items defined somewhere in the 
+      *🔍 Research:* Section as well...
+
+   - [ ] *Usage:* [0/4]
+
+      For most common cases, you will need to create a New Region 
+      as a container for a defined Planet, or Group, etc... 
+      Which... in turn were created because they are the reference 
+      source for elements within your evolving story (book)...
+
+      However, you may be inspired to create a smaller Region 
+      which may be contained within a special World, or localized 
+      to a planet or other body in space, or even some small 
+      microscopic region inside a single drop of water!  
+      All of the above depending on the nature of your story...
+
+      =Add:= As Many *✨ New Region:* Headings As Needed And Are 
+           Important To Include As Reference For The Writing 
+           Of Your Book...
+
+      To Add More: *✨ New Region:* Entries to this Book Project:
+
+      + [ ] =COPY/CLONE This= *✨ New Region:* /(Master Template)/
+
+             =Include All Sub-Headings And Content=
+
+      + [ ] =PASTE CLONE:= as: =NEW Entry= Under: *✨ Regions:*
+
+             Paste directly under any Existing *✨ New Region:* headings
+             already in place Under the general: *✨ Regions:* Heading 
+             within the: *🔍 Research:* Section of this Book Project...
+
+      + [ ] =Edit Content of:= *📃 Summary* =and:= *🗒 Location Details:*
+
+             Begin Filling in specific Details that fit your book's needs
+             and remove other things that do not apply... Generalized items 
+             exist for your use and/or modifications... 
+
+             Other Possibilities  be added if needed...
+             /(You are encouraged to customize these templates for your/ 
+             /own needs!)/
+
+      + [ ] =Fill In Details Periodically:=
+
+             Add details as you are writing your book, or come back 
+             to fill in details later /as your Muses may be inspiring/ 
+             /you with visions about some new aspect of this new world/ 
+             /while you were off doing something completely different!/  
+
+             IF your muses reveal new ideas/concepts/visions not 
+             covered by an existing item below? *Fantastic!* You have 
+             a new category to add to this Template and that item will 
+             jog your imagination the next time you are describing a 
+             NEW WORLD in another Book!
 :END:
 
-***** Superstitions
+This Section Defines a Particular & Unique *✨ Region*
 
+*Worlds* and *Regions* are more of an abstract concept than Geographical Planets, Satellites, Nebula, Gas Giants, etc., OR Sociological Groups, Factions, etc...
+
+\newpage
+
+**** 📃 Summary
 :README:
-(Knowing the power irrational explanations have over a populace can sometimes be good story material.)
+   =Usage:= Don't go into too much Detail here...  
+
+           Drill Down into Details using sub-headings 
+           Under: *Region Details:* 
+
+           This Space Is For A Short Summary ONLY...
 :END:
 
-***** Beliefs
+=Write A Short One Or Two Paragraph Synopsis for a Single:= *Region* 
 
+\newpage
+
+**** 🗒 Region Details:
+***** 🌪 Overall Feeling:
 :README:
-Do I really have to explain this one?  This alone could end up being your entire story...
+   =Write About The General Mood Of This Region:= 
+   Climate? 
+   Seasons? /(if any)/ 
+   Day/Night Cycles? /(if any)/ 
+   Jungle? Desert? Mountains? Farm Land? 
+   Ocean? Islands? Atmosphere? Sky? 
+   Moons? /(if itself is not a moon)/
 :END:
 
-***** Rituals
+=Include details= /(as described in README above)/ =that relate to this specific Region=
 
+\newpage
+
+***** 🗻 Sights:
 :README:
-(e.g., Birth? Coming-of-age? Marriage? Death? Justice? etc.)
+   =Note:= Only mention things that make this place truly unique 
+          compared to other neighboring regions... 
+          /(if a feature is common to a larger location than that/ 
+          /is where the description for that feature should be../ 
+          /Not here...  We are drilling down to more unique/ 
+          /situations here...)/
 :END:
 
-***** Festivals
+Include: =Prominant Features, Sights, Monuments, Artifacts, Geological Anomalies, Whatever!= in this section...
 
+\newpage
+
+***** 📢 Sounds:
 :README:
-(e.g., What do people celebrate? What are considered holidays? Why?, etc.)
+   =Note:= Only mention the kinds of sound events that would make this 
+          place truly unique compared to other neighboring regions... 
+          /(if a feature is common to a larger location than that/ 
+           /is where the description for that feature should be../
+           /Not here... We are drilling down to more unique/ 
+           /situations here...)/
+
+   If there are no distinguishing sounds about this location that make it unique compared to other neighboring regions, than simply give lip service to the normal kinds of sounds that are commonly found here... One paragraph should be enough...  
 :END:
 
-**** 🕉 Language
+*Include:* =Prominant Sounds from ANY Source!= Natural, Unnatural, or 
+Otherwise, within this section...
 
+\newpage
+
+***** 👃 Smells:
 :README:
-This is kind of a big one! Be very careful to point how and why your characters can understand each other, especially if they are from different countries. Language in the real world is a hell of a barrier, but even if you have a Chinese dragon, an Arabian unicorn, a French knight, a Mayan princess, and a Japanese ninja, they can all talk to and understand each other without explanation. Double I-call-BS-points for someone from another world or time!  Anyone who has ever toured Europe can tell you why this is complete bull.  Take a closer look, especially if you’re modeling anything after medieval Europe; only the Church had a universal language: Latin.
+   =Note:= Only mention the kinds of smell that would make this place
+          truly unique compared to other neighboring regions... 
+          /(if a feature is common to a larger location than that/ 
+           /is where the description for that feature should be.../ 
+           /Not here... We are drilling down to more unique/ 
+           /situations here...)/
+
+   If there are no distinguishing "smells" about this location that make it unique compared to other neighboring regions, than simply give lip service to the normal kinds of "smells" that are commonly found here... One paragraph should be enough...  
 :END:
 
-**** ⚗ Education
+*Include:* =Prominant Scents / Smells from ANY Source!= Natural, Unnatural, or Otherwise, within this section...
 
+\newpage
+
+*** NEW ∅ New Planet or Satellite: /(Master Template)/
 :README:
-(How are children taught?  Skilled workers, like architects or brewers?  Is there public education?  Higher education?)
+
+- =Note:= This can be a tricky thing because a Planet or Satellite may 
+          contain many "Locations" or "Regions" and of course the 
+          reverse is true as well...  
+
+          =And For-that-matter...= 
+
+          Either a Location/Region or a Planet/Satellite COULD 
+          contain One or MORE New Worlds within them as well!
+
+          =OMG Girl! Do The Math! %^)= 
+
+          /(If you write Sci-Fi, the permutations are mind boggling!)/
+ 
+          =For Our Purposes Here: Consider:= *∅ New Planet - Satellite:*   
+          Entries to be autonomous... /(i.e., They Stand Alone...)/
+
+          There may or may not be any connections between items defined
+          here and items defined in other sections...
+
+          For most Use-Cases any *Planet - Satellite* defined here will have
+          its corresponding *Region* defined within this same
+          *♾ New World* item as well...
+
+          =Add:= as many *∅ New Planet - Satellite:* headings here as needed and
+                are important to include for the writing of your Book...
+
+   =Usage:=
+
+          =If You Need To Add Another:=  *∅ New Planet - Satellite:* 
+          Heading to this: *♾ New World* Section: =COPY/CLONE= This Entire:
+          *🏞 Region:* Heading, and
+          =INCLUDE ALL SUB-HEADINGS and CONTENTS= 
+
+          =PASTE Your CLONE Directly Under this One...=
+
+          =THEN:= Fill in details under: *📃 Summary* and *🗒 Region Details:* 
+                 below... periodically... as you are writing your book, or 
+                 come back to fill in details later /as your Muses may be/ 
+                 /inspiring you with visions about some new aspect of this/
+                 /new location while you were off doing something completely/ /different!/
+
+          IF your muses reveal new ideas/concepts/visions not covered by 
+          an existing item below? *Fantastic!* You have a new category to 
+          add to this Template and that item will jog your imagination 
+          the next time you are describing a NEW WORLD in another Book!
 :END:
 
-**** 🚉 Transportation - Shipping
+- [ ] *Write A short Synopsis for a* =SINGLE Planet/Satellite= *here:*
 
+- [ ] *Use the following Headings within this* =Planet/Satellite= *section:* 
+
+       /drill down into details under the headings.../
+
+This Section Defines a Particular & Unique *Planet* or *Satellite*
+
+\newpage
+
+**** System, Sector/quadrant
 :README:
-Here is where you talk about, how "people" and "things" are moved/transported from one "place" to another. (e.g., The logistics... Armies? Crowds? Goods? Animals? etc.)
+   Rename System, Sector/quadrant heading above with the actual name of your system, with its specific sector and quadrant coordinates...
 :END:
 
-**** ⚔ Military
-
-:README:
-Write about the military is all about here... What real world military is/can it be based upon? What’s it’s structure?
-:END:
-
-**** 🏙 Major sectors and systems
-
-|--------+----------+--------+-----------------------------------------|
-| Sector | Quadrant | System | Description:                            |
-|--------+----------+--------+-----------------------------------------|
-|        |          |        | One or two paragraphs only here.        |
-|        |          |        | Reference link to longer doc is better. |
-|        |          |        |                                         |
-|        |          |        |                                         |
-|        |          |        |                                         |
-|--------+----------+--------+-----------------------------------------|
-
-**** 📖 History
-
-:README:
-Everyone comes from somewhere.  People just don’t up and appear on islands and such.  The Native Americans walked across a land bridge way back in the day... Europeans came from Romans and Greeks and Celts and Gauls and more... Very few people bother to look at this aspect of world-building, and they really should.  Even if a civilization has been around for two thousand years and are elven dragon riders, they came from somewhere.  Even if their mythology says they crawled out of the earth: they came from somewhere.  Examine it!
-:END:
-
-*** 🛡 Nation <The Roman Empire, etc.>
-
-:README:
-Nation Definition:
-
-   - A Non-spacefaring kingdom, empire, country, etc.
-
-   - A Continent, Country, Nomadic Diaspora or Clan... (e.g., Asia, Europe, The Roman Empire, The Gypsies, The Isle of Mann, or the Ba Aka Pygmys, etc.) not to be limited to groups living on Planet Earth only of course...
-
-# NOTE: Change the heading title "Nation" above to the actual name of your specific group...
-
-# This template was originally adapted from Droemar’s article “5 Tips: World-Building Template”:
-
-        http://droemar.deviantart.com/journal/5-Tips-World-Building-Template-224630229
-
-# Originally created as an Evernote template, later moved to and overhauled within Scrivener, and now living her third incarnation within a future proof plain text .org file that is parsed, hosted, and rendered by my fancy Emacs pubOps environment... %^) 
-:END:
-
-**** 📃 Summary:
-
-:README:
-Goals, motivations, who they’re at war with, etc.
-:END:
-
-**** 🔤 Basics:
-
-|----------------+---------+--------+----------+----------------------|
-| Home Country   | Colours | Symbol | Currency | Official language(s) |
-|----------------+---------+--------+----------+----------------------|
-| <country name> |         |        |          |                      |
-|                |         |        |          |                      |
-|----------------+---------+--------+----------+----------------------|
-
-|-------------------+------------------------+-----------------------|
-| Government type   | Current governing body | Current head of state |
-|-------------------+------------------------+-----------------------|
-| Feudal, caste,    | Party name.            |                       |
-| democracy, etc... |                        |                       |
-|                   |                        |                       |
-|-------------------+------------------------+-----------------------|
-
-|-------------------+----------------+-----------------------|
-| Military          | Affiliation(s) | Number of territories |
-|-------------------+----------------+-----------------------|
-| What’s it called? |                |                       |
-|                   |                |                       |
-|-------------------+----------------+-----------------------|
-
-**** 𐇑 Social Structure
-
-:README:
-Who holds power, and how does it affect the way the society works? Is there an aristocracy? If so, how are its ranks structured?
-:END:
-
-**** 🏛 Government
-
-:README:
-Structure and general procedures
-:END:
-
-**** ⚖ Taxation
-
-:README:
-A brief overview of how the people are taxed, and where that money goes.
-:END:
-
-**** 💵 Currency
-
-:README:
-What is the currency? What are its sub-denominations?
-:END:
-
-**** 👥 Population
-***** Common physical characteristics
-
-:README:
-Common physical characteristics of long-term inhabitants and native peoples: skin colour, hair colour, build, dress
-:END:
-
-***** Races 
-
-:README:
-The races that inhabit the area, whether or not they’re native.
-:END:
-
-***** Predominant religion(s)
-
-:README:
-Monotheism?  Pantheism?  Atheism? Name and describe them as needed.
-:END:
-
-**** ⛩ Culture
-***** Mannerisms
-
-:README:
-The likely way someone behaves if they’re from this place. Because believe me, a fur-wrapped barbarian behaves in a very different way than a Greek statesman.
-:END:
-
-***** Greetings
-
-:README:
-What is considered an acceptable greeting?  In formal setting?  Among friends? Family?
-:END:
-
-***** Customs
-
-:README:
-The habits of a people that make them unique.  Google it if you’re confused.
-:END:
-
-***** Superstitions
-
-:README:
-Knowing the power irrational explanations have over a populace can sometimes be good story material.
-:END:
-
-***** Beliefs
-
-:README:
-Do I really have to explain this one?  This alone can be your story.
-:END:
-
-***** Rituals
-
-:README:
-Birth? Coming-of-age?  Marriage?  Death?  Justice?
-:END:
-
-***** Festivals
-
-:README:
-What do people celebrate?  What are considered holidays?  Why?
-:END:
-
-**** 🕉 Language
-
-:README:
-This is kind of a big one for me, because I’m always very careful to point how and why my characters can understand each other, especially if they are from different countries. Language in the real world is a hell of a barrier, but even if you have a Chinese dragon, an Arabian unicorn, a French knight, a Mayan princess, and a Japanese ninja, they can all talk to and understand each other without explanation. Double I-call-BS-points for someone from another world or time!  Anyone who has ever toured Europe can tell you why this is complete bull.  Take a closer look, especially if you’re modeling anything after medieval Europe; only the Church had a universal language: Latin.
-:END:
-
-**** ⚗ Education
-
-:README:
-How are children taught?  Skilled workers, like architects or brewers?  Is there public education?  
-Higher education?
-:END:
-
-**** 🚉︎Transportation
-
-:README:
-How do people move things?  Armies?  Crowds?  Goods?  Animals?
-:END:
-
-**** ⚔ Military
-
-:README:
-What is their military like? What real world military is/can it be based upon? What’s it’s structure?
-:END:
-
-**** 🏙 Major territories and cities
-
-***** Territory:
-
-****** City <name of major city>:
-
-Description...
-
-**** 📖 History
-
-:README:
-Everyone comes from somewhere.  People just don’t up and appear on islands and such.  Even Native Americans walked across a land bridge way back in the day. Europeans came from Romans and Greeks and Celts and Gauls and more.  
-
-Few people bother to look at this aspect of world-building, and they really should.  Even if a civilization has been around for two thousand years and are elven dragon riders, they came from somewhere.  Even if their mythology says they crawled out of the earth: they came from somewhere.  Examine it!
-:END:
-
-
-
-** DONE 🌐 New World
-CLOSED: [2020-07-02 Thu 00:40]
-:LOGBOOK:
-- State "DONE"       from "ACTIVE"     [2020-07-02 Thu 00:40]
-:END:
-*** DONE 🏞 Location
-CLOSED: [2020-07-02 Thu 00:39]
-:LOGBOOK:
-- State "DONE"       from "ACTIVE"     [2020-07-02 Thu 00:39]
-:END:
-
-**** DONE Summary
-CLOSED: [2020-07-01 Wed 19:53]
-:LOGBOOK:
-- State "DONE"       from              [2020-07-01 Wed 19:53]
-:END:
-
-:README:
-Write your Location Summary here. Use what ever sub headings, and or formatting you need to accomplish this but don't make it too long...  The next sections are for drilling down...
-:END:
-
-**** DONE Setting Detail
-CLOSED: [2020-07-02 Thu 00:39]
-:LOGBOOK:
-- State "DONE"       from "ACTIVE"     [2020-07-02 Thu 00:39]
-:END:
-
-***** DONE Overall Feeling:
-CLOSED: [2020-07-02 Thu 00:39]
-:LOGBOOK:
-- State "DONE"       from "NEW"        [2020-07-02 Thu 00:39]
-:END:
-
-***** DONE Sights:
-CLOSED: [2020-07-02 Thu 00:39]
-:LOGBOOK:
-- State "DONE"       from "NEW"        [2020-07-02 Thu 00:39]
-:END:
-
-***** DONE Sounds:
-CLOSED: [2020-07-02 Thu 00:39]
-:LOGBOOK:
-- State "DONE"       from "NEW"        [2020-07-02 Thu 00:39]
-:END:
-
-***** DONE Smells:
-CLOSED: [2020-07-02 Thu 00:39]
-:LOGBOOK:
-- State "DONE"       from "NEW"        [2020-07-02 Thu 00:39]
-:END:
-
-*** DONE ∅ Planet/Satellite
-CLOSED: [2020-07-01 Wed 19:49]
-:LOGBOOK:
-- State "DONE"       from "ACTIVE"     [2020-07-01 Wed 19:49]
-:END:
-
-:README:
-Rename Planet/Satellite heading above to the actual name of the planet or satellite of your specific case...
-
-The Ideas and Notes here were adapted from Droemar’s article “5 Tips: World-Building Template”.
-
-http://droemar.deviantart.com/journal/5-Tips-World-Building-Template-224630229
-
-Much more information can be obtained by visiting the above website!!!
-:END:
-
-**** DONE System, Sector/quadrant
-CLOSED: [2020-07-01 Wed 19:11]
-:LOGBOOK:
-- State "DONE"       from              [2020-07-01 Wed 19:11]
-:END:
-
-:README:
-Rename System, Sector/quadrant heading above with the actual name of your system, with its specific sector and quadrant coordinates...
-:END:
+\newpage
 
 ***** Controlling party/faction
-
 :README:
-Rename Controlling party/faction heading above with the actual name of your party/or faction...  Fill in key facts in the tables below...
+  Rename Controlling party/faction heading above with the actual name of your party/or faction...  Fill in key facts in the tables below...
 :END:
-
 
 |-------+------+-------------+----------------+------------|
 | Class | Type | Satellites  | Native species | Population |
@@ -1669,336 +2122,603 @@ Rename Controlling party/faction heading above with the actual name of your part
 |              |              |             | plutocracy, etc. |                |
 |--------------+--------------+-------------+------------------+----------------|
 
-**** DONE Major cities
-CLOSED: [2020-07-01 Wed 19:13]
-:LOGBOOK:
-- State "DONE"       from              [2020-07-01 Wed 19:13]
-:END:
+**** Major cities
+
+\newpage
 
 ***** City (continent/region)
-
 :README:
-Change Heading City (continent/region) above to the name of your specific city, continent, or region...
+   Change Heading City (continent/region) above to the name of your specific city, continent, or region...
 
-Then add a detailed description below...  
+   Then add a detailed description below...  
 
-Do this to get a feel for the areas the characters will be visiting.
+   Do this to get a feel for the areas the characters will be visiting.
 :END:
+
+\newpage
 
 ****** Description:
 
-# Add Description Here:
+Add Description Here:
 
-**** DONE Population
-CLOSED: [2020-07-01 Wed 19:26]
-:LOGBOOK:
-- State "DONE"       from              [2020-07-01 Wed 19:26]
-:END:
+\newpage
 
+**** Population
 ***** Races:
-
 :README:
 List all the races that inhabit the area, whether or not they’re native.
 :END:
 
-***** Predominant religion(s):
+\newpage
 
+***** Predominant religion(s):
 :README:
 Monotheism?  Pantheism?  Atheism? Name and describe them as needed.
 :END:
 
-***** Common physical characteristics:
+\newpage
 
+***** Common physical characteristics:
 :README:
 List the common physical characteristics of long-term inhabitants and native peoples: skin colour, hair colour, build, dress
 :END:
 
-**** DONE Culture
-CLOSED: [2020-07-01 Wed 19:28]
-:LOGBOOK:
-- State "DONE"       from              [2020-07-01 Wed 19:28]
-:END:
+\newpage
 
+**** Culture
 ***** Mannerisms:
-
 :README:
 Use this space to illustrate the likely way someone behaves if they’re from this place. Because believe me, a fur-wrapped barbarian behaves in a very different way than a Greek statesman.
 :END:
 
-***** Cuisine:
+\newpage
 
+***** Cuisine:
 :README:
 Write about what most people on this planet eat every day?  On festival days?  As delicacies? Taboo?
 :END:
 
-***** Leisure:
+\newpage
 
+***** Leisure:
 :README:
 What do people here do in their spare time?  For fun?
 :END:
 
-***** Greetings:
+\newpage
 
+***** Greetings:
 :README:
 What is considered an acceptable greeting?  In formal setting?  Among friends? Family?
 :END:
 
-***** Customs:
+\newpage
 
+***** Customs:
 :README:
 The habits of a people that make them unique.  Google it if you’re confused.
 :END:
 
-***** Quotes:
+\newpage
 
+***** Quotes:
 :README:
 Write about how someone from this planet would talk like, or talk about.
 :END:
 
-***** Superstitions:
+\newpage
 
+***** Superstitions:
 :README:
 Knowing the power irrational explanations have over a populace can sometimes be good story material.
 :END:
 
-***** Magic:
+\newpage
 
+***** Magic:
 :README:
 How it is treated by the country.  Whether hated and feared, harnessed for industry, or nonexistent within it’s borders, if magic has a presence in your story you ought to look at how it affects the larger picture than just your heroes and their journey.
 :END:
 
-***** Beliefs:
+\newpage
 
+***** Beliefs:
 :README:
 Do I really have to explain this one?  This alone can be your story.
 :END:
 
-***** Rituals:
+\newpage
 
+***** Rituals:
 :README:
 Birth? Coming-of-age?  Marriage?  Death?  Justice?
 :END:
 
-***** Festivals:
+\newpage
 
+***** Festivals:
 :README:
 What do people celebrate?  What are considered holidays?  Why?
 :END:
 
-**** DONE Transport
-CLOSED: [2020-07-01 Wed 19:29]
-:LOGBOOK:
-- State "DONE"       from              [2020-07-01 Wed 19:29]
-:END:
+\newpage
 
+**** Transport
 :README:
 How do people move things?  Armies?  Crowds?  Goods?  Animals?
 :END:
 
-**** DONE Weather patterns
-CLOSED: [2020-07-01 Wed 19:30]
-:LOGBOOK:
-- State "DONE"       from              [2020-07-01 Wed 19:30]
-:END:
+\newpage
 
+**** Weather patterns
 :README:
 Tropical?  Stormy?  Cold?  Earthquakes?  Climate in general?
 :END:
 
-**** DONE Resources
-CLOSED: [2020-07-01 Wed 19:30]
-:LOGBOOK:
-- State "DONE"       from              [2020-07-01 Wed 19:30]
-:END:
+\newpage
 
+**** Resources
 :README:
 What does the planet export?  Import?  Make?  Is famous for?
 :END:
 
-**** DONE History
-CLOSED: [2020-07-01 Wed 19:48]
-:LOGBOOK:
-- State "DONE"       from              [2020-07-01 Wed 19:48]
-:END:
+\newpage
 
+**** History
 :README:
 Everyone comes from somewhere.  People just don’t up and appear on islands and such.  I mean, even Native Americans walked across a land bridge way back in the day. Europeans came from Romans and Greeks and Celts and Gauls and more.  Very few people bother to look at this aspect of world-building, and they really should.  Even if a civilization has been around for two thousand years and are elven dragon riders, they came from somewhere.  Even if their mythology says they crawled out of the earth: they came from somewhere.  Examine it here in this space!
 :END:
 
-
-** DONE 🔖 New Chapter #
-CLOSED: [2020-07-01 Wed 21:25]
-:LOGBOOK:
-- State "DONE"       from              [2020-07-01 Wed 21:25]
-:END:
-*** 📄 Preface <optional - replace with episode name if needed>
-
-# BEGIN SUB-CHAPTER TEXT
-
-Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo. Fusce tincidunt, lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante. 
-
-**** References:
-
-Add links to other reference, source docs, requirements, back stories, whatever, here...
-
-- *[ [][] ]*
-
-- *[ [][] ]*
-
-- *[ [][] ]*
-
-- *[ [][] ]*
-
-- *[ [][] ]*
-
-# END SUB-CHAPTER TEXT
-
-*** DONE 📄 Episode - <replace w/ chapter name>
-CLOSED: [2020-07-01 Wed 21:17]
-:LOGBOOK:
-- State "DONE"       from              [2020-07-01 Wed 21:17]
-:END:
-
+\newpage
+*** NEW 👥 New Group or Faction: /(Master Template)/
 :README:
-Episodes or Scenes are the DNA that make up the chapters in a novel...  
+   =Note:= This section is for describing the social and government
+          aspects of a group which may be located in one single
+          place as a primitive society or a more advanced civilization 
+          living on one single planet, without space travel, to a HUGE 
+          Interstellar Nation spanning one or more systems, possibly 
+          an entire Galaxy!
 
-Chapters can contain several scenes or episodes... There can be many twisty paths all alike (or all different)... %~)
+          If you need to add a NEW Group or Faction to your book:
+          =COPY/CLONE= This Entire *New Group or Faction* /(Master Template)/
+          =INCLUDE ALL SUB-HEADING and CONTENTS= 
+
+          =PASTE Your CLONE as a Sub-Heading Of:= *👥 Groups - Factions:* 
+          under the: *🔍 Research:* Section of this Project...
+
+          =THEN:= Adjust sub-headings of your clone to match your needs...
+              /i.e., Use Either/ *⚛ Interstellar Nation* /or/ *🛡 Nation*
+          =BUT NOT BOTH of THEM!=
 :END:
 
-# Begin Chapter:
+This Section Defines a Particular & Unique *Group* or *Faction* 
+within a *♾ New World* ...
 
-<insert chapter / episode text here>
+\newpage
 
-Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo. Fusce tincidunt, lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante. 
-
-At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
-
-# End of Chapter:
-
-*** DONE 🗒 Background Notes:
-CLOSED: [2020-07-01 Wed 21:24]
-:LOGBOOK:
-- State "DONE"       from              [2020-07-01 Wed 21:24]
-:END:
-
-**** DONE 🗒 Note 1: <2020-05-10 Sun>
-CLOSED: [2020-07-01 Wed 21:21]
-:LOGBOOK:
-- State "DONE"       from              [2020-07-01 Wed 21:21]
-:END:
-
-+ Mark each note's timestamp to its initial creation time. This will enable emerging notes for chapters to be searched chronologically, and to give you an idea of how things evolve over time...
-
-+ Add anything you need here under this heading formatted any way needed to present the data... Sub levels are fine, tables are fine... etc.  This is your chapter's Notebook, Scrapbook, whatever any extra info/metadata you feel is important to record...
-
-  + Use bulleted lists/sublist etc. if needed...
-
-1. Or Numbered Lists...
-
-|----+--------|
-| Or | Tables |
-|----+--------|
-|  1 |    2.3 |
-|----+--------|
-
-Do any or all the above to help get the concepts and images of your book clear in mind...
-
-**** DONE 🗒 Note 2: <2020-05-10 Sun>
-CLOSED: [2020-07-01 Wed 21:22]
-:LOGBOOK:
-- State "DONE"       from              [2020-07-01 Wed 21:22]
-:END:
-
-Each new note needs to get its own heading and initial timestamp...
-
-****** DONE Quid Novi?
-CLOSED: [2020-07-01 Wed 21:26]
-:LOGBOOK:
-- State "DONE"       from              [2020-07-01 Wed 21:26]
-:END:
-
-Quid Novi? Lorem Ipsum dolor sit amet,consectetur adipisicing elit, sed doeiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim adminim veniam, quis nostrudexercitation ullamco laboris nisi utaliquip ex ea commodo consequat.Duis aute irure dolor inreprehenderit in coluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatatnon proident, sunt in culpa quiofficia deserunt mollit anim id estlaborum.
-
-**** DONE 🗒 Phasellus orci: <2020-05-10 Sun>
-CLOSED: [2020-07-01 Wed 21:26]
-:LOGBOOK:
-- State "DONE"       from              [2020-07-01 Wed 21:26]
-:END:
-
-Etiam tempor elit auctor magna. Nullam nibh velit, vestibulum ut, eleifend non, pulvinar eget, enim. Classaptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer velit mauris, convallis acongue sed, placerat id, odio. Etiam venenatis tortor sed lectus. Nulla non orci. In egestas porttitor quam. Duis nec diameget nibh mattis tempus. Curabitus accumsan pede id odio. Nunc vitae libero. Aenean condimentum diam et turpis.Vestibulum non risus. Ut consectetuer gravida elit. Aenean est nunc, varius sed, alquam eu, feugiat sit amet, metus. Sedvenenatis odio id eros.
-
-|----------+-----------+-----------+-----------+-------------------|
-| Inceptos | Venenatis | Convallis | Curabitus | Nunc vitae libero |
-|----------+-----------+-----------+-----------+-------------------|
-| test 1   | test 2    | test 3    | test 4    | test 5            |
-|----------+-----------+-----------+-----------+-------------------|
-
-Yadda, yadda, yadda. etc...
-** DONE 📒 Back Story Plots:
-CLOSED: [2020-07-01 Wed 12:41]
-:LOGBOOK:
-- State "DONE"       from              [2020-07-01 Wed 12:41]
-:END:
-
+**** ⚛ Interstellar Nation /(Master Template)/
 :README:
-This template section contains a few example Back Story Plots which you can copy/clone into the "Back Story Plots:" sub-section of your main "Book:" section as needed for repourposing.
+   =Definition:=
 
-- It's a good idea to keep things organized (based on evolving existing and new emerging chapters within your book). The following tips will help you:
+      /A Galactic Nation/
 
-    + Keep your outline sub-headings timestamped below.
-
-    + Keep track of your plot summaries by adding "GTD TODO" keywords.
-
-    + Prioritize the plot summaries as well if needed. 
-
-The above will help you get better organized about how your book is developing, what areas need the most work, etc.  Most importantly, this will help prevent you from making any grave mistakes causing any contradictions within your story later... (unless that was your intention "Alfred Hitchcock")... In any case you will be better informed by keeping all your plot tasks here where you can see them and resolve them quickly...
-
-- Use the forms below when you need to make new Back Story Plots... Change the heading and content with the real "Back Story Plot" content for your book...
+      A Spacefaring kingdom, empire, country, etc (like Asimov's Galactic Empire, or the Romulan Empire etc.) This type of nation may extend out through a galactic cluster or quadrant, etc.
 :END:
-
-*** 📒 Back Story Plot Example One:
-
-Note: This is an example of a back story plot related to your book... Write it down in the rough here and then later you can develop it further if needed.
-
-*** 📒 Back Story Plot Example Two:
-
-Note: This is an example of a back story plot related to your book... Write it down in the rough here and then later you can develop it further if needed.
-
-*** 📒 Add more Back Story Plots like this:
-
-Note: This is an example of a back story plot related to your book... Write it down in the rough here and then later you can develop it further if needed.
-
-** DONE 🗡 Chapter Plot Summaries:
-CLOSED: [2020-07-01 Wed 12:43]
-:LOGBOOK:
-- State "DONE"       from              [2020-07-01 Wed 12:43]
-:END:
-
+***** 📃 Summary:
 :README:
-This template section contains a few example Chapter Plot Summaries which you can copy/clone into the "Chapter Plot Summaries:", sub-section of your main "Book:" section as needed for repourposing.
+   Write executive summary /(abstract)/ here, based on details within all the other sub-headings under this *Interstellar Nation* section...
 
-- It's a good idea to keep things organized (based on evolving existing and new emerging chapters within your book). The following tips will help you:
-
-    + Keep your outline sub-headings timestamped below.
-
-    + Keep track of your plot summaries by adding "GTD TODO" keywords.
-
-    + Prioritize the plot summaries as well if needed. 
-
-The above will help you get better organized about how your book is developing, what areas need the most work, etc.  Most importantly, this will help prevent you from making any grave mistakes causing any contradictions within your story later... (unless that was your intention "Alfred Hitchcock")... In any case you will be better informed by keeping all your plot tasks here where you can see them and resolve them quickly...
-
-- Use the forms below when you need to make new Chapter Plots... Change the heading and content with the real "Chapter # Plot" content for your book...
+   This abstract, is a short historical and present summary only... It should include the major goals, motivations... who they’re at war with, etc. i.e., It should include the news headlines, and ledelines...  but not the full story... Results of your research below this summary should be as rich and detailed as you can make it... /(but also indexed!)/
 :END:
 
-*** Chapter # Plots
+\newpage
 
-In this chapter we are dealing with  yadda yadda yadda which must be resolved with yadda yadda yadda.
+***** 🔤 Basics:
+:README:
+   Fill in the tables below... Pretty much self explanatory...  Do your research first!
+:END:
 
-*** Chapter # Plots
+|------------+---------+--------+----------+----------------+----------------|
+| Home World | Colours | Symbol | Currency | Official Langs | Galactic Scope |
+|------------+---------+--------+----------+----------------+----------------|
+|            |         |        |          |                | number of      |
+|            |         |        |          |                | systems, etc.  |
+|            |         |        |          |                |                |
+|            |         |        |          |                |                |
+|------------+---------+--------+----------+----------------+----------------|
 
-In this chapter we are dealing with  yadda yadda yadda which must be resolved with yadda yadda yadda.
+|------------------+------------------+----------------+-----------+------------|
+| Government       | Current Gov Body | Cur State Head | Military  | Affiliates |
+|------------------+------------------+----------------+-----------+------------|
+| <fudal, castle,  | <party name>     |                | What's it |            |
+| democracy, etc.> |                  |                | called?   |            |
+|                  |                  |                |           |            |
+|                  |                  |                |           |            |
+|------------------+------------------+----------------+-----------+------------|
 
-*** Chapter # Plots
+\newpage
 
-In this chapter we are dealing with  yadda yadda yadda which must be resolved with yadda yadda yadda.
+***** 🥂 Social Structure:
+:README:
+   Who holds power, and how does it affect the way the society works? Is there an aristocracy? If so, how are its ranks structured?
+:END:
+
+\newpage
+
+***** 🏛 Government:
+:README:
+   Describe the Structure and general procedures here...
+:END:
+
+\newpage
+
+***** ⚖ Taxation:
+:README:
+   Write a brief overview of how the people are taxed, and where that money goes.
+:END:
+
+\newpage
+
+***** 💵 Currency:
+:README:
+   What is the currency? What are its sub-denominations?
+:END:
+
+\newpage
+
+***** 👥 Population:
+****** 🎨 Races
+:README:
+   Describe the races that inhabit the area, and whether or not they’re native, etc...
+:END:
+
+\newpage
+
+****** 𐇑 Common Physical Characteristics
+:README:
+   Describe the common physical characteristics of long-term inhabitants and native peoples: skin colour, hair colour, build, dress, etc...
+:END:
+
+\newpage
+
+****** 🛐 Predominant religion(s)
+:README:
+   Describe the perdominant religion here... Is it Monotheism?  Pantheism?  Atheism? Name and describe them as needed.)
+:END:
+
+\newpage
+
+***** ⛩ Culture:
+:README:
+   =Definition:=
+
+     That which encompasses the social behaviour, institutions, and norms found within societies of sentient beings, as well as the knowledge, beliefs, arts, laws, customs, capabilities, and habits of the individuals in these groups. Culture is often originated from or attributed to a specific region or location...
+
+     People /(Intelligent social beings living together within a region on any world)/ acquire culture through the learning processes of *Enculturation* & *Socialization*, which is shown by the diversity of cultures across societies throughout the galaxy... 
+:END:
+****** ✋ Mannerisms
+:README:
+   Use this space to illustrate the typical way individuals or groups from this place behave... (e.g, A fur-wrapped barbarian behaves in a very different way than a Greek statesman.)
+:END:
+
+\newpage
+
+****** 🤝 Greetings
+:README:
+   Provide some examples of typical greetings here... (e.g, What is considered an acceptable greeting? In formal setting? Among friends? Family?, etc.)
+:END:
+
+\newpage
+
+****** 💍 Customs
+:README:
+   List the habits of a people that make them unique...
+:END:
+
+\newpage
+
+****** 👽 Superstitions
+:README:
+   Knowing the power that =Irrational Explanations= may have over a populace can provide great story material...
+:END:
+
+\newpage
+
+****** 🛐 Beliefs
+:README:
+   =This Item is HUGE...= Completing this section could end up turning into an entire story...
+:END:
+
+\newpage
+
+****** 𝌵 Rituals
+:README:
+   *Add details about:* Births? Coming-of-age?  Marriage?  Death?  Justice?
+:END:
+
+\newpage
+
+****** 🎪 Festivals
+:README:
+   What Do People Celebrate? What Are Considered Holidays? Why? Etc...
+:END:
+
+\newpage
+
+***** 🕉 Language
+:README:
+   This is kind of a big one! Be very careful to point how and why your characters can understand each other, especially if they are from different countries. Language in the real world is a hell of a barrier, but even if you have a Chinese dragon, an Arabian unicorn, a French knight, a Mayan princess, and a Japanese ninja, they can all talk to and understand each other without explanation. Double I-call-BS-points for someone from another world or time!  Anyone who has ever toured Europe can tell you why this is complete bull.  Take a closer look, especially if you’re modeling anything after medieval Europe; only the Church had a universal language: Latin.
+:END:
+
+\newpage
+
+***** 🎓 Education
+:README:
+   How are children taught?  
+   Skilled workers? 
+   Architects Or Brewers?  
+   Is there public education?  
+   Higher education?
+:END:
+
+\newpage
+
+***** 🚉 Transportation - Shipping
+:README:
+   Here is where you talk about, how people and things are moved/transported from one place to another. /(e.g., The logistics... Armies? Crowds? Goods? Animals? etc.)/
+:END:
+
+\newpage
+
+***** ⚔ Military
+:README:
+   Write about the military is all about here... 
+   What real world military is/can it be based upon? 
+   What’s it’s structure?
+:END:
+
+\newpage
+
+***** ✨ Major Sectors and Systems :README: This Table Structure may be changed if it is not working well... It may be better to simply create a sub heading for each Major Sector/Quadrant/System... /(of significance to the story)/ =To Be Determined...= :END:
+
+|--------+----------+--------+--------------|
+| Sector | Quadrant | System | Description: |
+|--------+----------+--------+--------------|
+|        |          |        | [[link to Doc]]  |
+|        |          |        | [[link to Doc]]  |
+|        |          |        | [[link to Doc]]  |
+|--------+----------+--------+--------------|
+
+\newpage
+
+***** 📚 History
+:README:
+   =Everyone Comes From Somewhere...= People just don’t up and appear on islands and such.  The Native Americans walked across a land bridge way back in the day... Europeans came from Romans and Greeks and Celts and Gauls and more... Very few people bother to look at this aspect of world-building, and they really should.  Even if a civilization has been around for two thousand years and are Elven Dragon Riders, they came from somewhere.  Even if their mythology says they crawled out of the earth: they came from somewhere. 
+
+   =Do the research!=
+:END:
+
+\newpage
+
+**** 🛡 Nation /(Master Template)/
+:README:
+   =Definition:=
+
+      /A Non-spacefaring kingdom, empire, country, etc./
+
+      =e.g., The Roman Empire, etc.=
+
+   A Continent, Country, Nomadic Diaspora or Clan... (e.g., Asia, Europe, The Roman Empire, The Gypsies, The Isle of Mann, or the Ba Aka Pygmys, etc.) not to be limited to groups living on Planet Earth only of course...
+:END:
+***** 📃 Summary:
+:README:
+   Write executive summary /(abstract)/ here, based on details within all the other sub-headings under this *Nation* section...
+
+   This abstract, is a short historical and present summary only... It should include the major goals, motivations... who they’re at war with, etc. i.e., It should include the news headlines, and ledelines...  but not the full story... Results of your research below this summary should be as rich and detailed as you can make it... /(but also indexed!)/
+:END:
+
+\newpage
+
+***** 🔤 Basics:
+:README:
+   Fill in the tables below... Do your research first!
+
+   =Note:= This Table Structure may be changed if
+          it is not working well...  It may be better
+          to simply create a sub heading for each
+          Major Country with details for each contained
+          within... 
+
+          =To Be Determined...=
+:END:
+
+|---------+---------+--------+----------+----------------|
+| Country | Colours | Symbol | Currency | Official Langs |
+|---------+---------+--------+----------+----------------|
+| <name>  |         |        |          |                |
+|         |         |        |          |                |
+|---------+---------+--------+----------+----------------|
+
+|-------------------+------------------+--------------------|
+| Gov type          | Current Gov Body | Current State Head |
+|-------------------+------------------+--------------------|
+| Feudal, caste,    | Party name.      |                    |
+| democracy, etc... |                  |                    |
+|                   |                  |                    |
+|-------------------+------------------+--------------------|
+
+|-------------------+----------------+-----------------------|
+| Military          | Affiliation(s) | Number of territories |
+|-------------------+----------------+-----------------------|
+| What’s it called? |                |                       |
+|                   |                |                       |
+|-------------------+----------------+-----------------------|
+
+\newpage
+
+***** 🥂 Social Structure
+:README:
+   Who holds power, and how does it affect the way the society works? Is there an aristocracy? If so, how are its ranks structured?
+:END:
+
+\newpage
+
+***** 🏛 Government
+:README:
+   Structure and general procedures 
+:END:
+
+\newpage
+
+***** ⚖ Taxation
+:README:
+   A brief overview of how the people are taxed, and where that money goes.
+:END:
+
+\newpage
+
+***** 💵 Currency
+:README:
+   What is the currency? What are its sub-denominations?
+:END:
+
+\newpage
+
+***** 👥 Population
+****** 🎨 Races 
+:README:
+   Describe the races that inhabit the area, and whether or not they’re native, etc...
+:END:
+
+\newpage
+
+****** 𐇑 Common physical characteristics
+:README:
+   Describe the common physical characteristics of long-term inhabitants and native peoples: skin colour, hair colour, build, dress, etc...
+:END:
+
+\newpage
+
+****** 🛐 Predominant religion(s)
+:README:
+   Describe the perdominant religion here... Is it Monotheism?  Pantheism?  Atheism? Name and describe them as needed.)
+:END:
+
+\newpage
+
+***** ⛩ Culture
+:README:
+   =Definition:=
+
+     That which encompasses the social behaviour, institutions, and norms found within societies of sentient beings, as well as the knowledge, beliefs, arts, laws, customs, capabilities, and habits of the individuals in these groups. Culture is often originated from or attributed to a specific region or location...
+
+     People /(Intelligent social beings living together within a region)/ acquire culture through the learning processes of *Enculturation* & *Socialization*...
+:END:
+****** ✋ Mannerisms
+:README:
+   Use this space to illustrate the typical way individuals or groups from this place behave... (e.g, A fur-wrapped barbarian behaves in a very different way than a Greek statesman.)
+:END:
+
+\newpage
+
+****** 🤝 Greetings
+:README:
+   Provide some examples of typical greetings here... (e.g, What is considered an acceptable greeting? In formal setting? Among friends? Family?, etc.)
+:END:
+
+\newpage
+
+****** 💍 Customs
+:README:
+   List the habits of a people that make them unique...
+:END:
+
+\newpage
+
+****** 👽 Superstitions
+:README:
+   Knowing the power that =Irrational Explanations= may have over a populace can provide great story material...
+:END:
+
+\newpage
+
+****** 🛐 Beliefs
+:README:
+   =This Item is HUGE...= Completing this section could end up turning into an entire story...
+:END:
+
+\newpage
+
+****** 𝌵 Rituals
+:README:
+   *Add details about:* Births? Coming-of-age?  Marriage?  Death?  Justice?
+:END:
+
+\newpage
+
+****** 🎪 Festivals
+:README:
+   What Do People Celebrate? What Are Considered Holidays? Why? Etc...
+:END:
+
+\newpage
+
+***** 🕉 Language
+:README:
+This is kind of a big one for me, because I’m always very careful to point how and why my characters can understand each other, especially if they are from different countries. Language in the real world is a hell of a barrier, but even if you have a Chinese dragon, an Arabian unicorn, a French knight, a Mayan princess, and a Japanese ninja, they can all talk to and understand each other without explanation. Double I-call-BS-points for someone from another world or time!  Anyone who has ever toured Europe can tell you why this is complete bull.  Take a closer look, especially if you’re modeling anything after medieval Europe; only the Church had a universal language: Latin.
+:END:
+
+\newpage
+
+***** 🎓 Education
+:README:
+   How are children taught?  
+   Skilled workers? 
+   Architects Or Brewers?  
+   Is there public education?  
+   Higher education?
+:END:
+
+\newpage
+
+***** 🚉 Transportation
+:README:
+   Here is where you talk about, how people and things are moved/transported from one place to another. /(e.g., The logistics... Armies? Crowds? Goods? Animals? etc.)/
+:END:
+
+\newpage
+
+***** ⚔ Military
+:README:
+   Write about the military is all about here... 
+   What real world military is/can it be based upon? 
+   What’s it’s structure?
+:END:
+
+\newpage
+
+***** 🏞 Major Territories:
+****** 🏞 Territory or Region:
+******* 🏰 Major City /(Name Of Major City Within Region)/
+:README:
+   Write Description of this Major City here...
+:END:
+
+\newpage
+
+******* 🏘 Minor City /(Name Of Minor City Within Region)/
+:README:
+   Write Description of this Minor City here...
+:END:
+
+\newpage
+
+***** 📚 History
+:README:
+   =Everyone Comes From Somewhere...= People just don’t up and appear on islands and such.  The Native Americans walked across a land bridge way back in the day... Europeans came from Romans and Greeks and Celts and Gauls and more... Very few people bother to look at this aspect of world-building, and they really should.  Even if a civilization has been around for two thousand years and are Elven Dragon Riders, they came from somewhere.  Even if their mythology says they crawled out of the earth: they came from somewhere. 
+
+   =Do the research!=
+:END:
+
+\newpage
 

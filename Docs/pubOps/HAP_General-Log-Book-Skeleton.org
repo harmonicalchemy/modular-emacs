@@ -40,15 +40,14 @@
 # #+TAGS:
 #+end_comment
 
-* NEW About:
-
+* NEW ☞ About:
 :README:
-   Use this section as Front Matter for your Log Book...
+   Use this section as Front Matter for your Log Book... The summary provided here about your log notebook will become more important over time as your log book gets filled with lots of information!!!  This is where you will be looking first years later when searching to find something you did years before! Hints to help with that process should appear here...
 :END:
 
-This Log Book was created for...  Yadda Yadda... Yadda...
+This Log Note Book was created for...  Yadda Yadda... Yadda...
 
-** References:
+** 📚 References:
 
 Add links to other reference, source docs, requirements, back stories, whatever, here...
 
@@ -68,81 +67,95 @@ Add links to other reference, source docs, requirements, back stories, whatever,
 
 \newpage
 
-* Begin Log:
+* 📒 Begin LOG Notebook:
 :PROPERTIES:
 :CUSTOM_ID: HAP-general-log-notebook-skeleton-1
 :END:
-** 2022:
-*** NEW log: <2021-03-29 Mon> Generic Title /(General Log Entry Template)/
-
+** 📅 2022:
+*** NEW 🗓 LOG: <2021-03-29 Mon> Generic Title /(General Log Entry Template)/
 :README:
-   Since you created this new log entry you are probably in the middle of a task related to it right now!  Go ahead and punch the clock right now as well, to start recording your time! The following Commands are defined below for you to remember and use to track your time:
+   - *Go To One of the HEADINGS Below:* /(Summary, Details, or Sub Headings)/
 
-   - *C-c C-x C-i* =Start Clock= /(Begin OR Resume Clocking Current task)/
-                  This creates a new ~:CLOCKING:~ Time Card Entry on the
-                  next line below the Org Heading you have chosen to
-                  clock time for... Clocking Entries look like this:
+      =Punch the Time Clock= At the heading And then begin working on a task related to that Heading... =Your Time IS being Recorded Now= 
 
-         =Example:=
+   - =Use These Commands:= /as you work to keep track your time.../
 
-         ::CLOCKING:
-           CLOCK: [2022-08-01 Mon 09:48]
-         ::END:
+      + *Clock IN:* ~C-c C-x C-i~ 
 
-         =Note:= /(I had to add an extra colon ~:~ char to the example below,/
-                /otherwise org mode thinks it is real, but it is inside/
-                /this/ ~:README:~ /which would cause a problem... Org-Mode/
-                /does NOT allow nesting of Properties Boxes.../
+                    /(Begin OR Resume Clocking Current task)/
 
-         =Do above command now...= /Start recording your time girl!/
-                                 /Be in control of your life!/
+                    This creates a new :CLOCKING: Time Card Entry just
+                    underneath the HEADING...
 
-   After doing the above, you can go away and do some work, leaving this log note to visit other files and work on them etc. The clock will be recording your time all the while... You will see in your mode line the elapsed clock time as you work...
+                    Do this just before starting work on the task... 
+                    Be in control of your life!
 
-   Document your progress and important information related to the task
-   here in the log as you work... =(be a lab rat! LOL)=
+                    After doing the above, you can go away and do some 
+                    work, leaving this heading, log note, etc. to visit 
+                    other files and/or work on them etc. The clock will 
+                    be recording your time all the while... You will see 
+                    in your mode line the elapsed clock time ticking away 
+                    as you work on a task /(hopefully related to this clock!)/
+                    and NOT Yac Shaving or being sidetracked!!!
 
-   - *C-c C-x C-j* /Return back to the Heading where you started the clock.../
+      + *RETURN to Clock Heading:* ~C-c C-x C-j~
 
-   You do this after you have worked on a task for a while and you need to come back to the time card /(this Log Entry Heading)/ and stop the clock before going off to do something unrelated to the log entry...
+                        /Go back to the place where you started the clock.../
 
-  - *C-c C-x C-o* =Stop the Clock= /(to stop clocking your time on task)/
+                        You do this after you have worked on a task for a 
+                        while and you need to come back to update the item's
+                        info etc., and/or stop the clock before going off to 
+                        do something else unrelated to the log entry...
 
-                 This *Finalizes the Time Card Entry* within ~:CLOCKING:~
-                 /(created earlier when you started the clock)/...
-                 The completed time card entry looks like this:
+      + *Clock OUT:* ~C-c C-x C-o~ /(to stop clocking your time on task)/
 
-  The above entry shows start timestamp, end timestamp, and total time worked during this segment...  As you can see from the example above I left the clock running all day by accident.  If you do something like that you can always come back and directly edit the clock times by hand to amend them...  After changing clock times or dates, etc., Update the Time Card Entry with the standard "Do What this line expects you to do" key command:
+                      This *Finalizes the Time Card Entry* within:
+                      ~:CLOCKING:~ /(created earlier when you started the/ 
+                      /clock)/...
 
-  - *C-c C-c*
+                      The Clock Entry changes showing start timestamp, end timestamp, and total time worked during this segment...  
 
-  The total time will change at the end showing your new calculated time...
+                      =Please DON'T Forget= /Like I often do, LOL.../ i.e.,
+                      Leaving a clock running all day by accident, or worse,
+                      leave it dangling with the file closed only to open it
+                      again and get that nasty *Org-Mode Message:* /"What do/
+                      /you want to do with this?"/ If you do something like 
+                      that you can always come back and directly edit the 
+                      clock times by hand to amend them...  After changing 
+                      clock times or dates, etc... Whatever...
 
-  =Example:=
+                      ="Onward We Row Mates... Through the log jam!"=
 
-    ::CLOCKING:
-       CLOCK: [2022-08-01 Mon 09:48]--[2022-08-01 Mon 09:56] =>  0:08
-    ::END:
+      + *Update Time Card Entry:* ~C-c C-c~ 
 
-  If you need to go away and do something else before finishing this task, you can do so after clocking out... When you come back simply clock back in again to start another Time Card Entry just as before... The new time card entry will appear above the earlier one within the ~:CLOCKING:~ drawer... When you clock out of this task it will look just like the entry below it with a total time worked tagged on the end...
+                  This command will change the total time at the end showing 
+                  your new calculated time...
 
-  When you are all done with this Log Entry mark it *DONE*
+                  If you need to go away and do something else before finishing this task, you can do so after clocking out... When you come back simply clock back in again to start another Time Card Entry just as before... The new time card entry will appear above the earlier one within the ~:CLOCKING:~ drawer... When you clock out of this task it will look just like the entry below it with a total time worked tagged on the end...
 
-  - *C-c C-x C-q* =Cancel Current Clock=
-     
-                 /(In Case You Accidentally Started It)/
+      + *Clock Out & Mark Items Done:* ~C-c C-t~
 
-   This removes currently running clock and forgets it...
+            When you are all done with a Log Entry use the above key 
+            command to mark its Heading *TODO* tag to: *DONE* /(Most of the/ 
+            /time this will ALSO clock you out if you are still clocked/ 
+            /into the item... But not allways in my experience.../  
+            So make sure you are also clocked OUT of an Item After 
+            marking it DONE... Type: ~C-c C-x C-j~ to check this...
+            /(if no running clock it will tell you and place your/
+            /cursor at the heading where you LAST CLOCKED OUT)/
 
-  - *C-c C-x C-d* =Display Clocking Info=
-     
-                 /This will show elapsed times to the right of
-                 headings.../
+      + ~C-c C-x C-q~ *Cancel Current Clock:* /(in case of accident)/
 
-                 =WARNING!= This command will clutter up your org file
-                          with time entries at the end of every heading!
+                      This removes currently running clock and forgets 
+                      any time accrued or associated with it...
 
-  Once all of this has become routine for you, go ahead and remove this ~README~ drawer from this template... That way it does not get copied when you need to clone new log entries...
+      + ~C-c C-x C-d~ *Display Clocking Info:* 
+
+                      /This will show elapsed times to the right of headings.../
+                      =Warning!= Using this command will CLUTTER ALL the headings
+                                within your org file with those timestamps!!!
+
+   - Once all of this has become routine for you, =go ahead and remove this= ~README~ =drawer from this template=... That way it does not get copied when you need to clone new log entries...
 :END:
 
 This Log Entry is about: Yadda... Yadda... Yadda...
@@ -202,7 +215,7 @@ Yadda... Yadda... Yadda...
 
       #+begin_src conf
        root@web1:~$ 
-       root@web1:~$ 
+       admin@web1:~$ 
       #+end_src
 
 - [ ] *__:* /(__)/
@@ -263,20 +276,20 @@ Yadda... Yadda... Yadda...
       #+end_src
 
 - [ ] *__:* /(__)/
-
+   
       #+begin_src conf
        user@home:~$ 
        user@home:~$ 
       #+end_src
 
 \newpage
-** 2023:
+
+** 📅 2023:
 
 /Not Here Yet but keep logging... The New Year will be here soon enough!/
 
-* Meta: /(Usage & Templates)/                                        :noexport:
-** Introduction:
-
+* ⎘ Meta: /(Usage & Templates)/                                        :noexport:
+** 📄 Introduction:
 :README:
    Use this Standard Log /(template)/ as a multi purpose time card/log entry vehicle/instrument...
 
@@ -327,67 +340,91 @@ Additional commands for using *Org-Mode* with Modular Emacs will be explained he
 
 \newpage
 
-** Instructions:
+** 📄 Instructions:
+:README:
+   This Log Notebook is being designed as these docs are being written...  At first much of the design is being done /manually/ while formats, concepts, are tried and tested.  Eventually much of the instructions below will become much simpler as there will be capture templates, and processes in place that replace the need to manually copy/paste things as we are doing initially below...  
 
-This Log Notebook is being designed as these docs are being written...  At first much of the design is being done /manually/ while formats, concepts, are tried and tested.  Eventually much of the instructions below will become much simpler as there will be capture templates, and processes in place that replace the need to manually copy/paste things as we are doing initially below...  
+   =Please bear with the author/architect as she makes up her mind about how to do things in here...=  *Org-mode, LaTeX options are vast!* Not to mention a sea of extra packages that could be tried out... /I feel like I am re-inventing wheels within rabbit holes!/ lol
 
-=Please bear with the author/architect as she makes up her mind about how to do things in here...=  *Org-mode, LaTeX options are vast!* Not to mention a sea of extra packages that could be tried out... /I feel like I am re-inventing wheels within rabbit holes!/ lol
+   =Note:= If you are making your very first log entry within a brand new clone of this template, =DON'T use a clone from the *Log Entry (template)* just yet=.  /Instead use the dummy boilerplate placeholder Log Entry /(with timestamp)/ /already in place as your first heading under the/ *Begin Log Notebook:* /heading./
 
-=Note:= If you are making your very first log entry within a brand new clone of this template, =DON'T use a clone from the *Log Entry (template)* just yet=.  /Instead use the dummy boilerplate placeholder Log Entry /(with timestamp)/ /already in place as your first heading under the/ *Begin Log Notebook:* /heading./
+   That first boilerplate log entry is there as an example to guide you in making your first completed log book entry. You may rename/commandeer it for your purposes now... Otherwise you will end up deleting it later... /Don't be wasteful... Recycle!/ lol ;-)
 
-That first boilerplate log entry is there as an example to guide you in making your first completed log book entry. You may rename/commandeer it for your purposes now... Otherwise you will end up deleting it later... /Don't be wasteful... Recycle!/ lol ;-)
+   Also for first time entry within your brand new log book, Skip the next two headings below /(copy and paste instructions)/ and continue following instructions under the: *Edit-Compose your new Log Entry:* heading /(as you will be commandeering the dummy boilerplate log entry as your first log entry)/.  Instructions for working on a new Cloned Log Entry are the same as for updating/emending an existing one from that point on...
 
-Also for first time entry within your brand new log book, Skip the next two headings below /(copy and paste instructions)/ and continue following instructions under the: *Edit-Compose your new Log Entry:* heading /(as you will be commandeering the dummy boilerplate log entry as your first log entry)/.  Instructions for working on a new Cloned Log Entry are the same as for updating/emending an existing one from that point on...
-
-*Otherwise*, if you already have one or more existing log entries from before, continue following instructions immediately below beginning with: *Copy/Clone Log Entry (template)*
-
-\newpage
-
-*** Copy/Clone - Entry: /<timestamp>/ (template)
-
-- Place your cursor on the *Entry: /<timestamp>/ (template)* heading and type *TAB* to collapse all of its contents into the heading alone. Then move your cursor to the first column on the empty line above the heading and type the "*t*" key to set the mark for selection, /(xah-fly-keys Command Mode)/.
-
-- Now, move your cursor down one single line by typing the "*k*" key /(xah-fly-keys Command Mode)/, to move down one single line, selecting-highlighting the text in the process.
-
-- Leave your cursor on the first /(leftmost)/ column of the very next line. Do not advance it any more columns to the right! Otherwise, anything else selected on the next line will also be copied!
-
-  *Note:* Selected text will be highlighted, but your cursor at the end of it will not be part of that selection. Placing your cursor on the first column of the next line will include the invisible new-line character which is what you want, but any text directly under the cursor will not be copied...  Later, after pasting this text somewhere else, your cursor will end up sitting on the first column of a blank line under the pasted text.  /(exactly as intended)/
-
-- To complete the copy operation, type "*c*" /(xah-fly-keys Command Mode)/. This will save the selection for pasting later, /(the highlighted text will go back to normal)/... You should have gotten only the Entry: /<timestamp>/  and not anything from the heading below it. 
-
-   *Note:* If you type: "*spacebar t*" /(xah-fly-keys leader key command)/ it will show you the contents of your paste buffer...  You can see what you copied in there...  To get out of the paste buffer view, type: "*spacebar u*" and it will return you to where you were before...
+   =Otherwise=, if you already have one or more existing log entries from before, continue following instructions immediately below beginning 
+   with: *Copy/Clone Log Entry (template)*
+:END:
 
 \newpage
 
-*** Paste your Cloned Log Entry:
+*** =Copy/Clone:= LOG: <2021-03-29 Mon> Generic Title /(Under Templates: heading)/
 
-- *To Paste:* Advance your cursor to a blank line just below the main heading: *Begin Log Notebook:* and then press *enter* a couple times to get your cursor on a fresh clean line with some extra space above and below it... /(above any previously time stamped entries you may already have placed)/...
+- =Select Heading= /(named above)/ under the Templates: Heading, using 
+   normal Emacs selection methods. i.e., Type ~t~ key to set the mark 
+   for selection, /(xah-fly-keys Command/ /Mode)/ or use ~C-SPACE~ /(normal Emacs)/, and 
+   move the point to get the entire heading, and all of its contents, but NOTHING else... and copy it...
 
-- Press "*v*" /(xah-fly-keys Command Mode)/ to paste your cloned Log Entry template... If you find out that what you copied also included some unwanted text directly below it, no problems... Just delete that part now... 
+   =Note:= Before Copying Selected Text, ensure your cursor is at the end of 
+          it BUT not be part of any items after it... Placing your cursor on 
+          the first column of the next line will include the invisible new-line
+          character which is what you want, but any text directly under the
+          cursor on the next line will not be copied...  Later, after pasting this text somewhere else, your cursor will end up sitting on the 
+          first column of a blank line under the pasted text.
+          /(exactly as intended)/
 
-   *Note:* If you accidentally copied one or more previously invisible bullets to column one on a blank line they will create an invisible "ghost" heading that you will now need to delete... You will know this if you see an org-ellipsis "⤵" symbol on a line by itself indicating a heading but no text... Simply delete that whole line and it will go away... Now you are ready to compose your new log entry...
+- =Complete the Copy Operation= Type ~c~ /(xah-fly-keys Command Mode)/. This 
+   will save the selection for pasting later, /(the highlighted text will go/ 
+   /back to normal)/... You should have gotten only the Single LOG Entry with
+   ALL its contents, BUT nothing else below it...
+
+   =Note:= If you type: "*spacebar t*" /(xah-fly-keys leader key command)/ 
+          it will show you the contents of your paste buffer...  You 
+          can see the LAST item you copied in there AT THE TOP...  
+          To get out of the paste buffer view, type: "*spacebar u*" and 
+          it will return you to where you were before...
 
 \newpage
 
-*** Edit-Compose your New Log Entry:
+*** =Paste Cloned LOG Entry:=
 
-Note:* If this is your first time using this log, you will be editing the dummy boilerplate placeholder *Entry:* /<with timestamp>/ already in place as your first log entry heading under the main *Begin Log Notebook:* heading.  
+- =Advance cursor= to a blank line just below the LAST Most Recent LOG entry under heading =2022= within the =Begin Log:= section, and press *enter* a couple times to get your cursor on a fresh clean line with some extra space above and below it... /(Below any previously time stamped entries you may already have placed)/...
 
-Conversely, If you just pasted a new cloned copy of the: *Entry:* /<timestamp>/ *(template)* under the main *Begin Log Notebook:* heading, you will be editing that instead.
+- =Press:= ~v~ /(xah-fly-keys Command Mode)/ to paste your cloned Log Entry template... If you find out that what you copied also included some unwanted text directly below it, no problems... Just delete that part now... 
 
-The instructions below for working on a new Cloned Log Entry are pretty much the same as for updating-reusing an existing log entry... /(differences will be noted in instructions below)/
-
-- Place your cursor directly on the existing timestamp of your new Log Entry, and enter the key binding:  *C-c .* /(i.e., press *Ctrl* key while holding "*c*", and then type a dot)/ A date chooser panel will pop up...
-
-- At this point, type one more *dot* to force the calendar selection to the current time and date and then, Press *ENTER* to accept your choice... /This will update the existing older timestamp with the current date/time.../ Check to make sure the timestamp was properly updated and then move on to the next step... This timestamp will not be updated after that.  It records the initial time of your new log entry to the Day and time you first created it...
-
-- You are now at the top of the list, (a few lines below the main "*Begin Log Notebook:"* heading), on a fresh new Log Entry Heading... Your timestamp indicates the present, /-and-/ You are ready to record a log of your current activities! This way, your most recent log entries will be on the top and descend down historically from there...
-
-- Follow the ~:README:~ directions within the Time Card section contained within your fresh new log entry to learn how to /"clock in"/ and /"clock out"/ of your log entry as you are on the task of entering your log data...
+   =Note:= If you accidentally copied one or more previously invisible 
+          bullets to column one on a blank line they will create an 
+          invisible "ghost" heading that you will now need to delete... 
+          You will know this if you see an org-ellipsis "⤵" symbol on 
+          a line by itself indicating a heading but no text... Simply 
+          delete that whole line and it will go away... Now you are 
+          ready to compose your new log entry...
 
 \newpage
 
-*** Enter New Log Entry Details:
+*** Edit-Compose New LOG Entry:
+
+=Note:= If this is your first time using this log, don't bother cloning a 
+       NEW log entry as there is a dummy boilerplate placeholder Log 
+       Entry ALREADY in place for you to use...
+       /(initially there as an example)/
+
+       The instructions below for modifying the Boilerplate Log Entry, or 
+       Editing a new Cloned Log Entry Template are pretty much the same...
+       /(differences will be noted in instructions below)/
+
+- =Place cursor directly on the existing timestamp= of the NEW Log Entry, and enter the key binding: ~C-c .~ /(i.e., press/ ~Ctrl~ /key while holding/
+   ~c~ /and then type a dot ~.~ /)/ A date chooser panel will pop up...
+
+- =Type one more dot:= ~.~ to force the calendar selection to the current time and date and then, Press ~ENTER~ to accept your choice... /This will update the existing older timestamp with the current date/time.../ Check to make sure the timestamp was properly updated and then move on to the next step... This timestamp will not be updated after that.  It records the initial time of your new log entry to the Day and time you first created it...
+
+- =You are now ready to start= making entries within your New Log Entry... Your timestamp indicates the present, /-and-/ you are all set to begin recording timef...
+
+- =Follow the= ~:README:~ directions within the Time Card section contained within your fresh new log entry to learn how to /"clock in"/ and /"clock out"/ of your log entry as you work on the tasks...
+
+\newpage
+
+*** Enter New LOG Entry Details:
 
 Two sub headings have been provided for your use /(if you need them)/. However, you may structure your log entries any way you wish.  The two provided headings:  *Summary* and *Details* are simply suggestions to help make your log entries a bit more organized...
 
@@ -395,91 +432,106 @@ The *Summary* heading could be used to log the main executive summary points, /(
 
 Conversely, the *Details* heading could contain a complete, thorough log of your work, which would be excluded from the final PDF report.  Everything under *Details* heading would be extra information that you don't want to bother your clients or boss with /(unless they ask for more detail of course)/. In that case, you will have it all recorded and organized for easy access later if needed...
 
-Place the *:noexport:* tag at the end of any org outline heading to exclude it and all its children from the PDF upon export...  You can add as much detail as you need within these excluded sections without cluttering up your final PDF.  The entire main heading: *How to Use this Template:* is already excluded from the final PDF, so it can be left in and your PDF will only include the *Begin Log Notebook:* section...
+Place the *:noexport:* tag at the end of any org outline heading to exclude it and all its children from the PDF upon export...  You can add as much detail as you need within these excluded sections without cluttering up your final PDF.  The entire main heading: *How to Use this Template:* is already excluded from the final PDF, so it can be left in and your PDF will only include the *Begin Log:* section...
 
-*** Export your Log as a PDF Report:
+*** Export LOG as a PDF Report:
 
-Anytime you need to see your Log Notebook as a nicely printed PDF report, you can export it using the following custom key command: *spacebar e p* /(i.e., press *spacebar*, type "*e*" and then "*p*" - *Xah-Fly-Keys Command Mode* extended leader key sequence)/
+Anytime you need to see your Log Notebook as a nicely printed PDF report, you can export it using the following custom key command: ~SPACE e p~ /(i.e., press ~spacebar~, type ~e~ and then ~p~ *(Xah-Fly-Keys Command Mode)* extended leader key sequence)/
 
 \newpage
-** Templates:
-*** NEW log: <2021-03-29 Mon> Generic Title /(General Log Entry Template)/
 
+** ⎘ Templates:
+*** NEW 🗓 LOG: <2021-03-29 Mon> Generic Title /(General Log Entry Template)/
 :README:
-   Since you created this new log entry you are probably in the middle of a task related to it right now!  Go ahead and punch the clock right now as well, to start recording your time! The following Commands are defined below for you to remember and use to track your time:
+   - *Go To One of the HEADINGS Below:* /(Summary, Details, or Sub Headings)/
 
-   - *C-c C-x C-i* =Start Clock= /(Begin OR Resume Clocking Current task)/
-                  This creates a new ~:CLOCKING:~ Time Card Entry on the
-                  next line below the Org Heading you have chosen to
-                  clock time for... Clocking Entries look like this:
+      =Punch the Time Clock= At the heading And then begin working on a task related to that Heading... =Your Time IS being Recorded Now= 
 
-         =Example:=
+   - =Use These Commands:= /as you work to keep track your time.../
 
-         ::CLOCKING:
-           CLOCK: [2022-08-01 Mon 09:48]
-         ::END:
+      + *Clock IN:* ~C-c C-x C-i~ 
 
-         =Note:= /(I had to add an extra colon ~:~ char to the example below,/
-                /otherwise org mode thinks it is real, but it is inside/
-                /this/ ~:README:~ /which would cause a problem... Org-Mode/
-                /does NOT allow nesting of Properties Boxes.../
+                    /(Begin OR Resume Clocking Current task)/
 
-         =Do above command now...= /Start recording your time girl!/
-                                 /Be in control of your life!/
+                    This creates a new :CLOCKING: Time Card Entry just
+                    underneath the HEADING...
 
-   After doing the above, you can go away and do some work, leaving this log note to visit other files and work on them etc. The clock will be recording your time all the while... You will see in your mode line the elapsed clock time as you work...
+                    Do this just before starting work on the task... 
+                    Be in control of your life!
 
-   Document your progress and important information related to the task
-   here in the log as you work... =(be a lab rat! LOL)=
+                    After doing the above, you can go away and do some 
+                    work, leaving this heading, log note, etc. to visit 
+                    other files and/or work on them etc. The clock will 
+                    be recording your time all the while... You will see 
+                    in your mode line the elapsed clock time ticking away 
+                    as you work on a task /(hopefully related to this clock!)/
+                    and NOT Yac Shaving or being sidetracked!!!
 
-   - *C-c C-x C-j* /Return back to the Heading where you started the clock.../
+      + *RETURN to Clock Heading:* ~C-c C-x C-j~
 
-   You do this after you have worked on a task for a while and you need to come back to the time card /(this Log Entry Heading)/ and stop the clock before going off to do something unrelated to the log entry...
+                        /Go back to the place where you started the clock.../
 
-  - *C-c C-x C-o* =Stop the Clock= /(to stop clocking your time on task)/
+                        You do this after you have worked on a task for a 
+                        while and you need to come back to update the item's
+                        info etc., and/or stop the clock before going off to 
+                        do something else unrelated to the log entry...
 
-                 This *Finalizes the Time Card Entry* within ~:CLOCKING:~
-                 /(created earlier when you started the clock)/...
-                 The completed time card entry looks like this:
+      + *Clock OUT:* ~C-c C-x C-o~ /(to stop clocking your time on task)/
 
-  The above entry shows start timestamp, end timestamp, and total time worked during this segment...  As you can see from the example above I left the clock running all day by accident.  If you do something like that you can always come back and directly edit the clock times by hand to amend them...  After changing clock times or dates, etc., Update the Time Card Entry with the standard "Do What this line expects you to do" key command:
+                      This *Finalizes the Time Card Entry* within:
+                      ~:CLOCKING:~ /(created earlier when you started the/ 
+                      /clock)/...
 
-  - *C-c C-c*
+                      The Clock Entry changes showing start timestamp, end timestamp, and total time worked during this segment...  
 
-  The total time will change at the end showing your new calculated time...
+                      =Please DON'T Forget= /Like I often do, LOL.../ i.e.,
+                      Leaving a clock running all day by accident, or worse,
+                      leave it dangling with the file closed only to open it
+                      again and get that nasty *Org-Mode Message:* /"What do/
+                      /you want to do with this?"/ If you do something like 
+                      that you can always come back and directly edit the 
+                      clock times by hand to amend them...  After changing 
+                      clock times or dates, etc... Whatever...
 
-  =Example:=
+                      ="Onward We Row Mates... Through the log jam!"=
 
-    ::CLOCKING:
-       CLOCK: [2022-08-01 Mon 09:48]--[2022-08-01 Mon 09:56] =>  0:08
-    ::END:
+      + *Update Time Card Entry:* ~C-c C-c~ 
 
-  If you need to go away and do something else before finishing this task, you can do so after clocking out... When you come back simply clock back in again to start another Time Card Entry just as before... The new time card entry will appear above the earlier one within the ~:CLOCKING:~ drawer... When you clock out of this task it will look just like the entry below it with a total time worked tagged on the end...
+                  This command will change the total time at the end showing 
+                  your new calculated time...
 
-  When you are all done with this Log Entry mark it *DONE*
+                  If you need to go away and do something else before finishing this task, you can do so after clocking out... When you come back simply clock back in again to start another Time Card Entry just as before... The new time card entry will appear above the earlier one within the ~:CLOCKING:~ drawer... When you clock out of this task it will look just like the entry below it with a total time worked tagged on the end...
 
-  - *C-c C-x C-q* =Cancel Current Clock=
-     
-                 /(In Case You Accidentally Started It)/
+      + *Clock Out & Mark Items Done:* ~C-c C-t~
 
-   This removes currently running clock and forgets it...
+            When you are all done with a Log Entry use the above key 
+            command to mark its Heading *TODO* tag to: *DONE* /(Most of the/ 
+            /time this will ALSO clock you out if you are still clocked/ 
+            /into the item... But not allways in my experience.../  
+            So make sure you are also clocked OUT of an Item After 
+            marking it DONE... Type: ~C-c C-x C-j~ to check this...
+            /(if no running clock it will tell you and place your/
+            /cursor at the heading where you LAST CLOCKED OUT)/
 
-  - *C-c C-x C-d* =Display Clocking Info=
-     
-                 /This will show elapsed times to the right of
-                 headings.../
+      + ~C-c C-x C-q~ *Cancel Current Clock:* /(in case of accident)/
 
-                 =WARNING!= This command will clutter up your org file
-                          with time entries at the end of every heading!
+                      This removes currently running clock and forgets 
+                      any time accrued or associated with it...
 
-  Once all of this has become routine for you, go ahead and remove this ~README~ drawer from this template... That way it does not get copied when you need to clone new log entries...
+      + ~C-c C-x C-d~ *Display Clocking Info:* 
+
+                      /This will show elapsed times to the right of headings.../
+                      =Warning!= Using this command will CLUTTER ALL the headings
+                                within your org file with those timestamps!!!
+
+   - Once all of this has become routine for you, =go ahead and remove this= ~README~ =drawer from this template=... That way it does not get copied when you need to clone new log entries...
 :END:
 
 This Log Entry is about: Yadda... Yadda... Yadda...
 
 \newpage
 
-**** NEW Reference:
+**** NEW 📚 Reference:
 
 - *Link to Project:* [[][] ]
 
@@ -499,14 +551,14 @@ This Log Entry is about: Yadda... Yadda... Yadda...
 
 \newpage
 
-**** NEW Time Card:
+**** NEW ⏰ Time Card:
 
 #+BEGIN: clocktable :scope tree3 :maxlevel 6 :tstart "<-1w>" :tend "<+1m>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3
 #+END:
 
 \newpage
 
-**** NEW Summary: [0/3]
+**** NEW ✅ Summary: [0/3]
 :README:
    This Summary is mostly to help you find things later when you cannot remember when or where is was done... If you go to the top of this file and expand all headings to show ALL content, then do a search on "~Summary:~" you will be able to quickly scroll through and scan these summaries quickly to find what you were looking for... 
 
@@ -525,14 +577,14 @@ Yadda... Yadda... Yadda...
 
 \newpage
 
-**** NEW Details:
+**** NEW 📒 Details:
 ***** NEW New Item 1 /(placeholder)/ [0/3]
 
 - [ ] *__:* /(__)/
 
       #+begin_src conf
        root@web1:~$ 
-       root@web1:~$ 
+       admin@web1:~$ 
       #+end_src
 
 - [ ] *__:* /(__)/
@@ -593,7 +645,7 @@ Yadda... Yadda... Yadda...
       #+end_src
 
 - [ ] *__:* /(__)/
-
+   
       #+begin_src conf
        user@home:~$ 
        user@home:~$ 
