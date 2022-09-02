@@ -1,0 +1,65 @@
+# -**- mode: org; coding: utf-8 -**-
+#+begin_comment
+=File:=  ~latex-book-pdf.org~ - HAP BASIC SETUP for BOOK formatted PDFs
+
+        =Org-Mode LaTeX --> BOOK PDF Configuration...=
+
+=USAGE:= *Copy/Clone* this file and adjust to suit your needs...
+        *Include* this file within ~.org~ files that need to be 
+        exported as *BASIC BOOK FORMAT PDF* Files...
+
+   *Add:* the following line to the Header the ~.Org~ File:
+
+   ~#+SETUPFILE: ~/.emacs.d/Docs/pubOps/org-templates/latex-book-pdf.org~
+
+   /You should copy/clone ~/.emacs.d/Docs/pubOps/org-templates~ /folder to your
+   book's project directory and adjust the above path to point to that instead.../
+   /This will allow you to make your own custom configurations for different books/
+   /without affecting the configurations of other books of the same genre.../
+#+end_comment
+
+=Type/Size:= 
+
+~"ebook"~ /uses the memoir class defined in:/ ~09-4-org-export-conf.el~
+
+#+LATEX_CLASS: ebook
+
+=Standard=
+
+#+LATEX_HEADER: \usepackage{parskip}
+#+LaTeX_HEADER: \usepackage{paralist}
+#+LATEX_HEADER: \usepackage[hyperref,x11names]{xcolor}
+#+LATEX_HEADER: \usepackage[colorlinks=true,urlcolor=SteelBlue4,linkcolor=Firebrick4]{hyperref}
+
+=Custom=
+
+=DISABLED OPTIONS for TESTING:=
+#+BEGIN_COMMENT
+# #+LATEX_CLASS_OPTIONS: [a4paper,13pt]
+# 
+# #+LATEX_HEADER: \usepackage[table]{xcolor}
+# #+LATEX_HEADER: \usepackage[margin=0.9in,bmargin=1.0in,tmargin=1.0in]{geometry}
+# #+LaTeX_HEADER: \usepackage[latin1]{inputenc}
+# #+LATEX_HEADER: \usepackage{algorithm2e}
+# #+LATEX_HEADER: \usepackage{algorithm}
+# #+LATEX_HEADER: \usepackage{amsmath}
+# #+LATEX_HEADER: \usepackage{arydshln}
+# #+LATEX_HEADER: \usepackage{subcaption}
+# #+LaTeX_HEADER: \newcommand{\point}[1]{\noindent \textbf{#1}}
+# #+LaTeX_HEADER: \usepackage{hyperref}
+# #+LaTeX_HEADER: \usepackage{csquotes}
+# #+LATEX_HEADER: \usepackage{graphicx}
+# #+LATEX_HEADER: \usepackage{bm}
+# #+LATEX_HEADER: \usepackage{subfig}
+# #+LaTeX_HEADER: \usepackage[mla]{ellipsis}
+# #+LaTeX_HEADER: \parindent = 0em
+# #+LaTeX_HEADER: \setlength\parskip{.5\baselineskip}
+# #+LaTeX_HEADER: \usepackage{pgf}
+# #+LaTeX_HEADER: \usepackage{tikz}
+# #+LaTeX_HEADER: \usetikzlibrary{shapes,arrows,automata,quotes}
+# #+LATEX_HEADER: \usepackage{adjustbox}
+# 
+# 
+# 
+#
+#+END_COMMENT

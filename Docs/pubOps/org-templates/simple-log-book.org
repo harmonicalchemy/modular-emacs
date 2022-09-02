@@ -1,10 +1,24 @@
 # -**- mode: org; coding: utf-8 -**-
-#+begin_comment
-# File:   simple-log-book.org - SETUPFILE for Minimalist Log Notebooks...
-# Usage:  Clone this file and adjust to suit your needs...
-#        Include this file within org files destined to become simple Log Notebooks...
-#        i.e., #+SETUPFILE: ~/.emacs.d/Docs/pubOps/org-templates/simple-log-book.org
-#+end_comment
+#+BEGIN_COMMENT
+=File:=  ~simple-log-book.org~ - HAP SETUP a for Minimalist Log Book...
+
+        =LaTeX Configuration for: SIMPLE-LOG-BOOK=
+
+=Usage:= *Copy/Clone* this file and adjust to suit your needs...
+        *Include* this file within ~.org~ files destined to become
+        a *Simple LOG Book - PDF*...
+
+  *Add:* the following line to the Header the ~.Org~ File:
+
+  ~#+SETUPFILE: $HOME/.emacs.d/Docs/pubOps/org-templates/simple-log-book.org~
+
+   /You should copy/clone ~$HOME/.emacs.d/Docs/pubOps/org-templates~ /folder to your
+   book's project directory and adjust the above path to point to that instead.../
+   /This will allow you to make your own custom configurations for different books/
+   /without affecting the configurations of other books of the same genre.../
+#+END_COMMENT
+
+=STANDARD STARTUP OPTIONS=
 
 #+CATEGORY: @Log_Books
 #+LANGUAGE: en
@@ -17,3 +31,16 @@
 #+OPTIONS: *:t            # Show Emphasized Text
 #+OPTIONS: -:t            # Convert Special Strings
 #+OPTIONS: ::nil          # Do NOT Export with fixed-width sections 
+
+=DISABLED OPTIONS for TESTING:=
+#+BEGIN_COMMENT
+   # #+OPTIONS: toc:2        # Set TOC (org-export-with-toc) 2 levels
+   # #+OPTIONS: toc:nil      # DO NOT Include Default TOC (org-export-with-toc)
+   # #+OPTIONS: num:3        # Set Section Numbering level...
+#+END_COMMENT
+
+=UN-NUMBER HEADINGS & TOC:=
+:PROPERTIES:
+   :UNNUMBERED: t
+:END:
+

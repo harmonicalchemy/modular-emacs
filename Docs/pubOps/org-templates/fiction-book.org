@@ -1,11 +1,24 @@
 # -**- mode: org; coding: utf-8 -**-
-#+begin_comment
-# File:  fiction-book.org - SETUPFILE for fiction book projects...
-# Usage: Clone this file and adjust to suit your needs...
-#        Include this file within org files destined to become
-#        a fiction book...
-#        i.e., #+SETUPFILE: ~/.emacs.d/Docs/pubOps/org-templates/fiction-book.org
-#+end_comment
+#+BEGIN_COMMENT
+=File:=  ~fiction-book.org~ - HAP BASIC SETUP for Fiction Book Projects...
+
+        =BASIC LaTeX Configuration for: FICTION=
+
+=Usage:= *Copy/Clone* this file and adjust to suit your needs...
+        *Include* this file within ~.org~ files destined to become
+        a *Fiction Book PDF*...
+
+  *Add:* the following line to the Header the ~.Org~ File:
+
+  ~#+SETUPFILE: $HOME/.emacs.d/Docs/pubOps/org-templates/fiction-book.org~
+
+   /You should copy/clone ~$HOME/.emacs.d/Docs/pubOps/org-templates~ /folder to your
+   book's project directory and adjust the above path to point to that instead.../
+   /This will allow you to make your own custom configurations for different books/
+   /without affecting the configurations of other books of the same genre.../
+#+END_COMMENT
+
+=STANDARD STARTUP OPTIONS=
 
 #+CATEGORY: @Fiction_Books
 #+LANGUAGE: en
@@ -15,10 +28,9 @@
 #+STARTUP:  align
 #+STARTUP:  inlineimages
 
-#
-# ## EXPORT OPTIONS:
-# ##   https://orgmode.org/manual/Export-Settings.html#Export-Settings
-#
+=STANDARD EXPORT OPTIONS:=
+
+/Ref:/ https://orgmode.org/manual/Export-Settings.html#Export-Settings
 
 #+SELECT_TAGS: export
 #+EXCLUDE_TAGS: noexport
@@ -29,7 +41,9 @@
 #+OPTIONS: ::nil        # Do NOT Export with fixed-width sections
 
 #+OPTIONS: <:t          # Enclude time/date active/inactive stamps
-#+OPTIONS: \n:t         # Preserve Line Breaks (this may affect LaTeX parskip)
+
+#+OPTIONS: \n:nil       # Preserve Line Breaks (this may affect LaTeX parskip)
+
 #+OPTIONS: ^:{}         # Use Tex-like syntax for sub and superscripts
                         # Typing simple a_b will not be affected anymore
                          # Use word^{super} to raise word "super" - superscript
@@ -46,10 +60,13 @@
 
 #+OPTIONS: email:t      # Include Author’s e-mail (org-export-with-email)
 #+OPTIONS: f:t          # Include Footnotes (org-export-with-footnotes)
-#+OPTIONS: H:4          # Set Headline Levels for Export to 4
-#+OPTIONS: tasks:nil    # Do NOT Include any TODO or other Task related keywords...
+#+OPTIONS: H:3          # Set Headline Levels for Export
+
+# #+OPTIONS: num:0        # Set Section Numbering level...
+
+#+OPTIONS: tasks:t      # DO Include ITEMS containing Task related keywords...
 #+OPTIONS: inline:nil   # Do NOT Include Inline Tasks...
-#+OPTIONS: num:2        # Set Section Numbering to two levels deep.
+
 #+OPTIONS: p:nil        # NO Planning Info (org-export-with-planning)
 #+OPTIONS: pri:nil      # NO priority cookies (org-export-with-priority)
 #+OPTIONS: prop:nil     # No Property Drawers (org-export-with-properties)
@@ -58,6 +75,19 @@
 #+OPTIONS: tex:t        # Export LaTeX (org-export-with-latex)
 #+OPTIONS: timestamp:t  # Include Creation Time (org-export-time-stamp-file)
 #+OPTIONS: title:t      # Include Title (org-export-with-title)
-#+OPTIONS: toc:3        # Include TOC (level 3) (org-export-with-toc)
-#+OPTIONS: todo:nil     # DONT Include TODO keywords (org-export-with-todo-keywords)
+
+#+OPTIONS: todo:nil     # DO NOT Include TODO keywords (org-export-with-todo-keywords)
 #+OPTIONS: |:t          # Include Tables (org-export-with-tables)
+
+=DISABLED OPTIONS for TESTING:=
+#+BEGIN_COMMENT
+   # #+OPTIONS: toc:2        # Set TOC (org-export-with-toc) 2 levels
+   # #+OPTIONS: toc:nil      # DO NOT Include Default TOC (org-export-with-toc)
+   # #+OPTIONS: num:3        # Set Section Numbering level...
+#+END_COMMENT
+
+=UN-NUMBER HEADINGS & TOC:=
+:PROPERTIES:
+   :UNNUMBERED: t
+:END:
+
