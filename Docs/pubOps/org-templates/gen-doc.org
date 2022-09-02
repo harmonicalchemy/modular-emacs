@@ -1,11 +1,24 @@
 # -**- mode: org; coding: utf-8 -**-
-#+begin_comment
-# File:  gen-doc.org - SETUPFILE for general purpose documents...
-# Usage: Clone this file and adjust to suit your needs...
-#        Include this file within general purpose org files destined to become
-#        anything you like... Nothing special... Plain Vanilla Setup...
-#        i.e., #+SETUPFILE: ~/.emacs.d/Docs/pubOps/org-templates/gen-doc.org
-#+end_comment
+#+BEGIN_COMMENT
+=File:=  ~gen-doc.org~ - HAP BASIC SETUP for General Purpose Documents...
+
+        =GENERAL PURPOSE LaTeX Configuration=
+
+=Usage:= *Copy/Clone* this file and adjust to suit your needs...
+        *Include* this file within ~.org~ files destined to become
+        *Anything You Like*... This is basic Vanilla to Start
+
+  *Add:* the following line to the Header the ~.Org~ File:
+
+  ~#+SETUPFILE: $HOME/.emacs.d/Docs/pubOps/org-templates/gen-doc.org~
+
+   /You should copy/clone ~$HOME/.emacs.d/Docs/pubOps/org-templates~ /folder to your
+   book's project directory and adjust the above path to point to that instead.../
+   /This will allow you to make your own custom configurations for different books/
+   /without affecting the configurations of other books of the same genre.../
+#+END_COMMENT
+
+=STANDARD STARTUP OPTIONS=
 
 #+CATEGORY: @General_Purpose
 #+LANGUAGE: en
@@ -15,10 +28,9 @@
 #+STARTUP:  align
 #+STARTUP:  inlineimages
 
-#
-# ## EXPORT OPTIONS:
-# ##   https://orgmode.org/manual/Export-Settings.html#Export-Settings
-#
+=STANDARD EXPORT OPTIONS:=
+
+/Ref:/ https://orgmode.org/manual/Export-Settings.html#Export-Settings
 
 #+SELECT_TAGS: export
 #+EXCLUDE_TAGS: noexport
@@ -61,3 +73,10 @@
 #+OPTIONS: toc:3        # Include TOC (level 3) (org-export-with-toc)
 #+OPTIONS: todo:t       # Include TODO keywords (org-export-with-todo-keywords)
 #+OPTIONS: |:t          # Include Tables (org-export-with-tables)
+
+=DISABLED OPTIONS for TESTING:=
+#+BEGIN_COMMENT
+   # #+OPTIONS: toc:2        # Set TOC (org-export-with-toc) 2 levels
+   # #+OPTIONS: toc:nil      # DO NOT Include Default TOC (org-export-with-toc)
+   # #+OPTIONS: num:3        # Set Section Numbering level...
+#+END_COMMENT

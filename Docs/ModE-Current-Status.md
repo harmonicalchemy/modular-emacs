@@ -17,6 +17,13 @@ tags: Emacs, apps-tools, SysAdmin, HA-ModEmacs, how-to, README
 
 ## Release Notes:
 
+### 2022 Sept 02:
+
+**Docs:** Much work has been done _(finally)_ on Org-Mode configuration and Exporting to LaTeX PDF to make eBooks, Tech Manuals, Log Notebooks, etc.  Up until this point Exporting to PDF has been basic out-of-box default.  
+
+I am now modifying `09-4-org-export-conf.el` to add new custom export options... Also creating SETUPFILES for Org-Mode documents.  There are many ways to configure LaTeX and configure it to work well with Emacs Org-Mode... I am working out the best way to do this for Harmonic Alchemy Modular Emacs... 
+
+This work is currently on-going. Once I finally have a good setup complete with nice Templates to use, then we may be ready for a final NON BETA release!  These Markdown Based Readme files will be changed to .org files as well...
 
 ### 2020 July 25:
 

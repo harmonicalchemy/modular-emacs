@@ -1,0 +1,45 @@
+# -**- mode: org; coding: utf-8 -**-
+#+begin_comment
+*File:*    ~latex-tech-pdf.org~ - SETUPFILE for LaTeX Exports to Technical PDFs
+
+=USAGE=
+
+*Install:* Clone this file and adjust to suit your needs...
+         Include this file within org files that need to be exported 
+         as Technical Books or Manuals in PDF format...
+
+*Add:* the following line to the Header of any Org Files that needs to 
+     enable this configuration:
+
+     #+SETUPFILE: ~/.emacs.d/Docs/pubOps/org-templates/latex-tech-pdf.org
+#+end_comment
+
+#+LATEX_CLASS:         ethz
+#+OPTIONS:             toc:nil title:nil
+
+#+LATEX_HEADER: \usepackage{parskip}
+#+LaTeX_HEADER: \usepackage{paralist}
+#+LATEX_HEADER: \usepackage[hyperref,x11names]{xcolor}
+
+#+LATEX_HEADER: \usepackage[OT1]{fontenc}
+#+LATEX_HEADER: \usepackage[english]{babel}
+#+LATEX_HEADER: \usepackage[utf8]{inputenc}
+#+LATEX_HEADER: \usepackage[sc]{mathpazo}
+#+LATEX_HEADER: \usepackage{amsmath,amssymb,amsfonts,mathrsfs}
+#+LATEX_HEADER: \usepackage[amsmath,thmmarks]{ntheorem}
+#+LATEX_HEADER: \usepackage{graphicx}
+#+LATEX_HEADER: \usepackage{soul}
+#+LATEX_HEADER: \usepackage{pdfpages}
+#+LATEX_HEADER: \input{extrapackages}
+#+LATEX_HEADER: \input{layoutsetup}
+#+LATEX_HEADER: \input{theoremsetup}
+#+LATEX_HEADER: \input{macrosetup}
+#+LATEX_HEADER: \usepackage[citecolor=black,filecolor=black,colorlinks=true,urlcolor=SteelBlue4,linkcolor=Firebrick4]{hyperref}
+
+#+LATEX_HEADER: \hypersetup{colorlinks=true,allcolors=magenta}
+#+LATEX_HEADER: \usepackage[backend=bibtex,sorting=none]{biblatex}
+#+LATEX_HEADER: \addbibresource{org-bib-refs.bib}
+
+\title{Title \break \LARGE Subtitle}
+\author{ Alisha Awen \break \break \small siren1@disroot.org \break 18-902-049}
+
