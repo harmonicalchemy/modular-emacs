@@ -3,32 +3,58 @@
 ;;
 ;;   This is a sub module of 09-org-mode-pkg-conf.el which adds extra tools for
 ;;   exporting org-mode with specific features to many different output
-;;   publishing formats...  Consider this file to be the control panel for your
-;;   Emacs Org Mode PubOps engine...
+;; publishing formats...
+;; Consider this file to be your:
+;;     CONTROL PANEL TO A POWERFUL EMACS ORG MODE PUBOPS ENGINE
 ;;
-;;   You now hove in your hands Publishing Abilities Way Beyond Scrivener!
+;; YOU NOW HAVE IN YOUR HANDS PUBLISHING ABILITIES WAY BEYOND SCRIVENER!
+;;       (All Encapsulated Within Future Proof Plain Text Files) 
 ;;
 ;;   Override this file by placing a copy of it into "my-modules" then change
 ;;   settings below *within your cloned copy* to suit your own particular
 ;;   org mode export needs...
+;;
+;;   Last Updated: 2022-008-31
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;;;
-;;  Exporters:
+;;  Ensure Export Agents are "Locked & Loaded" %^)
 
 (require 'ox-md)
 (require 'ox-latex)
 (require 'tex)
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  AucTeX: LaTeX configuration:
+;;  Emacs AucTeX Configuration:
+;;  LaTeX Export Options:
+;;  Note: New Configs Added 2022-008-31
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+;;  put caption below in tables:
+(setq org-export-latex-table-caption-above nil)  
+(setq org-latex-table-caption-above nil)
+;;  don't export tags:
+(setq org-export-with-tags nil)    
+(setq org-export-latex-listings t)
+(setq org-latex-listings 'listings)
+(setq org-latex-prefer-user-labels t)
+
+(add-to-list 'org-latex-packages-alist '("" "listings"))
 
 (setq TeX-auto-save t)
 (setq TeX-fold-mode 1)
 (setq TeX-parse-self t)
 (setq-default TeX-master nil)
 (setq reftex-plug-into-AUCTeX t)
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Babel LaTeX Configuration:
+;;  Note: New Configs Added 2022-008-31
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+(setq org-src-preserve-indentation t)
+(setq org-confirm-babel-evaluate nil)
+(setq org-babel-python-command "python") ;; Use Defined "python" for Current OS...
 
 ;;;
 ;; Set default compile to PDF:
@@ -42,7 +68,6 @@
 (add-hook 'LaTeX-mode-hook 'flyspell-mode)
 (add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
 (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
-
 
 ;;;
 ;;  Hide the Emphasis Markup:
@@ -120,29 +145,8 @@
 
 (add-hook 'org-babel-after-execute-hook 'shk-fix-inline-images)
 
-
-;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;   Org Mode Export Options:
-
-;;;
 ;;  syntax highlight code blocks:
-
 (setq org-src-fontify-natively t)
-
-;;;
-;;  put caption below in tables:
-
-(setq org-export-latex-table-caption-above nil)
-(setq org-latex-table-caption-above nil)
-
-;;;
-;;  don't export tags:
-;;
-;;  Note: You may want to change this later if tags are important
-;;        to your exported docs...
-
-(setq org-export-with-tags nil)
-
 
 ;;;
 ;;  Make sure TEXINPUTS is set to: elpa/auctex-nn.nn.n/latex
@@ -152,6 +156,121 @@
   (message "MELPA package 'latex not yet installed..."))
 
 (require 'preview)
+
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Custom LaTeX Configurations for Export to PDF
+;;  These are NEW as of: 2022-008-29 
+;;  Trying out Gene Ting-Chun Kao's:
+;;  "Emacs Org Mode export to pdf" Repository:
+;;  .../my-modules/orgmode-latex-templates
+;;  The code below comes from her repo above
+
+(setq org-latex-pdf-process
+      '("latexmk -pdflatex='pdflatex -interaction nonstopmode' -pdf -bibtex -f %f"))
+
+;(setq org-latex-pdf-process '("latexmk -bibtex -f %f"))
+
+(unless (boundp 'org-latex-classes)
+  (setq org-latex-classes nil))
+
+;; ~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; ENABLED ORG LATEX CLASSES:
+
+(with-eval-after-load 'ox-latex
+(add-to-list
+ 'org-latex-classes
+ '("ethz"
+   "\\documentclass[a4paper,11pt,titlepage]{memoir}
+\\usepackage[utf8]{inputenc}
+\\usepackage[T1]{fontenc}
+\\usepackage{fixltx2e}
+\\usepackage{graphicx}
+\\usepackage{longtable}
+\\usepackage{float}
+\\usepackage{wrapfig}
+\\usepackage{rotating}
+\\usepackage[normalem]{ulem}
+\\usepackage{amsmath}
+\\usepackage{textcomp}
+\\usepackage{marvosym}
+\\usepackage{wasysym}
+\\usepackage{amssymb}
+\\usepackage{hyperref}
+\\usepackage{mathpazo}
+\\usepackage{color}
+\\usepackage{enumerate}
+\\definecolor{bg}{rgb}{0.95,0.95,0.95}
+\\tolerance=1000
+      [NO-DEFAULT-PACKAGES]
+      [PACKAGES]
+      [EXTRA]
+\\linespread{1.1}
+\\hypersetup{pdfborder=0 0 0}"
+   ("\\chapter{%s}" . "\\chapter*{%s}")
+   ("\\section{%s}" . "\\section*{%s}")
+   ("\\subsection{%s}" . "\\subsection*{%s}")
+   ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+   ("\\paragraph{%s}" . "\\paragraph*{%s}")
+   ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+
+;; ~~~~~~~~~~~~~~
+;; ARTICLE CLASS:
+
+(add-to-list
+ 'org-latex-classes
+ '("article"
+   "\\documentclass[11pt,a4paper]{article}
+\\usepackage[utf8]{inputenc}
+\\usepackage[T1]{fontenc}
+\\usepackage{fixltx2e}
+\\usepackage{graphicx}
+\\usepackage{longtable}
+\\usepackage{float}
+\\usepackage{wrapfig}
+\\usepackage{rotating}
+\\usepackage[normalem]{ulem}
+\\usepackage{amsmath}
+\\usepackage{textcomp}
+\\usepackage{marvosym}
+\\usepackage{wasysym}
+\\usepackage{amssymb}
+\\usepackage{hyperref}
+\\usepackage{mathpazo}
+\\usepackage{color}
+\\usepackage{enumerate}
+\\definecolor{bg}{rgb}{0.95,0.95,0.95}
+\\tolerance=1000
+      [NO-DEFAULT-PACKAGES]
+      [PACKAGES]
+      [EXTRA]
+\\linespread{1.1}
+\\hypersetup{pdfborder=0 0 0}"
+   ("\\section{%s}" . "\\section*{%s}")
+   ("\\subsection{%s}" . "\\subsection*{%s}")
+   ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+   ("\\paragraph{%s}" . "\\paragraph*{%s}")))
+
+;; ~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  EBOOK CLASS: (use memoir)
+
+(add-to-list
+ 'org-latex-classes
+ '("ebook"
+   "\\documentclass[13pt, oneside]{memoir}
+\\setstocksize{9in}{6in}
+\\settrimmedsize{\\stockheight}{\\stockwidth}{*}
+\\setlrmarginsandblock{2cm}{2cm}{*} % Left and right margin
+\\setulmarginsandblock{2cm}{2cm}{*} % Upper and lower margin
+\\checkandfixthelayout
+% Much more laTeX code omitted
+"
+   ("\\chapter{%s}" . "\\chapter*{%s}")
+   ("\\section{%s}" . "\\section*{%s}")
+   ("\\subsection{%s}" . "\\subsection*{%s}"))))
+
+;;  END: Custom LaTeX Configurations for Export to PDF
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -178,15 +297,22 @@
 ;;       into nice music notation...
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-;;  Enable extra org-babel language-specific packages:
+;;;  Enable Extra Custom Org-Babel Language:
+;;   (Add New Custom Language Configs HERE)
 
-(add-to-list 'load-path "~/.emacs.d/lisp/my-modules/ob-html")
-(load-file "~/.emacs.d/lisp/my-modules/ob-html/ob-html.el")
 
-(with-eval-after-load "org"
-  (require 'ob-html) ;;Enable C-c C-o on html code block
-  (org-babel-html-enable-open-src-block-result-temporary)
+;;; Activate External Language Execution:
+;;
+(eval-after-load "org"
+  (progn
+    ;;Enable C-c C-o on html code block
+    (require 'ob-html)
+
+    (org-babel-html-enable-open-src-block-result-temporary)
   (require 'ob-lisp)
+
+    ;; Enable normal tab behaviour for SRC Block language Modes:
+    (setq org-src-tab-acts-natively t)
 
   (org-babel-do-load-languages
    'org-babel-load-languages
@@ -219,11 +345,9 @@
      (screen . nil)
      (shell . t)
      (sql . nil)
-     (sqlite . t)))
-
-  ;; Enable normal tab behaviour for SRC Block language Modes:
-
-  (setq org-src-tab-acts-natively t))
+       (sqlite . t)))))
+;;
+;;; END: Activate External Language Execution
 
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;   END: [modular-emacs]:~/.emacs.d/lisp/modules/09-4-org-export-conf.el

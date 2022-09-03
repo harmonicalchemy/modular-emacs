@@ -337,7 +337,7 @@
 
         (me_set-writing-frame)
 
-        ;; Set Olivetti Width (82 column wide)
+        ;; Set Olivetti Width
         (olivetti-mode)
         (olivetti-set-width 82))
 
@@ -366,7 +366,7 @@
         (org-sidebar-tree-toggle)
         ;(org-sidebar-tree)
 
-        ;; Set Olivetti Width (100 column wide)
+        ;; Set Olivetti Width
         (olivetti-mode)
         (olivetti-set-width 82))
 
@@ -423,7 +423,10 @@
 
   (me_hide-org-bullets)
 
-  ;; Enable Olivetti Mode (88 column wide) (olivetti-mode) (olivetti-set-width 88)
+  ;; Set Up Fancy Unicode Checkboxes:
+  (me_set-unicode-checkboxes)
+
+  ;; Enable Olivetti Mode...
 
   (olivetti-mode)
   (olivetti-set-width 82)
