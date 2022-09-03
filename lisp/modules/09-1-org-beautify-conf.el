@@ -199,6 +199,19 @@
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; Use Unicode Symbols To Display Org-Mode Checkboxes:
+
+(defun me_set-unicode-checkboxes ()
+  "Use Unicode Symbols To Display Org-Mode Checkboxes"
+  (interactive)
+  (progn
+  (push '("[ ]" .  "☐") prettify-symbols-alist)
+  (push '("[X]" . "☑" ) prettify-symbols-alist)
+  (push '("[-]" . "❍" ) prettify-symbols-alist)
+  (prettify-symbols-mode)))
+
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Customize look of emphasized text in org-mode 
 ;; This is for how markup will look in an org-mode
 ;; buffer.  Not what it may or may not look like
