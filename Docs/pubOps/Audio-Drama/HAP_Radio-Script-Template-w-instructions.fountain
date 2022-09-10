@@ -84,25 +84,24 @@ This template is a working draft based on Tony Palermo's **"How to Write Radio D
 **LET IT FINISH**  (play this cue in its entirety. Don't fade it out)   
 **PLAY THROUGH AND OUT**  (this is the same as LET IT FINISH)]]
 
-## BEGIN Script Proper:
+## BEGIN Script Proper (Episode E001, Scene S01):
 
 >**BEGIN SCRIPT**<
 
 ### Example 02: Music Cue
 
-1. _MUSIC: [MUS-01]    STEAM PUNK STORY THEME "The Ivory Tower" (ESTABLISH)  CONTINUE UNDER_
+1. _MUSIC: [MUS-E101-S00-01] STEAM PUNK STORY THEME "The Ivory Tower" (ESTABLISH)  CONTINUE UNDER_
 
-
-2.
+2. _DIALOG:_
 
 ANNOUNCER:
 Welcome to another episode of...
   
 (HOLD BREATH FOR 5 SECONDS WHILE STING PLAYS)
 
-3. _SFX: [TRK-01] THE IVORY TOWER TITLE SUSPENSE CLIP (STING)_
+3. _SOUND: [SFX-E001-S00-01] THE IVORY TOWER TITLE SUSPENSE CLIP (STING)_
 
-4.
+4. _DIALOG:_
 
 ANNOUNCER:
 Yes folks, it's time for another exiting episode of The
@@ -138,19 +137,16 @@ Indicate WHAT the sound is first, then How it is to be played, and finally for h
 
 !**fyi Walla-Walla** = One of the most effective and convincing sound effects. It is made by having the cast or SFX crew mumble to simulate crowds. This is called "Walla-Walla" because the sound is indistinct.
 
+1. _SOUND: [SFX-E001-S01-02] DR. JEZNIK'S FOOT SETPS ALONG ROCKY PATH, [TRK-01] AIRPLANE IN DISTANCE, [TRK-02] SEAGULLS. CONTINUE_
 
-1. _SOUND:    	[FX-01] DR. JEZNIK'S FOOT SETPS ALONG ROCKY PATH, [TRK-01] AIRPLANE IN DISTANCE, [TRK-02] SEAGULLS. CONTINUE_
-
-
-2.
+2. _DIALOG:_
 
 DR. JEZNIK
 (DIRECT - RAISED VOICE TO CARRY BACK DOWN THE PATH TO PETER)
     
 Come along Peter, we're almost there.
 
-
-3.
+3. _DIALOG:_
 
 PETER
 (OFF - BACK FURTHER DOWN THE PATH, RAISED VOICE TO CARRY OVER SOUND OF DISTANT WAVES)
@@ -161,8 +157,7 @@ crashed down lighthouse scattered about the rocky knoll
     
 ahead of you.
 
-
-4.
+4. _DIALOG:_
 
 DR. JEZNIK
 (DIRECT - FROM DR JEZNIK'S LOCAL POSITION IN FRONT OF THE IVORY TOWER)
@@ -171,8 +166,7 @@ Well my boy, that's it!  Hurry up!  I'm already there...
 
 5. _SFX:   	[TRK-03] DR. JEZNIK'S FOOTSTEPS SHIFT FROM ROCKY PATH TO WOODEN STAIRS_
 
-
-6.
+6. _DIALOG:_
 
 PETER
 (OFF - FROM BACK FURTHER ON THE TRAIL)
@@ -196,8 +190,7 @@ Peter and Dr. Jeznik enter the chamber, the sound effects of their footsteps cha
 
 7. _SOUND:   	[TRK-04] SHUFFLING FOOTSTEPS ON WOODEN THRESHOLD [SFX-01] METAL CLANG OF LATCH OPENING LARGE IRON DOOR [SFX-02] DOOR SQUEAKING AS IT SLOWLY OPENS [SFX-02] EXPOSED INSIDE CHAMBER ADDS REVERB_
 
-
-8.
+8. _DIALOG:_
 
 DR. JEZNIK
 (PARTIALLY REVERBERATED)
@@ -208,8 +201,7 @@ until you reach me...
 
 9. _SOUND:   	[TRK-05] SHUFFLING FOOTSTEPS ON WOODEN THRESHOLD [TRK-06] PARTIALLY REVERBERATED BY CHAMBER BEYOND OPEN IRON DOOR_
 
-
-10.
+10. _DIALOG:_
 
 PETER
 (DIRECT - PARTIALLY REVERBERATED WITH DR. JEZNIK AT OPEN IRON DOOR)
@@ -224,8 +216,7 @@ mess on the other side of that door!  Hey, What's all
    
 this sticky feeling mist gathering all around us now?
 
-
-11.
+11. _DIALOG:_
 
 DR. JEZNIK
 (TO PETER)

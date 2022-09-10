@@ -1,103 +1,227 @@
 # -**- mode: org; coding: utf-8 -**-
 #+TITLE: HAP - Fiction Book Project Skeleton
 #+EXPORT_FILE_NAME: HAP_Untitled-Fiction-Book.pdf
-#+KEYWORDS:
+#+TEXT: Copyright © 2022 Harmonic Alchemy Productions & Others
 #+AUTHOR: Alisha Awen - Harmonic Alchemy Productions
 #+EMAIL: Siren1@disroot.org
 #+DATE: <2022-08-28 Sun>
 #+TEXT: Created: <2020-07-30 Thu>
-#+TEXT: Last Published: <2021-03-25 Thu>
-#+FILETAGS: templates fiction_books
+#+TEXT: Last Published: <Not Published>
+#+KEYWORDS:
+#+FILETAGS: templates fiction_books @projects unpublished
 
 #+DESCRIPTION: HAP - Fiction Book Project Skeleton with generic basics already done.  Great for Authors to use when starting a new fiction book project from scratch... Publishable as a PDF Book suitable for eBook readers... (easily modified for publishing in other eBook formats or for the web)
 
-#+begin_comment 
-*Setup Files:* For Cloned Versions of this template, replace 
-              file/paths below with file/paths to your own custom 
-              setup files (which you could convienently clone from 
-              the example setup files provided in: 
-              ~../org-templates/~ directory...
+#+BEGIN_COMMENT 
+=Setup Files:=
+
+   For Cloned Versions of this template, the file/paths below will be relative
+   to your parent project directory and as such, should be all set to your new: ~.../your-fiction-book-project/org-templates/~ directory...
+
 =NOTE:= 
 
-   ~#+CATEGORY:~ is specified within log-book.org setupfile.
-   If you need to change the category do it in fiction-book.org
-   or your cloned version of it...
+   ~#+CATEGORY:~ is specified within ~fiction-book.org~ SETUPFILE.
+   If you need to change the category, do it in your cloned version
+   of fiction-book.org...
 
-   The Setupfile: default-tags.org below is where tags are 
-   set for this file... /(rename or use your own tags file/ 
-   /and change the path to it below to make it work for this/
-   /.org file...)/
-#+end_comment
+   *SETUPFILE:* ~default-tags.org~ is where tags are set for this project...
 
-#+SETUPFILE: ~/.emacs.d/Docs/pubOps/org-templates/fiction-book.org
-#+SETUPFILE: ~/.emacs.d/Docs/pubOps/org-templates/latex-book-pdf.org
-#+SETUPFILE: ~/.emacs.d/Docs/pubOps/org-templates/default-tags.org
+   *SETUPFILE:* ~latex-book-pdf.org~ is for LaTeX Export Configurations 
+              to produce a PDF version of your Fiction Book...
 
-:README:
-To use this Emacs Org-Mode Fiction Book Project Skeleton /(template)/ for your own projects, perform the following steps:
+#+END_COMMENT
 
-1. *Clone a Copy of this File:* Put it where you normally organize your 
-   writing projects. *Place it within its own folder* named after your 
-   intended project title...
+#+SETUPFILE: ./org-templates/fiction-book.org
+#+SETUPFILE: ./org-templates/latex-book-pdf.org
+#+SETUPFILE: ./org-templates/default-tags.org
 
-2. *Change the* ~#+TITLE:~ *directive at the top of this file* 
-   to: /"your Fiction Book Project's Title"/
+:READ_ME_FIRST:
+☞ =Instructions:= /(How to Install & Use This Template)/
 
-3. *Change the* ~#+EXPORT_FILE_NAME:~ *directive at the top of this file* 
-   to: /"your-Fiction-Book-Project's-Title.pdf"/ That will be the file 
-   name produced thence forward...
+To use *HAP_Fiction-BOok-Project-Skeleton.org* /(Org-Mode Fiction Book Project /Template)/ for your own projects, perform the following steps: 
 
-4. *Change the* ~#+DESCRIPTION:~ *directive at the top of this file* 
-   to: /your Fiction Book Project's Description/ etc...
+/Use the org-mode Checkboxes to Help You Keep Track of Progress/
 
-2. *Copy/Clone ./media* /(and all its contents):/ To your new project's folder
-   /(where you copied this file).../ Any external documents or images referenced 
-   by your book project should be placed within this ~./media/~ directory... 
+1) [ ] *Clone a Copy of This File:* 
 
-   All of the external links, images, within the boilerplate examples may be 
-   used as examples for getting your own images, and external attachments 
-   linked properly...  This single *./media* directory serves media and external 
-   attachments for all of the *.org* files contained within:
-   ~.emacs.d/Docs/pubOps~ directory... Cloning any of the other *.org* files will 
-   also require copy/cloning the ./media directory relative to them...
+      Put your clone where you normally organize your writing 
+      projects. *Place it within its own master folder... It is*
+      *Important to keep this file within its OWN enclosing folder!* 
 
-4. You don't need to copy the ~./auto/~ directory...  That will be created for 
-   you automacally the first time you export this ~.org~ file to ~.PDF~.
+      Name the project's master folder to reflect your fiction book 
+      project's title... /(what you renamed this .org file to)/...
 
-5. You also don't need to copy the ~./org-templates~ directory... The files in 
-   there are automatically linked and included within this template. You don't 
-   need to change those settings unless you wish to customize the already 
-   customized tags, and export options. /They are set up correctly for the/ 
-   /Fiction Book genre already and the category is all set as well.../ 
-   But if you must, you can modify the original files to make your changes 
-   rather than cloning to your project directory... Realize that if you do 
-   that while on the master branch it will get out of sync with origin, check 
-   out a local branch to make it easier to get back to defaults if you change 
-   your mind later. %^)
+      =Other Files/Folders will be placed within this master folder...=
 
-6. *Start Planning / Writing Your Technical Book:* /Change headings and structure/ 
-   /to match your project's outline sections-chapters-scenes-plots-characters,/ 
-   /etc.../ Start doing the Tasks within the Tasks section... 
+2) [ ] *Copy/Clone:* ~./media~ /(and contents)/ *to your new project's Master Folder:*
 
-   =Have fun doing this...=
+      Copy this directory /(into your master folder as a sibling of this file).../ 
+      Any external documents or images referenced by your book project should 
+      be placed within this ~./media/~ directory...
 
-The *In-Buffer Settings* and *KEYWORDS* specified above are configured to get this file looking good when exported as a Standard PDF file.  Once you have your project directory all set up as above you are ready to export your first PDF as a test run... 
+      All external links, images, within the boilerplate examples of this
+      template may be used as examples for getting your own images, and 
+      external attachments linked properly...  
 
-To make a PDF out of this file issue the following Emacs command:
+      This single ~./media~ directory will serve media and external attachments 
+      for all of the ~.org~ doc template files from within: ~.emacs.d/Docs/pubOps~ 
+      directory /(if they were also copied here to your Project's Master Folder)/
 
-   ~M-x org-latex-export-to-pdf~
+   =Note:=  You DON'T need to copy the ~./auto/~ directory...  That directory
+           will be automatically created the first time you export this ~.org~ 
+           file to ~.PDF~...
 
-*-or-* If You Enabled *Xah-Fly-Keys* /"Command Mode"/ Try:
+3) [ ] *Copy/Clone:* ~./org-templates~ /(and all contents)/ *to your Master Folder:*
 
-   ~SPACE e p~
+      Copy this directory to your Book Project's Master Folder, /(as a sibling/
+      /of this .org file).../ 
 
-After *AucTeX* is done parsing/compiling etc., a new *PDF* by the name of ~HAP_Untitled-Fiction-Book.pdf~ -and- ~HAP_Untitled-Fiction-Book.tex~ will appear within the same directory as this file...
+      =Note:= The SETUPFILES Within this directory which are called out and 
+             included by this .org file /(above)/ must stay within this 
+             directory...  
 
-Subsequent repeated calls to the above command will overwrite your existing ~HAP_Untitled-Fiction-Book.pdf~ -and- ~HAP_Untitled-Fiction-Book.tex~ files! You should probably copy these files to the ~./auto/~ directory as well for safe keeping as backups...
+             Other SETUPFILES within this directory are used by other book 
+             project templates and are not needed for this Fiction Book 
+             Project... You may remove them if you wish... They are small
+             text files not bothering you... If you clone another 
+             ~HAP_<book-template>.org~ file into this project folder it will 
+             pick up its associated SETUPFILES automatically, so consider 
+             that if/when you decide to delete other UNUSED SETUPFILES...
 
-*Last Modified:* <2022-08-28 Sun> So far things are pretty basic PDF... We will get fancy with other formats later... I promice... I have to do all this documentation first! /(As you can see, if you been following for the past couple years, things are getting done! Albeit Slowly)/
+4) [ ] =Start Sketching Out Your Story NOW Before You Loose It!=
 
-Enjoy! - Alisha Awen
+      =NOTE:= You may be doing this because you have some fantastic story idea
+             brewing in your mind and you need to write that down before you 
+             forget!  =Right?=  Therefore... as soon as you are done with the
+             first steps above, =STOP= and go immediately to the:
+
+                   ~💡 Ideas Scratchpad Refile / ☞ Start Here!~ 
+
+             section and read the ~:README:~ directly under that heading...  
+             Then write your idea down quickly /(as per the README instructions)/ 
+             to get your inspiration recorded before you forget it...  
+
+             Later, After you have all your ideas sketched out and you are 
+             ready to be in an ="organized mood"= /(rather than creative mood)/ 
+             /This does not imply being organized cannot be a CREATIVE PROCESS/ 
+             Then it is time to:
+
+             =Come Back Here And Finish Setting Up Your Project...=
+
+             *This Project Template is HUGE!*
+
+             *Your Muse Can Easily Loose Her Inspiration!*
+
+             =The ☞ Start Here Section is Your Remedy= 
+
+             =Do That first!=
+
+5) [ ] *Finish Setting up this Project LATER...* [0/3]
+
+    - [ ] *Change the* ~#+TITLE:~ *directive at the top of this file:* 
+
+          Change to: /"your Fiction Book Project's Title"/
+
+    - [ ] *Change the* ~#+EXPORT_FILE_NAME:~ *directive at the top of this file:*
+
+          Change to: /"your-Fiction-Book-Project's-Title.pdf"/
+          This will be the file name(s) produced during export thence forward
+          /(including auto generated files: .tex, etc...)/
+
+    - [ ] *Change the* ~#+DESCRIPTION:~ *directive at the top of this file:*
+
+          Compose /Your-Fiction-Book-Project's Description/ as a short 
+          paragraph here...
+
+    - *The* ~./media~ *Directory is ALL Set:* 
+
+         Any external documents or images referenced by your book project 
+         should be placed within this ~./media/~ directory... This single 
+         ~./media~ directory will serve media and external attachments for this 
+         and any other fiction related ~.org~ files you may end up creating 
+         here, as well as being the media repository used by LaTeX during 
+         publishing...
+
+    - *Purpose of the:* ~./auto/~ *Directory:* /(you do not need to copy this)/
+
+         This is or will-be an auto generated folder where your output ~.PDF~ 
+         files are created and placed during LaTeX export. You DO NOT need 
+         to copy this folder as it is auto generated during org-mode LaTeX 
+         processing...
+
+         LaTeX processing will not delete any prior files contained here... 
+         Some of them will be updated, but will have backups...  Any files 
+         you place within this folder will NOT be lost, unless you delete 
+         them... This folder is a good place to store other temporary files 
+         you may be creating, generating.. etc...
+
+    - *Purpose of the:* ~./org-templates~  *Directory:*
+
+         The files in here are automatically linked and included within this
+         template. You don't need to change those settings unless you wish to
+         customize the already customized tags, and export options.
+
+         /They are allready set up correctly for the fiction book genre, and the category is all set as well... But you can and may modify the original files to fit your needs.../
+
+6) [ ] =Ongoing Planning / Writing Your Fiction Book:= 
+
+      /Change headings and structure to match your project's outline/ 
+      /sections-chapters-scenes-plots-characters, etc.../
+
+      *Start doing the Tasks within the Tasks section:*
+
+      =Have fun doing this...=
+
+7) [ ] =Export/Publish to PDF File:=
+
+      The *In-Buffer Settings* specified by the SETUPFILES above will 
+      get this file looking good when exported as a Standard PDF file.  
+      Once you have your project directory all set up as above you are 
+      ready to export your first PDF as a test run...
+
+         *Issue the following Emacs command:*
+
+            ~M-x org-latex-export-to-pdf~
+
+         *OR* If You Enabled *Xah-Fly-Keys* /"Command Mode"/ Try Shortcut:
+
+            ~SPACE e p~
+
+         *OR Export to OTHER Formats:*
+
+            ~C-c C-e~
+
+            /(a pop-up will show allowing you to choose export method)/
+
+      After *AucTeX* is done parsing/compiling etc., a new *PDF* by the name of: ~HAP_Untitled-Fiction-Book.pdf~ -and- ~HAP_Untitled-Fiction-Book.tex~ 
+      will appear within the same directory as this file...
+
+      Subsequent repeated calls to the above command will overwrite your existing ~HAP_Untitled-Fiction-Book.pdf~ -and- ~HAP_Untitled-Fiction-Book.tex~ 
+      files! /(make backups first if needed!)/
+      You should probably copy these files to the ~./auto/~ directory as 
+      well for safe keeping as backups...
+
+      =If you chose the last option above= LaTeX will output files with other
+      extensions for those other output formats... =NOTE:= SETUPFILES have not
+      been created yet for other eBook formats.  /(This is a work in progress)/
+
+      =If YOU EXPERIENCE LaTeX ERRORS:= 
+
+         *Consult Buffer:* ~*Org PDF LaTeX Output*~
+
+=These Instructions Were Last Modified:= <2022-09-09 Fri> 
+
+So far things are pretty basic PDF... We will get fancy with other formats later... 
+I promice... I have to do all this documentation first!
+/(As you can see, if you been following for the past couple years, things are/ 
+ /getting done! Albeit Slowly)/
+
+=Please Open an ISSUE At:= https://github.com/harmonicalchemy/modular-emacs/issues
+   
+Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas for Improvement... =You guys are my Product Managers=  I am only a User of ONE "seat". 
+Other folks UX metrics are sorely needed!! Thanks!
+
+=Enjoy!= - Alisha Awen
 :END:
 
 * 💡 Scratchpad Refile:      :noexport:
@@ -109,9 +233,9 @@ Enjoy! - Alisha Awen
 
    I often come here for my [[https://projects.csail.mit.edu/gsb/old-archive/gsb-archive/gsb2000-02-11.html]["yak shaving"]] adventures...
 
-   Use this: "*💡 Scratchpad Refile ☞ Start Here!*" section as a 
-   quick place to document ideas and inspirations as they come 
-   along... You can refile them later... 
+   Use this: *💡 Scratchpad Refile* section as a quick place to 
+   document ideas and inspirations as they come along... 
+   You can refile them later... 
 
    Even if your quick inspiration was intended for elsewhere?,
    /(e.g., You become bored documenting tedious technical/ 
@@ -135,7 +259,7 @@ Enjoy! - Alisha Awen
    =The following Shortcuts= will Help you get started as 
    quickly as possible:
 
-   - [ ] *Copy/Clone:* =Example Idea= *Heading Below:* 
+   - [ ] =Copy/Clone:= *💡* <2022-08-20 Sat> *Example Idea* =Below:=
 
          =Copy the Heading AND ALL ITS CONTENTS=
 
@@ -157,6 +281,7 @@ Enjoy! - Alisha Awen
 
           Advance your cursor few more lines down to some fresh 
           empty space and Start Typing Your Story Idea Like Mad!!! 
+          /(Remove the boilerplate content after reading it...)/
 
    - [ ] *Don't stop Writing!* 
 
@@ -172,13 +297,17 @@ Enjoy! - Alisha Awen
                fantastic ideas below them it to one single 
                blank line...
 
-        + [ ] *Further organize things as needed...*
+        + [ ] *Continue Writing/Developing RIGHT HERE if needed:*
 
-               If you become inspired to write while organizing... 
-               Do that first and come back later... Don't scare 
-               away your muses when they beckon! Get your story 
-               down first! No matter what state it may be in at 
-               first... =GET IT DOWN=
+               If you are not yet sure where this NEW IDEA should go
+               AND you are still inspired to write... Simply continue
+               writing and developing this IDEA in place RIGHT HERE...
+
+               Don't Worry about what it is for or where to put it...
+               It is still here in "dream state" which is GOOD...
+               Don't scare away your muses when they beckon! 
+               Get your story down first, no matter what state it 
+               may be in... =GET IT DOWN=
 
         + [ ] *You Are Free To Go Out And Play Elsewhere Little Grasshopper*
 
@@ -188,11 +317,13 @@ Enjoy! - Alisha Awen
                /And don't forget to take/ /your bath tonight... ;-)/
 
    Having done the simple steps above any time you get inspired, you 
-   will be able to tell your grand children.. "I got my first spark 
-   of an idea for that book back in Year, Month, Day, time, second" 
-   /(50 years later!)/ Now that is being organized! LOL
+   will much later in life be able to tell your grand children.. 
+   /"I got my first spark of an idea for that story back in Year,/ 
+   /Month, Day, time, second"/ 50 years later! Now that is being 
+   organized! LOL
 :END:
-*** 💡 <2022-08-20 Sat> Example Idea /(clone this)/
+
+** 💡 <2022-08-20 Sat> Example Idea /(clone this)/
 :README:
    This is a dummy example of some crazy idea that you may have 
    gotten at the spur of the moment, while you were doing something 
@@ -210,9 +341,11 @@ Enjoy! - Alisha Awen
 
 =Then Quickly Get Started Writing Down your FRESH NEW IDEA=
 
+=Replace all of this boilerplate content with your own content=
+
 \newpage
 
-*** 💡 <2020-06-07 Sun> Visisonar - Object from Asimov's Foundation Series
+** 💡 <2020-06-07 Sun> Visisonar Object /(from Asimov's Foundation Series)/
 :README:
    This is a dummy example of some crazy idea that you may have gotten at the spur of the moment, while you were doing something elsewhere within this project...  After you are done getting as much of the idea as you initally can then you can simply go back to what you were doing before the inspiration segue tore you away... you might want to schedule this as a todo item before leaving though...
 
@@ -321,11 +454,14 @@ Unlike most instruments, this one does not achieve its effect by using sonic eff
       + To Create a Link Type: ~C-c C-l~ 
          /(then paste: ~link~ & type: "description")/
 
-         =-or-= Simply Fill in the Template Link Placeholders 
-              Below & copy/paste more placeholders as 
-              needed... ;-)
+         =-or-= Simply Copy/Paste Template: /(link placeholder)/
+               Below and fill that in... 
+               copy/paste more placeholders as needed... ;-)
 
       + To Open a Link Type: ~C-c C-o~
+
+- [[][] ] - /(link placeholder)/
+
 :END:
 
 *Add links to Anything Deemed Important to the Writing of This Chapter:*
@@ -531,7 +667,7 @@ In this chapter we are dealing with yadda yadda yadda which must be resolved wit
 
 
 #+LATEX: \appendix
-* 🔍 Research:                                                       :export:
+* 🔍 Research:                    :noexport:
 ** 🗓 Log Book:
 :README:
    Use this space to add time stamped log note entries for any 
@@ -633,7 +769,7 @@ In this chapter we are dealing with yadda yadda yadda which must be resolved wit
    Chapters/Scenes of your Book... This section is purely for 
    research purposes to help you while you are writing your book. 
    You may have some classic plot outlined here that relates to 
-   your book, or it may be some general plot idea that you may 
+   your story, or it may be some general plot idea that you may 
    wish to employ later...  These are general plots usually 
    relating to the ENTIRE book, rather than any individual 
    chapter...
@@ -653,21 +789,24 @@ I found this classic Plot... /(see details below...)/ dealing with yadda yadda y
    that you may wish to include within your book...
 :END:
 
-* ⏰ Tasks:                                                          :export:
+* ⏰ Tasks:                          :export:
 :README:
-   This Tasks Section is similar to the Log Book within the 
-   Research section of this Book Project...  Log entries
+   This Tasks Section is similar to the *🗓 Log Book:* within the 
+   *🔍 Research:* Binder of this Book Project...  Log entries
    are research activities...  Tasks are more General and
    relate to this ENTIRE Book Project as a whole...
 
    - *Use this Section to* =ADD TIME STAMPED TASKS= *for any pourpose*
 
-      Create More *⏰ Tasks:* =Sub Categories= & *⏱ New Task:* =Entries= 
-      as needed during the development of your Book Project...
+      + Create More *⏰ Tasks:* =Sub Categories= as needed...
 
-      Use the Supplied: *⏱* <2022-08-25 Thu> *New Task:* /(Master Template)/ 
-      from the *⎘ Meta: / ⎘ Templates:* Binder to easily =copy/clone= 
-      a new Task Entry into this *⏰ Tasks:* Binder...
+      + Create More *⏱ New Task:* =Entries= under =Sub Categories= 
+         as needed during the development of your Book Project...
+
+         Use the Supplied: *⏱* <2022-08-25 Thu> *New Task:* /(Master Template)/ 
+         from the *⎘ Templates:* Section within the *⎘ Meta:* Binder to easily 
+         =copy/clone= a new Task Entry under a Sub Category of this *⏰ Tasks:* 
+         Binder...
 
    - *Time Stamp Task Entries With:* ~C-c .~ *To Set The* =START DATE=
 
@@ -691,7 +830,7 @@ I found this classic Plot... /(see details below...)/ dealing with yadda yadda y
 
    After completing each Timestamped Step below, Mark its TODO 
    state to ~DONE~ and update the timestamp to the current time as
-   well...  Use Command: ~C-c . RET~ while cursor is on the timestamp
+   well...  Use Command: ~C-c . . RET~ while cursor is on the timestamp
    to update it to the current date/time... 
 
    The Synopsis Tasks below are based on The Award winning Snowflake 
@@ -1052,15 +1191,15 @@ Your process now is to grow these ideas as chapters of your story. You are expan
 
 \newpage
 ** ⏱ Other Tasks:
-*** SOMEDAY ⏱ <2022-08-28 Sun> Create Editorial/Production Calendar
+*** SOMEDAY ⏱ <2022-08-28 Sun> Create Editorial Calendar
 
 =Note:= This is Still Under Construction... I am researching the 
       best way to use agenda, calendar views, and Tables to make 
-      an Editorial or Production Calendar work well in Emacs Org-Mode...
+      an Editorial Calendar work well in Emacs Org-Mode...
 
-Make an *Editorial* or *Production Calendar* for this project! You will need this for quick access during publishing / production time. Org-Mode excels for this task!  Take advantage of its powerful scheduling, agenda, and filtering capabilities!
+Make an *Editorial Calendar* for this project! You will need this for quick access during publishing / production time. Org-Mode excels for this task!  Take advantage of its powerful scheduling, agenda, and filtering capabilities!
 
-Use this space to design your *EC* or *PC* and then transfer it as a New Section within the main *🕮 Book:* /(binder)/ of this Book Project...
+Use this space to design your *EC* and then transfer it as a New Section within the main *🕮 Book:* /(binder)/ of this Book Project...
 
 **** ☞ Helpful Refs for Calendars, PM, etc:
 :README:
@@ -1079,14 +1218,11 @@ Use this space to design your *EC* or *PC* and then transfer it as a New Section
 
 :END:
 
-*Add links to Anything Deemed Important to the Writing of This Chapter:*
-/(Links to Websites, Other Stories, Images, Sound, Video, Whatever...)/
-
 - [[https://youtu.be/NkhgIB64zgc][Emacs: Diary and Calendar]] - /(YouTube Tutorial by: Protesilaos Stavrou)/
 
 \newpage
 
-* ⎘ Meta: /(templates etc.)/                                           :export:
+* ⎘ Meta: /(templates etc.)/        :noexport:
 ** 📄 About:
 
 This =Meta= section provides skeleton templates for use within your project(s).  Any sub heading under this Meta: group can be utilized by copy-pasting the collapsed heading into any of your existing project sections (i.e., making a clone anywhere you need to create a new section based on the template's structure)... 
@@ -1103,8 +1239,8 @@ Or... You could try mashing several cloned templates together to create a totall
 
 - [ ] *Paste The Copied Template As A New Clone:* 
 
-       /(Paste it within your project's book, planning,/ 
-        /or research section where it would normally belong)/
+       /(Paste it within your project's Book, or Research section/ 
+        /where it would normally belong...)/
 
 - [ ] *Change The Name Of Your Clone:* 
 
@@ -1502,22 +1638,27 @@ Replace these instructions with short description of log entry.
 \newpage
 
 **** 📚 Reference:
+:README:
+   =Org Mode Links Tip:=
+
+      + To Create a Link Type: ~C-c C-l~ 
+         /(then paste: ~link~ & type: "description")/
+
+         =-or-= Simply Copy/Paste Template: /(link placeholder)/
+               Below and fill that in... 
+               copy/paste more placeholders as needed... ;-)
+
+      + To Open a Link Type: ~C-c C-o~
+
+- [[][] ] - /(link placeholder)/
+
+:END:
 
 - *Link to Project:* [[][] ]
 
 - [[URL][Link Name] ] *Heading:* /(comment)/
 
 - [[][] ] - *_:* /(yadda...)/
-
-- [[][] ] - *_:* /(yadda...)/
-
-- [[][] ] - *_:* /(yadda...)/
-
-- [[][] ] /(_)/
-
-- [[][] ] /(_)/
-
-- [[][] ] /(_)/
 
 \newpage
 
