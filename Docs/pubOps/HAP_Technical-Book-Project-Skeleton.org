@@ -317,6 +317,9 @@ Enjoy! - Alisha Awen
           structure of *Chapter / Scene (sub-chapter)* intact... 
           /(i.e., change names only...)
 :END:
+
+This is a secret Org-Mode Tutorial /(presented here as an EXAMPLE Chapter)/ for a technical book...  Some good tips are in here so you may want to save this somewhere else before removing or re-writing it to use as a chapter within the technical book you have commondeerred this project skeleton for...
+
 *** NEW ☞ Chapter References:
 :README:
    =Org Mode Links Tip:=
@@ -331,15 +334,25 @@ Enjoy! - Alisha Awen
       + To Open a Link Type: ~C-c C-o~
 :END:
 
-- [[https://orgmode.org/worg/org-contrib/babel/examples/fontify-src-code-blocks.html#org42aa49f][Pretty fontification of source code blocks]] - /WORG/
+- [[https://orgmode.org/worg/org-tutorials/index.html][Org tutorials]] - /WORG/
+
+- [[https://orgmode.org/worg/org-contrib/babel/examples/fontify-src-code-blocks.html#org42aa49f][Pretty Fontification Of Source Code Blocks]] - /WORG/
+
+- [[https://orgmode.org/worg/library-of-babel.html][Org Library of Babel]] - /WORG/
 
 - [[https://orgmode.org/manual/Working-with-Source-Code.html#Working-with-Source-Code][Working with Source Code]] - /Org Manual/
 
-- [[https://orgmode.org/worg/library-of-babel.html][Org Library of Babel]] /WORG/
+- [[https://www.cheme.engineering.cmu.edu/directory/bios/kitchin-john.html][John Kitchin]] - /John's Home Page @ Carnegie Mellon/
 
 - [[https://github.com/jkitchin/org-ref][ORG-REF]] - ~JKitchin@Github~
 
+- [[https://www.youtube.com/playlist?list=PL0sMmOaE_gs3GbuZV_sNjwMREw9rfElTV][Org-Mode YouTube Presentaions PLAYLIST]] - ~JKitchin@YouTube~
+
 - [[https://youtu.be/fgizHHd7nOo][Org Mode is Awesome!]] - ~JKitchin@YouTube~
+
+- [[https://kitchingroup.cheme.cmu.edu/blog/2017/01/29/ob-ipython-and-inline-figures-in-org-mode/][ob-ipython and Inline Figures in org-mode]] - /The Kitchin Research Group/
+
+- [[https://kitchingroup.cheme.cmu.edu/blog/2017/05/04/An-emacs-lisp-dsl-for-gnuplot/][An emacs-lisp dsl for gnuplot]] - - /The Kitchin Research Group/
 
 - [[https://youtu.be/SzA2YODtgK4][Getting Started with Org Mode]] - ~Harry Schwartz@YouTube~
 
@@ -350,12 +363,6 @@ Enjoy! - Alisha Awen
 - [[https://zzamboni.org/post/beautifying-org-mode-in-emacs/][Beautifying Org Mode in Emacs]] - /Article by:/ ~Diego Zamboni~
 
 - [[https://www.linuxjournal.com/content/org-mode-latex-exporter-latex-non-texers][The org-mode LaTeX exporter: LaTeX for non-TEXers]] - /Article on LINUX Journal/ 
-
-- [[][] ] - 
-
-- [[][] ] - 
-
-- [[][] ] - 
 
 - [[][] ] -
 
