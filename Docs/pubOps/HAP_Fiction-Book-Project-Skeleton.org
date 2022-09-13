@@ -7,7 +7,6 @@
 #+DATE: <2022-08-28 Sun>
 #+TEXT: Created: <2020-07-30 Thu>
 #+TEXT: Last Published: <Not Published>
-#+KEYWORDS:
 #+FILETAGS: templates fiction_books @projects unpublished
 
 #+DESCRIPTION: HAP - Fiction Book Project Skeleton with generic basics already done.  Great for Authors to use when starting a new fiction book project from scratch... Publishable as a PDF Book suitable for eBook readers... (easily modified for publishing in other eBook formats or for the web)
@@ -323,7 +322,7 @@ Other folks UX metrics are sorely needed!! Thanks!
    organized! LOL
 :END:
 
-** 💡 <2022-08-20 Sat> Example Idea /(clone this)/
+** NEW 💡 <2022-08-20 Sat> New Example Idea /(clone this)/
 :README:
    This is a dummy example of some crazy idea that you may have 
    gotten at the spur of the moment, while you were doing something 
@@ -345,7 +344,7 @@ Other folks UX metrics are sorely needed!! Thanks!
 
 \newpage
 
-** 💡 <2020-06-07 Sun> Visisonar Object /(from Asimov's Foundation Series)/
+** NEW 💡 <2020-06-07 Sun> Visisonar Object /(from Asimov's Foundation Series)/
 :README:
    This is a dummy example of some crazy idea that you may have gotten at the spur of the moment, while you were doing something elsewhere within this project...  After you are done getting as much of the idea as you initally can then you can simply go back to what you were doing before the inspiration segue tore you away... you might want to schedule this as a todo item before leaving though...
 

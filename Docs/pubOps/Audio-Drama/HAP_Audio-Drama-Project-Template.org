@@ -238,7 +238,12 @@ Other folks UX metrics are sorely needed!! Thanks!
       /"Your Crazy Daze are Covered!" Yay!/ 
 
    =The following Shortcuts= will Help you get started as 
-   quickly as possible:
+   quickly as possible using templates designed to help you
+   sketch up ideas focused on Audio Drama Projects.  A basic
+   bare bones IDEAs Template is also provided for you to use
+   and design for any purpose of any scope!
+
+- =SCENES Shortcut Template:=  /Use This If You Have A New Scene Idea/
 
    - [ ] =Copy/Clone:= *NEW 🎙* ~S???~ <2022-09-09 Fri> *Scene Title:* 
 
@@ -313,6 +318,66 @@ Other folks UX metrics are sorely needed!! Thanks!
                things... =OK?= Don't create a swamp in here! 
                /And don't forget to take/ /your bath tonight... ;-)/
 
+- =NEW IDEA Template:= /Use This For Anything You Want!/
+
+   - [ ] =Copy/Clone:= *💡* <2022-08-20 Sat> *New Example Idea* =Below:=
+
+         =Copy the Heading AND ALL ITS CONTENTS=
+
+         /Change your Clone's Title to Your Own Title/
+
+   - [ ] *Change the timestamp on your Clone Entry:* [0/1]
+
+         =Type:= ~C-c .~ while cursor is sitting on the timestamp
+
+         /i.e., Press: ~Ctrl-c~, let go, and then type a Period/ ~.~
+
+         A date chooser panel will pop up...
+
+     + [ ] *Press* ~ENTER~ *to auto accept today's date and time.*  
+
+            The existing timestamp will change to TODAY...
+
+   - [ ] *Advance your cursor and Start Writing!!!*
+
+          Advance your cursor few more lines down to some fresh 
+          empty space and Start Typing Your Story Idea Like Mad!!! 
+          /(Remove the boilerplate content after reading it...)/
+
+   - [ ] *Don't stop Writing!* 
+
+          Don't worry about formatting or organizing it until later, 
+          after all your inspiration has passed and you are ready 
+          to organize...
+
+   - [ ] =TODO After You Are Done Writing:=
+
+        + [ ] *Adjust Space:* 
+
+               Adjust space between your headings and your 
+               fantastic ideas below them it to one single 
+               blank line...
+
+        + [ ] *Continue Writing/Developing RIGHT HERE if needed:*
+
+               If you are not yet sure where this NEW IDEA should go
+               AND you are still inspired to write... Simply continue
+               writing and developing this IDEA in place RIGHT HERE...
+
+               Don't Worry about what it is for or where to put it...
+               It is still here in "dream state" which is GOOD...
+               Don't scare away your muses when they beckon! 
+               Get your story down first, no matter what state it 
+               may be in... =GET IT DOWN=
+
+        + [ ] *You Are Free To Go Out And Play Elsewhere Little Grasshopper*
+
+               If after writing... You don't feel like organizing 
+               now? =NO PROBLEM=... But come back later and organize 
+               things... =OK?= Don't create a swamp in here! 
+               /And don't forget to take/ /your bath tonight... ;-)/
+
+
    Having done the simple steps above any time you get inspired, you 
    will much later in life be able to tell your grand children.. 
    /"I got my first spark of an idea for that story back in Year,/ 
@@ -320,7 +385,29 @@ Other folks UX metrics are sorely needed!! Thanks!
    organized! LOL
 :END:
 
-** 💡 New Scene Ideas:
+** NEW 💡 <2022-08-20 Sat> New Example Idea /(clone this)/
+:README:
+   This is a dummy example of some crazy idea that you may have 
+   gotten at the spur of the moment, while you were doing something 
+   elsewhere within this project...  After you are done getting as 
+   much of the idea as you initally can then you can simply go back 
+   to what you were doing before the inspiration segue tore you away... 
+   You might want to schedule this as a todo item before leaving though...
+
+   Later when you are free you can come back to file this or place it 
+   where it belongs.  In the case of the note below it would probably 
+   go in a research folder of a Sci-Fi related project...
+:END:
+
+=Copy/Clone this Boilerplate Template NOW= And Change your clone's Title.. 
+
+=Then Quickly Get Started Writing Down your FRESH NEW IDEA=
+
+=Replace all of this boilerplate content with your own content=
+
+\newpage
+
+** NEW 💡 New Scene Ideas:
 *** NEW 🎙 ~S???~ <2022-09-09 Fri>  Scene Title /(Template)/
 :README:
    Here is the =ULTIMATE MASTER WORKSPACE= for creating, developing, and 
@@ -392,6 +479,27 @@ Please somebody write me into a real character... Thanks!
 
 >END of SCENE<
  #+END_SRC
+
+\newpage
+💡 <2022-08-20 Sat> Example Idea /(clone this)/
+:README:
+   This is a dummy example of some crazy idea that you may have 
+   gotten at the spur of the moment, while you were doing something 
+   elsewhere within this project...  After you are done getting as 
+   much of the idea as you initally can then you can simply go back 
+   to what you were doing before the inspiration segue tore you away... 
+   You might want to schedule this as a todo item before leaving though...
+
+   Later when you are free you can come back to file this or place it 
+   where it belongs.  In the case of the note below it would probably 
+   go in a research folder of a Sci-Fi related project...
+:END:
+
+=Copy/Clone this Boilerplate Template NOW= And Change your clone's Title.. 
+
+=Then Quickly Get Started Writing Down your FRESH NEW IDEA=
+
+=Replace all of this boilerplate content with your own content=
 
 \newpage
 * 🎙 Production: /(Name of Production)/                    :export:
@@ -1194,7 +1302,13 @@ The reason for this requirement is because =EACH EPISODE is a MINI SELF CONTAINE
 The stinger or *"cliff hanger"* at the end of each episode leads listeners
 interest to continue with the next exciting adventure to come... /(another mini hero's journey)/
 
-No one claims this to be an absolute ideal structure, but it's the one that Randy Ingermanson uses, and it has a strong basis in psychology.
+A natural expansion of the *"SOLO" Hero's Journey* form that fits well within a Full Many-Seasons Episode Series will showcase a =TEAM of HEROS= expansion on the hero's journey form as commonly found within fiction, and Cinema... 
+
+The Team Hero's Concept Started in Comic Books long ago, but has returned today within Cinema and Video Games AND VR with a vengeance!
+
+No one claims this to be an absolute ideal structure, but it's the one that Randy Ingermanson uses, and it has a strong basis in psychology. I personally believe it to be based on the more general Sonnet Poetic Form, which mirrors the Sonata Musical Form, 
+
+I don't know what the parallel architectural form or term for this idea is, /(there are so many classical forms in architecture).../ But something within the world of architecture, contained in its most basic pure form, there must exist an exact parallel to "the Hero's Journey" form of Dramatic Arts. I am sure you can see, most of the classical forms follow golden mean, Fibbonochi shapes and dimensions... Oh.. but I digress! %^)
 
 You may find it easier to keep the main synopsis very short, but add mini synopsis for each episode using the same methods below...
 
@@ -1467,6 +1581,7 @@ Or... You could try mashing several cloned templates together to create a totall
 \newpage
 
 ** 📄 Instructions:
+*** Using Templates:
 
 - [ ] *Choose One Of The Templates Below And Copy It:*
 
@@ -1487,6 +1602,132 @@ Or... You could try mashing several cloned templates together to create a totall
         /a prefixed category word.)/
 
 \newpage
+
+*** Instructions for Exporting Fountain Scripts:
+
+Fountain screenplay scripts created within this project can be exported using the *afterwriting* python tool... Follow Instructions section below under the *Fountain 2 PDF:* heading for more about how to do that...
+
+**** Fountain 2 PDF
+
+The ~Audio-Drama~ project folder that contains this file also contains external files for exporting the project's fountain script(s) to a PDF file formatted to HAP Radio Drama Script style. Instructions and info for further customizations of your final output follow...
+
+I am now employing Afterwriting to perform the conversion and export job... No longer needing to dip into the LaTeX bowels for screenplays... Thank God!
+
+[[https://github.com/ifrost/afterwriting-labs/blob/master/docs/clients.md]]
+
+I plan to interface Emacs org-mode with afterwriting to produce output PDFs with just a few keystrokes while editing this file in Emacs...
+
+Before using this you must have afterwriting globally installed on your machine using NPM
+
+Install afterwriting globally on your machine: (assuming you already have Node.js npm installed & updated to latest LTS):
+
+Most of the information below under the first sections starting with Afterwriting config file: was copied (reprinted from original markdown) from: Github:ifrost/afterwriting-labs/CLI Tool therefore due credit goes to ifrost for most of the instructions below...
+
+The sections below where I begin using the information above to customize my own config.json file are my own... Based on much trial and error, as well as reading other docs on the fountain.org website...
+
+***** Generic Afterwriting Config File
+
+The output can be customized using configuration file passed as --config parameter. Config should be a JSON with this structure:
+
+  #+begin_src js
+    {
+        "embolden_scene_headers": false,
+        "show_page_numbers": true,
+        "split_dialogue": true,
+        "print_title_page": true,
+        "print_profile": "a4",
+        "double_space_between_scenes": false,
+        "print_sections": false,
+        "print_synopsis": false,
+        "print_actions": true,
+        "print_headers": true,
+        "print_dialogues": true,
+        "number_sections": false,
+        "use_dual_dialogue": true,
+        "print_notes": false,
+        "print_header": "",
+        "print_footer": "",
+        "print_watermark": "",
+        "scenes_numbers": "none",
+        "each_scene_on_new_page": false
+    }
+  #+end_src
+
+****** Available Configuration Options:
+
+|-----------------------------+-------------------------+----------------------------------|
+| *Option*                      | *Value*                   | *Description*                      |
+|-----------------------------+-------------------------+----------------------------------|
+| embolden_scene_headers      | true/false              | -                                |
+| show_page_numbers           | true/false              | -                                |
+| split_dialogue              | true/false              | Split dialogue between pages?    |
+| print_title_page            | true/false              | -                                |
+| print_profile               | a4 or usletter          | paper size                       |
+| double_space_between_scenes | true/false              | -                                |
+| print_sections              | true/false              | print sections (marked with #)   |
+| print_synopsis              | true/false              | print synopsis (market with =)   |
+| print_actions               | true/false              | print action blocks              |
+| print_headers               | true/false              | print scene headers              |
+| print_dialogues             | true/false              | print dialogues                  |
+| number_sections             | true/false              | auto-numbering sections          |
+| use_dual_dialogue           | true/false              | print dual dialogue in 2 columns |
+| print_notes                 | true/false              | print notes                      |
+| print_header                | string                  | text to put on the top           |
+| print_footer                | string                  | text to put on the bottom        |
+| print_watermark             | string                  | watermark text                   |
+| scenes_numbers              | none, left, right, both | side of auto-numbering scenes    |
+| each_scene_on_new_page      | true/false              | break page after a scene         |
+|-----------------------------+-------------------------+----------------------------------|
+
+- =NOTE:= /Any Settings above may also be provided as extra options while/ 
+         /evoking/ ~afterwriting~ /on the command line.../
+
+         There are other fancy things you can do like adding Snippets, etc. as well, 
+         which have been incorporated into this project template...
+
+         *See Github Link:*
+
+            [[https://github.com/ifrost/afterwriting-labs/blob/master/docs/clients.md]]
+
+         for more information...
+
+***** Harmonic Alchemy Modular Emacs - Afterwriting Custom Config file
+
+Using the knowledge above, I created a custom file /(after a lot of trial and error)/ for exporting with *afterwriting* called: ~awc-config.json~
+
+*This is what it currently looks like:* /(I am open to further expansion & automation ideas)/
+
+   #+begin_src js
+     {
+         "embolden_scene_headers": true,
+         "show_page_numbers": true,
+         "split_dialogue": false,
+         "print_title_page": true,
+         "print_profile": "usletter",
+         "double_space_between_scenes": false,
+         "print_sections": false,
+         "print_synopsis": true,
+         "print_actions": true,
+         "print_headers": true,
+         "print_dialogues": true,
+         "number_sections": false,
+         "use_dual_dialogue": true,
+         "print_notes": false,
+         "print_footer": "Harmonic Alchemy Productions - siren1@HarmonicAlchemy.productions",
+         "print_watermark": "",
+         "scenes_numbers": "both",
+         "each_scene_on_new_page": true,
+         "print_header": "The Ivory Tower          Episode 001",
+         "snippets": {
+             "HEADER": "$TITLE          $EPISODE",
+             "TITLE": "**The Ivory Tower**",
+             "EPISODE": "001",
+             "CREDIT": "*A Fountain TEMPLATE for Audio Drama Scripts*",
+             "AUTHOR": "by **Alisha Awen**",
+             "DRAFT_DATE": "PRODUCTION SCRIPT"
+         }
+     }
+   #+end_src
 
 ** NEW 🎙 ~E???~ Episode Title /(MASTER TEMPLATE - Change Title)/
 :README:
