@@ -34,6 +34,16 @@
 #+SETUPFILE: ./org-templates/latex-simple-pdf.org
 #+SETUPFILE: ./org-templates/default-tags.org
 
+* Table of Contents:                                                    :TOC:
+- [[#-readme][📖 README:]]
+- [[#-begin-log][📅 Begin Log:]]
+   - [[#-2022][📅 2022:]]
+- [[#-meta-usage--templates][📋 Meta: /(Usage & Templates)/]]
+   - [[#-introduction][📄 Introduction:]]
+   - [[#-howto][❔ HowTo:]]
+   - [[#-templates][⎘ Templates:]]
+
+* 📖 README:
 :READ_ME_FIRST:
 ☞ =Instructions:= /(How to Install & Use This Template)/
 
@@ -77,11 +87,16 @@ To use *HAP_README-Doc-Skeleton.org* /(Simple README Doc Template)/ for your own
       =NOTE:= You are most likely doing this because you have a project that
             needs a README File included as the Start Here Document for that
             project... Therefore... as soon as you are done with the first
-            steps above, =STOP= and go immediately to the: *📖 README* Binder
-            below and begin writing your README documentaton NOW... 
+            steps above, =STOP= and immediately begin composing your README
+            Content within this: *📖 README* Binder =NOW=...
 
-            Consult the ~:README:~ drawer directly under the README Binder's
-            heading for more instructions...
+      Add Sub headings below for your README as needed...
+
+      *btw*, if you Have *Harmonic Alchemy Modular Emacs* fully installed and
+      have enabled the ~Xah-Fly-Keys~ module, you can quickly and easily
+      insert your own /:README:/ drawers for your own purposes by typing:
+      ~SPACE e r~ on an empty line while in command mode... Type those two
+      keys, and the drawer is created for you automatically and opened...
 
 5) [ ] *Finish Setting up this Project LATER...* [0/3]
 
@@ -125,7 +140,7 @@ To use *HAP_README-Doc-Skeleton.org* /(Simple README Doc Template)/ for your own
        /and the category is all set as well... But you can and may modify/
        /the original files to fit your needs.../
 
-7) [ ] =Export/Publish to PDF File:=
+6) [ ] =Export/Publish to PDF File:= [0/3]
 
       You may wish to export this README.org file in an alternate PDF format
       for some use-cases.  The *In-Buffer Settings* specified by the SETUPFILES
@@ -133,36 +148,36 @@ To use *HAP_README-Doc-Skeleton.org* /(Simple README Doc Template)/ for your own
       file. Once you have your project directory all set up as above you are 
       ready to export your first PDF as a test run...
 
-         *Issue the following Emacs command:*
+    - [ ] *Issue the following Emacs command:*
 
-            ~M-x org-latex-export-to-pdf~
+          ~M-x org-latex-export-to-pdf~
 
-         *OR* If You Enabled *Xah-Fly-Keys* /"Command Mode"/ Try Shortcut:
+    - [ ] *OR* If You Enabled *Xah-Fly-Keys* /"Command Mode"/ Try Shortcut:
 
-            ~SPACE e p~
+          ~SPACE e p~
 
-         *OR Export to OTHER Formats:*
+    - [ ] *OR Export to OTHER Formats:*
 
-            ~C-c C-e~
+          ~C-c C-e~
 
-            /(a pop-up will show allowing you to choose export method)/
+          /(a pop-up will show allowing you to choose export method)/
 
-      After *AucTeX* is done parsing/compiling etc., a new files by the
-      names: ~README.pdf~ -and- ~README.tex~ will appear within the same
-      directory as this file...
+    After *AucTeX* is done parsing/compiling etc., a new files by the
+    names: ~README.pdf~ -and- ~README.tex~ will appear within the same
+    directory as this file...
 
-      Subsequent repeated calls to the above command will overwrite
-      existing ~README.pdf~ -and- ~README.tex~ files!
-      /(make backups first if needed!)/ You should probably copy these
-      files to the ~./auto/~ directory for safe keeping as backups...
+    Subsequent repeated calls to the above command will overwrite
+    existing ~README.pdf~ -and- ~README.tex~ files!
+    /(make backups first if needed!)/ You should probably copy these
+    files to the ~./auto/~ directory for safe keeping as backups...
 
-      =If you chose the last option above= LaTeX will output files with other
-      extensions for those other output formats... =NOTE:= SETUPFILES have not
-      been created yet for other eBook formats.  /(This is a work in progress)/
+    =If you chose the last option above= LaTeX will output files with other
+    extensions for those other output formats... =NOTE:= SETUPFILES have not
+    been created yet for other eBook formats.  /(This is a work in progress)/
 
-      =If YOU EXPERIENCE LaTeX ERRORS:= 
+    =If YOU EXPERIENCE LaTeX ERRORS:= 
 
-         *Consult Buffer:* ~*Org PDF LaTeX Output*~
+       *Consult Buffer:* ~*Org PDF LaTeX Output*~
 
 =These Instructions Were Last Modified:= <2022-09-26 Mon> 
 
@@ -175,43 +190,16 @@ Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas
 =Enjoy!= - Alisha Awen
 :END:
 
-* Table of Contents:                                                    :TOC:
-- [[#-readme][📖 README:]]
-- [[#-begin-log][📒 Begin Log:]]
-   - [[#-2022][📅 2022:]]
-- [[#-meta-usage--templates][⎘ Meta: /(Usage & Templates)/]]
-   - [[#-introduction][📄 Introduction:]]
-   - [[#-howto][📄 HowTo:]]
-   - [[#-templates][⎘ Templates:]]
-
-* 📖 README:
-:README:
-   *This is the Main Body of your README...* Everything under This heading
-   can be published as a companion PDF... 
-
-   =Note:= /The Published Title of your document will NOT be this/
-         *Main Heading.* /Your published Title is specified at the top/
-         /of this file.../ 
-
-   Add Sub headings below for your README as needed...
-
-   *btw*, if you Have *Harmonic Alchemy Modular Emacs* fully installed and
-   have enabled the ~Xah-Fly-Keys~ module, you can quickly and easily insert
-   your own /:README:/ drawers for your own purposes by typing: ~SPACE e r~ on
-   an empty line while in command mode... Type those two keys, and the
-   drawer is created for you automatically and opened...
-:END:
-
 =Compose Main Body of your README Doc Here=
 
 \newpage
 
-* 📒 Begin Log:
+* 📅 Begin Log:
 :PROPERTIES:
 :CUSTOM_ID: HAP_README-Doc-Skeleton_LOG
 :END:
 ** 📅 2022:
-*** NEW log: <2021-03-29 Mon> Generic Title /(General Log Entry Template)/
+*** NEW 🗓 LOG: <2021-03-29 Mon> Generic Title /(General Log Entry Template)/
 :README:
    - *Go To One of the HEADINGS Below:* /(Summary, Details, or Sub Headings)/
 
@@ -301,7 +289,7 @@ This Log Entry is about: Yadda... Yadda... Yadda...
 
 \newpage
 
-**** NEW Reference:
+**** NEW 📚 Reference:
 
 - *Link to Project:* [[][] ]
 
@@ -321,14 +309,14 @@ This Log Entry is about: Yadda... Yadda... Yadda...
 
 \newpage
 
-**** NEW Time Card:
+**** NEW ⏱ Time Card:
 
-#+BEGIN: clocktable :scope tree2 :maxlevel 4 :tstart "<-1d>" :tend "<+1m>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3
+#+BEGIN: clocktable :scope tree3 :maxlevel 6 :tstart "<-1w>" :tend "<+1m>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3
 #+END:
 
 \newpage
 
-**** NEW Summary: [0/3]
+**** NEW 📃 Summary: [0/3]
 :README:
    This Summary is mostly to help you find things later when you cannot remember when or where is was done... If you go to the top of this file and expand all headings to show ALL content, then do a search on "~Summary:~" you will be able to quickly scroll through and scan these summaries quickly to find what you were looking for... 
 
@@ -347,91 +335,83 @@ Yadda... Yadda... Yadda...
 
 \newpage
 
-**** NEW Details:
+**** NEW 📰 Details:
 ***** NEW New Item 1 /(placeholder)/ [0/3]
 
 - [ ] *__:* /(__)/
 
       #+begin_src conf
-       root@dev1:~$ 
-       root@dev1:~$ 
-       root@dev1:~$ 
+       root@web1:~$ 
+       admin@web1:~$ 
       #+end_src
 
 - [ ] *__:* /(__)/
 
       #+begin_src conf
-       admin@dev1:~$ 
-       admin@dev1:~$ 
-       admin@dev1:~$ 
+       admin@web1:~$ 
+       admin@web1:~$ 
       #+end_src
 
 - [ ] *__:* /(__)/
 
       #+begin_src conf
-       admin@dev1:~$ 
-       admin@dev1:~$ 
-       admin@dev1:~$ 
+       user@home:~$ 
+       user@home:~$ 
       #+end_src
 
 \newpage
 
-***** NEW New Item 1 /(placeholder)/ [0/3]
+***** NEW New Item 2 /(placeholder)/ [0/3]
 
 - [ ] *__:* /(__)/
 
       #+begin_src conf
-       root@dev1:~$ 
-       root@dev1:~$ 
-       root@dev1:~$ 
+       root@web1:~$ 
+       root@web1:~$ 
       #+end_src
 
 - [ ] *__:* /(__)/
 
       #+begin_src conf
-       admin@dev1:~$ 
-       admin@dev1:~$ 
-       admin@dev1:~$ 
+       admin@web1:~$ 
+       admin@web1:~$ 
       #+end_src
 
 - [ ] *__:* /(__)/
 
       #+begin_src conf
-       admin@dev1:~$ 
-       admin@dev1:~$ 
-       admin@dev1:~$ 
+       user@home:~$ 
+       user@home:~$ 
       #+end_src
 
 \newpage
 
-***** NEW New Item 1 /(placeholder)/ [0/3]
+***** NEW New Item 3 /(placeholder)/ [0/3]
 
 - [ ] *__:* /(__)/
 
       #+begin_src conf
-       root@dev1:~$ 
-       root@dev1:~$ 
-       root@dev1:~$ 
+       root@web1:~$ 
+       root@web1:~$ 
       #+end_src
 
 - [ ] *__:* /(__)/
 
       #+begin_src conf
-       admin@dev1:~$ 
-       admin@dev1:~$ 
-       admin@dev1:~$ 
+       admin@web1:~$ 
+       admin@web1:~$ 
       #+end_src
 
 - [ ] *__:* /(__)/
-
+   
       #+begin_src conf
-       admin@dev1:~$ 
-       admin@dev1:~$ 
-       admin@dev1:~$ 
+       user@home:~$ 
+       user@home:~$ 
       #+end_src
 
 \newpage
-* ⎘ Meta: /(Usage & Templates)/
+
+* 📋 Meta: /(Usage & Templates)/
 ** 📄 Introduction:
 :README:
    Use this Standard README /(template)/ as a multi purpose README document
@@ -481,7 +461,7 @@ Additional commands for using *Org-Mode* with Modular Emacs will be explained he
 
 \newpage
 
-** 📄 HowTo:
+** ❔ HowTo:
 :README:
    This README Doc Template is being designed as these docs are being written...  At first much of the design is being done /manually/ while formats, concepts, are tried and tested.  Eventually much of the instructions below will become much simpler as there will be capture templates, and processes in place that replace the need to manually copy/paste things as we are doing initially below...  
 
@@ -689,7 +669,7 @@ This Log Entry is about: Yadda... Yadda... Yadda...
 
 \newpage
 
-**** NEW Reference:
+**** NEW 📚 Reference:
 
 - *Link to Project:* [[][] ]
 
@@ -709,14 +689,14 @@ This Log Entry is about: Yadda... Yadda... Yadda...
 
 \newpage
 
-**** NEW Time Card:
+**** NEW ⏱ Time Card:
 
 #+BEGIN: clocktable :scope tree3 :maxlevel 6 :tstart "<-1w>" :tend "<+1m>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3
 #+END:
 
 \newpage
 
-**** NEW Summary: [0/3]
+**** NEW 📃 Summary: [0/3]
 :README:
    This Summary is mostly to help you find things later when you cannot remember when or where is was done... If you go to the top of this file and expand all headings to show ALL content, then do a search on "~Summary:~" you will be able to quickly scroll through and scan these summaries quickly to find what you were looking for... 
 
@@ -735,7 +715,7 @@ Yadda... Yadda... Yadda...
 
 \newpage
 
-**** NEW Details:
+**** NEW 📰 Details:
 ***** NEW New Item 1 /(placeholder)/ [0/3]
 
 - [ ] *__:* /(__)/
