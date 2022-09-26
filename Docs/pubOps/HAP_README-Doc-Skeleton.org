@@ -1,50 +1,210 @@
 # -**- mode: org; coding: utf-8 -**-
-#+LATEX_HEADER: \usepackage{parskip}
-#+LaTeX_HEADER: \usepackage{paralist}
-#+LATEX_HEADER: \usepackage[hyperref,x11names]{xcolor}
-#+LATEX_HEADER: \usepackage[colorlinks=true,urlcolor=SteelBlue4,linkcolor=Firebrick4]{hyperref}
-
-#+begin_comment
- Setup Files:
-   For Cloned Versions of this template, replace file/paths below
-   with file/paths to your own custom setup files (which you could 
-   convienently clone from the example setup files provided in
-   ../org-templates/ directory...
-
- NOTE: 
-   #+CATEGORY: is specified within log-book.org setupfile.
-   If you need to change the category do it in log-book.org
-   or your cloned version of it...
-#+end_comment
-
-#+SETUPFILE: ~/.emacs.d/Docs/pubOps/org-templates/log-book.org
-#+SETUPFILE: ~/.emacs.d/Docs/pubOps/org-templates/default-tags.org
-
 #+TITLE: Simple README with Log Notebook Skeleton
 #+EXPORT_FILE_NAME: README.pdf
-#+KEYWORDS:
+#+TEXT: Copyright © 2022 Harmonic Alchemy Productions & Others
 #+AUTHOR: Alisha Awen - Harmonic Alchemy Productions
 #+EMAIL: Siren1@disroot.org
 #+DATE: <2021-07-22 Thu>
 #+TEXT: Created: <2021-07-22 Thu>
 #+TEXT: Last Published: <NOT Published>
-#+FILETAGS: logs README templates
+#+FILETAGS: README templates unpublished
 
-#+DESCRIPTION: Short and sweet README with attached Log Notebook for any project or repository that needs such a thing... and there are many uses!!! Custom tailor this to fit your needs and also change the tags in default-tags.org (referenced above) as well.. to fit your needs.  Enjoy!  Don't forget to change this DESCRIPTION when you use this template as something real... ;-)
+#+DESCRIPTION: Short and sweet README with attached Log Notebook for any project or repository that needs such a thing... and there are many uses!!! Custom tailor this to fit your needs and also change the tags in default-tags.org (referenced above) as well.. to fit your needs.  Enjoy!  Don't forget to change this DESCRIPTION when you use a clone of this dummy template for something real... ;-)
 
-#+begin_comment
- Don't mess with these unless you have good reason, (e.g., testing).
- Use Setup Tag File above to specify tags for this file...
+#+BEGIN_COMMENT 
+=Setup Files:=
 
-# #+STARTUP: noptag
-# #+TAGS:
-#+end_comment
+   For Cloned Versions of this template, the file/paths below will be relative
+   to your parent project directory and as such, should be all set to your new: ~.../your_README.org_File's/org-templates/~ directory...
+
+=NOTE:= 
+
+   ~#+CATEGORY:~ is specified within ~gen-doc.org~ SETUPFILE.
+   If you need to change the category, do it in your cloned version
+   of fiction-book.org...
+
+   *SETUPFILE:* ~default-tags.org~ is where tags are set for this project...
+
+   *SETUPFILE:* ~latex-simple-pdf.org~ is for LaTeX Export Configurations 
+              to produce a PDF version of your README file...
+
+#+END_COMMENT
+
+#+SETUPFILE: ./org-templates/gen-doc.org
+#+SETUPFILE: ./org-templates/latex-simple-pdf.org
+#+SETUPFILE: ./org-templates/default-tags.org
+
+:READ_ME_FIRST:
+☞ =Instructions:= /(How to Install & Use This Template)/
+
+To use *HAP_README-Doc-Skeleton.org* /(Simple README Doc Template)/ for your own projects, perform the following steps: 
+
+/Use the org-mode Checkboxes to Help You Keep Track of Progress/
+
+1) [ ] *Clone a Copy of This File:* 
+
+      Put your clone within any master project folder that needs
+      to have a README.org file associated with it... This folder
+      will contain other files for the project as well as SETUPFILES
+      and media required by this README.org file...
+
+2) [ ] *Create sub-folder:* ~./media~ *within the Master Folder:*
+
+      Create this directory unless it already exists /(within your master/
+      /folder as a sibling of this file).../ Any external documents or
+      images referenced by the README.org file OR your project should be
+      placed within this ~./media/~ directory...
+
+3) [ ] *Copy/Clone:* ~./org-templates~ /(and all contents)/ *to your Master Folder:*
+
+      Copy this directory to the Project's Master Folder, /(as a sibling/
+      /of this .org file).../ 
+
+      =Note:= SETUPFILES Within this directory are called out and included
+            by this README.org file /(within the file header above)/
+
+             Other SETUPFILES within this directory are intended to be
+             used by other book project templates and are not needed for
+             this README.org Document... You may remove the extra files
+             if you wish... They are small text files not bothering you...
+             If you clone another ~HAP_<book-template>.org~ file into this
+             project folder it will pick up its associated SETUPFILES
+             automatically, so consider that if/when you decide to delete
+             other UNUSED SETUPFILES /(you may need them later)/...
+
+4) [ ] *Compose your README Content:*
+
+      =NOTE:= You are most likely doing this because you have a project that
+            needs a README File included as the Start Here Document for that
+            project... Therefore... as soon as you are done with the first
+            steps above, =STOP= and go immediately to the: *📖 README* Binder
+            below and begin writing your README documentaton NOW... 
+
+            Consult the ~:README:~ drawer directly under the README Binder's
+            heading for more instructions...
+
+5) [ ] *Finish Setting up this Project LATER...* [0/3]
+
+    - [ ] *Change the* ~#+TITLE:~ *directive at the top of this file:* 
+
+          Change *"Simple README with Log Notebook Skeleton"* /(above title)/ to:
+          /"README"/ or a more specific title relating to it's assiciated
+          project...
+
+    - [ ] *Change the* ~#+EXPORT_FILE_NAME:~ *directive at the top of this file:*
+
+          Leave it as: /"README.pdf"/ if that works fine, or change it to
+          something more specific if needed... This will be the README
+          file name produced if exported as a PDF file...
+
+    - [ ] *Change the* ~#+DESCRIPTION:~ *directive at the top of this file:*
+
+          Compose README Doc's Description as a short paragraph here...
+
+    - *The* ~./media~ *Directory is ALL Set:* 
+
+       This single ~./media~ directory serves media and external attachments
+       for this README.org file as well as any other ~.org~ files you may end
+       up creating here, as well as being the media repository used by LaTeX
+       during publishing...
+
+    - *Purpose of the:* ~./auto/~ *Directory:* /(auto generated folder)/
+
+       During LaTeX export operations This directory is auto generated...
+       You do NOT need to create this directory ahead of time... Files
+       created within this folder are temporary and get overritten upon
+       the next LaTeX export operation...
+
+    - *Purpose of the:* ~./org-templates~  *Directory:*
+
+       The files in here are automatically linked and included within
+       this template. You don't need to change those settings unless you
+       wish to customize the already customized tags, and export options.
+
+       /They are allready set up correctly for the General Documents genre,/
+       /and the category is all set as well... But you can and may modify/
+       /the original files to fit your needs.../
+
+7) [ ] =Export/Publish to PDF File:=
+
+      You may wish to export this README.org file in an alternate PDF format
+      for some use-cases.  The *In-Buffer Settings* specified by the SETUPFILES
+      above will get this file looking good when exported as a Standard PDF
+      file. Once you have your project directory all set up as above you are 
+      ready to export your first PDF as a test run...
+
+         *Issue the following Emacs command:*
+
+            ~M-x org-latex-export-to-pdf~
+
+         *OR* If You Enabled *Xah-Fly-Keys* /"Command Mode"/ Try Shortcut:
+
+            ~SPACE e p~
+
+         *OR Export to OTHER Formats:*
+
+            ~C-c C-e~
+
+            /(a pop-up will show allowing you to choose export method)/
+
+      After *AucTeX* is done parsing/compiling etc., a new files by the
+      names: ~README.pdf~ -and- ~README.tex~ will appear within the same
+      directory as this file...
+
+      Subsequent repeated calls to the above command will overwrite
+      existing ~README.pdf~ -and- ~README.tex~ files!
+      /(make backups first if needed!)/ You should probably copy these
+      files to the ~./auto/~ directory for safe keeping as backups...
+
+      =If you chose the last option above= LaTeX will output files with other
+      extensions for those other output formats... =NOTE:= SETUPFILES have not
+      been created yet for other eBook formats.  /(This is a work in progress)/
+
+      =If YOU EXPERIENCE LaTeX ERRORS:= 
+
+         *Consult Buffer:* ~*Org PDF LaTeX Output*~
+
+=These Instructions Were Last Modified:= <2022-09-26 Mon> 
+
+Export settings are pretty basic PDF for a simple README doc...
+
+If you experience problems =Please Open an ISSUE At:= https://github.com/harmonicalchemy/modular-emacs/issues
+   
+Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas for Improvement... =You guys are my Product Managers=  I am only a User of ONE "seat". Other folks UX metrics are sorely needed!! Thanks!
+
+=Enjoy!= - Alisha Awen
+:END:
+
+* Table of Contents:                                                    :TOC:
+- [[#-readme][📖 README:]]
+- [[#-begin-log][📒 Begin Log:]]
+   - [[#-2022][📅 2022:]]
+- [[#-meta-usage--templates][⎘ Meta: /(Usage & Templates)/]]
+   - [[#-introduction][📄 Introduction:]]
+   - [[#-howto][📄 HowTo:]]
+   - [[#-templates][⎘ Templates:]]
 
 * 📖 README:
+:README:
+   *This is the Main Body of your README...* Everything under This heading
+   can be published as a companion PDF... 
 
-Write your simple README stuff here... you can reference more detailed things but it is probably smart to keep this short with the top level info... This is what folks will be looking at first... Don't scare them away!  LOL
+   =Note:= /The Published Title of your document will NOT be this/
+         *Main Heading.* /Your published Title is specified at the top/
+         /of this file.../ 
 
-The rest of this README is a LOG Notebook to record any important things that may need to be recorded, and also time tracked...
+   Add Sub headings below for your README as needed...
+
+   *btw*, if you Have *Harmonic Alchemy Modular Emacs* fully installed and
+   have enabled the ~Xah-Fly-Keys~ module, you can quickly and easily insert
+   your own /:README:/ drawers for your own purposes by typing: ~SPACE e r~ on
+   an empty line while in command mode... Type those two keys, and the
+   drawer is created for you automatically and opened...
+:END:
+
+=Compose Main Body of your README Doc Here=
+
+\newpage
 
 * 📒 Begin Log:
 :PROPERTIES:
@@ -271,12 +431,11 @@ Yadda... Yadda... Yadda...
       #+end_src
 
 \newpage
-* ⎘ Meta: /(Usage & Templates)/                                      :noexport:
+* ⎘ Meta: /(Usage & Templates)/
 ** 📄 Introduction:
 :README:
-   Use this Standard Log /(template)/ as a multi purpose time card/log entry vehicle/instrument...
-
-   Use one for work, one for home, one for play, for creative projects, for pretty much anything that needs to be recorded with time and events in a log... I am honing this new scheme to be the General Purpose Log Note Template for everything that I ever dreamed of having.  And for you too!
+   Use this Standard README /(template)/ as a multi purpose README document
+   as a Start Here First Document for any kind of project...
 
    I stopped using Markdown files for this purpose a few years ago... This makes total sense as *Org-Mode* was designed exclusively for such things! *Markdown* is great for composing content intended for web pages etc.  But =Emacs Org Mode is Vastly Superior as a Publishing Environment=, with many features and power, completely agnostic of final publishing format... Whereas markdown mode excels doing one thing only... Translating author structured plain text into beautiful web pages... /(which is a good thing)/
 
@@ -284,7 +443,6 @@ Yadda... Yadda... Yadda...
 
    Yeah, that's a personal story from the past, lol... All you Mac users out there, please realize that your beautiful Apple desktop is in fact an *HP-UX Motif X-Windows widget set clone*!  That's what Steve Jobs believed to be the best X-Windows tool-kit of the day /(when he was building the NeXT computer)/...  So... Yup he copied that! The Applications Doc at the bottom of your screen is a dead giveaway. Hewlet Packard was first to use such UI concepts... /(back before the dawning of the web we loved those HPUX Workstations!)/
 :END:
-
 *** Emacs Shorthand Command Key Notation:
 
 The command key conventions used in the instructions below, /(as well as all *Harmonic Alchemy Productions* docs)/, follow *Standard Emacs* command key naming conventions.
@@ -323,40 +481,31 @@ Additional commands for using *Org-Mode* with Modular Emacs will be explained he
 
 \newpage
 
-** 📄 Instructions:
+** 📄 HowTo:
 :README:
-   This Log Notebook is being designed as these docs are being written...  At first much of the design is being done /manually/ while formats, concepts, are tried and tested.  Eventually much of the instructions below will become much simpler as there will be capture templates, and processes in place that replace the need to manually copy/paste things as we are doing initially below...  
+   This README Doc Template is being designed as these docs are being written...  At first much of the design is being done /manually/ while formats, concepts, are tried and tested.  Eventually much of the instructions below will become much simpler as there will be capture templates, and processes in place that replace the need to manually copy/paste things as we are doing initially below...  
 
    =Please bear with the author/architect as she makes up her mind about how to do things in here...=  *Org-mode, LaTeX options are vast!* Not to mention a sea of extra packages that could be tried out... /I feel like I am re-inventing wheels within rabbit holes!/ lol
-
-   =Note:= If you are making your very first log entry within a brand new clone of this template, =DON'T use a clone from the *Log Entry (template)* just yet=.  /Instead use the dummy boilerplate placeholder Log Entry /(with timestamp)/ /already in place as your first heading under the/ *Begin Log Notebook:* /heading./
-
-   That first boilerplate log entry is there as an example to guide you in making your first completed log book entry. You may rename/commandeer it for your purposes now... Otherwise you will end up deleting it later... /Don't be wasteful... Recycle!/ lol ;-)
-
-   Also for first time entry within your brand new log book, Skip the next two headings below /(copy and paste instructions)/ and continue following instructions under the: *Edit-Compose your new Log Entry:* heading /(as you will be commandeering the dummy boilerplate log entry as your first log entry)/.  Instructions for working on a new Cloned Log Entry are the same as for updating/emending an existing one from that point on...
-
-   =Otherwise=, if you already have one or more existing log entries from before, continue following instructions immediately below beginning 
-   with: *Copy/Clone Log Entry (template)*
 :END:
 
 \newpage
+*** Create New Log Entry within the *📒 Begin Log:* Binder:
+**** =Clone:= "LOG: <2021-03-29 Mon> Generic Title" /(from ⎘ Templates: binder)/
 
-*** =Copy/Clone:= LOG: <2021-03-29 Mon> Generic Title /(Under Templates: heading)/
-
-- =Select Heading= /(named above)/ under the Templates: Heading, using 
+- [ ] =Select the Heading= /(named above)/ from the Templates: Heading, using 
    normal Emacs selection methods. i.e., Type ~t~ key to set the mark 
-   for selection, /(xah-fly-keys Command/ /Mode)/ or use ~C-SPACE~ /(normal Emacs)/, and 
-   move the point to get the entire heading, and all of its contents, but NOTHING else... and copy it...
+   for selection, /(xah-fly-keys Command/ /Mode)/ or use ~C-SPACE~ /(normal Emacs)/, and move the point to get the entire heading, and all of its contents, but NOTHING else... and copy it...
 
-   =Note:= Before Copying Selected Text, ensure your cursor is at the end of 
-          it BUT not be part of any items after it... Placing your cursor on 
-          the first column of the next line will include the invisible new-line
-          character which is what you want, but any text directly under the
-          cursor on the next line will not be copied...  Later, after pasting this text somewhere else, your cursor will end up sitting on the 
-          first column of a blank line under the pasted text.
-          /(exactly as intended)/
+   =Note:= Before Copying Selected Text, ensure your cursor is at the
+         end of it BUT not be part of any items after it... Placing
+         your cursor on the first column of the next line will include
+         the invisible new-line character which is what you want, but
+         any text directly under the cursor on the next line will not
+         be copied...  Later, after pasting this text somewhere else,
+         your cursor will end up sitting on the first column of a
+         blank line under the pasted text. /(exactly as intended)/
 
-- =Complete the Copy Operation= Type ~c~ /(xah-fly-keys Command Mode)/. This 
+- [ ] =Complete the Copy Operation= Type ~c~ /(xah-fly-keys Command Mode)/. This 
    will save the selection for pasting later, /(the highlighted text will go/ 
    /back to normal)/... You should have gotten only the Single LOG Entry with
    ALL its contents, BUT nothing else below it...
@@ -369,23 +518,33 @@ Additional commands for using *Org-Mode* with Modular Emacs will be explained he
 
 \newpage
 
-*** =Paste Cloned LOG Entry:=
+**** =Paste Cloned LOG Entry:=
 
-- =Advance cursor= to a blank line just below the LAST Most Recent LOG entry under heading =2022= within the =Begin Log:= section, and press *enter* a couple times to get your cursor on a fresh clean line with some extra space above and below it... /(Below any previously time stamped entries you may already have placed)/...
+- [ ] =Advance cursor= to a blank line just below the LAST Most Recent
+      LOG entry under heading *📅 2022* within the *📒 Begin Log:* section,
+      and press *ENTER* a couple times to get your cursor on a fresh
+      clean line with some extra space above and below it...
+      /(Below any previously time stamped entries you may already/
+      /have placed)/...
 
-- =Press:= ~v~ /(xah-fly-keys Command Mode)/ to paste your cloned Log Entry template... If you find out that what you copied also included some unwanted text directly below it, no problems... Just delete that part now... 
+- [ ] =Press:= ~v~ /(xah-fly-keys Command Mode)/ to paste your cloned Log
+      Entry template... If you find out that what you copied also
+      included some unwanted text directly below it, no problems...
+      Just delete that part now... 
 
-   =Note:= If you accidentally copied one or more previously invisible 
-          bullets to column one on a blank line they will create an 
-          invisible "ghost" heading that you will now need to delete... 
-          You will know this if you see an org-ellipsis "⤵" symbol on 
-          a line by itself indicating a heading but no text... Simply 
-          delete that whole line and it will go away... Now you are 
-          ready to compose your new log entry...
+      =Note:= If you accidentally copied one or more previously
+            invisible bullets to column one on a blank line they
+            will create an invisible "ghost" heading that you will
+            now need to delete...
+            
+            You will know this if you see an org-ellipsis "⤵" symbol
+            on a line by itself indicating a heading but no text...
+            Simply delete that whole line and it will go away...
+            Now you are ready to compose your new log entry...
 
 \newpage
 
-*** Edit-Compose New LOG Entry:
+**** Edit-Compose New LOG Entry:
 
 =Note:= If this is your first time using this log, don't bother cloning a 
        NEW log entry as there is a dummy boilerplate placeholder Log 
@@ -396,18 +555,32 @@ Additional commands for using *Org-Mode* with Modular Emacs will be explained he
        Editing a new Cloned Log Entry Template are pretty much the same...
        /(differences will be noted in instructions below)/
 
-- =Place cursor directly on the existing timestamp= of the NEW Log Entry, and enter the key binding: ~C-c .~ /(i.e., press/ ~Ctrl~ /key while holding/
-   ~c~ /and then type a dot ~.~ /)/ A date chooser panel will pop up...
+- [ ] =Place cursor directly on the existing timestamp= of the NEW Log
+     Entry, and enter the key binding: ~C-c .~
+     /(i.e., press/ ~Ctrl~ /key while holding/ ~c~ /and then type a dot ~.~ /)/
+     A date chooser panel will pop up...
 
-- =Type one more dot:= ~.~ to force the calendar selection to the current time and date and then, Press ~ENTER~ to accept your choice... /This will update the existing older timestamp with the current date/time.../ Check to make sure the timestamp was properly updated and then move on to the next step... This timestamp will not be updated after that.  It records the initial time of your new log entry to the Day and time you first created it...
+- [ ] =Type one more dot:= ~.~ to force the calendar selection to the
+     current time and date and then, Press ~ENTER~ to accept your
+     choice... /This will update the existing older timestamp with/
+     /the current date/time.../ Check to make sure the timestamp was
+     properly updated and then move on to the next step... This
+     timestamp will not be updated after that.  It records the
+     initial time of your new log entry to the Day and time you
+     first created it...
 
-- =You are now ready to start= making entries within your New Log Entry... Your timestamp indicates the present, /-and-/ you are all set to begin recording timef...
+- [ ] =You are now ready to start= making entries within your New Log
+     Entry... Your timestamp indicates the present, /-and-/ you are
+     all set to begin recording timef...
 
-- =Follow the= ~:README:~ directions within the Time Card section contained within your fresh new log entry to learn how to /"clock in"/ and /"clock out"/ of your log entry as you work on the tasks...
+- [ ] =Follow the= ~:README:~ directions within the Time Card section
+     contained within your fresh new log entry to learn how to
+     /"clock in"/ and /"clock out"/ of your log entry as you work on
+     the tasks...
 
 \newpage
 
-*** Enter New LOG Entry Details:
+**** Enter New LOG Entry Details:
 
 Two sub headings have been provided for your use /(if you need them)/. However, you may structure your log entries any way you wish.  The two provided headings:  *Summary* and *Details* are simply suggestions to help make your log entries a bit more organized...
 
@@ -417,9 +590,11 @@ Conversely, the *Details* heading could contain a complete, thorough log of your
 
 Place the *:noexport:* tag at the end of any org outline heading to exclude it and all its children from the PDF upon export...  You can add as much detail as you need within these excluded sections without cluttering up your final PDF.  The entire main heading: *How to Use this Template:* is already excluded from the final PDF, so it can be left in and your PDF will only include the *Begin Log:* section...
 
-*** Export LOG as a PDF Report:
+*** Export README as a PDF Document:
 
-Anytime you need to see your Log Notebook as a nicely printed PDF report, you can export it using the following custom key command: ~SPACE e p~ /(i.e., press ~spacebar~, type ~e~ and then ~p~ *(Xah-Fly-Keys Command Mode)* extended leader key sequence)/
+For some use-cases you may need to see this README file in PDF format...
+
+you can export this README.org file as a PDF using the following custom key command: ~SPACE e p~ /(i.e., press ~spacebar~, type ~e~ and then ~p~)/ Xah-Fly-Keys Command Mode extended leader key sequence...
 
 \newpage
 

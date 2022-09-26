@@ -101,9 +101,9 @@ logview-cache.extmap
 ac-comphist.dat
 abbrev_defs
 transient/*
+eln-cache/*
 games/*
 emojis/*
 recentf
 abbrev_defs
 *.temp
-

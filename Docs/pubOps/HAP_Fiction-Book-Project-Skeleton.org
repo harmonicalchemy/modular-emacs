@@ -679,8 +679,15 @@ In this chapter we are dealing with yadda yadda yadda which must be resolved wit
       =Items From:=  *⎘ Templates:* Binder
       =Into This:=   *🗓 Log Book:* Binder
 :END:
+*** 📅 2022:
 
 =ADD a NEW Items= /(as per :README: above)/ right here in this Log Book Binder whenever you need to create a new Log Entry...
+
+\newpage
+
+*** 📅 2023:
+
+ADD a NEW Items= /(as per :README: above)/ right here in this Log Book Binder whenever you need to create a new Log Entry...
 
 \newpage
 
@@ -1530,7 +1537,8 @@ In this chapter we are dealing with yadda yadda yadda which must be resolved wit
 \newpage
 
 ** ⎘ Templates:
-*** NEW 🗓 LOG: <2021-03-29 Mon> Entry /(Log Entry Template)/
+*** New Log Entry Template:
+**** NEW 🗓 LOG: <2021-03-29 Mon> Entry /(Log Entry Template)/
 :README:
    - *Go To One of the HEADINGS Below:* /(Summary, Details, or Sub Headings)/
 
@@ -1636,7 +1644,7 @@ Replace these instructions with short description of log entry.
 
 \newpage
 
-**** 📚 Reference:
+***** 📚 Reference:
 :README:
    =Org Mode Links Tip:=
 
@@ -1661,14 +1669,14 @@ Replace these instructions with short description of log entry.
 
 \newpage
 
-**** ⏱ Time Card:
+***** ⏱ Time Card:
 
 #+BEGIN: clocktable :scope tree2 :maxlevel 4 :tstart "<-1d>" :tend "<+1m>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3
 #+END:
 
 \newpage
 
-**** NEW ✅ Summary: [0/3]
+***** NEW ✅ Summary: [0/3]
 :README:
    This Summary is mostly to help you find things later when you cannot remember when or where is was done... If you go to the top of this file and expand all headings to show ALL content, then do a search on "~Summary:~" you will be able to quickly scroll through and scan these summaries quickly to find what you were looking for... 
 
@@ -1687,8 +1695,8 @@ Yadda... Yadda... Yadda...
 
 \newpage
 
-**** NEW 📒 Details:
-***** NEW New Item 1 /(placeholder)/ [0/3]
+***** NEW 📒 Details:
+****** NEW New Item 1 /(placeholder)/ [0/3]
 
 - [ ] *__:* /(__)/
 
@@ -1698,7 +1706,7 @@ Yadda... Yadda... Yadda...
 
 \newpage
 
-***** NEW New Item 1 /(placeholder)/ [0/3]
+****** NEW New Item 1 /(placeholder)/ [0/3]
 
 - [ ] *__:* /(__)/
 
@@ -1708,7 +1716,7 @@ Yadda... Yadda... Yadda...
 
 \newpage
 
-***** NEW New Item 1 /(placeholder)/ [0/3]
+****** NEW New Item 1 /(placeholder)/ [0/3]
 
 - [ ] *__:* /(__)/
 
