@@ -112,7 +112,7 @@
 
 *Modular Emacs* is more than just Emacs with configurable modules... It is also designed to be the centerpiece /(command central)/ of a larger personalized, extensible *Dev♺Ops* / *Pub✎Ops* / *Multi🎥Media* workstation *IDE* capable of running on older but reasonably powerful *laptops/desktops* /(that would otherwise be considered legacy by most other standards)/.  
 
-I am a systems architect, dev♺Ops engineer, computer scientist, composer/musician, sound designer, writer/publisher.  I wear a lot of hats! My Emacs needs to wear a lot of hats as well!  The central focus of *Modular Emacs* is to build empowering features into *Emacs* utilizing a modular framework that facilitates all the above without becoming an over complicated mess to manage! *"good luck with that"*  :octocat:
+I am a systems architect, dev♺Ops engineer, computer scientist, composer/musician, sound designer, writer/publisher.  I wear a lot of hats! My Emacs needs to wear a lot of hats as well!  The central focus of *Modular Emacs* is to build empowering features into *Emacs* utilizing a modular framework that facilitates all the above without becoming an over complicated mess to manage! "*Good Luck With That*" :octocat:
 
 =Note:= Current Status & Release Notes of
       this project are documented [[./Docs/ModE-Current-Status.md][HERE]]
