@@ -40,24 +40,70 @@
 #+attr_latex: :width 800px
 [[file:./Docs/media/Modular-Emacs-Github-Banner-v3.png]]
 
-* Table of Contents:                                                    :TOC:
+* Table of Contents: :TOC_4:
 - [[#-harmonic-alchemy-modular-emacs][📖 Harmonic Alchemy Modular Emacs]]
    - [[#introduction][Introduction:]]
+   - [[#screenshots][Screenshots:]]
    - [[#history--purpose][History & Purpose:]]
    - [[#try-harmonic-alchemy-modular-emacs][Try Harmonic Alchemy Modular Emacs:]]
    - [[#microsoft-windows-support][Microsoft Windows Support]]
    - [[#my-commitment][My Commitment]]
    - [[#tldr---start-here][TL;DR - Start Here:]]
+      - [[#modular-emacs-default-installation][Modular Emacs Default Installation:]]
+      - [[#requirements][Requirements:]]
+         - [[#clone-this-repository][Clone This Repository:]]
+         - [[#install-emacs-v261][Install Emacs: V26.1+]]
+         - [[#nodejs---nvm--npm-no-longer-using-node-js-here][NODE.js - NVM & NPM: /(NO LONGER USING NODE JS HERE)/]]
+         - [[#multimarkdown--mmd-mode--also-no-longer-using-this][MultiMarkdown & mmd-mode:  /(Also No Longer Using This)/]]
+      - [[#optional-extras][Optional Extras:]]
+         - [[#pandoc][Pandoc:]]
+         - [[#fonts][Fonts:]]
+         - [[#python--pip][Python & Pip:]]
+         - [[#octocat-extra-for-experts---latex][:octocat: Extra for Experts - LaTeX]]
+         - [[#graphviz][Graphviz:]]
    - [[#get-ready-to-start-up-modular-emacs-for-the-first-time][Get Ready to Start up Modular Emacs for the first time!]]
+      - [[#initial-house-keeping-before-we-move-in][Initial House Keeping: /(before we move in)/]]
    - [[#ready-set-go--start-up-modular-emacs][Ready Set Go!  Start Up Modular Emacs:]]
    - [[#usage][Usage:]]
-   - [[#default-packages--features-built-in][Default Packages & Features: /(built in)/]]
+      - [[#general-usage][General Usage:]]
+      - [[#blackboard-color-theme][Blackboard Color Theme:]]
+   - [[#default-package-features-built-in][Default Package Features: /(built in)/]]
+      - [[#default-emacs-welcome-screen-scratch-buffer][Default Emacs Welcome Screen: /(~*scratch*~ buffer)/]]
+      - [[#miscellaneus-packages][Miscellaneus Packages:]]
+      - [[#core-emacs-system-related-packages][Core Emacs System Related Packages:]]
+      - [[#emacs-helm--extras][Emacs Helm & Extras:]]
+      - [[#tree--menu-related-packages][Tree & Menu Related Packages:]]
+      - [[#dired-related-packages][Dired Related Packages:]]
+      - [[#devops-sysadmin-infosec-related-packages][dev§Ops, sys§Admin, info✷Sec Related Packages:]]
+      - [[#writers--publishing-tools][Writer's & Publishing Tools:]]
+      - [[#spelling][Spelling:]]
+      - [[#key-bindings][Key-bindings:]]
+   - [[#optional-packages--customization][Optional Packages & Customization:]]
 - [[#-log][📅 LOG:]]
    - [[#-2022][📅 2022:]]
+      - [[#new--log-2021-03-29-mon-generic-title-general-log-entry-template][NEW 🗓 LOG: <2021-03-29 Mon> Generic Title /(General Log Entry Template)/]]
+         - [[#new--reference][NEW 📚 Reference:]]
+         - [[#new--time-card][NEW ⏱ Time Card:]]
+         - [[#new--summary-03][NEW 📃 Summary:]]
+         - [[#new--details][NEW 📰 Details:]]
 - [[#-meta-usage--templates][📋 Meta: /(Usage & Templates)/]]
    - [[#-introduction][📄 Introduction:]]
+      - [[#emacs-shorthand-command-key-notation][Emacs Shorthand Command Key Notation:]]
+      - [[#important-note-for-mac-users][Important Note For Mac Users:]]
+      - [[#org-mode-timestamps-and-clocking][Org Mode Timestamps and Clocking:]]
    - [[#-howto][❔ HowTo:]]
+      - [[#create-new-log-entry-within-the--begin-log-binder][Create New Log Entry within the *📒 Begin Log:* Binder:]]
+         - [[#clone-log-2021-03-29-mon-generic-title-from--templates-binder][=Clone:= "LOG: <2021-03-29 Mon> Generic Title" /(from ⎘ Templates: binder)/]]
+         - [[#paste-cloned-log-entry][=Paste Cloned LOG Entry:=]]
+         - [[#edit-compose-new-log-entry][Edit-Compose New LOG Entry:]]
+         - [[#enter-new-log-entry-details][Enter New LOG Entry Details:]]
+      - [[#export-readme-as-a-pdf-document][Export README as a PDF Document:]]
    - [[#-templates][⎘ Templates:]]
+      - [[#new--log-2021-03-29-mon-generic-title-general-log-entry-template-1][NEW 🗓 LOG: <2021-03-29 Mon> Generic Title /(General Log Entry Template)/]]
+         - [[#new--reference-1][NEW 📚 Reference:]]
+         - [[#new--time-card-1][NEW ⏱ Time Card:]]
+         - [[#new--summary-03-1][NEW 📃 Summary:]]
+         - [[#new--details-1][NEW 📰 Details:]]
 
 * 📖 Harmonic Alchemy Modular Emacs
 ** Introduction:
@@ -70,6 +116,11 @@ I am a systems architect, dev♺Ops engineer, computer scientist, composer/music
 
 =Note:= Current Status & Release Notes of
       this project are documented [[./Docs/ModE-Current-Status.md][HERE]]
+
+\newpage
+** TODO Screenshots:
+
+=Add Screenshots displaying HAP Modular Emacs main Features HERE=
 
 \newpage
 
@@ -497,7 +548,7 @@ You can even *clone OTHER git repos* wihtin ~my-modules~ without messing anythin
 
 \newpage
 
-** Default Packages & Features: /(built in)/
+** Default Package Features: /(built in)/
 *** Default Emacs Welcome Screen: /(~*scratch*~ buffer)/
 
 The default Emacs Welcome Message is replaced with a custom greeting banner that shows the current emacs configuration, and date... With a famous Mark Twain quote /(My Favorite author)/... This quote may change from time to time with new updates...  
@@ -514,7 +565,6 @@ the welcome text... /(which are lisp comments)/
    the code to enable powerline though.  If you like powerline,
    the code for enabling it is located within ~02-package-conf.el~...
    Read the comments in that file to find it...
-
 
 - [[https://github.com/auto-complete/auto-complete][auto-complete]] Easy Text Editing with suggested word completion.
    =THIS PACKAGE IS DISABLED BY DEFAULT=...
@@ -681,7 +731,7 @@ the welcome text... /(which are lisp comments)/
 
 \newpage
 
-*** dev§Ops, sys§Admin, info✷Sec Related Packages:
+*** TODO dev§Ops, sys§Admin, info✷Sec Related Packages:
 
 - [[https://github.com/fourier/ztree][ztree]] - *Ztree* is a project dedicated to implementation of several
    *text-tree* applications inside *GNU Emacs*. It consists of 2
@@ -734,6 +784,157 @@ the welcome text... /(which are lisp comments)/
 - nginx-mode - 
 - indent-tools - 
 - logview - 
+
+\newpage
+
+*** Writer's & Publishing Tools:
+
+- [[https://jblevins.org/projects/markdown-mode/][markdown-mode]] *Markdown Capability Within Emacs*. If you write for
+   the web You cannot live without this...  Although I use Emacs
+   org-mode for most things, /even publishing to web pages/...
+   Some Web engines require content to be submitted as raw
+   markdown... /(this makes that process work well)/
+
+- [[https://github.com/ardumont/markdown-toc][markdown-toc]] *Generate a TOC in a markdown file*
+   This is a simple but powerful mode to create a TOC in a
+   well-formed markdown file. In other words: The generated
+   TOC will be well-formed if your markdown file is also
+   well formed. ;-)
+   
+   =Note:= I like to place my toc at the bottom, and provide a
+         simple link named: `table-of-contents` or `index` and
+         put that link at the top, as well as strategic places
+         down within the body of the markdown file... It reminds
+         me of the way we used to do a similar thing in HTML
+         before Javascript enabled fancy CSS menus started
+         popping up... Now we have mobile menus to contend with.
+         Oh My!
+
+- [[https://jblevins.org/projects/deft/][deft]] *Major mode for quickly browsing, filtering*, and editing
+   directories of plain text notes. Created by Jason Blevins
+   /(the same statistics economics professor at Ohio State who/
+   /also created Emacs Markdown Mode)/ This guy is wicked clever!
+   Looks like he has some nice algorithms for studying the
+   cryptocurrency and smart contracts world as well! Invoke Deft
+   Mode with custom Xah Fly Keys Command Mode key: ~0~
+
+   =Note:= *Deft* is a powerful search/filtering tool and as such
+         sometimes it takes a while to get results...  After
+         typing a few keys if you wait too long /(before quickly/
+         /finishing your query)/ it may appear that your screen
+         is frozen. /(and in fact it is)/ while DEFT cranks away
+         using lots of system resources to get your juicy
+         results!  =No Pain... No Gain...=
+
+- [[https://joostkremers.github.io/pandoc-mode/][pandoc-mode]] *pandoc-mode* is an Emacs mode for interacting with
+   Pandoc. Pandoc is a program /(plus libraries)/ created by John
+   MacFarlane that can convert a text written in one markup
+   language into another markup language.
+
+   =pandoc-mode IS CURRENTLY DISABLED= /(commented out)/ and not used
+   by *HA Modular Emacs* I am evaluating whether pandoc-mode is useful
+   for Emacs... Also, Pandoc Installations ARE a BEAR to install on machines which already have HUGE LaTeX packages installed!!!
+   I am not currently using Pandoc /(yet)/ so I have decided to comment
+   out the code for now... It can easily be re-enabled...
+
+- [[https://github.com/rnkn/fountain-mode][fountain-mode]] For *writers, screenwriters, etc.* A markdown mode
+   for dramatic arts! Fantastic!!! Fountain together with pandoc,
+   allows you to do many conversions for screenplays to industry
+   formats like *Final Draft* etc. but the best part is the text
+   highlighting and colors make it very easy to read/rehearse dialog
+   and cues right from an Emacs buffer!  Writing scripts in this
+   mode is as natural as typing ~INT~ /(your line instantly turns into
+   a scene heading!)_ Try it! Just start typing your script and find
+   out what happens!  Modular Emacs Fountain Mode has been customized
+   to use a nice looking Typewriter style mono font! It also opens up
+   in olivetti mode _(next item below)_ automatically setting the line
+   width to 100 chars...
+   
+   =Update 2020:= I am writing docs for using fountain-mode within Emacs,
+                as well as providing some example drama scripts and
+                instructions on how to publish them to PDF using a tool
+                called Afterwriting... Stay tuned for that...
+
+- [[https://github.com/rnkn/olivetti][olivetti]] *Olivetti Adjusts Margins With Word Wrap* /(great to use with/
+   /fountain mode!)/ Perfect for distraction free writing! I also enable
+   this within ~rmoo~ /(if you have the games module enabled)/. Toggle it
+   on and off within *Xah Fly Keys Command Mode* by hitting the backtick
+   character: ~(`)~ key... Adjust the margin width within Xah Fly Keys Command Mode by hitting: ~SPACEBAR [~ or: ~SPACEBAR ]~ to shrink or
+   grow respectively.
+
+- [[https://github.com/blak3mill3r/vmd-mode][vmd-mode]] *Fast Github-flavored Markdown previews* synchronized with
+    changes to an emacs buffer /(no need to save)/.
+
+    =THIS PACKAGE HAS BEEN REMOVED - VMD NOT SECURE!=
+
+    After discovering the big security volunability of the NODE JS
+    App *VMD* /(Visual MarkDown)/ I decided to stop using it, remove it
+    from all platforms, and since I don't use it, I removed
+    vmd-mode from HAP Modular Emacs configuration as well.
+    I am using *org-mode* now for ALL writing operations...
+    I only needed it to update previous markdown docs...
+    /(this README Doc was the first to get converted ;-)/
+    If I need to update any of those they get immediately converted
+    to .org files as well... /(all of these HAP Modular Emacs Docs/
+    /are getting an org-mode facelift while they also get updated)/
+
+    Since I only use NODE JS to install LTS versions of JS apps
+    and the only one I use now is VMD, I decided to remove ALL
+    NODE JS related software from my operation.  =JS is DANGEROUS=
+
+\newpage
+
+*** Spelling:
+
+- [[https://github.com/][flyspell-correct]] This package provides functionality for correcting
+   words via custom interfaces. There are several functions for this:
+      ~flyspell-correct-wrapper~
+      ~flyspell-correct-at-point~
+      ~flyspell-correct-previous~
+      ~flyspell-correct-next~
+
+- [[https://github.com/pronobis/helm-flyspell][helm-flyspell]] Helm extension for correcting words with flyspell.
+
+- [[https://github.com/d12frosted/flyspell-correct][flyspell-correct-helm]] Nice helm interface for flyspell...
+   Place your cursor after any misspelled word and type: ~C-;~ to
+   see a list of suggestions...
+
+\newpage
+
+*** Key-bindings:
+
+- =NOTE1:= Key Bindings are ALL defined within: ~12-Xah-Fly-Keys.el~
+          AND ~13-key-bindings.el~ I have not listd them here yet,
+          as many of them have changed, or need to be removed etc.
+          They will most definately be listed here nicely for
+          *HAP Modular Emacs V4.0* /(soon to be released)/
+
+- =Note2:= If you type a *prefix key*: /(e.g., ~C-x~ /,/ ~C-c~ /,/ or ~M-x~ /, etc.)/
+          and wait a second, =You Will See a HELM Pop Up= showing all
+          the key commands available to choose from!!! *EURICA BABY!*
+          This ALSO works for ~SPACEBAR~ in *Xah-Fly-Keys* command mode.
+          *No guessing needed...* =The Helm Popup has a menu to=
+          =navigate the whole list as well=... *Try it!!*
+
+          /You will be using this to learn keys more than taking the/
+          /time to look them up in these docs or code because it's all/
+          /there at your fingertips, thanks to HELM.../
+
+\newpage
+
+** Optional Packages & Customization:
+
+Above I kept going on and on about setting up the Default version of Modular Emacs... Now it's time to forget boring defaults and really tune this baby up to be the best *DevOps* , *PubOPs* , *Lisp IDE* that it can be!
+The following doc with guide you through that process:
+
+- [[./Docs/ModE-Optional-Packages-y-Customization.md][Modular Emacs Customization]] - Optional Packages & Customization
+
+=Note:= These Extra Features are constantly "a work in progress" as new
+      options come up that work better, and other options turn out to
+      be more trouble than worth... etc. etc. etc... At the same time
+      I have to document all of this stuff and then revise, revise,
+      revise... Many of you know this delima... %^) Org-Mode helps
+      tremendusly! 
 
 \newpage
 
