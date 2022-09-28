@@ -1,0 +1,1337 @@
+# -**- mode: org; coding: utf-8 -**-
+#+TITLE: HAP - Modular Emacs - README & Log
+#+EXPORT_FILE_NAME: HAP-ME-README.pdf
+#+TEXT: Copyright © 2022 Harmonic Alchemy Productions & Others
+#+AUTHOR: Alisha Awen - Harmonic Alchemy Productions (HAP)
+#+EMAIL: Siren1@disroot.org
+#+DATE: <2021-07-22 Thu>
+#+TEXT: Created: <2021-07-22 Thu>
+#+TEXT: Last Published: <NOT Published>
+#+FILETAGS: README templates unpublished
+
+#+DESCRIPTION: MAIN README Doc for Harmonic Alchemy Productions - Modular Emacs... Incuding attached Log Notebook for keeping a cronological track of work, new feature developments, bug tracking, or anyting that may help keep this elephant of an eLisp mess organized! LOL! Also time tracking to see how much time I spend yak shaving! ("Elephants don't like to be shaved, but you can eat an entire elephant one bite at a time, AND still have time to go off and do a bit of yak-shaving just for fun in between bites" - %^)
+
+#+BEGIN_COMMENT 
+=Setup Files:=
+
+   For Cloned Versions of this template, the file/paths below will be relative
+   to your parent project directory and as such, should be all set to your new: ~.../your_README.org_File's/org-templates/~ directory...
+
+=NOTE:= 
+
+   ~#+CATEGORY:~ is specified within ~gen-doc.org~ SETUPFILE.
+   If you need to change the category, do it in your cloned version
+   of fiction-book.org...
+
+   *SETUPFILE:* ~default-tags.org~ is where tags are set for this project...
+
+   *SETUPFILE:* ~latex-simple-pdf.org~ is for LaTeX Export Configurations 
+              to produce a PDF version of your README file...
+#+END_COMMENT
+
+#+SETUPFILE: ./Docs/org-templates/gen-doc.org
+#+SETUPFILE: ./Docs/org-templates/latex-simple-pdf.org
+#+SETUPFILE: ./Docs/org-templates/default-tags.org
+
+#+NAME:    fig:HAP-Mod-Emacs-Banner-001
+#+CAPTION: Modular Emacs Page Banner
+#+ATTR_ORG: :width 800px
+#+attr_html: :width 800px
+#+attr_latex: :width 800px
+[[file:./Docs/media/Modular-Emacs-Github-Banner-v3.png]]
+
+* Table of Contents:                                                    :TOC:
+- [[#-harmonic-alchemy-modular-emacs][📖 Harmonic Alchemy Modular Emacs]]
+   - [[#introduction][Introduction:]]
+   - [[#history--purpose][History & Purpose:]]
+   - [[#try-harmonic-alchemy-modular-emacs][Try Harmonic Alchemy Modular Emacs:]]
+   - [[#microsoft-windows-support][Microsoft Windows Support]]
+   - [[#my-commitment][My Commitment]]
+   - [[#tldr---start-here][TL;DR - Start Here:]]
+   - [[#get-ready-to-start-up-modular-emacs-for-the-first-time][Get Ready to Start up Modular Emacs for the first time!]]
+   - [[#ready-set-go--start-up-modular-emacs][Ready Set Go!  Start Up Modular Emacs:]]
+   - [[#usage][Usage:]]
+   - [[#default-packages--features-built-in][Default Packages & Features: /(built in)/]]
+- [[#-log][📅 LOG:]]
+   - [[#-2022][📅 2022:]]
+- [[#-meta-usage--templates][📋 Meta: /(Usage & Templates)/]]
+   - [[#-introduction][📄 Introduction:]]
+   - [[#-howto][❔ HowTo:]]
+   - [[#-templates][⎘ Templates:]]
+
+* 📖 Harmonic Alchemy Modular Emacs
+** Introduction:
+
+*Welcome to Harmonic Alchemy Modular Emacs* - ~V3.2 [Q3 2020]~ /(still in Beta)/.
+
+*Modular Emacs* is more than just Emacs with configurable modules... It is also designed to be the centerpiece /(command central)/ of a larger personalized, extensible *Dev♺Ops* / *Pub✎Ops* / *Multi🎥Media* workstation *IDE* capable of running on older but reasonably powerful *laptops/desktops* /(that would otherwise be considered legacy by most other standards)/.  
+
+I am a systems architect, dev♺Ops engineer, computer scientist, composer/musician, sound designer, writer/publisher.  I wear a lot of hats! My Emacs needs to wear a lot of hats as well!  The central focus of *Modular Emacs* is to build empowering features into *Emacs* utilizing a modular framework that facilitates all the above without becoming an over complicated mess to manage! *"good luck with that"*  :octocat:
+
+=Note:= Current Status & Release Notes of
+      this project are documented [[./Docs/ModE-Current-Status.md][HERE]]
+
+\newpage
+
+** History & Purpose:
+
+The history of *Harmonic Alchemy Modular Emacs* is /"a confusing journey through many little twisty passages, all alike"/... [[./Docs/ModE-History.md][Everything is documented here now]]...  Read it at your leasure.  It provides some perspective, insight, and purpose behind how and why things are done here in the present time.
+
+\newpage
+
+** Try Harmonic Alchemy Modular Emacs:
+
+For those of you who feel [[https://github.com/harmonicalchemy/modular-emacs][Harmonic Alchemy Modular Emacs]] may be exactly what you were looking for, By all means... Lets Dive in!
+
+There are some external requirements... It may take a while... If that's OK with you, Great!... Lets go...  Eventually I will script this up so you can just enter this at the command prompt: ~./install.sh~ and be done with it... Keep your fingers crossed on that but don't get your hopes up... I am a busy girl!!! :octocat:  That script will have to install a lot of things! It will have to check a lot of system states!  I have to work all that out as a non-interactive process.  It should install everything /(transparently non-interactively)/ from that single running shell script...  If you have to answer questions and make decisions... Better that you execute manually instead, and read the docs first...  Right?
+
+\newpage
+
+** Microsoft Windows Support
+
+=Note:= Hello MS Windows Users... I admit to having no experience
+      at getting a nice Emacs GUI environment running nicely on
+      MS Windows... *Harmonic Alchemy Modular Emacs* expects to be
+      installed on a unix machine, or unix friendly machine
+      contaning standard unix apps and utilities or proper hooks
+      into such things... Many of these may not be implemented
+      within the canonical Windows OS model and I have no
+      experience sorting that out...  It is hard enough to get
+      Mac OS to behave along side GNU Linux or other free software
+      and open source standards! I do not wish to abandon MS
+      Windows users however.  I dedicated a document within
+      Harmonic Alchemy Modular Emacs to record any information
+      needed to help get Modular Emacs running on MS Windows.
+      Please consult: [[./Docs/ModE-Note-2-MS-Windows-Users.md][Note for MS Windows Users]] for more
+      information...  I am looking for a good MS Windows Sys
+      Admin type to jump in here and help... Where are you?
+      Please open an issue with intro to yourself for me to
+      review... Thanks!
+
+For the rest of us... For now... Let's learn this together... Please give feedback, open issues, ask questions!  Thanks ;-)
+
+\newpage
+
+** My Commitment
+
+*"Always do what is right. It will gratify half of mankind and astound the other."* - Mark Twain  
+
+One of the main reasons created this project was to empower lots of creative folks out there who have more brains than money.  This project is 100% open-source and Free to download, install, and use independently, /(both as in "Free Beer" and also as in having "Freedom of Choice and Control" over your Computing Infrastructures)/.
+
+I have been testing this project to see if it can successfully run on older legacy hardware as well.  My aim is to make it possible for anyone, no matter what their economic or social status is, to be empowered to use this... To give you a voice, to give you more control over your digital life operations, and provide you with a portable/inexpensive way to publish your ideas, stories, projects for the rest of the world to see. All under your independent and private control (no middle men dictating rules)..
+
+I am committed to making this *process/journey* as painless as possible for you as I have found many other Emacs setups to be way to complicated to make it easy for adoption into my workflow, and you are probably experiencing the same!  On the other end of the spectrum... Installing basic Emacs alone is not enough to get you started _(IMHO)_...  I set it up that way to get you up and running with a simple setup first... You should quickly outgrow that and certainly want to enable the extra features!  
+
+Therefore I hope to make that process reasonably easy to do!  The whole purpose of this project is to be able to easily grow and shrink features as needed in any combination thereof... Without /"getting lost in a tangled mess of twisty little passages all alike!"/
+
+If you end up liking *Harmonic Alchemy Modular Emacs*, please drop me a note to let me know! Please do ask questions, open issues, etc.  Thanks!  I have been using Emacs since around 1986/87 /(OMG that long! off-and-on with gaps in between ;-)/ but I never shared any of that Emacs knowledge with anyone before now... :heart_decoration:  
+
+=Therefore:= *Here is Modular Emacs!* I hope my long years of *devOps* experience will turn out a nice jewel for new comers to try out and succeed with! *Good Luck and God Speed!*
+
+\newpage
+** TL;DR - Start Here:
+*** Modular Emacs Default Installation:
+
+To install Harmonic Alchemy Modular Emacs for the first time, follow this guide /(in a top down fashion)/... Do not skip to any of the other /(optional)/ install guides until you have the basic default configuration of Modular Emacs installed and running /(without errors)/ in your home directory... 
+
+=Note:= It is entirely possible that Modular Emacs will run reasonably
+      without enabling many of the basic modules listed below.  This
+      may be a good way to get your feet wet without running into
+      initial problems or having to install many required externals,
+      all at once... Later, when you have a better handle on this,
+      try installing some of the extra requirements, /(like a FULL
+      LaTeX Package)/ and then enabling some of the more advanced
+      modules...
+
+\newpage
+
+*** Requirements:  
+**** Clone This Repository:
+
+Clone this repository into your ~$HOME~ directory as: ~me.init.d~. The ~me.~ prefix /(for Modular Emacs)/ is put there so that it will not overwrite your existing ~~/.emacs.d~ directory /(if you already use Emacs, which you will still need operational)/.  We will rename this folder later after all other requirements are complete...
+
+Issue the following command within your default *terminal* application:
+
+#+begin_src bash
+  git clone https://github.com/harmonicalchemy/modular-emacs.git ~/me.emacs.d
+#+end_src
+
+After the above is done, leave things here as they are and go do the rest of the steps below... We will come back to this later when we are just about ready to launch *Harmonic Alchemy - Modular Emacs* for the first time...
+
+\newpage
+
+**** Install Emacs: V26.1+  
+
+Many of the default packages installed with this project will not work with older versions of Emacs. Also the security older Emacs packages is horrendous! Recently, some of the older packages were removed from the updated MELPA and moved to other less-secure repositories. The entire MELPA site is TLS enabled now but these other repos are not very secure...  Updated features /(acquired securely)/ are vital for being reasonably safe going forward from 2020 onward...  Therefore, I decided not to support versions of Emacs prior to V26 and prefer to only support Emacs V26.1 and up...  
+
+=Warning!= If you have a really old version of Emacs currently installed,
+         it may break after you update Emacs below... Therefore before
+         installing a brand new version of Emacs it may be a wise idea
+         to save your current emacs environment, e.g., ~.emacs~,
+         ~~/.emacs.d~, etc... as well as a copy of your old *Emacs*
+         Application...
+
+         This is for a safety net, Do NOT delete your existing setup...
+         You still need your existing Emacs working wile you are getting
+         all the requirements below together for Modular Emacs... 
+
+- [ ] *Copy/Clone your entire:* ~~/.emacs.d~ directory and/or ~~/.emacs file~,
+     as well as a copy of your old *Emacs* application into a temporary
+     directory of your choice before upgrading below... /(or compress/
+     /and make a/ ~.zip~ /or/ ~.gz~ /archive file)/
+
+     This will be your safety net for coming back later if you decide you
+     are not ready to upgrade. If anything goes wrong, you will be able
+     to reverse everythig back no problem!
+
+- [ ] *Once your house is in order as above:*
+      [[./Docs/ModE-Install-Emacs.md][Click this Link to Build or Install Emacs 26+ on Your Platform]]
+
+\newpage
+**** NODE.js - NVM & NPM: /(NO LONGER USING NODE JS HERE)/
+
+Previous versions of Harmonic Alchemy Modular Emacs required installing *NODE Version Manager* ~NVM~, and *Node Package Manager* ~NPM~, so that we could use the *Visual MarkDown application* ~VMD~ as a *WYSIWIM* /(what you see is what I mean)/ editing environment for *Markdown* files within Emacs...
+
+I have decided to abandon *VMD* due to a critical security volunerability which has been discovered.  I am actually late to getting around to mitigating this problem... Since Harmonic Alchemy Modular Emacs only needed that single NODE JS applicition, I have decided to remove the entire NODE JS elephant so that it is no longer required...  You should NOT install NODE JS unless you are a dedicated JavaScript developer, and then you need to be extra careful about what apps from other devs you may wish to install... "It's a jungle out there, makes me wonder how I keep from going under!" - GMF
+
+I recommend installing Ocular on Linux, and use Mac OS built in Preview to see
+your markdown files rendered for reading normally etc.  I am no longer writing docs in Markdown as you can see this README file is now written in Org-Mode...
+Github displays .org files great and you can even have a Table of Contents!
+
+So going forward with Harmonic Alchemy Modular Emacs we will be doing ALL our
+docs from now on in org-mode and taking advantage of the nice org-mode features I have tweaked and beautified for Writers, Authors, Coders, i.e., anyone tired of plain jane org-mode appearances...
+
+\newpage
+
+**** MultiMarkdown & mmd-mode:  /(Also No Longer Using This)/
+
+*Multimarkdown* and ~mmd-mode~ are NO longer required or configured for use by *Harmonic Alchemy Modular Emacs*...
+
+As above for NODE JS and VMD, I have decided to remove this old ancient emacs mode which I had to clone and modify to get it working in newer versions of emacs... I removed external multimarkdown requirements as well... 
+
+I am no longer using Markdown as my go-to doc format for anything except WebSites which require content to be delivered that way, and therefore don't need this extra Markdown stuff that was only needed for Github... Normal emacs Markdown mode works great by itself... *Pandoc* /(optional package below)/ is a much better universal swiss army knife for converting from one format to another than multimarkdown as well...
+
+\newpage
+
+*** Optional Extras:
+**** Pandoc:
+
+*Harmonic Alchemy Modular Emacs* will run fine without Pandoc installed on your machine, and in fact is not even used internally... Pandoc exists as an external tool you may need from time to time to convert from one format to another when *Emacs* or *Org-Mode* cannot perform the same thing internally...
+
+Therefore, instructions for getting Pandoc installed on your platform are included here but it is not required for operation... It is /"Extra for Experts"/ :octocat:
+
+*Read the docs for Pandoc* to decide how to use them. More instructions for installing and using Pandoc can be [[https://pandoc.org/installing.html][found on the Pandoc Official Website]]...
+
+The [[Pandoc.org]] website has most everything you will need all in one place!
+
+[[./DOCS/MODE-INSTALL-PANDOC.MD][FOLLOW THIS LINK]] to Harmonic Alchemy Modular Emacs' Pandoc Install Guide /(All Platforms)/
+
+\newpage
+
+**** Fonts:
+
+*Harmonic Alchemy Modular Emacs* recommends a few fonts to be installed on your system to get Fancy Org-Mode, Fountain Screenplay, and coding frames/windows/mode-lines, etc. looking as good and "readable" as they possibly can.
+
+=HOWEVER THIS IS NOT A REQUIREMENT for PROPER OPERATION=
+
+You may or may not be fine with the fallback default fonts if the fonts below have NOT been installed on your machine... I have not tried defaults so your mileage may vary...
+
+Other fonts will be required by *LaTeX* /(for exporting to external document types)/. That process will be covered in a seporate doc and as well is also not entirely "required" for proper operation of Harmonic Alchemy Modular Emacs.
+
+For Instructions on how to install modular emacs recommended fonts on All Platforms, [[./DOCS/MODE-INSTALL-FONTS.MD][FOLLOW THIS LINK]]... Afterwards, you will see some nice looking "writers" fonts in Org-Mode as well as while editing Fountain drama scripts! :octocat:
+
+\newpage
+
+**** Python & Pip:
+
+Some of the newer /(OPTIONAL)/ modules to be enabled within *Harmonic Alchemy Modular Emacs* will require Python packages to be installed... This is especially true of *Emacs MultiMedia System* ~EMMS~ which is enabled within optional module: [[./lisp/modules/11-games-pkg-conf.el][11-games-pkg-conf.el]]]
+
+[[./Docs/ModE-Install-Python-PIP.md][FOLLOW THIS GUIDE]] to get *Python & PIP* set up within your local environment so you will be ready when python packages are needed to be installed now, or later...
+
+\newpage
+
+**** :octocat: Extra for Experts - LaTeX
+
+No I did not forget *LaTeX*...  This is a powerful monster! It needs its own monster doc to install and configure as well... You need it to work with *Pandoc* as well as *org-mode* to take atvantage of advanced export options of included example Org-mode Doc Templates within the PubOps Section...
+
+LaTeX provides extended features to produce PDFs, and eBook formats... Emacs can be integrated, (especially ~org-mode~) to be able to export to these fancy formats using LaTeX...
+
+This is Great News if you would like to make *Emacs* work as well as /(or better than)/ *Scrivener*...  So get on it already OK?
+
+- [ ] =Install Optional LaTeX Publishing Environment:= [[./DOCS/MODE-INSTALL-LATEX-PUBOPS-ENV.MD][FOLLOW THIS GUIDE]]...
+
+\newpage
+
+**** Graphviz:
+
+Harmonic Alchemy Modular Emacs is =OPTIONALLY= configured to use the popular *Graphviz utility*, allowing the creation of nice graphs, flowcharts, data diagrams, etc. using a powerful scripting language called *dot*...  The Emacs mode for Graphviz is: ~graphviz-dot-mode~
+
+Modular Emacs invokes: *graphviz-dot-mode* /(independent of whether graphviz is actually installed on your system)/ when you visit files ending in either: **`.dot`** or **`.gv`** Emacs will format these files nicely for you... But you cannot execute them unless you have Graphviz installed externally...
+
+If you DO have Graphvix installed... When you visit a ~.dot~ file, you can compile it with: ~C-c C-c~ which will produce an ~.svg~ file along side...  By default, Modular Emacs is configured to produce *SVG* vector files instead of ~.png~ files which is my preference because if you export and then view it as a PDF you can expand the resulting rendered chart or graph full screen and it will still look very sharp! Not to mention you can edit the resulting SVG file within *inkscape* to add things to it that Graphviz cannot...  Don't underestimate the power of *Graphviz* though! [[https://graphviz.org/documentation/][READ THE GRAPHVIZ DOCS!]]
+
+- [ ] =To Install Graphviz - All Platforms:= [[./Docs/ModE-Install-Graphviz.md][FOLLOW THIS LINK]]
+
+\newpage
+
+** Get Ready to Start up Modular Emacs for the first time!
+*** Initial House Keeping: /(before we move in)/
+
+- [ ] *Create an empty file:* ~custom.el~
+
+     This file keeps *Emacs Internal "Customize"* saved settings separate
+     from *Modular Emacs constructs* and outside of your ~.init.el~ file!
+     /(so you won't have to worry about tiptoeing over it)/ Emacs will
+     use this file /(initially empty)/ behind the scenes to save your
+     Emacs internal "customizations"...  Git ignores this file.
+     /(Which is why we have to create it here now)/ You will not need
+     to mess with this file after creating it, /(unless you want to/
+     /empty it out and start over when Emacs "customized" things get/
+     /out of hand)/...
+     
+     Create Empty Custom.el File:
+     #+begin_src bash
+       touch ~/me.emacs.d/custom.el
+     #+end_src
+
+- [ ] *Clone:* ~me.init.el~ *to:* ~init.el~
+
+     ~me.init.el~ is a template for reference only...  I did it this way,
+     adding: ~init.el~ to: ~.gitignore~ for the purpose of providing more
+     flexible ways to manage your local install of Modular Emacs...
+     ~me.init.el~ will stay in sync with the remote origin while your
+     local clone: ~init.el~ runs the show /(with any changes you might add)/
+     without triggering git to complain about new un-tracked files etc...
+
+      #+begin_src bash
+         cp ~/me.emacs.d/me.init.el ~/me.emacs.d/init.el
+      #+end_src
+
+     Later... You may want to edit your fresh new ~init.d~ and change
+     the Banner Message to be more specific to your installation...
+     Also, later we will discuss different strategies of management
+     that will hopefully allow you to build your own setup concurrently
+     and in harmony with Modular Emacs, and be able to easily share any
+     extra features/modules of your own that you may wish to bring to
+     the rest of the Modular Emacs user community!
+
+- [ ] *FINAL STEP - Make Modular Emacs Folder the DEFAULT ~~/.emacs.d~ Folder:*  
+
+     At the very beginning of this guide, you were advised to copy your
+     existing Emacs setup first.  I hope you did that because now you are
+     going to over-write your old installed Emacs configuration with
+     Harmonic Alchemy Modular Emacs!  
+
+     Therefore if you did not backup, FIRST make sure to rename /(save)/
+     your existing: ~~/.emacs.d~ to: ~~/save.emacs.d~ /(if you did not do/
+     /this in the beginning)/ You may also have a ~.emacs~ init file outside
+     of the ~.emacs.d~ folder that also needs to be renamed!
+     =This is very important!= Becase the next steps will overwrite them
+     if you did not change their names!!!
+
+     Now you are ready to rename: ~~/me.emacs.d~ to: ~~/.emacs.d~
+
+      #+begin_src bash
+        mv ~/me.emacs.d ~/.emacs.d
+      #+end_src
+
+     ~~/.emacs.d~ is now your new *Modular Emacs Local Repository* which
+     is also now your default *emacs* home directory! 
+
+     =One last sanity check=... Make sure you no longer have a ~~/.emacs~
+     file still in your home directory...  You should now only have
+     a: ~~/.emacs.d/~ directory and that's the only "emacs" in your
+     ~$HOME~ OK? Great! :octocat:
+     
+** Ready Set Go!  Start Up Modular Emacs:
+
+- [ ] *Start up GNU Emacs:*
+
+     Envoke Emacs either from the menu or command line and hold your
+     breath! After a lot of super computing lisp number crunching
+     flashing away in your mini buffer /(wait wait wait... for a/
+     /BUNCH of packages to download and compile the first time,/
+     /which can take up to a minute or more!)/ After that startup
+     should take no more than 5 or 6 seconds at most unless you
+     have some huge new package that needs to be installed...
+
+     After your long wait... *Bam!* You should see your new emacs
+     screen pop up with *Welcome to Harmonic Alchemy Modular Emacs!*
+     heading your scratch buffer in a frame with a pre-determined
+     row/column initial size!
+
+- =NO?= *It's Broken?* Oh My! =What a freaking let down!= *I feel your pain!*
+       OK... Don't worry if all you see are only numerous compiler
+       warnings... /(those are hard to avoid upon first startup with/
+       /all the new packages compiling etc. Not much you can do about/
+       /that... The developers who made the packages need to clean/
+       /that up, you could help them though. You can safely kill that/
+       /message buffer and move on)/...
+
+- =Yes?= *It worked?* =Yay!= What a fantastic feeling the first time eh?
+
+- =Note1:= I am still chasing an OLD issue with some functions, /(not mine)/
+         calling the old depreciated ~cl~ /(common lisp/ /library).../ These
+         will be replaced with calls to the new ~cl-lib~ replacement...
+         When that happens you will no longer see the warning:
+         *"cl lib is depreciated"* at startup...  There are several other
+         warnings like this I will eventually chase down as well...
+
+         It is hard to keep Emacs Lean and Mean with all these            *
+         *seat-of-the-pants developers* building packages that pull in
+         gigabytes of *FLUF* just to provide some stupid silly function
+         that you can do in three lines by yourself! *FLUF* = "Fluf is
+         Lousy Unnessary F**ks**t!" /(R-rated Recursive Acronym inspired/
+         /by: Xah Lee & Having to live with F**king GNU)/
+
+         If you got an error that halted completion part way thorugh, and you
+         have an incomplete emacs startup init screen, try to retrace your
+         steps or try running emacs with ~--debug-init~ turned on...
+         It's probably something dumb and easy to fix...
+
+         /(This happens to us all the first few times, and comes back again/
+         /later as well most of the time.  Other errors only come up in a blue/
+         /moon, and then mysterously go away and hide before you can catch/
+         /them! DOH! Compiler Logs are a hacker's best friend)/ :trollface:
+
+- =Note2:= Fetching/pulling new changes from the master ~modular-emacs~
+          GitHub repository to your local `~/.emacs.d/` directory will
+          automatically be reflected within your emacs configurations...
+          No need to copy any more files... But you may be surprised to
+          see some new feature or something working differently.
+          If that bothers you, you may wish to keep your changes separate
+          from the remote master branch.  Therefore create your own local
+          ~test~ branch /(or call it what you like)/ and maintain your local
+          changes in parallel... Change your local branch's .gitignore to
+          accommodate your needs...
+
+- =Note3:= The remote ~modular-emacs~ Github repository also maintains a
+          ~develop~ branch where new ideas and features are tried out before
+          folding them into the master branch which maintains the Modular
+          Emacs stable release.  You could also create a local branch that
+          tracks origin:develop if you would like to participate in any new
+          things I am trying out before final release... Earlier point
+          versions of Modular Emacs were first staged and tested within
+          the develop branch.  Version 3.x is tested on the develop branch
+          currengly. /(if not already merged into master by now)/... Any
+          time a final release of new features is ready, the develop branch
+          will be merged back into master branch, tagged as a new point
+          release /(or major release when a lot of new features have been/
+          /added to warrant it)/... maybe not this time eh?  LOL
+
+- =Note4:= I have created a new branch called: ~xah-fly-keys~ where the
+          optional module: ~12-Xah-Fly-Keys.el~ has been enabled by default.
+          You don't have to make any modifications in order to try this
+          otherwize optional feature when you are on this branch.
+          Try it out! It's easy to switch back and forth now...
+
+\newpage
+
+** Usage:
+*** General Usage:
+
+The *Harmonic Alchemy Productions - Modular Emacs* git repository is configured to ignore your local ~~/.emacs.d/init.el~ file... The file: ~~/.emacs.d/me.init.el~ is kept in revision and you do not use or touch this file directly...  Instead, your standard emacs config file: ~~/.emacs.d/init.el~ starts out as a clone of ~~/.emacs.d/me.init.el~ allowing you to try out new things on the fly without upsetting the state of the git repo...
+
+*HAP - Modular Emacs* is configured this way for some good reasons...
+
+   1) *First*, it allows you to return to the default setup easily in
+      case you mess up your ~.init.el~ file somewhere along the way...
+      
+   2) *Secondly*, this file is intentionally kept very simple...
+      There are NO implementations there... Instad ~.init.el~ calls
+      a *Module Dispatcher* ~dispatcher.el~ and that file is responsible
+      for dispatching /(loading)/ the entire emacs configuration /(modules)/
+      for *HAP - Modular Emacs*...
+      
+   3) *Thirdly*, It makes it =SUPER EASY= for you to disable your current
+      *HAP Modular Emacs* in order to try some *OTHER Emacs Configuration*
+      you may have wanted to try out. /(without too much trouble)/ right
+      in place without hurting your current HAP Modular Emacs Setup...
+      Going back simply involves renaming the associated ~init.el~ file,
+      and replacing it with the original, or visa-versa...
+
+Feel free to use your ~~/.emacs.d/init.el~ /(clone)/ to try out experimental customizations or tests. =HOWEVER=... *There are BETTER Ways to customize HAP Modular Emacs* leaving your ~.init.el~ as is... /(other than changing the/
+/boilerplate heading that gets displayed to suit your fancy)/ This is the
+purpose of ~dispatcher.el~ and the ~my-modules~ directory...
+
+You can also use the Emacs ~*scratch*~ buffer to paste experimental lisp code to try out before making it permanent as a stand alone ~.el~ emacs lisp file, /(as the welcome banner suggests ;-)/. Evaluate the entire ~*scratch*~ buffer without needing to remove the banner message at the top as that message is one huge lisp comment... If something horrible happens, no worries... Simply restart emacs... Your mess-up will be gone and you will be back to where you were before you or that elisp test code goofed up...
+
+If your customization proves stable, and you like it, you could then save your scratch buffer (as is) to a new file, for example:
+
+   ~~/.emacs.d/lisp/my-modules/xx-my-new-module.el~
+
+In all cases you would also be wise to also create and checkout your own private local ~test~ branch /(call it what you wish)/ and keep all your custom changes in there separate from the ~master~ or ~origin:develop~ branch...
+
+The directory: ~~/.emacs.d/lisp/my-modules/.~ is NOT tracked by *git*... So you can put anything in there without upsetting your local or remote tracking branches... 
+
+=ALSO= if you copy any of the files from: ~~/.emacs.d/lisp/modules/.~ to  ~~/.emacs.d/lisp/my-modules/.~ They will OVERRIDE the ones in ~modules~ and will NOT be tracked, SO you can try out mods within ~my-modules~ without messing up your current git status...  If something goes wrong, simply delete or rename your clone within ~my-modules~ and you will be back to where you were before...
+Easy Peasy.. /(this all works in a similar way to how the oh-my-zsh repository behaves for local ZSH configurations)/
+
+You can even *clone OTHER git repos* wihtin ~my-modules~ without messing anything up! This is better than using lousy sub repos /or what ever that is called/... I tried using git sub-repositories once and then ran for my life scared as shit after that initial crappy experiece!  LOL "What were you guys smoking when you created that mess?" Alisha is very opinionated about some things eh? RIGHT!
+
+\newpage
+
+*** Blackboard Color Theme:  
+
+*HAP Modular Emacs* comes with my new customized version of the *Blackboard color theme* /(patterned after the famous Textmate Blackboard Theme)/ which I like for the *pedagogic essence* it inspires... I have also tweaked it to look good under my *Fancy Org Mode* colors and faces.  If you would like to add more custom themes or a different theme than ~blackboard.el~, you can replace it or add additional themes into your local branch's: ~~/.emacs.d/lisp/themes~ directory and they will also will work with this setup by choosing ~M-x load-theme~ or changing the last line within ~~/.emacs.d/lisp/modules/06-interface.el~ to:
+
+   ~(load-theme 'your-chosen-theme-name t)~
+
+=Note:= Obviously if you add more themes to your *Modular Emacs* ~themes~
+      directory you will be adding new un-tracked files to your
+      cloned git repository! /(this one does not have an untracked/
+      *my-themes* /directory option like/ *my-modules* /is set up - but/
+      /I may add this later if needed)/...
+
+      Make sure you have checked out your own local branch before
+      adding new themes or doing any customization outside the
+      ~init.el~ file or the ~my-modules~ directory, OTHERWISE you will
+      get out of sync with remote tracking branches!!!
+
+      Checking out a LOCAL untracked branch is the proper way to
+      do code management of your own local custom changes tracked
+      seporately under your own code revision schemes in place ready
+      to merge any NEW changes from the remote Modular Emacs branches
+      any time you feel that may be necessary... /(merging conflicts/
+      /along the way as needed)/
+
+\newpage
+
+** Default Packages & Features: /(built in)/
+*** Default Emacs Welcome Screen: /(~*scratch*~ buffer)/
+
+The default Emacs Welcome Message is replaced with a custom greeting banner that shows the current emacs configuration, and date... With a famous Mark Twain quote /(My Favorite author)/... This quote may change from time to time with new updates...  
+
+Use Scratch buffer to evaluate snippets of ~lisp~ without having to remove
+the welcome text... /(which are lisp comments)/
+
+*** Miscellaneus Packages:
+
+- [[https://github.com/milkypostman/powerline][powerline]] - Decorate ~mode-line~ & make it More Informative.
+   You can customize options and use themes etc...
+   =THIS PACKAGE IS DISABLED BY DEFAULT=... I am back to the Emacs
+   default mode line and I customize that instead. I did not remove
+   the code to enable powerline though.  If you like powerline,
+   the code for enabling it is located within ~02-package-conf.el~...
+   Read the comments in that file to find it...
+
+
+- [[https://github.com/auto-complete/auto-complete][auto-complete]] Easy Text Editing with suggested word completion.
+   =THIS PACKAGE IS DISABLED BY DEFAULT=...
+   =I am NO LONGER USING THIS FLUF!=
+
+   With AC enabled... When entering code, if you enter a function
+   name and completion pops up, you are =TRAPPED! OUCH!!!= I don't
+   like that! If I want to keep typing /(not accepting the default/
+   /or maybe what I want is different than what it thinks?)/... It
+   fights me...  I have to fool it by typing some junk and then
+   pull off a text switch game.... LOL!
+
+   The code that activates auto-complete has not been removed yet
+   but it is commented out to disable ALL of it...
+
+   If you LIKE AC, /(you are an odd one if you like being trapped)/
+   you can still go in and un-comment the related code within
+   ~02-package-conf.el~ and enable that mess if you so choose!
+
+   I may soon delete all that *FLUF* code out later however...
+
+\newpage
+
+*** Core Emacs System Related Packages:
+
+- [[https://github.com/purcell/exec-path-from-shell][exec-path-from-shell]] Get environment variables such as ~$PATH~ from
+   the shell.  btw, this can be a tricky thing to do in emacs!
+   I have struggled with this on Mac OS for a while! You may find
+   you have to start Emacs from the terminal to get all your
+   environment vars into Emacs!  More about that later.. A continuing
+   saga!
+
+   =Update 2020:= This has been working fine on my iMac since completely replacing Homebrew with MacPorts. IMHO /(biased by a host of/
+   /irritant issues using Homebrew over the years)/ MacPorts is a much
+   better package manager all around... But not the popular one...
+   Oh Well... %^) Also, since building my own Emacs from GNU source
+   tree on my iMac, configured just how I like it, I have had no more
+   nagging MacOS related issues... And I can have the latest Emacs
+   the second it is released /(one build cycle away, or choose to go/
+   /back to my archived app if they introduce some bug or someting!/
+   :octocat:
+   
+*** Emacs Helm & Extras:
+
+- [[https://github.com/emacs-helm/helm][helm]] Helm is an Emacs incremental and narrowing framework that
+   helps speed up operations on commands with structured command
+   completions and more.  It is a programmable interface (API) as
+   well. To see how HELM can speed things up try a prefix key
+   like: ~C-x~ or ~C-c~ or ~M-x~ and just wait before typing any more
+   keys... You will see all the possible key-combos currently
+   associated with that prefix key pop up in the HELM mini-buffer!
+   Fantastic! No more guessing! /(Oops! What did I just do? OMG!)/
+
+- [[https://emacs-helm.github.io/helm/][helm-core]] Development files for Helm (API) dependency.
+
+- [[https://github.com/emacs-helm/helm][popup]] Popup is also a dependency package used by helm.
+
+- [[https://github.com/justbur/emacs-which-key][which-key]] Another Dependency package used with helm...
+   This package pops up suggestions for what can follow after
+   pressing ~C-x~ key... /(this is what I was talking about/
+   /above in the intro paragraph for HELM)/
+
+   =Note:= ~xah-fly-keys~ also uses helm to pop up leader key
+         choices and extended menu...  Hit the ~SPACEBAR~
+         /(LEADER KEY)/ and wait a second for helm to pop up
+         the list of options... /(with help feature and/
+         /pagination! Vital for learning all those keys!)/
+         
+*** Tree & Menu Related Packages:
+
+- [[https://github.com/fourier/ztree][ztree]] An efficient directory tree comparison utility. Invaluable for visually oriented thinkers! Integrates directly with ediff files!
+
+   + *To invoke Ztree Diff type:* ~C-c z~ /(normal Emacs edit mode)/
+      or symply type ~"z"~ from *Xah-Fly-Keys Command Mode*, and
+      then choose directory ~"A"~ & ~"B"~ /(as prompted)/ to compare
+      all files within both directories.
+
+   + Make your screen wide to see both directories listed side
+      by side. The file names are color coded, indicating
+      status/differences within in two side by side buffer lists
+      of all the files within both directories.
+
+   + This list of files can be navigated in a similar way you
+      navigate a dired buffer...  Putting cursor on any filename
+      and hitting RET key will open the two files within an
+      *eDiff* session...
+
+   + I used to use external diff/merge tools like *kdiff-3* but I
+      find Emacs to be superior /(if not quite as slick GUI looking)/
+      but that does not bother me in the slightest... The powerful
+      user configurable functions made available within Emacs are
+      /(to my eyes)/ the Beauty of Form and Function in action!
+
+      The prase /"Form follows function"/ has been misunderstood...
+      
+         /"Form and function should be one, joined in a/
+          /spiritual union."/ - Frank Lloyd Wright...
+
+- [[https://github.com/bmag/imenu-list][imenu-list]] *Right panel Menu and Variable list*
+   
+   =CURRENTLY DISABLED UNTIL FURTHER NOTICE=
+
+   You can toggle an imenu list right panel window to view
+   variables, functions, headings, etc. *iMenu List* uses *iMenu*
+   and displays the listing in a narrow window on the left side...
+
+   =Note:= For some reason ~imenu-list~ is not working currently.
+         There seems to be a problem with: ~window-display-buffer~
+         returning nil with the classic: ~wrong number of arguments~
+         error...  I am currently troubleshooting this...
+         For now simply use *imenu* by typing ~C-c '~, or by typing
+         the single quote character: ~'~ by itself /(when you are/
+         /in/ *Xah-Fly-Keys* /command mode)/...
+
+         When I have *iMenu-list* working again those keybindings
+         will call it instead... It provides a nice side bar that
+         you can navigate. The side bar stays there for you to use
+         over and over again until you toggle it back off again...
+         This is much better than using iMenu alone which pops up
+         in HELM but goes away as soon as you use it...
+
+\newpage
+
+*** Dired Related Packages:
+
+- [[https://github.com/thomp/dired-launch][dired-launch]] Open files directly within *dired* using default
+   applications. Great for quick viewing PDF or Image files
+   with your OS default viewer app! You can use
+   ~dired-launch-extensions-map~ to specify, for a given file
+   extension, one or more preferred applications by simply
+   specifying the application as a string.
+   
+   =example:=
+   #+begin_src elisp
+     (setf dired-launch-extensions-map
+           '(;; specify LibreOffice as the preferred application for
+             ;; a Microsoft Excel file with the xslx extension
+             ("xlsx" ("libreofficedev5.3"))
+             ;; specify LibreOffice and Abiword as preferred applications for
+             ;; an OpenDocument text file with the odt extension
+             ("odt" ("libreofficedev5.3" "abiword"))))
+   #+end_src
+
+   =Note:= The above is for launching apps /(inline your emacs buffer)/
+         but there are many ways to skin this external app launch
+         business... the following commands will launch a file in
+         an external application whilst your cursor is positioned
+         on a file in a dired buffer: ~W~, or ~SPC i w~ in *Xah Fly Keys*
+         command mode... /(Xah Fly Keys must be enabled for this/
+         /leader key sequence in Commnd Mode)/ but simply typing
+         upper case W is easier IMHO.
+
+
+- [[https://github.com/jaypei/emacs-neotree][neotree]] Spawn a directory tree relative your current working
+   directory location. You can toggle a ~neotree~ left side panel
+   window from any open buffer window using a single key...
+   Type: ~C-c d~ /(normal Emacs mode)/
+
+   =Note:= I have been using bookmarks pretty nicely for a while
+         now and not using this neotree feature all that much...
+         but it is a quick way to navigate from your current
+         buffer/location when you are NOT within dired...
+         Your mileage may vary...
+
+\newpage
+
+*** dev§Ops, sys§Admin, info✷Sec Related Packages:
+
+- [[https://github.com/fourier/ztree][ztree]] - *Ztree* is a project dedicated to implementation of several
+   *text-tree* applications inside *GNU Emacs*. It consists of 2
+   subprojects: ~ztree-diff~ and ~ztree-dir~ /(the basis of ztree-diff)/...
+
+   The *ztree-diff* utility configured to work nicely within *HAP Modular*
+   *Emacs* and clean up afterwards... /(still workng on the clean up part ;-)/
+
+- [[https://www.emacswiki.org/emacs/SmartTabs][smart-tabs-mode]] - Intelligent tabs to end the f***ing tabs vs
+   spaces war already =OK?= Click the Link & Read the docs... :-)
+
+   =THIS PACKAGE HAS BEEN DISABLED= Over the years I have found
+   smart-tabs to be quite dyslexic and problematic.. For a while
+   now, I simply disable TABs normally in Emacs and set indent
+   space to 3 chars for the default... Other modes/packages have
+   their own automatic ways to prettify the code... So I believe
+   I am all set NOT using smart-tabs-mode going forward Q4 2022...
+
+   =IF YOU WOULD LIKE= to enable smart-tabs-mode =THEN:=
+
+   =Edit:= ~~/.emacs.d/lisp/modules/04-devOps-pkg-conf.el~  
+
+   and remove the coment from the line below:
+
+   #+begin_src elisp
+     (defvar me--req-devops-packages
+       '(ztree
+     ;    smart-tabs-mode  ;; DISABLED while exploring other options...
+         ssh-config-mode
+         yaml-mode
+         nginx-mode
+         php-mode          ;; SOON to be REPLACED
+         indent-tools
+         logview))
+   #+end_src
+
+   /(also un-comment any smart-tabs related configs/
+    /further down the page. Search for Heading Comments)/
+
+- [[https://github.com/jhgorrell/ssh-config-mode-el][ssh-config-mode]] - A mode to edit SSH config files. If you
+   edit those files you will see nice colors of keywords etc.
+
+- [[https://github.com/emacs-php/php-mode][php-mode]] - Major mode for editing PHP code. This just works
+   on PHP files alone... I am using xah-lee configs for all
+   other web, JS, Yaml, etc... Xah is working on a php-mode...
+   When that is finished I will most likely adopt it to
+   match all the other web modes...
+
+- yaml-mode - 
+- nginx-mode - 
+- indent-tools - 
+- logview - 
+
+\newpage
+
+* 📅 LOG:
+:PROPERTIES:
+:CUSTOM_ID: HAP_README-Doc-Skeleton_LOG
+:END:
+** 📅 2022:
+*** NEW 🗓 LOG: <2021-03-29 Mon> Generic Title /(General Log Entry Template)/
+:README:
+   - *Go To One of the HEADINGS Below:* /(Summary, Details, or Sub Headings)/
+
+      =Punch the Time Clock= At the heading And then begin working on a task related to that Heading... =Your Time IS being Recorded Now= 
+
+   - =Use These Commands:= /as you work to keep track your time.../
+
+      + *Clock IN:* ~C-c C-x C-i~ 
+
+                    /(Begin OR Resume Clocking Current task)/
+
+                    This creates a new :CLOCKING: Time Card Entry just
+                    underneath the HEADING...
+
+                    Do this just before starting work on the task... 
+                    Be in control of your life!
+
+                    After doing the above, you can go away and do some 
+                    work, leaving this heading, log note, etc. to visit 
+                    other files and/or work on them etc. The clock will 
+                    be recording your time all the while... You will see 
+                    in your mode line the elapsed clock time ticking away 
+                    as you work on a task /(hopefully related to this clock!)/
+                    and NOT Yac Shaving or being sidetracked!!!
+
+      + *RETURN to Clock Heading:* ~C-c C-x C-j~
+
+                        /Go back to the place where you started the clock.../
+
+                        You do this after you have worked on a task for a 
+                        while and you need to come back to update the item's
+                        info etc., and/or stop the clock before going off to 
+                        do something else unrelated to the log entry...
+
+      + *Clock OUT:* ~C-c C-x C-o~ /(to stop clocking your time on task)/
+
+                      This *Finalizes the Time Card Entry* within:
+                      ~:CLOCKING:~ /(created earlier when you started the/ 
+                      /clock)/...
+
+                      The Clock Entry changes showing start timestamp, end timestamp, and total time worked during this segment...  
+
+                      =Please DON'T Forget= /Like I often do, LOL.../ i.e.,
+                      Leaving a clock running all day by accident, or worse,
+                      leave it dangling with the file closed only to open it
+                      again and get that nasty *Org-Mode Message:* /"What do/
+                      /you want to do with this?"/ If you do something like 
+                      that you can always come back and directly edit the 
+                      clock times by hand to amend them...  After changing 
+                      clock times or dates, etc... Whatever...
+
+                      ="Onward We Row Mates... Through the log jam!"=
+
+      + *Update Time Card Entry:* ~C-c C-c~ 
+
+                  This command will change the total time at the end showing 
+                  your new calculated time...
+
+                  If you need to go away and do something else before finishing this task, you can do so after clocking out... When you come back simply clock back in again to start another Time Card Entry just as before... The new time card entry will appear above the earlier one within the ~:CLOCKING:~ drawer... When you clock out of this task it will look just like the entry below it with a total time worked tagged on the end...
+
+      + *Clock Out & Mark Items Done:* ~C-c C-t~
+
+            When you are all done with a Log Entry use the above key 
+            command to mark its Heading *TODO* tag to: *DONE* /(Most of the/ 
+            /time this will ALSO clock you out if you are still clocked/ 
+            /into the item... But not allways in my experience.../  
+            So make sure you are also clocked OUT of an Item After 
+            marking it DONE... Type: ~C-c C-x C-j~ to check this...
+            /(if no running clock it will tell you and place your/
+            /cursor at the heading where you LAST CLOCKED OUT)/
+
+      + ~C-c C-x C-q~ *Cancel Current Clock:* /(in case of accident)/
+
+                      This removes currently running clock and forgets 
+                      any time accrued or associated with it...
+
+      + ~C-c C-x C-d~ *Display Clocking Info:* 
+
+                      /This will show elapsed times to the right of headings.../
+                      =Warning!= Using this command will CLUTTER ALL the headings
+                                within your org file with those timestamps!!!
+
+   - Once all of this has become routine for you, =go ahead and remove this= ~README~ =drawer from this template=... That way it does not get copied when you need to clone new log entries...
+:END:
+
+This Log Entry is about: Yadda... Yadda... Yadda...
+
+\newpage
+
+**** NEW 📚 Reference:
+
+- *Link to Project:* [[][] ]
+
+- [[URL][Link Name] ] *Heading:* /(comment)/
+
+- [[][] ] - *_:* /(yadda...)/
+
+- [[][] ] - *_:* /(yadda...)/
+
+- [[][] ] - *_:* /(yadda...)/
+
+- [[][] ] /(_)/
+
+- [[][] ] /(_)/
+
+- [[][] ] /(_)/
+
+\newpage
+
+**** NEW ⏱ Time Card:
+
+#+BEGIN: clocktable :scope tree3 :maxlevel 6 :tstart "<-1w>" :tend "<+1m>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3
+#+END:
+
+\newpage
+
+**** NEW 📃 Summary: [0/3]
+:README:
+   This Summary is mostly to help you find things later when you cannot remember when or where is was done... If you go to the top of this file and expand all headings to show ALL content, then do a search on "~Summary:~" you will be able to quickly scroll through and scan these summaries quickly to find what you were looking for... 
+
+   Also the *Time Card* /displayed above/ each search hit will give more clues by showing important headings you worked on...
+
+   Below is an optional list /(that could also provide links)./ This list could be used to itemize things you worked on, but I personally find it easier to simply write a short one or two line description containing important keywords right here and nothing more. I think that is more useful...
+:END:
+
+Yadda... Yadda... Yadda...
+
+1. [ ] *__:*
+
+2. [ ] *__:*
+
+3. [ ] *__:*
+
+\newpage
+
+**** NEW 📰 Details:
+***** NEW New Item 1 /(placeholder)/ [0/3]
+
+- [ ] *__:* /(__)/
+
+      #+begin_src conf
+       root@web1:~$ 
+       admin@web1:~$ 
+      #+end_src
+
+- [ ] *__:* /(__)/
+
+      #+begin_src conf
+       admin@web1:~$ 
+       admin@web1:~$ 
+      #+end_src
+
+- [ ] *__:* /(__)/
+
+      #+begin_src conf
+       user@home:~$ 
+       user@home:~$ 
+      #+end_src
+
+\newpage
+
+***** NEW New Item 2 /(placeholder)/ [0/3]
+
+- [ ] *__:* /(__)/
+
+      #+begin_src conf
+       root@web1:~$ 
+       root@web1:~$ 
+      #+end_src
+
+- [ ] *__:* /(__)/
+
+      #+begin_src conf
+       admin@web1:~$ 
+       admin@web1:~$ 
+      #+end_src
+
+- [ ] *__:* /(__)/
+
+      #+begin_src conf
+       user@home:~$ 
+       user@home:~$ 
+      #+end_src
+
+\newpage
+
+***** NEW New Item 3 /(placeholder)/ [0/3]
+
+- [ ] *__:* /(__)/
+
+      #+begin_src conf
+       root@web1:~$ 
+       root@web1:~$ 
+      #+end_src
+
+- [ ] *__:* /(__)/
+
+      #+begin_src conf
+       admin@web1:~$ 
+       admin@web1:~$ 
+      #+end_src
+
+- [ ] *__:* /(__)/
+   
+      #+begin_src conf
+       user@home:~$ 
+       user@home:~$ 
+      #+end_src
+
+\newpage
+
+* 📋 Meta: /(Usage & Templates)/
+** 📄 Introduction:
+:README:
+   Use this Standard README /(template)/ as a multi purpose README document
+   as a Start Here First Document for any kind of project...
+
+   I stopped using Markdown files for this purpose a few years ago... This makes total sense as *Org-Mode* was designed exclusively for such things! *Markdown* is great for composing content intended for web pages etc.  But =Emacs Org Mode is Vastly Superior as a Publishing Environment=, with many features and power, completely agnostic of final publishing format... Whereas markdown mode excels doing one thing only... Translating author structured plain text into beautiful web pages... /(which is a good thing)/
+
+   I finally bit the long curve bullet and learned Emacs Org Mode /(after many many many years of using Emacs without it!)/ Today, looking back with current knowledge to me is like going back to a /"*Dec VT220* green screen *dumb terminal*"/ after experiencing *X Windows* on a Big *HP-UX Workstation!*
+
+   Yeah, that's a personal story from the past, lol... All you Mac users out there, please realize that your beautiful Apple desktop is in fact an *HP-UX Motif X-Windows widget set clone*!  That's what Steve Jobs believed to be the best X-Windows tool-kit of the day /(when he was building the NeXT computer)/...  So... Yup he copied that! The Applications Doc at the bottom of your screen is a dead giveaway. Hewlet Packard was first to use such UI concepts... /(back before the dawning of the web we loved those HPUX Workstations!)/
+:END:
+
+*** Emacs Shorthand Command Key Notation:
+
+The command key conventions used in the instructions below, /(as well as all *Harmonic Alchemy Productions* docs)/, follow *Standard Emacs* command key naming conventions.
+
+Official GNU Emacs documentation uses a shorthand notation to indicate the *Ctrl* key as an upper case *C-* (/with minus appended/). Upper case *M-* (/with minus appended/) is the shorthand notation for the Emacs *META* key...
+
+*** Important Note For Mac Users:
+
+On Mac OS, *Modular Emacs* maps your *Ctrl* key to the *Apple Command* key. Emacs *META* is mapped to both *Alt* and *Ctrl* keys... Outside of Emacs all those keys function normally.  
+
+Therefore, for Mac users, anytime you either see *C-* or *Ctrl* below, use your *Apple Command* key for that when using Modular Emacs.  Anytime you see either *M-* or *META* below, use *Alt* or *Ctrl* keys for that when using Modular Emacs. 
+
+Anytime you are using Modular Emacs following instructions from standard vanilla Emacs docs, keep in mind your ~Ctrl~ and ~META~ keys are not /"standard"/ anymore and you must make a mental translation.  Beyond that, you will be fine following other emacs tutorials etc.  Hey... you Mac enthusiasts are used to that kind of /"being different"/ stuff anyway, right? Being one of /"the rest of us"/ that is... What the heck does that mean anyway? LOL
+
+The above key assignments were done to get the *Emacs C-* key closer to the space bar where it can be activated with your left thumb instead of contorting to get at it with your pinkie finger. This makes using *Xah Fly Keys* even easier to use and less stressful on your fingers...
+
+In the Official Emacs documentation you will commonly find key command notations such as *C-x* or *M-x*... This means: Hold the *Ctrl* /(or *META*)/ key down while typing the *x* key.  
+
+Any time you see this notation, regardless of what key may be connected to it with a dash /(e.g., *C-c*, *M-5*, etc.)/, this means to hold the *Ctrl*-or-*META* key down while you press the other key connected to it with the dash... If you have a command that includes many *C-key* or *M-key* commands in succession simply hold the *Ctrl*-or-*META* key down the entire time you type the other keys and then let go...
+
+If you see other keys alone separated by a space after the *C-x* or *M-x* /(e.g., C-x *d*, M-x *b*, etc.)/ this means to type that key /AFTER/ letting go of the *Ctrl*-or-*META* key...
+
+*Got that?* That's the key notation system we use here... It is all standard Emacs...  The above paragraphs are mostly for the benefit of new Emacs users! And there is more to learn below. If you are an Emacs/Org-Mode veteran please bear with us...
+
+\newpage
+
+*** Org Mode Timestamps and Clocking:
+
+This Template utilizes the default *Org-Mode:* "*C-c* ." command /(i.e., That's Ctrl-c and then type a dot. This Enters a timestamp range at the cursor position)/. The command employs *org-evaluate-time-range* to compute time on task.  This is useful for timesheets etc. 
+
+In addition, the *Log Entry (template)* stores and tracks *Org-Mode :CLOCKING:* entries and displays results in a *Time Card Table* with total time computed... 
+
+Common time clocking commands are defined within the *Log Entry (template)* itself. Any time you need to look up clocking commands, open the *:README:* drawer under the *Log Entry (template)* heading by placing your cursor over it and hitting *TAB*.
+
+Additional commands for using *Org-Mode* with Modular Emacs will be explained here if needed, as well as other *Harmonic Alchemy Modular Emacs Templates* that get produced in the future...
+
+\newpage
+
+** ❔ HowTo:
+:README:
+   This README Doc Template is being designed as these docs are being written...  At first much of the design is being done /manually/ while formats, concepts, are tried and tested.  Eventually much of the instructions below will become much simpler as there will be capture templates, and processes in place that replace the need to manually copy/paste things as we are doing initially below...  
+
+   =Please bear with the author/architect as she makes up her mind about how to do things in here...=  *Org-mode, LaTeX options are vast!* Not to mention a sea of extra packages that could be tried out... /I feel like I am re-inventing wheels within rabbit holes!/ lol
+:END:
+
+\newpage
+*** Create New Log Entry within the *📒 Begin Log:* Binder:
+**** =Clone:= "LOG: <2021-03-29 Mon> Generic Title" /(from ⎘ Templates: binder)/
+
+- [ ] =Select the Heading= /(named above)/ from the Templates: Heading, using 
+   normal Emacs selection methods. i.e., Type ~t~ key to set the mark 
+   for selection, /(xah-fly-keys Command/ /Mode)/ or use ~C-SPACE~ /(normal Emacs)/, and move the point to get the entire heading, and all of its contents, but NOTHING else... and copy it...
+
+   =Note:= Before Copying Selected Text, ensure your cursor is at the
+         end of it BUT not be part of any items after it... Placing
+         your cursor on the first column of the next line will include
+         the invisible new-line character which is what you want, but
+         any text directly under the cursor on the next line will not
+         be copied...  Later, after pasting this text somewhere else,
+         your cursor will end up sitting on the first column of a
+         blank line under the pasted text. /(exactly as intended)/
+
+- [ ] =Complete the Copy Operation= Type ~c~ /(xah-fly-keys Command Mode)/. This 
+   will save the selection for pasting later, /(the highlighted text will go/ 
+   /back to normal)/... You should have gotten only the Single LOG Entry with
+   ALL its contents, BUT nothing else below it...
+
+   =Note:= If you type: "*spacebar t*" /(xah-fly-keys leader key command)/ 
+          it will show you the contents of your paste buffer...  You 
+          can see the LAST item you copied in there AT THE TOP...  
+          To get out of the paste buffer view, type: "*spacebar u*" and 
+          it will return you to where you were before...
+
+\newpage
+
+**** =Paste Cloned LOG Entry:=
+
+- [ ] =Advance cursor= to a blank line just below the LAST Most Recent
+      LOG entry under heading *📅 2022* within the *📒 Begin Log:* section,
+      and press *ENTER* a couple times to get your cursor on a fresh
+      clean line with some extra space above and below it...
+      /(Below any previously time stamped entries you may already/
+      /have placed)/...
+
+- [ ] =Press:= ~v~ /(xah-fly-keys Command Mode)/ to paste your cloned Log
+      Entry template... If you find out that what you copied also
+      included some unwanted text directly below it, no problems...
+      Just delete that part now... 
+
+      =Note:= If you accidentally copied one or more previously
+            invisible bullets to column one on a blank line they
+            will create an invisible "ghost" heading that you will
+            now need to delete...
+            
+            You will know this if you see an org-ellipsis "⤵" symbol
+            on a line by itself indicating a heading but no text...
+            Simply delete that whole line and it will go away...
+            Now you are ready to compose your new log entry...
+
+\newpage
+
+**** Edit-Compose New LOG Entry:
+
+=Note:= If this is your first time using this log, don't bother cloning a 
+       NEW log entry as there is a dummy boilerplate placeholder Log 
+       Entry ALREADY in place for you to use...
+       /(initially there as an example)/
+
+       The instructions below for modifying the Boilerplate Log Entry, or 
+       Editing a new Cloned Log Entry Template are pretty much the same...
+       /(differences will be noted in instructions below)/
+
+- [ ] =Place cursor directly on the existing timestamp= of the NEW Log
+     Entry, and enter the key binding: ~C-c .~
+     /(i.e., press/ ~Ctrl~ /key while holding/ ~c~ /and then type a dot ~.~ /)/
+     A date chooser panel will pop up...
+
+- [ ] =Type one more dot:= ~.~ to force the calendar selection to the
+     current time and date and then, Press ~ENTER~ to accept your
+     choice... /This will update the existing older timestamp with/
+     /the current date/time.../ Check to make sure the timestamp was
+     properly updated and then move on to the next step... This
+     timestamp will not be updated after that.  It records the
+     initial time of your new log entry to the Day and time you
+     first created it...
+
+- [ ] =You are now ready to start= making entries within your New Log
+     Entry... Your timestamp indicates the present, /-and-/ you are
+     all set to begin recording timef...
+
+- [ ] =Follow the= ~:README:~ directions within the Time Card section
+     contained within your fresh new log entry to learn how to
+     /"clock in"/ and /"clock out"/ of your log entry as you work on
+     the tasks...
+
+\newpage
+
+**** Enter New LOG Entry Details:
+
+Two sub headings have been provided for your use /(if you need them)/. However, you may structure your log entries any way you wish.  The two provided headings:  *Summary* and *Details* are simply suggestions to help make your log entries a bit more organized...
+
+The *Summary* heading could be used to log the main executive summary points, /(which you would include in the exported PDF as a report to give to your boss or clients)/. 
+
+Conversely, the *Details* heading could contain a complete, thorough log of your work, which would be excluded from the final PDF report.  Everything under *Details* heading would be extra information that you don't want to bother your clients or boss with /(unless they ask for more detail of course)/. In that case, you will have it all recorded and organized for easy access later if needed...
+
+Place the *:noexport:* tag at the end of any org outline heading to exclude it and all its children from the PDF upon export...  You can add as much detail as you need within these excluded sections without cluttering up your final PDF.  The entire main heading: *How to Use this Template:* is already excluded from the final PDF, so it can be left in and your PDF will only include the *Begin Log:* section...
+
+*** Export README as a PDF Document:
+
+For some use-cases you may need to see this README file in PDF format...
+
+you can export this README.org file as a PDF using the following custom key command: ~SPACE e p~ /(i.e., press ~spacebar~, type ~e~ and then ~p~)/ Xah-Fly-Keys Command Mode extended leader key sequence...
+
+\newpage
+
+** ⎘ Templates:
+*** NEW 🗓 LOG: <2021-03-29 Mon> Generic Title /(General Log Entry Template)/
+:README:
+   - *Go To One of the HEADINGS Below:* /(Summary, Details, or Sub Headings)/
+
+      =Punch the Time Clock= At the heading And then begin working on a task related to that Heading... =Your Time IS being Recorded Now= 
+
+   - =Use These Commands:= /as you work to keep track your time.../
+
+      + *Clock IN:* ~C-c C-x C-i~ 
+
+                    /(Begin OR Resume Clocking Current task)/
+
+                    This creates a new :CLOCKING: Time Card Entry just
+                    underneath the HEADING...
+
+                    Do this just before starting work on the task... 
+                    Be in control of your life!
+
+                    After doing the above, you can go away and do some 
+                    work, leaving this heading, log note, etc. to visit 
+                    other files and/or work on them etc. The clock will 
+                    be recording your time all the while... You will see 
+                    in your mode line the elapsed clock time ticking away 
+                    as you work on a task /(hopefully related to this clock!)/
+                    and NOT Yac Shaving or being sidetracked!!!
+
+      + *RETURN to Clock Heading:* ~C-c C-x C-j~
+
+                        /Go back to the place where you started the clock.../
+
+                        You do this after you have worked on a task for a 
+                        while and you need to come back to update the item's
+                        info etc., and/or stop the clock before going off to 
+                        do something else unrelated to the log entry...
+
+      + *Clock OUT:* ~C-c C-x C-o~ /(to stop clocking your time on task)/
+
+                      This *Finalizes the Time Card Entry* within:
+                      ~:CLOCKING:~ /(created earlier when you started the/ 
+                      /clock)/...
+
+                      The Clock Entry changes showing start timestamp, end timestamp, and total time worked during this segment...  
+
+                      =Please DON'T Forget= /Like I often do, LOL.../ i.e.,
+                      Leaving a clock running all day by accident, or worse,
+                      leave it dangling with the file closed only to open it
+                      again and get that nasty *Org-Mode Message:* /"What do/
+                      /you want to do with this?"/ If you do something like 
+                      that you can always come back and directly edit the 
+                      clock times by hand to amend them...  After changing 
+                      clock times or dates, etc... Whatever...
+
+                      ="Onward We Row Mates... Through the log jam!"=
+
+      + *Update Time Card Entry:* ~C-c C-c~ 
+
+                  This command will change the total time at the end showing 
+                  your new calculated time...
+
+                  If you need to go away and do something else before finishing this task, you can do so after clocking out... When you come back simply clock back in again to start another Time Card Entry just as before... The new time card entry will appear above the earlier one within the ~:CLOCKING:~ drawer... When you clock out of this task it will look just like the entry below it with a total time worked tagged on the end...
+
+      + *Clock Out & Mark Items Done:* ~C-c C-t~
+
+            When you are all done with a Log Entry use the above key 
+            command to mark its Heading *TODO* tag to: *DONE* /(Most of the/ 
+            /time this will ALSO clock you out if you are still clocked/ 
+            /into the item... But not allways in my experience.../  
+            So make sure you are also clocked OUT of an Item After 
+            marking it DONE... Type: ~C-c C-x C-j~ to check this...
+            /(if no running clock it will tell you and place your/
+            /cursor at the heading where you LAST CLOCKED OUT)/
+
+      + ~C-c C-x C-q~ *Cancel Current Clock:* /(in case of accident)/
+
+                      This removes currently running clock and forgets 
+                      any time accrued or associated with it...
+
+      + ~C-c C-x C-d~ *Display Clocking Info:* 
+
+                      /This will show elapsed times to the right of headings.../
+                      =Warning!= Using this command will CLUTTER ALL the headings
+                                within your org file with those timestamps!!!
+
+   - Once all of this has become routine for you, =go ahead and remove this= ~README~ =drawer from this template=... That way it does not get copied when you need to clone new log entries...
+:END:
+
+This Log Entry is about: Yadda... Yadda... Yadda...
+
+\newpage
+
+**** NEW 📚 Reference:
+
+- *Link to Project:* [[][] ]
+
+- [[URL][Link Name] ] *Heading:* /(comment)/
+
+- [[][] ] - *_:* /(yadda...)/
+
+- [[][] ] - *_:* /(yadda...)/
+
+- [[][] ] - *_:* /(yadda...)/
+
+- [[][] ] /(_)/
+
+- [[][] ] /(_)/
+
+- [[][] ] /(_)/
+
+\newpage
+
+**** NEW ⏱ Time Card:
+
+#+BEGIN: clocktable :scope tree3 :maxlevel 6 :tstart "<-1w>" :tend "<+1m>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3
+#+END:
+
+\newpage
+
+**** NEW 📃 Summary: [0/3]
+:README:
+   This Summary is mostly to help you find things later when you cannot remember when or where is was done... If you go to the top of this file and expand all headings to show ALL content, then do a search on "~Summary:~" you will be able to quickly scroll through and scan these summaries quickly to find what you were looking for... 
+
+   Also the *Time Card* /displayed above/ each search hit will give more clues by showing important headings you worked on...
+
+   Below is an optional list /(that could also provide links)./ This list could be used to itemize things you worked on, but I personally find it easier to simply write a short one or two line description containing important keywords right here and nothing more. I think that is more useful...
+:END:
+
+Yadda... Yadda... Yadda...
+
+1. [ ] *__:*
+
+2. [ ] *__:*
+
+3. [ ] *__:*
+
+\newpage
+
+**** NEW 📰 Details:
+***** NEW New Item 1 /(placeholder)/ [0/3]
+
+- [ ] *__:* /(__)/
+
+      #+begin_src conf
+       root@web1:~$ 
+       admin@web1:~$ 
+      #+end_src
+
+- [ ] *__:* /(__)/
+
+      #+begin_src conf
+       admin@web1:~$ 
+       admin@web1:~$ 
+      #+end_src
+
+- [ ] *__:* /(__)/
+
+      #+begin_src conf
+       user@home:~$ 
+       user@home:~$ 
+      #+end_src
+
+\newpage
+
+***** NEW New Item 2 /(placeholder)/ [0/3]
+
+- [ ] *__:* /(__)/
+
+      #+begin_src conf
+       root@web1:~$ 
+       root@web1:~$ 
+      #+end_src
+
+- [ ] *__:* /(__)/
+
+      #+begin_src conf
+       admin@web1:~$ 
+       admin@web1:~$ 
+      #+end_src
+
+- [ ] *__:* /(__)/
+
+      #+begin_src conf
+       user@home:~$ 
+       user@home:~$ 
+      #+end_src
+
+\newpage
+
+***** NEW New Item 3 /(placeholder)/ [0/3]
+
+- [ ] *__:* /(__)/
+
+      #+begin_src conf
+       root@web1:~$ 
+       root@web1:~$ 
+      #+end_src
+
+- [ ] *__:* /(__)/
+
+      #+begin_src conf
+       admin@web1:~$ 
+       admin@web1:~$ 
+      #+end_src
+
+- [ ] *__:* /(__)/
+   
+      #+begin_src conf
+       user@home:~$ 
+       user@home:~$ 
+      #+end_src
+
+\newpage
+
