@@ -126,7 +126,7 @@ I am a systems architect, dev♺Ops engineer, computer scientist, composer/music
 
 ** History & Purpose:
 
-The history of *Harmonic Alchemy Modular Emacs* is /"a confusing journey through many little twisty passages, all alike"/... [[./Docs/ModE-History.md][Everything is documented here now]]...  Read it at your leasure.  It provides some perspective, insight, and purpose behind how and why things are done here in the present time.
+The history of *Harmonic Alchemy Modular Emacs* is /"a confusing journey through many little twisty passages, all alike/... [[./Docs/ModE-History.md][Everything is documented here now]]...  Read it at your leasure.  It provides some perspective, insight, and purpose behind how and why things are done here in the present time.
 
 \newpage
 
@@ -173,7 +173,7 @@ I have been testing this project to see if it can successfully run on older lega
 
 I am committed to making this *process/journey* as painless as possible for you as I have found many other Emacs setups to be way to complicated to make it easy for adoption into my workflow, and you are probably experiencing the same!  On the other end of the spectrum... Installing basic Emacs alone is not enough to get you started _(IMHO)_...  I set it up that way to get you up and running with a simple setup first... You should quickly outgrow that and certainly want to enable the extra features!  
 
-Therefore I hope to make that process reasonably easy to do!  The whole purpose of this project is to be able to easily grow and shrink features as needed in any combination thereof... Without /"getting lost in a tangled mess of twisty little passages all alike!"/
+Therefore I hope to make that process reasonably easy to do!  The whole purpose of this project is to be able to easily grow and shrink features as needed in any combination thereof... Without /"getting lost in a tangled mess of twisty little passages all alike!/
 
 If you end up liking *Harmonic Alchemy Modular Emacs*, please drop me a note to let me know! Please do ask questions, open issues, etc.  Thanks!  I have been using Emacs since around 1986/87 /(OMG that long! off-and-on with gaps in between ;-)/ but I never shared any of that Emacs knowledge with anyone before now... :heart_decoration:  
 
@@ -269,7 +269,7 @@ I am no longer using Markdown as my go-to doc format for anything except WebSite
 
 *Harmonic Alchemy Modular Emacs* will run fine without Pandoc installed on your machine, and in fact is not even used internally... Pandoc exists as an external tool you may need from time to time to convert from one format to another when *Emacs* or *Org-Mode* cannot perform the same thing internally...
 
-Therefore, instructions for getting Pandoc installed on your platform are included here but it is not required for operation... It is /"Extra for Experts"/ :octocat:
+Therefore, instructions for getting Pandoc installed on your platform are included here but it is not required for operation... It is /"Extra for Experts/ :octocat:
 
 *Read the docs for Pandoc* to decide how to use them. More instructions for installing and using Pandoc can be [[https://pandoc.org/installing.html][found on the Pandoc Official Website]]...
 
@@ -658,10 +658,10 @@ the welcome text... /(which are lisp comments)/
       user configurable functions made available within Emacs are
       /(to my eyes)/ the Beauty of Form and Function in action!
 
-      The prase /"Form follows function"/ has been misunderstood...
+      The prase /"Form follows function/ has been misunderstood...
       
          /"Form and function should be one, joined in a/
-          /spiritual union."/ - Frank Lloyd Wright...
+          /spiritual union./ - Frank Lloyd Wright...
 
 - [[https://github.com/bmag/imenu-list][imenu-list]] *Right panel Menu and Variable list*
    
@@ -989,8 +989,8 @@ The following doc with guide you through that process:
                       =Please DON'T Forget= /Like I often do, LOL.../ i.e.,
                       Leaving a clock running all day by accident, or worse,
                       leave it dangling with the file closed only to open it
-                      again and get that nasty *Org-Mode Message:* /"What do/
-                      /you want to do with this?"/ If you do something like 
+                      again and get that nasty *Org-Mode Message:* /What do/
+                      /you want to do with this?/ If you do something like 
                       that you can always come back and directly edit the 
                       clock times by hand to amend them...  After changing 
                       clock times or dates, etc... Whatever...
@@ -1163,7 +1163,7 @@ Yadda... Yadda... Yadda...
 
    I stopped using Markdown files for this purpose a few years ago... This makes total sense as *Org-Mode* was designed exclusively for such things! *Markdown* is great for composing content intended for web pages etc.  But =Emacs Org Mode is Vastly Superior as a Publishing Environment=, with many features and power, completely agnostic of final publishing format... Whereas markdown mode excels doing one thing only... Translating author structured plain text into beautiful web pages... /(which is a good thing)/
 
-   I finally bit the long curve bullet and learned Emacs Org Mode /(after many many many years of using Emacs without it!)/ Today, looking back with current knowledge to me is like going back to a /"*Dec VT220* green screen *dumb terminal*"/ after experiencing *X Windows* on a Big *HP-UX Workstation!*
+   I finally bit the long curve bullet and learned Emacs Org Mode /(after many many many years of using Emacs without it!)/ Today, looking back with current knowledge to me is like going back to a /"*Dec VT220* green screen *dumb terminal*/ after experiencing *X Windows* on a Big *HP-UX Workstation!*
 
    Yeah, that's a personal story from the past, lol... All you Mac users out there, please realize that your beautiful Apple desktop is in fact an *HP-UX Motif X-Windows widget set clone*!  That's what Steve Jobs believed to be the best X-Windows tool-kit of the day /(when he was building the NeXT computer)/...  So... Yup he copied that! The Applications Doc at the bottom of your screen is a dead giveaway. Hewlet Packard was first to use such UI concepts... /(back before the dawning of the web we loved those HPUX Workstations!)/
 :END:
@@ -1180,7 +1180,7 @@ On Mac OS, *Modular Emacs* maps your *Ctrl* key to the *Apple Command* key. Emac
 
 Therefore, for Mac users, anytime you either see *C-* or *Ctrl* below, use your *Apple Command* key for that when using Modular Emacs.  Anytime you see either *M-* or *META* below, use *Alt* or *Ctrl* keys for that when using Modular Emacs. 
 
-Anytime you are using Modular Emacs following instructions from standard vanilla Emacs docs, keep in mind your ~Ctrl~ and ~META~ keys are not /"standard"/ anymore and you must make a mental translation.  Beyond that, you will be fine following other emacs tutorials etc.  Hey... you Mac enthusiasts are used to that kind of /"being different"/ stuff anyway, right? Being one of /"the rest of us"/ that is... What the heck does that mean anyway? LOL
+Anytime you are using Modular Emacs following instructions from standard vanilla Emacs docs, keep in mind your ~Ctrl~ and ~META~ keys are not /standard/ anymore and you must make a mental translation.  Beyond that, you will be fine following other emacs tutorials etc.  Hey... you Mac enthusiasts are used to that kind of /being different/ stuff anyway, right? Being one of /the rest of us/ that is... What the heck does that mean anyway? LOL
 
 The above key assignments were done to get the *Emacs C-* key closer to the space bar where it can be activated with your left thumb instead of contorting to get at it with your pinkie finger. This makes using *Xah Fly Keys* even easier to use and less stressful on your fingers...
 
@@ -1300,7 +1300,7 @@ Additional commands for using *Org-Mode* with Modular Emacs will be explained he
 
 - [ ] =Follow the= ~:README:~ directions within the Time Card section
      contained within your fresh new log entry to learn how to
-     /"clock in"/ and /"clock out"/ of your log entry as you work on
+     /clock in/ and /clock out/ of your log entry as you work on
      the tasks...
 
 \newpage
@@ -1370,8 +1370,8 @@ you can export this README.org file as a PDF using the following custom key comm
                       =Please DON'T Forget= /Like I often do, LOL.../ i.e.,
                       Leaving a clock running all day by accident, or worse,
                       leave it dangling with the file closed only to open it
-                      again and get that nasty *Org-Mode Message:* /"What do/
-                      /you want to do with this?"/ If you do something like 
+                      again and get that nasty *Org-Mode Message:* /What do/
+                      /you want to do with this?/ If you do something like 
                       that you can always come back and directly edit the 
                       clock times by hand to amend them...  After changing 
                       clock times or dates, etc... Whatever...
