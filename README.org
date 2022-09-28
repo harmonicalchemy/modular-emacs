@@ -199,7 +199,7 @@ To install Harmonic Alchemy Modular Emacs for the first time, follow this guide 
 *** Requirements:  
 **** Clone This Repository:
 
-Clone this repository into your ~$HOME~ directory as: ~me.init.d~. The ~me.~ prefix /(for Modular Emacs)/ is put there so that it will not overwrite your existing ~~/.emacs.d~ directory /(if you already use Emacs, which you will still need operational)/.  We will rename this folder later after all other requirements are complete...
+Clone this repository into your ~$HOME~ directory as: ~me.init.d~. The ~me.~ prefix /(for Modular Emacs)/ is put there so that it will not overwrite your existing ~$HOME/.emacs.d~ directory /(if you already use Emacs, which you will still need operational)/.  We will rename this folder later after all other requirements are complete...
 
 Issue the following command within your default *terminal* application:
 
@@ -219,14 +219,14 @@ Many of the default packages installed with this project will not work with olde
          it may break after you update Emacs below... Therefore before
          installing a brand new version of Emacs it may be a wise idea
          to save your current emacs environment, e.g., ~.emacs~,
-         ~~/.emacs.d~, etc... as well as a copy of your old *Emacs*
+         ~$HOME/.emacs.d~, etc... as well as a copy of your old *Emacs*
          Application...
 
          This is for a safety net, Do NOT delete your existing setup...
          You still need your existing Emacs working wile you are getting
          all the requirements below together for Modular Emacs... 
 
-- [ ] *Copy/Clone your entire:* ~~/.emacs.d~ directory and/or ~~/.emacs file~,
+- [ ] *Copy/Clone your entire:* ~$HOME/.emacs.d~ directory and/or ~$HOME/.emacs file~,
      as well as a copy of your old *Emacs* application into a temporary
      directory of your choice before upgrading below... /(or compress/
      /and make a/ ~.zip~ /or/ ~.gz~ /archive file)/
@@ -366,7 +366,7 @@ If you DO have Graphvix installed... When you visit a ~.dot~ file, you can compi
      extra features/modules of your own that you may wish to bring to
      the rest of the Modular Emacs user community!
 
-- [ ] *FINAL STEP - Make Modular Emacs Folder the DEFAULT ~~/.emacs.d~ Folder:*  
+- [ ] *FINAL STEP - Make Modular Emacs Folder the DEFAULT ~$HOME/.emacs.d~ Folder:*  
 
      At the very beginning of this guide, you were advised to copy your
      existing Emacs setup first.  I hope you did that because now you are
@@ -374,24 +374,24 @@ If you DO have Graphvix installed... When you visit a ~.dot~ file, you can compi
      Harmonic Alchemy Modular Emacs!  
 
      Therefore if you did not backup, FIRST make sure to rename /(save)/
-     your existing: ~~/.emacs.d~ to: ~~/save.emacs.d~ /(if you did not do/
+     your existing: ~$HOME/.emacs.d~ to: ~$HOME/save.emacs.d~ /(if you did not do/
      /this in the beginning)/ You may also have a ~.emacs~ init file outside
      of the ~.emacs.d~ folder that also needs to be renamed!
      =This is very important!= Becase the next steps will overwrite them
      if you did not change their names!!!
 
-     Now you are ready to rename: ~~/me.emacs.d~ to: ~~/.emacs.d~
+     Now you are ready to rename: ~$HOME/me.emacs.d~ to: ~$HOME/.emacs.d~
 
       #+begin_src bash
         mv ~/me.emacs.d ~/.emacs.d
       #+end_src
 
-     ~~/.emacs.d~ is now your new *Modular Emacs Local Repository* which
+     ~$HOME/.emacs.d~ is now your new *Modular Emacs Local Repository* which
      is also now your default *emacs* home directory! 
 
-     =One last sanity check=... Make sure you no longer have a ~~/.emacs~
+     =One last sanity check=... Make sure you no longer have a ~$HOME/.emacs~
      file still in your home directory...  You should now only have
-     a: ~~/.emacs.d/~ directory and that's the only "emacs" in your
+     a: ~$HOME/.emacs.d/~ directory and that's the only "emacs" in your
      ~$HOME~ OK? Great! :octocat:
      
 ** Ready Set Go!  Start Up Modular Emacs:
@@ -481,7 +481,7 @@ If you DO have Graphvix installed... When you visit a ~.dot~ file, you can compi
 ** Usage:
 *** General Usage:
 
-The *Harmonic Alchemy Productions - Modular Emacs* git repository is configured to ignore your local ~~/.emacs.d/init.el~ file... The file: ~~/.emacs.d/me.init.el~ is kept in revision and you do not use or touch this file directly...  Instead, your standard emacs config file: ~~/.emacs.d/init.el~ starts out as a clone of ~~/.emacs.d/me.init.el~ allowing you to try out new things on the fly without upsetting the state of the git repo...
+The *Harmonic Alchemy Productions - Modular Emacs* git repository is configured to ignore your local ~$HOME/.emacs.d/init.el~ file... The file: ~$HOME/.emacs.d/me.init.el~ is kept in revision and you do not use or touch this file directly...  Instead, your standard emacs config file: ~$HOME/.emacs.d/init.el~ starts out as a clone of ~$HOME/.emacs.d/me.init.el~ allowing you to try out new things on the fly without upsetting the state of the git repo...
 
 *HAP - Modular Emacs* is configured this way for some good reasons...
 
@@ -501,7 +501,7 @@ The *Harmonic Alchemy Productions - Modular Emacs* git repository is configured 
       Going back simply involves renaming the associated ~init.el~ file,
       and replacing it with the original, or visa-versa...
 
-Feel free to use your ~~/.emacs.d/init.el~ /(clone)/ to try out experimental customizations or tests. =HOWEVER=... *There are BETTER Ways to customize HAP Modular Emacs* leaving your ~.init.el~ as is... /(other than changing the/
+Feel free to use your ~$HOME/.emacs.d/init.el~ /(clone)/ to try out experimental customizations or tests. =HOWEVER=... *There are BETTER Ways to customize HAP Modular Emacs* leaving your ~.init.el~ as is... /(other than changing the/
 /boilerplate heading that gets displayed to suit your fancy)/ This is the
 purpose of ~dispatcher.el~ and the ~my-modules~ directory...
 
@@ -509,13 +509,13 @@ You can also use the Emacs ~*scratch*~ buffer to paste experimental lisp code to
 
 If your customization proves stable, and you like it, you could then save your scratch buffer (as is) to a new file, for example:
 
-   ~~/.emacs.d/lisp/my-modules/xx-my-new-module.el~
+   ~$HOME/.emacs.d/lisp/my-modules/xx-my-new-module.el~
 
 In all cases you would also be wise to also create and checkout your own private local ~test~ branch /(call it what you wish)/ and keep all your custom changes in there separate from the ~master~ or ~origin:develop~ branch...
 
-The directory: ~~/.emacs.d/lisp/my-modules/.~ is NOT tracked by *git*... So you can put anything in there without upsetting your local or remote tracking branches... 
+The directory: ~$HOME/.emacs.d/lisp/my-modules/.~ is NOT tracked by *git*... So you can put anything in there without upsetting your local or remote tracking branches... 
 
-=ALSO= if you copy any of the files from: ~~/.emacs.d/lisp/modules/.~ to  ~~/.emacs.d/lisp/my-modules/.~ They will OVERRIDE the ones in ~modules~ and will NOT be tracked, SO you can try out mods within ~my-modules~ without messing up your current git status...  If something goes wrong, simply delete or rename your clone within ~my-modules~ and you will be back to where you were before...
+=ALSO= if you copy any of the files from: ~$HOME/.emacs.d/lisp/modules/.~ to  ~$HOME/.emacs.d/lisp/my-modules/.~ They will OVERRIDE the ones in ~modules~ and will NOT be tracked, SO you can try out mods within ~my-modules~ without messing up your current git status...  If something goes wrong, simply delete or rename your clone within ~my-modules~ and you will be back to where you were before...
 Easy Peasy.. /(this all works in a similar way to how the oh-my-zsh repository behaves for local ZSH configurations)/
 
 You can even *clone OTHER git repos* wihtin ~my-modules~ without messing anything up! This is better than using lousy sub repos /or what ever that is called/... I tried using git sub-repositories once and then ran for my life scared as shit after that initial crappy experiece!  LOL "What were you guys smoking when you created that mess?" Alisha is very opinionated about some things eh? RIGHT!
@@ -524,7 +524,7 @@ You can even *clone OTHER git repos* wihtin ~my-modules~ without messing anythin
 
 *** Blackboard Color Theme:  
 
-*HAP Modular Emacs* comes with my new customized version of the *Blackboard color theme* /(patterned after the famous Textmate Blackboard Theme)/ which I like for the *pedagogic essence* it inspires... I have also tweaked it to look good under my *Fancy Org Mode* colors and faces.  If you would like to add more custom themes or a different theme than ~blackboard.el~, you can replace it or add additional themes into your local branch's: ~~/.emacs.d/lisp/themes~ directory and they will also will work with this setup by choosing ~M-x load-theme~ or changing the last line within ~~/.emacs.d/lisp/modules/06-interface.el~ to:
+*HAP Modular Emacs* comes with my new customized version of the *Blackboard color theme* /(patterned after the famous Textmate Blackboard Theme)/ which I like for the *pedagogic essence* it inspires... I have also tweaked it to look good under my *Fancy Org Mode* colors and faces.  If you would like to add more custom themes or a different theme than ~blackboard.el~, you can replace it or add additional themes into your local branch's: ~$HOME/.emacs.d/lisp/themes~ directory and they will also will work with this setup by choosing ~M-x load-theme~ or changing the last line within ~$HOME/.emacs.d/lisp/modules/06-interface.el~ to:
 
    ~(load-theme 'your-chosen-theme-name t)~
 
@@ -752,7 +752,7 @@ the welcome text... /(which are lisp comments)/
 
    =IF YOU WOULD LIKE= to enable smart-tabs-mode =THEN:=
 
-   =Edit:= ~~/.emacs.d/lisp/modules/04-devOps-pkg-conf.el~  
+   =Edit:= ~$HOME/.emacs.d/lisp/modules/04-devOps-pkg-conf.el~  
 
    and remove the coment from the line below:
 
