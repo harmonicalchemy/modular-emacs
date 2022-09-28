@@ -1,6 +1,6 @@
 # -**- mode: org; coding: utf-8 -**-
 
-#+TAGS: TOC(k) health(h) drafts(3) synopsis(i) fonts(;) hardware(#)
+#+TAGS: TOC_3(k) health(h) drafts(3) synopsis(i) fonts(;) hardware(#)
 #+TAGS: computers(=) web(w) Cloud(9) email(m) apps(4) open_source(g)
 #+TAGS: banking($) taxes(%) auto(v) travel(y) utilities(u) must_read(!)
 
