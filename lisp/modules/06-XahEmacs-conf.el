@@ -92,6 +92,34 @@
 (autoload 'xah-find-replace-text-regex "xah-find" "find replace" t)
 (autoload 'xah-find-count "xah-find" "find replace" t)
 
+
+;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;; NEW For Q4 2022 and beyond... (using Xah-Emacs Web stuff now)
+
+;;;
+;; Load xah-html-mode.el - from my-modules/XahEmacs/xah-html-mode
+;; Ref: http://xahlee.info/emacs/emacs/xah-html-mode.html
+;; (Watch tutorial @ above link)
+
+(add-to-list 'load-path "~/.emacs.d/lisp/my-modules/XahEmacs/xah-html-mode")
+(require 'xah-html-mode)
+
+;;;
+;; Load xah-css-mode.el - from my-modules/XahEmacs/xah-css-mode
+;; Ref: http://xahlee.info/emacs/emacs/xah-css-mode.html
+;; (Watch tutorial @ above link)
+
+(add-to-list 'load-path "~/.emacs.d/lisp/my-modules/XahEmacs/xah-css-mode")
+(require 'xah-css-mode)
+
+;;;
+;; Load xah-js-mode.el - from my-modules/XahEmacs/xah-js-mode
+;; Ref: http://xahlee.info/emacs/emacs/xah-js-mode.html
+;; (Watch tutorial @ above link)
+
+(add-to-list 'load-path "~/.emacs.d/lisp/my-modules/XahEmacs/xah-js-mode")
+(require 'xah-js-mode)
+
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  More XahEmacs premium packages may be added here later as I try them out...
 ;;  Stay tuned!  (there is a LOT of stuff to look at and try out first)

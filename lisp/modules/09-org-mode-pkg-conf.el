@@ -11,6 +11,17 @@
 ;; Thirdly, I will be using org-mode for Writing, Publishing, Scrivener Style...
 ;; Also, I may end up using org-mode to organize all my System Admin stuff,
 ;; including the code and scripts...  More about that later....
+
+;;
+;; Change Log: (descending chronological order)
+;;
+
+;; 2022-009-18 - Alisha Awen, siren1@disroot.org
+;;   Added ABC-MODE Back in... (package loads fine now)
+
+;; 2022-009-18 - Alisha Awen, siren1@disroot.org
+;;   Removed (commented out) abc-mode.. This was causing some problems
+;;   Still troubleshooting this...
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;;;
@@ -24,11 +35,12 @@
 ;;
 
 (defvar me--req-org-packages
-  '(org-bullets
-    gnuplot-mode
+  '(gnuplot-mode
+    toc-org
     sass-mode
     abc-mode
     org-sidebar
+    org-contrib
     org-mind-map))
 
 ;;;
@@ -150,8 +162,12 @@
 (setq org-mobile-use-encryption t)
 
 ;; Set MobileOrg Password:
+;;   TODO: How secure is this??? Plain Text? Find out...
+;;         Phones are NOT secure by design however...
+;;         so only good for shopping-list.org and stuff?
+;;         You may see adds for food, etc... LOL
 
-(setq org-mobile-encryption-password "w1sIw1m2.0r9")
+(setq org-mobile-encryption-password "use-a-good-password-here")
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -198,6 +214,7 @@
 ;;  Function...
 
 (defun me_org-insert-readme-drawer ()
+  "Simple But Faster Than Typing. The Func Name Is The Doc... %^)"
   (interactive)
   (org-insert-drawer nil "README"))
 
@@ -210,7 +227,8 @@
 (defun me_org-open-other-frame ()
   "Jump to bookmark in another frame. See `bookmark-jump' for more."
   (interactive)
-  (let ((org-link-frame-setup (acons 'file 'find-file-other-frame org-link-frame-setup)))
+  (let ((org-link-frame-setup
+         (acons 'file 'find-file-other-frame org-link-frame-setup)))
     (org-open-at-point)))
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -423,8 +441,16 @@
 
   (me_hide-org-bullets)
 
-  ;; Set Up Fancy Unicode Checkboxes:
+  ;; Set Up Fancy Unicode Checkboxes...
+  
   (me_set-unicode-checkboxes)
+
+  ;; Include toc-org...
+
+  (if (require 'toc-org nil t)
+      (progn
+        (toc-org-mode))
+    (warn "toc-org not found"))
 
   ;; Enable Olivetti Mode...
 

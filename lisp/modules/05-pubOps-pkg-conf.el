@@ -10,6 +10,26 @@
 ;; WYSIWYG live (like standard word processors) but also very powerful macro
 ;; commands, ease of fast typing everything (no mouse needed) etc.  Which is
 ;; why I strongly feel Emacs is the best publishing tool out there for anything!
+
+;;
+;; Change Log: (descending chronological order)
+;;
+
+;; 2022-009-27 - Alisha Awen, siren1@disroot.org
+;;   Changed Harmonic Alchemy Modular Emacs TO: v3.5...
+;;   Removed VMD-MODE completely. (VMD has critical security problem)
+;;   I removed ALL NODE JS from my machines and removed its requirement
+;;   from HAP Modular Emacs as well...  No more HODE JS Period...
+;;   The Only Reason NODE was installed was for VMD actually.  Not
+;;   developing JS apps so NODE and all the FLUF it comes with is NOT
+;;   needed here...  (if you do JS Dev and need it you probably already
+;;   have it)
+;;
+;;   Also commented out Pandoc Code to see if that may have been
+;;   causing any problems... IF it is, it may ALSO be removed completely
+;;   later... Pandoc as an external tool works great...
+;;   Not sure if Emacs configuration with pandoc works well at this point...
+;;   MORE RESEARCH NEEDED...
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;;;
@@ -30,8 +50,7 @@
     pandoc-mode
     fountain-mode
     graphviz-dot-mode
-    csv-mode
-    vmd-mode))
+    csv-mode))
 
 ;;;
 ;; Install required packages:
@@ -115,6 +134,8 @@
 
 ;;;
 ;; Virtual Path to My-Docs on All Platforms:
+;; NOTE: For new OS installs, make sure ~/.MD is defined (either as directory
+;;       or a symlink to where your docs actually live...)
 
 (setq deft-directory "~/.MD")
 
@@ -136,7 +157,7 @@
 ;;;
 ;; Set deft to do regexp search instead of incremental:
 
-;(setq deft-org-mode-title-prefix nil)
+(setq deft-org-mode-title-prefix nil)
 
 ;;;
 ;; I don't want auto save because I open many notes for viewing only.
@@ -156,14 +177,15 @@
 
 (add-hook 'deft-mode-hook 'me_deft-init)
 
-;;;; ~~~~~~~~~~~~
+;;;; ~~~~~~~~~~~~~~~~~~~~~
 ;;   Pandoc Mode:
-;;;; ~~~~~~~~~~~~
+;;;; ~~~~~~~~~~~~~~~~~~~~~
 
 ;;;
 ;; NOTE: On Mac OS, Depending on how you installed PanDoc,
 ;; you may need one of the following: (I enabled the MacPorts form for my setup)
 
+;;;; ~~~~~~~~~~~~
 ;; Mac OS Case:
 
 (when ME--DARWIN
@@ -175,6 +197,8 @@
   ;; Your Pandoc was installed by MacPorts.  Ensure Emacs gets the path...
   (setq pandoc-binary "/opt/local/bin/pandoc"))
 
+
+;;;; ~~~~~~~~~~~~
 ;; Linux Case:
 
 (when ME--LINUX
@@ -186,14 +210,6 @@
 
 (add-hook 'markdown-mode-hook 'pandoc-mode)
 
-;;;; ~~~~~~~~~
-;;   VMD Mode:
-;;;; ~~~~~~~~~
-
-;;;
-;; Require GitHub flavored Markdown preview minor-mode:
-
-(require 'vmd-mode)
 
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;   Graphviz-dot-mode Customizations:
@@ -210,6 +226,17 @@
   (setq graphviz-dot-preview-extension "svg"))
 
 (add-hook 'graphviz-dot-mode-hook 'me_graphviz-tweaks)
+
+;;;
+;; Asymptote Configuration - Asymptote is a Vector Graphics Language 
+;; asy-mode - Enables Editing Source Code and Processing for Asymptote...
+;; (So far the path below is for Fedora as installed by DNF)
+
+(add-to-list 'load-path "/usr/share/asymptote")
+(autoload 'asy-mode "asy-mode.el" "Asymptote major mode." t)
+(autoload 'lasy-mode "asy-mode.el" "hybrid Asymptote/Latex major mode." t)
+(autoload 'asy-insinuate-latex "asy-mode.el" "Asymptote insinuate LaTeX." t)
+(add-to-list 'auto-mode-alist '("\\.asy$" . asy-mode))
 
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;   END: [modular-emacs]:~/.emacs.d/lisp/modules/05-pubOps-pkg-conf.el

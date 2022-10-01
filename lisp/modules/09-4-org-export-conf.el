@@ -14,7 +14,14 @@
 ;;   settings below *within your cloned copy* to suit your own particular
 ;;   org mode export needs...
 ;;
-;;   Last Updated: 2022-008-31
+
+;;
+;; Change Log: (descending chronological order)
+;;
+
+;; 2022-009-18 - Alisha Awen, siren1@disroot.org
+;;   Removed some of the Babel Languages which were causing problems
+;;   Still troubleshooting this...
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;;;
@@ -281,6 +288,8 @@
 ;;    ABC requires: abc-mode and the following
 ;;    external programs:
 ;;      abcm2ps (Install with Macports on MacOS)
+;;      This can be installed on Fedora (by exact name above)
+;;      I have not checked Debian yet.. But probably the same...
 ;;      ps2pdf (bundled with GhostScript)
 ;;  Usage:
 ;;     Babel adds some new elements to code blocks.
@@ -303,49 +312,52 @@
 
 ;;; Activate External Language Execution:
 ;;
-(eval-after-load "org"
-  (progn
-    ;;Enable C-c C-o on html code block
-    (require 'ob-html)
 
-    (org-babel-html-enable-open-src-block-result-temporary)
-  (require 'ob-lisp)
+(require 'org)
+(require 'ob)
+(require 'ob-html)
+(require 'ob-lisp)
+(require 'ob-asymptote)
+(require 'ob-abc)
 
-    ;; Enable normal tab behaviour for SRC Block language Modes:
-    (setq org-src-tab-acts-natively t)
+;; Enable normal tab behaviour for SRC Block language Modes:
+(setq org-src-tab-acts-natively t)
 
-  (org-babel-do-load-languages
-   'org-babel-load-languages
-   '((R . t)
-     (abc . t)
-     (asymptote . t)
-     (awk . t)
-     (calc . t)
-     (css . t)
-     (ditaa . t)
-     (dot . t)
-     (emacs-lisp . t)
-     (clojure . t)
-     (gnuplot . t)
-     (haskell . nil)
-     (java . t)
-     (js . t)
-     (latex . t)
-     (ledger . t) ;Hopefully this will add support for hledger too...
-     (lilypond . t)
-     (lua . nil)
-     (ocaml . nil)
-     (octave . t)
-     (org . t)
-     (perl . t)
-     (python . t)
-     (ruby . t)
-     (sass . t)
-     (sed . t)
-     (screen . nil)
-     (shell . t)
-     (sql . nil)
-       (sqlite . t)))))
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((abc . t)
+   (asymptote . t)
+   (awk . t)
+   (calc . t)
+   (C . t)
+;   (cpp . t)
+   (ditaa . t)
+   (dot . t)
+   (lisp . t)
+   (emacs-lisp . t)
+   (clojure . t)
+   (gnuplot . t)
+   (haskell . nil)
+   (java . t)
+   (js . t)
+   (latex . t)
+;   (ledger . t)    ;Hopefully this will add support for hledger too...
+   (lilypond . t)
+   (lua . nil)
+   (makefile . t)
+   (ocaml . nil)
+   (octave . t)
+   (org . t)
+   (perl . t)
+   (python . t)
+   (ruby . t)
+   (sass . t)
+   (css . t)
+   (sed . t)
+   (screen . nil)
+   (shell . t)
+   (sql . nil)
+   (sqlite . t)))
 ;;
 ;;; END: Activate External Language Execution
 

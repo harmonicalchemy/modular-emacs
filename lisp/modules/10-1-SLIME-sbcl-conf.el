@@ -21,6 +21,14 @@
 ;;      http://www.oreilly.com/catalog/gnuext/
 ;;  - Emacs Lisp Cheat Sheet:
 ;;      http://wikemacs.org/wiki/Emacs_Lisp_Cheat_Sheet
+
+;;
+;; Change Log: (descending chronological order)
+;;
+
+;; 2022-009-18 - Alisha Awen, siren1@disroot.org
+;;   Not using Slime or this module anymore...
+;;   ALL OF SBCL for Emacs needs a re-factoring now.
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;; Enable slime-mode within lisp-mode:
@@ -28,7 +36,7 @@
 (add-hook 'lisp-mode-hook (lambda () (slime-mode t)))
 (add-hook 'inferior-lisp-mode-hook (lambda () (inferior-slime-mode t)))
 
-;;_Define_Default_Lisp_Environment:
+;; Define Default Lisp Environment:
 
 (load (expand-file-name "~/quicklisp/slime-helper.el"))
 
@@ -67,14 +75,16 @@
 (slime-require :swank-listener-hooks)
 
 ;; Tell auto-complete to use ac-slime specific completions when sime-mode is active:
+;; NOTE:  I am no longer using Auto Complete mode or any Completion mode..  Using
+;;        Emacs Default Abbriv instead...
 
-(add-hook 'slime-mode-hook 'set-up-slime-ac)
-(add-hook 'slime-repl-mode-hook 'set-up-slime-ac)
+;(add-hook 'slime-mode-hook 'set-up-slime-ac)
+;(add-hook 'slime-repl-mode-hook 'set-up-slime-ac)
 
 ;; Bind ac-modes and slime-repl-mode to Slime:
 
-(eval-after-load "auto-complete"
-  '(add-to-list 'ac-modes 'slime-repl-mode))
+;(eval-after-load "auto-complete"
+;  '(add-to-list 'ac-modes 'slime-repl-mode))
 
 ;;;;
 ;; Modify the way lisp-mode buffers behave:
