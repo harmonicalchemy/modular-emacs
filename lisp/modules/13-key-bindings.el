@@ -1,5 +1,15 @@
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;;; [Modular-Emacs]:~/.emacs.d/lisp/modules/13-key-bindings.el
+;;;  [Modular-Emacs]:~/.emacs.d/lisp/modules/13-key-bindings.el
+
+;;
+;; Change Log: (descending chronological order)
+;;
+
+;; 2022-009-18 - Alisha Awen, siren1@disroot.org
+;;   Changed Harmonic Alchemy Modular Emacs TO: v3.5...
+;;   Added F1 key to invoke "wo-man" (Emacs Without Man Pages - Info Style)
+;;   (stupid name but it works to get all those MAN pages into Emacs)
+;;   I don't have any CUSTOM configurations for WOMAN yet...
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -100,6 +110,16 @@
 ;; Xah Fly Keys users specifically, but rather a general purpose aid...
 
 (define-key key-translation-map (kbd "ESC") (kbd "C-g"))
+
+;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; Set F1 key to load man page for keyword at current cursor position (woman):
+;; This key is universal...  Nice to have it in Emacs for Man Pages! Cool! 
+
+(global-set-key (kbd "<f1>")
+                (lambda ()
+                  (interactive)
+                  (let ((woman-use-topic-at-point t))
+                    (woman))))
 
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; END: [modular-emacs]:~/.emacs.d/lisp/modules/13-key-bindings.el

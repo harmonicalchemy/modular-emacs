@@ -65,9 +65,8 @@
 ;;   Modular Emacs...
 
 ;; 2022-005-15 - Alisha Awen, siren1@disroot.org
-;;   Renamed 02-package-conf.el to: 02-common-conf.el (See 02-common-conf.el
-;;   changelog for details)... Removed; 06-interface.el and the form here that
-;;   runs that file...
+;;   Renamed: 02-package-conf.el to: 02-common-conf.el
+;;   Removed; 06-interface.el and the form here that loads that file...
 
 ;; 2021-004-08 - Updated Modular Emacs to v3.4.0 [Q2 2021]
 ;;   (still beta - working on updating many docs to org-mode and
@@ -203,6 +202,10 @@
 ;; This module is enabled by default on the ME lisp-ide branch.  Pull that
 ;; branch instead if you want to stay up with the programming stuff as
 ;; it takes time for that to filter into the main branches...
+
+;; NOTE: These Modules are currently being re-factored so that they don't
+;;       have to use emacs packages that add a LOT of Unnecessary FLUF
+;;       FLUF = Fluf is Lousy Unnecessary Fuckshit! (recursive acro)
 
 ;(if (file-exists-p "~/.emacs.d/lisp/my-modules/10-progLang-pkg-conf.el")
 ;    (load-file "~/.emacs.d/lisp/my-modules/10-progLang-pkg-conf.el")

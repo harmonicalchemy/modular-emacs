@@ -26,12 +26,14 @@
       '(("GNU-ELPA" . "https://elpa.gnu.org/packages/")
         ("MELPA-Stable" . "https://stable.melpa.org/packages/")
         ("MELPA-Unstable" . "https://melpa.org/packages/")
+        ("ORG-CONTRIB"    . "https://elpa.nongnu.org/nongnu/")
         ("ORG"   . "https://orgmode.org/elpa/")))
 
 (setq package-archive-priorities
       '(("MELPA-Stable" . 50)
         ("ORG" . 5)
         ("GNU-ELPA" . 5)
+        ("ORG-CONTRIB" . 10)
         ("MELPA-Unstable" . 0)))
 
 ;;;;

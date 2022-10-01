@@ -23,6 +23,11 @@
 ;; Change Log: (descending chronological order)
 ;;
 
+;; 2022-009-18 - Alisha Awen, siren1@disroot.org
+;;   Not using Slime/SBCL anymore...
+;;   ALL OF SBCL for Emacs needs a re-factoring now.
+;;   CURRENTLY THIS FILE DOES NOTHING!!!  It is ALL being refactored...
+
 ;;   2021-008-09 - Alisha Awen
 ;;       Multi Web Mode sucks!!! OMG! Switched to web-mode now.  It is much
 ;;       better/easier and can be customized if needed to your hearts content!
@@ -35,32 +40,37 @@
 
 ;;; Create repositories cache for devOps extras, if required:
 
-(when (not package-archive-contents)
-  (package-refresh-contents))
+;(when (not package-archive-contents)
+;  (package-refresh-contents))
 
 ;;; Declare a list of required packages for computer programming:
 
-(defvar me--req-proglang-packages
-  '(slime
+;(defvar me--req-proglang-packages
+;  '(
+;    slime
 ;   slime-autoloads
-    helm-slime
-    ac-slime
+;    helm-slime
+;    ac-slime        ;; Not using Auto Complete Anymore For Anything...
 ;    clojure-mode
 ;    cider
-    web-mode
-  ;  multi-web-mode
-  ;  php-mode
-    yasnippet
-    yasnippet-snippets
-    common-lisp-snippets
-    auto-yasnippet
-    el-autoyas))
+;    web-mode
+;    multi-web-mode
+;    yasnippet
+;    yasnippet-snippets
+;    common-lisp-snippets
+;    auto-yasnippet
+;    el-autoyas
+;    ))
 
 ;;; Install required packages:
 
-(mapc (lambda (p) (package-install p))
-      me--req-proglang-packages)
+;(mapc (lambda (p) (package-install p))
+;      me--req-proglang-packages)
 
+;;;;
+;;   NOTE:  I am turning all my previous WEB stuff OFF and
+;;          trying out xah Lee's WEB mode stuff...
+;;          regular web-mode is commented out now...
 
 ;;;
 ;;   Set up Web Mode:
@@ -73,63 +83,36 @@
 ;;      All the other (active-semi-active) web related emacs modes
 ;;      I have looked at seem far too complicated & have bugs!!! OMG!!!
 
-(require 'web-mode)
+;(require 'web-mode)
 
-(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.php\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.[agj]sp\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.php\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.[agj]sp\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 
-;; Set up customizations for Hook:
+;;; Set up customizations for Hook:
 
-(defun me_web-mode-hook ()
-  "Hooks for Web mode."
-  (setq web-mode-markup-indent-offset 2)
-  (setq web-mode-css-indent-offset 2)
-  (setq web-mode-code-indent-offset 2))
+;; (defun me_web-mode-hook ()
+;;   "Hooks for Web mode."
+;;   (setq web-mode-markup-indent-offset 2)
+;;   (setq web-mode-css-indent-offset 2)
+;;   (setq web-mode-code-indent-offset 2))
 
-(add-hook 'web-mode-hook 'me_web-mode-hook)
+;; (add-hook 'web-mode-hook 'me_web-mode-hook)
 
 ;;; END: web-mode Customizations
 
-;;;
-;;   Set up Multi Web Mode: (Not using this one anymore)
-;;;
-
-;; (require 'multi-web-mode)
-;; (setq mweb-default-major-mode 'html-mode)
-;; (setq mweb-tags
-;;       '(
-;;         ;(php-mode "<\\?php\\|<\\? \\|<\\?=" "\\?>")
-;;         (js-mode "<script +\\(type=\"text/javascript\"\\|language=\"javascript\"\\)[^>]*>" "</script>")
-;;         (css-mode "<style +type=\"text/css\"[^>]*>" "</style>")))
-;; (setq mweb-filename-extensions '("php" "htm" "html" "ctp" "phtml" "php4" "php5"))
-;; (multi-web-global-mode 1)
-
-
-;;;
-;;   Set up PHP Mode for WordPress Coding Style:  (Not using this one anymore)
-;;
-;;   NOTE: There are other coding styles you can set here instead:
-;;         php-enable-pear-coding-style
-;;         php-enable-drupal-coding-style
-;;         php-enable-wordpress-coding-style
-;;         php-enable-symfony2-coding-style
-;;         php-enable-psr2-coding-style
-
-;; (add-hook 'php-mode-hook 'php-enable-wordpress-coding-style)
-;;;
 
 ;;;
 ;; Load SLIME / sbcl IDE Module:
 ;;;
 
-(load-file "~/.emacs.d/lisp/modules/10-1-SLIME-sbcl-conf.el")
+;(load-file "~/.emacs.d/lisp/modules/10-1-SLIME-sbcl-conf.el")
 
 
 ;;;

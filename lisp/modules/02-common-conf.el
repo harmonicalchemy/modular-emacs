@@ -5,8 +5,15 @@
 ;; Many default parameters are set here, as well as different frame creation
 ;; functions... All of the dimension settings for frames / windows etc. are
 ;; defined within this module...
+
 ;;
-;;; Change Log:
+;; Change Log: (descending chronological order)
+;;
+
+;; 2022-009-18 - Alisha Awen, siren1@disroot.org
+;;   Changed Harmonic Alchemy Modular Emacs TO: v3.5...
+;;   Removed Auto-Complete, Powerline, AND smart-mode-line
+;;   (commented out now BUT will be removed LATER)    
 
 ;; 2022-005-15 - Alisha Awen, siren1@disroot.org
 ;;   Renamed this file from; 02-package-conf.el to: 02-common-conf.el The
@@ -99,7 +106,7 @@
 ;    smart-mode-line
     imenu-list
     olivetti
-    auto-complete
+;    auto-complete   ;; No longer using these add-on Completion Packages...
     which-key
     flyspell-correct-helm))
 
@@ -121,7 +128,7 @@
 
 ;; Change title-bar text
 (setq frame-title-format
-      "Harmonic Alchemy Modular Emacs - Version 3.4 (still in beta) [Q4 2021]")
+      "Harmonic Alchemy Modular Emacs - Version 3.5 [Q4 2021]")
 
 ;; Disable tool-bar - I could care less about tool bars in emacs!
 ;; An oxymoron! But you may feel differently.  Comment this out if you like them.
@@ -170,13 +177,12 @@
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; imenu-list configuration:
-;;                 (DISABLED)
-;;  Note:  I am currently experiencing problems
-;;         with imenu-list.  It is disabled until
-;;         that can be sorted out...
-;
+;;
+;;  Note:  I was experiencing problems with imenu-list
+;;         previously.  
+
 ;(require imenu-list)
-;(setq imenu-list-focus-after-activation t)
+(setq imenu-list-focus-after-activation t)
 ;(setq imenu-list-auto-resize nil)
 
 ;; imenu tweaks:
@@ -185,8 +191,10 @@
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Load default auto-complete configs
+;; NOTE:  No longer using these add-on Completion Packages...
+;;        Making my own Emacs Abbriv templates...
 
-(ac-config-default)
+;; (ac-config-default)
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Start which-key-mode
@@ -236,7 +244,7 @@
 ;; screen size, etc...
 
 (setq initial-frame-alist
-      '( (name . "HA Mod Emacs v3.4 - Default Frame")
+      '( (name . "HA Mod Emacs v3.5 - Default Frame")
          (font . "Hermit")
          (height . 38)
          (width . 88)
@@ -252,7 +260,7 @@
 ;; screen size, etc...
 
 (setq default-frame-alist
-      '( (name . "HA Mod Emacs v3.4 - Default Frame")
+      '( (name . "HA Mod Emacs v3.5 - Default Frame")
          (font . "Hermit")
          (height . 38)
          (width . 88)
@@ -308,11 +316,11 @@
 
     (make-frame
      (quote
-      ((name . "HA Mod Emacs v3.4 - Writer's Frame"))))
+      ((name . "HA Mod Emacs v3.5 - Writer's Frame"))))
 
     ;; Select this new frame:
 
-    (select-frame-by-name "HA Mod Emacs v3.4 - Writer's Frame")
+    (select-frame-by-name "HA Mod Emacs v3.5 - Writer's Frame")
 
     ;; Set Default Face to Courier Prime:
     (set-face-attribute 'default (selected-frame)
@@ -339,11 +347,11 @@
 
     (make-frame
      (quote
-      ((name . "HA Mod Emacs v3.4 - Default Frame"))))
+      ((name . "HA Mod Emacs v3.5 - Default Frame"))))
 
     ;; Select this NEW Frame:
     
-    (select-frame-by-name "HA Mod Emacs v3.4 - Default Frame")
+    (select-frame-by-name "HA Mod Emacs v3.5 - Default Frame")
 
     ;; Set Default Face for Coding:
     (set-face-attribute 'default (selected-frame)
@@ -424,7 +432,7 @@
     (modify-frame-parameters
      nil
      (quote
-      ((name . "HA Mod Emacs v3.4 - Writer's Frame")
+      ((name . "HA Mod Emacs v3.5 - Writer's Frame")
        (height . 38)
        (width  . 84))))))
 
@@ -447,7 +455,7 @@
     (modify-frame-parameters
      nil
      (quote
-      ((name   . "HA Mod Emacs v3.4 - Fancy Wide Org-Mode Frame")
+      ((name   . "HA Mod Emacs v3.5 - Fancy Wide Org-Mode Frame")
        (height . 38)
        (width  . 142))))))
 
@@ -474,7 +482,7 @@
     (modify-frame-parameters
      nil
      (quote
-      ((name . "HA Mod Emacs v3.4 - Default Frame")
+      ((name . "HA Mod Emacs v3.5 - Default Frame")
        (height . 38)
        (width  . 88))))))
 
@@ -496,7 +504,7 @@
     (modify-frame-parameters
      nil
      (quote
-      ((name . "HA Mod Emacs v3.4 - WIDE Coder's Frame")
+      ((name . "HA Mod Emacs v3.5 - WIDE Coder's Frame")
        (height . 38)
        (width  . 184))))
 
@@ -531,7 +539,7 @@
     (modify-frame-parameters
      nil
      (quote
-      ((name . "HA Mod Emacs v3.4 - Default Frame")
+      ((name . "HA Mod Emacs v3.5 - Default Frame")
        (height . 38)
        (width  . 88))))))
 

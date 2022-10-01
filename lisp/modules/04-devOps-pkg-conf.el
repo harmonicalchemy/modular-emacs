@@ -8,6 +8,13 @@
 ;; Change Log: (descending chronological order)
 ;;
 
+;; 2022-009-18 - Alisha Awen, siren1@disroot.org
+;;   Changed Harmonic Alchemy Modular Emacs TO: v3.5...
+;;   I am no longer using magit... It requires emacs packages
+;;   I don't want this extra FLUF in my Emacs...
+;;   I have my own GIT macros,aliases, etc. set up for ZSH and BASH...
+;;   DOING GIT within ZSH IS MY AWESOME WORKFLOW... (Magit Take a HIKE Thanks!)
+
 ;; 2022-005-15 - Alisha Awen, siren1@disroot.org
 ;;   Removed Premium XahEmacs package loads and created a dedicated conf.el file
 ;;   for that: 06-XahEmacs-conf.el which is disabled by default within
@@ -26,17 +33,17 @@
 ;;;
 ;; Declare a list of required packages for programming, build/test, deploy, etc.:
 ;; NOTE: I removed: gitconfig-mode, gitignore-mode & gitattributes-mode
-;;       No longer supported... (need magit/git-modes now) TODO later...
+;;       No longer supported... 
 
 (defvar me--req-devops-packages
   '(ztree
     smart-tabs-mode
     ssh-config-mode
     yaml-mode
-    indent-tools
-    logview
-    hydra
-    magit))
+    nginx-mode
+    php-mode          ;; SOON to be REPLACED by xah-php-mode (when it is done)
+;    indent-tools     ;; Removed becuase it rwquires s- Package (Insulting eLisp code)
+    logview))
 
 ;; Install required packages:
 
@@ -58,13 +65,7 @@
 (add-hook 'ssh-config-mode-hook 'turn-on-font-lock)
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; Disable Tabs Globally (use spaces only), and reactivate them for
-;; modes with smart tabs handling:
-
-(setq-default indent-tabs-mode nil)
-
-(add-hook 'c-mode-common-hook
-              (lambda () (setq indent-tabs-mode t)))
+;;  TABS Configuration:
 
 ;; Set Default Tab size to three spaces:
 
@@ -72,17 +73,16 @@
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Add Language Support for Web Dev: (HTML, CSS, PHP, etc...)
-(setq c-basic-offset 3)
 
+(setq c-basic-offset 3)
 (setq web-mode-markup-indent-offset 3)
 (setq web-mode-css-indent-offset 3)
 (setq web-mode-code-indent-offset 3)
 (setq web-mode-sql-indent-offset 3)
 (setq css-indent-offset 3)
 
-
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; Enable Smart Tabs for all supported languages including above:
+;; Enable Smart Tabs for all supported languages:
 
 (smart-tabs-insinuate 'c
                       'c++
@@ -93,31 +93,10 @@
                       'ruby
                       'nxml)
 
-
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Set C Lang Auto Mode for specific file extensions:
 
 (add-to-list 'auto-mode-alist '("\\.xkb\\'" . c-mode))
-
-
-;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; Set F1 key to load man page for keyword at current cursor position (woman):
-;; This key is universal...  Nice to have it in Emacs for Man Pages! Cool! 
-
-(global-set-key (kbd "<f1>")
-                (lambda ()
-                  (interactive)
-                  (let ((woman-use-topic-at-point t))
-                    (woman))))
-
-
-;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; Magit Customisation Section:
-;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-;; So far I only set a global key for git status: (more may come)
-
-(global-set-key (kbd "C-x g") 'magit-status)
 
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -6,10 +6,20 @@
 ;;
 ;;   Override this file by placing a copy of it into "my-modules" then change
 ;;   it to suit your personal org-mode look and feel...
+
+;;
+;; Change Log: (descending chronological order)
+;;
+
+;; 2022-009-28 - Alisha Awen, siren1@disroot.org
+;;   Removed Org-Bullets... This has been commented out for a while...
+;;   I am NOT using org-bullets and only used them for a short while in
+;;   the beginning BEFORE I set up my Fancy Org Mode which HIDES all bullets
+;;   anyway... (except for the top most level)... Therefore org-bullets has
+;;   always been a mute thing here...
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 (require 'org-faces)
-
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Set Fallback Font:
@@ -24,96 +34,16 @@
 (set-fontset-font "fontset-default" nil
                   (font-spec :size 20 :name "Symbola"))
 
-
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;   Org-Bullets:
-;;
-;;  NOTE:
-;;    After setting up my Book Publishing Project
-;;    Templates, I realized that showing any bullets
-;;    at all, (even the last one) clutters up my nice
-;;    Headings Display (which use variable scale fonts
-;;    etc.) So now I am not actually displaying any of
-;;    the fancy bullets below... I left this code in
-;;    however to allow them to show should you choose
-;;    to make the last bullet visible again...
-;;    (see function:  me_hide-org-bullets () below)
-
-;; Use org-bullets-mode for utf8 symbols as org bullets
-
-;(require 'org-bullets)
-
-;; Make "org-bullet-face" available allowing control of the font
-;; sizes individually:  (NOTE: I don't really use this but it's here)
-
-;(setq org-bullets-face-name (quote org-bullet-face))
-
-;;;
-;; Bullet options to try out: (commented out)
-;; Enable the one you like... Add more choices below if you find them...
-
-;(setq org-bullets-bullet-list '("✙" "♱" "♰" "☥" "✞" "✟" "✝" "†" "✠" "✚" "✜" "✛" "✢" "✣" "✤" "✥"))
-
-;; Hexagrams:
-;(setq org-bullets-bullet-list '("✡" "⎈" "✽" "✲" "✱" "✻" "✼" "✽" "✾" "✿" "❀" "❁" "❂" "❃" "❄" "❅" "❆" "❇"))
-
-;; Special Symbols:
-;(setq org-bullets-bullet-list '("☀" "♼" "☼" "☾" "☽" "☣" "§" "¶" "‡" "※" "✕" "△" "◇" "▶" "◀" "◈"))
-
-;; NOTE: I find Org Outline Bullets in general to be cluttering and non-essential. ;;       I make my outline bullets in Modular Emacs default to "invisible" and
-;;       instead focus on heading indentation, size, and font style.
-;;       (like a real doc should look)
-;;
-;;       Hiding Outline bullets also aids visibility of plain list bullets and
-;;       enumerations, (which traditionally are expected to have bullets in
-;;       front of them...
-
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; Org ellipsis options, other than the default Go to Node...
-;; not supported in common font, but supported in Symbola font. ⬎, ⤷, ⤵
-;;
-;; I LOVE This One:
-
-(setq org-ellipsis "⤵")
-
-
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  SHOW all bullets/asterisks etc. in Org mode:
-;;
-;;  For certain reasons, you may wish to see the
-;;  heading bullets in org-mode...  (this sometimes
-;;  helps when you are unsure of a sub headings correct
-;;  level, etc...
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-(defun me_show-org-bullets ()
-  "Show All ORG Heading / Sub-Heading Bullets..."
-  (interactive)
-  (setq org-hide-leading-stars t))
-
-
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Hide all bullets/asterisks etc. in Org mode:
 ;;
 ;;  For writing books, docs, etc. I decided showing
-;;  the bullets, (even the last one) clutters up my
-;;  nice variable scale headings outline display...
+;;  the bullets, clutters up my nice variable scale
+;;  headings outline display...
+;;
 ;;  This function was written to perform that service
 ;;  globally in org mode... It is added to the my
 ;;  org-mode hook function below...
-;;
-;;  NOTE: if you want to see the fancy bullets in your
-;;  outline headings, than don't call this function
-;;  in any org-mode hook functions...
-;;
-;;  NOTE: I am now trying this in my org-mode hook:
-;
-;   (after! org
-;     (setq org-hide-leading-stars nil
-;           org-indent-mode-turns-on-hiding-stars nil))
-;
-;;  As an alternative way no longer needing the
-;;  explicit function call below...
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 (defun me_hide-org-bullets ()
@@ -130,7 +60,13 @@
                            (_ ?\u25CB)))
                         nil))))))
 
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; Org ellipsis options, other than the default Go to Node...
+;; not supported in common font, but supported in Symbola font. ⬎, ⤷, ⤵
+;;
+;; I LOVE This One:
 
+(setq org-ellipsis "⤵")
 
 ;; Open Org Files initially folded in Overview Mode:
 
@@ -159,7 +95,6 @@
 
 (setq org-show-siblings (quote (default)))
 
-
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Show nice chosen symbols instead of a dash in bulleted lists.
 ;; If you don't like these, either disable the next two forms or
@@ -177,26 +112,19 @@
     (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "🞜"))))))
 
 ;; Automatically demote / promote list items with different characters...
+;; As above, You can change (replace) bullet glifs (left column) to others
+;; that you may prefer instead...
 
 (setq org-list-demote-modify-bullet
       (quote (("+"  . "-")
               ("-"  . "+")
-              ("*"  . "-")
+              ("✜"  . "-")
               ("1." . "-")
-              ("1)" . "-")
-              ("A)" . "-")
-              ("B)" . "-")
-              ("a)" . "-")
-              ("b)" . "-")
-              ("A." . "-")
-              ("B." . "-")
-              ("a." . "-")
-              ("b." . "-"))))
+              ("1)" . "-"))))
 
 ;; Increase offset a wee bit more between plain list levels... 
 
 (setq-default org-list-indent-offset 1)
-
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Use Unicode Symbols To Display Org-Mode Checkboxes:
@@ -209,7 +137,6 @@
   (push '("[X]" . "☑" ) prettify-symbols-alist)
   (push '("[-]" . "❍" ) prettify-symbols-alist)
   (prettify-symbols-mode)))
-
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Customize look of emphasized text in org-mode 
@@ -225,7 +152,7 @@
 ;;
 ;; For a nice visual reference of ALL available Emacs Colors
 ;; See: http://www.raebear.net/computers/emacs-colors/
-;; (Jessica's Corner of Cyberspace)
+;; (Jessica's Corner of Cyberspace) Thanks! Jessica
 
 (setq org-emphasis-alist
       '(("*" (bold
@@ -252,7 +179,6 @@
               :foreground "firebrick"))             ;; ~org-code~
 
         ("+" (:strike-through t))))                 ;; +strike-through+
-
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Customize Org headings:
