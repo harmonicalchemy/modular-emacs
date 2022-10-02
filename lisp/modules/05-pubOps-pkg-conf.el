@@ -17,6 +17,7 @@
 
 ;; 2022-009-27 - Alisha Awen, siren1@disroot.org
 ;;   Changed Harmonic Alchemy Modular Emacs TO: v3.5...
+;;   No Longer Using mmd-mode (IMHO it is not worth the effort)...
 ;;   Removed VMD-MODE completely. (VMD has critical security problem)
 ;;   I removed ALL NODE JS from my machines and removed its requirement
 ;;   from HAP Modular Emacs as well...  No more HODE JS Period...
@@ -93,15 +94,18 @@
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; mmd-mode - Multimarkdown extensions to markdown-mode:
 ;; Reference: GitHub:jmquigley/mmd-mode
+;;
+;; NOTE: This Package is not being used anymore... I may
+;;       Remove this commented-out section alltogether soon.
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-(add-to-list 'load-path "{~/.emacs.d/lisp/my-modules/mmd-mode}")
-(require 'mmd-mode)
+;; (add-to-list 'load-path "{~/.emacs.d/lisp/my-modules/mmd-mode}")
+;; (require 'mmd-mode)
 
-(add-to-list 'auto-mode-alist '("\\.md\\'" . mmd-mode))
-(add-to-list 'auto-mode-alist '("\\.mdwn\\'" . mmd-mode))
-(add-to-list 'auto-mode-alist '("\\.mdt\\'" . mmd-mode))
-(add-to-list 'auto-mode-alist '("\\.mmd\\'" . mmd-mode))
+;; (add-to-list 'auto-mode-alist '("\\.md\\'" . mmd-mode))
+;; (add-to-list 'auto-mode-alist '("\\.mdwn\\'" . mmd-mode))
+;; (add-to-list 'auto-mode-alist '("\\.mdt\\'" . mmd-mode))
+;; (add-to-list 'auto-mode-alist '("\\.mmd\\'" . mmd-mode))
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Use Deft mode for quickly browsing, filtering, and

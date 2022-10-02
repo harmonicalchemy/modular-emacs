@@ -323,6 +323,10 @@
 
   (define-key xah-fly-Lp2p1-key-map (kbd "o") 'me_org-open-other-frame)
 
+  ;; Org-Mode Export/Publish to PDF File:
+  ;; (xah-fly-Lp2p1-key-map) QWERTY "p"
+
+  (define-key xah-fly-Lp2p1-key-map (kbd "p") 'org-latex-export-to-pdf)
   
   ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   ;; Xah-Fly-Keys SECONDARY LEADER-KEY BINDINGS:
