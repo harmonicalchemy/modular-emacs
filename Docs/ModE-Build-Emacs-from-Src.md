@@ -33,12 +33,6 @@ Unfortunately I am dependent on Mac OS For digital music/sound, video, graphic d
 
 > **Update 2020-009-11:** _I upgraded my iMac [Rodrigo] to High Sierra v10.13.6 in August! So far, it has been a mess to reconfigure things.  I have to upgrade my current Emacs 27 now.  The new Emacs beyond V27.1 is supposed to be a long awaited update to past versions of Emacs.  Imagmagick and Ghostscript are no longer used, and they are buggy and introduce security holes! No problems with APFS so far, so that may not be an issue for me.  Compatability with DAW software will be critical to test though!_
 
-On my Qubes Laptop, Emacs works great, straight from any of the above package managers _(as you can see above...)_  
-
-Mac OS (**Darwin**) has always been a mongrel cross-breed of different unix flavors. _(by now all the unix are mixed up pretty much however... so that's not it...)_  The problem is all the non-standard junk that Apple does that tends to break standard unix things if those are also installed!  OMG! Hair pulling time!
-
-Long story short... My older Emacs install was causing all my woes... Homebrew stopped building versions that I needed for my Emacs configuration to work correctly. _(some of the problems were also shell startup related)_.  After experiencing of all of that over the past year, and coming to the realization that I shoulda/coulda used **MacPorts** instead of Homebrew, but not daring to change all that now mid stream of course... So... on MacOS I build Emacs from source from now on... Straight from a cloned repository from Gnu's Git Server!  I can get the bleeding edge if I want now... :stuck_out_tongue:
-
 ### Install Emacs from Source - Mac OS
 
 > **Sept 2020 Update:**  This doc is currently being changed as I go through the process of building/upgrading my current Emacs on Mac OS from v27 to v28 on Mac OS High Sierra v10.13.6.  (I may decide to upgrade my mac to the latest OS and have to do this all over again... Whatever...)  The updated environment will not work for building Emacs 26 because I removed many requirements that introduce security holes... From now on, at least on Mac OS it will be at least Emacs v27.1 or rather the latest bleeding edge from the repo...

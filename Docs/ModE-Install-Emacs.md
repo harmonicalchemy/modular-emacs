@@ -59,7 +59,7 @@ Once you get MacPorts installed and updated,  come back here and use the above c
 
 As of this doc update, MacPorts will get you Emacs version 27.0.91, which should work great for you! I have installed this _(via MacPorts)_ and tested it on a 2009 Mac Book Pro running Mac OS El Capitan. **Modular Emacs** _(fully installed on that old laptop)_ looks perfect on the screen! Macports also runs fine on El Capitan... So far no issues for me... If you can build from source, you can get a few more years out of old computers after everyone else has junked them!
 
-On my desktop iMac the story was quite different as I had Emacs already installed via Homebrew _(and was suffering many problems when I first started out)_. So I installed Emacs from source on my iMac...  If you would rather do that as well, I have included the steps below for you...
+On my desktop iMac the story was quite different as I had Emacs already installed via Homebrew _(and was suffering many problems when I first started out)_. So I installed Emacs from source on my iMac...  If you would rather do that as well, I have included the steps below for you... Building from Source will get you the Latest Version of Emacs Possible!!! Cool eh? _(or maybe a curse lol)_
 
 I have since switched to MacPorts, but since I have my own local Emacs build project started, I continue to maintain that outside of MacPorts, and I keep Emacs up to the Developer's Bleeding Edge... :octocat:
 
