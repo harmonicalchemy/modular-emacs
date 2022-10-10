@@ -49,19 +49,15 @@
 (defconst ME--POSIX (memq window-system `(ns x)))
 
 ;;;
-;; Default Frame and Text width Dimensions:
+;; Load Harmonic Alchemy Productions - Modular Emacs CONSTANTS
+;; NOTE: Override The Defaults set in the load file below to
+;;       better fit your particular platform needs... Do this
+;;       by copying the file below into "my-modules" and then
+;;       editing it...
 
-(defconst ME--CODE-FRAME-HEIGHT (round 42) "Default Frame Height for Codeing. Defined in 00-system.el")
-(defconst ME--CODE-FRAME-WIDTH (round 92) "Default Frame Width for Codeing. Defined in 00-system.el")
-(defconst ME--CODE-OLIV-WIDTH (round 88) "Default Olivetti text width for Codeing. Defined in 00-system.el")
-
-(defconst ME--DOC-FRAME-HEIGHT (round 42) "Default Frame Height for Writing. Defined in 00-system.el")
-(defconst ME--DOC-FRAME-WIDTH (round 92) "Default Frame Width for Writing. Defined in 00-system.el")
-(defconst ME--DOC-OLIV-WIDTH (round 88) "Default Olivetti text width for Writing. Defined in 00-system.el")
-
-(defconst ME--FANCY-FRAME-HEIGHT (round 48) "Default Frame Height for Fancy Org Mode. Defined in 00-system.el")
-(defconst ME--FANCY-FRAME-WIDTH (round 142) "Default Frame Width for Fancy Org Mode. Defined in 00-system.el")
-(defconst ME--FANCY-OLIV-WIDTH (round 82) "Default Olivetti text width for Fancy Org Mode. Defined in 00-system.el")
+(if (file-exists-p "~/.emacs.d/lisp/my-modules/me-constants.el")
+    (load-file "~/.emacs.d/lisp/my-modules/me-constants.el")
+  (load-file "~/.emacs.d/lisp/modules/me-constants.el"))
 
 ;;;
 ;; Configure custom elisp library load path.

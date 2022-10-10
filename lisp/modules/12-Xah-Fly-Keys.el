@@ -148,15 +148,10 @@
 
   (define-key xah-fly-command-map (kbd "`") 'me_toggle-olivetti-mode)
 
-  ;; Set global key to toggle imenu:
-  ;; (single quote)
-  ;; (pops up in Helm window)...
-  ;; NOTE: this used to run: imenu-list but I am
-  ;;       experiencing a problem with imenu-list right now.
-  ;;       When that is fixed... This key will run that
-  ;;       function instead...
+  ;; Set global key to toggle imenu-list: (SINGLE QUOTE CHAR)
+  ;; (displays list window on right side)
 
-  (define-key xah-fly-command-map (kbd "'") 'imenu)
+  (define-key xah-fly-command-map (kbd "'") 'imenu-list)
   ;;  (define-key xah-fly-command-map (kbd "'") 'imenu-list)
 
   ;; Invoke Daft:

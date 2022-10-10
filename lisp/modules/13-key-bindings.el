@@ -35,7 +35,7 @@
     ("C-c t" . me_org-toggle-blocks)
     ("C-c v" . vmd-mode)
     ("C-c r" . view-mode)
-    ("C-c '" . imenu)
+    ("C-c '" . imenu-list)
     ("C-c b" . other-frame)
     ("C-c p" . me_toggle-default-face)
     ("C-c u" . me_toggle-letter-case)

@@ -13,7 +13,6 @@
 
 (defvar me--req-dired-packages
   '(helm-core
-    neotree
     dired-launch))
 
 ;; Install required packages:

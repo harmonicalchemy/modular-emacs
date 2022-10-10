@@ -90,13 +90,13 @@
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;;;
-;; Create repositories cache, if required
+;; Create Repositories Cache, If Required:
 
 (when (not package-archive-contents)
   (package-refresh-contents))
 
 ;;;
-;; Declare default modular-emacs list of required packages:
+;; Declare Default Modular Emacs List of Required Packages:
 
 (defvar me--required-packages
   '(exec-path-from-shell
@@ -106,12 +106,11 @@
 ;    smart-mode-line
     imenu-list
     olivetti
-;    auto-complete   ;; No longer using these add-on Completion Packages...
     which-key
     flyspell-correct-helm))
 
 ;;;
-;; Install required packages
+;; Install Required Packages:
 
 (mapc (lambda (p) (package-install p))
       me--required-packages)
@@ -125,10 +124,10 @@
 
 (when ME--POSIX (exec-path-from-shell-initialize))
 
+;; Change Title Bar Text:
 
-;; Change title-bar text
 (setq frame-title-format
-      "Harmonic Alchemy Modular Emacs - Version 3.5 [Q4 2021]")
+      "Harmonic Alchemy Modular Emacs - Version 3.5 [Q4 2022]")
 
 ;; Disable tool-bar - I could care less about tool bars in emacs!
 ;; An oxymoron! But you may feel differently.  Comment this out if you like them.
@@ -178,23 +177,14 @@
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; imenu-list configuration:
 ;;
-;;  Note:  I was experiencing problems with imenu-list
-;;         previously.  
 
-;(require imenu-list)
+(require 'imenu-list)
 (setq imenu-list-focus-after-activation t)
-;(setq imenu-list-auto-resize nil)
+(setq imenu-list-auto-resize nil)
 
 ;; imenu tweaks:
 
 (setq imenu-auto-rescan t)
-
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; Load default auto-complete configs
-;; NOTE:  No longer using these add-on Completion Packages...
-;;        Making my own Emacs Abbriv templates...
-
-;; (ac-config-default)
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Start which-key-mode
@@ -229,63 +219,72 @@
     (when (assq (car mim) minor-mode-alist)
       (setf (cdr (assq (car mim) minor-mode-alist)) repl))))
 
-
-
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Activate Blackboard theme:
 
 (load-theme 'blackboard t)
 
 
-
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; Set Initial Startup Frame Dimensions:
-;; You may have to play with this depending on your total
-;; screen size, etc...
+;; Set Up Default Frame Parameters for both INITIAL Frame
+;; AND DEFAULT Frame. (Use same parameter values for BOTH)
+;;
+;; You may have to play with the CONSTANTS to get window
+;; dimensions of your liking... depending on your total
+;; screen size, X configuration, etc...
+;;
+;; Check if GUI session first... If in Terminal, much
+;; does NOT apply... But Remove tool bar lines to
+;; free up terminal screen space?
+;; (display-graphic-p if block from: Xah Lee)
 
+(if (display-graphic-p)
+    (progn
+      ;; Set Initial Startup Frame Dimensions:
 (setq initial-frame-alist
-      '( (name . "HA Mod Emacs v3.5 - Default Frame")
+	    '((name . "HA Mod Emacs v3.5 - INITIAL Frame")
          (font . "Hermit")
-         (height . 38)
-         (width . 88)
+              (height . 42)
+              (width . 92)
          (menu-bar-lines . 1)
          (vertical-scroll-bars . nil)
          (horizontal-scroll-bars . nil)
          (left-fringe . 1)
          (right-fringe . 1)))
 
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Set Default Frame Dimensions:
-;; You may have to play with this depending on your total
-;; screen size, etc...
-
 (setq default-frame-alist
-      '( (name . "HA Mod Emacs v3.5 - Default Frame")
+	    '((name . "HA Mod Emacs v3.5 - DEFAULT Frame")
          (font . "Hermit")
-         (height . 38)
-         (width . 88)
+              (height . 42)
+              (width . 92)
          (menu-bar-lines . 1)
          (vertical-scroll-bars . nil)
          (horizontal-scroll-bars . nil)
          (left-fringe . 1)
-         (right-fringe . 1)))
+              (right-fringe . 1))))
 
+      ;; This is a Terminal Session (No GUI)
+      (progn
+	(setq initial-frame-alist '((tool-bar-lines . 0)))
+	(setq default-frame-alist '((tool-bar-lines . 0)))))
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; Toggle Olivetti Mode with default width: (86 col)
+;; Toggle Olivetti Mode:
 ;; The extra 6 chars over standard 80 col allows
 ;; for code and org-mode indention (a compromise)
 ;; My standard frame width is set to 88 columns)
 ;; so this should just fit...
 
 (require 'olivetti)
+(olivetti-set-width ME--CODE-OLIV-WIDTH)
 
 (defun me_toggle-olivetti-mode ()
-  "Toggles olivetti-mode and sets default width back to 86 columns..."
+  "Toggles olivetti-mode...  Width is set Elsewhere Depending on Context"
   (interactive)
   (progn
     (olivetti-mode 'toggle)
-    (olivetti-set-width 82)))
+    (olivetti-set-width ME--CODE-OLIV-WIDTH)))
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -295,93 +294,38 @@
 (helm-autoresize-mode 1)
 (setq helm-split-window-in-side-p t)
 
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  Modular Emacs - Make NEW Writer's Frame:
-;;  This makes a brand new frame to match
-;;  HA Modular Emacs Default Writing Frame Specs...
-;;  The new frame opens with initial buffer set
-;;  to: Bookmark Menu List
-
-(defun me_make-writing-frame ()
-  "Create NEW Frame using ME default writer's face
-   and ME default writer's frame dimensions
-   Frame opens with buffer set to Bookmark Menu List"
-  (interactive)
-  (progn
-    ;; Set buffer to *Bookmark List*
-
-    (bookmark-bmenu-list)
-
-    ;; Make New Writer's Frame:
-
-    (make-frame
-     (quote
-      ((name . "HA Mod Emacs v3.5 - Writer's Frame"))))
-
-    ;; Select this new frame:
-
-    (select-frame-by-name "HA Mod Emacs v3.5 - Writer's Frame")
-
-    ;; Set Default Face to Courier Prime:
-    (set-face-attribute 'default (selected-frame)
-                        :family "Courier Prime"
-                        :height 135)))
-
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  Modular Emacs - Make NEW Coder's Frame:
-;;  This makes a brand new frame to match
-;;  HA Modular Emacs Default Coding Frame Specs...
-;;  The new frame opens with initial buffer set
-;;  to: Bookmark Menu List
-
-(defun me_make-default-frame ()
-  "Create NEW Frame using ME default coding face
-   and ME default coding frame dimensions
-   Frame opens with buffer set to Bookmark Menu List"
-  (interactive)
-  (progn
-    ;; Set buffer to *Bookmark List*
-    (bookmark-bmenu-list)
-
-    ;; Make NEW Coder's Frame:
-
-    (make-frame
-     (quote
-      ((name . "HA Mod Emacs v3.5 - Default Frame"))))
-
-    ;; Select this NEW Frame:
-    
-    (select-frame-by-name "HA Mod Emacs v3.5 - Default Frame")
-
-    ;; Set Default Face for Coding:
-    (set-face-attribute 'default (selected-frame)
-                        :family "Hermit"
-                        :height 120)))
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Modular Emacs - Make Frame Function:
-;;  This makes NEW frames to match HA Modular Emacs
-;;  current me--def-face flag setting...
-;;  If the flag is set to: 1
-;;     me_make-writing-frame is called...
-;;  If the flag is set to: 2
-;;     me_make-default-frame is called...
+;;  This makes NEW HAP Modular Emacs DEFAULT frame
 
 (defun me_make-frame ()
-  "Create Frames depending on the current setting of
-   the me--def-face flag. If flag = 2 make writer's
-   frame. If flag = 1, make coder's frame..."
+"Create Frames depending on the current setting of the me--def-face flag.
+If flag = 2 make writer's frame. If flag = 1, make coder's frame..."
   (interactive)
   (progn
-    (cond
-     ((= me--def-face 2)
-      (message "Creating Writer's Frame")
-      (me_make-writing-frame))
-     ((= me--def-face 1)
-      (message "Creating Default Frame")
-      (me_make-default-frame)))))
+    ;; Set buffer to *Bookmark List*
+    (bookmark-bmenu-list)
 
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ;; Make New DEFAULT CODE Frame:
+    (make-frame
+     (quote
+      ((name . "HA Mod Emacs v3.5 - NEW DEFAULT FRAME"))))
+
+    ;; Select this NEW Frame:
+    (select-frame-by-name "HA Mod Emacs v3.5 - NEW DEFAULT FRAME")
+    
+    ;; Set Frame Dimentions for DEFAULT Coding etc.:
+    (set-frame-size (selected-frame)
+		    ME--CODE-FRAME-WIDTH
+		    ME--CODE-FRAME-HEIGHT)
+
+    ;; Set DEFAULT Face for Coding etc.:
+    (set-face-attribute 'default (selected-frame)
+                        :family "Hermit"
+			:height ME--DEFAULT-CODE-TEXT-HEIGHT)))
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Modular Emacs - Set Default Face Functions:
 ;;
 ;;  Purpose:
@@ -392,16 +336,11 @@
 ;;    face (which is Emacs Default) to another depending on
 ;;    my current work mode (writing or coding)...
 ;;
-;;  Usage:
-;;
-;;    Adjust face dimensions and weight within forms below as needed.
-;;    Note: Linux vs Mac, Big screen vs Laptop, may require
-;;          sub cases to handle... %^)
-;;
-;;    Xah Fly Key Assigned: Command Mode "p"
+;;    Xah Fly LEADER Key Assigned: "SPACE p"
 ;;
 ;;  NOTE1:  Currently there is no check to see if these fonts are
-;;          installed on your system! This is still alpha test stage..."
+;;          installed on your system! It will FALL BACK TO DEFAULT
+;;          without warning if FONTS are NOT INSTALLED...
 ;;
 ;;  NOTE2:  It appears that Courier Prime is required to prevent
 ;;          D o u b l e  W i d e rendering of certain Emacs faces! This
@@ -413,11 +352,10 @@
 ;;
 ;;  NOTE3:  If I get fancy with fonts, I will provide them in this repo for easy
 ;;          installations. In fact I have already gotten fancy with fonts eh? LOL
-;;
 
-;;;
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Set Modular Emacs Writing Frame Function:
-;; NOTE: This only sets frame parameters
+;; NOTE: This only resets frame parameters
 ;;       for the currently Selected Frame...
 ;;        (other frames are not affected)
 
@@ -425,19 +363,20 @@
   "Set Frame Font & Frame Dimensions for Writing"
   (interactive)
   (progn
+    ;; RESET to NORMAL ORG Writer's FACE Specs:
     (set-face-attribute 'default (selected-frame)
                         :family "Courier Prime"
-                        :height 135)
+			:height ME--DEFAULT-ORG-TEXT-HEIGHT)
 
-    (modify-frame-parameters
-     nil
-     (quote
-      ((name . "HA Mod Emacs v3.5 - Writer's Frame")
-       (height . 38)
-       (width  . 84))))))
+    ;; RESET Frame dimensions for NORMAL ORG Writing from GLOBAL CONSTANTS:
+    (set-frame-size (selected-frame)
+		    ME--ORG-FRAME-WIDTH
+		    ME--ORG-FRAME-HEIGHT)
+
+    (set-frame-parameter nil 'name "HA Mod Emacs v3.5 - NORMAL ORG Writer's Frame")))
 
 
-;;;
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Set Modular Emacs Fancy Org-Mode WIDE Frame Function:
 ;; NOTE: This only sets frame parameters
 ;;       for the currently Selected Frame...
@@ -447,20 +386,20 @@
   "Set Frame Font & Frame Dimensions for Modular Emacs Fancy WIDESCREEN Org-Mode"
   (interactive)
   (progn
+    ;; RESET to ORG Writer's FACE Spec from GLOBAL CONSTANT:
     (set-face-attribute 'default (selected-frame)
                         :family "Courier Prime"
-                        :height 135)
+                        :height ME--DEFAULT-ORG-TEXT-HEIGHT)
 
-    ;; Modify Frame dimensions for Fancy WIDE Org-Mode:
-    (modify-frame-parameters
-     nil
-     (quote
-      ((name   . "HA Mod Emacs v3.5 - Fancy Wide Org-Mode Frame")
-       (height . 38)
-       (width  . 142))))))
+    ;; RESET Frame dimensions for WIDE ORG Writing from GLOBAL CONSTANTS:
+    (set-frame-size (selected-frame)
+		    ME--WIDE-ORG-FRAME-WIDTH
+		    ME--WIDE-ORG-FRAME-HEIGHT)
+
+    (set-frame-parameter nil 'name "HA Mod Emacs v3.5 - WIDE ORG Writer's Frame")))
 
 
-;;;
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Set Modular Emacs Default Frame Function:
 ;; NOTE: This only sets the frame parameters
 ;;       for the currently Selected Frame...
@@ -470,50 +409,46 @@
   "Set Font & Frame Parameters back to HA Modular Emacs Default"
   (interactive)
   (progn
-
-    ;; Ensure default Coding Face:
-
+    ;; RESET to DEFAULT Coder's FACE Spec from GLOBAL CONSTANT:
     (set-face-attribute 'default (selected-frame)
                         :family "Hermit"
-                        :height 120)
+			:height ME--DEFAULT-CODE-TEXT-HEIGHT)
 
-    ;; Change Frame Dimensions back to Normal Coding Frame:
+    ;; RESET Frame dimensions for DEFAULT CODE from GLOBAL CONSTANTS:
+    (set-frame-size (selected-frame)
+		    ME--CODE-FRAME-WIDTH
+		    ME--CODE-FRAME-HEIGHT)
     
-    (modify-frame-parameters
-     nil
-     (quote
-      ((name . "HA Mod Emacs v3.5 - Default Frame")
-       (height . 38)
-       (width  . 88))))))
+    (set-frame-parameter nil 'name "HA Mod Emacs v3.5 - CODING Frame")))
 
 
-;;;
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Set Modular Emacs WIDE Coding Frame Function:
 ;; NOTE: This only sets the frame parameters
 ;;       for the currently Selected Frame...
 ;;        (other frames are not affected)
 
 (defun me_set-coding-wide-frame ()
-  "Set Frame Font & Frame Dimensions for Coding"
+  "Set Frame Font & Frame Dimensions for WIDE-SCREEN Coding"
   (interactive)
   (progn
+    ;; RESET to DEFAULT Coder's FACE Spec from GLOBAL CONSTANT:
     (set-face-attribute 'default (selected-frame)
                         :family "Hermit"
-                        :height 120)
+                        :height ME--DEFAULT-CODE-TEXT-HEIGHT)
 
-    (modify-frame-parameters
-     nil
-     (quote
-      ((name . "HA Mod Emacs v3.5 - WIDE Coder's Frame")
-       (height . 38)
-       (width  . 184))))
+    ;; RESET Frame dimensions for DEFAULT WIDE Coding from GLOBAL CONSTANTS:
+    (set-frame-size (selected-frame)
+		    ME--WIDE-CODE-FRAME-WIDTH
+		    ME--WIDE-CODE-FRAME-HEIGHT)
+
+    (set-frame-parameter nil 'name "HA Mod Emacs v3.5 - DEFAULT WIDE Coder's Frame")
 
     ;; Split Window Side by Side for Comparing code etc.
-
     (split-window-right)))
 
 
-;;;
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Set Modular Emacs Default Coding Frame Function:
 ;; NOTE: This only sets the frame parameters
 ;;       for the currently Selected Frame...
@@ -523,49 +458,31 @@
   "Set Frame Font & Frame Dimensions to Coding Default"
   (interactive)
   (progn
-
     ;; Remove Split Windows (remaining window is where cursor is)
-
     (delete-other-windows)
 
-    ;; Ensure Font is correct for Coding:
-    
+    ;; RESET to DEFAULT Coder's FACE Spec from GLOBAL CONSTANT:
     (set-face-attribute 'default (selected-frame)
                         :family "Hermit"
-                        :height 120)
+			:height ME--DEFAULT-CODE-TEXT-HEIGHT)
 
-    ;; Set Frame Parameters to Default Coder's Frame:
+    ;; RESET Frame dimensions for DEFAULT CODE from GLOBAL CONSTANTS:
+    (set-frame-size (selected-frame)
+		    ME--CODE-FRAME-WIDTH
+		    ME--CODE-FRAME-HEIGHT)
     
-    (modify-frame-parameters
-     nil
-     (quote
-      ((name . "HA Mod Emacs v3.5 - Default Frame")
-       (height . 38)
-       (width  . 88))))))
+    (set-frame-parameter nil 'name "HA Mod Emacs v3.5 - CODING Frame")))
 
 
-;;;
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Toggle Default Face Function:
 ;;
-;;  Bound to Xah Fly Command Key:  "p"
+;;  Bound to Xah Fly LEADER Key:  "SPACE p"
 ;;
 ;;  NOTE1: This only sets the face for the currently Selected Frame...
-;;         (other frames are not affected)
-;;
-;;  This function calls one of the two above depending on test variable:  me--default
-;;    if me--default is t
-;;      Switch to Writer's Frame Style
-;;      Change me--default to nil
-;;    Otherwise
-;;      Switch to Coder's Frame Style
-;;      Change me--default to t
-;;
-;;  NOTE2: The flag that gets set to check whether coding or writing mode
-;;         DOES effect other frames!  This is a side effect, but the remedy
-;;         is to simply toggle the key twice.  A silly fix is too complicated imho!
-;;
+;;         (other frames are not supposed to be affected)
 
-(defvar me--def-face 1 "Test variable for me_toggle-default-face")
+(defvar me--def-face nil "Test variable for me_toggle-default-face")
 
 (defun me_toggle-default-face ()
   "Toggle default frame parameters for selected frame only,
@@ -573,6 +490,9 @@
    Purpose: I like to use a serif mono font for writing
    paragraphs, but I need to use Hermit etc. for Coding
    This provides a way to toggle from one to the other"
+  (interactive)
+  (progn
+
   ;; NOTE: The flag me--def-face DOES effect other frames!
   ;;       Therefore, For example: If you are editing code in one frame
   ;;       and writing a screenplay in another frame, if you switch to
@@ -581,28 +501,25 @@
   ;;       of the screenplay frame, only the flag.  This results in you
   ;;       needing to hit the toggle key twice if, for instance, you needed
   ;;       to change from writing a screenplay to doing some coding...
-  ;;                             No Problemo! %^)
+  ;;
   ;;       The complicated code needed to have a local flag for each frame
   ;;       is too much worry over the silly fix it would provide...
   ;;       Simply toggle the key a second time if you do not see the font
   ;;       change etc. Note, this will reset the flag in your coding frame,
   ;;       but no worries there either.. (the woes of multitasking lol)
   ;;
-  ;;       UPDATE: Thinking on this further... It makes sense to do this
-  ;;               in a let form...  Then local variables will not effect
-  ;;               flag state in other frames... I was being lazy above. %~)
-  ;;               Still being lazy cause I have not put that let form in
-  ;;               below yet... LOL
-  (interactive)
-  (cond
-   ((= me--def-face 1)
+  ;;       UPDATE:  I may have fixed this... Need to test...
+
+  (if me--def-face
+      (progn
     (message "Setting default face to Courier Prime for Writing")
-    (me_set-writing-frame)
-    (setq me--def-face 2))
-   ((= me--def-face 2)
+	(me_set-writing-frame))
+
+    (progn
     (message "Setting default face to Hermit for Coding")
-    (me_set-default-frame)
-    (setq me--def-face 1))))
+      (me_set-default-frame)))
+
+  (setq-local me--def-face (not me--def-face))))
 
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; END: [modular-emacs]:~/.emacs.d/lisp/modules/02-package-conf.el

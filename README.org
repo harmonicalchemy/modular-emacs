@@ -46,7 +46,7 @@
    - [[#-introduction][💡 Introduction:]]
       - [[#-history--purpose][📜 History & Purpose:]]
       - [[#-try-harmonic-alchemy-modular-emacs][☞ Try Harmonic Alchemy Modular Emacs:]]
-      - [[#-microsoft-windows-support][⚙ Microsoft Windows Support]]
+      - [[#-microsoft-windows-support-needed][⚙ Microsoft Windows Support Needed:]]
       - [[#-my-commitment][🙏 My Commitment]]
    - [[#-screenshots][📸 Screenshots:]]
    - [[#-tldr---start-here][☞ TL;DR - Start Here:]]
@@ -134,28 +134,26 @@ There are some external requirements... It may take a while... If that's OK with
 
 \newpage
 
-*** ⚙ Microsoft Windows Support
+*** ⚙ Microsoft Windows Support Needed:
 
-=Note:= Hello MS Windows Users... I admit to having no experience
-      at getting a nice Emacs GUI environment running nicely on
-      MS Windows... *Harmonic Alchemy Modular Emacs* expects to be
-      installed on a unix machine, or unix friendly machine
-      contaning standard unix apps and utilities or proper hooks
-      into such things... Many of these may not be implemented
-      within the canonical Windows OS model and I have no
-      experience sorting that out...  It is hard enough to get
-      Mac OS to behave along side GNU Linux or other free software
-      and open source standards! I do not wish to abandon MS
-      Windows users however.  I dedicated a document within
-      Harmonic Alchemy Modular Emacs to record any information
-      needed to help get Modular Emacs running on MS Windows.
-      Please consult: [[./Docs/ModE-Note-2-MS-Windows-Users.md][Note for MS Windows Users]] for more
-      information...  I am looking for a good MS Windows Sys
-      Admin type to jump in here and help... Where are you?
-      Please open an issue with intro to yourself for me to
-      review... Thanks!
+=Hello MS Windows Veterans...=
 
-For the rest of us... For now... Let's learn this together... Please give feedback, open issues, ask questions!  Thanks ;-)
+I admit to having no experience at getting a nice Emacs GUI environment running nicely on MS Windows, as I am a Hard Core Mac user and have not used a MS Windows box since Win-XP days... LOL and I never upgraded to that VISTA crap either...  Thank Goddess!
+
+I am sure the newest latest greatest MS Windows (10 now?) is Awesome!!! I just don't use it... sorry...
+      
+*Harmonic Alchemy Modular Emacs* expects to be installed on a Linux or BSD machine, or unix friendly machine contaning standard unix apps and utilities or
+proper hooks into such things... Many of these may not be implemented within the canonical Windows OS model and I have no experience sorting that out...
+
+It is hard enough to get Mac OS to behave along side GNU Linux or other free software and open source standards!
+      
+I do not wish to abandon MS Windows users however. So I dedicated a document within Harmonic Alchemy Modular Emacs to record any information needed to help get Modular Emacs running on MS Windows.
+
+Please consult: [[./Docs/ModE-Note-2-MS-Windows-Users.md][Note for MS Windows Users]] for more information...
+
+I am looking for a good MS Windows Sys Admin type to jump in here and help... Where are you??? Please open an issue with intro to yourself for me to       review... Thanks!
+
+For the rest of us... For now... Let's learn this together... Please provide any feedback about your experience attempting to install this on a MS Windows box, Please open issues, ask questions!  We will get this part done some how... Thanks ;-)
 
 \newpage
 
@@ -163,13 +161,21 @@ For the rest of us... For now... Let's learn this together... Please give feedba
 
 *"Always do what is right. It will gratify half of mankind and astound the other."* - Mark Twain  
 
-One of the main reasons created this project was to empower lots of creative folks out there who have more brains than money.  This project is 100% open-source and Free to download, install, and use independently, /(both as in "Free Beer" and also as in having "Freedom of Choice and Control" over your Computing Infrastructures)/.
+One of the main purposes of this project is to empower lots of creative folks out there who have more brains than money.  This project is 100% free software, Free to download, install, and use independently, /(both as in "Free Beer" and also as in having "Freedom of Choice and Control" over your Computing Infrastructures)/.
 
-I have been testing this project to see if it can successfully run on older legacy hardware as well.  My aim is to make it possible for anyone, no matter what their economic or social status is, to be empowered to use this... To give you a voice, to give you more control over your digital life operations, and provide you with a portable/inexpensive way to publish your ideas, stories, projects for the rest of the world to see. All under your independent and private control (no middle men dictating rules)..
+I have been testing this project to see if it can successfully run on older legacy hardware as well.  My aim is to make it possible for anyone, no matter what their economic or social status is, to be empowered to use this...
 
-I am committed to making this *process/journey* as painless as possible for you as I have found many other Emacs setups to be way to complicated to make it easy for adoption into my workflow, and you are probably experiencing the same!  On the other end of the spectrum... Installing basic Emacs alone is not enough to get you started _(IMHO)_...  I set it up that way to get you up and running with a simple setup first... You should quickly outgrow that and certainly want to enable the extra features!  
+To =GIVE YOU a VOICE=, to =GIVE YOU MORE CONTROL= over your digital life operations and creations. To provide you with a future proof portable/inexpensive way to publish your ideas, stories, projects for the rest of the world to see...
 
-Therefore I hope to make that process reasonably easy to do!  The whole purpose of this project is to be able to easily grow and shrink features as needed in any combination thereof... Without /"getting lost in a tangled mess of twisty little passages all alike!/
+*Harmonic Alchemy Productions - Modular Emacs* is NOT some cheap publishing tool, but an entire arsenal of professional publishing and project management tools, ALL "free or open-source", ALL under your independent and private control /(No Middle Men Dictating Rules, no "share cropping")/..
+
+I am committed to making this *process/journey* as painless as possible for you as I have found many other Emacs setups to be way to complicated to make it easy for adoption into my workflow, and you are probably experiencing the same!
+
+On the other end of the spectrum... Installing basic Emacs alone is not enough to get you started _(IMHO)_...  I made a few tweaks to the Emacs Basic Operation to get you up and running with a simple setup that works well out of the box...
+
+You will quickly outgrow that initial setup however, and will certainly want to enable some extra features you are learning about! =WARNING!= This is where Danger can lurk if you are lulled into installing something that is pure CRAP!  Trust me on that... Don't fall for the hype... Check it out thoroughly before using.  Are there a LOT of Stack Exchange posts about that package? That's a red flag... 🚩
+
+I hope to make this process of discovery reasonably easy to do for you!  The whole purpose of this project is to be able to easily grow and shrink features as needed in any combination thereof... Without /"getting lost in a tangled mess of twisty little passages all alike!/
 
 If you end up liking *Harmonic Alchemy Modular Emacs*, please drop me a note to let me know! Please do ask questions, open issues, etc.  Thanks!  I have been using Emacs since around 1986/87 /(OMG that long! off-and-on with gaps in between ;-)/ but I never shared any of that Emacs knowledge with anyone before now... :heart_decoration:  
 
