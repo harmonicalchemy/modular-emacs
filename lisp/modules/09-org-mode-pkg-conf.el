@@ -69,11 +69,9 @@
 ;; etc...
 ;;;
 
-;; Virtual Path to ORG Docs on All Platforms: (a symlink)
+;; Set Path to ORG Docs from CONSTANT:
 
-(defconst me--org-dir "~/.OD")
-
-(setq org-directory me--org-dir)
+(setq org-directory ME--ORG-DOC-DIR)
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Configure Org Mode Beautify Settings: (constantly under revision %^)
@@ -132,30 +130,13 @@
 ;; (setq org-mind-map-engine "twopi")  ; Radial layouts
 ;; (setq org-mind-map-engine "circo")  ; Circular Layout
 
+;; Set Mobile Org Directory from GLOBAL CONSTANT:
 
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;            Mobile Org Configuration
-
-;; Set up MobileOrg Staging Area:
-
-(when ME--DARWIN
-  (defconst me--mobile-org-dir
-    (file-name-as-directory
-     (expand-file-name "~/Path/To/Your-MacOS/Dropbox/Apps/MobileOrg"))))
-
-;;;
-;; Path to Your ORG Docs on Linux:
-
-(when ME--LINUX
-  (defconst me--mobile-org-dir
-    (file-name-as-directory
-     (expand-file-name "~/Path/To/Your-Linux/Dropbox/Apps/MobileOrg"))))
-
-(setq org-mobile-directory me--mobile-org-dir)
+(setq org-mobile-directory ME--MOBILE-ORG-DIR)
 
 ;; Set Name of file where new notes will be stored:
 
-(setq org-mobile-inbox-for-pull (expand-file-name  "flagged.org" me--org-dir))
+(setq org-mobile-inbox-for-pull (expand-file-name  "flagged.org" org-directory))
 
 ;; Enable MobileOrg Encryption:
 
@@ -167,7 +148,7 @@
 ;;         so only good for shopping-list.org and stuff?
 ;;         You may see adds for food, etc... LOL
 
-(setq org-mobile-encryption-password "use-a-good-password-here")
+(setq org-mobile-encryption-password ME--MOBILE-ORG-PW)
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -357,7 +338,7 @@
 
         ;; Set Olivetti Width
         (olivetti-mode)
-        (olivetti-set-width 82))
+        (olivetti-set-width ME--ORG-OLIV-WIDTH))
 
     ;; ELSE print warning about buffer not being an Org File...
     (message "Warning: You are NOT visiting a .ORG file!")))
@@ -386,7 +367,7 @@
 
         ;; Set Olivetti Width
         (olivetti-mode)
-        (olivetti-set-width 82))
+        (olivetti-set-width ME--WIDE-ORG-OLIV-WIDTH))
 
     ;; ELSE print warning about buffer not being an Org File...
     (progn
@@ -455,7 +436,7 @@
   ;; Enable Olivetti Mode...
 
   (olivetti-mode)
-  (olivetti-set-width 82)
+  (olivetti-set-width ME--ORG-OLIV-WIDTH)
 
   ;; Call Xah-Fly-Keys (resets some face attributes)
   (xah-fly-keys 1))

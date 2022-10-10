@@ -166,6 +166,95 @@
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Enable Frame Modifications from eLisp Source Code Blocks:
+;;  REF: https://emacs.stackexchange.com/questions/42096/running-elisp-within-an-orgmode-code-block
+;;
+;;  The following lisp code defines the new emacs-lisp source block parameter :keep-windows.
+;;  You can modify the window configuration through the source block if you set this parameter to t.
+;;
+;;  This replaces: save-window-excursion in org-babel-execute:emacs-lisp by a newly defined macro
+;;  save-window-excursion-if. The new macro needs a predicate as new first argument.
+;;  The window configuration is only stored if that predicate is non-nil.
+;;  That is where the new source block parameter :keep-windows is tested.
+
+;; The function replace-in-fundef below needs access to the source file ob-emacs-lisp.el.
+(require 'ob-emacs-lisp)
+
+(defun transform-tree (tree trafo)
+  "Transform TREE by TRAFO."
+  (let ((next tree))
+    (while next
+      (let ((this next))
+    (setq next (cdr next))
+    (if (consp (car this))
+        (transform-tree (car this) trafo)
+      (funcall trafo this)))))
+  tree)
+
+(defun replace-in-fundef (fun sym &rest replacement)
+  "In function FUN perform REPLACEMENT."
+  (setq fun (or
+         (condition-case err
+         (let* ((pos (find-function-noselect fun t))
+            (buf (car pos))
+            (pt (cdr pos)))
+           (with-current-buffer buf
+             (save-excursion
+               (goto-char pt)
+               (read buf))))
+         (error nil))
+         (and (symbolp fun) (symbol-function fun))
+         fun))
+  (transform-tree fun
+   (lambda (this)
+     (when (eq (car this) sym)
+       (let ((copy-repl (cl-copy-list replacement)))
+     (setcdr (last copy-repl) (cdr this))
+     (setcdr this (cdr copy-repl))
+     (setcar this (car copy-repl)))))))
+
+(defmacro save-window-excursion-if (pred &rest body)
+  "Act like `save-window-excursion' if PRED is non-nil."
+  (declare (indent 1) (debug t))
+  (let ((c (make-symbol "wconfig")))
+    `(let ((,c (and ,pred (current-window-configuration))))
+       (unwind-protect (progn ,@body)
+         (when ,c (set-window-configuration ,c))))))
+
+(advice-remove 'org-babel-execute:emacs-lisp #'ad-org-babel-execute:emacs-lisp)
+
+;; make sure we have access to the source code of `org-babel-execute:emacs-lisp'
+(find-function-noselect 'org-babel-execute:emacs-lisp t)
+
+;; (defun ad-org-babel-execute:emacs-lisp ...):
+(eval
+ (replace-in-fundef
+  'org-babel-execute:emacs-lisp
+  'org-babel-execute:emacs-lisp
+  'ad-org-babel-execute:emacs-lisp))
+
+;; Use `save-window-excursion-if' in `ad-org-babel-execute:emacs-lisp':
+(declare-function 'ad-org-babel-execute:emacs-lisp " ")
+(eval
+ (replace-in-fundef
+  'ad-org-babel-execute:emacs-lisp
+  'save-window-excursion
+  'save-window-excursion-if
+  '(null (member (cdr (assoc :keep-windows params)) '("yes" "t")))))
+
+;; Replace `org-babel-execute:emacs-lisp':
+(advice-add 'org-babel-execute:emacs-lisp :override #'ad-org-babel-execute:emacs-lisp)
+
+;; USAGE: The Above Configuration allows you to make source blocks within a .org file
+;;        augmented with :keep-windows as follows:
+;;
+;;    #+BEGIN_SRC elisp :results silent :keep-windows t
+;;       PUT Your Window or Frame Mod Code Here...
+;;    #+END_SRC
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Custom LaTeX Configurations for Export to PDF
 ;;  These are NEW as of: 2022-008-29 
 ;;  Trying out Gene Ting-Chun Kao's:

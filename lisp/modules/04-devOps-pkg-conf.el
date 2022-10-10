@@ -37,7 +37,7 @@
 
 (defvar me--req-devops-packages
   '(ztree
-    smart-tabs-mode
+;    smart-tabs-mode  ;; DISABLED - Using Xah Code Functions now...
     ssh-config-mode
     yaml-mode
     nginx-mode
@@ -83,15 +83,16 @@
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Enable Smart Tabs for all supported languages:
+;; DISABLED - Using Xah Code Functions now...
 
-(smart-tabs-insinuate 'c
-                      'c++
-                      'javascript
-                      'java
-                      'cperl
-                      'python
-                      'ruby
-                      'nxml)
+;; (smart-tabs-insinuate 'c
+;;                       'c++
+;;                       'javascript
+;;                       'java
+;;                       'cperl
+;;                       'python
+;;                       'ruby
+;;                       'nxml)
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Set C Lang Auto Mode for specific file extensions:

@@ -2,27 +2,29 @@
 ;; [modular-emacs]:~/.emacs.d/lisp/modules/07-misc.el
 ;;
 ;; This module is a catch-all for things that don't seem to fit in a specific
-;; category.  More genearl nature...  I am using this module to troubleshoot
-;; Mac OS problem of not getting the proper environment variables, (PATH etc.)
-;; I still have not solved the Mac OS problem.  The "exec-path-from-shell"
-;; related lines at the end of this file are my first attempt to fix this problem.
-;; exec-path-from-shell did solve some environment problems on Linux however...
+;; category.  LOL "miscellaneous" is the category you use when YOU HAVE NO
+;; IDEA what category to use... That's This Module for HAP Modular Emacs...
+;;
+;; Change Log: (descending chronological order)
+;;
+
+;; 2022-010-06 - Alisha Awen, siren1@disroot.org
+;;    Updated Comments, etc.  Nothing special... This module started out as an
+;;    afterthought... But it is an important place to keep odds-and-ends that
+;;    Don't fit anywhere else...
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  Insert Date Function:
+;;  Insert Date Function: (without TIME component)
 ;;  Insert Date at point using format:  yyyy-mmm-dd
 ;;  If a region has been selected, delete that first...
 
 (defun me_insert-date ()
   "Insert current date in this format: 2020-012-25.
-   I do it with three digit months to further distinguish from
-   days..."
+   Uses three digit months to distinguish from days."
   (interactive)
   (when (use-region-p) (delete-region (region-beginning) (region-end)))
-
-  (insert           ;; "2016-010-10"
-   (format-time-string "%Y-%03m-%d")))
+  (insert (format-time-string "%Y-%03m-%d"))) ;; "2022-010-06"
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -35,13 +37,13 @@
                                  (message "File reloaded")))
         (t (message "You're not editing a file!"))))
 
-;;Disable splash message, start *scratch* buffer by default
+;; Disable splash message, start *scratch* buffer by default
 
 (setq initial-buffer-choice t)
 
 (setq initial-scratch-message "")
 
-;;Enable winner-mode
+;; Enable winner-mode
 
 (winner-mode t)
 
@@ -53,17 +55,29 @@
 
 (setq whitespace-line-column 10000)
 
-;; Turn highlight matching brackets ON when cursor is on one.
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Parenthesis / Bracket HIGHLIGHTING
+;;  Matching Pairs Are Highlighted Blue: ( ) [ ]
+;;  Un-Matching & Singletons are Highlighted dark
+;;  RED when cursor is ON either one: (  ] or single [
+
+;;; TURN ON Highlight Matching Parenthesis/Brackets Mode:
 
 (show-paren-mode 1)
 
-;; highlight brackets
+;;; Option 1: ONLY Highlight Bracket Characters: ( ) [ ]
 ;(setq show-paren-style 'parenthesis)
 
-;; highlight entire expression
+;;; Option 2: HIGHLIGHT ENTIRE Matching Pair EXPRESSION:
 ;(setq show-paren-style 'expression)
 
-;; highlight brackets if visible, else entire expression
+;;; MY CHOICE: Highlight Bracket Chars ONLY If BOTH Visible:
+;;             ELSE, Highlight The ENTIRE EXPRESSION:
+;;
+;; This one is helpful when trying to find matching pair of
+;; real long forms, (using my split windows technique) to get
+;; Begin And End Parens In View At Same Time...
+;; BUT it WON'T HIGHLIGHT YOU IN YOUR FACE for short forms...
 
 (setq show-paren-style 'mixed)
 
@@ -80,9 +94,9 @@
 (require 'generic-x)
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  Set Olivetti Mode Default Width to 82 columns:
+;;  Set Olivetti Mode DEFAULT WIDTH: (from constant)
 
-(setq olivetti-body-width 82)
+(setq olivetti-body-width ME--CODE-OLIV-WIDTH)
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; The default visible bell actually startles me when it occurs!

@@ -27,7 +27,6 @@
 
    *SETUPFILE:* ~latex-book-pdf.org~ is for LaTeX Export Configurations 
               to produce a PDF version of your Fiction Book...
-
 #+END_COMMENT
 
 #+SETUPFILE: ./org-templates/fiction-book.org
@@ -37,7 +36,7 @@
 :READ_ME_FIRST:
 ☞ =Instructions:= /(How to Install & Use This Template)/
 
-To use *HAP_Fiction-BOok-Project-Skeleton.org* /(Org-Mode Fiction Book Project /Template)/ for your own projects, perform the following steps: 
+To use *HAP_Fiction-Book-Project-Skeleton.org* /(Org-Mode Fiction Book Project /Template)/ for your own projects, perform the following steps: 
 
 /Use the org-mode Checkboxes to Help You Keep Track of Progress/
 
