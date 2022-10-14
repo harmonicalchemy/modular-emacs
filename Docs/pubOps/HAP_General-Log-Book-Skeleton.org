@@ -54,18 +54,18 @@ To use *HAP_General-Log-Book-Project-Skeleton.org* /(Org-Mode Log Notebook Proje
 
       =Other Files/Folders will be placed within this MASTER FOLDER...=
 
-2) [ ] *Copy/Clone:* ~./media~ /(and contents)/ *to your new project's Master Folder:*
+2) [ ] *Create:* ~./media~ *sub folder in your new project's Master Folder:*
 
-      Copy this directory /(into your master folder as a sibling of/
+      Create this new directory /(in your master folder as a sibling of/
       /this file).../ Any external documents or images referenced by your
       Log book should be placed within this ~./media/~ directory...
 
       This single ~./media~ directory will serve media and external attachments 
-      for all of the ~.org~ docs within this =MASTER FOLDER=.
+      for all of the ~.org~ docs within this =MASTER FOLDER= /(parent directory)/...
 
-      =Note:= You DON'T need to copy the ~./auto/~ directory...  That directory
-            will be automatically created the first time you export this
-            ~.org~ file to ~.PDF~...
+      =Note:= You DON'T need to create or copy the ~./auto/~ directory...
+             That directory will be automatically created the first time
+             you export this ~.org~ file to ~.PDF~...
 
 3) [ ] *Copy/Clone:* ~./org-templates~ /(and all contents)/ *to your MASTER FOLDER:*
 
