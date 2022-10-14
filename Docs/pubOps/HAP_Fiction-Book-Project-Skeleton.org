@@ -766,23 +766,116 @@ ADD a NEW Items= /(as per :README: above)/ right here in this Log Book Binder wh
    as research of classic plots that may influence and or help you 
    make your real plots more believable and/or accurate...
 :END:
-*** 🗡 Plot Idea: /(TEMPLATE for Research of Classic Plot)/
+
+*** NEW 🗡 Plot Idea: /(TEMPLATE for Plot Development )/
 :README:
    =Copy/Clone This Template= /(And Re-Purpose Copy)/
 
-   This is All =META DATA= It is NOT Intended to be Added to ANY 
-   Chapters/Scenes of your Book... This section is purely for 
-   research purposes to help you while you are writing your book. 
-   You may have some classic plot outlined here that relates to 
-   your story, or it may be some general plot idea that you may 
-   wish to employ later...  These are general plots usually 
-   relating to the ENTIRE book, rather than any individual 
-   chapter...
+   This is All =META DATA= It is NOT Intended to be Added
+   directly to ANY specific Chapters/Scenes of your Book...
+
+   This section is for OVERALL R&D of the MAJOR Plot and
+   Sub-Plots of your entire story... and goes into the
+   📒 Research: Binder of this Project under the: *🗡 Plots:*
+   Section...
+
+   Work out the general plots and sub-plots you intend to
+   develop within the ENTIRE book...
+
+   You may have More than ONE Major Plot worked out... 
+
+   =In that case:= Copy/Clone this entire *🗡 Plot Idea:*
+   Template for each Major Plot that needs to unfold
+   within your story during new Episodes or Chapters where
+   completely new un-related plots and or sub-plots emerge...
+   
+   /(or simply use this TEMPLATE ONCE for a BOOK based on/
+   /only ONE Single Major plot and/or sub-plots, which is/
+   /most likely the most common option unless this an epic/
+   /multi episodic series)/...
+
+   =Note:= Each chapter has its own *🗡 Plot Summary:* section
+   Reflecting elements defined within this Research Section.
+   Content within the plot summaries drill down into more
+   detail, pointing out events withen the chapter where these
+   theoretical plot elements unfold...
 :END:
 
-=Plot IDEA= /(EXAMPLE - Commendeer for Your Purposes)/
+/COMPLETE The FORM BELOW: (Provide Details)/
 
-I found this classic Plot... /(see details below...)/ dealing with yadda yadda yadda which could be modified and used to: yadda yadda yadda.... To be continued...
+**** 🗡 =Plot A= /(Elements)/: [0/5]
+
+- [ ] =NAME This Plot= 
+
+- [ ] *Define This Plot's Dramatic Question*:
+
+       /(Write the Dramatic Question that This Plot Raises)/
+
+- [ ] *Main Plot Type*:
+
+       /Choose ONE or a HYBRID (combo) of the following/:
+       /(DELETE ANY that DO NOT APPLY)/
+
+   + [ ] =Tragedy=
+
+         /The main character experiences a dramatic change of/
+         /fortune which is ALMOST ALWAYS FROM GOOD TO BAD,/
+         /HAPPY TO SAD. Tragic characters experience much suffering!/
+
+   + [ ] =Comedy=
+
+         /The characters have defects, but their defects never wind/
+         /up being painful or destructive... Comic characters make/
+         /it through the story unscathed.../
+
+   + [ ] =Hero's Journey=
+
+          /This is the most powerful Plot Type... Its form matches/
+          /the poetic "Sonnet" and musical "Sonata" forms which are/
+          /also considered the most powerful devices for those art/
+          /forms.../
+
+          /The hero of a "hero's journey" story must undergo two/
+          /things:/ *1. Recognition* /and/ *2. Reversal* /of a situation.../
+          
+          /Something has to happen from the outside that inspires/
+          /the hero in a way that they did not realize before.../
+
+          /Usually a "mentor" comes into play to help our hero to/
+          /"transform" and "overcome" limitations.../
+
+          /Once the transformation has taken place our hero then/
+          /undertakes one or more quests to solve the situation.../
+
+   + [ ] =Rags To Riches=
+
+          /The best example of this Plot Type is Cinderella.../
+          /This classic Fairy tale follows a simple rags-to-riches/
+          /plot: The protagonist is downtrodden, impoverished, or/
+          /otherwise struggling... Then a series of transforming/
+          /events occur: (i.e, either magical, like in the case of/
+          /Harry Potter, or more realistic, like in Great Expectations)/
+
+          /Through these transformative events our character achieves/
+          /success.../
+
+          /This type of plot often features a happy ending.../
+
+   + [ ] =Rebirth=
+
+      The rebirth style of plot follows a character’s transformation from bad to good. The character will frequently have a tragic past that informs their current negative view of life, however, a series of events (usually set in motion by the protagonist or a narrator) will help them see the light. See: Scrooge in A Christmas Carol, or the Beast in Beauty and the Beast.
+
+   + [ ] =Overcoming the Monster=
+
+      Otherwise known as the good versus evil plot, this type of story features a protagonist (good) fighting an antagonist (evil). The protagonist can be a singular character or a group united in their mission. The antagonist is generally a big, bad evil (like Darth Vader in Star Wars) who continuously throws obstacles in the protagonist’s way—until the final battle.
+
+   + [ ] =Voyage and Return=
+
+      This plot is a simple point A to point B and back to point A plot. The protagonist sets off on a journey, only to return to his or her starting point having gained wisdom and experience (and sometimes treasure too). Paulo Coelho's The Alchemist is a beloved contemporary illustration of this plot.
+      
+- [ ] *Sub Plots*: /(plot devices)/
+
+       (/List and Define sub-plots under this bullet)/
 
 \newpage
 
@@ -972,9 +1065,14 @@ This step defines the second stage of the snowflake model... as illustrated by f
 
 For this step, *visualize the story as having "three disasters plus an ending"* 
 
+Aristotle was the first to formulate this now well-worn *3 Act Formula* in Poetics.
+He put it this way: /“A whole is that which has a beginning, a middle, and an end.”/
+
 Each of the disasters takes a quarter of the book to develop and the ending takes the final quarter. 
 
 No one claims this to be an absolute ideal structure, but it's the one that Randy Ingermanson uses, and it has a strong basis in psychology.
+
+Many of the =Plot Types= described in the *🗡 Plot Idea:* /TEMPLATE/ work best if developed using this 3 Act Structure /(at least starting out... It will be easier to modify that structure later to adapt the twisty turns of your story as it develops)/ 
 
 =If you believe in the Three-Act structure, then:=
 
@@ -1536,8 +1634,7 @@ In this chapter we are dealing with yadda yadda yadda which must be resolved wit
 \newpage
 
 ** ⎘ Templates:
-*** New Log Entry Template:
-**** NEW 🗓 LOG: <2021-03-29 Mon> Entry /(Log Entry Template)/
+*** NEW 🗓 LOG: <2021-03-29 Mon> Entry /(Log Entry Template)/
 :README:
    - *Go To One of the HEADINGS Below:* /(Summary, Details, or Sub Headings)/
 
@@ -1643,7 +1740,7 @@ Replace these instructions with short description of log entry.
 
 \newpage
 
-***** 📚 Reference:
+**** 📚 Reference:
 :README:
    =Org Mode Links Tip:=
 
@@ -1668,14 +1765,14 @@ Replace these instructions with short description of log entry.
 
 \newpage
 
-***** ⏱ Time Card:
+**** ⏱ Time Card:
 
 #+BEGIN: clocktable :scope tree2 :maxlevel 4 :tstart "<-1d>" :tend "<+1m>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3
 #+END:
 
 \newpage
 
-***** NEW ✅ Summary: [0/3]
+**** NEW ✅ Summary: [0/3]
 :README:
    This Summary is mostly to help you find things later when you cannot remember when or where is was done... If you go to the top of this file and expand all headings to show ALL content, then do a search on "~Summary:~" you will be able to quickly scroll through and scan these summaries quickly to find what you were looking for... 
 
@@ -1694,8 +1791,8 @@ Yadda... Yadda... Yadda...
 
 \newpage
 
-***** NEW 📒 Details:
-****** NEW New Item 1 /(placeholder)/ [0/3]
+**** NEW 📒 Details:
+***** NEW New Item 1 /(placeholder)/ [0/3]
 
 - [ ] *__:* /(__)/
 
@@ -1705,7 +1802,7 @@ Yadda... Yadda... Yadda...
 
 \newpage
 
-****** NEW New Item 1 /(placeholder)/ [0/3]
+***** NEW New Item 1 /(placeholder)/ [0/3]
 
 - [ ] *__:* /(__)/
 
@@ -1715,7 +1812,7 @@ Yadda... Yadda... Yadda...
 
 \newpage
 
-****** NEW New Item 1 /(placeholder)/ [0/3]
+***** NEW New Item 1 /(placeholder)/ [0/3]
 
 - [ ] *__:* /(__)/
 
@@ -4582,4 +4679,261 @@ within a *♾ New World* ...
 :END:
 
 \newpage
+*** NEW 🗡 Plot Idea: /(TEMPLATE for Plot Development)/
+:README:
+   =Copy/Clone This Template= /(And Re-Purpose Copy)/
 
+   This is All =META DATA= It is NOT Intended to be Added
+   directly to ANY specific Chapters/Scenes of your Book...
+
+   This section is for OVERALL R&D of the MAJOR Plot and
+   Sub-Plots of your entire story... and goes into the
+   📒 Research: Binder of this Project under the: *🗡 Plots:*
+   Section...
+
+   Work out the general plots and sub-plots you intend to
+   develop within the ENTIRE book...
+
+   You may have More than ONE Major Plot worked out... 
+
+   =In that case:= Copy/Clone this entire *🗡 Plot Idea:*
+   Template for each Major Plot that needs to unfold
+   within your story during new Episodes or Chapters where
+   completely new un-related plots and or sub-plots emerge...
+   
+   /(or simply use this TEMPLATE ONCE for a BOOK based on/
+   /only ONE Single Major plot and/or sub-plots, which is/
+   /most likely the most common option unless this an epic/
+   /multi episodic series)/...
+
+   =Note:= Each chapter has its own *🗡 Plot Summary:* section
+   Reflecting elements defined within this Research Section.
+   Content within the plot summaries drill down into more
+   detail, pointing out events withen the chapter where these
+   theoretical plot elements unfold...
+:END:
+
+/COMPLETE The FORM BELOW: (Provide Details)/
+
+**** 🗡 =Plot A= /(MAIN STORY PLOT)/: [0/4]
+
+The *A PLOT* is an account of the actual chain of events that take place within the story... It is =NOT about WHO or WHERE or WHY=... The Plot is NOT about any special attributes of the characters or Places...  These may enhance the plot but they are NOT part of the Plot... The PLOT is simply about =UNFOLDING EVENTS= In =SEQUENCE= as they occur within the story line... Nothing Else...
+
+- [ ] =NAME This Plot=
+
+- [ ] *Define This Plot's Dramatic Question*:
+
+       /(Write the Dramatic Question that This Plot Raises)/
+
+- [ ] *Main Plot Type*:
+
+       /Choose ONE or a HYBRID (combo) of the following/:
+       /(DELETE ANY that DO NOT APPLY)/
+
+   + [ ] =Tragedy=
+
+         /The main character experiences a dramatic change of/
+         /fortune which is ALMOST ALWAYS FROM GOOD TO BAD,/
+         /HAPPY TO SAD. Tragic characters experience much suffering!/
+
+   + [ ] =Comedy=
+
+         /The characters have defects, but their defects never wind/
+         /up being painful or destructive... Comic characters make/
+         /it through the story unscathed.../
+
+   + [ ] =Hero's Journey=
+
+          /This is the most powerful Plot Type... Its form matches/
+          /the poetic "Sonnet" and musical "Sonata" forms which are/
+          /also considered the most powerful devices for those art/
+          /forms.../
+
+          /The hero of a "hero's journey" story must undergo two/
+          /things:/ *1. Recognition* /and/ *2. Reversal* /of a situation.../
+          
+          /Something has to happen from the outside that inspires/
+          /the hero in a way that they did not realize before.../
+
+          /Usually a "mentor" comes into play to help our hero to/
+          /"transform" and "overcome" limitations.../
+
+          /Once the transformation has taken place our hero then/
+          /undertakes one or more quests to solve the situation.../
+
+   + [ ] =Rags To Riches=
+
+          /The best example of this Plot Type is Cinderella.../
+          /This classic Fairy tale follows a simple rags-to-riches/
+          /plot: The protagonist is downtrodden, impoverished, or/
+          /otherwise struggling... Then a series of transforming/
+          /events occur: (i.e, either magical, like in the case of/
+          /Harry Potter, or more realistic, like in Great Expectations)/
+
+          /Through these transformative events our character achieves/
+          /success.../
+
+          /This type of plot often features a happy ending.../
+
+   + [ ] =Rebirth=
+
+         /This style follows a character’s transformation from bad to/
+         /good. The character will frequently have a tragic past that/
+         /informs their current negative view of life, however, a series/
+         /of events (usually set in motion by the protagonist or a/
+         /narrator) will help them see the light./
+
+         /See: Scrooge in A Christmas Carol, or the Beast in Beauty/
+         /and the Beast.../
+
+   + [ ] =Overcoming the Monster=
+
+         /This Style, (also known as the good versus evil plot) features/
+         /a protagonist (good) fighting an antagonist (evil). The/
+         /protagonist can be a singular character or a group united in/
+         /their mission. The antagonist is generally a big, bad evil/
+         /(Darth Vader Like Character) who continuously throws/
+         /obstacles in the protagonist’s way... Until the final battle.../
+
+   + [ ] =Voyage and Return=
+
+         /This style (as in in music) follows the simple ABA form... The/
+         /protagonist sets off on a journey (starting at Point A), Travels/
+         /an oftentimes twisty path to (Point B) AND after having gained/
+         /wisdom, experience, and sometimes treasure... Returns back to/
+         /(Point B) bringing the story to resolution... Paulo Coelho's/
+         /"The Alchemist" is a beloved contemporary illustraion of this/
+         /plot.../
+
+\newpage
+
+**** 🗡 Plot Elements: /(plot devices)/
+
+Define ANY of the 6 Classic Elements below that best strengthens the structure of this story in SEQUENCE as it develops... Note the chapters, scenes, where these elements first occur and play out... REMOVE ANYTHING THAT DOES NOT APPLY...
+
+   + [ ] *Exposition*:
+
+          /The Exposition is where you introduce your hero and establish/
+          the story setting, i.e., your hero’s world... By focusing on
+          the core value at stake from the very beginning, you confirm
+          genre for your readers and introduce dramatic tension by
+          setting up conflict and forcing your character to act on a
+          choice.
+
+          In most types of suspense fiction, the story will turn on a core
+          value of Life vs. Death or perhaps a Fate Worse than Death. Often,
+          the internal value at stake is Good vs. Evil. Crime stories, on
+          some level, usually deal with issues of justice and good guys
+          vanquishing bad guys while lives are in danger.
+
+          During this exposition phase, use specific details and descriptive elements to sink your reader deep into the story and make them care
+          about your hero and worry over what will happen next.
+
+   + [ ] *Inciting Incident*:
+
+          Once your reader is grounded in the story world and emotionally invested in your character, something needs to happen to interrupt the established pattern and rock your character’s world in some way. An Inciting Incident begins the story arc that will eventually culminate in the climactic scene and ending resolution of your story.
+
+          The inciting incident should be inspired by, and reinforce, the core value at stake in the story. In a crime story, this event—whether coincidental or triggered by a story character—works best when it reflects a conflict between life and death or something worse.
+
+          The way you pace your story and deliver information to your reader is paramount to your story’s success, right from the very beginning.
+
+   + [ ] *Rising Action*:
+
+          Rising Action is where you raise the stakes and ratchet up the tension in a buildup toward the dilemma. These are the try/fail cycles, the struggle to understand the antagonistic force and find a way to defeat it through trial and error.
+
+          When thriller writer, Lee Child, was asked to divulge his recipe for creating suspense, he said it’s not so much about the ingredients as it is about making your family hungry, making them wait. This is where you spin out uncertainty and worry, making your reader hungry for the payoff.
+
+          I've written several articles about how to increase tension in a story's plot by focusing on the elements of suspense. The writing techniques I've taught in these articles, such as how to create cliffhangers, write an action scene, and plant clues and red herrings, will help you develop rising action in your story. Learn more about how to use these powerful techniques in your stories by reading each article (linked in the previous sentence).
+
+          All of these writing skills will help you keep the story pace moving along through the middle, where many writers flounder.
+
+   + [ ] *Dilemma*:
+
+          Now we get to the crux of the story, where the rubber meets the road. The Dilemma boils down to a choice your protagonist must make—a difficult and crucial choice.
+
+          There are two types of choices that create the most conflict and drama. The first is often called the Best Bad Choice, where there is no happy alternative and your character is forced to choose from a menu of unsavory options.
+
+          =For instance:= Does Katniss cut down a tracker jacker nest and kill some of the tributes, or does she wait for the tributes to kill her?
+
+          The other variety of tough choices involves having to decide between conflicting goods, otherwise called an Irreconcilable Goods Decision. In this scenario, someone benefits while someone else is harmed. There is no win/win.
+
+          =For example:= Does Kramer hire someone to take care of his son in order to work a prestigious job, or does he step down from his career to be a reliable parent?
+
+          The dilemma is the heart of your story. It’s where your hero demonstrates his true character development. If you’ve created a sympathetic protagonist readers care about, they will be desperate to learn how he chooses and what happens as a result of that choice.
+
+   + [ ] *Climax*:
+
+          Your hero faces a difficult choice in the dilemma, but the Climax is where she acts on that choice and reaps the consequences of that action. This is the payoff you’ve been building toward since the beginning. This is the summit readers want to reach when they open a book.
+
+          This is also where your hero gains or ultimately loses what she seeks. In suspense fiction, that sought-after objective is usually solving a crime and bringing the perpetrator to justice. Or it might be revenge, rescue, or the acquisition of wealth or power.
+
+          Whatever it is, it centers on the conflict between the core values at stake—life or death. The events in your story have transformed and prepared your protagonist for this final confrontation.
+
+          Now it’s showtime.
+
+          Knowing your story's climax also helps to hone your skills of foreshadowing. You’ll be able to properly place your setups and readers won’t feel cheated.
+
+          It’s also a good idea to make sure you’ve honored reader expectations and delivered a story suited to what suspense fans crave.
+
+   + [ ] *Denouement*:
+
+          Writers are sometimes tempted to skip writing the Denouement of the plot, or give it short shrift.
+
+          Don’t. If you want readers to look back fondly on your story and pick up your next book, give them the closure they desire.
+
+          Readers need a moment to savor the climax and feel the release of tension. If you’ve done a good job creating compelling characters, readers won’t want to say goodbye right away. Let them spend a little more time together.
+
+          This is where you validate your protagonist’s arc and reflect on how she’s changed. Even if the world around her is back to normal, she’s not the same person who started the story.
+
+          This is also where you wrap up any loose ends and it’s the perfect place to bring secondary plotlines to a close. Read below to learn more about subplots.
+
+\newpage
+
+**** 🗡 =B Plots:= /(Sub Plots & Secondary Devices)/
+
+Anything longer than a short story is enriched by weaving in one or more secondary plotlines, or subplots...
+
+You can see this clearly in just about any television episode. There’s an A plot and a B plot. The A plot is the main story.
+
+The B plot forms a supporting storyline that plays off the A plot and may highlight theme or act as a foil or contrast to the A plot.
+
+A secondary plotline can center on just about anything, including a character, setting, theme, motif, or problem. It can enter the story at any point and leave at any point—no need for it to run through the entire story unless that’s what serves the story best.
+
+These Sub Plots may show up within a single chapter and they wrap up quickly within that same chapter or over the next couple of chapters... But not much longer, so as not to take the focus away from the MAIN plot of the entire story...
+
+Brainstorm the best subplot ideas that can deepen the tension and make your main character’s scenario more complex. Finding the right way to incorporate subplots can be tricky.
+
+=DONT LET YOUR SUB PLOTS UPSTAGE YOUR MAIN CHARACTER & MAIN PLOT...
+Sub Plots Play Second Fiddle...=
+
+/(Define Any of the Sub Plots listed under this bullet AS NEEDED.../
+/Remove any that are not required...)/
+
+- [ ] *Mirror Sub Plot*:
+
+       /A smaller-scale conflict mirrors the main character’s in order/
+       /to teach them a valuable lesson or illuminate how to resolve/
+       /the conflict./
+
+- [ ] *Contrasting Sub Plot*:
+
+       /A secondary character faces similar circumstances and dilemmas/
+       /as the main character but makes different decisions with the/
+       /opposite outcome./
+
+- [ ] *Complicating Sub Plot*:
+
+       /A secondary character makes matters worse for the main character./
+
+- [ ] *Romantic Sub Plot*:
+
+       /The main character has a love interest, and this relationship/
+       /complicates the main plot. Don't drag this out so long that/
+       /readers are ready to jump ship (on the main plot) and continue/
+       /in this new direction... Your original story will be ruined/
+       /if that happens. Resolve this sub plot in a way that readers/
+       /are relieved to get back to the original plot/conflict with/
+       /new enhanced awareness (understanding) based on the outcome/
+       /of the sub-plot.../
+
+\newpage
