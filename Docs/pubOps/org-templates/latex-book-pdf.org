@@ -1,21 +1,30 @@
 # -**- mode: org; coding: utf-8 -**-
 #+begin_comment
-=File:=  ~latex-book-pdf.org~ - HAP BASIC SETUP for BOOK formatted PDFs
+
+=File:=  ~~/.emacs.d/Docs/pubOps/org-templates/latex-book-pdf.org~
 
         =Org-Mode LaTeX --> BOOK PDF Configuration...=
 
-=USAGE:= *Copy/Clone* this file and adjust to suit your needs...
-        *Include* this file within ~.org~ files that need to be 
-        exported as *BASIC BOOK FORMAT PDF* Files...
 
-   *Add:* the following line to the Header the ~.Org~ File:
+=Usage:= *Include* this SETUPFILE within ~.org~ files which need to be exported
+        in a Basic Book Style, published as a PDF file....
 
-   ~#+SETUPFILE: ~/.emacs.d/Docs/pubOps/org-templates/latex-book-pdf.org~
+        *COPY/CLONE:* ~~/.emacs.d/Docs/pubOps/org-templates~ directory
+        to the MASTER directory where existing .org files reference
+        this contained SETUPFILE... Modify the copied SETUP Files within
+        your cloned org-templates directory to suit your needs...
 
-   /You should copy/clone ~/.emacs.d/Docs/pubOps/org-templates~ /folder to your
-   book's project directory and adjust the above path to point to that instead.../
-   /This will allow you to make your own custom configurations for different books/
-   /without affecting the configurations of other books of the same genre.../
+        =Don't Modify The MASTER Templates Within ~/.emacs.d=
+
+  =Add:= the following line to the Header of ~.Org~ Files that need to
+        include this file:
+
+        ~#+SETUPFILE: ./org-templates/latex-book-pdf.org~
+
+/Making a COPY/CLONE of:/ ~$HOME/.emacs.d/Docs/pubOps/org-templates~ /master/
+/folder To your book's project directory will allow you to make your own custom/
+/configurations for different books without affecting the configurations of other/
+/book projects within their own MASTER FOLDERS.../
 #+end_comment
 
 =Type/Size:= 

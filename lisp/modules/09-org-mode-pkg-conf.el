@@ -73,6 +73,16 @@
 
 (setq org-directory ME--ORG-DOC-DIR)
 
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; Configure LilyPond-mode for editing .ly Music Notation files in Emacs
+
+(autoload 'LilyPond-mode "lilypond-mode")
+(setq auto-mode-alist
+      (cons '("\\.ly$" . LilyPond-mode) auto-mode-alist))
+
+(add-hook 'LilyPond-mode-hook (lambda () (turn-on-font-lock)))
+
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Configure Org Mode Beautify Settings: (constantly under revision %^)
 ;;  Override the file below by putting it into "my-modules" then change it to

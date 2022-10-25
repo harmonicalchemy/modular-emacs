@@ -25,7 +25,7 @@
 
    *SETUPFILE:* ~default-tags.org~ is where tags are set for this project...
 
-   *SETUPFILE:* ~latex-book-pdf.org~ is for LaTeX Export Configurations 
+   *SETUPFILE:* ~latex-simple-pdf.org~ is for LaTeX Export Configurations 
               to produce a PDF version of your Log Note Book...
 #+END_COMMENT
 
@@ -58,7 +58,7 @@ To use *HAP_General-Log-Book-Project-Skeleton.org* /(Org-Mode Log Notebook Proje
 
       Create this new directory /(in your master folder as a sibling of/
       /this file).../ Any external documents or images referenced by your
-      Log book should be placed within this ~./media/~ directory...
+      book(s) should be placed within this ~./media/~ directory...
 
       This single ~./media~ directory will serve media and external attachments 
       for all of the ~.org~ docs within this =MASTER FOLDER= /(parent directory)/...
@@ -119,10 +119,10 @@ To use *HAP_General-Log-Book-Project-Skeleton.org* /(Org-Mode Log Notebook Proje
 
           Change to: /"Copyright © your info here"/ You are the copyright
           owner of your own documents created from clones of these master
-          templates... /(but these master Template Files are to stay under/
+          templates... /(but these MASTER Template Files are to stay under/
           /Harmonic Alchemy Productions copyright. Any Attribution to me/
           /for the template structure of your published docs will be/
-          /appreciated... Thanks! ;-)/
+          /appreciated... but unnecessary... Thanks! ;-)/
 
     - [ ] *Change the* ~#+AUTHOR:~ *directive at the top of this file:* 
 
@@ -143,16 +143,18 @@ To use *HAP_General-Log-Book-Project-Skeleton.org* /(Org-Mode Log Notebook Proje
 
           Put your cursor on the TIMESTAMP: /i.e.,/ <2022-10-05 Wed>
           and type: ~C-c . . RETURN~ The TIMESTAMP will update to NOW.
-          Leave this DATE alone after this first and only update as
-          it reflects the time/date that you created this new document
-          for the first time...
+
+          =LEAVE THIS DATE ALONE after Setting It The FIRST Time=
+
+          This Date reflects the time/date that you first created this
+          new document It should NEVER change after that...
 
     - [ ] *Change the* ~#+TEXT: Last Published:~ *TIMESTAMP at Publish Time:* 
 
-          Don't change this UNTIL you have actually Exported this file
-          as PDF or HTML, etc. and have PUBLISHED it publically somewhere...
+          =Don't Change This UNTIL You Have Actually Exported This File=
+          /(as a PDF or HTML, etc. and have PUBLISHED it publically somewhere)/
 
-          Until that publishing time comes leave it alone as: <unpublished>
+          Until that publishing time comes leave it alone as: <not-published>
           
           As soon as this is published or re-published, Replace the
           <unpublished> placeholder with a REAL TIMESTAMP by typing:

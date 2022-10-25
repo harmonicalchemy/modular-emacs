@@ -1,111 +1,286 @@
 # -**- mode: org; coding: utf-8 -**-
-#+LATEX_HEADER: \usepackage{parskip}
-#+LaTeX_HEADER: \usepackage{paralist}
-#+LATEX_HEADER: \usepackage[hyperref,x11names]{xcolor}
-#+LATEX_HEADER: \usepackage[colorlinks=true,urlcolor=SteelBlue4,linkcolor=Firebrick4]{hyperref}
-
-#+begin_comment
- Setup Files:
-   For Cloned Versions of this template, replace file/paths below
-   with file/paths to your own custom setup files (which you could 
-   convienently clone from the example setup files provided in
-   ../org-templates/ directory...
-
- NOTE: 
-   #+CATEGORY: is specified within log-book.org setupfile.
-   If you need to change the category do it in log-book.org
-   or your cloned version of it...
-#+end_comment
-
-#+SETUPFILE: ~/.emacs.d/Docs/pubOps/org-templates/ref-book.org
-#+SETUPFILE: ~/.emacs.d/Docs/pubOps/org-templates/default-tags.org
-
 #+TITLE: HAP - Technical Book Project Skeleton
 #+EXPORT_FILE_NAME: HAP_Untitled-Tech-Manual.pdf
-#+KEYWORDS:
+#+TEXT: Copyright © 2022 Harmonic Alchemy Productions & Others
 #+AUTHOR: Alisha Awen - Harmonic Alchemy Productions
 #+EMAIL: Siren1@disroot.org
-#+DATE: <2022-08-28 Sun>
+#+DATE: <2022-10-18 Tue>
 #+TEXT: Created: <2020-07-30 Thu>
-#+TEXT: Last Published: <2021-03-25 Thu>
-#+FILETAGS: templates reference_books
+#+TEXT: Last Published: <Not Published>
+#+FILETAGS: templates reference_books @projects unpublished
 
 #+DESCRIPTION: HAP - Tech Manual Book Project Skeleton with generic basics already done. Great for documenting technical projects, large or small... Also great for organizing, handling caveats, trying different methods, etc. All while building a sound outline of support docs, steps, best practices... and publishable as a PDF Book suitable for eBook readers... (easily modified for publishing in other eBook formats or for the web)
 
-#+begin_comment
- Don't mess with these unless you have good reason, (e.g., testing).
- Use Setup Tag File above to specify tags for this file...
+#+BEGIN_COMMENT
+=Setup Files:=
 
-# #+STARTUP: noptag
-# #+TAGS:
-#+end_comment
+   For Cloned Versions of this template, the file/paths below will be relative
+   to your parent project directory and as such, should be all set to your new: ~.../your-technical-book-project/org-templates/~ directory...
 
-:README:
-To use this Emacs Org-Mode Technical Book Project Skeleton /(template)/ for your own projects, perform the following steps:
+=NOTE:= 
 
-1. *Clone a Copy of this File:* Put it where you normally organize your 
-   writing projects. *Place it within its own folder* named after your 
-   intended project title...
+   ~#+CATEGORY:~ is specified within ~ref-book.org~ SETUPFILE.
+   If you need to change the category, do it in your cloned version
+   of ref-book.org...
 
-2. *Change the* ~#+TITLE:~ *directive at the top of this file* 
-   to: /"your Technical Book Project's Title"/
+   *SETUPFILE:* ~default-tags.org~ is where tags are set for this project...
 
-3. *Change the* ~#+EXPORT_FILE_NAME:~ *directive at the top of this file* 
-   to: /"your-Technical-Book-Project's-Title.pdf"/ That will be the file 
-   name produced thence forward...
+   *SETUPFILE:* ~latex-tech-pdf.org~ is for LaTeX Export Configurations 
+              to produce a PDF version of your Fiction Book...
+#+END_COMMENT
 
-4. *Change the* ~#+DESCRIPTION:~ *directive at the top of this file* 
-   to: /your Technical Book Project's Description/ etc...
+#+SETUPFILE: ./org-templates/ref-book.org
+#+SETUPFILE: ./org-templates/latex-tech-pdf.org
+#+SETUPFILE: ./org-templates/default-tags.org
 
-2. *Copy/Clone ./media* /(and all its contents):/ To your new project's folder
-   /(where you copied this file).../ Any external documents or images referenced 
-   by your book project should be placed within this ~./media/~ directory... 
+:READ_ME_FIRST:
+☞ =Instructions:= /(How to Install & Use This Template)/
 
-   All of the external links, images, within the boilerplate examples may be 
-   used as examples for getting your own images, and external attachments 
-   linked properly...  This single *./media* directory serves media and external 
-   attachments for all of the *.org* files contained within:
-   ~.emacs.d/Docs/pubOps~ directory... Cloning any of the other *.org* files will 
-   also require copy/cloning the ./media directory relative to them...
+To use *HAP_Technical-Book-Project-Skeleton.org* /(Org-Mode Reference Book Project /Template)/ for your own projects, perform the following steps: 
 
-4. You don't need to copy the ~./auto/~ directory...  That will be created for 
-   you automacally the first time you export this ~.org~ file to ~.PDF~.
+/Use the org-mode Checkboxes to Help You Keep Track of Progress/
 
-5. You also don't need to copy the ~./org-templates~ directory... The files in 
-   there are automatically linked and included within this template. You don't 
-   need to change those settings unless you wish to customize the already 
-   customized tags, and export options. /They are set up correctly for the/ 
-   /Tech Book genre already and the category is all set as well.../ But if you 
-   must, you can modify the original files to make your changes rather than 
-   cloning to your project directory... Realize that if you do that while on 
-   the master branch it will get out of sync with origin, check out a local 
-   branch to make it easier to get back to defaults if you change your mind 
-   later. %^)
+1) [ ] *Clone a Copy of This File:* 
 
-6. *Start Planning / Writing Your Technical Book:* /Change headings and structure/ 
-   /to match your project's outline sections-chapters-scenes-plots-characters,/ 
-   /etc.../ Start doing the Tasks within the Tasks section... 
+      Put your clone where you normally organize your writing 
+      projects. *Place it within its own master folder... It is*
+      *Important to keep this file within its OWN enclosing folder!* 
 
-   =Have fun doing this...=
+      Name the project's master folder to reflect your Reference book 
+      project's title... /(what you renamed this .org file to)/...
 
-The *In-Buffer Settings* and *KEYWORDS* specified above are configured to get this file looking good when exported as a Standard PDF file.  Once you have your project directory all set up as above you are ready to export your first PDF as a test run... 
+      =Other Files/Folders will be placed within this master folder...=
 
-To make a PDF out of this file issue the following Emacs command:
+2) [ ] *Create:* ~./media~ *sub folder in your new project's Master Folder:*
 
-   ~M-x org-latex-export-to-pdf~
+      Create this new directory /(in your master folder as a sibling of/
+      /this file).../ Any external documents or images referenced by your
+      book(s) should be placed within this ~./media/~ directory...
 
-*-or-* If You Enabled *Xah-Fly-Keys* /"Command Mode"/ Try:
+      This single ~./media~ directory will serve media and external attachments 
+      for all of the ~.org~ docs within this =MASTER FOLDER= /(parent directory)/...
 
-   ~SPACE e p~
+      =Note:= You DON'T need to create or copy the ~./auto/~ directory...
+             That directory will be automatically created the first time
+             you export this ~.org~ file to ~.PDF~...
 
-After *AucTeX* is done parsing/compiling etc., a new *PDF* by the name of ~HAP_Untitled-Tech-Manual.pdf~ -and- ~HAP_Untitled-Tech-Manual.tex~ will appear within the same directory as this file...
+3) [ ] *Copy/Clone:* ~./org-templates~ /(and all contents)/ *to your Master Folder:*
 
-Subsequent repeated calls to the above command will overwrite your existing ~HAP_Untitled-Tech-Manual.pdf~ -and- ~HAP_Untitled-Tech-Manual.tex~ files! You should probably copy these files to the ~./auto/~ directory as well for safe keeping as backups...
+      Copy this directory to your book's MASTER FOLDER,
+      /(i.e., as a sibling/ /of this .org file).../ 
 
-*Last Modified:* <2022-08-28 Sun> So far things are pretty basic PDF... We will get fancy with other formats later... I promice... I have to do all this documentation first! /(As you can see, if you been following for the past couple years, things are getting done! Albeit Slowly)/
+      =Note:= The SETUPFILES Within this directory which are called out and 
+            included by this .org file /(above)/ must stay within this
+            directory...  
 
-Enjoy! - Alisha Awen
+            Other SETUPFILES within this directory are used by other book 
+            project templates and are not needed for this Technical Book
+            Project... You may remove them if you wish...
+
+            However, consider If you clone another ~HAP_<book-template>.org~
+            file into this MASTER PROJECT FOLDER it will pick up its
+            associated SETUPFILES automatically, so consider that if/when
+            you decide to delete other UNUSED SETUPFILES... They are small
+            text files not bothering you or your operations...
+
+4) [ ] =Start Sketching Out Your Technical Book NOW Before You Loose It!=
+
+      =NOTE:= You may be doing this because you have technical information that
+             needs to be writtin now before you forget!  =Right?=  Therefore...
+             as soon as you are done with the first steps above, =STOP= and go immediately to the:
+
+                   ~💡 Ideas Scratchpad Refile / ☞ Start Here!~ 
+
+             section and read the ~:README:~ directly under that heading...  
+             Then write your ideas down quickly /(as per the README instructions)/ 
+             to get your information recorded before you forget it...  
+
+             Later, After you have all your ideas sketched out and you are 
+             ready to be in an ="organized mood"= /(rather than creative mood)/ 
+             /This does not imply being organized cannot be a CREATIVE PROCESS/ 
+             Then it is time to:
+
+             =Come Back Here And Finish Setting Up Your Project...=
+
+             *This Project Template is HUGE!*
+
+             *Your Muse Can Easily Loose Her Inspiration!*
+
+             =The ☞ Start Here Section is Your Remedy= 
+
+             =Do That first!=
+
+5) [ ] *Finish Setting up this Project LATER...* [0/3]
+
+    - [ ] *Change the* ~#+TITLE:~ *directive at the top of this file:* 
+
+          Change to: /"your Technical Book Project's Title"/
+
+    - [ ] *Change the* ~#+EXPORT_FILE_NAME:~ *directive at the top of this file:*
+
+          Change to: /"your-tehcnical-Book-Project's-Title.pdf"/
+          This will be the file name(s) produced during export thence forward
+          /(including auto generated files: .tex, etc...)/
+
+    - [ ] *Change the* ~#+TEXT: Copyright © 2022:~ *directive top of this file:*
+
+          Change to: /"Copyright © your info here"/ You are the copyright
+          owner of your own documents created from clones of these master
+          templates... /(but these MASTER Template Files are to stay under/
+          /Harmonic Alchemy Productions copyright. Any Attribution to me/
+          /for the template structure of your published docs will be/
+          /appreciated... but unnecessary... Thanks! ;-)/
+
+    - [ ] *Change the* ~#+AUTHOR:~ *directive at the top of this file:* 
+
+          Change to: /"your NAME"/
+
+    - [ ] *Change the* ~#+EMAIL:~ *directive at the top of this file:* 
+
+          Change to: /"your EMAIL"/
+
+    - [ ] *Change the* ~#+DATE:~ *TIMESTAMP at the top of this file:* 
+
+          Put your cursor on the TIMESTAMP: /i.e.,/ <2022-10-05 Wed>
+          and type: ~C-c . . RETURN~ The TIMESTAMP will update to NOW.
+          Do this whenever you update your doc to show last date
+          it was changed or modified...
+
+    - [ ] *Change the* ~#+TEXT: Created:~ *TIMESTAMP at the top of this file:* 
+
+          Put your cursor on the TIMESTAMP: /i.e.,/ <2022-10-05 Wed>
+          and type: ~C-c . . RETURN~ The TIMESTAMP will update to NOW.
+
+          =LEAVE THIS DATE ALONE after Setting It The FIRST Time=
+
+          This Date reflects the time/date that you first created this
+          new document It should NEVER change after that...
+
+    - [ ] *Change the* ~#+TEXT: Last Published:~ *TIMESTAMP at Publish Time:* 
+
+          =Don't Change This UNTIL You Have Actually Exported This File=
+          /(as a PDF or HTML, etc. and have PUBLISHED it publically somewhere)/
+
+          Until that publishing time comes leave it alone as: <not-published>
+          
+          As soon as this is published or re-published, Replace the
+          <unpublished> placeholder with a REAL TIMESTAMP by typing:
+          ~C-c . . RETURN~ The new Last Published: <TIMESTAMP> will
+          appear in place... Do this EVERY time you publish or update
+          an existing publishing... /(this will help you keep track)/
+
+    - [ ] *Change the* ~#+FILETAGS:~ *directive at the top of this file:* 
+
+          Add your own tags that match the context of your Log Book...
+          
+    - [ ] *Change the* ~#+DESCRIPTION:~ *directive at the top of this file:*
+
+          Compose /Your-Technical-Book-Project's Description/ as a short 
+          paragraph here...
+
+    - *The* ~./media~ *Directory is ALL Set:* 
+
+         Any external documents or images referenced by ANY book projects
+         located within this MASTER FOLDER, should be placed within this
+         ~./media/~ directory... This single ~./media~ directory will serve
+         media and external attachments for this and any other related
+         ~.org~ files you may end up creating here, as well as being
+         the media repository used by LaTeX during publishing...
+
+    - *Purpose of the:* ~./auto/~ *Directory:* /(you do not need to copy this)/
+
+         This is or will-be an auto generated folder where your output ~.PDF~ 
+         files are created and placed during LaTeX export. You DO NOT need 
+         to copy this folder as it is auto generated during org-mode LaTeX 
+         processing...
+
+         LaTeX processing will not delete any prior files contained here... 
+         Some of them will be updated, but will have backups...  Any files 
+         you place within this folder will NOT be lost, unless you delete 
+         them... This folder is a good place to store other temporary files 
+         you may be creating, generating.. etc...
+
+    - *Purpose of the:* ~./org-templates~  *Directory:*
+
+         The files in here are automatically linked and included within this
+         template. You don't need to change those settings unless you wish to
+         customize the already customized tags, and export options.
+
+         /They are allready set up correctly for the Technical Book genre, and/
+         /the Category is all set as well... But you can and may modify the/
+         /SETUPFILES to fit your needs.../
+
+         Other SETUPFILES within this directory are used by other book 
+         project templates and are not needed for this Technical Book
+         Project... You may remove them if you wish...
+
+         However, consider If you clone another ~HAP_<book-template>.org~
+         file into this MASTER PROJECT FOLDER it will pick up its
+         associated SETUPFILES automatically, so consider that if/when
+         you decide to delete other UNUSED SETUPFILES... They are small
+         text files not bothering you or your operations...
+
+6) [ ] =Ongoing Planning / Writing Your Technical Book:= 
+
+      /Change headings and structure to match your project's outline/ 
+      /sections-chapters, figures, etc.../
+
+      *Start doing the Tasks within the Tasks section:*
+
+      =Have fun doing this...=
+
+7) [ ] =Export/Publish to PDF File:=
+
+      The *In-Buffer Settings* specified by the SETUPFILES above will 
+      get this file looking good when exported as a Standard PDF file.  
+      Once you have your project directory all set up as above you are 
+      ready to export your first PDF as a test run...
+
+         *Issue the following Emacs command:*
+
+            ~M-x org-latex-export-to-pdf~
+
+         *OR* If You Enabled *Xah-Fly-Keys* /"Command Mode"/ Try Shortcut:
+
+            ~SPACE e p~
+
+         *OR Export to OTHER Formats:*
+
+            ~C-c C-e~
+
+            /(a pop-up will show allowing you to choose export method)/
+
+      After *AucTeX* is done parsing/compiling etc., new files by the name of: ~HAP_Untitled-Tech-Manual.pdf~ -and- ~HAP_Untitled-Tech-Manual.tex~ 
+      will appear within the same directory as this file...
+
+      Subsequent repeated calls to the above command will overwrite your existing ~HAP_Untitled-Tech-Manual.pdf~ -and- ~HAP_Untitled-Tech-Manual.tex~ 
+      files! /(make backups first if needed!)/
+      You should probably copy these files to the ~./auto/~ directory as 
+      well for safe keeping as backups...
+
+      =If you chose the last option above= LaTeX will output files with other
+      extensions for those other output formats... =NOTE:= SETUPFILES have not
+      been created yet for other eBook formats.  /(This is a work in progress)/
+
+      =If YOU EXPERIENCE LaTeX ERRORS:= 
+
+         *Consult Buffer:* ~*Org PDF LaTeX Output*~
+
+=These Instructions Were Last Modified:= <2022-10-18 Tue> 
+
+So far things are pretty basic PDF... We will get fancy with other formats later... 
+I promice... I have to do all this documentation first!
+/(As you can see, if you been following for the past couple years, things are/ 
+ /getting done! Albeit Slowly)/
+
+=Please Open an ISSUE At:= https://github.com/harmonicalchemy/modular-emacs/issues
+   
+Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas for Improvement... =You guys are my Product Managers=  I am only a User of ONE "seat". 
+Other folks UX metrics are sorely needed!! Thanks!
+
+=Enjoy!= - Alisha Awen
 :END:
+
 * 💡 Scratchpad Refile:           :noexport:
 ** ☞ Start Here!
 :README:
@@ -432,7 +607,7 @@ Yadda, yadda, yadda. etc...
 
 \newpage
 
-* 📒 Research:                          :noexport:
+* 🔍 Research:                          :noexport:
 ** 🗓 Log Book:
 :README:
    Use this space to add time stamped log note entries for any 
