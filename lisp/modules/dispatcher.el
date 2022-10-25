@@ -45,6 +45,18 @@
 ;; Change Log: (descending chronological order)
 ;;
 
+;; 2022-010-25 - Alisha Awen, siren1@disroot.org
+;;   Added a new module: me-abbrev-defs.el
+;;   Which contains GLOBAL Abbrev Definitions taken directly from Xah Lee's 
+;;   webpage:  http://xahlee.info/emacs/emacs/emacs_abbrev_mode.html
+;;   Some new global abbrevs were also added by me. (or rather Modular
+;;   Emacs)... IT may be wise NOT to change many of these default abbrevs,
+;;   (except personal ones like your name etc.)... Instead, use the section
+;;   at the BOTTOM of the list within me-abbrev-defs.el (where noted in the
+;;   file), and add your new custom abbrev forms there... (adding to the list)
+;;   These default global abbrevs work in all emacs modes... You can make
+;;   some exclusive to specific modes as well...
+;;
 ;; 2022-005-15 - Alisha Awen, siren1@disroot.org
 ;;   Added a new form that invokes new file: 06-XahEmacs-conf.el...
 ;;   This module is disabled by default (the form is commented out) You won't
@@ -151,6 +163,13 @@
 (if (file-exists-p "~/.emacs.d/lisp/my-modules/13-key-bindings.el")
     (load-file "~/.emacs.d/lisp/my-modules/13-key-bindings.el")
   (load-file "~/.emacs.d/lisp/modules/13-key-bindings.el"))
+
+;;;
+;; Load - Custom: Abbrevs (Mod Emacs Defaults -AND/OR- Your Personal Overrides)
+
+(if (file-exists-p "~/.emacs.d/lisp/my-modules/me-abbrev-defs.el")
+    (load-file "~/.emacs.d/lisp/my-modules/me-abbrev-defs.el"))
+  (load-file "~/.emacs.d/lisp/modules/me-abbrev-defs.el"))
 
 ;;;
 ;; Load Harmonic Alchemy Modular Emacs - Dired Extras module:
