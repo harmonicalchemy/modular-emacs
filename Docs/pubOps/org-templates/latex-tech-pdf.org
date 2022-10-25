@@ -1,17 +1,29 @@
 # -**- mode: org; coding: utf-8 -**-
 #+begin_comment
-*File:*    ~latex-tech-pdf.org~ - SETUPFILE for LaTeX Exports to Technical PDFs
+=File:=  ~~/.emacs.d/Docs/pubOps/org-templates/latex-tech-pdf.org~
 
-=USAGE=
+        =Org-Mode LaTeX --> TECH BOOK PDF Configuration...=
 
-*Install:* Clone this file and adjust to suit your needs...
-         Include this file within org files that need to be exported 
-         as Technical Books or Manuals in PDF format...
+=Usage:= *Include* this SETUPFILE within ~.org~ files which need to be exported
+        in a Reference Book or Tech Manual format/style, published as a
+        PDF file....
 
-*Add:* the following line to the Header of any Org Files that needs to 
-     enable this configuration:
+        *COPY/CLONE:* ~~/.emacs.d/Docs/pubOps/org-templates~ directory
+        to the MASTER directory where existing .org files reference
+        this contained SETUPFILE... Modify the copied SETUP Files within
+        your cloned org-templates directory to suit your needs...
 
-     #+SETUPFILE: ~/.emacs.d/Docs/pubOps/org-templates/latex-tech-pdf.org
+        =Don't Modify The MASTER Templates Within ~/.emacs.d=
+
+  =Add:= the following line to the Header of ~.Org~ Files that need to
+        include this file:
+
+        ~#+SETUPFILE: ./org-templates/latex-tech-pdf.org~
+
+/Making a COPY/CLONE of:/ ~$HOME/.emacs.d/Docs/pubOps/org-templates~ /master/
+/folder To your book's project directory will allow you to make your own custom/
+/configurations for different books without affecting the configurations of other/
+/book projects within their own MASTER FOLDERS.../
 #+end_comment
 
 #+LATEX_CLASS:         ethz

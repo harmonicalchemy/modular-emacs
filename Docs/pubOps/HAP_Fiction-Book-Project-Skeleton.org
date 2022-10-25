@@ -191,7 +191,7 @@ To use *HAP_Fiction-Book-Project-Skeleton.org* /(Org-Mode Fiction Book Project /
 
             /(a pop-up will show allowing you to choose export method)/
 
-      After *AucTeX* is done parsing/compiling etc., a new *PDF* by the name of: ~HAP_Untitled-Fiction-Book.pdf~ -and- ~HAP_Untitled-Fiction-Book.tex~ 
+      After *AucTeX* is done parsing/compiling etc., new files by the name of: ~HAP_Untitled-Fiction-Book.pdf~ -and- ~HAP_Untitled-Fiction-Book.tex~ 
       will appear within the same directory as this file...
 
       Subsequent repeated calls to the above command will overwrite your existing ~HAP_Untitled-Fiction-Book.pdf~ -and- ~HAP_Untitled-Fiction-Book.tex~ 
@@ -207,7 +207,7 @@ To use *HAP_Fiction-Book-Project-Skeleton.org* /(Org-Mode Fiction Book Project /
 
          *Consult Buffer:* ~*Org PDF LaTeX Output*~
 
-=These Instructions Were Last Modified:= <2022-09-09 Fri> 
+=These Instructions Were Last Modified:= <2022-10-18 Tue> 
 
 So far things are pretty basic PDF... We will get fancy with other formats later... 
 I promice... I have to do all this documentation first!

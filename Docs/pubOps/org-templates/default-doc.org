@@ -1,21 +1,28 @@
 # -**- mode: org; coding: utf-8 -**-
 #+BEGIN_COMMENT
-=File:=  ~default-doc.org~ - HAP BASIC SETUP for Generic Book Projects...
+=File:=  ~~/.emacs.d/Docs/pubOps/org-templates/default-doc.org~
 
-        =BASIC LaTeX Configuration for: GENERIC BOOKS=
+        =BASIC LaTeX Configuration for: GENERIC DOCUMENTS=
 
-=Usage:= *Copy/Clone* this file and adjust to suit your needs...
-        *Include* this file within ~.org~ files destined to become
-        a *Generic Book*... Customize this file for Specifics...
+=Usage:= *Include* this SETUPFILE within ~.org~ files destined to become
+        a *Generic Book or Document*...
 
-  *Add:* the following line to the Header the ~.Org~ File:
+        *COPY/CLONE:* ~~/.emacs.d/Docs/pubOps/org-templates~ directory
+        to the MASTER directory where existing .org files reference
+        this contained SETUPFILE... Modify the copied SETUP Files within
+        your cloned org-templates directory to suit your needs...
 
-  ~#+SETUPFILE: $HOME/.emacs.d/Docs/pubOps/org-templates/default-doc.org~
+        =Don't Modify The MASTER Templates Within ~/.emacs.d=
 
-   /You should copy/clone ~$HOME/.emacs.d/Docs/pubOps/org-templates~ /folder to your
-   book's project directory and adjust the above path to point to that instead.../
-   /This will allow you to make your own custom configurations for different books/
-   /without affecting the configurations of other books of the same genre.../
+  =Add:= the following line to the Header of ~.Org~ Files that need to
+        include this file:
+
+        ~#+SETUPFILE: ./org-templates/default-doc.org~
+
+/Making a COPY/CLONE of:/ ~$HOME/.emacs.d/Docs/pubOps/org-templates~ /master/
+/folder To your book's project directory will allow you to make your own custom/
+/configurations for different books without affecting the configurations of other/
+/book projects within their own MASTER FOLDERS.../
 #+END_COMMENT
 
 =STANDARD STARTUP OPTIONS=

@@ -81,46 +81,58 @@
 ;;        a public Emacs project...  That way you don't have to tweak my
 ;;        hard-coded settings below... For now... I am still testing all this...
 
-(setq org-agenda-files
-      (list
-       (file-name-as-directory (expand-file-name ME--ORG-DOC-DIR))
-       (file-name-as-directory (expand-file-name ME--ORG-AGENDA-FILES))
-       (file-name-as-directory (expand-file-name ME--ORG-SANDBOX))
-       (file-name-as-directory (expand-file-name ME--ORG-TEMPLATES))
-       (file-name-as-directory (expand-file-name ME--ORG-FILES))
-       (file-name-as-directory (expand-file-name ME--ORG-RTFM))
-       (file-name-as-directory (expand-file-name ME--ORG-BRAIN))
-       (file-name-as-directory (expand-file-name "~/.emacs.d/Docs/pubOps"))
-       (file-name-as-directory (expand-file-name "~/.emacs.d/Docs/pubOps/Audio-Drama"))))
+
+;;; CURRENTLY DISABLED - Agenda files and Capture Templates configurations are ALL
+;;                       being refactored...
+;;
+;; (setq org-agenda-files
+;;       (list
+;;        (file-name-as-directory (expand-file-name ME--ORG-DOC-DIR))
+;;        (file-name-as-directory (expand-file-name ME--ORG-AGENDA-FILES))
+;;        (file-name-as-directory (expand-file-name ME--ORG-SANDBOX))
+;;        (file-name-as-directory (expand-file-name ME--ORG-TEMPLATES))
+;;        (file-name-as-directory (expand-file-name ME--ORG-FILES))
+;;        (file-name-as-directory (expand-file-name ME--ORG-RTFM))
+;;        (file-name-as-directory (expand-file-name ME--ORG-BRAIN))
+;;        (file-name-as-directory (expand-file-name "~/.emacs.d/Docs/pubOps"))
+;;        (file-name-as-directory (expand-file-name "~/.emacs.d/Docs/pubOps/Audio-Drama"))))
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Define Custom Org-file Name CONSTANTS:
 
-(defconst ME--DEFAULT-ORG-NOTE 
-  (expand-file-name "refile.org" ME--ORG-FILES))
 
-(defconst ME--DEFAULT-ORG-DIARY
-  (expand-file-name "diary.org" ME--ORG-FILES))
+;;; CURRENTLY DISABLED - Agenda files and Capture Templates configurations are ALL
+;;                       being refactored...
+;;
+;; (defconst ME--DEFAULT-ORG-NOTE 
+;;   (expand-file-name "refile.org" ME--ORG-FILES))
 
-(defconst ME--PRIVATE-ORG-NOTE
-  (expand-file-name "private.org" ME--ORG-FILES))
+;; (defconst ME--DEFAULT-ORG-DIARY
+;;   (expand-file-name "diary.org" ME--ORG-FILES))
 
-(defconst ME--WORK-LOG
-  (expand-file-name "logbook-work.org" ME--ORG-FILES))
+;; (defconst ME--PRIVATE-ORG-NOTE
+;;   (expand-file-name "private.org" ME--ORG-FILES))
 
-(defconst ME--PERSONAL-LOG
-  (expand-file-name "logbook-personal.org" ME--ORG-FILES))
+;; (defconst ME--WORK-LOG
+;;   (expand-file-name "logbook-work.org" ME--ORG-FILES))
+
+;; (defconst ME--PERSONAL-LOG
+;;   (expand-file-name "logbook-personal.org" ME--ORG-FILES))
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Define Custom Capture Template Files:
 
-(defconst ME--ORG-TODO-TEMPLATE
-  (expand-file-name "t-private-todo.txt" ME--ORG-TEMPLATES))
 
-(defconst ME--ORG-LOG-TEMPLATE
-  (expand-file-name "t-log-entry.txt" ME--ORG-TEMPLATES))
+;;; CURRENTLY DISABLED - Agenda files and Capture Templates configurations are ALL
+;;                       being refactored...
+;;
+;; (defconst ME--ORG-TODO-TEMPLATE
+;;   (expand-file-name "t-private-todo.txt" ME--ORG-TEMPLATES))
+
+;; (defconst ME--ORG-LOG-TEMPLATE
+;;   (expand-file-name "t-log-entry.txt" ME--ORG-TEMPLATES))
 
 
 
@@ -128,33 +140,37 @@
 ;; Set Up Capture templates for: TODO tasks, Notes,
 ;; appointments, phone calls, and org-protocol
 
-(setq
- org-capture-templates
- (quote
-  (("p" "Private Templates")
 
-   ("pt"
-    "ToDo Entry"
-    entry
-    (file+headline ME--PRIVATE-ORG-NOTE "Capture")
-    (file ME--ORG-TODO-TEMPLATE)
-    :empty-lines-before 1)
+;;; CURRENTLY DISABLED - Agenda files and Capture Templates configurations are ALL
+;;                       being refactored...
+;;
+;; (setq
+;;  org-capture-templates
+;;  (quote
+;;   (("p" "Private Templates")
 
-   ("pl" "Log Notebook Entry" entry
-    (file+headline buffer-file-name "Begin Log Notebook:")
-    (file ME--ORG-LOG-TEMPLATE)
-    :unnarrowed t
-    :tree-type week
-    :prepend t
-    :clock-in t
-    :clock-keep t
-    :empty-lines 1
-    :immediate-finish t)
+;;    ("pt"
+;;     "ToDo Entry"
+;;     entry
+;;     (file+headline ME--PRIVATE-ORG-NOTE "Capture")
+;;     (file ME--ORG-TODO-TEMPLATE)
+;;     :empty-lines-before 1)
 
-   ("w" "Work Templates")
+;;    ("pl" "Log Notebook Entry" entry
+;;     (file+headline buffer-file-name "Begin Log Notebook:")
+;;     (file ME--ORG-LOG-TEMPLATE)
+;;     :unnarrowed t
+;;     :tree-type week
+;;     :prepend t
+;;     :clock-in t
+;;     :clock-keep t
+;;     :empty-lines 1
+;;     :immediate-finish t)
 
-   ("wl" "Work Log Entry" entry
-    (file+datetree ME--WORK-LOG) "** %U - %^{Activity}  :LOG:")
+;;    ("w" "Work Templates")
+
+;;    ("wl" "Work Log Entry" entry
+;;     (file+datetree ME--WORK-LOG) "** %U - %^{Activity}  :LOG:")
 
    ;;; This section is commented out for Now... Need to decide details...
 
@@ -192,8 +208,7 @@
    ;; ("h" "Habit" entry
    ;;  (file (expand-file-name ME--DEFAULT-ORG-NOTE ME--ORG-FILES))
    ;;  "* NEXT %?\n%U\n%a\nSCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")\n:PROPERTIES:\n:STYLE: habit\n:REPEAT_TO_STATE: NEXT\n:END:\n")
-
-   )))
+;;   )))
 
 ;;;
 ;; Dim blocked tasks

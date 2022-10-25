@@ -1,119 +1,210 @@
 # -**- mode: org; coding: utf-8 -**-
-#+LATEX_HEADER: \usepackage{parskip}
-#+LaTeX_HEADER: \usepackage{paralist}
-#+LATEX_HEADER: \usepackage[hyperref,x11names]{xcolor}
-#+LATEX_HEADER: \usepackage[colorlinks=true,urlcolor=SteelBlue4,linkcolor=Firebrick4]{hyperref}
-
-#+begin_comment
- Setup Files:
-   For Cloned Versions of this template, replace file/paths below
-   with file/paths to your own custom setup files (which you could 
-   convienently clone from the example setup files provided in
-   ../org-templates/ directory...
-
- NOTE: 
-   #+CATEGORY: is specified within gen-doc.org setupfile.
-   If you need to change the category do it in gen-doc.org
-   or your cloned version of it...
-#+end_comment
-
-#+SETUPFILE: ~/.emacs.d/Docs/pubOps/org-templates/gen-doc.org
-#+SETUPFILE: ~/.emacs.d/Docs/pubOps/org-templates/default-tags.org
-
 #+TITLE: HAP - Generic Document Skeleton
 #+EXPORT_FILE_NAME: HAP_Generic-Document-Skeleton.pdf
-#+KEYWORDS:
+#+TEXT: Copyright © 2022 Harmonic Alchemy Productions & Others
 #+AUTHOR: Alisha Awen - Harmonic Alchemy Productions
 #+EMAIL: Siren1@disroot.org
 #+DATE: <2021-05-22 Sat>
 #+TEXT: Created: <2021-05-21 Fri>
-#+TEXT: Last Published: <2021-05-22 Sat>
-#+FILETAGS: templates docs
+#+TEXT: Last Published: <Not Published>
+#+FILETAGS: templates docs unpublished
 
-#+DESCRIPTION: HAP - Generic Document Skeleton with basic structure for smaller documents that don't requre so much planning etc. Great for simple outlines, one page docs, short How-Tos, etc., (easily modified to make reports, charts, etc.)  Publishable as a PDF...
+#+DESCRIPTION: HAP - Generic Document Skeleton with basic structure for smaller documents that don't require so much planning etc. Great for simple outlines, one page docs, short How-Tos, etc., (easily modified to make reports, charts, etc.)  Publishable as a Simple PDF...
 
-#+begin_comment
- Don't mess with these unless you have good reason, (e.g., testing).
- Use Setup Tag File above to specify tags for this file...
+#+BEGIN_COMMENT 
+=Setup Files:=
 
-# #+STARTUP: noptag
-# #+TAGS:
-#+end_comment
+   For Cloned Versions of this template, the file/paths below will be relative
+   to your parent project directory and as such, should be all set to your new: ~.../your-fiction-book-project/org-templates/~ directory...
 
-:README:
-To use this Generic Document Skeleton /(template)/ for your own documents, 
-*Perform the following steps:* [0/6]
+=NOTE:= 
 
-1. [ ] *Clone a Copy of this File:* 
+   ~#+CATEGORY:~ is specified within ~gen-doc.org~ SETUPFILE.
+   If you need to change the category, do it in your cloned version
+   of gen-doc.org...
 
-       Put it where you normally organize your writing documents. 
-       *Place it within its own folder* named after your intended 
-       document title...
+   *SETUPFILE:* ~default-tags.org~ is where tags are set for this project...
 
-2. [ ] *Change the Boilerplate Info at the Top of this file as follows:* [0/3]
+   *SETUPFILE:* ~latex-simple-pdf.org~ is for LaTeX Export Configurations 
+              to produce a Simple PDF version of your Document...
+#+END_COMMENT
 
-    - [ ] *Change the* ~#+TITLE:~ *Directive To:* 
+#+SETUPFILE: ./org-templates/gen-doc.org
+#+SETUPFILE: ./org-templates/latex-simple-pdf.org
+#+SETUPFILE: ./org-templates/default-tags.org
 
-          /"your Generic Document's Title"/
+:READ_ME_FIRST:
+☞ =Instructions:= /(How to Install & Use This Template)/
 
-    - [ ] *Change the* ~#+EXPORT_FILE_NAME:~ *Directive to:*
+To use *HAP_Generic-Document-Skeleton.org* /(Org-Mode Generic Doc Project /Template)/ for your own projects, perform the following steps: 
 
-           /"Your-New-Document-Title.pdf"/ 
-           /That will be the file name produced thence forward.../
+/Use the org-mode Checkboxes to Help You Keep Track of Progress/
 
-    - [ ] *Change the* ~#+DESCRIPTION:~ *Directive To:*
+1) [ ] *Clone a Copy of This File:*
 
-           /"Your Generic Document's Description" etc.../
+      Put your clone where you normally organize your writing 
+      projects. *Place it within its own master folder... It is*
+      *Important to keep this file within its OWN enclosing folder!* 
 
-3. [ ] *Copy/Clone ./media* /(and all its contents):/ 
+      Name the project's master folder to reflect your Document 
+      project's title... /(what you renamed this .org file to)/...
 
-       Copy to your new document's /(where you copied this file).../  
-       Any external documents or images referenced by your document 
-       should be placed within this ~./media/~ directory... All of the 
-       external links, images, within the boilerplate examples may be 
-       used as examples for getting your own images, and external 
-       attachments linked properly...  This single *./media* directory 
-       serves media and external attachments for all of the *.org* files 
-       contained within: ~.emacs.d/Docs/pubOps~ directory... Cloning 
-       any of the other *.org* files will also require copy/cloning the 
-       ~./media~ directory relative to them...
+      =Other Files/Folders will be placed within this master folder...=
 
-4. [ ] You don't need to copy the ~./auto/~ directory...  
+2) [ ] *Copy/Clone:* ~./media~ /(and contents)/ *to your new project's Master Folder:*
 
-       That will be created for you automacally the first time you export 
-       this ~.org~ file to ~.PDF~.
+      Copy this directory /(into your master folder as a sibling of this file).../ 
+      Any external documents or images referenced by your Document should 
+      be placed within this ~./media/~ directory...
 
-5. [ ] You also don't need to copy the ~./org-templates~ directory... 
+      All external links, images, within the boilerplate examples of this
+      template may be used as examples for getting your own images, and 
+      external attachments linked properly...  
 
-       The files in there are automatically linked and included within this 
-       template. You don't need to change those settings unless you wish to 
-       customize the already customized tags, and export options. 
-       /They are set up correctly for generic document genre already/ and the 
-       category is all set as well... But if you must, you can modify the 
-       original files to make your changes rather than cloning to your project
-       directory... Realize that if you do that while on the master branch it 
-       will get out of sync with origin, check out a local branch to make it 
-       easier to get back to defaults if you change your mind later. %^)
+      This single ~./media~ directory will serve media and external attachments 
+      for all of the ~.org~ doc template files from within: ~.emacs.d/Docs/pubOps~ 
+      directory /(if they were also copied here to your Project's Master Folder)/
 
-6. [ ] *Start Planning / Writing Your Document:* 
+   =Note:=  You DON'T need to copy the ~./auto/~ directory...  That directory
+           will be automatically created the first time you export this ~.org~ 
+           file to ~.PDF~...
 
-       /Change headings and structure to match your document's outline and purpose./
+3) [ ] *Copy/Clone:* ~./org-templates~ /(and all contents)/ *to your Master Folder:*
 
-The *In-Buffer Settings* and *KEYWORDS* specified above are configured to get this file looking good when exported as a Standard PDF file.  Once you have your project directory all set up as above you are ready to export your first PDF as a test run...  To make a PDF out of this file issue the following Emacs command:
+      Copy this directory to your Document's Master Folder, /(as a sibling/
+      /of this .org file).../ 
 
-      ~M-x org-latex-export-to-pdf~
+      =Note:= The SETUPFILES Within this directory which are called out and 
+             included by this .org file /(above)/ must stay within this 
+             directory...  
 
-*-or-* If You Enabled *Xah-Fly-Keys* /"Command Mode"/ Try:
+             Other SETUPFILES within this directory are used by other book 
+             project templates and are not needed for this Simple Document 
+             Project... You may remove them if you wish... They are small
+             text files not bothering you... If you clone another 
+             ~HAP_<book-template>.org~ file into this project folder it will 
+             pick up its associated SETUPFILES automatically, so consider 
+             that if/when you decide to delete other UNUSED SETUPFILES...
 
-      ~SPACE e p~
+4) [ ] =Start Sketching Out Your Document NOW Before You Loose It!=
 
-After *AucTeX* is done parsing/compiling etc., a new *PDF* by the name of ~New-Untitled-Document.pdf~ -and- ~New-Untitled-Document.tex~ will appear within the same directory as this file...
+      =NOTE:= You may be doing this because you have some new idea brewing in
+            your mind and you need to write that down before you forget!
+            =Right?=  Therefore... as soon as you are done with the first
+            steps above, =STOP= and go immediately to the:
 
-Subsequent repeated calls to the above command will overwrite your existing ~New-Untitled-Document.pdf~ -and- ~New-Untitled-Document.tex~ files! You should probably copy these files to the ~./auto/~ directory as well for safe keeping as backups...
+                   ~💡 Ideas Scratchpad Refile / ☞ Start Here!~ 
 
-*Last Modified:* <2021-05-22 Sat> So far things are pretty basic PDF... We will get fancy with other formats later... I promice... I have to do all this documentation first! /(As you can see, if you been following for the past couple years, things are getting done! Albeit Slowly)/
+            section and read the ~:README:~ directly under that heading...  
+            Then write your idea down quickly /(as per the README instructions)/ 
+            to get your inspiration recorded before you forget it...  
 
-Enjoy! - Alisha Awen
+            Later, After you have all your ideas sketched out and you are 
+            ready to be in an ="organized mood"= /(rather than creative mood)/ 
+            /This does not imply being organized cannot be a CREATIVE PROCESS/ 
+            Then it is time to:
+
+            =Come Back Here And Finish Setting Up This Project...=
+
+5) [ ] *Finish Setting up this Project LATER...* [0/3]
+
+    - [ ] *Change the* ~#+TITLE:~ *directive at the top of this file:* 
+
+          Change to: /"your Simple Document Project Title"/
+
+    - [ ] *Change the* ~#+EXPORT_FILE_NAME:~ *directive at the top of this file:*
+
+          Change to: /"your-Document-Title.pdf"/
+          This will be the file name(s) produced during export thence forward
+          /(including auto generated files: .tex, etc...)/
+
+    - [ ] *Change the* ~#+DESCRIPTION:~ *directive at the top of this file:*
+
+          Compose /Your Document Description/ as a short paragraph here...
+
+    - *The* ~./media~ *Directory is ALL Set:*
+
+         Any external documents or images referenced by this Simple Document
+         project should be placed within this ~./media/~ directory... This single 
+         ~./media~ directory will serve media and external attachments for this 
+         and any other ~.org~ files you may end up creating here, as well as
+         being the media repository used by LaTeX during publishing...
+
+    - *Purpose of the:* ~./auto/~ *Directory:* /(you do not need to copy this)/
+
+         This is or will-be an auto generated folder where your output ~.PDF~ 
+         files are created and placed during LaTeX export. You DO NOT need 
+         to copy this folder as it is auto generated during org-mode LaTeX 
+         processing...
+
+         LaTeX processing will not delete any prior files contained here... 
+         Some of them will be updated, but will have backups...  Any files 
+         you place within this folder will NOT be lost, unless you delete 
+         them... This folder is a good place to store other temporary files 
+         you may be creating, generating.. etc...
+
+    - *Purpose of the:* ~./org-templates~  *Directory:*
+
+         The files in here are automatically linked and included within this
+         template. You don't need to change those settings unless you wish to
+         customize the already customized tags, and export options.
+
+         /They are allready set up correctly for the simple document genre,/
+         /and the category is all set as well... But you can and may modify/
+         /the original files to fit your needs.../
+
+7) [ ] =Export/Publish to PDF File:=
+
+      The *In-Buffer Settings* specified by the SETUPFILES above will 
+      get this file looking good when exported as a Simple PDF file.  
+      Once you have your project directory all set up as above you are 
+      ready to export your first PDF as a test run...
+
+         *Issue the following Emacs command:*
+
+            ~M-x org-latex-export-to-pdf~
+
+         *OR* If You Enabled *Xah-Fly-Keys* /"Command Mode"/ Try Shortcut:
+
+            ~SPACE e p~
+
+         *OR Export to OTHER Formats:* /(not usefull for this template)/
+
+            ~C-c C-e~
+
+            /(a pop-up will show allowing you to choose export method)/
+
+      After *AucTeX* is done parsing/compiling etc., new files by the name of: ~
+      ~HAP_Generic-Document-Skeleton.pdf~ -and- ~HAP_Untitled-Fiction-Book.tex~ 
+      will appear within the same directory as this file...
+
+      Subsequent repeated calls to the above command will overwrite your existing
+      ~HAP_Generic-Document-Skeleton.pdf~ -and- ~HAP_Generic-Document-Skeleton.tex~ 
+      files! /(make backups first if needed!)/
+      You should probably copy these files to the ~./auto/~ directory as 
+      well for safe keeping as backups...
+
+      =If you chose the last option above= LaTeX will output files with other
+      extensions for those other output formats...
+
+      =NOTE:= This Generic Document Template is not initially a good
+            candidate for other eBook formats, but you possibly may
+            use it as a starting point for customizing & creating one...
+
+      =If YOU EXPERIENCE LaTeX ERRORS:= 
+
+         *Consult Buffer:* ~*Org PDF LaTeX Output*~
+
+=These Instructions Were Last Modified:= <2022-10-19 Wed> 
+
+So far things are pretty basic PDF... There are no plans to add any other eBook formats to this *Generic Document* template... However, I am looking into adding EPUB configurations for *HAP_Fiction-Book* and *HAP_Technical-Book* Skeletons, /(templates)/.
+
+=Please Open an ISSUE At:= https://github.com/harmonicalchemy/modular-emacs/issues
+   
+Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas for Improvement... =You guys are my Product Managers=  I am only a User of ONE "seat". 
+Other folks UX metrics are sorely needed!! Thanks!
+
+=Enjoy!= - Alisha Awen
 :END:
 
 * NEW 💡 Scratchpad Refile:                        :noexport:

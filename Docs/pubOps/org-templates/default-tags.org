@@ -9,9 +9,24 @@
 
 This file is included as part of *Harmonic Alchemy Modular Emacs* to provide an example of how ~org-tags~ are organized by default once *Modular Emacs* is installed on your machine...
 
-- *Use this as your Default* ~SETUPFILE~ *for new documents*. /(it is already included in other .org file templates within this repository)/.
+=Usage:= *COPY/CLONE:* ~~/.emacs.d/Docs/pubOps/org-templates~ directory
+        to the MASTER directory where existing .org files reference
+        this contained default-tags SETUPFILE... Modify the copied SETUP
+        Files within your cloned org-templates directory to suit your needs...
 
-- *Copy/Clone* this file to create new ~<your_category>-tags.org~ files of your own design...
+        =Don't Modify The MASTER Templates Within ~/.emacs.d=
+
+  =Add:= the following line to the Header of ~.Org~ Files that need to
+        include this file:
+
+        ~#+SETUPFILE: ./org-templates/default-tags.org~
+
+/Making a COPY/CLONE of:/ ~$HOME/.emacs.d/Docs/pubOps/org-templates~ /master/
+/folder To your book's project directory will allow you to make your own custom/
+/configurations for different books without affecting the configurations of other/
+/book projects within their own MASTER FOLDERS.../
+
+- *Modify your Copy/Clone:* of this file to create new ~<your_category>-tags.org~ files of your own design...
 
 - *Use the Global Defined Tag Keys selection keys listed below* when creating new tags for your custom tags file...  Replace Local Defined Tags below with your changed tags selection characters. (for quick tagging)...
 

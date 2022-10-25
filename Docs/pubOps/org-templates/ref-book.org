@@ -1,21 +1,28 @@
 # -**- mode: org; coding: utf-8 -**-
 #+BEGIN_COMMENT
-=File:=  ~ref-book.org~ - HAP BASIC SETUP for Reference & Technical Book Projects...
+=File:=  ~~/.emacs.d/Docs/pubOps/org-templates/ref-book.org~
 
-        =BASIC LaTeX Configuration for: REFERENCE=
+        =BASIC LaTeX Configuration for: REFERENCE BOOKS=
 
-=Usage:= *Copy/Clone* this file and adjust to suit your needs...
-        *Include* this file within ~.org~ files destined to become
-        a *Reference Manual or Book - PDF*...
+=Usage:= *Include* this SETUPFILE within ~.org~ files destined to become
+        *Reference Manual or Technical Book Projects*...
 
-  *Add:* the following line to the Header the ~.Org~ File:
+        *COPY/CLONE:* ~~/.emacs.d/Docs/pubOps/org-templates~ directory
+        to the MASTER directory where existing .org files reference
+        this contained SETUPFILE... Modify the copied SETUP Files within
+        your cloned org-templates directory to suit your needs...
 
-  ~#+SETUPFILE: $HOME/.emacs.d/Docs/pubOps/org-templates/ref-book.org~
+        =Don't Modify The MASTER Templates Within ~/.emacs.d=
 
-   /You should copy/clone ~$HOME/.emacs.d/Docs/pubOps/org-templates~ /folder to your
-   book's project directory and adjust the above path to point to that instead.../
-   /This will allow you to make your own custom configurations for different books/
-   /without affecting the configurations of other books of the same genre.../
+  =Add:= the following line to the Header of ~.Org~ Files that need to
+        include this file:
+
+        ~#+SETUPFILE: ./org-templates/ref-book.org~
+
+/Making a COPY/CLONE of:/ ~$HOME/.emacs.d/Docs/pubOps/org-templates~ /master/
+/folder To your book's project directory will allow you to make your own custom/
+/configurations for different books without affecting the configurations of other/
+/book projects within their own MASTER FOLDERS.../
 #+END_COMMENT
 
  =STANDARD STARTUP OPTIONS=
@@ -77,7 +84,7 @@
 =DISABLED OPTIONS for TESTING:=
 #+BEGIN_COMMENT
    # #+OPTIONS: toc:2        # Set TOC (org-export-with-toc) 2 levels
-   # #+OPTIONS: toc:nil      # DO NOT Include Default TOC (org-export-with-toc)
+   # #+OPTIONS: toc:t        # Include Default TOC (org-export-with-toc)
    # #+OPTIONS: num:3        # Set Section Numbering level...
 #+END_COMMENT
 
