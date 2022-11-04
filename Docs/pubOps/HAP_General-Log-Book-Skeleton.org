@@ -324,6 +324,7 @@ Add links to other reference, source docs, requirements, whatever, here...
 :END:
 ** 📅 2022:
 *** NEW 🗓 LOG: <2021-03-29 Mon> Generic Title /(General Log Entry Template)/
+<<Generic-Title-LOG>>
 :README:
    =Using the Clocking Feature of this Log Entry=
 

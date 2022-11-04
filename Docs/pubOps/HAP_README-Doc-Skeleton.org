@@ -34,16 +34,6 @@
 #+SETUPFILE: ./org-templates/latex-simple-pdf.org
 #+SETUPFILE: ./org-templates/default-tags.org
 
-* Table of Contents:                                                    :TOC:
-- [[#-readme][📖 README:]]
-- [[#-begin-log][📅 Begin Log:]]
-   - [[#-2022][📅 2022:]]
-- [[#-meta-usage--templates][📋 Meta: /(Usage & Templates)/]]
-   - [[#-introduction][📄 Introduction:]]
-   - [[#-howto][❔ HowTo:]]
-   - [[#-templates][⎘ Templates:]]
-
-* 📖 README:
 :READ_ME_FIRST:
 ☞ =Instructions:= /(How to Install & Use This Template)/
 
@@ -190,6 +180,24 @@ Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas
 =Enjoy!= - Alisha Awen
 :END:
 
+* 🔖 Table of Contents:                                                 :TOC_3:
+- [[#-readme][📖 README:]]
+- [[#-begin-log][📅 Begin Log:]]
+   - [[#-2022][📅 2022:]]
+      - [[#log-2021-03-29-mon-generic-title-general-log-entry-template][LOG: <2021-03-29 Mon> Generic Title /(General Log Entry Template)/]]
+- [[#-meta-usage--templates][📋 Meta: /(Usage & Templates)/]]
+   - [[#-introduction][📄 Introduction:]]
+      - [[#emacs-shorthand-command-key-notation][Emacs Shorthand Command Key Notation:]]
+      - [[#important-note-for-mac-users][Important Note For Mac Users:]]
+      - [[#org-mode-timestamps-and-clocking][Org Mode Timestamps and Clocking:]]
+   - [[#-howto][❔ HowTo:]]
+      - [[#create-new-log-entry-within-the--begin-log-binder][Create New Log Entry within the *📒 Begin Log:* Binder:]]
+      - [[#export-readme-as-a-pdf-document][Export README as a PDF Document:]]
+   - [[#-templates][⎘ Templates:]]
+      - [[#new--log-2021-03-29-mon-generic-title-general-log-entry-template][NEW 🗓 LOG: <2021-03-29 Mon> Generic Title /(General Log Entry Template)/]]
+
+* 📖 README:
+
 =Compose Main Body of your README Doc Here=
 
 \newpage
@@ -199,7 +207,7 @@ Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas
 :CUSTOM_ID: HAP_README-Doc-Skeleton_LOG
 :END:
 ** 📅 2022:
-*** NEW 🗓 LOG: <2021-03-29 Mon> Generic Title /(General Log Entry Template)/
+*** LOG: <2021-03-29 Mon> Generic Title /(General Log Entry Template)/
 :README:
    - *Go To One of the HEADINGS Below:* /(Summary, Details, or Sub Headings)/
 
@@ -410,7 +418,6 @@ Yadda... Yadda... Yadda...
       #+end_src
 
 \newpage
-
 * 📋 Meta: /(Usage & Templates)/
 ** 📄 Introduction:
 :README:
