@@ -168,7 +168,7 @@
 ;; Load - Custom: Abbrevs (Mod Emacs Defaults -AND/OR- Your Personal Overrides)
 
 (if (file-exists-p "~/.emacs.d/lisp/my-modules/me-abbrev-defs.el")
-    (load-file "~/.emacs.d/lisp/my-modules/me-abbrev-defs.el"))
+    (load-file "~/.emacs.d/lisp/my-modules/me-abbrev-defs.el")
   (load-file "~/.emacs.d/lisp/modules/me-abbrev-defs.el"))
 
 ;;;

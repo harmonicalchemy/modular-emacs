@@ -1,0 +1,90 @@
+# -**- mode: org; coding: utf-8 -**-
+#+BEGIN_COMMENT
+=File:=  ~~/.emacs.d/Docs/pubOps/org-templates/ref-book.org~
+
+        =BASIC LaTeX Configuration for: REFERENCE BOOKS=
+
+=Usage:= *Include* this SETUPFILE within ~.org~ files destined to become
+        *Reference Manual or Technical Book Projects*...
+
+        *COPY/CLONE:* ~~/.emacs.d/Docs/pubOps/org-templates~ directory
+        to the MASTER directory where existing .org files reference
+        this contained SETUPFILE... Modify the copied SETUP Files within
+        your cloned org-templates directory to suit your needs...
+
+        =Don't Modify The MASTER Templates Within ~/.emacs.d=
+
+  =Add:= the following line to the Header of ~.Org~ Files that need to
+        include this file:
+
+        ~#+SETUPFILE: ./org-templates/ref-book.org~
+
+/Making a COPY/CLONE of:/ ~$HOME/.emacs.d/Docs/pubOps/org-templates~ /master/
+/folder To your book's project directory will allow you to make your own custom/
+/configurations for different books without affecting the configurations of other/
+/book projects within their own MASTER FOLDERS.../
+#+END_COMMENT
+
+ =STANDARD STARTUP OPTIONS=
+
+#+CATEGORY: @Reference_Books
+#+LANGUAGE: en
+#+STARTUP:  overview
+#+STARTUP:  hideblocks
+#+STARTUP:  indent
+#+STARTUP:  align
+#+STARTUP:  inlineimages
+
+=STANDARD EXPORT OPTIONS:=
+
+/Ref:/ https://orgmode.org/manual/Export-Settings.html#Export-Settings
+
+#+SELECT_TAGS: export
+#+EXCLUDE_TAGS: noexport
+
+#+OPTIONS: ':nil        # Disable Smart Quotes! Use xah-fly insert funcs..
+#+OPTIONS: *:t          # Show Emphasized Text
+#+OPTIONS: -:t          # Convert Special Strings
+#+OPTIONS: ::nil        # Do NOT Export with fixed-width sections
+
+#+OPTIONS: <:t          # Enclude time/date active/inactive stamps
+#+OPTIONS: \n:t         # Preserve Line Breaks (this may affect LaTeX parskip)
+#+OPTIONS: ^:{}         # Use Tex-like syntax for sub and superscripts
+                        # Typing simple a_b will not be affected anymore
+                         # Use word^{super} to raise word "super" - superscript
+                           # Use word_{sub} to lower the word "sub" - subscript
+#+OPTIONS: author:t          # Include Author Name into Exported file
+#+OPTIONS: broken-links:mark  # Broken link(s) found? Mark Them & Don't Export
+#+OPTIONS: c:t               # Include CLOCK keywords in exported documents
+#+OPTIONS: creator:t       # Include Creator Info (org-export-with-creator)
+#+OPTIONS: d:nil         # Do NOT Include DRAWERS in exported documents
+#+OPTIONS: date:t       # Include DATE in exported documents
+
+#+OPTIONS: e:t          # Include Entities (org-export-with-entities)
+                        # TODO: Play around with this one...
+
+#+OPTIONS: email:t      # Include Author’s e-mail (org-export-with-email)
+#+OPTIONS: f:t          # Include Footnotes (org-export-with-footnotes)
+#+OPTIONS: H:4          # Set Headline Levels for Export to 4
+#+OPTIONS: tasks:t      # Include any TODO or other Task related keywords...
+#+OPTIONS: inline:t     # Include Inline Tasks...
+#+OPTIONS: num:2        # Set Section Numbering to two levels deep.
+#+OPTIONS: p:nil        # NO Planning Info (org-export-with-planning)
+#+OPTIONS: pri:nil      # NO priority cookies (org-export-with-priority)
+#+OPTIONS: prop:nil     # No Property Drawers (org-export-with-properties)
+#+OPTIONS: stat:nil     # No Stastic cookies (org-export-with-statistics-cookies)
+#+OPTIONS: tags:nil     # No Tags (org-export-with-tags)
+#+OPTIONS: tex:t        # Export LaTeX (org-export-with-latex)
+#+OPTIONS: timestamp:t  # Include Creation Time (org-export-time-stamp-file)
+#+OPTIONS: title:t      # Include Title (org-export-with-title)
+#+OPTIONS: toc:3        # Include TOC (level 3) (org-export-with-toc)
+#+OPTIONS: todo:nil     # DONT Include TODO keywords (org-export-with-todo-keywords)
+#+OPTIONS: |:t          # Include Tables (org-export-with-tables)
+
+=DISABLED OPTIONS for TESTING:=
+#+BEGIN_COMMENT
+   # #+OPTIONS: toc:2        # Set TOC (org-export-with-toc) 2 levels
+   # #+OPTIONS: toc:t        # Include Default TOC (org-export-with-toc)
+   # #+OPTIONS: num:3        # Set Section Numbering level...
+#+END_COMMENT
+

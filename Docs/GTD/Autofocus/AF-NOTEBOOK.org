@@ -1,0 +1,1208 @@
+# -**- mode: org; coding: utf-8 -**-
+#+TITLE: HAP - Autofocus Notebook Skeleton
+#+EXPORT_FILE_NAME: HAP_Autofocus-Notebook-Skeleton.pdf
+#+TEXT: Copyright © 2022 Harmonic Alchemy Productions & Others
+#+AUTHOR: Alisha Awen - Harmonic Alchemy Productions
+#+EMAIL: Siren1@disroot.org
+#+DATE: <2022-10-26 Wed>
+#+TEXT: Created: <2022-05-13 Fri>
+#+TEXT: Last Published: <not-published>
+#+FILETAGS: templates GTD Autofocus org-mode
+
+#+DESCRIPTION: HAP Personal Autofocus Notebook Skeleton (template) based on "The Autofocus Notebook Method" developed by: Mark Forster, Implemented for Emacs Org-Mode...
+
+#+BEGIN_COMMENT 
+=Setup Files:=
+
+   =Note:= This Autofocus Notebook uses the same settings as Simple-Log-Book...
+   
+   For Cloned Versions of this template, the file/paths below will be relative
+   to your parent GTD /(project management)/ directory and as such, should be all set to your new: ~.../Your-GTD-PM-Dir/~ folder...
+
+=NOTE:= 
+
+   ~#+CATEGORY:~ is specified within ~simple-log-book.org~ SETUPFILE.
+   If you need to change the category, do it in your cloned version
+   of simple-log-book.org...
+
+   *SETUPFILE:* ~default-tags.org~ is where tags are set for this notebook...
+
+   *SETUPFILE:* ~latex-simple-pdf.org~ is for LaTeX Export Configurations 
+              to produce a PDF version of your Autofocus NoteBook /(if needed)/...
+#+END_COMMENT
+
+#+SETUPFILE: ./org-templates/simple-log-book.org
+#+SETUPFILE: ./org-templates/latex-simple-pdf.org
+#+SETUPFILE: ./org-templates/default-tags.org
+
+:READ_ME_FIRST:
+The Autofocus Notebook Method is a GTD system developed by: *Mark Forster*  
+[[http://markforster.squarespace.com/][see his blog here]] *email:* [[mf@markforster.net]] Read More about it in the *☞ About:* Binder below...
+
+☞ =Instructions:= /(How to Install & Use This Template)/
+
+To use this *AF-NOTEBOOK.org* /(Org-Mode Autofocus Notebook /Template)/ for your own projects, perform the following steps: 
+
+/Use the org-mode Checkboxes to Help You Keep Track of Progress/
+
+1) [ ] *Copy/Clone:* ~../Autofocus~ /(and All contents)/
+
+      Paste this entire directory and contents to a place where you
+      do your GTD...  If you currently do not have a GTD process in
+      place, no problem... simply create a folder named GTD in your
+      normal "Documents" or "Projects" or where ever location...
+      
+      Your Cloned ~Autofocus~ directory will contain THIS FILE as well
+      as support files and folders needed to perform your daily
+      Autofocus sessions...
+
+      =NOTE:= Do not change the name of your cloned ~Autofocus~ master
+            directory...  If you change its name, some default
+            internal org-links may no longer work correctly...
+
+2) [ ] *DO Boilerplate AF TODO Tasks Within ✅ AF Notebook - Page 1:*
+
+      =Note:= These boilerplate AF TODO Tasks are NOT good examples
+            of what your AutoFocus Notebook TODO Items should be
+            like... They have way too long intro text for instance...
+            
+            The reason for this is pedagogical... The main purpose
+            of these BOILERPLATE TODO tasks is to teach you how to
+            use this AutoFocus Notebook... How to link from a specific
+            Autofocus TODO task entry to external docs and create a
+            link back to the Autofocus TODO Task from those external
+            docs...
+
+            More Autofocus related docs and or templates exist within
+            the *⎘ Meta* Binder of this Autofocus Notebook...
+
+3) [ ] *Finish Setting up this Project:* [0/10]
+
+    - [ ] *Change* ~#+TITLE:~ *Directive:*
+
+          /(in file header above)/
+
+          Change it to: /"your Autofocus Notebook Title"/
+
+    - [ ] *Change* ~#+EXPORT_FILE_NAME:~ *Directive:*
+
+          /(in file header above)/
+
+          Change it to: /"your-Autofocus-Notebook.pdf"/ This will be
+          the file name(s) produced during export thence forward
+          /(including auto generated files: .tex, etc...)/
+
+    - [ ] *Change* ~#+TEXT: Copyright © 2022:~ *Directive:*
+
+          /(in file header above)/
+
+          Change it to: /"Copyright © your info here"/ You are the
+          copyright owner of your own documents created from clones
+          of these master templates... /(but these MASTER Template/
+          /Files are to stay under Harmonic Alchemy Productions/
+          /copyright. Any Attribution to me for the template/
+          /structure of your published docs will be appreciated.../
+          /but unnecessary... Thanks! ;-)/
+
+    - [ ] *Change* ~#+AUTHOR:~ *Directive:*
+
+          /(in file header above)/
+
+          Change it to: /"your NAME"/
+
+    - [ ] *Change* ~#+EMAIL:~ *Directive:*
+
+          /(in file header above)/
+
+          Change it to: /"your EMAIL"/
+
+    - [ ] *Change* ~#+DATE:~ *TIMESTAMP:*
+
+          /(in file header above)/
+
+          Put your cursor on the TIMESTAMP: /i.e.,/ <2022-10-05 Wed>
+          and type: ~C-c . . RETURN~ The TIMESTAMP will update to NOW.
+          Do this whenever you update your doc to show last date
+          it was changed or modified...
+
+    - [ ] *Change* ~#+TEXT: Created:~ *TIMESTAMP:*
+
+          /(in file header above)/
+
+          Put your cursor on the TIMESTAMP: /i.e.,/ <2022-10-05 Wed>
+          and type: ~C-c . . RETURN~ The TIMESTAMP will update to NOW.
+
+          =LEAVE THIS DATE ALONE after Setting It The FIRST Time=
+
+          This Date reflects the time/date that you first created
+          this new document It should NEVER change after that...
+
+    - [ ] *Change* ~#+TEXT: Last Published:~ *TIMESTAMP:* /(after publishing)/
+
+          /(in file header above)/
+
+          =Don't Change This UNTIL You Have Actually Exported This File=
+          /(as a PDF or HTML, etc. and have PUBLISHED it publically/
+          /somewhere)/
+
+          Until that publishing time comes leave it alone as:
+          <not-published>
+          
+          =Note:= Autofocus Notebooks are probably not something that
+                needs to be published.  Other documents that are
+                referenced within Your Autofocus Notebook probably
+                will be published etc. /(e.g., Reports for Clients,/
+                /or details of a project you are working on etc.)/
+                Therefore *Last Published:* may always be left
+                as: <not-published>...
+          
+          As soon as this is published or re-published, Replace the
+          <unpublished> placeholder with a REAL TIMESTAMP by typing:
+          ~C-c . . RETURN~ The new Last Published: <TIMESTAMP> will
+          appear in place... Do this EVERY time you publish or
+          update an existing publishing... /(this will help you keep/
+          /track in case you do decide to publish later...)/
+
+    - [ ] *Change* ~#+FILETAGS:~ *Directive:*
+
+          /(in file header above)/
+
+          Add your own tags that match the context of your GTD,
+          PM, etc...
+
+    - [ ] *Change* ~#+DESCRIPTION:~ *Directive:*
+
+          /(in file header above)/
+
+          Compose /Your Autofocus Notebook's Description/ as a short 
+          paragraph here... and then use that to change the directive
+          above...
+
+    - *The* ~./media~ *Directory is ALL Set:* 
+
+        Currently empty... Any external documents or images
+        referenced within your Autofocus Notebook project or
+        any other org-files contained within the Autofocus
+        FOLDER should be placed within this ~./media/~ directory...
+
+        This single ~./media~ directory will serve media and
+        external attachments for this and any other related
+        ~.org~ files you may end up creating here, as well as
+        being the media repository used by LaTeX during
+        publishing...
+
+    - *Purpose of:* ~./auto/~ *Directory:* /(Created During LaTeX Process)/
+
+        Initially this folder does NOT exist... This is or will-be
+        an auto generated directory, created during LaTeX export.
+        You will not see this folder appear until that time...
+
+        Exported .TEX & .PDF files show up by default within the
+        same folder as this AF-AUTOFOCUS.org file...
+
+        The ~./auto~ folder is a good place to store files as initial
+        or final drafts etc., knowning that they will not be
+        accidentally overwritten during subsequent LaTeX Exports...
+
+    - *Purpose of:* ~./org-templates~  *Directory:*
+
+        The files in here are automatically linked and included
+        within this template. You don't need to change those
+        settings unless you wish to customize the already
+        customized tags, and export options.
+
+        /They are allready set up correctly for the LOG Notebook/
+        /genre, which also works fine for Autofocus Notebooks.../
+        /The Category is set for LOGs so you probably need to change/
+        /that to GTD or something else.../
+
+        =Note:= The SETUPFILES Within this directory which are called
+              out and included by this .org file /(above)/ must stay
+              within this directory...  
+
+              Other SETUPFILES within this directory may be used by
+              other .org project templates that may or may not be
+              used here... It is best to leave all these files
+              /(do not delete them).../ Edit the ones you need in
+              place... The ones you are NOT using are small text
+              files not bothering you or your operations...
+              =But You May Need Them Later...=
+
+    - *Purpose of the:* ~./af-meta~ *Directory:*
+
+        This directory is here to contain any Autofocus Task related
+        .org documents...
+
+        As you add more TODO Items to your Autofocus Notebook pages,
+        some of them may require extra documentation that currently
+        does not exist... when there is NO external project or docs
+        that fit a particular Autofocus TODO Item, you may create
+        one within this directory and make relative org-links both
+        ways to get Back and forth from Autofocus Notebook to these
+        external docs... /(kept close at hand)/
+
+4) [ ] =Optional= *Export/Publish to PDF File:*
+
+      =Note:= Autofocus Notebooks are probably not something that needs
+            to be published. Therefore the instructions here may not
+            apply... However you may have OTHER .org files in here
+            that you do want to publish etc. The instructions below
+            refer mostly to that kind of use case...
+
+      The *In-Buffer Settings* specified by the SETUPFILES above will 
+      get this file looking good when exported as a Standard PDF file.  
+      Once you have your project directory all set up as above you are 
+      ready to export your first PDF as a test run...
+
+      Sub Headings could be selected/isolated for exporting to a PDF
+      report of work you did for a client or something like that
+      and all other non important content would not be exported...
+
+         *Issue the following Emacs command:*
+
+            ~M-x org-latex-export-to-pdf~
+
+         *OR* If You Enabled *Xah-Fly-Keys* /"Command Mode"/ Try Shortcut:
+
+            ~SPACE e p~
+
+      =If YOU EXPERIENCE LaTeX ERRORS:= 
+
+         *Consult Buffer:* ~*Org PDF LaTeX Output*~
+
+=These Instructions Were Last Modified:= <2022-11-03 Thu> 
+
+So far things are pretty basic PDF for Autofocus Notebooks... Not much...
+
+=Please Open an ISSUE At:= https://github.com/harmonicalchemy/modular-emacs/issues
+   
+Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas for Improvement... =You guys are my Product Managers=  I am only a User of ONE
+"seat". Other folks UX metrics are sorely needed!! Thanks!
+
+=Enjoy!= - Alisha Awen
+:END:
+
+* 🔖 Table of Contents:        :TOC_3:
+- [[#-af-notebook][✅ AF NOTEBOOK:]]
+   - [[#-af-notebook---page-01-08][✅ AF Notebook - Page 01:]]
+      - [[#01--clone-this-org-file][01 ☞ Clone this .org file:]]
+      - [[#02--read-quick-start-instructions][02 ☞ Read Quick Start Instructions:]]
+      - [[#03--copyclone-a-new-todo-item][03 ☞ Copy/Clone a NEW TODO Item:]]
+      - [[#04--keep-item-headings-one-line-only][04 ☞ Keep Item Headings One Line Only:]]
+      - [[#05--add-up-to-25-items-per-page][05 ☞ Add up to 25 items per page:]]
+      - [[#06--start-a-new-page-after-25-items][06 ☞ Start A New Page After 25 Items:]]
+      - [[#07--read-full-instructions][07 ☞ Read Full Instructions:]]
+      - [[#08--remove-all-these-demo-tasks-and-start-this-page-clean][08 ☞ Remove All These Demo Tasks And Start This Page Clean:]]
+
+* ☞ About:                             :noexport:
+
+The Autofocus Notebook Method is a GTD system developed by: *Mark Forster*  
+[[http://markforster.squarespace.com/][see his blog here]] *email:* [[mf@markforster.net]]
+
+=Update:= <2022-11-02 Wed>
+
+        It seems the original *Squarespace* page for Mark's Autofocus System
+        no longer exists? I get an error when trying to visit it...
+
+        =Here are more links to the same information:=
+
+        [[https://lifehacker.com/autofocus-is-a-single-paper-based-list-organization-sy-5151111][Autofocus, Paper-Based List Organization System]] - /(lifehacker.com)/
+
+        [[https://lifehacker.com/the-autofocus-productivity-method-stop-maintaining-to-5704856][Autofocus Productivity Method]] - /(lifehacker.com)/
+
+        [[https://youtu.be/qF1ngJAyD_s][Autofocus System]] - YouTube Video /(with Mark himself Explaining)/
+      
+This *Emacs Org-Mode* file is an implementation of Mark's Autofocus System for folks like me who cannot write in notebooks due to the anxiety of combined dyslexia and dysgraphia... This .org file is not intended to be exported to PDF or other things... It is for working within org-mode /(as your electronic version of a spiral ruled notebook...)/
+
+If you like this system =I strongly suggest you visit the website above= as well as his blog to learn more... Watch the YouTube Video... That is best for starting out... /(this file is a template not a tutorial ok?)/ Mark has written many fine books on similar subjects... Also... If you don't have a problem with writing in a paper notebook etc.  I suggest you use Mark's system as he recommends... /(e.g., don't use this on a computer etc...)/
+
+For the rest of us fumbling idiots when it comes to pen and paper, =READ ON!!=
+
+This system is based purely on Mark Forster's experience... After only a few weeks of initial practice /(when he first started out)/ he discovered the following:
+
+- *A greatly increased volume of work:*
+   
+    Mark found He was able to process work much faster. This seems to be
+    mainly due to the fact that there is very little friction in the way
+    of resistance or procrastination.
+
+- *A lack of stress:*
+
+    Although obviously one still has to do the work, there are no great
+    barriers of resistance to overcome or feelings of overwhelm. In fact
+    just about all Mark's work became pleasurable. The more he learned
+    to trust the system, the more this became the case.
+
+- *Ability to Focus on what is important:*
+
+    It’s very difficult to focus on what is important with one’s rational
+    mind alone, because what your conscious mind thinks is important may
+    not be what your subconscious mind thinks is important. Looking back
+    on what you’ve done you will see that the focus produced by the system
+    feels “right” - right for you in your current circumstances.
+
+- *Very fast processing of routine actions:*
+
+    Your speed at doing various essential routine tasks will increase
+    exponentially... The sort of things /(e.g., replying to emails,/
+    /answering comments on your blog, returning phone calls, etc. etc.)/
+
+- *Thorough processing of major tasks and projects:*
+
+    The system encourages a /“little and often”/ approach to major tasks.
+    The result is that a project, such as setting up this trial, can
+    be dealt with over a period of time in a very methodical way. One
+    other result of the “little and often” approach is that ideas and
+    insights naturally spring up as a result of one’s mind engaging
+    with the task over a period of time.
+
+** 📚 References:
+:README:
+   Use this section to include links to Important References that
+   are GLOBAL to this ENTIRE Autofocus Notebook...
+:END:
+
+- [[https://markforster.squarespace.com/autofocus-system/][The Autofocus Time Management System]] /(link broken, see more)/
+
+   =Update:= <2022-11-02 Wed>
+
+      It appears the original *Squarespace* page for Mark's Autofocus
+      System /(above)/ no longer exists? I get an error when trying
+      to visit it...
+
+- [[https://lifehacker.com/autofocus-is-a-single-paper-based-list-organization-sy-5151111][Autofocus, Paper-Based List Organization System]] - /(lifehacker.com)/
+
+- [[https://lifehacker.com/the-autofocus-productivity-method-stop-maintaining-to-5704856][Autofocus Productivity Method]] - /(lifehacker.com)/
+
+- [[https://youtu.be/qF1ngJAyD_s][Autofocus System]] - YouTube Video /(with Mark himself Explaining)/
+
+- *Heading:* [[URL][Link Name] ] /(comment)/
+
+- *_:* [[][] ] /(yadda... yadda... yadda...)/
+
+\newpage
+
+* ✅ AF NOTEBOOK:
+:README:
+   This is my first org-mode based Autofocus notebook...
+
+   Use this org-mode based Autofocus system to create Autofocus
+   Notebooks for: Personal, clients, projects, etc...
+
+   The Best way to get started is to do the AF TODO Tasks waiting
+   for you inside: *✅ AF Notebook - Page 1:*
+   
+   =Read All Instructions Within:= *⎘ Meta:* Binder below to lean how
+   to use this Autofocus Notebook on the fly...
+
+   =Note:= *✅ AF Notebook - Page 1:* below currently contains a few
+         tasks to follow which will teach you how to use this
+         org-mode implementation of the Autofocus system...
+         
+         /(so you can learn how to use it while using it)/
+         
+         After completing all the tasks on page one, you will be a
+         pro!
+         
+         Remove all the boilerplate how-to tasks from Page 1 after
+         completion so you will have a clean page to go forward
+         with during your own AF adventures...
+:END:
+** ✅ AF Notebook - Page 01: [0/8]
+<<AFN-Page-01>>
+*** 00 ☞ BOILERPLATE TODO Item: /(/Copy/Clone for NEW AF TODO Item)/  :noexport:
+<<P0-00_AFN-TODO-Item>>
+:README:
+=Instructions...=
+
+This is a =Generic Autofocus TODO Item= numbered ~00~ to indicate that this is a BOILERPLATE Template containing INSTRUCTIONS on how to use it rather than
+being a real AFN TODO Item which would start at number ~01~... Real Autofocus TODO Items are numbered from: ~01~ to: ~25~ and should Only Contain One Or Two Sentences with a link to more info... And that would be ALL... This :README: drawer /(which contains a volume!)/ would NOT be included in your REAL AF TODO Items... 
+
+=Keep This= *00 ☞ BOILERPLATE TODO Item* =As a Read-Only Template= to copy when you need to add new items to your Autofocus Page (items numbered from ~01~ to ~25~ per page)
+
+It is initially at the Top of the list, but You may choose to keep this template on top or on bottom of your list... That is your preference...
+I am keeping mine on top but I have been known to change my mind... %^)
+
+I don't think it really matters. What matters is it is there to copy and save you a lot of time for the real Autofocus work...
+
+This BOILERPLATE Item does NOT appear within the TOC above so it is not in your face while you are doing your normal Autofocus Sessions...
+
+=Add NEW AF TODO Items to the HEAD of Your CURRENT PAGE:=
+
+=Note:= /Don't Add Over 25 Entries Per Page!/
+
+=Over 25 TODO Items already?= *Start a New Page:*
+Follow Instructions in the [[AFN-Page-00][:README:]] drawer under:
+*✅ AF Notebook - Page 00* /(above)/ instead...
+
+=Still Less than 25 entries?= *Continue Below:*
+
+- [ ] =Copy Paste:= *00 ☞ BOILERPLATE TODO Item:*
+
+      /(i.e., this heading and all content)/ to the =HEAD= of your latest
+      unfilled *AF Notebook Page*... Rename your copy to intended task
+      name and change ~00~ to the next number at the HEAD of your AF TODO
+      Items List...
+
+- [ ] *Feel Free to Remove this README Drawer from CLONES!*
+      You can always find these instructions in this read-only
+      template... It is important NOT to clutter up your AF TODO
+      Items... They need to be kept short and sweet one liners!
+
+=Linking Autofocus Item <-with-> Details Note or Ext .org Doc:=
+
+For quick navigation to and from your Autofocus Page List from tasks you are working on, you need some cross document org-links... This template adds boilerplate forms that make it easy for you to set your links without having to type a lot of key commands etc... /(you simply change the existing links and anchors contained within these templates)/
+
+The [[P0-00_AFN-TODO-Item_DETAILS][Follow This Link]] Link /(directly under this :README: drawer)/ links to a *MORE DETAILS Heading* for this GENERIC Autofocus TODO Item.
+
+       /ALL OF THIS IS BOILERPLATE FOR YOU TO COPY AND USE/
+
+The Link below takes you back to the: ~<P0-00_AFN-TODO-Item_DETAILS>~ anchor
+which is the default for the BOILERPLATE Template note...
+
+- [ ] =Use the existing Anchor:= ~<P0-00_AFN-TODO-Item>~ /(under HEADING above)/
+      as the =KEY= to emulate as you change it to reference your NEW
+      AFN page number & TODO Item number... as well as the anchor to
+      your renamed AFN TODO Item Details Note... both anchors should be
+      identical except ~_DETAILS~ is tacked on to the end of the anchor
+      for the MORE DETAILS Note...
+
+      ~P0~ = The Page Number /(P0=boilerplate template)/...
+           Start yours at ~P1~
+
+      ~-00~ = The Item Number /(00=boilerplate template)/...
+            Actual Items must be ~01~ to ~25~ only
+
+- [ ] =Change Anchor Title:= ~_AF-TODO-Item~ Replace this part with the real
+      title of your TODO Item using a leading underscore to connect to
+      Page and item number, and use dashes between words in the title...
+      
+- [ ] =Rename more DETAILS Note Anchor:= Copy the anchor you just created
+      above for this heading above, and add ~_DETAILS~ to the end of it
+      to make the anchor to this AFN TODO Item's DETAILS Note...
+
+This will insure all your "read more" notes or external .org docs point back to a single specific Autofocus TODO Item heading /(exclusively)/...
+
+- [ ] =Read Additional Instructions BELOW under this :README:=
+:END:
+
+[[P0-00_AFN-TODO-Item_DETAILS][Follow This Link]] and read the :README: just above where your cursor
+ends up after clicking the link... /(or simply follow steps below/
+/for quick usage)/
+
+The README provides detailed instructions for setting things up,
+linking to external docs, etc... 
+
+=Important= *THIS IS BOILERPLATE...* =Do NOT REMOVE or ALTER= this:
+          *00 ☞ BOILERPLATE TODO Item:* from your Notebook Pages...
+
+          Once a page reaches 25 items you no longer need this boilerplate
+          to create more Items because this page is full...
+          
+          Its OK and tidy to remove this BOILERPLATE from FULL AFN Pages.
+          /(but it does not hurt if you leave it)/
+
+=Quick Instructions:= /(to add A NEW AF TODO Item to this PAGE)/
+
+=Over 25 TODO Items already?= *Start a New Page:*
+Follow Instructions in the [[AFN-Page-00][:README:]] drawer under:
+*✅ AF Notebook - Page 00* /(above)/ instead...
+
+=Still Less than 25 entries?= *Continue Below:*
+
+- [ ] =Copy Paste:= *00 ☞ BOILERPLATE TODO Item:*
+
+      /(i.e., this heading and all contents)/ to the =HEAD= of your latest
+      unfilled *AF Notebook Page*... Rename your copy to intended task
+      name and change ~00~ to the next number at the HEAD of your AF TODO
+      Items List...
+
+- [ ] =Edit your NEW CLONED AFN TODO Item= to replace this note and ALL the
+      rest of the LONG TEXT below it with a SHORT one-liner description
+      of your real AFN TODO Item Task...
+
+- [ ] =EDIT/REUSE= the anchor & "Follow This link" /(above)/ so it will work
+      with your new renamed ~Px-xx_YOUR-TODO-Item_DETAILS~ anchor...
+
+- [ ] =Remove= the *:README:* drawer /(above)/ from your clone of this
+      BOILERPLATE once you have it all set up as an actual AF TODO
+      Item...
+
+- [ ] =Remove this:= *00 ☞ BOILERPLATE TODO Item:* after you have reached
+      a full 25 Items on this page... You won't need it in here anymore...
+      /New pages created will contain this same boilerplate item once you/
+      /have created them from the/ *✅ AF Notebook - Page 00:* /(template)/...
+
+\newpage
+
+*** TODO 01 ☞ Clone this .org file:
+/Follow the instructions within READ_ME_FIRST drawer at top.../
+
+*** TODO 02 ☞ Read Quick Start Instructions:
+/Read the Quick Start Instructions within the/ *⎘ Meta:* /Binder, below to get started.../ [[AFN-Quick-Start][Follow This Link]] to go there directly from here...
+
+*** TODO 03 ☞ Copy/Clone a NEW TODO Item:
+
+- [ ] =COPY:= *00 ☞ BOILERPLATE TODO Item:* from the top of this
+      list... Do NOT Edit, or delete your 00-BOILERPLATE! You
+      need that each time you need to add a new AutoFocus TODO
+      Item to this list...
+
+- [ ] =PASTE:= Your new BOILERPLATE Clone as the LAST Item below in this list...
+
+- [ ] =Change Item Number:= From ~00~ to the next consecutive
+      number at the end of this list, /(i.e.,/ ~09~ /)/
+
+- [ ] =Change title:= From *BOILERPLATE TODO Item:* to some randomly
+      chosen AF TODO Task name...
+
+      /This is for practice (or maybe real work?) using/
+      /AutoFocus... So make up/ /anything you wish here.../
+
+      /You may decide to delete these practice Items later,/
+      /(or NOT if they are real items)/ /once you get going/
+      /with your real tasks etc.../
+
+- [ ] =Set TODO state of your new clone:=
+
+      Initially New Tasks are set to the RED TODO state...
+
+      When you are finally DONE with a particular AutoFocus
+      TODO item, set its TODO state to *DONE* and tag it as:
+      ~:noexport:~... Doing this will remove it from the TOC
+      above so you won't see it during your next scan of that
+      AutoFocus Page...
+
+      =NOTE:= Unfortunately there is a bug in org-mode that adds
+            the TODO words to heading links... However these
+            TODO words are NOT part of the link and that breaks
+            it... =Keywords TODO and DONE are stripped however...=
+            Links to headings with those keywords attached work
+            in org-mode fine...
+
+            =SO...= You can only set those two built in keywords...
+            without breaking the TOC links... I believe this will
+            be fine for our purposes... /(bug avoidance rather/
+            /than workaround)/
+
+            You will be setting other TODO keywords within
+            docs related to your Autofocus Tasks, but don't
+            have to worry about those as you can use other
+            anchors within the file to link to etc...
+
+            When you are actually working on a TODO item in the
+            list you can set it temporally to *ACTIVE* to keep your
+            place while you are working on it... The TOC link will
+            be broken at this point, but you are WORKING on that
+            item NOW already... When You are ready to stop working
+            on the item, set it back to *TODO* or, if you are
+            completely finished set it to *DONE* /(if you are finally/
+            /done with the entire task...)/
+
+            The ~:noexport:~ tag is used to remove the item heading
+            from the TOC /(above)/ more than for LaTeX purposes...
+            /(you're probably NOT exporting AutoFocus Notebooks)/
+
+- [ ] =Follow Instructions:= within: [[P0-00_AFN-TODO-Item][:README:]] drawer of:
+      *00 ☞ BOILERPLATE TODO Item* for detailed instructions...
+      /(AGAIN... DON'T modify your BOILERPLATE... Modify your clowns!/
+      /OOPS! Silly pun... %^)/ 
+
+*** TODO 04 ☞ Keep Item Headings One Line Only:
+/Use a short sentence or Paragraph (like this) just below the heading (above) to/ /add more info and links to related docs if needed... (Try to Keep This Super Short!)/
+
+*** TODO 05 ☞ Add up to 25 items per page:
+/Continue to Copy more *00 ☞ AF TODO Item:* templates as needed to the end of this list... STOP after reaching Item 25... Do NOT make MORE than 25 TODO items per page as recommended by Mark.../
+
+*** TODO 06 ☞ Start A New Page After 25 Items:
+
+- [ ] =Copy:= *NEW ✅ AF Notebook - Page 0:* /(template)/ =AND ALL Sub Content=
+      from the *⎘ Meta:* Binder of this .org file...
+
+      /Paste As a new Parent Heading at the BOTTOM under ALL previously/
+      /created Autofocus Notebook Pages within this binder... Now, edit/
+      /this new Page to make it fit in consecutively as the highest page/
+      /number to date.../
+
+- [ ] =Follow Instructions:= within the [[AF-Page-00][:README:]] drawer of your new
+      Cloned *✅ AF Notebook - Page* for detailed instructions to finish
+      setting up...
+
+*** TODO 07 ☞ Read Full Instructions:
+/Read: *📄 Full Instructions:* within the/ *⎘ Meta:* /Binder, below/ /as a final task when you have time to focus on all of this.../ /It is IMPORTANT to make a point of reading the Full Instructions/ /in order to get a deeper understanding of this interesting human psychological process.../
+
+*** TODO 08 ☞ Remove All These Demo Tasks And Start This Page Clean:
+/Put your OWN TODO Tasks in here and start using this AF Notebook for real.../ You might probably leave 06 ☞ Start A New Page After
+25 Items to do once you have that many items... ;-)
+* 📝 AFN DETAILS:                :noexport:
+** ✅ AFN Page 01
+*** P0-00 ⏱ AFN TODO Item Details: /(BOILERPLATE template)/
+<<P0-00_AFN-TODO-Item_DETAILS>>
+:README:
+☞ =Instructions:= /(How to Use This BOILERPLATE template)/
+
+To use this *P0-00 ⏱ AFN TODO Item Details:* /(BOILERPLATE - /template)/ for your own projects, perform the following steps: /(Use the org-mode Checkboxes to Help You Keep Track of Progress)/
+
+1) [ ] *Clone a Copy of This Boilerplate Heading:* /(and all sub-content)/
+
+      =DON'T DELETE OR MODIFY This BOILERPLATE Template!=
+
+      =Copy:= *P0-00 ⏱ AFN TODO Item Details:* /(this heading and sub-content)/
+
+      Place your clone directly under this BOILERPLATE Template, or at the
+      Bottom of the list of previous TODO Item Details Notes just like this.
+
+      =Rename your clone= to: ~Px xx ⏱ Task-Title DETAILS:~ where the first ~x~
+      is the Autofocus page number where this task appears, and the
+      second ~xx~ is the number of this new TODO Item on that page...
+      Numbered from: ~01~ to: ~25~ only...
+
+      =Rename Title portion:= ~Task-Title~ /(after stopwatch)/
+      Replace this part with the real title of your TODO Item, Leave
+      DETAILS to distinguish between this note and the AFN TODO Item
+      itself...
+
+      ALL of your "read-more" details notes for your Autofocus TODO Items
+      will be placed within this *📝 AFN DETAILS:* Binder, under their
+      respective AFM Page No. sub-headings...
+
+      Use this BOILERPLATE heading to create more unique "read-more"
+      details notes linked exclusively to their associated TODO Items
+      within The *✅ AF NOTEBOOK:* Binder...
+
+      Place these new TODO Item Details Notes under the *✅ AFN Page 01*
+      heading until there are no more items left to write details
+      about... Once you begin working through a new Page 2, place your
+      TODO Item Details Notes under: *✅ AFN Page 02* heading which is
+      already below.  When you get to Page 3 Add a new  *✅ AFN Page 03*
+      Continue in this way adding new page headings as needed...
+
+3) [ ] =Adjust:= *RETURN TO AF Notebook ITEM* =link= /(below)/
+
+     This is the first thing you will see under this :README: drawer...
+     below.
+
+     Use *xah-fly-keys* leader key command: ~SPACE b~ to toggle Link
+     expansion, allowing you to edit the link manually... The link will
+     expand showing: [[P0-00_AFN-TODO-Item][RETURN TO AF Notebook ITEM] ]
+
+     Change: ~P0-00_~ to ~P1-xx_~ /(reflecting Page number & TODO Item number)/
+     of its actual AFN TODO Item...
+
+     Change: ~AFN-TODO-Item~ /(reflecting default TODO Item title)/
+     of the default boilerplate TODO ITEM anchor, to the NEW Title
+     of your NEW AF TODO Item... /Make sure this link matches your/
+     /anchor and titles match the Item Heading.../
+
+     Getting this link working correctly is vital to proper use of
+     your Autofocus Notebook...
+
+4) [ ] *Compose your Autofocus Notebook TODO Item details:*
+
+      Next... Compose your details in the space directly under the
+      *RETURN TO AF Notebook ITEM* link... /(which you just edited)/
+
+      Use as much space as needed... This is NOT a one liner...
+      You get to this spot ONLY when your autofocus session
+      leads you here... And when that happens you are "on task" so
+      get to it... ;-)
+
+      Remove all the existing instructions under the link and replace
+      that with your own content...  Have fun!
+
+=These Instructions Were Last Modified:= <2022-11-04 Fri>
+:END:
+- [[P0-00_AFN-TODO-Item][RETURN TO AF Notebook ITEM]]
+
+=Compose AutoFocus Notebook TODO Item Details HERE=
+
+Yadda... Yadda... Yadda...
+
+Add links to external documents in the Reference Section below...
+
+\newpage
+
+**** 📚 Reference:
+:README:
+   =Org Mode Links Tip:=
+
+      + To Create a Link Type: ~C-c C-l~ 
+         /(then paste: ~link~ & type: "description")/
+
+         =-or-= Simply Copy/Paste Template: /(link placeholder)/
+               Below and fill that in... 
+               copy/paste more placeholders as needed... ;-)
+
+      + To Open a Link Type: ~C-c C-o~
+
+- [[][] ] - /(link placeholder)/
+
+:END:
+
+- *Link to Project LOGS:* [[../HAP_General-Log-Book-Skeleton.org::Generic-Title-LOG][Generic-Title-LOG]]
+
+- *Heading:* [[URL][Link Name] ] /(comment)/
+
+- *_:* [[][] ] /(yadda... yadda... yadda...)/
+
+\newpage
+** ✅ AFN Page 02
+
+=Empty Placeholder Page= Put NEW *Px-xx ⏱ AFN TODO Item Details:* in here for new AFN TODO Item Details Notes for AFN Page 2...
+
+/Copy/Paste More of these Headings for Page 3, Page 4, ..., etc., as needed/
+
+* ⎘ Meta:                               :noexport:
+** 📋 Quick Start: /(from AF web-page reformatted for org-mode)/
+<<AFN-Quick-Start>>
+
+=Note:= These instructions originally came from the *Main Autofocus Website*
+      /(see link in:/ *📚 References:* /under the/ *☞ About:* /Binder above...)/
+      This is NOT intended to be a tutorial... It is a Template for folks
+      who use Emacs and would like to try Mark's Method using a keyboard only...
+      /(no coloured pencils, no mouse - because we have other ways)/...
+      Some may even use this on their phones with Mobile-Org...
+      That may not be what Mark's original intention was... His method
+      using paper notebooks is probably best, but I am totally disgraphic
+      and use Emacs and keyboards to overcome my shortcomings!
+
+=About Autofocus:= /(paraphrased from Mark's original Instructions)/
+
+The Autofocus system consists of one long list of everything that you have to do, written in a ruled notebook /(25-35 lines to a page ideal)/. As you think of new items, add them to the end of the list. You work through the list one page at a time... This process facilitates integration between your Left and Right brain functions during your GTD process... Mark Forester claims this will vastly
+improve execution of tasks, and insure that the right tasks are being done properly, focusing on the MOST important things first, but less important things getting done too.. /(tasks that you may have initally thought important/
+/may get weeded out as you use the system)/ and that is a GOOD thing...
+
+=Quick Start Instructions:=
+
+- [ ] =Scan Quickly Through All Items Under The TOC:= 
+
+      Expand *🔖 Table of Contents:* Heading and leave ALL other
+      Headings CLOSED... =You DON'T WANT TO SEE ANY DETAILS= at
+      this stage....
+
+      /Read the headings within the TOC (PAGE 1 ONLY) without taking/
+      /action on any of them.../
+
+      Using The *🔖 Table of Contents* to quickly scan Item Headings,
+      under PAGE 1... Instead of drilling down into the actual
+      Autofocus Notebook Page itself... This affords an easy way to
+      focus on headings only WITHOUT TAKING ANY ACTION on any of them...
+
+      The TOC only lists Autofocus Pages as the main headings and actual
+      AF TODO Items numbered from 01 to 25 as sub headings under the page
+      headings...
+
+      This allows you to scan through currently active pages within the
+      TOC, using your cursor to scan through in the same way as you would
+      use your pencil to point to the items as you scan...
+
+      The purpose of this initial exercise is to get the items on the
+      page "fixed in your mind" "What is on it?" so to speak...
+      Your mind should sub-consciously thinking already what you should
+      be doing and what you shouldn't be doing...
+
+      You do this on the first active page over and over as long as you
+      like before moving to next page to do the same thing...
+
+      Continuing in like manner this way until you finally get to the
+      end of your last Unfilled Page...
+      
+      All Items are clearly in view and only the Headings show /(as links)/
+      to the Actual Items...
+
+- [ ] =Read Through The TOC More Slowly:=
+
+      /Go through the current page list a bit more slowly this time,/
+      /looking at the items in order until one stands out for you.../
+
+      Start again at the top of the page... Continue scanning this 
+      single page under the *🔖 Table of Contents* more slowly this
+      time... Pausing on each Item Heading /(using your curesor rather/
+      /than a pencil)/ until you see a heading that stands out..
+      
+      If you "feel" that this item is ready to be worked on, COMMIT
+      to working on that item by clicking on it...
+
+      This heading /(within the TOC)/ is a link to the actual TODO Item
+      Heading... Therefore, if you decide to do it, THEN and ONLY THEN
+      you simply and immediately click the link to visit actual the
+      TODO Item to take action on it...
+
+- [ ] =NOW Work On the Item That Called To You:=
+
+      /So... during your slower read through of the list, You/
+      /decide to Work on an item that has caught your interest.../
+      /You may now work on this item for as long as you feel like/
+      /doing so.../
+
+      At this point simply put your cursor on the link and
+      type: ~C-c C-o~ to go directly to the actual AF Notebook TODO
+      Item Heading... /(and see what needs to be done from there)/
+
+      While working on an actual TODO Item, mark its heading's TODO
+      state as *ACTIVE*... Unfortunately a bug within org-mode will
+      break the link to this item within the TOC with custom TODO
+      keywords...
+
+      However, you are currently working on it and will change it
+      either back to *TODO* if you are NOT done yet, or *DONE* if you
+      are finished... Setting it to Active NOW while you are still
+      working on it helps you find it easily if you needed to step
+      away elsewhere for a moment...
+
+- [ ] =Cross The Item Off The List:= /(if task is DONE)/
+
+      This is much easier to do here in org-mode than if you were using
+      a paper spiral notebook, and coloured pencils...
+
+      Instead of crossing it off where it exists, simply move it to the
+      HEAD of the list on your current unfilled Auto Focus Page and change
+      its Item number from where it was, to the next available number
+      /(up to 25)/ on this new unfilled page...
+
+- [ ] =Continue Going Round The Same Page:=
+
+      After you are done working on the previous task /(whether or not/
+      /the task is actually completed)/, Scan the list in the same way as
+      before /(within the TOC)/... Don’t move onto the next page until
+      you complete a pass of the page without any item standing out...
+
+      As you complete some items they get marked *DONE* and tagged with
+      ~:noexport:~ This causes them to automatically fall away from the
+      TOC so they will NOT be in your face the next time you scan that
+      page...
+
+      Some items, will get pushed to the LAST page if you worked on them
+      for a bit but the task is not 100% complete yet...
+
+      Some Items never seem to get started... When that happens you may
+      choose to "DISMISS" the TODO Item using the *CANCELLED* TODO keyword
+      on that TODO Item's Heading... Also use the org-mode +strikeout+
+      delimiters: ~+content+~ on the Item Heading Title to show more clearly
+      the item has been dismissed...
+
+      Finally tag the Item's Heading with: ~:noexport:~ to keep this
+      dismissed TODO Item from showing up in the TOC List...
+
+- [ ] =Move Onto The Next Page:=
+
+      If after going through the current page slowly and NOTHING seems
+      to spark your intrest or motivation to commit, it's time to
+      move on to the next Page...
+      
+      /Repeat the above process all over again as you did on Page 1.../
+
+      Because of all the above, as you work through your Autofocus Notebook
+      you will see the number of items getting smaller and smaller as you
+      work though them on each page... Eventually they will ALL be done and
+      then that page will be empty and removed from the TOC list, or the
+      page will be dismissed with some items that must have been not that
+      important... /(being dismissed is NOT deleted, it is archived)/ All
+      of the information can be retrieved if need at some point but it
+      is no longer in your face... Hopefully never to see again unless
+      you made a big planning mistake or something...
+
+- [ ] =No Items Stand Out For You?:=
+
+      If during several passes through the TOC list of any single page,
+      NOTHING seems to stand out calling for your attention so much,
+      then all the outstanding items on that page need to be dismissed
+      without re-entering them...
+   
+      =Note:= /This does not apply to the final page, on which/
+            /you are still adding new items.../
+
+      Once ALL items on a page are +dismissed,+ Mark the page with the
+      org TODO tag: *CANCELLED* ~"c"~ to show that this entire page has
+      been dismissed...
+   
+      =Note:= Setting a heading to CANCELLED will require you to type a
+            reason... That is fine and possibly will help you later
+            if you need to dig up some ghost from the past...
+   
+- [ ] =Once You’ve Finished Scanning the Final Page:=
+
+      /re-start at the first page that is still active.../
+      /Continue doing this until you are ready to stop/
+      /your autofocus session.../
+
+Each of the above steps are explained in more detail below under:
+*📄 Full Instructions*. but I suggest you get going now and read the
+full instructions later...
+
+=Also:= the Full Instructions below are the exact words /(more-or-less)/ from
+Mark Forster... I DID NOT ADD any special org-mode instructions to what is written within the Full Instructions...
+
+Everything you NEED to USE this org-mode version of AutoFocus is written within this SIMPLE *📄 Quick Start* section...
+
+Everything you NEED to get a DEEPER UNDERSTANDING of the Autofocus Process is explained within the *📄 Full Instructions* below...
+
+=Don’t forget to Read= *📄 Full Instructions* =as an IMPORTANT TASK...=
+
+You don’t need a huge number of tasks to start with, just add tasks as you think of them or they come up... /(you will have plenty of tasks soon enough)/
+
+** 🕮 Full Instructions: /(from AF web-page reformatted for org-mode)/
+*** As you think of new items, add them to the end of the list.
+
+One of the characteristics of this system is that you can put anything into it. I recommend that you enter everything that comes to mind without trying to evaluate. The system itself will do the evaluation.
+
+*** Read quickly through all the items on any page 
+
+/(without taking action on any of them.)/
+
+A quick read through the page allows your mind to start processing the items without pressure...
+
+*** Go through the page more slowly:
+
+/(looking at the items in order until one stands out for you.)/
+
+This is the heart of the system. Don’t try to prioritise items mentally - this will interfere with the balance between the rational and intuitive parts of your mind. Instead wait for a feeling of release about an item.
+
+It’s hard to describe but easy to recognise. You just feel that the item is ready to be done. If you go on down the page, you may find that you feel drawn back to that item. Once you get that feeling about a task all resistance to doing the task vanishes, and it becomes easy to do.
+
+*** Work on that item for as long as you feel like doing so
+
+Don’t force yourself to continue working on an item for longer than you feel right doing so. This system encourages the: “little and often” approach. Once you feel you’ve done enough, stop.
+
+*** Cross the item off the list:
+
+/(and re-enter it at the end of the list if you haven’t finished it)/
+
+Actually it’s better to re-enter it first and then cross the item off because then you are less likely to lose your place, but I have to admit I’m not very good at remembering to do it in that order. Re-entry of items is an essential part of the system. You should re-enter everything which is done on a recurring basis (e.g. e-mail, paper, exercise), everything you are still working on (e.g. draft article or report), everything which needs follow up (e.g. Mike replied to email yet?), and extended tasks like reading a book, magazine or journal. You may also need to enter next steps or follow-up items. I find that about half to two-thirds of my tasks require re-entry in one form or another.
+
+*** Continue going round the same page in the same way:
+
+/(Don’t move onto the next page until you complete a pass of the current page without any item standing out)/
+
+Treating each page as a unit allows you to get the benefit of “structured procrastination”, which is based on the fact that procrastination is relative. In other words any task becomes easy if it is a choice between doing it or another harder task...
+
+*** Move onto the next page and repeat the process:
+
+You may find that you pass through a page very quickly or spend a considerable time working your way round it. Either way is fine - just let the “standing out” method guide you.
+
+*** If you go to a page and no item stands out:
+
+If no item stands out for you on your first pass through it, then all the outstanding items on that page are dismissed without re-entering them. Use your highlighter to mark dismissed items.
+
+This is where the system finally gets rid of all the items which you entered without evaluation, but which the system has sifted and found wanting. This may happen very quickly (for instance if you have entered a long list of books you are thinking of reading), but more usually quite slowly.
+
+Please take the rule not to re-enter these items seriously. It doesn’t mean you can never re-enter them, but you should let some time pass before you do and consider carefully why they were rejected, whether they really need to be done at all, whether the time is ripe for them to be done, whether they distract from your main goals, and any other factors. When you do re-enter a dismissed item, it is often best to break it down or re-phrase it in some way.
+
+=Highlighting rejected items helps you to review them easily.=
+
+*Remember that this rule does not apply to the page on which you are still writing items (i.e. the last page).*
+
+*** Once you’ve finished with the last page:
+
+*re-start at the first page that is still active.*
+
+I mark pages that are no longer active with a cross at the top outside corner of the page, and put a circle round the cross when there are no active pages before that page. That makes it easy to find the first active page. You may find the number of active pages varies considerably from time to time. At the time of writing I have nine, but it’s varied from three or four up to fifteen.
+
+/This system can be quite addictive (at least that’s what I’ve found) so you may find it a good idea to set strict working hours. Stop dead when the time is up, and start again at the same place when it’s time to start again. I admit I am not very good at following this advice myself!/
+
+*** Backlogs:
+
+You may already have some backlogs of work when you start this system. If you have a backlog of tasks then I recommend you enter all the tasks into the system in one go and let it sift them. If you find some of them end up being rejected then you need to ask serious questions about whether they really need doing at all.
+
+However with backlogs of email and paper there is a danger that a large backlog may get in the way of the efficient processing of newly arriving emails and papers. So I recommend moving your backlog(s) into separate folders and having tasks called “Email Backlog” and/or “Paper Backlog” as well as the standard “Clear Email” and “Clear Intray”.
+
+*** Why it works:
+
+The system works by providing a framework which balances the rational and intuitive parts of the brain.
+
+If we try to run our lives with our rational brain only, we will tend to make plans which are subverted by our own minds because our minds don’t work on purely rational grounds. Most of us have experienced occasions on which we know (with our rational brain) that we would be better served to do certain things, but nevertheless our natural inclination is to reject them.
+
+On the other hand, if we try to run our lives by following our natural inclinations only we will have a strong tendency to drift, become impulsive and act irrationally.
+
+However when these two ways of thinking are in balance we are able to make rational decisions which are fully in accord with our deeper feelings and emotions. The Autofocus system provides a framework which enables this. Although I talk about “the system” making the choices, what I really mean is that the system provides a framework which allows us to make these balanced decisions ourselves in a non-stressful way.
+
+*** Dos and Don’ts:
+
+- =DO= trust the system. Because of the way it is structured it will
+       help you to produce better decisions than you would unaided.
+
+- =DO= use common sense. If something comes up which needs doing
+       immediately, do it immediately.
+
+- =DON’T= try to pre-edit what you put into the system. If you do, you
+         will be using a less efficient means of prioritising than the
+         system itself.
+
+- =DO= expect things to move at different rates. Some things will move
+       fast, some slowly, some will stop for a period, and some will be
+       rejected altogether. This is how it’s supposed to work.
+
+- =DON’T= use this system for things which need to be done at specific
+         times of day. These might include preparing meals, music practice,
+         shutting up shop, etc.
+
+- =DO= read through all the outstanding items on your list when you come
+       back to it after an extended break. This will help your mind to get
+       an overview of what needs to be done.
+
+- =DON’T= forget to put follow-ups and reminders into the system. These are
+         an essential way of keeping track of your work.
+
+- =DO= include plenty of creative tasks such as “Think about…”,
+       “Investigate…”; “Discuss…”; “Review…”
+
+- =DO= put the date next to the first item you add each day. Although not
+       essential to the system, it helps you to monitor progress.
+
+- =DON’T= leave your list without some means of recording ideas and tasks
+         which come into your mind.
+
+- =DO= use some means of bringing forward tasks which can only be done at
+       a future date (Tickler file, Outlook reminders, Calendar, etc.)
+
+- =DO= use a separate notebook and list for each location, e.g. Home,
+       Workplace.
+
+\newpage
+** ✅ AF Notebook - Page 00: [0/5] /(template)/
+<<AFN-Page-00>>
+:README:
+=Instructions For New AutoFocus Page:=
+
+- [ ] =Copy/Clone This Heading AND ALL contents= for a *NEW AF Page*...
+      Paste your copy as the last /(most recent)/ Main Heading under
+      the *✅ AF NOTEBOOK:* Binder...
+
+- [ ] =Re-Name:= *Page 00* above within your clone to the actual
+      AF Page number you need to add... Remove /(template)/
+      from heading as well...
+
+- [ ] =Change Anchor Link:= ~<<AFN-Page-00>>~ /(above)/ to reflect your
+      new page number...
+
+- [ ] =Follow= [[P0-00_AFN-TODO-Item][:README:]] =Instructions= Under: *00 ☞ BOILERPLATE TODO Item*
+      below /(to add new TODO Item, etc.)/...
+
+- [ ] =Delete this README Drawer From Your Clone= after completing
+      ALL instructions... /(you can always read this stuff here/
+      /in the META Binder)/
+:END:
+*** 00 ☞ BOILERPLATE TODO Item: /(/Copy/Clone for NEW AF TODO Item)/  :noexport:
+<<P0-00_AFN-TODO-Item>>
+:README:
+=Instructions...=
+
+This is a =Generic Autofocus TODO Item= numbered ~00~ to indicate that this is a BOILERPLATE Template containing INSTRUCTIONS on how to use it rather than
+being a real AFN TODO Item which would start at number ~01~... Real Autofocus TODO Items are numbered from: ~01~ to: ~25~ and should Only Contain One Or Two Sentences with a link to more info... And that would be ALL... This :README: drawer /(which contains a volume!)/ would NOT be included in your REAL AF TODO Items... 
+
+=Keep This= *00 ☞ BOILERPLATE TODO Item* =As a Read-Only Template= to copy when you need to add new items to your Autofocus Page (items numbered from ~01~ to ~25~ per page)
+
+It is initially at the Top of the list, but You may choose to keep this template on top or on bottom of your list... That is your preference...
+I am keeping mine on top but I have been known to change my mind... %^)
+
+I don't think it really matters. What matters is it is there to copy and save you a lot of time for the real Autofocus work...
+
+This BOILERPLATE Item does NOT appear within the TOC above so it is not in your face while you are doing your normal Autofocus Sessions...
+
+=Add NEW AF TODO Items to the HEAD of Your CURRENT PAGE:=
+
+=Note:= /Don't Add Over 25 Entries Per Page!/
+
+=Over 25 TODO Items already?= *Start a New Page:*
+Follow Instructions in the [[AFN-Page-00][:README:]] drawer under:
+*✅ AF Notebook - Page 00* /(above)/ instead...
+
+=Still Less than 25 entries?= *Continue Below:*
+
+- [ ] =Copy Paste:= *00 ☞ BOILERPLATE TODO Item:*
+
+      /(i.e., this heading and all content)/ to the =HEAD= of your latest
+      unfilled *AF Notebook Page*... Rename your copy to intended task
+      name and change ~00~ to the next number at the HEAD of your AF TODO
+      Items List...
+
+- [ ] *Feel Free to Remove this README Drawer from CLONES!*
+      You can always find these instructions in this read-only
+      template... It is important NOT to clutter up your AF TODO
+      Items... They need to be kept short and sweet one liners!
+
+=Linking Autofocus Item <-with-> Details Note or Ext .org Doc:=
+
+For quick navigation to and from your Autofocus Page List from tasks you are working on, you need some cross document org-links... This template adds boilerplate forms that make it easy for you to set your links without having to type a lot of key commands etc... /(you simply change the existing links and anchors contained within these templates)/
+
+The [[P0-00_AFN-TODO-Item_DETAILS][Follow This Link]] Link /(directly under this :README: drawer)/ links to a *MORE DETAILS Heading* for this GENERIC Autofocus TODO Item.
+
+       /ALL OF THIS IS BOILERPLATE FOR YOU TO COPY AND USE/
+
+The Link below takes you back to the: ~<P0-00_AFN-TODO-Item_DETAILS>~ anchor
+which is the default for the BOILERPLATE Template note...
+
+- [ ] =Use the existing Anchor:= ~<P0-00_AFN-TODO-Item>~ /(under HEADING above)/
+      as the =KEY= to emulate as you change it to reference your NEW
+      AFN page number & TODO Item number... as well as the anchor to
+      your renamed AFN TODO Item Details Note... both anchors should be
+      identical except ~_DETAILS~ is tacked on to the end of the anchor
+      for the MORE DETAILS Note...
+
+      ~P0~ = The Page Number /(P0=boilerplate template)/...
+           Start yours at ~P1~
+
+      ~-00~ = The Item Number /(00=boilerplate template)/...
+            Actual Items must be ~01~ to ~25~ only
+
+- [ ] =Change Anchor Title:= ~_AF-TODO-Item~ Replace this part with the real
+      title of your TODO Item using a leading underscore to connect to
+      Page and item number, and use dashes between words in the title...
+      
+- [ ] =Rename more DETAILS Note Anchor:= Copy the anchor you just created
+      above for this heading above, and add ~_DETAILS~ to the end of it
+      to make the anchor to this AFN TODO Item's DETAILS Note...
+
+This will insure all your "read more" notes or external .org docs point back to a single specific Autofocus TODO Item heading /(exclusively)/...
+
+- [ ] =Read Additional Instructions BELOW under this :README:=
+:END:
+
+[[P0-00_AFN-TODO-Item_DETAILS][Follow This Link]] and read the :README: just above where your cursor
+ends up after clicking the link... /(or simply follow steps below/
+/for quick usage)/
+
+The README provides detailed instructions for setting things up,
+linking to external docs, etc... 
+
+=Important= *THIS IS BOILERPLATE...* =Do NOT REMOVE or ALTER= this:
+          *00 ☞ BOILERPLATE TODO Item:* from your Notebook Pages...
+
+          Once a page reaches 25 items you no longer need this boilerplate
+          to create more Items because this page is full...
+          
+          Its OK and tidy to remove this BOILERPLATE from FULL AFN Pages.
+          /(but it does not hurt if you leave it)/
+
+=Quick Instructions:= /(to add A NEW AF TODO Item to this PAGE)/
+
+=Over 25 TODO Items already?= *Start a New Page:*
+Follow Instructions in the [[AFN-Page-00][:README:]] drawer under:
+*✅ AF Notebook - Page 00* /(above)/ instead...
+
+=Still Less than 25 entries?= *Continue Below:*
+
+- [ ] =Copy Paste:= *00 ☞ BOILERPLATE TODO Item:*
+
+      /(i.e., this heading and all contents)/ to the =HEAD= of your latest
+      unfilled *AF Notebook Page*... Rename your copy to intended task
+      name and change ~00~ to the next number at the HEAD of your AF TODO
+      Items List...
+
+- [ ] =Edit your NEW CLONED AFN TODO Item= to replace this note and ALL the
+      rest of the LONG TEXT below it with a SHORT one-liner description
+      of your real AFN TODO Item Task...
+
+- [ ] =EDIT/REUSE= the anchor & "Follow This link" /(above)/ so it will work
+      with your new renamed ~Px-xx_YOUR-TODO-Item_DETAILS~ anchor...
+
+- [ ] =Remove= the *:README:* drawer /(above)/ from your clone of this
+      BOILERPLATE once you have it all set up as an actual AF TODO
+      Item...
+
+- [ ] =Remove this:= *00 ☞ BOILERPLATE TODO Item:* after you have reached
+      a full 25 Items on this page... You won't need it in here anymore...
+      /New pages created will contain this same boilerplate item once you/
+      /have created them from the/ *✅ AF Notebook - Page 00:* /(template)/...
+
+\newpage

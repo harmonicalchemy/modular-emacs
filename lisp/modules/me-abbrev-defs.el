@@ -123,3 +123,6 @@
 (set-default 'abbrev-mode t)
 
 (setq save-abbrevs nil)
+
+;; END File: ~/.emacs.d/lisp/modules/me-abbrev-defs.el
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
