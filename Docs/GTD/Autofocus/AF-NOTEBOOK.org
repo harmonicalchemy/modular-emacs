@@ -37,7 +37,7 @@
 
 :READ_ME_FIRST:
 The Autofocus Notebook Method is a GTD system developed by: *Mark Forster*  
-[[http://markforster.squarespace.com/][see his blog here]] *email:* [[mf@markforster.net]] Read More about it in the *☞ About:* Binder below...
+[[http://markforster.squarespace.com/][see his blog here]] *email:* [[mailto:mf@markforster.net]] Read More about it in the *☞ About:* Binder below...
 
 ☞ =Instructions:= /(How to Install & Use This Template)/
 
@@ -60,23 +60,19 @@ To use this *AF-NOTEBOOK.org* /(Org-Mode Autofocus Notebook /Template)/ for your
             directory...  If you change its name, some default
             internal org-links may no longer work correctly...
 
-2) [ ] *DO Boilerplate AF TODO Tasks Within ✅ AF Notebook - Page 1:*
+      =Close This Read-Only TEMPLATE:=
+      ~~/.emacs.d/Docs/GTD/Autofocus/AF-NOTEBOOK.org~ As soon as
+      you finish this first step... /(do not mark checkbox above/
+      /within this master template)/ Consider it read-only...
 
-      =Note:= These boilerplate AF TODO Tasks are NOT good examples
-            of what your AutoFocus Notebook TODO Items should be
-            like... They have way too long intro text for instance...
-            
-            The reason for this is pedagogical... The main purpose
-            of these BOILERPLATE TODO tasks is to teach you how to
-            use this AutoFocus Notebook... How to link from a specific
-            Autofocus TODO task entry to external docs and create a
-            link back to the Autofocus TODO Task from those external
-            docs...
+      =CONTINUE Next Steps Below Within Your Cloned Copy= In:
+      ~.../your-gtd-dir/Autofocus/AF-NOTEBOOK.org~
 
-            More Autofocus related docs and or templates exist within
-            the *⎘ Meta* Binder of this Autofocus Notebook...
+      =Mark this checkbox= ☑️ /(within your cloned copy)/ and continue
+      with the next steps below... marking each checkbox as they
+      are completed...
 
-3) [ ] *Finish Setting up this Project:* [0/10]
+2) [ ] *Finish Setting up this Project:* [0/10]
 
     - [ ] *Change* ~#+TITLE:~ *Directive:*
 
@@ -241,6 +237,22 @@ To use this *AF-NOTEBOOK.org* /(Org-Mode Autofocus Notebook /Template)/ for your
         ways to get Back and forth from Autofocus Notebook to these
         external docs... /(kept close at hand)/
 
+3) [ ] *DO Boilerplate AF TODO Tasks Within ✅ AF Notebook - Page 1:*
+
+      =Note:= These boilerplate AF TODO Tasks are NOT good examples
+            of what your AutoFocus Notebook TODO Items should be
+            like... They have way too long intro text for instance...
+            
+            The reason for this is pedagogical... The main purpose
+            of these BOILERPLATE TODO tasks is to teach you how to
+            use this AutoFocus Notebook... How to link from a specific
+            Autofocus TODO task entry to external docs and create a
+            link back to the Autofocus TODO Task from those external
+            docs...
+
+            More Autofocus related docs and or templates exist within
+            the *⎘ Meta* Binder of this Autofocus Notebook...
+
 4) [ ] =Optional= *Export/Publish to PDF File:*
 
       =Note:= Autofocus Notebooks are probably not something that needs
@@ -270,7 +282,7 @@ To use this *AF-NOTEBOOK.org* /(Org-Mode Autofocus Notebook /Template)/ for your
 
          *Consult Buffer:* ~*Org PDF LaTeX Output*~
 
-=These Instructions Were Last Modified:= <2022-11-03 Thu> 
+=These Instructions Were Last Modified:= <2022-11-04 Fri> 
 
 So far things are pretty basic PDF for Autofocus Notebooks... Not much...
 
@@ -287,17 +299,17 @@ Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas
    - [[#-af-notebook---page-01-08][✅ AF Notebook - Page 01:]]
       - [[#01--clone-this-org-file][01 ☞ Clone this .org file:]]
       - [[#02--read-quick-start-instructions][02 ☞ Read Quick Start Instructions:]]
-      - [[#03--copyclone-a-new-todo-item][03 ☞ Copy/Clone a NEW TODO Item:]]
+      - [[#03--copyclone-a-new-todo-item-06][03 ☞ Copy/Clone a NEW TODO Item:]]
       - [[#04--keep-item-headings-one-line-only][04 ☞ Keep Item Headings One Line Only:]]
       - [[#05--add-up-to-25-items-per-page][05 ☞ Add up to 25 items per page:]]
       - [[#06--start-a-new-page-after-25-items][06 ☞ Start A New Page After 25 Items:]]
       - [[#07--read-full-instructions][07 ☞ Read Full Instructions:]]
-      - [[#08--remove-all-these-demo-tasks-and-start-this-page-clean][08 ☞ Remove All These Demo Tasks And Start This Page Clean:]]
+      - [[#08--mark-all-these-demo-tasks-done--no-export][08 ☞ Mark All These Demo Tasks DONE & no export:]]
 
 * ☞ About:                             :noexport:
 
 The Autofocus Notebook Method is a GTD system developed by: *Mark Forster*  
-[[http://markforster.squarespace.com/][see his blog here]] *email:* [[mf@markforster.net]]
+[[http://markforster.squarespace.com/][see his blog here]] *email:* [[mailto:mf@markforster.net]]
 
 =Update:= <2022-11-02 Wed>
 
@@ -356,13 +368,23 @@ This system is based purely on Mark Forster's experience... After only a few wee
     insights naturally spring up as a result of one’s mind engaging
     with the task over a period of time.
 
-** 📚 References:
+** 📚 Reference:
 :README:
-   Use this section to include links to Important References that
-   are GLOBAL to this ENTIRE Autofocus Notebook...
+   =Org Mode Links Tip:=
+
+      + To Create a Link Type: ~C-c C-l~ 
+         /(then paste: ~link~ & type: "description")/
+
+         =-or-= Simply Copy/Paste Template: /(boilerplate placeholder)/
+               Below and fill that in manually... 
+               Copy/Paste more placeholders as needed... ;-)
+
+      + To Open a Link Type: ~C-c C-o~
+
+☞ *Heading:* [[URL][Link Name] ] /(comment)/
 :END:
 
-- [[https://markforster.squarespace.com/autofocus-system/][The Autofocus Time Management System]] /(link broken, see more)/
+☞ [[https://markforster.squarespace.com/autofocus-system/][The Autofocus Time Management System]] /(link broken, see more)/
 
    =Update:= <2022-11-02 Wed>
 
@@ -370,15 +392,17 @@ This system is based purely on Mark Forster's experience... After only a few wee
       System /(above)/ no longer exists? I get an error when trying
       to visit it...
 
-- [[https://lifehacker.com/autofocus-is-a-single-paper-based-list-organization-sy-5151111][Autofocus, Paper-Based List Organization System]] - /(lifehacker.com)/
+☞ [[https://lifehacker.com/autofocus-is-a-single-paper-based-list-organization-sy-5151111][Autofocus, Paper-Based List Organization System]] - /(lifehacker.com)/
 
-- [[https://lifehacker.com/the-autofocus-productivity-method-stop-maintaining-to-5704856][Autofocus Productivity Method]] - /(lifehacker.com)/
+☞ [[https://lifehacker.com/the-autofocus-productivity-method-stop-maintaining-to-5704856][Autofocus Productivity Method]] - /(lifehacker.com)/
 
-- [[https://youtu.be/qF1ngJAyD_s][Autofocus System]] - YouTube Video /(with Mark himself Explaining)/
+☞ [[https://youtu.be/qF1ngJAyD_s][Autofocus System]] - YouTube Video /(with Mark himself Explaining)/
 
-- *Heading:* [[URL][Link Name] ] /(comment)/
+=BOILERPLATE:= /(clone to add more ref links)/
 
-- *_:* [[][] ] /(yadda... yadda... yadda...)/
+☞ *Heading:* [[link][NAME] ] /(comment)/
+
+☞ *_:* [[][] ] /(yadda... yadda... yadda...)/
 
 \newpage
 
@@ -410,128 +434,156 @@ This system is based purely on Mark Forster's experience... After only a few wee
 :END:
 ** ✅ AF Notebook - Page 01: [0/8]
 <<AFN-Page-01>>
-*** 00 ☞ BOILERPLATE TODO Item: /(/Copy/Clone for NEW AF TODO Item)/  :noexport:
-<<P0-00_AFN-TODO-Item>>
+*** 00 ☞ BOILERPLATE AFN TODO Item: /(/Clone for NEW AF TODO Item)/ :noexport:
+<<P1-00_BOILERPLATE-AFN-TODO-Item>>
 :README:
-=Instructions...=
+☞ =Instructions:= /(How to Use This BOILERPLATE template)/
 
 This is a =Generic Autofocus TODO Item= numbered ~00~ to indicate that this is a BOILERPLATE Template containing INSTRUCTIONS on how to use it rather than
-being a real AFN TODO Item which would start at number ~01~... Real Autofocus TODO Items are numbered from: ~01~ to: ~25~ and should Only Contain One Or Two Sentences with a link to more info... And that would be ALL... This :README: drawer /(which contains a volume!)/ would NOT be included in your REAL AF TODO Items... 
+being a real AFN TODO Item which would start at number ~01~...
+
+Real Autofocus TODO Items are numbered from: ~01~ to: ~25~ and should Only Contain One Or Two Sentences with a link to more info... And that would be ALL... This :README: drawer /(which contains a volume!)/ would also NOT be included in your REAL AF TODO Items... 
 
 =Keep This= *00 ☞ BOILERPLATE TODO Item* =As a Read-Only Template= to copy when you need to add new items to your Autofocus Page (items numbered from ~01~ to ~25~ per page)
 
-It is initially at the Top of the list, but You may choose to keep this template on top or on bottom of your list... That is your preference...
+This Template is initially at the Top of the list, but You may choose to keep this template on top or on bottom of your list... That is your preference...
 I am keeping mine on top but I have been known to change my mind... %^)
 
-I don't think it really matters. What matters is it is there to copy and save you a lot of time for the real Autofocus work...
+I don't think it really matters. What matters is it is there to clone, saving you a lot of time for the real Autofocus work...
 
-This BOILERPLATE Item does NOT appear within the TOC above so it is not in your face while you are doing your normal Autofocus Sessions...
+This BOILERPLATE TODO Item does NOT appear within the =TOC= above so it will not be in your face while you are performing normal Autofocus Sessions...
 
-=Add NEW AF TODO Items to the HEAD of Your CURRENT PAGE:=
+ALL of your *Autofocus TODO Items* will be placed within the *✅ AF NOTEBOOK:* Binder, under their respective *✅ AFN Page XX* sub-headings...
 
-=Note:= /Don't Add Over 25 Entries Per Page!/
+=Important= *THIS Item IS BOILERPLATE...* =Do NOT REMOVE or ALTER= this:
+          *00 ⏱ BOILERPLATE AFN TODO Item:* heading or any
+          of its content...
 
-=Over 25 TODO Items already?= *Start a New Page:*
-Follow Instructions in the [[AFN-Page-00][:README:]] drawer under:
-*✅ AF Notebook - Page 00* /(above)/ instead...
+          =DON'T Change Checkboxes Within This BOILERPATE!=
 
-=Still Less than 25 entries?= *Continue Below:*
+          =You Should Be Editing Clones Of This Instead...=
 
-- [ ] =Copy Paste:= *00 ☞ BOILERPLATE TODO Item:*
+          =COPY THIS BOILERPLATE= to make a NEW AFN TODO Item
+          DETAILS Note for a NEW AFN TODO Item Heading...
 
-      /(i.e., this heading and all content)/ to the =HEAD= of your latest
-      unfilled *AF Notebook Page*... Rename your copy to intended task
-      name and change ~00~ to the next number at the HEAD of your AF TODO
-      Items List...
+          =THEN CONTINUE BELOW WHITHIN your CLONE:=
 
-- [ ] *Feel Free to Remove this README Drawer from CLONES!*
-      You can always find these instructions in this read-only
-      template... It is important NOT to clutter up your AF TODO
-      Items... They need to be kept short and sweet one liners!
+- [ ] =Perform The Following Steps WITHIN YOUR CLONED COPY:= [0/2]
 
-=Linking Autofocus Item <-with-> Details Note or Ext .org Doc:=
+   /(Use the org-mode Checkboxes to Help You Keep Track of Progress)/
+   
+   =Note:= /Don't Add Over 25 Entries Per Page!/
 
-For quick navigation to and from your Autofocus Page List from tasks you are working on, you need some cross document org-links... This template adds boilerplate forms that make it easy for you to set your links without having to type a lot of key commands etc... /(you simply change the existing links and anchors contained within these templates)/
+   =Over 25 TODO Items On This Page Already?=
 
-The [[P0-00_AFN-TODO-Item_DETAILS][Follow This Link]] Link /(directly under this :README: drawer)/ links to a *MORE DETAILS Heading* for this GENERIC Autofocus TODO Item.
+   1) [ ] *Start a New Page:*
+      
+          Follow Instructions in the [[AFN-Page-00][:README:]] drawer under:
+          *✅ AF Notebook - Page 00* /(above)/ instead...
+
+       =Still Less than 25 entries =-or- on NEW Page?=
+
+   2) [ ] =Copy Paste:= *00 ☞ BOILERPLATE AFN TODO Item:*
+
+          /(i.e., this heading and all content)/ to the =HEAD= of your latest
+          unfilled *AF Notebook Page*... Rename your copy to its intended task
+          name and change dummy item number: ~00~ to the next number at the
+          HEAD of your AF TODO Items List on the page...
+
+=Linking THIS AF TODO Item <-with-> ITS DETAILS Note, or an Ext .org Doc:=
+
+For quick navigation to and from your *Autofocus Notebook Page List* to the actual tasks you are working on, you need a nice cross document org-link scheme...
+
+These BOILERPLATE Templates contain Anchors directly under their main headings... Org-Links set elsewhere use these anchors to get back to them...  These anchors and links are set to work properly on the read-only BOILERPLATE Headings if left unchanged...
+
+You need to CHANGE both the anchors AND Links to them from within this .org
+file, so that they match your NEW AFN PAGE Number, TODO Item Number, and Title...
+
+Try to follow the same naming convention used for the Default BOILERPLATE Items when you make your new anchors and links...
+
+/(manually edit and change existing anchors and links already present within these templates to make them useable for your new purpose)/
+
+The *"☞ Follow This Link"* /(directly under this :README: drawer)/ leads you to the generic: *P0-00 ⏱ AFN BOILERPLATE TODO Item DETAILS:* Note located under the *✅ AFN Page 01* sub-heading within the *📝 AFN DETAILS:* Main Binder...
 
        /ALL OF THIS IS BOILERPLATE FOR YOU TO COPY AND USE/
 
-The Link below takes you back to the: ~<P0-00_AFN-TODO-Item_DETAILS>~ anchor
-which is the default for the BOILERPLATE Template note...
+- [ ] =Use Existing Anchor:= ~<P0-00_BOILERPLATE-AFN-TODO-Item>~
+      /(under HEADING above)/ as the =KEY= to emulate when changing
+      it to reference your NEW AFN page number & TODO Item number.
 
-- [ ] =Use the existing Anchor:= ~<P0-00_AFN-TODO-Item>~ /(under HEADING above)/
-      as the =KEY= to emulate as you change it to reference your NEW
-      AFN page number & TODO Item number... as well as the anchor to
-      your renamed AFN TODO Item Details Note... both anchors should be
-      identical except ~_DETAILS~ is tacked on to the end of the anchor
-      for the MORE DETAILS Note...
+      =Naming Convention is as follows:=
 
-      ~P0~ = The Page Number /(P0=boilerplate template)/...
+      ~P0~ = The Page Number /(P0=BOILERPLATE page)/...
            Start yours at ~P1~
 
-      ~-00~ = The Item Number /(00=boilerplate template)/...
+      ~-00~ = The Item Number /(00=BOILERPLATE AFN TODO Item)/...
             Actual Items must be ~01~ to ~25~ only
 
-- [ ] =Change Anchor Title:= ~_AF-TODO-Item~ Replace this part with the real
-      title of your TODO Item using a leading underscore to connect to
-      Page and item number, and use dashes between words in the title...
-      
-- [ ] =Rename more DETAILS Note Anchor:= Copy the anchor you just created
-      above for this heading above, and add ~_DETAILS~ to the end of it
-      to make the anchor to this AFN TODO Item's DETAILS Note...
+      /Use Underscores to separate Px-xx from Item Title in anchors/
+      /and use dashes to separate words... Put a final Underscore and/
+      /the word DETAILS on the end of the anchor under your NEW AFN/
+      /DETAILS Note... Both anchors should be identical otherwise.../
 
-This will insure all your "read more" notes or external .org docs point back to a single specific Autofocus TODO Item heading /(exclusively)/...
+- [ ] =Change Existing Anchor Above this :README:=
+      ~<P0-00_BOILERPLATE-AFN-TODO-Item>~ Change it To:
+      ~<Px-xx_Your-New-TODO-Item-title>~ where ~Px-~ is the Autofocus
+      Page Number, and ~xx_~ is the newly assigned AFN TODO Item Number
+      within that page... /(this number must NOT exceed ~25~)/
+
+- [ ] =Rename more DETAILS Note Anchor:= Copy the anchor you just created
+      above for this heading above, and add ~_DETAILS~ /(with underscore)/
+      to the end of it to make the anchor to this AFN TODO Item's
+      DETAILS Note...
+
+      Rename your cloned AFN TODO Item DETAILS Note in the same way...
+      /(i.e., an exact copy of the title of this renamed TODO Item with/
+      /DETAILS added to the end...)/
+
+The above will insure all your "read more" notes or external .org docs point back to a single specific Autofocus TODO Item heading /(exclusively)/...
 
 - [ ] =Read Additional Instructions BELOW under this :README:=
 :END:
 
-[[P0-00_AFN-TODO-Item_DETAILS][Follow This Link]] and read the :README: just above where your cursor
-ends up after clicking the link... /(or simply follow steps below/
-/for quick usage)/
+=Important= *THIS Item IS BOILERPLATE...* =Do NOT REMOVE or ALTER=
+          this: *00 ☞ BOILERPLATE TODO Item:* heading or any
+          of its content...
 
-The README provides detailed instructions for setting things up,
-linking to external docs, etc... 
+          =DON'T Change Checkboxes Within This BOILERPATE!=
 
-=Important= *THIS IS BOILERPLATE...* =Do NOT REMOVE or ALTER= this:
-          *00 ☞ BOILERPLATE TODO Item:* from your Notebook Pages...
+          =You Should Be Editing Clones Of This Instead...=
 
-          Once a page reaches 25 items you no longer need this boilerplate
-          to create more Items because this page is full...
+          =COPY THIS BOILERPLATE= Follow Instructions within
+          the *:README:* drawer above to make a NEW AFN TODO
+          Item within your current LIVE Autofocus Notebook
+          Page...
+
+          =CONTINUE Editing Your CLONE BELOW:=
+
+Once a page reaches 25 items you no longer need this BOILERPLATE to create more Items because the page containing it is full...
           
-          Its OK and tidy to remove this BOILERPLATE from FULL AFN Pages.
-          /(but it does not hurt if you leave it)/
+At that point it will be fine and tidy to remove this BOILERPLATE from this page... /(but it does not hurt anything if you leave it)/
 
-=Quick Instructions:= /(to add A NEW AF TODO Item to this PAGE)/
+☞ [[P0-00_BOILERPLATE-AFN-TODO-Item_DETAILS][Follow This Link]] and read the *:README:* found at the destination...
 
-=Over 25 TODO Items already?= *Start a New Page:*
-Follow Instructions in the [[AFN-Page-00][:README:]] drawer under:
-*✅ AF Notebook - Page 00* /(above)/ instead...
+The *:README:* drawer at the destination of the above link provides detailed instructions for cloning the generic: *P0-00 ⏱ AFN BOILERPLATE TODO Item DETAILS:* note to use as your NEW DETAILS Note for your NEW renamed *AFN TODO Item* /(here)/...
 
-=Still Less than 25 entries?= *Continue Below:*
+- [ ] =EDIT/REUSE= the anchor within *"☞ Follow This link"* /(above)/ so it
+      will work with your new AFN TODO Item DETAILS Note containing
+      this Anchor: ~<Px-xx_Your-New-TODO-Item-title_DETAILS>~
+      /(which you created while following the :README: at the top
+      of this TODO Item...)/
 
-- [ ] =Copy Paste:= *00 ☞ BOILERPLATE TODO Item:*
-
-      /(i.e., this heading and all contents)/ to the =HEAD= of your latest
-      unfilled *AF Notebook Page*... Rename your copy to intended task
-      name and change ~00~ to the next number at the HEAD of your AF TODO
-      Items List...
-
-- [ ] =Edit your NEW CLONED AFN TODO Item= to replace this note and ALL the
-      rest of the LONG TEXT below it with a SHORT one-liner description
-      of your real AFN TODO Item Task...
-
-- [ ] =EDIT/REUSE= the anchor & "Follow This link" /(above)/ so it will work
-      with your new renamed ~Px-xx_YOUR-TODO-Item_DETAILS~ anchor...
+- [ ] =Edit Your CLONE of This: BOILERPLATE AFN TODO Item= AND replace
+      this note and all this LONG BOILERPLATE HOW TO TEXT with a
+      SHORT one-liner description of your real AFN TODO Item Task...
 
 - [ ] =Remove= the *:README:* drawer /(above)/ from your clone of this
       BOILERPLATE once you have it all set up as an actual AF TODO
       Item...
 
-- [ ] =Remove this:= *00 ☞ BOILERPLATE TODO Item:* after you have reached
-      a full 25 Items on this page... You won't need it in here anymore...
-      /New pages created will contain this same boilerplate item once you/
-      /have created them from the/ *✅ AF Notebook - Page 00:* /(template)/...
+- [ ] =Remove All Content Here Under The :README: Above= except for
+      the sentence that starts with: *"☞ Follow This link"* and your
+      one-liner description after that...
 
 \newpage
 
@@ -539,9 +591,9 @@ Follow Instructions in the [[AFN-Page-00][:README:]] drawer under:
 /Follow the instructions within READ_ME_FIRST drawer at top.../
 
 *** TODO 02 ☞ Read Quick Start Instructions:
-/Read the Quick Start Instructions within the/ *⎘ Meta:* /Binder, below to get started.../ [[AFN-Quick-Start][Follow This Link]] to go there directly from here...
+☞ [[AFN-Quick-Start][Follow This Link]] /To Read the Quick Start Instructions within the/ *⎘ Meta:* /Binder, below to get started.../
 
-*** TODO 03 ☞ Copy/Clone a NEW TODO Item:
+*** TODO 03 ☞ Copy/Clone a NEW TODO Item: [0/6]
 
 - [ ] =COPY:= *00 ☞ BOILERPLATE TODO Item:* from the top of this
       list... Do NOT Edit, or delete your 00-BOILERPLATE! You
@@ -551,10 +603,12 @@ Follow Instructions in the [[AFN-Page-00][:README:]] drawer under:
 - [ ] =PASTE:= Your new BOILERPLATE Clone as the LAST Item below in this list...
 
 - [ ] =Change Item Number:= From ~00~ to the next consecutive
-      number at the end of this list, /(i.e.,/ ~09~ /)/
+      number at the end of this list, /(e.g., ~09~, ~10~, etc.)/
 
 - [ ] =Change title:= From *BOILERPLATE TODO Item:* to some randomly
       chosen AF TODO Task name...
+
+      =Remove:= /(/Clone for NEW AF TODO Item)/ from the end...
 
       /This is for practice (or maybe real work?) using/
       /AutoFocus... So make up/ /anything you wish here.../
@@ -566,6 +620,9 @@ Follow Instructions in the [[AFN-Page-00][:README:]] drawer under:
 - [ ] =Set TODO state of your new clone:=
 
       Initially New Tasks are set to the RED TODO state...
+      The BOILERPLATE Template has no such state set...
+
+      =Change Your Clone's TODO State To:= *TODO* =NOW=
 
       When you are finally DONE with a particular AutoFocus
       TODO item, set its TODO state to *DONE* and tag it as:
@@ -603,7 +660,7 @@ Follow Instructions in the [[AFN-Page-00][:README:]] drawer under:
             from the TOC /(above)/ more than for LaTeX purposes...
             /(you're probably NOT exporting AutoFocus Notebooks)/
 
-- [ ] =Follow Instructions:= within: [[P0-00_AFN-TODO-Item][:README:]] drawer of:
+- [ ] =Follow Instructions:= within: [[P0-00_BOILERPLATE-AFN-TODO-Item][:README:]] drawer of:
       *00 ☞ BOILERPLATE TODO Item* for detailed instructions...
       /(AGAIN... DON'T modify your BOILERPLATE... Modify your clowns!/
       /OOPS! Silly pun... %^)/ 
@@ -624,140 +681,212 @@ Follow Instructions in the [[AFN-Page-00][:README:]] drawer under:
       /this new Page to make it fit in consecutively as the highest page/
       /number to date.../
 
-- [ ] =Follow Instructions:= within the [[AF-Page-00][:README:]] drawer of your new
+- [ ] =Follow Instructions:= within the [[AFN-Page-00][:README:]] drawer of your new
       Cloned *✅ AF Notebook - Page* for detailed instructions to finish
       setting up...
 
 *** TODO 07 ☞ Read Full Instructions:
-/Read: *📄 Full Instructions:* within the/ *⎘ Meta:* /Binder, below/ /as a final task when you have time to focus on all of this.../ /It is IMPORTANT to make a point of reading the Full Instructions/ /in order to get a deeper understanding of this interesting human psychological process.../
+ [[AFN-Full-Instructions][Follow This Link]] /To Read:/ *📄 Full Instructions:* /within the/ *⎘ Meta:* /Binder, below/ /as a final task when you have time to focus on all of this.../ /It is IMPORTANT to make a point of reading the Full Instructions/ /in order to get a deeper understanding of this interesting human psychological process.../
 
-*** TODO 08 ☞ Remove All These Demo Tasks And Start This Page Clean:
-/Put your OWN TODO Tasks in here and start using this AF Notebook for real.../ You might probably leave 06 ☞ Start A New Page After
-25 Items to do once you have that many items... ;-)
+*** TODO 08 ☞ Mark All These Demo Tasks DONE & no export:
+Once you have done all the demo tasks, mostly to set up your own autofocus operation, you may and should mark their org-mode TODO state to DONE...
+
+Once AFN TODO Items are marked DONE, they should also be tagged with ~:noexport:~ to remove them from the =TOC= above... That way you won't see
+them anymore while during your normal Autofocus Sessions...
+
+/Put your OWN TODO Tasks in here and start using this AF Notebook for real.../ You might probably leave 06 ☞ Start A New Page After 25 Items to do once you have that many items... That is actually a repeating task you will need....
+
 * 📝 AFN DETAILS:                :noexport:
 ** ✅ AFN Page 01
-*** P0-00 ⏱ AFN TODO Item Details: /(BOILERPLATE template)/
-<<P0-00_AFN-TODO-Item_DETAILS>>
+*** P0-00 ⏱ BOILERPLATE AFN TODO Item DETAILS: /(BOILERPLATE template)/
+<<P0-00_BOILERPLATE-AFN-TODO-Item_DETAILS>>
 :README:
 ☞ =Instructions:= /(How to Use This BOILERPLATE template)/
 
-To use this *P0-00 ⏱ AFN TODO Item Details:* /(BOILERPLATE - /template)/ for your own projects, perform the following steps: /(Use the org-mode Checkboxes to Help You Keep Track of Progress)/
+ALL of your "read-more" DETAILS notes for your Autofocus TODO
+Items will be placed within this *📝 AFN DETAILS:* Binder, under
+their respective *✅ AFN Page XX* sub-headings...
 
-1) [ ] *Clone a Copy of This Boilerplate Heading:* /(and all sub-content)/
+=Important= *THIS Item IS BOILERPLATE...* =Do NOT REMOVE or ALTER=
+          this: *P0-00 ⏱ BOILERPLATE AFN TODO Item DETAILS:*
+          heading or any of its content...
 
-      =DON'T DELETE OR MODIFY This BOILERPLATE Template!=
+          =DON'T Change Checkboxes Within This BOILERPATE!=
 
-      =Copy:= *P0-00 ⏱ AFN TODO Item Details:* /(this heading and sub-content)/
+          =You Should Be Editing Clones Of This Instead...=
 
-      Place your clone directly under this BOILERPLATE Template, or at the
-      Bottom of the list of previous TODO Item Details Notes just like this.
+          =COPY THIS BOILERPLATE= to make a NEW AFN TODO Item
+          DETAILS note for a NEW AFN TODO Item Heading...
 
-      =Rename your clone= to: ~Px xx ⏱ Task-Title DETAILS:~ where the first ~x~
-      is the Autofocus page number where this task appears, and the
-      second ~xx~ is the number of this new TODO Item on that page...
-      Numbered from: ~01~ to: ~25~ only...
+          =THEN CONTINUE BELOW WHITHIN your CLONE:=
 
-      =Rename Title portion:= ~Task-Title~ /(after stopwatch)/
-      Replace this part with the real title of your TODO Item, Leave
-      DETAILS to distinguish between this note and the AFN TODO Item
-      itself...
+Copy this BOILERPLATE heading whenever you need to create more unique "read-more" details notes linked exclusively to their associated TODO Items within The *✅ AF NOTEBOOK:* Binder...
 
-      ALL of your "read-more" details notes for your Autofocus TODO Items
-      will be placed within this *📝 AFN DETAILS:* Binder, under their
-      respective AFM Page No. sub-headings...
+- [ ] =Perform The Following Steps WITHIN YOUR CLONED COPY:= [0/5]
 
-      Use this BOILERPLATE heading to create more unique "read-more"
-      details notes linked exclusively to their associated TODO Items
-      within The *✅ AF NOTEBOOK:* Binder...
+   /(Use the org-mode Checkboxes to Help You Keep Track of Progress)/
 
-      Place these new TODO Item Details Notes under the *✅ AFN Page 01*
-      heading until there are no more items left to write details
-      about... Once you begin working through a new Page 2, place your
-      TODO Item Details Notes under: *✅ AFN Page 02* heading which is
-      already below.  When you get to Page 3 Add a new  *✅ AFN Page 03*
-      Continue in this way adding new page headings as needed...
+   1) [ ] =Copy:= *P0-00 ⏱ BOILERPLATE AFN TODO Item DETAILS:*
+         /(i.e., this heading and all sub-content)/
 
-3) [ ] =Adjust:= *RETURN TO AF Notebook ITEM* =link= /(below)/
+         =Paste= your copy Directly Under this BOILERPLATE template
+               heading /(if this is the first time)/...
 
-     This is the first thing you will see under this :README: drawer...
-     below.
+         =OTHERWISE=
+            
+         =Paste= your copy to the END of this List of previously
+               created AFN TODO Item DETAILS Notes... Be sure
+               to put new notes under the Correct *✅ AFN Page 0x*
+               sub-heading within this *📝 AFN DETAILS:* Binder...
+               /(i.e., the pages where the associated TODO/
+               /Item lives)/
 
-     Use *xah-fly-keys* leader key command: ~SPACE b~ to toggle Link
-     expansion, allowing you to edit the link manually... The link will
-     expand showing: [[P0-00_AFN-TODO-Item][RETURN TO AF Notebook ITEM] ]
+         In Other words... Place these new TODO Item Details Notes
+         under the proper *✅ AFN Page XX* heading related to the AFN
+         Page where their respective AFN TODO Items are located...
 
-     Change: ~P0-00_~ to ~P1-xx_~ /(reflecting Page number & TODO Item number)/
-     of its actual AFN TODO Item...
+         Once you begin working through a new Page 2 within your
+         Autofocus Notebook you will be placing  NEW TODO Item
+         Details Notes under: *✅ AFN Page 02* heading which is
+         already created and waiting for you below.
 
-     Change: ~AFN-TODO-Item~ /(reflecting default TODO Item title)/
-     of the default boilerplate TODO ITEM anchor, to the NEW Title
-     of your NEW AF TODO Item... /Make sure this link matches your/
-     /anchor and titles match the Item Heading.../
+         When you get to Page 3 Add a new *✅ AFN Page 03* Heading,
+         using the same naming convention, and continue adding
+         NEW TODO Item Details Notes, under that...
 
-     Getting this link working correctly is vital to proper use of
-     your Autofocus Notebook...
+         Keeping all TODO Item Details Notes under their
+         respective page headings helps helps things organized...
 
-4) [ ] *Compose your Autofocus Notebook TODO Item details:*
+         =Once Cloned=, Close this BOILERPLATE HEADING and OPEN this
+         same :README: Drawer WITHIN YOUR CLONE to continue from
+         this same spot...
 
-      Next... Compose your details in the space directly under the
-      *RETURN TO AF Notebook ITEM* link... /(which you just edited)/
+         =Mark this checkbox= ☑️ /(within your clone)/ and continue
+         with the next steps below... marking each checkbox as they
+         are completed...
 
-      Use as much space as needed... This is NOT a one liner...
-      You get to this spot ONLY when your autofocus session
-      leads you here... And when that happens you are "on task" so
-      get to it... ;-)
+   2) [ ] =Rename your clone= to: *Px-xx ⏱ Task-Title DETAILS:*
 
-      Remove all the existing instructions under the link and replace
-      that with your own content...  Have fun!
+         Where the first ~x~ represents the Autofocus page number where
+         this task appears, and the second ~xx~ represents the number of
+         this new TODO Item on that page... Numbered from: ~01~ to: ~25~ only...
 
-=These Instructions Were Last Modified:= <2022-11-04 Fri>
+   3) [ ] =Rename Task-Title portion:= *BOILERPLATE AFN TODO Item*
+         /(the part after stopwatch ⏱ icon)/
+     
+         Replace this part with the real title of your TODO Item,
+         Leave *"DETAILS"* at the end of your new title to
+         distinguish between this note and the AFN TODO Item itself...
+
+   4) [ ] =Adjust:= *☞ RETURN TO AF Notebook ITEM* =link= /(below)/
+
+         This is the first thing you will see under this :README: drawer...
+         below.
+
+         Use *xah-fly-keys* leader key command: ~SPACE b~ to toggle Link
+         expansion, allowing you to edit the link manually...
+         The link will expand showing:
+
+         ~[[P0-00_BOILERPLATE-AFN-TODO-Item][RETURN TO AF Notebook ITEM] ]~
+
+         Change: ~P0-00_~ to ~P1-xx_~ /(reflecting Page number & TODO Item number)/
+         of its actual AFN TODO Item...
+
+         Change: ~BOILERPLATE-AFN-TODO-Item~ /(reflecting default TODO Item/
+                 /title)/ of the default boilerplate TODO ITEM anchor, to
+                 the NEW Title of your NEW AF TODO Item... /Make sure this/
+                 /link matches your anchor and titles match the Item/
+                 /Heading.../
+
+         Getting this link working correctly is vital to proper use of
+         your Autofocus Notebook...
+
+   5) [ ] =Continue to Follow Instructions in Body of this Note=
+
+         After following instructions replace all of the
+         boilerplate (instructions and all) with your own
+         content... Saving the ☞ RETURN TO AF Notebook ITEM link
+         which you will need...
+
+=These Instructions Were Last Modified:= <2022-11-05 Sat>
 :END:
-- [[P0-00_AFN-TODO-Item][RETURN TO AF Notebook ITEM]]
 
-=Compose AutoFocus Notebook TODO Item Details HERE=
+☞ [[P0-00_BOILERPLATE-AFN-TODO-Item][RETURN TO AF Notebook ITEM]]
 
-Yadda... Yadda... Yadda...
+=Important= *THIS Item IS BOILERPLATE...* =Do NOT REMOVE or ALTER= this:
+          *P0-00 ⏱ BOILERPLATE AFN TODO Item DETAILS:* heading or any
+          of its content...
 
-Add links to external documents in the Reference Section below...
+          =DON'T Change Checkboxes Within This BOILERPATE!=
+
+          =You Should Be Editing Clones Of This Instead...=
+
+          =COPY THIS BOILERPLATE= Follow Instructions within
+          the *:README:* drawer above to make a NEW AFN TODO
+          Item DETAILS note for a NEW AFN TODO Item Heading...
+
+          =CONTINUE Editing Your CLONE BELOW:=
+
+- [ ] =Compose AutoFocus Notebook TODO Item Details HERE Within your Clones= 
+      /(replacing all this BOILERPLATE content - All except for:/
+       ☞ /RETURN TO AF Notebook ITEM - link above)/
+
+      Use as much space as needed... This is NOT a one liner... You get to
+      this spot ONLY when your autofocus session leads you here... And
+      when that happens you are "on task" so get to it... ;-)
+
+- [ ] =Add Links To External Documents= in the *📚 Reference:* Section below...
+
+- [ ] =Remove All Remaining BOILERPLATE Instructions From This Note=
+      Only your own content and LINKS should be in here now...
+
+      =Have fun writing!= 🧜🏼‍♀️
 
 \newpage
 
-**** 📚 Reference:
+**** 📚 Reference: 
 :README:
    =Org Mode Links Tip:=
 
       + To Create a Link Type: ~C-c C-l~ 
          /(then paste: ~link~ & type: "description")/
 
-         =-or-= Simply Copy/Paste Template: /(link placeholder)/
-               Below and fill that in... 
-               copy/paste more placeholders as needed... ;-)
+         =-or-= Simply Copy/Paste Template: /(boilerplate placeholder)/
+               Below and fill that in manually... 
+               Copy/Paste more placeholders as needed... ;-)
 
       + To Open a Link Type: ~C-c C-o~
 
-- [[][] ] - /(link placeholder)/
-
+☞ *Heading:* [[URL][Link Name] ] /(comment)/
 :END:
 
-- *Link to Project LOGS:* [[../HAP_General-Log-Book-Skeleton.org::Generic-Title-LOG][Generic-Title-LOG]]
+☞ *Link to Project LOG:* [[link][Put LOG Book Title Here] ]
 
-- *Heading:* [[URL][Link Name] ] /(comment)/
+=BOILERPLATE:= /(clone to add more ref links)/
 
-- *_:* [[][] ] /(yadda... yadda... yadda...)/
+☞ *Heading:* [[link][NAME] ] /(comment)/
+
+☞ *_:* [[][] ] /(yadda... yadda... yadda...)/
 
 \newpage
+
 ** ✅ AFN Page 02
 
-=Empty Placeholder Page= Put NEW *Px-xx ⏱ AFN TODO Item Details:* in here for new AFN TODO Item Details Notes for AFN Page 2...
+=Empty Placeholder Page=
+
+Put NEW *Px-xx ⏱ BOILERPLATE AFN TODO Item DETAILS:* in here for new AFN TODO Item Details Notes for AFN Page 2... REMOVE this BOILERPLATE once you have REAL Items
+in here...
 
 /Copy/Paste More of these Headings for Page 3, Page 4, ..., etc., as needed/
+
+\newpage
 
 * ⎘ Meta:                               :noexport:
 ** 📋 Quick Start: /(from AF web-page reformatted for org-mode)/
 <<AFN-Quick-Start>>
 
 =Note:= These instructions originally came from the *Main Autofocus Website*
-      /(see link in:/ *📚 References:* /under the/ *☞ About:* /Binder above...)/
+      /(see link in:/ *📚 Reference:* /under the/ *☞ About:* /Binder above...)/
       This is NOT intended to be a tutorial... It is a Template for folks
       who use Emacs and would like to try Mark's Method using a keyboard only...
       /(no coloured pencils, no mouse - because we have other ways)/...
@@ -810,7 +939,7 @@ improve execution of tasks, and insure that the right tasks are being done prope
       All Items are clearly in view and only the Headings show /(as links)/
       to the Actual Items...
 
-- [ ] =Read Through The TOC More Slowly:=
+- [ ] =Read Through The TOC More Slowly:= 
 
       /Go through the current page list a bit more slowly this time,/
       /looking at the items in order until one stands out for you.../
@@ -828,7 +957,7 @@ improve execution of tasks, and insure that the right tasks are being done prope
       you simply and immediately click the link to visit actual the
       TODO Item to take action on it...
 
-- [ ] =NOW Work On the Item That Called To You:=
+- [ ] =NOW Work On the Item That Called To You:= 
 
       /So... during your slower read through of the list, You/
       /decide to Work on an item that has caught your interest.../
@@ -850,17 +979,20 @@ improve execution of tasks, and insure that the right tasks are being done prope
       working on it helps you find it easily if you needed to step
       away elsewhere for a moment...
 
-- [ ] =Cross The Item Off The List:= /(if task is DONE)/
+- [ ] =Cross An Item Off The List:= /(when the task is completely DONE)/
 
       This is much easier to do here in org-mode than if you were using
       a paper spiral notebook, and coloured pencils...
 
-      Instead of crossing it off where it exists, simply move it to the
-      HEAD of the list on your current unfilled Auto Focus Page and change
-      its Item number from where it was, to the next available number
-      /(up to 25)/ on this new unfilled page...
+      Instead of crossing an AFN TODO Item heading off the list as in
+      a spiral notebook, in Emacs Org-Mode you can change its *TODO*
+      keyword to *DONE* =and= Set the ~:noexport:~ Tag as well...
 
-- [ ] =Continue Going Round The Same Page:=
+      The result of the above operation will remove this completed
+      item from the =TOC= at the top so you won't see it anymore during
+      your autofocus page scans...
+
+- [ ] =Continue Going Round The Same Page:= 
 
       After you are done working on the previous task /(whether or not/
       /the task is actually completed)/, Scan the list in the same way as
@@ -868,12 +1000,14 @@ improve execution of tasks, and insure that the right tasks are being done prope
       you complete a pass of the page without any item standing out...
 
       As you complete some items they get marked *DONE* and tagged with
-      ~:noexport:~ This causes them to automatically fall away from the
-      TOC so they will NOT be in your face the next time you scan that
+      ~:noexport:~ This causes them to automagically fall away from the
+      =TOC= so they will NOT be in your face the next time you scan that
       page...
 
-      Some items, will get pushed to the LAST page if you worked on them
-      for a bit but the task is not 100% complete yet...
+      Some items, will get =pushed to the LAST page= if you worked on them
+      for a bit but the task is not 100% complete yet... /Or it is a/
+      /REPEATING Task which has to be re-entered (for later) after/
+      /current completion.../
 
       Some Items never seem to get started... When that happens you may
       choose to "DISMISS" the TODO Item using the *CANCELLED* TODO keyword
@@ -884,7 +1018,7 @@ improve execution of tasks, and insure that the right tasks are being done prope
       Finally tag the Item's Heading with: ~:noexport:~ to keep this
       dismissed TODO Item from showing up in the TOC List...
 
-- [ ] =Move Onto The Next Page:=
+- [ ] =Move Onto The Next Page:= 
 
       If after going through the current page slowly and NOTHING seems
       to spark your intrest or motivation to commit, it's time to
@@ -902,7 +1036,7 @@ improve execution of tasks, and insure that the right tasks are being done prope
       is no longer in your face... Hopefully never to see again unless
       you made a big planning mistake or something...
 
-- [ ] =No Items Stand Out For You?:=
+- [ ] =No Items Stand Out For You?:= 
 
       If during several passes through the TOC list of any single page,
       NOTHING seems to stand out calling for your attention so much,
@@ -920,15 +1054,14 @@ improve execution of tasks, and insure that the right tasks are being done prope
             reason... That is fine and possibly will help you later
             if you need to dig up some ghost from the past...
    
-- [ ] =Once You’ve Finished Scanning the Final Page:=
+- [ ] =Once You’ve Finished Scanning the Final Page:= 
 
       /re-start at the first page that is still active.../
       /Continue doing this until you are ready to stop/
       /your autofocus session.../
 
 Each of the above steps are explained in more detail below under:
-*📄 Full Instructions*. but I suggest you get going now and read the
-full instructions later...
+*🕮 Full Instructions*. but I suggest you get going now and read the full instructions later...
 
 =Also:= the Full Instructions below are the exact words /(more-or-less)/ from
 Mark Forster... I DID NOT ADD any special org-mode instructions to what is written within the Full Instructions...
@@ -942,6 +1075,7 @@ Everything you NEED to get a DEEPER UNDERSTANDING of the Autofocus Process is ex
 You don’t need a huge number of tasks to start with, just add tasks as you think of them or they come up... /(you will have plenty of tasks soon enough)/
 
 ** 🕮 Full Instructions: /(from AF web-page reformatted for org-mode)/
+<<AFN-Full-Instructions>>
 *** As you think of new items, add them to the end of the list.
 
 One of the characteristics of this system is that you can put anything into it. I recommend that you enter everything that comes to mind without trying to evaluate. The system itself will do the evaluation.
@@ -1075,134 +1209,162 @@ However when these two ways of thinking are in balance we are able to make ratio
 - [ ] =Change Anchor Link:= ~<<AFN-Page-00>>~ /(above)/ to reflect your
       new page number...
 
-- [ ] =Follow= [[P0-00_AFN-TODO-Item][:README:]] =Instructions= Under: *00 ☞ BOILERPLATE TODO Item*
-      below /(to add new TODO Item, etc.)/...
+- [ ] =Follow= [[P0-00_BOILERPLATE-AFN-TODO-Item][:README:]] =Instructions= Under: *00 ☞ BOILERPLATE TODO Item*
+      below /(whenever you need to add new TODO Item)/...
 
 - [ ] =Delete this README Drawer From Your Clone= after completing
       ALL instructions... /(you can always read this stuff here/
       /in the META Binder)/
 :END:
-*** 00 ☞ BOILERPLATE TODO Item: /(/Copy/Clone for NEW AF TODO Item)/  :noexport:
-<<P0-00_AFN-TODO-Item>>
+*** 00 ☞ BOILERPLATE AFN TODO Item: /(/Clone for NEW AF TODO Item)/ :noexport:
+<<P0-00_BOILERPLATE-AFN-TODO-Item>>
 :README:
-=Instructions...=
+☞ =Instructions:= /(How to Use This BOILERPLATE template)/
 
 This is a =Generic Autofocus TODO Item= numbered ~00~ to indicate that this is a BOILERPLATE Template containing INSTRUCTIONS on how to use it rather than
-being a real AFN TODO Item which would start at number ~01~... Real Autofocus TODO Items are numbered from: ~01~ to: ~25~ and should Only Contain One Or Two Sentences with a link to more info... And that would be ALL... This :README: drawer /(which contains a volume!)/ would NOT be included in your REAL AF TODO Items... 
+being a real AFN TODO Item which would start at number ~01~...
+
+Real Autofocus TODO Items are numbered from: ~01~ to: ~25~ and should Only Contain One Or Two Sentences with a link to more info... And that would be ALL... This :README: drawer /(which contains a volume!)/ would also NOT be included in your REAL AF TODO Items... 
 
 =Keep This= *00 ☞ BOILERPLATE TODO Item* =As a Read-Only Template= to copy when you need to add new items to your Autofocus Page (items numbered from ~01~ to ~25~ per page)
 
-It is initially at the Top of the list, but You may choose to keep this template on top or on bottom of your list... That is your preference...
+This Template is initially at the Top of the list, but You may choose to keep this template on top or on bottom of your list... That is your preference...
 I am keeping mine on top but I have been known to change my mind... %^)
 
-I don't think it really matters. What matters is it is there to copy and save you a lot of time for the real Autofocus work...
+I don't think it really matters. What matters is it is there to clone, saving you a lot of time for the real Autofocus work...
 
-This BOILERPLATE Item does NOT appear within the TOC above so it is not in your face while you are doing your normal Autofocus Sessions...
+This BOILERPLATE TODO Item does NOT appear within the =TOC= above so it will not be in your face while you are performing normal Autofocus Sessions...
 
-=Add NEW AF TODO Items to the HEAD of Your CURRENT PAGE:=
+ALL of your *Autofocus TODO Items* will be placed within the *✅ AF NOTEBOOK:* Binder, under their respective *✅ AFN Page XX* sub-headings...
 
-=Note:= /Don't Add Over 25 Entries Per Page!/
+=Important= *THIS Item IS BOILERPLATE...* =Do NOT REMOVE or ALTER= this:
+          *00 ⏱ BOILERPLATE AFN TODO Item:* heading or any
+          of its content...
 
-=Over 25 TODO Items already?= *Start a New Page:*
-Follow Instructions in the [[AFN-Page-00][:README:]] drawer under:
-*✅ AF Notebook - Page 00* /(above)/ instead...
+          =DON'T Change Checkboxes Within This BOILERPATE!=
 
-=Still Less than 25 entries?= *Continue Below:*
+          =You Should Be Editing Clones Of This Instead...=
 
-- [ ] =Copy Paste:= *00 ☞ BOILERPLATE TODO Item:*
+          =COPY THIS BOILERPLATE= to make a NEW AFN TODO Item
+          DETAILS Note for a NEW AFN TODO Item Heading...
 
-      /(i.e., this heading and all content)/ to the =HEAD= of your latest
-      unfilled *AF Notebook Page*... Rename your copy to intended task
-      name and change ~00~ to the next number at the HEAD of your AF TODO
-      Items List...
+          =THEN CONTINUE BELOW WHITHIN your CLONE:=
 
-- [ ] *Feel Free to Remove this README Drawer from CLONES!*
-      You can always find these instructions in this read-only
-      template... It is important NOT to clutter up your AF TODO
-      Items... They need to be kept short and sweet one liners!
+- [ ] =Perform The Following Steps WITHIN YOUR CLONED COPY:= [0/2]
 
-=Linking Autofocus Item <-with-> Details Note or Ext .org Doc:=
+   /(Use the org-mode Checkboxes to Help You Keep Track of Progress)/
+   
+   =Note:= /Don't Add Over 25 Entries Per Page!/
 
-For quick navigation to and from your Autofocus Page List from tasks you are working on, you need some cross document org-links... This template adds boilerplate forms that make it easy for you to set your links without having to type a lot of key commands etc... /(you simply change the existing links and anchors contained within these templates)/
+   =Over 25 TODO Items On This Page Already?=
 
-The [[P0-00_AFN-TODO-Item_DETAILS][Follow This Link]] Link /(directly under this :README: drawer)/ links to a *MORE DETAILS Heading* for this GENERIC Autofocus TODO Item.
+   1) [ ] *Start a New Page:*
+      
+          Follow Instructions in the [[AFN-Page-00][:README:]] drawer under:
+          *✅ AF Notebook - Page 00* /(above)/ instead...
+
+       =Still Less than 25 entries =-or- on NEW Page?=
+
+   2) [ ] =Copy Paste:= *00 ☞ BOILERPLATE AFN TODO Item:*
+
+          /(i.e., this heading and all content)/ to the =HEAD= of your latest
+          unfilled *AF Notebook Page*... Rename your copy to its intended task
+          name and change dummy item number: ~00~ to the next number at the
+          HEAD of your AF TODO Items List on the page...
+
+=Linking THIS AF TODO Item <-with-> ITS DETAILS Note, or an Ext .org Doc:=
+
+For quick navigation to and from your *Autofocus Notebook Page List* to the actual tasks you are working on, you need a nice cross document org-link scheme...
+
+These BOILERPLATE Templates contain Anchors directly under their main headings... Org-Links set elsewhere use these anchors to get back to them...  These anchors and links are set to work properly on the read-only BOILERPLATE Headings if left unchanged...
+
+You need to CHANGE both the anchors AND Links to them from within this .org
+file, so that they match your NEW AFN PAGE Number, TODO Item Number, and Title...
+
+Try to follow the same naming convention used for the Default BOILERPLATE Items when you make your new anchors and links...
+
+/(manually edit and change existing anchors and links already present within these templates to make them useable for your new purpose)/
+
+The *"☞ Follow This Link"* /(directly under this :README: drawer)/ leads you to the generic: *P0-00 ⏱ AFN BOILERPLATE TODO Item DETAILS:* Note located under the *✅ AFN Page 01* sub-heading within the *📝 AFN DETAILS:* Main Binder...
 
        /ALL OF THIS IS BOILERPLATE FOR YOU TO COPY AND USE/
 
-The Link below takes you back to the: ~<P0-00_AFN-TODO-Item_DETAILS>~ anchor
-which is the default for the BOILERPLATE Template note...
+- [ ] =Use Existing Anchor:= ~<P0-00_BOILERPLATE-AFN-TODO-Item>~
+      /(under HEADING above)/ as the =KEY= to emulate when changing
+      it to reference your NEW AFN page number & TODO Item number.
 
-- [ ] =Use the existing Anchor:= ~<P0-00_AFN-TODO-Item>~ /(under HEADING above)/
-      as the =KEY= to emulate as you change it to reference your NEW
-      AFN page number & TODO Item number... as well as the anchor to
-      your renamed AFN TODO Item Details Note... both anchors should be
-      identical except ~_DETAILS~ is tacked on to the end of the anchor
-      for the MORE DETAILS Note...
+      =Naming Convention is as follows:=
 
-      ~P0~ = The Page Number /(P0=boilerplate template)/...
+      ~P0~ = The Page Number /(P0=BOILERPLATE page)/...
            Start yours at ~P1~
 
-      ~-00~ = The Item Number /(00=boilerplate template)/...
+      ~-00~ = The Item Number /(00=BOILERPLATE AFN TODO Item)/...
             Actual Items must be ~01~ to ~25~ only
 
-- [ ] =Change Anchor Title:= ~_AF-TODO-Item~ Replace this part with the real
-      title of your TODO Item using a leading underscore to connect to
-      Page and item number, and use dashes between words in the title...
-      
-- [ ] =Rename more DETAILS Note Anchor:= Copy the anchor you just created
-      above for this heading above, and add ~_DETAILS~ to the end of it
-      to make the anchor to this AFN TODO Item's DETAILS Note...
+      /Use Underscores to separate Px-xx from Item Title in anchors/
+      /and use dashes to separate words... Put a final Underscore and/
+      /the word DETAILS on the end of the anchor under your NEW AFN/
+      /DETAILS Note... Both anchors should be identical otherwise.../
 
-This will insure all your "read more" notes or external .org docs point back to a single specific Autofocus TODO Item heading /(exclusively)/...
+- [ ] =Change Existing Anchor Above this :README:=
+      ~<P0-00_BOILERPLATE-AFN-TODO-Item>~ Change it To:
+      ~<Px-xx_Your-New-TODO-Item-title>~ where ~Px-~ is the Autofocus
+      Page Number, and ~xx_~ is the newly assigned AFN TODO Item Number
+      within that page... /(this number must NOT exceed ~25~)/
+
+- [ ] =Rename more DETAILS Note Anchor:= Copy the anchor you just created
+      above for this heading above, and add ~_DETAILS~ /(with underscore)/
+      to the end of it to make the anchor to this AFN TODO Item's
+      DETAILS Note...
+
+      Rename your cloned AFN TODO Item DETAILS Note in the same way...
+      /(i.e., an exact copy of the title of this renamed TODO Item with/
+      /DETAILS added to the end...)/
+
+The above will insure all your "read more" notes or external .org docs point back to a single specific Autofocus TODO Item heading /(exclusively)/...
 
 - [ ] =Read Additional Instructions BELOW under this :README:=
 :END:
 
-[[P0-00_AFN-TODO-Item_DETAILS][Follow This Link]] and read the :README: just above where your cursor
-ends up after clicking the link... /(or simply follow steps below/
-/for quick usage)/
+☞ [[P0-00_BOILERPLATE-AFN-TODO-Item_DETAILS][Follow This Link]] For More Details About this AFN TODO Item...
 
-The README provides detailed instructions for setting things up,
-linking to external docs, etc... 
+The *:README:* drawer at the destination of the above link provides detailed instructions for cloning the generic: *P0-00 ⏱ AFN BOILERPLATE TODO Item DETAILS:* note to use as your NEW DETAILS Note for your NEW renamed *AFN TODO Item* /(here)/...
 
-=Important= *THIS IS BOILERPLATE...* =Do NOT REMOVE or ALTER= this:
-          *00 ☞ BOILERPLATE TODO Item:* from your Notebook Pages...
+=Important= *THIS Item IS BOILERPLATE...* =Do NOT REMOVE or ALTER=
+          this: *00 ☞ BOILERPLATE TODO Item:* heading or any
+          of its content...
 
-          Once a page reaches 25 items you no longer need this boilerplate
-          to create more Items because this page is full...
+          =DON'T Change Checkboxes Within This BOILERPATE!=
+
+          =You Should Be Editing Clones Of This Instead...=
+
+          =COPY THIS BOILERPLATE= Follow Instructions within
+          the *:README:* drawer above to make a NEW AFN TODO
+          Item within your current LIVE Autofocus Notebook
+          Page...
+
+          =CONTINUE Editing Your CLONE BELOW:=
+
+Once a page reaches 25 items you no longer need this BOILERPLATE to create more Items because the page containing it is full...
           
-          Its OK and tidy to remove this BOILERPLATE from FULL AFN Pages.
-          /(but it does not hurt if you leave it)/
+At that point it will be fine and tidy to remove this BOILERPLATE from this page... /(but it does not hurt anything if you leave it)/
 
-=Quick Instructions:= /(to add A NEW AF TODO Item to this PAGE)/
+- [ ] =EDIT/REUSE= the anchor within *"☞ Follow This link"* /(above)/ so it
+      will work with your new AFN TODO Item DETAILS Note containing
+      this Anchor: ~<Px-xx_Your-New-TODO-Item-title_DETAILS>~
+      /(which you created while following the :README: at the top
+      of this TODO Item...)/
 
-=Over 25 TODO Items already?= *Start a New Page:*
-Follow Instructions in the [[AFN-Page-00][:README:]] drawer under:
-*✅ AF Notebook - Page 00* /(above)/ instead...
-
-=Still Less than 25 entries?= *Continue Below:*
-
-- [ ] =Copy Paste:= *00 ☞ BOILERPLATE TODO Item:*
-
-      /(i.e., this heading and all contents)/ to the =HEAD= of your latest
-      unfilled *AF Notebook Page*... Rename your copy to intended task
-      name and change ~00~ to the next number at the HEAD of your AF TODO
-      Items List...
-
-- [ ] =Edit your NEW CLONED AFN TODO Item= to replace this note and ALL the
-      rest of the LONG TEXT below it with a SHORT one-liner description
-      of your real AFN TODO Item Task...
-
-- [ ] =EDIT/REUSE= the anchor & "Follow This link" /(above)/ so it will work
-      with your new renamed ~Px-xx_YOUR-TODO-Item_DETAILS~ anchor...
+- [ ] =Edit Your CLONE of This: BOILERPLATE AFN TODO Item= AND replace
+      this note and all this LONG BOILERPLATE HOW TO TEXT with a
+      SHORT one-liner description of your real AFN TODO Item Task...
 
 - [ ] =Remove= the *:README:* drawer /(above)/ from your clone of this
       BOILERPLATE once you have it all set up as an actual AF TODO
       Item...
 
-- [ ] =Remove this:= *00 ☞ BOILERPLATE TODO Item:* after you have reached
-      a full 25 Items on this page... You won't need it in here anymore...
-      /New pages created will contain this same boilerplate item once you/
-      /have created them from the/ *✅ AF Notebook - Page 00:* /(template)/...
+- [ ] =Remove All Content Here Under The :README: Above= except for
+      the sentence that starts with: *"☞ Follow This link"* and your
+      one-liner description after that...
 
 \newpage
