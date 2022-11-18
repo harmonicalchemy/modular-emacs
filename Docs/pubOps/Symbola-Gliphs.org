@@ -1,4 +1,11 @@
+# -**- mode: org; coding: utf-8 -**-
 
+  =COPY/PASTE These Unicode Symbolic Glyphs/Icons/Emojis Into Your .org Docs=
+       /These Should work on ALL platforms but may appear differently/
+   /Some of these are MAC only and may appear as a box on other platforms/
+
+  =Use:= ~C-x C-+~ to zoom/enlarge this text for easy inspection of choices... 
+   
 * Building1: 🏕 🏠 🏡 🏘 💒 🕌 🕍 ⛪ 🛐
 
 * Building2: 🎪 🏯 🏭 🏟 🏰 🏢 🏫 🏛 🌃 🌇 🌆 🏙 🌉 
@@ -11,7 +18,7 @@
 
 * Place: 🚉 🏞 ⛰ 🏜 🗻 💥 🌪 🌧 🌐 ✨ 🌠 🌌 🌄 🌅 🛣 🛤 
 
-* Prof: ⚗ 🔬 🔭 ⚛ ♨ 📈 📉 📊 🎓 🏆 💯 🎗 🥇 🎖🕉 
+* Prof: ⚗ 🔬 🔭 ⚛ ♨ 📈 📉 📊 🎓 🏆 💯 🎗 🥇 🎖 🕉 
 
 * Social1: 𝌵 🥂 🍷 🍸 🍦 🎂 ☕ 🏹 📢 🗣
 
@@ -32,7 +39,7 @@
 * Symbols: ⚖ ♡ ☥ ♾ ⚕ ⚚ ☤ ✠ ✞ ✟ ✙ ✚ ♆ ☯ ☮ ☢ ☠ 🕱 ☣
 
 * Divination: ☷ ䷁ ䷌ ䷓ ䷜ ䷬ ䷲ ⚜ ⚡ ⛧ ⛤ ⛥ ⛦ ⛮
-* Media1: 🖼 📸 💾 📀 🎥 🎙🎚🎛 📻 📞 🎬 🎤 🎧 🎮 
+* Media1: 🖼 📸 💾 📀 🎥 🎙 🎚 🎛 📻 📞 🎬 🎤 🎧 🎮 
 
 * Media2:  🎼 🎻 🎨 🎭 🎹 🥁 🎷 🎺 🎸
 

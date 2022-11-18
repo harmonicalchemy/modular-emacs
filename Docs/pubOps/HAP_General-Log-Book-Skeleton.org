@@ -4,7 +4,7 @@
 #+TEXT: Copyright © 2022 Harmonic Alchemy Productions & Others
 #+AUTHOR: Alisha Awen - Harmonic Alchemy Productions
 #+EMAIL: Siren1@disroot.org
-#+DATE: <2022-10-05 Wed>
+#+DATE: <2022-11-07 Mon>
 #+TEXT: Created: <2021-02-11 Thu>
 #+TEXT: Last Published: <not-published>
 #+FILETAGS: templates logs unpublished
@@ -291,30 +291,54 @@ This Log Note Book was created for...  Yadda Yadda... Yadda...
 
 ** 📚 References:
 :README:
-   Use this section to include links to Important References that
-   are GLOBAL to this ENTIRE Log Book... 
+   =Org Mode Links Tip:=
 
-   =Note:= Each Log Entry ALSO has its own specific Reference Section...
-         Links to refs specific to one Log Entry only, which is NOT
-         about something that could be applied as a GENERAL idea
-         should NOT be PUT in this GENERAL Ref section of your Log Book...
+      + To Create a Link Type: ~C-c C-l~ 
+         /(then paste: ~link~ & type: "description")/
+
+         =-OR-= Simply Copy/Paste BOILERPLATE:
+              /(use placeholders below)/
+              And Fill Them In Manually... 
+              Copy/Paste more placeholders as
+              needed to create more links...
+
+      + To Open a Link Type: ~C-c C-o~
+
+      + To EXPAND a Link Type: ~SPACE b~
+         or: ~M-x org-toggle-link-display~
+
+   =BOILERPLATE:= /(clone to add more ref links)/
+
+   ☞ *Heading:* [[link][Link NAME] ] /(comment)/
+
+   ☞ [[link][Link Name] ] *Heading:* /(comment)/
+   
+   ☞ *_:* [[][] ] /(yadda... yadda... yadda...)/
+
+   ☞ [[][] ] /(_)/
+
+   [[junk][JUNK]]  /(This is a stupid BUG workaround/ /for org-mode link/
+         /expansion/compression... If you invoke:/ ~org-toggle-link-display~
+         /you will notice this JUNK link DOES NOT compress to a clickable/
+         /link title alone.../
+         
+         /I am not sure if this is due to my Emacs Config or a bug within/
+         *Org-Mode* /itself.../
+
+         /I put this workaround in here because if it is not here,/
+         /SOME of your external file links created below may not/
+         /compress after expansion, even though thy are GOOD links!/
+
+         /Leaving this JUNK link in here acts like a scapegoat/
+         /so that your real links below will all compress/expand/
+         /normally... I am NOT SURE WHY THIS WORKS??? I'm to busy/
+         /to do anything beyond hacking at this point.../
+         
+         ~org-lint~ /will detect JUNK above... Ignore that warning.../
+                  /It's my "METHOD of MADNESS" %^)/
 :END:
 
-Add links to other reference, source docs, requirements, whatever, here...
-
-- [[URL][Link Name] ] *Heading:* /(comment)/
-
-- [[][] ] - *_:* /(yadda...)/
-
-- [[][] ] - *_:* /(yadda...)/
-
-- [[][] ] - *_:* /(yadda...)/
-
-- [[][] ] /(_)/
-
-- [[][] ] /(_)/
-
-- [[][] ] /(_)/
+☞ *Link to Project:* [[][] ] /(comment)/
 
 \newpage
 
@@ -323,8 +347,8 @@ Add links to other reference, source docs, requirements, whatever, here...
 :CUSTOM_ID: HAP_General_LOG_Notebook_Skeleton_1
 :END:
 ** 📅 2022:
-*** NEW 🗓 LOG: <2021-03-29 Mon> Generic Title /(General Log Entry Template)/
-<<Generic-Title-LOG>>
+*** NEW 🗓 LOG: <2021-03-29 Mon> Generic Title CLONE /(General Log Entry Template)/
+<<LOG_Generic-Title-CLONE>>
 :README:
    =Using the Clocking Feature of this Log Entry=
 
@@ -428,32 +452,54 @@ This Log Entry is about: Yadda... Yadda... Yadda...
 
 **** NEW 📚 Reference:
 :README:
-   Use this section to include links to References related to this
-   SINLE LOG ENTRY ONLY... 
+   =Org Mode Links Tip:=
 
-   =Note:= There is a GLOBAL Ref Section under the: *☞ About:* section
-         of this Log Notebook...
+      + To Create a Link Type: ~C-c C-l~ 
+         /(then paste: ~link~ & type: "description")/
 
-         Links to refs of a GENERAL nature should NOT be PUT in
-         this Log Entry Ref section... Put those in the GLOBAL Ref
-         Section of this entire Log Notebook instead...
+         =-OR-= Simply Copy/Paste BOILERPLATE:
+              /(use placeholders below)/
+              And Fill Them In Manually... 
+              Copy/Paste more placeholders as
+              needed to create more links...
+
+      + To Open a Link Type: ~C-c C-o~
+
+      + To EXPAND a Link Type: ~SPACE b~
+         or: ~M-x org-toggle-link-display~
+
+   =BOILERPLATE:= /(clone to add more ref links)/
+
+   ☞ *Heading:* [[link][Link NAME] ] /(comment)/
+
+   ☞ [[link][Link Name] ] *Heading:* /(comment)/
+   
+   ☞ *_:* [[][] ] /(yadda... yadda... yadda...)/
+
+   ☞ [[][] ] /(_)/
+
+   [[junk][JUNK]]  /(This is a stupid BUG workaround/ /for org-mode link/
+         /expansion/compression... If you invoke:/ ~org-toggle-link-display~
+         /you will notice this JUNK link DOES NOT compress to a clickable/
+         /link title alone.../
+         
+         /I am not sure if this is due to my Emacs Config or a bug within/
+         *Org-Mode* /itself.../
+
+         /I put this workaround in here because if it is not here,/
+         /SOME of your external file links created below may not/
+         /compress after expansion, even though thy are GOOD links!/
+
+         /Leaving this JUNK link in here acts like a scapegoat/
+         /so that your real links below will all compress/expand/
+         /normally... I am NOT SURE WHY THIS WORKS??? I'm to busy/
+         /to do anything beyond hacking at this point.../
+         
+         ~org-lint~ /will detect JUNK above... Ignore that warning.../
+                  /It's my "METHOD of MADNESS" %^)/
 :END:
 
-- *Link to Project:* [[][] ]
-
-- [[URL][Link Name] ] *Heading:* /(comment)/
-
-- [[][] ] - *_:* /(yadda...)/
-
-- [[][] ] - *_:* /(yadda...)/
-
-- [[][] ] - *_:* /(yadda...)/
-
-- [[][] ] /(_)/
-
-- [[][] ] /(_)/
-
-- [[][] ] /(_)/
+☞ *Link to Project:* [[][] ] /(comment)/
 
 \newpage
 
@@ -485,11 +531,11 @@ This Log Entry is about: Yadda... Yadda... Yadda...
 
 Yadda... Yadda... Yadda...
 
-1. [ ] *__:*
+1. [ ] *New Item 1:*
 
-2. [ ] *__:*
+2. [ ] *New Item 2:*
 
-3. [ ] *__:*
+3. [ ] *New Item 3:* /(copy/clone more as needed)/
 
 \newpage
 
@@ -505,7 +551,11 @@ Add sub headings as needed...
 Don't forget to clock-in to HEADINGS while you work on them...
 AND... Don't forget to Clock OUT when you are DONE... %^)
 
-=Examples I Use Often=
+=Delete BOILERPLATE= /below/ if you don't need it...
+
+\newpage:
+
+****** BOILERPLATE:
 
 The following list contains Babel Source Code Blocks that are often needed for something I am writing or "Logging" about... I use them so much I decided to include them in this template...
 
@@ -563,7 +613,11 @@ Add sub headings as needed...
 Don't forget to clock-in to HEADINGS while you work on them...
 AND... Don't forget to Clock OUT when you are DONE... %^)
 
-=Examples I Use Often=
+=Delete BOILERPLATE= /below/ if you don't need it...
+
+\newpage:
+
+****** BOILERPLATE:
 
 The following list contains Babel Source Code Blocks that are often needed for something I am writing or "Logging" about... I use them so much I decided to include them in this template...
 
@@ -621,7 +675,11 @@ Add sub headings as needed...
 Don't forget to clock-in to HEADINGS while you work on them...
 AND... Don't forget to Clock OUT when you are DONE... %^)
 
-=Examples I Use Often=
+=Delete BOILERPLATE= /below/ if you don't need it...
+
+\newpage:
+
+****** BOILERPLATE:
 
 The following list contains Babel Source Code Blocks that are often needed for something I am writing or "Logging" about... I use them so much I decided to include them in this template...
 
@@ -708,7 +766,6 @@ The following list contains Babel Source Code Blocks that are often needed for s
    giveaway. Hewlet Packard was first to use such UI concepts...
    /(back before the dawning of the web we loved those HPUX Workstations!)/
 :END:
-
 *** Emacs Shorthand Command Key Notation:
 
 The command key conventions used in the instructions below, /(as well as all *Harmonic Alchemy Productions* docs)/, follow *Standard Emacs* command key naming conventions.
@@ -783,9 +840,6 @@ Additional commands for using *Org-Mode* with Modular Emacs will be explained he
    before, continue following instructions immediately below beginning 
    with: *Copy/Clone Log Entry (template)*
 :END:
-
-\newpage
-
 *** =Copy/Clone:= LOG: <2021-03-29 Mon> Generic Title /(from *⎘ Templates* Binder)/
 
 - [ ] =Select Heading= /(named above)/ under the *⎘ Templates* Binder,
@@ -900,6 +954,7 @@ Anytime you need to see your Log Notebook as a nicely printed PDF report, you ca
 
 ** ⎘ Templates:
 *** NEW 🗓 LOG: <2021-03-29 Mon> Generic Title /(General Log Entry Template)/
+<<LOG_Generic-Title>>
 :README:
    =Using the Clocking Feature of this Log Entry=
 
@@ -1003,32 +1058,54 @@ This Log Entry is about: Yadda... Yadda... Yadda...
 
 **** NEW 📚 Reference:
 :README:
-   Use this section to include links to References related to this
-   SINLE LOG ENTRY ONLY... 
+   =Org Mode Links Tip:=
 
-   =Note:= There is a GLOBAL Ref Section under the: *☞ About:* section
-         of this Log Notebook...
+      + To Create a Link Type: ~C-c C-l~ 
+         /(then paste: ~link~ & type: "description")/
 
-         Links to refs of a GENERAL nature should NOT be PUT in
-         this Log Entry Ref section... Put those in the GLOBAL Ref
-         Section of this entire Log Notebook instead...
+         =-OR-= Simply Copy/Paste BOILERPLATE:
+              /(use placeholders below)/
+              And Fill Them In Manually... 
+              Copy/Paste more placeholders as
+              needed to create more links...
+
+      + To Open a Link Type: ~C-c C-o~
+
+      + To EXPAND a Link Type: ~SPACE b~
+         or: ~M-x org-toggle-link-display~
+
+   =BOILERPLATE:= /(clone to add more ref links)/
+
+   ☞ *Heading:* [[link][Link NAME] ] /(comment)/
+
+   ☞ [[link][Link Name] ] *Heading:* /(comment)/
+   
+   ☞ *_:* [[][] ] /(yadda... yadda... yadda...)/
+
+   ☞ [[][] ] /(_)/
+
+   [[junk][JUNK]]  /(This is a stupid BUG workaround/ /for org-mode link/
+         /expansion/compression... If you invoke:/ ~org-toggle-link-display~
+         /you will notice this JUNK link DOES NOT compress to a clickable/
+         /link title alone.../
+         
+         /I am not sure if this is due to my Emacs Config or a bug within/
+         *Org-Mode* /itself.../
+
+         /I put this workaround in here because if it is not here,/
+         /SOME of your external file links created below may not/
+         /compress after expansion, even though thy are GOOD links!/
+
+         /Leaving this JUNK link in here acts like a scapegoat/
+         /so that your real links below will all compress/expand/
+         /normally... I am NOT SURE WHY THIS WORKS??? I'm to busy/
+         /to do anything beyond hacking at this point.../
+         
+         ~org-lint~ /will detect JUNK above... Ignore that warning.../
+                  /It's my "METHOD of MADNESS" %^)/
 :END:
 
-- *Link to Project:* [[][] ]
-
-- [[URL][Link Name] ] *Heading:* /(comment)/
-
-- [[][] ] - *_:* /(yadda...)/
-
-- [[][] ] - *_:* /(yadda...)/
-
-- [[][] ] - *_:* /(yadda...)/
-
-- [[][] ] /(_)/
-
-- [[][] ] /(_)/
-
-- [[][] ] /(_)/
+☞ *Link to Project:* [[][] ] /(comment)/
 
 \newpage
 
@@ -1060,11 +1137,11 @@ This Log Entry is about: Yadda... Yadda... Yadda...
 
 Yadda... Yadda... Yadda...
 
-1. [ ] *__:*
+1. [ ] *New Item 1:*
 
-2. [ ] *__:*
+2. [ ] *New Item 2:*
 
-3. [ ] *__:*
+3. [ ] *New Item 3:* /(copy/clone more as needed)/
 
 \newpage
 
@@ -1080,7 +1157,11 @@ Add sub headings as needed...
 Don't forget to clock-in to HEADINGS while you work on them...
 AND... Don't forget to Clock OUT when you are DONE... %^)
 
-=Examples I Use Often=
+=Delete BOILERPLATE= /below/ if you don't need it...
+
+\newpage:
+
+****** BOILERPLATE:
 
 The following list contains Babel Source Code Blocks that are often needed for something I am writing or "Logging" about... I use them so much I decided to include them in this template...
 
@@ -1126,6 +1207,12 @@ The following list contains Babel Source Code Blocks that are often needed for s
       : CDR w: (92)
 
 \newpage
+
+
+
+
+
+
 
 ***** NEW ⏱ New Item 2 /(placeholder)/ [0/3]
 
@@ -1138,7 +1225,11 @@ Add sub headings as needed...
 Don't forget to clock-in to HEADINGS while you work on them...
 AND... Don't forget to Clock OUT when you are DONE... %^)
 
-=Examples I Use Often=
+=Delete BOILERPLATE= /below/ if you don't need it...
+
+\newpage:
+
+****** BOILERPLATE:
 
 The following list contains Babel Source Code Blocks that are often needed for something I am writing or "Logging" about... I use them so much I decided to include them in this template...
 
@@ -1184,6 +1275,9 @@ The following list contains Babel Source Code Blocks that are often needed for s
       : CDR w: (92)
 
 \newpage
+
+
+
 
 ***** NEW ⏱ New Item 3 /(placeholder)/ [0/3]
 
@@ -1196,7 +1290,11 @@ Add sub headings as needed...
 Don't forget to clock-in to HEADINGS while you work on them...
 AND... Don't forget to Clock OUT when you are DONE... %^)
 
-=Examples I Use Often=
+=Delete BOILERPLATE= /below/ if you don't need it...
+
+\newpage:
+
+****** BOILERPLATE:
 
 The following list contains Babel Source Code Blocks that are often needed for something I am writing or "Logging" about... I use them so much I decided to include them in this template...
 
@@ -1242,3 +1340,4 @@ The following list contains Babel Source Code Blocks that are often needed for s
       : CDR w: (92)
 
 \newpage
+
