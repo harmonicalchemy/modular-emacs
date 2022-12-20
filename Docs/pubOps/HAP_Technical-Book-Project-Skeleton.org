@@ -23,15 +23,26 @@
    If you need to change the category, do it in your cloned version
    of ref-book.org...
 
-   *SETUPFILE:* ~default-tags.org~ is where tags are set for this project...
+   *SETUPFILE:* ~default-tags.org~ is where related tags are defined
+              for use in this project...
 
-   *SETUPFILE:* ~latex-tech-pdf.org~ is for LaTeX Export Configurations 
-              to produce a PDF version of your Fiction Book...
+   *SETUPFILE:* ~ref-book.org~ is for LaTeX Export Configurations 
+              to produce a PDF version of your Book...
 #+END_COMMENT
 
 #+SETUPFILE: ./org-templates/ref-book.org
-#+SETUPFILE: ./org-templates/latex-tech-pdf.org
 #+SETUPFILE: ./org-templates/default-tags.org
+
+Set ALL ~.png~ images in this file /(emojis)/ to ~30x30~ pixels...
+/(other images may be adjusted to size inline)/
+#+BEGIN_SRC elisp
+;(setq org-latex-images-centered nil)
+;(setq org-latex-image-default-width "1.0\\linewidth")
+;(setq org-latex-image-default-width "")
+(setq org-image-actual-width (list 30))
+#+END_SRC
+#+RESULTS:
+| 30 |
 
 :READ_ME_FIRST:
 ☞ =Instructions:= /(How to Install & Use This Template)/
@@ -51,18 +62,23 @@ To use *HAP_Technical-Book-Project-Skeleton.org* /(Org-Mode Reference Book Proje
 
       =Other Files/Folders will be placed within this master folder...=
 
-2) [ ] *Create:* ~./media~ *sub folder in your new project's Master Folder:*
+2) [ ] *Copy/Clone:* ~./media~ /(and contents)/ *to your new project's Master Folder:*
 
-      Create this new directory /(in your master folder as a sibling of/
-      /this file).../ Any external documents or images referenced by your
-      book(s) should be placed within this ~./media/~ directory...
+      Copy this directory /(into your master folder as a sibling of this file).../ 
+      Any external documents or images referenced by your book project should 
+      be placed within this ~./media/~ directory...
+
+      All external links, images, within the boilerplate examples of this
+      template may be used as examples for getting your own images, and 
+      external attachments linked properly...  
 
       This single ~./media~ directory will serve media and external attachments 
-      for all of the ~.org~ docs within this =MASTER FOLDER= /(parent directory)/...
+      for all of the ~.org~ doc template files from within: ~.emacs.d/Docs/pubOps~ 
+      directory /(if they were also copied here to your Project's Master Folder)/
 
-      =Note:= You DON'T need to create or copy the ~./auto/~ directory...
-             That directory will be automatically created the first time
-             you export this ~.org~ file to ~.PDF~...
+      =Note:=  You DON'T need to copy the ~./auto/~ directory...  That directory
+             will be automatically created the first time you export this ~.org~ 
+             file to ~.PDF~...
 
 3) [ ] *Copy/Clone:* ~./org-templates~ /(and all contents)/ *to your Master Folder:*
 
@@ -77,19 +93,20 @@ To use *HAP_Technical-Book-Project-Skeleton.org* /(Org-Mode Reference Book Proje
             project templates and are not needed for this Technical Book
             Project... You may remove them if you wish...
 
-            However, consider If you clone another ~HAP_<book-template>.org~
-            file into this MASTER PROJECT FOLDER it will pick up its
-            associated SETUPFILES automatically, so consider that if/when
-            you decide to delete other UNUSED SETUPFILES... They are small
-            text files not bothering you or your operations...
+            They are small text files not bothering you... If you clone
+            another ~HAP_<book-template>.org~ file into this project folder
+            it will pick up its associated SETUPFILES automatically, so
+            consider that if/when you decide to delete other
+            UNUSED SETUPFILES...
 
 4) [ ] =Start Sketching Out Your Technical Book NOW Before You Loose It!=
 
       =NOTE:= You may be doing this because you have technical information that
              needs to be writtin now before you forget!  =Right?=  Therefore...
-             as soon as you are done with the first steps above, =STOP= and go immediately to the:
+             as soon as you are done with the first steps above, =STOP= and go
+             immediately to the:
 
-                   ~💡 Ideas Scratchpad Refile / ☞ Start Here!~ 
+                   [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4A1.png]] *Ideas Scratchpad Refile / ☞ Start Here!*
 
              section and read the ~:README:~ directly under that heading...  
              Then write your ideas down quickly /(as per the README instructions)/ 
@@ -210,16 +227,6 @@ To use *HAP_Technical-Book-Project-Skeleton.org* /(Org-Mode Reference Book Proje
          /the Category is all set as well... But you can and may modify the/
          /SETUPFILES to fit your needs.../
 
-         Other SETUPFILES within this directory are used by other book 
-         project templates and are not needed for this Technical Book
-         Project... You may remove them if you wish...
-
-         However, consider If you clone another ~HAP_<book-template>.org~
-         file into this MASTER PROJECT FOLDER it will pick up its
-         associated SETUPFILES automatically, so consider that if/when
-         you decide to delete other UNUSED SETUPFILES... They are small
-         text files not bothering you or your operations...
-
 6) [ ] =Ongoing Planning / Writing Your Technical Book:= 
 
       /Change headings and structure to match your project's outline/ 
@@ -255,6 +262,7 @@ To use *HAP_Technical-Book-Project-Skeleton.org* /(Org-Mode Reference Book Proje
 
       Subsequent repeated calls to the above command will overwrite your existing ~HAP_Untitled-Tech-Manual.pdf~ -and- ~HAP_Untitled-Tech-Manual.tex~ 
       files! /(make backups first if needed!)/
+      
       You should probably copy these files to the ~./auto/~ directory as 
       well for safe keeping as backups...
 
@@ -266,23 +274,46 @@ To use *HAP_Technical-Book-Project-Skeleton.org* /(Org-Mode Reference Book Proje
 
          *Consult Buffer:* ~*Org PDF LaTeX Output*~
 
-=These Instructions Were Last Modified:= <2022-10-18 Tue> 
+8) [ ] =Handling Images=
 
-So far things are pretty basic PDF... We will get fancy with other formats later... 
-I promice... I have to do all this documentation first!
-/(As you can see, if you been following for the past couple years, things are/ 
- /getting done! Albeit Slowly)/
+      All Images /(by DEFAULT from above elisp source code block)/ are set
+      to thumbnail size (to properly size the .png ICONS /(emojis)/ in front
+      of Binder Headings etc...
+
+      This means that Other images within your ~.org~ file will ALSO display
+      as small thumbnails...
+
+      If that is NOT what you want for some images, you can override the
+      DEFAULT by using local attributes above the image link...
+
+      Use *LaTeX* and/or *HTML* attributes as follows on the images that need
+      to be a different size...
+
+      =Example:=
+      
+         #+CAPTION: Example larger size .png file 
+         #+NAME:  example:00001
+         #+attr_html: :width 200px
+         #+attr_latex: :width 200px
+      [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F3D5.png]]
+
+=These Instructions Were Last Modified:= <2022-12-18 Sun> 
+
+So far Export to PDF in nice Technical or Reference Book Style format... This has not been tested for HTML or other eBook formats yet... We will get fancy with other formats later... I promice... I have to do all this documentation first!
+
+/As you can see, if you been following for the past couple years, things are getting done! Albeit Slowly/
 
 =Please Open an ISSUE At:= https://github.com/harmonicalchemy/modular-emacs/issues
    
-Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas for Improvement... =You guys are my Product Managers=  I am only a User of ONE "seat". 
+Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas for Improvement... =You guys are my Product Managers=  I am only a User of ONE "seat".
+
 Other folks UX metrics are sorely needed!! Thanks!
 
 =Enjoy!= - Alisha Awen
 :END:
 
-* 💡 Scratchpad Refile:           :noexport:
-** ☞ Start Here!
+* [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4A1.png]] Scratchpad Refile:                                          :noexport:
+** [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F449.0.png]] Start Here!
 :README:
    This Section is mainly to accommodate "seat-of-pants" writers
           /(Of Which I Have Been Accused Of.../
@@ -373,8 +404,7 @@ Other folks UX metrics are sorely needed!! Thanks!
    of an idea for that book back in Year, Month, Day, time, second" 
    /(50 years later!)/ Now that is being organized! LOL
 :END:
-*** NEW 💡 <2020-06-07 Sun> My New Business Idea! /(example)/ 
-/"Yeah We've Heard That One Before"/
+*** NEW [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4A1.png]] <2020-06-07 Sun> My New Business Idea! /(example)/
 :README:
    This is a dummy example of some crazy idea that you may have 
    gotten at the spur of the moment, while you were doing something 
@@ -388,14 +418,13 @@ Other folks UX metrics are sorely needed!! Thanks!
    go in a research folder of a Sci-Fi related project...
 :END:
 
+/"Yeah We've Heard That One Before"/
+
 =Copy/Clone this Boilerplate Template NOW= And Change your clone's Title.. 
 
 =Then Quickly Get Started Writing Down your FRESH NEW IDEA=
 
-\newpage
-
-* 🕮 Book: /(Name of Book)/             :export:
-** NEW 📃 Synopsis: /(or Introduction:)/
+* NEW [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4DD.png]] Synopsis: /(or Introduction:)/                               :noexport:
 :README:
    =Use this space to write the main synopsis of your technical work=
 
@@ -417,7 +446,7 @@ Other folks UX metrics are sorely needed!! Thanks!
    reading his book to get a deeper understanding behind these dry forms 
    and worksheets...
 
-   - [ ] *Go to the:* =⏰ Tasks:= *Binder and do the:* =📃 Synopsis Tasks:=
+   - [ ] *Go to the:* [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u23F1.png]] Tasks: *Binder and do the: 📃 *Synopsis Tasks:*
 
    - [ ] *After Completing Tasks Mark Them:* ~DONE~
 
@@ -436,24 +465,8 @@ Other folks UX metrics are sorely needed!! Thanks!
 
 =Synopsis Content:= Yadda... Yadda... Yadda...
 
-\newpage
-
-** NEW 📃 Front Matter:
-:README:
-   This section has been purposefully left blank for you to fill in...
-
-   Use this space for holding all of the Front Matter related 
-   content of your book... 
-
-   Add Book Cover Art, Copyright Info, Publishing Info, etc. here... 
-   Only these basic elements are included in this Front Matter 
-   section which may or may not be exported to published media...
-:END:
-
-=Front Matter Content=... yadda... yadda... yadda...
-
-\newpage
-** NEW 📃 Preface: /(or Introduction - Optional)/
+* NEW 📃 Preface: /(or Introduction - Optional)/                     :export:
+<<BOOK_PREFACE>>
 :README:
    This section has been purposefully left blank for you to fill in...
 
@@ -466,165 +479,1223 @@ Other folks UX metrics are sorely needed!! Thanks!
 
 =Preface or Introduction Content:= 
 
-   yadda... yadda... yadda...
+Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo. Fusce tincidunt, lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante.
 
-\newpage
+At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
 
-** NEW 📖 Chapter: ~1~ Org-Mode Publishing Tricks /(example template)/
+
+
+#+BEGIN_EXPORT latex
+\mainmatter
+#+END_EXPORT
+
+* DONE Org-Mode Tricks /(example chapter)/                        :export:
+CLOSED: [2022-12-18 Sun 22:47]
+:LOGBOOK:
+- State "DONE"       from "ACTIVE"     [2022-12-18 Sun 22:47]
+:END:
+<<CHAPTER_org-mode-tricks>>
 :README:
-   *📖 Chapters* are the *Top Level Headings* within the *🕮 Book:* Binder 
-   of this *Emacs Org-mode* Book Publishing project...
+   *Chapters* are *Top Level Headings* within this *Emacs Org-mode* Book
+   Publishing project... Built in LaTeX memoir styles insure that
+   chapter and scene numbering work without needing any of your
+   input... You only need to insure your anchors are unique!
 
    =Usage:=
 
-   - [ ] =Clone This:= *📖 Chapter/Episode:* ~#~ /(Master Template)/ 
-          =Copy ALL its contents= and =paste= it as a child Item 
-          in the *🕮 Book:* Binder of this Book Publishing Project... 
+   - [ ] =Clone This:= *NEW Chapter Title:* /(BOILERPLATE)/
+      
+          =Copy ALL its contents= and =paste= it as new sibling
+          directly UNDER any existing chapters allready in place,
+          but ABOVE the BOILERPLATE item it was created from...
+          /(i.e., save your boilerplate template on the bottom/
+          /of the list where it will be copied/cloned again later)/
 
-          Do this whenever you need to start a new chapter...
+          =Do this whenever you need to start a new chapter...=
 
-   - [ ] =Edit Your New Clone:=
+   - [ ] =Commandeer Your New Clone:=
+      
           The structure of this template is all set up for 
           you ahead of time to allow you to immediately begin 
-          writing...  
+          writing...
 
-          Replace titles to suit your needs, but keep the 
-          structure of *Chapter / Scene (sub-chapter)* intact... 
-          /(i.e., change names only...)
+          After cloning, rename *Chapter Title:* /(BOILERPLATE)/
+          to a *Unique Title* and remove /(BOILERPLATE)/ in order
+          to commandeer the entire item for your needs...
+
+   - [ ] =Change The Anchor Link=
+
+         Change the anchor /(directly under Chapter Title)/ to match
+         your new chapter's title name...
+         
+         Leave ~CHAPTER_~ as the anchor's prefix... /(as in boilerplate above)/
+         Use dashes to connect words /(all lower case)/ from your title...
+
+         The anchor above may be used to link to this chapter from
+         Research or other sections of this book...
+         
+         /(which may or may not be published as links within eBook)/
+
+   - [ ] =Replace Titles, Anchors, & Content Within This Section=
+
+         Change names to suit your needs, but keep the structure of
+         *Chapter / Sub-Chapter* intact...
+         
+         /(i.e., change titles, anchors, and content only...)/
+
+   - [ ] =Add New Cloned Sub-Chapters as Needed=
+
+         Copy/Clone & Commandeer new Sub-Chapter headings as needed
+         to finish the chapter... Read the *:README:* drawers within
+         Scenes for more info...
+:END:
+** DONE 📄 Introduction:                                                       :export:
+CLOSED: [2022-12-18 Sun 22:14]
+:LOGBOOK:
+- State "DONE"       from "NEW"        [2022-12-18 Sun 22:14]
+:END:
+<<TOPIC_org-mode-tricks-introduction>>
+:README:
+   Sub Topics are the DNA that make up the chapters in a reference
+   or technical Book... Each new Sub Topic gets its own title or
+   phrase... The LaTeX memoir styles take care of numbering chapters
+   and sub topics for you automatically...
+
+   Chapters may contain several sub topics and sub topics can themselves
+   also have sub sub topics...
+
+   =Usage:=
+
+   - [ ] =Clone This:= *New Sub Topic X:* /(use "Sub Title", etc.)/
+
+         =Copy ALL its contents= and =paste= it as new sibling
+         directly UNDER any existing Sub Topic headings allready in place,
+         but ABOVE the BOILERPLATE item it was created from...
+         
+         /(i.e., save your boilerplate template on the bottom/
+         /of the list where it will be copied/cloned again later)/
+
+         =Do this whenever you need to start a new sub topic...=
+
+   - [ ] =Commandeer Your New Clone:=
+     
+        The structure of this template is all set up for you ahead
+        of time to allow you to immediately begin writing...
+
+        After cloning, rename *New Sub Topic X:*
+        to a *Unique Title* and remove /(boilerplate)/ in order
+        to commandeer the entire item for your needs...
+
+   - [ ] =Change The Anchor Link= /(make it unique)/
+
+         Change the anchor /(directly under the/ *Sub Topic X* /Title)/
+         to match your new Sub Topic title name...
+         
+         Leave ~TOPIC_~ as the anchor's prefix... /(as in boilerplate above)/
+         Use dashes to connect words /(all lower case)/ from your sub
+         topic's title...
+
+         The anchor above may be used to link to this sub topic from
+         Research or other sections of this book...
+
+        /(which may or may not be published as links within eBook)/
+
+   - [ ] This *Sub Topic Template* could ALSO Serve As =CHAPTER INTRODUCTION=
+
+         This is optional if you need one, but its anchor link must be
+         unique! /(i.e., NOT "TOPIC_introduction")/
 :END:
 
 This is a secret Org-Mode Tutorial /(presented here as an EXAMPLE Chapter)/ for a technical book...  Some good tips are in here so you may want to save this somewhere else before removing or re-writing it to use as a chapter within the technical book you have commondeerred this project skeleton for...
 
-*** NEW ☞ Chapter References:
+In Particular, here are some *Org-Mode publishing tips and snippits* I have found along the way...  Some of them may get incorporated more formally later /(with docs, etc.),/ but for now... you will have to =discover these treasures below= within this =example chapter=...
+
+This initial draft only contains Ref Links...  I did a lot of re-configuring of this template to get it looking good when exported to PDF...  I discuss some of the hurdles I ran into getting all this done, /(and the tricks I learned)/ as next sub topics below... That will be done later... /(all in good time)/
+
+** DONE Org Mode Reference:                                              :export:
+CLOSED: [2022-12-18 Sun 22:38]
+<<TOPIC_org-mode-reference>>
+:LOGBOOK:
+- State "DONE"       from "ACTIVE"     [2022-12-18 Sun 22:38]
+- State "ACTIVE"     from "DONE"       [2022-12-18 Sun 22:01]
+- State "DONE"       from "NEW"        [2022-12-18 Sun 21:59]
+:END:
 :README:
    =Org Mode Links Tip:=
 
       + To Create a Link Type: ~C-c C-l~ 
          /(then paste: ~link~ & type: "description")/
 
-         =-or-= Simply Fill in the Template Link Placeholders 
-              Below & copy/paste more placeholders as 
-              needed... ;-)
+         =-OR-= Simply Copy/Paste BOILERPLATE:
+              /(use placeholders below)/
+              And Fill Them In Manually... 
+              Copy/Paste more placeholders as
+              needed to create more links...
 
       + To Open a Link Type: ~C-c C-o~
+
+      + To EXPAND a Link Type: ~SPACE b~
+         or: ~M-x org-toggle-link-display~
+
+   =BOILERPLATE:= /(clone to add more ref links)/
+
+   + *Heading:* [[link][Link NAME] ] /(comment)/
+
+   + [[link][Link Name] ] *Heading:* /(comment)/
+   
+   + *_:* [[][] ] /(yadda... yadda... yadda...)/
+
+   + [[][] ] /(_)/
+
+   [[junk][JUNK]]  /(This is a stupid BUG workaround/ /for org-mode link/
+         /expansion/compression... If you invoke:/ ~org-toggle-link-display~
+         /you will notice this JUNK link DOES NOT compress to a clickable/
+         /link title alone.../
+         
+         /I am not sure if this is due to my Emacs Config or a bug within/
+         *Org-Mode* /itself.../
+
+         /I put this workaround in here because if it is not here,/
+         /SOME of your external file links created below may not/
+         /compress after expansion, even though thy are GOOD links!/
+
+         /Leaving this JUNK link in here acts like a scapegoat/
+         /so that your real links below will all compress/expand/
+         /normally... I am NOT SURE WHY THIS WORKS??? I'm to busy/
+         /to do anything beyond hacking at this point.../
+         
+         ~org-lint~ /will detect JUNK above... Ignore that warning.../
+                  /It's my "METHOD of MADNESS" %^)/
 :END:
 
-- [[https://orgmode.org/worg/org-tutorials/index.html][Org tutorials]] - /WORG/
++ [[https://orgmode.org/worg/org-tutorials/index.html][Org tutorials]] - /WORG/
 
-- [[https://orgmode.org/worg/org-contrib/babel/examples/fontify-src-code-blocks.html#org42aa49f][Pretty Fontification Of Source Code Blocks]] - /WORG/
++ [[https://orgmode.org/worg/org-contrib/babel/examples/fontify-src-code-blocks.html#org42aa49f][Pretty Fontification Of Source Code Blocks]] - /WORG/
 
-- [[https://orgmode.org/worg/library-of-babel.html][Org Library of Babel]] - /WORG/
++ [[https://orgmode.org/worg/library-of-babel.html][Org Library of Babel]] - /WORG/
 
-- [[https://orgmode.org/manual/Working-with-Source-Code.html#Working-with-Source-Code][Working with Source Code]] - /Org Manual/
++ [[https://orgmode.org/manual/Working-with-Source-Code.html#Working-with-Source-Code][Working with Source Code]] - /Org Manual/
 
-- [[https://www.cheme.engineering.cmu.edu/directory/bios/kitchin-john.html][John Kitchin]] - /John's Home Page @ Carnegie Mellon/
++ [[https://www.cheme.engineering.cmu.edu/directory/bios/kitchin-john.html][John Kitchin]] - /John's Home Page @ Carnegie Mellon/
 
-- [[https://github.com/jkitchin/org-ref][ORG-REF]] - ~JKitchin@Github~
++ [[https://github.com/jkitchin/org-ref][ORG-REF]] - ~JKitchin@Github~
 
-- [[https://www.youtube.com/playlist?list=PL0sMmOaE_gs3GbuZV_sNjwMREw9rfElTV][Org-Mode YouTube Presentaions PLAYLIST]] - ~JKitchin@YouTube~
++ [[https://www.youtube.com/playlist?list=PL0sMmOaE_gs3GbuZV_sNjwMREw9rfElTV][Org-Mode YouTube Presentaions PLAYLIST]] - ~JKitchin@YouTube~
 
-- [[https://youtu.be/fgizHHd7nOo][Org Mode is Awesome!]] - ~JKitchin@YouTube~
++ [[https://youtu.be/fgizHHd7nOo][Org Mode is Awesome!]] - ~JKitchin@YouTube~
 
-- [[https://kitchingroup.cheme.cmu.edu/blog/2017/01/29/ob-ipython-and-inline-figures-in-org-mode/][ob-ipython and Inline Figures in org-mode]] - /The Kitchin Research Group/
++ [[https://kitchingroup.cheme.cmu.edu/blog/2017/01/29/ob-ipython-and-inline-figures-in-org-mode/][ob-ipython and Inline Figures in org-mode]] - /The Kitchin Research Group/
 
-- [[https://kitchingroup.cheme.cmu.edu/blog/2017/05/04/An-emacs-lisp-dsl-for-gnuplot/][An emacs-lisp dsl for gnuplot]] - - /The Kitchin Research Group/
++ [[https://kitchingroup.cheme.cmu.edu/blog/2017/05/04/An-emacs-lisp-dsl-for-gnuplot/][An emacs-lisp dsl for gnuplot]] - /The Kitchin Research Group/
 
-- [[https://youtu.be/SzA2YODtgK4][Getting Started with Org Mode]] - ~Harry Schwartz@YouTube~
++ [[https://youtu.be/SzA2YODtgK4][Getting Started with Org Mode]] - ~Harry Schwartz@YouTube~
 
-- [[http://howardism.org/Technical/Emacs/literate-devops.html][Literate DevOps]] -  /Article by: Howard Abrams/
++ [[http://howardism.org/Technical/Emacs/literate-devops.html][Literate DevOps]] - /Article by: Howard Abrams/
 
-- [[https://youtu.be/dljNabciEGg][Literate DevOps with Emacs]] - ~Howard Abrams@YouTube~
++ [[https://youtu.be/dljNabciEGg][Literate DevOps with Emacs]] - ~Howard Abrams@YouTube~
 
-- [[https://zzamboni.org/post/beautifying-org-mode-in-emacs/][Beautifying Org Mode in Emacs]] - /Article by:/ ~Diego Zamboni~
++ [[https://zzamboni.org/post/beautifying-org-mode-in-emacs/][Beautifying Org Mode in Emacs]] - /Article by:/ ~Diego Zamboni~
 
-- [[https://www.linuxjournal.com/content/org-mode-latex-exporter-latex-non-texers][The org-mode LaTeX exporter: LaTeX for non-TEXers]] - /Article on LINUX Journal/ 
++ [[https://www.linuxjournal.com/content/org-mode-latex-exporter-latex-non-texers][The org-mode LaTeX exporter: LaTeX for non-TEXers]] - /Article on LINUX Journal/
 
-- [[][] ] -
+** New Sub Topic X /(use "Sub Title", NOT "Sub Topic n.1")/      :noexport:
+<<TOPIC_new-sub-topic-x>>
+:README:
+   Sub Topics are the DNA that make up the chapters in a reference
+   or technical Book... Each new Sub Topic gets its own title or
+   phrase... The LaTeX memoir styles take care of numbering chapters
+   and sub topics for you automatically...
 
-\newpage
+   Chapters may contain several sub topics and sub topics can themselves
+   also have sub sub topics...
 
-*** NEW 📄 Chapter Introduction: /<replace with topic name if needed>/
+   =Usage:=
 
-Here are some *Org-Mode publishing tips and snippits* I have found along the way...  Some of them may get incorporated more formally later /(with docs, etc.),/ but for now... you will have to =discover these treasures below= within this =example chapter=...
+   - [ ] =Clone This:= *New Sub Topic X:* /(use "Sub Title", etc.)/
 
-\newpage
+         =Copy ALL its contents= and =paste= it as new sibling
+         directly UNDER any existing Sub Topic headings allready in place,
+         but ABOVE the BOILERPLATE item it was created from...
+         
+         /(i.e., save your boilerplate template on the bottom/
+         /of the list where it will be copied/cloned again later)/
 
-*** NEW 📄 New Topic <replace with topic name>
+         =Do this whenever you need to start a new sub topic...=
+
+   - [ ] =Commandeer Your New Clone:=
+     
+        The structure of this template is all set up for you ahead
+        of time to allow you to immediately begin writing...
+
+        After cloning, rename *New Sub Topic X:*
+        to a *Unique Title* and remove /(boilerplate)/ in order
+        to commandeer the entire item for your needs...
+
+   - [ ] =Change The Anchor Link= /(make it unique)/
+
+         Change the anchor /(directly under the/ *Sub Topic X* /Title)/
+         to match your new Sub Topic title name...
+         
+         Leave ~TOPIC_~ as the anchor's prefix... /(as in boilerplate above)/
+         Use dashes to connect words /(all lower case)/ from your sub
+         topic's title...
+
+         The anchor above may be used to link to this sub topic from
+         Research or other sections of this book...
+
+        /(which may or may not be published as links within eBook)/
+
+   - [ ] This *Sub Topic Template* could ALSO Serve As =CHAPTER INTRODUCTION=
+
+         This is optional if you need one, but its anchor link must be
+         unique! /(i.e., NOT "TOPIC_introduction")/
+:END:
+
+=Insert Sub Topic Content Here=
+
+Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo. Fusce tincidunt, lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante.
 
 At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
 
-\newpage
-
-*** NEW 🗒 Background Notes:
+** New Sub Topic Y /(use "Sub Title", NOT "Sub Topic n.1")/      :noexport:
+<<TOPIC_new-sub-topic-y>>
 :README:
-The *Background Notes* section of a chapter is a place where you can add notes, ideas, instructions, whatever... close at hand within the chapter, and not have to worry about any of it getting exported and or published to the final output product...  
+   Sub Topics are the DNA that make up the chapters in a reference
+   or technical Book... Each new Sub Topic gets its own title or
+   phrase... The LaTeX memoir styles take care of numbering chapters
+   and sub topics for you automatically...
 
-Nothing within this section will be exported... not even the Background Notes Heading itself.  Use this section any way and for any purpose you wish for things related to the chapter heading that contains it...
+   Chapters may contain several sub topics and sub topics can themselves
+   also have sub sub topics...
 
-The example Notes below have been timestamped as a way to suggest organizing TODO items for a particular chapter you may find yourself working on, or researching... *Use / replace the notes below with / for your own schemes*...
+   =Usage:=
+
+   - [ ] =Clone This:= *New Sub Topic Y:* /(use "Sub Title", etc.)/
+
+         =Copy ALL its contents= and =paste= it as new sibling
+         directly UNDER any existing Sub Topic headings allready in place,
+         but ABOVE the BOILERPLATE item it was created from...
+         
+         /(i.e., save your boilerplate template on the bottom/
+         /of the list where it will be copied/cloned again later)/
+
+         =Do this whenever you need to start a new sub topic...=
+
+   - [ ] =Commandeer Your New Clone:=
+     
+        The structure of this template is all set up for you ahead
+        of time to allow you to immediately begin writing...
+
+        After cloning, rename *New Sub Topic Y:*
+        to a *Unique Title* and remove /(boilerplate)/ in order
+        to commandeer the entire item for your needs...
+
+   - [ ] =Change The Anchor Link= /(make it unique)/
+
+         Change the anchor /(directly under the/ *Sub Topic Y* /Title)/
+         to match your new Sub Topic title name...
+         
+         Leave ~TOPIC_~ as the anchor's prefix... /(as in boilerplate above)/
+         Use dashes to connect words /(all lower case)/ from your sub
+         topic's title...
+
+         The anchor above may be used to link to this sub topic from
+         Research or other sections of this book...
+
+        /(which may or may not be published as links within eBook)/
+
+   - [ ] This *Sub Topic Template* could ALSO Serve As =CHAPTER INTRODUCTION=
+
+         This is optional if you need one, but its anchor link must be
+         unique! /(i.e., NOT "TOPIC_introduction")/
 :END:
-**** 🗒 Note 1: <2020-05-10 Sun>
+
+=Insert Sub Topic Content Here=
+
+Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo. Fusce tincidunt, lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante.
+
+At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
+
+** New Sub Topic Z /(use "Sub Title", NOT "Sub Topic n.1")/      :noexport:
+<<TOPIC_new-sub-topic-z>>
+:README:
+   Sub Topics are the DNA that make up the chapters in a reference
+   or technical Book... Each new Sub Topic gets its own title or
+   phrase... The LaTeX memoir styles take care of numbering chapters
+   and sub topics for you automatically...
+
+   Chapters may contain several sub topics and sub topics can themselves
+   also have sub sub topics...
+
+   =Usage:=
+
+   - [ ] =Clone This:= *New Sub Topic Z:* /(use "Sub Title", etc.)/
+
+         =Copy ALL its contents= and =paste= it as new sibling
+         directly UNDER any existing Sub Topic headings allready in place,
+         but ABOVE the BOILERPLATE item it was created from...
+         
+         /(i.e., save your boilerplate template on the bottom/
+         /of the list where it will be copied/cloned again later)/
+
+         =Do this whenever you need to start a new sub topic...=
+
+   - [ ] =Commandeer Your New Clone:=
+     
+        The structure of this template is all set up for you ahead
+        of time to allow you to immediately begin writing...
+
+        After cloning, rename *New Sub Topic Z:*
+        to a *Unique Title* and remove /(boilerplate)/ in order
+        to commandeer the entire item for your needs...
+
+   - [ ] =Change The Anchor Link= /(make it unique)/
+
+         Change the anchor /(directly under the/ *Sub Topic Z* /Title)/
+         to match your new Sub Topic title name...
+         
+         Leave ~TOPIC_~ as the anchor's prefix... /(as in boilerplate above)/
+         Use dashes to connect words /(all lower case)/ from your sub
+         topic's title...
+
+         The anchor above may be used to link to this sub topic from
+         Research or other sections of this book...
+
+         /(which may or may not be published as links within eBook)/
+
+   - [ ] This *Sub Topic Template* could ALSO Serve As =CHAPTER INTRODUCTION=
+
+         This is optional if you need one, but its anchor link must be
+         unique! /(i.e., NOT "TOPIC_introduction")/
+:END:
+
+=Insert Sub Topic Content Here=
+
+Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo. Fusce tincidunt, lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante.
+
+At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
+** [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4DA.png]] Chapter References:                                                :noexport:
+:README:
+   =Org Mode Links Tip:=
+
+      + To Create a Link Type: ~C-c C-l~ 
+         /(then paste: ~link~ & type: "description")/
+
+         =-OR-= Simply Copy/Paste BOILERPLATE:
+              /(use placeholders below)/
+              And Fill Them In Manually... 
+              Copy/Paste more placeholders as
+              needed to create more links...
+
+      + To Open a Link Type: ~C-c C-o~
+
+      + To EXPAND a Link Type: ~SPACE b~
+         or: ~M-x org-toggle-link-display~
+
+   =BOILERPLATE:= /(clone to add more ref links)/
+
+   + *Heading:* [[link][Link NAME] ] /(comment)/
+
+   + [[link][Link Name] ] *Heading:* /(comment)/
+   
+   + *_:* [[][] ] /(yadda... yadda... yadda...)/
+
+   + [[][] ] /(_)/
+
+   + [[junk][JUNK]]  /(This is a stupid BUG workaround/ /for org-mode link/
+         /expansion/compression... If you invoke:/ ~org-toggle-link-display~
+         /you will notice this JUNK link DOES NOT compress to a clickable/
+         /link title alone.../
+         
+         /I am not sure if this is due to my Emacs Config or a bug within/
+         *Org-Mode* /itself.../
+
+         /I put this workaround in here because if it is not here,/
+         /SOME of your external file links created below may not/
+         /compress after expansion, even though thy are GOOD links!/
+
+         /Leaving this JUNK link in here acts like a scapegoat/
+         /so that your real links below will all compress/expand/
+         /normally... I am NOT SURE WHY THIS WORKS??? I'm to busy/
+         /to do anything beyond hacking at this point.../
+         
+         ~org-lint~ /will detect JUNK above... Ignore that warning.../
+                  /It's my "METHOD of MADNESS" %^)/
+:END:
+
++ *Link to Project:* [[][] ] /(comment)/
+  
+** [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4DD.png]] Chapter Notes:                                                         :noexport:
+:README:
+   *Chapter Notes*, Should be written in =OUTLINE= form to aid in organization
+   of events, etc... This section is =NOT the place to create NEW ideas=, 
+   but rather to =organize EXISTING ideas you have already written=...
+
+   =None of the Content Written Here Should be Added to any= 
+   =Chapter/Topics within your Book= 
+
+   =THIS IS A META PLACE=
+
+      /(i.e., Your Books Internal Analyst/
+             /Behind the Curtain So-To-Speak... %^)/
+
+   The example Notes below have been timestamped as a way to suggest
+   organizing TODO items for a particular chapter you may find yourself
+   working on, or researching...
+   
+   =Use or replace the notes below for your own schemes=
+:END:
+*** NEW Note 1: <2020-05-10 Sun>
 
 1. Enumerated List Item A
 
-    * Enumerated List Item B
+2. Enumerated List Item B
 
-       + Enumerated List Item C
+3. Enumerated List Item C
 
-       + Enumerated List Item D
+4. Enumerated List Item D
 
-2. Something New...
 
-- Bullet checkbox Test one...
+1. =New Enumerated List...=
 
-   + [ ] Checkbox List:
+2. Bullet checkbox Test one...
 
-   + [ ] 
+    + [ ] Checkbox List item:
 
-\newpage
+    + [ ] Checkbox List item:
 
-**** 🗒 Note 2: <2020-05-10 Sun>
+*** NEW Note 2: <2020-05-10 Sun>
 
 Each new note needs to get its own heading and initial timestamp...
 
-****** Quid Novi?
+It is fine to make as many sub-headings as needed for these notes
+but not important for them to also be time-stamped...
+
+***** Quid Novi? /(example note sub heading)/
+
+Quid Novi? Lorem Ipsum dolor sit amet,consectetur adipisicing elit, sed doeiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim adminim veniam, quis nostrudexercitation ullamco laboris nisi utaliquip ex ea commodo consequat.Duis aute irure dolor inreprehenderit in coluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatatnon proident, sunt in culpa quiofficia deserunt mollit anim id estlaborum.
+* NEW Chapter Title /(BOILERPLATE clone this)/                       :noexport:
+<<CHAPTER_chapter-title>>
+:README:
+   *Chapters* are *Top Level Headings* within this *Emacs Org-mode* Book
+   Publishing project... Built in LaTeX memoir styles insure that
+   chapter and sub-topic numbering work without needing any of your
+   input... You only need to insure your anchors are unique!
+
+   =Usage:= *This is a NON Exported BOILERPLATE Which Should Be Cloned*
+
+   - [ ] =Clone This:= *NEW Chapter Title:* /(BOILERPLATE)/
+
+          =Copy ALL its contents= and =paste= it as new sibling
+          directly UNDER any existing chapters allready in place,
+          but ABOVE the BOILERPLATE item it was created from...
+          /(i.e., save your boilerplate template on the bottom/
+          /of the list where it will be copied/cloned again later)/
+
+          =Do this whenever you need to start a new chapter...=
+
+   - [ ] =Commandeer Your New Clone:=
+      
+          The structure of this template is all set up for 
+          you ahead of time to allow you to immediately begin 
+          writing...
+
+          After cloning, rename *Chapter Title:* /(BOILERPLATE)/
+          to a *Unique Title* and remove /(BOILERPLATE)/ in order
+          to commandeer the entire item for your needs...
+
+          Change the ~:noexport:~ tag to ~:export:~ for this NEW
+          REAL Chapter so it will show up when publishing drafts...
+
+   - [ ] =Change The Anchor Link=
+
+         Change the anchor /(directly under Chapter Title)/ to match
+         your new chapter's title name...
+         
+         Leave ~CHAPTER_~ as the anchor's prefix... /(as in boilerplate above)/
+         Use dashes to connect words /(all lower case)/ from your title...
+
+         The anchor above may be used to link to this chapter from
+         Research or other sections of this book...
+         
+         /(which may or may not be published as links within eBook)/
+
+   - [ ] =Replace Titles, Anchors, & Content Within This Section=
+
+         Change names to suit your needs, but keep the structure of
+         *Chapter / Sub Topic)* intact...
+         
+         /(i.e., change titles, anchors, and content only...)/
+
+   - [ ] =Add New Cloned Sub Topics as Needed=
+
+         Copy/Clone & Commandeer new Sub Topics as needed to finish
+         the chapter... Read the *:README:* drawers within Sub Topic
+         Boilerplate Examples for more info...
+:END:
+
+** New Sub Topic X /(use "Sub Title", NOT "Sub Topic n.1")/       :noexport:
+<<TOPIC_new-sub-topic-x>>
+:README:
+   Sub Topics are the DNA that make up the chapters in a reference
+   or technical Book... Each new Sub Topic gets its own title or
+   phrase... The LaTeX memoir styles take care of numbering chapters
+   and sub topics for you automatically...
+
+   Chapters may contain several sub topics and sub topics can themselves
+   also have sub sub topics...
+
+   =Usage:=
+
+   - [ ] =Clone This:= *New Sub Topic X:* /(use "Sub Title", etc.)/
+
+         =Copy ALL its contents= and =paste= it as new sibling
+         directly UNDER any existing Sub Topic headings allready in place,
+         but ABOVE the BOILERPLATE item it was created from...
+         
+         /(i.e., save your boilerplate template on the bottom/
+         /of the list where it will be copied/cloned again later)/
+
+         =Do this whenever you need to start a new sub topic...=
+
+   - [ ] =Commandeer Your New Clone:=
+     
+        The structure of this template is all set up for you ahead
+        of time to allow you to immediately begin writing...
+
+        After cloning, rename *New Sub Topic X:*
+        to a *Unique Title* and remove /(boilerplate)/ in order
+        to commandeer the entire item for your needs...
+
+        Change the ~:noexport:~ tag to ~:export:~ for this NEW
+        REAL Sub-Topic so it will show up when publishing drafts...
+
+   - [ ] =Change The Anchor Link= /(make it unique)/
+
+         Change the anchor /(directly under the/ *Sub Topic X* /Title)/
+         to match your new Sub Topic title name...
+         
+         Leave ~TOPIC_~ as the anchor's prefix... /(as in boilerplate above)/
+         Use dashes to connect words /(all lower case)/ from your sub
+         topic's title...
+
+         The anchor above may be used to link to this sub-topic from
+         Research or other sections of this book...
+
+        /(which may or may not be published as links within eBook)/
+
+   - [ ] This *Sub Topic Template* could ALSO Serve As =CHAPTER INTRODUCTION=
+
+         This is optional if you need one, but its anchor link must be
+         unique! /(i.e., NOT "TOPIC_introduction")/
+:END:
+
+=Insert Sub Topic Content Here=
+
+Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo. Fusce tincidunt, lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante.
+
+At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
+
+** New Sub Topic Y /(use "Sub Title", NOT "Sub Topic n.2")/       :noexport:
+<<TOPIC_new-sub-topic-y>>
+:README:
+   Sub Topics are the DNA that make up the chapters in a reference
+   or technical Book... Each new Sub Topic gets its own title or
+   phrase... The LaTeX memoir styles take care of numbering chapters
+   and sub topics for you automatically...
+
+   Chapters may contain several sub topics and sub topics can themselves
+   also have sub sub topics...
+
+   =Usage:=
+
+   - [ ] =Clone This:= *New Sub Topic Y:* /(use "Sub Title", etc.)/
+
+         =Copy ALL its contents= and =paste= it as new sibling
+         directly UNDER any existing Sub Topic headings allready in place,
+         but ABOVE the BOILERPLATE item it was created from...
+         
+         /(i.e., save your boilerplate template on the bottom/
+         /of the list where it will be copied/cloned again later)/
+
+         =Do this whenever you need to start a new sub topic...=
+
+   - [ ] =Commandeer Your New Clone:=
+     
+        The structure of this template is all set up for you ahead
+        of time to allow you to immediately begin writing...
+
+        After cloning, rename *New Sub Topic Y:*
+        to a *Unique Title* and remove /(boilerplate)/ in order
+        to commandeer the entire item for your needs...
+
+        Change the ~:noexport:~ tag to ~:export:~ for this NEW
+        REAL Sub-Topic so it will show up when publishing drafts...
+
+   - [ ] =Change The Anchor Link= /(make it unique)/
+
+         Change the anchor /(directly under the/ *Sub Topic Y* /Title)/
+         to match your new Sub Topic title name...
+         
+         Leave ~TOPIC_~ as the anchor's prefix... /(as in boilerplate above)/
+         Use dashes to connect words /(all lower case)/ from your sub
+         topic's title...
+
+         The anchor above may be used to link to this sub-topic from
+         Research or other sections of this book...
+
+         /(which may or may not be published as links within eBook)/
+
+   - [ ] This *Sub Topic Template* could ALSO Serve As =CHAPTER INTRODUCTION=
+
+         This is optional if you need one, but its anchor link must be
+         unique! /(i.e., NOT "TOPIC_introduction")/
+:END:
+
+=Insert Sub Topic Content Here=
+
+Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo. Fusce tincidunt, lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante.
+
+At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
+
+** New Sub Topic Z /(MASTER - keep until Final Draft)/              :noexport:
+<<TOPIC_new-sub-topic-z>>
+:README:
+   Sub Topics are the DNA that make up the chapters in a reference
+   or technical Book... Each new Sub Topic gets its own title or
+   phrase... The LaTeX memoir styles take care of numbering chapters
+   and sub topics for you automatically...
+
+   Chapters may contain several sub topics and sub topics can themselves
+   also have sub sub topics...
+
+   =Usage:=
+
+   - [ ] =Clone This:= *New Sub Topic Z:* /(use "Sub Title", etc.)/
+
+         =Copy ALL its contents= and =paste= it as new sibling
+         directly UNDER any existing Sub Topic headings allready in place,
+         but ABOVE the BOILERPLATE item it was created from...
+         
+         /(i.e., save your boilerplate template on the bottom/
+         /of the list where it will be copied/cloned again later)/
+
+         =Do this whenever you need to start a new sub topic...=
+
+   - [ ] =Commandeer Your New Clone:=
+     
+        The structure of this template is all set up for you ahead
+        of time to allow you to immediately begin writing...
+
+        After cloning, rename *New Sub Topic Z:*
+        to a *Unique Title* and remove /(boilerplate)/ in order
+        to commandeer the entire item for your needs...
+
+        Change the ~:noexport:~ tag to ~:export:~ for this NEW
+        REAL Sub-Topic so it will show up when publishing drafts...
+
+   - [ ] =Change The Anchor Link= /(make it unique)/
+
+         Change the anchor /(directly under the/ *Sub Topic Z* /Title)/
+         to match your new Sub Topic title name...
+         
+         Leave ~TOPIC_~ as the anchor's prefix... /(as in boilerplate above)/
+         Use dashes to connect words /(all lower case)/ from your sub
+         topic's title...
+
+         The anchor above may be used to link to this sub-topic from
+         Research or other sections of this book...
+
+         /(which may or may not be published as links within eBook)/
+
+   - [ ] This *Sub Topic Template* could ALSO Serve As =CHAPTER INTRODUCTION=
+
+         This is optional if you need one, but its anchor link must be
+         unique! /(i.e., NOT "TOPIC_introduction")/
+:END:
+
+=Insert Sub Topic Content Here=
+
+Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo. Fusce tincidunt, lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante.
+
+At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
+
+** [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4DA.png]] Chapter References:                                               :noexport:
+:README:
+   =Org Mode Links Tip:=
+
+      + To Create a Link Type: ~C-c C-l~ 
+         /(then paste: ~link~ & type: "description")/
+
+         =-OR-= Simply Copy/Paste BOILERPLATE:
+              /(use placeholders below)/
+              And Fill Them In Manually... 
+              Copy/Paste more placeholders as
+              needed to create more links...
+
+      + To Open a Link Type: ~C-c C-o~
+
+      + To EXPAND a Link Type: ~SPACE b~
+         or: ~M-x org-toggle-link-display~
+
+   =BOILERPLATE:= /(clone to add more ref links)/
+
+   + *Heading:* [[link][Link NAME] ] /(comment)/
+
+   + [[link][Link Name] ] *Heading:* /(comment)/
+   
+   + *_:* [[][] ] /(yadda... yadda... yadda...)/
+
+   + [[][] ] /(_)/
+
+   + [[junk][JUNK]]  /(This is a stupid BUG workaround/ /for org-mode link/
+         /expansion/compression... If you invoke:/ ~org-toggle-link-display~
+         /you will notice this JUNK link DOES NOT compress to a clickable/
+         /link title alone.../
+         
+         /I am not sure if this is due to my Emacs Config or a bug within/
+         *Org-Mode* /itself.../
+
+         /I put this workaround in here because if it is not here,/
+         /SOME of your external file links created below may not/
+         /compress after expansion, even though thy are GOOD links!/
+
+         /Leaving this JUNK link in here acts like a scapegoat/
+         /so that your real links below will all compress/expand/
+         /normally... I am NOT SURE WHY THIS WORKS??? I'm to busy/
+         /to do anything beyond hacking at this point.../
+         
+         ~org-lint~ /will detect JUNK above... Ignore that warning.../
+                  /It's my "METHOD of MADNESS" %^)/
+:END:
+
++ *Link to Project:* [[][] ] /(comment)/
+
+** [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4DD.png]] Chapter Notes:                                                        :noexport:
+:README:
+   *Chapter Notes*, Should be written in =OUTLINE= form to aid in organization
+   of events, etc... This section is =NOT the place to create NEW ideas=, 
+   but rather to =organize EXISTING ideas you have already written=...
+
+   =None of the Content Written Here Should be Added to any= 
+   =Chapter/Topics within your Book= 
+
+   =THIS IS A META PLACE=
+
+      /(i.e., Your Books Internal Analyst/
+             /Behind the Curtain So-To-Speak... %^)/
+
+   The example Notes below have been timestamped as a way to suggest
+   organizing TODO items for a particular chapter you may find yourself
+   working on, or researching...
+   
+   =Use or replace the notes below for your own schemes=
+:END:
+*** NEW Note 1: <2020-05-10 Sun>
+
+1. Enumerated List Item A
+
+2. Enumerated List Item B
+
+3. Enumerated List Item C
+
+4. Enumerated List Item D
+
+
+1. =New Enumerated List...=
+
+2. Bullet checkbox Test one...
+
+    + [ ] Checkbox List item:
+
+    + [ ] Checkbox List item:
+
+*** NEW Note 2: <2020-05-10 Sun>
+
+Each new note needs to get its own heading and initial timestamp...
+
+It is fine to make as many sub-headings as needed for these notes
+but not important for them to also be time-stamped...
+
+***** Quid Novi? /(example note sub heading)/
 
 Quid Novi? Lorem Ipsum dolor sit amet,consectetur adipisicing elit, sed doeiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim adminim veniam, quis nostrudexercitation ullamco laboris nisi utaliquip ex ea commodo consequat.Duis aute irure dolor inreprehenderit in coluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatatnon proident, sunt in culpa quiofficia deserunt mollit anim id estlaborum.
 
-\newpage
-
-**** 🗒 Phasellus orci: <2020-05-10 Sun>
-
-Etiam tempor elit auctor magna. Nullam nibh velit, vestibulum ut, eleifend non, pulvinar eget, enim. Classaptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer velit mauris, convallis acongue sed, placerat id, odio. Etiam venenatis tortor sed lectus. Nulla non orci. In egestas porttitor quam. Duis nec diameget nibh mattis tempus. Curabitus accumsan pede id odio. Nunc vitae libero. Aenean condimentum diam et turpis.Vestibulum non risus. Ut consectetuer gravida elit. Aenean est nunc, varius sed, alquam eu, feugiat sit amet, metus. Sedvenenatis odio id eros.
-
-|----------+-----------+-----------+-----------+-------------------|
-| Inceptos | Venenatis | Convallis | Curabitus | Nunc vitae libero |
-|----------+-----------+-----------+-----------+-------------------|
-| test 1   | test 2    | test 3    | test 4    | test 5            |
-|----------+-----------+-----------+-----------+-------------------|
-
-Yadda, yadda, yadda. etc...
-
-\newpage
-
-* 🔍 Research:                          :noexport:
-** 🗓 Log Book:
+* NEW Chapter Title /(MASTER - keep until Final Draft)/            :export:
+<<CHAPTER_chapter-title>>
 :README:
-   Use this space to add time stamped log note entries for any 
-   pourpose you may need while you are planning, writing, or 
-   publishing your book...
 
-   =USAGE=
+   =Usage:= *This is the MASTER Chapter Reserved for LAST*
 
-      =Place New:=   *🗓 LOG:* /<timestamp>/ *Entry* /(Log Entry Template)/ 
-      =Items From:=  *⎘ Templates:* Binder
-      =Into This:=   *🗓 Log Book:* Binder
+   - [ ] =This item is BOILERPLATE= /(DON'T MESS with IT until THE END)/
+
+         Do Not use this MASTER CHAPTER while you are writing
+         your book... =KEEP IT LAST= in your list of *Chapter Headings*...
+         Keep This Item set to ~:export:~ for all drafts...
+
+         =COMMANDEER= This item /(changing the title etc.)/ as the
+         very last chapter in your book /(Once you know that/
+         /for sure)/... The *NEW Sub Topic Z* sub-heading contains
+         LaTeX directives starting ~\backmatter~...
+
+         Therefore if another chapter were to be placed AFTER
+         this item, it would show up as a NEW section outside
+         of the book proper!!
+
+   - [ ] =Commandeer This as LAST CHAPTER OF YOUR BOOK:=
+
+         The structure of this BOILERPLATE is all set up for 
+         you allowing you to immediately begin writing it as
+         your very LAST chapter in your book...
+
+         Rename *Chapter Title: /(MASTER - keep until Final Draft)
+         to a *Unique Title* and remove /(MASTER - etc.)/ in order
+         to commandeer the entire item for your needs...
+
+   - [ ] =Change The Anchor Link=
+
+         Change the anchor /(directly under Chapter Title)/ to match
+         your new chapter's title name...
+         
+         Leave ~CHAPTER_~ as the anchor's prefix... /(as in boilerplate above)/
+         Use dashes to connect words /(all lower case)/ from your title...
+
+         The anchor above may be used to link to this chapter from
+         Research or other sections of this book...
+         
+         /(which may or may not be published as links within eBook)/
+
+   - [ ] =Replace Titles, Anchors, & Content Within This Section=
+
+         Change names to suit your needs, but keep the structure of
+         *Chapter / Sub Topic)* intact...
+         
+         /(i.e., change titles, anchors, and content only...)/
+
+   - [ ] =Add New Cloned Sub Topics as Needed=
+
+         Copy/Clone & Commandeer new Sub Topics as needed to finish
+         the chapter... Read the *:README:* drawers within Sub Topic
+         Boilerplate Examples for more info...
+
+   - [ ] =Make Sure= *New Sub Topic Z:* /(below)/ is commandeered as =LAST SCENE=
+
+         The *New Sub Topic Z:* contains LaTeX directive:
+         ~\backmatter~ and ~\appendix~ which means it MUST Be
+         placed as the LAST Scene of your BOOK proper...
+
+         The LaTeX directive at the end of *Sub Topic Z*
+         /(or title you change it to)/ must be left =as is= when
+         you are commandeering the scene to fit in as the last
+         scene in your book...
+
+         Do NOT touch Sub Topic Z until you are ready, and leave
+         it tagged for ~:export:~ containing LaTeX directives, no
+         matter what...
+:END:
+** New Sub Topic X /(use "Sub Title", NOT "Sub Topic n.1")/       :noexport:
+<<TOPIC_new-sub-topic-x>>
+:README:
+   Sub Topics are the DNA that make up the chapters in a reference
+   or technical Book... Each new Sub Topic gets its own title or
+   phrase... The LaTeX memoir styles take care of numbering chapters
+   and sub topics for you automatically...
+
+   Chapters may contain several sub topics and sub topics can themselves
+   also have sub sub topics...
+
+   =Usage:=
+
+   - [ ] =Clone This:= *New Sub Topic X:* /(use "Sub Title", etc.)/
+
+         =Copy ALL its contents= and =paste= it as new sibling
+         directly UNDER any existing Sub Topic headings allready in place,
+         but ABOVE the BOILERPLATE item it was created from...
+         
+         /(i.e., save your boilerplate template on the bottom/
+         /of the list where it will be copied/cloned again later)/
+
+         =Do this whenever you need to start a new sub topic...=
+
+   - [ ] =Commandeer Your New Clone:=
+     
+        The structure of this template is all set up for you ahead
+        of time to allow you to immediately begin writing...
+
+        After cloning, rename *New Sub Topic X:*
+        to a *Unique Title* and remove /(boilerplate)/ in order
+        to commandeer the entire item for your needs...
+
+        Change the ~:noexport:~ tag to ~:export:~ for this NEW
+        REAL Sub-Topic so it will show up when publishing drafts...
+
+   - [ ] =Change The Anchor Link= /(make it unique)/
+
+         Change the anchor /(directly under the/ *Sub Topic X* /Title)/
+         to match your new Sub Topic title name...
+         
+         Leave ~TOPIC_~ as the anchor's prefix... /(as in boilerplate above)/
+         Use dashes to connect words /(all lower case)/ from your sub
+         topic's title...
+
+         The anchor above may be used to link to this sub-topic from
+         Research or other sections of this book...
+
+        /(which may or may not be published as links within eBook)/
+
+   - [ ] This *Sub Topic Template* could ALSO Serve As =CHAPTER INTRODUCTION=
+
+         This is optional if you need one, but its anchor link must be
+         unique! /(i.e., NOT "TOPIC_introduction")/
 :END:
 
-=ADD a NEW Items= /(as per :README: above)/ right here in this Log Book Binder whenever you need to create a new Log Entry...
+=Insert Sub Topic Content Here=
 
-\newpage
+Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo. Fusce tincidunt, lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante.
 
+At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
+
+** New Sub Topic Y /(use "Sub Title", NOT "Sub Topic n.2")/       :noexport:
+<<TOPIC_new-sub-topic-y>>
+:README:
+   Sub Topics are the DNA that make up the chapters in a reference
+   or technical Book... Each new Sub Topic gets its own title or
+   phrase... The LaTeX memoir styles take care of numbering chapters
+   and sub topics for you automatically...
+
+   Chapters may contain several sub topics and sub topics can themselves
+   also have sub sub topics...
+
+   =Usage:=
+
+   - [ ] =Clone This:= *New Sub Topic Y:* /(use "Sub Title", etc.)/
+
+         =Copy ALL its contents= and =paste= it as new sibling
+         directly UNDER any existing Sub Topic headings allready in place,
+         but ABOVE the BOILERPLATE item it was created from...
+         
+         /(i.e., save your boilerplate template on the bottom/
+         /of the list where it will be copied/cloned again later)/
+
+         =Do this whenever you need to start a new sub topic...=
+
+   - [ ] =Commandeer Your New Clone:=
+     
+        The structure of this template is all set up for you ahead
+        of time to allow you to immediately begin writing...
+
+        After cloning, rename *New Sub Topic Y:*
+        to a *Unique Title* and remove /(boilerplate)/ in order
+        to commandeer the entire item for your needs...
+
+        Change the ~:noexport:~ tag to ~:export:~ for this NEW
+        REAL Sub-Topic so it will show up when publishing drafts...
+
+   - [ ] =Change The Anchor Link= /(make it unique)/
+
+         Change the anchor /(directly under the/ *Sub Topic Y* /Title)/
+         to match your new Sub Topic title name...
+         
+         Leave ~TOPIC_~ as the anchor's prefix... /(as in boilerplate above)/
+         Use dashes to connect words /(all lower case)/ from your sub
+         topic's title...
+
+         The anchor above may be used to link to this sub-topic from
+         Research or other sections of this book...
+
+         /(which may or may not be published as links within eBook)/
+
+   - [ ] This *Sub Topic Template* could ALSO Serve As =CHAPTER INTRODUCTION=
+
+         This is optional if you need one, but its anchor link must be
+         unique! /(i.e., NOT "TOPIC_introduction")/
+:END:
+
+=Insert Sub Topic Content Here=
+
+Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo. Fusce tincidunt, lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante.
+
+At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
+
+** New Sub Topic Z /(MASTER - keep until Final Draft)/              :export:
+<<TOPIC_new-sub-topic-z>>
+:README:
+   This FINAL *New Sub Topic Z:* sub-title contains LaTeX directive:
+   ~\backmatter~ and ~\appendix~ which means it =MUST Be placed= as
+   the =LAST SUB TOPIC of your BOOK proper=...
+
+   The LaTeX directive at the end of *Sub Topic Z* /(or title/ /you/
+   /change it to)/ must be left =as is= when you are commandeering
+   the sub-topic to fit in as the last one in your book...
+
+   Do NOT touch this special Sub Topic Z until you are ready,
+   and leave it tagged for ~:export:~ containing LaTeX directives,
+   no matter what allways...
+
+   =Usage:=
+
+   - [ ] =Make Sure= *New Sub Topic Z:* is commandeered =LAST=
+
+         This Sub Topic MUST Be placed and appear as the LAST
+         Sub Topic in the LAST Chapter of your BOOK proper...
+
+   - [ ] =Commandeer Sub Topic Z when you are READY:=
+     
+        The structure of this template is all set up for you ahead
+        of time to allow you to immediately begin writing...
+
+        Rename *New Sub Topic Z:* /(MASTER - etc.)/
+        to a *Unique Title* and remove /(boilerplate)/ in order
+        to commandeer the entire item for your needs...
+
+   - [ ] =Change The Anchor Link= /(make it unique)/
+
+         Change the anchor /(directly under Sub Topic Title)/ to match
+         your new Sub Topic title name...
+         
+         Leave ~TOPIC_~ as the anchor's prefix... /(as in boilerplate above)/
+         Use dashes to connect words /(all lower case)/ from your Sub
+         Topic's title...
+
+         The anchor above may be used to link to this sub-topic from
+         Research or other sections of this book...
+
+         /(which may or may not be published as links within eBook)/
+:END:
+
+=Insert Sub Topic Content Here=
+
+Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo. Fusce tincidunt, lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante.
+
+At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
+
+
+
+=DO NOT REMOVE BELOW - MUST BE AT END OF BOOK PROPER=
+
+#+BEGIN_EXPORT latex
+\backmatter
+\appendix
+#+END_EXPORT
+
+** [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4DA.png]] Chapter References:                                               :noexport:
+:README:
+   =Org Mode Links Tip:=
+
+      + To Create a Link Type: ~C-c C-l~ 
+         /(then paste: ~link~ & type: "description")/
+
+         =-OR-= Simply Copy/Paste BOILERPLATE:
+              /(use placeholders below)/
+              And Fill Them In Manually... 
+              Copy/Paste more placeholders as
+              needed to create more links...
+
+      + To Open a Link Type: ~C-c C-o~
+
+      + To EXPAND a Link Type: ~SPACE b~
+         or: ~M-x org-toggle-link-display~
+
+   =BOILERPLATE:= /(clone to add more ref links)/
+
+   + *Heading:* [[link][Link NAME] ] /(comment)/
+
+   + [[link][Link Name] ] *Heading:* /(comment)/
+   
+   + *_:* [[][] ] /(yadda... yadda... yadda...)/
+
+   + [[][] ] /(_)/
+
+   + [[junk][JUNK]]  /(This is a stupid BUG workaround/ /for org-mode link/
+         /expansion/compression... If you invoke:/ ~org-toggle-link-display~
+         /you will notice this JUNK link DOES NOT compress to a clickable/
+         /link title alone.../
+         
+         /I am not sure if this is due to my Emacs Config or a bug within/
+         *Org-Mode* /itself.../
+
+         /I put this workaround in here because if it is not here,/
+         /SOME of your external file links created below may not/
+         /compress after expansion, even though thy are GOOD links!/
+
+         /Leaving this JUNK link in here acts like a scapegoat/
+         /so that your real links below will all compress/expand/
+         /normally... I am NOT SURE WHY THIS WORKS??? I'm to busy/
+         /to do anything beyond hacking at this point.../
+         
+         ~org-lint~ /will detect JUNK above... Ignore that warning.../
+                  /It's my "METHOD of MADNESS" %^)/
+:END:
+
++ *Link to Project:* [[][] ] /(comment)/
+
+** [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4DD.png]] Chapter Notes:                                                        :noexport:
+:README:
+   *Chapter Notes*, Should be written in =OUTLINE= form to aid in organization
+   of events, etc... This section is =NOT the place to create NEW ideas=, 
+   but rather to =organize EXISTING ideas you have already written=...
+
+   =None of the Content Written Here Should be Added to any= 
+   =Chapter/Topics within your Book= 
+
+   =THIS IS A META PLACE=
+
+      /(i.e., Your Books Internal Analyst/
+             /Behind the Curtain So-To-Speak... %^)/
+
+   The example Notes below have been timestamped as a way to suggest
+   organizing TODO items for a particular chapter you may find yourself
+   working on, or researching...
+   
+   =Use or replace the notes below for your own schemes=
+:END:
+*** NEW Note 1: <2020-05-10 Sun>
+
+1. Enumerated List Item A
+
+2. Enumerated List Item B
+
+3. Enumerated List Item C
+
+4. Enumerated List Item D
+
+
+1. =New Enumerated List...=
+
+2. Bullet checkbox Test one...
+
+    + [ ] Checkbox List item:
+
+    + [ ] Checkbox List item:
+
+*** NEW Note 2: <2020-05-10 Sun>
+
+Each new note needs to get its own heading and initial timestamp...
+
+It is fine to make as many sub-headings as needed for these notes
+but not important for them to also be time-stamped...
+
+***** Quid Novi? /(example note sub heading)/
+
+Quid Novi? Lorem Ipsum dolor sit amet,consectetur adipisicing elit, sed doeiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim adminim veniam, quis nostrudexercitation ullamco laboris nisi utaliquip ex ea commodo consequat.Duis aute irure dolor inreprehenderit in coluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatatnon proident, sunt in culpa quiofficia deserunt mollit anim id estlaborum.
+
+* APPENDIX A                                                         :export:
+
+=Insert Appendix Content Here=
+
+Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo. Fusce tincidunt, lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante.
+
+At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
+
+* APPENDIX B                                                         :export:
+
+=Insert Appendix Content Here=
+
+Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo. Fusce tincidunt, lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante.
+
+At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
+
+* 🔍 Research:                                                       :noexport:
 ** 💡 New Topic Ideas:
 :README:
    Use this space to add new topic ideas that come up as you are
@@ -644,13 +1715,13 @@ Yadda, yadda, yadda. etc...
 later... You will know anything set to ~:ACTIVE:~ within this binder needs to
 be worked on.
 
-\newpage
+ 
 
 *** NEW 💡 New Topic /(clone this)/
 
 At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
 
-\newpage
+ 
 
 ** 📒 Yak Shaving:
 :README:
@@ -686,7 +1757,7 @@ Note: This is an example of some documentation or research you need to do, the r
 
 Use this section's top level heading outline structure.. Create sub-level headings as needed for your purposes...
 
-\newpage
+ 
 
 *** NEW Yak Shaving Heading Two:
 
@@ -694,7 +1765,7 @@ Note: This is an example of some documentation or research you need to do, the r
 
 Use this section's top level heading outline structure.. Create sub-level headings as needed for your purposes...
 
-\newpage
+ 
 
 *** NEW Add more yak shaving headings as needed:
 
@@ -704,31 +1775,418 @@ Create sub-level outlines below each heading as needed for your purposes.
 
 Anything goes here... You can make this into what ever you want..
 
-\newpage
+ 
 
-* ⏰ Tasks:                               :noexport:
+* 🗓 LOGS:                                                             :noexport:
 :README:
-   This Tasks Section is similar to the Log Book within the 
-   Research section of this Book Project...  Log entries
-   are research activities...  Tasks are more General and
-   relate to this ENTIRE Book Project as a whole...
+   Use this space to add time stamped log note entries for any 
+   pourpose you may need while you are planning, writing, or 
+   publishing your book...
+
+   =USAGE=
+
+      =Place New:=   *🗓 LOG:* /<timestamp>/ *Entry* /(Log Entry Template)/ 
+      =Items From:=  *⎘ Templates:* Binder /(under the/ *⎘ Meta: /binder)/
+      =Into This:=  *🗓 Log Book:* Binder /(for current year)/
+:END:
+** 📅 2022:
+*** NEW 🗓 LOG: <2021-03-29 Mon> Generic Title /(General Log Entry Template)/
+<<LOG_Generic-Title>>
+:README:
+   =Using the Clocking Feature of this Log Entry=
+
+   - [ ] *Go To One of the HEADINGS Below:*
+
+         /(Summary, Details, or Sub Headings)/
+
+         =Punch the Time Clock:= /(see Clocking Commands: below)/ At
+         the heading And then begin working on a task related to
+         that Heading...
+
+         =Your Time IS being Recorded Now= /(you will see a/ *:clocking:*
+         /item under the heading where time is recorded)/
+
+   - [ ] =Use These Clocking Commands:= /to keep track your time.../
+
+      + *Clock IN:* ~C-c C-x C-i~ /(Begin OR Resume Clocking Current task)/
+
+            This creates a new :CLOCKING: Time Card Entry just
+            underneath the HEADING...
+
+            Do this just before starting work on the task... 
+            Be in control of your life!
+
+            After doing the above, you can go away and do some 
+            work, leaving this heading, log note, etc. to visit 
+            other files and/or work on them etc. The clock will 
+            be recording your time all the while... You will see 
+            in your mode line the elapsed clock time ticking away 
+            as you work on a task /(hopefully related to this clock!)/
+            and NOT Yac Shaving or being sidetracked!!!
+
+      + *RETURN to Clock Heading:* ~C-c C-x C-j~
+
+            /Go back to the place where you started the clock.../
+
+            You do this after you have worked on a task for a 
+            while and you need to come back to update the item's
+            info etc., and/or stop the clock before going off to 
+            do something else unrelated to the log entry...
+
+      + *Clock OUT:* ~C-c C-x C-o~ /(to stop clocking your time on task)/
+
+            This *Finalizes the Time Card Entry* within:
+            ~:CLOCKING:~ /(created earlier when you started the clock)/
+
+            The Clock Entry changes showing start timestamp, end
+            timestamp, and total time worked during this segment...  
+
+            =Please DON'T Forget= /Like I often do, LOL.../ i.e., Leaving
+            a clock running all day by accident, or worse, leave it
+            dangling with the file closed only to open it again and
+            get that nasty *Org-Mode Message:* /"What do you want to do/
+            /with this?"/ If you do something like that you can always
+            come back and directly edit the clock times by hand to
+            amend them...  After changing clock times or dates, etc...
+            Whatever...
+
+                  ="Onward We Row Mates... Through the log jam!"=
+
+      + *Update Time Card Entry:* ~C-c C-c~ 
+
+            This command will change the total time at the end showing 
+            your new calculated time...
+
+            If you need to go away and do something else before finishing
+            this task, you can do so after clocking out... When you come
+            back simply clock back in again to start another Time Card
+            Entry just as before... The new time card entry will appear
+            above the earlier one within the ~:CLOCKING:~ drawer... When
+            you clock out of this task it will look just like the entry
+            below it with a total time worked tagged on the end...
+
+      + *Clock Out & Mark Items Done:* ~C-c C-t~
+
+            When you are all done with a Log Entry use the above key 
+            command to mark its Heading *TODO* tag to: *DONE* /(Most of the/ 
+            /time this will ALSO clock you out if you are still clocked/ 
+            /into the item... But not allways in my experience.../  
+            So make sure you are also clocked OUT of an Item After 
+            marking it DONE... Type: ~C-c C-x C-j~ to check this...
+            /(if no running clock it will tell you and place your/
+            /cursor at the heading where you LAST CLOCKED OUT)/
+
+      + ~C-c C-x C-q~ *Cancel Current Clock:* /(in case of accident)/
+
+            This removes currently running clock and forgets any time
+            accrued or associated with it...
+
+      + ~C-c C-x C-d~ *Display Clocking Info:* 
+
+            /This will show elapsed times to the right of headings.../
+            =Warning!= Using this command will CLUTTER ALL the headings
+                     within your org file with those timestamps!!!
+
+:END:
+
+This Log Entry is about: Yadda... Yadda... Yadda...
+
+**** NEW 📚 Reference:
+:README:
+   =Org Mode Links Tip:=
+
+      + To Create a Link Type: ~C-c C-l~ 
+         /(then paste: ~link~ & type: "description")/
+
+         =-OR-= Simply Copy/Paste BOILERPLATE:
+              /(use placeholders below)/
+              And Fill Them In Manually... 
+              Copy/Paste more placeholders as
+              needed to create more links...
+
+      + To Open a Link Type: ~C-c C-o~
+
+      + To EXPAND a Link Type: ~SPACE b~
+         or: ~M-x org-toggle-link-display~
+
+   =BOILERPLATE:= /(clone to add more ref links)/
+
+   ☞ *Heading:* [[link][Link NAME] ] /(comment)/
+
+   ☞ [[link][Link Name] ] *Heading:* /(comment)/
+   
+   ☞ *_:* [[][] ] /(yadda... yadda... yadda...)/
+
+   ☞ [[][] ] /(_)/
+
+   [[junk][JUNK]]  /(This is a stupid BUG workaround/ /for org-mode link/
+         /expansion/compression... If you invoke:/ ~org-toggle-link-display~
+         /you will notice this JUNK link DOES NOT compress to a clickable/
+         /link title alone.../
+         
+         /I am not sure if this is due to my Emacs Config or a bug within/
+         *Org-Mode* /itself.../
+
+         /I put this workaround in here because if it is not here,/
+         /SOME of your external file links created below may not/
+         /compress after expansion, even though thy are GOOD links!/
+
+         /Leaving this JUNK link in here acts like a scapegoat/
+         /so that your real links below will all compress/expand/
+         /normally... I am NOT SURE WHY THIS WORKS??? I'm to busy/
+         /to do anything beyond hacking at this point.../
+         
+         ~org-lint~ /will detect JUNK above... Ignore that warning.../
+                  /It's my "METHOD of MADNESS" %^)/
+:END:
+
+☞ *Link to Project:* [[][] ] /(comment)/
+
+**** NEW ⏰ Time Card:
+
+#+BEGIN: clocktable :scope tree3 :maxlevel 6 :tstart "<-1w>" :tend "<+1m>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3
+#+END:
+
+**** NEW ✅ Summary: [0/3]
+:README:
+   This Summary is mostly to help you find things later when you
+   cannot remember when or where is was done... If you go to the
+   top of this file and expand all headings to show ALL content,
+   then do a search on "~Summary:~" you will be able to quickly
+   scroll through and scan these summaries quickly to find what
+   you were looking for... 
+
+   Also the *Time Card* /displayed above/ each search hit will give
+   more clues by showing important headings you worked on...
+
+   Below is an optional list /(that could also provide links)./ This
+   list could be used to itemize things you worked on, but I
+   personally find it easier to simply write a short one or two
+   line description containing important keywords right here and
+   nothing more. I think that is more useful...
+:END:
+
+Yadda... Yadda... Yadda...
+
+1. [ ] *New Item 1:*
+
+2. [ ] *New Item 2:*
+
+3. [ ] *New Item 3:* /(copy/clone more as needed)/
+
+**** NEW 📒 Details:
+***** NEW ⏱ New Item 1 /(placeholder)/ [0/3]
+
+New Item Details... Yadda... Yadda... Yadda...
+
+Re-Purpose these as needed and Delete anything you don't need...
+
+Add sub headings as needed...
+
+Don't forget to clock-in to HEADINGS while you work on them...
+AND... Don't forget to Clock OUT when you are DONE... %^)
+
+=Delete BOILERPLATE= /below/ if you don't need it...
+
+****** BOILERPLATE:
+
+The following list contains Babel Source Code Blocks that are often needed for something I am writing or "Logging" about... I use them so much I decided to include them in this template...
+
+- [ ] *__:* /(__)/
+
+      #+begin_src conf
+       keyword1:     Value1 
+       keyword2:     Value2 
+       keyword3:     Value 
+      #+end_src
+
+- [ ] *__:* /(__)/
+
+      #+begin_src bash
+       sudo dnf install emacs
+       sudo apt install emacs
+      #+end_src
+
+- [ ] *__:* /(__)/
+
+      #+BEGIN_SRC emacs-lisp :results output
+       ;; Initialize Local Vars from GLOBAL CONSTANTS;
+       (let ((h (list 'text-pixels ME--CODE-FRAME-HEIGHT))
+             (w (list 'text-pixels ME--CODE-FRAME-WIDTH)))
+         (princ "CAR h: ")
+         (princ (car h))
+         (princ "\n")
+         (princ "CDR h: ")
+         (princ (cdr h))
+         (princ "\n\n")
+         (princ "CAR w: ")
+         (princ (car w))
+         (princ "\n")
+         (princ "CDR w: ")
+         (princ (cdr w)))
+      #+END_SRC
+
+      #+RESULTS:
+      : CAR h: text-pixels
+      : CDR h: (42)
+      : 
+      : CAR w: text-pixels
+      : CDR w: (92)
+
+***** NEW ⏱ New Item 2 /(placeholder)/ [0/3]
+
+New Item Details... Yadda... Yadda... Yadda...
+
+Re-Purpose these as needed and Delete anything you don't need...
+
+Add sub headings as needed...
+
+Don't forget to clock-in to HEADINGS while you work on them...
+AND... Don't forget to Clock OUT when you are DONE... %^)
+
+=Delete BOILERPLATE= /below/ if you don't need it...
+
+****** BOILERPLATE:
+
+The following list contains Babel Source Code Blocks that are often needed for something I am writing or "Logging" about... I use them so much I decided to include them in this template...
+
+- [ ] *__:* /(__)/
+
+      #+begin_src conf
+       keyword1:     Value1 
+       keyword2:     Value2 
+       keyword3:     Value 
+      #+end_src
+
+- [ ] *__:* /(__)/
+
+      #+begin_src bash
+       sudo dnf install emacs
+       sudo apt install emacs
+      #+end_src
+
+- [ ] *__:* /(__)/
+
+      #+BEGIN_SRC emacs-lisp :results output
+       ;; Initialize Local Vars from GLOBAL CONSTANTS;
+       (let ((h (list 'text-pixels ME--CODE-FRAME-HEIGHT))
+             (w (list 'text-pixels ME--CODE-FRAME-WIDTH)))
+         (princ "CAR h: ")
+         (princ (car h))
+         (princ "\n")
+         (princ "CDR h: ")
+         (princ (cdr h))
+         (princ "\n\n")
+         (princ "CAR w: ")
+         (princ (car w))
+         (princ "\n")
+         (princ "CDR w: ")
+         (princ (cdr w)))
+      #+END_SRC
+
+      #+RESULTS:
+      : CAR h: text-pixels
+      : CDR h: (42)
+      : 
+      : CAR w: text-pixels
+      : CDR w: (92)
+
+ 
+
+***** NEW ⏱ New Item 3 /(placeholder)/ [0/3]
+
+New Item Details... Yadda... Yadda... Yadda...
+
+Re-Purpose these as needed and Delete anything you don't need...
+
+Add sub headings as needed...
+
+Don't forget to clock-in to HEADINGS while you work on them...
+AND... Don't forget to Clock OUT when you are DONE... %^)
+
+=Delete BOILERPLATE= /below/ if you don't need it...
+
+****** BOILERPLATE:
+
+The following list contains Babel Source Code Blocks that are often needed for something I am writing or "Logging" about... I use them so much I decided to include them in this template...
+
+- [ ] *__:* /(__)/
+
+      #+begin_src conf
+       keyword1:     Value1 
+       keyword2:     Value2 
+       keyword3:     Value 
+      #+end_src
+
+- [ ] *__:* /(__)/
+
+      #+begin_src bash
+       sudo dnf install emacs
+       sudo apt install emacs
+      #+end_src
+
+- [ ] *__:* /(__)/
+
+      #+BEGIN_SRC emacs-lisp :results output
+       ;; Initialize Local Vars from GLOBAL CONSTANTS;
+       (let ((h (list 'text-pixels ME--CODE-FRAME-HEIGHT))
+             (w (list 'text-pixels ME--CODE-FRAME-WIDTH)))
+         (princ "CAR h: ")
+         (princ (car h))
+         (princ "\n")
+         (princ "CDR h: ")
+         (princ (cdr h))
+         (princ "\n\n")
+         (princ "CAR w: ")
+         (princ (car w))
+         (princ "\n")
+         (princ "CDR w: ")
+         (princ (cdr w)))
+      #+END_SRC
+
+      #+RESULTS:
+      : CAR h: text-pixels
+      : CDR h: (42)
+      : 
+      : CAR w: text-pixels
+      : CDR w: (92)
+
+ 
+
+=ADD a NEW Items= /(as per :README: above)/ right here in this Log Book Binder whenever you need to create a new Log Entry...
+
+
+
+** 📅 2023:
+
+=ADD a NEW Items= /(as per :README: above)/ when 2023 rolls around, right here in this Log Book Binder whenever you need to create a new Log Entry...
+
+* [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u23F1.png]] TASKS:                                                            :noexport:
+:README:
+   This *TASKS* Binder is similar to the *🗓 LOGS:* Binder...
+   However, log entries are research activities... while tasks are
+   more General and relate to this ENTIRE Book Project as a whole...
 
    - *Use this Section to* =ADD TIME STAMPED TASKS= *for any pourpose*
 
-      Create More *⏰ Tasks:* =Sub Categories= & *⏱ New Task:* =Entries= 
-      as needed during the development of your Book Project...
+      + Create More *⏱ Tasks:* =Sub Categories= as needed...
 
-      Use the Supplied: *⏱* <2022-08-25 Thu> *New Task:* /(Master Template)/ 
-      from the *⎘ Meta: / ⎘ Templates:* Binder to easily =copy/clone= 
-      a new Task Entry into this *⏰ Tasks:* Binder...
+      + Create More *⏱ New Task:* =Entries= under =Sub Categories= 
+         as needed during the development of your Book Project...
+
+         Use the Supplied: *⏱* <2022-08-25 Thu> *New Task:* /(Master Template)/ 
+         from the *⎘ Templates:* Section within the *⎘ Meta:* Binder to easily 
+         =copy/clone= a new Task Entry under a Sub Category of this *⏱ Tasks:* 
+         Binder...
 
    - *Time Stamp Task Entries With:* ~C-c .~ *To Set The* =START DATE=
 
    - *Use or Create NEW Task Sub Categories as Needed:*
 
    The Synopsis Tasks provided below are important first steps to take 
-   when first starting a book.  They are based on the "Snowflake Method" 
-   by Randy Ingermanson...
+   when first starting any book.  They are based on the "Snowflake Method" 
+   by Randy Ingermanson... /(for fiction writers)/ but the universal
+   visualization concepts apply for reference and technical works as well.
 
    These tasks should be started as soon as you create a new project 
    using this: *HAP_Technical-Book-Project-Skeleton* 
@@ -761,7 +2219,7 @@ Anything goes here... You can make this into what ever you want..
    before doing any other writing! This advise comes from many 
    highly acclaimed authors! Not just Randy...
 :END:
-*** NEW <2022-08-25 Thu> Do This First: =Important=
+*** NEW ⏱ <2022-08-25 Thu> Do This First: =Important=
 
 =NOTE:= Before you start you need to answer the 
       following questions:
@@ -781,9 +2239,7 @@ Anything goes here... You can make this into what ever you want..
 
 After completing above, follow the steps below...
 
-\newpage
-
-*** NEW <2022-08-25 Thu> Step One - Write a Single Sentence Summary:
+*** NEW ⏱ <2022-08-25 Thu> Step One - Write a Single Sentence Summary:
 
 =Take An Hour And Write A One-Sentence Summary Of Your Book:= 
    
@@ -878,7 +2334,8 @@ When the time comes for you to write your book proposal, this sentence should ap
 
    /(and other 60 second movies like it)/ for a completely 
    different audio/visual parallel to this literary concept...
-*** NEW <2022-08-25 Thu> Step Two - Expand Summary to Paragraph
+   
+*** NEW ⏱ <2022-08-25 Thu> Step Two - Expand Summary to Paragraph
 
 =Take another hour and expand your sentence= from step one into a full paragraph describing brief overview, technical requirements or challenges, and ending with your proposed solution in a single sentence.
 
@@ -898,11 +2355,11 @@ No one claims this to be an absolute ideal structure, but it's the one that Rand
 
 - *The second disaster /(challenge)/ would be the mid-point of Act 2*
 
-- *The third disaster /(challenge)/ would come at the end of Act 2, and force Act 3*
+- *The third disaster /(challenge)/ would come at the end of Act 2,
+   and force Act 3*
 
-- *Act 3 wraps everything up* /(and provides a final solution or conclusion for your technical book...)/
-
-\newpage
+- *Act 3 wraps everything up* /(and provides a final solution or
+   conclusion for your technical book...)/
 
 **** Make 5 Sentences: [0/5]
 
@@ -944,7 +2401,7 @@ No one claims this to be an absolute ideal structure, but it's the one that Rand
    encouragement and also challenge for your readers to read 
    this book to discover more.
 
-\newpage
+ 
 
 **** Using Your One-Paragraph Summary:
 
@@ -953,9 +2410,9 @@ too many details until they read the book...
 
 =However=, Some of this paragraph /(written with parts pourposefully left out or with questions put in place)/ may end up back-cover copy for your book's promotion.
 
-\newpage
+ 
 
-*** NEW <2022-08-25 Thu> Step Three - Expand Paragraph to Synopsis:
+*** NEW ⏱ <2022-08-25 Thu> Step Three - Expand Paragraph to Synopsis:
 
 =Take several hours and expand each sentence= of your summary paragraph into a full paragraph. 
 
@@ -967,18 +2424,15 @@ At the end of this exercise, you will have a nice one-page skeleton of your book
 
 Your process now is to grow these ideas as individual chapters and topics.  You have a synopsis "executive summary" suitable for a proposal, and you are well on your way to doing extended promotion...
 
-\newpage
+*** NEW ⏱ <2022-08-25 Thu> Completion:
 
-*** NEW <2022-08-25 Thu> Completion:
+- [ ] *Copy one-page skeleton from:* =Step Three= above to the main
+      *📃 Synopsis:* Section of this book project...
 
-- [ ] *Copy one-page skeleton from:* =Step Three= above to: *📃 Synopsis:* 
-       inside the *🕮 Book:* Binder...
+      When you are done with these Synopsis tasks, you will have 
+      completed half the battle of writing your technical work! 
+      Everything else you write will flow out of that initial seed...
 
-       When you are done with these Synopsis tasks, you will have 
-       completed half the battle of writing your technical work! 
-       Everything else you write will flow out of that initial seed...
-
-\newpage
 ** ⏱ Other Tasks:
 *** SOMEDAY ⏱ <2022-08-28 Sun> Create Editorial Calendar
 
@@ -988,20 +2442,17 @@ Your process now is to grow these ideas as individual chapters and topics.  You 
 
 Make an *Editorial* for this project! You will need this for quick access during publishing time. Org-Mode excels for this task!  Take advantage of its powerful scheduling, agenda, and filtering capabilities!
 
-Use this space to design your *EC* and then transfer it as a New Section within the main *🕮 Book:* /(binder)/ of this Book Project...
+Use this space to design your *EC* and then transfer it as a New Top Level
+Binder of this Book Project...
 
-\newpage
-
-* ⎘ Meta: /(templates etc.)/              :noexport:
+* [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F5C2.png]] Meta: /(templates etc.)/                                          :noexport:
 ** 📄 About:
 
 This =Meta= section provides skeleton templates for use within your project(s).  Any sub heading under this Meta: group can be utilized by copy-pasting the collapsed heading into any of your existing project sections (i.e., making a clone anywhere you need to create a new section based on the template's structure)... 
 
-Or... You could try mashing several cloned templates together to create a totally new project heading with a totally different structure... The intent of this is to save lots of time starting up a new custom writing project.  Lets see if it helps. :trollface:
+Or... You could try mashing several cloned templates together to create a totally new project heading with a totally different structure... The intent of this is to save lots of time starting up a new custom writing project.  Lets see if it helps...
 
-\newpage
-
-** Instructions:
+** 📄 Instructions:
 
 - [ ] *Choose One Of The Templates Below And Copy It:*
 
@@ -1020,428 +2471,442 @@ Or... You could try mashing several cloned templates together to create a totall
         /keep those titles as they are universal.../ 
         /but you may wish to further qualify them by adding/ 
         /a prefixed category word.)/
-
-\newpage
-
-** NEW 📖 Chapter: ~#~ <optional title> /(Master Template)/
-:README:
-   *📖 Chapters* are the *Top Level Headings* within the 
-   *🕮 Book:* Binder of this Book Publishing project...
-
-   =Usage:=
-
-   - [ ] =Clone This:= *📖 Chapter:* ~#~ *<optional title>* /(Master Template)/ 
-          =Copy ALL its contents= and =paste= it as a child Item 
-          in the *🕮 Book:* Binder of this Emacs Org-Mode Book 
-          Publishing Project... 
-
-          Do this whenever you need to start a new chapter...
-
-   - [ ] =Edit Your New Clone:=
-          The structure of this template is all set up for 
-          you ahead of time to allow you to immediately begin 
-          writing...  
-
-          Replace titles to suit your needs, but keep the 
-          structure of *Chapter / Topic* etc., intact... 
-          /(i.e., change names only...)/
-:END:
-*** ☞ Chapter References:
+        
+*** ☞ Reference:
 :README:
    =Org Mode Links Tip:=
 
-      To Create a Link Type: ~C-c C-l~ /(then paste: ~link~ & type: "description")/
-      To Open a Link Type: ~C-c C-o~
+      + To Create a Link Type: ~C-c C-l~ 
+         /(then paste: ~link~ & type: "description")/
 
-      =-or-= Simply Fill in the Template Link Placeholders Below 
-           & copy/paste more placeholders as needed... ;-)
-:END:
+         =-OR-= Simply Copy/Paste BOILERPLATE:
+              /(use placeholders below)/
+              And Fill Them In Manually... 
+              Copy/Paste more placeholders as
+              needed to create more links...
 
-*Add links to Anything Deemed Important to the Writing of This Chapter:*
-/(Links to Websites, Other Stories, Images, Sound, Video, Whatever...)/
+      + To Open a Link Type: ~C-c C-o~
 
-- [[][] ] - 
+      + To EXPAND a Link Type: ~SPACE b~
+         or: ~M-x org-toggle-link-display~
 
-- [[][] ] - 
+   =BOILERPLATE:= /(clone to add more ref links)/
 
-- [[][] ] - 
+   + *Heading:* [[link][Link NAME] ] /(comment)/
 
-- [[][] ] - 
-
-- [[][] ] -
-
-\newpage
-
-*** 🔖 Chapter Introduction: /(optional - remove if not needed)/
-
-*Lorem Ipsum *Lorem Ipsum dolor sit amet*, consectetuer adipiscingelit. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo. Fusce tincidunt, /lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante./
-
-\newpage
-
-*** 🔖 New Topic 1:  /(Replace With Title or Simply Use:/ ~#.1.1~ /etc.)/
-:README:
-   =Topics= /(Scenes)/ are the DNA that make up the chapters in a  
-   book... Each Topic could have its own title or phrase or 
-   it could not have a title but instead sub chapter numbering 
-   only...
-
-   Chapters may contain several topics... There can be many 
-   twisty paths all alike (or all different)... %~)
-
-   This *Topic Template* could ALSO Serve As A 
-   =CHAPTER INTRODUCTION= if you need one...
-
-   =Note:= /You also have options to export with TeX directives/ 
-         /to add sub chapter numbering e.g., ~1.1.1...~ etc.../
-         /and this could be added with or without inclusion of/
-         /the scene name headings.../
-:END:
-
-~<insert Topic Content Here>~
-
-At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
-
-\newpage
-
-=Copy/Clone This Entire Topic Heading and Paste Copy Below it as Needed=
-
-*** 🔖 New Topic 2:  /(Replace With Title or Simply Use:/ ~#.2.1~ /etc.)/
-:README:
-   =Topics= /(Scenes)/ are the DNA that make up the chapters in a  
-   book... Each Topic could have its own title or phrase or 
-   it could not have a title but instead sub chapter numbering 
-   only...
-
-   Chapters may contain several topics... There can be many 
-   twisty paths all alike (or all different)... %~)
-
-   This *Topic Template* could ALSO Serve As A 
-   =CHAPTER INTRODUCTION= if you need one...
-
-   =Note:= /You also have options to export with TeX directives/ 
-         /to add sub chapter numbering e.g., ~1.1.1...~ etc.../
-         /and this could be added with or without inclusion of/
-         /the scene name headings.../
-:END:
-
-~<insert Topic Content Here>~
-
-At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
-
-\newpage
-
-=Copy/Clone This Entire Topic Heading and Paste Copy Below it as Needed=
-
-*** 🗒 Background Notes:
-:README:
-   *Background Notes* /(unlike Topics, Introductions, Summaries etc.)/
-   Should be written in =OUTLINE= form to aid in organization of 
-   details, etc... This section is =NOT the place to create NEW ideas=, 
-   but rather to =organize EXISTING ideas you have already written=...
-
-   =None of the Content Written Here Should be Added to any= 
-   =Chapter/Topics within your Book= 
-
-   =THIS IS A META PLACE=
-
-      /(i.e., Your Books Internal Analyst/
-             /Behind the Curtain So-To-Speak... %^)
-
-   Use Background Notes when you need to add notes, ideas, instructions,
-   whatever... close at hand within the chapter, and not have to worry 
-   about any of it getting exported and or published to the final output 
-   product...  
-
-   Nothing within this section will be exported... not even the Background
-   Notes Heading itself.  Use this section any way and for any purpose you 
-   wish for things related to the chapter heading that contains it...
-
-   The example Notes below have been timestamped as a way to suggest
-   organizing TODO items for a particular chapter you may find 
-   yourself working on, or researching... 
-
-   =Use/Replace the notes below for your own schemes=
-:END:
-**** 🗒 Note 1: <2020-05-10 Sun> /(example)/
-
-*Mark each note's timestamp to its initial creation time*. This will enable emerging notes for chapters to be searched chronologically, and to give you an idea of how things evolve over time...
-
-*Add anything you need here under this heading* formatted any way needed to present the data... Sub levels are fine, tables are fine... etc.  This is your chapter's Notebook, Scrapbook, whatever any extra info/metadata you feel is important to record...
-
-- *Use bulleted lists/sublist etc. if needed...*
-
-*1. Or Numbered Lists...*
-
-|----+--------|
-| Or | Tables |
-|----+--------|
-|  1 |    2.3 |
-|----+--------|
-
-Do any or all the above to help get the concepts and images of your book clear in mind...
-
-\newpage
-
-**** 🗒 Note 2: <2020-05-10 Sun> /(example)/
-
-Each new note needs to get its own heading and initial timestamp...
-
-****** Quid Novi?
-
-Quid Novi? Lorem Ipsum dolor sit amet,consectetur adipisicing elit, sed doeiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim adminim veniam, quis nostrudexercitation ullamco laboris nisi utaliquip ex ea commodo consequat.Duis aute irure dolor inreprehenderit in coluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatatnon proident, sunt in culpa quiofficia deserunt mollit anim id estlaborum.
-
-\newpage
-*** 📝 Chapter Summary: /(Chapter Template)/
-:README:
-   Chapter Summaries, /(Just Like Background Notes)/ are ALSO =META DATA= 
-   Not Intended to be Added back to the Chapters/Topics of your 
-   Book... The purpose of Chapter Summaries are to help you during 
-   planning stages where you are trying to resolve some technical 
-   detail, or work out a best practice method, etc...
-
-   Keeping the above in mind while writing a chapter summary will help 
-   you get better organized about how your book is developing, what 
-   directions you need to take next, what areas need the most work, 
-   and where problems or inconsistencies may arise...
-
-   Most importantly, this will help prevent you from making any grave 
-   mistakes causing contradictions within your presentation later... 
+   + [[link][Link Name] ] *Heading:* /(comment)/
    
-   In any case you will be better informed by keeping all your figuring 
-   here in this summary where you can see and resolve issues quickly...
+   + *_:* [[][] ] /(yadda... yadda... yadda...)/
+
+   + [[][] ] /(_)/
+
+   + [[junk][JUNK]]  /(This is a stupid BUG workaround/ /for org-mode link/
+         /expansion/compression... If you invoke:/ ~org-toggle-link-display~
+         /you will notice this JUNK link DOES NOT compress to a clickable/
+         /link title alone.../
+         
+         /I am not sure if this is due to my Emacs Config or a bug within/
+         *Org-Mode* /itself.../
+
+         /I put this workaround in here because if it is not here,/
+         /SOME of your external file links created below may not/
+         /compress after expansion, even though thy are GOOD links!/
+
+         /Leaving this JUNK link in here acts like a scapegoat/
+         /so that your real links below will all compress/expand/
+         /normally... I am NOT SURE WHY THIS WORKS??? I'm to busy/
+         /to do anything beyond hacking at this point.../
+         
+         ~org-lint~ /will detect JUNK above... Ignore that warning.../
+                  /It's my "METHOD of MADNESS" %^)/
 :END:
 
-=Chapter Summary= /(example)/
+Here are Links to Information that may be helpful While Using this Technical Book Template
 
-In this chapter we are dealing with yadda yadda yadda which must be resolved with yadda yadda yadda.  But be careful about Yadda Yadda Yadda as that does not exist in this book at all!  What?  Nevermind... It never existed... 
-IT Only exists when you actually try to observe the results...
+- [[https://mirrors.rit.edu/CTAN/macros/latex/contrib/memoir/memman.pdf][The Memoir Class]] - /Link to PDF/ 
 
-\newpage
+      The above document is all about the LaTeX Class used by: 
+      *This  Book Template*...
+
+- [[https://latex-tutorial.com/documentclass-latex/][Your Guide to documentclass LaTeX: Types and options]] - /LaTeX-Tutorial.com/
+
+- [[https://orgmode.org/manual/In_002dbuffer-Settings.html][Summary of In-Buffer Settings]] - /The ORG Manual/
+
+- [[https://orgmode.org/manual/Export-Settings.html#Export-Settings][Export Settings]] - /The ORG Manual/
+
+- [[https://orgmode.org/manual/Table-of-Contents.html][Table of Contents]] - /(Ths ORG Manual)/
+
+- [[https://ctan.org/][Comprehensive TeX Archive Network]] - /CTAN/
+
+- [[https://www.linuxjournal.com/content/org-mode-latex-exporter-latex-non-texers][The org-mode LaTeX exporter]] - /(LaTeX for non-TEXers) LINUX Journal/
+
+- [[https://www.geneatcg.com/emacs-org-mode-export-to-pdf/][Emacs Org Mode export to pdf]] - /(Article by: Gene Ting-Chun Kao)/
 
 ** ⎘ Templates:
-*** NEW 🗓 LOG: <2021-03-29 Mon> Entry /(Log Entry Template)/
+*** NEW 🗓 LOG: <2021-03-29 Mon> Generic Title /(General Log Entry Template)/
+<<LOG_Generic-Title>>
 :README:
-   - *Go To One of the HEADINGS Below:* /(Summary, Details, or Sub Headings)/
+   =Using the Clocking Feature of this Log Entry=
 
-      =Punch the Time Clock= At the heading And then begin working on a
-      task related to that Heading... =Your Time IS being Recorded Now= 
+   - [ ] *Go To One of the HEADINGS Below:*
 
-   - =Use These Commands:= /as you work to keep track your time.../
+         /(Summary, Details, or Sub Headings)/
 
-      + *Clock IN:* ~C-c C-x C-i~ 
+         =Punch the Time Clock:= /(see Clocking Commands: below)/ At
+         the heading And then begin working on a task related to
+         that Heading...
 
-           /(Begin OR Resume Clocking Current task)/
+         =Your Time IS being Recorded Now= /(you will see a/ *:clocking:*
+         /item under the heading where time is recorded)/
 
-           This creates a new :CLOCKING: Time Card Entry just
-           underneath the HEADING...
+   - [ ] =Use These Clocking Commands:= /to keep track your time.../
 
-           Do this just before starting work on the task... 
-           Be in control of your life!
+      + *Clock IN:* ~C-c C-x C-i~ /(Begin OR Resume Clocking Current task)/
 
-           After doing the above, you can go away and do some 
-           work, leaving this heading, log note, etc. to visit 
-           other files and/or work on them etc. The clock will 
-           be recording your time all the while... You will see 
-           in your mode line the elapsed clock time ticking away 
-           as you work on a task /(hopefully related to this clock!)/
-           and NOT Yac Shaving or being sidetracked!!!
+            This creates a new :CLOCKING: Time Card Entry just
+            underneath the HEADING...
+
+            Do this just before starting work on the task... 
+            Be in control of your life!
+
+            After doing the above, you can go away and do some 
+            work, leaving this heading, log note, etc. to visit 
+            other files and/or work on them etc. The clock will 
+            be recording your time all the while... You will see 
+            in your mode line the elapsed clock time ticking away 
+            as you work on a task /(hopefully related to this clock!)/
+            and NOT Yac Shaving or being sidetracked!!!
 
       + *RETURN to Clock Heading:* ~C-c C-x C-j~
 
-           /Go back to the place where you started the clock.../
+            /Go back to the place where you started the clock.../
 
-           You do this after you have worked on a task for a 
-           while and you need to come back to update the item's
-           info etc., and/or stop the clock before going off to 
-           do something else unrelated to the log entry...
+            You do this after you have worked on a task for a 
+            while and you need to come back to update the item's
+            info etc., and/or stop the clock before going off to 
+            do something else unrelated to the log entry...
 
       + *Clock OUT:* ~C-c C-x C-o~ /(to stop clocking your time on task)/
 
-           This *Finalizes the Time Card Entry* within:
-           ~:CLOCKING:~ /(created earlier when you started the/ /clock)/
+            This *Finalizes the Time Card Entry* within:
+            ~:CLOCKING:~ /(created earlier when you started the clock)/
 
-           The Clock Entry changes showing start timestamp, end 
-           timestamp, and total time worked during this segment...  
+            The Clock Entry changes showing start timestamp, end
+            timestamp, and total time worked during this segment...  
 
-           =Please DON'T Forget= /Like I often do, LOL.../ i.e.,
-           Leaving a clock running all day by accident, or worse,
-           leave it dangling with the file closed only to open it
-           again and get that nasty *Org-Mode Message:* /"What do/
-           /you want to do with this?"/ If you do something like 
-           that you can always come back and directly edit the 
-           clock times by hand to amend them...  After changing 
-           clock times or dates, etc... Whatever...
+            =Please DON'T Forget= /Like I often do, LOL.../ i.e., Leaving
+            a clock running all day by accident, or worse, leave it
+            dangling with the file closed only to open it again and
+            get that nasty *Org-Mode Message:* /"What do you want to do/
+            /with this?"/ If you do something like that you can always
+            come back and directly edit the clock times by hand to
+            amend them...  After changing clock times or dates, etc...
+            Whatever...
 
-           ="Onward We Row Mates... Through the log jam!"=
+                  ="Onward We Row Mates... Through the log jam!"=
 
       + *Update Time Card Entry:* ~C-c C-c~ 
 
-           This command will change the total time at the end showing 
-           your new calculated time...
+            This command will change the total time at the end showing 
+            your new calculated time...
 
-           If you need to go away and do something else before finishing 
-           this task, you can do so after clocking out... When you come 
-           back simply clock back in again to start another Time Card 
-           Entry just as before... The new time card entry will appear 
-           above the earlier one within the ~:CLOCKING:~ drawer... When 
-           you clock out of this task it will look just like the entry 
-           below it with a total time worked tagged on the end...
+            If you need to go away and do something else before finishing
+            this task, you can do so after clocking out... When you come
+            back simply clock back in again to start another Time Card
+            Entry just as before... The new time card entry will appear
+            above the earlier one within the ~:CLOCKING:~ drawer... When
+            you clock out of this task it will look just like the entry
+            below it with a total time worked tagged on the end...
 
       + *Clock Out & Mark Items Done:* ~C-c C-t~
 
-           When you are all done with a Log Entry use the above key 
-           command to mark its Heading *TODO* tag to: *DONE* /(Most of the/ 
-           /time this will ALSO clock you out if you are still clocked/ 
-           /into the item... But not allways in my experience.../  
-           So make sure you are also clocked OUT of an Item After 
-           marking it DONE... Type: ~C-c C-x C-j~ to check this...
-           /(if no running clock it will tell you and place your/
-           /cursor at the heading where you LAST CLOCKED OUT)/
+            When you are all done with a Log Entry use the above key 
+            command to mark its Heading *TODO* tag to: *DONE* /(Most of the/ 
+            /time this will ALSO clock you out if you are still clocked/ 
+            /into the item... But not allways in my experience.../  
+            So make sure you are also clocked OUT of an Item After 
+            marking it DONE... Type: ~C-c C-x C-j~ to check this...
+            /(if no running clock it will tell you and place your/
+            /cursor at the heading where you LAST CLOCKED OUT)/
 
       + ~C-c C-x C-q~ *Cancel Current Clock:* /(in case of accident)/
 
-           This removes currently running clock and forgets 
-           any time accrued or associated with it...
+            This removes currently running clock and forgets any time
+            accrued or associated with it...
 
-      + ~C-c C-x C-d~ *Display Clocking Info:*
+      + ~C-c C-x C-d~ *Display Clocking Info:* 
 
-           /This will show elapsed times to the right of headings.../
-           =Warning!= Using this command will CLUTTER ALL the headings
-           within your org file with those timestamps!!!
+            /This will show elapsed times to the right of headings.../
+            =Warning!= Using this command will CLUTTER ALL the headings
+                     within your org file with those timestamps!!!
 
-   =Note:= Once all of the above commands become routine for you, you 
-          might want to remove this ~:README:~ drawer from this 
-          template... That way it won't get copied when you need to 
-          clone new log entries...
 :END:
 
-=Copy/Clone= This: *🗓 LOG:* <2021-03-29 Mon> *Entry* /(Log Entry Template)/
-=Paste As: New Entry= Within: *🗓 Log Book:* Binder
-under the *🔍 Research:* section of this Emacs Org-Mode Book Publishing Project...
+This Log Entry is about: Yadda... Yadda... Yadda...
 
-Replace these instructions with short description of log entry. 
-/(if needed)/
+**** NEW 📚 Reference:
+:README:
+   =Org Mode Links Tip:=
 
-\newpage
+      + To Create a Link Type: ~C-c C-l~ 
+         /(then paste: ~link~ & type: "description")/
 
-**** 📚 Reference:
+         =-OR-= Simply Copy/Paste BOILERPLATE:
+              /(use placeholders below)/
+              And Fill Them In Manually... 
+              Copy/Paste more placeholders as
+              needed to create more links...
 
-- *Link to Project:* [[][] ]
+      + To Open a Link Type: ~C-c C-o~
 
-- [[URL][Link Name] ] *Heading:* /(comment)/
+      + To EXPAND a Link Type: ~SPACE b~
+         or: ~M-x org-toggle-link-display~
 
-- [[][] ] - *_:* /(yadda...)/
+   =BOILERPLATE:= /(clone to add more ref links)/
 
-- [[][] ] - *_:* /(yadda...)/
+   ☞ *Heading:* [[link][Link NAME] ] /(comment)/
 
-- [[][] ] - *_:* /(yadda...)/
+   ☞ [[link][Link Name] ] *Heading:* /(comment)/
+   
+   ☞ *_:* [[][] ] /(yadda... yadda... yadda...)/
 
-- [[][] ] /(_)/
+   ☞ [[][] ] /(_)/
 
-- [[][] ] /(_)/
+   [[junk][JUNK]]  /(This is a stupid BUG workaround/ /for org-mode link/
+         /expansion/compression... If you invoke:/ ~org-toggle-link-display~
+         /you will notice this JUNK link DOES NOT compress to a clickable/
+         /link title alone.../
+         
+         /I am not sure if this is due to my Emacs Config or a bug within/
+         *Org-Mode* /itself.../
 
-- [[][] ] /(_)/
+         /I put this workaround in here because if it is not here,/
+         /SOME of your external file links created below may not/
+         /compress after expansion, even though thy are GOOD links!/
 
-\newpage
+         /Leaving this JUNK link in here acts like a scapegoat/
+         /so that your real links below will all compress/expand/
+         /normally... I am NOT SURE WHY THIS WORKS??? I'm to busy/
+         /to do anything beyond hacking at this point.../
+         
+         ~org-lint~ /will detect JUNK above... Ignore that warning.../
+                  /It's my "METHOD of MADNESS" %^)/
+:END:
 
-**** ⏱ Time Card:
+☞ *Link to Project:* [[][] ] /(comment)/
+
+**** NEW ⏰ Time Card:
 
 #+BEGIN: clocktable :scope tree2 :maxlevel 4 :tstart "<-1d>" :tend "<+1m>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3
 #+END:
 
-\newpage
-
 **** NEW ✅ Summary: [0/3]
 :README:
-   This Summary is mostly to help you find things later when you cannot remember when or where is was done... If you go to the top of this file and expand all headings to show ALL content, then do a search on "~Summary:~" you will be able to quickly scroll through and scan these summaries quickly to find what you were looking for... 
+   This Summary is mostly to help you find things later when you
+   cannot remember when or where is was done... If you go to the
+   top of this file and expand all headings to show ALL content,
+   then do a search on "~Summary:~" you will be able to quickly
+   scroll through and scan these summaries quickly to find what
+   you were looking for... 
 
-   Also the *Time Card* /displayed above/ each search hit will give more clues by showing important headings you worked on...
+   Also the *Time Card* /displayed above/ each search hit will give
+   more clues by showing important headings you worked on...
 
-   Below is an optional list /(that could also provide links)./ This list could be used to itemize things you worked on, but I personally find it easier to simply write a short one or two line description containing important keywords right here and nothing more. I think that is more useful...
+   Below is an optional list /(that could also provide links)./ This
+   list could be used to itemize things you worked on, but I
+   personally find it easier to simply write a short one or two
+   line description containing important keywords right here and
+   nothing more. I think that is more useful...
 :END:
 
 Yadda... Yadda... Yadda...
 
-1. [ ] *__:*
+1. [ ] *New Item 1:*
 
-2. [ ] *__:*
+2. [ ] *New Item 2:*
 
-3. [ ] *__:*
+3. [ ] *New Item 3:* /(copy/clone more as needed)/
 
-\newpage
 
 **** NEW 📒 Details:
-***** NEW New Item 1 /(placeholder)/ [0/3]
+***** NEW ⏱ New Item 1 /(placeholder)/ [0/3]
+
+New Item Details... Yadda... Yadda... Yadda...
+
+Re-Purpose these as needed and Delete anything you don't need...
+
+Add sub headings as needed...
+
+Don't forget to clock-in to HEADINGS while you work on them...
+AND... Don't forget to Clock OUT when you are DONE... %^)
+
+=Delete BOILERPLATE= /below/ if you don't need it...
+
+****** BOILERPLATE:
+
+The following list contains Babel Source Code Blocks that are often needed for something I am writing or "Logging" about... I use them so much I decided to include them in this template...
 
 - [ ] *__:* /(__)/
 
       #+begin_src conf
-       user@home:~$ 
+       keyword1:     Value1 
+       keyword2:     Value2 
+       keyword3:     Value 
       #+end_src
 
 - [ ] *__:* /(__)/
 
-      #+begin_src conf
-       root@dev1:~$ 
+      #+begin_src bash
+       sudo dnf install emacs
+       sudo apt install emacs
       #+end_src
 
 - [ ] *__:* /(__)/
 
-      #+begin_src conf
-       admin@dev1:~$ 
-      #+end_src
+      #+BEGIN_SRC emacs-lisp :results output
+       ;; Initialize Local Vars from GLOBAL CONSTANTS;
+       (let ((h (list 'text-pixels ME--CODE-FRAME-HEIGHT))
+             (w (list 'text-pixels ME--CODE-FRAME-WIDTH)))
+         (princ "CAR h: ")
+         (princ (car h))
+         (princ "\n")
+         (princ "CDR h: ")
+         (princ (cdr h))
+         (princ "\n\n")
+         (princ "CAR w: ")
+         (princ (car w))
+         (princ "\n")
+         (princ "CDR w: ")
+         (princ (cdr w)))
+      #+END_SRC
 
-\newpage
+      #+RESULTS:
+      : CAR h: text-pixels
+      : CDR h: (42)
+      : 
+      : CAR w: text-pixels
+      : CDR w: (92)
 
+***** NEW ⏱ New Item 2 /(placeholder)/ [0/3]
 
-***** NEW New Item 2 /(placeholder)/ [0/3]
+New Item Details... Yadda... Yadda... Yadda...
 
-- [ ] *__:* /(__)/
+Re-Purpose these as needed and Delete anything you don't need...
 
-      #+begin_src conf
-       user@home:~$ 
-      #+end_src
+Add sub headings as needed...
 
-- [ ] *__:* /(__)/
+Don't forget to clock-in to HEADINGS while you work on them...
+AND... Don't forget to Clock OUT when you are DONE... %^)
 
-      #+begin_src conf
-       root@dev1:~$ 
-      #+end_src
+=Delete BOILERPLATE= /below/ if you don't need it...
 
-- [ ] *__:* /(__)/
+****** BOILERPLATE:
 
-      #+begin_src conf
-       admin@dev1:~$ 
-      #+end_src
-
-\newpage
-
-***** NEW New Item 3 /(placeholder)/ [0/3]
-
-- [ ] *__:* /(__)/
-
-      #+begin_src conf
-       user@home:~$ 
-      #+end_src
-
-- [ ] *__:* /(__)/
-
-      #+begin_src conf
-       root@dev1:~$ 
-      #+end_src
+The following list contains Babel Source Code Blocks that are often needed for something I am writing or "Logging" about... I use them so much I decided to include them in this template...
 
 - [ ] *__:* /(__)/
 
       #+begin_src conf
-       admin@dev1:~$ 
+       keyword1:     Value1 
+       keyword2:     Value2 
+       keyword3:     Value 
       #+end_src
 
-\newpage
+- [ ] *__:* /(__)/
+
+      #+begin_src bash
+       sudo dnf install emacs
+       sudo apt install emacs
+      #+end_src
+
+- [ ] *__:* /(__)/
+
+      #+BEGIN_SRC emacs-lisp :results output
+       ;; Initialize Local Vars from GLOBAL CONSTANTS;
+       (let ((h (list 'text-pixels ME--CODE-FRAME-HEIGHT))
+             (w (list 'text-pixels ME--CODE-FRAME-WIDTH)))
+         (princ "CAR h: ")
+         (princ (car h))
+         (princ "\n")
+         (princ "CDR h: ")
+         (princ (cdr h))
+         (princ "\n\n")
+         (princ "CAR w: ")
+         (princ (car w))
+         (princ "\n")
+         (princ "CDR w: ")
+         (princ (cdr w)))
+      #+END_SRC
+
+      #+RESULTS:
+      : CAR h: text-pixels
+      : CDR h: (42)
+      : 
+      : CAR w: text-pixels
+      : CDR w: (92)
+
+***** NEW ⏱ New Item 3 /(placeholder)/ [0/3]
+
+New Item Details... Yadda... Yadda... Yadda...
+
+Re-Purpose these as needed and Delete anything you don't need...
+
+Add sub headings as needed...
+
+Don't forget to clock-in to HEADINGS while you work on them...
+AND... Don't forget to Clock OUT when you are DONE... %^)
+
+=Delete BOILERPLATE= /below/ if you don't need it...
+
+****** BOILERPLATE:
+
+The following list contains Babel Source Code Blocks that are often needed for something I am writing or "Logging" about... I use them so much I decided to include them in this template...
+
+- [ ] *__:* /(__)/
+
+      #+begin_src conf
+       keyword1:     Value1 
+       keyword2:     Value2 
+       keyword3:     Value 
+      #+end_src
+
+- [ ] *__:* /(__)/
+
+      #+begin_src bash
+       sudo dnf install emacs
+       sudo apt install emacs
+      #+end_src
+
+- [ ] *__:* /(__)/
+
+      #+BEGIN_SRC emacs-lisp :results output
+       ;; Initialize Local Vars from GLOBAL CONSTANTS;
+       (let ((h (list 'text-pixels ME--CODE-FRAME-HEIGHT))
+             (w (list 'text-pixels ME--CODE-FRAME-WIDTH)))
+         (princ "CAR h: ")
+         (princ (car h))
+         (princ "\n")
+         (princ "CDR h: ")
+         (princ (cdr h))
+         (princ "\n\n")
+         (princ "CAR w: ")
+         (princ (car w))
+         (princ "\n")
+         (princ "CDR w: ")
+         (princ (cdr w)))
+      #+END_SRC
+
+      #+RESULTS:
+      : CAR h: text-pixels
+      : CDR h: (42)
+      : 
+      : CAR w: text-pixels
+      : CDR w: (92)
 
 *** NEW ⏱ <2022-08-25 Thu> New Task: /(Master Template)/
 :README:
   =Copy/Clone= This Template as a *NEW TASK* within a 
-             sub-category of your: *⏰ Tasks:* Binder... 
+             sub-category of your: *⏱ Tasks:* Binder... 
              Create New Sub Categories as needed...
 :END:
 
@@ -1466,32 +2931,4 @@ Yadda... Yadda... Yadda...
 
        Do Item Three...
 
-\newpage
-
-*** NEW 💡 New Topic Idea:  /(Replace With Title or Simply Use:/ ~#.1.1~ /etc.)/
-:README:
-   =Topics= /(Scenes)/ are the DNA that make up the chapters in a  
-   book... Each Topic could have its own title or phrase or 
-   it could not have a title but instead sub chapter numbering 
-   only...
-
-   Chapters may contain several topics... There can be many 
-   twisty paths all alike (or all different)... %~)
-
-   This *Topic Template* could ALSO Serve As A 
-   =CHAPTER INTRODUCTION= if you need one...
-
-   =Note:= /You also have options to export with TeX directives/ 
-         /to add sub chapter numbering e.g., ~1.1.1...~ etc.../
-         /and this could be added with or without inclusion of/
-         /the scene name headings.../
-:END:
-
-~<insert Topic Content Here>~
-
-At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
-
-\newpage
-
-=Copy/Clone This Entire Topic Heading and Paste Copy Below it as Needed=
 
