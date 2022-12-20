@@ -1,34 +1,182 @@
 # -**- mode: org; coding: utf-8 -**-
 
-  =COPY/PASTE These Unicode Symbolic Glyphs/Icons/Emojis Into Your .org Docs=
+=COPY/PASTE These Unicode Symbolic Glyphs/Icons/Emojis Into Your .org Docs=
        /These Should work on ALL platforms but may appear differently/
    /Some of these are MAC only and may appear as a box on other platforms/
 
-  =Use:= ~C-x C-+~ to zoom/enlarge this text for easy inspection of choices... 
-   
-* Building1: 🏕 🏠 🏡 🏘 💒 🕌 🕍 ⛪ 🛐
+=Use:= ~C-x C-+~ to zoom/enlarge this text for easy inspection of choices...
 
-* Building2: 🎪 🏯 🏭 🏟 🏰 🏢 🏫 🏛 🌃 🌇 🌆 🏙 🌉 
+The following Source Code Block sets ALL ~.png~ images below to ~50x50~ pixels...
+you can change that number to suit size of headings where they may be placed...
 
-* People1: 👶 👼 👧 👦 👩 👨 👵 👴 👲 👮‍🤵 👩 👰 👸 🤴
+#+BEGIN_SRC elisp
+(setq org-image-actual-width (list 50))
+#+END_SRC
+#+RESULTS:
+| 50 |
 
-* People2: 🤶 🎅 🤰 🤦 🕺 🕴 👫 👭 👬 💑 💏 👪 🚮 🎎 🧜🏼‍♀️
+:README:
+   Copy the above source code block to the top of the .org file where any of
+   the ~.png~ files are used... Default size above is 50 pixels... Adjust that
+   for your needs...
+
+   Other images within your ~.org~ file =WILL ALSO BE RESIZED=... Therefore you
+   will need to use LaTeX and/or HTML attributes as follows on the images that
+   need to be a different size:
+    #+attr_html: :width 100px
+    #+attr_latex: :width 100px
+   [[~/.emacs.d/emojis/Dabolus-Complete-Emoji-Collection/u1F3D5.png]] u1F3D5.png - camping
+:END:
+
+* [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4DA.png]] Reference:
+
++ [[https://unicode.org/emoji/charts/full-emoji-list.html#1f3d5][UNICODE.org FULL EMOJI LIST]]
+
++ [[https://kaushikamardas.medium.com/using-emojis-in-latex-c901969efa24][Using Emojis in LaTeX - Medium Article]]
+
+* [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F3DB.png]] Buildings:
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F3D5.png]] u1F3D5.png - camping 🏕 
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F3E0.png]] u1F3E0.png - house 🏠 
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F3E1.png]] u1F3E1.png - house w tree 🏡 
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F3D8.png]] u1F3D8.png - houses 🏘 
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F492.png]] u1F492.png - wedding chapel 💒 
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F54C.png]] u1F54C.png - mosk 🕌
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F54D.png]] u1F54D.png - synagogue 🕍 
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u26EA.png]] u26EA.png - church ⛪️
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F3AA.png]] u1F3AA.png - circus tent 🎪
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F3EF.png]] u1F3EF.png - Japanese castle 🏯
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F3ED.png]] u1F3ED.png - factory 🏭
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F3DF.png]] u1F3DF.png - stadium 🏟
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F3F0.png]] u1F3F0.png - European castle 🏰
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F3E2.png]] u1F3E2.png - office building 🏢
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F3EB.png]] u1F3EB.png - school 🏫
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F3DB.png]] u1F3DB.png - classical bldg 🏛
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F303.png]] u1F303.png - city night w stars 🌃
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F307.png]] u1F307.png - city sunset 🌇
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F306.png]] u1F306.png - city dusk 🌇
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F309.png]] u1F309.png - night bridge 🌉
+
+* [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F465.png]] People:
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F476.0.png]] u1F476.0.png - baby 👶
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F47C.0.png]] u1F47C.0.png - baby angel 👼
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F467.0.png]] u1F467.0.png - girl 👧
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F466.0.png]] u1F466.0.png - boy 👦
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F469.0.png]] u1F469.0.png - woman 👩
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F9D4.0.M.png]] u1F9D4.0.M.png - beard man 🧔
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F475.0.png]] u1F475.0.png - old woman 👵
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F474.1.png]] u1F474.1.png - old man 👴🏻
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F472.0.png]] u1F472.0.png - man w Chinese cap 👲
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F46E.0.M.png]] u1F46E.0.M.png - policeman 👮
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F935.0.M.png]] u1F935.0.M.png - man groom tux ‍🤵
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F470.0.W.png]] u1F470.0.W.png - bride 👰
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F478.2.png]] u1F478.2.png - princess ‍👸
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F934.0.png]] u1F934.0.png - prince 🤴
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F930.2.png]] u1F930.2.png - pregnant woman 🤰
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F931.0.png]] u1F931.0.png - breastfeeding 🤱
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F926.0.W.png]] u1F926.0.W.png - woman face palm 🤦‍♀️
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F926.2.M.png]] u1F926.2.M.png - man face palm 🤦
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F483.0.png]] u1F483.0.png - woman dancing 💃
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F57A.0.png]] u1F57A.0.png - man dancing 🕺
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F465.png]] u1F465.png - 👥
+
+
+
+
+
+
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F465.png]] u1F465.png - 👥
+
+* People2: 👫 👭 👬 💑 💏 👪 🚮 🎎 🧜🏼‍♀️
 
 * People3: 👤 👥 🚹 🚺 🚼 🚻 🙏
 
 * Place: 🚉 🏞 ⛰ 🏜 🗻 💥 🌪 🌧 🌐 ✨ 🌠 🌌 🌄 🌅 🛣 🛤 
+* Professional:
 
-* Prof: ⚗ 🔬 🔭 ⚛ ♨ 📈 📉 📊 🎓 🏆 💯 🎗 🥇 🎖 🕉 
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F50E.png]] u1F50E.png - right-pointing magnifying glass 🔎
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F465.png]] u1F465.png - 👥
+
+* Prof: ⚗ 🔮 🔎 🔬 🔭 ⚛ ♨ 📈 📉 📊 🎓 🏆 💯 🎗 🥇 🎖 🕉 
+* Flags: 🏴󠁧󠁢󠁷󠁬󠁳󠁿
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F3F4_uE0067_uE0062_uE0077_uE006C_uE0073_uE007F.png]] u1F3F4_uE0067_uE0062_uE0077_uE006C_uE0073_uE007F.png - Welsh Pen Dragon 🏴󠁧󠁢󠁷󠁬󠁳󠁿
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F465.png]] u1F465.png - 👥
 
 * Social1: 𝌵 🥂 🍷 🍸 🍦 🎂 ☕ 🏹 📢 🗣
 
-* Social2: 🗪 🗩 🗫 💬 𐇑 🛂 🎏 🎉 🎈
+* Social2: 🗪 🗩 🗫 💬 𐇑 🛂 🎏 🎉 🎈 🛐
 
-* Action1: ❕ ❌ 🚫 ❓ ❔ ✅ ✔️ ☑️ 🔤 ☞ 💡
+* Action:
 
-* Action2: ⚔ ⚙ ⏱ ⏰ ⛷ 🏂 🤺 🏇 💵 ⚠️
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4A1.png]] u1F4A1.png - light bulb 💡
 
-* Docs1: 📋 🗒 📄 📝 📃 📂 📓 📒 📰 📗 📚 📖 🕮 🔖 🗟 ⎘
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F449.0.png]] u1F449.0.png - pointing 👉 ☞
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F5E1.png]] u1F5E1.png - dagger 🗡
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u23F1.png]] u23F1.png - stopwatch ⏱
+
+* Action1: ❕ ❌ 🚫 ❓ ❔ ✅ ✔️ ☑️ 🔤 
+
+* Action2: ⚔ ⚙ ⏰ ⛷ 🏂 🤺 🏇 💵 ⚠️
+
+* Docs:
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4DD.png]] u1F4DD.png - memo 📝
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4CB.png]] u1F4CB.png - clipboard 📋
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4DA.png]] u1F4DA.png - books 📚
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4D3.png]] u1F4D3.png - composition notebook 📓
+
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F5C2.png]] u1F5C2.png - Card Index Dividers 🗂
+
+* Docs1: 🗒 📄 📃 📂 📓 📒 📰 📗 📚 📖 🕮 🔖 🗟 ⎘
 
 * Docs2: 📔 📕 📜 🗓 📆 📅 🏷 💳 🗂 📑 📇 🖼 ✏️ ✐ ✏︎ ☕︎ 
 

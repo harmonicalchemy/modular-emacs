@@ -1,23 +1,33 @@
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;   [modular-emacs]:~/.emacs.d/lisp/modules/09-4-org-export-conf.el
+;;  [modular-emacs]:~/.emacs.d/lisp/modules/09-4-org-export-conf.el
 ;;
-;;   This is a sub module of 09-org-mode-pkg-conf.el which adds extra tools for
-;;   exporting org-mode with specific features to many different output
-;; publishing formats...
-;; Consider this file to be your:
+;;  This is a sub module of 09-org-mode-pkg-conf.el which adds extra tools for
+;;  exporting org-mode with specific features to many different output
+;;  publishing formats...
+;;
+;;  Consider this file to be your:
 ;;     CONTROL PANEL TO A POWERFUL EMACS ORG MODE PUBOPS ENGINE
 ;;
-;; YOU NOW HAVE IN YOUR HANDS PUBLISHING ABILITIES WAY BEYOND SCRIVENER!
+;;  YOU NOW HAVE IN YOUR HANDS PUBLISHING ABILITIES WAY BEYOND SCRIVENER!
 ;;       (All Encapsulated Within Future Proof Plain Text Files) 
 ;;
-;;   Override this file by placing a copy of it into "my-modules" then change
-;;   settings below *within your cloned copy* to suit your own particular
-;;   org mode export needs...
+;;  Override this file by placing a copy of it into "my-modules" then change
+;;  settings below *within your cloned copy* to suit your own particular
+;;  org mode exporting needs...
 ;;
 
 ;;
 ;; Change Log: (descending chronological order)
 ;;
+
+;; 2022-012-19 - Alisha Awen, siren1@disroot.org
+;;   Finally getting LaTeX PDF Book Formats looking GOOD!
+;;   Nothing fancy but it is all working as intended...
+;;   Two enabled DEFAULT LaTeX Classes have been defined:
+;;   - "fictbook" (For Fiction (Chapter Numbering only - NO TOC)
+;;
+;;   - "refbook" for Reference Manuals, Technical Books, Tutorials etc.
+;;               (With Chapter & Sub-Topic Section Numbering AND TOC)
 
 ;; 2022-009-18 - Alisha Awen, siren1@disroot.org
 ;;   Removed some of the Babel Languages which were causing problems
@@ -37,10 +47,13 @@
 ;;  Note: New Configs Added 2022-008-31
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-;;  put caption below in tables:
+;;  Put Caption Below In Tables:
+
 (setq org-export-latex-table-caption-above nil)  
 (setq org-latex-table-caption-above nil)
-;;  don't export tags:
+
+;;  Don'T Export Tags:
+
 (setq org-export-with-tags nil)    
 (setq org-export-latex-listings t)
 (setq org-latex-listings 'listings)
@@ -64,7 +77,7 @@
 (setq org-babel-python-command "python") ;; Use Defined "python" for Current OS...
 
 ;;;
-;; Set default compile to PDF:
+;; Set Default Compile To PDF:
 
 (setq TeX-PDF-mode t)
 
@@ -95,7 +108,7 @@
 (setq org-hide-emphasis-markers t)
 
 ;;;
-;;  Position tags right after last char of headline:
+;;  Position Tags Right After Last Char Of Headline:
 ;;  (This is mostly to fix problems with variable-pitch
 ;;  It does not seem to be a problem with fixed-pitch)
 ;;  NOTE: I disabled this thing... It was causing an
@@ -109,17 +122,17 @@
 ;(org-tags-column 0)
 
 ;;;
-;;  speed keys for quick navigation:
+;;  Speed Keys For Quick Navigation:
 
 (setq org-use-speed-commands 1)
 
 ;;;
-;;  set maximum indentation for org-mode description lists:
+;;  Set Maximum Indentation For Org-Mode Description Lists:
 
 (setq org-list-description-max-indent 5)
 
 ;;;
-;;  prevent org-mode demoting heading also shifting text inside sections:
+;;  Prevent Org-Mode Demoting Heading Also Shifting Text Inside Sections:
 
 (setq org-adapt-indentation nil)
 
@@ -152,12 +165,14 @@
 
 (add-hook 'org-babel-after-execute-hook 'shk-fix-inline-images)
 
-;;  syntax highlight code blocks:
+;;;
+;;  Syntax Highlight Code Blocks:
+
 (setq org-src-fontify-natively t)
 
 ;;;
-;;  Make sure TEXINPUTS is set to: elpa/auctex-nn.nn.n/latex
-;;  require 'preview below should set this as long as auctex is installed...
+;;  Make Sure TEXINPUTS is Set To: elpa/auctex-nn.nn.n/latex
+;;  "require 'preview" works as long as auctex is installed...
 
 (unless (require 'latex nil t)
   (message "MELPA package 'latex not yet installed..."))
@@ -166,19 +181,27 @@
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  Enable Frame Modifications from eLisp Source Code Blocks:
+;;  BEGIN: Enable Frame Modifications from eLisp
+;;         Source Code Blocks:
 ;;  REF: https://emacs.stackexchange.com/questions/42096/running-elisp-within-an-orgmode-code-block
 ;;
-;;  The following lisp code defines the new emacs-lisp source block parameter :keep-windows.
-;;  You can modify the window configuration through the source block if you set this parameter to t.
+;;  The following lisp code defines the new emacs-lisp source block parameter
+;;  :keep-windows. You can modify the window configuration through the source
+;;  block if you set this parameter to t.
 ;;
-;;  This replaces: save-window-excursion in org-babel-execute:emacs-lisp by a newly defined macro
-;;  save-window-excursion-if. The new macro needs a predicate as new first argument.
-;;  The window configuration is only stored if that predicate is non-nil.
-;;  That is where the new source block parameter :keep-windows is tested.
+;;  This replaces: save-window-excursion in org-babel-execute:emacs-lisp by a
+;;  newly defined macro save-window-excursion-if. The new macro needs a predicate
+;;  as new first argument. The window configuration is only stored if that
+;;  predicate is non-nil. That is where the new source block parameter
+;; :keep-windows is tested.
 
-;; The function replace-in-fundef below needs access to the source file ob-emacs-lisp.el.
+;; The function replace-in-fundef below needs access to the source file:
+;;  ob-emacs-lisp.el.
+
 (require 'ob-emacs-lisp)
+
+;;;
+;;  FUNCTION: Transform TREE by TRAFO
 
 (defun transform-tree (tree trafo)
   "Transform TREE by TRAFO."
@@ -190,6 +213,9 @@
         (transform-tree (car this) trafo)
       (funcall trafo this)))))
   tree)
+
+;;;
+;;  FUNCTION: Replace in Function
 
 (defun replace-in-fundef (fun sym &rest replacement)
   "In function FUN perform REPLACEMENT."
@@ -213,6 +239,9 @@
      (setcdr this (cdr copy-repl))
      (setcar this (car copy-repl)))))))
 
+;;;
+;;  MACRO: Save Window Excursion If PRED Is non-nil
+
 (defmacro save-window-excursion-if (pred &rest body)
   "Act like `save-window-excursion' if PRED is non-nil."
   (declare (indent 1) (debug t))
@@ -221,19 +250,23 @@
        (unwind-protect (progn ,@body)
          (when ,c (set-window-configuration ,c))))))
 
+
 (advice-remove 'org-babel-execute:emacs-lisp #'ad-org-babel-execute:emacs-lisp)
 
-;; make sure we have access to the source code of `org-babel-execute:emacs-lisp'
+;; Make Sure We Have Access To The Source Code Of `org-babel-execute:emacs-lisp'
+
 (find-function-noselect 'org-babel-execute:emacs-lisp t)
 
 ;; (defun ad-org-babel-execute:emacs-lisp ...):
+
 (eval
  (replace-in-fundef
   'org-babel-execute:emacs-lisp
   'org-babel-execute:emacs-lisp
   'ad-org-babel-execute:emacs-lisp))
 
-;; Use `save-window-excursion-if' in `ad-org-babel-execute:emacs-lisp':
+;; USE: `save-window-excursion-if' in `ad-org-babel-execute:emacs-lisp':
+
 (declare-function 'ad-org-babel-execute:emacs-lisp " ")
 (eval
  (replace-in-fundef
@@ -243,131 +276,252 @@
   '(null (member (cdr (assoc :keep-windows params)) '("yes" "t")))))
 
 ;; Replace `org-babel-execute:emacs-lisp':
+
 (advice-add 'org-babel-execute:emacs-lisp :override #'ad-org-babel-execute:emacs-lisp)
 
-;; USAGE: The Above Configuration allows you to make source blocks within a .org file
-;;        augmented with :keep-windows as follows:
+;; USAGE: The Above COMPLICATED Configuration (Funcs,Macro,etc...) allows you to
+;;        make source blocks within a .org file that alter frame geometry etc...
+;;        This is doing by specifying :keep-windows as follows:
 ;;
 ;;    #+BEGIN_SRC elisp :results silent :keep-windows t
 ;;       PUT Your Window or Frame Mod Code Here...
 ;;    #+END_SRC
+;;
+;; END: Enable Frame Modifications from eLisp
+;;      Source Code Blocks:
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  Custom LaTeX Configurations for Export to PDF
+;;  BEGIN: Custom LaTeX Configurations for
+;;         Export to PDF...
+;;
 ;;  These are NEW as of: 2022-008-29 
 ;;  Trying out Gene Ting-Chun Kao's:
 ;;  "Emacs Org Mode export to pdf" Repository:
 ;;  .../my-modules/orgmode-latex-templates
 ;;  The code below comes from her repo above
+;;
+;;  Update: 2022-011-19 - Added some more LaTeX eBook styles
+;;          which I am configuring first for Fiction eBooks
+;;          and later when that is working well, I will modify
+;;          that to make other eBook styles for Modular Emacs...
+;;
+;;  THESE Earlier PDF Process Configs were tried and then COMMENTED OUT:
+;;
+;;   (setq org-latex-pdf-process '("latexmk -bibtex -f %f"))
+;;
+;;   (setq org-latex-pdf-process
+;;    '("latexmk -pdflatex='pdflatex -interaction nonstopmode' -pdf -bibtex -f %f"))
+
+;; USE Lualatex Preview: (Since 2022-011-23)
+;; Ref: https://stackoverflow.com/questions/41568410/configure-org-mode-to-use-lualatex
 
 (setq org-latex-pdf-process
-      '("latexmk -pdflatex='pdflatex -interaction nonstopmode' -pdf -bibtex -f %f"))
+  '("lualatex -shell-escape -interaction nonstopmode %f"
+    "lualatex -shell-escape -interaction nonstopmode %f"))
 
-;(setq org-latex-pdf-process '("latexmk -bibtex -f %f"))
+(setq luamagick '(luamagick :programs ("lualatex" "convert")
+       :description "pdf > png"
+       :message "you need to install lualatex and imagemagick."
+       :use-xcolor t
+       :image-input-type "pdf"
+       :image-output-type "png"
+       :image-size-adjust (1.0 . 1.0)
+       :latex-compiler ("lualatex -interaction nonstopmode -output-directory %o %f")
+       :image-converter ("convert -density %D -trim -antialias %f -quality 100 %O")))
 
-(unless (boundp 'org-latex-classes)
-  (setq org-latex-classes nil))
+(add-to-list 'org-preview-latex-process-alist luamagick)
 
-;; ~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; ENABLED ORG LATEX CLASSES:
+(setq org-preview-latex-default-process 'luamagick)
 
 (with-eval-after-load 'ox-latex
-(add-to-list
- 'org-latex-classes
- '("ethz"
-   "\\documentclass[a4paper,11pt,titlepage]{memoir}
-\\usepackage[utf8]{inputenc}
-\\usepackage[T1]{fontenc}
-\\usepackage{fixltx2e}
-\\usepackage{graphicx}
-\\usepackage{longtable}
-\\usepackage{float}
-\\usepackage{wrapfig}
-\\usepackage{rotating}
-\\usepackage[normalem]{ulem}
-\\usepackage{amsmath}
-\\usepackage{textcomp}
-\\usepackage{marvosym}
-\\usepackage{wasysym}
-\\usepackage{amssymb}
-\\usepackage{hyperref}
-\\usepackage{mathpazo}
-\\usepackage{color}
-\\usepackage{enumerate}
-\\definecolor{bg}{rgb}{0.95,0.95,0.95}
-\\tolerance=1000
-      [NO-DEFAULT-PACKAGES]
-      [PACKAGES]
-      [EXTRA]
-\\linespread{1.1}
-\\hypersetup{pdfborder=0 0 0}"
-   ("\\chapter{%s}" . "\\chapter*{%s}")
-   ("\\section{%s}" . "\\section*{%s}")
-   ("\\subsection{%s}" . "\\subsection*{%s}")
-   ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-   ("\\paragraph{%s}" . "\\paragraph*{%s}")
-   ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
 
-;; ~~~~~~~~~~~~~~
-;; ARTICLE CLASS:
+  ;; ~~~~~~~~~~~~~~
+  ;; ETHZ CLASS: (Initial Trial NOW DISABLED  2022-011-21)
 
-(add-to-list
- 'org-latex-classes
- '("article"
-   "\\documentclass[11pt,a4paper]{article}
-\\usepackage[utf8]{inputenc}
-\\usepackage[T1]{fontenc}
-\\usepackage{fixltx2e}
-\\usepackage{graphicx}
-\\usepackage{longtable}
-\\usepackage{float}
-\\usepackage{wrapfig}
-\\usepackage{rotating}
-\\usepackage[normalem]{ulem}
-\\usepackage{amsmath}
-\\usepackage{textcomp}
-\\usepackage{marvosym}
-\\usepackage{wasysym}
-\\usepackage{amssymb}
-\\usepackage{hyperref}
-\\usepackage{mathpazo}
-\\usepackage{color}
-\\usepackage{enumerate}
-\\definecolor{bg}{rgb}{0.95,0.95,0.95}
-\\tolerance=1000
-      [NO-DEFAULT-PACKAGES]
-      [PACKAGES]
-      [EXTRA]
-\\linespread{1.1}
-\\hypersetup{pdfborder=0 0 0}"
-   ("\\section{%s}" . "\\section*{%s}")
-   ("\\subsection{%s}" . "\\subsection*{%s}")
-   ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-   ("\\paragraph{%s}" . "\\paragraph*{%s}")))
+  ;; (add-to-list
+  ;;  'org-latex-classes
+  ;;  '("ethz"
+  ;;    "\\documentclass[a4paper,11pt,titlepage]{memoir}
+  ;; \\usepackage[utf8]{inputenc}
+  ;; \\usepackage[T1]{fontenc}
+  ;; \\usepackage{fixltx2e}
+  ;; \\usepackage{graphicx}
+  ;; \\usepackage{longtable}
+  ;; \\usepackage{float}
+  ;; \\usepackage{wrapfig}
+  ;; \\usepackage{rotating}
+  ;; \\usepackage[normalem]{ulem}
+  ;; \\usepackage{amsmath}
+  ;; \\usepackage{textcomp}
+  ;; \\usepackage{marvosym}
+  ;; \\usepackage{wasysym}
+  ;; \\usepackage{amssymb}
+  ;; \\usepackage{hyperref}
+  ;; \\usepackage{mathpazo}
+  ;; \\usepackage{color}
+  ;; \\usepackage{enumerate}
+  ;; \\definecolor{bg}{rgb}{0.95,0.95,0.95}
+  ;; \\tolerance=1000
+  ;;       [NO-DEFAULT-PACKAGES]
+  ;;       [PACKAGES]
+  ;;       [EXTRA]
+  ;; \\linespread{1.1}
+  ;; \\hypersetup{pdfborder=0 0 0}"
+  ;;    ("\\chapter{%s}" . "\\chapter*{%s}")
+  ;;    ("\\section{%s}" . "\\section*{%s}")
+  ;;    ("\\subsection{%s}" . "\\subsection*{%s}")
+  ;;    ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+  ;;    ("\\paragraph{%s}" . "\\paragraph*{%s}")
+  ;;    ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
 
-;; ~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  EBOOK CLASS: (use memoir)
+  ;; ~~~~~~~~~~~~~~
+  ;; HAP DEFAULT ARTICLE CLASS: (Initial Trial NOW DISABLED  2022-011-21)
 
-(add-to-list
- 'org-latex-classes
- '("ebook"
-   "\\documentclass[13pt, oneside]{memoir}
-\\setstocksize{9in}{6in}
-\\settrimmedsize{\\stockheight}{\\stockwidth}{*}
-\\setlrmarginsandblock{2cm}{2cm}{*} % Left and right margin
-\\setulmarginsandblock{2cm}{2cm}{*} % Upper and lower margin
-\\checkandfixthelayout
-% Much more laTeX code omitted
-"
-   ("\\chapter{%s}" . "\\chapter*{%s}")
-   ("\\section{%s}" . "\\section*{%s}")
-   ("\\subsection{%s}" . "\\subsection*{%s}"))))
+  ;; (add-to-list
+  ;;  'org-latex-classes
+  ;;  '("article"
+  ;;    "\\documentclass[11pt,a4paper]{article}
+  ;; \\usepackage[utf8]{inputenc}
+  ;; \\usepackage[T1]{fontenc}
+  ;; \\usepackage{fixltx2e}
+  ;; \\usepackage{graphicx}
+  ;; \\usepackage{longtable}
+  ;; \\usepackage{float}
+  ;; \\usepackage{wrapfig}
+  ;; \\usepackage{rotating}
+  ;; \\usepackage[normalem]{ulem}
+  ;; \\usepackage{amsmath}
+  ;; \\usepackage{textcomp}
+  ;; \\usepackage{marvosym}
+  ;; \\usepackage{wasysym}
+  ;; \\usepackage{amssymb}
+  ;; \\usepackage{hyperref}
+  ;; \\usepackage{mathpazo}
+  ;; \\usepackage{color}
+  ;; \\usepackage{enumerate}
+  ;; \\definecolor{bg}{rgb}{0.95,0.95,0.95}
+  ;; \\tolerance=1000
+  ;;       [NO-DEFAULT-PACKAGES]
+  ;;       [PACKAGES]
+  ;;       [EXTRA]
+  ;; \\linespread{1.1}
+  ;; \\hypersetup{pdfborder=0 0 0}"
+  ;;    ("\\section{%s}" . "\\section*{%s}")
+  ;;    ("\\subsection{%s}" . "\\subsection*{%s}")
+  ;;    ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+  ;;    ("\\paragraph{%s}" . "\\paragraph*{%s}")))
+
+  ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ;;  HAP DEFAULT EBOOK CLASS: (Initial Trial NOW DISABLED  2022-011-21)
+  ;;  (ebook - use memoir)
+
+  ;; (add-to-list
+  ;;  'org-latex-classes
+  ;;  '("ebook"
+  ;;    "\\documentclass[13pt, oneside]{memoir}
+  ;; \\setstocksize{9in}{6in}
+  ;; \\settrimmedsize{\\stockheight}{\\stockwidth}{*}
+  ;; \\setlrmarginsandblock{2cm}{2cm}{*} % Left and right margin
+  ;; \\setulmarginsandblock{2cm}{2cm}{*} % Upper and lower margin
+  ;; \\checkandfixthelayout
+  ;; % Much more laTeX code omitted"
+  ;;    ("\\chapter{%s}" . "\\chapter*{%s}")
+  ;;    ("\\section{%s}" . "\\section*{%s}")
+  ;;    ("\\subsection{%s}" . "\\subsection*{%s}")))
+
+
+  ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ;;  HAP DEFAULT REFERENCE EBOOK CLASS:
+  ;;  (refbook - use memoir)
+  ;;  For Reference Manuals, Technical Books, Tutorials, etc...
+  ;;  This class/style was initially inspired by:
+  ;;     Org-Docs/10-RTFM/MemoirChapStyles.pdf
+  ;;
+  ;; REMOVED: \\usepackage{afterpage}  (this does not seem to be needed)
+  
+  (add-to-list
+   'org-latex-classes
+   '("refbook"
+     "\\documentclass[openleft,oneside,showtrims]{memoir}
+\\usepackage{calc}
+
+\\setlength{\\headwidth}{\\textwidth}
+\\addtolength{\\headwidth}{.382\\foremargin}
+
+\\renewcommand\\afterchapternum{}
+
+\\renewcommand\\afterchaptertitle{%
+\\ifnum \\c@secnumdepth>\\m@ne%
+\\ifNoChapNum\\else\\par\\nobreak\\vskip\\afterchapskip\\fi%
+\\fi}
+
+\\setlength\\beforechapskip{15pt}
+\\renewcommand\\printchapternonum{\\global\\NoChapNumtrue}
+\\renewcommand{\\chaptitlefont}{\\raggedleft\\normalfont\\Huge\\bfseries}
+\\makeatletter
+
+\\AtBeginDocument{
+    \\nonzeroparskip
+    \\frontmatter
+}
+
+\\chapterstyle{lyhne}"
+     ("\\chapter{%s}" . "\\chapter*{%s}")
+     ("\\section{%s}" . "\\section*{%s}")
+     ("\\subsection{%s}" . "\\subsection*{%s}")
+     ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+     ("\\paragraph{%s}" . "\\paragraph*{%s}")
+     ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+
+  ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ;;  HAP DEFAULT FICTION EBOOK CLASS:
+  ;;  (fictbook - use memoir)
+  ;;  For Fiction Books or Docs NOT requiring a TOC 
+  ;;  or Sub-Topic Section Numbering...
+  ;;  This class/style was initially inspired by:
+  ;;     Org-Docs/10-RTFM/MemoirChapStyles.pdf
+  ;;
+  ;; REMOVED: \\usepackage{afterpage}  (this does not seem to be needed)
+
+  (add-to-list
+   'org-latex-classes
+   '("fictbook"
+     "\\documentclass[openleft,oneside,showtrims]{memoir}
+\\usepackage{calc}
+
+\\setlength{\\headwidth}{\\textwidth}
+\\addtolength{\\headwidth}{.382\\foremargin}
+
+\\renewcommand\\afterchapternum{}
+
+\\renewcommand\\afterchaptertitle{%
+\\ifnum \\c@secnumdepth>\\m@ne%
+\\ifNoChapNum\\else\\par\\nobreak\\vskip\\afterchapskip\\fi%
+\\fi}
+
+\\setlength\\beforechapskip{15pt}
+\\renewcommand\\printchapternonum{\\global\\NoChapNumtrue}
+\\renewcommand{\\chaptitlefont}{\\raggedleft\\normalfont\\Huge\\bfseries}
+\\makeatletter
+
+\\AtBeginDocument{
+    \\nonzeroparskip
+    \\frontmatter
+}
+
+\\chapterstyle{lyhne}"
+     ("\\chapter{%s}" . "\\chapter*{%s}")
+     ("\\section{%s}" . "\\section*{%s}")
+     ("\\subsection{%s}" . "\\subsection*{%s}")
+     ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+     ("\\paragraph{%s}" . "\\paragraph*{%s}")
+     ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))))
 
 ;;  END: Custom LaTeX Configurations for Export to PDF
+;;       (CUSTOMIZED org-latex-classes LIST)
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Org Babel Active Language Configurations:
@@ -397,7 +551,6 @@
 
 ;;;  Enable Extra Custom Org-Babel Language:
 ;;   (Add New Custom Language Configs HERE)
-
 
 ;;; Activate External Language Execution:
 ;;

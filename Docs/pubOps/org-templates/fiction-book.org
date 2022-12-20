@@ -1,29 +1,37 @@
 # -**- mode: org; coding: utf-8 -**-
 #+BEGIN_COMMENT
-=File:=  ~~/.emacs.d/Docs/pubOps/org-templates/~fiction-book.org~
+=File:=  ~~/.emacs.d/Docs/pubOps/org-templates/fiction-book.org~
 
-        =BASIC LaTeX Configuration for: FICTION=
+       =HAP BASIC Org-Mode Configuration for FICTION Books=
 
 =Usage:= *Copy/Clone* this file and adjust to suit your needs...
-        *Include* this file within ~.org~ files destined to become
-        a *Fiction Short Story or Book*...
+       *Include* this file within ~.org~ files destined to become
+       a *Fiction Short Story or Large Book Novel*...
 
-        *COPY/CLONE:* ~~/.emacs.d/Docs/pubOps/org-templates~ directory
-        to the MASTER directory where existing .org files reference
-        this contained SETUPFILE... Modify the copied SETUP Files within
-        your cloned org-templates directory to suit your needs...
+       *COPY/CLONE:* ~~/.emacs.d/Docs/pubOps/org-templates~ directory
+       to the MASTER directory where existing .org files reference
+       this contained SETUPFILE... Modify the copied SETUP Files within
+       your cloned org-templates directory to suit your needs...
 
-        =Don't Modify The MASTER Templates Within ~/.emacs.d=
+       =Don't Modify The MASTER Templates Within ~/.emacs.d=
 
+       /(if you did by accident, simply: ~git checkout .~ to refresh)/
+       
   =Add:= the following line to the Header of ~.Org~ Files that need to
-        include this file:
+       include this file:
 
-        ~#+SETUPFILE: ./org-templates/fiction-book.org~
+       ~#+SETUPFILE: ./org-templates/fiction-book.org~
 
 /Making a COPY/CLONE of:/ ~$HOME/.emacs.d/Docs/pubOps/org-templates~ /master/
 /folder To your book's project directory will allow you to make your own custom/
 /configurations for different books without affecting the configurations of other/
 /book projects within their own MASTER FOLDERS.../
+
+=NOTE:= The Configurations within this file depend on HAP Modular Emacs init file:
+      ~09-4-org-export-conf.el~ in: ~~/.emacs.d/lisp/modules~ If you need to make
+      more involved customizations of your fiction books, you will also need to
+      change the quoted \\LaTeX directives under the: "fictbook" /(add to list/
+      /member in code... See comments within file. Copy to Create a new list member)/
 #+END_COMMENT
 
 =STANDARD STARTUP OPTIONS=
@@ -36,66 +44,163 @@
 #+STARTUP:  align
 #+STARTUP:  inlineimages
 
+=LaTeX --> Fiction Book PDF:=
+
+#+LATEX_CLASS: fictbook
+#+LATEX_HEADER: \usepackage{parskip}
+#+LaTeX_HEADER: \usepackage{paralist}
+
+~fictbook~ =CLASS= /is defined in:/ ~09-4-org-export-conf.el~
+
 =STANDARD EXPORT OPTIONS:=
 
 /Ref:/ https://orgmode.org/manual/Export-Settings.html#Export-Settings
+     https://orgmode.org/worg/dev/org-export-reference.html
 
 #+SELECT_TAGS: export
 #+EXCLUDE_TAGS: noexport
 
-#+OPTIONS: ':nil        # Disable Smart Quotes! Use xah-fly insert funcs..
-#+OPTIONS: *:t          # Show Emphasized Text
-#+OPTIONS: -:t          # Convert Special Strings
-#+OPTIONS: ::nil        # Do NOT Export with fixed-width sections
+#+OPTIONS: ':t
+   # ENABLE Smart Quotes (org-export-with-smart-quotes)
 
-#+OPTIONS: <:t          # Enclude time/date active/inactive stamps
+#+OPTIONS: *:t
+   # Show Emphasized Text (org-export-with-emphasize)
+   # NOTE: Exported PDF is styled different
+   # than org-mode buffer fontification..
 
-#+OPTIONS: \n:nil       # Preserve Line Breaks (this may affect LaTeX parskip)
+#+OPTIONS: -:nil
+   # Convert Special Strings (org-export-with-special-strings)
 
-#+OPTIONS: ^:{}         # Use Tex-like syntax for sub and superscripts
-                        # Typing simple a_b will not be affected anymore
-                         # Use word^{super} to raise word "super" - superscript
-                           # Use word_{sub} to lower the word "sub" - subscript
-#+OPTIONS: author:t          # Include Author Name into Exported file
-#+OPTIONS: broken-links:mark  # Broken link(s) found? Mark Them & Don't Export
-#+OPTIONS: c:t               # Include CLOCK keywords in exported documents
-#+OPTIONS: creator:t       # Include Creator Info (org-export-with-creator)
-#+OPTIONS: d:nil         # Do NOT Include DRAWERS in exported documents
-#+OPTIONS: date:t       # Include DATE in exported documents
+#+OPTIONS: ::t
+   # Export with fixed-width sections (org-export-with-fixed-width)
+   # Options: (nil, t)
+   # non-nil = Interpret Strings Starting with a
+   # colon ":" as: A Fixed-With Verbatim area.
 
-#+OPTIONS: e:t          # Include Entities (org-export-with-entities)
-                        # TODO: Play around with this one...
+#+OPTIONS: <:t
+   # Enclude time/date active/inactive stamps (org-export-with-timestamps)
 
-#+OPTIONS: email:t      # Include Author’s e-mail (org-export-with-email)
-#+OPTIONS: f:t          # Include Footnotes (org-export-with-footnotes)
-#+OPTIONS: H:3          # Set Headline Levels for Export
+#+OPTIONS: \n:nil
+   # Non-nil = Preserve ALL Line Breaks (org-export-preserve-breaks)
+   # NOTE: (non-nil may affect LaTeX parskip)
 
-# #+OPTIONS: num:0        # Set Section Numbering level...
+#+OPTIONS: ^:{}
+   # Use Tex-like Syntax For Sub And Superscripts (org-export-with-sub-superscripts)
+   # Typing simple a_b will not be affected anymore
+   # Use word^{super} to raise word "super" - superscript
+   # Use word_{sub} to lower the word "sub" - subscript
+                
+#+OPTIONS: author:t
+   # Include Author Name into Exported file (org-export-with-author)
+   
+#+OPTIONS: broken-links:mark
+   # Broken link(s) found?
+   # Mark Them & Don't Export (org-export-with-broken-links)
+   
+#+OPTIONS: c:t
+   # Include CLOCK keywords in exported documents (org-export-with-clocks)
+   
+#+OPTIONS: creator:t
+   # Include Creator Info (org-export-with-creator)
+   
+#+OPTIONS: d:nil
+   # Do NOT Include DRAWERS in exported documents (org-export-with-drawers)
+   
+#+OPTIONS: date:t
+   # Include DATE in exported documents (org-export-with-date)
 
-#+OPTIONS: tasks:t      # DO Include ITEMS containing Task related keywords...
-#+OPTIONS: inline:nil   # Do NOT Include Inline Tasks...
+#+OPTIONS: e:nil
+   # DON'T Include Entities (org-export-with-entities)
+   # TODO: Play around with this one...
+   # wtf does this do? lol %^)
 
-#+OPTIONS: p:nil        # NO Planning Info (org-export-with-planning)
-#+OPTIONS: pri:nil      # NO priority cookies (org-export-with-priority)
-#+OPTIONS: prop:nil     # No Property Drawers (org-export-with-properties)
-#+OPTIONS: stat:nil     # No Stastic cookies (org-export-with-statistics-cookies)
-#+OPTIONS: tags:nil     # No Tags (org-export-with-tags)
-#+OPTIONS: tex:t        # Export LaTeX (org-export-with-latex)
-#+OPTIONS: timestamp:t  # Include Creation Time (org-export-time-stamp-file)
-#+OPTIONS: title:t      # Include Title (org-export-with-title)
+#+OPTIONS: email:t
+   # Include Author’s e-mail (org-export-with-email)
+   
+#+OPTIONS: f:t
+   # Include Footnotes (org-export-with-footnotes)
 
-#+OPTIONS: todo:nil     # DO NOT Include TODO keywords (org-export-with-todo-keywords)
-#+OPTIONS: |:t          # Include Tables (org-export-with-tables)
+#+OPTIONS: H:4
+   # Set Headline Levels for Export (org-export-headline-levels)
 
-=DISABLED OPTIONS for TESTING:=
+#+OPTIONS: tasks:t
+   # Toggle inclusion of TODO Task related keywords (org-export-with-tasks)
+   # IF t    - INCLUDE ALL TASK KEYWORDS...
+   # IF nil  - REMOVE ALL TASKS...
+   # IF todo - REMOVE DONE TASKS...
+   # IF list - (use list of keywords to keep)
+
+#+OPTIONS: inline:t
+   # Include Inline Tasks (org-export-with-inlinetasks)
+   # (org-export-with-section-numbers)
+
+#+OPTIONS: num:1
+   # Include section-numbers on Top Level Headings ONLY (chapters)
+   # (org-export-with-section-numbers)
+   # When N, Number only headlines level N or above.
+   # Set ‘UNNUMBERED’ property to non-nil to disable
+   # numbering of heading and subheadings entirely.
+   # Moreover, when value is ‘notoc’, headline,
+   # (and all children), do NOT appear in TOC either.
+
+#+OPTIONS: p:nil
+   # NO Planning Info (org-export-with-planning)
+   
+#+OPTIONS: pri:nil
+   # NO priority cookies (org-export-with-priority)
+   
+#+OPTIONS: prop:nil
+   # No Property Drawers (org-export-with-properties)
+   
+#+OPTIONS: stat:nil
+   # No Stastic cookies (org-export-with-statistics-cookies)
+   
+#+OPTIONS: tags:nil
+   # No Tags (org-export-with-tags)
+
+#+OPTIONS: tex:verbatim
+   # Verbatim export (org-export-with-latex)
+
+#+OPTIONS: timestamp:t
+   # Include Creation Time (org-export-time-stamp-file)
+   
+#+OPTIONS: title:t
+   # Include Title (org-export-with-title)
+
+#+OPTIONS: toc:nil
+   # DO NOT Include Default TOC (org-export-with-toc)
+
+#+OPTIONS: todo:nil
+   # DONT Include TODO keywords (org-export-with-todo-keywords)
+   
+#+OPTIONS: |:t
+   # Include Tables (org-export-with-tables)
+
+=DISABLED OPTIONS For this Configuration:=
+
 #+BEGIN_COMMENT
-   # #+OPTIONS: toc:2        # Set TOC (org-export-with-toc) 2 levels
-   # #+OPTIONS: toc:nil      # DO NOT Include Default TOC (org-export-with-toc)
-   # #+OPTIONS: num:3        # Set Section Numbering level...
-#+END_COMMENT
+#+OPTIONS: ::nil
+   # DO NOT Export fixed-width sections
+   # (org-export-with-fixed-width)
 
-=UN-NUMBER HEADINGS & TOC:=
-:PROPERTIES:
-   :UNNUMBERED: t
-:END:
+#+OPTIONS: -:t
+   # Convert Special Strings
+   # (non-nil is being tried now)
+
+#+OPTIONS: inline:nil
+   # DO NOT Include Inline Tasks
+   # (org-export-with-inlinetasks)
+
+#+OPTIONS: num:nil
+   # DO NOT Include section-numbers
+   # (org-export-with-section-numbers)
+
+#+OPTIONS: tex:t
+   # Normal LaTeX Export
+   # (org-export-with-latex)
+
+#+OPTIONS: toc:1
+   # Include TOC for Top Level Headlings ONLY
+   # (org-export-with-toc)
+#+END_COMMENT
 
