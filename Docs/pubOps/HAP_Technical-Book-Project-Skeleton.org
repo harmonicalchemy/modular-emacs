@@ -465,7 +465,7 @@ Other folks UX metrics are sorely needed!! Thanks!
 
 =Synopsis Content:= Yadda... Yadda... Yadda...
 
-* NEW 📃 Preface: /(or Introduction - Optional)/                     :export:
+* NEW Preface: /(or Introduction - Optional)/                          :export:
 <<BOOK_PREFACE>>
 :README:
    This section has been purposefully left blank for you to fill in...

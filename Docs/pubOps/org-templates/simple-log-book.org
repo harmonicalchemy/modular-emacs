@@ -37,7 +37,31 @@
 
 =MINIMAL LOG EXPORT OPTIONS:=
 
-/Ref:/ https://orgmode.org/manual/Export-Settings.html#Export-Settings
+/
+- *Reference:*
+   
+   + [[https://orgmode.org/manual/Export-Settings.html#Export-Settings][Org Manual Export Settings]]
+
+   + [[https://orgmode.org/worg/dev/org-export-reference.html][WORG - Org Export Reference]]
+
+   + [[https://www.linuxjournal.com/content/org-mode-latex-exporter-latex-non-texers][Org Mode Latex Exporter - Linux Journal]]
+
+   + [[https://www.ctan.org/pkg/latexmk/][latexmk – Fully automated LaTeX document generation]]
+
+   + [[https://damitr.org/2014/01/09/latex-tufte-class-in-org-mode/][Latex Tufte class in org-mode]]
+
+   + [[https://tufte-latex.github.io/tufte-latex/][Tufte-LaTeX]]
+
+        /A Tufte-inspired LaTeX class for producing/
+        /handouts, papers, and books.../
+
+   + [[https://github.com/Tufte-LaTeX/tufte-latex][tufte-latex.github.io/tufte-latex/]]
+
+   + [[https://latex-tutorial.com/documentclass-latex/][Your Guide to documentclass LaTeX - Latex-Tutorial.com]] -
+
+   + [[https://mirror2.sandyriver.net/pub/ctan/macros/latex/contrib/memoir/memman.pdf][The Memoir Document Class]] - /(link to PDF)/
+
+   + [[https://www.ctan.org/pkg/memoir][memoir – Typeset fiction, non-fiction and mathematical books]] - /(CTAN)/
 
 #+SELECT_TAGS: export
 #+EXCLUDE_TAGS: noexport

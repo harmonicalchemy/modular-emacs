@@ -15,7 +15,8 @@
 =Setup Files:=
 
    For Cloned Versions of this template, the file/paths below will be relative
-   to your parent project directory and as such, should be all set to your new: ~.../your-fiction-book-project/org-templates/~ directory...
+   to your parent project directory and as such, should be all set to your new:
+   ~.../your-fiction-book-project/org-templates/~ directory...
 
 =NOTE:= 
 
@@ -25,8 +26,9 @@
 
    *SETUPFILE:* ~default-tags.org~ is where tags are set for this project...
 
-   *SETUPFILE:* ~latex-book-pdf.org~ is for LaTeX Export Configurations 
-              to produce a PDF version of your Fiction Book...
+   *SETUPFILE:* ~fiction-book.org~ is for LaTeX Export Configurations 
+              to produce a Fiction Book styled PDF /(No TOC, & Numbering
+              at Chapter level ONLY...)/
 #+END_COMMENT
 
 #+SETUPFILE: ./org-templates/fiction-book.org
@@ -53,15 +55,15 @@ To use *HAP_Fiction-Book-Project-Skeleton.org* /(Org-Mode Fiction Book Project /
 1) [ ] *Clone a Copy of This File:* 
 
       Put your clone where you normally organize your writing 
-      projects. *Place it within its own master folder... It is*
+      projects. *Place it within its own MASTER FOLDER... It is*
       *Important to keep this file within its OWN enclosing folder!* 
 
-      Name the project's master folder to reflect your fiction book 
+      Name the project's MASTER FOLDER to reflect your fiction book 
       project's title... /(what you renamed this .org file to)/...
 
-      =Other Files/Folders will be placed within this master folder...=
+      =Other Files/Folders will be placed within this MASTER FOLDER...=
 
-2) [ ] *Copy/Clone:* ~./media~ /(and contents)/ *to your new project's Master Folder:*
+2) [ ] *Copy/Clone:* ~./media~ /(and contents)/ *to your new project's MASTER FOLDER:*
 
       Copy this directory /(into your master folder as a sibling of this file).../ 
       Any external documents or images referenced by your book project should 
@@ -79,24 +81,24 @@ To use *HAP_Fiction-Book-Project-Skeleton.org* /(Org-Mode Fiction Book Project /
              will be automatically created the first time you export this ~.org~ 
              file to ~.PDF~...
 
-3) [ ] *Copy/Clone:* ~./org-templates~ /(and all contents)/ *to your Master Folder:*
+3) [ ] *Copy/Clone:* ~./org-templates~ /(and all contents)/ *to your MASTER FOLDER:*
 
-      Copy this directory to your Book Project's Master Folder, /(as a sibling/
-      /of this .org file).../ 
+      Copy this directory to your Book Project's MASTER FOLDER,
+      /(as a sibling of this .org file).../ 
 
       =Note:= The SETUPFILES Within this directory which are called out and 
-             included by this .org file /(above)/ must stay within this 
-             directory...  
+            included by this .org file /(above)/ must stay within this 
+            directory...  
 
-             Other SETUPFILES within this directory are used by other book 
-             project templates and are not needed for this Fiction Book 
-             Project... You may remove them if you wish...
+            Other SETUPFILES within this directory are used by other book 
+            project templates and are not needed for this Fiction Book 
+            Project... You may remove them if you wish...
 
-             They are small text files not bothering you... If you clone
-             another ~HAP_<book-template>.org~ file into this project folder
-             it will pick up its associated SETUPFILES automatically, so
-             consider that if/when you decide to delete other
-             UNUSED SETUPFILES...
+            However, consider If you clone another ~HAP_<book-template>.org~
+            file into this MASTER PROJECT FOLDER it will pick up its
+            associated SETUPFILES automatically, so consider that if/when
+            you decide to delete other UNUSED SETUPFILES... They are small
+            text files not bothering you or your operations...
 
 4) [ ] =Start Sketching Out Your Story NOW Before You Loose It!=
 
@@ -191,7 +193,8 @@ To use *HAP_Fiction-Book-Project-Skeleton.org* /(Org-Mode Fiction Book Project /
     - [ ] *Change the* ~#+DESCRIPTION:~ *directive at the top of this file:*
 
           Compose /Your-Fiction-Book-Project's Description/ as a short 
-          paragraph here...
+          paragraph here... and then use that to change the directive
+          above...
 
     - *The* ~./media~ *Directory is ALL Set:* 
 
@@ -225,6 +228,16 @@ To use *HAP_Fiction-Book-Project-Skeleton.org* /(Org-Mode Fiction Book Project /
          /the category is all set as well... But you can and may modify the/
          /original files to fit your needs.../
 
+         Other SETUPFILES within this directory are used by other book 
+         project templates and are not needed for this LOG Book
+         Project... You may remove them if you wish...
+
+         However, consider If you clone another ~HAP_<book-template>.org~
+         file into this MASTER PROJECT FOLDER it will pick up its
+         associated SETUPFILES automatically, so consider that if/when
+         you decide to delete other UNUSED SETUPFILES... They are small
+         text files not bothering you or your operations...
+
 6) [ ] =Ongoing Planning / Writing Your Fiction Book:= 
 
       /Change headings and structure to match your project's outline/ 
@@ -257,18 +270,19 @@ To use *HAP_Fiction-Book-Project-Skeleton.org* /(Org-Mode Fiction Book Project /
 
       After *AucTeX* is done parsing/compiling etc., new files by the name of:
       ~HAP_Untitled-Fiction-Book.pdf~ -and- ~HAP_Untitled-Fiction-Book.tex~ 
+
+      /(or the name you changed it to located at the top of this file)/
       will appear within the same directory as this file...
 
-      Subsequent repeated calls to the above command will overwrite your existing
-      ~HAP_Untitled-Fiction-Book.pdf~ -and- ~HAP_Untitled-Fiction-Book.tex~ 
-      files! /(make backups first if needed!)/
-
-      You should probably copy these files to the ~./auto/~ directory as 
-      well for safe keeping as backups...
+      Subsequent repeated calls to the above command will overwrite your
+      existing ~.pdf~ -and- ~.tex~ files! /(make backups first if needed!)/ You
+      could use the ~./auto/~ directory for backups...
 
       =If you chose the last option above= LaTeX will output files with other
-      extensions for those other output formats... =NOTE:= SETUPFILES have not
-      been created yet for other eBook formats.  /(This is a work in progress)/
+      extensions for those other output formats...
+
+      =NOTE:= SETUPFILES have not been created yet for other eBook formats.
+            /(This is a work in progress)/
 
       =If YOU EXPERIENCE LaTeX ERRORS:= 
 

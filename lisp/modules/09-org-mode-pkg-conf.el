@@ -76,6 +76,8 @@
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Configure LilyPond-mode for editing .ly Music Notation files in Emacs
+;; NOTE: This is not for org-mode but I only use LilyPond to make files
+;;       for org-mode to export eventually to PDF Docs, Books, etc...
 
 (autoload 'LilyPond-mode "lilypond-mode")
 (setq auto-mode-alist
@@ -123,8 +125,24 @@
   (load-file "~/.emacs.d/lisp/modules/09-4-org-export-conf.el"))
 
 
+;;;
+;;  Speed Keys For Quick Navigation:
+
+(setq org-use-speed-commands 1)
+
+;;;
+;;  Set Maximum Indentation For Org-Mode Description Lists:
+
+(setq org-list-description-max-indent 5)
+
+;;;
+;;  Prevent Org-Mode Demoting Heading Also Shifting Text Inside Sections:
+
+(setq org-adapt-indentation nil)
+
+
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;   Alisha's Advanced Org-Mode Configurations:
+;;   Alisha's Advanced Org-Mode Configurations: (EXTRA STUFF)
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

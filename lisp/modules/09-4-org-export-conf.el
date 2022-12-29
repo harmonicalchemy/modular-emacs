@@ -296,26 +296,30 @@
 ;;  BEGIN: Custom LaTeX Configurations for
 ;;         Export to PDF...
 ;;
-;;  These are NEW as of: 2022-008-29 
-;;  Trying out Gene Ting-Chun Kao's:
-;;  "Emacs Org Mode export to pdf" Repository:
-;;  .../my-modules/orgmode-latex-templates
-;;  The code below comes from her repo above
+;;  Update: 2022-012-20 - Disabled (commented out) all previous
+;;          LaTeX eBook styles which were being evaluated...
+;;          Two New LaTeX eBook styles were created below:
 ;;
-;;  Update: 2022-011-19 - Added some more LaTeX eBook styles
-;;          which I am configuring first for Fiction eBooks
-;;          and later when that is working well, I will modify
-;;          that to make other eBook styles for Modular Emacs...
+;;            "fictbook" (For Fiction (Chapter Numbering only - NO TOC)
 ;;
-;;  THESE Earlier PDF Process Configs were tried and then COMMENTED OUT:
+;;            "refbook" for Reference Manuals, Technical Books, Tutorials etc.
+;;                      (With Chapter & Sub-Topic Section Numbering AND TOC)
+;;
+;;          These new styles are based on memoir class...
+;;          They are currently the only active styles for Modular Emacs...
+;;          The code for: refbook started out as a clone of fictbook...
+;;          fictbook and refbook can and may dirverge at later stages...
+;;          
+;;          
+;;   Earlier PDF Process Configs I tried, which possibly might be useful later:
 ;;
 ;;   (setq org-latex-pdf-process '("latexmk -bibtex -f %f"))
 ;;
 ;;   (setq org-latex-pdf-process
 ;;    '("latexmk -pdflatex='pdflatex -interaction nonstopmode' -pdf -bibtex -f %f"))
-
-;; USE Lualatex Preview: (Since 2022-011-23)
-;; Ref: https://stackoverflow.com/questions/41568410/configure-org-mode-to-use-lualatex
+;;
+;;   USE Lualatex Preview: (Since 2022-011-23)
+;;   Ref: https://stackoverflow.com/questions/41568410/configure-org-mode-to-use-lualatex
 
 (setq org-latex-pdf-process
   '("lualatex -shell-escape -interaction nonstopmode %f"

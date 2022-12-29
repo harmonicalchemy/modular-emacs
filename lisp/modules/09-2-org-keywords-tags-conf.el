@@ -123,19 +123,6 @@
 ;;        #+STARTUP: noptag
 ;;    Making tags persistant does not seem that useful to me, but it is another option...
 ;;
-;; Tag Hierarchy EXAMPLE:
-;;
-;;  (setq org-tag-alist
-;;      (quote
-;;       ((:startgrouptag)
-;;        ("GTD")
-;;        (:grouptags)
-;;        ("Control")
-;;        ("Persp")
-;;        (:endgrouptag)
-;;        (:startgrouptag)
-;;        ("Control")
-;;       )))
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Create General Tags for everything else:
@@ -151,59 +138,33 @@
 
    ;; Mutually Exclusive Tags:
 
-   ((:startgroup     . nil)   ;; BEGIN: Mutually Exclusive Group:
-    ("@home"         . ?H)    ;; FLAG: (personal stuff, banking, health, etc.)
-    ("@work"         . ?W)    ;; FLAG: (devOps, sysAdmin, clients, community, sales)
-    (:endgroup       . nil)   ;; END Group:
+   ((:startgroup     . nil) ;; BEGIN: Mutually Exclusive Group:
+    ("noexport"      . ?n) ;; FLAG: "Exclude Outline Tree from Export"
+    ("export"        . ?x) ;; FLAG: "Export Outline Tree"
+    (:endgroup       . nil) ;; END Group:
 
-    (:startgroup     . nil)   ;; BEGIN: Mutually Exclusive Group:
-    ("export"        . ?x)    ;; FLAG: "Export Outline Tree"
-    ("noexport"      . ?n)    ;; FLAG: "Exclude Outline Tree from Export" 
-    (:endgroup       . nil)   ;; END Group:
+    (:startgroup     . nil) ;; BEGIN: Mutually Exclusive Group:
+    ("@home"         . ?H) ;; FLAG: (personal stuff, banking, health, etc.)
+    ("@work"         . ?W) ;; FLAG: (devOps, sysAdmin, clients, community, sales)
+    (:endgroup       . nil) ;; END Group:
 
-    (:startgroup     . nil)   ;; BEGIN: Mutually Exclusive Group:
-    ("in_ed_cal"     . ?1)    ;; FLAG: "In Editorial Calendar"
-    ("not_in_ed_cal" . ?0)    ;; FLAG: "NOT In Editorial Calendar"
-    (:endgroup       . nil)   ;; END Group:
+    (:startgroup     . nil) ;; BEGIN: Mutually Exclusive Group:
+    ("not_in_ed_cal" . ?0)  ;; FLAG: "NOT In Editorial Calendar"
+    ("in_ed_cal"     . ?1)  ;; FLAG: "In Editorial Calendar"
+    (:endgroup       . nil) ;; END Group:
 
-    (:startgroup     . nil)   ;; BEGIN: Mutually Exclusive Group:
-    ("published"     . ?+)    ;; FLAG: "IS Published"
-    ("unpublished"   . ?-)    ;; FLAG: "NOT Published"
-    (:endgroup       . nil)   ;; END Group:
+    (:startgroup     . nil) ;; BEGIN: Mutually Exclusive Group:
+    ("TOC_3"         . ?2)  ;; FLAG: TOC-Org (3 levels deep)
+    ("TOC"           . ?3)  ;; FLAG: TOC-Org (DEFAULT 2 levels deep)
+    (:endgroup       . nil) ;; END Group:
 
-    ;; General Purpose:
-
-    ("@projects"     . ?p)    ;; All Projects Large or Small... Play or Work...
-    ("research"      . ?r)    ;; Ditto for research...
-    ("@autofocus"    . ?A)    ;; @AutoFocus Notebook Tag. (Smart GTD)
-    ("@GTD"          . ?G)    ;; OK then... here is plain old GTD too. %^)
-
-    ("business"      . ?b)
-    ("legal"         . ?l)
-    ("accounting"    . ?a)
-    ("finance"       . ?f)
-    ("economics"     . ?e)
-    ("transactions"  . ?t)
-
-    ("docs"          . ?o)
-    ("cheatsheets"   . ?c)
-    ("diagrams"      . ?d)
-    ("logs"          . ?L)
-    ("newIdeas"      . ?N)
-    ("scratchpads"   . ?s)
-    ("quotes"        . ?q)
-    ("README"        . ?5)
-    ("templates"     . ?T)
-    ("tools"         . ?2)
-    ("tutorials"     . ??)
-    ("images"        . ?I)
-    ("recordings"    . ?R)
-    ("videos"        . ?V))))
+    (:startgroup     . nil) ;; BEGIN: Mutually Exclusive Group:
+    ("published"     . ?+)  ;; FLAG: "IS Published"
+    ("unpublished"   . ?-)  ;; FLAG: "NOT Published"
+    (:endgroup       . nil)))) ;; END Group:
 
     ;; Keys Used So Far:
-    ;; a b c d e f l n o p q r s t x A G H I L N R T V W 0 1 2 5 + - ?
-
-    ;; END GENERAL TAGS
+    ;; n x H W 0 1 2 3 + -
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Append all TOP LEVEL tag lists together for org-mode quick set tags....
