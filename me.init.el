@@ -1,8 +1,30 @@
-;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; File: ~/.emacs.d/init.el - Emacs Configuration for Linux and Mac-OS.
-;; Author:   Alisha Awen Sheppard - siren1@disroot.org
-;; First Created:  2018-011-13
-;; Info:
+; -*- coding: utf-8; lexical-binding: t; -*-
+;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; File:        ~/.emacs.d/init.el - Modular Emacs Config Main Entry Point
+;; Ref:         <https://github.com/harmonicalchemy/modular-emacs>
+;; Author:      Alisha Awen Sheppard - siren1@disroot.org
+;; Maintainer:  Alisha Awen
+;; Created:     2018-011-13
+;; Version:     3.5 - 2022-010-16
+
+;; This File is NOT Part of GNU Emacs
+
+;; This program is free software: you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation, either version 3 of the License, or
+;; (at your option) any later version.
+
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+
+;; You should have received a copy of the GNU General Public License
+;; along with this program.  If not, see <https://www.gnu.org/licenses/>.
+;;;
+
+;;;
+;; INFO:
 ;;   This is the default Emacs Initialization file...
 ;;   This file does nothing more than load dispatcher.el and finish
 ;;   with printing a welcome message in the *scratch* buffer...
@@ -29,8 +51,8 @@
 ;;       Also change the Welcome Message at the bottom of this file to the new
 ;;       version number!
 
-;;
-;; Change Log: (descending chronological order)
+;;;
+;; CHANGE LOG: (descending chronological order)
 ;;
 
 ;;   2022-010-16 - Harmonic Alchemy Modular-Emacs V3.5 [Q3 2022]
@@ -160,7 +182,7 @@
 ;;      This represents a BIG departure from my previous emacs configurations.
 ;;      I need to use this file to update my default init.el in my dotfiles
 ;;      GitHub repository...      
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;; *** Load Start time for Harmonic Alchemy Modular Emacs ***
 (defvar config-start-time

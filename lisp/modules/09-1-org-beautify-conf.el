@@ -1,12 +1,3 @@
-;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;   [modular-emacs]:~/.emacs.d/lisp/modules/09-1-org-beautify-conf.el
-;;
-;;   This is a sub module of 09-org-mode-pkg-conf.el which configures Org Mode
-;;   Beautify Settings:          (constantly under evolving revision %^)
-;;
-;;   Override this file by placing a copy of it into "my-modules" then change
-;;   it to suit your personal org-mode look and feel...
-
 ;;
 ;; Change Log: (descending chronological order)
 ;;
@@ -104,7 +95,7 @@
 (font-lock-add-keywords
  'org-mode
  '(("^ *\\([-]\\) "
-    (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "🍥" ))))))
+    (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "►" ))))))
 
 (font-lock-add-keywords
  'org-mode
@@ -118,7 +109,7 @@
 (setq org-list-demote-modify-bullet
       (quote (("+"  . "-")
               ("-"  . "+")
-              ("✜"  . "-")
+              ("🞜"  . "-")
               ("1." . "-")
               ("1)" . "-"))))
 
@@ -135,7 +126,7 @@
   (progn
   (push '("[ ]" .  "☐") prettify-symbols-alist)
   (push '("[X]" . "☑" ) prettify-symbols-alist)
-  (push '("[-]" . "❍" ) prettify-symbols-alist)
+  (push '("[-]" . "☢︎" ) prettify-symbols-alist)
   (prettify-symbols-mode)))
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

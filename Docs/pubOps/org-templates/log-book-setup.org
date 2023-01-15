@@ -1,12 +1,13 @@
 # -**- mode: org; coding: utf-8 -**-
-#+BEGIN_COMMENT
-=File:=  ~~/.emacs.d/Docs/pubOps/org-templates/fiction-book.org~
 
-       =HAP BASIC Org-Mode Configuration for FICTION Books=
+=File:= ~~/.emacs.d/Docs/pubOps/org-templates/log-book-setup.org~
+      =ORG-MODE LaTeX SETUPFILE for: LOG Notebooks= (~logbook~ =CLASS=)
+
+:README:
 
 =Usage:= *Copy/Clone* this file and adjust to suit your needs...
-       *Include* this file within ~.org~ files destined to become
-       a *Fiction Short Story or Large Book Novel*...
+       *Include* this SETUPFILE within ~.org~ files destined to become
+       *LOG Notebooks*...
 
        *COPY/CLONE:* ~~/.emacs.d/Docs/pubOps/org-templates~ directory
        to the MASTER directory where existing .org files reference
@@ -16,43 +17,47 @@
        =Don't Modify The MASTER Templates Within ~/.emacs.d=
 
        /(if you did by accident, simply: ~git checkout .~ to refresh)/
-       
-  =Add:= the following line to the Header of ~.Org~ Files that need to
+
+       *Add:* the following line to the Header of ~.Org~ Files that need to
        include this file:
 
-       ~#+SETUPFILE: ./org-templates/fiction-book.org~
+          ~#+SETUPFILE: ./org-templates/log-book-setup.org~
 
 /Making a COPY/CLONE of:/ ~$HOME/.emacs.d/Docs/pubOps/org-templates~ /master/
 /folder To your book's project directory will allow you to make your own custom/
 /configurations for different books without affecting the configurations of other/
 /book projects within their own MASTER FOLDERS.../
 
-=NOTE:= The Configurations within this file depend on HAP Modular Emacs init file:
-      ~09-4-org-export-conf.el~ in: ~~/.emacs.d/lisp/modules~ If you need to make
-      more involved customizations of your fiction books, you will also need to
-      change the quoted \\LaTeX directives under the: "fictbook" /(add to list/
-      /member in code... See comments within file. Copy to Create a new list member)/
-#+END_COMMENT
+=NOTE:= The Configurations within this file depend on Harmonic Alchemy Modular
+      Emacs init file: ~~/.emacs.d/lisp/modules/09-4-org-export-conf.el~...
 
-=STANDARD STARTUP OPTIONS=
+      If you need to make more involved customizations of your LaTeX
+      Configuration, you will also need to override ~09-4-org-export-conf.el~
+      by placing a copy of it within: ~~/.emacs.d/lisp/my-modules~ and then
+      make your changes in your cloned copy...
 
-#+CATEGORY: @Fiction_Books
-#+LANGUAGE: en
-#+STARTUP:  overview
-#+STARTUP:  hideblocks
-#+STARTUP:  indent
-#+STARTUP:  align
-#+STARTUP:  inlineimages
+The ~logbook~ =CLASS= defined within: ~09-4-org-export-conf.el~ Uses: ~~/.emacs.d/Docs/pubOps/org-templates/log-book-setup.tex~ for its *LaTeX* Configuration...
 
-=LaTeX --> Fiction Book PDF:=
+A copy of this file is in your local ~org-templates~ directory for you to inspect and change to fit your particular needs...
 
-#+LATEX_CLASS: blueboxbook
-#+LATEX_HEADER: \usepackage{parskip}
-#+LaTeX_HEADER: \usepackage{paralist}
+=For Local Customizing:= You will have to edit your local CLONED copy of: ~09-4-org-export-conf.el~... /(as per above NOTE...)/ Find the ~"logbook"~ section within ~org-latex-classes~ list, and change the ~\\input~ path to your local customized clone of ~log-book-setup.tex~ file... You will need to study *LaTeX* a lot and in particular, the *"memoir"* document class... =read the well documented docs= /(see reference section below)/
 
-~blueboxbook~ =CLASS= /is defined in:/ ~09-4-org-export-conf.el~
+Once you have tried this several times /(and failed)/ it won't look so complicated and you will begin to "get it"... /(Be Diligent! TeX/LaTeX IS a complicated Turing Complete Language... Created by one of the Geekiest GEEKS of Computer Science, Mathematics, and Algorithm Analysis! Donald Knuth... You have been warned!!!)/
 
-=STANDARD EXPORT OPTIONS:=
+=Good luck!=
+
+=HOWTO: Prevent Headlines from Showing Up in the TOC=
+
+Set any *HEADING* within your .org project file with the following PROPERTIES BOX...
+
+- *Set The NOTOC Property:* /(NOT in TOC)/
+
+     =* Section HEADING:=
+     *:PROPERTIES:*
+          :NOTOC: t
+     *:END:*
+
+:END:
 
 - *Reference:*
    
@@ -74,24 +79,77 @@
 
    + [[https://tug.org/FontCatalogue/calligraphicalfonts.html][Calligraphical Fonts]] - /(TUG.org)/
 
-   + [[https://en.wikibooks.org/wiki/LaTeX/Fonts][LaTeX Fonts]] - /(WIKIbooks.org)/ 
+   + [[https://en.wikibooks.org/wiki/LaTeX/Fonts][LaTeX Fonts]] - /(WIKIbooks.org)/
 
    + [[https://www.ctan.org/pkg/latexmk/][latexmk – Fully automated LaTeX document generation]]
 
    + [[https://damitr.org/2014/01/09/latex-tufte-class-in-org-mode/][Latex Tufte class in org-mode]]
 
-   + [[https://tufte-latex.github.io/tufte-latex/][Tufte-LaTeX]]
-
-        /A Tufte-inspired LaTeX class for producing/
-        /handouts, papers, and books.../
+   + [[https://tufte-latex.github.io/tufte-latex/][Tufte-LaTeX]] - /For Producing Handouts, Papers, and Books/
 
    + [[https://github.com/Tufte-LaTeX/tufte-latex][tufte-latex.github.io/tufte-latex/]]
 
-   + [[https://latex-tutorial.com/documentclass-latex/][Your Guide to documentclass LaTeX - Latex-Tutorial.com]] -
+   + [[https://latex-tutorial.com/documentclass-latex/][Your Guide to documentclass LaTeX - Latex-Tutorial.com]] 
 
    + [[https://mirror2.sandyriver.net/pub/ctan/macros/latex/contrib/memoir/memman.pdf][The Memoir Document Class]] - /(link to PDF)/
 
    + [[https://www.ctan.org/pkg/memoir][memoir – Typeset fiction, non-fiction and mathematical books]] - /(CTAN)/
+
+   + [[https://orgmode.org/manual/Embedded-LaTeX.html][12.5 Embedded LaTeX]] - /(The Org Manual)/ 
+
+   + [[https://orgmode.org/manual/LaTeX-fragments.html][12.5.1 LaTeX fragments]] - /(The Org Manual)/ 
+
+   + [[https://www.offerzen.com/blog/literate-programming-empower-your-writing-with-emacs-org-mode][Empower Your Writing with Emacs Org-Mode]] - /(Literate Programming)/
+
+   + [[][] ] - 
+
+   + [[][] ] - 
+
+   + [[][] ] -
+
+=LaTeX --> LOG Book PDF:=
+
+/(currently using ~logbook~ class defined in ~09-4-org-export-conf.el~)/
+
+#+LATEX_CLASS:  logbook
+
+=DISABLED OPTIONS For This Configuration:= /(for debugging)/
+
+#+BEGIN_COMMENT
+   #+LATEX_HEADER: \renewcommand\familydefault{\sfdefault}
+   #+LATEX_HEADER: \setlength{\textheight}{230mm}
+   #+LATEX_HEADER: \setlength{\textwidth}{160mm}
+   #+LATEX_HEADER: \setlength{\voffset}{-10mm}
+   #+LATEX_HEADER: \setlength{\oddsidemargin}{0mm}
+   #+LATEX_HEADER: \setlength{\evensidemargin}{0mm}
+
+   #+OPTIONS: e:nil
+      # DO NOT Include Entities (org-export-with-entities)
+      # Example: HTML exports \\alpha as: &alpha;
+
+   #+OPTIONS: tex:verbatim
+      # Verbatim export (org-export-with-latex)
+
+   #+OPTIONS: toc:??? 
+      # I have tried all settings in past (org-export-with-toc)
+
+   #  #+begin_export latex
+   #     \begin{document}
+   #     \maketitle
+   #  #+end_export
+#+END_COMMENT
+
+=STARTUP OPTIONS For This Configuration:=
+
+#+CATEGORY: @Log_Books
+#+LANGUAGE: en
+#+STARTUP:  overview
+#+STARTUP:  hideblocks
+#+STARTUP:  indent
+#+STARTUP:  align
+#+STARTUP:  inlineimages
+
+=STANDARD OPTIONS For This Configuration:=
 
 #+SELECT_TAGS: export
 #+EXCLUDE_TAGS: noexport
@@ -125,39 +183,38 @@
    # Typing simple a_b will not be affected anymore
    # Use word^{super} to raise word "super" - superscript
    # Use word_{sub} to lower the word "sub" - subscript
-                
+
 #+OPTIONS: author:t
    # Include Author Name into Exported file (org-export-with-author)
-   
+
 #+OPTIONS: broken-links:mark
    # Broken link(s) found?
    # Mark Them & Don't Export (org-export-with-broken-links)
-   
+
 #+OPTIONS: c:t
    # Include CLOCK keywords in exported documents (org-export-with-clocks)
-   
+
 #+OPTIONS: creator:t
    # Include Creator Info (org-export-with-creator)
-   
+
 #+OPTIONS: d:nil
    # Do NOT Include DRAWERS in exported documents (org-export-with-drawers)
-   
+
 #+OPTIONS: date:t
    # Include DATE in exported documents (org-export-with-date)
 
-#+OPTIONS: e:nil
-   # DON'T Include Entities (org-export-with-entities)
-   # TODO: Play around with this one...
-   # wtf does this do? lol %^)
+#+OPTIONS: e:t
+   # Include Entities (org-export-with-entities)
+   # Example: HTML exports \\alpha as: &alpha;
 
 #+OPTIONS: email:t
    # Include Author’s e-mail (org-export-with-email)
-   
+
 #+OPTIONS: f:t
    # Include Footnotes (org-export-with-footnotes)
 
-#+OPTIONS: H:4
-   # Set Headline Levels for Export (org-export-headline-levels)
+#+OPTIONS: H:6
+   # Set Number of Headline Levels for Export (org-export-headline-levels)
 
 #+OPTIONS: tasks:t
    # Toggle inclusion of TODO Task related keywords (org-export-with-tasks)
@@ -168,10 +225,9 @@
 
 #+OPTIONS: inline:t
    # Include Inline Tasks (org-export-with-inlinetasks)
-   # (org-export-with-section-numbers)
 
-#+OPTIONS: num:1
-   # Include section-numbers on Top Level Headings ONLY (chapters)
+#+OPTIONS: num:6
+   # LIMIT SECTION NUMBERING TO 6 LEVELS DEEP...
    # (org-export-with-section-numbers)
    # When N, Number only headlines level N or above.
    # Set ‘UNNUMBERED’ property to non-nil to disable
@@ -181,62 +237,33 @@
 
 #+OPTIONS: p:nil
    # NO Planning Info (org-export-with-planning)
-   
+
 #+OPTIONS: pri:nil
    # NO priority cookies (org-export-with-priority)
-   
+
 #+OPTIONS: prop:nil
    # No Property Drawers (org-export-with-properties)
-   
+
 #+OPTIONS: stat:nil
    # No Stastic cookies (org-export-with-statistics-cookies)
-   
+
 #+OPTIONS: tags:nil
    # No Tags (org-export-with-tags)
 
-#+OPTIONS: tex:verbatim
-   # Verbatim export (org-export-with-latex)
+#+OPTIONS: tex:t
+   # Do the right thing automatically (org-export-with-latex)
 
 #+OPTIONS: timestamp:t
    # Include Creation Time (org-export-time-stamp-file)
-   
+
 #+OPTIONS: title:t
    # Include Title (org-export-with-title)
 
-#+OPTIONS: toc:nil
-   # DO NOT Include Default TOC (org-export-with-toc)
+#+OPTIONS: toc:t
+   # Create DEFAULT TOC... (org-export-with-toc)
 
 #+OPTIONS: todo:nil
-   # DONT Include TODO keywords (org-export-with-todo-keywords)
-   
+   # DO NOT Include TODO keywords (org-export-with-todo-keywords)
+
 #+OPTIONS: |:t
    # Include Tables (org-export-with-tables)
-
-=DISABLED OPTIONS For this Configuration:=
-
-#+BEGIN_COMMENT
-#+OPTIONS: ::nil
-   # DO NOT Export fixed-width sections
-   # (org-export-with-fixed-width)
-
-#+OPTIONS: -:t
-   # Convert Special Strings
-   # (non-nil is being tried now)
-
-#+OPTIONS: inline:nil
-   # DO NOT Include Inline Tasks
-   # (org-export-with-inlinetasks)
-
-#+OPTIONS: num:nil
-   # DO NOT Include section-numbers
-   # (org-export-with-section-numbers)
-
-#+OPTIONS: tex:t
-   # Normal LaTeX Export
-   # (org-export-with-latex)
-
-#+OPTIONS: toc:1
-   # Include TOC for Top Level Headlings ONLY
-   # (org-export-with-toc)
-#+END_COMMENT
-

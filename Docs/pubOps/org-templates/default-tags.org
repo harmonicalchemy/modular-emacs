@@ -36,6 +36,6 @@ This file is included as part of *Harmonic Alchemy Modular Emacs* to provide an 
 
 /(These are from above local file settings, as well as global ones set by HA Mod Emacs Org Mode Module: ~09-2-org-keywords-tags-conf.el~)/
 
-- *Globall:* /a b c d e f l n o p q r s t x A G H I L N R T V W 0 1 2 5 + - ?/
+- *Globall:* /a b c d e f k l n o p q r s t x A G H I L N R T V W 0 1 2 5 + - ?/
 
 - *Local:* /g h i k m u v w y ; ! # $ % 3 4 9 =/

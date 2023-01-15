@@ -1,21 +1,24 @@
 # -**- mode: org; coding: utf-8 -**-
-#+TITLE: HAP - General LOG Notebook Skeleton
-#+EXPORT_FILE_NAME: HAP_General-Log-Notebook-Skeleton.pdf
+#+TITLE: HAP - General LOG Book Skeleton
+#+SUBTITLE: A GP Log Book with Time Tracking and Reporting
+#+EXPORT_FILE_NAME: HAP_General-Log-Book-Skeleton.pdf
 #+TEXT: Copyright © 2022 Harmonic Alchemy Productions & Others
 #+AUTHOR: Alisha Awen - Harmonic Alchemy Productions
 #+EMAIL: Siren1@disroot.org
-#+DATE: <2022-11-07 Mon>
+#+DATE: {{{time(%A %Y-%b-%d)}}}
 #+TEXT: Created: <2021-02-11 Thu>
-#+TEXT: Last Published: <not-published>
-#+FILETAGS: templates logs unpublished
+#+TEXT: Last Published: <2022-12-23 Fri>
+#+FILETAGS: templates logs published
 
 #+DESCRIPTION: HAP - Modular Emacs Org Mode General Log Notebook Template.  This is the replacement for the Markdown Mode templates I was using previously, which were in turn replacements for even older templates I made originally for Evernote/Trello/Scrivener...
 
-#+BEGIN_COMMENT 
+#+BEGIN_COMMENT
+
 =Setup Files:=
 
    For Cloned Versions of this template, the file/paths below will be relative
-   to your parent project directory and as such, should be all set to your new: ~.../your-Log-Book-Project/org-templates/~ directory...
+   to your parent project directory and as such, should be all set to your new:
+   ~.../your-Log-Book-Project/org-templates/~ directory...
 
 =NOTE:= 
 
@@ -29,8 +32,7 @@
               to produce a PDF version of your Log Note Book...
 #+END_COMMENT
 
-#+SETUPFILE: ./org-templates/log-book.org
-#+SETUPFILE: ./org-templates/latex-simple-pdf.org
+#+SETUPFILE: ./org-templates/log-book-setup.org
 #+SETUPFILE: ./org-templates/default-tags.org
 
 :READ_ME_FIRST:
@@ -43,29 +45,37 @@ To use *HAP_General-Log-Book-Project-Skeleton.org* /(Org-Mode Log Notebook Proje
 1) [ ] *Clone a Copy of This File:* 
 
       Put your clone where you normally organize your Logs or 
-      projects that need logs. *Place it within its own master*
-      *folder or within a master project folder that needs a LOG...*
-      It is Important to =Keep This File Within This MASTER=
-      =Enclosing Folder!=
+      projects that need logs.
+
+      *Place it within its own MASTER* *FOLDER* /(or within a MASTER/
+      /project folder that needs a LOG...)/
+
+      =Keep Your Clone Within This MASTER PARENT FOLDER!=
 
       If this is a =STANDALONE LOG NOTEBOOK=, Name the =MASTER FOLDER=
-      to reflect your Log Book Project's Title...
+      to reflect your Log Book Project's Title and/or purpose...
+      
       /(i.e., what you renamed this General-Log-Book-Lkeleton.org file to)/
 
       =Other Files/Folders will be placed within this MASTER FOLDER...=
 
-2) [ ] *Create:* ~./media~ *sub folder in your new project's Master Folder:*
+2) [ ] *Copy/Clone:* ~./media~ /(and contents)/ *to your new project's MASTER FOLDER:*
 
-      Create this new directory /(in your master folder as a sibling of/
-      /this file).../ Any external documents or images referenced by your
-      book(s) should be placed within this ~./media/~ directory...
+      Copy this directory /(into your MASTER FOLDER as a sibling of this file).../ 
+      Any external documents or images referenced by your book project should 
+      be placed within this ~./media/~ directory...
+
+      All external links, images, within the boilerplate examples of this
+      template may be used as examples for getting your own images, and 
+      external attachments linked properly...  
 
       This single ~./media~ directory will serve media and external attachments 
-      for all of the ~.org~ docs within this =MASTER FOLDER= /(parent directory)/...
+      for all of the ~.org~ doc template files from within: ~.emacs.d/Docs/pubOps~ 
+      directory /(if they were also copied here to your Project's MASTER FOLDER)/
 
-      =Note:= You DON'T need to create or copy the ~./auto/~ directory...
-             That directory will be automatically created the first time
-             you export this ~.org~ file to ~.PDF~...
+      =Note:=  You DON'T need to copy the ~./auto/~ directory...  That directory
+             will be automatically created the first time you export this ~.org~ 
+             file to ~.PDF~...
 
 3) [ ] *Copy/Clone:* ~./org-templates~ /(and all contents)/ *to your MASTER FOLDER:*
 
@@ -239,26 +249,53 @@ To use *HAP_General-Log-Book-Project-Skeleton.org* /(Org-Mode Log Notebook Proje
 
             /(a pop-up will show allowing you to choose export method)/
 
-      After *AucTeX* is done parsing/compiling etc., a new *PDF* by the name of:
-      ~HAP_General-Log-Notebook-Skeleton.pdf~ -and-
-      ~HAP_General-Log-Notebook-Skeleton.tex~ /(or the name you changed it to/
-      /located at the top of this file)/ will appear within the same directory
-      as this file... 
+      After *AucTeX* is done parsing/compiling etc., a new files named:
+      
+         ~HAP_General-Log-Notebook-Skeleton.pdf~
+         -and-
+         ~HAP_General-Log-Notebook-Skeleton.tex~
+      
+      /(or the name you changed it to located at the top of this file)/
+      will appear within the same directory as this file... 
 
       Subsequent repeated calls to the above command will overwrite your
       existing ~.pdf~ -and- ~.tex~ files! /(make backups first if needed!)/ You
-      should probably copy these files to the ~./auto/~ directory as well for
-      safe keeping as backups...
+      could use the ~./auto/~ directory for backups...
 
       =If you chose the last option above= LaTeX will output files with other
-      extensions for those other output formats... =NOTE:= SETUPFILES have not
-      been created yet for other eBook formats.  /(This is a work in progress)/
+      extensions for those other output formats...
+
+       =NOTE:= SETUPFILES have not been created yet for other eBook formats.
+             /(This is a work in progress)/
 
       =If YOU EXPERIENCE LaTeX ERRORS:= 
 
          *Consult Buffer:* ~*Org PDF LaTeX Output*~
 
-=These Instructions Were Last Modified:= <2022-10-05 Wed> 
+8) [ ] =Handling Images=
+
+      All Images /(by DEFAULT from above elisp source code block)/ are set
+      to thumbnail size (to properly size the .png ICONS /(emojis)/ in front
+      of Binder Headings etc...
+
+      This means that Other images within your ~.org~ file will ALSO display
+      as small thumbnails...
+
+      If that is NOT what you want for some images, you can override the
+      DEFAULT by using local attributes above the image link...
+
+      Use *LaTeX* and/or *HTML* attributes as follows on the images that need
+      to be a different size...
+
+      =Example:=
+      
+         #+CAPTION: Example larger size .png file 
+         #+NAME:  example:00001
+         #+attr_html: :width 200px
+         #+attr_latex: :width 200px
+      [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F3D5.png]]
+
+=These Instructions Were Last Modified:= <2022-12-21 Wed> 
 
 So far things are pretty basic PDF for LOG Notebooks... We may get fancy with
 other formats later... /(Maybe a Status Report - Invoice thing with nice LOGO,
@@ -276,7 +313,8 @@ Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas
 =Enjoy!= - Alisha Awen
 :END:
 
-* NEW ☞ About:
+* NEW About This Log Notebook:                       :export:
+<<LOG_about-this-log-notebook>>
 :README:
    Use this section as Front Matter for your Log Book... The summary
    provided here about your log notebook will become more important
@@ -287,9 +325,13 @@ Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas
    process should appear here...
 :END:
 
+#+begin_quote
+/“Everyone is a moon, and has a dark side which he never shows to anybody.”/ - Mark Twain 
+#+end_quote
+
 This Log Note Book was created for...  Yadda Yadda... Yadda...
 
-** 📚 References:
+** References:
 :README:
    =Org Mode Links Tip:=
 
@@ -309,13 +351,13 @@ This Log Note Book was created for...  Yadda Yadda... Yadda...
 
    =BOILERPLATE:= /(clone to add more ref links)/
 
-   ☞ *Heading:* [[link][Link NAME] ] /(comment)/
+   - *Heading:* [[link][Link NAME] ] /(comment)/
 
-   ☞ [[link][Link Name] ] *Heading:* /(comment)/
+   - [[link][Link Name] ] *Heading:* /(comment)/
    
-   ☞ *_:* [[][] ] /(yadda... yadda... yadda...)/
+   - *_:* [[][] ] /(yadda... yadda... yadda...)/
 
-   ☞ [[][] ] /(_)/
+   - [[][] ] /(_)/
 
    [[junk][JUNK]]  /(This is a stupid BUG workaround/ /for org-mode link/
          /expansion/compression... If you invoke:/ ~org-toggle-link-display~
@@ -338,17 +380,42 @@ This Log Note Book was created for...  Yadda Yadda... Yadda...
                   /It's my "METHOD of MADNESS" %^)/
 :END:
 
-☞ *Link to Project:* [[][] ] /(comment)/
+Here are Links to Information that may be helpful While Using this Log Book Template:
 
-\newpage
+- [[https://latex-tutorial.com/documentclass-latex/][Your Guide to documentclass LaTeX: Types and options]] - /LaTeX-Tutorial.com/
 
-* 📒 Begin LOG Notebook:
-:PROPERTIES:
-:CUSTOM_ID: HAP_General_LOG_Notebook_Skeleton_1
-:END:
-** 📅 2022:
-*** NEW 🗓 LOG: <2021-03-29 Mon> Generic Title CLONE /(General Log Entry Template)/
-<<LOG_Generic-Title-CLONE>>
+- [[https://orgmode.org/manual/In_002dbuffer-Settings.html][Summary of In-Buffer Settings]] - /The ORG Manual/
+
+- [[https://orgmode.org/manual/Export-Settings.html#Export-Settings][Export Settings]] - /The ORG Manual/
+
+- [[https://orgmode.org/manual/Table-of-Contents.html][Table of Contents]] - /(The ORG Manual)/
+
+- [[https://ctan.org/][Comprehensive TeX Archive Network]] - /CTAN/
+
+- [[https://www.linuxjournal.com/content/org-mode-latex-exporter-latex-non-texers][The org-mode LaTeX exporter]] - /(LaTeX for non-TEXers) LINUX Journal/
+
+- [[https://www.geneatcg.com/emacs-org-mode-export-to-pdf/][Emacs Org Mode export to pdf]] - /(Article by: Gene Ting-Chun Kao)/
+
+- [[https://www.ctan.org/pkg/latexmk/][Fully Automated LaTeX Document Generation]] - /(CTAN - latexmk)/
+
+- [[http://doc.norang.ca/org-mode.html][Org Mode - Organize Your Life In Plain Text!]] - /(Norang.ca Public Docs)/
+
+
+
+
+
+#+BEGIN_EXPORT latex
+\clearpage
+\listoffigures*
+\clearpage
+\listoftables*
+\mainmatter
+#+END_EXPORT
+
+* 2022 Logs:                                                   :export:
+** NEW Lab Experiment Gone WRONG!                       :export:
+<2022-12-28 Wed>
+<<LOG_lab-experiment-gone-wrong>>
 :README:
    =Using the Clocking Feature of this Log Entry=
 
@@ -446,11 +513,23 @@ This Log Note Book was created for...  Yadda Yadda... Yadda...
 
 :END:
 
-This Log Entry is about: Yadda... Yadda... Yadda...
+Just Kidding... No Panic... No pandemics were released and no animals were harmed... LOL
 
-\newpage
+This is a dummy placeholder pretend Log Entry... Cloned from the *Meta:* Binder:
+*Generic Title* /(General Log Entry Template)/...
 
-**** NEW 📚 Reference:
+Commendeer this fake Log entry /(change it all)/ to use as your already-in-place boilerplate for your VERY FIRST LOG ENTRY...
+
+I made all this dummy content to see a real-world example exported to PDF...
+This template was used to set LaTeX styling for LOGBOOKS etc...
+
+Because of that, This DUMMY Example shows up in exported PDF /(for showing this BOILERPLATE dummy content)/
+
+=Styling is all set...= for viewing your next draft... /(you benefit from all my research & tweaking.../ So... You can =NOW= simply change the content to =ANYTHING= org-mode accepts... =DO IT= ;-)
+
+If you don't like the look of they exported PDF, then do what I am doing and change it... /(good luck with that.. LaTeX Styling is a f---ing TIME SYNC)/ LOL
+
+*** NEW Reference:                                                             :noexport:
 :README:
    =Org Mode Links Tip:=
 
@@ -470,13 +549,13 @@ This Log Entry is about: Yadda... Yadda... Yadda...
 
    =BOILERPLATE:= /(clone to add more ref links)/
 
-   ☞ *Heading:* [[link][Link NAME] ] /(comment)/
+   + *Heading:* [[link][Link NAME] ] /(comment)/
 
-   ☞ [[link][Link Name] ] *Heading:* /(comment)/
+   + [[link][Link Name] ] *Heading:* /(comment)/
    
-   ☞ *_:* [[][] ] /(yadda... yadda... yadda...)/
+   + *_:* [[][] ] /(yadda... yadda... yadda...)/
 
-   ☞ [[][] ] /(_)/
+   + [[][] ] /(_)/
 
    [[junk][JUNK]]  /(This is a stupid BUG workaround/ /for org-mode link/
          /expansion/compression... If you invoke:/ ~org-toggle-link-display~
@@ -499,18 +578,33 @@ This Log Entry is about: Yadda... Yadda... Yadda...
                   /It's my "METHOD of MADNESS" %^)/
 :END:
 
-☞ *Link to Project:* [[][] ] /(comment)/
++ *Link to Project:* [[][] ] /(comment)/
 
-\newpage
+*** Time Card:                                                                :export:
 
-**** NEW ⏰ Time Card:
+#+BEGIN: clocktable :scope tree3 :maxlevel 5 :tstart "<-1w>" :tend "<+1m>" :step week :stepskip0 t :emphasize t :level t :tcolumns 4
 
-#+BEGIN: clocktable :scope tree3 :maxlevel 6 :tstart "<-1w>" :tend "<+1m>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3
+Weekly report starting on: [2022-12-26 Mon]
+| L | Headline                        | Time |      |      |      |
+|---+---------------------------------+------+------+------+------|
+|   | *Total time*                      | *2:54* |      |      |      |
+|---+---------------------------------+------+------+------+------|
+| 2 | \_  /Lab Experiment Gone WRONG!/  |      | /2:54/ |      |      |
+| 3 | \_    Summary: [1/3]            |      |      | 0:05 |      |
+| 3 | \_    Details:                  |      |      | 2:49 |      |
+| 4 | \_      First Experiment [0/3]  |      |      |      | 1:17 |
+| 5 | \_        Tables:               |      |      |      | 0:59 |
+| 4 | \_      Second Experiment [0/3] |      |      |      | 1:32 |
+
 #+END:
 
-\newpage
+#+LATEX: \newpage
 
-**** NEW ✅ Summary: [0/3]
+*** ACTIVE Summary: [1/3]                                                      :export:
+:CLOCKING:
+CLOCK: [2022-12-30 Fri 21:06]--[2022-12-30 Fri 21:10] =>  0:04
+CLOCK: [2022-12-28 Wed 12:23]--[2022-12-28 Wed 12:24] =>  0:01
+:END:
 :README:
    This Summary is mostly to help you find things later when you
    cannot remember when or where is was done... If you go to the
@@ -531,35 +625,441 @@ This Log Entry is about: Yadda... Yadda... Yadda...
 
 Yadda... Yadda... Yadda...
 
-1. [ ] *New Item 1:*
+1. [X] *First Experiment*
 
-2. [ ] *New Item 2:*
+2. [-] *Second Experiment*
 
-3. [ ] *New Item 3:* /(copy/clone more as needed)/
+3. [ ] *New Item 3* /(copy/clone more as needed)/
 
-\newpage
+#+LATEX: \newpage
 
-**** NEW 📒 Details:
-***** NEW ⏱ New Item 1 /(placeholder)/ [0/3]
+*** ACTIVE Details:                                                               :export:
+**** DONE First Experiment [0/3]
+CLOSED: [2022-12-28 Wed 12:42]
+:LOGBOOK:
+- State "DONE"       from "ACTIVE"     [2022-12-28 Wed 12:42]
+:END:
+:CLOCKING:
+CLOCK: [2022-12-28 Wed 12:24]--[2022-12-28 Wed 12:42] =>  0:18
+:END:
 
-New Item Details... Yadda... Yadda... Yadda...
+This is a NEW Item I am currently working on... The clock is ticking... Yadda Yadda Yadda...
 
-Re-Purpose these as needed and Delete anything you don't need...
+***** Plain Lists:  
 
-Add sub headings as needed...
+The LATEX export back-end accepts the ‘environment’ and ‘options’ attributes for plain lists. Both attributes work together for customizing lists, as shown in the examples:
 
-Don't forget to clock-in to HEADINGS while you work on them...
-AND... Don't forget to Clock OUT when you are DONE... %^)
+Some ways to say "Hello":
 
-=Delete BOILERPLATE= /below/ if you don't need it...
+#+ATTR_LATEX: :environment itemize*
+#+ATTR_LATEX: :options [label={}, itemjoin={,}, itemjoin*={, and}]
+#+CAPTION: This is the LIST Caption
 
-\newpage:
+- Hola /(first level List item)/
 
-****** BOILERPLATE:
+   + second level list item
 
-The following list contains Babel Source Code Blocks that are often needed for something I am writing or "Logging" about... I use them so much I decided to include them in this template...
+      - Third level list item
 
-- [ ] *__:* /(__)/
+         + Fourth level list item
+
+         + Fourth level list item
+
+      - Third level list item
+
+         1. Fourth Level Numbered Item
+
+         2. Fourth Level Numbered Item
+
+         3. Fourth Level Numbered Item
+
+   + second level list item
+
+- Bonjour
+
+   + second level list item
+
+- Guten Tag.
+
+   + second level list item
+
+***** Tables:
+:CLOCKING:
+CLOCK: [2022-12-31 Sat 13:26]--[2022-12-31 Sat 13:27] =>  0:01
+:END:
+
+Org Mode Tables are a bit more complicated than Markdown Mode tables which are static tables only.  Also the syntax is different (darn it!) but these org-mode tables are great because they are smart tables!  You most probably won't type a table like this outside of Emacs. The manual alignment without tool-support is very tedious. You don't have do careful tedious aligning or restructuring your tables in org-mode!  You can enter them very sloppy like so:
+
+#+CAPTION: Normal Table Default Alignment
+| My Column 1 | My Column 2 | Last Column |
+|-------------+-------------+-------------|
+|          42 | foo         | bar         |
+|          23 | baz         | abcdefg     |
+|-------------+-------------+-------------|
+|          65 |             |             |
+
+
+Once you hit tab on above it will look like this:
+
+#+CAPTION: Normal Table Default Alignment
+| My Column 1 | My Column 2 | Last Column |
+|-------------+-------------+-------------|
+|          42 | foo         | bar         |
+|          23 | baz         | abcdefg     |
+|-------------+-------------+-------------|
+|          65 |             |             |
+
+
+Cool!  It even knows how to justify numbers differently than text!  And there's a bunch more it can do... (i.e., spreadsheet stuff)...
+
+Org tables have cells of at most one line long: i.e., *There Is No Such Thing As A Multi-Line Table Cell In Org.*
+
+
+****** Column formatting:
+
+
+Columns are automatically aligned by default as such:
+
+#+ATTR_LATEX: :environment itemize*
+#+ATTR_LATEX: :options [label={}, itemjoin={,}, itemjoin*={, and}]
+#+CAPTION: Default Table Column Formatting
+- /Number-rich Columns to the Right/
+- /String-rich Columns to the Left/
+
+******* Table with aligned cells
+
+/If you want to override the automatic alignment, use:/ ~<r>~, ~<c>~ or ~<l>~.
+
+#+CAPTION: Table with aligned columns
+|          <r> |     <c>      | <l>          |
+|            1 |      2       | 3            |
+|        Right |    Center    | Left         |
+| xxxxxxxxxxxx | xxxxxxxxxxxx | xxxxxxxxxxxx |
+
+
+******* Header row
+
+You can create tables with an header row (by using an horizontal line of dashes to separate it from the rest of the table).
+
+#+CAPTION: Table with an header row
+| Name of column 1 | Name of column 2 | Name of column 3 |
+|------------------+------------------+------------------|
+| Top left         | Top middle       |                  |
+|                  |                  | Right            |
+| Bottom left      | Bottom middle    |                  |
+
+******* A very long table to test "sticky headers":
+:CLOCKING:
+CLOCK: [2022-12-31 Sat 13:27]--[2022-12-31 Sat 13:32] =>  0:05
+:END:
+
+
+#+ATTR_LATEX: :environment longtable :align l|lp{3cm}r|l
+#+CAPTION: Extra LONG Table (to see how LaTeX handles them)
+| *Name of column 1* | *Name of column 2* | *Name of column 3* |
+|------------------+------------------+------------------|
+|         /Top Left/ | /Top Middle/       | /Top Right/        |
+|                2 |                  |                  |
+|                3 |                  |                  |
+|                4 |                  |                  |
+|                5 | /Middle/           | /Right/            |
+|                6 |                  |                  |
+|                7 |                  |                  |
+|                8 |                  |                  |
+|                9 |                  |                  |
+|               10 | /Middle/           | /Right/            |
+|               11 |                  |                  |
+|               12 |                  |                  |
+|               13 |                  |                  |
+|               14 |                  |                  |
+|               15 | /Middle/           | /Right/            |
+|               16 |                  |                  |
+|               17 |                  |                  |
+|               18 |                  |                  |
+|               19 |                  |                  |
+|               20 | /Middle/           | /Right/            |
+|               21 |                  |                  |
+|               22 |                  |                  |
+|               23 |                  |                  |
+|               24 |                  |                  |
+|               25 | /Middle/           | /Right/            |
+|               26 |                  |                  |
+|               27 |                  |                  |
+|               28 |                  |                  |
+|               29 |                  |                  |
+|               30 | /Middle/           | /Right/            |
+|               31 |                  |                  |
+|               32 |                  |                  |
+|               33 |                  |                  |
+|               34 |                  |                  |
+|               35 | /Middle/           | /Right/            |
+|      /Bottom left/ | /Bottom middle/    | /Bottom Right/     |
+
+
+****** Table Placement:
+******* Align Table Centred: /(the default)/
+
+=Normal DEFAULT Tables are Centered= 
+
+
+#+CAPTION: DEFAULT TABLE (as is)
+| a | b | c |
+|---+---+---|
+| 1 | 2 | 3 |
+| 4 | 5 | 6 |
+
+
+******* Align Table Flush RIGHT:
+
+
+#+LATEX: \hfill
+#+ATTR_LATEX: :center nil
+#+CAPTION: Table Flush RIGHT
+| a | b | c |
+|---+---+---|
+| 1 | 2 | 3 |
+| 4 | 5 | 6 |
+
+
+Here the hfill adds infinite stretch before the table, so it pushes the table to the right.
+
+******* Align Table Flush LEFT:
+
+
+#+LATEX: \noindent
+#+ATTR_LATEX: :center nil
+#+CAPTION: Table Flush LEFT
+| a | b | c |
+|---+---+---|
+| 1 | 2 | 3 |
+| 4 | 5 | 6 |
+#+LATEX: \hfill
+
+
+The noindent just gets rid of the indentation of the first line of a paragraph which in this case is the table. The hfill adds infinite stretch after the table, so it pushes the table to the left.
+
+******* Table size:
+
+#+ATTR_HTML: :width 100%
+#+CAPTION: Full Width Table
+| Cell in column 1, row 1 | Cell in column 2, row 1 |
+| Cell in column 1, row 2 | Cell in column 2, row 2 |
+
+****** Using Table.el to do More With Tables:
+:CLOCKING:
+CLOCK: [2022-12-31 Sat 13:32]--[2022-12-31 Sat 13:32] =>  0:00
+:END:
+
+*org-mode* has 2 table formats, the default *org-table* and the other is *table.el*... You can do a lot more by converting your tables to use Table.el...  To toggle between the two different modes type:
+
+*C-c ~* /(tilde)/
+
+=Tip:= Add a blank line above and below the table.
+     The blank lines should prevent a bug when converting
+     the table with *C-c ~*.
+
+******* Example:
+:CLOCKING:
+CLOCK: [2022-12-31 Sat 13:32]--[2022-12-31 Sat 14:25] =>  0:53
+:END:
+
+1. [ ] Place your cursor, /a.k.a the point/, inside your updated
+      table then type ~C-c ~~ /(tilde)/ and answer *y*.
+      The table in example below is normal org-table
+      After doing above comment it will change to a
+      boxed in look...
+
+#+CAPTION: Raw Table with Extra Long Column
+| Term      | Definition                                                                                               |
+| keyword 1 | Extra Long line definition that continues beyond your frame width or beyond your set Olivetti line width |
+| keyword 2 | Extra Long line definition that continues beyond your frame width or beyond your set Olivetti line width |
+
+
+1. [ ] Place Cursor Inside Updated Table Then Type: ~C-c '~
+      /A New Special Table Editing Window Will Appear.../
+
+2. [ ] Place Cursor Inside Second Column And Type: ~C-c C-c <~
+
+      /Do this command repeatedly until the column is the/
+      /desired width.../
+
+3. [ ] =Save Table With:= ~C-c '~ /(to view results of edits)/
+   
+      /The Example Below is result of first pass.../
+      /(After converting back to org-table for exporting)/
+
+#+CAPTION: Resized Table (try #1)
+| *Term*      | *Definition*                                            |
+| keyword 1 | Extra Long line definition that continues beyond your |
+|           | frame width or                                        |
+|           | beyond your set Olivetti line width                   |
+| keyword 2 | Extra Long line definition that continues beyond your |
+|           | frame width or                                        |
+|           | beyond your set Olivetti line width                   |
+
+   =Tip:= Use the universal argument key binding ~C-u~ to quickly repeat
+        this step. For example, If your right column is 106 characters
+        as in the above example, and you want to redice the right column
+        width to 50 characters do: ~C-u 56 C-c C-c <~ which will repeat:
+        ~C-c C-c <~ command 56 times.
+
+After typing: ~C-c '~ /(to save and exit the table editor)/ you will see your table resized as the above table now looks below...
+
+#+CAPTION: Resized Table (Final)
+| *Term*      | *Definition*                |
+| keyword 1 | Extra Long line           |
+|           | definition that continues |
+|           | beyond your frame width   |
+|           | or beyond your set        |
+|           | Olivetti line             |
+|           | width                     |
+| keyword 2 | Extra Long line           |
+|           | definition that continues |
+|           | beyond your frame width   |
+|           | or beyond your set        |
+|           | Olivetti line             |
+|           | width                     |
+
+***** LiliPond Music Notation:
+
+#+PROPERTY: header-args:lilypond :noweb yes
+
+=Example 1:=
+
+#+begin_src lilypond :file ./auto/ionian.pdf
+\relative c' {
+  c d e f
+  g a b c
+  b a g f
+  e d c d
+  e f g a
+  b c b a
+  g f e d
+  c1
+}
+#+end_src
+
+#+RESULTS:
+
+=Example 2:=
+
+#+begin_src lilypond :file ./auto/MuseScore-Frescobaldi-Lilypond-Emacs.pdf
+\version "2.23.82"
+% automatically converted by musicxml2ly from Str-Qt-Score_2bar-Example-Template.mxl
+\pointAndClickOff
+
+\header {
+    title = "2 Bar Example Boilerplate"
+    encodingsoftware =  "MuseScore 3.6.2"
+    encodingdate =  "2022-12-29"
+    }
+
+\paper {
+    
+    paper-width = 23\cm
+    paper-height = 9.8\cm
+    top-margin = 0.0\cm
+    bottom-margin = 0.0\cm
+    left-margin = 2\cm
+    right-margin = 0.5\cm
+    indent = 1.6161538461538463\cm
+    }
+\layout {
+    \context { \Score
+        autoBeaming = ##f
+        }
+    }
+PartPOneVoiceOne =  \relative fis' {
+    \clef "treble" \time 12/8 \key c \major | % 1
+    \stemUp fis4 \stemUp a4 \stemUp e8 \stemDown cis'4 \stemDown fis4
+    \stemDown d4 \stemDown c8 \tempo 4.=80 | % 2
+    \stemUp fis,4 \stemUp a4 \stemUp e8 \stemDown cis'4 \stemDown fis4
+    \stemDown d4 \stemDown c8 \bar "|."
+    }
+
+PartPTwoVoiceOne =  \relative cis' {
+    \clef "treble" \time 12/8 \key c \major | % 1
+    \stemUp cis4 r8 \stemUp c4 r8 \stemUp e4 r8 \stemUp e4 r8 | % 2
+    \stemUp cis4 r8 \stemUp c4 r8 \stemUp e4 r8 \stemUp e4 r8 \bar "|."
+    }
+
+PartPThreeVoiceOne =  \relative gis {
+    \clef "alto" \time 12/8 \key c \major | % 1
+    \stemUp gis4 r8 \stemUp ais4 r8 \stemDown dis4 r8 \stemDown d4 r8 | % 2
+    \stemUp gis,4 r8 \stemUp ais4 r8 \stemDown dis4 r8 \stemDown d4 r8
+    \bar "|."
+    }
+
+PartPFourVoiceOne =  \relative g, {
+    \clef "bass" \time 12/8 \key c \major | % 1
+    \stemUp g2 \stemDown e'2 \stemUp f,2 | % 2
+    \stemUp g2 \stemDown e'2 \stemUp f,2 \bar "|."
+    }
+
+
+% The score definition
+\score {
+    <<
+        \new StaffGroup
+        <<
+            \new Staff
+            <<
+                \set Staff.instrumentName = "Violin I"
+                
+                \context Staff << 
+                    \mergeDifferentlyDottedOn\mergeDifferentlyHeadedOn
+                    \context Voice = "PartPOneVoiceOne" {  \PartPOneVoiceOne }
+                    >>
+                >>
+            \new Staff
+            <<
+                \set Staff.instrumentName = "Violin II"
+                
+                \context Staff << 
+                    \mergeDifferentlyDottedOn\mergeDifferentlyHeadedOn
+                    \context Voice = "PartPTwoVoiceOne" {  \PartPTwoVoiceOne }
+                    >>
+                >>
+            \new Staff
+            <<
+                \set Staff.instrumentName = "Viola"
+                
+                \context Staff << 
+                    \mergeDifferentlyDottedOn\mergeDifferentlyHeadedOn
+                    \context Voice = "PartPThreeVoiceOne" {  \PartPThreeVoiceOne }
+                    >>
+                >>
+            \new Staff
+            <<
+                \set Staff.instrumentName = "Violoncello"
+                
+                \context Staff << 
+                    \mergeDifferentlyDottedOn\mergeDifferentlyHeadedOn
+                    \context Voice = "PartPFourVoiceOne" {  \PartPFourVoiceOne }
+                    >>
+                >>
+            >>
+        >>
+    \layout {}
+    }
+#+end_src
+
+#+RESULTS:
+[[file:./auto/MuseScore-Frescobaldi-Lilypond-Emacs.pdf]]
+
+**** ACTIVE Second Experiment [0/3]
+:CLOCKING:
+CLOCK: [2022-12-30 Fri 21:10]--[2022-12-30 Fri 22:42] =>  1:32
+:END:
+***** Literate Programming
+:BOILERPLATE:
+  =Delete This BOILERPLATE DRAWER If You Don't Need It...=
+
+  The following list contains Babel Source Code Blocks that are
+  often needed for something I am writing or "Logging" about...
+  I use them so much I decided to include them in this template...
+
+  - [ ] *__:* /(__)/
 
       #+begin_src conf
        keyword1:     Value1 
@@ -567,14 +1067,73 @@ The following list contains Babel Source Code Blocks that are often needed for s
        keyword3:     Value 
       #+end_src
 
-- [ ] *__:* /(__)/
+  - [ ] *__:* /(__)/
 
       #+begin_src bash
        sudo dnf install emacs
        sudo apt install emacs
       #+end_src
 
-- [ ] *__:* /(__)/
+  - [ ] *__:* /(__)/
+
+      #+BEGIN_SRC emacs-lisp :results output
+       ;; Initialize Local Vars from GLOBAL CONSTANTS;
+       (let ((h (list 'text-pixels ME--CODE-FRAME-HEIGHT))
+             (w (list 'text-pixels ME--CODE-FRAME-WIDTH)))
+         (princ "CAR h: ")
+         (princ (car h))
+         (princ "\n")
+         (princ "CDR h: ")
+         (princ (cdr h))
+         (princ "\n\n")
+         (princ "CAR w: ")
+         (princ (car w))
+         (princ "\n")
+         (princ "CDR w: ")
+         (princ (cdr w)))
+      #+END_SRC
+
+      #+RESULTS:
+      : CAR h: text-pixels
+      : CDR h: (42)
+      : 
+      : CAR w: text-pixels
+      : CDR w: (92)
+      
+:END:
+
+- *Run Code Block* Test of list item with long paragraph that extends many lines to see how indentation and folding works... Test of list item with long paragraph that extends many lines to see how indentation and folding works...
+  
+  Test of list item with long paragraph that extends many lines to see how indentation and folding works... Test of list item with long paragraph that extends many lines to see how indentation and folding works...
+
+**** NEW New Item 3 /(placeholder)/ [0/3]                                       :noexport:
+:PROPERTIES:
+:UNNUMBERED: notoc
+:END:
+:BOILERPLATE:
+
+  =Delete This BOILERPLATE DRAWER If You Don't Need It...=
+
+  The following list contains Babel Source Code Blocks that are
+  often needed for something I am writing or "Logging" about...
+  I use them so much I decided to include them in this template...
+
+  - [ ] *__:* /(__)/
+
+      #+begin_src conf
+       keyword1:     Value1 
+       keyword2:     Value2 
+       keyword3:     Value 
+      #+end_src
+
+  - [ ] *__:* /(__)/
+
+      #+begin_src bash
+       sudo dnf install emacs
+       sudo apt install emacs
+      #+end_src
+
+  - [ ] *__:* /(__)/
 
       #+BEGIN_SRC emacs-lisp :results output
        ;; Initialize Local Vars from GLOBAL CONSTANTS;
@@ -600,71 +1159,29 @@ The following list contains Babel Source Code Blocks that are often needed for s
       : CAR w: text-pixels
       : CDR w: (92)
 
-\newpage
+  - [ ] =LaTeX Code Within ~.Org~ Docs:=
 
-***** NEW ⏱ New Item 2 /(placeholder)/ [0/3]
+      #+begin_comment
 
-New Item Details... Yadda... Yadda... Yadda...
+      Code Embedded ~In-line~ within paragraphs:
+      
+         Put: @@latex:<LaTeX Code Here>@@ Anywhere
+         Within a paragraph...
 
-Re-Purpose these as needed and Delete anything you don't need...
+      #+LATEX: % Any Arbitrary LaTeX Code...
+      #+LATEX: \newpage % Start New Page
 
-Add sub headings as needed...
+      #+BEGIN_EXPORT latex
+      %% Put LaTex Code In Here...
+      #+END_EXPORT
 
-Don't forget to clock-in to HEADINGS while you work on them...
-AND... Don't forget to Clock OUT when you are DONE... %^)
+      #+BEGIN_LaTeX
+      %% Put LaTex Code In Here...
+      #+END_LaTeX
 
-=Delete BOILERPLATE= /below/ if you don't need it...
+      #+end_comment
 
-\newpage:
-
-****** BOILERPLATE:
-
-The following list contains Babel Source Code Blocks that are often needed for something I am writing or "Logging" about... I use them so much I decided to include them in this template...
-
-- [ ] *__:* /(__)/
-
-      #+begin_src conf
-       keyword1:     Value1 
-       keyword2:     Value2 
-       keyword3:     Value 
-      #+end_src
-
-- [ ] *__:* /(__)/
-
-      #+begin_src bash
-       sudo dnf install emacs
-       sudo apt install emacs
-      #+end_src
-
-- [ ] *__:* /(__)/
-
-      #+BEGIN_SRC emacs-lisp :results output
-       ;; Initialize Local Vars from GLOBAL CONSTANTS;
-       (let ((h (list 'text-pixels ME--CODE-FRAME-HEIGHT))
-             (w (list 'text-pixels ME--CODE-FRAME-WIDTH)))
-         (princ "CAR h: ")
-         (princ (car h))
-         (princ "\n")
-         (princ "CDR h: ")
-         (princ (cdr h))
-         (princ "\n\n")
-         (princ "CAR w: ")
-         (princ (car w))
-         (princ "\n")
-         (princ "CDR w: ")
-         (princ (cdr w)))
-      #+END_SRC
-
-      #+RESULTS:
-      : CAR h: text-pixels
-      : CDR h: (42)
-      : 
-      : CAR w: text-pixels
-      : CDR w: (92)
-
-\newpage
-
-***** NEW ⏱ New Item 3 /(placeholder)/ [0/3]
+:END:
 
 New Item Details... Yadda... Yadda... Yadda...
 
@@ -675,62 +1192,28 @@ Add sub headings as needed...
 Don't forget to clock-in to HEADINGS while you work on them...
 AND... Don't forget to Clock OUT when you are DONE... %^)
 
-=Delete BOILERPLATE= /below/ if you don't need it...
-
-\newpage:
-
-****** BOILERPLATE:
-
-The following list contains Babel Source Code Blocks that are often needed for something I am writing or "Logging" about... I use them so much I decided to include them in this template...
-
-- [ ] *__:* /(__)/
-
-      #+begin_src conf
-       keyword1:     Value1 
-       keyword2:     Value2 
-       keyword3:     Value 
-      #+end_src
-
-- [ ] *__:* /(__)/
-
-      #+begin_src bash
-       sudo dnf install emacs
-       sudo apt install emacs
-      #+end_src
-
-- [ ] *__:* /(__)/
-
-      #+BEGIN_SRC emacs-lisp :results output
-       ;; Initialize Local Vars from GLOBAL CONSTANTS;
-       (let ((h (list 'text-pixels ME--CODE-FRAME-HEIGHT))
-             (w (list 'text-pixels ME--CODE-FRAME-WIDTH)))
-         (princ "CAR h: ")
-         (princ (car h))
-         (princ "\n")
-         (princ "CDR h: ")
-         (princ (cdr h))
-         (princ "\n\n")
-         (princ "CAR w: ")
-         (princ (car w))
-         (princ "\n")
-         (princ "CDR w: ")
-         (princ (cdr w)))
-      #+END_SRC
-
-      #+RESULTS:
-      : CAR h: text-pixels
-      : CDR h: (42)
-      : 
-      : CAR w: text-pixels
-      : CDR w: (92)
-
-\newpage
-
-** 📅 2023:
+* 2023 Logs:                                                    :export:
 
 /Not Here Yet but keep logging... The New Year will be here soon enough!/
 
-* ⎘ Meta: /(Usage & Templates)/                                        :noexport:
+=When the New Year Comes Around: RENAME This Heading to the Next YEAR=
+
+=DON'T Clone this Heading...= /(Leave it here as the LAST Top Level Heading before the Meta Binder...  It must stay Titled as the Next Upcoming YEAR)/ 
+
+=After Doing Above:= Create a NEW Top Level Heading with the Current YEAR and Use that to place new Cloned LOG Entry Templates from the Meta Section...
+
+=The Following LaTeX Snippit MUST be placed AFTER All LOG Entries=
+/This Starts the BACK MATTER Section of this Log Book (nothing in it yet)/
+
+
+
+
+
+#+BEGIN_EXPORT latex
+\backmatter
+#+END_EXPORT
+
+* ⎘ Meta: /(Usage & Templates)/                                 :noexport:
 ** 📄 Introduction:
 :README:
    Use this Standard Log /(template)/ as a multi purpose time card/log
@@ -790,8 +1273,6 @@ If you see other keys alone separated by a space after the *C-x* or *M-x* /(e.g.
 
 *Got that?* That's the key notation system we use here... It is all standard Emacs...  The above paragraphs are mostly for the benefit of new Emacs users! And there is more to learn below. If you are an Emacs/Org-Mode veteran please bear with us...
 
-\newpage
-
 *** Org Mode Timestamps and Clocking:
 
 This Template utilizes the default *Org-Mode:* "*C-c* ." command /(i.e., That's Ctrl-c and then type a dot. This Enters a timestamp range at the cursor position)/. The command employs *org-evaluate-time-range* to compute time on task.  This is useful for timesheets etc. 
@@ -801,8 +1282,6 @@ In addition, the *Log Entry (template)* stores and tracks *Org-Mode :CLOCKING:* 
 Common time clocking commands are defined within the *Log Entry (template)* itself. Any time you need to look up clocking commands, open the *:README:* drawer under the *Log Entry (template)* heading by placing your cursor over it and hitting *TAB*.
 
 Additional commands for using *Org-Mode* with Modular Emacs will be explained here if needed, as well as other *Harmonic Alchemy Modular Emacs Templates* that get produced in the future...
-
-\newpage
 
 ** 📄 Instructions:
 :README:
@@ -871,7 +1350,7 @@ Additional commands for using *Org-Mode* with Modular Emacs will be explained he
             To get out of the paste buffer view, type: "*spacebar u*" and 
             it will return you to where you were before...
 
-\newpage
+
 
 *** =Paste Cloned LOG Entry:=
 
@@ -898,7 +1377,7 @@ Additional commands for using *Org-Mode* with Modular Emacs will be explained he
             go away... Now you are ready to compose your new
             log entry...
 
-\newpage
+
 
 *** Edit-Compose New LOG Entry:
 
@@ -934,7 +1413,7 @@ Additional commands for using *Org-Mode* with Modular Emacs will be explained he
       /"clock in"/ and /"clock out"/ of your log entry as you work on
       the tasks...
 
-\newpage
+
 
 *** Enter New LOG Entry Details:
 
@@ -949,11 +1428,8 @@ Place the *:noexport:* tag at the end of any org outline heading to exclude it a
 *** Export LOG as a PDF Report:
 
 Anytime you need to see your Log Notebook as a nicely printed PDF report, you can export it using the following custom key command: ~SPACE e p~ /(i.e., press ~spacebar~, type ~e~ and then ~p~ *(Xah-Fly-Keys Command Mode)* extended leader key sequence)/
-
-\newpage
-
-** ⎘ Templates:
-*** NEW 🗓 LOG: <2021-03-29 Mon> Generic Title /(General Log Entry Template)/
+** NEW Generic Log Entry /(General Log Entry Template)/
+<2021-03-29 Mon>
 <<LOG_Generic-Title>>
 :README:
    =Using the Clocking Feature of this Log Entry=
@@ -1054,9 +1530,10 @@ Anytime you need to see your Log Notebook as a nicely printed PDF report, you ca
 
 This Log Entry is about: Yadda... Yadda... Yadda...
 
-\newpage
-
-**** NEW 📚 Reference:
+*** NEW Reference:
+:PROPERTIES:
+:UNNUMBERED: notoc
+:END:
 :README:
    =Org Mode Links Tip:=
 
@@ -1076,13 +1553,13 @@ This Log Entry is about: Yadda... Yadda... Yadda...
 
    =BOILERPLATE:= /(clone to add more ref links)/
 
-   ☞ *Heading:* [[link][Link NAME] ] /(comment)/
+   - *Heading:* [[link][Link NAME] ] /(comment)/
 
-   ☞ [[link][Link Name] ] *Heading:* /(comment)/
+   - [[link][Link Name] ] *Heading:* /(comment)/
    
-   ☞ *_:* [[][] ] /(yadda... yadda... yadda...)/
+   - *_:* [[][] ] /(yadda... yadda... yadda...)/
 
-   ☞ [[][] ] /(_)/
+   - [[][] ] /(_)/
 
    [[junk][JUNK]]  /(This is a stupid BUG workaround/ /for org-mode link/
          /expansion/compression... If you invoke:/ ~org-toggle-link-display~
@@ -1105,18 +1582,18 @@ This Log Entry is about: Yadda... Yadda... Yadda...
                   /It's my "METHOD of MADNESS" %^)/
 :END:
 
-☞ *Link to Project:* [[][] ] /(comment)/
+- *Link to Project:* [[][] ] /(comment)/
 
-\newpage
-
-**** NEW ⏰ Time Card:
+*** NEW Time Card:
+:PROPERTIES:
+:UNNUMBERED: notoc
+:END:
 
 #+BEGIN: clocktable :scope tree3 :maxlevel 6 :tstart "<-1w>" :tend "<+1m>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3
+
 #+END:
 
-\newpage
-
-**** NEW ✅ Summary: [0/3]
+*** NEW Summary: [0/3]
 :README:
    This Summary is mostly to help you find things later when you
    cannot remember when or where is was done... If you go to the
@@ -1143,29 +1620,20 @@ Yadda... Yadda... Yadda...
 
 3. [ ] *New Item 3:* /(copy/clone more as needed)/
 
-\newpage
+*** NEW Details:
+**** NEW New Item 1 /(placeholder)/ [0/4]
+:PROPERTIES:
+:UNNUMBERED: notoc
+:END:
+:BOILERPLATE:
 
-**** NEW 📒 Details:
-***** NEW ⏱ New Item 1 /(placeholder)/ [0/3]
+  =Delete This BOILERPLATE DRAWER If You Don't Need It...=
 
-New Item Details... Yadda... Yadda... Yadda...
+  The following list contains Babel Source Code Blocks that are
+  often needed for something I am writing or "Logging" about...
+  I use them so much I decided to include them in this template...
 
-Re-Purpose these as needed and Delete anything you don't need...
-
-Add sub headings as needed...
-
-Don't forget to clock-in to HEADINGS while you work on them...
-AND... Don't forget to Clock OUT when you are DONE... %^)
-
-=Delete BOILERPLATE= /below/ if you don't need it...
-
-\newpage:
-
-****** BOILERPLATE:
-
-The following list contains Babel Source Code Blocks that are often needed for something I am writing or "Logging" about... I use them so much I decided to include them in this template...
-
-- [ ] *__:* /(__)/
+  - [ ] *__:* /(__)/
 
       #+begin_src conf
        keyword1:     Value1 
@@ -1173,14 +1641,14 @@ The following list contains Babel Source Code Blocks that are often needed for s
        keyword3:     Value 
       #+end_src
 
-- [ ] *__:* /(__)/
+  - [ ] *__:* /(__)/
 
       #+begin_src bash
        sudo dnf install emacs
        sudo apt install emacs
       #+end_src
 
-- [ ] *__:* /(__)/
+  - [ ] *__:* /(__)/
 
       #+BEGIN_SRC emacs-lisp :results output
        ;; Initialize Local Vars from GLOBAL CONSTANTS;
@@ -1206,15 +1674,29 @@ The following list contains Babel Source Code Blocks that are often needed for s
       : CAR w: text-pixels
       : CDR w: (92)
 
-\newpage
+  - [ ] =LaTeX Code Within ~.Org~ Docs:=
 
+      #+begin_comment
 
+      Code Embedded ~In-line~ within paragraphs:
+      
+         Put: @@latex:<LaTeX Code Here>@@ Anywhere
+         Within a paragraph...
 
+      #+LATEX: % Any Arbitrary LaTeX Code...
+      #+LATEX: \newpage % Start New Page
 
+      #+BEGIN_EXPORT latex
+      %% Put LaTex Code In Here...
+      #+END_EXPORT
 
+      #+BEGIN_LaTeX
+      %% Put LaTex Code In Here...
+      #+END_LaTeX
 
+      #+end_comment
 
-***** NEW ⏱ New Item 2 /(placeholder)/ [0/3]
+:END:
 
 New Item Details... Yadda... Yadda... Yadda...
 
@@ -1225,15 +1707,19 @@ Add sub headings as needed...
 Don't forget to clock-in to HEADINGS while you work on them...
 AND... Don't forget to Clock OUT when you are DONE... %^)
 
-=Delete BOILERPLATE= /below/ if you don't need it...
+**** NEW New Item 2 /(placeholder)/ [0/3]
+:PROPERTIES:
+:UNNUMBERED: notoc
+:END:
+:BOILERPLATE:
 
-\newpage:
+  =Delete This BOILERPLATE DRAWER If You Don't Need It...=
 
-****** BOILERPLATE:
+  The following list contains Babel Source Code Blocks that are
+  often needed for something I am writing or "Logging" about...
+  I use them so much I decided to include them in this template...
 
-The following list contains Babel Source Code Blocks that are often needed for something I am writing or "Logging" about... I use them so much I decided to include them in this template...
-
-- [ ] *__:* /(__)/
+  - [ ] *__:* /(__)/
 
       #+begin_src conf
        keyword1:     Value1 
@@ -1241,14 +1727,14 @@ The following list contains Babel Source Code Blocks that are often needed for s
        keyword3:     Value 
       #+end_src
 
-- [ ] *__:* /(__)/
+  - [ ] *__:* /(__)/
 
       #+begin_src bash
        sudo dnf install emacs
        sudo apt install emacs
       #+end_src
 
-- [ ] *__:* /(__)/
+  - [ ] *__:* /(__)/
 
       #+BEGIN_SRC emacs-lisp :results output
        ;; Initialize Local Vars from GLOBAL CONSTANTS;
@@ -1273,13 +1759,8 @@ The following list contains Babel Source Code Blocks that are often needed for s
       : 
       : CAR w: text-pixels
       : CDR w: (92)
-
-\newpage
-
-
-
-
-***** NEW ⏱ New Item 3 /(placeholder)/ [0/3]
+      
+:END:
 
 New Item Details... Yadda... Yadda... Yadda...
 
@@ -1290,15 +1771,19 @@ Add sub headings as needed...
 Don't forget to clock-in to HEADINGS while you work on them...
 AND... Don't forget to Clock OUT when you are DONE... %^)
 
-=Delete BOILERPLATE= /below/ if you don't need it...
+**** NEW New Item 3 /(placeholder)/ [0/3]
+:PROPERTIES:
+:UNNUMBERED: notoc
+:END:
+:BOILERPLATE:
 
-\newpage:
+  =Delete This BOILERPLATE DRAWER If You Don't Need It...=
 
-****** BOILERPLATE:
+  The following list contains Babel Source Code Blocks that are
+  often needed for something I am writing or "Logging" about...
+  I use them so much I decided to include them in this template...
 
-The following list contains Babel Source Code Blocks that are often needed for something I am writing or "Logging" about... I use them so much I decided to include them in this template...
-
-- [ ] *__:* /(__)/
+  - [ ] *__:* /(__)/
 
       #+begin_src conf
        keyword1:     Value1 
@@ -1306,14 +1791,14 @@ The following list contains Babel Source Code Blocks that are often needed for s
        keyword3:     Value 
       #+end_src
 
-- [ ] *__:* /(__)/
+  - [ ] *__:* /(__)/
 
       #+begin_src bash
        sudo dnf install emacs
        sudo apt install emacs
       #+end_src
 
-- [ ] *__:* /(__)/
+  - [ ] *__:* /(__)/
 
       #+BEGIN_SRC emacs-lisp :results output
        ;; Initialize Local Vars from GLOBAL CONSTANTS;
@@ -1338,6 +1823,15 @@ The following list contains Babel Source Code Blocks that are often needed for s
       : 
       : CAR w: text-pixels
       : CDR w: (92)
+      
+:END:
 
-\newpage
+New Item Details... Yadda... Yadda... Yadda...
+
+Re-Purpose these as needed and Delete anything you don't need...
+
+Add sub headings as needed...
+
+Don't forget to clock-in to HEADINGS while you work on them...
+AND... Don't forget to Clock OUT when you are DONE... %^)
 

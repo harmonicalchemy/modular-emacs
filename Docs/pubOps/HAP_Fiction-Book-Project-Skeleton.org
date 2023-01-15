@@ -4,18 +4,20 @@
 #+TEXT: Copyright © 2022 Harmonic Alchemy Productions & Others
 #+AUTHOR: Alisha Awen - Harmonic Alchemy Productions
 #+EMAIL: Siren1@disroot.org
-#+DATE: <2022-08-28 Sun>
+#+DATE: {{{time(%Y-0%M-%d)}}}
 #+TEXT: Created: <2020-07-30 Thu>
 #+TEXT: Last Published: <Not Published>
 #+FILETAGS: templates fiction_books @projects unpublished
 
 #+DESCRIPTION: HAP - Fiction Book Project Skeleton with generic basics already done.  Great for Authors to use when starting a new fiction book project from scratch... Publishable as a PDF Book suitable for eBook readers... (easily modified for publishing in other eBook formats or for the web)
 
-#+BEGIN_COMMENT 
+#+BEGIN_COMMENT
+
 =Setup Files:=
 
    For Cloned Versions of this template, the file/paths below will be relative
-   to your parent project directory and as such, should be all set to your new: ~.../your-fiction-book-project/org-templates/~ directory...
+   to your parent project directory and as such, should be all set to your new:
+   ~.../your-fiction-book-project/org-templates/~ directory...
 
 =NOTE:= 
 
@@ -23,111 +25,126 @@
    If you need to change the category, do it in your cloned version
    of fiction-book.org...
 
-   *SETUPFILE:* ~default-tags.org~ is where tags are set for this project...
+   *SETUPFILE:* ~default-tags.org~ is where related tags are defined
+              for use in this project... Tags defined are useful
+              for most situations and some are ALWAYS to be defined
+              for this LaTeX publishing system to work.
+              
+              /(change the name from/ ~default-tags.org~ /to another name/
+              /and-or replace some (but NOT ALL) of the tags within/
+              /to your own tags... see instructions inside the file)/
 
-   *SETUPFILE:* ~latex-book-pdf.org~ is for LaTeX Export Configurations 
-              to produce a PDF version of your Fiction Book...
+   *SETUPFILE:* ~fiction-book.org~ is for LaTeX Export Configurations 
+              to produce a Fiction Book styled PDF /(No TOC, & Numbering
+              at Chapter level ONLY...)/
 #+END_COMMENT
 
 #+SETUPFILE: ./org-templates/fiction-book.org
 #+SETUPFILE: ./org-templates/default-tags.org
 
-Set ALL ~.png~ images in this file /(emojis)/ to ~30x30~ pixels...
-/(other images may be adjusted to size inline)/
-#+BEGIN_SRC elisp
-;(setq org-latex-images-centered nil)
-;(setq org-latex-image-default-width "1.0\\linewidth")
-;(setq org-latex-image-default-width "")
-(setq org-image-actual-width (list 30))
-#+END_SRC
-#+RESULTS:
-| 30 |
-
 :READ_ME_FIRST:
 =Instructions:= /(How to Install & Use This Template)/
 
-To use *HAP_Fiction-Book-Project-Skeleton.org* /(Org-Mode Fiction Book Project /Template)/ for your own projects, perform the following steps: 
+To use *HAP_Fiction-Book-Project-Skeleton.org* /(Org-Mode Fiction Book/
+/Project /Template)/ for your own projects, =Perform The Following Steps:= 
 
 /Use the org-mode Checkboxes to Help You Keep Track of Progress/
 
-1) [ ] *Clone a Copy of This File:* 
+1) [ ] *Clone a Copy of This File:*
 
       Put your clone where you normally organize your writing 
-      projects. *Place it within its own master folder... It is*
+      projects. *Place it within its own MASTER FOLDER... It is*
       *Important to keep this file within its OWN enclosing folder!* 
 
-      Name the project's master folder to reflect your fiction book 
+      Name the project's MASTER FOLDER to reflect your fiction book 
       project's title... /(what you renamed this .org file to)/...
 
-      =Other Files/Folders will be placed within this master folder...=
+      =Other Files/Folders will be placed within this MASTER FOLDER...=
 
-2) [ ] *Copy/Clone:* ~./media~ /(and contents)/ *to your new project's Master Folder:*
+      You may put this file within other Master Project Folders that
+      contain existing ~.org~ files /(cloned from other HAP_Doc-Skeleton/
+      /template files)/ =If This is the case:= *Skip Steps 2 & 3 below...*
+
+      =Do NOT OVERWRITE ANY PRE-EXISTING FILES or FOLDERS!!!=
+
+      =Otherwise:=
+      
+      *Name this New Project's MASTER FOLDER* to reflect your Fiction
+      book project's title... /(what you renamed this .org file to)/...
+
+2) [ ] *Copy/Clone:* ~./media~ /(and contents)/ *to your new project's MASTER FOLDER:*
+      /(skip this step if this folder already exists within your project)/
 
       Copy this directory /(into your master folder as a sibling of this file).../ 
       Any external documents or images referenced by your book project should 
       be placed within this ~./media/~ directory...
 
-      All external links, images, within the boilerplate examples of this
-      template may be used as examples for getting your own images, and 
-      external attachments linked properly...  
+      There are images within the ~./media/~ directory that are required by
+      boilerplate examples within this template... You may inspect/copy etc.,
+      these boilerplate examples /(with links to media files)/ to get your
+      own images, and external attachments linked and published properly...  
 
       This single ~./media~ directory will serve media and external attachments 
-      for all of the ~.org~ doc template files from within: ~.emacs.d/Docs/pubOps~ 
-      directory /(if they were also copied here to your Project's Master Folder)/
+      for all of the ~.org~ doc template files copied from: ~.emacs.d/Docs/pubOps~ 
+      directory /(if they ARE later copied here to this Project's Master Folder)/
 
-      =Note:=  You DON'T need to copy the ~./auto/~ directory...  That directory
-             will be automatically created the first time you export this ~.org~ 
-             file to ~.PDF~...
+      If you Decide Later to copy another doc template file from:
+      ~.emacs.d/Docs/pubOps~, =YOU WILL BE SKIPPING THIS STEP= to avoid
+      OVERWRITING existing files and/or folders!!!
 
-3) [ ] *Copy/Clone:* ~./org-templates~ /(and all contents)/ *to your Master Folder:*
+      =Note:= You DON'T need to copy the ~./auto/~ directory... That directory
+            will be automatically created the first time you export this ~.org~ 
+            file to ~.PDF~...
 
-      Copy this directory to your Book Project's Master Folder, /(as a sibling/
-      /of this .org file).../ 
+3) [ ] *Copy/Clone:* ~./org-templates~ /(and contents)/ *to your project's MASTER FOLDER:*
+      /(skip this step if this folder already exists within your project)/
 
-      =Note:= The SETUPFILES Within this directory which are called out and 
-             included by this .org file /(above)/ must stay within this 
-             directory...  
+      Copy this directory to your book's MASTER FOLDER,
+      /(i.e., as a sibling/ /of this .org file).../
 
-             Other SETUPFILES within this directory are used by other book 
-             project templates and are not needed for this Fiction Book 
-             Project... You may remove them if you wish...
+      =Note:= The SETUPFILE: ~fiction-book.org~ Within this directory is called
+            out and included by this ~.org~ file /(above)/ and as such must stay
+            within this directory...
 
-             They are small text files not bothering you... If you clone
-             another ~HAP_<book-template>.org~ file into this project folder
-             it will pick up its associated SETUPFILES automatically, so
-             consider that if/when you decide to delete other
-             UNUSED SETUPFILES...
+      Other SETUPFILES within this directory are required by other book
+      project templates... /(if they are to ALSO be cloned here)/
+
+      If you Decide Later to copy another ~HAP_<book-template>.org~ Document
+      Template file from: ~.emacs.d/Docs/pubOps~, =YOU WILL BE SKIPPING THIS STEP=
+      to avoid OVERWRITING existing files and/or folders!!!
 
 4) [ ] =Start Sketching Out Your Story NOW Before You Loose It!=
 
       =NOTE:= You may be doing this because you have some fantastic story idea
-             brewing in your mind and you need to write that down before you 
-             forget!  =Right?=  Therefore... as soon as you are done with the
-             first steps above, =STOP= and go immediately to the:
-                   [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4A1.png]] *Ideas Scratchpad Refile / ☞ Start Here!* 
+            brewing in your mind and you need to write that down before you 
+            forget! =Right?= Therefore... as soon as you are done with the first
+            steps above, =STOP= and go immediately to the:
+            
+                💡 *Ideas Scratchpad Refile* Binder...
 
-             section and read the ~:README:~ directly under that heading...  
-             Then write your idea down quickly /(as per the README instructions)/ 
-             to get your inspiration recorded before you forget it...  
+            and read the ~:README:~ directly under the *☞ Start Here!* heading...
+            
+            Then write your idea down quickly /(as per the README instructions)/ 
+            to get your inspiration recorded before you forget it...  
 
-             Later, After you have all your ideas sketched out and you are 
-             ready to be in an ="organized mood"= /(rather than creative mood)/ 
-             /This does not imply being organized cannot be a CREATIVE PROCESS/ 
-             Then it is time to:
+            Later, After you have all your ideas sketched out and you are 
+            ready to be in an ="organized mood"= /(rather than creative mood)/ 
+            /This does not imply being organized cannot be a CREATIVE PROCESS/ 
+            Then it is time to:
 
-             =Come Back Here And Finish Setting Up Your Project...=
+            =Come Back Here And Finish Setting Up Your Project...=
 
-             *This Project Template is HUGE!*
+            *This Project Template is HUGE!*
 
-             *Your Muse Can Easily Loose Her Inspiration!*
+            *Your Muse Can Easily Loose Her Inspiration!*
 
-             =The Start Here Section is Your Remedy= 
+            =The= 💡 *Ideas Scratchpad Refile* =Binder is Your Remedy=
 
-             =Do That first!=
+            =Do That first!=
 
 5) [ ] *Finish Setting up this Project LATER...* [0/3]
 
-    - [ ] *Change the* ~#+TITLE:~ *directive at the top of this file:* 
+    - [ ] *Change the* ~#+TITLE:~ *directive at the top of this file:*
 
           Change to: /"your Fiction Book Project's Title"/
 
@@ -146,22 +163,15 @@ To use *HAP_Fiction-Book-Project-Skeleton.org* /(Org-Mode Fiction Book Project /
           /for the template structure of your published docs will be/
           /appreciated... but unnecessary... Thanks! ;-)/
 
-    - [ ] *Change the* ~#+AUTHOR:~ *directive at the top of this file:* 
+    - [ ] *Change the* ~#+AUTHOR:~ *directive at the top of this file:*
 
           Change to: /"your NAME"/
 
-    - [ ] *Change the* ~#+EMAIL:~ *directive at the top of this file:* 
+    - [ ] *Change the* ~#+EMAIL:~ *directive at the top of this file:*
 
           Change to: /"your EMAIL"/
 
-    - [ ] *Change the* ~#+DATE:~ *TIMESTAMP at the top of this file:* 
-
-          Put your cursor on the TIMESTAMP: /i.e.,/ <2022-10-05 Wed>
-          and type: ~C-c . . RETURN~ The TIMESTAMP will update to NOW.
-          Do this whenever you update your doc to show last date
-          it was changed or modified...
-
-    - [ ] *Change the* ~#+TEXT: Created:~ *TIMESTAMP at the top of this file:* 
+    - [ ] *Change the* ~#+TEXT: Created:~ *TIMESTAMP at the top of this file:*
 
           Put your cursor on the TIMESTAMP: /i.e.,/ <2022-10-05 Wed>
           and type: ~C-c . . RETURN~ The TIMESTAMP will update to NOW.
@@ -171,7 +181,7 @@ To use *HAP_Fiction-Book-Project-Skeleton.org* /(Org-Mode Fiction Book Project /
           This Date reflects the time/date that you first created this
           new document It should NEVER change after that...
 
-    - [ ] *Change the* ~#+TEXT: Last Published:~ *TIMESTAMP at Publish Time:* 
+    - [ ] *Change the* ~#+TEXT: Last Published:~ *TIMESTAMP at Publish Time:*
 
           =Don't Change This UNTIL You Have Actually Exported This File=
           /(as a PDF or HTML, etc. and have PUBLISHED it publically somewhere)/
@@ -184,23 +194,28 @@ To use *HAP_Fiction-Book-Project-Skeleton.org* /(Org-Mode Fiction Book Project /
           appear in place... Do this EVERY time you publish or update
           an existing publishing... /(this will help you keep track)/
 
-    - [ ] *Change the* ~#+FILETAGS:~ *directive at the top of this file:* 
+    - [ ] *Change the* ~#+FILETAGS:~ *directive at the top of this file:*
 
-          Add your own tags that match the context of your Log Book...
+          Add your own tags that match the context of your Fiction Book...
           
     - [ ] *Change the* ~#+DESCRIPTION:~ *directive at the top of this file:*
 
           Compose /Your-Fiction-Book-Project's Description/ as a short 
-          paragraph here...
+          paragraph here... and then use that to change the directive
+          above in the File HEADER...
 
-    - *The* ~./media~ *Directory is ALL Set:* 
+    - *The* ~./media~ *Directory is ALL Set:*
 
-         Any external documents or images referenced by your book project 
-         should be placed within this ~./media/~ directory... This single 
-         ~./media~ directory will serve media and external attachments for this 
-         and any other fiction related ~.org~ files you may end up creating 
-         here, as well as being the media repository used by LaTeX during 
-         publishing...
+         Any external documents or images referenced by ANY book projects
+         located within this MASTER FOLDER, should be placed within this
+         ~./media/~ directory... This single ~./media~ directory will serve
+         media and external attachments for this and any other related
+         ~.org~ files you may end up creating here, as well as being
+         the media repository used by LaTeX during publishing...
+
+         Media required for use in template BOILERPLATE Sections already
+         exists within this folder /(for all HAP Skeleton Template .org files)/
+         So that is all set...
 
     - *Purpose of the:* ~./auto/~ *Directory:* /(you do not need to copy this)/
 
@@ -220,12 +235,22 @@ To use *HAP_Fiction-Book-Project-Skeleton.org* /(Org-Mode Fiction Book Project /
          The files in here are automatically linked and included within this
          template. You don't need to change those settings unless you wish to
          customize the already customized tags, and export options.
+         
+         /Things are currently set up for the Fiction Book genre, and/
+         /the Category is all set as well... But you can and may modify/
+         ~fiction-book.org~ /to narrow down the category more specifically,/
+         /fitting everything to this project's specific needs.../
 
-         /They are allready set up correctly for the fiction book genre, and/
-         /the category is all set as well... But you can and may modify the/
-         /original files to fit your needs.../
+         The DEFAULT Tags defined for all project templates are useful for
+         most situations and SOME tags are ALWAYS to be defined for this
+         LaTeX publishing system to work.
 
-6) [ ] =Ongoing Planning / Writing Your Fiction Book:= 
+         /Change the SETUPFILE name ABOVE and within this directory from/
+         ~default-tags.org~ /to another name and-or replace some -BUT NOT ALL-/
+         /of the tags within to your own tags... see instructions inside the/
+         /file.../
+
+6) [ ] =Ongoing Planning / Writing Your Fiction Book:=
 
       /Change headings and structure to match your project's outline/ 
       /sections-chapters-scenes-plots-characters, etc.../
@@ -257,18 +282,19 @@ To use *HAP_Fiction-Book-Project-Skeleton.org* /(Org-Mode Fiction Book Project /
 
       After *AucTeX* is done parsing/compiling etc., new files by the name of:
       ~HAP_Untitled-Fiction-Book.pdf~ -and- ~HAP_Untitled-Fiction-Book.tex~ 
+
+      /(or the name you changed it to located at the top of this file)/
       will appear within the same directory as this file...
 
-      Subsequent repeated calls to the above command will overwrite your existing
-      ~HAP_Untitled-Fiction-Book.pdf~ -and- ~HAP_Untitled-Fiction-Book.tex~ 
-      files! /(make backups first if needed!)/
-
-      You should probably copy these files to the ~./auto/~ directory as 
-      well for safe keeping as backups...
+      Subsequent repeated calls to the above command will overwrite your
+      existing ~.pdf~ -and- ~.tex~ files! /(make backups first if needed!)/ You
+      could use the ~./auto/~ directory for backups...
 
       =If you chose the last option above= LaTeX will output files with other
-      extensions for those other output formats... =NOTE:= SETUPFILES have not
-      been created yet for other eBook formats.  /(This is a work in progress)/
+      extensions for those other output formats...
+
+      =NOTE:= Some SETUPFILES have not been created yet for other eBook formats.
+            /(This is a work in progress)/
 
       =If YOU EXPERIENCE LaTeX ERRORS:= 
 
@@ -276,28 +302,23 @@ To use *HAP_Fiction-Book-Project-Skeleton.org* /(Org-Mode Fiction Book Project /
 
 8) [ ] =Handling Images=
 
-      All Images /(by DEFAULT from above elisp source code block)/ are set
-      to thumbnail size (to properly size the .png ICONS /(emojis)/ in front
-      of Binder Headings etc...
-
-      This means that Other images within your ~.org~ file will ALSO display
-      as small thumbnails...
-
-      If that is NOT what you want for some images, you can override the
-      DEFAULT by using local attributes above the image link...
-
+      Some Images may render too large or too small to fit on a page
+      of an exported version of this file... This is easy do fix within
+      your content on an image by image basis...
+      
       Use *LaTeX* and/or *HTML* attributes as follows on the images that need
       to be a different size...
 
       =Example:=
       
-         #+CAPTION: Example larger size .png file 
+         #+CAPTION: Example: Larger Size Emoji 
          #+NAME:  example:00001
          #+attr_html: :width 200px
          #+attr_latex: :width 200px
       [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F3D5.png]]
 
-=These Instructions Were Last Modified:= <2022-12-18 Sun> 
+
+=These Instructions Were Last Modified:= <2023-01-05 Thu> 
 
 So far Export to PDF in nice Fiction Style format... This has not been tested for HTML or other eBook formats yet... We will get fancy with other formats later... 
 I promice... I have to do all this documentation first!
@@ -313,106 +334,116 @@ Other folks UX metrics are sorely needed!! Thanks!
 =Enjoy!= - Alisha Awen
 :END:
 
-* [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4A1.png]] Scratchpad Refile:                              :noexport:
-** [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F449.0.png]] Start Here!
+* NEW 💡 Scratchpad Refile:                                        :noexport:
+** ☞ Start Here!
+
+This Section is mainly to accommodate "seat-of-pants" writers /(Of Which I Have Been Accused Of... But I Also Crave The Planning Stuff)/. 
+
+I often come here for my [[https://projects.csail.mit.edu/gsb/old-archive/gsb-archive/gsb2000-02-11.html]["yak shaving"]] adventures...
+
+Use this: "*💡 Scratchpad Refile*" section as a quick place to document ideas and inspirations as they come along... You can refile them later... 
+
+Even if your quick inspiration was intended for elsewhere?, /(e.g., You are doing some research on some interesing background info for your fiction book when suddenly, out-of-nowhere, an idea for a new sci-fi scene in that screenplay episode you kind-of had in the back of your mind all day!, etc.)/
+
+=Ummm.... Parallel Universe?= - =Sure!= You can put anything in here! We've got that covered for you in this Start Here spot. %^)
+
+Use this section to quickly capture inspired at-the-moment ideas...
+=While they are still fresh in mind=
+
+=How To Use ???= 
+
+/Simply Come directly here and do what ever you want.../
+/"Your Crazy Daze are Covered!" Yay!/
+
+=The following Shortcuts= will Help you get started as 
+quickly as possible. /(Incorporating Knowledge Management Best Practice)/
+
+- [ ] =Copy/Clone:= 💡 <2022-08-20 Sat> *Example Idea* =Below:=
+
+     =Copy the Heading AND ALL ITS CONTENTS=
+
+     /Change your Clone's Title to Your Own Title/
+
+- [ ] *Change the timestamp on your Clone Entry:* [0/1]
+
+     =Type:= ~C-c .~ while cursor is sitting on the timestamp
+
+     /i.e., Press: ~Ctrl-c~, let go, and then type a Period/ ~.~
+
+     A date chooser panel will pop up...
+
+     + [ ] *Press* ~ENTER~ *to auto accept today's date and time.*
+
+          The existing timestamp will change to TODAY...
+
+- [ ] *Advance your cursor and Start Writing!!!*
+
+     Advance your cursor few more lines down to some fresh 
+     empty space and Start Typing Your Story Idea Like Mad!!! 
+     /(Remove the boilerplate content after reading it...)/
+
+- [ ] *Don't stop Writing!*
+
+     Don't worry about formatting or organizing it until later, 
+     after all your inspiration has passed and you are ready 
+     to organize...
+
+- [ ] =TODO After You Are Done Writing:=
+
+     + [ ] *Adjust Space:*
+
+          Adjust space between your headings and your 
+          fantastic ideas below them it to one single 
+          blank line...
+
+     + [ ] *Continue Writing/Developing RIGHT HERE if needed:*
+
+          If you are not yet sure where this NEW IDEA should go
+          AND you are still inspired to write... Simply continue
+          writing and developing this IDEA in place RIGHT HERE...
+
+          =ONE IMPORTANT Point:= It is Good KM Practice to add at
+          least a few good relevant tags to this item right NOW
+          before you forget however... You may not know where
+          things belong in the beginning but you most likely
+          DO Know the category, genra, etc. of your new idea...
+
+          This will help you in case you forget all about it later...
+          Sooner or later It will show up in some random tag search
+          that way and remind you...
+          
+          When that time comes, you may know exactly where it should
+          go and the reminder simply jogs your memory to move it into
+          the right bin for further processing later as part of a
+          scheduled task...
+          
+          =For NOW=, Don't Worry about what it is for or where to
+          put it... It is still here in "dream state" which is
+          GOOD... Don't scare away your muses when they beckon! 
+          Get your Idea down first, no matter what state it may
+          be in... =GET YOUR IDEA DOWN=
+
+     + [ ] *You Are Free To Go Out And Play Elsewhere Little Grasshopper*
+
+          If after writing... You don't feel like organizing 
+          now? =NO PROBLEM=... But come back later and organize 
+          things... =OK?= Don't create a swamp in here! 
+          /And don't forget to take/ /your bath tonight... ;-)/
+
+Having done the simple steps above any time you get inspired, you will much later in life be able to tell your grand children.. /"I got my first spark of an idea for that story back in Year, Month, Day, time, second"/ 50 years later! Now that is being organized! LOL
+
+** NEW 💡 <2020-06-07 Sun> Visisonar Object /(from Asimov's Foundation Series)/
 :README:
-   This Section is mainly to accommodate "seat-of-pants" writers
-          /(Of Which I Have Been Accused Of.../
-           /But I Also Crave The Planning Stuff)/. 
+   This is a dummy example of some crazy idea that you may have gotten at the spur of the moment, while you were doing something elsewhere within this project...  After you are done getting as much of the idea as you initally can then you can simply go back to what you were doing before the inspiration segue tore you away... you might want to schedule this as a todo item before leaving though...
 
-   I often come here for my [[https://projects.csail.mit.edu/gsb/old-archive/gsb-archive/gsb2000-02-11.html]["yak shaving"]] adventures...
-
-   Use this: [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4A1.png]] *Scratchpad Refile* section as a quick place to 
-   document ideas and inspirations as they come along... 
-   You can refile them later... 
-
-   Even if your quick inspiration was intended for elsewhere?,
-   /(e.g., You become bored documenting tedious technical/ 
-   /information when suddenly, out-of-nowhere, an idea for a/ 
-   /new sci-fi scene in that screenplay episode you had in the/ 
-   /back of your mind all day!, etc.)/
-
-   =Ummm.... Parallel Universe?=
-
-   =Sure!= You can put anything in here! We've got that covered 
-         for you in this Start Here spot. %^)
-
-   Use this section to quickly capture inspired at-the-moment 
-   ideas =While they are still fresh in mind=
-
-   =How To Use ???= 
-
-      /Simply Come directly here and do what ever you want.../
-      /"Your Crazy Daze are Covered!" Yay!/ 
-
-   =The following Shortcuts= will Help you get started as 
-   quickly as possible:
-
-   - [ ] =Copy/Clone:= [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4A1.png]] <2022-08-20 Sat> *Example Idea* =Below:=
-
-         =Copy the Heading AND ALL ITS CONTENTS=
-
-         /Change your Clone's Title to Your Own Title/
-
-   - [ ] *Change the timestamp on your Clone Entry:* [0/1]
-
-         =Type:= ~C-c .~ while cursor is sitting on the timestamp
-
-         /i.e., Press: ~Ctrl-c~, let go, and then type a Period/ ~.~
-
-         A date chooser panel will pop up...
-
-     + [ ] *Press* ~ENTER~ *to auto accept today's date and time.*  
-
-            The existing timestamp will change to TODAY...
-
-   - [ ] *Advance your cursor and Start Writing!!!*
-
-          Advance your cursor few more lines down to some fresh 
-          empty space and Start Typing Your Story Idea Like Mad!!! 
-          /(Remove the boilerplate content after reading it...)/
-
-   - [ ] *Don't stop Writing!* 
-
-          Don't worry about formatting or organizing it until later, 
-          after all your inspiration has passed and you are ready 
-          to organize...
-
-   - [ ] =TODO After You Are Done Writing:=
-
-        + [ ] *Adjust Space:* 
-
-               Adjust space between your headings and your 
-               fantastic ideas below them it to one single 
-               blank line...
-
-        + [ ] *Continue Writing/Developing RIGHT HERE if needed:*
-
-               If you are not yet sure where this NEW IDEA should go
-               AND you are still inspired to write... Simply continue
-               writing and developing this IDEA in place RIGHT HERE...
-
-               Don't Worry about what it is for or where to put it...
-               It is still here in "dream state" which is GOOD...
-               Don't scare away your muses when they beckon! 
-               Get your story down first, no matter what state it 
-               may be in... =GET IT DOWN=
-
-        + [ ] *You Are Free To Go Out And Play Elsewhere Little Grasshopper*
-
-               If after writing... You don't feel like organizing 
-               now? =NO PROBLEM=... But come back later and organize 
-               things... =OK?= Don't create a swamp in here! 
-               /And don't forget to take/ /your bath tonight... ;-)/
-
-   Having done the simple steps above any time you get inspired, you 
-   will much later in life be able to tell your grand children.. 
-   /"I got my first spark of an idea for that story back in Year,/ 
-   /Month, Day, time, second"/ 50 years later! Now that is being 
-   organized! LOL
+   Later when you are free you can come back to file this or place it where it belongs.  In the case of the note below it would probably go in a research folder of a Sci-Fi related project...
 :END:
 
-** NEW [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4A1.png]] <2022-08-20 Sat> New Example Idea /(clone this)/
+From Isaac Asimov's science fiction series 'Foundation', specifically the section of 'Foundation and Empire' entitled 'The Mule', the visisonar is considered a musical instrument.
+
+Unlike most instruments, this one does not achieve its effect by using sonic effects but, instead, directly stimulates the listeners' mental well-being. The number of people and level of effect depends on the skill level of the player. As this was a device from the First Empire, there were not that many people around with any skill at all. However, the Mule's clown, Magnifico, had some skill with the instrument and was asked to play for select parties on the Foundation and for large groups of workers on Haven. This may not have been a good idea...
+
+** NEW 💡 <2022-08-20 Sat> New Example Idea /(BOILERPLATE Clone This)/
 :README:
    This is a dummy example of some crazy idea that you may have 
    gotten at the spur of the moment, while you were doing something 
@@ -432,24 +463,16 @@ Other folks UX metrics are sorely needed!! Thanks!
 
 =Replace all of this boilerplate content with your own content=
 
+* NEW 📕 Front Matter:                                                :noexport:
 
+=Use this binder for Front Page Ideas= /(e.g., Information about Title Page, Synopsis, etc...)/, which is not normally published as part of the book itself...
 
-** NEW [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4A1.png]] <2020-06-07 Sun> Visisonar Object /(from Asimov's Foundation Series)/
+** NEW 📝 Synopsis:
 :README:
-   This is a dummy example of some crazy idea that you may have gotten at the spur of the moment, while you were doing something elsewhere within this project...  After you are done getting as much of the idea as you initally can then you can simply go back to what you were doing before the inspiration segue tore you away... you might want to schedule this as a todo item before leaving though...
+   =Use This Space to record your official book Synopsis...=
 
-   Later when you are free you can come back to file this or place it where it belongs.  In the case of the note below it would probably go in a research folder of a Sci-Fi related project...
-:END:
-
-From Isaac Asimov's science fiction series 'Foundation', specifically the section of 'Foundation and Empire' entitled 'The Mule', the visisonar is considered a musical instrument.
-
-Unlike most instruments, this one does not achieve its effect by using sonic effects but, instead, directly stimulates the listeners' mental well-being. The number of people and level of effect depends on the skill level of the player. As this was a device from the First Empire, there were not that many people around with any skill at all. However, the Mule's clown, Magnifico, had some skill with the instrument and was asked to play for select parties on the Foundation and for large groups of workers on Haven. This may not have been a good idea...
-
-* [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4DD.png]] Synopsis:                                             :noexport:
-:README:
-   =Use This Space to keep your books Synopsis...=
-
-   =THIS SECTION IS NOT NORMALLY PUBLISHED=
+   =This Section Is Not Normally Published As Part Of The Book=
+   /(but a short version of it may appear on the back of the book)/
    
    You can write anything you want here but it is highly recommended
    to use the award winning *"Snowflake Method"* created by [[https://www.advancedfictionwriting.com/][Randy Ingermanson]] 
@@ -458,7 +481,7 @@ Unlike most instruments, this one does not achieve its effect by using sonic eff
    for you to fill out while reading his book to get a deeper understanding 
    behind these dry forms and worksheets... 
 
-   - [ ] *Go to the:* [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u23F1.png]] Tasks: *Binder and do the: 📃 *Synopsis Tasks:*
+   - [ ] Go to the: *⏱ Tasks:* Binder and do the: *📋 Synopsis Tasks:*
 
    - [ ] *After Completing Tasks Mark Them:* ~DONE~
 
@@ -478,7 +501,7 @@ Unlike most instruments, this one does not achieve its effect by using sonic eff
 
 =Synopsis Content:= Yadda... Yadda... Yadda...
 
-* NEW Preface: /(or Introduction - Optional)/               :export:
+* NEW Preface: /(or Introduction - Optional)/                           :export:
 <<BOOK_PREFACE>>
 :README:
    This section has been purposefully left blank for you to fill in...
@@ -488,6 +511,10 @@ Unlike most instruments, this one does not achieve its effect by using sonic eff
    Optionally you may wish to include a *Table of Contents*... 
    However there are automatic ways that =Emacs Org-Mode can configure TOCs= 
    as well...
+   
+   =WARNING:= Do NOT Remove the ~#+BEGIN_EXPORT latex~ Directive at the end of
+            this Preface...  It is needed to mark the end of All Front
+            Matter and the Beginning of the Mainmatter of this book...
 :END:
 
 =Preface or Introduction Content:= 
@@ -502,114 +529,168 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
 \mainmatter
 #+END_EXPORT
 
-* NEW Chapter Title /(BOILERPLATE clone this)/          :noexport:
-<<CHAPTER_chapter-title>>
+* NEW Chapter Title A /(BOILERPLATE Clone This)/                     :noexport:
+<<CHAPTER_chapter-title-a>>
 :README:
    *Chapters* are *Top Level Headings* within this *Emacs Org-mode* Book
    Publishing project... Built in LaTeX memoir styles insure that
    chapter and scene numbering work without needing any of your
    input... You only need to insure your anchors are unique!
 
-   =Usage:=
+   =Usage:= *This is a NON Exported BOILERPLATE Which Should Be Cloned*
 
    - [ ] =Clone This:= *NEW Chapter Title:* /(BOILERPLATE)/
       
-          =Copy ALL its contents= and =paste= it as new sibling
-          directly UNDER any existing chapters allready in place,
-          but ABOVE the BOILERPLATE item it was created from...
-          /(i.e., save your boilerplate template on the bottom/
-          /of the list where it will be copied/cloned again later)/
+        =Copy ALL its contents= and =paste= it as new sibling
+        directly UNDER any existing chapters allready in place,
+        but ABOVE the BOILERPLATE item it was created from...
+        /(i.e., save your boilerplate template on the bottom/
+        /of the list where it will be copied/cloned again later)/
 
-          =Do this whenever you need to start a new chapter...=
+        =Do this whenever you need to start a new chapter...=
 
    - [ ] =Commandeer Your New Clone:=
       
-          The structure of this template is all set up for 
-          you ahead of time to allow you to immediately begin 
-          writing...
+        The structure of this template is all set up for 
+        you ahead of time to allow you to immediately begin 
+        writing...
 
-          After cloning, rename *Chapter Title:* /(BOILERPLATE)/
-          to a *Unique Title* and remove /(BOILERPLATE)/ in order
-          to commandeer the entire item for your needs...
+        After cloning, rename *Chapter Title:* /(BOILERPLATE)/
+        to a *Unique Title* and remove /(BOILERPLATE)/ in order
+        to commandeer the entire item for your needs...
+
+        Change the ~:noexport:~ tag to ~:export:~ for this NEW
+        REAL Chapter so it will show up when publishing drafts...
 
    - [ ] =Change The Anchor Link=
 
-         Change the anchor /(directly under Chapter Title)/ to match
-         your new chapter's title name...
+        Change the anchor /(directly under Chapter Title)/ to match
+        your new chapter's title name...
          
-         Leave ~CHAPTER_~ as the anchor's prefix... /(as in boilerplate above)/
-         Use dashes to connect words /(all lower case)/ from your title...
+        =Note:= I created the following convention for making unique
+              anchors within ALL of these HAP_Doc-Skeleton.org
+              Template files.
 
-         The anchor above may be used to link to this chapter from
-         Research or other sections of this book...
+              The anchor ~PREFIX_~ is there to match the named sections
+              of a book or document project defined as a standard
+              across ALL of these HAP_Document-Skeleton.org Template
+              files... This will help keep your anchors unique, and
+              also add an extra *KM* dimension of *category* to them...
+
+              It would be wise to follow this convention when you
+              create anchors elsewhere within ALL of your Book
+              Projects created from HAP Modular Emacs Document
+              Skeleton Template files...
+
+              If you wish to change all of this, go ahead and do
+              what ever you want... For simplicity's sake, follow
+              the instructions below... /(there are automatic ways/
+              /to create links and anchors within org-mode... I/
+              /prefer to do it manually... The alternate is a mess/
+              /IMHO)/
+
+        Leave ~CHAPTER_~ as the anchor's prefix... /(as in boilerplate above)/
+        Use dashes to connect words /(all lower case)/ from your title...
+
+        The anchor above may be used to link to this chapter from
+        Research or other sections of this book... /(Or even from/
+        ~.org~ /docs OUTSIDE of this file...)/
          
-         /(which may or may not be published as links within eBook)/
+        /(which may or may not be published as links within the PDF)/
 
    - [ ] =Replace Titles, Anchors, & Content Within This Section=
 
-         Change names to suit your needs, but keep the structure of
-         *Chapter / Scene (sub-chapter)* intact...
+        Change names to suit your needs, but keep the structure of
+        *Chapter / Scene (sub-chapter)* intact...
          
-         /(i.e., change titles, anchors, and content only...)/
+        /(i.e., change titles, anchors, and content only...)/
 
    - [ ] =Add New Cloned Scenes as Needed=
 
-         Copy/Clone & Commandeer new Scenes as needed to finish
-         the chapter... Read the *:README:* drawers within Scenes
-         for more info...
+        Commandeer *Scenes X* & *Y* as needed when first starting
+        out on this new chapter... Read the *:README:* drawer
+        under the Scene heading for more info...
+
+        After that, =COPY/CLONE= *New Scene Z* to make more scenes,
+        and leave the original *New Scene Z* in place =AS IS= to
+        be cloned later to make more scenes if & when needed...
+        Read the *:README:* drawer under the Scene heading for
+        more info...
 :END:
-** New Scene X /(use "Sub Title", NOT "Scene n.1")/    :noexport:
+** New Scene X /(COMMANDEER This One)/                           :noexport:
 <<SCENE_new-scene-x>>
 :README:
    Scenes are the DNA that make up the chapters in a novel 
    or episodes in a production... Each Scene should have its 
-   own title or phrase... The LaTeX memoir styles take care
-   of numbering for you...
+   own title or phrase... The LaTeX style configuration for
+   this book template takes care of numbering chapters
+   automatically... Sub Chapter Scenes are NOT Numbered for
+   Fiction book templates...
 
    Chapters may contain several scenes... There can be many 
    twisty paths all alike /(or all different)/... %~)
 
    =Usage:=
 
-   - [ ] =Clone This:= *New Scene X:* /(use "Sub Title", etc.)/
+   - [ ] =Commandeer This:= *New Scene X:* /(COMMANDEER...)/
 
-         =Copy ALL its contents= and =paste= it as new sibling
-         directly UNDER any existing Scenes allready in place,
-         but ABOVE the BOILERPLATE item it was created from...
+        =Change ALL its contents= to NEW Chapter Scene content when
+        you are ready to add your FIRST Scene for this chapter...
          
-         /(i.e., save your boilerplate template on the bottom/
-         /of the list where it will be copied/cloned again later)/
-
-         =Do this whenever you need to start a new scene...=
-
-   - [ ] =Commandeer Your New Clone:=
-     
         The structure of this template is all set up for you ahead
         of time to allow you to immediately begin writing...
 
-        After cloning, rename *New Scene X:*
-        to a *Unique Title* and remove /(boilerplate)/ in order
-        to commandeer the entire item for your needs...
+        Rename *New Scene X:* to a *Unique Title* and remove
+        /(all boilerplate content)/ in order to commandeer the entire
+        item for your specific needs...
+
+        Change the ~:noexport:~ tag to ~:export:~ for this NEW
+        REAL Scene so it will show up when publishing drafts...
 
    - [ ] =Change The Anchor Link= /(make it unique)/
 
-         Change the anchor /(directly under the/ *New Scene X* /title)/
-         to match your new scene's title name...
+        Change the ~<<anchor>~ /(directly under the/ *New Scene X* /title)/
+        to match your new Scene's title name...
          
-         Leave ~SCENE_~ as the anchor's prefix... /(as in boilerplate above)/
-         Use dashes to connect words /(all lower case)/ from your scene's
-         title...
+        =Note:= I created the following convention for making unique
+              anchors within ALL of these HAP_Doc-Skeleton.org
+              Template files.
 
-         The anchor above may be used to link to this scene from
-         Research or other sections of this book...
+              The anchor ~PREFIX_~ is there to match the named sections
+              of a book or document project defined as a standard
+              across ALL of these HAP_Document-Skeleton.org Template
+              files... This will help keep your anchors unique, and
+              also add an extra *KM* dimension of *category* to them...
 
-        /(which may or may not be published as links within eBook)/
+              It would be wise to follow this convention when you
+              create anchors elsewhere within ALL of your Book
+              Projects created from HAP Modular Emacs Document
+              Skeleton Template files...
+
+              If you wish to change all of this, go ahead and do
+              what ever you want... For simplicity's sake, follow
+              the instructions below... /(there are automatic ways/
+              /to create links and anchors within org-mode... I/
+              /prefer to do it manually... The alternate is a mess/
+              /IMHO)/
+         
+        Leave ~SCENE_~ as the anchor's prefix...
+        /(as in boilerplate anchor above)/ Use dashes to connect
+        words /(all lower case)/ from your scene's title...
+
+        The anchor above may be used to link to this Scene from
+        Research or other sections of this book... /(Or even from/
+        ~.org~ /docs OUTSIDE of this file...)/
+
+        /(which may or may not be published as links within the PDF)/
 
    - [ ] This *Scene Template* could ALSO Serve As =CHAPTER INTRODUCTION=
 
-         This is optional if you need one, but its anchor link must be
-         unique! /(i.e., NOT "SCENE_introduction")/
+        This is optional if you need one, but its anchor link must be
+        unique! /(i.e., NOT "SCENE_introduction")/
 :END:
+
+=BOILERPLATE CONTENT=
 
 =Insert Scene Content Here=
 
@@ -617,65 +698,83 @@ Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus
 
 At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae,varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
 
-** New Scene Y /(use "Sub Title", NOT "Scene n.2")/    :noexport:
+** New Scene Y /(COMMANDEER This One)/                           :noexport:
 <<SCENE_new-scene-y>>
 :README:
    Scenes are the DNA that make up the chapters in a novel 
    or episodes in a production... Each Scene should have its 
-   own title or phrase... The LaTeX memoir styles take care
-   of numbering for you...
+   own title or phrase... The LaTeX style configuration for
+   this book template takes care of numbering chapters
+   automatically... Sub Chapter Scenes are NOT Numbered for
+   Fiction book templates...
 
    Chapters may contain several scenes... There can be many 
    twisty paths all alike /(or all different)/... %~)
 
    =Usage:=
 
-   - [ ] =Clone This:= *New Scene Y:* /(New Sub Title, etc.)/
+   - [ ] =Commandeer This:= *New Scene Y:* /(COMMANDEER...)/
 
-         =Copy ALL its contents= and =paste= it as new sibling
-         directly UNDER any existing Scenes allready in place,
-         but ABOVE the BOILERPLATE item it was created from...
-         /(i.e., save your boilerplate template on the bottom/
-         /of the list where it will be copied/cloned again later)/
+        =Change ALL its contents= to NEW Chapter Scene content when
+        you are ready to add your SECOND Scene to this chapter...
 
-         =Do this whenever you need to start a new scene...=
-
-   - [ ] =Commandeer Your New Clone:=
-     
         The structure of this template is all set up for you ahead
         of time to allow you to immediately begin writing...
 
-        After cloning, rename *New Scene Y:* /(New Sub Title, etc.)/
-        to a *Unique Title* and remove /(boilerplate)/ in order
-        to commandeer the entire item for your needs...
+        Rename *New Scene Y:* to a *Unique Title* and remove
+        /(all boilerplate content)/ in order to commandeer the entire item
+        for your specific needs...
+
+        Change the ~:noexport:~ tag to ~:export:~ for this NEW
+        REAL Scene so it will show up when publishing drafts...
 
    - [ ] =Change The Anchor Link= /(make it unique)/
 
-         Change the anchor /(directly under Scene Title)/ to match
-         your new scene title name...
+        Change the ~<<anchor>~ /(directly under the/ *New Scene Y* /title)/
+        to match your new Scene's title name...
          
-         Leave ~SCENE_~ as the anchor's prefix... /(as in boilerplate above)/
-         Use dashes to connect words /(all lower case)/ from your scene's
-         title...
+        =Note:= I created the following convention for making unique
+              anchors within ALL of these HAP_Doc-Skeleton.org
+              Template files.
 
-         The anchor above may be used to link to this scene from
-         Research or other sections of this book...
+              The anchor ~PREFIX_~ is there to match the named sections
+              of a book or document project defined as a standard
+              across ALL of these HAP_Document-Skeleton.org Template
+              files... This will help keep your anchors unique, and
+              also add an extra *KM* dimension of *category* to them...
 
-        /(which may or may not be published as links within eBook)/
+              It would be wise to follow this convention when you
+              create anchors elsewhere within ALL of your Book
+              Projects created from HAP Modular Emacs Document
+              Skeleton Template files...
 
-   - [ ] This *Scene Template* could ALSO Serve As =CHAPTER INTRODUCTION=
+              If you wish to change all of this, go ahead and do
+              what ever you want... For simplicity's sake, follow
+              the instructions below... /(there are automatic ways/
+              /to create links and anchors within org-mode... I/
+              /prefer to do it manually... The alternate is a mess/
+              /IMHO)/
+         
+        Leave ~SCENE_~ as the anchor's prefix... /(as in boilerplate above)/
+        Use dashes to connect words /(all lower case)/ from your scene's
+        title...
 
-         This is optional if you need one, but its anchor link must be
-         unique! /(i.e., not "SCENE_introduction")/
+        The anchor above may be used to link to this Scene from
+        Research or other sections of this book... /(Or even from/
+        ~.org~ /docs OUTSIDE of this file...)/
+
+        /(which may or may not be published as links within the PDF)/
 :END:
+
+=BOILERPLATE CONTENT=
 
 =Insert Scene Content Here=
 
 Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo. Fusce tincidunt, lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante.
 
-At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
+At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae,varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
 
-** New Scene Z /(use "Sub Title", NOT "Scene n.3")/    :noexport:
+** New Scene Z /(BOILERPLATE - Keep Until Final Draft)/    :noexport:
 <<SCENE_new-scene-z>>
 :README:
    Scenes are the DNA that make up the chapters in a novel 
@@ -688,44 +787,74 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
 
    =Usage:=
 
-   - [ ] =Clone This:= *New Scene Z:* /(New Sub Title, etc.)/
+   - [ ] =FIRST: Copy Clone This BOILERPLATE= *New Scene Z:*
 
-         =Copy ALL its contents= and =paste= it as new sibling
-         directly UNDER any existing Scenes allready in place,
-         but ABOVE the BOILERPLATE item it was created from...
-         /(i.e., save your boilerplate template on the bottom/
-         /of the list where it will be copied/cloned again later)/
+        Leave this BOILERPLATE Sub Topic Z in place...
+        
+        =Do NOT CHANGE ITS CONTENT!...=
 
-         =Do this whenever you need to start a new scene...=
+        Paste your clone just above it, /(below your existing Scenes)/
+        For Final Draft, /(if you are sure you are done with this chapter)/
+        you may then remove this BOILERPLATE which is only here for
+        convenience while still writing this chapter...
+        
+        =NOTE:= If you know for sure This WILL BE your LAST Scene
+              for this Chapter, =COMMANDEER= This Item Instead of
+              Cloning another Copy above it... In that case YES
+              Change all BOILERPLATE Content within this Item
+              and compose your LAST Scene here...
 
    - [ ] =Commandeer Your New Clone:=
-     
+
         The structure of this template is all set up for you ahead
         of time to allow you to immediately begin writing...
 
-        After cloning, rename *New Scene Z:* /(New Sub Title, etc.)/
-        to a *Unique Title* and remove /(boilerplate)/ in order
-        to commandeer the entire item for your needs...
+        Rename *New Scedne Z:* to a *Unique Title* and Replace
+        ALL BOILERPLATE content with Your Specific Scene content
+        for this chapter...
+
+        Change the ~:noexport:~ tag to ~:export:~ for this NEW
+        REAL Scene so it will show up when publishing drafts...
 
    - [ ] =Change The Anchor Link= /(make it unique)/
 
-         Change the anchor /(directly under Scene Title)/ to match
-         your new scene title name...
-         
-         Leave ~SCENE_~ as the anchor's prefix... /(as in boilerplate above)/
-         Use dashes to connect words /(all lower case)/ from your scene's
-         title...
+        Change the _<<anchor>_ /(directly under your renamed/ *Scene* /heading)/
+        to match your new renamed scene title...
 
-         The anchor above may be used to link to this scene from
-         Research or other sections of this book...
+        =Note:= I created the following convention for making unique
+              anchors within ALL of these HAP_Doc-Skeleton.org
+              Template files.
 
-        /(which may or may not be published as links within eBook)/
+              The anchor ~PREFIX_~ is there to match the named sections
+              of a book or document project defined as a standard
+              across ALL of these HAP_Document-Skeleton.org Template
+              files... This will help keep your anchors unique, and
+              also add an extra *KM* dimension of *category* to them...
 
-   - [ ] This *Scene Template* could ALSO Serve As =CHAPTER INTRODUCTION=
+              It would be wise to follow this convention when you
+              create anchors elsewhere within ALL of your Book
+              Projects created from HAP Modular Emacs Document
+              Skeleton Template files...
 
-         This is optional if you need one, but its anchor link must be
-         unique! /(i.e., not "SCENE_introduction")/
+              If you wish to change all of this, go ahead and do
+              what ever you want... For simplicity's sake, follow
+              the instructions below... /(there are automatic ways/
+              /to create links and anchors within org-mode... I/
+              /prefer to do it manually... The alternate is a mess/
+              /IMHO)/
+
+        Leave ~SCENE_~ as the anchor's prefix... /(as in boilerplate above)/
+        Use dashes to connect words /(all lower case)/ from your scene's
+        title...
+
+        The anchor above may be used to link to this Scene from
+        Research or other sections of this book... /(Or even from/
+        ~.org~ /docs OUTSIDE of this file...)/
+
+        /(which may or may not be published as links within the PDF)/
 :END:
+
+=BOILERPLATE CONTENT=
 
 =Insert Scene Content Here=
 
@@ -733,7 +862,7 @@ Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus
 
 At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
 
-** [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4DA.png]] Chapter References:                                   :noexport:
+** 📚 Chapter References:                                   :noexport:
 :README:
    =Org Mode Links Tip:=
 
@@ -784,7 +913,7 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
 
 + *Link to Project:* [[][] ] /(comment)/
 
-** [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4DD.png]] Chapter Notes:                                            :noexport:
+** 📝 Chapter Notes:                                            :noexport:
 :README:
    *Chapter Notes*, /(unlike Scenes, Back Stories, Summaries etc.)/ 
    Should be written in =OUTLINE= form to aid in organization of 
@@ -799,7 +928,7 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
       /(i.e., Your Books Internal Analyst/
              /Behind the Curtain So-To-Speak... %^)/
 :END:
-*** NEW Background Note 1: <2020-05-10 Sun> /(example)/
+*** NEW 📝 Background Note 1: <2020-05-10 Sun> /(example)/
 
 *Mark each note's timestamp to its initial creation time*. This will enable emerging notes for chapters to be searched chronologically, and to give you an idea of how things evolve over time...
 
@@ -817,11 +946,18 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
 
 Do any or all the above to help get the concepts and images of your book clear in mind...
 
-*** NEW Background Note 2: <2020-05-10 Sun> /(example)/
+*** NEW 📝 Background Note 2: <2020-05-10 Sun> /(example)/
 
 Each new note needs to get its own heading and initial timestamp...
 
-** [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4D3.png]] Back Stories:                                              :noexport:
+It is fine to make as many sub-headings as needed for these notes
+but not so important for them to also be time-stamped since their parent heading is... /(unless of course you have a reason)/
+
+***** Quid Novi? /(example note sub heading)/
+
+Quid Novi? Lorem Ipsum dolor sit amet,consectetur adipisicing elit, sed doeiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim adminim veniam, quis nostrudexercitation ullamco laboris nisi utaliquip ex ea commodo consequat.Duis aute irure dolor inreprehenderit in coluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatatnon proident, sunt in culpa quiofficia deserunt mollit anim id estlaborum.
+
+** 📰 Back Stories:                                                :noexport:
 :README:
    This section is for a chapter's Back Story development... 
    The following tips will help you manage development of your 
@@ -855,7 +991,7 @@ Each new note needs to get its own heading and initial timestamp...
    =The Content Written Within This Section May or May Not be= 
    =Added to actual Chapters/Scenes of your Book...=
 :END:
-*** NEW Back Story: <2020-05-10 Sun> /(Example)/
+*** NEW 📰 Back Story: <2020-05-10 Sun> /(Example)/
 
 =Note:= This is an example of a back story related to this 
       chapter, or possibly connecting to another chapter 
@@ -866,7 +1002,7 @@ Each new note needs to get its own heading and initial timestamp...
       Notes about this back story as well, AND keep them 
       up to date as this story develops!
 
-** [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F5E1.png]] Plots:                                                          :noexport:
+** 🗡 Plot(s):                                                          :noexport:
 :README:
    Plots and Sub Plots, /(Just Like Background Notes)/ are =META DATA= 
    Not Intended to be Added back to the Chapters/Scenes of your 
@@ -885,85 +1021,133 @@ Each new note needs to get its own heading and initial timestamp...
    you will be better informed by keeping all your plot tasks here 
    where you can see them and resolve them quickly...
 :END:
-*** Plot Summary:
+*** 🗡 Plot Summary:
 
 =Plot or Sub-Plot Summary= /(example)/
 
 In this chapter we are dealing with yadda yadda yadda which must be resolved with yadda yadda yadda.  But be careful about Yadda Yadda Yadda as she does not exist in this book at all!  What?  Nevermind... She never existed... Only in your dreams...
 
-* NEW Chapter Title /(MASTER - keep until Final Draft)/ :export:
-<<CHAPTER_chapter-title>>
+* NEW Chapter Title Z /(MASTER - DON'T TOUCH UNTIL FINAL)/         :export:
+<<CHAPTER_chapter-title-z>>
 :README:
 
-   =Usage:= *This is the MASTER Chapter Reserved for LAST*
+   =Usage:= *This is the MASTER CHAPTER Reserved for LAST*
 
    - [ ] =This item is BOILERPLATE= /(DON'T MESS with IT until THE END)/
 
-         Do Not use this MASTER CHAPTER while you are writing
-         your book... =KEEP IT LAST= in your list of *Chapter Headings*...
-         Keep This Item set to ~:export:~ for all drafts...
+        Do Not use this MASTER CHAPTER while you are writing
+        your book... =KEEP IT LAST= in your list of *Chapter Headings*...
+        Keep This Item set to ~:export:~ for all drafts...
 
-         =COMMANDEER= This item /(changing the title etc.)/ as the
-         very last chapter in your book /(Once you know that/
-         /for sure)/... The *Scene Z* sub-heading contains LaTeX
-         directives starting ~\backmatter~...
+        This Item contains LaTeX directives designating the end of
+        the Book Proper, /i.e. the end of/ ~\mainmatter~ and the start
+        of Appendix, Index, etc... /i.e.,/ ~\backmatter~
 
-         Therefore if another chapter were to be placed AFTER
-         this item, it would show up as a NEW section outside
-         of the book proper!!
+        =Warning:= /If another chapter were to be placed AFTER this item,/
+                 /it would show up as a NEW section outside of the book/
+                 /proper!! NOT what you want!/
+
+        =Therefore This:= *Chapter Title Z* =Must Remain In Place AS IS=
+        throughout the duration of your project until you reach Final
+        Draft stage...
+
+        *When That Time Comes, Do The Rest Of The Steps Below:*
 
    - [ ] =Commandeer This as LAST CHAPTER OF YOUR BOOK:=
 
-         The structure of this BOILERPLATE is all set up for 
-         you allowing you to immediately begin writing it as
-         your very LAST chapter in your book...
+        =COMMANDEER= This item /(changing the title etc.)/ as the
+        very last chapter in your book /(Once you know that/
+        /for sure)/... The *NEW Scene Z* sub-heading contains
+        LaTeX directives starting ~\backmatter~... Everyting After
+        This chapter is BACKMATTER, /(e.g., Appendix, Index, etc...)/
 
-         Rename *Chapter Title: /(MASTER - keep until Final Draft)
-         to a *Unique Title* and remove /(MASTER - etc.)/ in order
-         to commandeer the entire item for your needs...
+        The structure of this BOILERPLATE is all set up for 
+        you allowing you to immediately begin writing it as
+        your very LAST chapter in your book...
+
+        Rename *Chapter Title Z:* /(MASTER - etc...)/ to a *Unique Title*
+        and remove /(MASTER - etc...)/ in order to commandeer the
+        entire item for your needs...
 
    - [ ] =Change The Anchor Link=
 
-         Change the anchor /(directly under Chapter Title)/ to match
-         your new chapter's title name...
+        Change the anchor /(directly under the Chapter Title)/ to
+        match your new chapter's title name...
          
-         Leave ~CHAPTER_~ as the anchor's prefix... /(as in boilerplate above)/
-         Use dashes to connect words /(all lower case)/ from your title...
+        =Note:= I created the following convention for making unique
+              anchors within ALL of these HAP_Doc-Skeleton.org
+              Template files.
 
-         The anchor above may be used to link to this scene from
-         Research or other sections of this book...
-         /(which may or may not be published as links within eBook)/
+              The anchor ~PREFIX_~ is there to match the named sections
+              of a book or document project defined as a standard
+              across ALL of these HAP_Document-Skeleton.org Template
+              files... This will help keep your anchors unique, and
+              also add an extra *KM* dimension of *category* to them...
 
-   - [ ] =Replace Titles, Anchors, & Content Within This Section=
+              It would be wise to follow this convention when you
+              create anchors elsewhere within ALL of your Book
+              Projects created from HAP Modular Emacs Document
+              Skeleton Template files...
 
-         Change names to suit your needs, but keep the structure of
-         *Chapter / Scene (sub-chapter)* intact...
-         /(i.e., change titles, anchors, and content only...)/
+              If you wish to change all of this, go ahead and do
+              what ever you want... For simplicity's sake, follow
+              the instructions below... /(there are automatic ways/
+              /to create links and anchors within org-mode... I/
+              /prefer to do it manually... The alternate is a mess/
+              /IMHO)/
+         
+        Leave ~CHAPTER_~ as the anchor's prefix...
+        /(as in boilerplate above).../ Use dashes to connect words
+        /(all lower case)/ from your title...
+
+        The anchor above may be used to link to this chapter from
+        Research or other sections of this book... /(Or even from/
+        ~.org~ /docs OUTSIDE of this file...)/
+         
+        /(which may or may not be published as links within the PDF)/
+
+   - [ ] =Replace ALL BOILERPLATE Within This CHAPTER=
+
+        *Add Your Content:* Paragraphs, Sub Headings, Lists, Tables,
+        Figures, Images, etc...
+
+        =Keep the Structure Of:= *Chapter / Scene)* =Intact...=
+
+        Anything you do under *Scene* Level will be automatically
+        handled during export...
+
+        =Note:= /Usually/ *Fiction* /does not contain any Headings below/
+              /Scenes, but if you do have some special headings/
+              /e.g., A Figure, Map, Etc., /within your novel under/
+              /the Scene Heading, Make Anchors to these sub-headings/
+              /Unique! You can also employ LaTeX Inline Properties/
+              /to get special items looking nice within Scenes.../
 
    - [ ] =Add New Cloned Scenes as Needed=
 
-         Copy/Clone & Commandeer new Scenes as needed to finish
-         the chapter... Read the *:README:* drawers within Scenes
-         for more info...
+        Copy/Clone & Commandeer new Scenes as needed to finish
+        the chapter... Read the *:README:* drawers within Scenes
+        for more info...
 
    - [ ] =Make Sure= *New Scene Z:* /(below)/ is commandeered as =LAST SCENE=
 
-         The *New Scene Z:* sub-title contains LaTeX directive:
-         ~\backmatter~ and ~\appendix~ which means it MUST Be
-         placed as the LAST Scene of your BOOK proper...
+        The *New Scene Z:* heading contains LaTeX directive:
+        ~\backmatter~ and ~\appendix~ which means it MUST Be
+        placed as the LAST Scene of your BOOK proper...
 
-         The LaTeX directive at the end of *Scene Z* /(or title/
-         /you change it to)/ must be left =as is= when you are
-         commandeering the scene to fit in as the last scene
-         in your book...
+        The LaTeX directive at the end of *New Scene Z*
+        /(or title you change it to)/ must be left =AS IS= when
+        you are commandeering the scene to fit in as the last
+        scene in your book...
 
-         Do NOT touch Scene Z until you are ready, and leave it
-         tagged for ~:export:~ containing LaTeX directives,
-         no matter what...
+        Do NOT touch *New Scene Z* until you are ready, and leave
+        it tagged for ~:export:~ containing LaTeX directives, no
+        matter what...
 :END:
-** New Scene X /(use "Sub Title", NOT "Scene n.1")/     :noexport:
+** New Scene X /(COMMANDEER This One)/                                     :noexport:
 <<SCENE_new-scene-x>>
 :README:
+
    Scenes are the DNA that make up the chapters in a novel 
    or episodes in a production... Each Scene should have its 
    own title or phrase... The LaTeX memoir styles take care
@@ -974,44 +1158,65 @@ In this chapter we are dealing with yadda yadda yadda which must be resolved wit
 
    =Usage:=
 
-   - [ ] =Clone This:= *New Scene X:* /(use "Sub Title", etc.)/
+   - [ ] =Commandeer This:= *New Scene X:* /(COMMANDEER...)/
 
-         =Copy ALL its contents= and =paste= it as new sibling
-         directly UNDER any existing Scenes allready in place,
-         but ABOVE the BOILERPLATE item it was created from...
-         /(i.e., save your boilerplate template on the bottom/
-         /of the list where it will be copied/cloned again later)/
+        =Change ALL its contents= to NEW Chapter Scene content when
+        you are ready to add your FIRST Scene to this chapter...
 
-         =Do this whenever you need to start a new scene...=
-
-   - [ ] =Commandeer Your New Clone:=
-     
         The structure of this template is all set up for you ahead
         of time to allow you to immediately begin writing...
 
-        After cloning, rename *New Scene X:* /(New Sub Title, etc.)/
-        to a *Unique Title* and remove /(boilerplate)/ in order
-        to commandeer the entire item for your needs...
+        Rename *New Scene X:* to a *Unique Title* and remove
+        /(all boilerplate content)/ in order to commandeer the entire
+        item for your specific needs...
+
+        Change the ~:noexport:~ tag to ~:export:~ for this NEW
+        REAL Scene so it will show up when publishing drafts...
 
    - [ ] =Change The Anchor Link= /(make it unique)/
 
-         Change the anchor /(directly under Scene Title)/ to match
-         your new scene title name...
+        Change the ~<<anchor>~ /(directly under your renamed/ *Scene* /heading)/
+        to match your new renamed scene title...
+
+        =Note:= I created the following convention for making unique
+              anchors within ALL of these HAP_Doc-Skeleton.org
+              Template files.
+
+              The anchor ~PREFIX_~ is there to match the named sections
+              of a book or document project defined as a standard
+              across ALL of these HAP_Document-Skeleton.org Template
+              files... This will help keep your anchors unique, and
+              also add an extra *KM* dimension of *category* to them...
+
+              It would be wise to follow this convention when you
+              create anchors elsewhere within ALL of your Book
+              Projects created from HAP Modular Emacs Document
+              Skeleton Template files...
+
+              If you wish to change all of this, go ahead and do
+              what ever you want... For simplicity's sake, follow
+              the instructions below... /(there are automatic ways/
+              /to create links and anchors within org-mode... I/
+              /prefer to do it manually... The alternate is a mess/
+              /IMHO)/
          
-         Leave ~SCENE_~ as the anchor's prefix... /(as in boilerplate above)/
-         Use dashes to connect words /(all lower case)/ from your scene's
-         title...
+        Leave ~SCENE_~ as the anchor's prefix...
+        /(as in boilerplate above)/ Use dashes to connect
+        words /(all lower case)/ from your scene's title...
 
-         The anchor above may be used to link to this scene from
-         Research or other sections of this book...
+        The anchor above may be used to link to this scene from
+        *Research* or other sections of this project...
+        /(Or even from/ ~.org~ /docs OUTSIDE of this file...)/
 
-        /(which may or may not be published as links within eBook)/
+        /(which may or may not be published as links within the PDF)/
 
    - [ ] This *Scene Template* could ALSO Serve As =CHAPTER INTRODUCTION=
 
-         This is optional if you need one, but its anchor link must be
-         unique! /(i.e., not "SCENE_introduction")/
+        This is optional if you need one, but its anchor link must be
+        unique! /(i.e., not "SCENE_introduction")/
 :END:
+
+=BOILERPLATE CONTENT=
 
 =Insert Scene Content Here=
 
@@ -1019,7 +1224,7 @@ Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus
 
 At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
 
-** New Scene Y /(use "Sub Title", NOT "Scene n.2")/    :noexport:
+** New Scene Y /(COPY/CLONE This One)/                                     :noexport:
 <<SCENE_new-scene-y>>
 :README:
    Scenes are the DNA that make up the chapters in a novel 
@@ -1032,44 +1237,75 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
 
    =Usage:=
 
-   - [ ] =Clone This:= *New Scene Y:* /(New Sub Title, etc.)/
 
-         =Copy ALL its contents= and =paste= it as new sibling
-         directly UNDER any existing Scenes allready in place,
-         but ABOVE the BOILERPLATE item it was created from...
-         /(i.e., save your boilerplate template on the bottom/
-         /of the list where it will be copied/cloned again later)/
+   - [ ] =FIRST: Copy Clone This BOILERPLATE= *New Scene Y:*
 
-         =Do this whenever you need to start a new scene...=
+        Leave this BOILERPLATE *New Scene Y* in place Until you No Longer
+        Have any more Scenes to write for this chapter.
 
-   - [ ] =Commandeer Your New Clone:=
-     
-        The structure of this template is all set up for you ahead
-        of time to allow you to immediately begin writing...
+        =Do NOT CHANGE ITS CONTENT!...=
+        
+        Paste your clone just above it, /(below your existing Scenes)/
+        Your new clone will serve as your SECOND, THIRD, FOURTH, Etc...
+        Sub-Topics for this chapter...
 
-        After cloning, rename *New Scene Y:* /(New Sub Title, etc.)/
-        to a *Unique Title* and remove /(boilerplate)/ in order
-        to commandeer the entire item for your needs...
+        After cloning, rename *New Scene Y:* to a *Unique Title*
+        and and Replace ALL BOILERPLATE content with Your Specific
+        scene content for this chapter...
+
+        Change the ~:noexport:~ tag to ~:export:~ for this NEW
+        REAL scene so it will show up when publishing drafts...
+
+        =Do this whenever you need to start a new scene...=
+
+        =NOTE:= If you know for sure what your SECOND to LAST scene
+              is, =COMMANDEER= This Item Instead of Copy/Clone...
+
+        Otherwise, Once you know you are ready to start your LAST scene
+        in this chapter, DELETE THIS: *New Scene Y* Heading and all
+        content... It is no longer needed...
+        
+        /(i.e., Time to Commandeer/ *New Scene Z* /as your LAST Sub Topic)/
 
    - [ ] =Change The Anchor Link= /(make it unique)/
 
-         Change the anchor /(directly under Scene Title)/ to match
-         your new scene title name...
+        Change the ~<<anchor>~ /(directly under your renamed scene heading)/
+        to match your new renamed scene title...
+
+        =Note:= I created the following convention for making unique
+              anchors within ALL of these HAP_Doc-Skeleton.org
+              Template files.
+
+              The anchor ~PREFIX_~ is there to match the named sections
+              of a book or document project defined as a standard
+              across ALL of these HAP_Document-Skeleton.org Template
+              files... This will help keep your anchors unique, and
+              also add an extra *KM* dimension of *category* to them...
+
+              It would be wise to follow this convention when you
+              create anchors elsewhere within ALL of your Book
+              Projects created from HAP Modular Emacs Document
+              Skeleton Template files...
+
+              If you wish to change all of this, go ahead and do
+              what ever you want... For simplicity's sake, follow
+              the instructions below... /(there are automatic ways/
+              /to create links and anchors within org-mode... I/
+              /prefer to do it manually... The alternate is a mess/
+              /IMHO)/
          
-         Leave ~SCENE_~ as the anchor's prefix... /(as in boilerplate above)/
-         Use dashes to connect words /(all lower case)/ from your scene's
-         title...
+        Leave ~SCENE_~ as the anchor's prefix... /(as in boilerplate above)/
+        Use dashes to connect words /(all lower case)/ from your scene's
+        title...
 
-         The anchor above may be used to link to this scene from
-         Research or other sections of this book...
+        The anchor above may be used to link to this Scene from
+        Research or other sections of this book... /(Or even from/
+        ~.org~ /docs OUTSIDE of this file...)/
 
-        /(which may or may not be published as links within eBook)/
-
-   - [ ] This *Scene Template* could ALSO Serve As =CHAPTER INTRODUCTION=
-
-         This is optional if you need one, but its anchor link must be
-         unique! /(i.e., not "SCENE_introduction")/
+        /(which may or may not be published as links within the PDF)/
 :END:
+
+=BOILERPLATE CONTENT=
 
 =Insert Scene Content Here=
 
@@ -1077,51 +1313,79 @@ Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus
 
 At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
 
-** New Scene Z /(MASTER - keep until Final Draft)/     :export:
+** New Scene Z /(BOILERPLATE - keep until Final Draft)/               :export:
 <<SCENE_new-scene-z>>
 :README:
    This FINAL *New Scene Z:* sub-title contains LaTeX directive:
-   ~\backmatter~ and ~\appendix~ which means it MUST Be placed as
-   the LAST Scene of your BOOK proper...
+   ~\backmatter~ and ~\appendix~ which means it =MUST Be placed= as
+   the =LAST Scene of your BOOK proper ALWAYS...=
 
    The LaTeX directive at the end of *Scene Z* /(or title/ /you/
-   /change it to)/ must be left =as is= when you are commandeering
+   /change it to)/ must be left =AS IS= when you are commandeering
    the scene to fit in as the last scene in your book...
 
    Do NOT touch this special Scene Z until you are ready, and
    leave it tagged for ~:export:~ containing LaTeX directives,
-   no matter what...
+   no matter what ALWAYS...
+
+   =DO NOT DELETE THIS ITEM - CHANGE IT's CONTENT INSTEAD=
 
    =Usage:=
 
-   - [ ] =Make Sure= *New Scene Z:* is commandeered as =LAST SCENE=
+   - [ ] =Make Sure= *New Scene Z:* is commandeered =LAST=
 
-         This Scene MUST Be placed and appear as the very
-         LAST Scene of your BOOK proper...
+        This Scene MUST Be placed and appear as the LAST
+        Scene in the LAST Chapter of your BOOK proper...
 
    - [ ] =Commandeer Scene Z when you are READY:=
      
         The structure of this template is all set up for you ahead
         of time to allow you to immediately begin writing...
 
-        Rename *New Scene Z:* /(MASTER - etc.)/
-        to a *Unique Title* and remove /(boilerplate)/ in order
-        to commandeer the entire item for your needs...
+        Rename *New Scene Z:* /(BOILERPLATE - etc.)/
+        to a *Unique Title* and replace ALL BOILERPLATE with your
+        own content in order to commandeer the entire item for
+        your specific needs...
 
    - [ ] =Change The Anchor Link= /(make it unique)/
 
-         Change the anchor /(directly under Scene Title)/ to match
-         your new scene title name...
+        Change the anchor directly under your renamed scene heading
+        to match your renamed scene title...
+
+        =Note:= I created the following convention for making unique
+              anchors within ALL of these HAP_Doc-Skeleton.org
+              Template files.
+
+              The anchor ~PREFIX_~ is there to match the named sections
+              of a book or document project defined as a standard
+              across ALL of these HAP_Document-Skeleton.org Template
+              files... This will help keep your anchors unique, and
+              also add an extra *KM* dimension of *category* to them...
+
+              It would be wise to follow this convention when you
+              create anchors elsewhere within ALL of your Book
+              Projects created from HAP Modular Emacs Document
+              Skeleton Template files...
+
+              If you wish to change all of this, go ahead and do
+              what ever you want... For simplicity's sake, follow
+              the instructions below... /(there are automatic ways/
+              /to create links and anchors within org-mode... I/
+              /prefer to do it manually... The alternate is a mess/
+              /IMHO)/
          
-         Leave ~SCENE_~ as the anchor's prefix... /(as in boilerplate above)/
-         Use dashes to connect words /(all lower case)/ from your scene's
-         title...
+        Leave ~SCENE_~ as the anchor's prefix... /(as in boilerplate above)/
+        Use dashes to connect words /(all lower case)/ from your scene's
+        title...
 
-         The anchor above may be used to link to this scene from
-         Research or other sections of this book...
+        The anchor above may be used to link to this Scene from
+        Research or other sections of this book... /(Or even from/
+        ~.org~ /docs OUTSIDE of this file...)/
 
-         /(which may or may not be published as links within eBook)/
+        /(which may or may not be published as links within the PDF)/
 :END:
+
+=BOILERPLATE CONTENT=
 
 =Insert Scene Content Here=
 
@@ -1136,7 +1400,7 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
 \appendix
 #+END_EXPORT
 
-** [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4DA.png]] Chapter References:                                :noexport:
+** 📚 Chapter References:                                :noexport:
 :README:
    =Org Mode Links Tip:=
 
@@ -1187,7 +1451,7 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
 
 + *Link to Project:* [[][] ] /(comment)/
 
-** [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4DD.png]] Chapter Notes:                                         :noexport:
+** 📝 Chapter Notes:                                         :noexport:
 :README:
    *Chapter Notes*, /(unlike Scenes, Back Stories, Summaries etc.)/ 
    Should be written in =OUTLINE= form to aid in organization of 
@@ -1201,6 +1465,12 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
 
       /(i.e., Your Books Internal Analyst/
              /Behind the Curtain So-To-Speak... %^)/
+
+   The example Notes below have been timestamped as a way to suggest
+   organizing TODO items for a particular chapter you may find yourself
+   working on, or researching...
+
+   =Use or replace the notes below for your own schemes=   
 :END:
 *** NEW Background Note 1: <2020-05-10 Sun> /(example)/
 
@@ -1223,6 +1493,13 @@ Do any or all the above to help get the concepts and images of your book clear i
 *** NEW Background Note 2: <2020-05-10 Sun> /(example)/
 
 Each new note needs to get its own heading and initial timestamp...
+
+It is fine to make as many sub-headings as needed for these notes
+but not important for them to also be time-stamped...
+
+***** Quid Novi? /(example note sub heading)/
+
+Quid Novi? Lorem Ipsum dolor sit amet,consectetur adipisicing elit, sed doeiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim adminim veniam, quis nostrudexercitation ullamco laboris nisi utaliquip ex ea commodo consequat.Duis aute irure dolor inreprehenderit in coluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatatnon proident, sunt in culpa quiofficia deserunt mollit anim id estlaborum.
 
 ** [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4D3.png]] Back Stories:                                              :noexport:
 :README:
@@ -1309,7 +1586,58 @@ Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus
 
 At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
 
-* [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F50E.png]] Research:                                              :noexport:
+* 🔍 Research:                                              :noexport:
+** 📚 Research Reference:                                              :noexport:
+:README:
+   =Org Mode Links Tip:=
+
+      + To Create a Link Type: ~C-c C-l~ 
+         /(then paste: ~link~ & type: "description")/
+
+         =-OR-= Simply Copy/Paste BOILERPLATE:
+              /(use placeholders below)/
+              And Fill Them In Manually... 
+              Copy/Paste more placeholders as
+              needed to create more links...
+
+      + To Open a Link Type: ~C-c C-o~
+
+      + To EXPAND a Link Type: ~SPACE b~
+         or: ~M-x org-toggle-link-display~
+
+   =BOILERPLATE:= /(clone to add more ref links)/
+
+   + *Heading:* [[link][Link NAME] ] /(comment)/
+
+   + [[link][Link Name] ] *Heading:* /(comment)/
+   
+   + *_:* [[][] ] /(yadda... yadda... yadda...)/
+
+   + [[][] ] /(_)/
+
+   + [[junk][JUNK]]  /(This is a stupid BUG workaround/ /for org-mode link/
+         /expansion/compression... If you invoke:/ ~org-toggle-link-display~
+         /you will notice this JUNK link DOES NOT compress to a clickable/
+         /link title alone.../
+         
+         /I am not sure if this is due to my Emacs Config or a bug within/
+         *Org-Mode* /itself.../
+
+         /I put this workaround in here because if it is not here,/
+         /SOME of your external file links created below may not/
+         /compress after expansion, even though thy are GOOD links!/
+
+         /Leaving this JUNK link in here acts like a scapegoat/
+         /so that your real links below will all compress/expand/
+         /normally... I am NOT SURE WHY THIS WORKS??? I'm to busy/
+         /to do anything beyond hacking at this point.../
+         
+         ~org-lint~ /will detect JUNK above... Ignore that warning.../
+                  /It's my "METHOD of MADNESS" %^)/
+:END:
+
++ *Link to Project:* [[][] ] /(comment)/
+
 ** 👤 Characters:
 :README:
   =Place= *👤 New Character:* =Items= /(From Templates)/ Into This
@@ -1318,68 +1646,98 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
 
   =Note:= New Characters are developed within this Section by 
         completing the: *👤 Character Tasks:* located within 
-        the *⏰ Tasks:* Binder of this Book Project...
+        the *⏱ Tasks:* Binder of this Book Project...
 :END:
 *** NEW 👥 Major Characters Summary:
 :README:
-   Write a one page synopsis (or 600 words) about 
-   the major characters in your story...
+   + [ ] *Write a one page synopsis* /(or 600 words)/
+        about the major characters in your story...
 
    =Note:= This summary is written while completing the:
          *👥 Major Characters Summary* Task located within 
-         the *⏰ Tasks:* /(Binder)/ of this Book Project...
+         the *⏱ Tasks:* /(Binder)/ of this Book Project...
 
          Add results of that task below...
 :END:
+
+=Place Major Characters Summary HERE=
+
+yadda, yadda, yadda...
 
 *** NEW 👥 Minor Characters Summary:
 :README:
-   Write a half page synopsis (or 300 words) about 
-   the minor characters in your story...
+   + [ ] *Write a half page synopsis* /(or 300 words)/
+        about the minor characters in your story...
 
    =Note:= This summary is written while completing the:
          *👥 Minor Characters Summary* Task located within 
-         the *⏰ Tasks:* /(Binder)/ of this Book Project...
+         the *⏱ Tasks:* /(Binder)/ of this Book Project...
 
          Add results of that task below...
 :END:
 
-*** NEW 👤 New Character: /(placeholder)/
+=Place Minor Characters Summary HERE=
 
-=Place= *👤 New Character:* =Items= /(From Templates)/ BELOW
-      Remove this /(placeholder)/ After your First Character
-      is Item has been placed...
+yadda, yadda, yadda...
+
+*** NEW 👤 New Character: /(placeholder)/
+:README:
+   + [ ] =Place= *👤 New Character:* =Items= From the *⎘ Templates:* heading
+        under the *🗂 Meta:* binder /(below)/ and commandeer your cloned
+        template for specific needs...
+:END:
+
+=BOILERPLATE Content...= /(Replace This with REAL content)/
 
 ** ♾ Worlds:
 :README:
-   =Place= *♾ New World:* =Items= /(From Templates)/ =Into This Binder:= /As Needed/
+   + [ ] =Place= *♾ New World:* =Items= from the *⎘ Templates:* heading
+        under the *🗂 Meta:* binder /(below)/ and commandeer your cloned
+        template for specific needs...
 :END:
+
+=BOILERPLATE Content...= /(Replace This with REAL content)/
 
 ** ✨ Regions:
 :README:
-   =Place= *✨ New Region:* =Items= /(From Templates)/ =Into This Binder:= /As Needed/
+   + [ ] =Place= *✨ New Region:* =Items= from the *⎘ Templates:* heading
+        under the *🗂 Meta:* binder /(below)/ and commandeer your cloned
+        template for specific needs...
 :END:
+
+=BOILERPLATE Content...= /(Replace This with REAL content)/
 
 ** ∅ Planets - Satellites:
 :README:
-   =Place= *∅ New Planet or Satellite:* =Items= /(From Templates)/ =Into This Binder:=
+   + [ ] =Place= *∅ New Planet or Satellite:* =Items= from the *⎘ Templates:* heading
+        under the *🗂 Meta:* binder /(below)/ and commandeer your cloned
+        template for specific needs...
 :END:
+
+=BOILERPLATE Content...= /(Replace This with REAL content)/
 
 ** 👥 Groups - Factions:
 :README:
-   =Place= *👥 New Group or Faction:* =Items:= /(From Templates)/ =Into This Binder:=
+   + [ ] =Place= *👥 New Group or Faction:* =Items= from the *⎘ Templates:* heading
+        under the *🗂 Meta:* binder /(below)/ and commandeer your cloned
+        template for specific needs...
 :END:
 
-** 🗡 Plots:
+=BOILERPLATE Content...= /(Replace This with REAL content)/
+
+** 🗡 Plot Research:
 :README:
-   This Research/Plots section is for documenting or planning out plots 
+   This Plot Research section is for documenting or planning out plots 
    that may or may not be related to the actual plots you are developing 
    within the books chapters... This is for Research purposes... 
 
-   This is NOT for story development... But rather to be used purely 
-   as research of classic plots that may influence and or help you 
-   make your real plots more believable and/or accurate...
+   Plot research is NOT intended for direct story development... But rather
+   to be used purely to record and study and annotate classic plots that
+   may influence and/or help you make your real plots more believable
+   and/or accurate...
 :END:
+
+=BOILERPLATE Content...= /(Replace This with REAL content)/
 
 ** ❝ Quotations:
 :README:
@@ -1389,15 +1747,17 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
    that you may wish to include within your book...
 :END:
 
+=BOILERPLATE Content...= /(Replace This with REAL content)/
+
 * 🗓 LOGS:                                                   :noexport:
 :README:
    Use this space to add time stamped log note entries for any 
    pourpose you may need while you are planning, writing, or 
-   publishing your book...
+   publishing...
 
    =USAGE=
 
-      =Place New:=   *🗓 LOG:* /<timestamp>/ *Entry* /(Log Entry Template)/ 
+      =Place New:=   *🗓 LOG:* /<timestamp>/ *Generic Title* /(General Log Entry Template)/
       =Items From:=  *⎘ Templates:* Binder /(under the/ *⎘ Meta: /binder)/
       =Into This:=  *🗓 Log Book:* Binder /(for current year)/
 :END:
@@ -1554,12 +1914,10 @@ This Log Entry is about: Yadda... Yadda... Yadda...
 
 ☞ *Link to Project:* [[][] ] /(comment)/
 
-**** NEW ⏰ Time Card:
+**** NEW ⏱ Time Card:
 
 #+BEGIN: clocktable :scope tree3 :maxlevel 6 :tstart "<-1w>" :tend "<+1m>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3
 #+END:
-
-
 
 **** NEW ✅ Summary: [0/3]
 :README:
@@ -1587,8 +1945,6 @@ Yadda... Yadda... Yadda...
 2. [ ] *New Item 2:*
 
 3. [ ] *New Item 3:* /(copy/clone more as needed)/
-
-
 
 **** NEW 📒 Details:
 ***** NEW ⏱ New Item 1 /(placeholder)/ [0/3]
@@ -1785,18 +2141,16 @@ The following list contains Babel Source Code Blocks that are often needed for s
 
 =ADD a NEW Items= /(as per :README: above)/ when 2023 rolls around, right here in this Log Book Binder whenever you need to create a new Log Entry...
 
-* [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u23F1.png]] Tasks:                                                   :noexport:
+* ⏱ Tasks:                                                   :noexport:
 :README:
-   This *Tasks* Binder is similar to the *🗓 Log Book:* Binder...
-   However, log entries are research activities... while tasks are
-   more General and relate to this ENTIRE Book Project as a whole...
+   This *⏱ Tasks* Binder is similar to the *🗓 LOGS:* Binder...
 
    - *Use this Section to* =ADD TIME STAMPED TASKS= *for any pourpose*
 
-      + Create More *⏱ Tasks:* =Sub Categories= as needed...
+      + Create More *📋 Tasks:* =Sub Categories= as needed...
 
       + Create More *⏱ New Task:* =Entries= under =Sub Categories= 
-         as needed during the development of your Book Project...
+         as needed during the development of your Project...
 
          Use the Supplied: *⏱* <2022-08-25 Thu> *New Task:* /(Master Template)/ 
          from the *⎘ Templates:* Section within the *⎘ Meta:* Binder to easily 
@@ -1805,11 +2159,9 @@ The following list contains Babel Source Code Blocks that are often needed for s
 
    - *Time Stamp Task Entries With:* ~C-c .~ *To Set The* =START DATE=
 
-   - *Use or Create NEW Task Sub Categories as Needed:*
-
    The Synopsis Tasks provided below are important first steps to take 
-   when first starting a novel.  They are based on the "Snowflake Method" 
-   by Randy Ingermanson... 
+   when first starting a novel. They are based on the "Snowflake Method" 
+   by Randy Ingermanson...
 
    These tasks should be started as soon as you create a new project 
    using this: *HAP_Fiction-Book-Project-Skeleton* 
@@ -1819,7 +2171,7 @@ The following list contains Babel Source Code Blocks that are often needed for s
    how to properly organize and write your books with a clearer mind, 
    inspired outlook, and renewed motivation...
 :END:
-** 📃 Synopsis Tasks:
+** 📋 Synopsis Tasks:
 :README:
    =Do These Synopsis Tasks FIRST When Starting a NEW Book Project=
 
@@ -1855,8 +2207,6 @@ The following list contains Babel Source Code Blocks that are often needed for s
 
 
 After completing above, follow the steps below...
-
-
 
 *** NEW ⏱ <2022-08-25 Thu> Step One - Write a Single Sentence Summary:
 
@@ -1983,8 +2333,6 @@ Many of the =Plot Types= described in the *🗡 Plot Idea:* /TEMPLATE/ work best
 
 - *Act 3 wraps everything up*
 
-
-
 **** Make 5 Sentences: [0/5]
 
 1. [ ] =Exposition:=
@@ -2027,15 +2375,11 @@ Many of the =Plot Types= described in the *🗡 Plot Idea:* /TEMPLATE/ work best
    ends as a comedy, tragedy, or mellowdrama...
    You decide on that...
 
-
-
 **** Using Your One-Paragraph Summary:
 
 You will be using this paragraph in your proposals. It is only for your agents etc.  Not for your readers who need to be kept in the dark about how the story develops before reading the book! =Watch Out Spoilers!=
 
 =However=, Some of this paragraph /(written with parts pourposefully left out or with questions put in place)/ may end up back-cover copy for your book's promotion.
-
-
 
 *** NEW ⏱ <2022-08-25 Thu> Step Three - Expand Paragraph to Synopsis:
 
@@ -2051,8 +2395,6 @@ At the end of this exercise, you will have a nice one-page skeleton of your nove
 
 Your process now is to grow these ideas as chapters of your story. You are expanding the conflict. You have a synopsis suitable for a proposal, and you are well on your way to doing extended promotion...
 
-
-
 *** NEW ⏱ <2022-08-25 Thu> Completion:
 
 - [ ] *Copy one-page skeleton from:* =Step Three= above to: *📃 Synopsis:* 
@@ -2062,8 +2404,6 @@ Your process now is to grow these ideas as chapters of your story. You are expan
        completed half the battle of writing your novel! The other 
        half is getting to know your characters... Plots and chapters 
        will flow from that effortlessly...
-
-
 
 ** 👤 Character Tasks:
 :README:
@@ -2163,8 +2503,6 @@ Your process now is to grow these ideas as chapters of your story. You are expan
        for Character Synopsis & Profile /(The Front/
        /facing Headings)/
 
-
-
 *** NEW ⏱ <2022-08-26 Fri> 👥 Major Characters Summary:
 :README:
    Write a one page synopsis (or 600 words) about 
@@ -2177,8 +2515,6 @@ Your process now is to grow these ideas as chapters of your story. You are expan
 :END:
 
 /(Use this space as a temporary scratch pad if needed...)/
-
-
 
 *** NEW ⏱ <2022-08-26 Fri> 👥 Minor Characters Summary:
 :README:
@@ -2193,9 +2529,7 @@ Your process now is to grow these ideas as chapters of your story. You are expan
 
 /(Use this space as a temporary scratch pad if needed...)/
 
-
-
-** ⏱ Other Tasks:
+** 📋 Other Tasks:
 *** SOMEDAY ⏱ <2022-08-28 Sun> Create Editorial Calendar
 
 =Note:= This is Still Under Construction... I am researching the 
@@ -2227,14 +2561,14 @@ Use this space to design your *EC* and then transfer it as a New Section within 
 
 
 
-* [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F5C2.png]] Meta: /(templates etc.)/                                :noexport:
-** 📄 About:
+* 🗂 Meta: /(templates etc.)/                                :noexport:
+** 📃 About:
 
 This =Meta= section provides skeleton templates for use within your project(s).  Any sub heading under this Meta: group can be utilized by copy-pasting the collapsed heading into any of your existing project sections (i.e., making a clone anywhere you need to create a new section based on the template's structure)... 
 
 Or... You could try mashing several cloned templates together to create a totally new project heading with a totally different structure... The intent of this is to save lots of time starting up a new custom writing project.  Lets see if it helps. :trollface:
 
-** 📄 Instructions:
+** 📕 Instructions:
 
 - [ ] *Choose One Of The Templates Below And Copy It:*
 
@@ -2324,6 +2658,76 @@ Here are Links to Information that may be helpful While Using this Fiction Book 
 
 - [[https://www.geneatcg.com/emacs-org-mode-export-to-pdf/][Emacs Org Mode export to pdf]] - /(Article by: Gene Ting-Chun Kao)/
 
+** 📚 Meta Reference:
+:README:
+   =Org Mode Links Tip:=
+
+      + To Create a Link Type: ~C-c C-l~ 
+         /(then paste: ~link~ & type: "description")/
+
+         =-OR-= Simply Copy/Paste BOILERPLATE:
+              /(use placeholders below)/
+              And Fill Them In Manually... 
+              Copy/Paste more placeholders as
+              needed to create more links...
+
+      + To Open a Link Type: ~C-c C-o~
+
+      + To EXPAND a Link Type: ~SPACE b~
+         or: ~M-x org-toggle-link-display~
+
+   =BOILERPLATE:= /(clone to add more ref links)/
+
+   + *Heading:* [[link][Link NAME] ] /(comment)/
+
+   + [[link][Link Name] ] *Heading:* /(comment)/
+   
+   + *_:* [[][] ] /(yadda... yadda... yadda...)/
+
+   + [[][] ] /(_)/
+
+   + [[junk][JUNK]]  /(This is a stupid BUG workaround/ /for org-mode link/
+         /expansion/compression... If you invoke:/ ~org-toggle-link-display~
+         /you will notice this JUNK link DOES NOT compress to a clickable/
+         /link title alone.../
+         
+         /I am not sure if this is due to my Emacs Config or a bug within/
+         *Org-Mode* /itself.../
+
+         /I put this workaround in here because if it is not here,/
+         /SOME of your external file links created below may not/
+         /compress after expansion, even though thy are GOOD links!/
+
+         /Leaving this JUNK link in here acts like a scapegoat/
+         /so that your real links below will all compress/expand/
+         /normally... I am NOT SURE WHY THIS WORKS??? I'm to busy/
+         /to do anything beyond hacking at this point.../
+         
+         ~org-lint~ /will detect JUNK above... Ignore that warning.../
+                  /It's my "METHOD of MADNESS" %^)/
+:END:
+
+Here are Links to Information that may be helpful While Using this Fiction Book Template
+
+- [[https://mirrors.rit.edu/CTAN/macros/latex/contrib/memoir/memman.pdf][The Memoir Class]] - /Link to PDF/ 
+
+      The above document is all about the LaTeX Class used by: 
+      *This  Book Template*...
+
+- [[https://latex-tutorial.com/documentclass-latex/][Your Guide to documentclass LaTeX: Types and options]] - /LaTeX-Tutorial.com/
+
+- [[https://orgmode.org/manual/In_002dbuffer-Settings.html][Summary of In-Buffer Settings]] - /The ORG Manual/
+
+- [[https://orgmode.org/manual/Export-Settings.html#Export-Settings][Export Settings]] - /The ORG Manual/
+
+- [[https://orgmode.org/manual/Table-of-Contents.html][Table of Contents]] - /(Ths ORG Manual)/
+
+- [[https://ctan.org/][Comprehensive TeX Archive Network]] - /CTAN/
+
+- [[https://www.linuxjournal.com/content/org-mode-latex-exporter-latex-non-texers][The org-mode LaTeX exporter]] - /(LaTeX for non-TEXers) LINUX Journal/
+
+- [[https://www.geneatcg.com/emacs-org-mode-export-to-pdf/][Emacs Org Mode export to pdf]] - /(Article by: Gene Ting-Chun Kao)/
+  
 ** ⎘ Templates:
 *** NEW 🗓 LOG: <2021-03-29 Mon> Generic Title /(General Log Entry Template)/
 <<LOG_Generic-Title>>
@@ -2477,7 +2881,7 @@ This Log Entry is about: Yadda... Yadda... Yadda...
 
 ☞ *Link to Project:* [[][] ] /(comment)/
 
-**** NEW ⏰ Time Card:
+**** NEW ⏱ Time Card:
 
 #+BEGIN: clocktable :scope tree3 :maxlevel 6 :tstart "<-1w>" :tend "<+1m>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3
 #+END:
@@ -2715,7 +3119,7 @@ The following list contains Babel Source Code Blocks that are often needed for s
 *** NEW 👤 New Character: /(Master Template)/
 :README:
   =Note:= New Characters are developed by completing the:
-        *👤 Character Tasks:* located within the *⏰ Tasks:* 
+        *👤 Character Tasks:* located within the *⏱ Tasks:* 
         Binder of this Book Project...
 :END:
 **** 📃 Character Synopsis:
@@ -2744,14 +3148,10 @@ The following list contains Babel Source Code Blocks that are often needed for s
    Add Summary Sheet from Character Bible Below when complete...
 :END:
 
-
-
-***** 📄 Summary (Sentence):  
+***** 📄 Summary (Sentence):
 :README:
    Put a single sentence summary of the character's storyline here.
 :END:
-
-
 
 ***** 📃 Summary (Paragraph):  
 :README:
@@ -2760,36 +3160,26 @@ The following list contains Babel Source Code Blocks that are often needed for s
    write from the snowflake steps.
 :END:
 
-
-
 ***** 🍦 Motivation
 :README:
    The character's motivation /(what does he/she want abstractly?)/
 :END:
-
-
 
 ***** 🥇 Goal
 :README:
    The character's goal (what does he/she want concretely?)
 :END:
 
-
-
 ***** 🤺 Conflict
 :README:
    The character's conflict (what prevents him/her from reaching this goal?)
 :END:
-
-
 
 ***** 💡 Epiphany
 :README:
    The character's epiphany (what will he/she learn, 
    how will he/she change?
 :END:
-
-
 
 ***** 🔤 Basics:
 
@@ -2808,8 +3198,6 @@ The following list contains Babel Source Code Blocks that are often needed for s
 |     |            |      |        |        | Ambi  etc. |           |
 |-----+------------+------+--------+--------+------------+-----------|
 
-
-
 ***** 👪 Family
 
 |----------+------------+----------+--------+--------+----------|
@@ -2817,8 +3205,6 @@ The following list contains Babel Source Code Blocks that are often needed for s
 |----------+------------+----------+--------+--------+----------|
 |          |            |          |        |        |          |
 |----------+------------+----------+--------+--------+----------|
-
-
 
 ***** 🥂 Social
 
@@ -2837,8 +3223,6 @@ The following list contains Babel Source Code Blocks that are often needed for s
 |             | etc...             |            |               |      |
 |-------------+--------------------+------------+---------------+------|
 
-
-
 ***** 🏹 Skills Etc.
 
 |--------+---------+---------------+-----------|
@@ -2848,21 +3232,15 @@ The following list contains Babel Source Code Blocks that are often needed for s
 |        |         |               |           |
 |--------+---------+---------------+-----------|
 
-
-
 ***** 💪 Physical Attributes
 :README:
    The Character's Physical description.... 
 :END:
 
-
-
 ***** 😇 Personality
 :README:
    The Character's Personality... yadda yadda yadda
 :END:
-
-
 
 ****** Likes / Dislikes
 :README:
@@ -2875,8 +3253,6 @@ The Character's Likes / dislikes, yadda yadda yadda...
 :README:
    Character’s personal history. Yadda yadda yadda...
 :END:
-
-
 
 **** 🗒 Worksheet:
 :README:
@@ -2903,7 +3279,7 @@ The Character's Likes / dislikes, yadda yadda yadda...
 :END:
 ***** NEW <2022-08-26 Fri> 🗂 Prepare Character Summary Sheet:
 
-- [ ] *Take an hour to produce the following summary sheet:* 
+- [ ] *Take an hour to produce the following summary sheet:*
 
        This sheet will provide all the vital essentials for 
        this character for easy reference later... 
@@ -2943,8 +3319,6 @@ The Character's Likes / dislikes, yadda yadda yadda...
 |-------------------+--------------------------------------------|
 | *Epiphany:*         |                                            |
 |-------------------+--------------------------------------------|
-
-
 
 ***** NEW <2022-08-26 Fri> 👤 Detailed Character Interview:
 
@@ -4193,8 +4567,6 @@ CHARACTER
 
        /(On and On... Huck goes on a personal rant all about himself!)/
 
-
-
 *** NEW ♾ New World: /(Master Template)/
 :README:
    - *DEFINITION:*
@@ -4318,9 +4690,7 @@ This Section Defines a Particular & Unique *♾ New World*
           This Space Is For A Short Summary ONLY...
 :END:
 
-=Write A Short One Or Two Paragraph Synopsis for a Single:= *World* 
-
-
+=Write A Short One Or Two Paragraph Synopsis for a Single:= *World*
 
 **** 🗒 World Details:
 ***** ⛮ Type-Class:
@@ -4335,8 +4705,6 @@ This Section Defines a Particular & Unique *♾ New World*
 Details relating to this specific *World* ONLY. 
 Use only enough words to get the concept across...
 
-
-
 ***** ⦝ Origin:
 :README:
    How did this World come to be? Did it Always exist? 
@@ -4346,8 +4714,6 @@ Use only enough words to get the concept across...
 =Include details= /(as described in README above)/ 
 Details relating to this specific *World* ONLY. 
 Use only enough words to get the concept across...
-
-
 
 ***** ⚛ Physics:
 :README:
@@ -4365,8 +4731,6 @@ Use only enough words to get the concept across...
 Details relating to this specific *World* ONLY. 
 Use only enough words to get the concept across...
 
-
-
 ***** 📍 Location:
 :README:
    Where is this World Located?  
@@ -4376,8 +4740,6 @@ Use only enough words to get the concept across...
 =Include details= /(as described in README above)/ 
 Details relating to this specific *World* ONLY. 
 Use only enough words to get the concept across...
-
-
 
 ***** 📐 Dimensions:
 :README:
@@ -4394,8 +4756,6 @@ Use only enough words to get the concept across...
 Details relating to this specific *World* ONLY. 
 Use only enough words to get the concept across...
 
-
-
 ***** ⌬ Shape:
 :README:
    Again... Like Dimensions describe this World's
@@ -4411,8 +4771,6 @@ Use only enough words to get the concept across...
 Details relating to this specific *World* ONLY. 
 Use only enough words to get the concept across...
 
-
-
 ***** ✨ Regions:
 :README:
    Enumerate ONLY regions within this new world that 
@@ -4424,8 +4782,6 @@ Use only enough words to get the concept across...
 =Include details= /(as described in README above)/ 
 Details relating to this specific *World* ONLY. 
 Use only enough words to get the concept across...
-
-
 
 ***** ⌛ Timeline(s):
 :README:
@@ -4446,8 +4802,6 @@ Use only enough words to get the concept across...
 Details relating to this specific *World* ONLY. 
 Use only enough words to get the concept across...
 
-
-
 ***** 🦋 Dominant Species:
 :README:
    IF This world DOES NOT Contain Life
@@ -4464,8 +4818,6 @@ Use only enough words to get the concept across...
 Details relating to this specific *World* ONLY. 
 Use only enough words to get the concept across...
 
-
-
 ***** 👥 Groups:
 :README:
    IF This world DOES NOT Contain any Groups
@@ -4481,8 +4833,6 @@ Use only enough words to get the concept across...
 =Include details= /(as described in README above)/ 
 Details relating to this specific *World* ONLY. 
 Use only enough words to get the concept across...
-
-
 
 *** NEW ✨ New Region: /(Master Template)/
 :README:
@@ -4606,8 +4956,6 @@ This Section Defines a Particular & Unique *✨ Region*
 
 *Regions* and *Worlds* are more of an abstract concept than Geographical Planets, Satellites, Nebula, Gas Giants, etc., *-or-* Sociological Groups, Factions, etc...
 
-
-
 **** 📃 Summary
 :README:
    =Usage:= Don't go into too much Detail here...  
@@ -4618,9 +4966,7 @@ This Section Defines a Particular & Unique *✨ Region*
           This Space Is For A Short Summary ONLY...
 :END:
 
-=Write A Short One Or Two Paragraph Synopsis for a Single:= *Region* 
-
-
+=Write A Short One Or Two Paragraph Synopsis for a Single:= *Region*
 
 **** 🗒 Region Details:
 ***** 🌪 Overall Mood:
@@ -4646,8 +4992,6 @@ This Section Defines a Particular & Unique *✨ Region*
 Details relating to this specific *Region* ONLY. 
 Use only enough words to get the concept across...
 
-
-
 ***** 🗻 Sights - Features:
 :README:
    =Note:= Only mention places of note that make this region truly 
@@ -4661,8 +5005,6 @@ Use only enough words to get the concept across...
 =Include details= /(as described in README above)/ 
 Details relating to this specific *Region* ONLY. 
 Use only enough words to get the concept across...
-
-
 
 ***** 📢 Sounds:
 :README:
@@ -4683,8 +5025,6 @@ Use only enough words to get the concept across...
 Details relating to this specific *Region* ONLY. 
 Use only enough words to get the concept across...
 
-
-
 ***** 👃 Smells:
 :README:
    =Note:= Only mention the kinds of smell that would make this place
@@ -4703,8 +5043,6 @@ Use only enough words to get the concept across...
 =Include details= /(as described in README above)/ 
 Details relating to this specific *Region* ONLY. 
 Use only enough words to get the concept across...
-
-
 
 *** NEW ∅ New Planet or Satellite: /(Master Template)/
 :README:
@@ -4761,8 +5099,6 @@ This Section Defines a Particular & Unique *Planet* or *Satellite*
 |       |      | etc...     |                |            |
 |-------+------+------------+----------------+------------|
 
-
-
 **** ⛿ Controlling party/faction
 :README:
   Rename Controlling party/faction heading above with the 
@@ -4782,8 +5118,6 @@ This Section Defines a Particular & Unique *Planet* or *Satellite*
 |         |         |         | etc...     |            |
 |---------+---------+---------+------------+------------|
 
-
-
 **** 🌃 Major cities:
 ***** City (continent/region)
 :README:
@@ -4796,13 +5130,9 @@ This Section Defines a Particular & Unique *Planet* or *Satellite*
    will be visiting.
 :END:
 
-
-
 ****** Description:
 
 Add Description Here:
-
-
 
 **** 👪 Population
 ***** 𐇑 Races:
@@ -4811,15 +5141,11 @@ Add Description Here:
    or not they’re native.
 :END:
 
-
-
 ***** 🕉 Predominant religion(s):
 :README:
    Monotheism?  Pantheism?  Atheism? Name and describe 
    them as needed.
 :END:
-
-
 
 ***** ⎄ Common physical characteristics:
 :README:
@@ -4827,8 +5153,6 @@ Add Description Here:
    long-term inhabitants and native peoples: 
    skin colour, hair colour, build, dress
 :END:
-
-
 
 ***** 🎻 Culture
 ****** 🎎 Mannerisms:
@@ -4839,22 +5163,16 @@ Add Description Here:
    way than a Greek statesman.
 :END:
 
-
-
 ****** 🍷 Cuisine:
 :README:
    Write about what most people on this planet eat every 
    day?  On festival days?  As delicacies? Taboo?
 :END:
 
-
-
 ****** 🦋 Leisure:
 :README:
    What do people here do in their spare time?  For fun?
 :END:
-
-
 
 ****** 🤝 Greetings:
 :README:
@@ -4862,15 +5180,11 @@ Add Description Here:
    In formal setting?  Among friends? Family?
 :END:
 
-
-
 ****** 🎏 Customs:
 :README:
    The habits of a people that make them unique.  
    Google it if you’re confused.
 :END:
-
-
 
 ****** ❝ Quotes:
 :README:
@@ -4878,15 +5192,11 @@ Add Description Here:
    talk like, or talk about.
 :END:
 
-
-
 ****** 𝌵 Superstitions:
 :README:
    Knowing the power irrational explanations have over 
    a populace can sometimes be good story material.
 :END:
-
-
 
 ****** ⛧ Magic:
 :README:
@@ -4897,23 +5207,17 @@ Add Description Here:
    larger picture than just your heroes and their journey.
 :END:
 
-
-
 ****** 🕌 Beliefs:
 :README:
    Do I really have to explain this one?  T
    his alone can be your story.
 :END:
 
-
-
 ****** ♾ Rituals:
 :README:
    Birth? Coming-of-age?  
    Marriage? Death? Justice?
 :END:
-
-
 
 ****** 🎪 Festivals:
 :README:
@@ -4922,15 +5226,11 @@ Add Description Here:
    Why?
 :END:
 
-
-
 **** 🚉 Transport
 :README:
    How do people move things?
    Armies? Crowds? Goods? Animals?
 :END:
-
-
 
 **** 🌧 Weather patterns
 :README:
@@ -4938,15 +5238,11 @@ Add Description Here:
    Discuss Climate in general?
 :END:
 
-
-
 **** ⛮ Resources
 :README:
    What does the planet export? 
    Import? Make? Is famous for?
 :END:
-
-
 
 **** 📚 History
 :README:
@@ -4962,6 +5258,7 @@ Add Description Here:
    mythology says they crawled out of the earth: they 
    came from somewhere. Examine it here in this space!
 :END:
+
 *** NEW ⚛ Interstellar Nation: /(Group Master Template)/
 :README:
 

@@ -1,0 +1,30 @@
+
+\makechapterstyle{melog}{%
+  \chapterstyle{default}
+  \renewcommand*{\chapnumfont}{%
+     \normalfont \sffamily
+     \huge \bfseries}
+
+  \renewcommand*{\chaptitlefont}{%
+     \raggedright \normalfont
+     \sffamily \Huge
+     \scshape \bfseries}
+
+  \setlength\beforechapskip{0pt}
+  \renewcommand*{\printchaptername}{}
+
+  \renewcommand*{\printchapternum}{%
+    \hrule \vskip 0.5\onelineskip
+    \Huge \centering \thechapter.\ }
+  \renewcommand*{\printchapternonum}{%
+    \hrule \vskip 0.5\onelineskip
+    \global \NoChapNumtrue
+    \Huge \centering}
+
+  \renewcommand*{\afterchapternum}{}
+  \setlength{\midchapskip}{0pt}
+  
+  \renewcommand*{\printchaptertitle}[1]{%
+    ##1 \par
+    \vskip 0.5\onelineskip
+    \hrule}}

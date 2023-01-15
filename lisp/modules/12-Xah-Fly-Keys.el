@@ -62,8 +62,13 @@
 ;; See: http://www.raebear.net/computers/emacs-colors/
 ;; (Jessica's Corner of Cyberspace)
 
-(defun me_modeline-color-on () (set-face-background 'mode-line "orange"))
-(defun me_modeline-color-off () (set-face-background 'mode-line "LightPink"))
+(defun me_modeline-color-on ()
+  (set-face-background 'mode-line "orange")
+  (set-face-foreground 'mode-line "#280028"))
+
+(defun me_modeline-color-off ()
+  (set-face-background 'mode-line "LightPink")
+  (set-face-foreground 'mode-line "#280028"))
 
 (add-hook 'xah-fly-command-mode-activate-hook 'me_modeline-color-on)
 (add-hook 'xah-fly-insert-mode-activate-hook  'me_modeline-color-off)

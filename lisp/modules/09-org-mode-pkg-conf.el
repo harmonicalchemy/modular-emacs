@@ -76,6 +76,8 @@
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Configure LilyPond-mode for editing .ly Music Notation files in Emacs
+;; NOTE: This is not for org-mode but I only use LilyPond to make files
+;;       for org-mode to export eventually to PDF Docs, Books, etc...
 
 (autoload 'LilyPond-mode "lilypond-mode")
 (setq auto-mode-alist
@@ -123,8 +125,24 @@
   (load-file "~/.emacs.d/lisp/modules/09-4-org-export-conf.el"))
 
 
+;;;
+;;  Speed Keys For Quick Navigation:
+
+(setq org-use-speed-commands 1)
+
+;;;
+;;  Set Maximum Indentation For Org-Mode Description Lists:
+
+(setq org-list-description-max-indent 5)
+
+;;;
+;;  Prevent Org-Mode Demoting Heading Also Shifting Text Inside Sections:
+
+(setq org-adapt-indentation nil)
+
+
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;   Alisha's Advanced Org-Mode Configurations:
+;;   Alisha's Advanced Org-Mode Configurations: (EXTRA STUFF)
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -224,71 +242,77 @@
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  Modular Emacs Quick Insert CUSTOM_ID for links
-;;  with Helper Functions...
-;;  Ref: https://writequit.org/articles/emacs-org-mode-generate-ids.html
-;;       This implements the initial set of functions etc. from Lee's
-;;       article.  He has revised his original due to some user input
-;;       etc...  I have not implemented that but if problems arise
-;;       as mentioned in the above article, go back and implement
-;;       those updates at the bottom of his article...
+;; ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;     NOTE: I Disabled All of this because I am NOT
+;;           Using it... Instead I simply add <<anchors>>
+;;           under headings that I may need to link to...
+;;           Creating links using my self designed unique
+;;           anchor naming convention works fine for me...
 
-;; Require the org-id library, which contains
-;; helpers. Use a CUSTOM_ID for links:
+;; ;;  Modular Emacs Quick Insert CUSTOM_ID for links
+;; ;;  with Helper Functions...
+;; ;;  Ref: https://writequit.org/articles/emacs-org-mode-generate-ids.html
+;; ;;       This implements the initial set of functions etc. from Lee's
+;; ;;       article.  He has revised his original due to some user input
+;; ;;       etc...  I have not implemented that but if problems arise
+;; ;;       as mentioned in the above article, go back and implement
+;; ;;       those updates at the bottom of his article...
 
-(require 'org-id)
-(setq org-id-link-to-org-use-id 'create-if-interactive-and-no-custom-id)
+;; ;; Require the org-id library, which contains
+;; ;; helpers. Use a CUSTOM_ID for links:
 
-;; Define custom Modular Emacs version of org-custom-id-get
-;; that calls org-id-new and creates a new property if one
-;; doesn't already exist...
+;; (require 'org-id)
+;; (setq org-id-link-to-org-use-id 'create-if-interactive-and-no-custom-id)
 
-(defun me_org-custom-id-get (&optional pom create prefix)
-  "Get the CUSTOM_ID property of the entry at point-or-marker POM.
-   If POM is nil, refer to the entry at point. If the entry does
-   not have an CUSTOM_ID, the function returns nil. However, when
-   CREATE is non nil, create a CUSTOM_ID if none is present
-   already. PREFIX will be passed through to `org-id-new'. In any
-   case, the CUSTOM_ID of the entry is returned."
-  (interactive)
-  (org-with-point-at pom
-    (let ((id (org-entry-get nil "CUSTOM_ID")))
-      (cond
-       ((and id (stringp id) (string-match "\\S-" id))
-        id)
-       (create
-        (setq id (org-id-new (concat prefix "h")))
-        (org-entry-put pom "CUSTOM_ID" id)
-        (org-id-add-location id (buffer-file-name (buffer-base-buffer)))
-        id)))))
+;; ;; Define custom Modular Emacs version of org-custom-id-get
+;; ;; that calls org-id-new and creates a new property if one
+;; ;; doesn't already exist...
 
-;; Add a helper function that's interactive to add custom ids to all
-;; headlines in the buffer if they don't already have one. 
+;; (defun me_org-custom-id-get (&optional pom create prefix)
+;;   "Get the CUSTOM_ID property of the entry at point-or-marker POM.
+;;    If POM is nil, refer to the entry at point. If the entry does
+;;    not have an CUSTOM_ID, the function returns nil. However, when
+;;    CREATE is non nil, create a CUSTOM_ID if none is present
+;;    already. PREFIX will be passed through to `org-id-new'. In any
+;;    case, the CUSTOM_ID of the entry is returned."
+;;   (interactive)
+;;   (org-with-point-at pom
+;;     (let ((id (org-entry-get nil "CUSTOM_ID")))
+;;       (cond
+;;        ((and id (stringp id) (string-match "\\S-" id))
+;;         id)
+;;        (create
+;;         (setq id (org-id-new (concat prefix "h")))
+;;         (org-entry-put pom "CUSTOM_ID" id)
+;;         (org-id-add-location id (buffer-file-name (buffer-base-buffer)))
+;;         id)))))
 
-(defun me_org-add-ids-to-headlines-in-file ()
-  "Add CUSTOM_ID properties to all headlines in the
-   current file which do not already have one."
-  (interactive)
-  (org-map-entries (lambda () (me_org-custom-id-get (point) 'create))))
+;; ;; Add a helper function that's interactive to add custom ids to all
+;; ;; headlines in the buffer if they don't already have one. 
 
-;; Add a helper function that's interactive to add a custom id to 
-;; the headline at the current cursor location in buffer
-;; (if there isn't a custom ID set allready)...
+;; (defun me_org-add-ids-to-headlines-in-file ()
+;;   "Add CUSTOM_ID properties to all headlines in the
+;;    current file which do not already have one."
+;;   (interactive)
+;;   (org-map-entries (lambda () (me_org-custom-id-get (point) 'create))))
 
-(defun me_org-add-id-to-headline ()
-  "Add CUSTOM_ID property to headline nearest to current cursor
-   location if the heading does not already have one."
-  (interactive)
-  (me_org-custom-id-get (point) 'create))
+;; ;; Add a helper function that's interactive to add a custom id to 
+;; ;; the headline at the current cursor location in buffer
+;; ;; (if there isn't a custom ID set allready)...
 
-;; Optional helper to add a CUSTOM_ID to headlines
-;; created when using an org-capture template: 
+;; (defun me_org-add-id-to-headline ()
+;;   "Add CUSTOM_ID property to headline nearest to current cursor
+;;    location if the heading does not already have one."
+;;   (interactive)
+;;   (me_org-custom-id-get (point) 'create))
 
-(add-hook 'org-capture-prepare-finalize-hook
-          (lambda () (me_org-custom-id-get (point) 'create)))
+;; ;; Optional helper to add a CUSTOM_ID to headlines
+;; ;; created when using an org-capture template: 
 
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; (add-hook 'org-capture-prepare-finalize-hook
+;;           (lambda () (me_org-custom-id-get (point) 'create)))
+
+;; ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

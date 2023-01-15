@@ -160,7 +160,9 @@ you can change that number to suit size of headings where they may be placed...
 
 [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u23F1.png]] u23F1.png - stopwatch ⏱
 
-* Action1: ❕ ❌ 🚫 ❓ ❔ ✅ ✔️ ☑️ 🔤 
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u2705.png]] u2705.png -  ✅
+
+* Action1: ❕ ❌ 🚫 ❓ ❔ ✔️ ☑️ 🔤 
 
 * Action2: ⚔ ⚙ ⏰ ⛷ 🏂 🤺 🏇 💵 ⚠️
 
@@ -174,9 +176,13 @@ you can change that number to suit size of headings where they may be placed...
 
 [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4D3.png]] u1F4D3.png - composition notebook 📓
 
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4D2.png]] u1F4D2.png - composition notebook 📒
+
 [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F5C2.png]] u1F5C2.png - Card Index Dividers 🗂
 
-* Docs1: 🗒 📄 📃 📂 📓 📒 📰 📗 📚 📖 🕮 🔖 🗟 ⎘
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4C6.png]] u1F4C6.png - tear-off calendar 📆
+
+* Docs1: 🗒 📄 📃 📂 📓 📒 📰 📗 📚 📖 🕮 🔖 🗟 ⎘ 
 
 * Docs2: 📔 📕 📜 🗓 📆 📅 🏷 💳 🗂 📑 📇 🖼 ✏️ ✐ ✏︎ ☕︎ 
 

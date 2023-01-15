@@ -34,7 +34,7 @@
       /member in code... See comments within file. Copy to Create a new list member)/
 #+END_COMMENT
 
- =STANDARD STARTUP OPTIONS=
+=STANDARD STARTUP OPTIONS=
 
 #+CATEGORY: @Reference_Books
 #+LANGUAGE: en
@@ -44,18 +44,44 @@
 #+STARTUP:  align
 #+STARTUP:  inlineimages
 
-=LaTeX --> Fiction Book PDF:=
+=LaTeX --> Reference Book PDF:=
+
+/(currently using ~refbook~ class)/
 
 #+LATEX_CLASS: refbook
 #+LATEX_HEADER: \usepackage{parskip}
 #+LaTeX_HEADER: \usepackage{paralist}
+#+LATEX_HEADER: \usepackage[hyperref,x11names]{xcolor}
+#+LATEX_HEADER: \usepackage[colorlinks=true,urlcolor=SteelBlue4,linkcolor=Firebrick4]{hyperref}
 
 ~refbook~ =CLASS= /is defined in:/ ~09-4-org-export-conf.el~
 
 =STANDARD EXPORT OPTIONS:=
 
-/Ref:/ https://orgmode.org/manual/Export-Settings.html#Export-Settings
-     https://orgmode.org/worg/dev/org-export-reference.html
+- *Reference:*
+   
+   + [[https://orgmode.org/manual/Export-Settings.html#Export-Settings][Org Manual Export Settings]]
+
+   + [[https://orgmode.org/worg/dev/org-export-reference.html][WORG - Org Export Reference]]
+
+   + [[https://www.linuxjournal.com/content/org-mode-latex-exporter-latex-non-texers][Org Mode Latex Exporter - Linux Journal]]
+
+   + [[https://www.ctan.org/pkg/latexmk/][latexmk – Fully automated LaTeX document generation]]
+
+   + [[https://damitr.org/2014/01/09/latex-tufte-class-in-org-mode/][Latex Tufte class in org-mode]]
+
+   + [[https://tufte-latex.github.io/tufte-latex/][Tufte-LaTeX]]
+
+        /A Tufte-inspired LaTeX class for producing/
+        /handouts, papers, and books.../
+
+   + [[https://github.com/Tufte-LaTeX/tufte-latex][tufte-latex.github.io/tufte-latex/]]
+
+   + [[https://latex-tutorial.com/documentclass-latex/][Your Guide to documentclass LaTeX - Latex-Tutorial.com]] -
+
+   + [[https://mirror2.sandyriver.net/pub/ctan/macros/latex/contrib/memoir/memman.pdf][The Memoir Document Class]] - /(link to PDF)/
+
+   + [[https://www.ctan.org/pkg/memoir][memoir – Typeset fiction, non-fiction and mathematical books]] - /(CTAN)/
 
 #+SELECT_TAGS: export
 #+EXCLUDE_TAGS: noexport
@@ -167,7 +193,7 @@
    # Include Title (org-export-with-title)
 
 #+OPTIONS: toc:3
-   # Include TOC (level 3) (org-export-with-toc)
+   # Include TOC 3 levels deep (org-export-with-toc)
 
 #+OPTIONS: todo:nil
    # DONT Include TODO keywords (org-export-with-todo-keywords)
