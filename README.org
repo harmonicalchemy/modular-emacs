@@ -146,11 +146,11 @@ If you end up liking *Harmonic Alchemy Modular Emacs*, please drop me a note to 
 
 Follow the steps below /(in a top down fashion beginning with "Requirements:")/ to install: *Harmonic Alchemy Productions - Modular Emacs* for the first time...
 
-Do not skip to the /(optional)/ install guides until you have the basic default configuration of Modular Emacs installed and running /(without errors)/ in your home directory... 
+Do not skip to the /(optional)/ install guides until you have the basic default configuration of Modular Emacs installed and running /(without errors)/ in your home directory...
 
-#+begin_verse
+#+begin_center
    *Note:* It is entirely possible that Modular Emacs will run reasonably without enabling many of the basic modules listed below. Starting bare bones like that may be a good way to get your feet wet without running into initial problems or having to install many required externals, all at once... Later, when you have a better handle on this, try installing some of the extra requirements, /(like a FULL LaTeX Package)/ and then enabling some of the more advanced modules...
-#+end_verse
+#+end_center
 
 ** ✅ Requirements:
 *** ⎘ Clone This Repository:
