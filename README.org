@@ -25,7 +25,7 @@
 
 * 💡 Introduction:
 
-*Welcome to Harmonic Alchemy Modular Emacs* ~V3.5 [Q1 2023]~
+*Welcome to Harmonic Alchemy Modular Emacs* ~V3.5 (beta) [Q1 2023]~
 
 *Modular Emacs* provides a simple method of dispatching your emacs configuration in steps based on initial choice of modules starting with essentials loading first, and then loading optional user chosen modules...
 
@@ -39,7 +39,9 @@ Emacs Org-Mode also makes it possible to do [[https://en.wikipedia.org/wiki/Lite
 
 I am a systems architect, dev♺Ops engineer, computer scientist, composer/musician, sound designer, writer/publisher.  I wear a lot of hats! My Emacs needs to wear a lot of hats as well!  The central focus of *Modular Emacs* is to build empowering features into *Emacs* utilizing a modular framework that facilitates all the above without becoming an over complicated mess to manage! "*Good Luck With That*" :octocat:
 
-   *Note:* Current Status & Release Notes of this project are documented [[./Docs/ModE-Current-Status.md][HERE]]
+We are still in BETA as many changes are still being made to the LaTeX export configurations... When these org-mode export design changes are done, AND all existing Document Templates in PubOps folder are producing nice looking PDF docs, the beta period will be removed. That event will be tagged as the *Official Release* for *V3.5* /(or possibly become V4.0 instead)/
+
+   *Note:* Current Status & Release Notes of this project are documented [[./Docs/ModE-Current-Status.md][HERE]] /(this may need an update now)/
 
 * 🔖 Contents:                                                        :TOC_4:
 - [[#-introduction][💡 Introduction:]]
