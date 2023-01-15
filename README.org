@@ -75,7 +75,7 @@ I am a systems architect, dev♺Ops engineer, computer scientist, composer/music
 
 * 📜 History & Purpose:
 
-The history of *Harmonic Alchemy Modular Emacs* is /"a confusing journey through many little twisty passages, all alike.../ [[./Docs/ModE-History.md][Everything is Documented Here Now]]  Read it at your leasure.  It provides some perspective, insight, and purpose behind how and why things are done here in the present time.
+The history of *Harmonic Alchemy Modular Emacs* is like a confusing *Adventure* through many little twisty passages, all alike... /(or all different)/  [[./Docs/ModE-History.md][Everything is Documented Here Now]]  Read it at your leasure. It provides some perspective, insight, and purpose behind how and why things are done here in the present time.
 
 * ☞ Try Harmonic Alchemy Modular Emacs:
 
@@ -107,10 +107,10 @@ For the rest of us... For now... Let's learn this together... Please provide any
 * 🙏 My Commitment
 
 #+begin_quote
-    *"Always do what is right. It will gratify half of mankind and astound the other."* - Mark Twain
+   "Always do what is right. It will gratify half of mankind and astound the other." - Mark Twain
 #+end_quote
 
-One of the main purposes of this project is to empower lots of creative folks out there who have more brains than money.  This project is 100% free software, Free to download, install, and use independently, /(both as in "Free Beer" and also as in having "Freedom of Choice and Control" over your Computing Infrastructures)/.
+One of the main purposes of this project is to empower lots of creative folks out there who have more brains than money.  This project is 100% free software, Free to download, install, and use independently, /(both as in "Free Beer" and also as in having "Freedom of Choice and Control" over your Computing Infrastructures)/
 
 I have been testing this project to see if it can successfully run on older legacy hardware as well.  My aim is to make it possible for anyone, no matter what their economic or social status is, to be empowered to use this...
 
