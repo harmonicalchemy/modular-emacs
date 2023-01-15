@@ -4,36 +4,17 @@
 #+TEXT: Copyright © 2022 Harmonic Alchemy Productions & Others
 #+AUTHOR: Alisha Awen - Harmonic Alchemy Productions (HAP)
 #+EMAIL: Siren1@disroot.org
-#+DATE: <2022-10-01 Sat>
+#+DATE: {{{time(%A %Y-%b-%d)}}}
 #+TEXT: Created: <2021-07-22 Thu>
 #+TEXT: Last Published: <NOT Published>
 #+FILETAGS: README unpublished HAP_Mod_Emacs
 
-#+DESCRIPTION: MAIN README Doc for Harmonic Alchemy Productions - Modular Emacs... Including attached Log Notebook for keeping a cronological track of work, new feature developments, bug tracking, or anyting that may help keep this elephant of an eLisp mess organized! LOL! Also time tracking to see how much time I spend yak shaving! ("Elephants don't like to be shaved, but you can eat an entire elephant one bite at a time, AND still have time to go off and do a bit of yak-shaving just for fun in between bites" - %^)
-
-#+BEGIN_COMMENT 
-=Setup Files:=
-
-   For Cloned Versions of this template, the file/paths below will be relative
-   to your parent project directory and as such, should be all set to your new: ~.../your_README.org_File's/org-templates/~ directory...
-
-=NOTE:= 
-
-   ~#+CATEGORY:~ is specified within ~gen-doc.org~ SETUPFILE.
-   If you need to change the category, do it in your cloned version
-   of fiction-book.org...
-
-   *SETUPFILE:* ~default-tags.org~ is where tags are set for this project...
-
-   *SETUPFILE:* ~latex-simple-pdf.org~ is for LaTeX Export Configurations 
-              to produce a PDF version of your README file...
-#+END_COMMENT
+#+DESCRIPTION: MAIN README Doc for Harmonic Alchemy Productions - Modular Emacs... This File is NOT intended to be exported to PDF It is for viewing on GitHub.com ONLY...
 
 #+SETUPFILE: ./Docs/org-templates/gen-doc.org
-#+SETUPFILE: ./Docs/org-templates/latex-simple-pdf.org
 #+SETUPFILE: ./Docs/org-templates/default-tags.org
 
-#+NAME:    fig:HAP-Mod-Emacs-Banner-001
+#+NAME: fig:HAP-Mod-Emacs-Banner-001
 #+CAPTION: HAP - Modular Emacs Page Banner
 #+ATTR_ORG: :width 700px
 #+attr_html: :width 700px
@@ -41,73 +22,12 @@
 [[file:./Docs/media/Modular-Emacs-Github-Banner-v3.png]]
 
 * 📖 Harmonic Alchemy Modular Emacs
-** 🔖 Contents:                                                       :TOC_4:
-- [[#-harmonic-alchemy-modular-emacs][📖 Harmonic Alchemy Modular Emacs]]
-   - [[#-introduction][💡 Introduction:]]
-      - [[#-history--purpose][📜 History & Purpose:]]
-      - [[#-try-harmonic-alchemy-modular-emacs][☞ Try Harmonic Alchemy Modular Emacs:]]
-      - [[#-microsoft-windows-support-needed][⚙ Microsoft Windows Support Needed:]]
-      - [[#-my-commitment][🙏 My Commitment]]
-   - [[#-screenshots][📸 Screenshots:]]
-   - [[#-tldr---start-here][☞ TL;DR - Start Here:]]
-      - [[#-requirements][✅ Requirements:]]
-         - [[#-clone-this-repository][⎘ Clone This Repository:]]
-         - [[#-install-emacs][🛠 Install Emacs:]]
-         - [[#-nodejs---nvm--npm-removed][🚫 NODE.js - NVM & NPM: /(REMOVED)/]]
-         - [[#-multimarkdown--mmd-mode--removed][🚫 MultiMarkdown & mmd-mode:  /(REMOVED)/]]
-      - [[#-optional-extras][🎁 Optional Extras:]]
-         - [[#-pandoc][🛠 Pandoc:]]
-         - [[#𓂀-fonts][𓂀 Fonts:]]
-         - [[#-python--pip][▞ Python & Pip:]]
-         - [[#octocat-extra-for-experts---latex][:octocat: Extra for Experts - LaTeX]]
-         - [[#-graphviz][📈 Graphviz:]]
-   - [[#-get-ready-to-start-up-modular-emacs-for-the-first-time][⚛ Get Ready to Start up Modular Emacs for the first time!]]
-      - [[#-initial-house-keeping-before-we-move-in][🏠 Initial House Keeping: /(before we move in)/]]
-   - [[#-ready-set-go--start-up-modular-emacs][📢 Ready Set Go!  Start Up Modular Emacs:]]
-   - [[#-usage][🎨 Usage:]]
-      - [[#managing-your-git-repo][Managing Your Git Repo:]]
-      - [[#blackboard-color-theme][Blackboard Color Theme:]]
-   - [[#-default-package-features-built-in][✅ Default Package Features: /(built in)/]]
-      - [[#default-emacs-welcome-screen-scratch-buffer][Default Emacs Welcome Screen: /(~*scratch*~ buffer)/]]
-      - [[#miscellaneus-packages][Miscellaneus Packages:]]
-      - [[#core-emacs-system-related-packages][Core Emacs System Related Packages:]]
-      - [[#emacs-helm--extras][Emacs Helm & Extras:]]
-      - [[#tree--menu-related-packages][Tree & Menu Related Packages:]]
-      - [[#dired-related-packages][Dired Related Packages:]]
-      - [[#devops-sysadmin-infosec-related-packages][dev§Ops, sys§Admin, info✷Sec Related Packages:]]
-      - [[#writers--publishing-tools][Writer's & Publishing Tools:]]
-      - [[#spelling][Spelling:]]
-      - [[#key-bindings][Key-bindings:]]
-   - [[#-optional-packages--customization][🎁 Optional Packages & Customization:]]
-- [[#-log][📅 LOG:]]
-   - [[#-2022][📅 2022:]]
-      - [[#new--log-2021-03-29-mon-generic-title-general-log-entry-template][NEW 🗓 LOG: <2021-03-29 Mon> Generic Title /(General Log Entry Template)/]]
-         - [[#new--reference][NEW 📚 Reference:]]
-         - [[#new--time-card][NEW ⏱ Time Card:]]
-         - [[#new--summary-03][NEW 📃 Summary:]]
-         - [[#new--details][NEW 📰 Details:]]
-- [[#-meta-usage--templates][📋 Meta: /(Usage & Templates)/]]
-   - [[#-introduction-1][📄 Introduction:]]
-      - [[#emacs-shorthand-command-key-notation][Emacs Shorthand Command Key Notation:]]
-      - [[#important-note-for-mac-users][Important Note For Mac Users:]]
-      - [[#org-mode-timestamps-and-clocking][Org Mode Timestamps and Clocking:]]
-   - [[#-howto][❔ HowTo:]]
-      - [[#create-new-log-entry-within-the--begin-log-binder][Create New Log Entry within the *📒 Begin Log:* Binder:]]
-         - [[#clone-log-2021-03-29-mon-generic-title-from--templates-binder][=Clone:= "LOG: <2021-03-29 Mon> Generic Title" /(from ⎘ Templates: binder)/]]
-         - [[#paste-cloned-log-entry][=Paste Cloned LOG Entry:=]]
-         - [[#edit-compose-new-log-entry][Edit-Compose New LOG Entry:]]
-         - [[#enter-new-log-entry-details][Enter New LOG Entry Details:]]
-      - [[#export-readme-as-a-pdf-document][Export README as a PDF Document:]]
-   - [[#-templates][⎘ Templates:]]
-      - [[#new--log-2021-03-29-mon-generic-title-general-log-entry-template-1][NEW 🗓 LOG: <2021-03-29 Mon> Generic Title /(General Log Entry Template)/]]
-         - [[#new--reference-1][NEW 📚 Reference:]]
-         - [[#new--time-card-1][NEW ⏱ Time Card:]]
-         - [[#new--summary-03-1][NEW 📃 Summary:]]
-         - [[#new--details-1][NEW 📰 Details:]]
+=NOTE:= /Skip to:/ *☞* [[tldr-start-here][TL;DR - Start Here]] /if you just need to/
+      /get this going now./ :trollface:
 
 ** 💡 Introduction:
 
-*Welcome to Harmonic Alchemy Modular Emacs* - ~V3.5 [Q4 2022]~
+*Welcome to Harmonic Alchemy Modular Emacs* - ~V3.5 [Q1 2023]~
 
 *Modular Emacs* provides a simple method of dispatching your emacs configuration in steps based on initial choice of modules starting with essentials loading first, and then loading optional user chosen modules ...
 
@@ -117,8 +37,6 @@ I am a systems architect, dev♺Ops engineer, computer scientist, composer/music
 
 =Note:= Current Status & Release Notes of
       this project are documented [[./Docs/ModE-Current-Status.md][HERE]]
-
-\newpage
 
 *** 📜 History & Purpose:
 
@@ -182,6 +100,46 @@ If you end up liking *Harmonic Alchemy Modular Emacs*, please drop me a note to 
 =Therefore:= *Here is Modular Emacs!* I hope my long years of *devOps* experience will turn out a nice jewel for new comers to try out and succeed with! *Good Luck and God Speed!*
 
 \newpage
+
+** 🔖 Contents:                                                       :TOC_4:
+- [[#-harmonic-alchemy-modular-emacs][📖 Harmonic Alchemy Modular Emacs]]
+   - [[#-introduction][💡 Introduction:]]
+      - [[#-history--purpose][📜 History & Purpose:]]
+      - [[#-try-harmonic-alchemy-modular-emacs][☞ Try Harmonic Alchemy Modular Emacs:]]
+      - [[#-microsoft-windows-support-needed][⚙ Microsoft Windows Support Needed:]]
+      - [[#-my-commitment][🙏 My Commitment]]
+   - [[#-screenshots][📸 Screenshots:]]
+   - [[#-tldr---start-here][☞ TL;DR - Start Here:]]
+      - [[#-requirements][✅ Requirements:]]
+         - [[#-clone-this-repository][⎘ Clone This Repository:]]
+         - [[#-install-emacs][🛠 Install Emacs:]]
+         - [[#-nodejs---nvm--npm-removed][🚫 NODE.js - NVM & NPM: /(REMOVED)/]]
+         - [[#-multimarkdown--mmd-mode--removed][🚫 MultiMarkdown & mmd-mode:  /(REMOVED)/]]
+      - [[#-optional-extras][🎁 Optional Extras:]]
+         - [[#-pandoc][🛠 Pandoc:]]
+         - [[#𓂀-fonts][𓂀 Fonts:]]
+         - [[#-python--pip][▞ Python & Pip:]]
+         - [[#octocat-extra-for-experts---latex][:octocat: Extra for Experts - LaTeX]]
+         - [[#-graphviz][📈 Graphviz:]]
+   - [[#-get-ready-to-start-up-modular-emacs-for-the-first-time][⚛ Get Ready to Start up Modular Emacs for the first time!]]
+      - [[#-initial-house-keeping-before-we-move-in][🏠 Initial House Keeping: /(before we move in)/]]
+   - [[#-ready-set-go-start-up-modular-emacs][📢 Ready Set Go! Start Up Modular Emacs:]]
+   - [[#-usage][🎨 Usage:]]
+      - [[#managing-your-git-repo][Managing Your Git Repo:]]
+      - [[#blackboard-color-theme][Blackboard Color Theme:]]
+   - [[#-default-package-features-built-in][✅ Default Package Features: /(built in)/]]
+      - [[#default-emacs-welcome-screen-scratch-buffer][Default Emacs Welcome Screen: /(~*scratch*~ buffer)/]]
+      - [[#miscellaneus-packages][Miscellaneus Packages:]]
+      - [[#core-emacs-system-related-packages][Core Emacs System Related Packages:]]
+      - [[#emacs-helm--extras][Emacs Helm & Extras:]]
+      - [[#tree--menu-related-packages][Tree & Menu Related Packages:]]
+      - [[#dired-related-packages][Dired Related Packages:]]
+      - [[#devops-sysadmin-infosec-related-packages][dev§Ops, sys§Admin, info✷Sec Related Packages:]]
+      - [[#writers--publishing-tools][Writer's & Publishing Tools:]]
+      - [[#spelling][Spelling:]]
+      - [[#key-bindings][Key-bindings:]]
+   - [[#-optional-packages--customization][🎁 Optional Packages & Customization:]]
+
 ** TODO 📸 Screenshots:
 
 =Add Screenshots displaying HAP Modular Emacs main Features HERE=
@@ -189,6 +147,7 @@ If you end up liking *Harmonic Alchemy Modular Emacs*, please drop me a note to 
 \newpage
 
 ** ☞ TL;DR - Start Here:
+<<tldr-start-here>>
 
 Follow the steps below /(in a top down fashion beginning with "Requirements:")/ to install: *Harmonic Alchemy Productions - Modular Emacs* for the first time...
 
@@ -203,9 +162,7 @@ Do not skip to the /(optional)/ install guides until you have the basic default 
       /(like a FULL LaTeX Package)/ and then enabling some of the more
       advanced modules...
 
-\newpage
-
-*** ✅ Requirements:  
+*** ✅ Requirements:
 **** ⎘ Clone This Repository:
 
 Clone this repository into your ~$HOME~ directory as: ~me.init.d~. The ~me.~ prefix /(for Modular Emacs)/ is put there so that it will not overwrite your existing ~$HOME/.emacs.d~ directory /(if you already use Emacs, which you will still need operational)/.  We will rename this folder later after all other requirements are complete...
@@ -220,7 +177,7 @@ After the above is done, leave things here as they are and go do the rest of the
 
 \newpage
 
-**** 🛠 Install Emacs:  
+**** 🛠 Install Emacs:
 
 Many of the default packages installed with this project will not work with older versions of Emacs. Also the security older Emacs packages is horrendous! Recently, some of the older packages were removed from the updated MELPA and moved to other less-secure repositories. The entire MELPA site is TLS enabled now but these other repos are not very secure...  Updated features /(acquired securely)/ are vital for being reasonably safe going forward from 2020 onward...  Therefore, I decided not to support versions of Emacs prior to V26 and prefer to only support Emacs V26.1 and up...  
 
@@ -403,7 +360,7 @@ If you DO have Graphvix installed... When you visit a ~.dot~ file, you can compi
      a: ~$HOME/.emacs.d/~ directory and that's the only "emacs" in your
      ~$HOME~ OK? Great! :octocat:
      
-** 📢 Ready Set Go!  Start Up Modular Emacs:
+** 📢 Ready Set Go! Start Up Modular Emacs:
 
 - [ ] *Start up GNU Emacs:*
 
@@ -947,604 +904,6 @@ The following doc with guide you through that process:
       tremendously! I will be updating these extra docs after weeding
       out the dead-wood... /(which is my current task to get ready for/
       /The major release of:/ *HAP Modular Emacs V4.0* /on the horizon.../
-
-\newpage
-
-* 📅 LOG:
-:PROPERTIES:
-:CUSTOM_ID: HAP_README-Doc-Skeleton_LOG
-:END:
-** 📅 2022:
-*** NEW 🗓 LOG: <2021-03-29 Mon> Generic Title /(General Log Entry Template)/
-:README:
-   - *Go To One of the HEADINGS Below:* /(Summary, Details, or Sub Headings)/
-
-      =Punch the Time Clock= At the heading And then begin working on a task related to that Heading... =Your Time IS being Recorded Now= 
-
-   - =Use These Commands:= /as you work to keep track your time.../
-
-      + *Clock IN:* ~C-c C-x C-i~ 
-
-                    /(Begin OR Resume Clocking Current task)/
-
-                    This creates a new :CLOCKING: Time Card Entry just
-                    underneath the HEADING...
-
-                    Do this just before starting work on the task... 
-                    Be in control of your life!
-
-                    After doing the above, you can go away and do some 
-                    work, leaving this heading, log note, etc. to visit 
-                    other files and/or work on them etc. The clock will 
-                    be recording your time all the while... You will see 
-                    in your mode line the elapsed clock time ticking away 
-                    as you work on a task /(hopefully related to this clock!)/
-                    and NOT Yac Shaving or being sidetracked!!!
-
-      + *RETURN to Clock Heading:* ~C-c C-x C-j~
-
-                        /Go back to the place where you started the clock.../
-
-                        You do this after you have worked on a task for a 
-                        while and you need to come back to update the item's
-                        info etc., and/or stop the clock before going off to 
-                        do something else unrelated to the log entry...
-
-      + *Clock OUT:* ~C-c C-x C-o~ /(to stop clocking your time on task)/
-
-                      This *Finalizes the Time Card Entry* within:
-                      ~:CLOCKING:~ /(created earlier when you started the/ 
-                      /clock)/...
-
-                      The Clock Entry changes showing start timestamp, end timestamp, and total time worked during this segment...  
-
-                      =Please DON'T Forget= /Like I often do, LOL.../ i.e.,
-                      Leaving a clock running all day by accident, or worse,
-                      leave it dangling with the file closed only to open it
-                      again and get that nasty *Org-Mode Message:* /What do/
-                      /you want to do with this?/ If you do something like 
-                      that you can always come back and directly edit the 
-                      clock times by hand to amend them...  After changing 
-                      clock times or dates, etc... Whatever...
-
-                      ="Onward We Row Mates... Through the log jam!"=
-
-      + *Update Time Card Entry:* ~C-c C-c~ 
-
-                  This command will change the total time at the end showing 
-                  your new calculated time...
-
-                  If you need to go away and do something else before finishing this task, you can do so after clocking out... When you come back simply clock back in again to start another Time Card Entry just as before... The new time card entry will appear above the earlier one within the ~:CLOCKING:~ drawer... When you clock out of this task it will look just like the entry below it with a total time worked tagged on the end...
-
-      + *Clock Out & Mark Items Done:* ~C-c C-t~
-
-            When you are all done with a Log Entry use the above key 
-            command to mark its Heading *TODO* tag to: *DONE* /(Most of the/ 
-            /time this will ALSO clock you out if you are still clocked/ 
-            /into the item... But not allways in my experience.../  
-            So make sure you are also clocked OUT of an Item After 
-            marking it DONE... Type: ~C-c C-x C-j~ to check this...
-            /(if no running clock it will tell you and place your/
-            /cursor at the heading where you LAST CLOCKED OUT)/
-
-      + ~C-c C-x C-q~ *Cancel Current Clock:* /(in case of accident)/
-
-                      This removes currently running clock and forgets 
-                      any time accrued or associated with it...
-
-      + ~C-c C-x C-d~ *Display Clocking Info:* 
-
-                      /This will show elapsed times to the right of headings.../
-                      =Warning!= Using this command will CLUTTER ALL the headings
-                                within your org file with those timestamps!!!
-
-   - Once all of this has become routine for you, =go ahead and remove this= ~README~ =drawer from this template=... That way it does not get copied when you need to clone new log entries...
-:END:
-
-This Log Entry is about: Yadda... Yadda... Yadda...
-
-\newpage
-
-**** NEW 📚 Reference:
-
-- *Link to Project:* [[][] ]
-
-- [[URL][Link Name] ] *Heading:* /(comment)/
-
-- [[][] ] - *_:* /(yadda...)/
-
-- [[][] ] - *_:* /(yadda...)/
-
-- [[][] ] - *_:* /(yadda...)/
-
-- [[][] ] /(_)/
-
-- [[][] ] /(_)/
-
-- [[][] ] /(_)/
-
-\newpage
-
-**** NEW ⏱ Time Card:
-
-#+BEGIN: clocktable :scope tree3 :maxlevel 6 :tstart "<-1w>" :tend "<+1m>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3
-#+END:
-
-\newpage
-
-**** NEW 📃 Summary: [0/3]
-:README:
-   This Summary is mostly to help you find things later when you cannot remember when or where is was done... If you go to the top of this file and expand all headings to show ALL content, then do a search on "~Summary:~" you will be able to quickly scroll through and scan these summaries quickly to find what you were looking for... 
-
-   Also the *Time Card* /displayed above/ each search hit will give more clues by showing important headings you worked on...
-
-   Below is an optional list /(that could also provide links)./ This list could be used to itemize things you worked on, but I personally find it easier to simply write a short one or two line description containing important keywords right here and nothing more. I think that is more useful...
-:END:
-
-Yadda... Yadda... Yadda...
-
-1. [ ] *__:*
-
-2. [ ] *__:*
-
-3. [ ] *__:*
-
-\newpage
-
-**** NEW 📰 Details:
-***** NEW New Item 1 /(placeholder)/ [0/3]
-
-- [ ] *__:* /(__)/
-
-      #+begin_src conf
-       root@web1:~$ 
-       admin@web1:~$ 
-      #+end_src
-
-- [ ] *__:* /(__)/
-
-      #+begin_src conf
-       admin@web1:~$ 
-       admin@web1:~$ 
-      #+end_src
-
-- [ ] *__:* /(__)/
-
-      #+begin_src conf
-       user@home:~$ 
-       user@home:~$ 
-      #+end_src
-
-\newpage
-
-***** NEW New Item 2 /(placeholder)/ [0/3]
-
-- [ ] *__:* /(__)/
-
-      #+begin_src conf
-       root@web1:~$ 
-       root@web1:~$ 
-      #+end_src
-
-- [ ] *__:* /(__)/
-
-      #+begin_src conf
-       admin@web1:~$ 
-       admin@web1:~$ 
-      #+end_src
-
-- [ ] *__:* /(__)/
-
-      #+begin_src conf
-       user@home:~$ 
-       user@home:~$ 
-      #+end_src
-
-\newpage
-
-***** NEW New Item 3 /(placeholder)/ [0/3]
-
-- [ ] *__:* /(__)/
-
-      #+begin_src conf
-       root@web1:~$ 
-       root@web1:~$ 
-      #+end_src
-
-- [ ] *__:* /(__)/
-
-      #+begin_src conf
-       admin@web1:~$ 
-       admin@web1:~$ 
-      #+end_src
-
-- [ ] *__:* /(__)/
-   
-      #+begin_src conf
-       user@home:~$ 
-       user@home:~$ 
-      #+end_src
-
-\newpage
-
-* 📋 Meta: /(Usage & Templates)/
-** 📄 Introduction:
-:README:
-   Use this Standard README /(template)/ as a multi purpose README document
-   as a Start Here First Document for any kind of project...
-
-   I stopped using Markdown files for this purpose a few years ago... This makes total sense as *Org-Mode* was designed exclusively for such things! *Markdown* is great for composing content intended for web pages etc.  But =Emacs Org Mode is Vastly Superior as a Publishing Environment=, with many features and power, completely agnostic of final publishing format... Whereas markdown mode excels doing one thing only... Translating author structured plain text into beautiful web pages... /(which is a good thing)/
-
-   I finally bit the long curve bullet and learned Emacs Org Mode /(after many many many years of using Emacs without it!)/ Today, looking back with current knowledge to me is like going back to a /"*Dec VT220* green screen *dumb terminal*/ after experiencing *X Windows* on a Big *HP-UX Workstation!*
-
-   Yeah, that's a personal story from the past, lol... All you Mac users out there, please realize that your beautiful Apple desktop is in fact an *HP-UX Motif X-Windows widget set clone*!  That's what Steve Jobs believed to be the best X-Windows tool-kit of the day /(when he was building the NeXT computer)/...  So... Yup he copied that! The Applications Doc at the bottom of your screen is a dead giveaway. Hewlet Packard was first to use such UI concepts... /(back before the dawning of the web we loved those HPUX Workstations!)/
-:END:
-
-*** Emacs Shorthand Command Key Notation:
-
-The command key conventions used in the instructions below, /(as well as all *Harmonic Alchemy Productions* docs)/, follow *Standard Emacs* command key naming conventions.
-
-Official GNU Emacs documentation uses a shorthand notation to indicate the *Ctrl* key as an upper case *C-* (/with minus appended/). Upper case *M-* (/with minus appended/) is the shorthand notation for the Emacs *META* key...
-
-*** Important Note For Mac Users:
-
-On Mac OS, *Modular Emacs* maps your *Ctrl* key to the *Apple Command* key. Emacs *META* is mapped to both *Alt* and *Ctrl* keys... Outside of Emacs all those keys function normally.  
-
-Therefore, for Mac users, anytime you either see *C-* or *Ctrl* below, use your *Apple Command* key for that when using Modular Emacs.  Anytime you see either *M-* or *META* below, use *Alt* or *Ctrl* keys for that when using Modular Emacs. 
-
-Anytime you are using Modular Emacs following instructions from standard vanilla Emacs docs, keep in mind your ~Ctrl~ and ~META~ keys are not /standard/ anymore and you must make a mental translation.  Beyond that, you will be fine following other emacs tutorials etc.  Hey... you Mac enthusiasts are used to that kind of /being different/ stuff anyway, right? Being one of /the rest of us/ that is... What the heck does that mean anyway? LOL
-
-The above key assignments were done to get the *Emacs C-* key closer to the space bar where it can be activated with your left thumb instead of contorting to get at it with your pinkie finger. This makes using *Xah Fly Keys* even easier to use and less stressful on your fingers...
-
-In the Official Emacs documentation you will commonly find key command notations such as *C-x* or *M-x*... This means: Hold the *Ctrl* /(or *META*)/ key down while typing the *x* key.  
-
-Any time you see this notation, regardless of what key may be connected to it with a dash /(e.g., *C-c*, *M-5*, etc.)/, this means to hold the *Ctrl*-or-*META* key down while you press the other key connected to it with the dash... If you have a command that includes many *C-key* or *M-key* commands in succession simply hold the *Ctrl*-or-*META* key down the entire time you type the other keys and then let go...
-
-If you see other keys alone separated by a space after the *C-x* or *M-x* /(e.g., C-x *d*, M-x *b*, etc.)/ this means to type that key /AFTER/ letting go of the *Ctrl*-or-*META* key...
-
-*Got that?* That's the key notation system we use here... It is all standard Emacs...  The above paragraphs are mostly for the benefit of new Emacs users! And there is more to learn below. If you are an Emacs/Org-Mode veteran please bear with us...
-
-\newpage
-
-*** Org Mode Timestamps and Clocking:
-
-This Template utilizes the default *Org-Mode:* "*C-c* ." command /(i.e., That's Ctrl-c and then type a dot. This Enters a timestamp range at the cursor position)/. The command employs *org-evaluate-time-range* to compute time on task.  This is useful for timesheets etc. 
-
-In addition, the *Log Entry (template)* stores and tracks *Org-Mode :CLOCKING:* entries and displays results in a *Time Card Table* with total time computed... 
-
-Common time clocking commands are defined within the *Log Entry (template)* itself. Any time you need to look up clocking commands, open the *:README:* drawer under the *Log Entry (template)* heading by placing your cursor over it and hitting *TAB*.
-
-Additional commands for using *Org-Mode* with Modular Emacs will be explained here if needed, as well as other *Harmonic Alchemy Modular Emacs Templates* that get produced in the future...
-
-\newpage
-
-** ❔ HowTo:
-:README:
-   This README Doc Template is being designed as these docs are being written...  At first much of the design is being done /manually/ while formats, concepts, are tried and tested.  Eventually much of the instructions below will become much simpler as there will be capture templates, and processes in place that replace the need to manually copy/paste things as we are doing initially below...  
-
-   =Please bear with the author/architect as she makes up her mind about how to do things in here...=  *Org-mode, LaTeX options are vast!* Not to mention a sea of extra packages that could be tried out... /I feel like I am re-inventing wheels within rabbit holes!/ lol
-:END:
-
-\newpage
-*** Create New Log Entry within the *📒 Begin Log:* Binder:
-**** =Clone:= "LOG: <2021-03-29 Mon> Generic Title" /(from ⎘ Templates: binder)/
-
-- [ ] =Select the Heading= /(named above)/ from the Templates: Heading, using 
-   normal Emacs selection methods. i.e., Type ~t~ key to set the mark 
-   for selection, /(xah-fly-keys Command/ /Mode)/ or use ~C-SPACE~ /(normal Emacs)/, and move the point to get the entire heading, and all of its contents, but NOTHING else... and copy it...
-
-   =Note:= Before Copying Selected Text, ensure your cursor is at the
-         end of it BUT not be part of any items after it... Placing
-         your cursor on the first column of the next line will include
-         the invisible new-line character which is what you want, but
-         any text directly under the cursor on the next line will not
-         be copied...  Later, after pasting this text somewhere else,
-         your cursor will end up sitting on the first column of a
-         blank line under the pasted text. /(exactly as intended)/
-
-- [ ] =Complete the Copy Operation= Type ~c~ /(xah-fly-keys Command Mode)/. This 
-   will save the selection for pasting later, /(the highlighted text will go/ 
-   /back to normal)/... You should have gotten only the Single LOG Entry with
-   ALL its contents, BUT nothing else below it...
-
-   =Note:= If you type: "*spacebar t*" /(xah-fly-keys leader key command)/ 
-          it will show you the contents of your paste buffer...  You 
-          can see the LAST item you copied in there AT THE TOP...  
-          To get out of the paste buffer view, type: "*spacebar u*" and 
-          it will return you to where you were before...
-
-\newpage
-
-**** =Paste Cloned LOG Entry:=
-
-- [ ] =Advance cursor= to a blank line just below the LAST Most Recent
-      LOG entry under heading *📅 2022* within the *📒 Begin Log:* section,
-      and press *ENTER* a couple times to get your cursor on a fresh
-      clean line with some extra space above and below it...
-      /(Below any previously time stamped entries you may already/
-      /have placed)/...
-
-- [ ] =Press:= ~v~ /(xah-fly-keys Command Mode)/ to paste your cloned Log
-      Entry template... If you find out that what you copied also
-      included some unwanted text directly below it, no problems...
-      Just delete that part now... 
-
-      =Note:= If you accidentally copied one or more previously
-            invisible bullets to column one on a blank line they
-            will create an invisible "ghost" heading that you will
-            now need to delete...
-            
-            You will know this if you see an org-ellipsis "⤵" symbol
-            on a line by itself indicating a heading but no text...
-            Simply delete that whole line and it will go away...
-            Now you are ready to compose your new log entry...
-
-\newpage
-
-**** Edit-Compose New LOG Entry:
-
-=Note:= If this is your first time using this log, don't bother cloning a 
-       NEW log entry as there is a dummy boilerplate placeholder Log 
-       Entry ALREADY in place for you to use...
-       /(initially there as an example)/
-
-       The instructions below for modifying the Boilerplate Log Entry, or 
-       Editing a new Cloned Log Entry Template are pretty much the same...
-       /(differences will be noted in instructions below)/
-
-- [ ] =Place cursor directly on the existing timestamp= of the NEW Log
-     Entry, and enter the key binding: ~C-c .~
-     /(i.e., press/ ~Ctrl~ /key while holding/ ~c~ /and then type a dot ~.~ /)/
-     A date chooser panel will pop up...
-
-- [ ] =Type one more dot:= ~.~ to force the calendar selection to the
-     current time and date and then, Press ~ENTER~ to accept your
-     choice... /This will update the existing older timestamp with/
-     /the current date/time.../ Check to make sure the timestamp was
-     properly updated and then move on to the next step... This
-     timestamp will not be updated after that.  It records the
-     initial time of your new log entry to the Day and time you
-     first created it...
-
-- [ ] =You are now ready to start= making entries within your New Log
-     Entry... Your timestamp indicates the present, /-and-/ you are
-     all set to begin recording timef...
-
-- [ ] =Follow the= ~:README:~ directions within the Time Card section
-     contained within your fresh new log entry to learn how to
-     /clock in/ and /clock out/ of your log entry as you work on
-     the tasks...
-
-\newpage
-
-**** Enter New LOG Entry Details:
-
-Two sub headings have been provided for your use /(if you need them)/. However, you may structure your log entries any way you wish.  The two provided headings:  *Summary* and *Details* are simply suggestions to help make your log entries a bit more organized...
-
-The *Summary* heading could be used to log the main executive summary points, /(which you would include in the exported PDF as a report to give to your boss or clients)/. 
-
-Conversely, the *Details* heading could contain a complete, thorough log of your work, which would be excluded from the final PDF report.  Everything under *Details* heading would be extra information that you don't want to bother your clients or boss with /(unless they ask for more detail of course)/. In that case, you will have it all recorded and organized for easy access later if needed...
-
-Place the *:noexport:* tag at the end of any org outline heading to exclude it and all its children from the PDF upon export...  You can add as much detail as you need within these excluded sections without cluttering up your final PDF.  The entire main heading: *How to Use this Template:* is already excluded from the final PDF, so it can be left in and your PDF will only include the *Begin Log:* section...
-
-*** Export README as a PDF Document:
-
-For some use-cases you may need to see this README file in PDF format...
-
-you can export this README.org file as a PDF using the following custom key command: ~SPACE e p~ /(i.e., press ~spacebar~, type ~e~ and then ~p~)/ Xah-Fly-Keys Command Mode extended leader key sequence...
-
-\newpage
-
-** ⎘ Templates:
-*** NEW 🗓 LOG: <2021-03-29 Mon> Generic Title /(General Log Entry Template)/
-:README:
-   - *Go To One of the HEADINGS Below:* /(Summary, Details, or Sub Headings)/
-
-      =Punch the Time Clock= At the heading And then begin working on a task related to that Heading... =Your Time IS being Recorded Now= 
-
-   - =Use These Commands:= /as you work to keep track your time.../
-
-      + *Clock IN:* ~C-c C-x C-i~ 
-
-                    /(Begin OR Resume Clocking Current task)/
-
-                    This creates a new :CLOCKING: Time Card Entry just
-                    underneath the HEADING...
-
-                    Do this just before starting work on the task... 
-                    Be in control of your life!
-
-                    After doing the above, you can go away and do some 
-                    work, leaving this heading, log note, etc. to visit 
-                    other files and/or work on them etc. The clock will 
-                    be recording your time all the while... You will see 
-                    in your mode line the elapsed clock time ticking away 
-                    as you work on a task /(hopefully related to this clock!)/
-                    and NOT Yac Shaving or being sidetracked!!!
-
-      + *RETURN to Clock Heading:* ~C-c C-x C-j~
-
-                        /Go back to the place where you started the clock.../
-
-                        You do this after you have worked on a task for a 
-                        while and you need to come back to update the item's
-                        info etc., and/or stop the clock before going off to 
-                        do something else unrelated to the log entry...
-
-      + *Clock OUT:* ~C-c C-x C-o~ /(to stop clocking your time on task)/
-
-                      This *Finalizes the Time Card Entry* within:
-                      ~:CLOCKING:~ /(created earlier when you started the/ 
-                      /clock)/...
-
-                      The Clock Entry changes showing start timestamp, end timestamp, and total time worked during this segment...  
-
-                      =Please DON'T Forget= /Like I often do, LOL.../ i.e.,
-                      Leaving a clock running all day by accident, or worse,
-                      leave it dangling with the file closed only to open it
-                      again and get that nasty *Org-Mode Message:* /What do/
-                      /you want to do with this?/ If you do something like 
-                      that you can always come back and directly edit the 
-                      clock times by hand to amend them...  After changing 
-                      clock times or dates, etc... Whatever...
-
-                      ="Onward We Row Mates... Through the log jam!"=
-
-      + *Update Time Card Entry:* ~C-c C-c~ 
-
-                  This command will change the total time at the end showing 
-                  your new calculated time...
-
-                  If you need to go away and do something else before finishing this task, you can do so after clocking out... When you come back simply clock back in again to start another Time Card Entry just as before... The new time card entry will appear above the earlier one within the ~:CLOCKING:~ drawer... When you clock out of this task it will look just like the entry below it with a total time worked tagged on the end...
-
-      + *Clock Out & Mark Items Done:* ~C-c C-t~
-
-            When you are all done with a Log Entry use the above key 
-            command to mark its Heading *TODO* tag to: *DONE* /(Most of the/ 
-            /time this will ALSO clock you out if you are still clocked/ 
-            /into the item... But not allways in my experience.../  
-            So make sure you are also clocked OUT of an Item After 
-            marking it DONE... Type: ~C-c C-x C-j~ to check this...
-            /(if no running clock it will tell you and place your/
-            /cursor at the heading where you LAST CLOCKED OUT)/
-
-      + ~C-c C-x C-q~ *Cancel Current Clock:* /(in case of accident)/
-
-                      This removes currently running clock and forgets 
-                      any time accrued or associated with it...
-
-      + ~C-c C-x C-d~ *Display Clocking Info:* 
-
-                      /This will show elapsed times to the right of headings.../
-                      =Warning!= Using this command will CLUTTER ALL the headings
-                                within your org file with those timestamps!!!
-
-   - Once all of this has become routine for you, =go ahead and remove this= ~README~ =drawer from this template=... That way it does not get copied when you need to clone new log entries...
-:END:
-
-This Log Entry is about: Yadda... Yadda... Yadda...
-
-\newpage
-
-**** NEW 📚 Reference:
-
-- *Link to Project:* [[][] ]
-
-- [[URL][Link Name] ] *Heading:* /(comment)/
-
-- [[][] ] - *_:* /(yadda...)/
-
-- [[][] ] - *_:* /(yadda...)/
-
-- [[][] ] - *_:* /(yadda...)/
-
-- [[][] ] /(_)/
-
-- [[][] ] /(_)/
-
-- [[][] ] /(_)/
-
-\newpage
-
-**** NEW ⏱ Time Card:
-
-#+BEGIN: clocktable :scope tree3 :maxlevel 6 :tstart "<-1w>" :tend "<+1m>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3
-#+END:
-
-\newpage
-
-**** NEW 📃 Summary: [0/3]
-:README:
-   This Summary is mostly to help you find things later when you cannot remember when or where is was done... If you go to the top of this file and expand all headings to show ALL content, then do a search on "~Summary:~" you will be able to quickly scroll through and scan these summaries quickly to find what you were looking for... 
-
-   Also the *Time Card* /displayed above/ each search hit will give more clues by showing important headings you worked on...
-
-   Below is an optional list /(that could also provide links)./ This list could be used to itemize things you worked on, but I personally find it easier to simply write a short one or two line description containing important keywords right here and nothing more. I think that is more useful...
-:END:
-
-Yadda... Yadda... Yadda...
-
-1. [ ] *__:*
-
-2. [ ] *__:*
-
-3. [ ] *__:*
-
-\newpage
-
-**** NEW 📰 Details:
-***** NEW New Item 1 /(placeholder)/ [0/3]
-
-- [ ] *__:* /(__)/
-
-      #+begin_src conf
-       root@web1:~$ 
-       admin@web1:~$ 
-      #+end_src
-
-- [ ] *__:* /(__)/
-
-      #+begin_src conf
-       admin@web1:~$ 
-       admin@web1:~$ 
-      #+end_src
-
-- [ ] *__:* /(__)/
-
-      #+begin_src conf
-       user@home:~$ 
-       user@home:~$ 
-      #+end_src
-
-\newpage
-
-***** NEW New Item 2 /(placeholder)/ [0/3]
-
-- [ ] *__:* /(__)/
-
-      #+begin_src conf
-       root@web1:~$ 
-       root@web1:~$ 
-      #+end_src
-
-- [ ] *__:* /(__)/
-
-      #+begin_src conf
-       admin@web1:~$ 
-       admin@web1:~$ 
-      #+end_src
-
-- [ ] *__:* /(__)/
-
-      #+begin_src conf
-       user@home:~$ 
-       user@home:~$ 
-      #+end_src
-
-\newpage
-
-***** NEW New Item 3 /(placeholder)/ [0/3]
-
-- [ ] *__:* /(__)/
-
-      #+begin_src conf
-       root@web1:~$ 
-       root@web1:~$ 
-      #+end_src
-
-- [ ] *__:* /(__)/
-
-      #+begin_src conf
-       admin@web1:~$ 
-       admin@web1:~$ 
-      #+end_src
-
-- [ ] *__:* /(__)/
-   
-      #+begin_src conf
-       user@home:~$ 
-       user@home:~$ 
-      #+end_src
 
 \newpage
 

@@ -1,46 +1,41 @@
 # -**- mode: org; coding: utf-8 -**-
-#+TITLE: HAP Default Tags
-#+DATE: <2022-12-20 Tue>
 
-#+TAGS: accounting(a) business(b) computers(c) drafts(d) economics(e) finance(f)
-#+TAGS: health(h) images(i) tasks(k) legal(l) email(m) open_source(o)
-#+TAGS: @projects(p) quotes(q) research(r) synopsis(s) tools(t) utilities(u)
-#+TAGS: auto(v) web(w) travel(y)
+#+TAGS: TOC(k) health(h) drafts(3) synopsis(i) fonts(;) hardware(#)
+#+TAGS: computers(=) web(w) Cloud(9) email(m) apps(4) open_source(g)
+#+TAGS: banking($) taxes(%) auto(v) travel(y) utilities(u) must_read(!)
 
-#+TAGS: @autofocus(A) templates(B) diagrams(D) hardware(E) fonts(F) @GTD(G) apps(I) logs(L)
-#+TAGS: newIdeas(N) recordings(R) scratchpads(S) transactions(T) videos(V)
+* Default Tags:                                                    :noexport:
+** Instructions:
 
-#+TAGS: README(5) Cloud(9) must_read(!) banking($) taxes(%) cheatsheets(=) tutorials(?) 
+This file is included as part of *Harmonic Alchemy Modular Emacs* to provide an example of how ~org-tags~ are organized by default once *Modular Emacs* is installed on your machine...
 
-* Defined Tag Keys:                     :noexport:
+=Usage:= *COPY/CLONE:* ~~/.emacs.d/Docs/pubOps/org-templates~ directory
+        to the MASTER directory where existing .org files reference
+        this contained default-tags SETUPFILE... Modify the copied SETUP
+        Files within your cloned org-templates directory to suit your needs...
+
+        =Don't Modify The MASTER Templates Within ~/.emacs.d=
+
+  =Add:= the following line to the Header of ~.Org~ Files that need to
+        include this file:
+
+        ~#+SETUPFILE: ./org-templates/default-tags.org~
+
+/Making a COPY/CLONE of:/ ~$HOME/.emacs.d/Docs/pubOps/org-templates~ /master/
+/folder To your book's project directory will allow you to make your own custom/
+/configurations for different books without affecting the configurations of other/
+/book projects within their own MASTER FOLDERS.../
+
+- *Modify your Copy/Clone:* of this file to create new ~<your_category>-tags.org~ files of your own design...
+
+- *Use the Global Defined Tag Keys selection keys listed below* when creating new tags for your custom tags file...  Replace Local Defined Tags below with your changed tags selection characters. (for quick tagging)...
+
+- *You could use a custom SETUPFILE in addition to this default setupfile*. In that case, consider ALL of the keys below, (global & local) to be already used. If you wish to have speed keys for your new custom tags, they will have to be unique /(different from the keys defined below)/...  
+
+** Defined Tag Keys:
 
 /(These are from above local file settings, as well as global ones set by HA Mod Emacs Org Mode Module: ~09-2-org-keywords-tags-conf.el~)/
 
-- *Global Defined Keys:* ~n x H W 0 1 2 3 + -~
+- *Globall:* /a b c d e f k l n o p q r s t x A G H I L N R T V W 0 1 2 5 + - ?/
 
-- *Local Defined Keys:* ~a b c d e f h i k l m o p q r s t u v w y~
-                       ~A B D E F G I L N R S T V~
-                       ~5 9 ! $ % = ?~
-
-- *Tags Currently Free to Use:* ~g j z~
-                               ~C J K M O P Q U X Y Z~
-                               ~~ 4 6 7 8 @ ^ & * ( ) _ [ { ] } |~
-                               ~; : , < . >~
-
-* Instructions:                              :noexport:
-
-This SETUPFILE is included as part of *Harmonic Alchemy Modular Emacs* to provide Default ~org-tags~ for General Purpose Use...
-
-- *Use this as your Default* ~SETUPFILE~ *for new documents of general nature*.
-   /(it is included in some of the Modular Emacs .org templates)/
-
-- *Copy/Clone* this file to create new ~<your_category>-tags.org~ files of
-   your own design for use by category specific org files...
-   =Add / Remove / Change= any of the LOCAL Defined Keys for your own purposes...
-   But =DON'T Override any of the GLOBAL Defined Keys= which must not change
-   from one .org file to the next... 
-
-- =DO NOT USE More Than ONE TAGS SETUPFILE= within any single .org file!
-   Local Defined Keys may end up being duplicated if you do that...
-   You only need one of these for tags... /(modify yours to fit your needs)/
-
+- *Local:* /g h i k m u v w y ; ! # $ % 3 4 9 =/

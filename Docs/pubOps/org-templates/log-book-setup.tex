@@ -1,0 +1,108 @@
+%%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%%   File:        ~/.emacs.d/Docs/PubOps/org-templates/log-book-setup.tex
+%%   Ref:         <https://github.com/harmonicalchemy/modular-emacs>
+%%   Purpose:     LaTeX Setup Include File for Log Notebooks
+%%   Author:      Alisha Awen
+%%   Maintainer:  Alisha Awen
+%%   Created:     2023-001-13
+%%   Updated:     2023-001-14
+
+%%   This program is free software: you can redistribute it and/or modify
+%%   it under the terms of the GNU General Public License as published by
+%%   the Free Software Foundation, either version 3 of the License, or
+%%   (at your option) any later version.
+
+%%   This program is distributed in the hope that it will be useful,
+%%   but WITHOUT ANY WARRANTY; without even the implied warranty of
+%%   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%%   GNU General Public License for more details.
+
+%%   You should have received a copy of the GNU General Public License
+%%   along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+%%   To Customize: Copy/Clone ~/.emacs.d/Docs/PubOps/org-templates (which contains
+%%   this file) to your .org doc's MASTER FOLDER. Then, modify your cloned copy of
+%%   this file...
+
+%%   PACKAGES REMOVED or DISABLED for DEBUGGING:
+%%      \usepackage{afterpage}  This does not seem to be needed...
+%%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+%% PACKAGES %%
+
+\usepackage{paralist}
+\usepackage[cm]{fullpage}
+\usepackage{calc}
+\usepackage{pdfpages}
+\usepackage{parskip}
+
+%% FONTS %%
+
+\usepackage[T1]{fontenc}
+\setmainfont{Adobe Caslon Pro}
+\usepackage{roboto}
+
+\usepackage{sectsty}
+\allsectionsfont{\normalfont\sffamily}  %% Sans Font For Section Headings
+\setsansfont{roboto}
+
+%% WIDOWS and ORPHANS %%
+
+\usepackage[all]{nowidow}
+
+%% FOOTNOTES %%
+
+\usepackage[hang,flushmargin, stable, multiple]{footmisc}
+\usepackage{manyfoot}
+\DeclareNewFootnote{A}[fnsymbol]
+\usepackage{relsize}
+
+%% FOOTNOTE FORMATTING %%
+
+\addtolength{\footskip}{0.5cm}
+\setlength{\footnotemargin}{0.4cm}
+\setlength{\footnotesep}{0.4cm}
+
+\usepackage{breakcites}
+\usepackage{biblatex}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{setspace} \singlespacing
+\setstretch{1.15}
+
+%% ADD BAR FOR QUOTE BLOCKS %%
+
+\usepackage[most]{tcolorbox} 
+\definecolor{block-gray}{gray}{0.98}
+
+\newtcolorbox{quote-b}{%
+    colback=block-gray,
+    grow to right by=-10mm,
+    grow to left by=-10mm, 
+    boxrule=0pt,
+    boxsep=0pt,
+    breakable,
+    enhanced jigsaw,
+    borderline west={2pt}{0pt}{gray}}
+
+%% HAP LOGBOOK DOC LAYOUT %%
+
+\setlength{\headwidth}{\textwidth}
+\addtolength{\headwidth}{.382\foremargin}
+\renewcommand\afterchapternum{}
+
+\renewcommand\afterchaptertitle{%
+  \ifnum \c@secnumdepth>\m@ne%
+    \ifNoChapNum\else\par\nobreak\vskip\afterchapskip
+    \fi%
+  \fi%
+}
+
+\setlength\beforechapskip{15pt}
+\renewcommand\printchapternonum{\global\NoChapNumtrue}
+\renewcommand{\chaptitlefont}{\raggedleft\normalfont\Huge\bfseries}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\makeatletter
+
+%%%% END: ~/.emacs.d/Docs/PubOps/org-templates/log-book-setup.tex
+%%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

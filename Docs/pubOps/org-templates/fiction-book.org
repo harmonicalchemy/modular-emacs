@@ -46,11 +46,11 @@
 
 =LaTeX --> Fiction Book PDF:=
 
-#+LATEX_CLASS: fictbook
+#+LATEX_CLASS: blueboxbook
 #+LATEX_HEADER: \usepackage{parskip}
 #+LaTeX_HEADER: \usepackage{paralist}
 
-~fictbook~ =CLASS= /is defined in:/ ~09-4-org-export-conf.el~
+~blueboxbook~ =CLASS= /is defined in:/ ~09-4-org-export-conf.el~
 
 =STANDARD EXPORT OPTIONS:=
 
@@ -61,6 +61,20 @@
    + [[https://orgmode.org/worg/dev/org-export-reference.html][WORG - Org Export Reference]]
 
    + [[https://www.linuxjournal.com/content/org-mode-latex-exporter-latex-non-texers][Org Mode Latex Exporter - Linux Journal]]
+
+   + [[https://tug.org/][TeX Users Group]] - /TUG/
+
+   + [[https://tug.org/FontCatalogue/][The LaTeX Font Catalogue]] - /(TUG.org)/
+
+   + [[https://tug.org/FontCatalogue/seriffonts.html][Serif Fonts]] - /(TUG.org)/
+
+   + [[https://tug.org/FontCatalogue/sansseriffonts.html][Sans Serif Fonts]] - /(TUG.org)/
+
+   + [[https://tug.org/FontCatalogue/typewriterfonts.html][Typewriter Fonts]] - /(TUG.org)/
+
+   + [[https://tug.org/FontCatalogue/calligraphicalfonts.html][Calligraphical Fonts]] - /(TUG.org)/
+
+   + [[https://en.wikibooks.org/wiki/LaTeX/Fonts][LaTeX Fonts]] - /(WIKIbooks.org)/ 
 
    + [[https://www.ctan.org/pkg/latexmk/][latexmk – Fully automated LaTeX document generation]]
 

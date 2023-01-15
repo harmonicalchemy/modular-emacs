@@ -1,10 +1,11 @@
 # -**- mode: org; coding: utf-8 -**-
 #+TITLE: HAP - Technical Book Project Skeleton
+#+SUBTITLE: for reference books, tech manuals, etc...
 #+EXPORT_FILE_NAME: HAP_Untitled-Tech-Manual.pdf
 #+TEXT: Copyright © 2022 Harmonic Alchemy Productions & Others
 #+AUTHOR: Alisha Awen - Harmonic Alchemy Productions
 #+EMAIL: Siren1@disroot.org
-#+DATE: <2022-10-18 Tue>
+#+DATE: {{{time(%A %Y-%b-%d %l%p)}}}
 #+TEXT: Created: <2020-07-30 Thu>
 #+TEXT: Last Published: <Not Published>
 #+FILETAGS: templates reference_books @projects unpublished
@@ -12,6 +13,7 @@
 #+DESCRIPTION: HAP - Tech Manual Book Project Skeleton with generic basics already done. Great for documenting technical projects, large or small... Also great for organizing, handling caveats, trying different methods, etc. All while building a sound outline of support docs, steps, best practices... and publishable as a PDF Book suitable for eBook readers... (easily modified for publishing in other eBook formats or for the web)
 
 #+BEGIN_COMMENT
+
 =Setup Files:=
 
    For Cloned Versions of this template, the file/paths below will be relative
@@ -24,108 +26,121 @@
    of ref-book.org...
 
    *SETUPFILE:* ~default-tags.org~ is where related tags are defined
-              for use in this project...
+              for use in this project... Tags defined are useful
+              for most situations and some are ALWAYS to be defined
+              for this LaTeX publishing system to work.
+              
+              /(change the name from/ ~default-tags.org~ /to another name/
+              /and-or replace some (but NOT ALL) of the tags within/
+              /to your own tags... see instructions inside the file)/
 
    *SETUPFILE:* ~ref-book.org~ is for LaTeX Export Configurations 
-              to produce a PDF version of your Book...
+              to produce a Reference Book styled PDF /(With TOC,/
+              /& Heading Numbering at Sub Sections and Sub Sub Sections...)/
 #+END_COMMENT
 
 #+SETUPFILE: ./org-templates/ref-book.org
 #+SETUPFILE: ./org-templates/default-tags.org
 
-Set ALL ~.png~ images in this file /(emojis)/ to ~30x30~ pixels...
-/(other images may be adjusted to size inline)/
-#+BEGIN_SRC elisp
-;(setq org-latex-images-centered nil)
-;(setq org-latex-image-default-width "1.0\\linewidth")
-;(setq org-latex-image-default-width "")
-(setq org-image-actual-width (list 30))
-#+END_SRC
-#+RESULTS:
-| 30 |
-
 :READ_ME_FIRST:
 ☞ =Instructions:= /(How to Install & Use This Template)/
 
-To use *HAP_Technical-Book-Project-Skeleton.org* /(Org-Mode Reference Book Project /Template)/ for your own projects, perform the following steps: 
+To use *HAP_Technical-Book-Project-Skeleton.org* /(Org-Mode Reference Book/
+/Project /Template)/ for your own projects, =Perform The Following Steps:= 
 
 /Use the org-mode Checkboxes to Help You Keep Track of Progress/
 
 1) [ ] *Clone a Copy of This File:* 
 
       Put your clone where you normally organize your writing 
-      projects. *Place it within its own master folder... It is*
+      projects. *Place it within its own MASTER FOLDER... It is*
       *Important to keep this file within its OWN enclosing folder!* 
 
-      Name the project's master folder to reflect your Reference book 
+      Name the project's MASTER FOLDER to reflect your Referenc book 
       project's title... /(what you renamed this .org file to)/...
 
-      =Other Files/Folders will be placed within this master folder...=
+      =Other Files/Folders will be placed within this MASTER FOLDER...=
 
-2) [ ] *Copy/Clone:* ~./media~ /(and contents)/ *to your new project's Master Folder:*
+      You may put this file within other Master Project Folders that
+      contain existing ~.org~ files /(cloned from other HAP_Doc-Skeleton/
+      /template files)/ =If This is the case:= *Skip Steps 2 & 3 below...*
+
+      =Do NOT OVERWRITE ANY PRE-EXISTING FILES or FOLDERS!!!=
+
+      =Otherwise:=
+      
+      *Name This New Project's MASTER FOLDER* to reflect your Reference
+      book project's title... /(what you renamed this .org file to)/...
+
+2) [ ] *Copy/Clone:* ~./media~ /(and contents)/ *to your new project's MASTER FOLDER:*
+      /(skip this step if this folder already exists within your project)/
 
       Copy this directory /(into your master folder as a sibling of this file).../ 
       Any external documents or images referenced by your book project should 
       be placed within this ~./media/~ directory...
 
-      All external links, images, within the boilerplate examples of this
-      template may be used as examples for getting your own images, and 
-      external attachments linked properly...  
+      There are images within the ~./media/~ directory that are required by
+      boilerplate examples within this template... You may inspect/copy etc.,
+      these boilerplate examples /(with links to media files)/ to get your
+      own images, and external attachments linked and published properly...  
 
       This single ~./media~ directory will serve media and external attachments 
-      for all of the ~.org~ doc template files from within: ~.emacs.d/Docs/pubOps~ 
-      directory /(if they were also copied here to your Project's Master Folder)/
+      for all of the ~.org~ doc template files copied from: ~.emacs.d/Docs/pubOps~ 
+      directory /(if they ARE later copied here to this Project's Master Folder)/
 
-      =Note:=  You DON'T need to copy the ~./auto/~ directory...  That directory
-             will be automatically created the first time you export this ~.org~ 
-             file to ~.PDF~...
+      If you Decide Later to copy another doc template file from:
+      ~.emacs.d/Docs/pubOps~, =YOU WILL BE SKIPPING THIS STEP= to avoid
+      OVERWRITING existing files and/or folders!!!
 
-3) [ ] *Copy/Clone:* ~./org-templates~ /(and all contents)/ *to your Master Folder:*
+      =Note:= You DON'T need to copy the ~./auto/~ directory... That directory
+            will be automatically created the first time you export this ~.org~ 
+            file to ~.PDF~...
+
+3) [ ] *Copy/Clone:* ~./org-templates~ /(and contents)/ *to your project's MASTER FOLDER:*
+      /(skip this step if this folder already exists within your project)/
 
       Copy this directory to your book's MASTER FOLDER,
-      /(i.e., as a sibling/ /of this .org file).../ 
+      /(i.e., as a sibling/ /of this .org file).../
 
-      =Note:= The SETUPFILES Within this directory which are called out and 
-            included by this .org file /(above)/ must stay within this
-            directory...  
+      =Note:= The SETUPFILE: ~ref-book.org~ Within this directory is called
+            out and included by this ~.org~ file /(above)/ and as such must stay
+            within this directory...
 
-            Other SETUPFILES within this directory are used by other book 
-            project templates and are not needed for this Technical Book
-            Project... You may remove them if you wish...
+      Other SETUPFILES within this directory are required by other book
+      project templates... /(if they are to ALSO be cloned here)/
 
-            They are small text files not bothering you... If you clone
-            another ~HAP_<book-template>.org~ file into this project folder
-            it will pick up its associated SETUPFILES automatically, so
-            consider that if/when you decide to delete other
-            UNUSED SETUPFILES...
+      If you Decide Later to copy another ~HAP_<book-template>.org~ Document
+      Template file from: ~.emacs.d/Docs/pubOps~, =YOU WILL BE SKIPPING THIS STEP=
+      to avoid OVERWRITING existing files and/or folders!!!
 
 4) [ ] =Start Sketching Out Your Technical Book NOW Before You Loose It!=
 
       =NOTE:= You may be doing this because you have technical information that
-             needs to be writtin now before you forget!  =Right?=  Therefore...
-             as soon as you are done with the first steps above, =STOP= and go
-             immediately to the:
+            needs to be writtin now before you forget! =Right?= Therefore...
+            as soon as you are done with the first steps above, =STOP= and go
+            immediately to the:
 
-                   [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4A1.png]] *Ideas Scratchpad Refile / ☞ Start Here!*
+                💡 *Ideas Scratchpad Refile* Binder...
 
-             section and read the ~:README:~ directly under that heading...  
-             Then write your ideas down quickly /(as per the README instructions)/ 
-             to get your information recorded before you forget it...  
+            and read the ~:README:~ directly under the *☞ Start Here!* heading...
 
-             Later, After you have all your ideas sketched out and you are 
-             ready to be in an ="organized mood"= /(rather than creative mood)/ 
-             /This does not imply being organized cannot be a CREATIVE PROCESS/ 
-             Then it is time to:
+            Then write your ideas down quickly /(as per the README instructions)/ 
+            to get your information recorded before you forget it...  
 
-             =Come Back Here And Finish Setting Up Your Project...=
+            Later, After you have all your ideas sketched out and you are 
+            ready to be in an ="organized mood"= /(rather than creative mood)/ 
+            /This does not imply being organized cannot be a CREATIVE PROCESS/ 
+            Then it is time to:
 
-             *This Project Template is HUGE!*
+            =Come Back Here And Finish Setting Up Your Project...=
 
-             *Your Muse Can Easily Loose Her Inspiration!*
+            *This Project Template is HUGE!*
 
-             =The ☞ Start Here Section is Your Remedy= 
+            *Your Muse Can Easily Loose Her Inspiration!*
 
-             =Do That first!=
+            =The= 💡 *Ideas Scratchpad Refile* =Binder is Your Remedy=
+
+            =Do That first!=
 
 5) [ ] *Finish Setting up this Project LATER...* [0/3]
 
@@ -156,13 +171,6 @@ To use *HAP_Technical-Book-Project-Skeleton.org* /(Org-Mode Reference Book Proje
 
           Change to: /"your EMAIL"/
 
-    - [ ] *Change the* ~#+DATE:~ *TIMESTAMP at the top of this file:* 
-
-          Put your cursor on the TIMESTAMP: /i.e.,/ <2022-10-05 Wed>
-          and type: ~C-c . . RETURN~ The TIMESTAMP will update to NOW.
-          Do this whenever you update your doc to show last date
-          it was changed or modified...
-
     - [ ] *Change the* ~#+TEXT: Created:~ *TIMESTAMP at the top of this file:* 
 
           Put your cursor on the TIMESTAMP: /i.e.,/ <2022-10-05 Wed>
@@ -188,12 +196,13 @@ To use *HAP_Technical-Book-Project-Skeleton.org* /(Org-Mode Reference Book Proje
 
     - [ ] *Change the* ~#+FILETAGS:~ *directive at the top of this file:* 
 
-          Add your own tags that match the context of your Log Book...
+          Add your own tags that match the context of your Reference Book...
           
     - [ ] *Change the* ~#+DESCRIPTION:~ *directive at the top of this file:*
 
           Compose /Your-Technical-Book-Project's Description/ as a short 
-          paragraph here...
+          paragraph here... and then use that to change the directive
+          above in the File HEADER...
 
     - *The* ~./media~ *Directory is ALL Set:* 
 
@@ -203,6 +212,10 @@ To use *HAP_Technical-Book-Project-Skeleton.org* /(Org-Mode Reference Book Proje
          media and external attachments for this and any other related
          ~.org~ files you may end up creating here, as well as being
          the media repository used by LaTeX during publishing...
+
+         Media required for use in template BOILERPLATE Sections already
+         exists within this folder /(for all HAP Skeleton Template .org files)/
+         So that is all set...
 
     - *Purpose of the:* ~./auto/~ *Directory:* /(you do not need to copy this)/
 
@@ -222,10 +235,20 @@ To use *HAP_Technical-Book-Project-Skeleton.org* /(Org-Mode Reference Book Proje
          The files in here are automatically linked and included within this
          template. You don't need to change those settings unless you wish to
          customize the already customized tags, and export options.
+         
+         /Things are currently set up for the Technical Book genre, and/
+         /the Category is all set as well... But you can and may modify/
+         ~ref-book.org~ /to narrow down the category more specifically,/
+         /fitting everything to this project's specific needs.../
 
-         /They are allready set up correctly for the Technical Book genre, and/
-         /the Category is all set as well... But you can and may modify the/
-         /SETUPFILES to fit your needs.../
+         The DEFAULT Tags defined for all project templates are useful for
+         most situations and SOME tags are ALWAYS to be defined for this
+         LaTeX publishing system to work.
+
+         /Change the SETUPFILE name ABOVE and within this directory from/
+         ~default-tags.org~ /to another name and-or replace some -BUT NOT ALL-/
+         /of the tags within to your own tags... see instructions inside the/
+         /file.../
 
 6) [ ] =Ongoing Planning / Writing Your Technical Book:= 
 
@@ -245,30 +268,33 @@ To use *HAP_Technical-Book-Project-Skeleton.org* /(Org-Mode Reference Book Proje
 
          *Issue the following Emacs command:*
 
-            ~M-x org-latex-export-to-pdf~
+             ~M-x org-latex-export-to-pdf~
 
          *OR* If You Enabled *Xah-Fly-Keys* /"Command Mode"/ Try Shortcut:
 
-            ~SPACE e p~
+             ~SPACE e p~
 
          *OR Export to OTHER Formats:*
 
-            ~C-c C-e~
+             ~C-c C-e~
 
             /(a pop-up will show allowing you to choose export method)/
 
-      After *AucTeX* is done parsing/compiling etc., new files by the name of: ~HAP_Untitled-Tech-Manual.pdf~ -and- ~HAP_Untitled-Tech-Manual.tex~ 
+      After *AucTeX* is done parsing/compiling etc., new files by the name of:
+      ~HAP_Untitled-Tech-Manual.pdf~ -and- ~HAP_Untitled-Tech-Manual.tex~ 
+
+      /(or the name you changed it to located at the top of this file)/
       will appear within the same directory as this file...
 
-      Subsequent repeated calls to the above command will overwrite your existing ~HAP_Untitled-Tech-Manual.pdf~ -and- ~HAP_Untitled-Tech-Manual.tex~ 
-      files! /(make backups first if needed!)/
-      
-      You should probably copy these files to the ~./auto/~ directory as 
-      well for safe keeping as backups...
+      Subsequent repeated calls to the above command will overwrite your
+      existing ~.pdf~ -and- ~.tex~ files! /(make backups first if needed!)/ You
+      could use the ~./auto/~ directory for backups...
 
       =If you chose the last option above= LaTeX will output files with other
-      extensions for those other output formats... =NOTE:= SETUPFILES have not
-      been created yet for other eBook formats.  /(This is a work in progress)/
+      extensions for those other output formats...
+
+      =NOTE:= Some SETUPFILES have not been created yet for other eBook formats.
+            /(This is a work in progress)/
 
       =If YOU EXPERIENCE LaTeX ERRORS:= 
 
@@ -276,28 +302,23 @@ To use *HAP_Technical-Book-Project-Skeleton.org* /(Org-Mode Reference Book Proje
 
 8) [ ] =Handling Images=
 
-      All Images /(by DEFAULT from above elisp source code block)/ are set
-      to thumbnail size (to properly size the .png ICONS /(emojis)/ in front
-      of Binder Headings etc...
-
-      This means that Other images within your ~.org~ file will ALSO display
-      as small thumbnails...
-
-      If that is NOT what you want for some images, you can override the
-      DEFAULT by using local attributes above the image link...
-
+      Some Images may render too large or too small to fit on a page
+      of an exported version of this file... This is easy do fix within
+      your content on an image by image basis...
+      
       Use *LaTeX* and/or *HTML* attributes as follows on the images that need
       to be a different size...
 
       =Example:=
       
-         #+CAPTION: Example larger size .png file 
+         #+CAPTION: Example: Larger Size Emoji 
          #+NAME:  example:00001
          #+attr_html: :width 200px
          #+attr_latex: :width 200px
       [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F3D5.png]]
 
-=These Instructions Were Last Modified:= <2022-12-18 Sun> 
+
+=These Instructions Were Last Modified:= <2023-01-05 Thu> 
 
 So far Export to PDF in nice Technical or Reference Book Style format... This has not been tested for HTML or other eBook formats yet... We will get fancy with other formats later... I promice... I have to do all this documentation first!
 
@@ -306,105 +327,108 @@ So far Export to PDF in nice Technical or Reference Book Style format... This ha
 =Please Open an ISSUE At:= https://github.com/harmonicalchemy/modular-emacs/issues
    
 Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas for Improvement... =You guys are my Product Managers=  I am only a User of ONE "seat".
-
 Other folks UX metrics are sorely needed!! Thanks!
-
 =Enjoy!= - Alisha Awen
 :END:
 
-* [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4A1.png]] Scratchpad Refile:                                          :noexport:
-** [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F449.0.png]] Start Here!
-:README:
-   This Section is mainly to accommodate "seat-of-pants" writers
-          /(Of Which I Have Been Accused Of.../
-           /But I Also Crave The Planning Stuff)/. 
+* NEW 💡 Scratchpad Refile:                                        :noexport:
+** ☞ Start Here!
 
-   I often come here for my [[https://projects.csail.mit.edu/gsb/old-archive/gsb-archive/gsb2000-02-11.html]["yak shaving"]] adventures...
+This Section is mainly to accommodate "seat-of-pants" writers /(Of Which I Have Been Accused Of... But I Also Crave The Planning Stuff)/. 
 
-   Use this: "*💡 Scratchpad Refile ☞ Start Here!*" section as a 
-   quick place to document ideas and inspirations as they come 
-   along... You can refile them later... 
+I often come here for my [[https://projects.csail.mit.edu/gsb/old-archive/gsb-archive/gsb2000-02-11.html]["yak shaving"]] adventures...
 
-   Even if your quick inspiration was intended for elsewhere?,
-   /(e.g., You become bored documenting tedious technical/ 
-   /information when suddenly, out-of-nowhere, an idea for a/ 
-   /new sci-fi scene in that screenplay episode you had in the/ 
-   /back of your mind all day!, etc.)/
+Use this: "*💡 Scratchpad Refile*" section as a quick place to document ideas and inspirations as they come along... You can refile them later... 
 
-   =Ummm.... Parallel Universe?=
+Even if your quick inspiration was intended for elsewhere?, /(e.g., You become bored documenting tedious technical information when suddenly, out-of-nowhere, an idea for a new sci-fi scene in that screenplay episode you had in the back of your mind all day!, etc.)/
 
-   =Sure!= You can put anything in here! We've got that covered 
-         for you in this Start Here spot. %^)
+=Ummm.... Parallel Universe?= - =Sure!= You can put anything in here! We've got that covered for you in this Start Here spot. %^)
 
-   Use this section to quickly capture inspired at-the-moment 
-   ideas =While they are still fresh in mind=
+Use this section to quickly capture inspired at-the-moment ideas...
+=While they are still fresh in mind=
 
-   =How To Use ???= 
+=How To Use ???= 
 
-      /Simply Come directly here and do what ever you want.../
-      /"Your Crazy Daze are Covered!" Yay!/ 
+/Simply Come directly here and do what ever you want.../
+/"Your Crazy Daze are Covered!" Yay!/ 
 
-   =The following Shortcuts= Will Help you Get Started as 
-   Quickly as Possible:
+=The following Shortcuts= will Help you get started as 
+quickly as possible. /(using Knowledge Management Best Practices)/
 
-   - [ ] *Copy/Clone:* =Example Idea= *Heading Below:* 
+- [ ] =Copy/Clone:= 💡 <2022-08-20 Sat> *Example Idea* =Below:=
 
-         =Copy the Heading AND ALL ITS CONTENTS=
+     =Copy the Heading AND ALL ITS CONTENTS=
 
-         /Change your Clone's Title to Your Own Title/
+     /Change your Clone's Title to Your Own Title/
 
-   - [ ] *Change the timestamp on your Clone Entry:* [0/1]
+- [ ] *Change the timestamp on your Clone Entry:* [0/1]
 
-         =Type:= ~C-c .~ while cursor is sitting on the timestamp
+     =Type:= ~C-c .~ while cursor is sitting on the timestamp
 
-         /i.e., Press: ~Ctrl-c~, let go, and then type a Period/ ~.~
+     /i.e., Press: ~Ctrl-c~, let go, and then type a Period/ ~.~
 
-         A date chooser panel will pop up...
+     A date chooser panel will pop up...
 
-     + [ ] *Press* ~ENTER~ *to auto accept today's date and time.*  
+     + [ ] *Press* ~ENTER~ *to auto accept today's date and time.*
 
-            The existing timestamp will change to TODAY...
+          The existing timestamp will change to TODAY...
 
-   - [ ] *Advance your cursor and Start Writing!!!*
+- [ ] *Advance your cursor and Start Writing!!!*
 
-          Advance your cursor few more lines down to some fresh 
-          empty space and Start Typing Your Story Idea Like Mad!!! 
+     Advance your cursor few more lines down to some fresh 
+     empty space and Start Typing Your New Idea Like Mad!!! 
+     /(Remove the boilerplate content after reading it...)/
 
-   - [ ] *Don't stop Writing!* 
+- [ ] *Don't stop Writing!*
 
-          Don't worry about formatting or organizing it until later, 
-          after all your inspiration has passed and you are ready 
-          to organize...
+     Don't worry about formatting or organizing it until later, 
+     after all your inspiration has passed and you are ready 
+     to organize...
 
-   - [ ] =TODO After You Are Done Writing:=
+- [ ] =TODO After You Are Done Writing:=
 
-        + [ ] *Adjust Space:* 
+     + [ ] *Adjust Space:*
 
-               Adjust space between your headings and your 
-               fantastic ideas below them it to one single 
-               blank line...
+          Adjust space between your headings and your 
+          fantastic ideas below them it to one single 
+          blank line...
 
-        + [ ] *Further organize things as needed...*
+     + [ ] *Continue Writing/Developing RIGHT HERE if needed:*
 
-               If you become inspired to write while organizing... 
-               Do that first and come back later... Don't scare 
-               away your muses when they beckon! Get your story 
-               down first! No matter what state it may be in at 
-               first... =GET IT DOWN=
+          If you are not yet sure where this NEW IDEA should go
+          AND you are still inspired to write... Simply continue
+          writing and developing this IDEA in place RIGHT HERE...
 
-        + [ ] *You Are Free To Go Out And Play Elsewhere Little Grasshopper*
+          =ONE IMPORTANT Point:= It is Good KM Practice to add at
+          least a few good relevant tags to this item right NOW
+          before you forget however... You may not know where
+          things belong in the beginning but you most likely
+          DO Know the category, genra, etc. of your new idea...
 
-               If after writing... You don't feel like organizing 
-               now? =NO PROBLEM=... But come back later and organize 
-               things... =OK?= Don't create a swamp in here! 
-               /And don't forget to take/ /your bath tonight... ;-)/
+          This will help you in case you forget all about it later...
+          Sooner or later It will show up in some random tag search
+          that way and remind you...
+          
+          When that time comes, you may know exactly where it should
+          go and the reminder simply jogs your memory to move it into
+          the right bin for further processing later as part of a
+          scheduled task...
+          
+          =For NOW=, Don't Worry about what it is for or where to
+          put it... It is still here in "dream state" which is
+          GOOD... Don't scare away your muses when they beckon! 
+          Get your Idea down first, no matter what state it may
+          be in... =GET YOUR IDEA DOWN=
 
-   Having done the simple steps above any time you get inspired, you 
-   will be able to tell your grand children.. "I got my first spark 
-   of an idea for that book back in Year, Month, Day, time, second" 
-   /(50 years later!)/ Now that is being organized! LOL
-:END:
-*** NEW [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4A1.png]] <2020-06-07 Sun> My New Business Idea! /(example)/
+     + [ ] *You Are Free To Go Out And Play Elsewhere Little Grasshopper*
+
+          If after writing... You don't feel like organizing 
+          now? =NO PROBLEM=... But come back later and organize 
+          things... =OK?= Don't create a swamp in here! 
+          /And don't forget to take/ /your bath tonight... ;-)/
+
+Having done the simple steps above any time you get inspired, you will much later in life be able to tell your grand children.. /"I got my first spark of an idea for that story back in Year, Month, Day, time, second"/ 50 years later! Now that is being organized! LOL
+** NEW 💡 <2020-06-07 Sun> My New Business Idea! /(example)/
 :README:
    This is a dummy example of some crazy idea that you may have 
    gotten at the spur of the moment, while you were doing something 
@@ -424,9 +448,35 @@ Other folks UX metrics are sorely needed!! Thanks!
 
 =Then Quickly Get Started Writing Down your FRESH NEW IDEA=
 
-* NEW [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4DD.png]] Synopsis: /(or Introduction:)/                               :noexport:
+** NEW 💡 <2022-08-20 Sat> New Example Idea /(BOILERPLATE Clone This)/
 :README:
-   =Use this space to write the main synopsis of your technical work=
+   This is a dummy example of some crazy idea that you may have 
+   gotten at the spur of the moment, while you were doing something 
+   elsewhere within this project...  After you are done getting as 
+   much of the idea as you initally can then you can simply go back 
+   to what you were doing before the inspiration segue tore you away... 
+   You might want to schedule this as a todo item before leaving though...
+
+   Later when you are free you can come back to file this or place it 
+   where it belongs.  In the case of the note below it would probably 
+   go in a research folder of a Sci-Fi related project...
+:END:
+
+=Copy/Clone this Boilerplate Template NOW= And Change your clone's Title.. 
+
+=Then Quickly Get Started Writing Down your FRESH NEW IDEA=
+
+=Replace all of this boilerplate content with your own content=
+
+* NEW 📕 Front Matter:                                             :noexport:
+
+=Use this binder for Front Page Ideas= /(e.g., Information about Title Page, Synopsis, etc...)/, which could function as an abstract when published...
+
+** NEW 📝 Synopsis:
+:README:
+   =Use This Space to record your official book Synopsis...=
+
+   =THIS SECTION COULD FUNCTION AS AN ABSTRACT when PUBLISHED=
 
    You can write anything you want here but it is highly recommended 
    to use the award winning *"Snowflake Method"* created by [[https://www.advancedfictionwriting.com/][Randy Ingermanson]] 
@@ -441,22 +491,25 @@ Other folks UX metrics are sorely needed!! Thanks!
    Snowflake concepts apply just as well for real-worlds as they do for  
    make-believe worlds... /(the worlds don't care or notice the difference)/
 
-   The steps within the *⏰ Tasks:* Binder follow guidelines within Randy's
-   book... Boilerplate forms have been set up for you to fill out while 
-   reading his book to get a deeper understanding behind these dry forms 
-   and worksheets...
+   The steps within the *⏱ Tasks:* Binder are based on guidelines within
+   Randy's book... Boilerplate forms have been set up for you to fill
+   out while reading his book to get a deeper understanding behind these
+   dry forms and worksheets...
 
-   - [ ] *Go to the:* [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u23F1.png]] Tasks: *Binder and do the: 📃 *Synopsis Tasks:*
+   - [ ] Go to the: *⏱ Tasks:* Binder and do the: *📋 Synopsis Tasks:*
 
    - [ ] *After Completing Tasks Mark Them:* ~DONE~
 
    - [ ] *Place Resulting Synopsis in Here:*
 
-         Copy the one-page skeleton from: =Step Three= of Synopsis Tasks
-         to HERE to serve as this books official Synopsis...
+        Copy the one-page skeleton from: =Step Three= of Synopsis
+        Tasks to HERE to serve as this books official Synopsis...
 
    When you are done with these Synopsis tasks, you will have 
-   completed half the battle of writing your technical work! 
+   completed half the battle of writing your technical work!
+   And you will have a pretty good abstract to publish ahead
+   or for book promotions...
+   
    Everything else you write will flow out of that initial seed...
 
    You will be coming back here to consult these notes for many 
@@ -475,6 +528,10 @@ Other folks UX metrics are sorely needed!! Thanks!
    Optionally you may wish to include a *Table of Contents*... 
    However there are automatic ways that =Emacs Org-Mode can configure TOCs= 
    as well...
+
+   =WARNING:= Do NOT Remove the ~#+BEGIN_EXPORT latex~ Directive at the end of
+            this Preface...  It is needed to mark the end of All Front
+            Matter and the Beginning of the Mainmatter of this book...
 :END:
 
 =Preface or Introduction Content:= 
@@ -490,121 +547,10 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
 #+END_EXPORT
 
 * DONE Org-Mode Tricks /(example chapter)/                        :export:
-CLOSED: [2022-12-18 Sun 22:47]
-:LOGBOOK:
-- State "DONE"       from "ACTIVE"     [2022-12-18 Sun 22:47]
-:END:
 <<CHAPTER_org-mode-tricks>>
-:README:
-   *Chapters* are *Top Level Headings* within this *Emacs Org-mode* Book
-   Publishing project... Built in LaTeX memoir styles insure that
-   chapter and scene numbering work without needing any of your
-   input... You only need to insure your anchors are unique!
 
-   =Usage:=
-
-   - [ ] =Clone This:= *NEW Chapter Title:* /(BOILERPLATE)/
-      
-          =Copy ALL its contents= and =paste= it as new sibling
-          directly UNDER any existing chapters allready in place,
-          but ABOVE the BOILERPLATE item it was created from...
-          /(i.e., save your boilerplate template on the bottom/
-          /of the list where it will be copied/cloned again later)/
-
-          =Do this whenever you need to start a new chapter...=
-
-   - [ ] =Commandeer Your New Clone:=
-      
-          The structure of this template is all set up for 
-          you ahead of time to allow you to immediately begin 
-          writing...
-
-          After cloning, rename *Chapter Title:* /(BOILERPLATE)/
-          to a *Unique Title* and remove /(BOILERPLATE)/ in order
-          to commandeer the entire item for your needs...
-
-   - [ ] =Change The Anchor Link=
-
-         Change the anchor /(directly under Chapter Title)/ to match
-         your new chapter's title name...
-         
-         Leave ~CHAPTER_~ as the anchor's prefix... /(as in boilerplate above)/
-         Use dashes to connect words /(all lower case)/ from your title...
-
-         The anchor above may be used to link to this chapter from
-         Research or other sections of this book...
-         
-         /(which may or may not be published as links within eBook)/
-
-   - [ ] =Replace Titles, Anchors, & Content Within This Section=
-
-         Change names to suit your needs, but keep the structure of
-         *Chapter / Sub-Chapter* intact...
-         
-         /(i.e., change titles, anchors, and content only...)/
-
-   - [ ] =Add New Cloned Sub-Chapters as Needed=
-
-         Copy/Clone & Commandeer new Sub-Chapter headings as needed
-         to finish the chapter... Read the *:README:* drawers within
-         Scenes for more info...
-:END:
 ** DONE 📄 Introduction:                                                       :export:
-CLOSED: [2022-12-18 Sun 22:14]
-:LOGBOOK:
-- State "DONE"       from "NEW"        [2022-12-18 Sun 22:14]
-:END:
 <<TOPIC_org-mode-tricks-introduction>>
-:README:
-   Sub Topics are the DNA that make up the chapters in a reference
-   or technical Book... Each new Sub Topic gets its own title or
-   phrase... The LaTeX memoir styles take care of numbering chapters
-   and sub topics for you automatically...
-
-   Chapters may contain several sub topics and sub topics can themselves
-   also have sub sub topics...
-
-   =Usage:=
-
-   - [ ] =Clone This:= *New Sub Topic X:* /(use "Sub Title", etc.)/
-
-         =Copy ALL its contents= and =paste= it as new sibling
-         directly UNDER any existing Sub Topic headings allready in place,
-         but ABOVE the BOILERPLATE item it was created from...
-         
-         /(i.e., save your boilerplate template on the bottom/
-         /of the list where it will be copied/cloned again later)/
-
-         =Do this whenever you need to start a new sub topic...=
-
-   - [ ] =Commandeer Your New Clone:=
-     
-        The structure of this template is all set up for you ahead
-        of time to allow you to immediately begin writing...
-
-        After cloning, rename *New Sub Topic X:*
-        to a *Unique Title* and remove /(boilerplate)/ in order
-        to commandeer the entire item for your needs...
-
-   - [ ] =Change The Anchor Link= /(make it unique)/
-
-         Change the anchor /(directly under the/ *Sub Topic X* /Title)/
-         to match your new Sub Topic title name...
-         
-         Leave ~TOPIC_~ as the anchor's prefix... /(as in boilerplate above)/
-         Use dashes to connect words /(all lower case)/ from your sub
-         topic's title...
-
-         The anchor above may be used to link to this sub topic from
-         Research or other sections of this book...
-
-        /(which may or may not be published as links within eBook)/
-
-   - [ ] This *Sub Topic Template* could ALSO Serve As =CHAPTER INTRODUCTION=
-
-         This is optional if you need one, but its anchor link must be
-         unique! /(i.e., NOT "TOPIC_introduction")/
-:END:
 
 This is a secret Org-Mode Tutorial /(presented here as an EXAMPLE Chapter)/ for a technical book...  Some good tips are in here so you may want to save this somewhere else before removing or re-writing it to use as a chapter within the technical book you have commondeerred this project skeleton for...
 
@@ -613,13 +559,7 @@ In Particular, here are some *Org-Mode publishing tips and snippits* I have foun
 This initial draft only contains Ref Links...  I did a lot of re-configuring of this template to get it looking good when exported to PDF...  I discuss some of the hurdles I ran into getting all this done, /(and the tricks I learned)/ as next sub topics below... That will be done later... /(all in good time)/
 
 ** DONE Org Mode Reference:                                              :export:
-CLOSED: [2022-12-18 Sun 22:38]
 <<TOPIC_org-mode-reference>>
-:LOGBOOK:
-- State "DONE"       from "ACTIVE"     [2022-12-18 Sun 22:38]
-- State "ACTIVE"     from "DONE"       [2022-12-18 Sun 22:01]
-- State "DONE"       from "NEW"        [2022-12-18 Sun 21:59]
-:END:
 :README:
    =Org Mode Links Tip:=
 
@@ -698,183 +638,94 @@ CLOSED: [2022-12-18 Sun 22:38]
 
 + [[https://www.linuxjournal.com/content/org-mode-latex-exporter-latex-non-texers][The org-mode LaTeX exporter: LaTeX for non-TEXers]] - /Article on LINUX Journal/
 
-** New Sub Topic X /(use "Sub Title", NOT "Sub Topic n.1")/      :noexport:
-<<TOPIC_new-sub-topic-x>>
-:README:
-   Sub Topics are the DNA that make up the chapters in a reference
-   or technical Book... Each new Sub Topic gets its own title or
-   phrase... The LaTeX memoir styles take care of numbering chapters
-   and sub topics for you automatically...
-
-   Chapters may contain several sub topics and sub topics can themselves
-   also have sub sub topics...
-
-   =Usage:=
-
-   - [ ] =Clone This:= *New Sub Topic X:* /(use "Sub Title", etc.)/
-
-         =Copy ALL its contents= and =paste= it as new sibling
-         directly UNDER any existing Sub Topic headings allready in place,
-         but ABOVE the BOILERPLATE item it was created from...
-         
-         /(i.e., save your boilerplate template on the bottom/
-         /of the list where it will be copied/cloned again later)/
-
-         =Do this whenever you need to start a new sub topic...=
-
-   - [ ] =Commandeer Your New Clone:=
-     
-        The structure of this template is all set up for you ahead
-        of time to allow you to immediately begin writing...
-
-        After cloning, rename *New Sub Topic X:*
-        to a *Unique Title* and remove /(boilerplate)/ in order
-        to commandeer the entire item for your needs...
-
-   - [ ] =Change The Anchor Link= /(make it unique)/
-
-         Change the anchor /(directly under the/ *Sub Topic X* /Title)/
-         to match your new Sub Topic title name...
-         
-         Leave ~TOPIC_~ as the anchor's prefix... /(as in boilerplate above)/
-         Use dashes to connect words /(all lower case)/ from your sub
-         topic's title...
-
-         The anchor above may be used to link to this sub topic from
-         Research or other sections of this book...
-
-        /(which may or may not be published as links within eBook)/
-
-   - [ ] This *Sub Topic Template* could ALSO Serve As =CHAPTER INTRODUCTION=
-
-         This is optional if you need one, but its anchor link must be
-         unique! /(i.e., NOT "TOPIC_introduction")/
-:END:
-
-=Insert Sub Topic Content Here=
-
-Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo. Fusce tincidunt, lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante.
-
-At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
-
-** New Sub Topic Y /(use "Sub Title", NOT "Sub Topic n.1")/      :noexport:
-<<TOPIC_new-sub-topic-y>>
-:README:
-   Sub Topics are the DNA that make up the chapters in a reference
-   or technical Book... Each new Sub Topic gets its own title or
-   phrase... The LaTeX memoir styles take care of numbering chapters
-   and sub topics for you automatically...
-
-   Chapters may contain several sub topics and sub topics can themselves
-   also have sub sub topics...
-
-   =Usage:=
-
-   - [ ] =Clone This:= *New Sub Topic Y:* /(use "Sub Title", etc.)/
-
-         =Copy ALL its contents= and =paste= it as new sibling
-         directly UNDER any existing Sub Topic headings allready in place,
-         but ABOVE the BOILERPLATE item it was created from...
-         
-         /(i.e., save your boilerplate template on the bottom/
-         /of the list where it will be copied/cloned again later)/
-
-         =Do this whenever you need to start a new sub topic...=
-
-   - [ ] =Commandeer Your New Clone:=
-     
-        The structure of this template is all set up for you ahead
-        of time to allow you to immediately begin writing...
-
-        After cloning, rename *New Sub Topic Y:*
-        to a *Unique Title* and remove /(boilerplate)/ in order
-        to commandeer the entire item for your needs...
-
-   - [ ] =Change The Anchor Link= /(make it unique)/
-
-         Change the anchor /(directly under the/ *Sub Topic Y* /Title)/
-         to match your new Sub Topic title name...
-         
-         Leave ~TOPIC_~ as the anchor's prefix... /(as in boilerplate above)/
-         Use dashes to connect words /(all lower case)/ from your sub
-         topic's title...
-
-         The anchor above may be used to link to this sub topic from
-         Research or other sections of this book...
-
-        /(which may or may not be published as links within eBook)/
-
-   - [ ] This *Sub Topic Template* could ALSO Serve As =CHAPTER INTRODUCTION=
-
-         This is optional if you need one, but its anchor link must be
-         unique! /(i.e., NOT "TOPIC_introduction")/
-:END:
-
-=Insert Sub Topic Content Here=
-
-Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo. Fusce tincidunt, lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante.
-
-At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
-
-** New Sub Topic Z /(use "Sub Title", NOT "Sub Topic n.1")/      :noexport:
+** New Sub Topic Z /(BOILERPLATE - Keep Until Final Draft)/      :noexport:
 <<TOPIC_new-sub-topic-z>>
 :README:
    Sub Topics are the DNA that make up the chapters in a reference
    or technical Book... Each new Sub Topic gets its own title or
-   phrase... The LaTeX memoir styles take care of numbering chapters
-   and sub topics for you automatically...
+   phrase... The LaTeX style configuration for this book template
+   takes care of numbering chapters and sub topics for you
+   automatically...
 
    Chapters may contain several sub topics and sub topics can themselves
    also have sub sub topics...
 
    =Usage:=
 
-   - [ ] =Clone This:= *New Sub Topic Z:* /(use "Sub Title", etc.)/
+   - [ ] =FIRST: Copy Clone This BOILERPLATE= *New Sub Topic Z:*
 
-         =Copy ALL its contents= and =paste= it as new sibling
-         directly UNDER any existing Sub Topic headings allready in place,
-         but ABOVE the BOILERPLATE item it was created from...
-         
-         /(i.e., save your boilerplate template on the bottom/
-         /of the list where it will be copied/cloned again later)/
+        Leave this BOILERPLATE Sub Topic Z in place...
+        
+        =Do NOT CHANGE ITS CONTENT!...=
+        
+        Paste your clone just above it, /(below your existing Sub-Topics)/
+        You new clone will serve as your THIRD, FOURTH, Etc...
+        Sub-Topics for this chapter...
 
-         =Do this whenever you need to start a new sub topic...=
+        =NOTE:= If you know for sure This WILL BE your LAST Sub Topic
+              for this Chapter, =COMMANDEER= This Item Instead of
+              Cloning another Copy above it... In that case YES
+              Change all BOILERPLATE Content within this Item
+              and compose your LAST Topic here...
 
-   - [ ] =Commandeer Your New Clone:=
-     
+   - [ ] =Commandeer Your Clone:= /(or this if it is your last topic)/
+
         The structure of this template is all set up for you ahead
         of time to allow you to immediately begin writing...
 
-        After cloning, rename *New Sub Topic Z:*
-        to a *Unique Title* and remove /(boilerplate)/ in order
-        to commandeer the entire item for your needs...
+        Rename *New Sub Topic Z:* to a *Unique Title* and Replace
+        ALL BOILERPLATE content with Your Specific Topic content
+        for this chapter...
+
+        Change the ~:noexport:~ tag to ~:export:~ for this NEW
+        REAL Sub-Topic so it will show up when publishing drafts...
 
    - [ ] =Change The Anchor Link= /(make it unique)/
 
-         Change the anchor /(directly under the/ *Sub Topic Z* /Title)/
-         to match your new Sub Topic title name...
-         
-         Leave ~TOPIC_~ as the anchor's prefix... /(as in boilerplate above)/
-         Use dashes to connect words /(all lower case)/ from your sub
-         topic's title...
+        Change the ~<<anchor>~ /(directly under the/ *Sub Topic Z* /Title)/
+        to match your new Sub Topic title name...
 
-         The anchor above may be used to link to this sub topic from
-         Research or other sections of this book...
+        =Note:= I created the following conventionfor making unique
+              anchors within ALL of these HAP_Doc-Skeleton.org
+              Template files.
 
-         /(which may or may not be published as links within eBook)/
+              The anchor ~PREFIX_~ is there to match the named sections
+              of a book or document project defined as a standard
+              across ALL of these HAP_Document-Skeleton.org Template
+              files... This will help keep your anchors unique, and
+              also add an extra *KM* dimension of *category* to them...
 
-   - [ ] This *Sub Topic Template* could ALSO Serve As =CHAPTER INTRODUCTION=
+              It would be wise to follow this convention when you
+              create anchors elsewhere within ALL of your Book
+              Projects created from HAP Modular Emacs Document
+              Skeleton Template files...
 
-         This is optional if you need one, but its anchor link must be
-         unique! /(i.e., NOT "TOPIC_introduction")/
+              If you wish to change all of this, go ahead and do
+              what ever you want... For simplicity's sake, follow
+              the instructions below... /(there are automatic ways/
+              /to create links and anchors within org-mode... I/
+              /prefer to do it manually... The alternate is a mess/
+              /IMHO)/
+
+        Leave ~TOPIC_~ as the anchor's prefix... /(as in boilerplate above)/
+        Use dashes to connect words /(all lower case)/ from your sub
+        topic's title...
+
+        The anchor above may be used to link to this sub-topic from
+        Research or other sections of this book...
+
+        /(which may or may not be published as links within eBook)/
 :END:
+
+=BOILERPLATE CONTENT=
 
 =Insert Sub Topic Content Here=
 
 Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo. Fusce tincidunt, lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante.
 
 At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
-** [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4DA.png]] Chapter References:                                                :noexport:
+
+** 📚 Chapter References:                                               :noexport:
 :README:
    =Org Mode Links Tip:=
 
@@ -925,7 +776,7 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
 
 + *Link to Project:* [[][] ] /(comment)/
   
-** [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4DD.png]] Chapter Notes:                                                         :noexport:
+** 📝 Chapter Notes:                                                        :noexport:
 :README:
    *Chapter Notes*, Should be written in =OUTLINE= form to aid in organization
    of events, etc... This section is =NOT the place to create NEW ideas=, 
@@ -974,8 +825,9 @@ but not important for them to also be time-stamped...
 ***** Quid Novi? /(example note sub heading)/
 
 Quid Novi? Lorem Ipsum dolor sit amet,consectetur adipisicing elit, sed doeiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim adminim veniam, quis nostrudexercitation ullamco laboris nisi utaliquip ex ea commodo consequat.Duis aute irure dolor inreprehenderit in coluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatatnon proident, sunt in culpa quiofficia deserunt mollit anim id estlaborum.
-* NEW Chapter Title /(BOILERPLATE clone this)/                       :noexport:
-<<CHAPTER_chapter-title>>
+
+* NEW Chapter Title A /(BOILERPLATE Clone This)/                   :noexport:
+<<CHAPTER_chapter-title-a>>
 :README:
    *Chapters* are *Top Level Headings* within this *Emacs Org-mode* Book
    Publishing project... Built in LaTeX memoir styles insure that
@@ -986,109 +838,154 @@ Quid Novi? Lorem Ipsum dolor sit amet,consectetur adipisicing elit, sed doeiusmo
 
    - [ ] =Clone This:= *NEW Chapter Title:* /(BOILERPLATE)/
 
-          =Copy ALL its contents= and =paste= it as new sibling
-          directly UNDER any existing chapters allready in place,
-          but ABOVE the BOILERPLATE item it was created from...
-          /(i.e., save your boilerplate template on the bottom/
-          /of the list where it will be copied/cloned again later)/
+        =Copy ALL its contents= and =paste= it as new sibling
+        directly UNDER any existing chapters allready in place,
+        but ABOVE the BOILERPLATE item it was created from...
+        /(i.e., save your boilerplate template on the bottom/
+        /of the list where it will be copied/cloned again later)/
 
-          =Do this whenever you need to start a new chapter...=
+        =Do this whenever you need to start a new chapter...=
 
    - [ ] =Commandeer Your New Clone:=
       
-          The structure of this template is all set up for 
-          you ahead of time to allow you to immediately begin 
-          writing...
+        The structure of this template is all set up for 
+        you ahead of time to allow you to immediately begin 
+        writing...
 
-          After cloning, rename *Chapter Title:* /(BOILERPLATE)/
-          to a *Unique Title* and remove /(BOILERPLATE)/ in order
-          to commandeer the entire item for your needs...
+        After cloning, rename *Chapter Title:* /(BOILERPLATE)/
+        to a *Unique Title* and remove /(BOILERPLATE)/ in order
+        to commandeer the entire item for your needs...
 
-          Change the ~:noexport:~ tag to ~:export:~ for this NEW
-          REAL Chapter so it will show up when publishing drafts...
+        Change the ~:noexport:~ tag to ~:export:~ for this NEW
+        REAL Chapter so it will show up when publishing drafts...
 
    - [ ] =Change The Anchor Link=
 
-         Change the anchor /(directly under Chapter Title)/ to match
-         your new chapter's title name...
-         
-         Leave ~CHAPTER_~ as the anchor's prefix... /(as in boilerplate above)/
-         Use dashes to connect words /(all lower case)/ from your title...
+        Change the anchor /(directly under Chapter Title)/ to match
+        your new chapter's title name...
 
-         The anchor above may be used to link to this chapter from
-         Research or other sections of this book...
+        =Note:= I created the following convention for making unique
+              anchors within ALL of these HAP_Doc-Skeleton.org
+              Template files.
+
+              The anchor ~PREFIX_~ is there to match the named sections
+              of a book or document project defined as a standard
+              across ALL of these HAP_Document-Skeleton.org Template
+              files... This will help keep your anchors unique, and
+              also add an extra *KM* dimension of *category* to them...
+
+              It would be wise to follow this convention when you
+              create anchors elsewhere within ALL of your Book
+              Projects created from HAP Modular Emacs Document
+              Skeleton Template files...
+
+              If you wish to change all of this, go ahead and do
+              what ever you want... For simplicity's sake, follow
+              the instructions below... /(there are automatic ways/
+              /to create links and anchors within org-mode... I/
+              /prefer to do it manually... The alternate is a mess/
+              /IMHO)/
+
+        Leave ~CHAPTER_~ as the anchor's prefix... /(as in boilerplate above)/
+        Use dashes to connect words /(all lower case)/ from your title...
+
+        The anchor above may be used to link to this chapter from
+        Research or other sections of this book...
          
-         /(which may or may not be published as links within eBook)/
+        /(which may or may not be published as links within eBook)/
 
    - [ ] =Replace Titles, Anchors, & Content Within This Section=
 
-         Change names to suit your needs, but keep the structure of
-         *Chapter / Sub Topic)* intact...
+        Change names to suit your needs, but keep the structure of
+        *Chapter / Sub Topic)* intact...
          
-         /(i.e., change titles, anchors, and content only...)/
+        /(i.e., change titles, anchors, and content only...)/
 
    - [ ] =Add New Cloned Sub Topics as Needed=
 
-         Copy/Clone & Commandeer new Sub Topics as needed to finish
-         the chapter... Read the *:README:* drawers within Sub Topic
-         Boilerplate Examples for more info...
-:END:
+        Commandeer *Sub Topics X* & *Y* as needed when first starting
+        out on this new chapter... Read the *:README:* drawer under
+        the Sub Topic heading for more info...
 
-** New Sub Topic X /(use "Sub Title", NOT "Sub Topic n.1")/       :noexport:
+        After that, =COPY/CLONE= *New Sub Topic Z* to make more scenes,
+        and leave the original *New Sub Topic Z* in place =AS IS= to
+        be cloned later to make more scenes if & when needed...
+        Read the *:README:* drawer under the Sub Topic heading for
+        more info...
+:END:
+** New Sub Topic X /(COMMANDEER This One)/                           :noexport:
 <<TOPIC_new-sub-topic-x>>
 :README:
+
    Sub Topics are the DNA that make up the chapters in a reference
    or technical Book... Each new Sub Topic gets its own title or
-   phrase... The LaTeX memoir styles take care of numbering chapters
-   and sub topics for you automatically...
+   phrase... The LaTeX style configuration for this book template
+   takes care of numbering chapters and sub topics for you
+   automatically...
 
    Chapters may contain several sub topics and sub topics can themselves
    also have sub sub topics...
 
    =Usage:=
 
-   - [ ] =Clone This:= *New Sub Topic X:* /(use "Sub Title", etc.)/
+   - [ ] =Commandeer This:= *New Sub Topic X:* /(COMMANDEER...)/
 
-         =Copy ALL its contents= and =paste= it as new sibling
-         directly UNDER any existing Sub Topic headings allready in place,
-         but ABOVE the BOILERPLATE item it was created from...
-         
-         /(i.e., save your boilerplate template on the bottom/
-         /of the list where it will be copied/cloned again later)/
+        =Change ALL its contents= to NEW Chapter Sub-Topic content when
+        you are ready to add your FIRST Sub-Topic to this chapter...
 
-         =Do this whenever you need to start a new sub topic...=
-
-   - [ ] =Commandeer Your New Clone:=
-     
         The structure of this template is all set up for you ahead
         of time to allow you to immediately begin writing...
 
-        After cloning, rename *New Sub Topic X:*
-        to a *Unique Title* and remove /(boilerplate)/ in order
-        to commandeer the entire item for your needs...
+        Rename *New Sub Topic X:* to a *Unique Title* and remove
+        /(all boilerplate content)/ in order to commandeer the entire
+        item for your specific needs...
 
         Change the ~:noexport:~ tag to ~:export:~ for this NEW
         REAL Sub-Topic so it will show up when publishing drafts...
 
    - [ ] =Change The Anchor Link= /(make it unique)/
 
-         Change the anchor /(directly under the/ *Sub Topic X* /Title)/
-         to match your new Sub Topic title name...
+        Change the ~<<anchor>~ /(directly under the/ *Sub Topic X* /Title)/
+        to match your new Sub Topic title name...
          
-         Leave ~TOPIC_~ as the anchor's prefix... /(as in boilerplate above)/
-         Use dashes to connect words /(all lower case)/ from your sub
-         topic's title...
+        =Note:= I created the following convention for making unique
+              anchors within ALL of these HAP_Doc-Skeleton.org
+              Template files.
 
-         The anchor above may be used to link to this sub-topic from
-         Research or other sections of this book...
+              The anchor ~PREFIX_~ is there to match the named sections
+              of a book or document project defined as a standard
+              across ALL of these HAP_Document-Skeleton.org Template
+              files... This will help keep your anchors unique, and
+              also add an extra *KM* dimension of *category* to them...
+
+              It would be wise to follow this convention when you
+              create anchors elsewhere within ALL of your Book
+              Projects created from HAP Modular Emacs Document
+              Skeleton Template files...
+
+              If you wish to change all of this, go ahead and do
+              what ever you want... For simplicity's sake, follow
+              the instructions below... /(there are automatic ways/
+              /to create links and anchors within org-mode... I/
+              /prefer to do it manually... The alternate is a mess/
+              /IMHO)/
+         
+        Leave ~TOPIC_~ as the anchor's prefix...
+        /(as in boilerplate anchor above)/ Use dashes to connect
+        words /(all lower case)/ from your sub topic's title...
+
+        The anchor above may be used to link to this sub-topic from
+        Research or other sections of this book...
 
         /(which may or may not be published as links within eBook)/
 
-   - [ ] This *Sub Topic Template* could ALSO Serve As =CHAPTER INTRODUCTION=
+   - [ ] This *Sub Topic X* Template could ALSO Serve As =CHAPTER INTRODUCTION=
 
-         This is optional if you need one, but its anchor link must be
-         unique! /(i.e., NOT "TOPIC_introduction")/
+        This is optional if you need one, but its anchor link must be
+        unique! /(i.e., NOT "TOPIC_introduction")/
 :END:
+
+=BOILERPLATE CONTENT=
 
 =Insert Sub Topic Content Here=
 
@@ -1096,61 +993,74 @@ Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus
 
 At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
 
-** New Sub Topic Y /(use "Sub Title", NOT "Sub Topic n.2")/       :noexport:
+** New Sub Topic Y /(COMMANDEER This One)/                           :noexport:
 <<TOPIC_new-sub-topic-y>>
 :README:
+
    Sub Topics are the DNA that make up the chapters in a reference
    or technical Book... Each new Sub Topic gets its own title or
-   phrase... The LaTeX memoir styles take care of numbering chapters
-   and sub topics for you automatically...
+   phrase... The LaTeX style configuration for this book template
+   takes care of numbering chapters and sub topics for you
+   automatically...
 
    Chapters may contain several sub topics and sub topics can themselves
    also have sub sub topics...
 
    =Usage:=
 
-   - [ ] =Clone This:= *New Sub Topic Y:* /(use "Sub Title", etc.)/
+   - [ ] =Commandeer This:= *New Sub Topic Y:* /(COMMANDEER...)/
 
-         =Copy ALL its contents= and =paste= it as new sibling
-         directly UNDER any existing Sub Topic headings allready in place,
-         but ABOVE the BOILERPLATE item it was created from...
-         
-         /(i.e., save your boilerplate template on the bottom/
-         /of the list where it will be copied/cloned again later)/
+        =Change ALL its contents= to NEW Chapter Sub-Topic content when
+        you are ready to add your SECOND Sub-Topic to this chapter...
 
-         =Do this whenever you need to start a new sub topic...=
-
-   - [ ] =Commandeer Your New Clone:=
-     
         The structure of this template is all set up for you ahead
         of time to allow you to immediately begin writing...
 
-        After cloning, rename *New Sub Topic Y:*
-        to a *Unique Title* and remove /(boilerplate)/ in order
-        to commandeer the entire item for your needs...
+        Rename *New Sub Topic Y:* to a *Unique Title* and remove
+        /(all boilerplate content)/ in order to commandeer the entire item
+        for your specific needs...
 
         Change the ~:noexport:~ tag to ~:export:~ for this NEW
         REAL Sub-Topic so it will show up when publishing drafts...
 
    - [ ] =Change The Anchor Link= /(make it unique)/
 
-         Change the anchor /(directly under the/ *Sub Topic Y* /Title)/
-         to match your new Sub Topic title name...
+        Change the ~<<anchor>~ /(directly under the/ *Sub Topic Y* /Title)/
+        to match your new Sub Topic title name...
          
-         Leave ~TOPIC_~ as the anchor's prefix... /(as in boilerplate above)/
-         Use dashes to connect words /(all lower case)/ from your sub
-         topic's title...
+        =Note:= I created the following convention for making unique
+              anchors within ALL of these HAP_Doc-Skeleton.org
+              Template files.
 
-         The anchor above may be used to link to this sub-topic from
-         Research or other sections of this book...
+              The anchor ~PREFIX_~ is there to match the named sections
+              of a book or document project defined as a standard
+              across ALL of these HAP_Document-Skeleton.org Template
+              files... This will help keep your anchors unique, and
+              also add an extra *KM* dimension of *category* to them...
 
-         /(which may or may not be published as links within eBook)/
+              It would be wise to follow this convention when you
+              create anchors elsewhere within ALL of your Book
+              Projects created from HAP Modular Emacs Document
+              Skeleton Template files...
 
-   - [ ] This *Sub Topic Template* could ALSO Serve As =CHAPTER INTRODUCTION=
+              If you wish to change all of this, go ahead and do
+              what ever you want... For simplicity's sake, follow
+              the instructions below... /(there are automatic ways/
+              /to create links and anchors within org-mode... I/
+              /prefer to do it manually... The alternate is a mess/
+              /IMHO)/
+         
+        Leave ~TOPIC_~ as the anchor's prefix... /(as in boilerplate above)/
+        Use dashes to connect words /(all lower case)/ from your sub
+        topic's title...
 
-         This is optional if you need one, but its anchor link must be
-         unique! /(i.e., NOT "TOPIC_introduction")/
+        The anchor above may be used to link to this sub-topic from
+        Research or other sections of this book...
+
+        /(which may or may not be published as links within eBook)/
 :END:
+
+=BOILERPLATE CONTENT=
 
 =Insert Sub Topic Content Here=
 
@@ -1158,61 +1068,86 @@ Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus
 
 At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
 
-** New Sub Topic Z /(MASTER - keep until Final Draft)/              :noexport:
+** New Sub Topic Z /(BOILERPLATE - Keep Until Final Draft)/     :noexport:
 <<TOPIC_new-sub-topic-z>>
 :README:
    Sub Topics are the DNA that make up the chapters in a reference
    or technical Book... Each new Sub Topic gets its own title or
-   phrase... The LaTeX memoir styles take care of numbering chapters
-   and sub topics for you automatically...
+   phrase... The LaTeX style configuration for this book template
+   takes care of numbering chapters and sub topics for you
+   automatically...
 
    Chapters may contain several sub topics and sub topics can themselves
    also have sub sub topics...
 
    =Usage:=
 
-   - [ ] =Clone This:= *New Sub Topic Z:* /(use "Sub Title", etc.)/
+   - [ ] =FIRST: Copy Clone This BOILERPLATE= *New Sub Topic Z:*
 
-         =Copy ALL its contents= and =paste= it as new sibling
-         directly UNDER any existing Sub Topic headings allready in place,
-         but ABOVE the BOILERPLATE item it was created from...
-         
-         /(i.e., save your boilerplate template on the bottom/
-         /of the list where it will be copied/cloned again later)/
+        Leave this BOILERPLATE Sub Topic Z in place...
+        
+        =Do NOT CHANGE ITS CONTENT!...=
+        
+        Paste your clone just above it, /(below your existing Sub-Topics)/
+        You new clone will serve as your THIRD, FOURTH, Etc...
+        Sub-Topics for this chapter...
 
-         =Do this whenever you need to start a new sub topic...=
+        =NOTE:= If you know for sure This WILL BE your LAST Sub Topic
+              for this Chapter, =COMMANDEER= This Item Instead of
+              Cloning another Copy above it... In that case YES
+              Change all BOILERPLATE Content within this Item
+              and compose your LAST Topic here...
 
-   - [ ] =Commandeer Your New Clone:=
-     
+   - [ ] =Commandeer Your Clone:= /(or this if it is your last topic)/
+
         The structure of this template is all set up for you ahead
         of time to allow you to immediately begin writing...
 
-        After cloning, rename *New Sub Topic Z:*
-        to a *Unique Title* and remove /(boilerplate)/ in order
-        to commandeer the entire item for your needs...
+        Rename *New Sub Topic Z:* to a *Unique Title* and Replace
+        ALL BOILERPLATE content with Your Specific Topic content
+        for this chapter...
 
         Change the ~:noexport:~ tag to ~:export:~ for this NEW
         REAL Sub-Topic so it will show up when publishing drafts...
 
    - [ ] =Change The Anchor Link= /(make it unique)/
 
-         Change the anchor /(directly under the/ *Sub Topic Z* /Title)/
-         to match your new Sub Topic title name...
+        Change the _<<anchor>_ /(directly under your renamed/ *Topic* /heading)/
+        to match your new renamed Sub Topic title...
+
+        =Note:= I created the following convention for making unique
+              anchors within ALL of these HAP_Doc-Skeleton.org
+              Template files.
+
+              The anchor ~PREFIX_~ is there to match the named sections
+              of a book or document project defined as a standard
+              across ALL of these HAP_Document-Skeleton.org Template
+              files... This will help keep your anchors unique, and
+              also add an extra *KM* dimension of *category* to them...
+
+              It would be wise to follow this convention when you
+              create anchors elsewhere within ALL of your Book
+              Projects created from HAP Modular Emacs Document
+              Skeleton Template files...
+
+              If you wish to change all of this, go ahead and do
+              what ever you want... For simplicity's sake, follow
+              the instructions below... /(there are automatic ways/
+              /to create links and anchors within org-mode... I/
+              /prefer to do it manually... The alternate is a mess/
+              /IMHO)/
          
-         Leave ~TOPIC_~ as the anchor's prefix... /(as in boilerplate above)/
-         Use dashes to connect words /(all lower case)/ from your sub
-         topic's title...
+        Leave ~TOPIC_~ as the anchor's prefix... /(as in boilerplate above)/
+        Use dashes to connect words /(all lower case)/ from your sub
+        topic's title...
 
-         The anchor above may be used to link to this sub-topic from
-         Research or other sections of this book...
+        The anchor above may be used to link to this sub-topic from
+        Research or other sections of this book...
 
-         /(which may or may not be published as links within eBook)/
-
-   - [ ] This *Sub Topic Template* could ALSO Serve As =CHAPTER INTRODUCTION=
-
-         This is optional if you need one, but its anchor link must be
-         unique! /(i.e., NOT "TOPIC_introduction")/
+        /(which may or may not be published as links within the PDF)/
 :END:
+
+=BOILERPLATE CONTENT=
 
 =Insert Sub Topic Content Here=
 
@@ -1220,7 +1155,7 @@ Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus
 
 At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
 
-** [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4DA.png]] Chapter References:                                               :noexport:
+** 📚 Chapter References:                                               :noexport:
 :README:
    =Org Mode Links Tip:=
 
@@ -1271,7 +1206,7 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
 
 + *Link to Project:* [[][] ] /(comment)/
 
-** [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4DD.png]] Chapter Notes:                                                        :noexport:
+** 📝 Chapter Notes:                                                        :noexport:
 :README:
    *Chapter Notes*, Should be written in =OUTLINE= form to aid in organization
    of events, etc... This section is =NOT the place to create NEW ideas=, 
@@ -1315,139 +1250,200 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
 Each new note needs to get its own heading and initial timestamp...
 
 It is fine to make as many sub-headings as needed for these notes
-but not important for them to also be time-stamped...
+but not so important for them to also be time-stamped since their parent heading is... /(unless of course you have a reason)/
 
 ***** Quid Novi? /(example note sub heading)/
 
 Quid Novi? Lorem Ipsum dolor sit amet,consectetur adipisicing elit, sed doeiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim adminim veniam, quis nostrudexercitation ullamco laboris nisi utaliquip ex ea commodo consequat.Duis aute irure dolor inreprehenderit in coluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatatnon proident, sunt in culpa quiofficia deserunt mollit anim id estlaborum.
 
-* NEW Chapter Title /(MASTER - keep until Final Draft)/            :export:
-<<CHAPTER_chapter-title>>
+* NEW Chapter Title Z /(MASTER - DON'T TOUCH UNTIL FINAL)/        :export:
+<<CHAPTER_chapter-title-z>>
 :README:
 
-   =Usage:= *This is the MASTER Chapter Reserved for LAST*
+   =Usage:= *This is the MASTER CHAPTER Reserved for LAST*
 
    - [ ] =This item is BOILERPLATE= /(DON'T MESS with IT until THE END)/
 
-         Do Not use this MASTER CHAPTER while you are writing
-         your book... =KEEP IT LAST= in your list of *Chapter Headings*...
-         Keep This Item set to ~:export:~ for all drafts...
+        Do Not use this MASTER CHAPTER while you are writing
+        your book... =KEEP IT LAST= in your list of *Chapter Headings*...
+        Keep This Item set to ~:export:~ for all drafts...
 
-         =COMMANDEER= This item /(changing the title etc.)/ as the
-         very last chapter in your book /(Once you know that/
-         /for sure)/... The *NEW Sub Topic Z* sub-heading contains
-         LaTeX directives starting ~\backmatter~...
+        This Item contains LaTeX directives designating the end of
+        the Book Proper, /i.e. the end of/ ~\mainmatter~ and the start
+        of Appendix, Index, etc... /i.e.,/ ~\backmatter~
 
-         Therefore if another chapter were to be placed AFTER
-         this item, it would show up as a NEW section outside
-         of the book proper!!
+        =Warning:= /If another chapter were to be placed AFTER this item,/
+                 /it would show up as a NEW section outside of the book/
+                 /proper!! NOT what you want!/
 
-   - [ ] =Commandeer This as LAST CHAPTER OF YOUR BOOK:=
+        =Therefore This:= *Chapter Title Z* =Must Remain In Place AS IS=
+        throughout the duration of your project until you reach Final
+        Draft stage...
 
-         The structure of this BOILERPLATE is all set up for 
-         you allowing you to immediately begin writing it as
-         your very LAST chapter in your book...
+        *When That Time Comes, Do The Rest Of The Steps Below:*
 
-         Rename *Chapter Title: /(MASTER - keep until Final Draft)
-         to a *Unique Title* and remove /(MASTER - etc.)/ in order
-         to commandeer the entire item for your needs...
+   - [ ] =Commandeer This Item as The LAST CHAPTER OF YOUR BOOK:=
+
+        =COMMANDEER= This item /(changing the title etc.)/ as the
+        very last chapter in your book /(Once you know that/
+        /for sure)/... The *NEW Sub Topic Z* sub-heading contains
+        LaTeX directives starting ~\backmatter~... Everyting After
+        This chapter is BACKMATTER, /(e.g., Appendix, Index, etc...)/
+
+        The structure of this BOILERPLATE is all set up for 
+        you allowing you to immediately begin writing it as
+        your very LAST chapter in your book...
+
+        Rename *Chapter Title Z:* /(MASTER - etc...)/ to a *Unique Title*
+        and remove /(MASTER - etc...)/ in order to commandeer the
+        entire item for your needs...
 
    - [ ] =Change The Anchor Link=
 
-         Change the anchor /(directly under Chapter Title)/ to match
-         your new chapter's title name...
+        Change the anchor /(directly under the Chapter Title)/ to
+        match your new chapter's title name...
          
-         Leave ~CHAPTER_~ as the anchor's prefix... /(as in boilerplate above)/
-         Use dashes to connect words /(all lower case)/ from your title...
+        =Note:= I created the following convention for making unique
+              anchors within ALL of these HAP_Doc-Skeleton.org
+              Template files.
 
-         The anchor above may be used to link to this chapter from
-         Research or other sections of this book...
+              The anchor ~PREFIX_~ is there to match the named sections
+              of a book or document project defined as a standard
+              across ALL of these HAP_Document-Skeleton.org Template
+              files... This will help keep your anchors unique, and
+              also add an extra *KM* dimension of *category* to them...
+
+              It would be wise to follow this convention when you
+              create anchors elsewhere within ALL of your Book
+              Projects created from HAP Modular Emacs Document
+              Skeleton Template files...
+
+              If you wish to change all of this, go ahead and do
+              what ever you want... For simplicity's sake, follow
+              the instructions below... /(there are automatic ways/
+              /to create links and anchors within org-mode... I/
+              /prefer to do it manually... The alternate is a mess/
+              /IMHO)/
          
-         /(which may or may not be published as links within eBook)/
+        Leave ~CHAPTER_~ as the anchor's prefix...
+        /(as in boilerplate above).../ Use dashes to connect words
+        /(all lower case)/ from your title...
 
-   - [ ] =Replace Titles, Anchors, & Content Within This Section=
-
-         Change names to suit your needs, but keep the structure of
-         *Chapter / Sub Topic)* intact...
+        The anchor above may be used to link to this chapter from
+        Research or other sections of this book...
          
-         /(i.e., change titles, anchors, and content only...)/
+        /(which may or may not be published as links within eBook)/
+
+   - [ ] =Replace ALL BOILERPLATE Content Within This CHAPTER=
+
+        *Add Your Content:* Paragraphs, Sub Headings, Lists, Tables,
+        Figures, Images, etc...
+
+        =Keep the Structure Of:= *Chapter / Sub Topic)* =Intact...=
+
+        Anything you do under *Sub Topic* Level will be automatically
+        handled during export...
+
+        =Note:= /You May Wish to Add your own Anchors under any headings/
+              /you created below/ *Sub Topic* /Level... Make them Unique!/
+              /You can also employ LaTeX Inline Properties to get/
+              /special items looking nice.../
 
    - [ ] =Add New Cloned Sub Topics as Needed=
 
-         Copy/Clone & Commandeer new Sub Topics as needed to finish
-         the chapter... Read the *:README:* drawers within Sub Topic
-         Boilerplate Examples for more info...
+        Copy/Clone & Commandeer new Sub Topics as needed to finish
+        the chapter... Read the *:README:* drawers within Sub Topic
+        Boilerplate Examples for more info...
 
-   - [ ] =Make Sure= *New Sub Topic Z:* /(below)/ is commandeered as =LAST SCENE=
+   - [ ] =Make Sure= *New Sub Topic Z:* /(below)/ Is COMMANDEERED as =LAST TOPIC=
 
-         The *New Sub Topic Z:* contains LaTeX directive:
-         ~\backmatter~ and ~\appendix~ which means it MUST Be
-         placed as the LAST Scene of your BOOK proper...
+        The *New Sub Topic Z:* heading contains LaTeX directive:
+        ~\backmatter~ and ~\appendix~ which means it MUST Be
+        placed as the LAST Topic of your BOOK proper...
 
-         The LaTeX directive at the end of *Sub Topic Z*
-         /(or title you change it to)/ must be left =as is= when
-         you are commandeering the scene to fit in as the last
-         scene in your book...
+        The LaTeX directive at the end of *New Sub Topic Z*
+        /(or title you change it to)/ must be left =AS IS= when
+        you are commandeering the Topic to fit in as the last
+        scene in your book...
 
-         Do NOT touch Sub Topic Z until you are ready, and leave
-         it tagged for ~:export:~ containing LaTeX directives, no
-         matter what...
+        Do NOT touch *Sub Topic Z* until you are ready, and leave
+        it tagged for ~:export:~ containing LaTeX directives, no
+        matter what...
 :END:
-** New Sub Topic X /(use "Sub Title", NOT "Sub Topic n.1")/       :noexport:
+** New Sub Topic X /(COMMANDEER This One)/                             :noexport:
 <<TOPIC_new-sub-topic-x>>
 :README:
+
    Sub Topics are the DNA that make up the chapters in a reference
    or technical Book... Each new Sub Topic gets its own title or
-   phrase... The LaTeX memoir styles take care of numbering chapters
-   and sub topics for you automatically...
+   phrase... The LaTeX style configuration for this book template
+   takes care of numbering chapters and sub topics for you
+   automatically...
 
    Chapters may contain several sub topics and sub topics can themselves
    also have sub sub topics...
 
    =Usage:=
 
-   - [ ] =Clone This:= *New Sub Topic X:* /(use "Sub Title", etc.)/
+   - [ ] =Commandeer This:= *New Sub Topic X:* /(COMMANDEER...)/
 
-         =Copy ALL its contents= and =paste= it as new sibling
-         directly UNDER any existing Sub Topic headings allready in place,
-         but ABOVE the BOILERPLATE item it was created from...
-         
-         /(i.e., save your boilerplate template on the bottom/
-         /of the list where it will be copied/cloned again later)/
+        =Change ALL its contents= to NEW Chapter Sub-Topic content when
+        you are ready to add your FIRST Sub-Topic to this chapter...
 
-         =Do this whenever you need to start a new sub topic...=
-
-   - [ ] =Commandeer Your New Clone:=
-     
         The structure of this template is all set up for you ahead
         of time to allow you to immediately begin writing...
 
-        After cloning, rename *New Sub Topic X:*
-        to a *Unique Title* and remove /(boilerplate)/ in order
-        to commandeer the entire item for your needs...
+        Rename *New Sub Topic X:* to a *Unique Title* and remove
+        /(all boilerplate content)/ in order to commandeer the entire
+        item for your specific needs...
 
         Change the ~:noexport:~ tag to ~:export:~ for this NEW
         REAL Sub-Topic so it will show up when publishing drafts...
 
    - [ ] =Change The Anchor Link= /(make it unique)/
 
-         Change the anchor /(directly under the/ *Sub Topic X* /Title)/
-         to match your new Sub Topic title name...
-         
-         Leave ~TOPIC_~ as the anchor's prefix... /(as in boilerplate above)/
-         Use dashes to connect words /(all lower case)/ from your sub
-         topic's title...
+        Change the ~<<anchor>~ /(directly under your/ *Sub Topic X* /heading)/
+        to match your new renamed Sub Topic title...
 
-         The anchor above may be used to link to this sub-topic from
-         Research or other sections of this book...
+        =Note:= I created the following convention for making unique
+              anchors within ALL of these HAP_Doc-Skeleton.org
+              Template files.
 
-        /(which may or may not be published as links within eBook)/
+              The anchor ~PREFIX_~ is there to match the named sections
+              of a book or document project defined as a standard
+              across ALL of these HAP_Document-Skeleton.org Template
+              files... This will help keep your anchors unique, and
+              also add an extra *KM* dimension of *category* to them...
+
+              It would be wise to follow this convention when you
+              create anchors elsewhere within ALL of your Book
+              Projects created from HAP Modular Emacs Document
+              Skeleton Template files...
+
+              If you wish to change all of this, go ahead and do
+              what ever you want... For simplicity's sake, follow
+              the instructions below... /(there are automatic ways/
+              /to create links and anchors within org-mode... I/
+              /prefer to do it manually... The alternate is a mess/
+              /IMHO)/
+
+        Leave ~TOPIC_~ as the anchor's prefix...
+        /(as in boilerplate anchor above)/ Use dashes to connect
+        words /(all lower case)/ from your sub topic's title...
+
+        The anchor above may be used to link to this sub topic from
+        *Research* or other sections of this project...
+        /(Or even from/ ~.org~ /docs OUTSIDE of this file...)/
+
+        /(which may or may not be published as links within the PDF)/
 
    - [ ] This *Sub Topic Template* could ALSO Serve As =CHAPTER INTRODUCTION=
 
-         This is optional if you need one, but its anchor link must be
-         unique! /(i.e., NOT "TOPIC_introduction")/
+        This is optional if you need one, but its anchor link must be
+        unique! /(i.e., NOT "TOPIC_introduction")/
 :END:
+
+=BOILERPLATE CONTENT=
 
 =Insert Sub Topic Content Here=
 
@@ -1455,61 +1451,89 @@ Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus
 
 At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
 
-** New Sub Topic Y /(use "Sub Title", NOT "Sub Topic n.2")/       :noexport:
+** New Sub Topic Y /(COPY/CLONE This One)/                             :noexport:
 <<TOPIC_new-sub-topic-y>>
 :README:
+
    Sub Topics are the DNA that make up the chapters in a reference
    or technical Book... Each new Sub Topic gets its own title or
-   phrase... The LaTeX memoir styles take care of numbering chapters
-   and sub topics for you automatically...
+   phrase... The LaTeX style configuration for this book template
+   takes care of numbering chapters and sub topics for you
+   automatically...
 
    Chapters may contain several sub topics and sub topics can themselves
    also have sub sub topics...
 
    =Usage:=
 
-   - [ ] =Clone This:= *New Sub Topic Y:* /(use "Sub Title", etc.)/
+   - [ ] =FIRST: Copy Clone This BOILERPLATE= *New Sub Topic Y:*
 
-         =Copy ALL its contents= and =paste= it as new sibling
-         directly UNDER any existing Sub Topic headings allready in place,
-         but ABOVE the BOILERPLATE item it was created from...
-         
-         /(i.e., save your boilerplate template on the bottom/
-         /of the list where it will be copied/cloned again later)/
+        Leave this BOILERPLATE *New Sub Topic Y* in place Until you No Longer
+        Have any more Sub Topics to write for this chapter.
 
-         =Do this whenever you need to start a new sub topic...=
+        =Do NOT CHANGE ITS CONTENT!...=
+        
+        Paste your clone just above it, /(below your existing Sub-Topics)/
+        Your new clone will serve as your SECOND, THIRD, FOURTH, Etc...
+        Sub-Topics for this chapter...
 
-   - [ ] =Commandeer Your New Clone:=
-     
-        The structure of this template is all set up for you ahead
-        of time to allow you to immediately begin writing...
-
-        After cloning, rename *New Sub Topic Y:*
-        to a *Unique Title* and remove /(boilerplate)/ in order
-        to commandeer the entire item for your needs...
+        After cloning, rename *New Sub Topic Y:* to a *Unique Title*
+        and and Replace ALL BOILERPLATE content with Your Specific
+        topic content for this chapter...
 
         Change the ~:noexport:~ tag to ~:export:~ for this NEW
         REAL Sub-Topic so it will show up when publishing drafts...
 
+        =Do this whenever you need to start a new sub topic...=
+
+        =NOTE:= If you know for sure what your SECOND to LAST Sub Topic
+              is, =COMMANDEER= This Item Instead of Copy/Clone...
+
+        Otherwise, Once you know you are ready to start your LAST Sub
+        Topic in this chapter, DELETE THIS: *New Sub Topic Y* Heading
+        and all content... It is no longer needed...
+        
+        /(i.e., Time to Commandeer/ *New Sub Topic Z* /as your LAST Sub Topic)/
+
    - [ ] =Change The Anchor Link= /(make it unique)/
 
-         Change the anchor /(directly under the/ *Sub Topic Y* /Title)/
-         to match your new Sub Topic title name...
-         
-         Leave ~TOPIC_~ as the anchor's prefix... /(as in boilerplate above)/
-         Use dashes to connect words /(all lower case)/ from your sub
-         topic's title...
+        Change the ~<<anchor>~ /(directly under your renamed sub topic heading)/
+        to match your new renamed sub topic title...
 
-         The anchor above may be used to link to this sub-topic from
-         Research or other sections of this book...
+        =Note:= I created the following convention for making unique
+              anchors within ALL of these HAP_Doc-Skeleton.org
+              Template files.
 
-         /(which may or may not be published as links within eBook)/
+              The anchor ~PREFIX_~ is there to match the named sections
+              of a book or document project defined as a standard
+              across ALL of these HAP_Document-Skeleton.org Template
+              files... This will help keep your anchors unique, and
+              also add an extra *KM* dimension of *category* to them...
 
-   - [ ] This *Sub Topic Template* could ALSO Serve As =CHAPTER INTRODUCTION=
+              It would be wise to follow this convention when you
+              create anchors elsewhere within ALL of your Book
+              Projects created from HAP Modular Emacs Document
+              Skeleton Template files...
 
-         This is optional if you need one, but its anchor link must be
-         unique! /(i.e., NOT "TOPIC_introduction")/
+              If you wish to change all of this, go ahead and do
+              what ever you want... For simplicity's sake, follow
+              the instructions below... /(there are automatic ways/
+              /to create links and anchors within org-mode... I/
+              /prefer to do it manually... The alternate is a mess/
+              /IMHO)/
+
+        Leave ~TOPIC_~ as the anchor's prefix... /(as in boilerplate above)/
+        Use dashes to connect words /(all lower case)/ from your sub
+        topic's title...
+
+        The anchor above may be used to link to this sub-topic from
+        Research or other sections of this book... /(Or even from/
+        ~.org~ /docs OUTSIDE of this file...)/
+
+        /(which may or may not be published as links within the PDF)/
 :END:
+
+=BOILERPLATE CONTENT=
 
 =Insert Sub Topic Content Here=
 
@@ -1517,51 +1541,79 @@ Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus
 
 At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
 
-** New Sub Topic Z /(MASTER - keep until Final Draft)/              :export:
+** New Sub Topic Z /(BOILERPLATE - keep until Final Draft)/       :export:
 <<TOPIC_new-sub-topic-z>>
 :README:
    This FINAL *New Sub Topic Z:* sub-title contains LaTeX directive:
    ~\backmatter~ and ~\appendix~ which means it =MUST Be placed= as
-   the =LAST SUB TOPIC of your BOOK proper=...
+   the =LAST SUB TOPIC of your BOOK proper ALWAYS=...
 
    The LaTeX directive at the end of *Sub Topic Z* /(or title/ /you/
-   /change it to)/ must be left =as is= when you are commandeering
+   /change it to)/ must be left =AS IS= when you are commandeering
    the sub-topic to fit in as the last one in your book...
 
    Do NOT touch this special Sub Topic Z until you are ready,
    and leave it tagged for ~:export:~ containing LaTeX directives,
-   no matter what allways...
+   no matter what ALWAYS...
+
+   =DO NOT DELETE THIS ITEM - CHANGE IT's CONTENT INSTEAD=
 
    =Usage:=
 
    - [ ] =Make Sure= *New Sub Topic Z:* is commandeered =LAST=
 
-         This Sub Topic MUST Be placed and appear as the LAST
-         Sub Topic in the LAST Chapter of your BOOK proper...
+        This Sub Topic MUST Be placed and appear as the LAST
+        Sub Topic in the LAST Chapter of your BOOK proper...
 
    - [ ] =Commandeer Sub Topic Z when you are READY:=
      
         The structure of this template is all set up for you ahead
         of time to allow you to immediately begin writing...
 
-        Rename *New Sub Topic Z:* /(MASTER - etc.)/
-        to a *Unique Title* and remove /(boilerplate)/ in order
-        to commandeer the entire item for your needs...
+        Rename *New Sub Topic Z:* /(BOILERPLATE - etc.)/
+        to a *Unique Title* and replace ALL BOILERPLATE with your
+        own content in order to commandeer the entire item for
+        your specific needs...
 
    - [ ] =Change The Anchor Link= /(make it unique)/
 
-         Change the anchor /(directly under Sub Topic Title)/ to match
-         your new Sub Topic title name...
+        Change the anchor directly under your renamed sub topic heading
+        to match your renamed sub topic title...
+
+        =Note:= I created the following convention for making unique
+              anchors within ALL of these HAP_Doc-Skeleton.org
+              Template files.
+
+              The anchor ~PREFIX_~ is there to match the named sections
+              of a book or document project defined as a standard
+              across ALL of these HAP_Document-Skeleton.org Template
+              files... This will help keep your anchors unique, and
+              also add an extra *KM* dimension of *category* to them...
+
+              It would be wise to follow this convention when you
+              create anchors elsewhere within ALL of your Book
+              Projects created from HAP Modular Emacs Document
+              Skeleton Template files...
+
+              If you wish to change all of this, go ahead and do
+              what ever you want... For simplicity's sake, follow
+              the instructions below... /(there are automatic ways/
+              /to create links and anchors within org-mode... I/
+              /prefer to do it manually... The alternate is a mess/
+              /IMHO)/
          
-         Leave ~TOPIC_~ as the anchor's prefix... /(as in boilerplate above)/
-         Use dashes to connect words /(all lower case)/ from your Sub
-         Topic's title...
+        Leave ~TOPIC_~ as the anchor's prefix... /(as in boilerplate above)/
+        Use dashes to connect words /(all lower case)/ from your
+        sub-topic's title...
 
-         The anchor above may be used to link to this sub-topic from
-         Research or other sections of this book...
+        The anchor above may be used to link to this sub-topic from
+        Research or other sections of this book... /(Or even from/
+        ~.org~ /docs OUTSIDE of this file...)/
 
-         /(which may or may not be published as links within eBook)/
+        /(which may or may not be published as links within the PDF)/
 :END:
+
+=BOILERPLATE CONTENT=
 
 =Insert Sub Topic Content Here=
 
@@ -1578,7 +1630,7 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
 \appendix
 #+END_EXPORT
 
-** [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4DA.png]] Chapter References:                                               :noexport:
+** 📚 Chapter References:                                               :noexport:
 :README:
    =Org Mode Links Tip:=
 
@@ -1629,7 +1681,7 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
 
 + *Link to Project:* [[][] ] /(comment)/
 
-** [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4DD.png]] Chapter Notes:                                                        :noexport:
+** 📝 Chapter Notes:                                                        :noexport:
 :README:
    *Chapter Notes*, Should be written in =OUTLINE= form to aid in organization
    of events, etc... This section is =NOT the place to create NEW ideas=, 
@@ -1695,7 +1747,58 @@ Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus
 
 At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
 
-* 🔍 Research:                                                       :noexport:
+* 🔍 Research:                                                         :noexport:
+** 📚 Research Reference:                                              :noexport:
+:README:
+   =Org Mode Links Tip:=
+
+      + To Create a Link Type: ~C-c C-l~ 
+         /(then paste: ~link~ & type: "description")/
+
+         =-OR-= Simply Copy/Paste BOILERPLATE:
+              /(use placeholders below)/
+              And Fill Them In Manually... 
+              Copy/Paste more placeholders as
+              needed to create more links...
+
+      + To Open a Link Type: ~C-c C-o~
+
+      + To EXPAND a Link Type: ~SPACE b~
+         or: ~M-x org-toggle-link-display~
+
+   =BOILERPLATE:= /(clone to add more ref links)/
+
+   + *Heading:* [[link][Link NAME] ] /(comment)/
+
+   + [[link][Link Name] ] *Heading:* /(comment)/
+   
+   + *_:* [[][] ] /(yadda... yadda... yadda...)/
+
+   + [[][] ] /(_)/
+
+   + [[junk][JUNK]]  /(This is a stupid BUG workaround/ /for org-mode link/
+         /expansion/compression... If you invoke:/ ~org-toggle-link-display~
+         /you will notice this JUNK link DOES NOT compress to a clickable/
+         /link title alone.../
+         
+         /I am not sure if this is due to my Emacs Config or a bug within/
+         *Org-Mode* /itself.../
+
+         /I put this workaround in here because if it is not here,/
+         /SOME of your external file links created below may not/
+         /compress after expansion, even though thy are GOOD links!/
+
+         /Leaving this JUNK link in here acts like a scapegoat/
+         /so that your real links below will all compress/expand/
+         /normally... I am NOT SURE WHY THIS WORKS??? I'm to busy/
+         /to do anything beyond hacking at this point.../
+         
+         ~org-lint~ /will detect JUNK above... Ignore that warning.../
+                  /It's my "METHOD of MADNESS" %^)/
+:END:
+
++ *Link to Project:* [[][] ] /(comment)/
+
 ** 💡 New Topic Ideas:
 :README:
    Use this space to add new topic ideas that come up as you are
@@ -1715,15 +1818,11 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
 later... You will know anything set to ~:ACTIVE:~ within this binder needs to
 be worked on.
 
- 
-
 *** NEW 💡 New Topic /(clone this)/
 
 At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
 
- 
-
-** 📒 Yak Shaving:
+** 🐃 Yak Shaving:
 :README:
    =What is Yak Shaving doing in your Research Folder?= Just as the name 
    implies, this is a place that may have no business being in your book, 
@@ -1751,23 +1850,19 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
    section may end up in this *Yak Shaving* section later when you are 
    ready to organize things further... /(after inspiration)/
 :END:
-*** NEW Yak Shaving Heading One:
+*** NEW 🐃 Yak Shaving Heading One:
 
 Note: This is an example of some documentation or research you need to do, the result of which will not be included in your book but will be used as a resource necessary for the creation and or publishing of your book... Add what you need here... 
 
 Use this section's top level heading outline structure.. Create sub-level headings as needed for your purposes...
 
- 
-
-*** NEW Yak Shaving Heading Two:
+*** NEW 🐃 Yak Shaving Heading Two:
 
 Note: This is an example of some documentation or research you need to do, the result of which will not be included in your book but will be used as a resource necessary for the creation and or publishing of your book... Add what you need here... 
 
 Use this section's top level heading outline structure.. Create sub-level headings as needed for your purposes...
 
- 
-
-*** NEW Add more yak shaving headings as needed:
+*** NEW 🐃 Add more yak shaving headings as needed:
 
 Duplicate the top level Outline above to create more headings here as needed... 
 
@@ -1775,9 +1870,7 @@ Create sub-level outlines below each heading as needed for your purposes.
 
 Anything goes here... You can make this into what ever you want..
 
- 
-
-* 🗓 LOGS:                                                             :noexport:
+* 🗓 LOGS:                                                               :noexport:
 :README:
    Use this space to add time stamped log note entries for any 
    pourpose you may need while you are planning, writing, or 
@@ -2161,18 +2254,16 @@ The following list contains Babel Source Code Blocks that are often needed for s
 
 =ADD a NEW Items= /(as per :README: above)/ when 2023 rolls around, right here in this Log Book Binder whenever you need to create a new Log Entry...
 
-* [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u23F1.png]] TASKS:                                                            :noexport:
+* ⏱ TASKS:                                                             :noexport:
 :README:
-   This *TASKS* Binder is similar to the *🗓 LOGS:* Binder...
-   However, log entries are research activities... while tasks are
-   more General and relate to this ENTIRE Book Project as a whole...
+   This *⏱ Tasks* Binder is similar to the *🗓 LOGS:* Binder...
 
    - *Use this Section to* =ADD TIME STAMPED TASKS= *for any pourpose*
 
-      + Create More *⏱ Tasks:* =Sub Categories= as needed...
+      + Create More *📋 Tasks:* =Sub Categories= as needed...
 
       + Create More *⏱ New Task:* =Entries= under =Sub Categories= 
-         as needed during the development of your Book Project...
+         as needed during the development of your Project...
 
          Use the Supplied: *⏱* <2022-08-25 Thu> *New Task:* /(Master Template)/ 
          from the *⎘ Templates:* Section within the *⎘ Meta:* Binder to easily 
@@ -2196,7 +2287,7 @@ The following list contains Babel Source Code Blocks that are often needed for s
    how to properly organize and write your books with a clearer mind, 
    inspired outlook, and renewed motivation...
 :END:
-** 📃 Synopsis Tasks:
+** 📋 Synopsis Tasks:
 :README:
    =Do These Synopsis Tasks FIRST When Starting a NEW Tech Book Project=
 
@@ -2401,16 +2492,12 @@ No one claims this to be an absolute ideal structure, but it's the one that Rand
    encouragement and also challenge for your readers to read 
    this book to discover more.
 
- 
-
 **** Using Your One-Paragraph Summary:
 
 You will be using this paragraph in your proposals. It is only for your agents etc.  Not for your readers who need to be kept in the dark about 
 too many details until they read the book...
 
 =However=, Some of this paragraph /(written with parts pourposefully left out or with questions put in place)/ may end up back-cover copy for your book's promotion.
-
- 
 
 *** NEW ⏱ <2022-08-25 Thu> Step Three - Expand Paragraph to Synopsis:
 
@@ -2433,7 +2520,7 @@ Your process now is to grow these ideas as individual chapters and topics.  You 
       completed half the battle of writing your technical work! 
       Everything else you write will flow out of that initial seed...
 
-** ⏱ Other Tasks:
+** 📋 Other Tasks:
 *** SOMEDAY ⏱ <2022-08-28 Sun> Create Editorial Calendar
 
 =Note:= This is Still Under Construction... I am researching the 
@@ -2445,14 +2532,14 @@ Make an *Editorial* for this project! You will need this for quick access during
 Use this space to design your *EC* and then transfer it as a New Top Level
 Binder of this Book Project...
 
-* [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F5C2.png]] Meta: /(templates etc.)/                                          :noexport:
-** 📄 About:
+* 🗂 Meta: /(templates etc.)/                                           :noexport:
+** 📃 About:
 
 This =Meta= section provides skeleton templates for use within your project(s).  Any sub heading under this Meta: group can be utilized by copy-pasting the collapsed heading into any of your existing project sections (i.e., making a clone anywhere you need to create a new section based on the template's structure)... 
 
 Or... You could try mashing several cloned templates together to create a totally new project heading with a totally different structure... The intent of this is to save lots of time starting up a new custom writing project.  Lets see if it helps...
 
-** 📄 Instructions:
+** 📕 Instructions:
 
 - [ ] *Choose One Of The Templates Below And Copy It:*
 
@@ -2472,7 +2559,7 @@ Or... You could try mashing several cloned templates together to create a totall
         /but you may wish to further qualify them by adding/ 
         /a prefixed category word.)/
         
-*** ☞ Reference:
+** 📚 Meta Reference:
 :README:
    =Org Mode Links Tip:=
 
@@ -2693,7 +2780,7 @@ This Log Entry is about: Yadda... Yadda... Yadda...
                   /It's my "METHOD of MADNESS" %^)/
 :END:
 
-☞ *Link to Project:* [[][] ] /(comment)/
+☞ *Link to Project, etc.* [[][] ] /(comment)/
 
 **** NEW ⏰ Time Card:
 

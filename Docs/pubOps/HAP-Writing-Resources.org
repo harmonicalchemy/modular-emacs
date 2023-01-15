@@ -33,17 +33,6 @@
 #+SETUPFILE: ./org-templates/ref-book.org
 #+SETUPFILE: ./org-templates/default-tags.org
 
-Set ALL ~.png~ images in this file /(emojis)/ to ~30x30~ pixels...
-/(other images may be adjusted to size inline)/
-#+BEGIN_SRC elisp
-;(setq org-latex-images-centered nil)
-;(setq org-latex-image-default-width "1.0\\linewidth")
-;(setq org-latex-image-default-width "")
-(setq org-image-actual-width (list 30))
-#+END_SRC
-#+RESULTS:
-| 30 |
-
 :READ_ME_FIRST:
 ☞ =Instructions:= /(How to Install & Use This Template)/
 
@@ -104,9 +93,7 @@ To use *HAP_Technical-Book-Project-Skeleton.org* /(Org-Mode Reference Book Proje
       =NOTE:= You may be doing this because you have technical information that
              needs to be writtin now before you forget!  =Right?=  Therefore...
              as soon as you are done with the first steps above, =STOP= and go
-             immediately to the:
-
-                   [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4A1.png]] *Ideas Scratchpad Refile / ☞ Start Here!*
+             immediately to the: *Ideas Scratchpad Refile / ☞ Start Here!*
 
              section and read the ~:README:~ directly under that heading...  
              Then write your ideas down quickly /(as per the README instructions)/ 
@@ -312,8 +299,8 @@ Other folks UX metrics are sorely needed!! Thanks!
 =Enjoy!= - Alisha Awen
 :END:
 
-* [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4A1.png]] Scratchpad Refile:                                          :noexport:
-** [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F449.0.png]] Start Here!
+*  Scratchpad Refile:                                          :noexport:
+** Start Here!
 :README:
    This Section is mainly to accommodate "seat-of-pants" writers
           /(Of Which I Have Been Accused Of.../
@@ -485,7 +472,7 @@ We need an antagonist... (her teacher? Step Mother? A mean kid?)
 There will be the mentor... (an imaginary or real "invisible" being? or Angel?
 
 Etc...  Jessica will encounter something big and challenging about her new found abilities... the rest is foggy... But it will eventually end happily ever after... This is not to be a tragedy! There should be a lot of comic relief after all the troubles Jessica meets trying to cope within the small minded hick town she and uncle Bob live in...
-* NEW [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4DD.png]] Synopsis: /(or Introduction:)/                               :noexport:
+* NEW Synopsis: /(or Introduction:)/                               :noexport:
 :README:
    =Use this space to write the main synopsis of your technical work=
 
@@ -507,7 +494,7 @@ Etc...  Jessica will encounter something big and challenging about her new found
    reading his book to get a deeper understanding behind these dry forms 
    and worksheets...
 
-   - [ ] *Go to the:* [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u23F1.png]] Tasks: *Binder and do the: 📃 *Synopsis Tasks:*
+   - [ ] *Go to the:* Tasks: *Binder and do the: 📃 *Synopsis Tasks:*
 
    - [ ] *After Completing Tasks Mark Them:* ~DONE~
 
@@ -525,7 +512,7 @@ Etc...  Jessica will encounter something big and challenging about her new found
 :END:
 
 =Synopsis Content:= Yadda... Yadda... Yadda...
-* NEW 📃 Preface: /(or Introduction - Optional)/                     :export:
+* NEW Preface: /(or Introduction - Optional)/                     :export:
 <<BOOK_PREFACE>>
 :README:
    This section has been purposefully left blank for you to fill in...
@@ -4469,7 +4456,7 @@ Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus
 
 At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
 
-** [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4DA.png]] Chapter References:                                               :noexport:
+** Chapter References:                                               :noexport:
 :README:
    =Org Mode Links Tip:=
 
@@ -4520,7 +4507,7 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
 
 + *Link to Project:* [[][] ] /(comment)/
 
-** [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4DD.png]] Chapter Notes:                                                        :noexport:
+** Chapter Notes:                                                        :noexport:
 :README:
    *Chapter Notes*, Should be written in =OUTLINE= form to aid in organization
    of events, etc... This section is =NOT the place to create NEW ideas=, 
@@ -4828,7 +4815,7 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
 \appendix
 #+END_EXPORT
 
-** [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4DA.png]] Chapter References:                                               :noexport:
+** Chapter References:                                               :noexport:
 :README:
    =Org Mode Links Tip:=
 
@@ -4879,7 +4866,7 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
 
 + *Link to Project:* [[][] ] /(comment)/
 
-** [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4DD.png]] Chapter Notes:                                                        :noexport:
+** Chapter Notes:                                                        :noexport:
 :README:
    *Chapter Notes*, Should be written in =OUTLINE= form to aid in organization
    of events, etc... This section is =NOT the place to create NEW ideas=, 
@@ -5411,7 +5398,7 @@ The following list contains Babel Source Code Blocks that are often needed for s
 
 =ADD a NEW Items= /(as per :README: above)/ when 2023 rolls around, right here in this Log Book Binder whenever you need to create a new Log Entry...
 
-* [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u23F1.png]] TASKS:                                                            :noexport:
+* TASKS:                                                            :noexport:
 :README:
    This *TASKS* Binder is similar to the *🗓 LOGS:* Binder...
    However, log entries are research activities... while tasks are
@@ -5695,7 +5682,7 @@ Make an *Editorial* for this project! You will need this for quick access during
 Use this space to design your *EC* and then transfer it as a New Top Level
 Binder of this Book Project...
 
-* [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F5C2.png]] Meta: /(templates etc.)/                                          :noexport:
+* Meta: /(templates etc.)/                                          :noexport:
 ** 📄 About:
 
 This =Meta= section provides skeleton templates for use within your project(s).  Any sub heading under this Meta: group can be utilized by copy-pasting the collapsed heading into any of your existing project sections (i.e., making a clone anywhere you need to create a new section based on the template's structure)... 
