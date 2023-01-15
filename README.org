@@ -21,23 +21,19 @@
 #+attr_latex: :width 700px
 [[file:./Docs/media/Modular-Emacs-Github-Banner-v3.png]]
 
-=NOTE:= /Skip to:/ [[#-tldr---start-here][☞ TL;DR - Start Here:]]
-      /if you are ready to install Modular Emacs now/
-      /Skipping over Introduction, History, Purpose,/
-      /etc... and you just need to get all this going now./ :trollface:
+    *NOTE:* Skip to: [[#-tldr---start-here][☞ TL;DR - Start Here:]] if you are ready to install Modular Emacs now Skipping over Introduction, History, Purpose, etc... and you just need to get all this going now.... :trollface:
 
 * 💡 Introduction:
 
-*Welcome to Harmonic Alchemy Modular Emacs* - ~V3.5 [Q1 2023]~
+*Welcome to Harmonic Alchemy Modular Emacs* ~V3.5 [Q1 2023]~
 
-*Modular Emacs* provides a simple method of dispatching your emacs configuration in steps based on initial choice of modules starting with essentials loading first, and then loading optional user chosen modules ...
+*Modular Emacs* provides a simple method of dispatching your emacs configuration in steps based on initial choice of modules starting with essentials loading first, and then loading optional user chosen modules...
 
-There are module configurations for: *Dev♺Ops* other configurations for *Pub✎Ops* and yet others for *Multi🎥Media* workstation *IDE* tasks.  Or ALL the Above completely capable of running on older but reasonably powerful *laptops/desktops* /(that would otherwise be considered legacy by most other standards)/.  
+There are module configurations for: *Dev♺Ops* other configurations for *Pub✎Ops* and yet others for 🎥 *MultiMedia* workstation *IDE* tasks.  Or ALL the Above completely capable of running on older but reasonably powerful *laptops/desktops* /(that would otherwise be considered legacy by most other standards)/.  
 
 I am a systems architect, dev♺Ops engineer, computer scientist, composer/musician, sound designer, writer/publisher.  I wear a lot of hats! My Emacs needs to wear a lot of hats as well!  The central focus of *Modular Emacs* is to build empowering features into *Emacs* utilizing a modular framework that facilitates all the above without becoming an over complicated mess to manage! "*Good Luck With That*" :octocat:
 
-=Note:= Current Status & Release Notes of
-      this project are documented [[./Docs/ModE-Current-Status.md][HERE]]
+   *Note:* Current Status & Release Notes of this project are documented [[./Docs/ModE-Current-Status.md][HERE]]
 
 * 🔖 Contents:                                                        :TOC_4:
 - [[#-introduction][💡 Introduction:]]
@@ -79,7 +75,7 @@ I am a systems architect, dev♺Ops engineer, computer scientist, composer/music
 
 * 📜 History & Purpose:
 
-The history of *Harmonic Alchemy Modular Emacs* is /"a confusing journey through many little twisty passages, all alike/... [[./Docs/ModE-History.md][Everything is documented here now]]...  Read it at your leasure.  It provides some perspective, insight, and purpose behind how and why things are done here in the present time.
+The history of *Harmonic Alchemy Modular Emacs* is /"a confusing journey through many little twisty passages, all alike.../ [[./Docs/ModE-History.md][Everything is Documented Here Now]]  Read it at your leasure.  It provides some perspective, insight, and purpose behind how and why things are done here in the present time.
 
 * ☞ Try Harmonic Alchemy Modular Emacs:
 
@@ -89,7 +85,7 @@ There are some external requirements... It may take a while... If that's OK with
 
 * ⚙ Microsoft Windows Support Needed:
 
-=Hello MS Windows Veterans...=
+Hello MS Windows Veterans...
 
 I admit to having no experience at getting a nice Emacs GUI environment running nicely on MS Windows, as I am a Hard Core Mac user and have not used a MS Windows box since Win-XP days... LOL and I never upgraded to that VISTA crap either...  Thank Goddess!
 
@@ -110,7 +106,9 @@ For the rest of us... For now... Let's learn this together... Please provide any
 
 * 🙏 My Commitment
 
-*"Always do what is right. It will gratify half of mankind and astound the other."* - Mark Twain  
+#+begin_quote
+    *"Always do what is right. It will gratify half of mankind and astound the other."* - Mark Twain
+#+end_quote
 
 One of the main purposes of this project is to empower lots of creative folks out there who have more brains than money.  This project is 100% free software, Free to download, install, and use independently, /(both as in "Free Beer" and also as in having "Freedom of Choice and Control" over your Computing Infrastructures)/.
 
@@ -124,7 +122,7 @@ I am committed to making this *process/journey* as painless as possible for you 
 
 On the other end of the spectrum... Installing basic Emacs alone is not enough to get you started _(IMHO)_...  I made a few tweaks to the Emacs Basic Operation to get you up and running with a simple setup that works well out of the box...
 
-You will quickly outgrow that initial setup however, and will certainly want to enable some extra features you are learning about! =WARNING!= This is where Danger can lurk if you are lulled into installing something that is pure CRAP!  Trust me on that... Don't fall for the hype... Check it out thoroughly before using.  Are there a LOT of Stack Exchange posts about that package? That's a red flag... 🚩
+You will quickly outgrow that initial setup however, and will certainly want to enable some extra features you are learning about! =WARNING!= This is where Danger can lurk if you are lulled into installing something that is pure CRAP!  Trust me on that... Don't fall for the hype... Check it out thoroughly before using.  Are there a LOT of Stack Exchange posts about that package? That's a red 🚩 flag...
 
 I hope to make this process of discovery reasonably easy to do for you!  The whole purpose of this project is to be able to easily grow and shrink features as needed in any combination thereof... Without /"getting lost in a tangled mess of twisty little passages all alike!/
 
