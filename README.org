@@ -33,7 +33,7 @@
 
 There are module configurations for: *Dev♺Ops* other configurations for *Pub✎Ops* and yet others for 🎥 *MultiMedia* workstation *IDE* tasks.  Or ALL the Above completely capable of running on older but reasonably powerful *laptops/desktops* /(that would otherwise be considered legacy by most other standards)/.  
 
-In Addition *org-mode* based *Document Templates* are being designed, /(still in beta design mode)/ which when exported via LaTeX, produce the fineset quality typeset PDF or eBook docs which can be printed as hard copy books, or used with eBook readers for a quality reading experience... See: [[#-screenshots][📸 Screenshots:]] below to see examples...
+In Addition *org-mode* based *Document Templates* are being designed, /(still in beta design mode)/ which when exported via LaTeX, produce the fineset quality typeset PDF or eBook docs which can be printed as hard copy books, or used with eBook readers for a quality reading experience... See: [[#-screenshots][📸 Screenshots:]] below to see examples... /(images to be added later)/
 
 Publishing via org-mode/LaTeX is being made as simple as possible, starting with these templates, allowing individual writers to immediately dive into professional publishing and independent book selling without depending on outside typesetting or publishing firms...
 
@@ -43,7 +43,12 @@ I am a systems architect, dev♺Ops engineer, computer scientist, composer/music
 
 We are still in BETA as many changes are still being made to the LaTeX export configurations... When these org-mode export design changes are done, AND all existing Document Templates in PubOps folder are producing nice looking PDF docs, the beta period will be removed. That event will be tagged as the *Official Release* for *V3.5* /(or possibly become V4.0 instead)/
 
-   *Note:* Current Status & Release Notes of this project are documented [[./Docs/ModE-Current-Status.md][HERE]] /(this may need an update now)/
+Also, These README files are being converted from markdown to .org files which
+IMHO is a more professional way to document... Github renders .org files to html
+nicely, and you can add a TOC that renders nicely as well... So far only this README file has been converted... The old README.md file can be found in the ~./Docs~ directory... All the rest of the markdown files within the Docs directory are being updated one at a time... TBD...
+
+*Note:* Current Status & Release Notes of this project are
+      documented [[./Docs/ModE-Current-Status.md][HERE]] /(WHICH NEEDS AN UPDATE NOW - TBD)/
 
 * 🔖 Contents:                                                        :TOC_4:
 - [[#-introduction][💡 Introduction:]]
