@@ -2,21 +2,17 @@
  "log-book-setup"
  (lambda ()
    (TeX-add-to-alist 'LaTeX-provided-package-options
-                     '(("fullpage" "cm") ("fontenc" "T1") ("nowidow" "all") ("footmisc" "hang" "flushmargin" "stable" "multiple") ("geometry" "margin=1.25in") ("tcolorbox" "most")))
+                     '(("footmisc" "hang" "flushmargin" "stable" "multiple") ("geometry" "margin=1.25in") ("tcolorbox" "most")))
    (add-to-list 'LaTeX-verbatim-macros-with-braces-local "url")
    (add-to-list 'LaTeX-verbatim-macros-with-braces-local "path")
    (add-to-list 'LaTeX-verbatim-macros-with-delims-local "url")
    (add-to-list 'LaTeX-verbatim-macros-with-delims-local "path")
    (TeX-run-style-hooks
-    "paralist"
-    "fullpage"
-    "calc"
-    "pdfpages"
     "parskip"
-    "fontenc"
+    "calc"
+    "titlesec"
     "roboto"
-    "sectsty"
-    "nowidow"
+    "palatino"
     "footmisc"
     "manyfoot"
     "relsize"

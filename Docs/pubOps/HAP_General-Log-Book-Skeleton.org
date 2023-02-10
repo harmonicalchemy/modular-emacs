@@ -35,6 +35,34 @@
 #+SETUPFILE: ./org-templates/log-book-setup.org
 #+SETUPFILE: ./org-templates/default-tags.org
 
+:LATEST_UPDATE:
+  <2023-02-03 Fri>
+
+  ☞ =Instructions:=
+
+  + [ ] Change this *:LATEST_UPDATE:* drawer title to *:LATEST_TEMPLATE_UPDATE:*
+        within NEW CLONES of this file...
+
+  + [X] Update the timestamp ABOVE within THIS TEMPLATE Skeleton
+        /(NOT CLONES of IT)/ whenever THIS TEMPLATE has changed...
+
+  + [ ] *COMPARE the TIMESTAMPS between THIS TEMPLATE and CLONES*
+
+        The BOILERPLATE content within CLONES of this TEMPLATE will
+        get out of sync after a while due to version updates etc...
+        
+        Use the ABOVE timestamp /(within the TEMPLATE and your CLONE)/
+        to see if the clone's BOILERPLATE content needs to be updated
+        /(brought into sync with its template)/ and then perform any
+        needed updates...
+
+  + [ ] *Update ABOVE timestamp within CLONES of THIS TEMPLATE:*
+
+        AFTER completing above step and your clone's BOILERPLATE
+        content has been brought up to date /(i.e. in sync)/ with
+        its TEMPLATE... Then update the timestamp ABOVE...
+        /(within your clone)/ so you will know its latest status...
+:END:
 :READ_ME_FIRST:
 ☞ =Instructions:= /(How to Install & Use This Template)/
 
@@ -42,7 +70,7 @@ To use *HAP_General-Log-Book-Project-Skeleton.org* /(Org-Mode Log Notebook Proje
 
 /Use the org-mode Checkboxes to Help You Keep Track of Progress/
 
-1) [ ] *Clone a Copy of This File:* 
+1) [ ] *Clone a Copy of This File:*
 
       Put your clone where you normally organize your Logs or 
       projects that need logs.
@@ -59,7 +87,13 @@ To use *HAP_General-Log-Book-Project-Skeleton.org* /(Org-Mode Log Notebook Proje
 
       =Other Files/Folders will be placed within this MASTER FOLDER...=
 
-2) [ ] *Copy/Clone:* ~./media~ /(and contents)/ *to your new project's MASTER FOLDER:*
+2) [ ] *Change Title of :LATEST_UPDATE: drawer ABOVE:*
+
+      AFTER Cloning, Change *:LATEST_UPDATE:* drawer title ABOVE
+      /(within your clone, NOT the Original!)/ to *:LATEST_TEMPLATE_UPDATE:*
+      AND Follow Instructions within it...
+
+3) [ ] *Copy/Clone:* ~./media~ /(and contents)/ *to your new project's MASTER FOLDER:*
 
       Copy this directory /(into your MASTER FOLDER as a sibling of this file).../ 
       Any external documents or images referenced by your book project should 
@@ -77,7 +111,7 @@ To use *HAP_General-Log-Book-Project-Skeleton.org* /(Org-Mode Log Notebook Proje
              will be automatically created the first time you export this ~.org~ 
              file to ~.PDF~...
 
-3) [ ] *Copy/Clone:* ~./org-templates~ /(and all contents)/ *to your MASTER FOLDER:*
+4) [ ] *Copy/Clone:* ~./org-templates~ /(and all contents)/ *to your MASTER FOLDER:*
 
       Copy this directory to your Log Notebook's MASTER FOLDER,
       /(i.e., as a sibling/ /of this .org file).../ 
@@ -96,7 +130,7 @@ To use *HAP_General-Log-Book-Project-Skeleton.org* /(Org-Mode Log Notebook Proje
             you decide to delete other UNUSED SETUPFILES... They are small
             text files not bothering you or your operations...
 
-4) [ ] =Start Documenting/Logging what was on your mind NOW Before You Loose It!=
+5) [ ] =Start Documenting/Logging what was on your mind NOW Before You Loose It!=
 
       =NOTE:= You may be doing this because you have something you need to
             quickly document and or add a time-stamped log entry for...
@@ -113,9 +147,9 @@ To use *HAP_General-Log-Book-Project-Skeleton.org* /(Org-Mode Log Notebook Proje
             /this LOG in the first place)/ You should come back and:
             =Resume Finishing Set Up of This LOG Notebook= /(next steps below)/
 
-5) [ ] *Finish Setting up this Project* =LATER= [0/3]
+6) [ ] *Finish Setting up this Project* =LATER= [0/10]
 
-    - [ ] *Change the* ~#+TITLE:~ *directive at the top of this file:* 
+    - [ ] *Change the* ~#+TITLE:~ *directive at the top of this file:*
 
           Change to: /"your LOG Book Title"/
 
@@ -134,22 +168,15 @@ To use *HAP_General-Log-Book-Project-Skeleton.org* /(Org-Mode Log Notebook Proje
           /for the template structure of your published docs will be/
           /appreciated... but unnecessary... Thanks! ;-)/
 
-    - [ ] *Change the* ~#+AUTHOR:~ *directive at the top of this file:* 
+    - [ ] *Change the* ~#+AUTHOR:~ *directive at the top of this file:*
 
           Change to: /"your NAME"/
 
-    - [ ] *Change the* ~#+EMAIL:~ *directive at the top of this file:* 
+    - [ ] *Change the* ~#+EMAIL:~ *directive at the top of this file:*
 
           Change to: /"your EMAIL"/
 
-    - [ ] *Change the* ~#+DATE:~ *TIMESTAMP at the top of this file:* 
-
-          Put your cursor on the TIMESTAMP: /i.e.,/ <2022-10-05 Wed>
-          and type: ~C-c . . RETURN~ The TIMESTAMP will update to NOW.
-          Do this whenever you update your doc to show last date
-          it was changed or modified...
-
-    - [ ] *Change the* ~#+TEXT: Created:~ *TIMESTAMP at the top of this file:* 
+    - [ ] *Change the* ~#+TEXT: Created:~ *TIMESTAMP at the top of this file:*
 
           Put your cursor on the TIMESTAMP: /i.e.,/ <2022-10-05 Wed>
           and type: ~C-c . . RETURN~ The TIMESTAMP will update to NOW.
@@ -159,7 +186,7 @@ To use *HAP_General-Log-Book-Project-Skeleton.org* /(Org-Mode Log Notebook Proje
           This Date reflects the time/date that you first created this
           new document It should NEVER change after that...
 
-    - [ ] *Change the* ~#+TEXT: Last Published:~ *TIMESTAMP at Publish Time:* 
+    - [ ] *Change the* ~#+TEXT: Last Published:~ *TIMESTAMP at Publish Time:*
 
           =Don't Change This UNTIL You Have Actually Exported This File=
           /(as a PDF or HTML, etc. and have PUBLISHED it publically somewhere)/
@@ -172,7 +199,7 @@ To use *HAP_General-Log-Book-Project-Skeleton.org* /(Org-Mode Log Notebook Proje
           appear in place... Do this EVERY time you publish or update
           an existing publishing... /(this will help you keep track)/
 
-    - [ ] *Change the* ~#+FILETAGS:~ *directive at the top of this file:* 
+    - [ ] *Change the* ~#+FILETAGS:~ *directive at the top of this file:*
 
           Add your own tags that match the context of your Log Book...
 
@@ -182,7 +209,7 @@ To use *HAP_General-Log-Book-Project-Skeleton.org* /(Org-Mode Log Notebook Proje
           paragraph here... and then use that to change the directive
           above...
 
-    - *The* ~./media~ *Directory is ALL Set:* 
+    - *The* ~./media~ *Directory is ALL Set:*
 
          Any external documents or images referenced by your LOG book project 
          should be placed within this ~./media/~ directory... This single 
@@ -204,7 +231,7 @@ To use *HAP_General-Log-Book-Project-Skeleton.org* /(Org-Mode Log Notebook Proje
          them... This folder is a good place to store other temporary files 
          you may be creating, generating.. etc...
 
-    - *Purpose of the:* ~./org-templates~  *Directory:*
+    - *Purpose of the:* ~./org-templates~ *Directory:*
 
          The files in here are automatically linked and included within this
          template. You don't need to change those settings unless you wish to
@@ -295,7 +322,7 @@ To use *HAP_General-Log-Book-Project-Skeleton.org* /(Org-Mode Log Notebook Proje
          #+attr_latex: :width 200px
       [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F3D5.png]]
 
-=These Instructions Were Last Modified:= <2022-12-21 Wed> 
+=These Instructions Were Last Modified:= <2023-02-03 Fri> 
 
 So far things are pretty basic PDF for LOG Notebooks... We may get fancy with
 other formats later... /(Maybe a Status Report - Invoice thing with nice LOGO,
@@ -714,7 +741,6 @@ Cool!  It even knows how to justify numbers differently than text!  And there's 
 
 Org tables have cells of at most one line long: i.e., *There Is No Such Thing As A Multi-Line Table Cell In Org.*
 
-
 ****** Column formatting:
 
 
@@ -920,13 +946,32 @@ After typing: ~C-c '~ /(to save and exit the table editor)/ you will see your ta
 |           | Olivetti line             |
 |           | width                     |
 
+#+LATEX: \newpage
+
 ***** LiliPond Music Notation:
 
-#+PROPERTY: header-args:lilypond :noweb yes
+****** Example 1:
 
-=Example 1:=
+#+begin_comment
+   #+PROPERTY: header-args:lilypond :noweb yes
+#+end_comment
 
 #+begin_src lilypond :file ./auto/ionian.pdf
+
+\header {
+  title = "The Ionian Mode (modern major mode)"
+}
+
+\paper {
+    paper-width = 23\cm
+    paper-height = 3.0\cm
+    top-margin = 0.0\cm
+    bottom-margin = 0.0\cm
+    left-margin = 0.0\cm
+    right-margin = 0.0\cm
+    indent = 1.6\cm
+    }
+
 \relative c' {
   c d e f
   g a b c
@@ -938,15 +983,18 @@ After typing: ~C-c '~ /(to save and exit the table editor)/ you will see your ta
   c1
 }
 #+end_src
-
 #+RESULTS:
+[[file:./auto/ionian.pdf]]
 
-=Example 2:=
+****** Example 2:
 
 #+begin_src lilypond :file ./auto/MuseScore-Frescobaldi-Lilypond-Emacs.pdf
 \version "2.23.82"
-% automatically converted by musicxml2ly from Str-Qt-Score_2bar-Example-Template.mxl
-\pointAndClickOff
+%% automatically converted by musicxml2ly from
+%% Str-Qt-Score_2bar-Example-Template.mxl
+%% Modified for best Fit on Final PDF MANUALY...
+
+%% \pointAndClickOff
 
 \header {
     title = "2 Bar Example Boilerplate"
@@ -955,20 +1003,23 @@ After typing: ~C-c '~ /(to save and exit the table editor)/ you will see your ta
     }
 
 \paper {
-    
-    paper-width = 23\cm
-    paper-height = 9.8\cm
+    paper-width = 23.0\cm
+    paper-height = 9.0\cm
     top-margin = 0.0\cm
     bottom-margin = 0.0\cm
-    left-margin = 2\cm
-    right-margin = 0.5\cm
-    indent = 1.6161538461538463\cm
+    left-margin = 2.6\cm
+    right-margin = 2.6\cm
+    indent = 0.0\cm
     }
+
 \layout {
-    \context { \Score
-        autoBeaming = ##f
-        }
-    }
+  \context {
+    \Score
+    proportionalNotationDuration = #(ly:make-moment 1/16)
+    autoBeaming = ##f
+  }
+}
+
 PartPOneVoiceOne =  \relative fis' {
     \clef "treble" \time 12/8 \key c \major | % 1
     \stemUp fis4 \stemUp a4 \stemUp e8 \stemDown cis'4 \stemDown fis4
@@ -995,7 +1046,6 @@ PartPFourVoiceOne =  \relative g, {
     \stemUp g2 \stemDown e'2 \stemUp f,2 | % 2
     \stemUp g2 \stemDown e'2 \stemUp f,2 \bar "|."
     }
-
 
 % The score definition
 \score {
@@ -1043,154 +1093,8 @@ PartPFourVoiceOne =  \relative g, {
     \layout {}
     }
 #+end_src
-
 #+RESULTS:
 [[file:./auto/MuseScore-Frescobaldi-Lilypond-Emacs.pdf]]
-
-**** ACTIVE Second Experiment [0/3]
-:CLOCKING:
-CLOCK: [2022-12-30 Fri 21:10]--[2022-12-30 Fri 22:42] =>  1:32
-:END:
-***** Literate Programming
-:BOILERPLATE:
-  =Delete This BOILERPLATE DRAWER If You Don't Need It...=
-
-  The following list contains Babel Source Code Blocks that are
-  often needed for something I am writing or "Logging" about...
-  I use them so much I decided to include them in this template...
-
-  - [ ] *__:* /(__)/
-
-      #+begin_src conf
-       keyword1:     Value1 
-       keyword2:     Value2 
-       keyword3:     Value 
-      #+end_src
-
-  - [ ] *__:* /(__)/
-
-      #+begin_src bash
-       sudo dnf install emacs
-       sudo apt install emacs
-      #+end_src
-
-  - [ ] *__:* /(__)/
-
-      #+BEGIN_SRC emacs-lisp :results output
-       ;; Initialize Local Vars from GLOBAL CONSTANTS;
-       (let ((h (list 'text-pixels ME--CODE-FRAME-HEIGHT))
-             (w (list 'text-pixels ME--CODE-FRAME-WIDTH)))
-         (princ "CAR h: ")
-         (princ (car h))
-         (princ "\n")
-         (princ "CDR h: ")
-         (princ (cdr h))
-         (princ "\n\n")
-         (princ "CAR w: ")
-         (princ (car w))
-         (princ "\n")
-         (princ "CDR w: ")
-         (princ (cdr w)))
-      #+END_SRC
-
-      #+RESULTS:
-      : CAR h: text-pixels
-      : CDR h: (42)
-      : 
-      : CAR w: text-pixels
-      : CDR w: (92)
-      
-:END:
-
-- *Run Code Block* Test of list item with long paragraph that extends many lines to see how indentation and folding works... Test of list item with long paragraph that extends many lines to see how indentation and folding works...
-  
-  Test of list item with long paragraph that extends many lines to see how indentation and folding works... Test of list item with long paragraph that extends many lines to see how indentation and folding works...
-
-**** NEW New Item 3 /(placeholder)/ [0/3]                                       :noexport:
-:PROPERTIES:
-:UNNUMBERED: notoc
-:END:
-:BOILERPLATE:
-
-  =Delete This BOILERPLATE DRAWER If You Don't Need It...=
-
-  The following list contains Babel Source Code Blocks that are
-  often needed for something I am writing or "Logging" about...
-  I use them so much I decided to include them in this template...
-
-  - [ ] *__:* /(__)/
-
-      #+begin_src conf
-       keyword1:     Value1 
-       keyword2:     Value2 
-       keyword3:     Value 
-      #+end_src
-
-  - [ ] *__:* /(__)/
-
-      #+begin_src bash
-       sudo dnf install emacs
-       sudo apt install emacs
-      #+end_src
-
-  - [ ] *__:* /(__)/
-
-      #+BEGIN_SRC emacs-lisp :results output
-       ;; Initialize Local Vars from GLOBAL CONSTANTS;
-       (let ((h (list 'text-pixels ME--CODE-FRAME-HEIGHT))
-             (w (list 'text-pixels ME--CODE-FRAME-WIDTH)))
-         (princ "CAR h: ")
-         (princ (car h))
-         (princ "\n")
-         (princ "CDR h: ")
-         (princ (cdr h))
-         (princ "\n\n")
-         (princ "CAR w: ")
-         (princ (car w))
-         (princ "\n")
-         (princ "CDR w: ")
-         (princ (cdr w)))
-      #+END_SRC
-
-      #+RESULTS:
-      : CAR h: text-pixels
-      : CDR h: (42)
-      : 
-      : CAR w: text-pixels
-      : CDR w: (92)
-
-  - [ ] =LaTeX Code Within ~.Org~ Docs:=
-
-      #+begin_comment
-
-      Code Embedded ~In-line~ within paragraphs:
-      
-         Put: @@latex:<LaTeX Code Here>@@ Anywhere
-         Within a paragraph...
-
-      #+LATEX: % Any Arbitrary LaTeX Code...
-      #+LATEX: \newpage % Start New Page
-
-      #+BEGIN_EXPORT latex
-      %% Put LaTex Code In Here...
-      #+END_EXPORT
-
-      #+BEGIN_LaTeX
-      %% Put LaTex Code In Here...
-      #+END_LaTeX
-
-      #+end_comment
-
-:END:
-
-New Item Details... Yadda... Yadda... Yadda...
-
-Re-Purpose these as needed and Delete anything you don't need...
-
-Add sub headings as needed...
-
-Don't forget to clock-in to HEADINGS while you work on them...
-AND... Don't forget to Clock OUT when you are DONE... %^)
 
 * 2023 Logs:                                                    :export:
 
@@ -1593,7 +1497,7 @@ This Log Entry is about: Yadda... Yadda... Yadda...
 
 #+END:
 
-*** NEW Summary: [0/3]
+*** NEW Summary: [1/3]
 :README:
    This Summary is mostly to help you find things later when you
    cannot remember when or where is was done... If you go to the
@@ -1614,11 +1518,13 @@ This Log Entry is about: Yadda... Yadda... Yadda...
 
 Yadda... Yadda... Yadda...
 
-1. [ ] *New Item 1:*
+1. [X] *New Item 1:* /(this represents a completed item)/
 
-2. [ ] *New Item 2:*
+2. [-] *New Item 2:* /(this represents a currently "radio active" item)/
 
-3. [ ] *New Item 3:* /(copy/clone more as needed)/
+3. [ ] *New Item 3:* /(this represents a new item not worked on yet)/
+
+3. [ ] *New Item:* /(copy/clone more of these as needed)/
 
 *** NEW Details:
 **** NEW New Item 1 /(placeholder)/ [0/4]
@@ -1684,6 +1590,7 @@ Yadda... Yadda... Yadda...
          Within a paragraph...
 
       #+LATEX: % Any Arbitrary LaTeX Code...
+      
       #+LATEX: \newpage % Start New Page
 
       #+BEGIN_EXPORT latex

@@ -48,7 +48,6 @@
 
 /(currently using ~refbook~ class)/
 
-#+LATEX_CLASS: refbook
 #+LATEX_HEADER: \usepackage{parskip}
 #+LaTeX_HEADER: \usepackage{paralist}
 #+LATEX_HEADER: \usepackage[hyperref,x11names]{xcolor}

@@ -30,25 +30,49 @@
 
 %% PACKAGES %%
 
-\usepackage{paralist}
-\usepackage[cm]{fullpage}
-\usepackage{calc}
-\usepackage{pdfpages}
 \usepackage{parskip}
+\usepackage{calc}
+\usepackage{titlesec}
 
 %% FONTS %%
+%% Note: [T1]{fontenc} is included and LOADED FIRST
+%%       BY: (org-latex-default-packages-alist)
 
-\usepackage[T1]{fontenc}
-\setmainfont{Adobe Caslon Pro}
 \usepackage{roboto}
+\usepackage{palatino}
 
-\usepackage{sectsty}
-\allsectionsfont{\normalfont\sffamily}  %% Sans Font For Section Headings
-\setsansfont{roboto}
+%% DEFAULT PARAGRAPH SETTINGS %%
 
-%% WIDOWS and ORPHANS %%
+\setlength{\headwidth}{\textwidth}
+\addtolength{\headwidth}{.382\foremargin}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{10pt plus 2pt minus 1pt}
 
-\usepackage[all]{nowidow}
+%% TITLE, CHAPTER, & SECTION, HEADING FORMAT %%
+
+\makeatletter
+\renewcommand\afterchapternum{}
+\renewcommand\afterchaptertitle{%
+  \ifnum \c@secnumdepth>\m@ne%
+    \ifNoChapNum\else\par\nobreak\vskip\afterchapskip
+    \fi%
+  \fi}
+\makeatother
+
+\setlength\beforechapskip{15pt}
+\renewcommand\printchapternonum{\global\NoChapNumtrue}
+\renewcommand{\chaptitlefont}{\raggedleft\normalfont\Huge\roboto\bfseries}
+
+%\titleformat{\chapter}
+%  [display]
+%  {\Huge\bfseries\roboto}
+%  {\huge\chaptertitlename\space\thechapter}
+%  {20pt}
+%  {}
+
+\titleformat*{\section}{\normalfont\huge\bfseries\roboto}
+\titleformat*{\subsection}{\normalfont\Large\bfseries\roboto}
+\titleformat*{\subsubsection}{\normalfont\large\bfseries\roboto}
 
 %% FOOTNOTES %%
 
@@ -75,34 +99,22 @@
 \definecolor{block-gray}{gray}{0.98}
 
 \newtcolorbox{quote-b}{%
-    colback=block-gray,
-    grow to right by=-10mm,
-    grow to left by=-10mm, 
-    boxrule=0pt,
-    boxsep=0pt,
-    breakable,
-    enhanced jigsaw,
-    borderline west={2pt}{0pt}{gray}}
+  colback=block-gray,
+  grow to right by=-10mm,
+  grow to left by=-10mm, 
+  boxrule=0pt,
+  boxsep=0pt,
+  breakable,
+  enhanced jigsaw,
+  borderline west={2pt}{0pt}{gray}}
 
-%% HAP LOGBOOK DOC LAYOUT %%
+%% AT BEGIN DOCUMENT  %%
 
-\setlength{\headwidth}{\textwidth}
-\addtolength{\headwidth}{.382\foremargin}
-\renewcommand\afterchapternum{}
-
-\renewcommand\afterchaptertitle{%
-  \ifnum \c@secnumdepth>\m@ne%
-    \ifNoChapNum\else\par\nobreak\vskip\afterchapskip
-    \fi%
-  \fi%
+\AtBeginDocument{
+%  \nonzeroparskip
+  \frontmatter
 }
-
-\setlength\beforechapskip{15pt}
-\renewcommand\printchapternonum{\global\NoChapNumtrue}
-\renewcommand{\chaptitlefont}{\raggedleft\normalfont\Huge\bfseries}
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{6pt plus 2pt minus 1pt}
-\makeatletter
+\chapterstyle{verville}
 
 %%%% END: ~/.emacs.d/Docs/PubOps/org-templates/log-book-setup.tex
 %%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

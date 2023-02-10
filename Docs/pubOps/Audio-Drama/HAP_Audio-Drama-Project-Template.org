@@ -1,18 +1,19 @@
 # -**- mode: org; coding: utf-8 -**-
 #+TITLE: HAP - Audio Drama Project Template
+#+SUBTITLE: for Audio Theater Production, Podcasts, etc...
 #+EXPORT_FILE_NAME: HAP_Audio-Drama-Project-Template.pdf
 #+TEXT: Copyright © 2022 Harmonic Alchemy Productions & Others
-#+AUTHOR: Sirena256 - Harmonic Alchemy Productions
+#+AUTHOR: Alisha Awen - Harmonic Alchemy Productions
 #+EMAIL: Siren1@disroot.org
-#+DATE: <2021-12-03 Fri>
+#+DATE: {{{time(%Y-0%M-%d)}}}
 #+TEXT: Created: <2019-10-01 Tue>
 #+TEXT: Last Published: <Not Published>
-#+KEYWORDS:
 #+FILETAGS: templates drama_scripts audio_theatre @projects unpublished
 
 #+DESCRIPTION: HAP - Bare Bones Audio Theatre Project Skeleton with generic basics already done.  Great for Authors to use when starting a new Radio Drama, Podcast, News Program, or any kind of Audio-Only Production project from scratch...
 
 #+BEGIN_COMMENT
+
  =Setup Files:=
 
    For Cloned Versions of this template, the file/paths below will be relative
@@ -20,34 +21,57 @@
 
  =NOTE:= 
 
-   ~#+CATEGORY:~ is specified within ~audio-book.org~ SETUPFILE.
+   ~#+CATEGORY:~ is specified within ~audio-book-setup.org~ SETUPFILE.
    If you need to change the category, do it within your cloned version
-   of: audio-book.org...
+   of: audio-book-setup.org...
 
-   *SETUPFILE:* ~audio-tags.org~ is where tags are set for this project
+   *SETUPFILE:* ~audio-book-setup.org~ is for LaTeX Export Configurations 
+              to produce your Project as a kind of Reference Manual or
+              Production Manual, and also the raw source of all your
+              Writing... For review as a printable PDF file...
 
-   *SETUPFILE:* ~latex-audio-book-pdf.org~ is for LaTeX Export Configurations 
-              to produce a PDF version of this entire Audio Drama as a Book
+   *SETUPFILE:* ~audio-tags.org~ is where tags are defined for this project.
+
+              The Existing Tags are useful for most situations within
+              this context, and some of the tags MUST ALWAYS be defined
+              for this LaTeX publishing system to work correctly...
+              
+              This file may be used by other ~.org~ files within this
+              Master Folder... If you need to customize them specifically
+              for this ~.org~ file alone, you should copy and rename:
+              ~audio-tags.org~ and modify your renamed copy instead...
+              
+              If you do this, you will ALSO need to change the
+              ~#+SETUPFILE: ./org-templates/audio-tags.org~
+              directive below to reflect your changed file name...
+
+              /(change the name from/ ~audio-tags.org~ /to another name/
+              /and-or replace some (but NOT ALL) of the tags within/
+              /to your own tags... see instructions inside the file)/
 
    *SETUPFILE:* ~awc-config.json~ is for configuration of FINAL DRAFT
               *Fountain Scripts* to convert them to *PDF files* suitable
               for printing and using during rehearsals and performances
+              
 #+END_COMMENT
 
-#+SETUPFILE: ./org-templates/audio-book.org
-#+SETUPFILE: ./org-templates/latex-audio-book-pdf.org
+#+SETUPFILE: ./org-templates/audio-drama-setup.org
 #+SETUPFILE: ./org-templates/audio-tags.org
 
 :READ_ME_FIRST:
 ☞ =Instructions:= /(How to Install & Use This Template)/
 
-To use *HAP_Audio-Drama-Project-Template.Org* /(Org-Mode Audio Drama Project Skeleton /Template)/ for your own projects, perform the following steps: 
+To use *HAP_Audio-Drama-Project-Template.Org* /(Org-Mode Audio Drama Project Skeleton /Template)/ for your own projects, =Perform The Following Steps:= 
 
 /Use the org-mode Checkboxes to Help You Keep Track of Progress/
 
-1) [ ] *Copy/Clone ALL of the:* ~../Audio-Drama~ *Folder:* /(and its contents)/ 
+1) [ ] *Copy/Clone ALL of the:* ~../Audio-Drama~ *Folder:* /(and ALL its contents)/ 
 
         Copy this template folder as your ="NEW-Audio-Project"= folder... 
+
+        You Cloned copy will have a copy of This File which you should ALSO
+        rename to your specific Audio Drama or Podcast Production Project's
+        REAL Title...
 
         In order to use this Audio Drama Project Skeleton properly so that 
         default Settings work, you need to *copy the ENTIRE folder* containing 
@@ -66,11 +90,13 @@ To use *HAP_Audio-Drama-Project-Template.Org* /(Org-Mode Audio Drama Project Ske
              forget!  =Right?=  Therefore... as soon as you clone this file,
              =STOP= and go immediately to the:
 
-                   ~💡 Ideas Scratchpad Refile / ☞ Start Here!~ 
+                   ~💡 Scratchpad Refile Binder~ 
 
-             section and read the ~:README:~ directly under that heading...  
-             Then write your idea down quickly /(as per the README instructions)/ 
-             to get your inspiration recorded before you forget it...  
+             =READ ALL OF THE INFORMATION= UNDER The *☞ Start Here!* heading and
+             follow the instructions...
+             
+             =Write your idea down quickly= /(as per the instructions)/ 
+             to get your inspiration recorded before you forget it...
 
              Later, After you have all your ideas sketched out and you are 
              ready to be in an ="organized mood"= /(rather than creative mood)/ 
@@ -87,11 +113,15 @@ To use *HAP_Audio-Drama-Project-Template.Org* /(Org-Mode Audio Drama Project Ske
 
              =Do That first!=
 
-3) [ ] *Finish Setting up this Project LATER...* [0/3]
+3) [ ] *FINISH SETTING UP THIS PROJECT...* [0/10]
 
     - [ ] *Change the* ~#+TITLE:~ *directive at the top of this file:* 
 
            Change it to /"Your Audio Drama Project's Title"/
+
+    - [ ] *Change the* ~#+SUBTITLE:~ *directive at the top of this file:* 
+
+           Change it to /"Your Audio Drama Project's Sub Title"/
 
     - [ ] *Change the* ~#+EXPORT_FILE_NAME:~ *directive at the top of this file:* 
 
@@ -99,10 +129,55 @@ To use *HAP_Audio-Drama-Project-Template.Org* /(Org-Mode Audio Drama Project Ske
            That will be the file name(s) produced during export thence forward
            /(including auto generated files: .tex, etc...)/
 
+    - [ ] *Change the* ~#+TEXT: Copyright © 2022:~ *directive top of this file:*
+
+          Change to: /"Copyright © your info here"/ You are the copyright
+          owner of your own documents created from clones of these master
+          templates... /(but these MASTER Template Files are to stay under/
+          /Harmonic Alchemy Productions copyright. Any Attribution to me/
+          /for the template structure of your published docs will be/
+          /appreciated... but unnecessary... Thanks! ;-)/
+
+    - [ ] *Change the* ~#+AUTHOR:~ *directive at the top of this file:*
+
+          Change to: /"your NAME"/
+
+    - [ ] *Change the* ~#+EMAIL:~ *directive at the top of this file:*
+
+          Change to: /"your EMAIL"/
+
+    - [ ] *Change the* ~#+TEXT: Created:~ *TIMESTAMP at the top of this file:*
+
+          Put your cursor on the TIMESTAMP: /i.e.,/ <2022-10-05 Wed>
+          and type: ~C-c . . RETURN~ The TIMESTAMP will update to NOW.
+
+          =LEAVE THIS DATE ALONE after Setting It The FIRST Time=
+
+          This Date reflects the time/date that you first created this
+          new document It should NEVER change after that...
+
+    - [ ] *Change the* ~#+TEXT: Last Published:~ *TIMESTAMP at Publish Time:*
+
+          =Don't Change This UNTIL You Have Actually Exported This File=
+          /(as a PDF or HTML, etc. and have PUBLISHED it publically somewhere)/
+
+          Until that publishing time comes leave it alone as: <not-published>
+          
+          As soon as this is published or re-published, Replace the
+          <unpublished> placeholder with a REAL TIMESTAMP by typing:
+          ~C-c . . RETURN~ The new Last Published: <TIMESTAMP> will
+          appear in place... Do this EVERY time you publish or update
+          an existing publishing... /(this will help you keep track)/
+
+    - [ ] *Change the* ~#+FILETAGS:~ *directive at the top of this file:*
+
+          Add your own tags that match the context of your Audio Production...
+
     - [ ] *Change the* ~#+DESCRIPTION:~ *directive at the top of this file:* 
 
            Compose /Your-Audio-Drama-Project's Description/ as a short 
-           paragraph here...
+           paragraph here... and then use that to change the directive
+           above in the File HEADER...
 
     - *The* ~./media~ *Directory is ALL Set:* 
 
@@ -118,6 +193,10 @@ To use *HAP_Audio-Drama-Project-Template.Org* /(Org-Mode Audio Drama Project Ske
          This ~./media/~ directory may ALSO contain a SymLink to the media folder
          used by a =DAW Project= for =post production work= directly related to this 
          Audio Drama Project...
+
+         Media required for use in template BOILERPLATE Sections already
+         exists within this folder /(for HAP Audio Project Template .org files)/
+         So that is all set...
 
     - *Purpose of the:* ~./bin~ *Directory:*
 
@@ -136,11 +215,29 @@ To use *HAP_Audio-Drama-Project-Template.Org* /(Org-Mode Audio Drama Project Ske
 
     - *Purpose of the:* ~./org-templates~  *Directory:*
 
-         The files in here are automatically linked and included within this
-         template. You don't need to change those settings unless you wish to
-         customize the already customized tags, and export options.
+       The files in here are automatically linked and included within this
+       template. You don't need to change those settings unless you wish to
+       customize the already customized tags, and export options.
 
-         /They are allready set up correctly for the audio drama genre, and the category is all set as well... But you can and may modify the original files to fit your needs.../
+       /Things are currently set up correctly for the audio drama genre, and/
+       /the category is all set as well... But you can and may modify/
+       ~audio-book-setup.org~ /to narrow down the category more/
+       /specifically, fitting everything to this project's specific/
+       /needs.../
+
+       In addition there may also be an ~audio-book-setup.tex~ file in this
+       directory, which MAY be needed for more extensive LaTeX Styling...
+       If this file is present, read the Instrutions within it for more
+       info on what to do... 
+
+       The DEFAULT Tags defined for all project templates are useful for
+       most situations and SOME tags are ALWAYS to be defined for this
+       LaTeX publishing system to work.
+
+       /Change the SETUPFILE name ABOVE and within this directory from/
+       ~default-tags.org~ /to another name and-or replace some -BUT NOT ALL-/
+       /of the tags within to your own tags... see instructions inside the/
+       /file.../
 
 4) [ ] =Ongoing Planning / Writing - Developing Your Audio Production:=
 
@@ -182,20 +279,37 @@ To use *HAP_Audio-Drama-Project-Template.Org* /(Org-Mode Audio Drama Project Ske
       well for safe keeping as backups...
 
       =If you chose the last option above= LaTeX will output files with other
-      extensions for those other output formats... =NOTE:= SETUPFILES have not
-      been created yet for other eBook formats.  /(This is a work in progress)/
+      extensions for those other output formats...
+
+      =NOTE:= SETUPFILES have not been created yet for other eBook formats.
+             /(This is a work in progress)/
 
       =If YOU EXPERIENCE LaTeX ERRORS:= 
 
          *Consult Buffer:* ~*Org PDF LaTeX Output*~
 
-=These Instructions Were Last Modified:= <2022-09-09 Fri> 
+6) [ ] =Handling Images=
+
+      Some Images may render too large or too small to fit on a page
+      of an exported version of this file... This is easy do fix within
+      your content on an image by image basis...
+      
+      Use *LaTeX* and/or *HTML* attributes as follows on the images that need
+      to be a different size...
+
+      =Example:=
+      
+         #+CAPTION: Example: Larger Size Emoji 
+         #+NAME:  example:00001
+         #+attr_html: :width 200px
+         #+attr_latex: :width 200px
+      [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F3D5.png]]
+
+         
+=These Instructions Were Last Modified:= <2023-01-16 Mon> 
 
 So far things are pretty basic PDF which is good enough for Audio Production...
-Your Printed output will not be a book, but rather printable drama scripts
-which will be discussed in detail later... 
-
-For other Book Projects here in the PubOps section, We will get fancy trying out other eBook formats later...
+Your Printed output will not be a normal book, more like a manual containing everything you need to produce an full fledged audio production...
 
 =Please Open an ISSUE At:= https://github.com/harmonicalchemy/modular-emacs/issues
    
@@ -205,45 +319,31 @@ Other folks UX metrics are sorely needed!! Thanks!
 =Enjoy!= - Alisha Awen
 :END:
 
-* 💡 Scratchpad Refile:                                 :noexport:
+* NEW 💡 Scratchpad Refile:                                   :noexport:
 ** ☞ Start Here!
-:README:
-   This Section is mainly to accommodate "seat-of-pants" writers
-          /(Of Which I Have Been Accused Of.../
-           /But I Also Crave The Planning Stuff)/. 
 
-   I often come here for my [[https://projects.csail.mit.edu/gsb/old-archive/gsb-archive/gsb2000-02-11.html]["yak shaving"]] adventures...
+This Section is mainly to accommodate "seat-of-pants" writers /(Of Which I Have Been Accused Of... But I Also Crave The Planning Stuff)/. 
 
-   Use this: *💡 Scratchpad Refile* section as a quick place to 
-   document ideas and inspirations as they come along... 
-   You can refile them later... 
+I often come here for my [[https://projects.csail.mit.edu/gsb/old-archive/gsb-archive/gsb2000-02-11.html]["yak shaving"]] adventures...
 
-   Even if your quick inspiration was intended for elsewhere?,
-   /(e.g., You become bored documenting tedious technical/ 
-   /information when suddenly, out-of-nowhere, an idea for a/ 
-   /new sci-fi scene in that screenplay episode you had in the/ 
-   /back of your mind all day!, etc.)/
+Use this: "*💡 Scratchpad Refile*" section as a quick place to document ideas and inspirations as they come along... You can refile them later... 
 
-   =Ummm.... Parallel Universe?=
+Even if your quick inspiration was intended for elsewhere?, /(e.g., You become bored documenting tedious technical information when suddenly, out-of-nowhere, an idea for a new sci-fi scene in that screenplay episode you had in the back of your mind all day!, etc.)/
 
-   =Sure!= You can put anything in here! We've got that covered 
-         for you in this Start Here spot. %^)
+=Ummm.... Parallel Universe?= - =Sure!= You can put anything in here! We've got that covered for you in this Start Here spot. %^)
 
-   Use this section to quickly capture inspired at-the-moment 
-   ideas =While they are still fresh in mind=
+Use this section to quickly capture inspired at-the-moment ideas...
+=While they are still fresh in mind=
 
-   =How To Use ???= 
+=How To Use ???= 
 
-      /Simply Come directly here and do what ever you want.../
-      /"Your Crazy Daze are Covered!" Yay!/ 
+/Simply Come directly here and do what ever you want.../
+/"Your Crazy Daze are Covered!" Yay!/ 
 
-   =The following Shortcuts= will Help you get started as 
-   quickly as possible using templates designed to help you
-   sketch up ideas focused on Audio Drama Projects.  A basic
-   bare bones IDEAs Template is also provided for you to use
-   and design for any purpose of any scope!
+=The following Shortcuts= will Help you get started as quickly as possible.
+/(using Knowledge Management Best Practices)/ and templates designed to help you sketch up ideas focused on Audio Drama Projects.  A basic bare bones IDEAs Template is also provided for you to use and design for any purpose of any scope!
 
-- =SCENES Shortcut Template:=  /Use This If You Have A New Scene Idea/
+- =NEW SCENE Shortcut:=  /Use This If You Have A New Scene Idea/
 
    - [ ] =Copy/Clone:= *NEW 🎙* ~S???~ <2022-09-09 Fri> *Scene Title:* 
 
@@ -283,6 +383,17 @@ Other folks UX metrics are sorely needed!! Thanks!
           after all your inspiration has passed and you are ready 
           to organize...
 
+          However without breaking your focus, you should add relevant
+          ~:org_tags:~ that come to mind as you are writing...
+
+          This is easy to do... Simply Type: ~C-c C-q~ Add Your Tag
+          and =THEN CONTINUE WRITING...=
+
+          Adding =TAGS= is a =VITAL KM BEST PRACTICE FIRST STEP=
+          which will help you find important things you have written
+          by the seat-of-your-pants, LATER LONG After you may have
+          forgotten!  /(better than Google Search)/ :trollface:
+
    - [ ] =TODO After You Are Done Writing:=
 
         + [ ] *Move this new Scene Idea into an existing Episode:*
@@ -301,15 +412,32 @@ Other folks UX metrics are sorely needed!! Thanks!
 
         + [ ] *Continue Writing/Developing RIGHT HERE if needed:*
 
-               If you are not yet sure where this new Scene should go
-               AND you are still inspired to write... Simply continue
-               writing and developing this scene in place RIGHT HERE...
+              If you are not yet sure where this new Scene should go
+              AND you are still inspired to write... Simply continue
+              writing and developing this scene in place RIGHT HERE...
 
-               Don't Worry about what it is for or where to put it...
-               It is still here in "dream state" which is GOOD...
-               Don't scare away your muses when they beckon! 
-               Get your story down first, no matter what state it 
-               may be in... =GET IT DOWN=
+              =ONE IMPORTANT Point:= It is Good KM Practice to continue
+              adding relevant org-tags to this item right NOW before you
+              forget...
+
+              You may not know where things belong in the beginning but
+              you most likely DO Know the category, genra, etc. of your
+              new idea...
+
+              This will help you in case you forget all about it later...
+              Sooner or later It will show up in some random tag search
+              that way and remind you...
+          
+              When that time comes, you may know exactly where it should
+              go and the reminder simply jogs your memory to move it into
+              the right bin for further processing later as part of a
+              scheduled task...
+          
+              =For NOW=, Don't Worry about what it is for or where to
+              put it... It is still here in "dream state" which is
+              GOOD... Don't scare away your muses when they beckon! 
+              Get your Idea down first, no matter what state it may
+              be in... =GET YOUR IDEA DOWN=
 
         + [ ] *You Are Free To Go Out And Play Elsewhere Little Grasshopper*
 
@@ -318,7 +446,7 @@ Other folks UX metrics are sorely needed!! Thanks!
                things... =OK?= Don't create a swamp in here! 
                /And don't forget to take/ /your bath tonight... ;-)/
 
-- =NEW IDEA Template:= /Use This For Anything You Want!/
+- =NEW IDEA Shortcut:= /Use This For Anything You Want!/
 
    - [ ] =Copy/Clone:= *💡* <2022-08-20 Sat> *New Example Idea* =Below:=
 
@@ -350,42 +478,64 @@ Other folks UX metrics are sorely needed!! Thanks!
           after all your inspiration has passed and you are ready 
           to organize...
 
+          However without breaking your focus, you should add relevant
+          ~:org_tags:~ that come to mind as you are writing...
+
+          This is easy to do... Simply Type: ~C-c C-q~ Add Your Tag
+          and =THEN CONTINUE WRITING...=
+
+          Adding =TAGS= is a =VITAL KM BEST PRACTICE FIRST STEP=
+          which will help you find important things you have written
+          by the seat-of-your-pants, LATER LONG After you may have
+          forgotten!  /(better than Google Search)/ :trollface:
+
    - [ ] =TODO After You Are Done Writing:=
 
         + [ ] *Adjust Space:* 
 
-               Adjust space between your headings and your 
-               fantastic ideas below them it to one single 
-               blank line...
+             Adjust space between your headings and your 
+             fantastic ideas below them it to one single 
+             blank line...
 
         + [ ] *Continue Writing/Developing RIGHT HERE if needed:*
 
-               If you are not yet sure where this NEW IDEA should go
-               AND you are still inspired to write... Simply continue
-               writing and developing this IDEA in place RIGHT HERE...
+             If you are not yet sure where this NEW IDEA should go
+             AND you are still inspired to write... Simply continue
+             writing and developing this IDEA in place RIGHT HERE...
 
-               Don't Worry about what it is for or where to put it...
-               It is still here in "dream state" which is GOOD...
-               Don't scare away your muses when they beckon! 
-               Get your story down first, no matter what state it 
-               may be in... =GET IT DOWN=
+             =ONE IMPORTANT Point:= It is Good KM Practice to continue
+             adding relevant org-tags to this item right NOW before you
+             forget...
+
+             You may not know where things belong in the beginning but
+             you most likely DO Know the category, genra, etc. of your
+             new idea...
+
+             This will help you in case you forget all about it later...
+             Sooner or later It will show up in some random tag search
+             that way and remind you...
+          
+             When that time comes, you may know exactly where it should
+             go and the reminder simply jogs your memory to move it into
+             the right bin for further processing later as part of a
+             scheduled task...
+          
+             =For NOW=, Don't Worry about what it is for or where to
+             put it... It is still here in "dream state" which is
+             GOOD... Don't scare away your muses when they beckon! 
+             Get your Idea down first, no matter what state it may
+             be in... =GET YOUR IDEA DOWN=
 
         + [ ] *You Are Free To Go Out And Play Elsewhere Little Grasshopper*
 
-               If after writing... You don't feel like organizing 
-               now? =NO PROBLEM=... But come back later and organize 
-               things... =OK?= Don't create a swamp in here! 
-               /And don't forget to take/ /your bath tonight... ;-)/
+             If after writing... You don't feel like organizing 
+             now? =NO PROBLEM=... But come back later and organize 
+             things... =OK?= Don't create a swamp in here! 
+             /And don't forget to take/ /your bath tonight... ;-)/
 
+Having done the simple steps above any time you get inspired, you will much later in life be able to tell your grand children.. /"I got my first spark of an idea for that story back in Year, Month, Day, time, second"/ 50 years later! Now that is being organized! LOL
 
-   Having done the simple steps above any time you get inspired, you 
-   will much later in life be able to tell your grand children.. 
-   /"I got my first spark of an idea for that story back in Year,/ 
-   /Month, Day, time, second"/ 50 years later! Now that is being 
-   organized! LOL
-:END:
-
-** NEW 💡 <2022-08-20 Sat> New Example Idea /(clone this)/
+** ACTIVE 💡 <2023-01-18 Wed> Cooking, Composing, & Software Dev
 :README:
    This is a dummy example of some crazy idea that you may have 
    gotten at the spur of the moment, while you were doing something 
@@ -399,16 +549,25 @@ Other folks UX metrics are sorely needed!! Thanks!
    go in a research folder of a Sci-Fi related project...
 :END:
 
-=Copy/Clone this Boilerplate Template NOW= And Change your clone's Title.. 
+=Note:= The following is an example of an idea that /(actually did come up)/
+      while I was in the process of designing and producing these Org-Mode
+      based Project Skeleton Template Files for Independent Authors, Writers,
+      etc... It is documented here now...
 
-=Then Quickly Get Started Writing Down your FRESH NEW IDEA=
+      I can come back later and put it where it belongs, and then continue
+      on with it.... /(when that time comes)/ It is Tagged ~:must_read:~
 
-=Replace all of this boilerplate content with your own content=
+This is the start of an essay comparing gourmet chefs, music composers, producers, architects, authors, and software developers...
 
-\newpage
+Although the above disciplines don't seem to have much in common at first glance... A deeper analysis may reveal a generalized trend of significant similar attributes and processes in common across all of the above mentioned groups... A generalized trend may be revealed that leads to great success in each related field...
 
-** NEW 💡 New Scene Ideas:
-*** NEW 🎙 ~S???~ <2022-09-09 Fri>  Scene Title /(Template)/
+It is my hope that this study will reveal these common trends...
+
+A research discussion will be proposed to investigate the how each group goes about doing the things they do, the way they do it, and why...  That will be the first step...
+
+More to come later...  Hope this is enough kindling to start the fire...
+
+** NEW 🎙 ~S???~ <2022-09-09 Fri>  Scene Title /(BOILERPLATE clone this)/
 :README:
    Here is the =ULTIMATE MASTER WORKSPACE= for creating, developing, and 
    updating a *new scene*...
@@ -433,22 +592,22 @@ Other folks UX metrics are sorely needed!! Thanks!
 
    If a scene changes abruptly to some other situation, that may mean that the scene is over and a new one is starting... Usually a change of environment triggers a new scene...
 :END:
-**** ✨ Location:
+*** ✨ Location:
 
 \newpage
 
-**** 📃 Summary:
+*** 📃 Summary:
 
 \newpage
 
-**** 🗒 Background Notes:
+*** 🗒 Background Notes:
 :README:
   This area could start out as this single scene's quick synopsis summarizing all of the actions / dialog etc. that take place during this particular scene and / or the place where you sketch these things out first before committing them to the actual scene dialog script heading below...  This is also a place to add extra notes for this scene that will not become part of the final production fountain script...
 :END:
 
 \newpage
 
-**** 📃 Fountain Script: /(single scene script)/
+*** 📃 Fountain Script: /(single scene script)/
 :README:
   Compose a new draft scene fountain script in the block below... Write some scene related production notes, or instructions within the fountain script source block as well...
 :END:
@@ -502,96 +661,219 @@ Please somebody write me into a real character... Thanks!
 =Replace all of this boilerplate content with your own content=
 
 \newpage
-* 🎙 Production: /(Name of Production)/                    :export:
-** NEW 📃 Synopsis:
+** NEW 💡 <2022-08-20 Sat> New Example Idea /(BOILERPLATE clone this)/
 :README:
-   =Use This Space to keep your Audio Drama's Synopsis...=
+   This is a dummy example of some crazy idea that you may have 
+   gotten at the spur of the moment, while you were doing something 
+   elsewhere within this project...  After you are done getting as 
+   much of the idea as you initally can then you can simply go back 
+   to what you were doing before the inspiration segue tore you away... 
+   You might want to schedule this as a todo item before leaving though...
 
-   You can write anything you want here but it is highly recommended
+   Later when you are free you can come back to file this or place it 
+   where it belongs.  In the case of the note below it would probably 
+   go in a research folder of a Sci-Fi related project...
+:END:
+
+=Copy/Clone this Boilerplate Template NOW= And Change your clone's Title.. 
+
+=Then Quickly Get Started Writing Down your FRESH NEW IDEA=
+
+=Replace all of this boilerplate content with your own content=
+* NEW 📕 Production Front Matter:                       :noexport:
+
+=Use this binder for INITIAL PRODUCTION NOTES= /(e.g., Production META Info, Synopsis, etc...)/, which could function as promotional material before, during, and
+after public release off the performance...
+
+=This Binder is NOT Exported...=
+
+** NEW 📝 Synopsis:
+:README:
+   =Use This Space to record your official production Synopsis...=
+
+   You can write anything you want here but it is highly recommended 
    to use the award winning *"Snowflake Method"* created by [[https://www.advancedfictionwriting.com/][Randy Ingermanson]] 
-   of Ingermanson Communications, Inc. The steps within the *⏰ Tasks:* Binder
-   follow guidelines within his book... Boilerplate forms have been set up 
-   for you to fill out while reading his book to get a deeper understanding 
-   behind these dry forms and worksheets... 
+   of Ingermanson Communications, Inc.
 
-   - [ ] *Go to the:* =⏰ Tasks:= *Binder and do the:* =📃 Synopsis Tasks:=
+   The steps within the *⏱ Tasks:* Binder are based on guidelines within
+   Randy's book... Boilerplate forms have been set up for you to fill
+   out while reading his book to get a deeper understanding behind these
+   dry forms and worksheets...
+
+   - [ ] Go to the: *⏱ Tasks:* Binder and do the: *📋 Synopsis Tasks:*
 
    - [ ] *After Completing Tasks Mark Them:* ~DONE~
 
    - [ ] *Place Resulting Synopsis in Here:*
 
-         Copy the one-page skeleton from: =Step Three= of Synopsis Tasks
-         to HERE to serve as this Story's OFFICIAL SYNOPSIS...
+        Copy the one-page skeleton from: =Step Three= of Synopsis
+        Tasks to HERE to serve as this production's official Synopsis...
 
    When you are done with these Synopsis tasks, you will have 
-   completed half the battle of producing your Audio Drama! The 
-   other half is getting to know your characters... Plots, 
-   Episodes, and scenes will flow from that effortlessly...
+   completed half the battle of producing your Audio Work!
+   And you will have a pretty good abstract 
+   
+   Everything else you write will flow out of that initial seed...
 
    You will be coming back here to consult these notes for many 
-   things as you promote the premere performance of your work.
+   things as you promote and publish your production.
 :END:
 
 =Synopsis Content:= Yadda... Yadda... Yadda...
-
-\newpage
-
-** NEW 🎙 ~E001~ Episode Title: /(MASTER TEMPLATE - Change Title)/
+* NEW Introduction:                                                :export:
+<<PRODUCTION_INTRO>>
 :README:
-   *🎙 Episodes* are the *Top Level Headings* within the *🎙 Production:* Binder 
-   of this *Emacs Org-mode* Audio Drama Publishing project...
+   This section has been purposefully left blank for you to fill in...
+   Use this space to write the *Introduction* to your Audio Production...
+   When published, this *Introduction* will appear before *Episodes*...
+   
+   It should include anything production managers, directors, actors,
+   narrators, sound designers, composers, producers, executive producers,
+   casting directors, etc., and any interested readers will need to get
+   started with a solid overview of this entire audio production...
 
-   =Usage:=
+   The published version of this book will contain everything needed, and
+   the full Drama Script will be exported via an external ~.fountain~ script
+   file... which produces a separate printable *PDF* script in CURRIER font
+   that could be included here as well...
 
-   - [ ] =Clone This:= *NEW 🎙* ~E00n~ *Episode Title:* /(MASTER TEMPLATE)/ 
-          =Copy ALL its contents= and =paste= it as a child Item 
-          in the *🎙 Production:* Binder of this Audio Drama 
-          Publishing Project... 
+   Many Sections within this project /(that are NOT exported)/ contain fountain
+   script source code blocks, /(where the story is developed in stages)/ and
+   later put into the master ~.fountain~ script file...
 
-          Do this whenever you need to start a new episode...
-
-   - [ ] =Edit Your New Clone:=
-          The structure of this template is all set up for 
-          you ahead of time to allow you to immediately begin 
-          writing...  
-
-          Replace titles to suit your needs, but keep the 
-          structure of *Episode / Scenes* intact... 
-          /(i.e., change names only...)/
-:END:
-*** ☞ Episode References:                                          :noexport:
-:README:
-   =Org Mode Links Tip:=
-
-      + To Create a Link Type: ~C-c C-l~ 
-         /(then paste: ~link~ & type: "description")/
-
-         =-or-= Simply Copy/Paste Template: /(link placeholder)/
-               Below and fill that in... 
-               copy/paste more placeholders as needed... ;-)
-
-      + To Open a Link Type: ~C-c C-o~
-
-- [[][] ] - /(link placeholder)/
-
+   =WARNING:= Do NOT Remove the ~#+BEGIN_EXPORT latex~ Directive at the end of
+             this Preface...  It is needed to mark the end of LaTeX Frontmatter
+             and the Beginning of the Mainmatter *The Episodes*...
 :END:
 
-*Add links to Anything Deemed Important to the Writing of This Episode:*
-/(Links to Websites, Other Stories, Images, Sound, Video, Whatever...)/
+=Introduction Content:= 
 
-- [[][] ] - 
+Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo. Fusce tincidunt, lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante.
 
-- [[][] ] - 
+At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
 
-- [[][] ] - 
 
-- [[][] ] - 
 
-- [[][] ] -
+#+BEGIN_EXPORT latex
+\mainmatter
+#+END_EXPORT
 
-\newpage
-*** NEW 🎙 ~S001~ Scene Title: /(Template - Change to Actual Scene Title)/:
+* NEW Episode Title A: /(BOILERPLATE Clone This)/                :noexport:
+<<EPI_title-a>>
 :README:
+
+   *Episodes* are the *Top Level Headings* within this *Emacs Org-mode*
+   Audio Drama Production Project... Built in LaTeX memoir styles
+   insure that Episode and Scene numbering work without needing any
+   of your input... You only need to insure your anchors are unique!
+
+- [ ] *USAGE:* [0/2]
+
+   =This is a NON Exported BOILERPLATE Which Should Be Cloned=
+
+   1) [ ] =Clone This:= *NEW Episode Title A:* /(BOILERPLATE)/
+      
+         =Copy ALL its contents= and =paste= it as new sibling
+         directly UNDER any existing Episodes allready in place,
+         but ABOVE THIS BOILERPLATE item it was created from...
+         /(i.e., save your boilerplate template on the bottom/
+         /of the list where it will be copied/cloned again later)/
+
+         =Do this whenever you need to start a new Episode...=
+
+   2) [ ] =Commandeer Your New Clone:=
+      
+         The structure of this template is all set up for 
+         you ahead of time to allow you to immediately begin 
+         writing...
+
+         After cloning, rename *Episode Title A:* /(BOILERPLATE)/
+         to a *Unique Title* and remove /(BOILERPLATE)/ in order
+         to commandeer the entire item for your needs...
+
+         =Do NOT PUT "EPISODE" in your Title!=
+
+         Built in LaTeX memoir styles create a *Episode #* heading
+         before your episode title heading to take care of sequence
+         numbering automatically...
+
+         Scenes are automatically numbered as well...
+
+         You only need to insure your anchors are unique!
+
+         Change the ~:noexport:~ tag to ~:export:~ for this NEW
+         REAL Chapter so it will show up when publishing drafts...
+
+   3) [ ] =Change The Anchor Link=
+
+         Change the anchor /(directly under Episode Title)/ to match
+         your new episode's title name...
+         
+         =Note:= I created the following convention for making unique
+               anchors within ALL of these HAP_Doc-Skeleton.org
+               Template files.
+
+               The anchor ~PREFIX_~ is there to match the named sections
+               of a book or document project defined as a standard
+               across ALL of these HAP_Document-Skeleton.org Template
+               files... This will help keep your anchors unique, and
+               also add an extra *KM* dimension of *category* to them...
+
+               It would be wise to follow this convention when you
+               create anchors elsewhere within ALL of your Book
+               Projects created from HAP Modular Emacs Document
+               Skeleton Template files...
+
+               If you wish to change all of this, go ahead and do
+               what ever you want... For simplicity's sake, follow
+               the instructions below... /(there are automatic ways/
+               /to create links and anchors within org-mode... I/
+               /prefer to do it manually... The alternate is a mess/
+               /IMHO)/
+
+         Leave ~EPI_~ as the anchor's prefix... /(as in boilerplate above)/
+         Use dashes to connect words /(all lower case)/ from your title...
+
+         The anchor above may be used to link to this episode from
+         Research or other sections of this project...
+         /(Or even from/ ~.org~ /docs OUTSIDE of this file...)/
+         
+         /(which may or may not be published as links within the PDF)/
+
+   4) [ ] =Replace Titles, Anchors, & Content Within This Section=
+
+         Change names to suit your needs, but keep the structure of
+         *Episode / Scene / sub-headings* intact...
+         
+         /(i.e., change titles, anchors, and content only...)/
+
+   5) [ ] =Add New Cloned Scenes as Needed=
+
+         Commandeer *Scenes X* & *Y* as needed when first starting
+         out on this new Episode... Read the *:README:* drawer
+         under the Scene headings for more info...
+
+         After that, =COPY/CLONE= *New Scene Z* to make more scenes,
+         and leave the original *New Scene Z* in place =AS IS= to
+         be cloned later to make more scenes if & when needed...
+         Read the *:README:* drawer under the Scene heading for
+         more info...
+
+:END:
+** NEW Scene X /(COMMANDEER This One)/                              :noexport:
+<<SCENE_new-scene-x>>
+:README:
+
+- [ ] *READ ABOUT THIS SECTION:*
+  
+   Scenes are the DNA that make up the episodes in an audio production...
+   Each Scene should have its own title or phrase... The LaTeX style
+   configuration for this book template takes care of numbering Episodes
+   and Scenes automatically...
+
+   Episodes may contain several scenes... There can be many twisty paths
+   all alike /(or all different)/... %~)
+
    Here is the =ULTIMATE MASTER WORKSPACE= for creating, developing, and 
    updating a *new scene*...
 
@@ -614,25 +896,97 @@ Please somebody write me into a real character... Thanks!
    The scenes don't necessarily follow in chronological order but they relate to each other in the mosaic fabric of the story as it develops... 
 
    If a scene changes abruptly to some other situation, that may mean that the scene is over and a new one is starting... Usually a change of environment triggers a new scene...
+
+- [ ] *USAGE:* [0/3]
+
+   1) [ ] =Commandeer This:= *New Scene X:*
+
+         =Add Your New Scene Content= under the provided standard
+         production industry sub-headings...  Follow any directions
+         found within the sub headings themselves...
+
+         The structure of this template is all set up for you ahead
+         of time to allow you to immediately begin writing...
+
+         Rename *New Scene X:* to a *Unique Title* and commandeer the
+         entire item for your specific needs...
+
+         =Do NOT PUT "Scene" in your Title!=
+
+         Built in LaTeX memoir styles create a *Scene #* heading
+         before your scene title heading to take care of sequence
+         numbering automatically...
+
+         You only need to insure your anchors are unique!
+
+         Change the ~:noexport:~ tag to ~:export:~ for this NEW
+         REAL Scene so it will show up when publishing drafts...
+
+   2) [ ] =Change The Anchor Link= /(make it unique)/
+
+         Change the ~<<anchor>~ /(directly under the/ *New Scene X* /title)/
+         to match your new Scene's title name...
+         
+         =Note:= I created the following convention for making unique
+                anchors within ALL of these HAP_Doc-Skeleton.org
+                Template files.
+
+                The anchor ~PREFIX_~ is there to match the named sections
+                of a book or document project defined as a standard
+                across ALL of these HAP_Document-Skeleton.org Template
+                files... This will help keep your anchors unique, and
+                also add an extra *KM* dimension of *category* to them...
+
+                It would be wise to follow this convention when you
+                create anchors elsewhere within ALL of your Book
+                Projects created from HAP Modular Emacs Document
+                Skeleton Template files...
+
+                If you wish to change all of this, go ahead and do
+                what ever you want... For simplicity's sake, follow
+                the instructions below... /(there are automatic ways/
+                /to create links and anchors within org-mode... I/
+                /prefer to do it manually... The alternate is a mess/
+                /IMHO)/
+         
+         Leave ~SCENE_~ as the anchor's prefix...
+         /(as in boilerplate anchor above)/ Use dashes to connect
+         words /(all lower case)/ from your scene's title...
+
+         The anchor above may be used to link to this Scene from
+         Research or other sections of this project...
+         /(Or even from/ ~.org~ /docs OUTSIDE of this file...)/
+
+         /(which may or may not be published as links within the PDF)/
+
 :END:
-**** Location:
 
-\newpage
+=BOILERPLATE CONTENT=
 
-**** Summary:
+=Commandeer Below with your Scene Content=
 
-\newpage
+*** Location:
 
-**** 🗒 Background Notes:
+=Put This Scene's Location Information Here=
+
+*** Summary:
+
+=Put This Scene's Summary Here=
+
+*** Production Notes:
 :README:
-  This area could start out as this single scene's quick synopsis summarizing all of the actions / dialog etc. that take place during this particular scene and / or the place where you sketch these things out first before committing them to the actual scene dialog script heading below...  This is also a place to add extra notes for this scene that will not become part of the final production fountain script...
+  This area could start out as this single scene's quick synopsis summarizing all of the important actions / dialog etc. that take place during this particular scene for production purposes...
+
+  This is also a place to add extra notes for this scene that will not become production notes within the final production fountain script...
 :END:
 
-\newpage
+=Put This Scene's Production Notes Here=
 
-**** 📃 Fountain Script: /(single scene script)/
+*** 📝 Fountain Script: /(single scene script)/                      :noexport:
 :README:
-  Compose a new draft scene fountain script in the block below... Write some scene related production notes, or instructions within the fountain script source block as well...
+  Compose a new draft scene fountain script in the block below... Write some scene related production notes, or instructions within the fountain script source block as well... The snippit you compose below will be added to the
+  final production script later, but this is the initial SOURCE where you
+  write the script for this scene...
 :END:
 
 #+BEGIN_SRC fountain
@@ -660,35 +1014,507 @@ Oh? I am just a template?  Whaaaat the heck is that?
 Please somebody write me into a real character... Thanks!
 
 >END of SCENE<
- #+END_SRC
+#+END_SRC
 
-\newpage
-
-*** NEW 📒 Epi Back Story /(Optional For Series Intro)/
+** NEW Scene Y /(COMMANDEER This One)/                              :noexport:
+<<SCENE_new-scene-y>>
 :README:
-  This section is for episode background planning and plot development which may or may not be included within the final production... Information contained here is more specific to this single episode than the more general *Synopsis / Back Story* section of this entire project, or what you may find within the *Research:* section which is more global in scope as well...
 
-  Structure this section any way you wish or need...
+- [ ] *READ ABOUT THIS SECTION:*
+  
+   Scenes are the DNA that make up the episodes in an audio production...
+   Each Scene should have its own title or phrase... The LaTeX style
+   configuration for this book template takes care of numbering Episodes
+   and Scenes automatically...
+
+   Episodes may contain several scenes... There can be many twisty paths
+   all alike /(or all different)/... %~)
+
+   Here is the =ULTIMATE MASTER WORKSPACE= for creating, developing, and 
+   updating a *new scene*...
+
+   All ideas, plots, dialog, sounds, music, production notes, etc. for a particular scene within this episode are developed here solely...
+
+   One of the accompanying fountain drama scripts for this *Audio Drama Project* ~.org~ file /(named after this episode)/ contains a compilation of all the /fountain script snippits/ for all scenes developed within this single episode...
+
+   Some elements created here will become part of the accompanying fountain drama script for this episode... /(e.g., dialog, notes, narration, etc.)/ 
+
+   The accompanying fountain drama script for this episode must be kept up to date with final drafts and latest edits made solely here...
+
+   The headings within this ~.org~ file can be tracked using ~GTD~ tags, and a *log* entry can keep track of time worked on them... Once a scene is in final draft stage, it can be marked *DONE* and the fountain script for the episode will be updated to reflect that scene's final draft state...
+
+   *What is a Scene?*
+
+   Scenes form the fabric within episodes of audio or radio programs...
+
+   Scenes are small packages of isolated events relating to a single unique thread/picture knitted into a defined situation where particular events related to that situation play out...
+
+   The scenes don't necessarily follow in chronological order but they relate to each other in the mosaic fabric of the story as it develops... 
+
+   If a scene changes abruptly to some other situation, that may mean that the scene is over and a new one is starting... Usually a change of environment triggers a new scene...
+
+- [ ] *USAGE:* [0/3]
+
+   1) [ ] =Commandeer This:= *New Scene Y:*
+
+         =Add Your New Scene Content= under the provided standard
+         production industry sub-headings...  Follow any directions
+         found within the sub headings themselves...
+
+         The structure of this template is all set up for you ahead
+         of time to allow you to immediately begin writing...
+
+         Rename *New Scene Y:* to a *Unique Title* and commandeer the
+         entire item for your specific needs...
+
+         =Do NOT PUT "Scene" in your Title!=
+
+         Built in LaTeX memoir styles create a *Scene #* heading
+         before your scene title heading to take care of sequence
+         numbering automatically...
+
+         You only need to insure your anchors are unique!
+
+         Change the ~:noexport:~ tag to ~:export:~ for this NEW
+         REAL Scene so it will show up when publishing drafts...
+
+   2) [ ] =Change The Anchor Link= /(make it unique)/
+
+         Change the ~<<anchor>~ /(directly under the/ *New Scene Y* /title)/
+         to match your new Scene's title name...
+         
+         =Note:= I created the following convention for making unique
+                anchors within ALL of these HAP_Doc-Skeleton.org
+                Template files.
+
+                The anchor ~PREFIX_~ is there to match the named sections
+                of a book or document project defined as a standard
+                across ALL of these HAP_Document-Skeleton.org Template
+                files... This will help keep your anchors unique, and
+                also add an extra *KM* dimension of *category* to them...
+
+                It would be wise to follow this convention when you
+                create anchors elsewhere within ALL of your Book
+                Projects created from HAP Modular Emacs Document
+                Skeleton Template files...
+
+                If you wish to change all of this, go ahead and do
+                what ever you want... For simplicity's sake, follow
+                the instructions below... /(there are automatic ways/
+                /to create links and anchors within org-mode... I/
+                /prefer to do it manually... The alternate is a mess/
+                /IMHO)/
+         
+         Leave ~SCENE_~ as the anchor's prefix...
+         /(as in boilerplate anchor above)/ Use dashes to connect
+         words /(all lower case)/ from your scene's title...
+
+         The anchor above may be used to link to this Scene from
+         Research or other sections of this project...
+         /(Or even from/ ~.org~ /docs OUTSIDE of this file...)/
+
+         /(which may or may not be published as links within the PDF)/
+
 :END:
 
-\newpage
+=BOILERPLATE CONTENT=
 
-*** NEW 📃 Epi Synopsis
+=Commandeer Below with your Scene Content=
+
+*** Location:
+
+=Put This Scene's Location Information Here=
+
+*** Summary:
+
+=Put This Scene's Summary Here=
+
+*** Production Notes:
+:README:
+  This area could start out as this single scene's quick synopsis summarizing all of the important actions / dialog etc. that take place during this particular scene for production purposes...
+
+  This is also a place to add extra notes for this scene that will not become production notes within the final production fountain script...
+:END:
+
+=Put This Scene's Production Notes Here=
+
+*** 📝 Fountain Script: /(single scene script)/                      :noexport:
+:README:
+  Compose a new draft scene fountain script in the block below... Write some scene related production notes, or instructions within the fountain script source block as well... The snippit you compose below will be added to the
+  final production script later, but this is the initial SOURCE where you
+  write the script for this scene...
+:END:
+
+#+BEGIN_SRC fountain
+# Production Notes: (example)
+
+= Add instructions, and information here needed to develop this scene... 
+= Yadda Yadda Yadda... 
+= Add Excerpts from: 🗒 Background Notes: above if needed...
+
+# BEGIN SCENE: (example)
+
+INT WRITERS ROOM (DAY)
+
+01 _MUSIC: [MUS-E001-S02-01] OPTIONAL OMINOUS HIGHLIGHT OVERLAY STING (SYNC TO DIALOG "Of all the nerve!", FADE FAST - ONLY HALL REVERB REMAINS THEN SILENCE)_
+
+02 _DIALOG:_
+
+CHARACTER
+Dialog text... Hey! Don't call me a generic character!  
+(EMPHATICALLY)
+Of all the nerve! 
+(SURPRISE)
+Oh? I am just a template?  Whaaaat the heck is that? 
+(LAUGHS)
+Please somebody write me into a real character... Thanks!
+
+>END of SCENE<
+#+END_SRC
+
+** NEW Scene Z /(BOILERPLATE - Keep Until Final Draft)/       :noexport:
+<<SCENE_new-scene-z>>
+:README:
+
+- [ ] *READ ABOUT THIS SECTION:*
+  
+   Scenes are the DNA that make up the episodes in an audio production...
+   Each Scene should have its own title or phrase... The LaTeX style
+   configuration for this book template takes care of numbering Episodes
+   and Scenes automatically...
+
+   Episodes may contain several scenes... There can be many twisty paths
+   all alike /(or all different)/... %~)
+
+   Here is the =ULTIMATE MASTER WORKSPACE= for creating, developing, and 
+   updating a *new scene*...
+
+   All ideas, plots, dialog, sounds, music, production notes, etc. for a particular scene within this episode are developed here solely...
+
+   One of the accompanying fountain drama scripts for this *Audio Drama Project* ~.org~ file /(named after this episode)/ contains a compilation of all the /fountain script snippits/ for all scenes developed within this single episode...
+
+   Some elements created here will become part of the accompanying fountain drama script for this episode... /(e.g., dialog, notes, narration, etc.)/ 
+
+   The accompanying fountain drama script for this episode must be kept up to date with final drafts and latest edits made solely here...
+
+   The headings within this ~.org~ file can be tracked using ~GTD~ tags, and a *log* entry can keep track of time worked on them... Once a scene is in final draft stage, it can be marked *DONE* and the fountain script for the episode will be updated to reflect that scene's final draft state...
+
+   *What is a Scene?*
+
+   Scenes form the fabric within episodes of audio or radio programs...
+
+   Scenes are small packages of isolated events relating to a single unique thread/picture knitted into a defined situation where particular events related to that situation play out...
+
+   The scenes don't necessarily follow in chronological order but they relate to each other in the mosaic fabric of the story as it develops... 
+
+   If a scene changes abruptly to some other situation, that may mean that the scene is over and a new one is starting... Usually a change of environment triggers a new scene...
+
+- [ ] *USAGE:* [0/3]
+
+   1) [ ] =FIRST: Copy Clone This BOILERPLATE= *New Scene Z:*
+
+         =Leave THIS BOILERPLATE Sub Topic Z in Place...=
+        
+         =Do NOT CHANGE ITS CONTENT!...=
+
+         Paste your clone just above it, /(below your existing Scenes)/
+         For Final Draft, /(if you are sure you are done with this episode)/
+         you may then remove this BOILERPLATE which is only here for
+         convenience while still writing this episode...
+        
+         =NOTE:= If you know for sure This WILL BE your LAST Scene
+               for this Episode, =COMMANDEER= This Item Instead of
+               Cloning another Copy above it... In that case YES
+               Change all BOILERPLATE Content within this Item
+               and compose your LAST Scene here...
+
+   2) [ ] =Commandeer Your New Clone:=
+
+         The structure of this template is all set up for you ahead
+         of time to allow you to immediately begin writing...
+
+         Rename *New Scene Z:* to a *Unique Title* and commandeer the
+         entire item for your specific needs...
+
+         =Do NOT PUT "Scene" in your Title!=
+
+         Built in LaTeX memoir styles create a *Scene #* heading
+         before your scene title heading to take care of sequence
+         numbering automatically...
+
+         You only need to insure your anchors are unique!
+
+         Change the ~:noexport:~ tag to ~:export:~ for this NEW
+         REAL Scene so it will show up when publishing drafts...
+
+   3) [ ] =Change The Anchor Link= /(make it unique)/
+
+         Change the _<<anchor>_ /(directly under your renamed/ *Scene* /heading)/
+         to match your new renamed scene title...
+
+         =Note:= I created the following convention for making unique
+               anchors within ALL of these HAP_Doc-Skeleton.org
+               Template files.
+
+               The anchor ~PREFIX_~ is there to match the named sections
+               of a book or document project defined as a standard
+               across ALL of these HAP_Document-Skeleton.org Template
+               files... This will help keep your anchors unique, and
+               also add an extra *KM* dimension of *category* to them...
+
+               It would be wise to follow this convention when you
+               create anchors elsewhere within ALL of your Book
+               Projects created from HAP Modular Emacs Document
+               Skeleton Template files...
+
+               If you wish to change all of this, go ahead and do
+               what ever you want... For simplicity's sake, follow
+               the instructions below... /(there are automatic ways/
+               /to create links and anchors within org-mode... I/
+               /prefer to do it manually... The alternate is a mess/
+               /IMHO)/
+         
+         Leave ~SCENE_~ as the anchor's prefix...
+         /(as in boilerplate anchor above)/ Use dashes to connect
+         words /(all lower case)/ from your scene's title...
+
+         The anchor above may be used to link to this Scene from
+         Research or other sections of this project...
+         /(Or even from/ ~.org~ /docs OUTSIDE of this file...)/
+
+         /(which may or may not be published as links within the PDF)/
+
+:END:
+
+=BOILERPLATE CONTENT=
+
+=Commandeer Below with your Scene Content=
+
+*** Location:
+
+=Put This Scene's Location Information Here=
+
+*** Summary:
+
+=Put This Scene's Summary Here=
+
+*** Production Notes:
+:README:
+  This area could start out as this single scene's quick synopsis summarizing all of the important actions / dialog etc. that take place during this particular scene for production purposes...
+
+  This is also a place to add extra notes for this scene that will not become production notes within the final production fountain script...
+:END:
+
+=Put This Scene's Production Notes Here=
+
+*** 📝 Fountain Script: /(single scene script)/                      :noexport:
+:README:
+  Compose a new draft scene fountain script in the block below... Write some scene related production notes, or instructions within the fountain script source block as well... The snippit you compose below will be added to the
+  final production script later, but this is the initial SOURCE where you
+  write the script for this scene...
+:END:
+
+#+BEGIN_SRC fountain
+# Production Notes: (example)
+
+= Add instructions, and information here needed to develop this scene... 
+= Yadda Yadda Yadda... 
+= Add Excerpts from: 🗒 Background Notes: above if needed...
+
+# BEGIN SCENE: (example)
+
+INT WRITERS ROOM (DAY)
+
+01 _MUSIC: [MUS-E001-S02-01] OPTIONAL OMINOUS HIGHLIGHT OVERLAY STING (SYNC TO DIALOG "Of all the nerve!", FADE FAST - ONLY HALL REVERB REMAINS THEN SILENCE)_
+
+02 _DIALOG:_
+
+CHARACTER
+Dialog text... Hey! Don't call me a generic character!  
+(EMPHATICALLY)
+Of all the nerve! 
+(SURPRISE)
+Oh? I am just a template?  Whaaaat the heck is that? 
+(LAUGHS)
+Please somebody write me into a real character... Thanks!
+
+>END of SCENE<
+#+END_SRC
+
+** NEW 📚 Episode References:                                         :noexport:
+:README:
+   =Org Mode Links Tip:=
+
+      + To Create a Link Type: ~C-c C-l~ 
+         /(then paste: ~link~ & type: "description")/
+
+         =-OR-= Simply Copy/Paste BOILERPLATE:
+              /(use placeholders below)/
+              And Fill Them In Manually... 
+              Copy/Paste more placeholders as
+              needed to create more links...
+
+      + To Open a Link Type: ~C-c C-o~
+
+      + To EXPAND a Link Type: ~SPACE b~
+         or: ~M-x org-toggle-link-display~
+
+   =BOILERPLATE:= /(clone to add more ref links)/
+
+   + *Heading:* [[link][Link NAME] ] /(comment)/
+
+   + [[link][Link Name] ] *Heading:* /(comment)/
+   
+   + *_:* [[][] ] /(yadda... yadda... yadda...)/
+
+   + [[][] ] /(_)/
+
+   + [[junk][JUNK]]  /(This is a stupid BUG workaround/ /for org-mode link/
+         /expansion/compression... If you invoke:/ ~org-toggle-link-display~
+         /you will notice this JUNK link DOES NOT compress to a clickable/
+         /link title alone.../
+         
+         /I am not sure if this is due to my Emacs Config or a bug within/
+         *Org-Mode* /itself.../
+
+         /I put this workaround in here because if it is not here,/
+         /SOME of your external file links created below may not/
+         /compress after expansion, even though thy are GOOD links!/
+
+         /Leaving this JUNK link in here acts like a scapegoat/
+         /so that your real links below will all compress/expand/
+         /normally... I am NOT SURE WHY THIS WORKS??? I'm to busy/
+         /to do anything beyond hacking at this point.../
+         
+         ~org-lint~ /will detect JUNK above... Ignore that warning.../
+                  /It's my "METHOD of MADNESS" %^)/
+:END:
+
++ *Link to Project:* [[][] ] /(comment)/
+
+** NEW 📝 Episode Notes:                                                  :noexport:
+:README:
+   *Episode Notes*, /(unlike Scenes, Back Stories, Summaries etc.)/ 
+   Should be written in =OUTLINE= form to aid in organization of 
+   events, etc... This section is =NOT the place to create NEW ideas=, 
+   but rather to =organize EXISTING ideas you have already written=...
+
+   =None of the Content Written Here Should be Added to any= 
+   =Episode/Scenes within your Book= 
+
+   =THIS IS A META PLACE=
+
+      /(i.e., Your Books Internal Analyst/
+             /Behind the Curtain So-To-Speak... %^)/
+:END:
+*** NEW 📃 Episode Synopsis
 :README:
   Write a short synopsis for this single episode here... This will be more or less a summary of this single episode only... You can use similar story building tools / exercises for writing this synopsis as you do for any typical fiction writing project... A summary of your Synopsis will be added to the final draft fountain script...
 :END:
 
-\newpage
+*** NEW 📝 Background Note 1: <2020-05-10 Sun> /(example)/
 
-*** NEW 🗡 Epi Plot Summary
+*Mark each note's timestamp to its initial creation time*. This will enable emerging notes for episodes to be searched chronologically, and to give you an idea of how things evolve over time...
+
+*Add anything you need here under this heading* formatted any way needed to present the data... Sub levels are fine, tables are fine... etc.  This is your episode's Notebook, Scrapbook, whatever any extra info/metadata you feel is important to record...
+
+- *Use bulleted lists/sublist etc. if needed...*
+
+*1. Or Numbered Lists...*
+
+|----+--------|
+| Or | Tables |
+|----+--------|
+|  1 |    2.3 |
+|----+--------|
+
+Do any or all the above to help get the concepts and images of your book clear in mind...
+
+*** NEW 📝 Background Note 2: <2020-05-10 Sun> /(example)/
+
+Each new note needs to get its own heading and initial timestamp...
+
+It is fine to make as many sub-headings as needed for these notes
+but not so important for them to also be time-stamped since their parent heading is... /(unless of course you have a reason)/
+
+***** Quid Novi? /(example note sub heading)/
+
+Quid Novi? Lorem Ipsum dolor sit amet,consectetur adipisicing elit, sed doeiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim adminim veniam, quis nostrudexercitation ullamco laboris nisi utaliquip ex ea commodo consequat.Duis aute irure dolor inreprehenderit in coluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatatnon proident, sunt in culpa quiofficia deserunt mollit anim id estlaborum.
+
+** NEW 📰 Back Stories:                                                     :noexport:
 :README:
-  Write your episode's plot summary here: /(e.g., In this episode we are dealing with yadda... yadda... yadda... which must be resolved with yadda... yadda... yadda..., etc...)/ This plot summary will probably not be added to the final draft fountain script... /(but there are exceptions of course)/
+   This section is for a episode's Back Story development... 
+   The following tips will help you manage development of your 
+   back stories and how they will best fit into your 
+   evolving story... 
+
+   - =Keep Things Organized:=
+
+      + *Add Time Stamped Background Notes:* /(within the Background/ 
+          /Notes section above)/ about new content added to this 
+          Back Stories section as you progress over time...
+
+      + *Add Time Stamps to:* Sub-headings within the Background 
+          Notes Section that reflect back to paragraphs written 
+          within this section...
+
+      + *Add TODO Keywords* to sub-headings within the Background 
+          Notes Section reflecting back to paragraphs written 
+          within this section...
+
+   Doing the above steps will help you keep track of back story 
+   development and get better organized about how your book is 
+   developing, what areas need the most work, seeing problems that 
+   need to be resolved, etc.  Most importantly, this will help 
+   prevent you from making any grave mistakes causing contradictions 
+   within your story later... /(unless that was your intention/ 
+   /"Alfred Hitchcock")/... In any case you will be better informed 
+   by keeping things organized here where you can see them and 
+   resolve them quickly...
+
+   =The Content Written Within This Section May or May Not be= 
+   =Added to actual Episodes/Scenes of your Book...=
+:END:
+*** NEW 📰 Back Story: <2020-05-10 Sun> /(Example)/
+
+=Note:= This is an example of a back story related to this 
+      episode, or possibly connecting to another episode 
+      in your book... 
+
+      Write it down in the rough here and then later you 
+      can develop it further as needed. Keep Background 
+      Notes about this back story as well, AND keep them 
+      up to date as this story develops!
+
+** NEW 🗡 Plot(s):                                                               :noexport:
+:README:
+   Plots and Sub Plots, /(Just Like Background Notes)/ are =META DATA= 
+   Not Intended to be Added back to the Episodes/Scenes of your 
+   Book... The purpose of Plot Summaries are to help you during 
+   planning stages where you are trying to resolve that twisty 
+   mess you created... OMG!
+
+   Keeping the above in mind while writing the plot summary of a 
+   episode, will help you get better organized about how your book 
+   is developing, what directions it is taking, what areas need the 
+   most work, where problems or inconsistencies may arise, etc.  
+
+   Most importantly, this will help prevent you from making any grave 
+   mistakes causing contradictions within your story later... 
+   /(unless that was your intention "Alfred Hitchcock")/... In any case 
+   you will be better informed by keeping all your plot tasks here 
+   where you can see them and resolve them quickly...
 :END:
 
-\newpage
+*** NEW 🗡 Plot Summary:
 
-*** NEW 📢 Sound Cues:
-**** Sound Cue /(CLIPS)/ Numbering Convention:
+=Plot or Sub-Plot Summary= /(crazy example)/
+
+In this episode we are dealing with yadda yadda yadda which must be resolved with yadda yadda yadda.  But be careful about Yadda Yadda Yadda as she does not exist in this Season's series yet!  Whaaat?  Nevermind... She never existed... Only in your dreams... The plot dissolves into tiny specs of sand on the marble floor...
+Goldfish float belly up dead in their tank due to some un-identified shockwave of unknown origin passing through the bedroom just moments before... The uncertainty brings on feelings of Not Safe!!! Oh... Ah! There you are... Sigh of relief...
+
+** NEW 📢 Sound Cues:                                                      :noexport:
+*** Sound Cue /(CLIPS)/ Numbering Convention:
 
 Sound Cues contain an identifying code number plus a short descriptive title... /(this way sound files can be sorted alphabetically and found easily when called for in a script (or cue sheet) during rehearsal or production time...)/
 
@@ -760,23 +1586,23 @@ This is for things like The Entire Series Music Theme, Content with a Scope Beyo
                   best judgment when naming and assigning a sound
                   file as "music" or "sfx"... You will be fine...
 
-\newpage
-
-**** Scene 01:
-***** 📢 ~[SFX-E001-S001-C001]~ "sound cue name" /(template)/
+*** NEW Scene 01:
+**** 📢 ~[SFX-E001-S001-C001]~ "sound cue name" /(template)/
 :README:
+
    WRITE SHORT SOUND DESCRIPTION IN ALL CAPS LIKE THIS
 
    /Example:/
    SCREAM - SMASH BATHROOM MIRROR - SHARDS FALL IN SINK - INTENSE SOBBING
 :END:
-****** 📃 Fountain Script: /(example)/
+
+***** 📃 Fountain Script: /(example)/
 
 #+begin_src fountain
 nn _SOUND: [SFX-E001-S001-C001] ANGRY SCREAM! - SMASH BATHROOM MIRROR - SHARDS FALL IN SINK (CONTINUE AND FADE SLIGHTLY UNDER - INTENSE EMOTIONAL SILENCE) [SFX-E01-S01-02] WALLA - DEEP SOBBING EMOTIONAL BREAKDOWN_
 #+end_src
 
-****** 🗒 Notes: [0/2]
+***** 🗒 Notes: [0/2]
 :README:
    This part will not be added to the script, and you should probably start here first to get the rough idea sketched out...
 
@@ -791,23 +1617,22 @@ nn _SOUND: [SFX-E001-S001-C001] ANGRY SCREAM! - SMASH BATHROOM MIRROR - SHARDS F
 
      ~./media/SFX-C001_Even-Shorter-Description.wav~
 
-\newpage
-
-**** Scene 02:
-***** 📢 ~[SFX-E001-S002-C002]~ "sound cue name" /(template)/
+*** NEW Scene 02:
+**** 📢 ~[SFX-E001-S002-C002]~ "sound cue name" /(template)/
 :README:
    WRITE SHORT SOUND DESCRIPTION IN ALL CAPS LIKE THIS
 
    /Example:/
    DOG BARKING - CAR WHEELS SCREECH - THUD - DOG CRIES THEN WHIMPERS
 :END:
-****** 📃 Fountain Script: /(example)/
+
+***** 📃 Fountain Script: /(example)/
 
 #+begin_src fountain
 nn _SOUND: [SFX-E001-S002-C002] DOG BARKING IN STREET! - CAR WHEELS SCREECH - THUD - DOG CRIES THEN WHIMPERS (CONTINUE AND FADE)_
 #+end_src
 
-****** 🗒 Notes:  [0/2]
+***** 🗒 Notes:  [0/2]
 :README:
    This part will not be added to the script, and you should probably start here first to get the rough idea sketched out...
 
@@ -820,10 +1645,8 @@ nn _SOUND: [SFX-E001-S002-C002] DOG BARKING IN STREET! - CAR WHEELS SCREECH - TH
 
        ~./media/SFX-C002_Even-Shorter-Description.wav~
 
-\newpage
-
-*** NEW 🎶 Music Cues:
-**** Music Cue /(music clips)/ Numbering Convention:
+** NEW 🎶 Music Cues:                                                       :noexport:
+*** Music Cue /(music clips)/ Numbering Convention:
 
 Music Cues contain an identifying code number plus a short descriptive title... /(this way music files can be sorted alphabetically and found easily when called for in a script (or cue sheet) during rehearsal or production time...)/
 
@@ -896,23 +1719,21 @@ This is for things like The Entire Series Music Theme, Content with a Scope Beyo
                   best judgment when naming and assigning a sound
                   file as "music" or "sfx"... =You will be fine...=
 
-\newpage
-
-**** Scene 01:
-***** 🎶 ~[MUS-E101-S001-M001]~ "music cue name" /(template)/
+*** NEW Scene 01:
+**** 🎶 ~[MUS-E101-S001-M001]~ "music cue name" /(template)/
 :README:
     WRITE SHORT MUSIC DESCRIPTION IN ALL CAPS LIKE THIS
 
     /Example:/
     MYSTERIOUS INTRO THEME
 :END:
-****** 📃 Fountain Script: /(example)/
+***** 📃 Fountain Script: /(example)/
 
 #+begin_src fountain
 nn _MUSIC: [MUS-E101-S001-M001] MYSTERIOUS INTRO THEME (CROSSFADE AND DUCK UNDER)_
 #+end_src
 
-****** 🗒 Notes: [0/2]
+***** 🗒 Notes: [0/2]
 :README:
    This part will not be added to the script, and you should probably start here first to get the rough idea sketched out...
 
@@ -927,21 +1748,22 @@ nn _MUSIC: [MUS-E101-S001-M001] MYSTERIOUS INTRO THEME (CROSSFADE AND DUCK UNDER
 
      ~./media/MUS-M001_Even-Shorter-Description.wav~
 
-**** Scene 02:
-***** 🎶 ~[MUS-E101-S002-M002]~ "music cue name" /(template)/
+*** NEW Scene 02:
+
+**** 🎶 ~[MUS-E101-S002-M002]~ "music cue name" /(template)/
 :README:
     WRITE SHORT MUSIC DESCRIPTION IN ALL CAPS LIKE THIS
 
     /Example:/
     OMINOUS HIGHLIGHT OVERLAY STING
 :END:
-****** 📃 Fountain Script: /(example)/
+***** 📃 Fountain Script: /(example)/
 
 #+begin_src fountain
 nn _MUSIC: [MUS-E101-S002-M002] OPTIONAL OMINOUS HIGHLIGHT OVERLAY STING (SYNC TO DIALOG "Until now...", FADE FAST - ONLY HALL REVERB REMAINS THEN SILENCE)_
 #+end_src
 
-****** 🗒 Notes: [0/3]
+***** 🗒 Notes: [0/3]
 :README:
    This part will not be added to the script, and you should probably start here first to get the rough idea sketched out...
 
@@ -956,9 +1778,1093 @@ nn _MUSIC: [MUS-E101-S002-M002] OPTIONAL OMINOUS HIGHLIGHT OVERLAY STING (SYNC T
 
        ~./media/MUS-M002_Even-Shorter-Description.wav~
 
-\newpage
+** NEW 📝 Episode Fountain Scripts:                                :noexport:
+:README:
+   =Org Mode Links Tip:=
 
-** 📝 Episode Final Drafts: /(Links to FULL EPISODE Drama Scripts)/
+      + To Create a Link Type: ~C-c C-l~ 
+         /(then paste: ~link~ & type: "description")/
+
+         =-or-= Simply Copy/Paste Template: /(link placeholder)/
+               Below and fill that in... 
+               copy/paste more placeholders as needed... ;-)
+
+      + To Open a Link Type: ~C-c C-o~
+
+      + To Open Link in New Frame Type: ~SPACE e o~
+         /(xah-fly-keys sequence)/
+         Or type: ~M-x me_org-open-other-frame~
+
+- [[][] ] - /(link placeholder)/
+
+:END:
+
+=Add links to ALL EPISODES FINAL DRAFTS Here:=
+/(Place Exported Fountain Scripts within same folder as this .org file)/
+
+1) [[./HAP_Radio-Script-Template.fountain][LINK TO E001 FINAL DRAFT - EXAMPLE Fountain Script]] 
+
+2) [[./HAP_Radio-Script-Template-w-instructions.fountain][LINK TO ANNOTATED Tony Palermo Style EXAMPLE Fountain Script]]
+* NEW Episode Title Z: /(MASTER - DON'T TOUCH UNTIL FINAL)/     :export:
+<<EPI_title-z>>
+:README:
+
+   *Episodes* are the *Top Level Headings* within this *Emacs Org-mode*
+   Audio Drama Production Project... Built in LaTeX memoir styles
+   insure that Episode and Scene numbering work without needing any
+   of your input... You only need to insure your anchors are unique!
+
+- [ ] *USAGE:* [0/2]
+
+   =This is the MASTER EPISODE Reserved for LAST=
+
+   1) [ ] =This item is BOILERPLATE= /(DON'T MESS with IT until THE END)/
+
+         Do Not use this MASTER EPISODE while you are writing
+         your book... =KEEP IT LAST= in your list of *Episode Headings*...
+         Keep This Item set to ~:export:~ for all drafts...
+
+         This Item contains LaTeX directives designating the end of
+         the Audio Production's Episodes/Scenes etc, /i.e. the end of/
+         ~\mainmatter~ and the start of Appendix, Index, if needed...
+         /i.e.,/ ~\backmatter~
+
+         =Warning:= /If another episode were to be placed AFTER this item,/
+                  /it would show up as a NEW section outside of the book/
+                  /proper!! NOT what you want!/
+
+         =Therefore This:= *Episode Title Z* =Must Remain In Place AS IS=
+         throughout the duration of your project until you reach Final
+         Draft stage...
+
+         *When That Time Comes, Do The Rest Of The Steps Below:*
+
+   2) [ ] =Commandeer This as LAST EPISODE OF YOUR PRODUCTION:=
+
+         =COMMANDEER= This item /(changing the title etc.)/ as the
+         very last episode in your production... /(Once you know that/
+         /for sure)/...
+
+         The structure of this BOILERPLATE is all set up for you
+         allowing you to immediately begin writing it as your very
+         LAST Episode in this Production...
+
+         Rename *Episode Title Z:* /(MASTER - etc...)/ to a *Unique Title*
+         and remove /(MASTER - etc...)/ in order to commandeer the
+         entire item for your needs...
+
+         =Do NOT PUT "EPISODE" in your Title!=
+
+         Built in LaTeX memoir styles create a *Episode #* heading
+         before your episode title heading to take care of sequence
+         numbering automatically...
+
+         Scenes are automatically numbered as well...
+
+         You only need to insure your anchors are unique!
+
+   3) [ ] =Change The Anchor Link=
+
+         Change the anchor /(directly under Episode Title)/ to match
+         your new episode's title name...
+         
+         =Note:= I created the following convention for making unique
+               anchors within ALL of these HAP_Doc-Skeleton.org
+               Template files.
+
+               The anchor ~PREFIX_~ is there to match the named sections
+               of a book or document project defined as a standard
+               across ALL of these HAP_Document-Skeleton.org Template
+               files... This will help keep your anchors unique, and
+               also add an extra *KM* dimension of *category* to them...
+
+               It would be wise to follow this convention when you
+               create anchors elsewhere within ALL of your Book
+               Projects created from HAP Modular Emacs Document
+               Skeleton Template files...
+
+               If you wish to change all of this, go ahead and do
+               what ever you want... For simplicity's sake, follow
+               the instructions below... /(there are automatic ways/
+               /to create links and anchors within org-mode... I/
+               /prefer to do it manually... The alternate is a mess/
+               /IMHO)/
+
+         Leave ~EPI_~ as the anchor's prefix...
+         /(as in boilerplate above)/ Use dashes to connect words
+         /(all lower case)/ from your title...
+
+         The anchor above may be used to link to this episode from
+         Research or other sections of this project...
+         /(Or even from/ ~.org~ /docs OUTSIDE of this file...)/
+         
+         /(which may or may not be published as links within the PDF)/
+
+   4) [ ] =Replace Titles, Anchors, & Content Within This Section=
+
+         Change names to suit your needs, but keep the structure of
+         *Episode / Scene / sub-headings* intact...
+         
+         /(i.e., change titles, anchors, and content only...)/
+
+   5) [ ] =Add New Scenes as Needed=
+
+         Commandeer *Scenes X* as needed when first starting
+         out on this LAST Episode... Read the *:README:* drawer
+         under the Scene headings for more info...
+
+         After that, =COPY/CLONE= *New Scene Y* to make more scenes
+         as needed until you are finally planning to write your very
+         last scene at the END of this production and ALL scenes before
+         that are in final draft stage...
+         
+         Leave the original *New Scene Z* in place =AS IS= to
+         be commandeered later to the VERY LAST Scene in the production...
+         
+         Read the *:README:* drawer under *New Scene Z* heading for
+         more info...
+
+   6) [ ] =Make Sure= *New Scene Z:* /(below)/ is commandeered as =LAST SCENE=
+
+         *New Scene Z:* contains LaTeX directives designating the end of
+         the Audio Production's Episodes/Scenes etc, /i.e. the end of/
+         ~\mainmatter~ and the start of Appendix, Index, if needed...
+         /i.e.,/ ~\backmatter~ /(which may or may not appear at the end)/
+
+         The LaTeX directive at the end of *New Scene Z*
+         /(or title you change it to)/ must be left =AS IS= when
+         you are commandeering the scene to fit in as the very last
+         scene of the LAST Episode in your audio production...
+
+         Do NOT touch *New Scene Z* until you are ready, and leave
+         it tagged for ~:export:~ containing LaTeX directives, no
+         matter what...
+
+:END:
+** NEW Scene X /(COMMANDEER This One)/                                      :noexport:
+<<SCENE_new-scene-x>>
+:README:
+
+- [ ] *READ ABOUT THIS SECTION:*
+  
+   Scenes are the DNA that make up the episodes in an audio production...
+   Each Scene should have its own title or phrase... The LaTeX style
+   configuration for this book template takes care of numbering Episodes
+   and Scenes automatically...
+
+   Episodes may contain several scenes... There can be many twisty paths
+   all alike /(or all different)/... %~)
+
+   Here is the =ULTIMATE MASTER WORKSPACE= for creating, developing, and 
+   updating a *new scene*...
+
+   All ideas, plots, dialog, sounds, music, production notes, etc. for a particular scene within this episode are developed here solely...
+
+   One of the accompanying fountain drama scripts for this *Audio Drama Project* ~.org~ file /(named after this episode)/ contains a compilation of all the /fountain script snippits/ for all scenes developed within this single episode...
+
+   Some elements created here will become part of the accompanying fountain drama script for this episode... /(e.g., dialog, notes, narration, etc.)/ 
+
+   The accompanying fountain drama script for this episode must be kept up to date with final drafts and latest edits made solely here...
+
+   The headings within this ~.org~ file can be tracked using ~GTD~ tags, and a *log* entry can keep track of time worked on them... Once a scene is in final draft stage, it can be marked *DONE* and the fountain script for the episode will be updated to reflect that scene's final draft state...
+
+   *What is a Scene?*
+
+   Scenes form the fabric within episodes of audio or radio programs...
+
+   Scenes are small packages of isolated events relating to a single unique thread/picture knitted into a defined situation where particular events related to that situation play out...
+
+   The scenes don't necessarily follow in chronological order but they relate to each other in the mosaic fabric of the story as it develops... 
+
+   If a scene changes abruptly to some other situation, that may mean that the scene is over and a new one is starting... Usually a change of environment triggers a new scene...
+
+- [ ] *USAGE:* [0/3]
+
+   1) [ ] =Commandeer This:= *New Scene X:*
+
+         =Add Your New Scene Content= under the provided standard
+         production industry sub-headings...  Follow any directions
+         found within the sub headings themselves...
+
+         The structure of this template is all set up for you ahead
+         of time to allow you to immediately begin writing...
+
+         Rename *New Scene X:* to a *Unique Title* and commandeer the
+         entire item for your specific needs...
+
+         =Do NOT PUT "Scene" in your Title!=
+
+         Built in LaTeX memoir styles create a *Scene #* heading
+         before your scene title heading to take care of sequence
+         numbering automatically...
+
+         You only need to insure your anchors are unique!
+
+         Change the ~:noexport:~ tag to ~:export:~ for this NEW
+         REAL Scene so it will show up when publishing drafts...
+
+   2) [ ] =Change The Anchor Link= /(make it unique)/
+
+         Change the ~<<anchor>~ /(directly under your renamed/ *Scene* /heading)/
+         to match your new renamed scene title...
+         
+         =Note:= I created the following convention for making unique
+                anchors within ALL of these HAP_Doc-Skeleton.org
+                Template files.
+
+                The anchor ~PREFIX_~ is there to match the named sections
+                of a book or document project defined as a standard
+                across ALL of these HAP_Document-Skeleton.org Template
+                files... This will help keep your anchors unique, and
+                also add an extra *KM* dimension of *category* to them...
+
+                It would be wise to follow this convention when you
+                create anchors elsewhere within ALL of your Book
+                Projects created from HAP Modular Emacs Document
+                Skeleton Template files...
+
+                If you wish to change all of this, go ahead and do
+                what ever you want... For simplicity's sake, follow
+                the instructions below... /(there are automatic ways/
+                /to create links and anchors within org-mode... I/
+                /prefer to do it manually... The alternate is a mess/
+                /IMHO)/
+         
+         Leave ~SCENE_~ as the anchor's prefix...
+         /(as in boilerplate anchor above)/ Use dashes to connect
+         words /(all lower case)/ from your scene's title...
+
+         The anchor above may be used to link to this scene from
+         *Research* or other sections of this project...
+         /(Or even from/ ~.org~ /docs OUTSIDE of this file...)/
+
+         /(which may or may not be published as links within the PDF)/
+
+:END:
+
+=BOILERPLATE CONTENT=
+
+=Commandeer Below with your Scene Content=
+
+*** Location:
+
+=Put This Scene's Location Information Here=
+
+*** Summary:
+
+=Put This Scene's Summary Here=
+
+*** Production Notes:
+:README:
+  This area could start out as this single scene's quick synopsis summarizing all of the important actions / dialog etc. that take place during this particular scene for production purposes...
+
+  This is also a place to add extra notes for this scene that will not become production notes within the final production fountain script...
+:END:
+
+=Put This Scene's Production Notes Here=
+
+*** 📝 Fountain Script: /(single scene script)/                      :noexport:
+:README:
+  Compose a new draft scene fountain script in the block below... Write some scene related production notes, or instructions within the fountain script source block as well... The snippit you compose below will be added to the
+  final production script later, but this is the initial SOURCE where you
+  write the script for this scene...
+:END:
+
+#+BEGIN_SRC fountain
+# Production Notes: (example)
+
+= Add instructions, and information here needed to develop this scene... 
+= Yadda Yadda Yadda... 
+= Add Excerpts from: 🗒 Background Notes: above if needed...
+
+# BEGIN SCENE: (example)
+
+INT WRITERS ROOM (DAY)
+
+01 _MUSIC: [MUS-E001-S02-01] OPTIONAL OMINOUS HIGHLIGHT OVERLAY STING (SYNC TO DIALOG "Of all the nerve!", FADE FAST - ONLY HALL REVERB REMAINS THEN SILENCE)_
+
+02 _DIALOG:_
+
+CHARACTER
+Dialog text... Hey! Don't call me a generic character!  
+(EMPHATICALLY)
+Of all the nerve! 
+(SURPRISE)
+Oh? I am just a template?  Whaaaat the heck is that? 
+(LAUGHS)
+Please somebody write me into a real character... Thanks!
+
+>END of SCENE<
+#+END_SRC
+
+** NEW Scene Y /(COPY/CLONE This One)/                                      :noexport:
+<<SCENE_new-scene-y>>
+:README:
+
+- [ ] *READ ABOUT THIS SECTION:*
+  
+   Scenes are the DNA that make up the episodes in an audio production...
+   Each Scene should have its own title or phrase... The LaTeX style
+   configuration for this book template takes care of numbering Episodes
+   and Scenes automatically...
+
+   Episodes may contain several scenes... There can be many twisty paths
+   all alike /(or all different)/... %~)
+
+   Here is the =ULTIMATE MASTER WORKSPACE= for creating, developing, and 
+   updating a *new scene*...
+
+   All ideas, plots, dialog, sounds, music, production notes, etc. for a particular scene within this episode are developed here solely...
+
+   One of the accompanying fountain drama scripts for this *Audio Drama Project* ~.org~ file /(named after this episode)/ contains a compilation of all the /fountain script snippits/ for all scenes developed within this single episode...
+
+   Some elements created here will become part of the accompanying fountain drama script for this episode... /(e.g., dialog, notes, narration, etc.)/ 
+
+   The accompanying fountain drama script for this episode must be kept up to date with final drafts and latest edits made solely here...
+
+   The headings within this ~.org~ file can be tracked using ~GTD~ tags, and a *log* entry can keep track of time worked on them... Once a scene is in final draft stage, it can be marked *DONE* and the fountain script for the episode will be updated to reflect that scene's final draft state...
+
+   *What is a Scene?*
+
+   Scenes form the fabric within episodes of audio or radio programs...
+
+   Scenes are small packages of isolated events relating to a single unique thread/picture knitted into a defined situation where particular events related to that situation play out...
+
+   The scenes don't necessarily follow in chronological order but they relate to each other in the mosaic fabric of the story as it develops... 
+
+   If a scene changes abruptly to some other situation, that may mean that the scene is over and a new one is starting... Usually a change of environment triggers a new scene...
+
+- [ ] *USAGE:* [0/3]
+
+   - [ ] =FIRST: Copy Clone This BOILERPLATE= *New Scene Y:*
+
+        Leave this BOILERPLATE *New Scene Y* in place Until you No Longer
+        Have any more Scenes to write for this LAST Episode.
+
+        =Do NOT CHANGE ITS CONTENT!...=
+        
+        Paste your clone just above it, /(below your existing Scenes)/
+        Your new clone will serve as your SECOND, THIRD, FOURTH, Etc...
+        Scenes for this LAST Episode in this Audio Production...
+
+        Rename *New Scene X:* to a *Unique Title* and commandeer the
+        entire item for your specific needs...
+
+        =Do NOT PUT "Scene" in your Title!=
+
+        Built in LaTeX memoir styles create a *Scene #* heading
+        before your scene title heading to take care of sequence
+        numbering automatically...
+
+        You only need to insure your anchors are unique!
+
+        =Add Your New Scene Content= under the provided standard
+        production industry sub-headings...  Follow any directions
+        found within the sub headings themselves...
+
+        Change the ~:noexport:~ tag to ~:export:~ for this NEW
+        REAL scene so it will show up when publishing drafts...
+
+        =Do this whenever you need to start a new scene...=
+
+        =NOTE:= If you know for sure what your SECOND to LAST scene
+              is, =COMMANDEER= This Item Instead of Copy/Clone...
+
+        Otherwise, Once you know you are ready to start your LAST scene
+        in this chapter, DELETE THIS: *New Scene Y* /(COPY/CLONE This One)/
+        Heading and all content... It is no longer needed...
+        
+        /(i.e., Time to Commandeer/ *New Scene Z* /as your LAST Sub Topic)/
+
+   2) [ ] =Change The Anchor Link= /(make it unique)/
+
+         Change the _<<anchor>_ /(directly under your renamed scene heading)/
+         to match your new renamed scene title...
+         
+         =Note:= I created the following convention for making unique
+                anchors within ALL of these HAP_Doc-Skeleton.org
+                Template files.
+
+                The anchor ~PREFIX_~ is there to match the named sections
+                of a book or document project defined as a standard
+                across ALL of these HAP_Document-Skeleton.org Template
+                files... This will help keep your anchors unique, and
+                also add an extra *KM* dimension of *category* to them...
+
+                It would be wise to follow this convention when you
+                create anchors elsewhere within ALL of your Book
+                Projects created from HAP Modular Emacs Document
+                Skeleton Template files...
+
+                If you wish to change all of this, go ahead and do
+                what ever you want... For simplicity's sake, follow
+                the instructions below... /(there are automatic ways/
+                /to create links and anchors within org-mode... I/
+                /prefer to do it manually... The alternate is a mess/
+                /IMHO)/
+         
+         Leave ~SCENE_~ as the anchor's prefix...
+         /(as in boilerplate anchor above)/ Use dashes to connect
+         words /(all lower case)/ from your scene's title...
+
+         The anchor above may be used to link to this Scene from
+         Research or other sections of this project...
+         /(Or even from/ ~.org~ /docs OUTSIDE of this file...)/
+
+         /(which may or may not be published as links within the PDF)/
+
+:END:
+
+=BOILERPLATE CONTENT=
+
+=Commandeer Below with your Scene Content=
+
+*** Location:
+
+=Put This Scene's Location Information Here=
+
+*** Summary:
+
+=Put This Scene's Summary Here=
+
+*** Production Notes:
+:README:
+  This area could start out as this single scene's quick synopsis summarizing all of the important actions / dialog etc. that take place during this particular scene for production purposes...
+
+  This is also a place to add extra notes for this scene that will not become production notes within the final production fountain script...
+:END:
+
+=Put This Scene's Production Notes Here=
+
+*** 📝 Fountain Script: /(single scene script)/                      :noexport:
+:README:
+  Compose a new draft scene fountain script in the block below... Write some scene related production notes, or instructions within the fountain script source block as well... The snippit you compose below will be added to the
+  final production script later, but this is the initial SOURCE where you
+  write the script for this scene...
+:END:
+
+#+BEGIN_SRC fountain
+# Production Notes: (example)
+
+= Add instructions, and information here needed to develop this scene... 
+= Yadda Yadda Yadda... 
+= Add Excerpts from: 🗒 Background Notes: above if needed...
+
+# BEGIN SCENE: (example)
+
+INT WRITERS ROOM (DAY)
+
+01 _MUSIC: [MUS-E001-S02-01] OPTIONAL OMINOUS HIGHLIGHT OVERLAY STING (SYNC TO DIALOG "Of all the nerve!", FADE FAST - ONLY HALL REVERB REMAINS THEN SILENCE)_
+
+02 _DIALOG:_
+
+CHARACTER
+Dialog text... Hey! Don't call me a generic character!  
+(EMPHATICALLY)
+Of all the nerve! 
+(SURPRISE)
+Oh? I am just a template?  Whaaaat the heck is that? 
+(LAUGHS)
+Please somebody write me into a real character... Thanks!
+
+>END of SCENE<
+#+END_SRC
+
+** NEW Scene Z /(BOILERPLATE - Keep Until Final Draft)/                :export:
+<<SCENE_new-scene-z>>
+:README:
+
+   This FINAL *New Scene Z:* contains LaTeX directive:
+   ~\backmatter~ and ~\appendix~ which means it =MUST Be placed= as the
+   =LAST Scene of your LAST EPISODE in this Audio Production...=
+
+   The LaTeX directive at the END of *Production Notes:* and BEFORE
+   the 📝 *Fountain Script:* heading =MUST BE LEFT AS IS= when you are
+   commandeering this FINAL Scene...
+
+   Do NOT touch this FINAL *Scene Z* until you are ready, and
+   leave it tagged for ~:export:~ no matter what ALWAYS...
+
+   =DO NOT DELETE THIS ITEM - CHANGE IT's CONTENT INSTEAD=
+
+- [ ] *USAGE:* [0/3]
+
+   1) [ ] =Make Sure= *New Scene Z:* is commandeered =LAST=
+
+         This Scene MUST Be placed and appear as the LAST
+         Scene in the LAST Episode of your Audio Production...
+
+   2) [ ] =Commandeer Scene Z when you are READY:=
+
+         =WARNING= Don't Do This UNTIL you KNOW FOR SURE this will be your
+                  very LAST Scene within your very LAST Episode of your
+                  Audio Production... Until that time DON'T TOUCH THIS
+                  Scene Z BOILERPLATE...
+
+         The structure of this template is all set up for you ahead
+         of time to allow you to immediately begin writing...
+
+         Rename *New Scene Z:* to a *Unique Title* and commandeer the
+         entire item for your specific needs...
+
+         =Do NOT PUT "Scene" in your Title!=
+
+         Built in LaTeX memoir styles create a *Scene #* heading
+         before your scene title heading to take care of sequence
+         numbering automatically...
+
+         You only need to insure your anchors are unique!
+
+        =Add Your New Scene Content= under the provided standard
+        production industry sub-headings...  Follow any directions
+        found within the sub headings themselves...
+
+   3) [ ] =Change The Anchor Link= /(make it unique)/
+
+         Change the _<<anchor>_ /(directly under your renamed/ *Scene* /heading)/
+         to match your new renamed scene title...
+
+         =Note:= I created the following convention for making unique
+                anchors within ALL of these HAP_Doc-Skeleton.org
+                Template files.
+
+                The anchor ~PREFIX_~ is there to match the named sections
+                of a book or document project defined as a standard
+                across ALL of these HAP_Document-Skeleton.org Template
+                files... This will help keep your anchors unique, and
+                also add an extra *KM* dimension of *category* to them...
+
+                It would be wise to follow this convention when you
+                create anchors elsewhere within ALL of your Book
+                Projects created from HAP Modular Emacs Document
+                Skeleton Template files...
+
+                If you wish to change all of this, go ahead and do
+                what ever you want... For simplicity's sake, follow
+                the instructions below... /(there are automatic ways/
+                /to create links and anchors within org-mode... I/
+                /prefer to do it manually... The alternate is a mess/
+                /IMHO)/
+         
+         Leave ~SCENE_~ as the anchor's prefix...
+         /(as in boilerplate anchor above)/ Use dashes to connect words
+         /(all lower case)/ from your scene's title...
+
+         The anchor above may be used to link to this Scene from
+         Research or other sections of this project...
+         /(Or even from/ ~.org~ /docs OUTSIDE of this file...)/
+
+         /(which may or may not be published as links within the PDF)/
+
+:END:
+
+=BOILERPLATE CONTENT=
+
+=Commandeer Below with your Scene Content=
+
+Remove BOILERPLATE above after commandeering this Scene...
+
+*** Location:
+
+=Put This Scene's Location Information Here=
+
+*** Summary:
+
+=Put This Scene's Summary Here=
+
+*** Production Notes:
+:README:
+  This area could start out as this single scene's quick synopsis summarizing all of the important actions / dialog etc. that take place during this particular scene for production purposes...
+
+  This is also a place to add extra notes for this scene that will not become production notes within the final production fountain script...
+:END:
+
+=Put This Scene's Production Notes Here=
+
+
+
+
+=DO NOT REMOVE BELOW - MUST BE AT END OF PRODUCTION=
+/(Backmatter may or may not be placed after this LAST Episode)/
+
+After Commandeering this Last Scene, remove these messages
+but leave the Export Directive Below ALLWAYS...
+
+#+BEGIN_EXPORT latex
+\backmatter
+\appendix
+#+END_EXPORT
+
+*** 📝 Fountain Script: /(single scene script)/                                :noexport:
+:README:
+  Compose a new draft scene fountain script in the block below... Write some scene related production notes, or instructions within the fountain script source block as well... The snippit you compose below will be added to the
+  final production script later, but this is the initial SOURCE where you
+  write the script for this scene...
+:END:
+
+#+BEGIN_SRC fountain
+# Production Notes: (example)
+
+= Add instructions, and information here needed to develop this scene... 
+= Yadda Yadda Yadda... 
+= Add Excerpts from: 🗒 Background Notes: above if needed...
+
+# BEGIN SCENE: (example)
+
+INT WRITERS ROOM (DAY)
+
+01 _MUSIC: [MUS-E001-S02-01] OPTIONAL OMINOUS HIGHLIGHT OVERLAY STING (SYNC TO DIALOG "Of all the nerve!", FADE FAST - ONLY HALL REVERB REMAINS THEN SILENCE)_
+
+02 _DIALOG:_
+
+CHARACTER
+Dialog text... Hey! Don't call me a generic character!  
+(EMPHATICALLY)
+Of all the nerve! 
+(SURPRISE)
+Oh? I am just a template?  Whaaaat the heck is that? 
+(LAUGHS)
+Please somebody write me into a real character... Thanks!
+
+>END of SCENE<
+#+END_SRC
+
+** NEW 📚 Episode References:                                         :noexport:
+:README:
+   =Org Mode Links Tip:=
+
+      + To Create a Link Type: ~C-c C-l~ 
+         /(then paste: ~link~ & type: "description")/
+
+         =-OR-= Simply Copy/Paste BOILERPLATE:
+              /(use placeholders below)/
+              And Fill Them In Manually... 
+              Copy/Paste more placeholders as
+              needed to create more links...
+
+      + To Open a Link Type: ~C-c C-o~
+
+      + To EXPAND a Link Type: ~SPACE b~
+         or: ~M-x org-toggle-link-display~
+
+   =BOILERPLATE:= /(clone to add more ref links)/
+
+   + *Heading:* [[link][Link NAME] ] /(comment)/
+
+   + [[link][Link Name] ] *Heading:* /(comment)/
+   
+   + *_:* [[][] ] /(yadda... yadda... yadda...)/
+
+   + [[][] ] /(_)/
+
+   + [[junk][JUNK]]  /(This is a stupid BUG workaround/ /for org-mode link/
+         /expansion/compression... If you invoke:/ ~org-toggle-link-display~
+         /you will notice this JUNK link DOES NOT compress to a clickable/
+         /link title alone.../
+         
+         /I am not sure if this is due to my Emacs Config or a bug within/
+         *Org-Mode* /itself.../
+
+         /I put this workaround in here because if it is not here,/
+         /SOME of your external file links created below may not/
+         /compress after expansion, even though thy are GOOD links!/
+
+         /Leaving this JUNK link in here acts like a scapegoat/
+         /so that your real links below will all compress/expand/
+         /normally... I am NOT SURE WHY THIS WORKS??? I'm to busy/
+         /to do anything beyond hacking at this point.../
+         
+         ~org-lint~ /will detect JUNK above... Ignore that warning.../
+                  /It's my "METHOD of MADNESS" %^)/
+:END:
+
++ *Link to Project:* [[][] ] /(comment)/
+
+** NEW 📝 Episode Notes:                                                  :noexport:
+:README:
+   *Episode Notes*, /(unlike Scenes, Back Stories, Summaries etc.)/ 
+   Should be written in =OUTLINE= form to aid in organization of 
+   events, etc... This section is =NOT the place to create NEW ideas=, 
+   but rather to =organize EXISTING ideas you have already written=...
+
+   =None of the Content Written Here Should be Added to any= 
+   =Episode/Scenes within your Book= 
+
+   =THIS IS A META PLACE=
+
+      /(i.e., Your Books Internal Analyst/
+             /Behind the Curtain So-To-Speak... %^)/
+:END:
+*** NEW 📃 Episode Synopsis
+:README:
+  Write a short synopsis for this single episode here... This will be more or less a summary of this single episode only... You can use similar story building tools / exercises for writing this synopsis as you do for any typical fiction writing project... A summary of your Synopsis will be added to the final draft fountain script...
+:END:
+
+*** NEW 📝 Background Note 1: <2020-05-10 Sun> /(example)/
+
+*Mark each note's timestamp to its initial creation time*. This will enable emerging notes for episodes to be searched chronologically, and to give you an idea of how things evolve over time...
+
+*Add anything you need here under this heading* formatted any way needed to present the data... Sub levels are fine, tables are fine... etc.  This is your episode's Notebook, Scrapbook, whatever any extra info/metadata you feel is important to record...
+
+- *Use bulleted lists/sublist etc. if needed...*
+
+*1. Or Numbered Lists...*
+
+|----+--------|
+| Or | Tables |
+|----+--------|
+|  1 |    2.3 |
+|----+--------|
+
+Do any or all the above to help get the concepts and images of your book clear in mind...
+
+*** NEW 📝 Background Note 2: <2020-05-10 Sun> /(example)/
+
+Each new note needs to get its own heading and initial timestamp...
+
+It is fine to make as many sub-headings as needed for these notes
+but not so important for them to also be time-stamped since their parent heading is... /(unless of course you have a reason)/
+
+***** Quid Novi? /(example note sub heading)/
+
+Quid Novi? Lorem Ipsum dolor sit amet,consectetur adipisicing elit, sed doeiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim adminim veniam, quis nostrudexercitation ullamco laboris nisi utaliquip ex ea commodo consequat.Duis aute irure dolor inreprehenderit in coluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatatnon proident, sunt in culpa quiofficia deserunt mollit anim id estlaborum.
+
+** NEW 📰 Back Stories:                                                     :noexport:
+:README:
+   This section is for a episode's Back Story development... 
+   The following tips will help you manage development of your 
+   back stories and how they will best fit into your 
+   evolving story... 
+
+   - =Keep Things Organized:=
+
+      + *Add Time Stamped Background Notes:* /(within the Background/ 
+          /Notes section above)/ about new content added to this 
+          Back Stories section as you progress over time...
+
+      + *Add Time Stamps to:* Sub-headings within the Background 
+          Notes Section that reflect back to paragraphs written 
+          within this section...
+
+      + *Add TODO Keywords* to sub-headings within the Background 
+          Notes Section reflecting back to paragraphs written 
+          within this section...
+
+   Doing the above steps will help you keep track of back story 
+   development and get better organized about how your book is 
+   developing, what areas need the most work, seeing problems that 
+   need to be resolved, etc.  Most importantly, this will help 
+   prevent you from making any grave mistakes causing contradictions 
+   within your story later... /(unless that was your intention/ 
+   /"Alfred Hitchcock")/... In any case you will be better informed 
+   by keeping things organized here where you can see them and 
+   resolve them quickly...
+
+   =The Content Written Within This Section May or May Not be= 
+   =Added to actual Episodes/Scenes of your Book...=
+:END:
+*** NEW 📰 Back Story: <2020-05-10 Sun> /(Example)/
+
+=Note:= This is an example of a back story related to this 
+      episode, or possibly connecting to another episode 
+      in your book... 
+
+      Write it down in the rough here and then later you 
+      can develop it further as needed. Keep Background 
+      Notes about this back story as well, AND keep them 
+      up to date as this story develops!
+
+** NEW 🗡 Plot(s):                                                               :noexport:
+:README:
+   Plots and Sub Plots, /(Just Like Background Notes)/ are =META DATA= 
+   Not Intended to be Added back to the Episodes/Scenes of your 
+   Book... The purpose of Plot Summaries are to help you during 
+   planning stages where you are trying to resolve that twisty 
+   mess you created... OMG!
+
+   Keeping the above in mind while writing the plot summary of a 
+   episode, will help you get better organized about how your book 
+   is developing, what directions it is taking, what areas need the 
+   most work, where problems or inconsistencies may arise, etc.  
+
+   Most importantly, this will help prevent you from making any grave 
+   mistakes causing contradictions within your story later... 
+   /(unless that was your intention "Alfred Hitchcock")/... In any case 
+   you will be better informed by keeping all your plot tasks here 
+   where you can see them and resolve them quickly...
+:END:
+
+*** NEW 🗡 Plot Summary:
+
+=Plot or Sub-Plot Summary= /(example)/
+
+In this episode we are dealing with yadda yadda yadda which must be resolved with yadda yadda yadda.  But be careful about Yadda Yadda Yadda as she does not exist in this book at all!  What?  Nevermind... She never existed... Only in your dreams...
+
+** NEW 📢 Sound Cues:                                                       :noexport:
+*** Sound Cue /(CLIPS)/ Numbering Convention:
+
+Sound Cues contain an identifying code number plus a short descriptive title... /(this way sound files can be sorted alphabetically and found easily when called for in a script (or cue sheet) during rehearsal or production time...)/
+
+It's easy to call out these cues during a rehearsal... For instance, simply saying: /"SFX 102, 12, 25"/ and everyone will know we are talking about Sound Clip "25", playing in Episode 102, at Scene 12...
+
+=Sound Cue Code Numbering Convention:=
+
+  ~[SFX-E001-S001-C001]~
+     \    \    \    \____ *Sound Cue #* /(or Clip #. 999 files/project)/
+      \    \    \
+       \    \    \____ *Scene #* /(999 Possible Scenes/Episode)/
+        \    \    
+         \    \____ *Episode #* /(999 Possible Episodes/Story)/
+          \
+           \____ *ID Mnemonic* /(Sound Effect, Environment Sound, Etc.)/
+
+The numbering and naming of sound cues for an entire audio drama project are specified by using the Sound Cue Naming Convention above...
+
+A Sound Cue Ending with the same ~C~ /(cue or clip number)/ may appear multiple
+times within this entire Audio Theatre Project. This means that the same clip gets played multiple times within different settings, e.g., ~[SFX-E001-S001-C001]~, ~[SFX-E001-S025-C001]~, ~[SFX-E018-S013-C001]~, etc.  Common sounds like footsteps etc., appear many times. However, you may only have three or four versions of footsteps produced as clips...
+
+=Special Case for:= /[SFX-E001-/ ~S000~ /-C001]/
+
+If the above number contains scene number: ~S000~ This is a special number reserved for cues that play BEFORE the first scene or ANY scene in the episode where it may appear...
+
+This is for things like The Entire Series Music Theme, Content with a Scope Beyond This Single Episode Alone, Orson Well's Historic Speech, /(lol)/ Whatever you want... These cues only appear at the very top of an episode's script, just before the first scene starts... By design, they cannot appear within Scenes...
+
+=Note:= All Audio Drama Projects based on this Template will use the same 
+       rules.. If identical Sound clips are needed by other projects, you
+       will have to copy those associated files to the other project's media
+       folder... /(i.e., they must be duplicated because other projects will/ 
+       /ONLY look for sound clips within their OWN MEDIA Folders).../
+
+       In Addition to this... Project's MEDIA Folders may actually contain
+       Symlinks to the Project's Accompanying DAW Project Folder's MEDIA
+       folder...
+
+       Redundancy /(i.e., multiple copies of media files)/ is fine as long as 
+       the sound files are not HUGE!!! If they ARE HUGE you may be better 
+       to use a simlink...
+
+       The actual sound file names will NOT contain Episode or Scene number,
+       but WILL contain the Sound Cue Number, AND a very short description 
+       of the sound itself...
+
+       You have 999 different possible Sound Cue Numbers, which should be more than enough when combined with a short description to make ALL sound
+       file names for a single project unique within their associated 
+       media folder...
+
+       TO make this manageable /(multiple project wide)/, all post production
+       ready sound files for any given project shall be kept in the
+       accompanying project's ~media~ sub folder... This sub folder may in 
+       fact be a symlink to THIS Project's Accompanying DAW Project Folder's 
+       MEDIA folder... All Audio Theatre Projects have an associated DAW
+       Project where Recorded Dialog is mixed with the music, sounds, 
+       everything... These two need to be linked together at the hip!
+
+=Note:= Many *"stock"* sounds occur normally within multiple Episodes 
+       throughout a production project... These identical sound files are 
+       identified within the script by looking at the Cue number which 
+       MUST be UNIQUE within any given project... The Episode and Scene
+       numbers may change but if the Cue Number is the same you know
+       that it refers to a single sound file /(used multiple times within
+       the script)/
+
+=Sound or Music?= Sometimes it is hard to decide whether a sound clip
+                  is "music", "background sound", or "sound effect"
+                  depending on the genre of the story etc... Use your
+                  best judgment when naming and assigning a sound
+                  file as "music" or "sfx"... You will be fine...
+
+*** NEW Scene 01:
+**** 📢 ~[SFX-E001-S001-C001]~ "sound cue name" /(template)/
+:README:
+   WRITE SHORT SOUND DESCRIPTION IN ALL CAPS LIKE THIS
+
+   /Example:/
+   SCREAM - SMASH BATHROOM MIRROR - SHARDS FALL IN SINK - INTENSE SOBBING
+:END:
+
+***** 📃 Fountain Script: /(example)/
+
+#+begin_src fountain
+nn _SOUND: [SFX-E001-S001-C001] ANGRY SCREAM! - SMASH BATHROOM MIRROR - SHARDS FALL IN SINK (CONTINUE AND FADE SLIGHTLY UNDER - INTENSE EMOTIONAL SILENCE) [SFX-E01-S01-02] WALLA - DEEP SOBBING EMOTIONAL BREAKDOWN_
+#+end_src
+
+***** 🗒 Notes: [0/2]
+:README:
+   This part will not be added to the script, and you should probably start here first to get the rough idea sketched out...
+
+   /Example:/ Angry Scream, accompanied by crashing sound of both fists smashing into the bathroom mirror with aftershock of shards falling into the sink, and finally after an intense emotional silence play: ~[SFX-E001-S001-C002]~ "Walla" (Deep Sobbing emotional breakdown sound)
+:END:
+
+- [ ] *Notes:*
+
+     Yadda... Yadda... Yadda...
+
+- [ ] *File Created:* 
+
+     ~./media/SFX-C001_Even-Shorter-Description.wav~
+
+*** NEW Scene 02:
+**** 📢 ~[SFX-E001-S002-C002]~ "sound cue name" /(template)/
+:README:
+   WRITE SHORT SOUND DESCRIPTION IN ALL CAPS LIKE THIS
+
+   /Example:/
+   DOG BARKING - CAR WHEELS SCREECH - THUD - DOG CRIES THEN WHIMPERS
+:END:
+
+***** 📃 Fountain Script: /(example)/
+
+#+begin_src fountain
+nn _SOUND: [SFX-E001-S002-C002] DOG BARKING IN STREET! - CAR WHEELS SCREECH - THUD - DOG CRIES THEN WHIMPERS (CONTINUE AND FADE)_
+#+end_src
+
+***** 🗒 Notes:  [0/2]
+:README:
+   This part will not be added to the script, and you should probably start here first to get the rough idea sketched out...
+
+   /Example:/ You hear a dog barking at cars in the street.... A passing car breaks to avoid hitting the dog...  Wheels Squeal, Car hits dog with a thud... Yadda... Yadda... Yadda...
+:END:
+
+- [ ] *Notes:*
+
+- [ ] *File Created:* 
+
+       ~./media/SFX-C002_Even-Shorter-Description.wav~
+
+** NEW 🎶 Music Cues:                                                       :noexport:
+*** Music Cue /(music clips)/ Numbering Convention:
+
+Music Cues contain an identifying code number plus a short descriptive title... /(this way music files can be sorted alphabetically and found easily when called for in a script (or cue sheet) during rehearsal or production time...)/
+
+It's easy to call out these cues during a rehearsal... For instance, simply saying: /"MUSIC 102, 12, 25"/ and everyone will know we are talking about Music Clip "25", playing in Episode 102, at Scene 12...
+
+=Music Cue Code Numbering Convention:=
+
+  ~[MUS-E001-S001-M001]~
+     \    \    \    \____ *Music Cue #* /(or Music Clip #. 999 files/project)/
+      \    \    \
+       \    \    \____ *Scene #* /(999 Possible Scenes/Episode)/
+        \    \    
+         \    \____ *Episode #* /(999 Possible Episodes/Story)/
+          \
+           \____ *ID Mnemonic* /(ID for Music Cues)/
+
+The numbering and naming of music cues for an entire audio drama project are specified by using the Music Cue Naming Convention above...
+
+A Music Cue Ending with the same ~M~ /(Music Cue number)/ may appear multiple
+times within this entire Audio Theatre Project. This means that the same clip gets played multiple times within different settings, e.g., ~[MUS-E001-S001-M001]~, ~[MUS-E001-S025-M001]~, ~[MUS-E018-S013-M001]~, etc.  Common music like intro themes, exit themes, etc., appear many times... 
+
+=Special Case for:= /[MUS-E001-/ ~S000~ /-M001]/
+
+If the above number contains scene number: ~S000~ This is a special number reserved for cues that play BEFORE the first scene or ANY scene in the episode where it may appear...
+
+This is for things like The Entire Series Music Theme, Content with a Scope Beyond This Single Episode Alone, Orson Well's Historic Speech, /(lol)/ Whatever you want... These cues only appear at the very top of an episode's script, just before the first scene starts... By design, they cannot appear within Scenes...
+
+=Note:= All Audio Drama Projects based on this Template will use the same 
+       rules.. If identical Music clips are needed by other projects, you
+       will have to copy those associated files to the other project's media
+       folder... /(i.e., they must be duplicated because other projects will/ 
+       /ONLY look for music clips within their OWN MEDIA Folders).../
+
+       In Addition to this... Project's MEDIA Folders may actually contain
+       Symlinks to the Project's Accompanying DAW Project Folder's MEDIA
+       folder...
+
+       Redundancy /(i.e., multiple copies of media files)/ is fine as long as 
+       the music files are not HUGE!!! If they ARE HUGE you may be better 
+       to use a simlink...
+
+       The actual music file names will NOT contain Episode or Scene number,
+       but WILL contain the Music Cue Number, AND a very short description 
+       of the music itself...
+
+       You have 999 different possible Music Cue Numbers, which should be more than enough when combined with a short description to make ALL music
+       file names for a single project unique within their associated 
+       media folder...
+
+       TO make this manageable /(multiple project wide)/, all post production
+       ready music files for any given project shall be kept in the
+       accompanying project's ~media~ sub folder... This sub folder may in 
+       fact be a symlink to THIS Project's Accompanying DAW Project Folder's 
+       MEDIA folder... All Audio Theatre Projects have an associated DAW
+       Project where Recorded Dialog is mixed with the music, sounds, 
+       everything... These two need to be linked together at the hip!
+
+=Note:= *"stock"* music may occur multiple times within multiple Episodes 
+       and Scenes throughout a production project... These identical 
+       music files are identified within the script by looking at the 
+       Music Cue Number which MUST be UNIQUE within any given project... 
+       The Episode and Scene numbers may change but if the Music Cue 
+       Number is the same you know that it refers to a single music file
+       /(used multiple times within the script)/
+
+=Sound or Music?= Sometimes it is hard to decide whether a clip is
+                  /"music"/ , /"background sound"/ , /"sound effect"/ 
+                  or, in many cases /a morph of all-the-above!!!/
+                  depending on the genre of the story etc... Use your
+                  best judgment when naming and assigning a sound
+                  file as "music" or "sfx"... =You will be fine...=
+
+*** NEW Scene 01:
+**** 🎶 ~[MUS-E101-S001-M001]~ "music cue name" /(template)/
+:README:
+    WRITE SHORT MUSIC DESCRIPTION IN ALL CAPS LIKE THIS
+
+    /Example:/
+    MYSTERIOUS INTRO THEME
+:END:
+***** 📃 Fountain Script: /(example)/
+
+#+begin_src fountain
+nn _MUSIC: [MUS-E101-S001-M001] MYSTERIOUS INTRO THEME (CROSSFADE AND DUCK UNDER)_
+#+end_src
+
+***** 🗒 Notes: [0/2]
+:README:
+   This part will not be added to the script, and you should probably start here first to get the rough idea sketched out...
+
+   /Example:/ This is the main theme music for the show... Let it play in full at the begining... Use short excerpts of this music in other places and fade under when dialog starts, etc...
+:END:
+
+- [ ] *Notes:*
+
+     Yadda... Yadda... Yadda...
+
+- [ ] *File Created:* 
+
+     ~./media/MUS-M001_Even-Shorter-Description.wav~
+
+*** NEW Scene 02:
+
+**** 🎶 ~[MUS-E101-S002-M002]~ "music cue name" /(template)/
+:README:
+    WRITE SHORT MUSIC DESCRIPTION IN ALL CAPS LIKE THIS
+
+    /Example:/
+    OMINOUS HIGHLIGHT OVERLAY STING
+:END:
+***** 📃 Fountain Script: /(example)/
+
+#+begin_src fountain
+nn _MUSIC: [MUS-E101-S002-M002] OPTIONAL OMINOUS HIGHLIGHT OVERLAY STING (SYNC TO DIALOG "Until now...", FADE FAST - ONLY HALL REVERB REMAINS THEN SILENCE)_
+#+end_src
+
+***** 🗒 Notes: [0/3]
+:README:
+   This part will not be added to the script, and you should probably start here first to get the rough idea sketched out...
+
+   /Example:/ This is a short symphonic "sting" to highlight and "showcase" some event or announcement during the show... Let it play in full /(it is short)/ and fade fast after initial reverb trail...
+:END:
+
+- [ ] *Notes:*
+
+     Yadda... Yadda... Yadda...
+
+- [ ] *File Created:*
+
+       ~./media/MUS-M002_Even-Shorter-Description.wav~
+
+** NEW 📝 Episode Fountain Scripts:                                :noexport:
 :README:
    =Org Mode Links Tip:=
 
@@ -986,25 +2892,73 @@ nn _MUSIC: [MUS-E101-S002-M002] OPTIONAL OMINOUS HIGHLIGHT OVERLAY STING (SYNC T
 
 2) [[./HAP_Radio-Script-Template-w-instructions.fountain][LINK TO ANNOTATED Tony Palermo Style EXAMPLE Fountain Script]]
 
-\newpage
+* APPENDIX A                                                     :export:
+
+=Insert Appendix Content Here=
+
+Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo. Fusce tincidunt, lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante.
+
+At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
+
+* APPENDIX B                                                     :export:
+
+=Insert Appendix Content Here=
+
+Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus. Donec ante dolor, iaculis nec, gravidaac, cursus in, eros. Mauris vestibulum, felis et egestasullamcorper, purus nibh vehicula sem, eu egestas antenisl non justo. Fusce tincidunt, lorem nev dapibusconsectetuer, leo orci mollis ipsum, eget suscipit erospurus in ante.
+
+At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
 
 * 🔍 Research:                                                     :noexport:
-** 🗓 Production LOG:
+** 📚 Research Reference:
 :README:
-   Use this space to add time stamped log note entries for any 
-   pourpose you may need while you are planning, writing, or 
-   publishing your production...
+   =Org Mode Links Tip:=
 
-   =USAGE=
+      + To Create a Link Type: ~C-c C-l~ 
+         /(then paste: ~link~ & type: "description")/
 
-      =Place New:=   *🗓 LOG:* /<timestamp>/ *Entry* /(Log Entry Template)/ 
-      =Items From:=  *⎘ Templates:* Binder
-      =Into This:=   *🗓 Production Log:* Binder
+         =-OR-= Simply Copy/Paste BOILERPLATE:
+              /(use placeholders below)/
+              And Fill Them In Manually... 
+              Copy/Paste more placeholders as
+              needed to create more links...
+
+      + To Open a Link Type: ~C-c C-o~
+
+      + To EXPAND a Link Type: ~SPACE b~
+         or: ~M-x org-toggle-link-display~
+
+   =BOILERPLATE:= /(clone to add more ref links)/
+
+   + *Heading:* [[link][Link NAME] ] /(comment)/
+
+   + [[link][Link Name] ] *Heading:* /(comment)/
+   
+   + *_:* [[][] ] /(yadda... yadda... yadda...)/
+
+   + [[][] ] /(_)/
+
+   + [[junk][JUNK]]  /(This is a stupid BUG workaround/ /for org-mode link/
+         /expansion/compression... If you invoke:/ ~org-toggle-link-display~
+         /you will notice this JUNK link DOES NOT compress to a clickable/
+         /link title alone.../
+         
+         /I am not sure if this is due to my Emacs Config or a bug within/
+         *Org-Mode* /itself.../
+
+         /I put this workaround in here because if it is not here,/
+         /SOME of your external file links created below may not/
+         /compress after expansion, even though thy are GOOD links!/
+
+         /Leaving this JUNK link in here acts like a scapegoat/
+         /so that your real links below will all compress/expand/
+         /normally... I am NOT SURE WHY THIS WORKS??? I'm to busy/
+         /to do anything beyond hacking at this point.../
+         
+         ~org-lint~ /will detect JUNK above... Ignore that warning.../
+                  /It's my "METHOD of MADNESS" %^)/
 :END:
 
-=ADD a NEW Items= /(as per :README: above)/ right here in this Log Book Binder whenever you need to create a new Log Entry...
-
-\newpage
++ *Link to Project:* [[][] ] /(comment)/
 
 ** 👤 Characters:
 :README:
@@ -1023,12 +2977,14 @@ nn _MUSIC: [MUS-E101-S002-M002] OPTIONAL OMINOUS HIGHLIGHT OVERLAY STING (SYNC T
 
    =Note:= This summary is written while completing the:
          *👥 Major Characters Summary* Task located within 
-         the *⏰ Tasks:* /(Binder)/ of this Book Project...
+         the ⏱ *Tasks:* /(Binder)/ of this Audio Production Project...
 
          Add results of that task below...
 :END:
 
-\newpage
+=BOILERPLATE - REPLACE this with your REAL Major Characters Summary HERE=
+
+yadda, yadda, yadda...
 
 *** NEW 👥 Minor Characters Summary:
 :README:
@@ -1042,38 +2998,61 @@ nn _MUSIC: [MUS-E101-S002-M002] OPTIONAL OMINOUS HIGHLIGHT OVERLAY STING (SYNC T
          Add results of that task below...
 :END:
 
-\newpage
+=BOILERPLATE - REPLACE this with your REAL Minor Characters Summary HERE=
+
+yadda, yadda, yadda...
 
 *** NEW 👤 New Character: /(placeholder)/
+:README:
 
-=Place= *👤 New Character:* =Items= /(From Templates)/ BELOW
-      Remove this /(placeholder)/ After your First Character
-      is Item has been placed...
+   + [ ] =Place CLONED= 👤 *New Character:* =Items= From the ⎘ *Templates:*
+        heading under the 🗂 *Meta:* binder /(below)/ and commandeer your
+        cloned template HERE for specific needs...
+:END:
 
-\newpage
-
+=BOILERPLATE Content...= /(Replace This with CLONED/ 👤 *New Character:* /items)/
 
 ** ♾ Worlds:
 :README:
-   =Place= *♾ New World:* =Items= /(From Templates)/ =Into This Binder:= /As Needed/
+
+   + [ ] =Place CLONED= ♾ *New World:* =Items= From the ⎘ *Templates:*
+        heading under the 🗂 *Meta:* binder /(below)/ and commandeer
+        your cloned template HERE for specific needs...
 :END:
+
+=BOILERPLATE Content...= /(Replace This with CLONED/ ♾ *Worlds:* /items)/
 
 ** ✨ Regions:
 :README:
-   =Place= *✨ New Region:* =Items= /(From Templates)/ =Into This Binder:= /As Needed/
+
+   + [ ] =Place CLONED= ✨ *New Region:* =Items= From the ⎘ *Templates:*
+         heading under the 🗂 *Meta:* binder /(below)/ and commandeer
+         your cloned template HERE for specific needs...
 :END:
+
+=BOILERPLATE Content...= /(Replace This with CLONED/ ✨ *New Region:* /items)/
 
 ** ∅ Planets - Satellites:
 :README:
-   =Place= *∅ New Planet or Satellite:* =Items= /(From Templates)/ =Into This Binder:=
+
+   + [ ] =Place CLONED= ∅ *New Planet or Satellite:* =Items= From the ⎘ *Templates:*
+         heading under the 🗂 *Meta:* binder /(below)/ and commandeer
+         your cloned template HERE for specific needs...
 :END:
+
+=BOILERPLATE Content...= /(Replace This with CLONED/ ∅ *Planets - Satellites:* /items)/
 
 ** 👥 Groups - Factions:
 :README:
-   =Place= *👥 New Group or Faction:* =Items:= /(From Templates)/ =Into This Binder:=
+
+   + [ ] =Place= 👥 *New Group or Faction:* =Items= from the ⎘ *Templates:*
+        heading under the *🗂 Meta:* binder /(below)/ and commandeer your
+        cloned template for specific needs...
 :END:
 
-** 🗡 Plots:
+=BOILERPLATE Content...= /(Replace This with CLONED/ 👥 *Groups - Factions:* /items)/
+
+** 🗡 Plot Research:
 :README:
    This Research/Plots section is for documenting or planning out plots 
    that may or may not be related to the actual plots you are developing 
@@ -1083,6 +3062,7 @@ nn _MUSIC: [MUS-E101-S002-M002] OPTIONAL OMINOUS HIGHLIGHT OVERLAY STING (SYNC T
    as research of classic plots that may influence and or help you 
    make your real plots more believable and/or accurate...
 :END:
+
 *** 🗡 Plot Idea: /(TEMPLATE for Research of Classic Plot)/
 :README:
    =Copy/Clone This Template= /(And Re-Purpose Copy)/
@@ -1101,8 +3081,6 @@ nn _MUSIC: [MUS-E101-S002-M002] OPTIONAL OMINOUS HIGHLIGHT OVERLAY STING (SYNC T
 
 I found this classic Plot... /(see details below...)/ dealing with yadda yadda yadda which could be modified and used to: yadda yadda yadda.... To be continued...
 
-\newpage
-
 ** ❝ Quotations:
 :README:
    =Place New= *❝ Quotations* =Here:=
@@ -1111,25 +3089,406 @@ I found this classic Plot... /(see details below...)/ dealing with yadda yadda y
    that you may wish to include with this series...
 :END:
 
-\newpage
+=BOILERPLATE Content...= /(Replace This with REAL content)/
 
-* ⏰ Tasks:                                                          :export:
+* 🗓 Production LOGS:                                        :noexport:
 :README:
-   This Tasks Section is similar to the *🗓 Production LOG* within 
-   the *🔍 Research:* Binder of this Audio Drama Project...  Log entries
-   are research activities...  Tasks are more General and relate to 
-   this ENTIRE Production Project as a whole...
+   Use this space to add time stamped log note entries for any 
+   pourpose you may need while you are planning, writing, or 
+   publishing your production...
+
+   =USAGE=
+
+      =Place New:=   🗓 *LOG:* /<timestamp>/ *Generic Title* /(Log Entry Template)/ 
+      =Items From:=  ⎘ *Templates:* Binder /(under the/ ⎘ *Meta:* /binder)/
+      =Into This:=   🗓 *Production Log:* Binder /(under the current year heading)/
+:END:
+
+** 📅 2023:
+*** NEW 🗓 LOG: <2023-01-17 Tue> Generic Title /(Log Entry Template)/
+<<LOG_Generic-Title>>
+:README:
+   =Using the Clocking Feature of this Log Entry=
+
+   - [ ] *Go To One of the HEADINGS Below:*
+
+         /(Summary, Details, or Sub Headings)/
+
+         =Punch the Time Clock:= /(see Clocking Commands: below)/ At
+         the heading And then begin working on a task related to
+         that Heading...
+
+         =Your Time IS being Recorded Now= /(you will see a/ *:clocking:*
+         /item under the heading where time is recorded)/
+
+   - [ ] =Use These Clocking Commands:= /to keep track your time.../
+
+      + *Clock IN:* ~C-c C-x C-i~ /(Begin OR Resume Clocking Current task)/
+
+            This creates a new :CLOCKING: Time Card Entry just
+            underneath the HEADING...
+
+            Do this just before starting work on the task... 
+            Be in control of your life!
+
+            After doing the above, you can go away and do some 
+            work, leaving this heading, log note, etc. to visit 
+            other files and/or work on them etc. The clock will 
+            be recording your time all the while... You will see 
+            in your mode line the elapsed clock time ticking away 
+            as you work on a task /(hopefully related to this clock!)/
+            and NOT Yac Shaving or being sidetracked!!!
+
+      + *RETURN to Clock Heading:* ~C-c C-x C-j~
+
+            /Go back to the place where you started the clock.../
+
+            You do this after you have worked on a task for a 
+            while and you need to come back to update the item's
+            info etc., and/or stop the clock before going off to 
+            do something else unrelated to the log entry...
+
+      + *Clock OUT:* ~C-c C-x C-o~ /(to stop clocking your time on task)/
+
+            This *Finalizes the Time Card Entry* within:
+            ~:CLOCKING:~ /(created earlier when you started the clock)/
+
+            The Clock Entry changes showing start timestamp, end
+            timestamp, and total time worked during this segment...  
+
+            =Please DON'T Forget= /Like I often do, LOL.../ i.e., Leaving
+            a clock running all day by accident, or worse, leave it
+            dangling with the file closed only to open it again and
+            get that nasty *Org-Mode Message:* /"What do you want to do/
+            /with this?"/ If you do something like that you can always
+            come back and directly edit the clock times by hand to
+            amend them...  After changing clock times or dates, etc...
+            Whatever...
+
+                  ="Onward We Row Mates... Through the log jam!"=
+
+      + *Update Time Card Entry:* ~C-c C-c~ 
+
+            This command will change the total time at the end showing 
+            your new calculated time...
+
+            If you need to go away and do something else before finishing
+            this task, you can do so after clocking out... When you come
+            back simply clock back in again to start another Time Card
+            Entry just as before... The new time card entry will appear
+            above the earlier one within the ~:CLOCKING:~ drawer... When
+            you clock out of this task it will look just like the entry
+            below it with a total time worked tagged on the end...
+
+      + *Clock Out & Mark Items Done:* ~C-c C-t~
+
+            When you are all done with a Log Entry use the above key 
+            command to mark its Heading *TODO* tag to: *DONE* /(Most of the/ 
+            /time this will ALSO clock you out if you are still clocked/ 
+            /into the item... But not allways in my experience.../  
+            So make sure you are also clocked OUT of an Item After 
+            marking it DONE... Type: ~C-c C-x C-j~ to check this...
+            /(if no running clock it will tell you and place your/
+            /cursor at the heading where you LAST CLOCKED OUT)/
+
+      + ~C-c C-x C-q~ *Cancel Current Clock:* /(in case of accident)/
+
+            This removes currently running clock and forgets any time
+            accrued or associated with it...
+
+      + ~C-c C-x C-d~ *Display Clocking Info:* 
+
+            /This will show elapsed times to the right of headings.../
+            =Warning!= Using this command will CLUTTER ALL the headings
+                     within your org file with those timestamps!!!
+
+:END:
+
+=Copy/Clone= This: 🗓 *LOG:* <2023-01-17 Tue> *Generic Title* /(Log Entry Template)/
+=Paste As a New Entry= under the currently active *📅 YYYY:* Section, Within
+The: 🗓 *Production LOGS:* Binder of this Audio Drama Productions Project...
+
+=Replace these BOILERPLATE Instructions= with a short description of your
+new log entry... /(or simply delete this BOILERPLATE if no description is needed)/
+
+**** NEW 📚 Reference:
+:README:
+   =Org Mode Links Tip:=
+
+      + To Create a Link Type: ~C-c C-l~ 
+         /(then paste: ~link~ & type: "description")/
+
+         =-OR-= Simply Copy/Paste BOILERPLATE:
+              /(use placeholders below)/
+              And Fill Them In Manually... 
+              Copy/Paste more placeholders as
+              needed to create more links...
+
+      + To Open a Link Type: ~C-c C-o~
+
+      + To EXPAND a Link Type: ~SPACE b~
+         or: ~M-x org-toggle-link-display~
+
+   =BOILERPLATE:= /(clone to add more ref links)/
+
+   ☞ *Heading:* [[link][Link NAME] ] /(comment)/
+
+   ☞ [[link][Link Name] ] *Heading:* /(comment)/
+   
+   ☞ *_:* [[][] ] /(yadda... yadda... yadda...)/
+
+   ☞ [[][] ] /(_)/
+
+   [[junk][JUNK]]  /(This is a stupid BUG workaround/ /for org-mode link/
+         /expansion/compression... If you invoke:/ ~org-toggle-link-display~
+         /you will notice this JUNK link DOES NOT compress to a clickable/
+         /link title alone.../
+         
+         /I am not sure if this is due to my Emacs Config or a bug within/
+         *Org-Mode* /itself.../
+
+         /I put this workaround in here because if it is not here,/
+         /SOME of your external file links created below may not/
+         /compress after expansion, even though thy are GOOD links!/
+
+         /Leaving this JUNK link in here acts like a scapegoat/
+         /so that your real links below will all compress/expand/
+         /normally... I am NOT SURE WHY THIS WORKS??? I'm to busy/
+         /to do anything beyond hacking at this point.../
+         
+         ~org-lint~ /will detect JUNK above... Ignore that warning.../
+                  /It's my "METHOD of MADNESS" %^)/
+:END:
+
+☞ *Link to Project:* [[][] ] /(comment)/
+
+**** NEW ⏱ Time Card:
+
+#+BEGIN: clocktable :scope tree3 :maxlevel 6 :tstart "<-1w>" :tend "<+1m>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3
+#+END:
+
+**** NEW ✅ Summary: [0/3]
+:README:
+   This Summary is mostly to help you find things later when you
+   cannot remember when or where is was done... If you go to the
+   top of this file and expand all headings to show ALL content,
+   then do a search on "~Summary:~" you will be able to quickly
+   scroll through and scan these summaries quickly to find what
+   you were looking for... 
+
+   Also the *Time Card* /displayed above/ each search hit will give
+   more clues by showing important headings you worked on...
+
+   Below is an optional list /(that could also provide links)./ This
+   list could be used to itemize things you worked on, but I
+   personally find it easier to simply write a short one or two
+   line description containing important keywords right here and
+   nothing more. I think that is more useful...
+:END:
+
+Yadda... Yadda... Yadda...
+
+1. [ ] *New Item 1:*
+
+2. [ ] *New Item 2:*
+
+3. [ ] *New Item 3:* /(copy/clone more as needed)/
+
+**** NEW 📒 Details:
+***** NEW ⏱ New Item 1 /(placeholder)/ [0/3]
+
+New Item Details... Yadda... Yadda... Yadda...
+
+Re-Purpose these as needed and Delete anything you don't need...
+
+Add sub headings as needed...
+
+Don't forget to clock-in to HEADINGS while you work on them...
+AND... Don't forget to Clock OUT when you are DONE... %^)
+
+=Delete BOILERPLATE= /below/ if you don't need it...
+
+****** BOILERPLATE:
+
+The following list contains Babel Source Code Blocks that are often needed for something I am writing or "Logging" about... I use them so much I decided to include them in this template...
+
+- [ ] *__:* /(__)/
+
+      #+begin_src conf
+       keyword1:     Value1 
+       keyword2:     Value2 
+       keyword3:     Value 
+      #+end_src
+
+- [ ] *__:* /(__)/
+
+      #+begin_src bash
+       sudo dnf install emacs
+       sudo apt install emacs
+      #+end_src
+
+- [ ] *__:* /(__)/
+
+      #+BEGIN_SRC emacs-lisp :results output
+       ;; Initialize Local Vars from GLOBAL CONSTANTS;
+       (let ((h (list 'text-pixels ME--CODE-FRAME-HEIGHT))
+             (w (list 'text-pixels ME--CODE-FRAME-WIDTH)))
+         (princ "CAR h: ")
+         (princ (car h))
+         (princ "\n")
+         (princ "CDR h: ")
+         (princ (cdr h))
+         (princ "\n\n")
+         (princ "CAR w: ")
+         (princ (car w))
+         (princ "\n")
+         (princ "CDR w: ")
+         (princ (cdr w)))
+      #+END_SRC
+
+      #+RESULTS:
+      : CAR h: text-pixels
+      : CDR h: (42)
+      : 
+      : CAR w: text-pixels
+      : CDR w: (92)
+
+***** NEW ⏱ New Item 2 /(placeholder)/ [0/3]
+
+New Item Details... Yadda... Yadda... Yadda...
+
+Re-Purpose these as needed and Delete anything you don't need...
+
+Add sub headings as needed...
+
+Don't forget to clock-in to HEADINGS while you work on them...
+AND... Don't forget to Clock OUT when you are DONE... %^)
+
+=Delete BOILERPLATE= /below/ if you don't need it...
+
+****** BOILERPLATE:
+
+The following list contains Babel Source Code Blocks that are often needed for something I am writing or "Logging" about... I use them so much I decided to include them in this template...
+
+- [ ] *__:* /(__)/
+
+      #+begin_src conf
+       keyword1:     Value1 
+       keyword2:     Value2 
+       keyword3:     Value 
+      #+end_src
+
+- [ ] *__:* /(__)/
+
+      #+begin_src bash
+       sudo dnf install emacs
+       sudo apt install emacs
+      #+end_src
+
+- [ ] *__:* /(__)/
+
+      #+BEGIN_SRC emacs-lisp :results output
+       ;; Initialize Local Vars from GLOBAL CONSTANTS;
+       (let ((h (list 'text-pixels ME--CODE-FRAME-HEIGHT))
+             (w (list 'text-pixels ME--CODE-FRAME-WIDTH)))
+         (princ "CAR h: ")
+         (princ (car h))
+         (princ "\n")
+         (princ "CDR h: ")
+         (princ (cdr h))
+         (princ "\n\n")
+         (princ "CAR w: ")
+         (princ (car w))
+         (princ "\n")
+         (princ "CDR w: ")
+         (princ (cdr w)))
+      #+END_SRC
+
+      #+RESULTS:
+      : CAR h: text-pixels
+      : CDR h: (42)
+      : 
+      : CAR w: text-pixels
+      : CDR w: (92)
+
+***** NEW ⏱ New Item 3 /(placeholder)/ [0/3]
+
+New Item Details... Yadda... Yadda... Yadda...
+
+Re-Purpose these as needed and Delete anything you don't need...
+
+Add sub headings as needed...
+
+Don't forget to clock-in to HEADINGS while you work on them...
+AND... Don't forget to Clock OUT when you are DONE... %^)
+
+=Delete BOILERPLATE= /below/ if you don't need it...
+
+****** BOILERPLATE:
+
+The following list contains Babel Source Code Blocks that are often needed for something I am writing or "Logging" about... I use them so much I decided to include them in this template...
+
+- [ ] *__:* /(__)/
+
+      #+begin_src conf
+       keyword1:     Value1 
+       keyword2:     Value2 
+       keyword3:     Value 
+      #+end_src
+
+- [ ] *__:* /(__)/
+
+      #+begin_src bash
+       sudo dnf install emacs
+       sudo apt install emacs
+      #+end_src
+
+- [ ] *__:* /(__)/
+
+      #+BEGIN_SRC emacs-lisp :results output
+       ;; Initialize Local Vars from GLOBAL CONSTANTS;
+       (let ((h (list 'text-pixels ME--CODE-FRAME-HEIGHT))
+             (w (list 'text-pixels ME--CODE-FRAME-WIDTH)))
+         (princ "CAR h: ")
+         (princ (car h))
+         (princ "\n")
+         (princ "CDR h: ")
+         (princ (cdr h))
+         (princ "\n\n")
+         (princ "CAR w: ")
+         (princ (car w))
+         (princ "\n")
+         (princ "CDR w: ")
+         (princ (cdr w)))
+      #+END_SRC
+
+      #+RESULTS:
+      : CAR h: text-pixels
+      : CDR h: (42)
+      : 
+      : CAR w: text-pixels
+      : CDR w: (92)
+
+=ADD a NEW Items= /(as per :README: above)/ right here in this Log Book Binder whenever you need to create a new Log Entry...
+
+** 📅 2024:
+
+=ADD a NEW Items= /(as per :README: above)/ when 2024 rolls around, right here in this Log Book Binder whenever you need to create a new Log Entry...
+
+* ⏱ Tasks:                                                           :noexport:
+:README:
+   This ⏱ *Tasks:* Binder is similar to the 🗓 *Production LOGS:* Binder...
 
    - *Use this Section to* =ADD TIME STAMPED TASKS= *for any pourpose*
 
-      + Create More *⏰ Tasks:* =Sub Categories= as needed...
+      + Create More 📋 *Tasks:* =Sub Categories= as needed...
 
-      + Create More *⏱ New Task:* =Entries= under =Sub Categories= 
-         as needed during the development of your Audio Production...
+      + Create More ⏱ *New Task:* =Entries= under =Sub Categories= 
+         as needed during the development of this Project...
 
-         Use the Supplied: *⏱* <2022-08-25 Thu> *New Task:* /(Master Template)/ 
-         from the *⎘ Templates:* Section within the *⎘ Meta:* Binder to easily 
-         =copy/clone= a new Task Entry under a Sub Category of this *⏰ Tasks:* 
+         Use the Supplied: ⏱ <2022-08-25 Thu> *New Task:* /(Master Template)/ 
+         from the ⎘ *Templates:* Section within the ⎘ *Meta:* Binder to easily 
+         =copy/clone= a new Task Entry under a Sub Category of this ⏱ *Tasks:* 
          Binder...
 
    - *Time Stamp Task Entries With:* ~C-c .~ *To Set The* =START DATE=
@@ -1148,8 +3507,10 @@ I found this classic Plot... /(see details below...)/ dealing with yadda yadda y
    how to properly organize, write, and produce an audio drama with a 
    clearer mind, inspired outlook, and renewed motivation...
 :END:
-** 📃 Synopsis Tasks:
+
+** 📋 Synopsis Tasks:
 :README:
+
    =Do These Synopsis Tasks FIRST When Starting a NEW Audio Project=
 
    After completing each Timestamped Step below, Mark its TODO 
@@ -1165,7 +3526,8 @@ I found this classic Plot... /(see details below...)/ dealing with yadda yadda y
    before doing any other writing!  This advise comes from many 
    highly acclaimed master authors! /(including Mark Twain himself!)/
 :END:
-*** NEW <2022-08-25 Thu> Do This First: =Important=
+
+*** NEW ⏱ <2022-08-25 Thu> Do This First: =Important=
 
 =NOTE:= Before you start you need to answer the 
       following questions:
@@ -1185,9 +3547,7 @@ I found this classic Plot... /(see details below...)/ dealing with yadda yadda y
 
 After completing above, follow the steps below...
 
-\newpage
-
-*** NEW <2022-08-25 Thu> Step One - Write a Single Sentence Summary:
+*** NEW ⏱ <2022-08-25 Thu> Step One - Write a Single Sentence Summary:
 
 =Take An Hour And Write A One-Sentence Summary Of Your Production:= 
    
@@ -1285,7 +3645,7 @@ one you can!
    /(and other 60 second movies like it)/ for a completely 
    different audio/visual parallel to this literary concept...
 
-*** NEW <2022-08-25 Thu> Step Two - Expand Summary to Paragraph
+*** NEW ⏱ <2022-08-25 Thu> Step Two - Expand Summary to Paragraph
 
 =Take another hour and expand your sentence= from step one into a full paragraph describing the story setup, major disasters, and ending of the series.
 
@@ -1321,8 +3681,6 @@ You may find it easier to keep the main synopsis very short, but add mini synops
 - *The third disaster would come at the end of Act 2, and force Act 3*
 
 - *Act 3 wraps everything up*
-
-\newpage
 
 **** Make 5 Sentences: [0/5]
 :README:
@@ -1374,17 +3732,13 @@ You may find it easier to keep the main synopsis very short, but add mini synops
    ends as a comedy, tragedy, or mellowdrama...
    You decide on that...
 
-\newpage
-
 **** Using Your One-Paragraph Summary:
 
 You will be using this paragraph in your proposals. It is only for your agents etc.  Not for your readers who need to be kept in the dark about how the story develops before reading the book! =Watch Out Spoilers!=
 
 =However=, Some of this paragraph /(written with parts pourposefully left out or with questions put in place)/ may end up as promotional material and or short previews of your Audio Production.
 
-\newpage
-
-*** NEW <2022-08-25 Thu> Step Three - Expand Paragraph to Synopsis:
+*** NEW ⏱ <2022-08-25 Thu> Step Three - Expand Paragraph to Synopsis:
 
 =Take several hours to expand each sentence= of your summary paragraph into a full paragraph. 
 
@@ -1398,19 +3752,16 @@ At the end of this exercise, you will have a nice one-page skeleton of your Audi
 
 Your process now is to grow these ideas as episodes within your story. You are expanding the conflict. You have a synopsis suitable for a proposal, and you are well on your way to doing extended promotion...
 
-\newpage
+*** NEW ⏱ <2022-08-25 Thu> Completion:
 
-*** NEW <2022-08-25 Thu> Completion:
+- [ ] *Copy one-page skeleton from:* =Step Three= above under the:
+     📝 *Synopsis:* Heading inside the 📕 *Production Front Matter:* Binder...
 
-- [ ] *Copy one-page skeleton from:* =Step Three= above to: *📃 Synopsis:* 
-       inside the *🎙 Production:* Binder...
-
-       when you are done with these Synopsis tasks, you will have 
-       completed half the battle of producing your Audio Drama! The 
-       other half is getting to know your characters... 
-       Plots and chapters will flow from that effortlessly...
-
-\newpage
+     When you are done with these Synopsis tasks, you will have completed
+     half the battle of producing your Audio Drama! The other half is
+     getting to know your characters...
+     
+     Plots, Episodes, and Scenes will flow from that effortlessly...
 
 ** 👤 Character Tasks:
 :README:
@@ -1418,22 +3769,25 @@ Your process now is to grow these ideas as episodes within your story. You are e
           Character emerges somewhere for the first time in 
           your Script...
 
-   - [ ] =STOP Everything & Go Define a:= *👤 New Character:* 
-          =Copy/Clone= a: *👤 New Character:* /(Master Template)/
-          from: *⎘ Templates:* /(binder)/ within the *⎘ Meta:*
-          Section of this Audio Theatre Project... 
-          =Paste Clone= to: *👤 Characters:* /(binder)/ located 
-          within the *🔍 Research:* Section of this Book 
-          Project...
+   - [ ] =STOP Everything & Go Define Your:= *👤 New Character:* 
+          =Copy/Clone=: *👤 New Character:* /(Master Template)/
+          from: ⎘ *Templates:* Binder within the ⎘ *Meta:*
+          Binder of this Audio Theatre Project...
+          
+          =Paste Your Clone= to the: 👤 *Characters:* Binder located 
+          within the *🔍 Research:* Binder of this Audio Theatre Project...
 
-   - [ ] =Use Your:= *👤 New Character:* Item as the repository 
-          for the results of these tasks. Fill in sub items: 
-          *💬 Profile:*, *📃 Character Synopsis*, etc. as you 
-          follow along completing the tasks below...
+   - [ ] =Use Your:= *👤 New Character:* Item as the repository for the
+         results of the tasks listed below. Fill in sub items:
+          *💬 Profile:*, *📃 Character Synopsis*, etc. as you follow
+          along completing any and all important information called
+          out within the sub headings and forms of your new Character
+          Item...
 
    - [ ] =After completing each Timestamped Step= below, 
           Mark its TODO State To ~DONE~ & Update the Timestamp 
-          to the current time as well...  
+          to the current time as well...
+          
           Use Command: ~C-c . RET~ while cursor is on the 
           timestamp to update it to the current date/time...
 
@@ -1443,8 +3797,8 @@ Your process now is to grow these ideas as episodes within your story. You are e
           next character you will be doing this for...
 
           You can also mark the TODO states of any of the 
-          headings within your final Character Profile as
-          you are working on them there...
+          headings within your final Character Item's Profile
+          as you are working on them there...
 
    Some of these Character tasks are based on the Snowflake Method 
    as outlined in Randy Ingermanson's book:
@@ -1523,8 +3877,6 @@ Your process now is to grow these ideas as episodes within your story. You are e
 
 /(Use this space as a temporary scratch pad if needed...)/
 
-\newpage
-
 *** NEW ⏱ <2022-08-26 Fri> 👥 Minor Characters Summary:
 :README:
    Write a half page synopsis (or 300 words) about 
@@ -1539,7 +3891,7 @@ Your process now is to grow these ideas as episodes within your story. You are e
 /(Use this space as a temporary scratch pad if needed...)/
 
 \newpage
-** ⏱ Other Tasks:
+** 📋 Other Tasks:
 *** SOMEDAY ⏱ <2022-08-28 Sun> Create Production Calendar
 
 =Note:= This is Still Under Construction... I am researching the 
@@ -1571,7 +3923,7 @@ Use this space to design your *PC* and then transfer it as a New Section within 
 
 \newpage
 
-* ⎘ Meta: /(TEMPLATES ETC.)/                                    :noexport:
+* ⎘ Meta: /(About, Instructions, TEMPLATES)/                       :noexport:
 ** 📄 About:
 
 This =Meta= section provides skeleton templates for use within your project(s).  Any sub heading under this Meta: group can be utilized by copy-pasting the collapsed heading into any of your existing project sections (i.e., making a clone anywhere you need to create a new section based on the template's structure)... 
@@ -1728,619 +4080,373 @@ Using the knowledge above, I created a custom file /(after a lot of trial and er
          }
      }
    #+end_src
-
-** NEW 🎙 ~E???~ Episode Title /(MASTER TEMPLATE - Change Title)/
-:README:
-   *🎙 Episodes* are the *Top Level Headings* within the *🎙 Production:* Binder 
-   of this *Emacs Org-mode* Audio Drama Publishing project...
-
-   =Usage:=
-
-   - [ ] =Clone This:= *NEW 🎙* ~E???~ *Episode Title:* /(MASTER TEMPLATE)/ 
-          =Copy ALL its contents= and =paste= it as a child Item 
-          in the *🎙 Production:* Binder of this Audio Drama 
-          Publishing Project... 
-
-          Do this whenever you need to start a new episode...
-
-   - [ ] =Edit Your New Clone:=
-          The structure of this template is all set up for 
-          you ahead of time to allow you to immediately begin 
-          writing...  
-
-          Replace titles to suit your needs, but keep the 
-          structure of *Episode / Scenes* intact... 
-          /(i.e., change names only...)/
-:END:
-*** ☞ Episode References:                                          :noexport:
-:README:
-   =Org Mode Links Tip:=
-
-      + To Create a Link Type: ~C-c C-l~ 
-         /(then paste: ~link~ & type: "description")/
-
-         =-or-= Simply Copy/Paste Template: /(link placeholder)/
-               Below and fill that in... 
-               copy/paste more placeholders as needed... ;-)
-
-      + To Open a Link Type: ~C-c C-o~
-
-- [[][] ] - /(link placeholder)/
-
-:END:
-
-*Add links to Anything Deemed Important to the Writing of This Episode:*
-/(Links to Websites, Other Stories, Images, Sound, Video, Whatever...)/
-
-- [[][] ] - 
-
-- [[][] ] - 
-
-- [[][] ] - 
-
-- [[][] ] - 
-
-- [[][] ] -
-
-\newpage
-*** NEW 🎙 ~S???~ Scene Title /(Template - Change to Actual Scene Title)/
-:README:
-   Here is the =ULTIMATE MASTER WORKSPACE= for creating, developing, and 
-   updating a *new scene*...
-
-   All ideas, plots, dialog, sounds, music, production notes, etc. for a particular scene within this episode are developed here solely...
-
-   One of the accompanying fountain drama scripts for this *Audio Drama Project* ~.org~ file /(named after this episode)/ contains a compilation of all the /fountain script snippits/ for all scenes developed within this single episode...
-
-   Some elements created here will become part of the accompanying fountain drama script for this episode... /(e.g., dialog, notes, narration, etc.)/ 
-
-   The accompanying fountain drama script for this episode must be kept up to date with final drafts and latest edits made solely here...
-
-   The headings within this ~.org~ file can be tracked using ~GTD~ tags, and a *log* entry can keep track of time worked on them... Once a scene is in final draft stage, it can be marked *DONE* and the fountain script for the episode will be updated to reflect that scene's final draft state...
-
-   *What is a Scene?*
-
-   Scenes form the fabric within episodes of audio or radio programs...
-
-   Scenes are small packages of isolated events relating to a single unique thread/picture knitted into a defined situation where particular events related to that situation play out...
-
-   The scenes don't necessarily follow in chronological order but they relate to each other in the mosaic fabric of the story as it develops... 
-
-   If a scene changes abruptly to some other situation, that may mean that the scene is over and a new one is starting... Usually a change of environment triggers a new scene...
-:END:
-**** ✨ Location:
-
-\newpage
-
-**** 📃 Summary:
-
-\newpage
-
-**** 🗒 Background Notes:
-:README:
-  This area could start out as this single scene's quick synopsis summarizing all of the actions / dialog etc. that take place during this particular scene and / or the place where you sketch these things out first before committing them to the actual scene dialog script heading below...  This is also a place to add extra notes for this scene that will not become part of the final production fountain script...
-:END:
-
-\newpage
-
-**** 📝 Fountain Script /(single scene script)/
-:README:
-  Compose a new draft scene fountain script in the block below... Write some scene related production notes, or instructions within the fountain script source block as well...
-:END:
-
-#+BEGIN_SRC fountain
-# Production Notes: (example)
-
-= Add instructions, and information here needed to develop this scene... 
-= Yadda Yadda Yadda... 
-= Add Excerpts from: 🗒 Background Notes: above if needed...
-
-# BEGIN SCENE: (example)
-
-INT WRITERS ROOM (DAY)
-
-01 _MUSIC: [MUS-E001-S02-01] OPTIONAL OMINOUS HIGHLIGHT OVERLAY STING (SYNC TO DIALOG "Of all the nerve!", FADE FAST - ONLY HALL REVERB REMAINS THEN SILENCE)_
-
-02 _DIALOG:_
-
-CHARACTER
-Dialog text... Hey! Don't call me a generic character!  
-(EMPHATICALLY)
-Of all the nerve! 
-(SURPRISE)
-Oh? I am just a template?  Whaaaat the heck is that? 
-(LAUGHS)
-Please somebody write me into a real character... Thanks!
-
->END of SCENE<
- #+END_SRC
-
-\newpage
-
-*** NEW 📒 Epi Back Story /(Optional For Series Intro)/
-:README:
-  This section is for episode background planning and plot development which may or may not be included within the final production... Information contained here is more specific to this single episode than the more general *Synopsis / Back Story* section of this entire project, or what you may find within the *Research:* section which is more global in scope as well...
-
-  Structure this section any way you wish or need...
-:END:
-
-\newpage
-
-*** NEW 📃 Epi Synopsis
-:README:
-  Write a short synopsis for this single episode here... This will be more or less a summary of this single episode only... You can use similar story building tools / exercises for writing this synopsis as you do for any typical fiction writing project... A summary of your Synopsis will be added to the final draft fountain script...
-:END:
-
-\newpage
-
-*** NEW 🗡 Epi Plot Summary
-:README:
-  Write your episode's plot summary here: /(e.g., In this episode we are dealing with yadda... yadda... yadda... which must be resolved with yadda... yadda... yadda..., etc...)/ This plot summary will probably not be added to the final draft fountain script... /(but there are exceptions of course)/
-:END:
-
-\newpage
-
-*** NEW 📢 Sound Cues:
-**** Sound Cue /(CLIPS)/ Numbering Convention:
-
-Sound Cues contain an identifying code number plus a short descriptive title... /(this way sound files can be sorted alphabetically and found easily when called for in a script (or cue sheet) during rehearsal or production time...)/
-
-It's easy to call out these cues during a rehearsal... For instance, simply saying: /"SFX 102, 12, 25"/ and everyone will know we are talking about Sound Clip "25", playing in Episode 102, at Scene 12...
-
-=Sound Cue Code Numbering Convention:=
-
-  ~[SFX-E001-S001-C001]~
-     \    \    \    \____ *Sound Cue #* /(or Clip #. 999 files/project)/
-      \    \    \
-       \    \    \____ *Scene #* /(999 Possible Scenes/Episode)/
-        \    \    
-         \    \____ *Episode #* /(999 Possible Episodes/Story)/
-          \
-           \____ *ID Mnemonic* /(Sound Effect, Environment Sound, Etc.)/
-
-The numbering and naming of sound cues for an entire audio drama project are specified by using the Sound Cue Naming Convention above...
-
-A Sound Cue Ending with the same ~C~ /(cue or clip number)/ may appear multiple
-times within this entire Audio Theatre Project. This means that the same clip gets played multiple times within different settings, e.g., ~[SFX-E001-S001-C001]~, ~[SFX-E001-S025-C001]~, ~[SFX-E018-S013-C001]~, etc.  Common sounds like footsteps etc., appear many times. However, you may only have three or four versions of footsteps produced as clips...
-
-=Special Case for:= /[SFX-E001-/ ~S000~ /-C001]/
-
-If the above number contains scene number: ~S000~ This is a special number reserved for cues that play BEFORE the first scene or ANY scene in the episode where it may appear...
-
-This is for things like The Entire Series Music Theme, Content with a Scope Beyond This Single Episode Alone, Orson Well's Historic Speech, /(lol)/ Whatever you want... These cues only appear at the very top of an episode's script, just before the first scene starts... By design, they cannot appear within Scenes...
-
-=Note:= All Audio Drama Projects based on this Template will use the same 
-       rules.. If identical Sound clips are needed by other projects, you
-       will have to copy those associated files to the other project's media
-       folder... /(i.e., they must be duplicated because other projects will/ 
-       /ONLY look for sound clips within their OWN MEDIA Folders).../
-
-       In Addition to this... Project's MEDIA Folders may actually contain
-       Symlinks to the Project's Accompanying DAW Project Folder's MEDIA
-       folder...
-
-       Redundancy /(i.e., multiple copies of media files)/ is fine as long as 
-       the sound files are not HUGE!!! If they ARE HUGE you may be better 
-       to use a simlink...
-
-       The actual sound file names will NOT contain Episode or Scene number,
-       but WILL contain the Sound Cue Number, AND a very short description 
-       of the sound itself...
-
-       You have 999 different possible Sound Cue Numbers, which should be more than enough when combined with a short description to make ALL sound
-       file names for a single project unique within their associated 
-       media folder...
-
-       TO make this manageable /(multiple project wide)/, all post production
-       ready sound files for any given project shall be kept in the
-       accompanying project's ~media~ sub folder... This sub folder may in 
-       fact be a symlink to THIS Project's Accompanying DAW Project Folder's 
-       MEDIA folder... All Audio Theatre Projects have an associated DAW
-       Project where Recorded Dialog is mixed with the music, sounds, 
-       everything... These two need to be linked together at the hip!
-
-=Note:= Many *"stock"* sounds occur normally within multiple Episodes 
-       throughout a production project... These identical sound files are 
-       identified within the script by looking at the Cue number which 
-       MUST be UNIQUE within any given project... The Episode and Scene
-       numbers may change but if the Cue Number is the same you know
-       that it refers to a single sound file /(used multiple times within
-       the script)/
-
-=Sound or Music?= Sometimes it is hard to decide whether a sound clip
-                  is "music", "background sound", or "sound effect"
-                  depending on the genre of the story etc... Use your
-                  best judgment when naming and assigning a sound
-                  file as "music" or "sfx"... You will be fine...
-
-\newpage
-
-**** Scene 01:
-***** 📢 ~[SFX-E001-S001-C001]~ "sound cue name" /(template)/
-:README:
-   WRITE SHORT SOUND DESCRIPTION IN ALL CAPS LIKE THIS
-
-   /Example:/
-   SCREAM - SMASH BATHROOM MIRROR - SHARDS FALL IN SINK - INTENSE SOBBING
-:END:
-****** 📃 Fountain Script: /(example)/
-
-#+begin_src fountain
-nn _SOUND: [SFX-E001-S001-C001] ANGRY SCREAM! - SMASH BATHROOM MIRROR - SHARDS FALL IN SINK (CONTINUE AND FADE SLIGHTLY UNDER - INTENSE EMOTIONAL SILENCE) [SFX-E01-S01-02] WALLA - DEEP SOBBING EMOTIONAL BREAKDOWN_
-#+end_src
-
-****** 🗒 Notes: [0/2]
-:README:
-   This part will not be added to the script, and you should probably start here first to get the rough idea sketched out...
-
-   /Example:/ Angry Scream, accompanied by crashing sound of both fists smashing into the bathroom mirror with aftershock of shards falling into the sink, and finally after an intense emotional silence play: ~[SFX-E001-S001-C002]~ "Walla" (Deep Sobbing emotional breakdown sound)
-:END:
-
-- [ ] *Notes:*
-
-     Yadda... Yadda... Yadda...
-
-- [ ] *File Created:* 
-
-     ~./media/SFX-C001_Even-Shorter-Description.wav~
-
-\newpage
-
-**** Scene 02:
-***** 📢 ~[SFX-E001-S002-C002]~ "sound cue name" /(template)/
-:README:
-   WRITE SHORT SOUND DESCRIPTION IN ALL CAPS LIKE THIS
-
-   /Example:/
-   DOG BARKING - CAR WHEELS SCREECH - THUD - DOG CRIES THEN WHIMPERS
-:END:
-****** 📃 Fountain Script: /(example)/
-
-#+begin_src fountain
-nn _SOUND: [SFX-E001-S002-C002] DOG BARKING IN STREET! - CAR WHEELS SCREECH - THUD - DOG CRIES THEN WHIMPERS (CONTINUE AND FADE)_
-#+end_src
-
-****** 🗒 Notes:  [0/2]
-:README:
-   This part will not be added to the script, and you should probably start here first to get the rough idea sketched out...
-
-   /Example:/ You hear a dog barking at cars in the street.... A passing car breaks to avoid hitting the dog...  Wheels Squeal, Car hits dog with a thud... Yadda... Yadda... Yadda...
-:END:
-
-- [ ] *Notes:*
-
-- [ ] *File Created:* 
-
-       ~./media/SFX-C002_Even-Shorter-Description.wav~
-
-\newpage
-
-*** NEW 🎶 Music Cues:
-**** Music Cue /(music clips)/ Numbering Convention:
-
-Music Cues contain an identifying code number plus a short descriptive title... /(this way music files can be sorted alphabetically and found easily when called for in a script (or cue sheet) during rehearsal or production time...)/
-
-It's easy to call out these cues during a rehearsal... For instance, simply saying: /"MUSIC 102, 12, 25"/ and everyone will know we are talking about Music Clip "25", playing in Episode 102, at Scene 12...
-
-=Music Cue Code Numbering Convention:=
-
-  ~[MUS-E001-S001-M001]~
-     \    \    \    \____ *Music Cue #* /(or Music Clip #. 999 files/project)/
-      \    \    \
-       \    \    \____ *Scene #* /(999 Possible Scenes/Episode)/
-        \    \    
-         \    \____ *Episode #* /(999 Possible Episodes/Story)/
-          \
-           \____ *ID Mnemonic* /(ID for Music Cues)/
-
-The numbering and naming of music cues for an entire audio drama project are specified by using the Music Cue Naming Convention above...
-
-A Music Cue Ending with the same ~M~ /(Music Cue number)/ may appear multiple
-times within this entire Audio Theatre Project. This means that the same clip gets played multiple times within different settings, e.g., ~[MUS-E001-S001-M001]~, ~[MUS-E001-S025-M001]~, ~[MUS-E018-S013-M001]~, etc.  Common music like intro themes, exit themes, etc., appear many times... 
-
-=Special Case for:= /[MUS-E001-/ ~S000~ /-M001]/
-
-If the above number contains scene number: ~S000~ This is a special number reserved for cues that play BEFORE the first scene or ANY scene in the episode where it may appear...
-
-This is for things like The Entire Series Music Theme, Content with a Scope Beyond This Single Episode Alone, Orson Well's Historic Speech, /(lol)/ Whatever you want... These cues only appear at the very top of an episode's script, just before the first scene starts... By design, they cannot appear within Scenes...
-
-=Note:= All Audio Drama Projects based on this Template will use the same 
-       rules.. If identical Music clips are needed by other projects, you
-       will have to copy those associated files to the other project's media
-       folder... /(i.e., they must be duplicated because other projects will/ 
-       /ONLY look for music clips within their OWN MEDIA Folders).../
-
-       In Addition to this... Project's MEDIA Folders may actually contain
-       Symlinks to the Project's Accompanying DAW Project Folder's MEDIA
-       folder...
-
-       Redundancy /(i.e., multiple copies of media files)/ is fine as long as 
-       the music files are not HUGE!!! If they ARE HUGE you may be better 
-       to use a simlink...
-
-       The actual music file names will NOT contain Episode or Scene number,
-       but WILL contain the Music Cue Number, AND a very short description 
-       of the music itself...
-
-       You have 999 different possible Music Cue Numbers, which should be more than enough when combined with a short description to make ALL music
-       file names for a single project unique within their associated 
-       media folder...
-
-       TO make this manageable /(multiple project wide)/, all post production
-       ready music files for any given project shall be kept in the
-       accompanying project's ~media~ sub folder... This sub folder may in 
-       fact be a symlink to THIS Project's Accompanying DAW Project Folder's 
-       MEDIA folder... All Audio Theatre Projects have an associated DAW
-       Project where Recorded Dialog is mixed with the music, sounds, 
-       everything... These two need to be linked together at the hip!
-
-=Note:= *"stock"* music may occur multiple times within multiple Episodes 
-       and Scenes throughout a production project... These identical 
-       music files are identified within the script by looking at the 
-       Music Cue Number which MUST be UNIQUE within any given project... 
-       The Episode and Scene numbers may change but if the Music Cue 
-       Number is the same you know that it refers to a single music file
-       /(used multiple times within the script)/
-
-=Sound or Music?= Sometimes it is hard to decide whether a clip is
-                  /"music"/ , /"background sound"/ , /"sound effect"/ 
-                  or, in many cases /a morph of all-the-above!!!/
-                  depending on the genre of the story etc... Use your
-                  best judgment when naming and assigning a sound
-                  file as "music" or "sfx"... =You will be fine...=
-
-\newpage
-
-**** Scene 01:
-***** 🎶 ~[MUS-E101-S001-M001]~ "music cue name" /(template)/
-:README:
-    WRITE SHORT MUSIC DESCRIPTION IN ALL CAPS LIKE THIS
-
-    /Example:/
-    MYSTERIOUS INTRO THEME
-:END:
-****** 📃 Fountain Script: /(example)/
-
-#+begin_src fountain
-nn _MUSIC: [MUS-E101-S001-M001] MYSTERIOUS INTRO THEME (CROSSFADE AND DUCK UNDER)_
-#+end_src
-
-****** 🗒 Notes: [0/2]
-:README:
-   This part will not be added to the script, and you should probably start here first to get the rough idea sketched out...
-
-   /Example:/ This is the main theme music for the show... Let it play in full at the begining... Use short excerpts of this music in other places and fade under when dialog starts, etc...
-:END:
-
-- [ ] *Notes:*
-
-     Yadda... Yadda... Yadda...
-
-- [ ] *File Created:* 
-
-     ~./media/MUS-M001_Even-Shorter-Description.wav~
-
-**** Scene 02:
-***** 🎶 ~[MUS-E101-S002-M002]~ "music cue name" /(template)/
-:README:
-    WRITE SHORT MUSIC DESCRIPTION IN ALL CAPS LIKE THIS
-
-    /Example:/
-    OMINOUS HIGHLIGHT OVERLAY STING
-:END:
-****** 📃 Fountain Script: /(example)/
-
-#+begin_src fountain
-nn _MUSIC: [MUS-E101-S002-M002] OPTIONAL OMINOUS HIGHLIGHT OVERLAY STING (SYNC TO DIALOG "Until now...", FADE FAST - ONLY HALL REVERB REMAINS THEN SILENCE)_
-#+end_src
-
-****** 🗒 Notes: [0/3]
-:README:
-   This part will not be added to the script, and you should probably start here first to get the rough idea sketched out...
-
-   /Example:/ This is a short symphonic "sting" to highlight and "showcase" some event or announcement during the show... Let it play in full /(it is short)/ and fade fast after initial reverb trail...
-:END:
-
-- [ ] *Notes:*
-
-     Yadda... Yadda... Yadda...
-
-- [ ] *File Created:*
-
-       ~./media/MUS-M002_Even-Shorter-Description.wav~
-
-\newpage
-
 ** ⎘ Templates:
-*** NEW 🗓 LOG: <2021-03-29 Mon> Entry /(Log Entry Template)/
+*** NEW 🗓 LOG: <2023-01-17 Tue> Generic Title /(Log Entry Template)/
+<<LOG_Generic-Title>>
 :README:
-   - *Go To One of the HEADINGS Below:* /(Summary, Details, or Sub Headings)/
+   =Using the Clocking Feature of this Log Entry=
 
-      =Punch the Time Clock= At the heading And then begin working on a
-      task related to that Heading... =Your Time IS being Recorded Now= 
+   - [ ] *Go To One of the HEADINGS Below:*
 
-   - =Use These Commands:= /as you work to keep track your time.../
+         /(Summary, Details, or Sub Headings)/
 
-      + *Clock IN:* ~C-c C-x C-i~ 
+         =Punch the Time Clock:= /(see Clocking Commands: below)/ At
+         the heading And then begin working on a task related to
+         that Heading...
 
-           /(Begin OR Resume Clocking Current task)/
+         =Your Time IS being Recorded Now= /(you will see a/ *:clocking:*
+         /item under the heading where time is recorded)/
 
-           This creates a new :CLOCKING: Time Card Entry just
-           underneath the HEADING...
+   - [ ] =Use These Clocking Commands:= /to keep track your time.../
 
-           Do this just before starting work on the task... 
-           Be in control of your life!
+      + *Clock IN:* ~C-c C-x C-i~ /(Begin OR Resume Clocking Current task)/
 
-           After doing the above, you can go away and do some 
-           work, leaving this heading, log note, etc. to visit 
-           other files and/or work on them etc. The clock will 
-           be recording your time all the while... You will see 
-           in your mode line the elapsed clock time ticking away 
-           as you work on a task /(hopefully related to this clock!)/
-           and NOT Yac Shaving or being sidetracked!!!
+            This creates a new :CLOCKING: Time Card Entry just
+            underneath the HEADING...
+
+            Do this just before starting work on the task... 
+            Be in control of your life!
+
+            After doing the above, you can go away and do some 
+            work, leaving this heading, log note, etc. to visit 
+            other files and/or work on them etc. The clock will 
+            be recording your time all the while... You will see 
+            in your mode line the elapsed clock time ticking away 
+            as you work on a task /(hopefully related to this clock!)/
+            and NOT Yac Shaving or being sidetracked!!!
 
       + *RETURN to Clock Heading:* ~C-c C-x C-j~
 
-           /Go back to the place where you started the clock.../
+            /Go back to the place where you started the clock.../
 
-           You do this after you have worked on a task for a 
-           while and you need to come back to update the item's
-           info etc., and/or stop the clock before going off to 
-           do something else unrelated to the log entry...
+            You do this after you have worked on a task for a 
+            while and you need to come back to update the item's
+            info etc., and/or stop the clock before going off to 
+            do something else unrelated to the log entry...
 
       + *Clock OUT:* ~C-c C-x C-o~ /(to stop clocking your time on task)/
 
-           This *Finalizes the Time Card Entry* within:
-           ~:CLOCKING:~ /(created earlier when you started the/ /clock)/
+            This *Finalizes the Time Card Entry* within:
+            ~:CLOCKING:~ /(created earlier when you started the clock)/
 
-           The Clock Entry changes showing start timestamp, end 
-           timestamp, and total time worked during this segment...  
+            The Clock Entry changes showing start timestamp, end
+            timestamp, and total time worked during this segment...  
 
-           =Please DON'T Forget= /Like I often do, LOL.../ i.e.,
-           Leaving a clock running all day by accident, or worse,
-           leave it dangling with the file closed only to open it
-           again and get that nasty *Org-Mode Message:* /"What do/
-           /you want to do with this?"/ If you do something like 
-           that you can always come back and directly edit the 
-           clock times by hand to amend them...  After changing 
-           clock times or dates, etc... Whatever...
+            =Please DON'T Forget= /Like I often do, LOL.../ i.e., Leaving
+            a clock running all day by accident, or worse, leave it
+            dangling with the file closed only to open it again and
+            get that nasty *Org-Mode Message:* /"What do you want to do/
+            /with this?"/ If you do something like that you can always
+            come back and directly edit the clock times by hand to
+            amend them...  After changing clock times or dates, etc...
+            Whatever...
 
-           ="Onward We Row Mates... Through the log jam!"=
+                  ="Onward We Row Mates... Through the log jam!"=
 
       + *Update Time Card Entry:* ~C-c C-c~ 
 
-           This command will change the total time at the end showing 
-           your new calculated time...
+            This command will change the total time at the end showing 
+            your new calculated time...
 
-           If you need to go away and do something else before finishing 
-           this task, you can do so after clocking out... When you come 
-           back simply clock back in again to start another Time Card 
-           Entry just as before... The new time card entry will appear 
-           above the earlier one within the ~:CLOCKING:~ drawer... When 
-           you clock out of this task it will look just like the entry 
-           below it with a total time worked tagged on the end...
+            If you need to go away and do something else before finishing
+            this task, you can do so after clocking out... When you come
+            back simply clock back in again to start another Time Card
+            Entry just as before... The new time card entry will appear
+            above the earlier one within the ~:CLOCKING:~ drawer... When
+            you clock out of this task it will look just like the entry
+            below it with a total time worked tagged on the end...
 
       + *Clock Out & Mark Items Done:* ~C-c C-t~
 
-           When you are all done with a Log Entry use the above key 
-           command to mark its Heading *TODO* tag to: *DONE* /(Most of the/ 
-           /time this will ALSO clock you out if you are still clocked/ 
-           /into the item... But not allways in my experience.../  
-           So make sure you are also clocked OUT of an Item After 
-           marking it DONE... Type: ~C-c C-x C-j~ to check this...
-           /(if no running clock it will tell you and place your/
-           /cursor at the heading where you LAST CLOCKED OUT)/
+            When you are all done with a Log Entry use the above key 
+            command to mark its Heading *TODO* tag to: *DONE* /(Most of the/ 
+            /time this will ALSO clock you out if you are still clocked/ 
+            /into the item... But not allways in my experience.../  
+            So make sure you are also clocked OUT of an Item After 
+            marking it DONE... Type: ~C-c C-x C-j~ to check this...
+            /(if no running clock it will tell you and place your/
+            /cursor at the heading where you LAST CLOCKED OUT)/
 
       + ~C-c C-x C-q~ *Cancel Current Clock:* /(in case of accident)/
 
-           This removes currently running clock and forgets 
-           any time accrued or associated with it...
+            This removes currently running clock and forgets any time
+            accrued or associated with it...
 
-      + ~C-c C-x C-d~ *Display Clocking Info:*
+      + ~C-c C-x C-d~ *Display Clocking Info:* 
 
-           /This will show elapsed times to the right of headings.../
-           =Warning!= Using this command will CLUTTER ALL the headings
-           within your org file with those timestamps!!!
+            /This will show elapsed times to the right of headings.../
+            =Warning!= Using this command will CLUTTER ALL the headings
+                     within your org file with those timestamps!!!
 
-   =Note:= Once all of the above commands become routine for you, you 
-          might want to remove this ~:README:~ drawer from this 
-          template... That way it won't get copied when you need to 
-          clone new log entries...
 :END:
 
-=Copy/Clone= This: *🗓 LOG:* <2021-03-29 Mon> *Entry* /(Log Entry Template)/
-=Paste As: New Entry= Within: *🗓 Production Log:* Binder
-under the *🔍 Research:* section of this Emacs Org-Mode Book Publishing 
-Project...
+=Copy/Clone= This: 🗓 *LOG:* <2023-01-17 Tue> *Generic Title* /(Log Entry Template)/
+=Paste As a New Entry= under the currently active *📅 YYYY:* Section, Within
+The: *🗓 Production LOGS:* Binder of this Audio Drama Productions Project...
 
-Replace these instructions with short description of log entry. 
-/(if needed)/
+=Replace these BOILERPLATE Instructions= with a short description of your
+new log entry... /(or simply delete this BOILERPLATE if no description is needed)/
 
-\newpage
-
-**** 📚 Reference:
+**** NEW 📚 Reference:
 :README:
    =Org Mode Links Tip:=
 
       + To Create a Link Type: ~C-c C-l~ 
          /(then paste: ~link~ & type: "description")/
 
-         =-or-= Simply Copy/Paste Template: /(link placeholder)/
-               Below and fill that in... 
-               copy/paste more placeholders as needed... ;-)
+         =-OR-= Simply Copy/Paste BOILERPLATE:
+              /(use placeholders below)/
+              And Fill Them In Manually... 
+              Copy/Paste more placeholders as
+              needed to create more links...
 
       + To Open a Link Type: ~C-c C-o~
 
-- [[][] ] - /(link placeholder)/
+      + To EXPAND a Link Type: ~SPACE b~
+         or: ~M-x org-toggle-link-display~
 
+   =BOILERPLATE:= /(clone to add more ref links)/
+
+   ☞ *Heading:* [[link][Link NAME] ] /(comment)/
+
+   ☞ [[link][Link Name] ] *Heading:* /(comment)/
+   
+   ☞ *_:* [[][] ] /(yadda... yadda... yadda...)/
+
+   ☞ [[][] ] /(_)/
+
+   [[junk][JUNK]]  /(This is a stupid BUG workaround/ /for org-mode link/
+         /expansion/compression... If you invoke:/ ~org-toggle-link-display~
+         /you will notice this JUNK link DOES NOT compress to a clickable/
+         /link title alone.../
+         
+         /I am not sure if this is due to my Emacs Config or a bug within/
+         *Org-Mode* /itself.../
+
+         /I put this workaround in here because if it is not here,/
+         /SOME of your external file links created below may not/
+         /compress after expansion, even though thy are GOOD links!/
+
+         /Leaving this JUNK link in here acts like a scapegoat/
+         /so that your real links below will all compress/expand/
+         /normally... I am NOT SURE WHY THIS WORKS??? I'm to busy/
+         /to do anything beyond hacking at this point.../
+         
+         ~org-lint~ /will detect JUNK above... Ignore that warning.../
+                  /It's my "METHOD of MADNESS" %^)/
 :END:
 
-- *Link to Project:* [[][] ]
+☞ *Link to Project:* [[][] ] /(comment)/
 
-- [[URL][Link Name] ] *Heading:* /(comment)/
+**** NEW ⏱ Time Card:
 
-- [[][] ] - *_:* /(yadda...)/
-
-- [[][] ] /(_)/
-
-\newpage
-
-**** ⏱ Time Card:
-
-#+BEGIN: clocktable :scope tree2 :maxlevel 4 :tstart "<-1d>" :tend "<+1m>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3
+#+BEGIN: clocktable :scope tree3 :maxlevel 6 :tstart "<-1w>" :tend "<+1m>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3
 #+END:
-
-\newpage
 
 **** NEW ✅ Summary: [0/3]
 :README:
-   This Summary is mostly to help you find things later when you cannot remember when or where is was done... If you go to the top of this file and expand all headings to show ALL content, then do a search on "~Summary:~" you will be able to quickly scroll through and scan these summaries quickly to find what you were looking for... 
+   This Summary is mostly to help you find things later when you
+   cannot remember when or where is was done... If you go to the
+   top of this file and expand all headings to show ALL content,
+   then do a search on "~Summary:~" you will be able to quickly
+   scroll through and scan these summaries quickly to find what
+   you were looking for... 
 
-   Also the *Time Card* /displayed above/ each search hit will give more clues by showing important headings you worked on...
+   Also the *Time Card* /displayed above/ each search hit will give
+   more clues by showing important headings you worked on...
 
-   Below is an optional list /(that could also provide links)./ This list could be used to itemize things you worked on, but I personally find it easier to simply write a short one or two line description containing important keywords right here and nothing more. I think that is more useful...
+   Below is an optional list /(that could also provide links)./ This
+   list could be used to itemize things you worked on, but I
+   personally find it easier to simply write a short one or two
+   line description containing important keywords right here and
+   nothing more. I think that is more useful...
 :END:
 
 Yadda... Yadda... Yadda...
 
-1. [ ] *__:*
+1. [ ] *New Item 1:*
 
-2. [ ] *__:*
+2. [ ] *New Item 2:*
 
-3. [ ] *__:*
-
-\newpage
+3. [ ] *New Item 3:* /(copy/clone more as needed)/
 
 **** NEW 📒 Details:
-***** NEW New Item 1 /(placeholder)/ [0/3]
+***** NEW ⏱ New Item 1 /(placeholder)/ [0/3]
+
+New Item Details... Yadda... Yadda... Yadda...
+
+Re-Purpose these as needed and Delete anything you don't need...
+
+Add sub headings as needed...
+
+Don't forget to clock-in to HEADINGS while you work on them...
+AND... Don't forget to Clock OUT when you are DONE... %^)
+
+=Delete BOILERPLATE= /below/ if you don't need it...
+
+****** BOILERPLATE:
+
+The following list contains Babel Source Code Blocks that are often needed for something I am writing or "Logging" about... I use them so much I decided to include them in this template...
 
 - [ ] *__:* /(__)/
 
-- [ ] *__:* /(__)/
+      #+begin_src conf
+       keyword1:     Value1 
+       keyword2:     Value2 
+       keyword3:     Value 
+      #+end_src
 
 - [ ] *__:* /(__)/
 
-\newpage
-
-***** NEW New Item 1 /(placeholder)/ [0/3]
-
-- [ ] *__:* /(__)/
-
-- [ ] *__:* /(__)/
+      #+begin_src bash
+       sudo dnf install emacs
+       sudo apt install emacs
+      #+end_src
 
 - [ ] *__:* /(__)/
 
-\newpage
+      #+BEGIN_SRC emacs-lisp :results output
+       ;; Initialize Local Vars from GLOBAL CONSTANTS;
+       (let ((h (list 'text-pixels ME--CODE-FRAME-HEIGHT))
+             (w (list 'text-pixels ME--CODE-FRAME-WIDTH)))
+         (princ "CAR h: ")
+         (princ (car h))
+         (princ "\n")
+         (princ "CDR h: ")
+         (princ (cdr h))
+         (princ "\n\n")
+         (princ "CAR w: ")
+         (princ (car w))
+         (princ "\n")
+         (princ "CDR w: ")
+         (princ (cdr w)))
+      #+END_SRC
 
-***** NEW New Item 1 /(placeholder)/ [0/3]
+      #+RESULTS:
+      : CAR h: text-pixels
+      : CDR h: (42)
+      : 
+      : CAR w: text-pixels
+      : CDR w: (92)
+
+***** NEW ⏱ New Item 2 /(placeholder)/ [0/3]
+
+New Item Details... Yadda... Yadda... Yadda...
+
+Re-Purpose these as needed and Delete anything you don't need...
+
+Add sub headings as needed...
+
+Don't forget to clock-in to HEADINGS while you work on them...
+AND... Don't forget to Clock OUT when you are DONE... %^)
+
+=Delete BOILERPLATE= /below/ if you don't need it...
+
+****** BOILERPLATE:
+
+The following list contains Babel Source Code Blocks that are often needed for something I am writing or "Logging" about... I use them so much I decided to include them in this template...
 
 - [ ] *__:* /(__)/
 
-- [ ] *__:* /(__)/
+      #+begin_src conf
+       keyword1:     Value1 
+       keyword2:     Value2 
+       keyword3:     Value 
+      #+end_src
 
 - [ ] *__:* /(__)/
 
-\newpage
+      #+begin_src bash
+       sudo dnf install emacs
+       sudo apt install emacs
+      #+end_src
+
+- [ ] *__:* /(__)/
+
+      #+BEGIN_SRC emacs-lisp :results output
+       ;; Initialize Local Vars from GLOBAL CONSTANTS;
+       (let ((h (list 'text-pixels ME--CODE-FRAME-HEIGHT))
+             (w (list 'text-pixels ME--CODE-FRAME-WIDTH)))
+         (princ "CAR h: ")
+         (princ (car h))
+         (princ "\n")
+         (princ "CDR h: ")
+         (princ (cdr h))
+         (princ "\n\n")
+         (princ "CAR w: ")
+         (princ (car w))
+         (princ "\n")
+         (princ "CDR w: ")
+         (princ (cdr w)))
+      #+END_SRC
+
+      #+RESULTS:
+      : CAR h: text-pixels
+      : CDR h: (42)
+      : 
+      : CAR w: text-pixels
+      : CDR w: (92)
+
+***** NEW ⏱ New Item 3 /(placeholder)/ [0/3]
+
+New Item Details... Yadda... Yadda... Yadda...
+
+Re-Purpose these as needed and Delete anything you don't need...
+
+Add sub headings as needed...
+
+Don't forget to clock-in to HEADINGS while you work on them...
+AND... Don't forget to Clock OUT when you are DONE... %^)
+
+=Delete BOILERPLATE= /below/ if you don't need it...
+
+****** BOILERPLATE:
+
+The following list contains Babel Source Code Blocks that are often needed for something I am writing or "Logging" about... I use them so much I decided to include them in this template...
+
+- [ ] *__:* /(__)/
+
+      #+begin_src conf
+       keyword1:     Value1 
+       keyword2:     Value2 
+       keyword3:     Value 
+      #+end_src
+
+- [ ] *__:* /(__)/
+
+      #+begin_src bash
+       sudo dnf install emacs
+       sudo apt install emacs
+      #+end_src
+
+- [ ] *__:* /(__)/
+
+      #+BEGIN_SRC emacs-lisp :results output
+       ;; Initialize Local Vars from GLOBAL CONSTANTS;
+       (let ((h (list 'text-pixels ME--CODE-FRAME-HEIGHT))
+             (w (list 'text-pixels ME--CODE-FRAME-WIDTH)))
+         (princ "CAR h: ")
+         (princ (car h))
+         (princ "\n")
+         (princ "CDR h: ")
+         (princ (cdr h))
+         (princ "\n\n")
+         (princ "CAR w: ")
+         (princ (car w))
+         (princ "\n")
+         (princ "CDR w: ")
+         (princ (cdr w)))
+      #+END_SRC
+
+      #+RESULTS:
+      : CAR h: text-pixels
+      : CDR h: (42)
+      : 
+      : CAR w: text-pixels
+      : CDR w: (92)
+
+=ADD a NEW Items= /(as per :README: above)/ right here in this Log Book Binder whenever you need to create a new Log Entry...
+
 *** NEW ⏱ <2022-08-25 Thu> New Task: /(Master Template)/
 :README:
   =Copy/Clone= This Template as a *NEW TASK* within a 
@@ -5198,4 +7304,3 @@ within a *♾ New World* ...
 :END:
 
 \newpage
-

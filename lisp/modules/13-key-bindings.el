@@ -16,8 +16,7 @@
 ;; Map Modular Emacs General Keys:
 
 (defvar me--my-keyboard-bindings
-  '(("C-c 0" . deft)
-    ("C-c 1" . org-sidebar-tree-toggle)
+  '(("C-c 1" . org-sidebar-tree-toggle)
     ("C-c 3" . org-sidebar-toggle)
     ("C-c 2" . me_make-frame)
     ("C-c =" . emms-volume-mode-plus)
@@ -28,7 +27,6 @@
     ("C-c a" . org-agenda)
     ("C-c c" . org-capture)
     ("C-c d" . neotree-toggle)
-    ("C-x C-g" . deft-find-file)
     ("C-c i" . bookmark-bmenu-list)
     ("C-c m" . org-md-export-to-markdown)
     ("C-c s" . me_org-tree-open-in-right-no-focus) 
