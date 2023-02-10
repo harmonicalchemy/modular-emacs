@@ -15,6 +15,13 @@
 ;; Change Log: (descending chronological order)
 ;;
 
+;; 2023-002-10 - Alisha Awen, siren1@disroot.org
+;;   Removed DEFT I am NOT using it and it is a PAIN in the ASS!
+;;   Sorry about that Jason Blevins... You did a lot great of work
+;;   and contributed to Emacs but this thing drives me nuts!
+;;   Also, DUDE!... Please Update Your Code... the cl (old common lisp lib)
+;;   is depreciated! I am tired of seeing that in my startup logs...
+;;
 ;; 2022-009-27 - Alisha Awen, siren1@disroot.org
 ;;   Changed Harmonic Alchemy Modular Emacs TO: v3.5...
 ;;   No Longer Using mmd-mode (IMHO it is not worth the effort)...
@@ -46,7 +53,7 @@
 (defvar me--req-pubops-packages
   '(markdown-mode
     markdown-toc
-    deft
+;    deft         ;; I am removing this... It is a Pain and causes Errors!
     auctex
     pandoc-mode
     fountain-mode
@@ -108,6 +115,7 @@
 ;; (add-to-list 'auto-mode-alist '("\\.mmd\\'" . mmd-mode))
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; 2023-002-10: REMOVED FROM MODULAR_EMACS - No longer using this...
 ;; Use Deft mode for quickly browsing, filtering, and
 ;; editing directories of plain text notes...
 ;; Deft was created by Jason Blevins. What a clever dude who
@@ -116,9 +124,10 @@
 ;; economics, money, crypotcurrency, etc...
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-(require 'deft)
+;(require 'deft)
 
 ;;;;
+;; 2023-002-10: REMOVED FROM MODULAR_EMACS - No longer using this...
 ;; Enable/edit these next several lines to Customize items in
 ;; the deft group to change default functionality...
 ;;
@@ -137,49 +146,55 @@
 ;;;;
 
 ;;;
+;; 2023-002-10: REMOVED FROM MODULAR_EMACS - No longer using this...
 ;; Virtual Path to My-Docs on All Platforms:
 ;; NOTE: For new OS installs, make sure ~/.MD is defined (either as directory
 ;;       or a symlink to where your docs actually live...)
 
-(setq deft-directory "~/.MD")
+;(setq deft-directory "~/.MD")
 
-(setq deft-recursive t)
-(setq deft-use-filename-as-title t)
-(setq deft-file-naming-rules
-      '((noslash . "-")
-        (nospace . "-")))
-(setq deft-markdown-mode-title-level 1)
-(setq deft-org-mode-title-prefix t)
+;(setq deft-recursive t)
+;(setq deft-use-filename-as-title t)
+;(setq deft-file-naming-rules
+;      '((noslash . "-")
+;        (nospace . "-")))
+;(setq deft-markdown-mode-title-level 1)
+;(setq deft-org-mode-title-prefix t)
 
 ;;;
+;; 2023-002-10: REMOVED FROM MODULAR_EMACS - No longer using this...
 ;; Associate file types for deft to process:
 ;; The default is "txt" "md" "org".  I have added Tex (LaTex files)
 ;; You may add more here if you work with other formats.
 
-(setq deft-extensions '("txt" "md" "tex" "org" "fountain"))
+;(setq deft-extensions '("txt" "md" "tex" "org" "fountain"))
 
 ;;;
+;; 2023-002-10: REMOVED FROM MODULAR_EMACS - No longer using this...
 ;; Set deft to do regexp search instead of incremental:
 
-(setq deft-org-mode-title-prefix nil)
+;(setq deft-org-mode-title-prefix nil)
 
 ;;;
+;; 2023-002-10: REMOVED FROM MODULAR_EMACS - No longer using this...
 ;; I don't want auto save because I open many notes for viewing only.
 ;; (Not to edit them but to read as reference, etc.  If this is not
 ;; disabled, I end up with a bunch of un-tracked files in my git
 ;; repository that holds these notes!
 
-(setq deft-auto-save-interval 0)
+;(setq deft-auto-save-interval 0)
 
 ;;;
+;; 2023-002-10: REMOVED FROM MODULAR_EMACS - No longer using this...
 ;; Also, I had to add this deft-mode-hook function because lines were wrapping.
 ;; I tried everything else to no avail... This is a band-aid.  I need
 ;; to consult with Jason Blevins about this one %^)
 
-(defun me_deft-init ()
-  (setq truncate-lines t))
+;(defun me_deft-init ()
+;  (setq truncate-lines t))
 
-(add-hook 'deft-mode-hook 'me_deft-init)
+;(add-hook 'deft-mode-hook 'me_deft-init)
+
 
 ;;;; ~~~~~~~~~~~~~~~~~~~~~
 ;;   Pandoc Mode:

@@ -1,8 +1,10 @@
 # -**- mode: org; coding: utf-8 -**-
-#+BEGIN_COMMENT
-=File:=  ~~/.emacs.d/Docs/pubOps/org-templates/fiction-book.org~
 
-       =HAP BASIC Org-Mode Configuration for FICTION Books=
+=File:=  ~~/.emacs.d/Docs/pubOps/org-templates/fiction-book-setup.org~
+        =ORG-MODE LaTeX SETUPFILE for: FICTION Books=
+        ~#+LATEX_CLASS: blueboxbook~
+
+:README:
 
 =Usage:= *Copy/Clone* this file and adjust to suit your needs...
        *Include* this file within ~.org~ files destined to become
@@ -16,43 +18,40 @@
        =Don't Modify The MASTER Templates Within ~/.emacs.d=
 
        /(if you did by accident, simply: ~git checkout .~ to refresh)/
-       
+
   =Add:= the following line to the Header of ~.Org~ Files that need to
        include this file:
 
-       ~#+SETUPFILE: ./org-templates/fiction-book.org~
+       ~#+SETUPFILE: ./org-templates/fiction-book-setup.org~
 
 /Making a COPY/CLONE of:/ ~$HOME/.emacs.d/Docs/pubOps/org-templates~ /master/
 /folder To your book's project directory will allow you to make your own custom/
 /configurations for different books without affecting the configurations of other/
 /book projects within their own MASTER FOLDERS.../
 
-=NOTE:= The Configurations within this file depend on HAP Modular Emacs init file:
-      ~09-4-org-export-conf.el~ in: ~~/.emacs.d/lisp/modules~ If you need to make
-      more involved customizations of your fiction books, you will also need to
-      change the quoted \\LaTeX directives under the: "fictbook" /(add to list/
-      /member in code... See comments within file. Copy to Create a new list member)/
-#+END_COMMENT
+=NOTE:= The Configurations within this file depend on Harmonic Alchemy Modular
+      Emacs init file: ~~/.emacs.d/lisp/modules/09-4-org-export-conf.el~...
 
-=STANDARD STARTUP OPTIONS=
+      If you need to create other LaTeX Document Styles or customize existing
+      ones, you will also need to override ~09-4-org-export-conf.el~
+      by placing a copy of it within: ~~/.emacs.d/lisp/my-modules~ and then
+      make your changes in your cloned copy...
 
-#+CATEGORY: @Fiction_Books
-#+LANGUAGE: en
-#+STARTUP:  overview
-#+STARTUP:  hideblocks
-#+STARTUP:  indent
-#+STARTUP:  align
-#+STARTUP:  inlineimages
+      Find the: ~BEGIN: CUSTOM LaTeX CONFIGURATIONS for EXPORT to PDF~
+      heading within that file... You can modify or add new configurations and
+      even ~\\input~ external LaTeX files with even more fancy modifications...
 
-=LaTeX --> Fiction Book PDF:=
+      You will need to study *LaTeX* a LOT, and in particular, the *"memoir"* document
+      class... =read the well documented docs= /(see reference section below)/
 
-#+LATEX_CLASS: blueboxbook
-#+LATEX_HEADER: \usepackage{parskip}
-#+LaTeX_HEADER: \usepackage{paralist}
+      Once you have tried this several times /(and failed)/ it won't look so
+      complicated and you will begin to "get it"... /(Be Diligent! TeX/LaTeX/
+      /IS a complicated Turing Complete Language... Created by one of the/
+      /Geekiest GEEKS of Computer Science, Mathematics, and Algorithm Analysis!/
+      /Donald Knuth... You have been warned!!!)/
 
-~blueboxbook~ =CLASS= /is defined in:/ ~09-4-org-export-conf.el~
-
-=STANDARD EXPORT OPTIONS:=
+      =Good luck!=
+:END:
 
 - *Reference:*
    
@@ -74,24 +73,85 @@
 
    + [[https://tug.org/FontCatalogue/calligraphicalfonts.html][Calligraphical Fonts]] - /(TUG.org)/
 
-   + [[https://en.wikibooks.org/wiki/LaTeX/Fonts][LaTeX Fonts]] - /(WIKIbooks.org)/ 
+   + [[https://en.wikibooks.org/wiki/LaTeX/Fonts][LaTeX Fonts]] - /(WIKIbooks.org)/
 
    + [[https://www.ctan.org/pkg/latexmk/][latexmk – Fully automated LaTeX document generation]]
 
    + [[https://damitr.org/2014/01/09/latex-tufte-class-in-org-mode/][Latex Tufte class in org-mode]]
 
-   + [[https://tufte-latex.github.io/tufte-latex/][Tufte-LaTeX]]
-
-        /A Tufte-inspired LaTeX class for producing/
-        /handouts, papers, and books.../
+   + [[https://tufte-latex.github.io/tufte-latex/][Tufte-LaTeX]] - /For Producing Handouts, Papers, and Books/
 
    + [[https://github.com/Tufte-LaTeX/tufte-latex][tufte-latex.github.io/tufte-latex/]]
 
-   + [[https://latex-tutorial.com/documentclass-latex/][Your Guide to documentclass LaTeX - Latex-Tutorial.com]] -
+   + [[https://latex-tutorial.com/documentclass-latex/][Your Guide to documentclass LaTeX - Latex-Tutorial.com]] 
 
    + [[https://mirror2.sandyriver.net/pub/ctan/macros/latex/contrib/memoir/memman.pdf][The Memoir Document Class]] - /(link to PDF)/
 
    + [[https://www.ctan.org/pkg/memoir][memoir – Typeset fiction, non-fiction and mathematical books]] - /(CTAN)/
+
+   + [[https://orgmode.org/manual/Embedded-LaTeX.html][12.5 Embedded LaTeX]] - /(The Org Manual)/ 
+
+   + [[https://orgmode.org/manual/LaTeX-fragments.html][12.5.1 LaTeX fragments]] - /(The Org Manual)/ 
+
+   + [[https://www.offerzen.com/blog/literate-programming-empower-your-writing-with-emacs-org-mode][Empower Your Writing with Emacs Org-Mode]] - /(Literate Programming)/
+
+   + [[][] ] - 
+
+   + [[][] ] - 
+
+   + [[][] ] -
+
+=LaTeX --> FICTION Book PDF:=
+
+/Currently Using ~blueboxbook~ Class/
+/Chapter Style:/  ~BlueBox~
+/DEFINED in:/     ~09-4-org-export-conf.el~
+
+#+LATEX_CLASS: blueboxbook
+
+#+LATEX_HEADER: \usepackage{parskip}
+#+LaTeX_HEADER: \usepackage{paralist}
+#+LATEX_HEADER: \usepackage[hyperref,x11names]{xcolor}
+#+LATEX_HEADER: \usepackage[colorlinks=true,urlcolor=SteelBlue4,linkcolor=Firebrick4]{hyperref}
+
+=DISABLED OPTIONS For This Configuration:= /(for debugging)/
+
+#+BEGIN_COMMENT
+  #+OPTIONS: ::nil
+     # DO NOT Export fixed-width sections
+     # (org-export-with-fixed-width)
+
+  #+OPTIONS: -:t
+     # Convert Special Strings
+     # (non-nil is being tried now)
+
+  #+OPTIONS: inline:nil
+     # DO NOT Include Inline Tasks
+     # (org-export-with-inlinetasks)
+
+  #+OPTIONS: num:nil
+     # DO NOT Include section-numbers
+     # (org-export-with-section-numbers)
+
+  #+OPTIONS: tex:t
+     # Normal LaTeX Export
+     # (org-export-with-latex)
+
+  #+OPTIONS: toc:1
+     # Include TOC for Top Level Headlings ONLY
+     # (org-export-with-toc)
+#+END_COMMENT
+
+=STARTUP OPTIONS For This Configuration:=
+
+#+LANGUAGE: en
+#+STARTUP:  overview
+#+STARTUP:  hideblocks
+#+STARTUP:  indent
+#+STARTUP:  align
+#+STARTUP:  inlineimages
+
+=STANDARD OPTIONS For This Configuration:=
 
 #+SELECT_TAGS: export
 #+EXCLUDE_TAGS: noexport
@@ -147,8 +207,7 @@
 
 #+OPTIONS: e:nil
    # DON'T Include Entities (org-export-with-entities)
-   # TODO: Play around with this one...
-   # wtf does this do? lol %^)
+   # Example if t: HTML exports \\alpha as: &alpha;
 
 #+OPTIONS: email:t
    # Include Author’s e-mail (org-export-with-email)
@@ -168,10 +227,9 @@
 
 #+OPTIONS: inline:t
    # Include Inline Tasks (org-export-with-inlinetasks)
-   # (org-export-with-section-numbers)
 
 #+OPTIONS: num:1
-   # Include section-numbers on Top Level Headings ONLY (chapters)
+   # LIMIT SECTION NUMBERING To TOP LEVEL HEADINGS ONLY (chapters)
    # (org-export-with-section-numbers)
    # When N, Number only headlines level N or above.
    # Set ‘UNNUMBERED’ property to non-nil to disable
@@ -211,32 +269,3 @@
    
 #+OPTIONS: |:t
    # Include Tables (org-export-with-tables)
-
-=DISABLED OPTIONS For this Configuration:=
-
-#+BEGIN_COMMENT
-#+OPTIONS: ::nil
-   # DO NOT Export fixed-width sections
-   # (org-export-with-fixed-width)
-
-#+OPTIONS: -:t
-   # Convert Special Strings
-   # (non-nil is being tried now)
-
-#+OPTIONS: inline:nil
-   # DO NOT Include Inline Tasks
-   # (org-export-with-inlinetasks)
-
-#+OPTIONS: num:nil
-   # DO NOT Include section-numbers
-   # (org-export-with-section-numbers)
-
-#+OPTIONS: tex:t
-   # Normal LaTeX Export
-   # (org-export-with-latex)
-
-#+OPTIONS: toc:1
-   # Include TOC for Top Level Headlings ONLY
-   # (org-export-with-toc)
-#+END_COMMENT
-

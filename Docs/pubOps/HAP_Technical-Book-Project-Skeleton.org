@@ -352,82 +352,98 @@ Use this section to quickly capture inspired at-the-moment ideas...
 /Simply Come directly here and do what ever you want.../
 /"Your Crazy Daze are Covered!" Yay!/ 
 
-=The following Shortcuts= will Help you get started as 
-quickly as possible. /(using Knowledge Management Best Practices)/
+=The following Shortcuts= will Help you get started as quickly as possible.
+/(using Knowledge Management Best Practices)/
 
-- [ ] =Copy/Clone:= 💡 <2022-08-20 Sat> *Example Idea* =Below:=
+- =NEW IDEA Shortcut:= /Use This For Anything You Want!/
 
-     =Copy the Heading AND ALL ITS CONTENTS=
+   + [ ] =Copy/Clone:= 💡 <2022-08-20 Sat> *New Example Idea* =Below:=
 
-     /Change your Clone's Title to Your Own Title/
+        =Copy the Heading AND ALL ITS CONTENTS=
 
-- [ ] *Change the timestamp on your Clone Entry:* [0/1]
+        /Change your Clone's Title to Your Own Title/
 
-     =Type:= ~C-c .~ while cursor is sitting on the timestamp
+   + [ ] *Change the timestamp on your Clone Entry:* [0/1]
 
-     /i.e., Press: ~Ctrl-c~, let go, and then type a Period/ ~.~
+        =Type:= ~C-c .~ while cursor is sitting on the timestamp
 
-     A date chooser panel will pop up...
+        /i.e., Press: ~Ctrl-c~, let go, and then type a Period/ ~.~
 
-     + [ ] *Press* ~ENTER~ *to auto accept today's date and time.*
+        A date chooser panel will pop up...
 
-          The existing timestamp will change to TODAY...
+      - [ ] *Press* ~ENTER~ *to auto accept today's date and time.*
 
-- [ ] *Advance your cursor and Start Writing!!!*
+           The existing timestamp will change to TODAY...
 
-     Advance your cursor few more lines down to some fresh 
-     empty space and Start Typing Your New Idea Like Mad!!! 
-     /(Remove the boilerplate content after reading it...)/
+   + [ ] *Advance your cursor and Start Writing!!!*
 
-- [ ] *Don't stop Writing!*
+        Advance your cursor few more lines down to some fresh 
+        empty space and Start Typing Your New Idea Like Mad!!! 
+        /(Remove the boilerplate content after reading it...)/
 
-     Don't worry about formatting or organizing it until later, 
-     after all your inspiration has passed and you are ready 
-     to organize...
+   + [ ] *Don't stop Writing!*
 
-- [ ] =TODO After You Are Done Writing:=
+          Don't worry about formatting or organizing it until later, 
+          after all your inspiration has passed and you are ready 
+          to organize...
 
-     + [ ] *Adjust Space:*
+          However without breaking your focus, you should add relevant
+          ~:org_tags:~ that come to mind as you are writing...
 
-          Adjust space between your headings and your 
-          fantastic ideas below them it to one single 
-          blank line...
+          This is easy to do... Simply Type: ~C-c C-q~ Add Your Tag
+          and =THEN CONTINUE WRITING...=
 
-     + [ ] *Continue Writing/Developing RIGHT HERE if needed:*
+          Adding =TAGS= is a =VITAL KM BEST PRACTICE FIRST STEP=
+          which will help you find important things you have written
+          by the seat-of-your-pants, LATER LONG After you may have
+          forgotten!  /(better than Google Search)/ :trollface:
 
-          If you are not yet sure where this NEW IDEA should go
-          AND you are still inspired to write... Simply continue
-          writing and developing this IDEA in place RIGHT HERE...
+   + [ ] =TODO After You Are Done Writing:=
 
-          =ONE IMPORTANT Point:= It is Good KM Practice to add at
-          least a few good relevant tags to this item right NOW
-          before you forget however... You may not know where
-          things belong in the beginning but you most likely
-          DO Know the category, genra, etc. of your new idea...
+      - [ ] *Adjust Space:*
 
-          This will help you in case you forget all about it later...
-          Sooner or later It will show up in some random tag search
-          that way and remind you...
+           Adjust space between your headings and your 
+           fantastic ideas below them it to one single 
+           blank line...
+
+      - [ ] *Continue Writing/Developing RIGHT HERE if needed:*
+
+           If you are not yet sure where this NEW IDEA should go
+           AND you are still inspired to write... Simply continue
+           writing and developing this IDEA in place RIGHT HERE...
+
+           =ONE IMPORTANT Point:= It is Good KM Practice to continue
+           adding relevant org-tags to this item right NOW before you
+           forget...
+
+           You may not know where things belong in the beginning but
+           you most likely DO Know the category, genra, etc. of your
+           new idea...
+
+           This will help you in case you forget all about it later...
+           Sooner or later It will show up in some random tag search
+           that way and remind you...
           
-          When that time comes, you may know exactly where it should
-          go and the reminder simply jogs your memory to move it into
-          the right bin for further processing later as part of a
-          scheduled task...
+           When that time comes, you may know exactly where it should
+           go and the reminder simply jogs your memory to move it into
+           the right bin for further processing later as part of a
+           scheduled task...
           
-          =For NOW=, Don't Worry about what it is for or where to
-          put it... It is still here in "dream state" which is
-          GOOD... Don't scare away your muses when they beckon! 
-          Get your Idea down first, no matter what state it may
-          be in... =GET YOUR IDEA DOWN=
+           =For NOW=, Don't Worry about what it is for or where to
+           put it... It is still here in "dream state" which is
+           GOOD... Don't scare away your muses when they beckon! 
+           Get your Idea down first, no matter what state it may
+           be in... =GET YOUR IDEA DOWN=
 
-     + [ ] *You Are Free To Go Out And Play Elsewhere Little Grasshopper*
+      - [ ] *You Are Free To Go Out And Play Elsewhere Little Grasshopper*
 
-          If after writing... You don't feel like organizing 
-          now? =NO PROBLEM=... But come back later and organize 
-          things... =OK?= Don't create a swamp in here! 
-          /And don't forget to take/ /your bath tonight... ;-)/
+           If after writing... You don't feel like organizing 
+           now? =NO PROBLEM=... But come back later and organize 
+           things... =OK?= Don't create a swamp in here! 
+           /And don't forget to take/ /your bath tonight... ;-)/
 
 Having done the simple steps above any time you get inspired, you will much later in life be able to tell your grand children.. /"I got my first spark of an idea for that story back in Year, Month, Day, time, second"/ 50 years later! Now that is being organized! LOL
+
 ** NEW 💡 <2020-06-07 Sun> My New Business Idea! /(example)/
 :README:
    This is a dummy example of some crazy idea that you may have 
@@ -471,6 +487,8 @@ Having done the simple steps above any time you get inspired, you will much late
 * NEW 📕 Front Matter:                                             :noexport:
 
 =Use this binder for Front Page Ideas= /(e.g., Information about Title Page, Synopsis, etc...)/, which could function as an abstract when published...
+
+=This Binder is NOT Exported...=
 
 ** NEW 📝 Synopsis:
 :README:

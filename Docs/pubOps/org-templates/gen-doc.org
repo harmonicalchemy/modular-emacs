@@ -27,7 +27,6 @@
 
 =STANDARD STARTUP OPTIONS=
 
-#+CATEGORY: @General_Purpose
 #+LANGUAGE: en
 #+STARTUP:  overview
 #+STARTUP:  hideblocks
@@ -37,7 +36,6 @@
 
 =STANDARD EXPORT OPTIONS:=
 
-/
 - *Reference:*
    
    + [[https://orgmode.org/manual/Export-Settings.html#Export-Settings][Org Manual Export Settings]]

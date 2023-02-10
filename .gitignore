@@ -25,6 +25,9 @@ custom.el
 Docs/pubOps/auto/*
 !Docs/pubOps/auto/.gitkeep
 
+Docs/pubOps/org-templates/auto/*
+!Docs/pubOps/org-templates/auto/.gitkeep
+
 Docs/pubOps/Audio-Drama/auto/*
 !Docs/pubOps/Audio-Drama/auto/.gitkeep
 

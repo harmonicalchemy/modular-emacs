@@ -1,41 +1,116 @@
 # -**- mode: org; coding: utf-8 -**-
+#### HAP Modular Emacs - DEFAULT General Purpose TAGS ####
+#+CATEGORY: @DEFAULT
+#+STARTUP: overview
 
-#+TAGS: TOC(k) health(h) drafts(3) synopsis(i) fonts(;) hardware(#)
-#+TAGS: computers(=) web(w) Cloud(9) email(m) apps(4) open_source(g)
-#+TAGS: banking($) taxes(%) auto(v) travel(y) utilities(u) must_read(!)
+#+TAGS: auto(a) computers(c) drafts(d) examples(e) friends(f) gov_politics(g) 
+#+TAGS: health(h) images(i) literature(l) email(m) open_source(o) personal(p)
+#+TAGS: synopsis(s) travel(t) utilities(u) web(w) 
+#+TAGS: Art(A) Cloud(C) Economics(E) Family(F) @GTD(G)
+#+TAGS: New_Ideas(I) Philosophy(K) Logs(L) Music(M)
+#+TAGS: @projects(P) Must_Read(R) Software(S) Templates(T)
+#+TAGS: Apps(~) Social(@) Hardware(#) Banking($) Taxes(%)
+#+TAGS: Security(.) Media(>) Tools(/) Science(?)
 
-* Default Tags:                                                    :noexport:
-** Instructions:
+=Last Updated:= <2023-01-19 Thu> 
 
-This file is included as part of *Harmonic Alchemy Modular Emacs* to provide an example of how ~org-tags~ are organized by default once *Modular Emacs* is installed on your machine...
+* Defined TAG Shortcut KEYS:                     :noexport:
 
-=Usage:= *COPY/CLONE:* ~~/.emacs.d/Docs/pubOps/org-templates~ directory
-        to the MASTER directory where existing .org files reference
-        this contained default-tags SETUPFILE... Modify the copied SETUP
-        Files within your cloned org-templates directory to suit your needs...
+- *GLOBALLY DEFINED KEYS:* /(from 09-2-org-keywords-tags-conf.el)/
 
-        =Don't Modify The MASTER Templates Within ~/.emacs.d=
+      ~n x H W 0 1 2 3 + -~ /(DON'T USE THESE)/
 
-  =Add:= the following line to the Header of ~.Org~ Files that need to
-        include this file:
+- *FILE LOCAL DEFINED KEYS:* /(KEEP THIS UPDATED)/
 
-        ~#+SETUPFILE: ./org-templates/default-tags.org~
+      ~a c d e f g h i l m o p s t u w~
+      
+      ~A C E F G I K L M P R S T~
+      
+      ~~ @ # $ % . > / ?~ 
 
-/Making a COPY/CLONE of:/ ~$HOME/.emacs.d/Docs/pubOps/org-templates~ /master/
-/folder To your book's project directory will allow you to make your own custom/
-/configurations for different books without affecting the configurations of other/
-/book projects within their own MASTER FOLDERS.../
+- *CURRENT KEYS - FREE to USE & DEFINE LOCALLY:* /(KEEP THIS UPDATED)/
 
-- *Modify your Copy/Clone:* of this file to create new ~<your_category>-tags.org~ files of your own design...
+      ~b               j k             r      v     y z~ 
 
-- *Use the Global Defined Tag Keys selection keys listed below* when creating new tags for your custom tags file...  Replace Local Defined Tags below with your changed tags selection characters. (for quick tagging)...
+      ~B   D           J      N O   Q       U V   X Y Z~
+    
+      ~4 5 6 7 8 9~  ~` & * ( ) _ =~
 
-- *You could use a custom SETUPFILE in addition to this default setupfile*. In that case, consider ALL of the keys below, (global & local) to be already used. If you wish to have speed keys for your new custom tags, they will have to be unique /(different from the keys defined below)/...  
+      ~[ { ] } | ; : ' " , < ^~ 
 
-** Defined Tag Keys:
+* Instructions:                                              :noexport:
 
-/(These are from above local file settings, as well as global ones set by HA Mod Emacs Org Mode Module: ~09-2-org-keywords-tags-conf.el~)/
+This file is included as part of *Harmonic Alchemy Modular Emacs* to provide an example of how ~org-tags~ are organized by *Modular Emacs* as installed out-of-box
+on your machine... You can change FILE LOCAL tags HERE for your own purposes...
 
-- *Globall:* /a b c d e f k l n o p q r s t x A G H I L N R T V W 0 1 2 5 + - ?/
+=NOTE:= In addition to *FILE LOCAL TAGS*... A set of *GLOBALLY defined TAGS*
+      are available to ALL .org files opened within a HAP Modular Emacs
+      configuration...
+      
+      *GLOBAL TAGS* get assigned within: ~09-2-org-keywords-tags-conf.el~
 
-- *Local:* /g h i k m u v w y ; ! # $ % 3 4 9 =/
+- [ ] *USAGE:* [0/4]
+  
+   /Follow These Steps to Use Out-Of-Box, or Customize with Your Own Tags.../
+
+   + [ ] *COPY/CLONE:* ~~/.emacs.d/Docs/pubOps/org-templates~ directory
+          to your MASTER PROJECT directory where existing ~.org~ files reference
+          this contained default-tags SETUPFILE... Modify the copied SETUP
+          Files within your cloned org-templates directory to suit your needs...
+
+          =Don't Modify The MASTER Templates Within ~/.emacs.d=
+
+          =VERIFY:= the following line in preamble heading of ~.Org~ Files
+          includes this file...
+          /(this is the default - which you could change to something else)/
+
+              ~#+SETUPFILE: ./org-templates/default-tags.org~
+
+      /Making a COPY/CLONE of:/ ~$HOME/.emacs.d/Docs/pubOps/org-templates~
+      /master folder To your book's project directory will allow you to/
+      /make your own custom configurations for different books without/
+      /affecting the configurations of other book projects within their/
+      /own MASTER FOLDERS.../
+
+   + [ ] =CONSULT:= the =Defined TAG Shortcut KEYS:= Section to see which TAG/KEY
+         assignments are already set by default... BOTH Global and Local TAG/KEY
+         assignment pairs are listed...
+
+   + [ ] =ADD NEW LOCAL TAG/KEY Assignments:=
+
+          /(or modify existing LOCAL assignments)/
+
+          HERE you may /(if you need)/ modify or Replace any of the FILE LOCAL
+          TAG/KEY assignments to create your own custom ~xxx-tags.org~
+          SETUPFILE...
+
+          You may ADD NEW or Change any of the FILE LOCAL tags and key
+          assignments to fit your categorical needs...
+
+          =CONSULT:= the *CURRENT KEYS - FREE to USE & DEFINE LOCALLY:* list to
+                   see which key assignments are free and available to make...
+                   If you make changes, update this list as well as the
+                   *FILE LOCAL DEFINED KEYS:* list...
+
+          Realize some of the already defined FILE LOCAL TAGS are of a General
+          and USEFUL Nature for most use-cases that you may not want to change...
+   
+          Therefore those general purpose tags /(e.g., must_read, etc.,)/ should
+          probably be left as is..., or at least, assign NEW shortcut KEYs to them.
+          /(if you have a better TAG in mind that fits that particular keyboard KEY
+           better than it does to the existing default TAG assignment)/
+
+   + [ ] =DO NOT MODIFY ANY GLOBALLY DEFINED Shortcht TAG/KEY Assignments=
+
+          The GLOBALLY DEFINED Shortcut KEYS Assign TAGS for =ALL .ORG FILES=
+          Globally... These TAGS are defined within:
+      
+             ~09-2-org-keywords-tags-conf.el~
+
+          These keys are conveniently listed for your inspection under:
+          the *GLOBALLY DEFINED KEYS* list above...
+        
+          =You CANNOT use these KEYS to define FILE LOCAL TAGS!=
+
+          /(If you try, your KEY choices will be SHADOWED by DEFAULTS/
+           /and will not work)/

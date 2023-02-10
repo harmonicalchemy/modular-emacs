@@ -125,13 +125,22 @@
 ;;
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; Create General Tags for everything else:
+;; DEFINE General AND GLOBAL Tags for EVERYTHING ELSE:
 ;;
 ;; NOTE: 2021-003-10 - This general tag list has been greatly shortened...
 ;;       Instead, I am now using Org Categories with Tag Files of specific
-;;       categories instead.  These -tag.org files are imported by .org
+;;       categories instead.  These xxx-tags.org files are imported by .org
 ;;       files that need specific tags from specific categories. The result
 ;;       is a much shorter general-tags list below... "Keep it Simple Stupid"
+;;
+;;       The Tags below MUST be available to ALL .ORG files for proper
+;;       operation of specialized features of Harmonic Alchemy Modular
+;;       Emacs "fancy org mode" kinds of things...
+;;
+;;       WARNING: Do NOT use any keyboard keys which are already defined
+;;                below to define any NEW local TAGS for any specific .org
+;;                files... Your KEYS will NOT WORK as they were already
+;;                defined globally HERE (see Keys Used So Far: below)...
 
 (defvar me--general-tags
   (quote
@@ -154,8 +163,8 @@
     (:endgroup       . nil) ;; END Group:
 
     (:startgroup     . nil) ;; BEGIN: Mutually Exclusive Group:
-    ("TOC_3"         . ?2)  ;; FLAG: TOC-Org (3 levels deep)
-    ("TOC"           . ?3)  ;; FLAG: TOC-Org (DEFAULT 2 levels deep)
+    ("TOC"           . ?2)  ;; FLAG: TOC-Org (DEFAULT 2 levels deep)
+    ("TOC_3"         . ?3)  ;; FLAG: TOC-Org (3 levels deep)
     (:endgroup       . nil) ;; END Group:
 
     (:startgroup     . nil) ;; BEGIN: Mutually Exclusive Group:

@@ -159,10 +159,6 @@
   (define-key xah-fly-command-map (kbd "'") 'imenu-list)
   ;;  (define-key xah-fly-command-map (kbd "'") 'imenu-list)
 
-  ;; Invoke Daft:
-
-  (define-key xah-fly-command-map (kbd "0") 'deft)
-
   ;; Recenter top to bottom:
   ;; (Standard Emacs "C-l" does this as well):
 

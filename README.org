@@ -21,7 +21,9 @@
 #+attr_latex: :width 700px
 [[file:./Docs/media/Modular-Emacs-Github-Banner-v3.png]]
 
-    *NOTE:* Skip to: [[#-tldr---start-here][☞ TL;DR - Start Here:]] if you are ready to install Modular Emacs *NOW* Skipping over Introduction, History, Purpose, etc... i.e., You just need to get all this going asap! :trollface:
+#+begin_quote
+   *NOTE:* Skip to: [[#-tldr---start-here][☞ TL;DR - Start Here:]] if you are ready to install Modular Emacs *NOW* Skipping over Introduction, History, Purpose, etc... i.e., You just need to get all this going asap! :trollface:
+#+end_quote
 
 * 💡 Introduction:
 
