@@ -232,6 +232,7 @@
 ;; ./lisp/my-modules/dispatcher.el and ./lisp/modules/dispatcher.el then copy
 ;; the load lines of any of those new modules you would like to add to your
 ;; customized installation...
+;;
 ;; Note: There are many ways to skin a rat...
 ;; btw, I don't skin cats!  My cats do skin rats though. And mice... And birds... %^)
 
@@ -257,10 +258,9 @@
                                                config-start-time)))       " seconds \n"
         ";; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
         ";;                                                                         \n"
-        ";;   \"Anger is an acid that can do more harm                              \n"
-        ";;     to the vessel in which it is stored                                 \n"
-        ";;     than to anything on which it is poured.\"                           \n"
-        ";;                            -- Mark Twain                                \n"
+        ";; (quote: Anger is an acid that can do more harm                          \n"
+        ";;         to the vessel in which it is stored than                        \n"
+        ";;         to anything on which it is poured...) -- Mark Twain             \n"
         ";;                                                                         \n"
         ";; More Mark Twain quotes can be found here:                                \n"
         ";; https://www.writerswrite.co.za/literary-birthday-30-november-mark-twain/  \n"
@@ -270,14 +270,13 @@
         ";; Check Out: GNU.org's Intro to Programming Emacs Lisp:                   \n"
         ";; https://www.gnu.org/software/emacs/manual/html_node/eintr/index.html    \n"
         ";;                                                                         \n"
-        ";; This entire message is a lisp comment!                                  \n"
-        ";; Emacs makes a Great S-exPs (S Expressions) IDE!                         \n"
-        ";; Our Universe is a Great Big Sex PistolS IDE ;-)                         \n"
-        ";; Evaluate this entire buffer as a test...  Of the universe?              \n"
-        ";; Why not? Go for it... You may have super powers!                        \n"
-        ";; Be sure to debug it well before committing it as your:                  \n"
-        ";; \"new-way-cool-custom-parallel-world-module.el\" %^)                    \n"
-        ";;                        -- Cheers!                                       \n"
+        ";; This entire message is a lisp comment! So you my compose any lisp       \n"
+        ";; statemet below and evaluate it... OR simply kill this buffer and        \n"
+        ";; you will be presented with a clean blackboard to geek out on... YAY!    \n"
+        ";; (A clean slate with NO Mark Twain quotes... I promice.  LOL             \n"
+        ";;                                                                         \n"
+        ";; Cheers!                                                                 \n"
+        ";;                                                                         \n"
         ";; Alisha Awen: @harmonicalchemy (Github, twitter etc.)                    \n"
         ";; PGP Pubkey: 0x922CC456F48355A8D9B2E044C9E6CD44A817E7BF                  \n"
         ";; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")

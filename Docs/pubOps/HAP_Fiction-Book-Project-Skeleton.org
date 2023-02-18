@@ -20,17 +20,19 @@
    to your parent project directory and as such, should be all set to your new:
    ~.../your-fiction-book-project/org-templates/~ directory...
 
-=NOTE:= 
-
-   ~#+CATEGORY:~ is specified within ~fiction-book-setup.org~ SETUPFILE.
-   If you need to change the category, do it in your cloned version
-   of fiction-book.org...
-
    *SETUPFILE:* ~fiction-book-setup.org~ is for LaTeX Export Configurations 
               to produce a Fiction Book styled PDF /(No TOC, & Numbering
               at Chapter level ONLY...)/
 
-   *SETUPFILE:* ~default-tags.org~ is where tags are defined for this project.
+   *SETUPFILE:* ~default-tags.org~ is where tags are defined for this project...
+
+              If you need to change the category, do it in your cloned version
+              of default-tags.org...  If you rename default-tags.org file from
+              "default" to something more specific, you will need to change the
+              ~#+SETUPFILE: ./org-templates/default-tags.org~ line below to reflect
+              your new file name as well...  You may change any of the tags except
+              important ones to what ever you wish... Read the *:README:* drawer
+              within the file for more information...
 
               The Existing Tags are useful for most situations within
               this context, and some of the tags MUST ALWAYS be defined
@@ -48,128 +50,206 @@
               /(change the name from/ ~default-tags.org~ /to another name/
               /and-or replace some (but NOT ALL) of the tags within/
               /to your own tags... see instructions inside the file)/
-
 #+END_COMMENT
 
 #+SETUPFILE: ./org-templates/fiction-book-setup.org
 #+SETUPFILE: ./org-templates/default-tags.org
 
+:LATEST_UPDATE:
+  <2023-02-15 Wed>
+
+  =YOU MAY REMOVE This Drawer= from your own clones of this template if
+  it is bothering you... This drawer is used for HAP Modular Emacs
+  DOC TEMPLATES housekeeping...
+
+  =HOWEVER= you may also use it for the same purpose to keep your existing
+  Modular Emacs based org documents in sync with the latest updates of the
+  template they were created from...
+  
+  =If you do wish to do the same... Read On Below...=
+  
+  - =INTERNAL USE Instructions:= /(END USERS SKIP THIS BULLET)/
+
+    This bullet is not for end users... This is /"Note to Self"/ stuff...
+
+    + [ ] =MASTER TEMPLATE ONLY= *Keep The Above Timestamp Up To Date:*
+
+        DO THIS ALWAYS, JUST AFTER YOU UPDATE THIS TEMPLATE... DON'T FORGET!
+        /(i.e., BOILERPLATE content and :README: meta data)/
+  
+  - =PUBLIC USE Instructions:= /(FOR CLONES OF THIS TEMPLATE)/
+
+    + [ ] =Change this= *:LATEST_UPDATE:* =drawer title:= /(within clones only)/
+
+         Change it to: *:LATEST_TEMPLATE_UPDATE:* within NEWLY CREATED CLONES...
+
+    + [ ] *COMPARE the TIMESTAMPS between THIS TEMPLATE and CLONES:*
+
+         The BOILERPLATE content and meta data within CLONES of this
+         TEMPLATE will get out of sync after a while due to Harmonic
+         Alchemy Modular Emacs version updates etc...
+        
+         Use the ABOVE timestamp /(within the TEMPLATE and your CLONE)/
+         to see if the clone's BOILERPLATE content needs to be updated
+         /(brought into sync with its template - MERGE)/ and then perform
+         any needed merging/replacing of BOILERPLATE and/or meta data.
+         /(e.g, *:README:* drawers, etc.)/
+
+    + [ ] *Keep ABOVE timestamp within CLONES of this template UP TO DATE:*
+
+         =AFTER Completing Above MERGE Step= and your clone's BOILERPLATE
+         content has been brought up to date /(i.e. in sync)/ with
+         its TEMPLATE... Then update the timestamp ABOVE...
+         /(WITHIN YOUR CLONE)/ to record the date of its last sync status...
+:END:
 :READ_ME_FIRST:
 =Instructions:= /(How to Install & Use This Template)/
 
-To use *HAP_Fiction-Book-Project-Skeleton.org* /(Org-Mode Fiction Book/
-/Project /Template)/ for your own projects, =Perform The Following Steps:= 
+To use *HAP_Fiction-Book-Project-Skeleton.org* Org-Mode Fiction Book Project Template
+for your own projects, =Perform The Following Steps:= 
 
 /Use the org-mode Checkboxes to Help You Keep Track of Progress/
 
 1) [ ] *Clone a Copy of This File:*
 
-      Put your clone where you normally organize your writing 
-      projects. *Place it within its own MASTER FOLDER... It is*
-      *Important to keep this file within its OWN enclosing folder!* 
+      Put your clone where you normally organize your writing projects.
 
-      Name the project's MASTER FOLDER to reflect your fiction book 
-      project's title... /(what you should have renamed this .org file to)/...
+      *Place it within its own MASTER* *FOLDER* /(or within an existing /project
+      MASTER FOLDER that contains other cloned .org Templates allready set up)/
 
-      =Other Files/Folders will be placed within this MASTER FOLDER...=
+      Existing MASTER FOLDERS contain other files for other projects as well as
+      the SETUPFILES and MEDIA required by this Fiction Book Project .org file...
 
-      You may put this file within other Master Project Folders that
-      contain existing ~.org~ files /(cloned from other HAP_Doc-Skeleton/
-      /template files)/ =If This is the case:= *Skip Steps 2 & 3 below...*
+      =Note:= If you put this file within other Project's existing MASTER FOLDERS
+            that contain existing ~.org~ files /(cloned from other HAP_Doc-Skeleton/
+            /template files)/ Pay CLOSE Attention to the Second and Third bullets
+            under Step 3 below to decide the correct action to take during
+            those steps...
 
-      =Do NOT OVERWRITE ANY PRE-EXISTING FILES or FOLDERS!!!=
+            =Do NOT OVERWRITE ANY PRE-EXISTING FILES or FOLDERS!!!=
 
-      =Otherwise:=
-      
-      *Name this New Project's MASTER FOLDER* to reflect your Fiction
-      book project's title... /(what you renamed this .org file to)/...
+            =OTHERWISE:= If this is a Brand NEW Project, name its NEW MASTER FOLDER
+                       to reflect your Fiction Book's title...
+                       /(i.e., what you renamed this .org file to)/...
+
+      =OTHER Files/Folders May also be placed Within your MASTER FOLDERS...=
 
 2) [ ] =Start Sketching Out Your Story NOW Before You Loose It!=
 
       =NOTE:= You may be doing this because you have some fantastic story idea
-             brewing in your mind and you need to write that down before you 
-             forget!  =Right?=  Therefore... as soon as you clone this file,
-             =STOP= and go immediately to the:
+            brewing in your mind and you need to write that down before you 
+            forget!  =Right?=  Therefore... as soon as you clone this file,
+            =STOP= and go immediately to the: ~💡 Scratchpad Refile Binder~ 
 
-                   ~💡 Scratchpad Refile Binder~ 
+      =READ ALL OF THE INFORMATION= UNDER The *☞ Start Here!* heading and
+      follow the instructions...
 
-             =READ ALL OF THE INFORMATION= UNDER The *☞ Start Here!* heading and
-             follow the instructions...
+      =Write your idea down quickly= /(as per the instructions)/ 
+      to get your inspiration recorded before you forget it...
 
-             =Write your idea down quickly= /(as per the instructions)/ 
-             to get your inspiration recorded before you forget it...
+      Later, After you have all your ideas sketched out and you are 
+      ready to be in an ="organized mood"= /(rather than creative mood)/ 
+      /This does not imply being organized cannot be a CREATIVE PROCESS/ 
+      Then it is time to:
 
-             Later, After you have all your ideas sketched out and you are 
-             ready to be in an ="organized mood"= /(rather than creative mood)/ 
-             /This does not imply being organized cannot be a CREATIVE PROCESS/ 
-             Then it is time to:
+      =Come Back Here And Finish Setting Up Your Project...=
 
-             =Come Back Here And Finish Setting Up Your Project...=
+      *This Project Template is HUGE!*
 
-             *This Project Template is HUGE!*
+      *Your Muse Can Easily Loose Her Inspiration!*
 
-             *Your Muse Can Easily Loose Her Inspiration!*
+      =The ☞ Start Here Section is Your Remedy= 
 
-             =The ☞ Start Here Section is Your Remedy= 
+      =Do That first!=
 
-             =Do That first!=
+3) [ ] =Finish Setting Up The Rest Of This Project LATER= [0/10]
 
-3) [ ] *Copy/Clone:* ~./media~ /(and contents)/ *to your new project's MASTER FOLDER:*
-      /(skip this step if this folder already exists within your project)/
+    - [ ] *Change Title of :LATEST_UPDATE: drawer ABOVE:*
 
-      Copy this directory /(into your master folder as a sibling of this file).../ 
-      Any external documents or images referenced by your book project should 
-      be placed within this ~./media/~ directory...
+         AFTER Cloning, Change *:LATEST_UPDATE:* drawer title ABOVE
+         /(within your clone, NOT the Original!)/ to *:LATEST_TEMPLATE_UPDATE:*
+         AND Follow Instructions within it...
 
-      There are images within the ~./media/~ directory that are required by
-      boilerplate examples within this template... You may inspect/copy etc.,
-      these boilerplate examples /(with links to media files)/ to get your
-      own images, and external attachments linked and published properly...  
+    - [ ] *Copy/Clone:* ~./media~ /(and contents)/ *to your new project's MASTER FOLDER:*
+      
+         /(skip this step if this folder already exists within your project)/
 
-      This single ~./media~ directory will serve media and external attachments 
-      for all of the ~.org~ doc template files copied from: ~.emacs.d/Docs/pubOps~ 
-      directory /(if they ARE later copied here to this Project's Master Folder)/
+         Copy this directory /(into your master folder as a sibling of this file).../ 
+         Any external documents or images referenced by your book project should 
+         be placed within this ~./media/~ directory...
 
-      If you Decide Later to copy another doc template file from:
-      ~.emacs.d/Docs/pubOps~, =YOU WILL BE SKIPPING THIS STEP= to avoid
-      OVERWRITING existing files and/or folders!!!
+         There are images within the ~./media/~ directory that are required by
+         boilerplate examples within this template... You may inspect/copy etc.,
+         these boilerplate examples /(with links to media files)/ to get your
+         own images, and external attachments linked and published properly...
 
-      =Note:= You DON'T need to copy the ~./auto/~ directory... That directory
-            will be automatically created the first time you export this ~.org~ 
-            file to ~.PDF~...
+         All external links, images, within the boilerplate examples of this
+         template may be used as examples for getting your own images, and 
+         external attachments linked properly...
 
-4) [ ] *Copy/Clone:* ~./org-templates~ /(and contents)/ *to your project's MASTER FOLDER:*
-      /(skip this step if this folder already exists within your project)/
+         This single ~./media~ directory will serve media and external attachments 
+         for this and other Modular Emacs Document TEMPLATE ~.org~ files that may
+         exist within this MASTER FOLDER now or in the future...
 
-      Copy this directory to your book's MASTER FOLDER,
-      /(i.e., as a sibling/ /of this .org file).../
+         /(IF/WHEN THEY /WERE/ARE COPIED HERE)/
 
-      =Note:= The SETUPFILE: ~fiction-book.org~ Within this directory is called
-            out and included by this ~.org~ file /(above)/ and as such must stay
-            within this directory...
+         =Note:= You DON'T need to copy the ~./auto/~ directory... That directory
+               will be automatically created by *AuxTex* the first time you export
+               this ~.org~ file to ~.PDF~...
 
-      Other SETUPFILES within this directory are required by other book
-      project templates... /(if they are to ALSO be cloned here)/
+    - [ ] *Copy/Clone:* ~./org-templates~ /(and contents)/ *to your project's MASTER FOLDER:*
 
-      If you Decide Later to copy another ~HAP_<book-template>.org~ Document
-      Template file from: ~.emacs.d/Docs/pubOps~, =YOU WILL BE SKIPPING THIS STEP=
-      to avoid OVERWRITING existing files and/or folders!!!
+         =WARNING!:= To avoid overwriting existing files, DO NOT COPY this
+                   ~./org-templates~ to your MASTER FOLDER IF ONE ALREADY EXISTS!
 
-5) [ ] *FINISH SETTING UP THIS PROJECT...* [0/10]
+                   But DO follow the rest of this step so you will know what you
+                   should do...
+
+                   =OTHERWISE For MASTER FOLDERS that DO NOT already have one:=
+                   *Copy this NEW directory to your book's MASTER FOLDER*
+                   /(i.e., as a sibling/ /of this book's .org file).../
+
+         =Note:= SETUPFILES Within this new or existing directory are called out
+               and included by this ~HAP_Fiction-Book-Project-Skeleton.org~ file...
+               /(within the file header above)/
+
+         =WARNING:= There may ALREADY be an ~org-templates~ directory existing within
+                  your MASTER FOLDER! In that case you will need to merge:
+                  ~fiction-book-setup.org~ AND ~default-tags.org~ /(contained within)/
+                  into your existing copies of them instead...       
+
+                  =YOU WON'T WANT TO OVERRITE EXISTING FILES= within this 
+                  directory you are already using, /(and modified!!!)/
+                  but you may need to update existing files you are NOT
+                  using currently if/when you DO start using them...
+
+         Other SETUPFILES within this directory are intended to be used by
+         other document style project templates and are not needed for this:
+         ~HAP Fiction Book Project Skeleton~ Document... You may remove the extra
+         files if you wish... 
+
+         =HOWEVER:= If you decide to clone another ~HAP_<book-template>.org~
+                  file into this project folder it will pick up its
+                  associated SETUPFILES automatically because this folder
+                  already exists! Consider this case if/when you decide
+                  to delete other UNUSED SETUPFILES... They are small text
+                  files not really bothering you...
+
+                  /(YOU MAY NEED THEM LATER DEPENDING ON YOUR CASE)/
 
     - [ ] *Change the* ~#+TITLE:~ *directive at the top of this file:*
 
-          Change to: /"your Fiction Book Project's Title"/
+         Change to: /"your Fiction Book Project's Title"/
 
     - [ ] *Change the* ~#+SUBTITLE:~ *directive at the top of this file:* 
 
-           Change it to /"Your Fiction Book Project's Sub Title"/
+         Change it to /"Your Fiction Book Project's Sub Title"/
 
     - [ ] *Change the* ~#+EXPORT_FILE_NAME:~ *directive at the top of this file:*
 
-          Change to: /"your-Fiction-Book-Project's-Title.pdf"/
-          This will be the file name(s) produced during export thence forward
-          /(including auto generated files: .tex, etc...)/
+         Change to: /"your-Fiction-Book-Project's-Title.pdf"/
+         This will be the file name(s) produced during export thence forward
+         /(including auto generated files: .tex, etc...)/
 
     - [ ] *Change the* ~#+TEXT: Copyright © 2022:~ *directive top of this file:*
 
@@ -187,23 +267,24 @@ To use *HAP_Fiction-Book-Project-Skeleton.org* /(Org-Mode Fiction Book/
     - [ ] *Change the* ~#+EMAIL:~ *directive at the top of this file:*
 
           Change to: /"your EMAIL"/
-
+          
     - [ ] *Change the* ~#+TEXT: Created:~ *TIMESTAMP at the top of this file:*
 
-          Put your cursor on the TIMESTAMP: /i.e.,/ <2022-10-05 Wed>
-          and type: ~C-c . . RETURN~ The TIMESTAMP will update to NOW.
+         Put your cursor on the TIMESTAMP: /i.e.,/ <2022-10-05 Wed>
+         and type: ~C-c . . RETURN~ The TIMESTAMP will update to NOW.
 
-          =LEAVE THIS DATE ALONE after Setting It The FIRST Time=
+         =LEAVE THIS DATE ALONE after Setting It The FIRST Time=
 
-          This Date reflects the time/date that you first created this
-          new document It should NEVER change after that...
+         This Date reflects the time/date that you first created this
+         new document It should NEVER change after that...
 
     - [ ] *Change the* ~#+TEXT: Last Published:~ *TIMESTAMP at Publish Time:*
 
           =Don't Change This UNTIL You Have Actually Exported This File=
           /(as a PDF or HTML, etc. and have PUBLISHED it publically somewhere)/
 
-          Until that publishing time comes leave it alone as: <not-published>
+          Until that publishing time comes leave it alone as:
+          ~<NOT Published>~
           
           As soon as this is published or re-published, Replace the
           <unpublished> placeholder with a REAL TIMESTAMP by typing:
@@ -213,76 +294,66 @@ To use *HAP_Fiction-Book-Project-Skeleton.org* /(Org-Mode Fiction Book/
 
     - [ ] *Change the* ~#+FILETAGS:~ *directive at the top of this file:*
 
-          Add your own tags that match the context of your Fiction Book...
-          
+         Add your own tags that match the context of your Fiction Book...
+
     - [ ] *Change the* ~#+DESCRIPTION:~ *directive at the top of this file:*
 
-          Compose /Your-Fiction-Book-Project's Description/ as a short 
-          paragraph here... and then use that to change the directive
-          above in the File HEADER...
+          Compose /Your-Fiction-Book-Project's Description/ as a short paragraph
+          here... and then use that to change the directive above in the
+          File HEADER...
 
-    - *The* ~./media~ *Directory is ALL Set:*
+4) *Purpose of the* ~./auto/~ *Directory:* /(you do not need to copy this)/
 
-       Any external documents or images referenced by ANY book projects
-       located within this MASTER FOLDER, should be placed within this
-       ~./media/~ directory... This single ~./media~ directory will serve
-       media and external attachments for this and any other related
-       ~.org~ files you may end up creating here, as well as being
-       the media repository used by LaTeX during publishing...
+   This is or will-be an auto generated folder where your output ~.PDF~ 
+   files are created and placed during LaTeX export. You DO NOT need 
+   to copy this folder as it is auto generated during org-mode LaTeX 
+   processing...
 
-       Media required for use in template BOILERPLATE Sections already
-       exists within this folder /(for all HAP Skeleton Template .org files)/
-       So that is all set...
+   LaTeX processing will not delete any prior files contained here... 
+   Some of them will be updated, but will have backups...  Any files 
+   you place within this folder will NOT be lost, unless you delete 
+   them... This folder is a good place to store other temporary files 
+   you may be creating, generating.. etc...
 
-    - *Purpose of the:* ~./auto/~ *Directory:* /(you do not need to copy this)/
+5) *Purpose of the:* ~./org-templates~  *Directory:*
 
-       This is or will-be an auto generated folder where your output ~.PDF~ 
-       files are created and placed during LaTeX export. You DO NOT need 
-       to copy this folder as it is auto generated during org-mode LaTeX 
-       processing...
+   The files in here are automatically linked and included within this template.
+   You don't need to change those settings unless you wish to customize the
+   already customized tags, and export options.
 
-       LaTeX processing will not delete any prior files contained here... 
-       Some of them will be updated, but will have backups...  Any files 
-       you place within this folder will NOT be lost, unless you delete 
-       them... This folder is a good place to store other temporary files 
-       you may be creating, generating.. etc...
+   /Things are currently set up correctly for the Fiction Book genre,/
+   /and the Category is all set as well... But you can and may modify
+   /the SETUPFILES to fit your needs.../
 
-    - *Purpose of the:* ~./org-templates~  *Directory:*
+   Other SETUPFILES within this directory are intended to be used by
+   other document style project templates and are not needed for this:
+   ~HAP_Fiction-Book-Project-Skeleton.org~ Document... You may remove the
+   extra files if you wish... 
 
-       The files in here are automatically linked and included within this
-       template. You don't need to change those settings unless you wish to
-       customize the already customized tags, and export options.
-         
-       /Things are currently set up for the Fiction Book genre, and/
-       /the Category is all set as well... But you can and may modify/
-       ~fiction-book-setup.org~ /to narrow down the category more/
-       /specifically, fitting everything to this project's specific/
-       /needs.../
+   =HOWEVER:= If you decide to clone another ~HAP_<book-template>.org~
+            file into this project folder it will pick up its
+            associated SETUPFILES automatically because this folder
+            already exists! Consider this case if/when you decide
+            to delete other UNUSED SETUPFILES... They are small text
+            files not really bothering you...
 
-       In addition there may also be an ~fiction-book-setup.tex~ file in
-       this directory, which MAY be needed for more extensive LaTeX Styling...
-       If this file is present, read the Instrutions within it for more
-       info on what to do...
+            /(YOU MAY NEED THEM LATER DEPENDING ON YOUR CASE)/
 
-       The DEFAULT Tags defined for all project templates are useful for
-       most situations and SOME tags are ALWAYS to be defined for this
-       LaTeX publishing system to work.
+            =AND= You won't want to OVERRITE existing files within this 
+                directory you are already using, /(and modified!!!)/
+                but you may need to update existing files you are NOT
+                using currently if/when you DO start using them...
 
-       /Change the SETUPFILE name ABOVE and within this directory from/
-       ~default-tags.org~ /to another name and-or replace some -BUT NOT ALL-/
-       /of the tags within to your own tags... see instructions inside the/
-       /file.../
+   The DEFAULT Tags defined for all project templates are useful for
+   most situations and SOME tags are ALWAYS to be defined for this
+   LaTeX publishing system to work.
 
-6) [ ] =Ongoing Planning / Writing Your Fiction Book:=
+   /Change the SETUPFILE name ABOVE and within this directory from/
+   ~default-tags.org~ /to another name and-or replace some -BUT NOT ALL-/
+   /of the tags within to your own tags... see instructions inside the/
+   /file.../
 
-      /Change headings and structure to match your project's outline/ 
-      /sections-chapters-scenes-plots-characters, etc.../
-
-      *Start doing the Tasks within the Tasks section:*
-
-      =Have fun doing this...=
-
-7) [ ] =Export/Publish to PDF File:=
+6) [ ] =Export/Publish to PDF File:=
 
       The *In-Buffer Settings* specified by the SETUPFILES above will 
       get this file looking good when exported as a Standard PDF file.  
@@ -303,11 +374,14 @@ To use *HAP_Fiction-Book-Project-Skeleton.org* /(Org-Mode Fiction Book/
 
             /(a pop-up will show allowing you to choose export method)/
 
-      After *AucTeX* is done parsing/compiling etc., new files by the name of:
-      ~HAP_Untitled-Fiction-Book.pdf~ -and- ~HAP_Untitled-Fiction-Book.tex~ 
+      After *AucTeX* is done parsing/compiling etc., new files named:
+
+            ~HAP_Fiction-Book-Project-Skeleton.pdf~
+            -and-
+            ~HAP_Fiction-Book-Project-Skeleton.tex~
 
       /(or the name you changed it to located at the top of this file)/
-      will appear within the same directory as this file...
+      will appear within the same directory as this file... 
 
       Subsequent repeated calls to the above command will overwrite your
       existing ~.pdf~ -and- ~.tex~ files! /(make backups first if needed!)/ You
@@ -319,39 +393,46 @@ To use *HAP_Fiction-Book-Project-Skeleton.org* /(Org-Mode Fiction Book/
       =NOTE:= Some SETUPFILES have not been created yet for other eBook formats.
             /(This is a work in progress)/
 
-      =If YOU EXPERIENCE LaTeX ERRORS:= 
+      =If YOU EXPERIENCE LaTeX ERRORS:= *Consult Buffer:* ~*Org PDF LaTeX Output*~
 
-         *Consult Buffer:* ~*Org PDF LaTeX Output*~
+7) =Ongoing Planning / Writing Your Fiction Book:=
 
-8) [ ] =Handling Images=
+   /Change headings and structure to match your project's outline/ 
+   /sections-chapters-scenes-plots-characters, etc.../
 
-      Some Images may render too large or too small to fit on a page
-      of an exported version of this file... This is easy do fix within
-      your content on an image by image basis...
+   *Start doing the Tasks within the Tasks section:*
+
+   =Have fun doing this...=
+
+8) =Handling Images:=
+
+   Some Images may render too large or too small to fit on a page
+   of an exported version of this file... This is easy do fix within
+   your content on an image by image basis...
       
-      Use *LaTeX* and/or *HTML* attributes as follows on the images that need
-      to be a different size...
+   Use *LaTeX* and/or *HTML* attributes as follows on the images that need
+   to be a different size...
 
-      =Example:=
+   =Example:=
       
-         #+CAPTION: Example: Larger Size Emoji 
-         #+NAME:  example:00001
-         #+attr_html: :width 200px
-         #+attr_latex: :width 200px
-      [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F3D5.png]]
+       #+CAPTION: Example larger size .png file 
+       #+NAME:  example:00001
+       #+attr_html: :width 600px
+       #+attr_latex: :width 100px
+      [[./media/lavender-banner.png]]
 
 
-=These Instructions Were Last Modified:= <2023-01-16 Mon> 
+
+=These Instructions Were Last Modified:= <2023-02-15 Wed> 
 
 So far Export to PDF in nice Fiction Style format... This has not been tested for HTML or other eBook formats yet... We will get fancy with other formats later... 
 I promice... I have to do all this documentation first!
 
 /As you can see, if you been following for the past couple years, things are getting done! Albeit Slowly/
 
-=Please Open an ISSUE At:= https://github.com/harmonicalchemy/modular-emacs/issues
+If you experience problems =Please Open an ISSUE At:= https://github.com/harmonicalchemy/modular-emacs/issues
    
 Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas for Improvement... =You guys are my Product Managers=  I am only a User of ONE "seat".
-
 Other folks UX metrics are sorely needed!! Thanks!
 
 =Enjoy!= - Alisha Awen
@@ -600,7 +681,7 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
          Change the ~:noexport:~ tag to ~:export:~ for this NEW
          REAL Chapter so it will show up when publishing drafts...
 
-   3) [ ] =Change The Anchor Link=
+   3) [ ] =Change The Anchor Link:=
 
          Change the anchor /(directly under Chapter Title)/ to match
          your new chapter's title name...

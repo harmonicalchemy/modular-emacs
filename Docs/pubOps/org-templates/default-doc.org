@@ -25,6 +25,8 @@
 /book projects within their own MASTER FOLDERS.../
 #+END_COMMENT
 
+=Last Updated:= <2023-02-13 Mon> /(this file needs an update)/
+
 =STANDARD STARTUP OPTIONS=
 
 #+CATEGORY: @Generic_Books
@@ -39,7 +41,6 @@
 
 =STANDARD EXPORT OPTIONS:=
 
-/
 - *Reference:*
    
    + [[https://orgmode.org/manual/Export-Settings.html#Export-Settings][Org Manual Export Settings]]

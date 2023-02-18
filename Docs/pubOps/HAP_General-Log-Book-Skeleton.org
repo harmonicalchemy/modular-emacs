@@ -7,8 +7,8 @@
 #+EMAIL: Siren1@disroot.org
 #+DATE: {{{time(%A %Y-%b-%d)}}}
 #+TEXT: Created: <2021-02-11 Thu>
-#+TEXT: Last Published: <2022-12-23 Fri>
-#+FILETAGS: templates logs published
+#+TEXT: Last Published: <Not Published>
+#+FILETAGS: templates logs unpublished
 
 #+DESCRIPTION: HAP - Modular Emacs Org Mode General Log Notebook Template.  This is the replacement for the Markdown Mode templates I was using previously, which were in turn replacements for even older templates I made originally for Evernote/Trello/Scrivener...
 
@@ -22,51 +22,89 @@
 
 =NOTE:= 
 
-   ~#+CATEGORY:~ is specified within ~log-book.org~ SETUPFILE.
-   If you need to change the category, do it in your cloned version
-   of fiction-book.org...
-
    *SETUPFILE:* ~default-tags.org~ is where tags are set for this project...
 
-   *SETUPFILE:* ~latex-simple-pdf.org~ is for LaTeX Export Configurations 
-              to produce a PDF version of your Log Note Book...
+              If you need to change the category, do it in your cloned version
+              of default-tags.org...  If you rename default-tags.org file from
+              "default" to something more specific, you will need to change the
+              ~#+SETUPFILE: ./org-templates/default-tags.org~ line below to reflect
+              your new file name as well...  You may change any of the tags except
+              important ones to what ever you wish... Read the *:README:* drawer
+              within the file for more information...
+
+              The Existing Tags are useful for most situations within
+              this context, and some of the tags MUST ALWAYS be defined
+              for this LaTeX publishing system to work correctly...
+
+              This file may be used by other ~.org~ files within this
+              Master Folder... If you need to customize them specifically
+              for this ~.org~ file alone, you should copy and rename:
+              ~default-tags.org~ and modify your renamed copy instead...
+              
+              If you do this, you will ALSO need to change the
+              ~#+SETUPFILE: ./org-templates/default-tags.org~
+              directive below to reflect your changed file name...
+
+              /(change the name from/ ~default-tags.org~ /to another name/
+              /and-or replace some (but NOT ALL) of the tags within/
+              /to your own tags... see instructions inside the file)/
+
 #+END_COMMENT
 
 #+SETUPFILE: ./org-templates/log-book-setup.org
 #+SETUPFILE: ./org-templates/default-tags.org
 
 :LATEST_UPDATE:
-  <2023-02-03 Fri>
+  <2023-02-15 Wed>
 
-  ☞ =Instructions:=
+  =YOU MAY REMOVE This Drawer= from your own clones of this template if
+  it is bothering you... This drawer is used for HAP Modular Emacs
+  DOC TEMPLATES housekeeping...
 
-  + [ ] Change this *:LATEST_UPDATE:* drawer title to *:LATEST_TEMPLATE_UPDATE:*
-        within NEW CLONES of this file...
+  =HOWEVER= you may also use it for the same purpose to keep your existing
+  Modular Emacs based org documents in sync with the latest updates of the
+  template they were created from...
+  
+  =If you do wish to do the same... Read On Below...=
+  
+  - =INTERNAL USE Instructions:= /(END USERS SKIP THIS BULLET)/
 
-  + [X] Update the timestamp ABOVE within THIS TEMPLATE Skeleton
-        /(NOT CLONES of IT)/ whenever THIS TEMPLATE has changed...
+    This bullet is not for end users... This is /"Note to Self"/ stuff...
 
-  + [ ] *COMPARE the TIMESTAMPS between THIS TEMPLATE and CLONES*
+    + [ ] =MASTER TEMPLATE ONLY= *Keep The Above Timestamp Up To Date:*
 
-        The BOILERPLATE content within CLONES of this TEMPLATE will
-        get out of sync after a while due to version updates etc...
+        DO THIS ALWAYS, JUST AFTER YOU UPDATE THIS TEMPLATE... DON'T FORGET!
+        /(i.e., BOILERPLATE content and :README: meta data)/
+  
+  - =PUBLIC USE Instructions:= /(FOR CLONES OF THIS TEMPLATE)/
+
+    + [ ] =Change this= *:LATEST_UPDATE:* =drawer title:= /(within clones only)/
+
+        Change it to: *:LATEST_TEMPLATE_UPDATE:* within NEWLY CREATED CLONES...
+
+    + [ ] *COMPARE the TIMESTAMPS between THIS TEMPLATE and CLONES:*
+
+        The BOILERPLATE content and meta data within CLONES of this
+        TEMPLATE will get out of sync after a while due to Harmonic
+        Alchemy Modular Emacs version updates etc...
         
         Use the ABOVE timestamp /(within the TEMPLATE and your CLONE)/
         to see if the clone's BOILERPLATE content needs to be updated
-        /(brought into sync with its template)/ and then perform any
-        needed updates...
+        /(brought into sync with its template - MERGE)/ and then perform
+        any needed merging/replacing of BOILERPLATE and/or meta data.
+        /(e.g, *:README:* drawers, etc.)/
 
-  + [ ] *Update ABOVE timestamp within CLONES of THIS TEMPLATE:*
+    + [ ] *Keep ABOVE timestamp within CLONES of this template UP TO DATE:*
 
-        AFTER completing above step and your clone's BOILERPLATE
+        =AFTER Completing Above MERGE Step= and your clone's BOILERPLATE
         content has been brought up to date /(i.e. in sync)/ with
         its TEMPLATE... Then update the timestamp ABOVE...
-        /(within your clone)/ so you will know its latest status...
+        /(WITHIN YOUR CLONE)/ to record the date of its last sync status...
 :END:
 :READ_ME_FIRST:
-☞ =Instructions:= /(How to Install & Use This Template)/
+=Instructions:= /(How to Install & Use This Template)/
 
-To use *HAP_General-Log-Book-Project-Skeleton.org* /(Org-Mode Log Notebook Project /Template)/ for your own projects, perform the following steps: 
+To use *HAP_General-Log-Book-Project-Skeleton.org* /(Org-Mode Log Notebook Project /Template)/ for your own projects, =Perform The Following Steps:=
 
 /Use the org-mode Checkboxes to Help You Keep Track of Progress/
 
@@ -75,62 +113,31 @@ To use *HAP_General-Log-Book-Project-Skeleton.org* /(Org-Mode Log Notebook Proje
       Put your clone where you normally organize your Logs or 
       projects that need logs.
 
-      *Place it within its own MASTER* *FOLDER* /(or within a MASTER/
-      /project folder that needs a LOG...)/
+      *Place it within its own MASTER* *FOLDER* /(or within an existing project
+      MASTER FOLDER that needs a LOG...)/
 
-      =Keep Your Clone Within This MASTER PARENT FOLDER!=
+      If this is a NEW MASTER FOLDER, name it to reflect your New
+      Log Book's title... /(what you renamed this .org file to)/...
 
-      If this is a =STANDALONE LOG NOTEBOOK=, Name the =MASTER FOLDER=
-      to reflect your Log Book Project's Title and/or purpose...
+      =OTHER Files/Folders May Exist Within This MASTER FOLDER...=
+
+      =Note:= You may put this file within other Project's MASTER FOLDERS that
+            contain existing ~.org~ files /(cloned from other HAP_Doc-Skeleton/
+            /template files)/ =If This is the case:= Pay CLOSE Attention to Steps
+            3 & 4 below to decide the correct action to take during those steps...
+
+      =Do NOT OVERWRITE ANY PRE-EXISTING FILES or FOLDERS!!!=
+
+      =Otherwise:=
       
-      /(i.e., what you renamed this General-Log-Book-Lkeleton.org file to)/
+      *Name this New Project's MASTER FOLDER* to reflect your Log Book
+      Project's Title...
 
-      =Other Files/Folders will be placed within this MASTER FOLDER...=
+      /(i.e., what you renamed this HAP_General-Log-Book-Lkeleton.org file to)/
 
-2) [ ] *Change Title of :LATEST_UPDATE: drawer ABOVE:*
+      =New Files/Folders will be placed within this MASTER FOLDER...=
 
-      AFTER Cloning, Change *:LATEST_UPDATE:* drawer title ABOVE
-      /(within your clone, NOT the Original!)/ to *:LATEST_TEMPLATE_UPDATE:*
-      AND Follow Instructions within it...
-
-3) [ ] *Copy/Clone:* ~./media~ /(and contents)/ *to your new project's MASTER FOLDER:*
-
-      Copy this directory /(into your MASTER FOLDER as a sibling of this file).../ 
-      Any external documents or images referenced by your book project should 
-      be placed within this ~./media/~ directory...
-
-      All external links, images, within the boilerplate examples of this
-      template may be used as examples for getting your own images, and 
-      external attachments linked properly...  
-
-      This single ~./media~ directory will serve media and external attachments 
-      for all of the ~.org~ doc template files from within: ~.emacs.d/Docs/pubOps~ 
-      directory /(if they were also copied here to your Project's MASTER FOLDER)/
-
-      =Note:=  You DON'T need to copy the ~./auto/~ directory...  That directory
-             will be automatically created the first time you export this ~.org~ 
-             file to ~.PDF~...
-
-4) [ ] *Copy/Clone:* ~./org-templates~ /(and all contents)/ *to your MASTER FOLDER:*
-
-      Copy this directory to your Log Notebook's MASTER FOLDER,
-      /(i.e., as a sibling/ /of this .org file).../ 
-
-      =Note:= The SETUPFILES Within this directory which are called out and 
-            included by this .org file /(above)/ must stay within this
-            directory...  
-
-            Other SETUPFILES within this directory are used by other book 
-            project templates and are not needed for this LOG Book
-            Project... You may remove them if you wish...
-
-            However, consider If you clone another ~HAP_<book-template>.org~
-            file into this MASTER PROJECT FOLDER it will pick up its
-            associated SETUPFILES automatically, so consider that if/when
-            you decide to delete other UNUSED SETUPFILES... They are small
-            text files not bothering you or your operations...
-
-5) [ ] =Start Documenting/Logging what was on your mind NOW Before You Loose It!=
+2) [ ] =Start Documenting/Logging what was on your mind NOW Before You Loose It!=
 
       =NOTE:= You may be doing this because you have something you need to
             quickly document and or add a time-stamped log entry for...
@@ -138,7 +145,7 @@ To use *HAP_General-Log-Book-Project-Skeleton.org* /(Org-Mode Log Notebook Proje
             You need to write that down before you forget!  =Right?=
             Therefore... as soon as you are done with the first steps above,
             =STOP= and go immediately to the: *📒 Begin LOG Notebook* Binder...
-            =Open:= *NEW 🗓 LOG: <2021-03-29 Mon> Generic Title* under: *📅 2022:*
+            =Open:= *NEW 🗓 LOG: <2021-03-29 Mon> Generic Title* under: *📅 YYYY:*
             Heading, and Follow Instructions contained in the *:README:*
             drawer...  Rename "Generic Title" to a name that fits the subject
             of your new Log Entry...
@@ -147,11 +154,88 @@ To use *HAP_General-Log-Book-Project-Skeleton.org* /(Org-Mode Log Notebook Proje
             /this LOG in the first place)/ You should come back and:
             =Resume Finishing Set Up of This LOG Notebook= /(next steps below)/
 
-6) [ ] *Finish Setting up this Project* =LATER= [0/10]
+3) [ ] =Finish Setting Up The Rest Of This Project LATER= [0/10]
+
+    - [ ] *Change Title of :LATEST_UPDATE: drawer ABOVE:*
+
+        AFTER Cloning, Change *:LATEST_UPDATE:* drawer title ABOVE
+        /(within your clone, NOT the Original!)/ to *:LATEST_TEMPLATE_UPDATE:*
+        AND Follow Instructions within it...
+
+    - [ ] *Copy/Clone:* ~./media~ /(and contents)/ *to your new project's MASTER FOLDER:*
+
+        /(skip this step if this folder already exists within your project)/
+        
+        Copy this directory /(into your MASTER FOLDER as a sibling of this file).../ 
+        Any external documents or images referenced by your book project should 
+        be placed within this ~./media/~ directory...
+
+        There are images within the ~./media/~ directory that are required by
+        boilerplate examples within this template... You may inspect/copy etc.,
+        these boilerplate examples /(with links to media files)/ to get your
+        own images, and external attachments linked and published properly...
+
+        All external links, images, within the boilerplate examples of this
+        template may be used as examples for getting your own images, and 
+        external attachments linked properly...  
+
+        This single ~./media~ directory will serve media and external attachments 
+        for this and other Modular Emacs Document TEMPLATE ~.org~ files that may
+        exist within this MASTER FOLDER now or in the future...
+
+        /(IF/WHEN THEY /WERE/ARE COPIED HERE)/
+
+        =Note:= You DON'T need to copy the ~./auto/~ directory... That directory
+              will be automatically created by *AuxTex* the first time you export
+              this ~.org~ file to ~.PDF~...
+
+    - [ ] *Copy/Clone:* ~./org-templates~ /(and all contents)/ *to your MASTER FOLDER:*
+
+        =WARNING!:= To avoid overwriting existing files, DO NOT COPY this
+                  ~./org-templates~ to your MASTER FOLDER IF ONE ALREADY EXISTS!
+
+                  But DO follow the rest of this step so you will know what you
+                  should do...
+
+         =OTHERWISE For MASTER FOLDERS that DO NOT already have one:=
+         *Copy this NEW directory to your book's MASTER FOLDER*
+         /(i.e., as a sibling/ /of this .org file).../
+
+        =Note:= SETUPFILES Within this new or existing directory are called out
+              and included by this ~HAP_General-Log-Book-Skeleton.org~ file...
+              /(within the file header above)/
+
+        =WARNING:= There may ALREADY be an ~org-templates~ directory existing within
+                 your MASTER FOLDER! In that case you will need to merge:
+                 ~log-book-setup.org~ AND ~default-tags.org~ /(contained within)/
+                 into your existing copies of them instead...       
+
+                 =YOU WON'T WANT TO OVERRITE EXISTING FILES= within this 
+                 directory you are already using, /(and modified!!!)/
+                 but you may need to update existing files you are NOT
+                 using currently if/when you DO start using them...
+
+        Other SETUPFILES within this directory are intended to be used by
+        other document style project templates and are not needed for this:
+        ~HAP_General-Log-Book-Skeleton~ Document... You may remove the extra
+        files if you wish... 
+
+        =HOWEVER:= If you decide to clone another ~HAP_<book-template>.org~
+                 file into this project folder it will pick up its
+                 associated SETUPFILES automatically because this folder
+                 already exists! Consider this case if/when you decide
+                 to delete other UNUSED SETUPFILES... They are small text
+                 files not really bothering you...
+
+                 /(YOU MAY NEED THEM LATER DEPENDING ON YOUR CASE)/
 
     - [ ] *Change the* ~#+TITLE:~ *directive at the top of this file:*
 
           Change to: /"your LOG Book Title"/
+
+    - [ ] *Change the* ~#+SUBTITLE:~ *directive at the top of this file:* 
+
+         Change it to /"Your Log Book's Sub Title"/
 
     - [ ] *Change the* ~#+EXPORT_FILE_NAME:~ *directive at the top of this file:*
 
@@ -191,7 +275,8 @@ To use *HAP_General-Log-Book-Project-Skeleton.org* /(Org-Mode Log Notebook Proje
           =Don't Change This UNTIL You Have Actually Exported This File=
           /(as a PDF or HTML, etc. and have PUBLISHED it publically somewhere)/
 
-          Until that publishing time comes leave it alone as: <not-published>
+          Until that publishing time comes leave it alone as:
+          ~<NOT Published>~
           
           As soon as this is published or re-published, Replace the
           <unpublished> placeholder with a REAL TIMESTAMP by typing:
@@ -205,137 +290,131 @@ To use *HAP_General-Log-Book-Project-Skeleton.org* /(Org-Mode Log Notebook Proje
 
     - [ ] *Change the* ~#+DESCRIPTION:~ *directive at the top of this file:*
 
-          Compose /Your-LOG-Book-Project's Description/ as a short 
-          paragraph here... and then use that to change the directive
-          above...
+        Compose /Your-LOG-Book-Project's Description/ as a short paragraph
+        here... and then use that to change the directive above in the
+        File HEADER...
 
-    - *The* ~./media~ *Directory is ALL Set:*
+4) [ ] *Export/Publish to PDF File:*
 
-         Any external documents or images referenced by your LOG book project 
-         should be placed within this ~./media/~ directory... This single 
-         ~./media~ directory will serve media and external attachments for this 
-         and any other related ~.org~ files you may end up creating 
-         here, as well as being the media repository used by LaTeX during 
-         publishing...
+     The *In-Buffer Settings* specified by the SETUPFILES above will 
+     get this file looking good when exported as a Standard PDF file.  
+     Once you have your project directory all set up as above you are 
+     ready to export your first PDF as a test run...
 
-    - *Purpose of the:* ~./auto/~ *Directory:* /(you do not need to copy this)/
+     Sub Headings /(Log Entries)/ could be selected/isolated for exporting
+     to a PDF report of work you did for a client or something like that
+     and all other log entries and content would not be exported...
 
-         This is or will-be an auto generated folder where your output ~.PDF~ 
-         files are created and placed during LaTeX export. You DO NOT need 
-         to copy this folder as it is auto generated during org-mode LaTeX 
-         processing...
+        *Issue the following Emacs command:*
 
-         LaTeX processing will not delete any prior files contained here... 
-         Some of them will be updated, but will have backups...  Any files 
-         you place within this folder will NOT be lost, unless you delete 
-         them... This folder is a good place to store other temporary files 
-         you may be creating, generating.. etc...
+           ~M-x org-latex-export-to-pdf~
 
-    - *Purpose of the:* ~./org-templates~ *Directory:*
+        *OR* If You Enabled *Xah-Fly-Keys* /"Command Mode"/ Try Shortcut:
 
-         The files in here are automatically linked and included within this
-         template. You don't need to change those settings unless you wish to
-         customize the already customized tags, and export options.
+           ~SPACE e p~
 
-         /They are allready set up correctly for the LOG Notebook genre, and/
-         /the Category is all set as well... But you can and may modify the/
-         /SETUPFILES to fit your needs.../
+        *OR Export to OTHER Formats:*
 
-         Other SETUPFILES within this directory are used by other book 
-         project templates and are not needed for this LOG Book
-         Project... You may remove them if you wish...
+           ~C-c C-e~
 
-         However, consider If you clone another ~HAP_<book-template>.org~
-         file into this MASTER PROJECT FOLDER it will pick up its
-         associated SETUPFILES automatically, so consider that if/when
-         you decide to delete other UNUSED SETUPFILES... They are small
-         text files not bothering you or your operations...
+           /(a pop-up will show allowing you to choose export method)/
 
-7) [ ] =Export/Publish to PDF File:=
+     After *AucTeX* is done parsing/compiling etc., new files named:
 
-      The *In-Buffer Settings* specified by the SETUPFILES above will 
-      get this file looking good when exported as a Standard PDF file.  
-      Once you have your project directory all set up as above you are 
-      ready to export your first PDF as a test run...
+           ~HAP_General-Log-Notebook-Skeleton.pdf~
+           -and-
+           ~HAP_General-Log-Notebook-Skeleton.tex~
 
-      Sub Headings /(Log Entries)/ could be selected/isolated for exporting
-      to a PDF report of work you did for a client or something like that
-      and all other log entries and content would not be exported...
+     /(or the name you changed it to located at the top of this file)/
+     will appear within the same directory as this file... 
 
-         *Issue the following Emacs command:*
+     Subsequent repeated calls to the above command will overwrite your
+     existing ~.pdf~ -and- ~.tex~ files! /(make backups first if needed!)/ You
+     could use the ~./auto/~ directory for backups...
 
-            ~M-x org-latex-export-to-pdf~
+     =If you chose the last option above= LaTeX will output files with other
+     extensions for those other output formats...
 
-         *OR* If You Enabled *Xah-Fly-Keys* /"Command Mode"/ Try Shortcut:
+     =NOTE:= Some SETUPFILES have not been created yet for other eBook formats.
+           /(This is a work in progress)/
 
-            ~SPACE e p~
+     =If YOU EXPERIENCE LaTeX ERRORS:= *Consult Buffer:* ~*Org PDF LaTeX Output*~
 
-         *OR Export to OTHER Formats:*
+5) *Purpose of the* ~./auto/~ *Directory:* /(you do not need to copy this)/
 
-            ~C-c C-e~
+   This is or will-be an auto generated folder where your output ~.PDF~ 
+   files are created and placed during LaTeX export. You DO NOT need 
+   to copy this folder as it is auto generated during org-mode LaTeX 
+   processing...
 
-            /(a pop-up will show allowing you to choose export method)/
+   LaTeX processing will not delete any prior files contained here... 
+   Some of them will be updated, but will have backups...  Any files 
+   you place within this folder will NOT be lost, unless you delete 
+   them... This folder is a good place to store other temporary files 
+   you may be creating, generating.. etc...
 
-      After *AucTeX* is done parsing/compiling etc., a new files named:
+6) *Purpose of the* ~./org-templates~ *Directory:*
+
+   The files in here are automatically linked and included within this template.
+   You don't need to change those settings unless you wish to customize the
+   already customized tags, and export options.
+
+   /They are allready set up correctly for the LOG Notebook genre, and/
+   /the Category is all set as well... But you can and may modify the/
+   /SETUPFILES to fit your needs.../
+
+   Other SETUPFILES within this directory are intended to be used by
+   other document style project templates and are not needed for this:
+   ~HAP_General-Log-Book-Skeleton.org~ Document...
+   You may remove the extra files if you wish... 
+
+   =HOWEVER:= If you decide to clone another ~HAP_<book-template>.org~
+            file into this project folder it will pick up its
+            associated SETUPFILES automatically because this folder
+            already exists! Consider this case if/when you decide
+            to delete other UNUSED SETUPFILES... They are small text
+            files not really bothering you...
+
+            /(YOU MAY NEED THEM LATER DEPENDING ON YOUR CASE)/
+
+            The DEFAULT Tags defined for all project templates are useful for
+            most situations and SOME tags are ALWAYS to be defined for this
+            LaTeX publishing system to work.
+
+            /Change the SETUPFILE name ABOVE and within this directory from/
+            ~default-tags.org~ /to another name and-or replace some -BUT NOT ALL-/
+            /of the tags within to your own tags... see instructions inside the/
+            /file.../
+
+7) *Handling Images:*
+
+      Some Images may render too large or too small to fit on a page
+      of an exported version of this file... This is easy do fix within
+      your content on an image by image basis...
       
-         ~HAP_General-Log-Notebook-Skeleton.pdf~
-         -and-
-         ~HAP_General-Log-Notebook-Skeleton.tex~
-      
-      /(or the name you changed it to located at the top of this file)/
-      will appear within the same directory as this file... 
-
-      Subsequent repeated calls to the above command will overwrite your
-      existing ~.pdf~ -and- ~.tex~ files! /(make backups first if needed!)/ You
-      could use the ~./auto/~ directory for backups...
-
-      =If you chose the last option above= LaTeX will output files with other
-      extensions for those other output formats...
-
-       =NOTE:= SETUPFILES have not been created yet for other eBook formats.
-             /(This is a work in progress)/
-
-      =If YOU EXPERIENCE LaTeX ERRORS:= 
-
-         *Consult Buffer:* ~*Org PDF LaTeX Output*~
-
-8) [ ] =Handling Images=
-
-      All Images /(by DEFAULT from above elisp source code block)/ are set
-      to thumbnail size (to properly size the .png ICONS /(emojis)/ in front
-      of Binder Headings etc...
-
-      This means that Other images within your ~.org~ file will ALSO display
-      as small thumbnails...
-
-      If that is NOT what you want for some images, you can override the
-      DEFAULT by using local attributes above the image link...
-
       Use *LaTeX* and/or *HTML* attributes as follows on the images that need
       to be a different size...
 
       =Example:=
       
-         #+CAPTION: Example larger size .png file 
-         #+NAME:  example:00001
-         #+attr_html: :width 200px
-         #+attr_latex: :width 200px
-      [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F3D5.png]]
+       #+CAPTION: Example larger size .png file 
+       #+NAME:  example:00001
+       #+attr_html: :width 600px
+       #+attr_latex: :width 100px
+       [[./media/lavender-banner.png]]
 
-=These Instructions Were Last Modified:= <2023-02-03 Fri> 
+=The Above Instructions Were Last Modified:= <2023-02-15 Wed> 
 
 So far things are pretty basic PDF for LOG Notebooks... We may get fancy with
 other formats later... /(Maybe a Status Report - Invoice thing with nice LOGO,
 /itemized tables with TOTAL, etc. - or something like that...)/
 
-I have to get all this documentation done first!
-/(As you can see, if you been following for the past couple years, things are/ 
- /getting done! Albeit Slowly)/
+I have to get all this documentation done first! /(As you can see, if you been following for the past couple years, things are getting done! Albeit Slowly)/
 
-=Please Open an ISSUE At:= https://github.com/harmonicalchemy/modular-emacs/issues
+If you experience problems =Please Open an ISSUE At:= https://github.com/harmonicalchemy/modular-emacs/issues
    
-Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas for Improvement... =You guys are my Product Managers=  I am only a User of ONE
-"seat". Other folks UX metrics are sorely needed!! Thanks!
+Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas for Improvement... =You guys are my Product Managers=  I am only a User of ONE "seat".
+Other folks UX metrics are sorely needed!! Thanks!
 
 =Enjoy!= - Alisha Awen
 :END:
@@ -439,7 +518,7 @@ Here are Links to Information that may be helpful While Using this Log Book Temp
 \mainmatter
 #+END_EXPORT
 
-* 2022 Logs:                                                   :export:
+* 2023 Logs:                                                         :export:
 ** NEW Lab Experiment Gone WRONG!                       :export:
 <2022-12-28 Wed>
 <<LOG_lab-experiment-gone-wrong>>
@@ -1096,7 +1175,7 @@ PartPFourVoiceOne =  \relative g, {
 #+RESULTS:
 [[file:./auto/MuseScore-Frescobaldi-Lilypond-Emacs.pdf]]
 
-* 2023 Logs:                                                    :export:
+* 2024 Logs:                                                         :export:
 
 /Not Here Yet but keep logging... The New Year will be here soon enough!/
 
@@ -1187,7 +1266,7 @@ Common time clocking commands are defined within the *Log Entry (template)* itse
 
 Additional commands for using *Org-Mode* with Modular Emacs will be explained here if needed, as well as other *Harmonic Alchemy Modular Emacs Templates* that get produced in the future...
 
-** 📄 Instructions:
+** ❔ HowTo:
 :README:
    This Log Notebook is being designed as these docs are being written...
    At first much of the design is being done /manually/ while formats,

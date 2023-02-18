@@ -1,8 +1,10 @@
 # -**- mode: org; coding: utf-8 -**-
-#+BEGIN_COMMENT
-=File:=  ~~/.emacs.d/Docs/pubOps/org-templates/gen-doc.org~
 
-        =GENERAL PURPOSE Documents Configuration=
+=File:= ~~/.emacs.d/Docs/pubOps/org-templates/gen-doc.org~
+
+      =ORG-MODE LaTeX SETUPFILE for: GP Simple Docs=  ~#+LATEX_CLASS: ~logbook~
+
+#+BEGIN_COMMENT
 
 =Usage:= *Include* this SETUPFILE within ~.org~ files destined to become
         a *General Purpose Document*...
@@ -24,6 +26,8 @@
 /configurations for different books without affecting the configurations of other/
 /book projects within their own MASTER FOLDERS.../
 #+END_COMMENT
+
+=Last Updated:= <2023-02-13 Mon> /(this file needs work)/
 
 =STANDARD STARTUP OPTIONS=
 

@@ -16,17 +16,20 @@
 
        =Don't Modify The MASTER Templates Within ~/.emacs.d=
 
-       /(if you did by accident, simply: ~git checkout .~ to refresh)/
+       /(if you did by accident, you can easily enough perform:/
+       
+            ~git restore <this file>~
 
-       *Add:* the following line to the Header of ~.Org~ Files that need to
-       include this file:
+            =or:= ~git checkout .~
 
-          ~#+SETUPFILE: ./org-templates/log-book-setup.org~
+        /to refresh ALL since you are not modifying the master branch...)/
 
-/Making a COPY/CLONE of:/ ~$HOME/.emacs.d/Docs/pubOps/org-templates~ /master/
-/folder To your book's project directory will allow you to make your own custom/
-/configurations for different books without affecting the configurations of other/
-/book projects within their own MASTER FOLDERS.../
+       =Add:= The following line to the Header of ~.Org~ Files that need to
+            include this file:
+
+               ~#+SETUPFILE: ./org-templates/log-book-setup.org~
+
+/Making a COPY/CLONE of:/ ~$HOME/.emacs.d/Docs/pubOps/org-templates~ /master folder To your book's project directory will allow you to make your own custom configurations for different books or other docs, without affecting the configurations of other book projects within their own MASTER FOLDERS.../
 
 =NOTE:= The Configurations within this file depend on Harmonic Alchemy Modular
       Emacs init file: ~~/.emacs.d/lisp/modules/09-4-org-export-conf.el~...
@@ -64,6 +67,8 @@ Set any *HEADING* within your .org project file with the following PROPERTIES BO
      *:END:*
 
 :END:
+
+=Last Updated:= <2023-02-13 Mon>
 
 - *Reference:*
    
@@ -106,12 +111,6 @@ Set any *HEADING* within your .org project file with the following PROPERTIES BO
    + [[https://orgmode.org/manual/LaTeX-fragments.html][12.5.1 LaTeX fragments]] - /(The Org Manual)/ 
 
    + [[https://www.offerzen.com/blog/literate-programming-empower-your-writing-with-emacs-org-mode][Empower Your Writing with Emacs Org-Mode]] - /(Literate Programming)/
-
-   + [[][] ] - 
-
-   + [[][] ] - 
-
-   + [[][] ] -
 
 =LaTeX --> LOG Book PDF:=
 
