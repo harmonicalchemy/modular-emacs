@@ -412,6 +412,39 @@
   ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   ;; SIMPLE DOCUMENT CLASS:
   ;;
+  ;; From: Alisha Awen
+  ;; REF:  Harmonic Alchemy Productions - Modular Emacs
+  ;;
+  ;; This Code Snippet Requires:
+  ;;       ~/.emacs.d/Docs/pubOps/org-templates/simple-doc-setup.tex
+  ;;
+  ;; TODO:
+  ;;       This is currently being developed to be used
+  ;;       with HAP_Simple-Document-Skeleton.org
+  ;;       A LaTeX configuration for short works like
+  ;;       README docs, abstracts, short papers, and
+  ;;       quick documentation for things not needing
+  ;;       a more complex format... bug fixes and refinements
+  ;;       are currently ongoing...
+
+  (add-to-list
+   'org-latex-classes
+   '("simple"
+     "\\documentclass[12pt, a4paper]{article}
+                  [NO-DEFAULT-PACKAGES]
+                  [PACKAGES]
+                  [EXTRA]
+      \\input{~/.emacs.d/Docs/TeX/simple-doc-setup.tex}"
+
+     ("\\section{%s}" . "\\section*{%s}")
+     ("\\subsection{%s}" . "\\subsection*{%s}")
+     ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+     ("\\paragraph{%s}" . "\\paragraph*{%s}")))
+  ;; ~~~~~~~~~~~~~ END: SIMPLE DOCUMENT CLASS ~~~~~~~~~~~~~~~
+
+  ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ;; GENERIC DOCUMENT CLASS:
+  ;;
   ;; From: Gene Ting-Chun Kao - PhD Researcher @ ETH Zurich
   ;;       BRG & NCCR dfab Research in Computational Design
   ;;       & Fabrication, Visual Computing
@@ -430,42 +463,42 @@
 
   (add-to-list
    'org-latex-classes
-   '("simple"
+   '("generic"
      "\\documentclass[11pt,a4paper]{article}
 
-\\usepackage[T1]{fontenc}
-\\usepackage{fixltx2e}
-\\usepackage{graphicx}
-\\usepackage{longtable}
-\\usepackage{float}
-\\usepackage{wrapfig}
-\\usepackage{rotating}
-\\usepackage[normalem]{ulem}
-\\usepackage{amsmath}
-\\usepackage{textcomp}
-\\usepackage{marvosym}
-\\usepackage{wasysym}
-\\usepackage{amssymb}
-\\usepackage{hyperref}
-\\usepackage{mathpazo}
-\\usepackage{color}
-\\usepackage{enumerate}
-\\definecolor{bg}{rgb}{0.95,0.95,0.95}
-\\tolerance=1000
-      [NO-DEFAULT-PACKAGES]
-      [PACKAGES]
-      [EXTRA]
-\\linespread{1.1}
-\\hypersetup{pdfborder=0 0 0}"
+  \\usepackage[T1]{fontenc}
+  \\usepackage{fixltx2e}
+  \\usepackage{graphicx}
+  \\usepackage{longtable}
+  \\usepackage{float}
+  \\usepackage{wrapfig}
+  \\usepackage{rotating}
+  \\usepackage[normalem]{ulem}
+  \\usepackage{amsmath}
+  \\usepackage{textcomp}
+  \\usepackage{marvosym}
+  \\usepackage{wasysym}
+  \\usepackage{amssymb}
+  \\usepackage{hyperref}
+  \\usepackage{mathpazo}
+  \\usepackage{color}
+  \\usepackage{enumerate}
+  \\definecolor{bg}{rgb}{0.95,0.95,0.95}
+  \\tolerance=1000
+  [NO-DEFAULT-PACKAGES]
+  [PACKAGES]
+  [EXTRA]
+  \\linespread{1.1}
+  \\hypersetup{pdfborder=0 0 0}"
      ("\\section{%s}" . "\\section*{%s}")
      ("\\subsection{%s}" . "\\subsection*{%s}")
      ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
      ("\\paragraph{%s}" . "\\paragraph*{%s}")))
-  ;; ~~~~~~~~~~~~~ END: SIMPLE DOCUMENT CLASS ~~~~~~~~~~~~~~~
+  ;; ~~~~~~~~~~~~~ END: GENERIC DOCUMENT CLASS ~~~~~~~~~~~~~~~
 
   ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   ;; ORG-NOTES DOCUMENT CLASS:
-  ;; (for exporting Simple NOTES to a Finer Quality LaTeX PDF)
+  ;; (for exporting Org NOTES to a Finer Quality LaTeX PDF)
   ;;
   ;; REF:
   ;;   https://github.com/mclearc/org-latex-classes
@@ -476,9 +509,9 @@
    'org-latex-classes
    '("org-notes"
      "\\documentclass[12pt]{article}
-                  [NO-DEFAULT-PACKAGES]
-                  [EXTRA]
-                  \\input{~/.emacs.d/Docs/pubOps/org-templates/notes-setup-file.tex}"
+  [NO-DEFAULT-PACKAGES]
+  [EXTRA]
+  \\input{~/.emacs.d/Docs/TeX/notes-setup-file.tex}"
      ("\\section{%s}" . "\\section*{%s}")
      ("\\subsection{%s}" . "\\subsection*{%s}")
      ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
@@ -504,11 +537,11 @@
    'org-latex-classes
    '("tuftebook"
      "\\documentclass{tufte-book}\n
-\\usepackage{color}
-\\usepackage{amssymb}
-\\usepackage{gensymb}
-\\usepackage{nicefrac}
-\\usepackage{units}"
+  \\usepackage{color}
+  \\usepackage{amssymb}
+  \\usepackage{gensymb}
+  \\usepackage{nicefrac}
+  \\usepackage{units}"
      ("\\section{%s}" . "\\section*{%s}")
      ("\\subsection{%s}" . "\\subsection*{%s}")
      ("\\paragraph{%s}" . "\\paragraph*{%s}")
@@ -533,12 +566,12 @@
    'org-latex-classes
    '("tuftehandout"
      "\\documentclass{tufte-handout}
-\\usepackage{color}
-\\usepackage{amssymb}
-\\usepackage{amsmath}
-\\usepackage{gensymb}
-\\usepackage{nicefrac}
-\\usepackage{units}"
+  \\usepackage{color}
+  \\usepackage{amssymb}
+  \\usepackage{amsmath}
+  \\usepackage{gensymb}
+  \\usepackage{nicefrac}
+  \\usepackage{units}"
      ("\\section{%s}" . "\\section*{%s}")
      ("\\subsection{%s}" . "\\subsection*{%s}")
      ("\\paragraph{%s}" . "\\paragraph*{%s}")
@@ -558,28 +591,13 @@
   (add-to-list
    'org-latex-classes
    '("refbook"
+     
      "\\documentclass[openleft,oneside,showtrims]{memoir}
+             [NO-DEFAULT-PACKAGES]
+             [PACKAGES]
+             [EXTRA]
+      \\input{~/.emacs.d/Docs/TeX/ref-book-file.tex}"
 
-\\usepackage{calc}
-\\setlength{\\headwidth}{\\textwidth}
-\\addtolength{\\headwidth}{.382\\foremargin}
-\\renewcommand\\afterchapternum{}
-
-\\renewcommand\\afterchaptertitle{%
-\\ifnum \\c@secnumdepth>\\m@ne%
-\\ifNoChapNum\\else\\par\\nobreak\\vskip\\afterchapskip\\fi%
-\\fi}
-
-\\setlength\\beforechapskip{15pt}
-\\renewcommand\\printchapternonum{\\global\\NoChapNumtrue}
-\\renewcommand{\\chaptitlefont}{\\raggedleft\\normalfont\\Huge\\bfseries}
-\\makeatletter
-
-\\AtBeginDocument{
-    \\nonzeroparskip
-    \\frontmatter
-}
-\\chapterstyle{lyhne}"
      ("\\chapter{%s}" . "\\chapter*{%s}")
      ("\\section{%s}" . "\\section*{%s}")
      ("\\subsection{%s}" . "\\subsection*{%s}")
@@ -588,7 +606,6 @@
      ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
   ;; ~~~~~~~ END: HAP REFERENCE BOOK DOCUMENT CLASS: ~~~~~~~~
 
-  
   ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   ;;  HAP AUDIO DRAMA PRODUCTION DOCUMENT CLASS:
   ;;  (audio-production - use memoir)
@@ -604,35 +621,35 @@
    '("audio-production"
      "\\documentclass[openleft,oneside,showtrims]{memoir}
 
-\\usepackage{calc}
+  \\usepackage{calc}
 
-\\setstocksize{9in}{6in}
-\\settrimmedsize{\\stockheight}{\\stockwidth}{*}
-\\setlrmarginsandblock{2cm}{2cm}{*}       %% Left and right margin
-\\setulmarginsandblock{2cm}{2cm}{*}       %% Upper and lower margin
-\\checkandfixthelayout
+  \\setstocksize{9in}{6in}
+  \\settrimmedsize{\\stockheight}{\\stockwidth}{*}
+  \\setlrmarginsandblock{2cm}{2cm}{*}       %% Left and right margin
+  \\setulmarginsandblock{2cm}{2cm}{*}       %% Upper and lower margin
+  \\checkandfixthelayout
 
-\\setlength{\\headwidth}{\\textwidth}
-\\addtolength{\\headwidth}{.382\\foremargin}
-\\renewcommand\\afterchapternum{}
-\\setlength\\beforechapskip{15pt}
-\\renewcommand\\printchapternonum{\\global\\NoChapNumtrue}
-\\renewcommand{\\chaptitlefont}{\\raggedleft\\normalfont\\Huge\\bfseries}
+  \\setlength{\\headwidth}{\\textwidth}
+  \\addtolength{\\headwidth}{.382\\foremargin}
+  \\renewcommand\\afterchapternum{}
+  \\setlength\\beforechapskip{15pt}
+  \\renewcommand\\printchapternonum{\\global\\NoChapNumtrue}
+  \\renewcommand{\\chaptitlefont}{\\raggedleft\\normalfont\\Huge\\bfseries}
 
-\\makeatletter
+  \\makeatletter
   \\renewcommand\\afterchaptertitle{%
-    \\ifnum \\c@secnumdepth>\\m@ne%
-      \\ifNoChapNum\\else\\par\\nobreak\\vskip\\afterchapskip
-      \\fi%
-    \\fi
+  \\ifnum \\c@secnumdepth>\\m@ne%
+  \\ifNoChapNum\\else\\par\\nobreak\\vskip\\afterchapskip
+  \\fi%
+  \\fi
   }
-\\makeatother
+  \\makeatother
 
-\\AtBeginDocument{
-    \\nonzeroparskip
-    \\frontmatter
-}
-\\chapterstyle{lyhne}"
+  \\AtBeginDocument{
+  \\nonzeroparskip
+  \\frontmatter
+  }
+  \\chapterstyle{lyhne}"
      ("\\chapter{%s}" . "\\chapter*{%s}")
      ("\\section{%s}" . "\\section*{%s}")
      ("\\subsection{%s}" . "\\subsection*{%s}")
@@ -641,7 +658,6 @@
      ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
   ;; ~~~ END: HAP AUDIO DRAMA PRODUCTION DOCUMENT CLASS: ~~~~
 
-  
   ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   ;; HAP BLUE BOX FICTION BOOK DOCUMENT CLASS:
   ;; (blueboxbook - uses memoir)
@@ -670,95 +686,17 @@
   (add-to-list
    'org-latex-classes
    '("blueboxbook"
-     "\\documentclass[openleft]{memoir}
 
-%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PREAMBLE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ %%%
-\\usepackage{color,calc}
-
-%%% ~~~~~~~~~~~~ FONT SPECS ~~~~~~~~~~~~~
-\\usepackage[LGR, T1]{fontenc}
-\\usepackage{libertine}
-\\usepackage{libertinust1math}
-\\usepackage{gfsneohellenic}
-\\renewcommand{\\sfdefault}{neohellenic}
-\\usepackage{titlesec}
-\\titleformat*{\\section}{\\Large\\sffamily}
-\\titleformat*{\\subsection}{\\large\\sffamily}
-\\titleformat*{\\subsubsection}{\\normalsize\\sffamily}
-
-%%% ~~~~~~~~ CHAPTER NUMBER BOX ~~~~~~~~~
-\\newsavebox{\\ChpNumBox}
-\\definecolor{ChapBlue}{rgb}{0.00,0.65,0.65}
-
-\\makeatletter
-
-\\newcommand*{\\thickhrulefill}{%
-  \\leavevmode\\leaders\\hrule height 1\\p@ \\hfill \\kern \\z@}
-
-\\newcommand*\\BuildChpNum[2]{%
-   \\begin{tabular}[t]{@{}c@{}}
-     \\makebox[0pt][c]{#1\strut}  \\\[.5ex]
-     \\colorbox{ChapBlue}{%
-        \\rule[-10em]{0pt}{0pt}%
-        \\rule{1ex}{0pt}\\color{black}#2\\strut
-        \\rule{1ex}{0pt}}%
-   \\end{tabular}}
-
-%%% ~~~~~~~~~~~~~~~~~~ Make BLUE BOX CHAPTER HEADING STYLE ~~~~~~~~~~~~~~~~~~ %%%
-\\makechapterstyle{BlueBox}{%
-   \\renewcommand{\\chapnamefont}{\\large\\scshape}
-   \\renewcommand{\\chapnumfont}{\\Huge\\bfseries}
-   \\renewcommand{\\chaptitlefont}{\\raggedright\\Huge\\bfseries}
-   \\setlength{\\beforechapskip}{20pt}
-   \\setlength{\\midchapskip}{26pt}
-   \\setlength{\\afterchapskip}{40pt}
-   \\renewcommand{\\printchaptername}{}
-   \\renewcommand{\\chapternamenum}{}
-
-   \\renewcommand{\\printchapternum}{%
-      \\sbox{\\ChpNumBox}{%
-         \\BuildChpNum{\\chapnamefont\\@chapapp}%
-         {\\chapnumfont\\thechapter}
-      }
-   }
-
-   \\renewcommand{\\printchapternonum}{%
-      \\sbox{\\ChpNumBox}{%
-         \\BuildChpNum{\\chapnamefont\\vphantom{\\@chapapp}}%
-         {\\chapnumfont\\hphantom{\\thechapter}}
-      }
-   }
-
-   \\renewcommand{\\afterchapternum}{}
-
-   \\renewcommand{\\printchaptertitle}[1]{%
-      \\usebox{\\ChpNumBox}\\hfill
-
-      \\parbox[t]{\\hsize-\\wd\\ChpNumBox-1em}{%
-         \\vspace{\\midchapskip}%
-         \\thickhrulefill\\par
-         \\chaptitlefont ##1\\par
-      }
-   }%
-} %% END BlueBox Chapter Style...
-\\makeatother
-%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ BEGIN DOCUMENT ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ %%%
-
-\\AtBeginDocument{
-    \\nonzeroparskip
-    \\frontmatter
-}
-
-\\chapterstyle{BlueBox}"
+     "\\documentclass[openleft,oneside,showtrims]{memoir}
+             [NO-DEFAULT-PACKAGES]
+             [PACKAGES]
+             [EXTRA]
+      \\input{~/.emacs.d/Docs/TeX/fiction-book-setup.tex}"
 
      ("\\chapter{%s}" . "\\chapter*{%s}")
      ("\\section{%s}" . "\\section*{%s}")
      ("\\subsection{%s}" . "\\subsection*{%s}")
-     ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-     ("\\paragraph{%s}" . "\\paragraph*{%s}")
-     ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+     ("\\subsubsection{%s}" . "\\subsubsection*{%s}")))
   ;; ~~~~ END: HAP BLUE BOX FICTION BOOK DOCUMENT CLASS: ~~~~
 
   ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -776,7 +714,7 @@
      "\\documentclass[12pt, openleft, oneside, showtrims]{memoir}
 
          [EXTRA]
-         \\input{~/.emacs.d/Docs/pubOps/org-templates/log-book-setup.tex}"
+         \\input{~/.emacs.d/Docs/TeX/log-book-setup.tex}"
      ("\\chapter{%s}" . "\\chapter*{%s}")
      ("\\section{%s}" . "\\section*{%s}")
      ("\\subsection{%s}" . "\\subsection*{%s}")
@@ -784,7 +722,6 @@
      ("\\paragraph{%s}" . "\\paragraph*{%s}")
      ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
   ;; ~~~~~~~~~~~ END: HAP LOGBOOK DOCUMENT CLASS ~~~~~~~~~~~~
-
 
   ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   ;;  HAP LAB NOTEBOOK DOCUMENT CLASS:

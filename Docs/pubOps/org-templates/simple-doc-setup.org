@@ -46,18 +46,11 @@
          Then update the timestamp ABOVE... /(WITHIN YOUR CLONE)/ to record
          the date of its last sync status...
 :END:
-
-=File:= ~~/.emacs.d/Docs/pubOps/org-templates/log-book-setup.org~
-
-           =ORG-MODE LaTeX SETUPFILE for: LOG Notebooks=
-           
-                    ~#+LATEX_CLASS: logbook~
-
 :README:
 
 =Usage:= *Copy/Clone* this file and adjust to suit your needs...
        *Include* this SETUPFILE within ~.org~ files destined to become
-       *LOG Notebooks*...
+       a *Short General Purpose Document*...
 
        *COPY/CLONE:* ~~/.emacs.d/Docs/pubOps/org-templates~ directory
        to the MASTER directory where existing .org files reference
@@ -77,7 +70,7 @@
        =Add:= The following line to the Header of ~.Org~ Files that need to
             include this file:
 
-               ~#+SETUPFILE: ./org-templates/log-book-setup.org~
+               ~#+SETUPFILE: ./org-templates/simple-doc-setup.org~
 
 /Making a COPY/CLONE of:/ ~$HOME/.emacs.d/Docs/pubOps/org-templates~ /master folder To your book's project directory will allow you to make your own custom configurations for different books or other docs, without affecting the configurations of other book projects within their own MASTER FOLDERS.../
 
@@ -95,28 +88,41 @@
       It's a LOT of work, /(research)/ but worth it in the end when you have
       something looking really nice!
 
-The ~logbook~ =CLASS= defined within: ~09-4-org-export-conf.el~ Uses: ~~/.emacs.d/Docs/pubOps/org-templates/log-book-setup.tex~ for its *LaTeX* Configuration...
+=This configuration uses the SIMPLE DOCUMENT CLASS= defined within:
+~09-4-org-export-conf.el~ as: ~simple~ for its *LaTeX* Configuration...
 
-A copy of this file will be in your local ~org-templates~ directory for you to inspect and change to fit your particular needs...
+=For Local Customizing:= You will have to edit your local CLONED copy of: ~09-4-org-export-conf.el~... /(as per above NOTE...)/
 
-=For Local Customizing:= You will have to edit your local CLONED copy of: ~09-4-org-export-conf.el~... /(as per above NOTE...)/ Find the ~"logbook"~ section within ~org-latex-classes~ list, and change the ~\\input~ path to your local customized clone of ~log-book-setup.tex~ file... You will need to study *LaTeX* a lot and in particular, the *"memoir"* document class... =read the well documented docs= /(see reference section below)/
+Find the ~"simple"~ section within ~org-latex-classes~ list, and change anything after the first ~\\~ Indicating the beginning of *LaTeX* directives that have to be escaped within an eLisp list...  You could also /(and I am going to as well)/ move all that embedded
+*LaTeX* code =OUT OF lisp=, and into its own ~.tex~ file where it belongs! Using the ~\\input~
+line to reference the file as the only "data" for that elisp list and you can close quote... You are done with the eLisp part... A lot cleaner code too!  Mixing both languages together like that is an insult to both languages mutually... IMHO...  But as you see I cheated for this first round...  Quick and dirty... maybe not quick... LOL
 
-Once you have tried this several times /(and failed)/ it won't look so complicated and you will begin to "get it"... /(Be Diligent! TeX/LaTeX IS a complicated Turing Complete Language... Created by one of the Geekiest GEEKS of Computer Science, Mathematics, and Algorithm Analysis! Donald Knuth... You have been warned!!!)/
+By the time you read this I may have already done the above, /(but forgot to update this
+doc)/ Sorry... =Please Let me know with an open ISSUE on GitHub=... Thanks!
+
+Once you have tried this several times to customize your LaTeX /(and failed)/ it won't look so complicated and you will begin to "get it"... /(Be Diligent! TeX/LaTeX IS a complicated Turing Complete Language... Created by one of the Geekiest GEEKS of Computer Science, Mathematics, and Algorithm Analysis! Donald Knuth... You have been warned!!!)/
 
 =Good luck!=
 
-=HOWTO: Prevent Headlines from Showing Up in the TOC=
+=HOWTO Org-Mode LaTeX Tip:=
 
-Set any *HEADING* within your .org project file with the following PROPERTIES BOX...
+Prevent Headlines from Showing Up in the *TOC* by seting any *HEADING* within your ~.org~ project file with the following *:PROPERTIES:* BOX...
 
 - *Set The NOTOC Property:* /(NOT in TOC)/
 
-     =* Section HEADING:=
+     ~*~ =ANY Section HEADING:=
      *:PROPERTIES:*
-          :NOTOC: t
+:       :NOTOC: t
      *:END:*
 
+Don't copy this pretty text example... It is NOT code... LOL
 :END:
+
+=File:= ~~/.emacs.d/Docs/pubOps/org-templates/simple-doc-setup.org~
+
+            =ORG-MODE LaTeX SETUPFILE for: GP Simple Docs=
+      
+                       ~#+LATEX_CLASS: simple~
 
 - *Reference:*
    
@@ -148,7 +154,7 @@ Set any *HEADING* within your .org project file with the following PROPERTIES BO
 
    + [[https://github.com/Tufte-LaTeX/tufte-latex][tufte-latex.github.io/tufte-latex/]]
 
-   + [[https://latex-tutorial.com/documentclass-latex/][Your Guide to documentclass LaTeX - Latex-Tutorial.com]] 
+   + [[https://latex-tutorial.com/documentclass-latex/][Your Guide to documentclass LaTeX - Latex-Tutorial.com]]
 
    + [[https://mirror2.sandyriver.net/pub/ctan/macros/latex/contrib/memoir/memman.pdf][The Memoir Document Class]] - /(link to PDF)/
 
@@ -160,38 +166,22 @@ Set any *HEADING* within your .org project file with the following PROPERTIES BO
 
    + [[https://www.offerzen.com/blog/literate-programming-empower-your-writing-with-emacs-org-mode][Empower Your Writing with Emacs Org-Mode]] - /(Literate Programming)/
 
-=LaTeX --> LOG Book PDF:=
+=LaTeX --> GP Simple Doc PDF:=
 
-/Currently Using ~logbook~ Class/
-/Chapter Style:/  ~verville~
-/DEFINED in:/     ~09-4-org-export-conf.el~
+/(currently all Latex Configurations are done here, but eventually this file will only set the directive: ~#+LATEX_CLASS:~ simple is defined within: ~09-4-org-export-conf.el~)/
 
-#+LATEX_CLASS:  logbook
+=LaTeX CLASS & PAPER SIZE:= /(defined within: ~09-4-org-export-conf.el~)/
+
+#+LATEX_CLASS: simple
+
+=LaTeX EXPORT OPTIONS:=
 
 =DISABLED OPTIONS For This Configuration:= /(for debugging)/
 
 #+BEGIN_COMMENT
-   #+LATEX_HEADER: \renewcommand\familydefault{\sfdefault}
-   #+LATEX_HEADER: \setlength{\textheight}{230mm}
-   #+LATEX_HEADER: \setlength{\textwidth}{160mm}
-   #+LATEX_HEADER: \setlength{\voffset}{-10mm}
-   #+LATEX_HEADER: \setlength{\oddsidemargin}{0mm}
-   #+LATEX_HEADER: \setlength{\evensidemargin}{0mm}
-
-   #+OPTIONS: e:nil
-      # DO NOT Include Entities (org-export-with-entities)
-      # Example: HTML exports \\alpha as: &alpha;
-
-   #+OPTIONS: tex:verbatim
-      # Verbatim export (org-export-with-latex)
-
-   #+OPTIONS: toc:??? 
-      # I have tried all settings in past (org-export-with-toc)
-
-   #  #+begin_export latex
-   #     \begin{document}
-   #     \maketitle
-   #  #+end_export
+   # #+OPTIONS: toc:2        # Set TOC (org-export-with-toc) 2 levels
+   # #+OPTIONS: toc:nil      # DO NOT Include Default TOC (org-export-with-toc)
+   # #+OPTIONS: num:3        # Set Section Numbering level...
 #+END_COMMENT
 
 =STARTUP OPTIONS For This Configuration:=
@@ -245,8 +235,8 @@ Set any *HEADING* within your .org project file with the following PROPERTIES BO
    # Broken link(s) found?
    # Mark Them & Don't Export (org-export-with-broken-links)
 
-#+OPTIONS: c:t
-   # Include CLOCK keywords in exported documents (org-export-with-clocks)
+#+OPTIONS: c:nil
+   # DONT Include CLOCK keywords in exported documents (org-export-with-clocks)
 
 #+OPTIONS: creator:t
    # Include Creator Info (org-export-with-creator)
@@ -277,11 +267,11 @@ Set any *HEADING* within your .org project file with the following PROPERTIES BO
    # IF todo - REMOVE DONE TASKS...
    # IF list - (use list of keywords to keep)
 
-#+OPTIONS: inline:t
-   # Include Inline Tasks (org-export-with-inlinetasks)
+#+OPTIONS: inline:nil
+   # Do NOT Include Inline Tasks (org-export-with-inlinetasks)
 
-#+OPTIONS: num:6
-   # LIMIT SECTION NUMBERING TO 6 LEVELS DEEP...
+#+OPTIONS: num:3
+   # LIMIT SECTION NUMBERING TO 3 LEVELS DEEP...
    # (org-export-with-section-numbers)
    # When N, Number only headlines level N or above.
    # Set ‘UNNUMBERED’ property to non-nil to disable
@@ -313,11 +303,12 @@ Set any *HEADING* within your .org project file with the following PROPERTIES BO
 #+OPTIONS: title:t
    # Include Title (org-export-with-title)
 
-#+OPTIONS: toc:t
-   # Create DEFAULT TOC... (org-export-with-toc)
+#+OPTIONS: toc:3
+   # Include TOC (level 3) (org-export-with-toc)
 
 #+OPTIONS: todo:nil
-   # DO NOT Include TODO keywords (org-export-with-todo-keywords)
+   # DON'T Include TODO keywords (org-export-with-todo-keywords)
 
 #+OPTIONS: |:t
    # Include Tables (org-export-with-tables)
+

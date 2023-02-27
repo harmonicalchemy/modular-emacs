@@ -1,164 +1,276 @@
 # -**- mode: org; coding: utf-8 -**-
 #+TITLE: HAP - Simple LOG Notebook Skeleton
-#+EXPORT_FILE_NAME: HAP_Simple-Log-Notebook-Skeleton.pdf
 #+TEXT: Copyright © 2022 Harmonic Alchemy Productions & Others
 #+AUTHOR: Alisha Awen - Harmonic Alchemy Productions
 #+EMAIL: Siren1@disroot.org
-#+DATE: <2022-10-17 Mon>
+#+DATE: <2023-02-16 Thu>
 #+TEXT: Created: <2022-01-26 Wed>
-#+TEXT: Last Published: <not-published>
+#+TEXT: Last Published: <NOT-published>
 #+FILETAGS: templates logs unpublished
 
-#+DESCRIPTION: HAP - Modular Emacs Org Mode Simple Log Notebook Template.  This is a minimalist version of: HAP_General-Log-Book-Skeleton.org (a Full Featured Look Book Skeleton Template).  This log book does not have all the bells and whistles because sometimes you need a simple way to record your time on tasks, etc. but not necessarily for HUGE projects, etc... Use this for quick stuff... You are expected to know what is going on in here... (but if not you have the General Template to learn from)... This simplified log book skeleton is minimally configured for LaTeX Export to simple PDF only...
+#+DESCRIPTION: HAP - Modular Emacs Org Mode Simple Log Notebook Template.  This is a minimalist version of: HAP_General-Log-Book-Skeleton.org (a Full Featured Look Book Skeleton Template).  This log book does not have all the bells and whistles of HAP_General-Log-Book-Skeleton.org This Simple Log Template is Great FOR Internal Tracking and Planning withtin Org-Mode ONLY when you don't need to be bothered with exporting to PDF etc... There are NO LaTeX directives in here. This Template's SOLE PURPOSE is for making a traditional Log useful for internal project management that does not itself get published...
 
-#+BEGIN_COMMENT 
-=Setup Files:=
+#+BEGIN_COMMENT
+
+=Setup TAGS:=
 
    For Cloned Versions of this template, the file/paths below will be relative
-   to your parent project directory and as such, should be all set to your new: ~.../your-Log-Book-Project/org-templates/~ directory...
+   to your parent project directory and as such, should be all set to your new: ~.../your_Simple-LOG.org_File's/org-templates/~ directory...
 
-=NOTE:= 
+   *SETUPFILE:* ~default-tags.org~ is where tags are defined for this project...
+              If you need to change the category, do it in your cloned version
+              of default-tags.org...  If you rename default-tags.org file from
+              "default" to something more specific, you will need to change the
+              ~#+SETUPFILE: ./org-templates/default-tags.org~ line below to reflect
+              your new file name as well...  You may change any of the tags except
+              important ones to what ever you wish... Read the *:README:* drawer
+              within the file for more information...
 
-   ~#+CATEGORY:~ is specified within ~simple-log-book.org~ SETUPFILE.
-   If you need to change the category, do it in your cloned version
-   of fiction-book.org...
+              The Existing Tags are useful for most situations within
+              this context, and some of the tags MUST ALWAYS be defined
+              for this LaTeX publishing system to work correctly...
 
-   *SETUPFILE:* ~default-tags.org~ is where tags are set for this project...
+              This file may be used by other ~.org~ files within this
+              Master Folder... If you need to customize them specifically
+              for this ~.org~ file alone, you should copy and rename:
+              ~default-tags.org~ and modify your renamed copy instead...
+              
+              If you do this, you will ALSO need to change the
+              ~#+SETUPFILE: ./org-templates/default-tags.org~
+              directive below to reflect your changed file name...
 
-   *SETUPFILE:* ~latex-simple-pdf.org~ is for LaTeX Export Configurations 
-              to produce a PDF version of your Log Note Book...
+              /(change the name from/ ~default-tags.org~ /to another name/
+              /and-or replace some (but NOT ALL) of the tags within/
+              /to your own tags... see instructions inside the file)/
 #+END_COMMENT
 
-#+SETUPFILE: ./org-templates/simple-log-book.org
-#+SETUPFILE: ./org-templates/latex-simple-pdf.org
 #+SETUPFILE: ./org-templates/default-tags.org
 
-:READ_ME_FIRST:
-☞ =Instructions:= /(How to Install & Use This Template)/
+:LATEST_UPDATE:
+  <2023-02-16 Thu>
 
-To use *HAP_Simple-Log-Book-Skeleton.org* /(Org-Mode Simple Log Notebook /Template)/ for your own projects, perform the following steps: 
+  =YOU MAY REMOVE This Drawer= from your own clones of this template if
+  it is bothering you... This drawer is used for HAP Modular Emacs
+  DOC TEMPLATES housekeeping...
+
+  =HOWEVER= you may also use it for the same purpose to keep your existing
+  Modular Emacs based org documents in sync with the latest updates of the
+  template they were created from...
+  
+  =If you do wish to do the same... Read On Below...=
+  
+  - =INTERNAL USE Instructions:= /(END USERS SKIP THIS BULLET)/
+
+    This bullet is not for end users... This is /"Note to Self"/ stuff...
+
+     + [X] =MASTER TEMPLATE ONLY= *Keep The Above Timestamp Up To Date:*
+
+         DO THIS ALWAYS, JUST AFTER YOU UPDATE THIS TEMPLATE... DON'T FORGET!
+         /(i.e., BOILERPLATE content and :README: meta data)/
+  
+  - =PUBLIC USE Instructions:= /(FOR CLONES OF THIS TEMPLATE)/
+
+     + [ ] =Change this= *:LATEST_UPDATE:* =drawer title:= /(within clones only)/
+
+          Change it to: *:LATEST_TEMPLATE_UPDATE:* within NEWLY CREATED CLONES...
+
+     + [ ] *COMPARE the TIMESTAMPS between THIS TEMPLATE and CLONES:*
+
+          The BOILERPLATE content and meta data within CLONES of this
+          TEMPLATE will get out of sync after a while due to Harmonic
+          Alchemy Modular Emacs version updates etc...
+        
+          Use the ABOVE timestamp /(within the TEMPLATE and your CLONE)/
+          to see if the clone's BOILERPLATE content needs to be updated
+          /(brought into sync with its template - MERGE)/ and then perform
+          any needed merging/replacing of BOILERPLATE and/or meta data.
+          /(e.g, *:README:* drawers, etc.)/
+
+     + [ ] *Keep ABOVE timestamp within CLONES of this template UP TO DATE:*
+
+          =AFTER Completing Above MERGE Step= and your clone's BOILERPLATE
+          content has been brought up to date /(i.e. in sync)/ with
+          its TEMPLATE... Then update the timestamp ABOVE...
+          /(WITHIN YOUR CLONE)/ to record the date of its last sync status...
+:END:
+:READ_ME_FIRST:
+=Instructions:= /(How to Install & Use This Template)/
+
+To use *HAP_Simple-Log-Book-Skeleton.org* /(Minimalist Log Notebook /TEMPLATE)/ for your own projects, =Perform The Following Steps:=
 
 /Use the org-mode Checkboxes to Help You Keep Track of Progress/
 
 1) [ ] *Clone a Copy of This File:* 
 
-      Put your clone where you normally organize your Logs or 
-      projects that need logs. *Place it within its own master*
-      *folder or within a master project folder that needs a LOG...*
-      It is Important to =Keep This File Within This MASTER=
-      =Enclosing Folder!=
+      Put your clone where you normally organize your Logs
+      or projects that need logs...
 
-      If this is a =STANDALONE LOG NOTEBOOK=, Name the =MASTER FOLDER=
-      to reflect your Log Book Project's Title...
-      /(i.e., what you renamed this General-Log-Book-Lkeleton.org file to)/
+      *Place this file within its own MASTER FOLDER*: =OR= place it
+      within another *MASTER FOLDER* of any project you need to add
+      journalling and time tracking to...
+      
+      =OR= place it within the *MASTER FOLDER* of another *Modular Emacs*
+      Org-Mode TEMPLATE based document project...
 
-      =Other Files/Folders will be placed within this MASTER FOLDER...=
+      Existing *Modular Emacs MASTER FOLDERS* will contain other files
+      for other projects as well as the SETUPFILES and MEDIA required
+      by this: ~HAP_Simple-Log-Book-Skeleton.org~ file...
 
-2) [ ] *Create:* ~./media~ *sub folder in your Master Folder:*
+      =In other words= *CLONE THIS TEMPLATE WHERE EVER YOU NEED TO PUT IT...*
+      The folder you put it in becomes it's *MASTER FOLDER*...
+      Don't move it somewhere else afterwards. It will loose its
+      dependencies if you do that...
 
-      Create this new directory /(if it is not already present - within your master/
-      /folder as a sibling of this file).../ Any external documents or images
-      referenced by your Log book should be placed within this ~./media/~
-      directory...
+      =Keep This File Within its MASTER ENCLOSING FOLDER=
 
-      This single ~./media~ directory will serve media and external attachments 
-      for any and all ~.org~ docs within this =MASTER FOLDER= /(parent directory)/...
+      If this is a =STANDALONE LOG=, Name the =MASTER FOLDER= to reflect the
+      subject category that it is going to be associated with...
+      /(i.e., what you renamed this HAP_Simple-Log-Book-Lkeleton.org file to)/
 
-      =Note:= You DON'T need to create or copy the ~./auto/~ directory...
-             That directory will be automatically created the first time
-             you export this ~.org~ file to ~.PDF~...
+      =Other Files/Folders Will Be Placed Within This MASTER FOLDER...=
 
-3) [ ] *Copy/Clone:* ~./org-templates~ /(and all contents)/ *to your MASTER FOLDER:*
+2) [ ] =Start Documenting/Logging NOW Before You Loose It!=
 
-      Copy this directory to your Log Notebook's MASTER FOLDER,
-      /(i.e., as a sibling/ /of this .org file).../ 
-
-      =Note:= The SETUPFILES Within this directory which are called out and 
-            included by this .org file /(above)/ must stay within this
-            directory...  
-
-            Other SETUPFILES within this directory are used by other book 
-            project templates and are not needed for this LOG Book
-            Project... You may remove them if you wish...
-
-            However, consider If you clone another ~HAP_<book-template>.org~
-            file into this MASTER FOLDER it will pick up its associated SETUPFILES automatically, so consider that if/when you decide to delete other
-            UNUSED SETUPFILES... They are small text files not bothering you or
-            your operations...
-
-4) [ ] =Start Documenting/Logging NOW Before You Loose It!=
-
-      =NOTE:= You may be doing this because you have something you need to
-             quickly document and or add a time-stamped log entry for...
+      You may be doing this because you have something you need to
+      quickly document and or add a time-stamped log entry for...
             
-             You need to write that down before you forget!  =Right?=
-             Therefore... as soon as you are done with the first steps above,
-             =STOP= and go immediately to the: *📒 Begin LOG* Binder...
-             =Open:= *NEW 🗓 LOG: <2021-03-29 Mon> Generic Title* under: *📅 2022:*
-             Heading, and Follow Instructions contained in the *:README:*
-             drawer...  Rename "Generic Title" to a name that fits the subject
-             of your new Log Entry...
+      You need to write that down before you forget!  =Right?= The clock
+      is ticking too! Therefore... as soon as you are done with the
+      first steps above, =STOP= and go immediately to the: 📒 *Simple Log:*
+      Binder...
 
-             Once your first LOG ENTRY is completed, /(the reason you started/
-             /this LOG in the first place)/ You should come back and:
-             =Resume Finishing Set Up of This LOG Notebook= /(next steps below)/
+      =Open:= *NEW* 🗓 *EXAMPLE Log Entry* /(Cloned from TEMPLATE)/ under the
+      *📅 2023:* Heading, and Follow Instructions contained in the
+      *:README:* drawer... Rename "EXAMPLE Log Entry" to a name that fits
+      the subject of your new Log Entry...
 
-5) [ ] *Finish Setting up this Project* =LATER= [0/3]
+      Once your first LOG ENTRY is completed, /(the reason you started/
+      /this LOG in the first place)/ You should come back and:
+      =Resume Finishing Set Up of This LOG Notebook= /(next steps below)/
+
+3) [ ] =Finish Setting Up The Rest Of This Project LATER= [0/12]
+
+    - [ ] *Change Title of :LATEST_UPDATE: drawer ABOVE:*
+
+         AFTER Cloning, Change *:LATEST_UPDATE:* drawer title ABOVE
+         /(WITHIN YOUR CLONE, NOT THE ORIGINAL!)/ to *:LATEST_TEMPLATE_UPDATE:*
+         AND Follow Instructions within it...
+
+    - [ ] *Copy/Clone:* ~./media~ /(and contents)/ *to the MASTER FOLDER:*
+
+         Copy this directory /(into the MASTER FOLDER as a sibling of this file).../ 
+         Any external documents or images referenced by your *Simple Log Book*
+         should be placed within this ~./media/~ directory...
+
+         All external links, images, within the boilerplate examples of this
+         template may be used as examples for getting your own images, and 
+         external attachments linked properly...  
+
+         This single ~./media~ directory will serve media and external attachments 
+         for this and other Modular Emacs Document TEMPLATE ~.org~ files that may
+         exist within this MASTER FOLDER now or in the future...
+
+         /(IF/WHEN THEY /WERE/ARE COPIED HERE)/
+
+         =Note:=  You DON'T need to copy the ~./auto/~ directory... That directory
+                may be automatically created by *AuxTeX* when exporting other ~.org~
+                files based on *Modular Emacs* TEMPLATES but =NOT= from this ~.org~
+                file which is not set up for exporting to ~.PDF~...
+
+    - [ ] *Copy/Clone:* ~./org-templates~ /(and all contents)/ *to the MASTER FOLDER:*
+
+         =WARNING!:= To avoid overwriting existing files, DO NOT COPY this
+                   ~./org-templates~ to your MASTER FOLDER IF ONE ALREADY EXISTS!
+
+                   But DO follow the rest of this step so you will know what you
+                   should do...
+
+                   =OTHERWISE For MASTER FOLDERS that DO NOT already have one:=
+                   *Copy this NEW directory to serve as your:*
+                   =NEW Simple Log Book's MASTER FOLDER=
+                   /(i.e., as a sibling/ /of this README.org file).../
+
+         =Note:= SETUPFILES Within this directory are called out and included
+               by this ~HAP_Simple-Log-Book.org~ file /(within the file header above)/
+
+         =WARNING:= There may ALREADY be an ~org-templates~ directory existing
+                  within your MASTER FOLDER! In that case you will need to
+                  merge: ~default-tags.org~ /(contained within)/ into your
+                  existing copy of it instead...       
+
+                  =YOU WON'T WANT TO OVERRITE EXISTING FILES= within this 
+                  directory you are already using, /(and modified!!!)/
+                  but you may need to update existing files you are NOT
+                  using currently if/when you DO start using them...
+
+         Other SETUPFILES within this directory are intended to be used by
+         other document style project templates and are not needed for this:
+         ~HAP_Simple-Log-Book.org~ Document... You may remove the extra files
+         if you wish... 
+
+         =HOWEVER:= If you decide to clone another ~HAP_<book-template>.org~
+                  file into this project folder it will pick up its
+                  associated SETUPFILES automatically because this folder
+                  already exists! Consider this case if/when you decide
+                  to delete other UNUSED SETUPFILES... They are small text
+                  files not really bothering you...
+
+                  /(YOU MAY NEED THEM LATER DEPENDING ON YOUR CASE)/
 
     - [ ] *Change the* ~#+TITLE:~ *directive at the top of this file:* 
 
-          Change to: /"your LOG Book Title"/
-
-    - [ ] *Change the* ~#+EXPORT_FILE_NAME:~ *directive at the top of this file:*
-
-          Change to: /"your-LOG-Book-Title.pdf"/
-          This will be the file name(s) produced during export thence forward
-          /(including auto generated files: .tex, etc...)/
+         Change to: /"your Simple Log's REAL Title"/
 
     - [ ] *Change the* ~#+TEXT: Copyright © 2022:~ *directive top of this file:*
 
-          Change to: /"Copyright © your info here"/ You are the copyright
-          owner of your own documents created from clones of these master
-          templates... /(but these master Template Files are to stay under/
-          /Harmonic Alchemy Productions copyright. Any Attribution to me/
-          /for the template structure of your published docs will be/
-          /appreciated... Thanks! ;-)/
+         Change to: /"Copyright © your info here"/ You are the copyright
+         owner of your own documents created from clones of these master
+         templates... /(but these master Template Files are to stay under/
+         /Harmonic Alchemy Productions copyright. Any Attribution to me/
+         /for the template structure of your published docs will be/
+         /appreciated... Thanks! ;-)/
 
     - [ ] *Change the* ~#+AUTHOR:~ *directive at the top of this file:* 
 
-          Change to: /"your NAME"/
+         Change to: /"your NAME"/
 
     - [ ] *Change the* ~#+EMAIL:~ *directive at the top of this file:* 
 
-          Change to: /"your EMAIL"/
+         Change to: /"your EMAIL"/
 
     - [ ] *Change the* ~#+DATE:~ *TIMESTAMP at the top of this file:* 
 
-          Put your cursor on the TIMESTAMP: /i.e.,/ <2022-10-05 Wed>
-          and type: ~C-c . . RETURN~ The TIMESTAMP will update to NOW.
-          Do this whenever you update your doc to show last date
-          it was changed or modified...
+         Put your cursor on the TIMESTAMP: /i.e.,/ <2022-10-05 Wed>
+         and type: ~C-c . . RETURN~ The TIMESTAMP will update to NOW.
+         Do this whenever you update your doc to show last date
+         it was changed or modified...
 
-    - [ ] *Change the* ~#+TEXT: Created:~ *TIMESTAMP at the top of this file:* 
+    - [ ] *Change the* ~#+TEXT: Created:~ *TIMESTAMP at the top of this file:*
 
-          Put your cursor on the TIMESTAMP: /i.e.,/ <2022-10-05 Wed>
-          and type: ~C-c . . RETURN~ The TIMESTAMP will update to NOW.
-          Leave this DATE alone after this first and only update as
-          it reflects the time/date that you created this new document
-          for the first time...
+         Put your cursor on the TIMESTAMP: /i.e.,/ <2022-10-05 Wed>
+         and type: ~C-c . . RETURN~ The TIMESTAMP will update to NOW.
+
+         =LEAVE THIS DATE ALONE after Setting It The FIRST Time=
+
+         This Date reflects the time/date that you first created this
+         new document It should NEVER change after that...
 
     - [ ] *Change the* ~#+TEXT: Last Published:~ *TIMESTAMP at Publish Time:* 
 
-          Don't change this UNTIL you have actually Exported this file
-          as PDF or HTML, etc. and have PUBLISHED it publically somewhere...
+          =Don't Change This UNTIL You have completed some MAJOR Release=
+          of the files or code that this ~Simple-Log.org~ doc refers to and
+          this LOG reflects the status of that MAJOR UPDATE
+          /(e.g., as published somewhere, in a public repository etc...)/
 
-          Until that publishing time comes leave it alone as: <unpublished>
+          Until that publishing time comes leave it alone as:
+          ~<NOT Published>~
           
-          As soon as this is published or re-published, Replace the
-          <unpublished> placeholder with a REAL TIMESTAMP by typing:
-          ~C-c . . RETURN~ The new Last Published: <TIMESTAMP> will
-          appear in place... Do this EVERY time you publish or update
-          an existing publishing... /(this will help you keep track)/
+          As soon as this is published as part of a major release, etc,
+          Replace the <unpublished> placeholder with a REAL TIMESTAMP by typing:
+          ~C-c . . RETURN~ The new Last Published: <TIMESTAMP> will appear in
+          place... Do this ANY time you have completed some major update, have
+          published that update and this file needs to reflect that update...
+          /(this will help you keep track)/
 
     - [ ] *Change the* ~#+FILETAGS:~ *directive at the top of this file:* 
 
@@ -166,100 +278,91 @@ To use *HAP_Simple-Log-Book-Skeleton.org* /(Org-Mode Simple Log Notebook /Templa
 
     - [ ] *Change the* ~#+DESCRIPTION:~ *directive at the top of this file:*
 
-          Compose /Your-LOG-Book-Description/ as a short 
-          paragraph here... and then use that to change the directive
-          above...
+         Compose your ~Simple LOG's~  Description as a short paragraph here...
+         and then use that to change the directive above...
 
-    - *The* ~./media~ *Directory is ALL Set:* 
+4) *Purpose of the:* ~./org-templates~  *Directory:*
 
-         Any external documents or images referenced by your Simple LOG book
-         should be placed within this ~./media/~ directory... This single 
-         ~./media~ directory will serve media and external attachments for this 
-         and any other related ~.org~ files you may end up creating 
-         here, as well as being the media repository used by LaTeX during 
-         publishing...
+    The files in here are automatically linked and included within
+    this template. You don't need to change those settings unless you
+    wish to customize the already customized tags...
 
-    - *Purpose of the:* ~./auto/~ *Directory:* /(you do not need to copy this)/
+    /They are allready set up correctly for the Simple Log Book genre,/
+    /and the category is all set as well... But you can and may modify/
+    /the original files to fit your needs.../
+       
+    Other SETUPFILES within this directory are intended to be used by
+    other document style project templates and are not needed for this:
+    ~Simple-Log.org~ Document... You may remove the extra files if you wish... 
 
-         This is or will-be an auto generated folder where your output ~.PDF~ 
-         files are created and placed during LaTeX export. You DO NOT need 
-         to copy this folder as it is auto generated during org-mode LaTeX 
-         processing...
+    =HOWEVER:= If you decide to clone another ~HAP_<book-template>.org~
+             file into this project folder it will pick up its
+             associated SETUPFILES automatically because this folder
+             already exists! Consider this case if/when you decide
+             to delete other UNUSED SETUPFILES... They are small text
+             files not really bothering you...
 
-         LaTeX processing will not delete any prior files contained here... 
-         Some of them will be updated, but will have backups...  Any files 
-         you place within this folder will NOT be lost, unless you delete 
-         them... This folder is a good place to store other temporary files 
-         you may be creating, generating.. etc...
+             /(YOU MAY NEED THEM LATER DEPENDING ON YOUR CASE)/
 
-    - *Purpose of the:* ~./org-templates~  *Directory:*
+             =AND= You won't want to OVERRITE existing files within this 
+                 directory you are already using, /(and modified!!!)/
+                 but you may need to update existing files you are NOT
+                 using currently if/when you DO start using them...
 
-         The files in here are automatically linked and included within this
-         template. You don't need to change those settings unless you wish to
-         customize the already customized tags, and export options.
+    The DEFAULT Tags defined for all project templates are useful for
+    most situations and SOME tags are ALWAYS to be defined for this
+    LaTeX publishing system to work.
 
-         /They are allready set up correctly for the Simple LOG Notebook genre,/
-         /and the Category is all set as well... But you can and may modify the/
-         /SETUPFILES to fit your needs.../
+    /Change the SETUPFILE name ABOVE and within this directory from/
+    ~default-tags.org~ /to another name and-or replace some -BUT NOT ALL-/
+    /of the tags within to your own tags... see instructions inside the/
+    /file.../
 
-         Other SETUPFILES within this directory are used by other book 
-         project templates and are not needed for this LOG Book
-         Project... You may remove them if you wish...
+5) =This File is NOT SET UP TO BE EXPORTED TO PDF= [0/3]
 
-         However, consider If you clone another ~HAP_<book-template>.org~
-         file into this MASTER FOLDER it will pick up its associated
-         SETUPFILES automatically, so consider that if/when you decide to
-         delete other UNUSED SETUPFILES... They are small text files not
-         bothering you or your operations...
+      You may wish to export OTHER Modular Emacs based .org files within
+      this MASTER FOLDER to PDF format however... To do that use the following:
 
-7) [ ] =Export/Publish to PDF File:=
+    - [ ] *Issue the following Emacs command:*
 
-      The *In-Buffer Settings* specified by the SETUPFILES above will 
-      get this file looking good when exported as a Standard PDF file.  
-      Once you have your project directory all set up as above you are 
-      ready to export your first PDF as a test run...
+          ~M-x org-latex-export-to-pdf~
 
-      Sub Headings /(Log Entries)/ could be selected/isolated for exporting
-      to a PDF report of work you did for a client or something like that
-      and all other log entries and content would not be exported...
+    - [ ] *OR* If You Enabled *Xah-Fly-Keys* /"Command Mode"/ Try Shortcut:
 
-         *Issue the following Emacs command:*
+          ~SPACE e p~
 
-            ~M-x org-latex-export-to-pdf~
+    - [ ] *OR Export to OTHER Formats:*
 
-         *OR* If You Enabled *Xah-Fly-Keys* /"Command Mode"/ Try Shortcut:
+          ~C-c C-e~
 
-            ~SPACE e p~
+          /(a pop-up will show allowing you to choose export method)/
 
-         *OR Export to OTHER Formats:*
+          After *AucTeX* is done parsing/compiling etc., new files will be
+          created using the file names specified within the ~HAP_file-name.org~
+          files they were exported from...
 
-            ~C-c C-e~
+    =If YOU EXPERIENCE LaTeX ERRORS:= 
 
-            /(a pop-up will show allowing you to choose export method)/
+       *Consult Buffer:* ~*Org PDF LaTeX Output*~
 
-      After *AucTeX* is done parsing/compiling etc., a new *PDF* by the name of:
-      ~HAP_General-Log-Notebook-Skeleton.pdf~ -and-
-      ~HAP_General-Log-Notebook-Skeleton.tex~ /(or the name you changed it to/
-      /located at the top of this file)/ will appear within the same directory
-      as this file... 
+6) *Handling Images:*
 
-      Subsequent repeated calls to the above command will overwrite your
-      existing ~.pdf~ -and- ~.tex~ files! /(make backups first if needed!)/ You
-      should probably copy these files to the ~./auto/~ directory as well for
-      safe keeping as backups...
+   Some Images may render too large or too small to fit on a page
+   of an exported version of this file... This is easy do fix within
+   your content on an image by image basis...
+      
+   Use *LaTeX* and/or *HTML* attributes as follows on the images that need
+   to be a different size...
 
-      =If you chose the last option above= LaTeX will output files with other
-      extensions for those other output formats... =NOTE:= SETUPFILES have not
-      been created yet for other eBook formats.  /(This is a work in progress)/
+   =Example:=
+      
+       #+CAPTION: Example larger size .png file 
+       #+NAME:  example:00001
+       #+attr_html: :width 600px
+       #+attr_latex: :width 100px
+      [[./media/lavender-banner.png]]
 
-      =If YOU EXPERIENCE LaTeX ERRORS:= 
-
-         *Consult Buffer:* ~*Org PDF LaTeX Output*~
-
-=These Instructions Were Last Modified:= <2022-10-17 Mon> 
-
-So far things are pretty basic PDF for SIMPLE LOG Notebooks. If you want something
-more fancy Maybe you should have chosen the HAP - General LOG Notebook Skeleton...
+=These Instructions Were Last Modified:= <2023-02-17 Fri>
 
 =Please Open an ISSUE At:= https://github.com/harmonicalchemy/modular-emacs/issues
    
@@ -269,152 +372,292 @@ Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas
 =Enjoy!= - Alisha Awen
 :END:
 
-* 📒 Begin Log:
-:PROPERTIES:
-:CUSTOM_ID: HAP-simple-log-notebook-skeleton-1
-:END:
-** 📅 2022:
-*** NEW 🗓 LOG: <2021-03-29 Mon> Generic Title /(General Log Entry Template)/
+* 📒 Simple Log:
+<<SLOG>>
+
+** 📅 2023:
+<<SLOG_2023>>
+
+*** NEW 🗓 EXAMPLE Log Entry /(Cloned from TEMPLATE)/
+<2021-03-29 Mon>  
+<<SLOG-2023_example-log-entry>>
 :README:
-   =Using the Clocking Feature of this Log Entry=
+   =Using this Log Entry TEMPLATE:= /(logging & tracking time)/
 
    - [ ] *Go To One of the HEADINGS Below:*
 
          /(Summary, Details, or Sub Headings)/
 
-         =Punch the Time Clock:= /(see Clocking Commands: below)/ At
-         the heading And then begin working on a task related to
-         that Heading...
+         =Punch the Time Clock:= /(See: CLOCKING COMMANDS: below)/
+         Punch the clock at any heading /(change its title)/ And then
+         begin working on a task related to your new Heading...
 
          =Your Time IS being Recorded Now= /(you will see a/ *:clocking:*
          /item under the heading where time is recorded)/
+         
+         Document your work under the current "clocking" heading as
+         you do the task... Clock OUT when you are done working...
+         /(do this whether task is complete or not)/
 
-   - [ ] =Use These Clocking Commands:= /to keep track your time.../
+   =Time Tracking:=
+
+   - [ ] =CLOCKING COMMANDS:= /(how to keep track your time)/
 
       + *Clock IN:* ~C-c C-x C-i~ /(Begin OR Resume Clocking Current task)/
 
-            This creates a new :CLOCKING: Time Card Entry just
-            underneath the HEADING...
+         This creates a new :CLOCKING: Time Card Entry just
+         underneath its HEADING...
 
-            Do this just before starting work on the task... 
-            Be in control of your life!
+         Do this just before starting work on the task... 
+         Be in control of your life!
 
-            After doing the above, you can go away and do some 
-            work, leaving this heading, log note, etc. to visit 
-            other files and/or work on them etc. The clock will 
-            be recording your time all the while... You will see 
-            in your mode line the elapsed clock time ticking away 
-            as you work on a task /(hopefully related to this clock!)/
-            and NOT Yac Shaving or being sidetracked!!!
+         If you need to go away and do something else before finishing
+         this task, you can do so after clocking out... When you come
+         back simply clock back in again to start another Time Card
+         Entry just as before... The new time card entry will appear
+         above the earlier one within the ~:CLOCKING:~ drawer... When
+         you clock out of this task it will look just like the entry
+         below it with a total time worked tagged on the end...
 
       + *RETURN to Clock Heading:* ~C-c C-x C-j~
 
-            /Go back to the place where you started the clock.../
+         /Go back to the place where you started the clock.../
 
-            You do this after you have worked on a task for a 
-            while and you need to come back to update the item's
-            info etc., and/or stop the clock before going off to 
-            do something else unrelated to the log entry...
+         You do this after you have worked on a task for a 
+         while and you need to come back to update the item's
+         info etc., and/or stop the clock before going off to 
+         do something else unrelated to the log entry...
 
       + *Clock OUT:* ~C-c C-x C-o~ /(to stop clocking your time on task)/
 
-            This *Finalizes the Time Card Entry* within:
-            ~:CLOCKING:~ /(created earlier when you started the clock)/
+         This *Finalizes the Time Card Entry* within:
+         ~:CLOCKING:~ /(created earlier when you started the clock)/
 
-            The Clock Entry changes showing start timestamp, end
-            timestamp, and total time worked during this segment...  
+         The Clock Entry changes showing start timestamp, end
+         timestamp, and total time worked during this segment...  
 
-            =Please DON'T Forget= /Like I often do, LOL.../ i.e., Leaving
-            a clock running all day by accident, or worse, leave it
-            dangling with the file closed only to open it again and
-            get that nasty *Org-Mode Message:* /"What do you want to do/
-            /with this?"/ If you do something like that you can always
-            come back and directly edit the clock times by hand to
-            amend them...  After changing clock times or dates, etc...
-            Whatever...
+         After Clocking OUT, you can go away and do some work, leaving
+         this heading, log note, etc. to visit other files and/or work on
+         them etc. The clock will be recording your time all the while...
+         You will see in your mode line the elapsed clock time ticking
+         away as you work on a task /(hopefully related to this clock!)/
+         and you are NOT Yac Shaving or being sidetracked!!! LOL
 
-                  ="Onward We Row Mates... Through the log jam!"=
+         =Please DON'T Forget= /Like I often do, LOL.../ i.e., Leaving
+         a clock running all day by accident, or worse, leave it
+         dangling with the file closed only to open it again and
+         get that nasty *Org-Mode Message:* /"What do you want to do/
+         /with this?"/ If you do something like that you can always
+         come back and directly edit the clock times by hand to
+         amend them...  After changing clock times or dates, etc...
+         Whatever...
+
+              ="Onward We Row Mates... Through the LOG jam!"=
 
       + *Update Time Card Entry:* ~C-c C-c~ 
 
-            This command will change the total time at the end showing 
-            your new calculated time...
+         =Go To The:= ⏰ *Time Card* Heading below...
 
-            If you need to go away and do something else before finishing
-            this task, you can do so after clocking out... When you come
-            back simply clock back in again to start another Time Card
-            Entry just as before... The new time card entry will appear
-            above the earlier one within the ~:CLOCKING:~ drawer... When
-            you clock out of this task it will look just like the entry
-            below it with a total time worked tagged on the end...
+         place your cursor on the same line or at the beginning of:
+         ~#+BEGIN: clocktable etc...~ and type: ~C-c C-c~  
+   
+         This command will change the total time at the end showing 
+         your new calculated time...
 
       + *Clock Out & Mark Items Done:* ~C-c C-t~
 
-            When you are all done with a Log Entry use the above key 
-            command to mark its Heading *TODO* tag to: *DONE* /(Most of the/ 
-            /time this will ALSO clock you out if you are still clocked/ 
-            /into the item... But not allways in my experience.../  
-            So make sure you are also clocked OUT of an Item After 
-            marking it DONE... Type: ~C-c C-x C-j~ to check this...
-            /(if no running clock it will tell you and place your/
-            /cursor at the heading where you LAST CLOCKED OUT)/
+         When you are all done with a Log Entry use the above key 
+         command to mark its Heading *TODO* tag to: *DONE* /(Most of the/ 
+         /time this will ALSO clock you out if you are still clocked/ 
+         /into the item... But not allways in my experience.../  
+         So make sure you are also clocked OUT of an Item After 
+         marking it DONE... Type: ~C-c C-x C-j~ to check this...
+         /(if no running clock it will tell you and place your/
+         /cursor at the heading where you LAST CLOCKED OUT)/
 
       + ~C-c C-x C-q~ *Cancel Current Clock:* /(in case of accident)/
 
-            This removes currently running clock and forgets any time
-            accrued or associated with it...
+         This removes currently running clock and forgets any time
+         accrued or associated with it...
 
       + ~C-c C-x C-d~ *Display Clocking Info:* 
 
-            /This will show elapsed times to the right of headings.../
-            =Warning!= Using this command will CLUTTER ALL the headings
-                     within your org file with those timestamps!!!
+         /This will show elapsed times to the right of headings.../
+         
+         =Warning!= Using this command will CLUTTER ALL the headings
+                  within your org file with those timestamps!!!
 
+   =CREATING A BRAND NEW LOG ENTRY:= /(from this TEMPLATE)/
+
+   - [ ] *COPY/CLONE THIS ENTIRE:*
+         
+        *NEW* 🗓 *BOILERPLATE LOG Entry* /(Simple Log Entry TEMPLATE)/
+         
+        Paste it under the current: 📅 *YYYY:* heading at the bottom
+        of the list /(under previous log entries items from before)/
+         
+        =or:= If you prefer... Place it at the top of the list...
+        /(i.e., descending or ascending chronological order)/
+        /(But Do One Or The Other... Don't mix or mess up your time/
+        /line silly girl!)/
+
+   - [ ] =Commandeer Your New Clone:=
+     
+         The structure of this Log Entry Template's content layout is
+         all set up for you ahead of time to allow you to immediately
+         begin writing... /(You only need to change titles etc...)/
+
+         After cloning, =RENAME= *BOILERPLATE LOG Entry* /(Simple Log Entry TEMPLATE)/
+         to a *Unique Title* in order to commandeer the log entry item for your
+         own needs...
+
+         =Do NOT PUT "LOG" in your Title!=
+
+         You also need to insure your anchors /(below the headings)/ are unique!
+
+   - [ ] =Change The Anchor Link:=
+
+        Change the anchor /(directly under the LOG Entry Title)/ to
+        match your new Log Entry's title name...
+
+         =Note:= I created the following convention for making unique
+               anchors within ALL of these HAP_Doc-Skeleton.org
+               Template files.
+
+               The anchor ~PREFIX_~ is there to match the named sections
+               of a book or document project defined as a standard
+               across ALL of these HAP_Document-Skeleton.org Template
+               files... This will help keep your anchors unique, and
+               also add an extra *KM* dimension of *category* to them...
+
+               It would be wise to follow this convention when you
+               create anchors elsewhere within ALL of your Book
+               Projects created from HAP Modular Emacs Document
+               Skeleton Template files...
+
+               If you wish to change all of this, go ahead and do
+               what ever you want... For simplicity's sake, follow
+               the instructions below... /(there are automatic ways/
+               /to create links and anchors within org-mode... I/
+               /prefer to do it manually... The alternate is a mess/
+               /IMHO)/
+
+         Leave ~SLOG-YYYY_~ as the anchor's prefix /(as in boilerplate above)/
+         but change the YYYY part to the current year that you copied this
+         NEW log Entry item into...
+
+         Change ~META-ENTRY~ /(after the underscore "_" )/ to a short but unique
+         abbreviation, acronym, or mnemonic of the log entry's title... Keep
+         the underscore to separate the MAIN HEADING ID of this anchor from
+         the NEW renaed title of this new LOG Entry...
+   
+         Make your title "POSTFIX" portion of the anchor link in all lower
+         case... Use dashes to connect words within your title postfix
+         portion of the anchor...
+
+         Your new unique anchor above may be used to link to this log entry
+         from Research or other sections of this log...
+         /(Or even from/ ~.org~ /docs OUTSIDE of this file...)/
+
+   - [ ] =Replace Titles, Anchors, & Content of Sub Headings=
+
+        =DO NOT CHANGE MAIN HEADINGS:= *Reference*, *Time Card*, *Summary*,
+        or *Details* below...  BUT DO CHANGE THE ANCHOR LINKS under
+        these main headings...
+
+        Change the *YYYY* part of the existing anchors to the year that this
+        log entry was placed in the same way as you did above in the previous
+        bullet... 
+
+        Change *META-ENTRY* within the existing anchor to the title of this
+        log entry, /(as you did for the Main Anchor of this Log Entry...)/
+        HOWEVER in this case it is NOW part of the PREFIX portion of this
+        anchor and should be ALL UPPER CASE. /(an underscore is placed/
+        /between it and the POSTFIX title of the sub heading)/
+
+        You will be doing this same shifting of parent heading titles to
+        the PREFIX for SUB-SUB Headings as well...
+        
+        This is why keeping that part short is a good idea because NOW
+        the Log Entry Title is part of the PREFIX for anchors made to
+        Sub-Headings... /(and in turn shortened versions of those sub/
+        /heading titles will become part of the PREFIX for anchors of/
+        /sub-sub headings... etc...)/
+        
+        =Use the underscore= ~_~ to separate the MAIN HEADING ID /(PREFIX)/ from
+        the /(POSTFIX)/ sub-heading title it has been placed under...
+
+        If you are creating NEW Sub Headings... Copy an anchor from a previous
+        one and adjust it the exact same way... /(the logic is self contained)/
+
+        /This all follows the same convention described within the previous/
+        /bullet.../
+
+   =ENJOY USING YOUR BRAND NEW LOG OF ANYTHING YOU WANT!=
 :END:
 
 This Log Entry is about: Yadda... Yadda... Yadda...
 
-\newpage
-
 **** NEW 📚 Reference:
+<<SLOG-2023-EXAMPLE-LOG-ENTRY_ref>>
 :README:
-   Use this section to include links to References related to this
-   SINLE LOG ENTRY ONLY... 
+   =Org Mode Links Tip:=
 
-   =Note:= There is a GLOBAL Ref Section under the: *☞ About:* section
-         of this Log Notebook...
+      + To Create a Link Type: ~C-c C-l~ 
+         /(then paste: ~link~ & type: "description")/
 
-         Links to refs of a GENERAL nature should NOT be PUT in
-         this Log Entry Ref section... Put those in the GLOBAL Ref
-         Section of this entire Log Notebook instead...
+         =-OR-= Simply Copy/Paste BOILERPLATE:
+              /(use placeholders below)/
+              And Fill Them In Manually... 
+              Copy/Paste more placeholders as
+              needed to create more links...
+
+      + To Open a Link Type: ~C-c C-o~
+
+      + To EXPAND a Link Type: ~SPACE b~
+         or: ~M-x org-toggle-link-display~
+
+   =BOILERPLATE:= /(clone to add more ref links)/
+
+   - *Heading:* [[link][Link NAME] ] /(comment)/
+
+   - [[link][Link Name] ] *Heading:* /(comment)/
+   
+   - *_:* [[][] ] /(yadda... yadda... yadda...)/
+
+   - [[][] ] /(_)/
+
+   [[junk][JUNK]]  /(This is a stupid BUG workaround/ /for org-mode link/
+         /expansion/compression... If you invoke:/ ~org-toggle-link-display~
+         /you will notice this JUNK link DOES NOT compress to a clickable/
+         /link title alone.../
+         
+         /I am not sure if this is due to my Emacs Config or a bug within/
+         *Org-Mode* /itself.../
+
+         /I put this workaround in here because if it is not here,/
+         /SOME of your external file links created below may not/
+         /compress after expansion, even though thy are GOOD links!/
+
+         /Leaving this JUNK link in here acts like a scapegoat/
+         /so that your real links below will all compress/expand/
+         /normally... I am NOT SURE WHY THIS WORKS??? I'm to busy/
+         /to do anything beyond hacking at this point.../
+         
+         ~org-lint~ /will detect JUNK above... Ignore that warning.../
+                  /It's my "METHOD of MADNESS" %^)/
 :END:
 
-- *Link to Project:* [[][] ]
-
-- [[URL][Link Name] ] *Heading:* /(comment)/
-
-- [[][] ] - *_:* /(yadda...)/
-
-- [[][] ] - *_:* /(yadda...)/
-
-- [[][] ] - *_:* /(yadda...)/
-
-- [[][] ] /(_)/
-
-- [[][] ] /(_)/
-
-- [[][] ] /(_)/
-
-\newpage
+- *Link to Project:* [[][] ] /(comment)/
 
 **** NEW ⏰ Time Card:
+<<SLOG-2023-EXAMPLE-LOG-ENTRY_time-card>>
 
 #+BEGIN: clocktable :scope tree3 :maxlevel 6 :tstart "<-1w>" :tend "<+1m>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3
 #+END:
 
-\newpage
-
 **** NEW ✅ Summary: [0/3]
+<<SLOG-2023-EXAMPLE-LOG-ENTRY_summary>>
 :README:
    This Summary is mostly to help you find things later when you
    cannot remember when or where is was done... If you go to the
@@ -435,31 +678,28 @@ This Log Entry is about: Yadda... Yadda... Yadda...
 
 Yadda... Yadda... Yadda...
 
-1. [ ] *__:*
+1. [X] *New Item 1:* /(this represents a completed item)/
 
-2. [ ] *__:*
+2. [-] *New Item 2:* /(this represents a currently "radio active" item)/
 
-3. [ ] *__:*
+3. [ ] *New Item 3:* /(this represents a new item not worked on yet)/
 
-\newpage
+3. [ ] *New Item:* /(copy/clone more of these as needed)/
 
 **** NEW 📒 Details:
+<<SLOG-2023-EXAMPLE-LOG-ENTRY_details>>
+
 ***** NEW ⏱ New Item 1 /(placeholder)/ [0/3]
+<<SLOG-2023-EXAMPLE-LOG-ENTRY-DETAILS_Item-1>>
+:BOILERPLATE:
 
-New Item Details... Yadda... Yadda... Yadda...
+  =Delete This BOILERPLATE DRAWER If You Don't Need It...=
 
-Re-Purpose these as needed and Delete anything you don't need...
+  The following list contains Babel Source Code Blocks that are
+  often needed for something I am writing or "Logging" about...
+  I use them so much I decided to include them in this template...
 
-Add sub headings as needed...
-
-Don't forget to clock-in to HEADINGS while you work on them...
-AND... Don't forget to Clock OUT when you are DONE... %^)
-
-=Examples I Use Often=
-
-The following list contains Babel Source Code Blocks that are often needed for something I am writing or "Logging" about... I use them so much I decided to include them in this template...
-
-- [ ] *__:* /(__)/
+  - [ ] *__:* /(__)/
 
       #+begin_src conf
        keyword1:     Value1 
@@ -467,14 +707,14 @@ The following list contains Babel Source Code Blocks that are often needed for s
        keyword3:     Value 
       #+end_src
 
-- [ ] *__:* /(__)/
+  - [ ] *__:* /(__)/
 
       #+begin_src bash
        sudo dnf install emacs
        sudo apt install emacs
       #+end_src
 
-- [ ] *__:* /(__)/
+  - [ ] *__:* /(__)/
 
       #+BEGIN_SRC emacs-lisp :results output
        ;; Initialize Local Vars from GLOBAL CONSTANTS;
@@ -500,24 +740,51 @@ The following list contains Babel Source Code Blocks that are often needed for s
       : CAR w: text-pixels
       : CDR w: (92)
 
-\newpage
+  - [ ] =LaTeX Code Within ~.Org~ Docs:=
+
+      #+begin_comment
+
+      Code Embedded ~In-line~ within paragraphs:
+      
+         Put: @@latex:<LaTeX Code Here>@@ Anywhere
+         Within a paragraph...
+
+      #+LATEX: % Any Arbitrary LaTeX Code...
+      
+      #+LATEX: \newpage % Start New Page
+
+      #+BEGIN_EXPORT latex
+      %% Put LaTex Code In Here...
+      #+END_EXPORT
+
+      #+BEGIN_LaTeX
+      %% Put LaTex Code In Here...
+      #+END_LaTeX
+
+      #+end_comment
+
+:END:
+
+New Item Details... Yadda... Yadda... Yadda...
+
+Re-Purpose these as needed and Delete anything you don't need...
+
+Add sub headings as needed...
+
+Don't forget to clock-in to HEADINGS while you work on them...
+AND... Don't forget to Clock OUT when you are DONE... %^)
 
 ***** NEW ⏱ New Item 2 /(placeholder)/ [0/3]
+<<SLOG-2023-EXAMPLE-LOG-ENTRY-DETAILS_Item-2>>
+:BOILERPLATE:
 
-New Item Details... Yadda... Yadda... Yadda...
+  =Delete This BOILERPLATE DRAWER If You Don't Need It...=
 
-Re-Purpose these as needed and Delete anything you don't need...
+  The following list contains Babel Source Code Blocks that are
+  often needed for something I am writing or "Logging" about...
+  I use them so much I decided to include them in this template...
 
-Add sub headings as needed...
-
-Don't forget to clock-in to HEADINGS while you work on them...
-AND... Don't forget to Clock OUT when you are DONE... %^)
-
-=Examples I Use Often=
-
-The following list contains Babel Source Code Blocks that are often needed for something I am writing or "Logging" about... I use them so much I decided to include them in this template...
-
-- [ ] *__:* /(__)/
+  - [ ] *__:* /(__)/
 
       #+begin_src conf
        keyword1:     Value1 
@@ -525,14 +792,14 @@ The following list contains Babel Source Code Blocks that are often needed for s
        keyword3:     Value 
       #+end_src
 
-- [ ] *__:* /(__)/
+  - [ ] *__:* /(__)/
 
       #+begin_src bash
        sudo dnf install emacs
        sudo apt install emacs
       #+end_src
 
-- [ ] *__:* /(__)/
+  - [ ] *__:* /(__)/
 
       #+BEGIN_SRC emacs-lisp :results output
        ;; Initialize Local Vars from GLOBAL CONSTANTS;
@@ -558,24 +825,51 @@ The following list contains Babel Source Code Blocks that are often needed for s
       : CAR w: text-pixels
       : CDR w: (92)
 
-\newpage
+  - [ ] =LaTeX Code Within ~.Org~ Docs:=
+
+      #+begin_comment
+
+      Code Embedded ~In-line~ within paragraphs:
+      
+         Put: @@latex:<LaTeX Code Here>@@ Anywhere
+         Within a paragraph...
+
+      #+LATEX: % Any Arbitrary LaTeX Code...
+      
+      #+LATEX: \newpage % Start New Page
+
+      #+BEGIN_EXPORT latex
+      %% Put LaTex Code In Here...
+      #+END_EXPORT
+
+      #+BEGIN_LaTeX
+      %% Put LaTex Code In Here...
+      #+END_LaTeX
+
+      #+end_comment
+
+:END:
+
+New Item Details... Yadda... Yadda... Yadda...
+
+Re-Purpose these as needed and Delete anything you don't need...
+
+Add sub headings as needed...
+
+Don't forget to clock-in to HEADINGS while you work on them...
+AND... Don't forget to Clock OUT when you are DONE... %^)
 
 ***** NEW ⏱ New Item 3 /(placeholder)/ [0/3]
+<<SLOG-2023-EXAMPLE-LOG-ENTRY-DETAILS_Item-3>>
+:BOILERPLATE:
 
-New Item Details... Yadda... Yadda... Yadda...
+  =Delete This BOILERPLATE DRAWER If You Don't Need It...=
 
-Re-Purpose these as needed and Delete anything you don't need...
+  The following list contains Babel Source Code Blocks that are
+  often needed for something I am writing or "Logging" about...
+  I use them so much I decided to include them in this template...
 
-Add sub headings as needed...
-
-Don't forget to clock-in to HEADINGS while you work on them...
-AND... Don't forget to Clock OUT when you are DONE... %^)
-
-=Examples I Use Often=
-
-The following list contains Babel Source Code Blocks that are often needed for something I am writing or "Logging" about... I use them so much I decided to include them in this template...
-
-- [ ] *__:* /(__)/
+  - [ ] *__:* /(__)/
 
       #+begin_src conf
        keyword1:     Value1 
@@ -583,14 +877,14 @@ The following list contains Babel Source Code Blocks that are often needed for s
        keyword3:     Value 
       #+end_src
 
-- [ ] *__:* /(__)/
+  - [ ] *__:* /(__)/
 
       #+begin_src bash
        sudo dnf install emacs
        sudo apt install emacs
       #+end_src
 
-- [ ] *__:* /(__)/
+  - [ ] *__:* /(__)/
 
       #+BEGIN_SRC emacs-lisp :results output
        ;; Initialize Local Vars from GLOBAL CONSTANTS;
@@ -616,192 +910,57 @@ The following list contains Babel Source Code Blocks that are often needed for s
       : CAR w: text-pixels
       : CDR w: (92)
 
-\newpage
+  - [ ] =LaTeX Code Within ~.Org~ Docs:=
 
-** 📅 2023:
+      #+begin_comment
+
+      Code Embedded ~In-line~ within paragraphs:
+      
+         Put: @@latex:<LaTeX Code Here>@@ Anywhere
+         Within a paragraph...
+
+      #+LATEX: % Any Arbitrary LaTeX Code...
+      
+      #+LATEX: \newpage % Start New Page
+
+      #+BEGIN_EXPORT latex
+      %% Put LaTex Code In Here...
+      #+END_EXPORT
+
+      #+BEGIN_LaTeX
+      %% Put LaTex Code In Here...
+      #+END_LaTeX
+
+      #+end_comment
+
+:END:
+
+New Item Details... Yadda... Yadda... Yadda...
+
+Re-Purpose these as needed and Delete anything you don't need...
+
+Add sub headings as needed...
+
+Don't forget to clock-in to HEADINGS while you work on them...
+AND... Don't forget to Clock OUT when you are DONE... %^)
+
+** 📅 2024:
+<<SLOG_2024>>
 
 /Not Here Yet but keep logging... The New Year will be here soon enough!/
 
+* 🗂 Meta: /(Usage & Templates)/                                        :noexport:
+<<META>>
 
-
-
-
-
-
-** 2022:
-*** NEW log: <2021-03-29 Mon> Generic Title /(General Log Entry Template)/
-:README:
-
-- Since you created this new log entry you are probably in the middle of a task related to it right now!  Go ahead and punch the clock right now as well, to start recording your time! The following Commands are defined below for you to remember and use to track your time:
-
-  + *C-c C-x C-i* - Start Clock /(Begin OR Resume Clocking Current task)/
-
-      This creates a new :CLOCKING: Time Card Entry that looks like this:
-
-      Do this now... Start recording your time girl!  Be in control of your life!
-
-     After doing the above, you can go away and do some work, leaving this log note to visit other files and work on them etc. The clock will be recording your time all the while... You will see in your mode line the elapsed clock time as you work...
-
-  + *C-c C-x C-j* - Return back to the Heading where you started the clock...
-      You do this after you have worked on a task for a while and you need to come back to the time card /(this Log Entry Heading)/ and stop the clock before going off to do something unrelated to the log entry...
-
-  + *C-c C-x C-o* - *Stop the Clock* /(to stop clocking your time on task)/
-       This *Finalizes the Time Card Entry* within ~:CLOCKING:~ /(created earlier when you started the clock)/... The completed time card entry looks like this:
-
-       The above entry shows start timestamp, end timestamp, and total time worked during this segment...  As you can see from the example above I left the clock running all day by accident.  If you do something like that you can always come back and directly edit the clock times by hand to amend them...  After changing clock times or dates, etc. type the following to *Update the Time Card Entry*:
-            *C-c C-c*
-       and the total time will change at the end showing your new calculated time...
-
-       If you need to go away and do something else before finishing this task, you can do so after clocking out... When you come back simply clock back in again to start another Time Card Entry just as before... The new time card entry will appear above the earlier one within the ~:CLOCKING:~ drawer... When you clock out of this task it will look just like the entry below it with a total time worked tagged on the end...
-
-       When you are all done with this Log Entry mark it *DONE*
-
-  + *C-c C-x C-q* - Cancel Current Clock /(in case you accidentally started it)/
-
-       This removes currently running clock and forgets it...
-
- + *C-c C-x C-d* - Display Clocking Info: /This will show elapsed times to the right of headings.../
-
-- Once all of this has become routine for you, go ahead and remove this ~README~ drawer from this template... That way it does not get copied when you need to clone new log entries...
-
-:END:
-
-This Log Entry is about: Yadda... Yadda... Yadda...
-
-\newpage
-
-**** NEW Reference:
-
-- *Link to Project:* [[][] ]
-
-- [[URL][Link Name] ] *Heading:* /(comment)/
-
-- [[][] ] - *_:* /(yadda...)/
-
-- [[][] ] - *_:* /(yadda...)/
-
-- [[][] ] - *_:* /(yadda...)/
-
-- [[][] ] /(_)/
-
-- [[][] ] /(_)/
-
-- [[][] ] /(_)/
-
-\newpage
-
-**** NEW Time Card:
-
-#+BEGIN: clocktable :scope tree2 :maxlevel 4 :tstart "<-1d>" :tend "<+1m>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3
-#+END:
-
-\newpage
-
-**** NEW Summary: [0/3]
-:README:
-   This Summary is mostly to help you find things later when you cannot remember when or where is was done... If you go to the top of this file and expand all headings to show ALL content, then do a search on "~Summary:~" you will be able to quickly scroll through and scan these summaries quickly to find what you were looking for... 
-
-   Also the *Time Card* /displayed above/ each search hit will give more clues by showing important headings you worked on...
-
-   Below is an optional list /(that could also provide links)./ This list could be used to itemize things you worked on, but I personally find it easier to simply write a short one or two line description containing important keywords right here and nothing more. I think that is more useful...
-:END:
-
-Yadda... Yadda... Yadda...
-
-1. [ ] *__:*
-
-2. [ ] *__:*
-
-3. [ ] *__:*
-
-\newpage
-
-**** NEW Details:
-***** NEW New Item 1 /(placeholder)/ [0/3]
-
-- [ ] *__:* /(__)/
-
-      #+begin_src conf
-       root@dev1:~$ 
-       root@dev1:~$ 
-       root@dev1:~$ 
-      #+end_src
-
-- [ ] *__:* /(__)/
-
-      #+begin_src conf
-       admin@dev1:~$ 
-       admin@dev1:~$ 
-       admin@dev1:~$ 
-      #+end_src
-
-- [ ] *__:* /(__)/
-
-      #+begin_src conf
-       admin@dev1:~$ 
-       admin@dev1:~$ 
-       admin@dev1:~$ 
-      #+end_src
-
-\newpage
-
-***** NEW New Item 1 /(placeholder)/ [0/3]
-
-- [ ] *__:* /(__)/
-
-      #+begin_src conf
-       root@dev1:~$ 
-       root@dev1:~$ 
-       root@dev1:~$ 
-      #+end_src
-
-- [ ] *__:* /(__)/
-
-      #+begin_src conf
-       admin@dev1:~$ 
-       admin@dev1:~$ 
-       admin@dev1:~$ 
-      #+end_src
-
-- [ ] *__:* /(__)/
-
-      #+begin_src conf
-       admin@dev1:~$ 
-       admin@dev1:~$ 
-       admin@dev1:~$ 
-      #+end_src
-
-\newpage
-
-***** NEW New Item 1 /(placeholder)/ [0/3]
-
-- [ ] *__:* /(__)/
-
-      #+begin_src conf
-       root@dev1:~$ 
-       root@dev1:~$ 
-       root@dev1:~$ 
-      #+end_src
-
-- [ ] *__:* /(__)/
-
-      #+begin_src conf
-       admin@dev1:~$ 
-       admin@dev1:~$ 
-       admin@dev1:~$ 
-      #+end_src
-
-- [ ] *__:* /(__)/
-
-      #+begin_src conf
-       admin@dev1:~$ 
-       admin@dev1:~$ 
-       admin@dev1:~$ 
-      #+end_src
-
-\newpage
-* ⎘ Meta: /(Usage & Templates)/                                        :noexport:
 ** 📄 Introduction:
+<<META_INTRO>>
+
+#+begin_quote
+/“Everyone is a moon,/
+ /and has a dark side,/
+ /which he never shows to anybody.”/ - Mark Twain 
+#+end_quote
+
 :README:
    Use this template as a quick way to start logging things that may or may not
    be part of a Large Project, /(or possibly smaller "yak shaving" tasks that you don't want cluttering up your Larger Project's Log Notebook with)/.
@@ -818,12 +977,14 @@ Yadda... Yadda... Yadda...
    time and events in a log...
 :END:
 *** Emacs Shorthand Command Key Notation:
+<<META-INTRO_EMACS>>
 
 The command key conventions used in the instructions below, /(as well as all *Harmonic Alchemy Productions* docs)/, follow *Standard Emacs* command key naming conventions.
 
 Official GNU Emacs documentation uses a shorthand notation to indicate the *Ctrl* key as an upper case *C-* (/with minus appended/). Upper case *M-* (/with minus appended/) is the shorthand notation for the Emacs *META* key...
 
 *** Important Note For Mac Users:
+<<META-INTRO_MAC>>
 
 On Mac OS, *Modular Emacs* maps your *Ctrl* key to the *Apple Command* key. Emacs *META* is mapped to both *Alt* and *Ctrl* keys... Outside of Emacs all those keys function normally.  
 
@@ -841,9 +1002,8 @@ If you see other keys alone separated by a space after the *C-x* or *M-x* /(e.g.
 
 *Got that?* That's the key notation system we use here... It is all standard Emacs...  The above paragraphs are mostly for the benefit of new Emacs users! And there is more to learn below. If you are an Emacs/Org-Mode veteran please bear with us...
 
-\newpage
-
 *** Org Mode Timestamps and Clocking:
+<<META-INTRO_CLOCKING>>
 
 This Template utilizes the default *Org-Mode:* "*C-c* ." command /(i.e., That's Ctrl-c and then type a dot. This Enters a timestamp range at the cursor position)/. The command employs *org-evaluate-time-range* to compute time on task.  This is useful for timesheets etc. 
 
@@ -853,9 +1013,8 @@ Common time clocking commands are defined within the *Log Entry (template)* itse
 
 Additional commands for using *Org-Mode* with Modular Emacs will be explained here if needed, as well as other *Harmonic Alchemy Modular Emacs Templates* that get produced in the future...
 
-\newpage
-
-** 📄 Instructions:
+** ❔ HowTo:
+<<META_HOWTO>>
 :README:
    This Log Notebook is being designed as these docs are being written...
    At first much of the design is being done /manually/ while formats,
@@ -892,9 +1051,8 @@ Additional commands for using *Org-Mode* with Modular Emacs will be explained he
    with: *Copy/Clone Log Entry (template)*
 :END:
 
-\newpage
-
 *** =Copy/Clone:= LOG: <2021-03-29 Mon> Generic Title /(from *⎘ Templates* Binder)/
+<<META-HOWTO_CLONE-LOG>>
 
 - [ ] =Select Heading= /(named above)/ under the *⎘ Templates* Binder,
       using normal Emacs selection methods. i.e., Type ~t~ key to set
@@ -925,9 +1083,8 @@ Additional commands for using *Org-Mode* with Modular Emacs will be explained he
             To get out of the paste buffer view, type: "*spacebar u*" and 
             it will return you to where you were before...
 
-\newpage
-
 *** =Paste Cloned LOG Entry:=
+<<META-HOWTO_PASTE-LOG>>
 
 - [ ] =Advance cursor= to a blank line just below the LAST Most Recent
       LOG entry under heading =2022= within the =Begin Log:= section,
@@ -955,6 +1112,7 @@ Additional commands for using *Org-Mode* with Modular Emacs will be explained he
 \newpage
 
 *** Edit-Compose New LOG Entry:
+<<META-HOWTO_EDIT-LOG>>
 
 =Note:= If this is your first time using this log, don't bother cloning
       a NEW log entry as there is a dummy boilerplate placeholder Log 
@@ -991,6 +1149,7 @@ Additional commands for using *Org-Mode* with Modular Emacs will be explained he
 \newpage
 
 *** Enter New LOG Entry Details:
+<<META-HOWTO_COMPOSE-LOG>>
 
 Two sub headings have been provided for your use /(if you need them)/. However, you may structure your log entries any way you wish.  The two provided headings:  *Summary* and *Details* are simply suggestions to help make your log entries a bit more organized...
 
@@ -1000,155 +1159,289 @@ Conversely, the *Details* heading could contain a complete, thorough log of your
 
 Place the *:noexport:* tag at the end of any org outline heading to exclude it and all its children from the PDF upon export...  You can add as much detail as you need within these excluded sections without cluttering up your final PDF.  The entire main heading: *How to Use this Template:* is already excluded from the final PDF, so it can be left in and your PDF will only include the *Begin Log:* section...
 
-*** Export LOG as a PDF Report:
-
-Although this template was designed for use within EMACS only /(Not to be published as a PDF),/ Just the same... if you need to see your SIMPLE Log
-Notebook as a nicely printed PDF report, you can export it using the following custom key command: ~SPACE e p~ /(i.e., press ~spacebar~, type ~e~ and then ~p~ *(Xah-Fly-Keys Command Mode)* extended leader key sequence)/
-
-\newpage
-
 ** ⎘ Templates:
-*** NEW 🗓 LOG: <2021-03-29 Mon> Generic Title /(General Log Entry Template)/
+<<META_TEMPLATES>>
+
+*** NEW 🗓 BOILERPLATE LOG Entry /(Simple Log Entry TEMPLATE)/
+<2021-03-29 Mon>  
+<<SLOG-YYYY_META-ENTRY>>
 :README:
-   =Using the Clocking Feature of this Log Entry=
+   =Using this Log Entry TEMPLATE:= /(logging & tracking time)/
 
    - [ ] *Go To One of the HEADINGS Below:*
 
          /(Summary, Details, or Sub Headings)/
 
-         =Punch the Time Clock:= /(see Clocking Commands: below)/ At
-         the heading And then begin working on a task related to
-         that Heading...
+         =Punch the Time Clock:= /(See: CLOCKING COMMANDS: below)/
+         Punch the clock at any heading /(change its title)/ And then
+         begin working on a task related to your new Heading...
 
          =Your Time IS being Recorded Now= /(you will see a/ *:clocking:*
          /item under the heading where time is recorded)/
+         
+         Document your work under the current "clocking" heading as
+         you do the task... Clock OUT when you are done working...
+         /(do this whether task is complete or not)/
 
-   - [ ] =Use These Clocking Commands:= /to keep track your time.../
+   =Time Tracking:=
+
+   - [ ] =CLOCKING COMMANDS:= /(how to keep track your time)/
 
       + *Clock IN:* ~C-c C-x C-i~ /(Begin OR Resume Clocking Current task)/
 
-            This creates a new :CLOCKING: Time Card Entry just
-            underneath the HEADING...
+         This creates a new :CLOCKING: Time Card Entry just
+         underneath its HEADING...
 
-            Do this just before starting work on the task... 
-            Be in control of your life!
+         Do this just before starting work on the task... 
+         Be in control of your life!
 
-            After doing the above, you can go away and do some 
-            work, leaving this heading, log note, etc. to visit 
-            other files and/or work on them etc. The clock will 
-            be recording your time all the while... You will see 
-            in your mode line the elapsed clock time ticking away 
-            as you work on a task /(hopefully related to this clock!)/
-            and NOT Yac Shaving or being sidetracked!!!
+         If you need to go away and do something else before finishing
+         this task, you can do so after clocking out... When you come
+         back simply clock back in again to start another Time Card
+         Entry just as before... The new time card entry will appear
+         above the earlier one within the ~:CLOCKING:~ drawer... When
+         you clock out of this task it will look just like the entry
+         below it with a total time worked tagged on the end...
 
       + *RETURN to Clock Heading:* ~C-c C-x C-j~
 
-            /Go back to the place where you started the clock.../
+         /Go back to the place where you started the clock.../
 
-            You do this after you have worked on a task for a 
-            while and you need to come back to update the item's
-            info etc., and/or stop the clock before going off to 
-            do something else unrelated to the log entry...
+         You do this after you have worked on a task for a 
+         while and you need to come back to update the item's
+         info etc., and/or stop the clock before going off to 
+         do something else unrelated to the log entry...
 
       + *Clock OUT:* ~C-c C-x C-o~ /(to stop clocking your time on task)/
 
-            This *Finalizes the Time Card Entry* within:
-            ~:CLOCKING:~ /(created earlier when you started the clock)/
+         This *Finalizes the Time Card Entry* within:
+         ~:CLOCKING:~ /(created earlier when you started the clock)/
 
-            The Clock Entry changes showing start timestamp, end
-            timestamp, and total time worked during this segment...  
+         The Clock Entry changes showing start timestamp, end
+         timestamp, and total time worked during this segment...  
 
-            =Please DON'T Forget= /Like I often do, LOL.../ i.e., Leaving
-            a clock running all day by accident, or worse, leave it
-            dangling with the file closed only to open it again and
-            get that nasty *Org-Mode Message:* /"What do you want to do/
-            /with this?"/ If you do something like that you can always
-            come back and directly edit the clock times by hand to
-            amend them...  After changing clock times or dates, etc...
-            Whatever...
+         After Clocking OUT, you can go away and do some work, leaving
+         this heading, log note, etc. to visit other files and/or work on
+         them etc. The clock will be recording your time all the while...
+         You will see in your mode line the elapsed clock time ticking
+         away as you work on a task /(hopefully related to this clock!)/
+         and you are NOT Yac Shaving or being sidetracked!!! LOL
 
-                  ="Onward We Row Mates... Through the log jam!"=
+         =Please DON'T Forget= /Like I often do, LOL.../ i.e., Leaving
+         a clock running all day by accident, or worse, leave it
+         dangling with the file closed only to open it again and
+         get that nasty *Org-Mode Message:* /"What do you want to do/
+         /with this?"/ If you do something like that you can always
+         come back and directly edit the clock times by hand to
+         amend them...  After changing clock times or dates, etc...
+         Whatever...
+
+              ="Onward We Row Mates... Through the LOG jam!"=
 
       + *Update Time Card Entry:* ~C-c C-c~ 
 
-            This command will change the total time at the end showing 
-            your new calculated time...
+         =Go To The:= ⏰ *Time Card* Heading below...
 
-            If you need to go away and do something else before finishing
-            this task, you can do so after clocking out... When you come
-            back simply clock back in again to start another Time Card
-            Entry just as before... The new time card entry will appear
-            above the earlier one within the ~:CLOCKING:~ drawer... When
-            you clock out of this task it will look just like the entry
-            below it with a total time worked tagged on the end...
+         place your cursor on the same line or at the beginning of:
+         ~#+BEGIN: clocktable etc...~ and type: ~C-c C-c~  
+   
+         This command will change the total time at the end showing 
+         your new calculated time...
 
       + *Clock Out & Mark Items Done:* ~C-c C-t~
 
-            When you are all done with a Log Entry use the above key 
-            command to mark its Heading *TODO* tag to: *DONE* /(Most of the/ 
-            /time this will ALSO clock you out if you are still clocked/ 
-            /into the item... But not allways in my experience.../  
-            So make sure you are also clocked OUT of an Item After 
-            marking it DONE... Type: ~C-c C-x C-j~ to check this...
-            /(if no running clock it will tell you and place your/
-            /cursor at the heading where you LAST CLOCKED OUT)/
+         When you are all done with a Log Entry use the above key 
+         command to mark its Heading *TODO* tag to: *DONE* /(Most of the/ 
+         /time this will ALSO clock you out if you are still clocked/ 
+         /into the item... But not allways in my experience.../  
+         So make sure you are also clocked OUT of an Item After 
+         marking it DONE... Type: ~C-c C-x C-j~ to check this...
+         /(if no running clock it will tell you and place your/
+         /cursor at the heading where you LAST CLOCKED OUT)/
 
       + ~C-c C-x C-q~ *Cancel Current Clock:* /(in case of accident)/
 
-            This removes currently running clock and forgets any time
-            accrued or associated with it...
+         This removes currently running clock and forgets any time
+         accrued or associated with it...
 
       + ~C-c C-x C-d~ *Display Clocking Info:* 
 
-            /This will show elapsed times to the right of headings.../
-            =Warning!= Using this command will CLUTTER ALL the headings
-                     within your org file with those timestamps!!!
+         /This will show elapsed times to the right of headings.../
+         
+         =Warning!= Using this command will CLUTTER ALL the headings
+                  within your org file with those timestamps!!!
 
+   =CREATING A BRAND NEW LOG ENTRY:= /(from this TEMPLATE)/
+
+   - [ ] *COPY/CLONE THIS ENTIRE:*
+         
+        *NEW* 🗓 *BOILERPLATE LOG Entry* /(Simple Log Entry TEMPLATE)/
+         
+        Paste it under the current: 📅 *YYYY:* heading at the bottom
+        of the list /(under previous log entries items from before)/
+         
+        =or:= If you prefer... Place it at the top of the list...
+        /(i.e., descending or ascending chronological order)/
+        /(But Do One Or The Other... Don't mix or mess up your time/
+        /line silly girl!)/
+
+   - [ ] =Commandeer Your New Clone:=
+     
+         The structure of this Log Entry Template's content layout is
+         all set up for you ahead of time to allow you to immediately
+         begin writing... /(You only need to change titles etc...)/
+
+         After cloning, =RENAME= *BOILERPLATE LOG Entry* /(Simple Log Entry TEMPLATE)/
+         to a *Unique Title* in order to commandeer the log entry item for your
+         own needs...
+
+         =Do NOT PUT "LOG" in your Title!=
+
+         You also need to insure your anchors /(below the headings)/ are unique!
+
+   - [ ] =Change The Anchor Link:=
+
+        Change the anchor /(directly under the LOG Entry Title)/ to
+        match your new Log Entry's title name...
+
+         =Note:= I created the following convention for making unique
+               anchors within ALL of these HAP_Doc-Skeleton.org
+               Template files.
+
+               The anchor ~PREFIX_~ is there to match the named sections
+               of a book or document project defined as a standard
+               across ALL of these HAP_Document-Skeleton.org Template
+               files... This will help keep your anchors unique, and
+               also add an extra *KM* dimension of *category* to them...
+
+               It would be wise to follow this convention when you
+               create anchors elsewhere within ALL of your Book
+               Projects created from HAP Modular Emacs Document
+               Skeleton Template files...
+
+               If you wish to change all of this, go ahead and do
+               what ever you want... For simplicity's sake, follow
+               the instructions below... /(there are automatic ways/
+               /to create links and anchors within org-mode... I/
+               /prefer to do it manually... The alternate is a mess/
+               /IMHO)/
+
+         Leave ~SLOG-YYYY_~ as the anchor's prefix /(as in boilerplate above)/
+         but change the YYYY part to the current year that you copied this
+         NEW log Entry item into...
+
+         Change ~META-ENTRY~ /(after the underscore "_" )/ to a short but unique
+         abbreviation, acronym, or mnemonic of the log entry's title... Keep
+         the underscore to separate the MAIN HEADING ID of this anchor from
+         the NEW renaed title of this new LOG Entry...
+   
+         Make your title "POSTFIX" portion of the anchor link in all lower
+         case... Use dashes to connect words within your title postfix
+         portion of the anchor...
+
+         Your new unique anchor above may be used to link to this log entry
+         from Research or other sections of this log...
+         /(Or even from/ ~.org~ /docs OUTSIDE of this file...)/
+
+   - [ ] =Replace Titles, Anchors, & Content of Sub Headings=
+
+        =DO NOT CHANGE MAIN HEADINGS:= *Reference*, *Time Card*, *Summary*,
+        or *Details* below...  BUT DO CHANGE THE ANCHOR LINKS under
+        these main headings...
+
+        Change the *YYYY* part of the existing anchors to the year that this
+        log entry was placed in the same way as you did above in the previous
+        bullet... 
+
+        Change *META-ENTRY* within the existing anchor to the title of this
+        log entry, /(as you did for the Main Anchor of this Log Entry...)/
+        HOWEVER in this case it is NOW part of the PREFIX portion of this
+        anchor and should be ALL UPPER CASE. /(an underscore is placed/
+        /between it and the POSTFIX title of the sub heading)/
+
+        You will be doing this same shifting of parent heading titles to
+        the PREFIX for SUB-SUB Headings as well...
+        
+        This is why keeping that part short is a good idea because NOW
+        the Log Entry Title is part of the PREFIX for anchors made to
+        Sub-Headings... /(and in turn shortened versions of those sub/
+        /heading titles will become part of the PREFIX for anchors of/
+        /sub-sub headings... etc...)/
+        
+        =Use the underscore= ~_~ to separate the MAIN HEADING ID /(PREFIX)/ from
+        the /(POSTFIX)/ sub-heading title it has been placed under...
+
+        If you are creating NEW Sub Headings... Copy an anchor from a previous
+        one and adjust it the exact same way... /(the logic is self contained)/
+
+        /This all follows the same convention described within the previous/
+        /bullet.../
+
+   =ENJOY USING YOUR BRAND NEW LOG OF ANYTHING YOU WANT!=
 :END:
 
 This Log Entry is about: Yadda... Yadda... Yadda...
 
-\newpage
-
 **** NEW 📚 Reference:
+<<SLOG-YYYY-META-ENTRY_ref>>
 :README:
-   Use this section to include links to References related to this
-   SINLE LOG ENTRY ONLY... 
+   =Org Mode Links Tip:=
 
-   =Note:= There is a GLOBAL Ref Section under the: *☞ About:* section
-         of this Log Notebook...
+      + To Create a Link Type: ~C-c C-l~ 
+         /(then paste: ~link~ & type: "description")/
 
-         Links to refs of a GENERAL nature should NOT be PUT in
-         this Log Entry Ref section... Put those in the GLOBAL Ref
-         Section of this entire Log Notebook instead...
+         =-OR-= Simply Copy/Paste BOILERPLATE:
+              /(use placeholders below)/
+              And Fill Them In Manually... 
+              Copy/Paste more placeholders as
+              needed to create more links...
+
+      + To Open a Link Type: ~C-c C-o~
+
+      + To EXPAND a Link Type: ~SPACE b~
+         or: ~M-x org-toggle-link-display~
+
+   =BOILERPLATE:= /(clone to add more ref links)/
+
+   - *Heading:* [[link][Link NAME] ] /(comment)/
+
+   - [[link][Link Name] ] *Heading:* /(comment)/
+   
+   - *_:* [[][] ] /(yadda... yadda... yadda...)/
+
+   - [[][] ] /(_)/
+
+   [[junk][JUNK]]  /(This is a stupid BUG workaround/ /for org-mode link/
+         /expansion/compression... If you invoke:/ ~org-toggle-link-display~
+         /you will notice this JUNK link DOES NOT compress to a clickable/
+         /link title alone.../
+         
+         /I am not sure if this is due to my Emacs Config or a bug within/
+         *Org-Mode* /itself.../
+
+         /I put this workaround in here because if it is not here,/
+         /SOME of your external file links created below may not/
+         /compress after expansion, even though thy are GOOD links!/
+
+         /Leaving this JUNK link in here acts like a scapegoat/
+         /so that your real links below will all compress/expand/
+         /normally... I am NOT SURE WHY THIS WORKS??? I'm to busy/
+         /to do anything beyond hacking at this point.../
+         
+         ~org-lint~ /will detect JUNK above... Ignore that warning.../
+                  /It's my "METHOD of MADNESS" %^)/
 :END:
 
-- *Link to Project:* [[][] ]
-
-- [[URL][Link Name] ] *Heading:* /(comment)/
-
-- [[][] ] - *_:* /(yadda...)/
-
-- [[][] ] - *_:* /(yadda...)/
-
-- [[][] ] - *_:* /(yadda...)/
-
-- [[][] ] /(_)/
-
-- [[][] ] /(_)/
-
-- [[][] ] /(_)/
-
-\newpage
+- *Link to Project:* [[][] ] /(comment)/
 
 **** NEW ⏰ Time Card:
+<<SLOG-YYYY-META-ENTRY_time-card>>
 
 #+BEGIN: clocktable :scope tree3 :maxlevel 6 :tstart "<-1w>" :tend "<+1m>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3
 #+END:
 
-\newpage
-
 **** NEW ✅ Summary: [0/3]
+<<SLOG-YYYY-META-ENTRY_summary>>
 :README:
    This Summary is mostly to help you find things later when you
    cannot remember when or where is was done... If you go to the
@@ -1169,31 +1462,28 @@ This Log Entry is about: Yadda... Yadda... Yadda...
 
 Yadda... Yadda... Yadda...
 
-1. [ ] *__:*
+1. [X] *New Item 1:* /(this represents a completed item)/
 
-2. [ ] *__:*
+2. [-] *New Item 2:* /(this represents a currently "radio active" item)/
 
-3. [ ] *__:*
+3. [ ] *New Item 3:* /(this represents a new item not worked on yet)/
 
-\newpage
+3. [ ] *New Item:* /(copy/clone more of these as needed)/
 
 **** NEW 📒 Details:
+<<SLOG-YYYY-META-ENTRY_details>>
+
 ***** NEW ⏱ New Item 1 /(placeholder)/ [0/3]
+<<SLOG-YYYY-META-ENTRY-DETAILS_item-1>>
+:BOILERPLATE:
 
-New Item Details... Yadda... Yadda... Yadda...
+  =Delete This BOILERPLATE DRAWER If You Don't Need It...=
 
-Re-Purpose these as needed and Delete anything you don't need...
+  The following list contains Babel Source Code Blocks that are
+  often needed for something I am writing or "Logging" about...
+  I use them so much I decided to include them in this template...
 
-Add sub headings as needed...
-
-Don't forget to clock-in to HEADINGS while you work on them...
-AND... Don't forget to Clock OUT when you are DONE... %^)
-
-=Examples I Use Often=
-
-The following list contains Babel Source Code Blocks that are often needed for something I am writing or "Logging" about... I use them so much I decided to include them in this template...
-
-- [ ] *__:* /(__)/
+  - [ ] *__:* /(__)/
 
       #+begin_src conf
        keyword1:     Value1 
@@ -1201,14 +1491,14 @@ The following list contains Babel Source Code Blocks that are often needed for s
        keyword3:     Value 
       #+end_src
 
-- [ ] *__:* /(__)/
+  - [ ] *__:* /(__)/
 
       #+begin_src bash
        sudo dnf install emacs
        sudo apt install emacs
       #+end_src
 
-- [ ] *__:* /(__)/
+  - [ ] *__:* /(__)/
 
       #+BEGIN_SRC emacs-lisp :results output
        ;; Initialize Local Vars from GLOBAL CONSTANTS;
@@ -1234,24 +1524,51 @@ The following list contains Babel Source Code Blocks that are often needed for s
       : CAR w: text-pixels
       : CDR w: (92)
 
-\newpage
+  - [ ] =LaTeX Code Within ~.Org~ Docs:=
+
+      #+begin_comment
+
+      Code Embedded ~In-line~ within paragraphs:
+      
+         Put: @@latex:<LaTeX Code Here>@@ Anywhere
+         Within a paragraph...
+
+      #+LATEX: % Any Arbitrary LaTeX Code...
+      
+      #+LATEX: \newpage % Start New Page
+
+      #+BEGIN_EXPORT latex
+      %% Put LaTex Code In Here...
+      #+END_EXPORT
+
+      #+BEGIN_LaTeX
+      %% Put LaTex Code In Here...
+      #+END_LaTeX
+
+      #+end_comment
+
+:END:
+
+New Item Details... Yadda... Yadda... Yadda...
+
+Re-Purpose these as needed and Delete anything you don't need...
+
+Add sub headings as needed...
+
+Don't forget to clock-in to HEADINGS while you work on them...
+AND... Don't forget to Clock OUT when you are DONE... %^)
 
 ***** NEW ⏱ New Item 2 /(placeholder)/ [0/3]
+<<SLOG-YYYY-META-ENTRY-DETAILS_item-2>>
+:BOILERPLATE:
 
-New Item Details... Yadda... Yadda... Yadda...
+  =Delete This BOILERPLATE DRAWER If You Don't Need It...=
 
-Re-Purpose these as needed and Delete anything you don't need...
+  The following list contains Babel Source Code Blocks that are
+  often needed for something I am writing or "Logging" about...
+  I use them so much I decided to include them in this template...
 
-Add sub headings as needed...
-
-Don't forget to clock-in to HEADINGS while you work on them...
-AND... Don't forget to Clock OUT when you are DONE... %^)
-
-=Examples I Use Often=
-
-The following list contains Babel Source Code Blocks that are often needed for something I am writing or "Logging" about... I use them so much I decided to include them in this template...
-
-- [ ] *__:* /(__)/
+  - [ ] *__:* /(__)/
 
       #+begin_src conf
        keyword1:     Value1 
@@ -1259,14 +1576,14 @@ The following list contains Babel Source Code Blocks that are often needed for s
        keyword3:     Value 
       #+end_src
 
-- [ ] *__:* /(__)/
+  - [ ] *__:* /(__)/
 
       #+begin_src bash
        sudo dnf install emacs
        sudo apt install emacs
       #+end_src
 
-- [ ] *__:* /(__)/
+  - [ ] *__:* /(__)/
 
       #+BEGIN_SRC emacs-lisp :results output
        ;; Initialize Local Vars from GLOBAL CONSTANTS;
@@ -1292,24 +1609,51 @@ The following list contains Babel Source Code Blocks that are often needed for s
       : CAR w: text-pixels
       : CDR w: (92)
 
-\newpage
+  - [ ] =LaTeX Code Within ~.Org~ Docs:=
+
+      #+begin_comment
+
+      Code Embedded ~In-line~ within paragraphs:
+      
+         Put: @@latex:<LaTeX Code Here>@@ Anywhere
+         Within a paragraph...
+
+      #+LATEX: % Any Arbitrary LaTeX Code...
+      
+      #+LATEX: \newpage % Start New Page
+
+      #+BEGIN_EXPORT latex
+      %% Put LaTex Code In Here...
+      #+END_EXPORT
+
+      #+BEGIN_LaTeX
+      %% Put LaTex Code In Here...
+      #+END_LaTeX
+
+      #+end_comment
+
+:END:
+
+New Item Details... Yadda... Yadda... Yadda...
+
+Re-Purpose these as needed and Delete anything you don't need...
+
+Add sub headings as needed...
+
+Don't forget to clock-in to HEADINGS while you work on them...
+AND... Don't forget to Clock OUT when you are DONE... %^)
 
 ***** NEW ⏱ New Item 3 /(placeholder)/ [0/3]
+<<SLOG-YYYY-META-ENTRY-DETAILS_item-3>>
+:BOILERPLATE:
 
-New Item Details... Yadda... Yadda... Yadda...
+  =Delete This BOILERPLATE DRAWER If You Don't Need It...=
 
-Re-Purpose these as needed and Delete anything you don't need...
+  The following list contains Babel Source Code Blocks that are
+  often needed for something I am writing or "Logging" about...
+  I use them so much I decided to include them in this template...
 
-Add sub headings as needed...
-
-Don't forget to clock-in to HEADINGS while you work on them...
-AND... Don't forget to Clock OUT when you are DONE... %^)
-
-=Examples I Use Often=
-
-The following list contains Babel Source Code Blocks that are often needed for something I am writing or "Logging" about... I use them so much I decided to include them in this template...
-
-- [ ] *__:* /(__)/
+  - [ ] *__:* /(__)/
 
       #+begin_src conf
        keyword1:     Value1 
@@ -1317,14 +1661,14 @@ The following list contains Babel Source Code Blocks that are often needed for s
        keyword3:     Value 
       #+end_src
 
-- [ ] *__:* /(__)/
+  - [ ] *__:* /(__)/
 
       #+begin_src bash
        sudo dnf install emacs
        sudo apt install emacs
       #+end_src
 
-- [ ] *__:* /(__)/
+  - [ ] *__:* /(__)/
 
       #+BEGIN_SRC emacs-lisp :results output
        ;; Initialize Local Vars from GLOBAL CONSTANTS;
@@ -1350,4 +1694,37 @@ The following list contains Babel Source Code Blocks that are often needed for s
       : CAR w: text-pixels
       : CDR w: (92)
 
-\newpage
+  - [ ] =LaTeX Code Within ~.Org~ Docs:=
+
+      #+begin_comment
+
+      Code Embedded ~In-line~ within paragraphs:
+      
+         Put: @@latex:<LaTeX Code Here>@@ Anywhere
+         Within a paragraph...
+
+      #+LATEX: % Any Arbitrary LaTeX Code...
+      
+      #+LATEX: \newpage % Start New Page
+
+      #+BEGIN_EXPORT latex
+      %% Put LaTex Code In Here...
+      #+END_EXPORT
+
+      #+BEGIN_LaTeX
+      %% Put LaTex Code In Here...
+      #+END_LaTeX
+
+      #+end_comment
+
+:END:
+
+New Item Details... Yadda... Yadda... Yadda...
+
+Re-Purpose these as needed and Delete anything you don't need...
+
+Add sub headings as needed...
+
+Don't forget to clock-in to HEADINGS while you work on them...
+AND... Don't forget to Clock OUT when you are DONE... %^)
+

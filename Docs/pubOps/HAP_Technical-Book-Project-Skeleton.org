@@ -39,7 +39,7 @@
               /& Heading Numbering at Sub Sections and Sub Sub Sections...)/
 #+END_COMMENT
 
-#+SETUPFILE: ./org-templates/ref-book.org
+#+SETUPFILE: ./org-templates/ref-book-setup.org
 #+SETUPFILE: ./org-templates/default-tags.org
 
 :READ_ME_FIRST:

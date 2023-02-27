@@ -1,0 +1,127 @@
+%%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%%   File:        ~/.emacs.d/Docs/PubOps/org-templates/fiction-book-setup.tex
+%%   Ref:         <https://github.com/harmonicalchemy/modular-emacs>
+%%   Purpose:     LaTeX Setup Include File for Fiction Books
+%%   Author:      Alisha Awen
+%%   Maintainer:  Alisha Awen
+%%   Created:     2023-002-18
+%%   Updated:     2023-002-18
+
+%%   This program is free software: you can redistribute it and/or modify
+%%   it under the terms of the GNU General Public License as published by
+%%   the Free Software Foundation, either version 3 of the License, or
+%%   (at your option) any later version.
+
+%%   This program is distributed in the hope that it will be useful,
+%%   but WITHOUT ANY WARRANTY; without even the implied warranty of
+%%   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%%   GNU General Public License for more details.
+
+%%   You should have received a copy of the GNU General Public License
+%%   along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+%%%  CUSTOM USAGE:
+
+%%   This Configuration defines the: BLUE BOX CHAPTER HEADING STYLE
+%%   To Customize: Copy/Clone ~/.emacs.d/Docs/PubOps/org-templates (which contains
+%%   this file) to your .org doc's MASTER FOLDER. Then, modify your cloned copy of
+%%   this file...
+%%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PREAMBLE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ %%%
+
+\usepackage{parskip}
+\usepackage{paralist}
+\usepackage[hyperref,x11names]{xcolor}
+\usepackage[colorlinks=true,urlcolor=SteelBlue4,linkcolor=Firebrick4]{hyperref}
+\usepackage{color,calc}
+
+%%% ~~~~~~~~~~~~ FONT SPECS ~~~~~~~~~~~~~
+
+\usepackage[LGR, T1]{fontenc}
+\usepackage{libertine}
+\usepackage{libertinust1math}
+\usepackage{gfsneohellenic}
+
+\renewcommand{\sfdefault}{neohellenic}
+
+\usepackage{titlesec}
+
+\titleformat*{\section}{\Large\sffamily}
+\titleformat*{\subsection}{\large\sffamily}
+\titleformat*{\subsubsection}{\normalsize\sffamily}
+
+%%% ~~~~~~~~ CHAPTER NUMBER BOX ~~~~~~~~~
+
+\newsavebox{\ChpNumBox}
+\definecolor{ChapBlue}{rgb}{0.00,0.65,0.65}
+
+\makeatletter
+
+\newcommand*{\thickhrulefill}{%
+   \leavevmode\leaders\hrule height 1\p@ \hfill \kern \z@
+}
+
+\newcommand*\BuildChpNum[2]{%
+   \begin{tabular}[t]{@{}c@{}}
+   \makebox[0pt][c]{#1\strut} \\[.5ex]
+   \colorbox{ChapBlue}{%
+      \rule[-10em]{0pt}{0pt}%
+      \rule{1ex}{0pt}\color{black}#2\strut
+      \rule{1ex}{0pt}}%
+   \end{tabular}
+}
+
+%%% ~~~~~~~~~~~~~~~~~~ Make BLUE BOX CHAPTER HEADING STYLE ~~~~~~~~~~~~~~~~~~ %%%
+
+\makechapterstyle{BlueBox}{%
+   \renewcommand{\chapnamefont}{\large\scshape}
+   \renewcommand{\chapnumfont}{\Huge\bfseries}
+   \renewcommand{\chaptitlefont}{\raggedright\Huge\bfseries}
+   \setlength{\beforechapskip}{20pt}
+   \setlength{\midchapskip}{26pt}
+   \setlength{\afterchapskip}{40pt}
+   \renewcommand{\printchaptername}{}
+   \renewcommand{\chapternamenum}{}
+
+   \renewcommand{\printchapternum}{%
+      \sbox{\ChpNumBox}{%
+         \BuildChpNum{\chapnamefont\@chapapp}%
+         {\chapnumfont\thechapter}
+      }
+   }
+
+   \renewcommand{\printchapternonum}{%
+      \sbox{\ChpNumBox}{%
+         \BuildChpNum{\chapnamefont\vphantom{\@chapapp}}%
+         {\chapnumfont\hphantom{\thechapter}}
+      }
+   }
+
+   \renewcommand{\afterchapternum}{}
+
+   \renewcommand{\printchaptertitle}[1]{%
+      \usebox{\ChpNumBox}\hfill
+
+      \parbox[t]{\hsize-\wd\ChpNumBox-1em}{%
+         \vspace{\midchapskip}%
+         \thickhrulefill\par
+         \chaptitlefont ##1\par
+      }
+   }%
+} %% END BlueBox Chapter Style...
+
+\makeatother
+%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ BEGIN DOCUMENT ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ %%%
+
+\AtBeginDocument{
+\nonzeroparskip
+\frontmatter
+}
+
+\chapterstyle{BlueBox}
+
+%%%% END: ~/.emacs.d/Docs/PubOps/org-templates/fiction-book-setup.tex
+%%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

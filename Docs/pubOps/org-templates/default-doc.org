@@ -1,8 +1,62 @@
 # -**- mode: org; coding: utf-8 -**-
-#+BEGIN_COMMENT
+:LATEST_UPDATE:
+  =Last Updated:= <2023-02-18 Sat> /(this template needs work)/
+
+  =YOU MAY REMOVE This Drawer= from your own clones of this template if
+  it is bothering you... This drawer is used for HAP Modular Emacs
+  DOC TEMPLATES housekeeping...
+
+  =HOWEVER= you may also use it for the same purpose to keep your existing
+  Modular Emacs based org documents in sync with the latest updates of the
+  template they were created from...
+  
+  =If you do wish to do the same... Read On Below...=
+  
+  - =INTERNAL USE Instructions:= /(END USERS SKIP THIS BULLET)/
+
+    This bullet is not for end users... This is /"Note to Self"/ stuff...
+
+    + [ ] =MASTER TEMPLATE ONLY= *Keep The Above Timestamp Up To Date:*
+
+        *DO THIS ALWAYS*, JUST AFTER YOU UPDATE THIS SETUPFILE...
+        =DON'T FORGET!=
+
+  - =PUBLIC USE Instructions:= /(FOR CLONES OF THIS TEMPLATE)/
+
+    + [ ] =Change this= *:LATEST_UPDATE:* =drawer title:= /(within clones only)/
+
+         Change it to: *:LATEST_TEMPLATE_UPDATE:* within NEWLY CREATED CLONES...
+
+    + [ ] *COMPARE the TIMESTAMPS between THIS TEMPLATE and CLONES:*
+
+         ~Org-Mode~ and ~AuxTeX~ settings and meta data within CLONES of
+         this SETUPFILE TEMPLATE will get out of sync after a while due
+         to Harmonic Alchemy Modular Emacs version updates etc...
+        
+         Use the ABOVE timestamp /(within the TEMPLATE and your CLONE)/
+         to see if the clone's settings need to be updated...
+         /(i.e., brought into sync with its template - MERGE)/ and then
+         perform any needed merging/replacing of BOILERPLATE and/or
+         meta data. /(e.g, *:README:* drawers, etc.)/
+
+    + [ ] *Keep ABOVE timestamp within CLONES of this template UP TO DATE:*
+
+         =AFTER Completing Above MERGE Step= and your clone has been brought
+         up to date /(i.e. in sync)/ with its STARTUPFILE TEMPLATE...
+         Then update the timestamp ABOVE... /(WITHIN YOUR CLONE)/ to record
+         the date of its last sync status...
+:END:
+
 =File:=  ~~/.emacs.d/Docs/pubOps/org-templates/default-doc.org~
 
-        =BASIC LaTeX Configuration for: GENERIC DOCUMENTS=
+        =ORG-MODE & LaTeX SETUPFILE for: GENERIC DOCUMENTS=
+
+=NOTE:= This SETUPFILE is NOT being used for anything
+      currently... It is here to help with troubleshooting
+      etc...  It may be incorporated into something useful
+      for real things later however...
+      
+:README:
 
 =Usage:= *Include* this SETUPFILE within ~.org~ files destined to become
         a *Generic Book or Document*...
@@ -23,23 +77,8 @@
 /folder To your book's project directory will allow you to make your own custom/
 /configurations for different books without affecting the configurations of other/
 /book projects within their own MASTER FOLDERS.../
-#+END_COMMENT
+:END:
 
-=STANDARD STARTUP OPTIONS=
-
-#+CATEGORY: @Generic_Books
-#+LANGUAGE: en
-
-#+STARTUP: overview
-#+STARTUP: hideblocks
-#+STARTUP: indent
-#+STARTUP: align
-#+STARTUP: showall
-#+STARTUP: inlineimages
-
-=STANDARD EXPORT OPTIONS:=
-
-/
 - *Reference:*
    
    + [[https://orgmode.org/manual/Export-Settings.html#Export-Settings][Org Manual Export Settings]]
@@ -48,22 +87,69 @@
 
    + [[https://www.linuxjournal.com/content/org-mode-latex-exporter-latex-non-texers][Org Mode Latex Exporter - Linux Journal]]
 
+   + [[https://tug.org/][TeX Users Group]] - /TUG/
+
+   + [[https://tug.org/FontCatalogue/][The LaTeX Font Catalogue]] - /(TUG.org)/
+
+   + [[https://tug.org/FontCatalogue/seriffonts.html][Serif Fonts]] - /(TUG.org)/
+
+   + [[https://tug.org/FontCatalogue/sansseriffonts.html][Sans Serif Fonts]] - /(TUG.org)/
+
+   + [[https://tug.org/FontCatalogue/typewriterfonts.html][Typewriter Fonts]] - /(TUG.org)/
+
+   + [[https://tug.org/FontCatalogue/calligraphicalfonts.html][Calligraphical Fonts]] - /(TUG.org)/
+
+   + [[https://en.wikibooks.org/wiki/LaTeX/Fonts][LaTeX Fonts]] - /(WIKIbooks.org)/
+
    + [[https://www.ctan.org/pkg/latexmk/][latexmk – Fully automated LaTeX document generation]]
 
    + [[https://damitr.org/2014/01/09/latex-tufte-class-in-org-mode/][Latex Tufte class in org-mode]]
 
-   + [[https://tufte-latex.github.io/tufte-latex/][Tufte-LaTeX]]
-
-        /A Tufte-inspired LaTeX class for producing/
-        /handouts, papers, and books.../
+   + [[https://tufte-latex.github.io/tufte-latex/][Tufte-LaTeX]] - /For Producing Handouts, Papers, and Books/
 
    + [[https://github.com/Tufte-LaTeX/tufte-latex][tufte-latex.github.io/tufte-latex/]]
 
-   + [[https://latex-tutorial.com/documentclass-latex/][Your Guide to documentclass LaTeX - Latex-Tutorial.com]] -
+   + [[https://latex-tutorial.com/documentclass-latex/][Your Guide to documentclass LaTeX - Latex-Tutorial.com]] 
 
    + [[https://mirror2.sandyriver.net/pub/ctan/macros/latex/contrib/memoir/memman.pdf][The Memoir Document Class]] - /(link to PDF)/
 
    + [[https://www.ctan.org/pkg/memoir][memoir – Typeset fiction, non-fiction and mathematical books]] - /(CTAN)/
+
+   + [[https://orgmode.org/manual/Embedded-LaTeX.html][12.5 Embedded LaTeX]] - /(The Org Manual)/ 
+
+   + [[https://orgmode.org/manual/LaTeX-fragments.html][12.5.1 LaTeX fragments]] - /(The Org Manual)/ 
+
+   + [[https://www.offerzen.com/blog/literate-programming-empower-your-writing-with-emacs-org-mode][Empower Your Writing with Emacs Org-Mode]] - /(Literate Programming)/
+
+   + [[][] ] - 
+
+   + [[][] ] - 
+
+   + [[][] ] -
+
+=LaTeX --> DEFAULT GENERIC PDF:=
+
+    /(NOT YET CONFIGURED)/
+
+=DISABLED OPTIONS For This Configuration:= /(for debugging)/
+
+#+BEGIN_COMMENT
+   # #+OPTIONS: toc:2        # Set TOC (org-export-with-toc) 2 levels
+   # #+OPTIONS: toc:nil      # DO NOT Include Default TOC (org-export-with-toc)
+   # #+OPTIONS: num:3        # Set Section Numbering level...
+#+END_COMMENT
+
+=STARTUP OPTIONS For This Configuration:=
+
+#+LANGUAGE: en
+#+STARTUP: overview
+#+STARTUP: hideblocks
+#+STARTUP: indent
+#+STARTUP: align
+#+STARTUP: showall
+#+STARTUP: inlineimages
+
+=STANDARD EXPORT OPTIONS:=
 
 #+SELECT_TAGS: export
 #+EXCLUDE_TAGS: noexport
@@ -108,11 +194,3 @@
 #+OPTIONS: toc:6        # Include TOC (level 3) (org-export-with-toc)
 #+OPTIONS: todo:nil     # DO NOT Include TODO keywords (org-export-with-todo-keywords)
 #+OPTIONS: |:t          # Include Tables (org-export-with-tables)
-
-=DISABLED OPTIONS for TESTING:=
-#+BEGIN_COMMENT
-   # #+OPTIONS: toc:2        # Set TOC (org-export-with-toc) 2 levels
-   # #+OPTIONS: toc:nil      # DO NOT Include Default TOC (org-export-with-toc)
-   # #+OPTIONS: num:3        # Set Section Numbering level...
-#+END_COMMENT
-
