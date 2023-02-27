@@ -686,95 +686,17 @@
   (add-to-list
    'org-latex-classes
    '("blueboxbook"
-     "\\documentclass[openleft]{memoir}
 
-  %%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PREAMBLE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ %%%
-  \\usepackage{color,calc}
-
-  %%% ~~~~~~~~~~~~ FONT SPECS ~~~~~~~~~~~~~
-  \\usepackage[LGR, T1]{fontenc}
-  \\usepackage{libertine}
-  \\usepackage{libertinust1math}
-  \\usepackage{gfsneohellenic}
-  \\renewcommand{\\sfdefault}{neohellenic}
-  \\usepackage{titlesec}
-  \\titleformat*{\\section}{\\Large\\sffamily}
-  \\titleformat*{\\subsection}{\\large\\sffamily}
-  \\titleformat*{\\subsubsection}{\\normalsize\\sffamily}
-
-  %%% ~~~~~~~~ CHAPTER NUMBER BOX ~~~~~~~~~
-  \\newsavebox{\\ChpNumBox}
-  \\definecolor{ChapBlue}{rgb}{0.00,0.65,0.65}
-
-  \\makeatletter
-
-  \\newcommand*{\\thickhrulefill}{%
-  \\leavevmode\\leaders\\hrule height 1\\p@ \\hfill \\kern \\z@}
-
-  \\newcommand*\\BuildChpNum[2]{%
-  \\begin{tabular}[t]{@{}c@{}}
-  \\makebox[0pt][c]{#1\strut}  \\\[.5ex]
-     \\colorbox{ChapBlue}{%
-        \\rule[-10em]{0pt}{0pt}%
-        \\rule{1ex}{0pt}\\color{black}#2\\strut
-        \\rule{1ex}{0pt}}%
-   \\end{tabular}}
-
-%%% ~~~~~~~~~~~~~~~~~~ Make BLUE BOX CHAPTER HEADING STYLE ~~~~~~~~~~~~~~~~~~ %%%
-\\makechapterstyle{BlueBox}{%
-   \\renewcommand{\\chapnamefont}{\\large\\scshape}
-   \\renewcommand{\\chapnumfont}{\\Huge\\bfseries}
-   \\renewcommand{\\chaptitlefont}{\\raggedright\\Huge\\bfseries}
-   \\setlength{\\beforechapskip}{20pt}
-   \\setlength{\\midchapskip}{26pt}
-   \\setlength{\\afterchapskip}{40pt}
-   \\renewcommand{\\printchaptername}{}
-   \\renewcommand{\\chapternamenum}{}
-
-   \\renewcommand{\\printchapternum}{%
-      \\sbox{\\ChpNumBox}{%
-         \\BuildChpNum{\\chapnamefont\\@chapapp}%
-         {\\chapnumfont\\thechapter}
-      }
-   }
-
-   \\renewcommand{\\printchapternonum}{%
-      \\sbox{\\ChpNumBox}{%
-         \\BuildChpNum{\\chapnamefont\\vphantom{\\@chapapp}}%
-         {\\chapnumfont\\hphantom{\\thechapter}}
-      }
-   }
-
-   \\renewcommand{\\afterchapternum}{}
-
-   \\renewcommand{\\printchaptertitle}[1]{%
-      \\usebox{\\ChpNumBox}\\hfill
-
-      \\parbox[t]{\\hsize-\\wd\\ChpNumBox-1em}{%
-         \\vspace{\\midchapskip}%
-         \\thickhrulefill\\par
-         \\chaptitlefont ##1\\par
-      }
-   }%
-} %% END BlueBox Chapter Style...
-\\makeatother
-%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ BEGIN DOCUMENT ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ %%%
-
-\\AtBeginDocument{
-    \\nonzeroparskip
-    \\frontmatter
-}
-
-\\chapterstyle{BlueBox}"
+     "\\documentclass[openleft,oneside,showtrims]{memoir}
+             [NO-DEFAULT-PACKAGES]
+             [PACKAGES]
+             [EXTRA]
+      \\input{~/.emacs.d/Docs/TeX/fiction-book-setup.tex}"
 
      ("\\chapter{%s}" . "\\chapter*{%s}")
      ("\\section{%s}" . "\\section*{%s}")
      ("\\subsection{%s}" . "\\subsection*{%s}")
-     ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-     ("\\paragraph{%s}" . "\\paragraph*{%s}")
-     ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+     ("\\subsubsection{%s}" . "\\subsubsection*{%s}")))
   ;; ~~~~ END: HAP BLUE BOX FICTION BOOK DOCUMENT CLASS: ~~~~
 
   ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -1,7 +1,57 @@
 # -**- mode: org; coding: utf-8 -**-
+:LATEST_UPDATE:
+  =Last Updated:= <2023-02-18 Sat> /(this template needs work)/
+
+  =YOU MAY REMOVE This Drawer= from your own clones of this template if
+  it is bothering you... This drawer is used for HAP Modular Emacs
+  DOC TEMPLATES housekeeping...
+
+  =HOWEVER= you may also use it for the same purpose to keep your existing
+  Modular Emacs based org documents in sync with the latest updates of the
+  template they were created from...
+  
+  =If you do wish to do the same... Read On Below...=
+  
+  - =INTERNAL USE Instructions:= /(END USERS SKIP THIS BULLET)/
+
+    This bullet is not for end users... This is /"Note to Self"/ stuff...
+
+    + [ ] =MASTER TEMPLATE ONLY= *Keep The Above Timestamp Up To Date:*
+
+        *DO THIS ALWAYS*, JUST AFTER YOU UPDATE THIS SETUPFILE...
+        =DON'T FORGET!=
+
+  - =PUBLIC USE Instructions:= /(FOR CLONES OF THIS TEMPLATE)/
+
+    + [ ] =Change this= *:LATEST_UPDATE:* =drawer title:= /(within clones only)/
+
+         Change it to: *:LATEST_TEMPLATE_UPDATE:* within NEWLY CREATED CLONES...
+
+    + [ ] *COMPARE the TIMESTAMPS between THIS TEMPLATE and CLONES:*
+
+         ~Org-Mode~ and ~AuxTeX~ settings and meta data within CLONES of
+         this SETUPFILE TEMPLATE will get out of sync after a while due
+         to Harmonic Alchemy Modular Emacs version updates etc...
+        
+         Use the ABOVE timestamp /(within the TEMPLATE and your CLONE)/
+         to see if the clone's settings need to be updated...
+         /(i.e., brought into sync with its template - MERGE)/ and then
+         perform any needed merging/replacing of BOILERPLATE and/or
+         meta data. /(e.g, *:README:* drawers, etc.)/
+
+    + [ ] *Keep ABOVE timestamp within CLONES of this template UP TO DATE:*
+
+         =AFTER Completing Above MERGE Step= and your clone has been brought
+         up to date /(i.e. in sync)/ with its STARTUPFILE TEMPLATE...
+         Then update the timestamp ABOVE... /(WITHIN YOUR CLONE)/ to record
+         the date of its last sync status...
+:END:
 
 =File:= ~~/.emacs.d/Docs/pubOps/org-templates/log-book-setup.org~
-      =ORG-MODE LaTeX SETUPFILE for: LOG Notebooks=  ~#+LATEX_CLASS: ~logbook~
+
+           =ORG-MODE LaTeX SETUPFILE for: LOG Notebooks=
+           
+                    ~#+LATEX_CLASS: logbook~
 
 :README:
 
@@ -68,8 +118,6 @@ Set any *HEADING* within your .org project file with the following PROPERTIES BO
 
 :END:
 
-=Last Updated:= <2023-02-13 Mon>
-
 - *Reference:*
    
    + [[https://orgmode.org/manual/Export-Settings.html#Export-Settings][Org Manual Export Settings]]
@@ -114,7 +162,9 @@ Set any *HEADING* within your .org project file with the following PROPERTIES BO
 
 =LaTeX --> LOG Book PDF:=
 
-/(currently using ~logbook~ class defined in ~09-4-org-export-conf.el~)/
+/Currently Using ~logbook~ Class/
+/Chapter Style:/  ~verville~
+/DEFINED in:/     ~09-4-org-export-conf.el~
 
 #+LATEX_CLASS:  logbook
 
