@@ -102,12 +102,12 @@
   '(exec-path-from-shell
     gnu-elpa-keyring-update
     helm
-;    powerline
-;    smart-mode-line
-    imenu-list
     olivetti
     which-key
     flyspell-correct-helm))
+;    powerline
+;    smart-mode-line
+;    imenu-list
 
 ;;;
 ;; Install Required Packages:
@@ -178,9 +178,9 @@
 ;; imenu-list configuration:
 ;;
 
-(require 'imenu-list)
-(setq imenu-list-focus-after-activation t)
-(setq imenu-list-auto-resize nil)
+;(require 'imenu-list)
+;(setq imenu-list-focus-after-activation t)
+;(setq imenu-list-auto-resize nil)
 
 ;; imenu tweaks:
 

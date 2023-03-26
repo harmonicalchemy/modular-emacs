@@ -146,27 +146,38 @@
 ;; (Jessica's Corner of Cyberspace) Thanks! Jessica
 
 (setq org-emphasis-alist
-      '(("*" (bold
-              :foreground "DeepSkyBlue" ))          ;; *BOLD*
+      '(
+	;; *ORG-BOLD*
+	("*" (bold
+              :foreground "DeepSkyBlue" ))          
 
+	;; /ORG-ITALIC/
         ("/" (italic
               :family "Courier Prime"
               :slant italic
-              :foreground "PaleGreen"))             ;; /Italic/
+              :foreground "PaleGreen")) 
 
+	;; _ORG-UNDERLINE_
         ("_" (
               :underline (
                           :color foreground-color
-                          :style line)))            ;; _underline_
+                          :style line)))            
 
+	;; =ORG-VERBATIM=
         ("=" (
               :family "Hermit"
               :background "aquamarine4"
-              :foreground "white"))                 ;; =org-verbatim=
+              :foreground "GhostWhite"))
 
+        ;; ~ORG-CODE~
+        ;;
+        ;; Backgrounds: GhostWhite honeydew Ivory
+        ;;
+        ;; Foregrounds: red red4 DarkRed firebrick DarkGreen chocolate sienna
+        ;;              SaddleBrown blue MidnightBlue aquamarine4 OrangeRed DarkOrange
         ("~" (
               :family "Hermit"
-              :background "Ivory"
+              :background "honeydew"
               :foreground "firebrick"))             ;; ~org-code~
 
         ("+" (:strike-through t))))                 ;; +strike-through+

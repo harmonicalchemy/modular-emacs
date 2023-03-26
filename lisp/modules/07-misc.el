@@ -4,15 +4,65 @@
 ;; This module is a catch-all for things that don't seem to fit in a specific
 ;; category.  LOL "miscellaneous" is the category you use when YOU HAVE NO
 ;; IDEA what category to use... That's This Module for HAP Modular Emacs...
+
 ;;
-;; Change Log: (descending chronological order)
+;; CHANGE LOG: (descending chronological order)
 ;;
+
+;; 2023-003-25 - Alisha Awen, HarmonicAlchemy@protonmail.com
+;;    Added ORG Emphasis Functions:
 
 ;; 2022-010-06 - Alisha Awen, siren1@disroot.org
 ;;    Updated Comments, etc.  Nothing special... This module started out as an
 ;;    afterthought... But it is an important place to keep odds-and-ends that
 ;;    Don't fit anywhere else...
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; ORG Emphisis Functions:
+;; These are quick ways to format the look of text within org-mode 
+;; paragraphs etc...  The selection characters for different emphesis are:
+;; "*" "~" "=" "/" "_" and "+" if called on Selected Text the entire selection
+;; will automagially change to proper emphisis... If executed on a blank line
+;; you simply get the delimiter charadters and may start writing the text inside
+;; which will change to the specified emphisis once you begin typing...
+
+(defun me_make-org-text-bold ()
+  "This function sets selected text to bold emphisis."
+  (interactive)
+  (org-emphasize '?*))
+
+(defun me_make-org-text-code ()
+  "This function sets selected text to monospace code emphisis."
+  (interactive)
+  (org-emphasize '?~))
+
+(defun me_make-org-text-hilight ()
+  "This function sets selected text to HIGHLIGHTED monospace emphisis."
+  (interactive)
+  (org-emphasize '?=))
+
+(defun me_make-org-text-italic ()
+  "This function sets selected text to italic emphisis."
+  (interactive)
+  (org-emphasize '?/))
+
+(defun me_make-org-text-underlined ()
+  "This function sets selected text to underlined emphisis."
+  (interactive)
+  (org-emphasize '?_))
+
+(defun me_make-org-text-strikethrough ()
+  "This function sets selected text to strikethrough emphisis."
+  (interactive)
+  (org-emphasize '?+))
+
+(defun me_make-org-text-plain ()
+  "This function sets selected text back to NO Emphisis. This simply opens up the selection... You still have to remove the delimiter characters..."
+  (interactive)
+  (org-emphasize '? ))
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Insert Date Function: (without TIME component)
