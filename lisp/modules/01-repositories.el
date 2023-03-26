@@ -23,18 +23,19 @@
 (require 'package)
 
 (setq package-archives
-      '(("GNU-ELPA" . "https://elpa.gnu.org/packages/")
-        ("MELPA-Stable" . "https://stable.melpa.org/packages/")
-        ("MELPA-Unstable" . "https://melpa.org/packages/")
+      '(("GNU-ELPA"       . "https://elpa.gnu.org/packages/")
         ("ORG-CONTRIB"    . "https://elpa.nongnu.org/nongnu/")
-        ("ORG"   . "https://orgmode.org/elpa/")))
+        ("ORG"            . "https://elpa.nongnu.org/nongnu/")
+        ("MELPA-Stable"   . "https://stable.melpa.org/packages/")
+        ("MELPA-Unstable" . "https://melpa.org/packages/")
+	))
 
 (setq package-archive-priorities
-      '(("MELPA-Stable" . 50)
-        ("ORG" . 5)
-        ("GNU-ELPA" . 5)
-        ("ORG-CONTRIB" . 10)
-        ("MELPA-Unstable" . 0)))
+      '(("GNU-ELPA" . 50)
+        ("ORG-CONTRIB" . 30)
+        ("ORG" . 15)
+	("MELPA-Stable" . 5)
+	("MELPA-Unstable" . 0)))
 
 ;;;;
 ;; Some packages are not loading due to a current bug in emacs...

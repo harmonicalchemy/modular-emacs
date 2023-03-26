@@ -114,11 +114,52 @@
 
 (with-eval-after-load 'xah-fly-keys
 
-  ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ;; Xah-Fly-Keys COMMAND MODE BINDINGS:
-  ;; (Xah-Fly-Keys Command Map) (NO Leader key)
-  ;; Add more key definitions to this list when needed:
-  ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;; Xah-Fly-Keys COMMAND MODE BINDINGS:
+;;; (Xah-Fly-Keys Command Map) (NO Leader key)
+;;; Add more key definitions to this list when needed:
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  ;; Org Mode EMPHSAIZED TEXT:
+  ;; Change region to BOLD Emphasized Text
+  ;; me_make-org-text-bold()
+
+  (define-key xah-fly-command-map (kbd "*") 'me_make-org-text-bold)
+
+  ;; Change region to CODE Emphasized Text
+  ;; me_make-org-text-code()
+
+  (define-key xah-fly-command-map (kbd "~") 'me_make-org-text-code)
+
+  ;; Change region to HIGHLIGHTED Emphasized Text
+  ;; me_make-org-text-hilight()
+
+  (define-key xah-fly-command-map (kbd "=") 'me_make-org-text-hilight)
+
+  ;; Change region to ITALIC Emphasized Text
+  ;; me_make-org-text-italic()
+
+  (define-key xah-fly-command-map (kbd "/") 'me_make-org-text-italic)
+
+  ;; Change region to UNDERLINED Emphasized Text
+  ;; me_make-org-text-underlined()
+
+  (define-key xah-fly-command-map (kbd "_") 'me_make-org-text-underlined)
+
+  ;; Change region to STRIKETHROUGH Emphasized Text
+  ;; me_make-org-text-strikethrough()
+
+  (define-key xah-fly-command-map (kbd "+") 'me_make-org-text-strikethrough)
+
+  ;; Change region BACK to Plain UN-Emphasized Text
+  ;; me_make-org-text-plain()
+
+  (define-key xah-fly-command-map (kbd "0") 'me_make-org-text-plain)
+
+  ;; Set easy key to OPWN Org-Links in OTHER FRAME:
+  ;; me_org-open-link-other-frame()
+
+  (define-key xah-fly-command-map (kbd "O") 'me_org-open-link-other-frame)
 
   ;; Set easy key to switch frames:
   ;; This enhances functionality of Xah-Fly-Keys
@@ -153,13 +194,7 @@
 
   (define-key xah-fly-command-map (kbd "`") 'me_toggle-olivetti-mode)
 
-  ;; Set global key to toggle imenu-list: (SINGLE QUOTE CHAR)
-  ;; (displays list window on right side)
-
-  (define-key xah-fly-command-map (kbd "'") 'imenu-list)
-  ;;  (define-key xah-fly-command-map (kbd "'") 'imenu-list)
-
-  ;; Recenter top to bottom:
+  ;; RECENTER TOP to BOTTOM:
   ;; (Standard Emacs "C-l" does this as well):
 
   (define-key xah-fly-command-map (kbd "p") 'recenter-top-bottom)
@@ -188,7 +223,7 @@
 
   ;; Set key to run HLedger Command:
 
-  (define-key xah-fly-command-map (kbd "=") 'hledger-run-command)
+  (define-key xah-fly-command-map (kbd "H") 'hledger-run-command)
 
   ;; Save the current location as bookmark:  SAVED
   ;; (overwrites the last saved setting)
@@ -205,12 +240,12 @@
 
   (define-key xah-fly-command-map (kbd "\\") 'me_toggle-letter-case)
 
-  
-  ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ;; Xah-Fly-Keys PRIMARY LEADER-KEY BINDINGS:
-  ;; (xah-fly-leader-key-map) SPACEBAR
-  ;; Add more key definitions to this list when needed:
-  ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;; Xah-Fly-Keys PRIMARY LEADER-KEY BINDINGS:
+;;; (xah-fly-leader-key-map) SPACEBAR
+;;; Add more key definitions to this list when needed:
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
   ;; Jump back to previously SAVED bookmark:
   ;; This PRIMARY Leader-Key bookmark-jump "-" mirrors
@@ -274,26 +309,16 @@
 
   (define-key xah-fly-leader-key-map (kbd "b") 'org-toggle-link-display)
 
-  ;; Export Org file to Markdown File:
-
-  (define-key xah-fly-leader-key-map (kbd "m") 'org-md-export-to-markdown)
-
   ;; TOGGLE Default face between coding mode and writing mode:
 
   (define-key xah-fly-leader-key-map (kbd "p") 'me_toggle-default-face)
 
-  ;; VMD-Mode Primary Leader-Key Sequence: SPC "v" ("k" Dvorak)
-  ;; (Since there already is a default paste "v" key in Command
-  ;; mode and it's easy enough to switch to Command Mode to paste)
 
-  (define-key xah-fly-leader-key-map (kbd "v") 'vmd-mode)
-
-  
-  ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ;; Xah-Fly-Keys SECONDARY LEADER-KEY BINDINGS:
-  ;; (xah-fly-Lp2p0-key-map) QWERTY "d"
-  ;; Add more key definitions to this list when needed:
-  ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;; Xah-Fly-Keys SECONDARY LEADER-KEY BINDINGS:
+;;; (xah-fly-Lp2p0-key-map) QWERTY "d"
+;;; Add more key definitions to this list when needed:
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
   ;; Set Easy Keybinding to Insert Org README Drawer:
   ;; Overrides default binding: xah-insert <> bracket pair ()
@@ -301,34 +326,30 @@
   (define-key xah-fly-Lp2p0-key-map (kbd "r") 'me_org-insert-readme-drawer)
 
   ;; ME INSERT DATE:
-  ;; Overrides default xah-insert-date () 
+  ;; Overrides default xah-insert-date ()
   ;; A simpler version that simply formats the date as I like to do it:
   ;; (i.e., "yyyy-mmm-dd" digits)
 
   (define-key xah-fly-Lp2p0-key-map (kbd "f") 'me_insert-date)
 
-  
-  ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ;; Xah-Fly-Keys SECONDARY LEADER-KEY BINDINGS:
-  ;; (xah-fly-Lp2p1-key-map) QWERTY "e"
-  ;; Add more key definitions to this list when needed:
-  ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-  ;; OPEN FILE OR DIR LINK IN NEW FRAME:
-  ;; (xah-fly-Lp2p1-key-map) QWERTY "o"
-
-  (define-key xah-fly-Lp2p1-key-map (kbd "o") 'me_org-open-other-frame)
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;; Xah-Fly-Keys SECONDARY LEADER-KEY BINDINGS:
+;;; (xah-fly-Lp2p1-key-map) QWERTY "e"
+;;; Add more key definitions to this list when needed:
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
   ;; Org-Mode Export/Publish to PDF File:
   ;; (xah-fly-Lp2p1-key-map) QWERTY "p"
 
   (define-key xah-fly-Lp2p1-key-map (kbd "p") 'org-latex-export-to-pdf)
+
   
-  ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ;; Xah-Fly-Keys SECONDARY LEADER-KEY BINDINGS:
-  ;; (xah-fly-Rp2p1-key-map) QWERTY "i"
-  ;; Add more key definitions to this list when needed:
-  ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; Xah-Fly-Keys SECONDARY LEADER-KEY BINDINGS:
+;; (xah-fly-Rp2p1-key-map) QWERTY "i"
+;; Add more key definitions to this list when needed:
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
   ;; TOGGLE FRAME FULL SCREEN:
   ;; (xah-fly-Rp2p1-key-map) QWERTY "2"
@@ -337,7 +358,7 @@
 
   (define-key xah-fly-Rp2p1-key-map (kbd "2") 'toggle-frame-fullscreen)
 
-) ;; <--WARNING! DO NOT REMOVE THIS END PARENTHESIS!!! It terminates
+  ) ;; <--WARNING! DO NOT REMOVE THIS END PARENTHESIS!!! It terminates
   ;; the list above... I put it here on a line by itself so I won't
   ;; accidentally break this config if I have to add a new binding to the
   ;; end of the list (just above) and forget to relocate the terminating
