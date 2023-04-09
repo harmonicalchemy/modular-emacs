@@ -582,11 +582,8 @@
   ;;  HAP REFERENCE BOOK DOCUMENT CLASS:
   ;;  (refbook - use memoir)
   ;;  For Reference Manuals, Technical Books, Tutorials, etc...
-  ;;  This class/style was initially inspired by:
-  ;;  mirrors.concertpass.com/tex-archive/info/latex-samples/MemoirChapStyles/MemoirChapStyles.pdf
+  ;;  This class/style was initially inspired by: .../MemoirChapStyles.pdf
   ;;  This is a morph of: "lyhne" & "EQ" Styles
-  ;;
-  ;; REMOVED: \\usepackage{afterpage}  (this does not seem to be needed)
 
   (add-to-list
    'org-latex-classes
@@ -596,7 +593,7 @@
              [NO-DEFAULT-PACKAGES]
              [PACKAGES]
              [EXTRA]
-      \\input{~/.emacs.d/Docs/TeX/ref-book-file.tex}"
+      \\input{~/.emacs.d/Docs/TeX/ref-book-setup.tex}"
 
      ("\\chapter{%s}" . "\\chapter*{%s}")
      ("\\section{%s}" . "\\section*{%s}")
@@ -663,8 +660,7 @@
   ;; (blueboxbook - uses memoir)
   ;; For Fiction Books or Docs NOT requiring a TOC
   ;; or Sub-Topic Section Numbering...
-  ;; This class/style was initially inspired by:
-  ;; mirrors.concertpass.com/tex-archive/info/latex-samples/MemoirChapStyles/MemoirChapStyles.pdf
+  ;; This class/style was initially inspired by: .../MemoirChapStyles.pdf
   ;; This Style is based on: "BlueBox".
   ;; Frontmatter (Preface, TOC, etc.) Page Numbers Are Lower Case Roman...
   ;; Chapter/Appendix Page Numbers Are Normal Integers...
