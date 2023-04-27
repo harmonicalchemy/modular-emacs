@@ -50,7 +50,7 @@
 
 ;; Ignore files with these extensions:
 
-(let* ((exts '(".dat" ".temp" ".out"))
+(let* ((exts '(".dat" ".temp" ".out" ".ods#"))
        (omit (delete-dups (append exts dired-omit-extensions))))
   (setq dired-omit-extensions omit))
 
