@@ -42,6 +42,53 @@
 #+SETUPFILE: ./org-templates/ref-book-setup.org
 #+SETUPFILE: ./org-templates/default-tags.org
 
+:LATEST_UPDATE:
+  <2023-04-06 Thu>
+
+  =YOU MAY REMOVE This Drawer= from your own clones of this template if
+  it is bothering you... This drawer is used for HAP Modular Emacs
+  DOC TEMPLATES housekeeping...
+
+  =HOWEVER= you may also use it for the same purpose to keep your existing
+  Modular Emacs based org documents in sync with the latest updates of the
+  template they were created from...
+  
+  =If you do wish to do the same... Read On Below...=
+  
+  - =INTERNAL USE Instructions:= /(END USERS SKIP THIS BULLET)/
+
+    This bullet is not for end users... This is /"Note to Self"/ stuff...
+
+    + [ ] =MASTER TEMPLATE ONLY= *Keep The Above Timestamp Up To Date:*
+
+        DO THIS ALWAYS, JUST AFTER YOU UPDATE THIS TEMPLATE... DON'T FORGET!
+        /(i.e., BOILERPLATE content and :README: meta data)/
+  
+  - =PUBLIC USE Instructions:= /(FOR CLONES OF THIS TEMPLATE)/
+
+    + [ ] =Change this= *:LATEST_UPDATE:* =drawer title:= /(within clones only)/
+
+         Change it to: *:LATEST_TEMPLATE_UPDATE:* within NEWLY CREATED CLONES...
+
+    + [ ] *COMPARE the TIMESTAMPS between THIS TEMPLATE and CLONES:*
+
+         The BOILERPLATE content and meta data within CLONES of this
+         TEMPLATE will get out of sync after a while due to Harmonic
+         Alchemy Modular Emacs version updates etc...
+        
+         Use the ABOVE timestamp /(within the TEMPLATE and your CLONE)/
+         to see if the clone's BOILERPLATE content needs to be updated
+         /(brought into sync with its template - MERGE)/ and then perform
+         any needed merging/replacing of BOILERPLATE and/or meta data.
+         /(e.g, *:README:* drawers, etc.)/
+
+    + [ ] *Keep ABOVE timestamp within CLONES of this template UP TO DATE:*
+
+         =AFTER Completing Above MERGE Step= and your clone's BOILERPLATE
+         content has been brought up to date /(i.e. in sync)/ with
+         its TEMPLATE... Then update the timestamp ABOVE...
+         /(WITHIN YOUR CLONE)/ to record the date of its last sync status...
+:END:
 :READ_ME_FIRST:
 ☞ =Instructions:= /(How to Install & Use This Template)/
 
