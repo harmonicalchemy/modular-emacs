@@ -17,9 +17,11 @@
 (setq org-todo-keywords
       (quote
        ((sequence "TODO(t)" "NEXT(x)" "|" "DONE(d!/!)")
-        (sequence "ACTIVE(a)" "REPEATING(r)" "WAITING(w@/!)" "HOLD(h@/!)"
-                  "|" "CANCELLED(c@/!)" "PHONE")
-	(sequence  "NEW(n)" "NOW(o)" "SOMEDAY(s)"  "|" "ARCHIVED(v)"))))
+        (sequence "ACTIVE(a)" "REPEATING(r)" "WAITING(g@/!)" "HOLD(h@/!)"
+                  "|" "CANCELLED(q@/!)" "PHONE")
+	(sequence  "NEW(n)" "NOW(w)" "SOMEDAY(m)" "|" "ARCHIVED(v)")
+        ;; 2023-005-15: Added these 4 new (for Software Dev - NEW & DONE are used here too)
+	(sequence  "CODED(c)" "TESTING(s)" "DEBUGGED(b)" "ORIGINAL(o)"))))
 
 ;;;
 ;; Setup my Default Org-Mode Keywords: (with fancy UTF 8 symbols)
@@ -63,7 +65,12 @@
         ("NEW" . (:family "Hermit" :height 100 :foreground "DodgerBlue" :weight bold))
         ("NOW" . (:family "Hermit" :height 100 :foreground "HotPink" :weight bold))
         ("SOMEDAY" . (:family "Hermit" :height 100 :foreground "gold" :weight bold))
-        ("ARCHIVED" . (:family "Hermit" :height 100 :foreground "AntiqueWhite" :weight bold)))))
+        ("ARCHIVED" . (:family "Hermit" :height 100 :foreground "AntiqueWhite" :weight bold))
+        ;; 2023-005-15: Added these 3 new (for Software Dev - NEW & DONE are used here too)
+        ("CODED" . (:family "Hermit" :height 100 :foreground "purple" :weight bold))
+        ("TESTING" . (:family "Hermit" :height 100 :foreground "DarkOrange" :weight bold))
+        ("DEBUGGED" . (:family "Hermit" :height 100 :foreground "cyan" :weight bold))
+        ("ORIGINAL" . (:family "Hermit" :height 100 :foreground "yellow" :weight bold)))))
 
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;   My Specific Universal TAGS & Other Custom Global Configurations Section:

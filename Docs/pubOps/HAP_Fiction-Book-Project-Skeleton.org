@@ -1023,7 +1023,11 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
 
    =BOILERPLATE:= /(clone to add more ref links)/
 
+   ☞ *Heading:* [[~/.GIT/My-Docs/][MY DOCS]] /(comment)/
+
    + *Heading:* [[link][Link NAME] ] /(comment)/
+
+   ☞ [[yt:aB1cD2eF3gH ][TITLE ] ] *Description:* /(YouTube)/
 
    + [[link][Link Name] ] *Heading:* /(comment)/
    
@@ -1616,7 +1620,11 @@ but leave the Export Directive Below ALLWAYS...
 
    =BOILERPLATE:= /(clone to add more ref links)/
 
+   ☞ *Heading:* [[~/.GIT/My-Docs/][MY DOCS]] /(comment)/
+
    + *Heading:* [[link][Link NAME] ] /(comment)/
+
+   ☞ [[yt:aB1cD2eF3gH ][TITLE ] ] *Description:* /(YouTube)/
 
    + [[link][Link Name] ] *Heading:* /(comment)/
    
@@ -1805,7 +1813,11 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
 
    =BOILERPLATE:= /(clone to add more ref links)/
 
+   ☞ *Heading:* [[~/.GIT/My-Docs/][MY DOCS]] /(comment)/
+
    + *Heading:* [[link][Link NAME] ] /(comment)/
+
+   ☞ [[yt:aB1cD2eF3gH ][TITLE ] ] *Description:* /(YouTube)/
 
    + [[link][Link Name] ] *Heading:* /(comment)/
    
@@ -2110,7 +2122,11 @@ new log entry... /(or simply delete this BOILERPLATE if no description is needed
 
    =BOILERPLATE:= /(clone to add more ref links)/
 
+   ☞ *Heading:* [[~/.GIT/My-Docs/][MY DOCS]] /(comment)/
+
    ☞ *Heading:* [[link][Link NAME] ] /(comment)/
+
+   ☞ [[yt:aB1cD2eF3gH ][TITLE ] ] *Description:* /(YouTube)/
 
    ☞ [[link][Link Name] ] *Heading:* /(comment)/
    
@@ -2138,6 +2154,8 @@ new log entry... /(or simply delete this BOILERPLATE if no description is needed
          ~org-lint~ /will detect JUNK above... Ignore that warning.../
                   /It's my "METHOD of MADNESS" %^)/
 :END:
+
+☞ *Heading:* [[~/.GIT/My-Docs/][MY DOCS]] /(comment)/
 
 ☞ *Link to Project:* [[][] ] /(comment)/
 
@@ -2831,6 +2849,8 @@ Or... You could try mashing several cloned templates together to create a totall
    + *Heading:* [[link][Link NAME] ] /(comment)/
 
    + [[link][Link Name] ] *Heading:* /(comment)/
+
+   + [[yt:aB1cD2eF3gH ][TITLE ] ] *Description:* /(YouTube)/
    
    + *_:* [[][] ] /(yadda... yadda... yadda...)/
 
@@ -2898,10 +2918,14 @@ Here are Links to Information that may be helpful While Using this Fiction Book 
 
    =BOILERPLATE:= /(clone to add more ref links)/
 
+   ☞ *Heading:* [[~/.GIT/My-Docs/][MY DOCS]] /(comment)/
+
    + *Heading:* [[link][Link NAME] ] /(comment)/
 
    + [[link][Link Name] ] *Heading:* /(comment)/
-   
+
+   ☞ [[yt:aB1cD2eF3gH ][TITLE ] ] *Description:* /(YouTube)/
+
    + *_:* [[][] ] /(yadda... yadda... yadda...)/
 
    + [[][] ] /(_)/
@@ -3075,10 +3099,14 @@ new log entry... /(or simply delete this BOILERPLATE if no description is needed
 
    =BOILERPLATE:= /(clone to add more ref links)/
 
+   ☞ *Heading:* [[~/.GIT/My-Docs/][MY DOCS]] /(comment)/
+
    ☞ *Heading:* [[link][Link NAME] ] /(comment)/
 
    ☞ [[link][Link Name] ] *Heading:* /(comment)/
-   
+
+   ☞ [[yt:aB1cD2eF3gH ][TITLE ] ] *Description:* /(YouTube)/
+
    ☞ *_:* [[][] ] /(yadda... yadda... yadda...)/
 
    ☞ [[][] ] /(_)/
@@ -5710,13 +5738,13 @@ Add Description Here:
    =To Be Determined...=
 :END:
 
-|--------+----------+--------+--------------|
-| Sector | Quadrant | System | Description: |
-|--------+----------+--------+--------------|
-|        |          |        | [[link to Doc]]  |
-|        |          |        | [[link to Doc]]  |
-|        |          |        | [[link to Doc]]  |
-|--------+----------+--------+--------------|
+|--------+----------+--------+-----------------|
+| Sector | Quadrant | System | Description:    |
+|--------+----------+--------+-----------------|
+|        |          |        | [[link to Doc]] |
+|        |          |        | [[link to Doc]] |
+|        |          |        | [[link to Doc]] |
+|--------+----------+--------+-----------------|
 
 **** NEW 📚 History
 :README:

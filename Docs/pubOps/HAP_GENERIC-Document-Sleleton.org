@@ -10,7 +10,7 @@
 #+TEXT: Last Published: <Not Published>
 #+FILETAGS: templates docs unpublished
 
-#+DESCRIPTION: HAP - Simple Document Skeleton with basic structure for smaller documents that don't require so much planning etc. Great for simple outlines, one page docs, short How-Tos, etc., (easily modified to make reports, charts, etc.)  Publishable as a Simple PDF...
+#+DESCRIPTION: HAP - Generic Document Skeleton with basic structure for smaller documents that don't require so much planning etc. Great for simple outlines, one page docs, short How-Tos, etc., (easily modified to make reports, charts, etc.)  Publishable as a Simple PDF...
 
 #+BEGIN_COMMENT
 
@@ -566,7 +566,7 @@ Having done the simple steps above any time you get inspired, you will much late
 =Then Quickly Get Started Writing Down your FRESH NEW IDEA=
 
 =Replace all of this boilerplate content with your own content=
-* NEW Introduction:                                                     :export:
+* NEW Introduction:                                                      :export:
 <<DOC_INTRODUCTION>>
 :README:
    This section has been purposefully left blank for you to fill in...
@@ -604,7 +604,11 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
 
    =BOILERPLATE:= /(clone to add more ref links)/
 
+   ☞ *Heading:* [[~/.GIT/My-Docs/][MY DOCS]] /(comment)/
+
    + *Heading:* [[link][Link NAME] ] /(comment)/
+
+   ☞ [[yt:aB1cD2eF3gH ][TITLE ] ] *Description:* /(YouTube)/
 
    + [[link][Link Name] ] *Heading:* /(comment)/
    
@@ -634,7 +638,7 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
 :END:
 
 + *Link to Project:* [[][] ] /(comment)/
-* NEW Main Topic A /(COMMANDEER This one first)/                       :export:
+* NEW Main Topic A /(COMMANDEER This one first)/                    :export:
 <<DOC_main-topic-z>>
 :README:
 
@@ -726,7 +730,7 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
         matter what...
 :END:
 
-** New Sub Topic X /(COMMANDEER This One)/                             :noexport:
+** New Sub Topic X /(COMMANDEER This One)/                                :noexport:
 <<DOC_new-sub-topic-x>>
 :README:
 
@@ -793,7 +797,7 @@ Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus
 
 At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
 
-** New Sub Topic Y /(COPY/CLONE This One)/                             :noexport:
+** New Sub Topic Y /(COPY/CLONE This One)/                                :noexport:
 <<DOC_new-sub-topic-y>>
 :README:
 
@@ -874,7 +878,7 @@ Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus
 
 At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
 
-** New Sub Topic Z /(BOILERPLATE - keep until Final Draft)/       :export:
+** New Sub Topic Z /(BOILERPLATE - keep until Final Draft)/        :export:
 <<DOC_new-sub-topic-z>>
 :README:
 
@@ -967,7 +971,11 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
 
    =BOILERPLATE:= /(clone to add more ref links)/
 
+   ☞ *Heading:* [[~/.GIT/My-Docs/][MY DOCS]] /(comment)/
+
    + *Heading:* [[link][Link NAME] ] /(comment)/
+
+   ☞ [[yt:aB1cD2eF3gH ][TITLE ] ] *Description:* /(YouTube)/
 
    + [[link][Link Name] ] *Heading:* /(comment)/
    
@@ -1133,7 +1141,7 @@ but not so important for them to also be time-stamped since their parent heading
         more info...
 :END:
 
-** New Sub Topic X /(COMMANDEER This One)/                           :noexport:
+** New Sub Topic X /(COMMANDEER This One)/                                :noexport:
 <<DOC_new-sub-topic-x>>
 :README:
 
@@ -1199,7 +1207,7 @@ Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus
 
 At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
 
-** New Sub Topic Y /(COMMANDEER This One)/                           :noexport:
+** New Sub Topic Y /(COMMANDEER This One)/                                :noexport:
 <<DOC_new-sub-topic-y>>
 :README:
 
@@ -1265,7 +1273,7 @@ Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus
 
 At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
 
-** New Sub Topic Z /(BOILERPLATE - Keep Until Final Draft)/   :noexport:
+** New Sub Topic Z /(BOILERPLATE - Keep Until Final Draft)/        :noexport:
 <<DOC_new-sub-topic-z>>
 :README:
 
@@ -1344,7 +1352,62 @@ Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus
 
 At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
 
-** 📝 Notes:                                                                       :noexport:
+** 📚 Main Topic References:                                               :noexport:
+:README:
+   =Org Mode Links Tip:=
+
+      + To Create a Link Type: ~C-c C-l~ 
+         /(then paste: ~link~ & type: "description")/
+
+         =-OR-= Simply Copy/Paste BOILERPLATE:
+              /(use placeholders below)/
+              And Fill Them In Manually... 
+              Copy/Paste more placeholders as
+              needed to create more links...
+
+      + To Open a Link Type: ~C-c C-o~
+
+      + To EXPAND a Link Type: ~SPACE b~
+         or: ~M-x org-toggle-link-display~
+
+   =BOILERPLATE:= /(clone to add more ref links)/
+
+   ☞ *Heading:* [[~/.GIT/My-Docs/][MY DOCS]] /(comment)/
+
+   + *Heading:* [[link][Link NAME] ] /(comment)/
+
+   ☞ [[yt:aB1cD2eF3gH ][TITLE ] ] *Description:* /(YouTube)/
+
+   + [[link][Link Name] ] *Heading:* /(comment)/
+   
+   + *_:* [[][] ] /(yadda... yadda... yadda...)/
+
+   + [[][] ] /(_)/
+
+   + [[junk][JUNK]]  /(This is a stupid BUG workaround/ /for org-mode link/
+         /expansion/compression... If you invoke:/ ~org-toggle-link-display~
+         /you will notice this JUNK link DOES NOT compress to a clickable/
+         /link title alone.../
+         
+         /I am not sure if this is due to my Emacs Config or a bug within/
+         *Org-Mode* /itself.../
+
+         /I put this workaround in here because if it is not here,/
+         /SOME of your external file links created below may not/
+         /compress after expansion, even though thy are GOOD links!/
+
+         /Leaving this JUNK link in here acts like a scapegoat/
+         /so that your real links below will all compress/expand/
+         /normally... I am NOT SURE WHY THIS WORKS??? I'm to busy/
+         /to do anything beyond hacking at this point.../
+         
+         ~org-lint~ /will detect JUNK above... Ignore that warning.../
+                  /It's my "METHOD of MADNESS" %^)/
+:END:
+
++ *Link to Project:* [[][] ] /(comment)/
+
+** 📝 Main Topic Notes:                                                        :noexport:
 :README:
    *Main Topic Notes*, Should be written in =OUTLINE= form to aid in organization
    of events, etc... This section is =NOT the place to create NEW ideas=, 
@@ -1400,7 +1463,7 @@ but not so important for them to also be time-stamped since their parent heading
 
 
 
-* ⎘ Meta: /(Usage & Templates)/                                          :noexport:
+* ⎘ Meta: /(Usage & Templates)/                                           :noexport:
 ** 📃 About:
 
 The *Templates:* section provides skeleton templates for use within this document.  These /"meta-sections"/ do not show up in final published docs, /(e.g., .pdf or web etc)/...

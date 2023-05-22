@@ -644,6 +644,8 @@ This initial draft only contains Ref Links...  I did a lot of re-configuring of 
 
    =BOILERPLATE:= /(clone to add more ref links)/
 
+   ☞ *Heading:* [[~/.GIT/My-Docs/][MY DOCS]] /(comment)/
+
    + *Heading:* [[link][Link NAME] ] /(comment)/
 
    + [[link][Link Name] ] *Heading:* /(comment)/
@@ -810,7 +812,11 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
 
    =BOILERPLATE:= /(clone to add more ref links)/
 
+   ☞ *Heading:* [[~/.GIT/My-Docs/][MY DOCS]] /(comment)/
+
    + *Heading:* [[link][Link NAME] ] /(comment)/
+
+   ☞ [[yt:aB1cD2eF3gH ][TITLE ] ] *Description:* /(YouTube)/
 
    + [[link][Link Name] ] *Heading:* /(comment)/
    
@@ -1240,7 +1246,11 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
 
    =BOILERPLATE:= /(clone to add more ref links)/
 
+   ☞ *Heading:* [[~/.GIT/My-Docs/][MY DOCS]] /(comment)/
+
    + *Heading:* [[link][Link NAME] ] /(comment)/
+
+   ☞ [[yt:aB1cD2eF3gH ][TITLE ] ] *Description:* /(YouTube)/
 
    + [[link][Link Name] ] *Heading:* /(comment)/
    
@@ -1715,7 +1725,11 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
 
    =BOILERPLATE:= /(clone to add more ref links)/
 
+   ☞ *Heading:* [[~/.GIT/My-Docs/][MY DOCS]] /(comment)/
+
    + *Heading:* [[link][Link NAME] ] /(comment)/
+
+   ☞ [[yt:aB1cD2eF3gH ][TITLE ] ] *Description:* /(YouTube)/
 
    + [[link][Link Name] ] *Heading:* /(comment)/
    
@@ -1833,7 +1847,11 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
 
    =BOILERPLATE:= /(clone to add more ref links)/
 
+   ☞ *Heading:* [[~/.GIT/My-Docs/][MY DOCS]] /(comment)/
+
    + *Heading:* [[link][Link NAME] ] /(comment)/
+
+   ☞ [[yt:aB1cD2eF3gH ][TITLE ] ] *Description:* /(YouTube)/
 
    + [[link][Link Name] ] *Heading:* /(comment)/
    
@@ -1947,7 +1965,7 @@ Anything goes here... You can make this into what ever you want..
       =Items From:=  *⎘ Templates:* Binder /(under the/ *⎘ Meta: /binder)/
       =Into This:=  *🗓 Log Book:* Binder /(for current year)/
 :END:
-** 📅 2022:
+** 📅 2023:
 *** NEW 🗓 LOG: <2021-03-29 Mon> Generic Title /(General Log Entry Template)/
 <<LOG_Generic-Title>>
 :README:
@@ -2069,7 +2087,11 @@ This Log Entry is about: Yadda... Yadda... Yadda...
 
    =BOILERPLATE:= /(clone to add more ref links)/
 
+   ☞ *Heading:* [[~/.GIT/My-Docs/][MY DOCS]] /(comment)/
+
    ☞ *Heading:* [[link][Link NAME] ] /(comment)/
+
+   ☞ [[yt:aB1cD2eF3gH ][TITLE ] ] *Description:* /(YouTube)/
 
    ☞ [[link][Link Name] ] *Heading:* /(comment)/
    
@@ -2315,7 +2337,7 @@ The following list contains Babel Source Code Blocks that are often needed for s
 
 
 
-** 📅 2023:
+** 📅 2024:
 
 =ADD a NEW Items= /(as per :README: above)/ when 2023 rolls around, right here in this Log Book Binder whenever you need to create a new Log Entry...
 
@@ -2644,7 +2666,11 @@ Or... You could try mashing several cloned templates together to create a totall
 
    =BOILERPLATE:= /(clone to add more ref links)/
 
+   ☞ *Heading:* [[~/.GIT/My-Docs/][MY DOCS]] /(comment)/
+
    + *Heading:* [[link][Link NAME] ] /(comment)/
+
+   ☞ [[yt:aB1cD2eF3gH ][TITLE ] ] *Description:* /(YouTube)/
 
    + [[link][Link Name] ] *Heading:* /(comment)/
    
@@ -2816,7 +2842,11 @@ This Log Entry is about: Yadda... Yadda... Yadda...
 
    =BOILERPLATE:= /(clone to add more ref links)/
 
+   ☞ *Heading:* [[~/.GIT/My-Docs/][MY DOCS]] /(comment)/
+
    ☞ *Heading:* [[link][Link NAME] ] /(comment)/
+
+   ☞ [[yt:aB1cD2eF3gH ][TITLE ] ] *Description:* /(YouTube)/
 
    ☞ [[link][Link Name] ] *Heading:* /(comment)/
    
