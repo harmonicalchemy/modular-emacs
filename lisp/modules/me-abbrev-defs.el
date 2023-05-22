@@ -1,7 +1,9 @@
 ;; -*- coding: utf-8; lexical-binding: t; -*-
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; File: ~/.emacs.d/lisp/modules/me-abbrev-defs.el
-;; Ref: http://xahlee.info/emacs/emacs/emacs_abbrev_mode.html
+;; Refs:
+;;   http://xahlee.info/emacs/emacs/emacs_abbrev_mode.html
+;;   http://xahlee.info/emacs/emacs/emacs_abbrev_mode_tutorial.html
 ;;
 ;; This File Contains Modular Emacs DEFAULT GP Emacs Abbrev Definitions...
 ;; Override this default by copying this file to:  ~/.emacs.d/lisp/my-modules/.
@@ -41,76 +43,76 @@
 
     ;; English Word Abbrevs:
 
-    ("arg" "argument")
-    ("bc" "because")
-    ("bg" "background")
-    ("bt" "between")
-    ("paren" "parenthesis") ;; ME added this one... (not xah-lee)
+    ("zarg" "argument")
+    ("zbc" "because")
+    ("zbg" "background")
+    ("zbt" "between")
+    ("zparen" "parenthesis") ;; ME added this one... (not xah-lee)
 
     ;; English Abridged Words:
 
-    ("cnt" "can't")
-    ("ddnt" "didn't")
-    ("dnt" "don't")
+    ("zcnt" "can't")
+    ("zddnt" "didn't")
+    ("zdnt" "don't")
 
     ;; Phrase Abbrev:
     
-    ("afaik" "as far as i know")
-    ("atm" "at the moment")
-    ("ty" "thank you")
-    ("btw" "by the way")
+    ("zafaik" "as far as i know")
+    ("zatm" "at the moment")
+    ("zty" "thank you")
+    ("zbtw" "by the way")
 
     ;; Computing:
     
-    ("cfg" "context-free grammar")
-    ("cs" "computer science")
+    ("zcfg" "context-free grammar")
+    ("zcs" "computer science")
 
     ;; Tech Company:
     
-    ("gc" "Google Chrome")
-    ("macos" "macOS")
-    ("msw" "Microsoft Windows")
-    ("glx" "GNU Linux")            ;; ME added this one... (not xah-lee)
-    ("bsx" "BSD Unix")             ;; ME added this one... (not xah-lee)
-    ("onx" "Other Unix")           ;; ME added this one... (not xah-lee)
+    ("zgc" "Google Chrome")
+    ("zmacos" "macOS")
+    ("zmsw" "Microsoft Windows")
+    ("zglx" "GNU Linux")            ;; ME added this one... (not xah-lee)
+    ("zbsx" "BSD Unix")             ;; ME added this one... (not xah-lee)
+    ("zonx" "Other Unix")           ;; ME added this one... (not xah-lee)
 
     ;; Programing:
     
-    ("ipa" "IP address")
-    ("jvm" "Java Virtual Machine")
-    ("rsi" "Repetitive Strain Injury")
-    ("subdir" "subdirectory")
-    ("db" "database")
+    ("zipa" "IP address")
+    ("zjvm" "Java Virtual Machine")
+    ("zrsi" "Repetitive Strain Injury")
+    ("zsubdir" "subdirectory")
+    ("zdb" "database")
 
-    ("evp" "environment variable")
-    ("guip" "graphical user interface")
-    ("oopp" "object oriented programing")
-    ("osp" "operating system")
+    ("zevp" "environment variable")
+    ("zguip" "graphical user interface")
+    ("zoopp" "object oriented programing")
+    ("zosp" "operating system")
 
-    ("eq" "==")
-    ("r" "return")
-    ("utf8" "-*- coding: utf-8 -*-")
+    ("zeq" "==")
+    ("zr" "return")
+    ("zutf8" "-*- coding: utf-8 -*-")
 
     ;; Regex:
     
-    ("azt" "\\([A-Za-z0-9]+\\)")
-    ("brackett" "\\[\\([^]]+?\\)\\]")
-    ("curlyt" "“\\([^”]+?\\)”")
-    ("digitst" "\\([0-9]+\\)")
-    ("datet" "\\([0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]\\)")
-    ("strt" "\\([^\"]+?\\)")
+    ("zazt" "\\([A-Za-z0-9]+\\)")
+    ("zbrackett" "\\[\\([^]]+?\\)\\]")
+    ("zcurlyt" "“\\([^”]+?\\)”")
+    ("zdigitst" "\\([0-9]+\\)")
+    ("zdatet" "\\([0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]\\)")
+    ("zstrt" "\\([^\"]+?\\)")
 
     ;; Unicode:
     
-    ("hr" "--------------------------------------------------")
-    ("bu" "•")
-    ("catface" "😸")
-    ("octo" "🐙")    ;; ME added this one... (not xah-lee)
-    ("aa" "👩‍💻 Alisha Awen @harmonicalchemy")  ;; ME added this one... (not xah-lee)
+    ("zhr" "--------------------------------------------------")
+    ("zbu" "•")
+    ("zcatface" "😸")
+    ("zocto" "🐙")    ;; ME added this one... (not xah-lee)
+    ("zaa" "👩‍💻 Alisha Awen @harmonicalchemy")  ;; ME added this one... (not xah-lee)
                                               ;; (Change this to your name and emoji)
     
-    ("hearts" "♥💕💓💔💖💗💘💝💞💟💙💚💛💜")
-    ("ra" "→")
+    ("zhearts" "♥💕💓💔💖💗💘💝💞💟💙💚💛💜")
+    ("zra" "→")
 
     ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     ;; ADD YOUR OWN ABBREV DEFINITIONS HERE:

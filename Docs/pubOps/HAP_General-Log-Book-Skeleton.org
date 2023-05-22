@@ -457,7 +457,11 @@ This Log Note Book was created for...  Yadda Yadda... Yadda...
 
    =BOILERPLATE:= /(clone to add more ref links)/
 
+   ☞ *Heading:* [[~/.GIT/My-Docs/][MY DOCS]] /(comment)/
+
    - *Heading:* [[link][Link NAME] ] /(comment)/
+
+   ☞ [[yt:aB1cD2eF3gH ][TITLE ] ] *Description:* /(YouTube)/
 
    - [[link][Link Name] ] *Heading:* /(comment)/
    
@@ -655,7 +659,11 @@ If you don't like the look of they exported PDF, then do what I am doing and cha
 
    =BOILERPLATE:= /(clone to add more ref links)/
 
+   ☞ *Heading:* [[~/.GIT/My-Docs/][MY DOCS]] /(comment)/
+
    + *Heading:* [[link][Link NAME] ] /(comment)/
+
+   ☞ [[yt:aB1cD2eF3gH ][TITLE ] ] *Description:* /(YouTube)/
 
    + [[link][Link Name] ] *Heading:* /(comment)/
    
@@ -1536,7 +1544,11 @@ This Log Entry is about: Yadda... Yadda... Yadda...
 
    =BOILERPLATE:= /(clone to add more ref links)/
 
+   ☞ *Heading:* [[~/.GIT/My-Docs/][MY DOCS]] /(comment)/
+
    - *Heading:* [[link][Link NAME] ] /(comment)/
+
+   ☞ [[yt:aB1cD2eF3gH ][TITLE ] ] *Description:* /(YouTube)/
 
    - [[link][Link Name] ] *Heading:* /(comment)/
    

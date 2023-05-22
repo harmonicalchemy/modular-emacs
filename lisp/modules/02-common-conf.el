@@ -142,7 +142,7 @@
 ;; trying many other things that were not working...  I am leaving this here
 ;; commented out to keep the option here in case I need it later, (or you do).
 
-;(scroll-bar-mode -1)
+(scroll-bar-mode -1)
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Disable this section if you like using the mouse wheel:
