@@ -1,0 +1,974 @@
+# -**- mode: org; coding: utf-8 -**-
+#+TITLE: HAP - Short Examples or Figures - Template
+#+SUBTITLE: A GP Document Template to produce SHORT PDF Exerpts...
+#+EXPORT_FILE_NAME: HAP_PDF-Example-Figure-Template.pdf
+#+TEXT: Copyright © 2022 Harmonic Alchemy Productions & Others
+#+AUTHOR: Alisha Awen - Harmonic Alchemy Productions
+#+EMAIL: Siren1@disroot.org
+#+DATE: {{{time(%A %Y-%b-%d)}}}
+#+TEXT: Created: <2023-06-01 Thu>
+#+TEXT: Last Published: <Not Published>
+#+FILETAGS: templates docs unpublished
+
+#+DESCRIPTION: HAP - Simple Document Skeleton to create short excrpt figures or examples that may or may not be originally from a larger Document or Book Project... These are most commonly created to serve in support of a larger project, But Publishable as a Simple STAND ALONE PDF when that's the only thing needed to look up.
+
+#+BEGIN_COMMENT
+
+=Setup Files:=
+
+   For Cloned Versions of this template, the file/paths below will be relative
+   to your parent project directory and as such, should be all set to your new: ~.../your-simple-document-project/org-templates/~ directory...
+
+   *SETUPFILE:* ~simple-doc-setup.org~ is for LaTeX Export Configurations 
+              to produce a Simple Document styled PDF
+
+   *SETUPFILE:* ~default-tags.org~ is where tags are set for this project...
+
+              If you need to change the category, do it in your cloned version
+              of default-tags.org...  If you rename default-tags.org file from
+              "default" to something more specific, you will need to change the
+              ~#+SETUPFILE: ./org-templates/default-tags.org~ line below to reflect
+              your new file name as well...  You may change any of the tags except
+              important ones to what ever you wish... Read the *:README:* drawer
+              within the file for more information...
+
+              The Existing Tags are useful for most situations within
+              this context, and some of the tags MUST ALWAYS be defined
+              for this LaTeX publishing system to work correctly...
+
+              This file may be used by other ~.org~ files within this
+              Master Folder... If you need to customize them specifically
+              for this ~.org~ file alone, you should copy and rename:
+              ~default-tags.org~ and modify your renamed copy instead...
+              
+              If you do this, you will ALSO need to change the
+              ~#+SETUPFILE: ./org-templates/default-tags.org~
+              directive below to reflect your changed file name...
+
+              /(change the name from/ ~default-tags.org~ /to another name/
+              /and-or replace some (but NOT ALL) of the tags within/
+              /to your own tags... see instructions inside the file)/
+#+END_COMMENT
+
+#+SETUPFILE: ./org-templates/pdf-excerpt-setup.org
+#+SETUPFILE: ./org-templates/default-tags.org
+
+:LATEST_UPDATE:
+  <2023-06-01 Thu>
+
+  =YOU MAY REMOVE This Drawer= from your own clones of this template if
+  it is bothering you... This drawer is used for HAP Modular Emacs
+  DOC TEMPLATES housekeeping...
+
+  =HOWEVER= you may also use it for the same purpose to keep your existing
+  Modular Emacs based org documents in sync with the latest updates of the
+  template they were created from...
+  
+  =If you do wish to do the same... Read On Below...=
+  
+  - =INTERNAL USE Instructions:= /(END USERS SKIP THIS BULLET)/
+
+    This bullet is not for end users... This is /"Note to Self"/ stuff...
+
+    + [ ] =MASTER TEMPLATE ONLY= *Keep The Above Timestamp Up To Date:*
+
+        DO THIS ALWAYS, JUST AFTER YOU UPDATE THIS TEMPLATE... DON'T FORGET!
+        /(i.e., BOILERPLATE content and :README: meta data)/
+  
+  - =PUBLIC USE Instructions:= /(FOR CLONES OF THIS TEMPLATE)/
+
+    + [ ] =Change this= *:LATEST_UPDATE:* =drawer title:= /(within clones only)/
+
+        Change it to: *:LATEST_TEMPLATE_UPDATE:* within NEWLY CREATED CLONES...
+
+    + [ ] *COMPARE the TIMESTAMPS between THIS TEMPLATE and CLONES:*
+
+        The BOILERPLATE content and meta data within CLONES of this
+        TEMPLATE will get out of sync after a while due to Harmonic
+        Alchemy Modular Emacs version updates etc...
+        
+        Use the ABOVE timestamp /(within the TEMPLATE and your CLONE)/
+        to see if the clone's BOILERPLATE content needs to be updated
+        /(brought into sync with its template - MERGE)/ and then perform
+        any needed merging/replacing of BOILERPLATE and/or meta data.
+        /(e.g, *:README:* drawers, etc.)/
+
+    + [ ] *Keep ABOVE timestamp within CLONES of this template UP TO DATE:*
+
+        =AFTER Completing Above MERGE Step= and your clone's BOILERPLATE
+        content has been brought up to date /(i.e. in sync)/ with
+        its TEMPLATE... Then update the timestamp ABOVE...
+        /(WITHIN YOUR CLONE)/ to record the date of its last sync status...
+:END:
+:READ_ME_FIRST:
+=Instructions:= /(How to Install & Use This Template)/
+
+To use *HAP_PDF-Example-Figure-Template.org* for your own projects, perform the following steps: 
+
+/Use the org-mode Checkboxes to Help You Keep Track of Progress/
+
+1) [ ] *Clone a Copy of This File:*
+
+      Put your clone where you normally organize your writing projects.
+      (most likely with a larger Book Doc that you wish to export short
+      figures, or examples, as stand alone PDF files...
+
+      *Place it within its own MASTER* *FOLDER* /(or within an existing /project
+      MASTER FOLDER that contains other cloned .org Templates allready set up)/
+
+      Existing MASTER FOLDERS contain other files for other projects as well as
+      the SETUPFILES and MEDIA required by this Simple Document .org file...
+
+      =Note:= If you put this file within other Project's existing MASTER FOLDERS
+            that contain existing ~.org~ files /(cloned from other HAP_Doc-Skeleton/
+            /template files)/ Pay CLOSE Attention to the Second and Third bullets
+            under Step 3 below to decide the correct action to take during
+            those steps...
+
+            =Do NOT OVERWRITE ANY PRE-EXISTING FILES or FOLDERS!!!=
+
+            =OTHERWISE:= If this is a Brand NEW Project, name its NEW MASTER FOLDER
+                       to reflect your Simple Document's title...
+                       /(i.e., what you renamed this .org file to)/...
+
+      =OTHER Files/Folders May also be placed Within your MASTER FOLDERS...=
+
+2) [ ] =Sketch Out Your Example or Figure=
+
+      Create a New Example if this is being done from scratch, or, copy the
+      example from a Larger .org Book Project if that is your intention...
+
+      Do the rest of the steps /(below)/ after getting this first part done...
+
+3) [ ] =Finish Setting Up The Rest Of This Project LATER= [0/10]
+
+    - [ ] *Change Title of :LATEST_UPDATE: drawer ABOVE:*
+
+         AFTER Cloning, Change *:LATEST_UPDATE:* drawer title ABOVE
+         /(within your clone, NOT the Original!)/ to *:LATEST_TEMPLATE_UPDATE:*
+         AND Follow Instructions within it...
+
+    - [ ] *Copy/Clone:* ~./media~ /(and contents)/ *to your new project's MASTER FOLDER:*
+
+         =NOTE:= Most Likely you are placing this file within an EXISTING
+               org-mode PROJECT...  If that is the case =SKIP THIS STEP=...
+               /i.e. Do NOT Copy/Clone a NEW ./media folder.../
+               
+         =OTHERWISE:= Do copy this folder...
+
+               If the example or figure you are making is new and NOT part of a
+               larger work, /(BOOK, or longer Paper)/, then you DO want to copy
+               this folder and all files within, to this Example's Parent folder.
+               
+               Copy this directory /(into your master folder as a sibling of
+               this file).../
+               
+               Any external documents or images referenced by your book
+               project should be placed within this ~./media/~ directory...
+
+               ANY external links, images, within the boilerplate examples of
+               this template may be used as examples for getting your own
+               images, and external attachments linked properly...
+
+               This single ~./media~ directory serves media and external attachments 
+               for this and other Modular Emacs Document TEMPLATE ~.org~ files that
+               may exist within this MASTER FOLDER now or in the future...
+
+         =Note:= You DON'T need to copy the ~./auto/~ directory... That directory
+               will be automatically created by *AuxTex* the first time you export
+               this ~.org~ file to ~.PDF~...
+
+    - [ ] *Copy/Clone:* ~./org-templates~ *to your project's MASTER FOLDER:*
+
+         =WARNING!:= To avoid overwriting existing files, DO NOT COPY this
+                   ~./org-templates~ to your MASTER FOLDER IF ONE ALREADY EXISTS!
+
+                   But DO follow the rest of this step so you will know what you
+                   should do...
+
+                   =OTHERWISE For MASTER FOLDERS that DO NOT already have one:=
+                   *Copy this NEW directory to your simple document's MASTER FOLDER*
+                   /(i.e., as a sibling/ /of this book's .org file).../
+
+         =Note:= SETUPFILES Within this new or existing directory are called out
+               and included by this ~HAP_PDF-Example-Figure-Template.org~ file...
+               /(within the file header above)/
+
+         =WARNING:= There may ALREADY be an ~org-templates~ directory existing within
+                  your MASTER FOLDER! In that case you will need to merge:
+                  ~simple-doc-setup.org~ AND ~default-tags.org~ /(contained within)/
+                  into your existing copies of them instead...       
+
+                  =YOU WON'T WANT TO OVERRITE EXISTING FILES= within this 
+                  directory you are already using, /(and modified!!!)/
+                  but you may need to update existing files you are NOT
+                  using currently if/when you DO start using them...
+
+         Other SETUPFILES within this directory are intended to be used by
+         other document style project templates and are not needed for this:
+         *PDF Example Figure Template* document... You may remove the extra
+         files if you wish... 
+
+         =HOWEVER:= If you decide to clone another ~HAP_<book-template>.org~
+                  file into this project folder it will pick up its
+                  associated SETUPFILES automatically because this folder
+                  already exists! Consider this case if/when you decide
+                  to delete other UNUSED SETUPFILES... They are small text
+                  files not really bothering you...
+
+                  /(YOU MAY NEED THEM LATER DEPENDING ON YOUR CASE)/
+
+    - [ ] *Change the* ~#+TITLE:~ *directive at the top of this file:* 
+
+          Change to: /"your Example or Figure (excerpt) Title"/
+
+    - [ ] *Change the* ~#+EXPORT_FILE_NAME:~ *directive at the top of this file:*
+
+          Change to: /"your-Example-Title.pdf"/
+          This will be the file name(s) produced during export thence forward
+          /(including auto generated files: .tex, etc...)/
+
+    - [ ] *Change the* ~#+TEXT: Copyright © 2022:~ *directive top of this file:*
+
+          Change to: /"Copyright © your info here"/ You are the copyright
+          owner of your own documents created from clones of these master
+          templates... /(but these MASTER Template Files are to stay under/
+          /Harmonic Alchemy Productions copyright. Any Attribution to me/
+          /for the template structure of your published docs will be/
+          /appreciated... but unnecessary... Thanks! ;-)/
+
+    - [ ] *Change the* ~#+AUTHOR:~ *directive at the top of this file:*
+
+          Change to: /"your NAME"/
+
+    - [ ] *Change the* ~#+EMAIL:~ *directive at the top of this file:*
+
+          Change to: /"your EMAIL"/
+
+    - [ ] *Change the* ~#+TEXT: Created:~ *TIMESTAMP at the top of this file:*
+
+          Put your cursor on the TIMESTAMP: /i.e.,/ <2022-10-05 Wed>
+          and type: ~C-c . . RETURN~ The TIMESTAMP will update to NOW.
+
+          =LEAVE THIS DATE ALONE after Setting It The FIRST Time=
+
+          This Date reflects the time/date that you first created this
+          new document It should NEVER change after that...
+
+    - [ ] *Change the* ~#+TEXT: Last Published:~ *TIMESTAMP at Publish Time:*
+
+          =Don't Change This UNTIL You Have Actually Exported This File=
+          /(e.g., as a PDF or HTML, etc. and have PUBLISHED it publically somewhere)/
+          
+          Until that publishing time comes leave it alone as:
+          ~<NOT Published>~
+          
+          As soon as this is published or re-published, Replace the
+          <unpublished> placeholder with a REAL TIMESTAMP by typing:
+          ~C-c . . RETURN~ The new Last Published: <TIMESTAMP> will
+          appear in place... Do this EVERY time you publish or update
+          an existing publishing... /(this will help you keep track)/
+
+    - [ ] *Change the* ~#+FILETAGS:~ *directive at the top of this file:*
+
+          Add your own tags that match the context of your document...
+
+    - [ ] *Change the* ~#+DESCRIPTION:~ *directive at the top of this file:*
+
+          Compose Your Example or Figure's Description as a short paragraph
+          here... and then use that to change the directive above...
+
+4) *Purpose of the:* ~./auto/~ *Directory:* /(you do not need to copy this)/
+
+   This is or will-be an auto generated folder where your output ~.PDF~ 
+   files are created and placed during LaTeX export. You DO NOT need 
+   to copy this folder as it is auto generated during org-mode LaTeX 
+   processing...
+
+   LaTeX processing will not delete any prior files contained here... 
+   Some of them will be updated, but will have backups...  Any files 
+   you place within this folder will NOT be lost, unless you delete 
+   them... This folder is a good place to store other temporary files 
+   you may be creating, generating.. etc...
+
+5) *Purpose of the:* ~./org-templates~  *Directory:*
+
+   The files in here are automatically linked and included within this
+   template. You don't need to change those settings unless you wish to
+   customize the already customized tags, and export options.
+
+   Things are currently set up correctly to produce a simple PDF file
+   containing a single heading with your Example or Figure as sub items...
+   The category is all set as well... But you can and may modify the
+   original files to fit your needs...
+
+   Other SETUPFILES within this directory are intended to be used by
+   other document style project templates and are not needed for this:
+   ~HAP_PDF-Example-Figure-Template.org~ Document... You may remove the
+   extra files if you wish... 
+
+   =HOWEVER:= If you decide to clone another ~HAP_<book-template>.org~
+            file into this project folder it will pick up its
+            associated SETUPFILES automatically because this folder
+            already exists! Consider this case if/when you decide
+            to delete other UNUSED SETUPFILES... They are small text
+            files not really bothering you...
+
+            /(YOU MAY NEED THEM LATER DEPENDING ON YOUR CASE)/
+
+            =AND= You won't want to OVERRITE existing files within this 
+                directory you are already using, /(and modified!!!)/
+                but you may need to update existing files you are NOT
+                using currently if/when you DO start using them...
+
+   The DEFAULT Tags defined for all project templates are useful for
+   most situations and SOME tags are ALWAYS to be defined for this
+   LaTeX publishing system to work.
+
+   /Change the SETUPFILE name ABOVE and within this directory from/
+   ~default-tags.org~ /to another name and-or replace some -BUT NOT ALL-/
+   /of the tags within to your own tags... see instructions inside the/
+   /file.../
+
+6) [ ] =Export/Publish to PDF File:=
+
+       The *In-Buffer Settings* specified by the SETUPFILES above will 
+       get this file looking good when exported as a Simple PDF file.  
+       Once you have your project directory all set up as above you
+       are ready to export your first PDF as a test run...
+
+         *Issue the following Emacs command:*
+
+            ~M-x org-latex-export-to-pdf~
+
+         *OR* If You Enabled *Xah-Fly-Keys* /"Command Mode"/ Try Shortcut:
+
+            ~SPACE e p~
+
+         *OR Export to OTHER Formats:* /(not usefull for this template)/
+
+            ~C-c C-e~
+
+            /(a pop-up will show allowing you to choose export method)/
+
+       After *AucTeX* is done parsing/compiling etc., new files named:
+
+            ~HAP_PDF-Example-Figure-Template.pdf~
+            -and-
+            ~HAP_PDF-Example-Figure-Template.tex~ 
+
+       /(or the name you changed it to located at the top of this file)/
+       will appear within the same directory as this file... 
+
+       Subsequent repeated calls to the above command will overwrite your
+       existing ~.pdf~ -and- ~.tex~ files! /(make backups first if needed!)/ You
+       could use the ~./auto/~ directory for backups...
+
+       =If you chose the last option above= LaTeX will output files with other
+       extensions for those other output formats...
+
+       =If YOU EXPERIENCE LaTeX ERRORS:= *Consult Buffer:* ~*Org PDF LaTeX Output*~
+
+7) [ ] =Handling Images=
+
+   Some Images may render too large or too small to fit on a page
+   of an exported version of this file... This is easy do fix within
+   your content on an image by image basis...
+      
+   Use *LaTeX* and/or *HTML* attributes as follows on the images that need
+   to be a different size...
+
+   =Example:=
+      
+       #+CAPTION: Example larger size .png file 
+       #+NAME:  example:00001
+       #+attr_html: :width 600px
+       #+attr_latex: :width 100px
+      [[./media/lavender-banner.png]]
+
+
+
+=These Instructions Were Last Modified:= <2023-06-01 Thu>
+
+There are no plans to add any other eBook formats to this Simple
+*EXAMPLE or FIGURE* template... It is an entirely self contained project
+with special emphasis on proper rendering of Tables, Images, and Graphs...
+
+If you experience problems =Please Open an ISSUE At:= https://github.com/harmonicalchemy/modular-emacs/issues
+   
+Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas for Improvement... =You guys are my Product Managers= I am only a User of ONE "seat". 
+Other folks UX metrics are sorely needed!! Thanks!
+
+=Enjoy!= - Alisha Awen
+:END:
+
+* NEW Figure A /(COMMANDEER This First One)/                           :export:
+<<FIG_a>>
+:README:
+
+   =Usage:= *This is an EXAMPLE FIGURE or EXAMPLE To Be Commandeered*
+
+   - [ ] =This item is BOILERPLATE=
+
+        Use this FIGURE A is BOILERPLATE intended to be commandeered to
+        compose your FIRST Main Topic. It is only here published in order
+        for the TEMPLATE to show something in its body as an exported PDF...
+
+        Keep This Item set to ~:export:~ and leave it that way after you have
+        commandeered it...
+
+   - [ ] =Commandeer This Item and use it:=
+
+        =COMMANDEER= This item /(changing the title etc.)/ as the
+        MAIN TITLE of one or more Examples or Figures...
+        If more than one example or figure, use the sub-headings below,
+        otherwise remove them and keep this one level deep...
+
+        The structure of this BOILERPLATE is all set up for 
+        you allowing you to immediately begin writing and everything will
+        work as expected...
+
+        Rename *Figure A:* to a *Unique Title* and remove /(COMMANDEER - etc...)/
+        from the end, in order to commandeer the entire item for your needs...
+
+   - [ ] =Change The Anchor Link=
+
+        Change the anchor /(directly under the heading)/ to match your new
+        Example or Figure's title name...
+
+        =Note:= I created the following convention for making unique
+              anchors within ALL of these HAP_Doc-Skeleton.org
+              Template files.
+
+              The anchor ~PREFIX_~ is there to match the named sections
+              of a book or document project defined as a standard
+              across ALL of these HAP_Document-Skeleton.org Template
+              files... This will help keep your anchors unique, and
+              also add an extra *KM* dimension of *category* to them...
+
+              It would be wise to follow this convention when you
+              create anchors elsewhere within ALL of your document
+              Projects created from HAP Modular Emacs Document
+              Skeleton Template files...
+
+              If you wish to change all of this, go ahead and do
+              what ever you want... For simplicity's sake, follow
+              the instructions below... /(there are automatic ways/
+              /to create links and anchors within org-mode... I/
+              /prefer to do it manually... The alternate is a mess/
+              /IMHO)/
+
+        Leave ~FIG_~ as the anchor's prefix... /(as in boilerplate above).../
+        Use dashes to connect words /(all lower case)/ from your title...
+
+        The anchor above may be used to link to this Figure or Example
+        from other documents which need to reference it...
+
+        /(which may or may not be published as links within the exported PDFs)/
+
+   - [ ] =Replace ALL BOILERPLATE Content Under The Figure A Heading=
+
+        *Add Your Content:* Add your Lists, Tables, Figures, Images, etc...
+
+        =Keep the Structure Of MAIN FIGURE HEADING INTACT:=
+
+        Anything you do under the *MAIN Figure HEADING* Level will be
+        automatically handled during export...
+
+        =Note:= Sub headings with unique Anchors are included for your use
+              and if you commandeer those sub-headings be sure to change
+              the anchors to match your new renamed sub-headings...
+              
+              /Make them Unique! USE the BOILERPLATE EXAMPLES to lean how/
+              /to get these looking good when exported to a PDF file.../
+:END:
+
+Use Subheadings below if needed, or REMOVE them... These templates are ALSO
+available in the Meta: Binder...  They are actually only here to give exported PDF some body, and for me to test how different export formats render...
+/"Yeah, I did all the dirty work here so you can just play with it all, no worries... Pay no attention to that lispy girl behind the Knuth Industries curtan"/ *TeeHee!*
+
+*** Sub Heading T /(template with tables - rename this)/
+<<FIG-A_subhead-t>>
+
+**** Basics:
+<<FIG-A-SUBH-T_basics>>
+
+The following are example Tables you can use /(with some instructions)/ Use what you need and Remove the rest...
+
+- *Simple Basic*
+
+   | Item 1 | Item 2 | Item 3 | Item 4 |
+   |--------+--------+--------+--------|
+   |        |        |        |        |
+
+- *A Bit More than Basic*
+
+  | My Column 1 | My Column 2 | Last Column |
+  |-------------+-------------+-------------|
+  |          42 | foo         | bar         |
+  |          23 | baz         | abcdefg     |
+  |-------------+-------------+-------------|
+  |          65 |             |             |
+
+**** Column Allignment:
+<<FIG-A-SUBH-T_col-allign>>
+
+- *Columns are automatically aligned by default as such:*
+
+   /Number-rich Columns to the Right/
+
+   /String-rich Columns to the Left/
+
+- *Override Automatic Alignment:*
+
+   /If you want to override the automatic alignment 
+   use:/ ~<r>~, ~<c>~ or ~<l>~.
+
+    #+CAPTION: Table with aligned columns
+   |              |     <c>      | <l>          |
+   | 1            |      2       | 3            |
+   | Right        |    Center    | Left         |
+   | xxxxxxxxxxxx | xxxxxxxxxxxx | xxxxxxxxxxxx |
+
+**** Header rows  & Row Borders
+<<FIG-A-SUBH-T_head-row>>
+
+- *You can create tables with a header row:* 
+
+   /(by using a horizontal line of dashes to separate/ 
+    /it from the rest of the table)/ 
+
+   *Like This:*
+
+   #+CAPTION: Table with an header row
+   | Name of column 1 | Name of column 2 | Name of column 3 |
+   |------------------+------------------+------------------|
+   | Top left         | Top middle       |                  |
+   |                  |                  | Right            |
+   | Bottom left      | Bottom middle    |                  |
+
+**** Vertical Borders:
+<<FIG-Z-SUBH-T_vertical-borders>>
+
+You can create tables with vertical & horizontal borders around groups of cells by using a combination of horizontal (header row) lines, and the following notation above the table...
+
+=Table with Horizontal and Vertical Borders around Groups:=
+
+#+CAPTION: Table with Custom Bordered Columns & Rows
+
+| / | <       | <      |        | >     | <      |      | >     | <      |        | >      |
+|---+---------+--------+--------+-------+--------+------+-------+--------+--------+--------|
+|   | *Group 1* | apple  | orange | peach |        |      |       |        |        |        |
+|   |         | banana | lemon  | plum  |        |      | empty | space  |        |        |
+|   |         | lime   | pear   | grape |        |      |       |        |        |        |
+|---+---------+--------+--------+-------+--------+------+-------+--------+--------+--------|
+|   | *Group 2* |        |        |       | Dog    | Cat  | Mouse |        |        |        |
+|   |         |        | empty  |       | spider | fly  | moth  |        | empty  |        |
+|   |         |        |        |       | rabbit | bird | gnat  |        |        |        |
+|---+---------+--------+--------+-------+--------+------+-------+--------+--------+--------|
+|   | *Group 3* |        |        |       |        |      |       | knife  | spoon  | fork   |
+|   |         |        |        | empty | space  |      |       | spade  | shovel | rake   |
+|   |         |        |        |       |        |      |       | hammer | chisel | wrench |
+|---+---------+--------+--------+-------+--------+------+-------+--------+--------+--------|
+
+**** Table placement
+<<FIG-A-SUBH-T_table-placement>>
+
+- *Align Table Centred:* 
+   /(the default)/
+
+   | a | b | c |
+   |---+---+---|
+   | 1 | 2 | 3 |
+   | 4 | 5 | 6 |
+
+- *Do NOT Align Center:*
+   /(overrides default)/
+
+    #+ATTR_LATEX: :center nil
+   | a | b |
+   | 1 | 2 |
+
+- *Align Table to Left Side:*
+
+   #+LATEX: \noindent
+   #+ATTR_LATEX: :center nil
+   | a | b | c |
+   |---+---+---|
+   | 1 | 2 | 3 |
+   | 4 | 5 | 6 |
+   #+LATEX: \hfill
+
+   /The noindent just gets rid of the indentation of the first/
+   /line of a paragraph which in this case is the table. The/
+   /hfill adds infinite stretch after the table, so it pushes/
+   /the table to the left./
+
+- *Align Table to Right Side:*
+
+   #+LATEX: \hfill
+   #+ATTR_LATEX: :center nil
+   | a | b | c |
+   |---+---+---|
+   | 1 | 2 | 3 |
+   | 4 | 5 | 6 |
+
+   /Here the hfill adds infinite stretch before the table,/
+   /so it pushes the table to the right./
+
+- *Table size:*
+
+   #+ATTR_HTML: :width 100%
+   | Cell in column 1, row 1 | Cell in column 2, row 1 |
+   | Cell in column 1, row 2 | Cell in column 2, row 2 |
+
+   *NOTE:* /You can do a whole lot more with org-tables /using/
+         /table.el but that information is too much to include/ 
+         /in this template.../ 
+
+         /Consult your Org-Mode cheat sheet instead/
+
+*** Heading S /(template with src-code blocks, etc. - rename this)/
+<<FIG-A_subhead-s>>
+
+- *SysAdmin & Command Prompts:*
+
+   #+begin_src
+   admin@vps1:~$ sudo apt update
+   #+end_src
+
+   #+begin_src
+   user@home:~$ git status
+   #+end_src
+
+- *Evaluate some eLisp code:*
+
+   #+begin_src lisp
+   (defvar test1 "test1 value")
+   (defvar test2 "test2 value")
+   test2
+   #+end_src
+
+   #+results:
+   : test2 value
+
+   #+begin_src lisp
+   (defvar test1 "test1 value")
+   (defvar test2 "test2 value")
+   test1
+   #+end_src
+
+   #+results:
+   : test1 value
+
+*** Heading D /(drama script snippit template - rename this)/
+<<FIG-A_subhead-d>>
+
+=Fountain Radio Drama Script Excerpt:=
+
+=Note:= You need to create a NEW LaTeX "listings" language for
+      fountain if you want to see anything more than plain text
+      in the exported PDF...  /(working on this)/
+
+#+begin_src
+MARY
+(NARRATING)
+   
+This is a fountain formatted script snippit example / template
+   
+
+  EXT. (JUNKYARD) (NIGHT) 
+
+MARY
+(LAUGHING)
+    
+I Can't believe you are writing a screenplay
+   
+on that crappy dog chewed notebook...
+    
+what a geeky thing to do!
+    
+(LAUGHS EVEN LOUDER)
+
+>*THE END*<
+#+end_src
+
+** 📚 References:                                                                  :noexport:
+:README:
+   =Org Mode Links Tip:=
+
+      + To Create a Link Type: ~C-c C-l~ 
+         /(then paste: ~link~ & type: "description")/
+
+         =-OR-= Simply Copy/Paste BOILERPLATE:
+              /(use placeholders below)/
+              And Fill Them In Manually... 
+              Copy/Paste more placeholders as
+              needed to create more links...
+
+      + To Open a Link Type: ~C-c C-o~
+
+      + To EXPAND a Link Type: ~SPACE b~
+         or: ~M-x org-toggle-link-display~
+
+   =BOILERPLATE:= /(clone to add more ref links)/
+
+   ☞ *Heading:* [[~/.GIT/My-Docs/][MY DOCS]] /(comment)/
+
+   + *Heading:* [[link][Link NAME] ] /(comment)/
+
+   ☞ [[yt:aB1cD2eF3gH ][TITLE ] ] *Description:* /(YouTube)/
+
+   + [[link][Link Name] ] *Heading:* /(comment)/
+   
+   + *_:* [[][] ] /(yadda... yadda... yadda...)/
+
+   + [[][] ] /(_)/
+
+   + [[junk][JUNK]]  /(This is a stupid BUG workaround/ /for org-mode link/
+         /expansion/compression... If you invoke:/ ~org-toggle-link-display~
+         /you will notice this JUNK link DOES NOT compress to a clickable/
+         /link title alone.../
+         
+         /I am not sure if this is due to my Emacs Config or a bug within/
+         *Org-Mode* /itself.../
+
+         /I put this workaround in here because if it is not here,/
+         /SOME of your external file links created below may not/
+         /compress after expansion, even though thy are GOOD links!/
+
+         /Leaving this JUNK link in here acts like a scapegoat/
+         /so that your real links below will all compress/expand/
+         /normally... I am NOT SURE WHY THIS WORKS??? I'm to busy/
+         /to do anything beyond hacking at this point.../
+         
+         ~org-lint~ /will detect JUNK above... Ignore that warning.../
+                  /It's my "METHOD of MADNESS" %^)/
+:END:
+
++ *Link to Project:* [[][] ] /(comment)/
+
+* ⎘ Meta: /(Usage & Templates)/                                           :noexport:
+** 📃 About:
+
+The *Templates:* section provides skeleton templates for use within this document.  These /"meta-sections"/ do not show up in final published docs, /(e.g., .pdf or web etc)/...
+
+Any sub heading under the "*Templates:"* group can be utilized by copy-pasting the collapsed heading into your existing document sections (i.e., making a clone anywhere you need to create a new section based on the template's structure)... 
+
+In some cases you may have to adjust the heading level of your pasted content... To do that place your cursor at the very beginning of the pasted heading /(completely collapsed)/ and type: ~M-S-<right or left arrow>~  Using the Shift key changes the hierarchy level of the cloned heading as well as the relative sub level headings it may contain... if it is not collapsed first you only change the level of the selected heading but none of the headings below /(no matter if they are currently sub headings)/.
+
+The intent of these templates are to save lots of time starting up a new document or to quickly develop a new idea.  Lets see if it helps. :trollface:
+
+** 📄 Instructions:
+
+=Treat Anything Found Within This Section as a Potential TEMPLATE= which may be used repeatedly as you write your Document Above...
+
+Change the Name, titles, and/or headings of Your Cloned Template to a specific title required within your document...
+
+** 📃 Example/Figure Sub headings: /(rename clones)/
+*** NEW 📄 Sub Heading T /(template with tables - rename this)/
+<<FIG-Z_subhead-t>>
+
+**** Basics:
+<<FIG-Z-SUBH-T_basics>>
+
+The following are example Tables you can use /(with some instructions)/ Use what you need and Remove the rest...
+
+- *Simple Basic*
+
+   | Item 1 | Item 2 | Item 3 | Item 4 |
+   |--------+--------+--------+--------|
+   |        |        |        |        |
+
+- *A Bit More than Basic*
+
+  | My Column 1 | My Column 2 | Last Column |
+  |-------------+-------------+-------------|
+  |          42 | foo         | bar         |
+  |          23 | baz         | abcdefg     |
+  |-------------+-------------+-------------|
+  |          65 |             |             |
+
+**** Column Allignment:
+<<FIG-Z-SUBH-T_col-allign>>
+
+- *Columns are automatically aligned by default as such:*
+
+   /Number-rich Columns to the Right/
+
+   /String-rich Columns to the Left/
+
+- *Override Automatic Alignment:*
+
+   /If you want to override the automatic alignment 
+   use:/ ~<r>~, ~<c>~ or ~<l>~.
+
+    #+CAPTION: Table with aligned columns
+   |              |     <c>      | <l>          |
+   | 1            |      2       | 3            |
+   | Right        |    Center    | Left         |
+   | xxxxxxxxxxxx | xxxxxxxxxxxx | xxxxxxxxxxxx |
+
+**** Header row
+<<FIG-Z-SUBH-T_head-row>>
+
+- *You can create tables with a header row:* 
+
+   /(by using a horizontal line of dashes to separate/ 
+    /it from the rest of the table)/ 
+
+   *Like This:*
+
+   #+CAPTION: Table with an header row
+   | Name of column 1 | Name of column 2 | Name of column 3 |
+   |------------------+------------------+------------------|
+   | Top left         | Top middle       |                  |
+   |                  |                  | Right            |
+   | Bottom left      | Bottom middle    |                  |
+
+**** Table placement
+<<FIG-Z-SUBH-T_table-placement>>
+
+- *Align Table Centred:* 
+   /(the default)/
+
+   | a | b | c |
+   |---+---+---|
+   | 1 | 2 | 3 |
+   | 4 | 5 | 6 |
+
+- *Do NOT Align Center:*
+   /(overrides default)/
+
+    #+ATTR_LATEX: :center nil
+   | a | b |
+   | 1 | 2 |
+
+- *Align Table to Left Side:*
+
+   #+LATEX: \noindent
+   #+ATTR_LATEX: :center nil
+   | a | b | c |
+   |---+---+---|
+   | 1 | 2 | 3 |
+   | 4 | 5 | 6 |
+   #+LATEX: \hfill
+
+   /The noindent just gets rid of the indentation of the first/
+   /line of a paragraph which in this case is the table. The/
+   /hfill adds infinite stretch after the table, so it pushes/
+   /the table to the left./
+
+- *Align Table to Right Side:*
+
+   #+LATEX: \hfill
+   #+ATTR_LATEX: :center nil
+   | a | b | c |
+   |---+---+---|
+   | 1 | 2 | 3 |
+   | 4 | 5 | 6 |
+
+   /Here the hfill adds infinite stretch before the table,/
+   /so it pushes the table to the right./
+
+- *Table size:*
+
+   #+ATTR_HTML: :width 100%
+   | Cell in column 1, row 1 | Cell in column 2, row 1 |
+   | Cell in column 1, row 2 | Cell in column 2, row 2 |
+
+   *NOTE:* /You can do a whole lot more with org-tables /using/
+         /table.el but that information is too much to include/ 
+         /in this template.../ 
+
+         /Consult your Org-Mode cheat sheet instead/
+
+*** NEW 📄 Heading S /(template with src-code blocks, etc. - rename this)/
+<<FIG-Z_subhead-s>>
+
+- *SysAdmin & Command Prompts:*
+
+   #+begin_src conf
+   admin@vps1:~$ sudo apt update
+   #+end_src
+
+   #+begin_src conf
+   user@home:~$ git status
+   #+end_src
+
+- *Evaluate some eLisp code:*
+
+   #+begin_src emacs-lisp
+   (defvar test1 "test1 value")
+   (defvar test2 "test2 value")
+   test2
+   #+end_src
+
+   #+results:
+   : test2 value
+
+   #+begin_src emacs-lisp
+   (defvar test1 "test1 value")
+   (defvar test2 "test2 value")
+   test1
+   #+end_src
+
+   #+results:
+   : test1 value
+
+**** Additional Admonitions
+<<FIG-Z-SUBH-S_additional>>
+
+***** Attention:
+
+#+begin_attention
+Attention
+#+end_attention
+
+***** Hint:
+
+#+begin_hint
+Hint
+#+end_hint
+
+***** Error:
+
+#+begin_error
+Error
+#+end_error
+
+***** Danger:
+
+#+begin_danger
+Danger!!!
+#+end_danger
+
+*** NEW 📄 Heading D /(drama script snippit template - rename this)/
+<<FIG-Z_subhead-d>>
+
+=Fountain Radio Drama Script Excerpt:=
+
+#+begin_src fountain
+MARY
+(NARRATING)
+   
+This is a fountain formatted script snippit example / template
+   
+
+  EXT. (JUNKYARD) (NIGHT) 
+
+MARY
+(LAUGHING)
+    
+I Can't believe you are writing a screenplay
+   
+on that crappy dog chewed notebook...
+    
+what a geeky thing to do!
+    
+(LAUGHS EVEN LOUDER)
+
+>*THE END*<
+#+end_src
+
+

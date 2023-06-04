@@ -1,0 +1,398 @@
+# -**- mode: org; coding: utf-8 -**-
+:LATEST_UPDATE:
+  =Last Updated:= <2023-06-04 Sun> /(this template needs work)/
+
+  =YOU MAY REMOVE This Drawer= from your own clones of this template if
+  it is bothering you... This drawer is used for HAP Modular Emacs
+  DOC TEMPLATES housekeeping...
+
+  =HOWEVER= you may also use it for the same purpose to keep your existing
+  Modular Emacs based org documents in sync with the latest updates of the
+  template they were created from...
+  
+  =If you do wish to do the same... Read On Below...=
+  
+  - =INTERNAL USE Instructions:= /(END USERS SKIP THIS BULLET)/
+
+    This bullet is not for end users... This is /"Note to Self"/ stuff...
+
+     + [X] =MASTER TEMPLATE ONLY= *Keep The Above Timestamp Up To Date:*
+
+         *DO THIS ALWAYS*, JUST AFTER YOU UPDATE THIS SETUPFILE...
+         =DON'T FORGET!=
+
+  - =PUBLIC USE Instructions:= /(FOR CLONES OF THIS TEMPLATE)/
+
+     + [X] =Change this= *:LATEST_UPDATE:* =drawer title:= /(within clones only)/
+
+          Change it to: *:LATEST_TEMPLATE_UPDATE:* within NEWLY CREATED CLONES...
+
+     + [X] *COMPARE the TIMESTAMPS between THIS TEMPLATE and CLONES:*
+
+          ~Org-Mode~ and ~AuxTeX~ settings and meta data within CLONES of
+          this SETUPFILE TEMPLATE will get out of sync after a while due
+          to Harmonic Alchemy Modular Emacs version updates etc...
+        
+          Use the ABOVE timestamp /(within the TEMPLATE and your CLONE)/
+          to see if the clone's settings need to be updated...
+          /(i.e., brought into sync with its template - MERGE)/ and then
+          perform any needed merging/replacing of BOILERPLATE and/or
+          meta data. /(e.g, *:README:* drawers, etc.)/
+
+     + [X] *Keep ABOVE timestamp within CLONES of this template UP TO DATE:*
+
+          =AFTER Completing Above MERGE Step= and your clone has been brought
+          up to date /(i.e. in sync)/ with its STARTUPFILE TEMPLATE...
+          Then update the timestamp ABOVE... /(WITHIN YOUR CLONE)/ to record
+          the date of its last sync status...
+:END:
+:README:
+
+=Usage:= *Copy/Clone* this file and adjust to suit your needs...
+       *Include* this SETUPFILE within ~.org~ files destined to become
+       a *Short General Purpose Document*...
+
+       *COPY/CLONE:* ~~/.emacs.d/Docs/pubOps/org-templates~ directory
+       to the MASTER directory where existing .org files reference
+       this contained SETUPFILE... Modify the copied SETUP Files within
+       your cloned org-templates directory to suit your needs...
+
+       =Don't Modify The MASTER Templates Within ~/.emacs.d=
+
+       /(if you did by accident, you can easily enough perform:/
+       
+            ~git restore <this file>~
+
+            =or:= ~git checkout .~
+
+        /to refresh ALL since you are not modifying the master branch...)/
+
+       =Add:= The following line to the Header of ~.Org~ Files that need to
+            include this file:
+
+               ~#+SETUPFILE: ./org-templates/pdf-excerpt-setup.org~
+
+/Making a COPY/CLONE of:/ ~$HOME/.emacs.d/Docs/pubOps/org-templates~ /master folder To your book's project directory will allow you to make your own custom configurations for different books or other docs, without affecting the configurations of other book projects within their own MASTER FOLDERS.../
+
+=NOTE:= The Configurations within this file depend on Harmonic Alchemy Modular
+      Emacs init file: ~~/.emacs.d/lisp/modules/09-4-org-export-conf.el~...
+
+      If you need to create other LaTeX Document Styles or customize existing
+      ones, you will also need to override ~09-4-org-export-conf.el~
+      by placing a copy of it within: ~~/.emacs.d/lisp/my-modules~ and then
+      make your changes in your cloned copy...
+
+      Find the: ~BEGIN: CUSTOM LaTeX CONFIGURATIONS for EXPORT to PDF~
+      heading within that file... You can modify or add new configurations and
+      even ~\\input~ external LaTeX files with even more fancy modifications...
+      It's a LOT of work, /(research)/ but worth it in the end when you have
+      something looking really nice!
+
+=This configuration uses the EXCERPT DOCUMENT CLASS= defined within:
+~09-4-org-export-conf.el~ as: ~excerpt~ for its *LaTeX* Configuration...
+
+=For Local Customizing:= EVERYTHING is pretty much done in this Setup File now...
+Only the generic things common to all LaTeX export configurations are done in Emacs Lisp configurations... Only the names are added to the list so the dispatcher knows what to do... 
+
+However if you are curious to see how things work, Find the ~"excerpt"~ section within ~org-latex-classes~ list, The UGLY Lisp/LaTeX mongrel code starts after the first ~\\~ Indicating the beginning of *LaTeX* directives that have to be escaped within an eLisp list...
+
+I hated that so I PUT as MUCH of the LaTeX configurations here in this .ORG file... Much cleaner IMHO and ALSO Portable as well... This is the Best Practice for Emacs to LaTeX to PDF Folks! Hands Down...  /(and it follows well Knuth's original idea of literate programming - which this writer-programmer loves! %^)/...
+
+I mean... I can write stories /(oh yeah)/ and have fun while coding, /(while also doing code documenting which is what I should be doing)/ LOL...
+
+I digress... The Fact is plain though... Mixing both languages /(eLisp & LaTeX)/ together is an =insult to both languages mutually...= =IMHO=  So as you see I Limited this to bare necessities only... /(which is acceptable "glue" otherwise how can the dispatcher know?)/
+
+Once you have tried this several times to customize your LaTeX /(and failed)/ it won't look so complicated and you will begin to "get it"  Everything can be done here, no need to go out and search through you lisp configurations...
+
+/(BE DILIGENT little grasshopper! TeX/LaTeX IS a complicated Turing Complete Language... Created by one of the Geekiest GEEKS of Computer Science, Mathematics, and Algorithm Analysis! Donald Knuth... You have been warned!!!)/
+
+But your woes are right inside this file only... /(and the LaTeX docs, and Libraries of course)/
+
+=Good luck!=
+
+
+=HERE ARE A FEW Org-Mode LaTeX Tips:=
+
+/(I may add a few more here as I find them, i.e., if I find them to be common hurdles/caveats for most folks)/
+
+- Prevent Headlines from Showing Up in the *TOC*
+
+   Set any *HEADING* within your ~.org~ project file with the
+   following *:PROPERTIES:* BOX...
+
+   + *Set The NOTOC Property:* /(NOT in TOC)/
+
+        ~*~ =ANY Section HEADING:=
+        *:PROPERTIES:*
+        :       :NOTOC: t
+        *:END:*
+
+        Don't copy this pretty text example... It is NOT code... LOL
+
+- *Handy Reference:*
+   
+   + [[https://orgmode.org/manual/Export-Settings.html#Export-Settings][Org Manual Export Settings]]
+
+   + [[https://orgmode.org/worg/dev/org-export-reference.html][WORG - Org Export Reference]]
+
+   + [[https://www.linuxjournal.com/content/org-mode-latex-exporter-latex-non-texers][Org Mode Latex Exporter - Linux Journal]]
+
+   + [[https://tug.org/][TeX Users Group]] - /TUG/
+
+   + [[https://tug.org/FontCatalogue/][The LaTeX Font Catalogue]] - /(TUG.org)/
+
+   + [[https://tug.org/FontCatalogue/seriffonts.html][Serif Fonts]] - /(TUG.org)/
+
+   + [[https://tug.org/FontCatalogue/sansseriffonts.html][Sans Serif Fonts]] - /(TUG.org)/
+
+   + [[https://tug.org/FontCatalogue/typewriterfonts.html][Typewriter Fonts]] - /(TUG.org)/
+
+   + [[https://tug.org/FontCatalogue/calligraphicalfonts.html][Calligraphical Fonts]] - /(TUG.org)/
+
+   + [[https://en.wikibooks.org/wiki/LaTeX/Fonts][LaTeX Fonts]] - /(WIKIbooks.org)/
+
+   + [[https://www.ctan.org/pkg/latexmk/][latexmk – Fully automated LaTeX document generation]]
+
+   + [[https://damitr.org/2014/01/09/latex-tufte-class-in-org-mode/][Latex Tufte class in org-mode]]
+
+   + [[https://tufte-latex.github.io/tufte-latex/][Tufte-LaTeX]] - /For Producing Handouts, Papers, and Books/
+
+   + [[https://github.com/Tufte-LaTeX/tufte-latex][tufte-latex.github.io/tufte-latex/]]
+
+   + [[https://latex-tutorial.com/documentclass-latex/][Your Guide to documentclass LaTeX - Latex-Tutorial.com]]
+
+   + [[https://mirror2.sandyriver.net/pub/ctan/macros/latex/contrib/memoir/memman.pdf][The Memoir Document Class]] - /(link to PDF)/
+
+   + [[https://www.ctan.org/pkg/memoir][memoir – Typeset fiction, non-fiction and mathematical books]] - /(CTAN)/
+
+   + [[https://orgmode.org/manual/Embedded-LaTeX.html][12.5 Embedded LaTeX]] - /(The Org Manual)/ 
+
+   + [[https://orgmode.org/manual/LaTeX-fragments.html][12.5.1 LaTeX fragments]] - /(The Org Manual)/ 
+
+   + [[https://www.offerzen.com/blog/literate-programming-empower-your-writing-with-emacs-org-mode][Empower Your Writing with Emacs Org-Mode]] - /(Literate Programming)/
+
+:END:
+
+=File:= ~~/.emacs.d/Docs/pubOps/org-templates/pdf-excerpt-setup.org~
+
+ORG-MODE LaTeX SETUPFILE for: Short PDF Excerpts of figures and examples that may or may not exist within Larger Docs...
+
+=LATEX CLASS:= ~excerpt~
+
+
+- *ORG-MODE STARTUP OPTIONS For THIS CONFIGURATION:*
+
+   #+LANGUAGE: en
+   #+STARTUP:  overview
+   #+STARTUP:  hideblocks
+   #+STARTUP:  indent
+   #+STARTUP:  align
+   #+STARTUP:  inlineimages
+
+
+=LaTeX CONFIGURATIONS FOR: --> Short Excerpt PDF:=
+
+=NOTE:= All Latex Configurations are done here for
+      portability...  The ~excerpt~ class name itself
+      is defined within: ~09-4-org-export-conf.el~
+
+- *DISABLED LATEX DIRECTIVES:*
+
+   #+begin_comment
+
+   =LaTeX CLASS & PAPER SIZE:=
+
+   
+   =General Options=
+   
+   #+LATEX_HEADER: \usepackage{minted}
+
+   =Special Options=
+   
+   #+LATEX_HEADER: \usepackage{lmodern}    %% Ensures we have correct font...
+   #+LATEX_HEADER: \usepackage[AUTO]{inputenc}
+   #+LATEX_HEADER: \usepackage{color}
+
+   =Required Options=
+
+   #+LATEX_HEADER: \usepackage[margin=0.9in,bmargin=1.0in,tmargin=1.0in]{geometry}
+   #+LATEX_HEADER: \usepackage{amsmath}
+   #+LATEX_HEADER: \usepackage{arydshln}
+   #+LATEX_HEADER: \usepackage{subcaption}
+   #+LATEX_HEADER: \newcommand{\point}[1]{\noindent \textbf{#1}}
+   #+LATEX_HEADER: \usepackage{hyperref}
+   #+LATEX_HEADER: \usepackage{csquotes}
+   #+LATEX_HEADER: \usepackage{graphicx}
+   #+LATEX_HEADER: \usepackage{bm}
+   #+LATEX_HEADER: \usepackage{subfig}
+   #+LATEX_HEADER: \usepackage[mla]{ellipsis}
+   #+LATEX_HEADER: \setlength\parskip{.5\baselineskip}
+   #+LATEX_HEADER: \usepackage{pgf}
+   #+LATEX_HEADER: \usepackage{tikz}
+   #+LATEX_HEADER: \usepackage{adjustbox}
+   #+LATEX_HEADER: \usetikzlibrary{shapes,arrows,automata,quotes}
+
+
+
+   #+LATEX_HEADER: \AtBeginDocument{\parindent = 0em \nonzeroparskip}
+
+   #+end_comment
+
+
+- *ENABLED LATEX DIRECTIVES:*
+      
+   =LaTeX CLASS & PAPER SIZE:=
+
+    #+LATEX_CLASS: excerpt
+    #+LATEX_CLASS_OPTIONS: [a5paper]
+
+   =General Options=
+    
+    #+LATEX_HEADER: \usepackage{parskip}
+    #+LATEX_HEADER: \usepackage{paralist}
+    #+LATEX_HEADER: \usepackage[hyperref,x11names]{xcolor}
+    #+LATEX_HEADER: \usepackage[colorlinks=true,urlcolor=SteelBlue4,linkcolor=Firebrick4]{hyperref}
+
+    #+LATEX_HEADER: \usepackage[landscape]{geometry}
+
+   /(MOST disabled for testing)/
+
+   =Special Options=
+
+   /(all disabled for testing)/
+
+   =Required Options=
+
+   /(MOST disabled for testing)/
+
+
+=STANDARD ORG-MODE OPTIONS For This Configuration:=
+
+- *DISABLED ORG-MODE OPTIONS:*
+
+   #+BEGIN_COMMENT
+
+   (Nothing in here Currently)
+
+   #+END_COMMENT
+
+
+- *ENABLED ORG-MODE OPTIONS:*
+
+    #+SELECT_TAGS: export
+    #+EXCLUDE_TAGS: noexport
+
+    #+OPTIONS: ':t
+       # ENABLE Smart Quotes (org-export-with-smart-quotes)
+
+    #+OPTIONS: *:t
+       # Show Emphasized Text (org-export-with-emphasize)
+       # NOTE: Exported PDF is styled different
+       # than org-mode buffer fontification..
+
+    #+OPTIONS: -:nil
+       # Convert Special Strings (org-export-with-special-strings)
+
+    #+OPTIONS: ::t
+       # Export with fixed-width sections (org-export-with-fixed-width)
+       # Options: (nil, t)
+       # non-nil = Interpret Strings Starting with a
+       # colon ":" as: A Fixed-With Verbatim area.
+
+    #+OPTIONS: <:t
+       # Enclude time/date active/inactive stamps (org-export-with-timestamps)
+
+    #+OPTIONS: \n:nil
+       # Non-nil = Preserve ALL Line Breaks (org-export-preserve-breaks)
+       # NOTE: (non-nil may affect LaTeX parskip)
+
+    #+OPTIONS: ^:{}
+       # Use Tex-like Syntax For Sub And Superscripts (org-export-with-sub-superscripts)
+       # Typing simple a_b will not be affected anymore
+       # Use word^{super} to raise word "super" - superscript
+       # Use word_{sub} to lower the word "sub" - subscript
+
+    #+OPTIONS: author:nil
+       # Don't Include Author Name into Exported file (org-export-with-author)
+
+    #+OPTIONS: broken-links:mark
+       # Broken link(s) found?
+       # Mark Them & Don't Export (org-export-with-broken-links)
+
+    #+OPTIONS: c:nil
+       # DONT Include CLOCK keywords in exported documents (org-export-with-clocks)
+
+    #+OPTIONS: creator:t
+       # Include Creator Info (org-export-with-creator)
+
+    #+OPTIONS: d:nil
+       # Do NOT Include DRAWERS in exported documents (org-export-with-drawers)
+
+    #+OPTIONS: date:nil
+       # Include DATE in exported documents (org-export-with-date)
+
+    #+OPTIONS: e:t
+       # Include Entities (org-export-with-entities)
+       # Example if t: HTML exports \\alpha as: &alpha;
+
+    #+OPTIONS: email:nil
+       # Don't Include Author’s e-mail (org-export-with-email)
+
+    #+OPTIONS: f:t
+       # Include Footnotes (org-export-with-footnotes)
+
+    #+OPTIONS: H:6
+       # Set Number of Headline Levels for Export (org-export-headline-levels)
+
+    #+OPTIONS: tasks:t
+       # Toggle inclusion of TODO Task related keywords (org-export-with-tasks)
+       # IF t    - INCLUDE ALL TASK KEYWORDS...
+       # IF nil  - REMOVE ALL TASKS...
+       # IF todo - REMOVE DONE TASKS...
+       # IF list - (use list of keywords to keep)
+
+    #+OPTIONS: inline:nil
+       # Do NOT Include Inline Tasks (org-export-with-inlinetasks)
+
+    #+OPTIONS: num:nil
+       # NO NUMBERING for SHORT PDF EXCERPTS...
+       # (org-export-with-section-numbers)
+       # When N, Number only headlines level N or above.
+       # Set ‘UNNUMBERED’ property to non-nil to disable
+       # numbering of single headings and subheadings.
+       # Moreover, when value is ‘notoc’, the headline,
+       # (and all children), do NOT appear in TOC either.
+
+    #+OPTIONS: p:nil
+       # NO Planning Info (org-export-with-planning)
+
+    #+OPTIONS: pri:nil
+       # NO priority cookies (org-export-with-priority)
+
+    #+OPTIONS: prop:nil
+       # No Property Drawers (org-export-with-properties)
+
+    #+OPTIONS: stat:nil
+       # No Stastic cookies (org-export-with-statistics-cookies)
+
+    #+OPTIONS: tags:nil
+       # No Tags (org-export-with-tags)
+
+    #+OPTIONS: tex:t
+       # Do the right thing automatically (org-export-with-latex)
+
+    #+OPTIONS: timestamp:nil
+       # Don't Include Creation Time (org-export-time-stamp-file)
+
+    #+OPTIONS: title:nil
+       # Don't Include Title (org-export-with-title)
+
+    #+OPTIONS: toc:nil
+       # DO NOT Include TOC (org-export-with-toc)
+
+    #+OPTIONS: todo:nil
+       # DON'T Include TODO keywords (org-export-with-todo-keywords)
+
+    #+OPTIONS: |:t
+       # Include Tables (org-export-with-tables)
+

@@ -132,6 +132,7 @@
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Set Default Compile To PDF:
 
+(setq org-latex-listings 't)
 (setq TeX-PDF-mode t)
 (setq TeX-auto-save t)
 (setq TeX-fold-mode 1)
@@ -405,9 +406,53 @@
   ;;
   ;; ~~~~~~~~~~~~~~ END UNUSED CLASSES ~~~~~~~~~~~~~~~~~~~~~~
 
+  
   ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   ;; BEGIN: (CUSTOMIZED org-latex-classes LIST)
   ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ;; EXCERPT DOCUMENT CLASS:
+  ;;
+  ;; AUTHOR:   Alisha Awen
+  ;; REF:      Harmonic Alchemy Productions - Modular Emacs
+  ;; UPDATED:  2023-006-04
+  ;;
+  ;; PURPOSE:
+  ;;
+  ;;       This is currently being developed to be used with:
+  ;;       HAP_PDF-Example-Figure-Template.org A NEW LaTeX configuration
+  ;;       for simple PDF excerpts particularly suited for figures or
+  ;;       examples that may or may not be originally from a larger
+  ;;       Document or Book Project...
+  ;;
+  ;;       These are most commonly created to serve in support of a
+  ;;       larger project, But Publishable as a Simple STAND ALONE PDF
+  ;;       when that's the only thing needed to look up while deep inside
+  ;;       a project with many docs open. You know what I mean! %^)
+  ;;
+  ;; REMOVED:
+  ;;       This Code Snippet (lisp form) NO LONGER Requires:
+  ;;       ~/.emacs.d/Docs/TeX/pdf-excerpt-setup.tex
+  ;;       \\input{~/.emacs.d/Docs/TeX/pdf-excerpt-setup.tex}"
+  ;;
+  ;;       All LaTeX Configuration is NOW done in SETUPFILE:
+  ;;       ~/.emacs.d/Docs/pubOps/org-templates/pdf-excerpt-setup.org
+  ;;       Which selects this defined class and everything "just works"
+  ;;       as expected... (at least if I haven't mucked things up! LOL)
+
+  (add-to-list
+   'org-latex-classes
+   '("excerpt"
+     "\\documentclass[12pt]{article}
+                  [NO-DEFAULT-PACKAGES]
+                  [PACKAGES]
+                  [EXTRA]"
+     ("\\section{%s}" . "\\section*{%s}")
+     ("\\subsection{%s}" . "\\subsection*{%s}")
+     ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+     ("\\paragraph{%s}" . "\\paragraph*{%s}")))
+  ;; ~~~~~~~~~~~~~ END: EXCERPT DOCUMENT CLASS ~~~~~~~~~~~~~~~
 
   ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   ;; SIMPLE DOCUMENT CLASS:
