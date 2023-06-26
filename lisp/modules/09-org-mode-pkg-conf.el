@@ -32,10 +32,12 @@
 
 ;;;
 ;; Declare a list of required packages for my fancy org-mode setup:
-;;
+;; UPDATE:  I am currently evaluating org-modern-mode to see if
+;;          it works for me...
 
 (defvar me--req-org-packages
   '(gnuplot-mode
+    org-modern
     toc-org
     sass-mode
     abc-mode
@@ -56,23 +58,14 @@
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Define LOCAL USER MASTER ORG FILES DIRECTORY:
-;; The place where you will be keeping all your private org files and
-;; sub-directories... You may already have a special directory for your
-;; org files.  In that case be sure to read all the notes below!
-;;
-;; IMPORTANT NOTE: Create a symlink in your home directory: ~/.OD which
-;; points to the top level directory where you keep all your .ORG files...
-;; NOTE: If you don't have a master org-files directory on your file system
-;; yet, then go ahead and create that directory now... Make sure your
-;; newly created symlink:  ~/.OD points to your new org-files directory path
-;; organize your important org-files in this master directory... master agenda
-;; etc...
-;;;
+;; Where you keep all your private org files...
+;; See:
+;;   [modular-emacs]:~/.emacs.d/lisp/modules/me-constants.el
+;;   for more info about setting up CONSTANTS FOR YOUR ENVIRONMENT...
 
 ;; Set Path to ORG Docs from CONSTANT:
 
 (setq org-directory ME--ORG-DOC-DIR)
-
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Configure LilyPond-mode for editing .ly Music Notation files in Emacs
@@ -124,26 +117,12 @@
     (load-file "~/.emacs.d/lisp/my-modules/09-4-org-export-conf.el")
   (load-file "~/.emacs.d/lisp/modules/09-4-org-export-conf.el"))
 
-
-;;;
-;;  Speed Keys For Quick Navigation:
-
-(setq org-use-speed-commands 1)
-
-;;;
-;;  Set Maximum Indentation For Org-Mode Description Lists:
-
-(setq org-list-description-max-indent 5)
-
-;;;
-;;  Prevent Org-Mode Demoting Heading Also Shifting Text Inside Sections:
-
-(setq org-adapt-indentation nil)
-
-
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;   Alisha's Advanced Org-Mode Configurations: (EXTRA STUFF)
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+;; Speed Keys For Quick Navigation:
+(setq org-use-speed-commands t)
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;             Org Mind Map Configuration
@@ -159,6 +138,9 @@
 ;; (setq org-mind-map-engine "circo")  ; Circular Layout
 
 ;; Set Mobile Org Directory from GLOBAL CONSTANT:
+;; See:
+;;   [modular-emacs]:~/.emacs.d/lisp/modules/me-constants.el
+;;   for more info about setting up CONSTANTS FOR YOUR ENVIRONMENT...
 
 (setq org-mobile-directory ME--MOBILE-ORG-DIR)
 
@@ -175,9 +157,11 @@
 ;;         Phones are NOT secure by design however...
 ;;         so only good for shopping-list.org and stuff?
 ;;         You may see adds for food, etc... LOL
+;; See:
+;;   [modular-emacs]:~/.emacs.d/lisp/modules/me-constants.el
+;;   for more info about setting up CONSTANTS FOR YOUR ENVIRONMENT...
 
 (setq org-mobile-encryption-password ME--MOBILE-ORG-PW)
-
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Defined Variable:  ME--YT-iFrame-format
@@ -232,6 +216,8 @@
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Modular Emacs Quick OPEN Org Link in NEW FRAME
 ;;  Function...
+;;  Use: xah-fly COMMAND "O" to DO THIS...
+;;  Use: Normal C-c C-o to open in current frame...
 
 (defun me_org-open-link-other-frame ()
   "Junp to bookmark in another frame... See: 'bookmark-jump' for more.,,"
@@ -381,26 +367,22 @@
   (me_set-writing-frame)
 
   ;; Collapse all source blocks;
-
   (org-hide-block-all)
 
-  ;; Hide bullets...
-
-  (me_hide-org-bullets)
+  ;; Use Fancy ORG Outline Heading Stars
+  (me_org-fancy-stars)
 
   ;; Set Up Fancy Unicode Checkboxes...
-  
   (me_set-unicode-checkboxes)
 
   ;; Include toc-org...
-
+  
   (if (require 'toc-org nil t)
       (progn
         (toc-org-mode))
     (warn "toc-org not found"))
 
   ;; Enable Olivetti Mode...
-
   (olivetti-mode)
   (olivetti-set-width ME--ORG-OLIV-WIDTH)
 
@@ -408,7 +390,7 @@
   (xah-fly-keys 1))
 
 ;; END Fancy Org View - org-mode Hook function...
-
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Modular Emacs - Org Mode Hook function For EDIFF:
@@ -441,15 +423,13 @@
   (set-face-attribute 'default (selected-frame)
                       :family "Courier Prime"
                       :height 130))
-
-
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 ;;;                      FANCY ORG MODE INIT
 ;;  Add Fancy Org Mode Hook Function to Org Mode startup list:
-
 (add-hook 'org-mode-hook 'me_fancy-org-mode-hook)
 
-;;;              NORMAL ORG MODE INIT
+;;;                     NORMAL (EDIFF) ORG MODE INIT
 ;;  Add Normal Org Mode Hook Function to Org Mode startup list:
 ;;  NOTE:  Don't enable this unless you are troubleshooting Org Mode or something...
 ;;         And if you do enable this form, you need to disable the form above it...

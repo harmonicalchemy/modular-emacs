@@ -1,0 +1,441 @@
+# -**- mode: org; coding: utf-8 -**-
+:LATEST_UPDATE:
+  =Last Updated:= <2023-06-18 Sun> /(this template needs work)/
+
+  =YOU MAY REMOVE This Drawer= from your own clones of this template if
+  it is bothering you... This drawer is used for HAP Modular Emacs
+  DOC TEMPLATES housekeeping...
+
+  =HOWEVER= you may also use it for the same purpose to keep your existing
+  Modular Emacs based org documents in sync with the latest updates of the
+  template they were created from...
+  
+  =If you do wish to do the same... Read On Below...=
+  
+  - =INTERNAL USE Instructions:= [0/1] /(END USERS SKIP THIS BULLET)/
+
+    This bullet is not for end users... This is /"Note to Self"/ stuff...
+
+      + [ ] =MASTER TEMPLATE ONLY= *Keep The Above Timestamp Up To Date:*
+
+          *DO THIS ALWAYS*, JUST AFTER YOU UPDATE THIS SETUPFILE...
+          =DON'T FORGET!=
+
+  - =PUBLIC USE Instructions:= /(FOR CLONES OF THIS TEMPLATE)/
+
+      + [ ] =Change this= *:LATEST_UPDATE:* =drawer title:= /(within clones only)/
+
+           Change it to: *:LATEST_TEMPLATE_UPDATE:* within NEWLY CREATED CLONES...
+
+      + [ ] *COMPARE the TIMESTAMPS between THIS TEMPLATE and CLONES:*
+
+           ~Org-Mode~ and ~AuxTeX~ settings and meta data within CLONES of
+           this SETUPFILE TEMPLATE will get out of sync after a while due
+           to Harmonic Alchemy Modular Emacs version updates etc...
+        
+           Use the ABOVE timestamp /(within the TEMPLATE and your CLONE)/
+           to see if the clone's settings need to be updated...
+           /(i.e., brought into sync with its template - MERGE)/ and then
+           perform any needed merging/replacing of BOILERPLATE and/or
+           meta data. /(e.g, *:README:* drawers, etc.)/
+
+      + [ ] *Keep ABOVE timestamp within CLONES of this template UP TO DATE:*
+
+           =AFTER Completing Above MERGE Step= and your clone has been brought
+           up to date /(i.e. in sync)/ with its STARTUPFILE TEMPLATE...
+           Then update the timestamp ABOVE... /(WITHIN YOUR CLONE)/ to record
+           the date of its last sync status...
+:END:
+:README:
+
+- =USAGE:= *Copy/Clone* this file and adjust to suit your needs...
+       *Include* this file within ~.org~ files destined to become
+       *Audio Drama or Podcasts* Projects...
+
+       *COPY/CLONE:* ~~/.emacs.d/Docs/pubOps/org-templates~ directory
+       to the MASTER directory where existing .org files reference
+       this contained SETUPFILE... Modify the copied SETUP Files within
+       your cloned org-templates directory to suit your needs...
+
+       =Don't Modify The MASTER Templates Within ~/.emacs.d=
+
+       /(if you did by accident, simply: ~git checkout .~ to refresh)/
+
+  =Add:= the following line to the Header of ~.Org~ Files that need to
+       include this file:
+
+       ~#+SETUPFILE: ./org-templates/audio-drama-setup.org~
+
+/Making a COPY/CLONE of:/ ~$HOME/.emacs.d/Docs/pubOps/org-templates~ /master/
+/folder To your MASTER project directory will allow you to make your own custom/
+/configurations for other books etc., without affecting the configurations of other/
+/book projects within their own OTHER MASTER FOLDERS.../
+
+=NOTE:= The Configurations within this file depend on Harmonic Alchemy Modular
+      Emacs init file: ~~/.emacs.d/lisp/modules/09-4-org-export-conf.el~...
+
+      If you need to create other LaTeX Document Styles or customize existing
+      ones, you will also need to override ~09-4-org-export-conf.el~
+      by placing a copy of it within: ~~/.emacs.d/lisp/my-modules~ and then
+      make your changes in your cloned copy...
+
+      Find the: ~BEGIN: CUSTOM LaTeX CONFIGURATIONS for EXPORT to PDF~
+      heading within that file... You can modify or add new configurations and
+      even ~\\input~ external LaTeX files with even more fancy modifications...
+
+      You will need to study *LaTeX* a LOT, and in particular, the *"memoir"* document
+      class... =read the well documented docs= /(see reference section below)/
+
+      Once you have tried this several times /(and failed)/ it won't look so
+      complicated and you will begin to "get it"... /(Be Diligent! TeX/LaTeX/
+      /IS a complicated Turing Complete Language... Created by one of the/
+      /Geekiest GEEKS of Computer Science, Mathematics, and Algorithm Analysis!/
+      /Donald Knuth... You have been warned!!!)/
+
+      =Good luck!=
+
+
+- =REFERENCE:= 
+   
+   + [[https://orgmode.org/manual/Export-Settings.html#Export-Settings][Org Manual Export Settings]]
+
+   + [[https://orgmode.org/worg/dev/org-export-reference.html][WORG - Org Export Reference]]
+
+   + [[https://www.linuxjournal.com/content/org-mode-latex-exporter-latex-non-texers][Org Mode Latex Exporter - Linux Journal]]
+
+   + [[https://tug.org/][TeX Users Group]] - /TUG/
+
+   + [[https://tug.org/FontCatalogue/][The LaTeX Font Catalogue]] - /(TUG.org)/
+
+   + [[https://tug.org/FontCatalogue/seriffonts.html][Serif Fonts]] - /(TUG.org)/
+
+   + [[https://tug.org/FontCatalogue/sansseriffonts.html][Sans Serif Fonts]] - /(TUG.org)/
+
+   + [[https://tug.org/FontCatalogue/typewriterfonts.html][Typewriter Fonts]] - /(TUG.org)/
+
+   + [[https://tug.org/FontCatalogue/calligraphicalfonts.html][Calligraphical Fonts]] - /(TUG.org)/
+
+   + [[https://en.wikibooks.org/wiki/LaTeX/Fonts][LaTeX Fonts]] - /(WIKIbooks.org)/
+
+   + [[https://www.ctan.org/pkg/latexmk/][latexmk – Fully automated LaTeX document generation]]
+
+   + [[https://damitr.org/2014/01/09/latex-tufte-class-in-org-mode/][Latex Tufte class in org-mode]]
+
+   + [[https://tufte-latex.github.io/tufte-latex/][Tufte-LaTeX]] - /For Producing Handouts, Papers, and Books/
+
+   + [[https://github.com/Tufte-LaTeX/tufte-latex][tufte-latex.github.io/tufte-latex/]]
+
+   + [[https://latex-tutorial.com/documentclass-latex/][Your Guide to documentclass LaTeX - Latex-Tutorial.com]] 
+
+   + [[https://mirror2.sandyriver.net/pub/ctan/macros/latex/contrib/memoir/memman.pdf][The Memoir Document Class]] - /(link to PDF)/
+
+   + [[https://www.ctan.org/pkg/memoir][memoir – Typeset fiction, non-fiction and mathematical books]] - /(CTAN)/
+
+   + [[https://orgmode.org/manual/Embedded-LaTeX.html][12.5 Embedded LaTeX]] - /(The Org Manual)/ 
+
+   + [[https://orgmode.org/manual/LaTeX-fragments.html][12.5.1 LaTeX fragments]] - /(The Org Manual)/ 
+
+   + [[https://www.offerzen.com/blog/literate-programming-empower-your-writing-with-emacs-org-mode][Empower Your Writing with Emacs Org-Mode]] - /(Literate Programming)/
+
+:END:
+
+=File:=  ~~/.emacs.d/Docs/pubOps/org-templates/audio-drama-setup.org~
+
+ORG-MODE LaTeX SETUPFILE for: AUDIO DRAMA or PODCAST PRODUCTION
+
+=LaTeX CLASS:= ~audio-production~
+
+=Chapter Style:= ~lyhne~
+
+=NOTE:= All LaTeX Configurations are done here for
+      portability... The ~audio-production~ class name
+      itself is defined within: ~09-4-org-export-conf.el~
+
+
+=STANDARD ORG-MODE OPTIONS For This Configuration:=
+
+- *STARTUP ORG-MODE OPTIONS:*
+
+   #+LANGUAGE: en
+   #+STARTUP:  overview
+   #+STARTUP:  hideblocks
+   #+STARTUP:  indent
+   #+STARTUP:  align
+   #+STARTUP:  inlineimages
+
+- *ENABLED ORG-MODE OPTIONS:*
+
+   /Mutually Exclusive Export TAGS/
+   #+SELECT_TAGS: export
+   #+EXCLUDE_TAGS: noexport
+
+   /ENABLE Smart Quotes (org-export-with-smart-quotes)/
+   #+OPTIONS: ':t
+
+   /Show Emphasized Text (org-export-with-emphasize)/
+   /NOTE: Exported PDF is styled different/
+         /than org-mode buffer fontification../
+   #+OPTIONS: *:t
+
+   /Convert Special Strings (org-export-with-special-strings)/
+   #+OPTIONS: -:nil
+
+   /Export with fixed-width sections (org-export-with-fixed-width)/
+   /Options: (nil, t)/
+   /non-nil = Interpret Strings Starting with a/
+   /colon ":" as: A Fixed-With Verbatim area./
+   #+OPTIONS: ::t
+
+   /Enclude time/date active/inactive stamps (org-export-with-timestamps)/
+   #+OPTIONS: <:t
+
+   /Line Breaks: Non-nil = Preserve ALL Line Breaks (org-export-preserve-breaks)/
+   /NOTE: (non-nil may affect LaTeX parskip)/
+   #+OPTIONS: \n:nil
+
+   /Use Tex-like Syntax For Sub And Superscripts (org-export-with-sub-superscripts)/
+   /Typing simple a_b will not be affected anymore/
+   /Use word^{super} to raise word "super" - superscript/
+   /Use word_{sub} to lower the word "sub" - subscript/
+   #+OPTIONS: ^:{}
+
+   /Include Author Name into Exported file (org-export-with-author)/
+   #+OPTIONS: author:t
+
+   /Broken link(s) found?/
+   /Mark Them & Don't Export (org-export-with-broken-links)/
+   #+OPTIONS: broken-links:mark
+   
+   /Include CLOCK keywords in exported documents (org-export-with-clocks)/
+   #+OPTIONS: c:t
+   
+   /Include Creator Info (org-export-with-creator)/
+   #+OPTIONS: creator:t
+
+   /Do NOT Include DRAWERS in exported documents (org-export-with-drawers)/
+   #+OPTIONS: d:nil
+
+   /Include DATE in exported documents (org-export-with-date)/
+   #+OPTIONS: date:t
+
+   /Include Entities (org-export-with-entities)/
+   /Example if t: HTML exports \\alpha as: &alpha;/
+   #+OPTIONS: e:t
+
+   /Include Author’s e-mail (org-export-with-email)/
+   #+OPTIONS: email:t
+
+   /Don't Include Footnotes (org-export-with-footnotes)/
+   /Use Built in Memoir Footnotes instead?/ *this needs research*
+   #+OPTIONS: f:nil
+
+   /Set Headline Levels for Export (org-export-headline-levels)/
+   #+OPTIONS: H:6
+
+   /Toggle inclusion of TODO Task related keywords (org-export-with-tasks)/
+   /IF t    - INCLUDE ALL TASK KEYWORDS.../
+   /IF nil  - REMOVE ALL TASKS.../
+   /IF todo - REMOVE DONE TASKS.../
+   /IF list - (use list of keywords to keep)/
+   #+OPTIONS: tasks:t
+
+   /Do NOT Include Inline Tasks (org-export-with-inlinetasks)/
+   #+OPTIONS: inline:nil
+
+   /Limit Section Numbering to 3 levels deep.../
+   /(org-export-with-section-numbers)/
+   /When N, Number only headlines level N or above./
+   /Set ‘UNNUMBERED’ property to non-nil to disable/
+   /numbering of heading and subheadings entirely./
+   /Moreover, when value is ‘notoc’, headline,/
+   /(and all children), do NOT appear in TOC either./
+   #+OPTIONS: num:3
+
+   /NO Planning Info (org-export-with-planning)/
+   #+OPTIONS: p:nil
+   
+   /NO priority cookies (org-export-with-priority)/
+   #+OPTIONS: pri:nil
+   
+   /No Property Drawers (org-export-with-properties)/
+   #+OPTIONS: prop:nil
+   
+   /No Stastic cookies (org-export-with-statistics-cookies)/
+   #+OPTIONS: stat:nil
+   
+   /No Tags (org-export-with-tags)/
+   #+OPTIONS: tags:nil
+
+   /Verbatim export (org-export-with-latex)/
+   #+OPTIONS: tex:verbatim
+
+   /Include Creation Time (org-export-time-stamp-file)/
+   #+OPTIONS: timestamp:t
+
+   /Include Title (org-export-with-title)/
+   #+OPTIONS: title:t
+
+   /Include TOC 3 levels deep (org-export-with-toc)/
+   /BUT Maybe Use Memoir Built In TOC features INSTEAD?...
+   (Using Memoir, you can have multiple TOCs)/
+   #+OPTIONS: toc:3
+
+   /DONT Include TODO keywords (org-export-with-todo-keywords)/
+   #+OPTIONS: todo:nil
+
+   /Include Tables (org-export-with-tables)/
+   #+OPTIONS: |:t
+
+- *DISABLED ORG-MODE OPTIONS:*
+
+   #+BEGIN_COMMENT
+
+    /DO NOT Export fixed-width sections/
+    /(org-export-with-fixed-width)/
+    #+OPTIONS: ::nil
+
+    /Convert Special Strings/
+    /(non-nil is being tried now)/
+    #+OPTIONS: -:t
+
+    /DO NOT Include Inline Tasks/
+    /(org-export-with-inlinetasks)/
+    #+OPTIONS: inline:nil
+
+    /DO NOT Include section-numbers/
+    /(org-export-with-section-numbers)/
+    #+OPTIONS: num:nil
+
+    /Normal LaTeX Export/
+    /(org-export-with-latex)/
+    #+OPTIONS: tex:t
+
+    /Include TOC for Top Level Headlings ONLY/
+    /(org-export-with-toc)/
+    #+OPTIONS: toc:1
+
+   #+END_COMMENT
+
+
+=LaTeX EXPORT CONFIG FOR: --> AUDIO Production Project PDF:=
+
+This class/style was initially inspired by:
+MemoirChapStyles/MemoirChapStyles.pdf (from CTAN?)
+This is a morph of: "lyhne" & "EQ" Styles
+
+- *ENABLED LATEX DIRECTIVES:*
+
+   =LaTeX CLASS & PAPER SIZE:=
+
+   #+LATEX_CLASS: audio-production
+   #+LATEX_CLASS_OPTIONS: [letterpaper, 12pt, oneside, onecolumn, openany, showtrims, final]
+
+   =GENERAL PACKAGES - Options:=
+
+   #+LaTeX_HEADER: \usepackage{paralist}
+   #+LATEX_HEADER: \usepackage{calc}
+
+   =BETTER SOURCE CODE LISTING STYLES:=
+
+   #+LATEX_HEADER: \usemintedstyle{xcode}
+
+      =RUN:= ~$> pygmentize -L styles~ /to see a list of all possible "minted" code
+           listing styles.  Then change {style-name} below to try any out.../
+           /So Far... I found these three to work fairly well for my needs.../
+           tango   - /Good but not quite.../
+           perldoc - /Nice One/
+           xcode   - /Similar to perldoc (even nicer... I am using this one NOW)/
+
+   =FONTS:=
+
+    #+LATEX_HEADER: \usepackage{fontenc}
+
+    #+LATEX_HEADER: \usepackage[english]{babel}
+    #+LATEX_HEADER: \usepackage[utf8]{inputenc}
+    #+LATEX_HEADER: \usepackage[sc]{mathpazo}
+    #+LATEX_HEADER: \usepackage{amsmath,amssymb,amsfonts,mathrsfs}
+    #+LATEX_HEADER: \usepackage[amsmath,thmmarks]{ntheorem}
+
+   =SPECIAL PACKAGES:=
+
+   /Include the use of Music and Chord Symbols/
+    #+LATEX_HEADER: \usepackage[minimal]{leadsheets}
+    #+LATEX_HEADER: \useleadsheetslibraries{musicsymbols}
+    #+LATEX_HEADER: \useleadsheetslibraries{chords}
+
+    #+LATEX_HEADER: \usepackage{graphicx}
+    #+LATEX_HEADER: \usepackage{soul}
+    #+LATEX_HEADER: \usepackage{pdfpages}
+    #+LATEX_HEADER: \usepackage[backend=bibtex,sorting=none]{biblatex}
+
+   =AUDIO PRODUCTION CUSTOM LaTeX CONFIG:=
+
+   /Chapter Heading Style & Positioning:/
+    #+BEGIN_EXPORT latex
+
+       %% DEFAULT SETTINGS %%
+
+       %% \addbibresource{org-bib-refs.bib}
+
+       \setlength{\headwidth}{\textwidth}
+       \addtolength{\headwidth}{.382\foremargin}
+       \renewcommand\afterchapternum{}
+
+       %% TITLE, CHAPTER, & SECTION, HEADING FORMAT %%
+
+       \renewcommand\afterchaptertitle{%
+          \ifnum \c@secnumdepth>\m@ne%
+             \ifNoChapNum\else\par\nobreak\vskip\afterchapskip
+             \fi%
+          \fi
+       }
+
+       \setlength\beforechapskip{15pt}
+       \renewcommand\printchapternonum{\global\NoChapNumtrue}
+       \renewcommand{\chaptitlefont}{\raggedleft\normalfont\Huge\bfseries}
+
+       \makeatletter
+
+       %% AT BEGIN DOCUMENT  %%
+
+       \AtBeginDocument{\frontmatter}
+       \chapterstyle{lyhne}
+
+    #+END_EXPORT
+
+- *DISABLED LATEX DIRECTIVES:*
+
+   #+begin_comment
+
+   =LaTeX CLASS & PAPER SIZE:=
+
+   =GENERAL PACKAGES - Options:=
+
+   /The Memoir Class has this "built in" and will ignore this line.../
+   #+LATEX_HEADER: \usepackage{parskip}
+
+   /(this does not seem to be needed)/
+   #+LATEX_HEADER: \usepackage{afterpage}
+
+   /The Memoir Class does NOT work with hyperref.../
+  # #+LATEX_HEADER: \usepackage[hyperref,x11names]{xcolor}
+  # #+LATEX_HEADER: \usepackage[colorlinks=true,urlcolor=SteelBlue4,linkcolor=Firebrick4]{hyperref}
+
+   =SPECIAL PACKAGES:=
+
+   =FONTS:=
+
+   =AUDIO PRODUCTION CUSTOM LaTeX CONFIG:=
+
+   /Stock Attributes:/
+   #+LATEX_HEADER: \setstocksize{9in}{6in}
+   #+LATEX_HEADER: \settrimmedsize{\stockheight}{\stockwidth}{*}
+
+   /Left & Right Margin:/
+   #+LATEX_HEADER: \setlrmarginsandblock{2cm}{2cm}{*}
+
+   /Upper & Lower Margin:/
+   #+LATEX_HEADER: \setulmarginsandblock{2cm}{2cm}{*}
+   #+LATEX_HEADER: \checkandfixthelayout
+
+   #+end_comment

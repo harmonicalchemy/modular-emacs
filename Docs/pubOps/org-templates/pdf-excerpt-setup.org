@@ -1,6 +1,6 @@
 # -**- mode: org; coding: utf-8 -**-
 :LATEST_UPDATE:
-  =Last Updated:= <2023-06-04 Sun> /(this template needs work)/
+  =Last Updated:= <2023-06-15 Thu> /(this template needs work)/
 
   =YOU MAY REMOVE This Drawer= from your own clones of this template if
   it is bothering you... This drawer is used for HAP Modular Emacs
@@ -202,18 +202,16 @@ ORG-MODE LaTeX SETUPFILE for: Short PDF Excerpts of figures and examples that ma
 
    =LaTeX CLASS & PAPER SIZE:=
 
-   
-   =General Options=
+
+   =GENERAL PACKAGES - Options:=
    
    #+LATEX_HEADER: \usepackage{minted}
 
-   =Special Options=
-   
    #+LATEX_HEADER: \usepackage{lmodern}    %% Ensures we have correct font...
    #+LATEX_HEADER: \usepackage[AUTO]{inputenc}
    #+LATEX_HEADER: \usepackage{color}
 
-   =Required Options=
+   =SPECIAL PACKAGES:=
 
    #+LATEX_HEADER: \usepackage[margin=0.9in,bmargin=1.0in,tmargin=1.0in]{geometry}
    #+LATEX_HEADER: \usepackage{amsmath}
@@ -232,12 +230,9 @@ ORG-MODE LaTeX SETUPFILE for: Short PDF Excerpts of figures and examples that ma
    #+LATEX_HEADER: \usepackage{adjustbox}
    #+LATEX_HEADER: \usetikzlibrary{shapes,arrows,automata,quotes}
 
-
-
    #+LATEX_HEADER: \AtBeginDocument{\parindent = 0em \nonzeroparskip}
 
    #+end_comment
-
 
 - *ENABLED LATEX DIRECTIVES:*
       
@@ -245,25 +240,31 @@ ORG-MODE LaTeX SETUPFILE for: Short PDF Excerpts of figures and examples that ma
 
     #+LATEX_CLASS: excerpt
     #+LATEX_CLASS_OPTIONS: [a5paper]
+    #+LATEX_HEADER: \usepackage[landscape]{geometry}
 
-   =General Options=
-    
+   =GENERAL PACKAGES - Options:=
+
     #+LATEX_HEADER: \usepackage{parskip}
     #+LATEX_HEADER: \usepackage{paralist}
     #+LATEX_HEADER: \usepackage[hyperref,x11names]{xcolor}
     #+LATEX_HEADER: \usepackage[colorlinks=true,urlcolor=SteelBlue4,linkcolor=Firebrick4]{hyperref}
 
-    #+LATEX_HEADER: \usepackage[landscape]{geometry}
+    + *USE Better Source Code Listing Styles:*
+  
+       /Try:/ ~$> pygmentize -L styles~ /to see a list of all possible "minted" code
+            listing styles.  Then change {style-name} below to try any out.../
+        
+       tango
+       perldoc - /Nice One/
+       xcode   - /Similar to perldoc (even nicer)/
 
-   /(MOST disabled for testing)/
+         #+LATEX_HEADER: \usemintedstyle{xcode}
 
-   =Special Options=
+   =SPECIAL PACKAGES:=
 
-   /(all disabled for testing)/
-
-   =Required Options=
-
-   /(MOST disabled for testing)/
+    #+LATEX_HEADER: \usepackage[minimal]{leadsheets}
+    #+LATEX_HEADER: \useleadsheetslibraries{musicsymbols}
+    #+LATEX_HEADER: \useleadsheetslibraries{chords}
 
 
 =STANDARD ORG-MODE OPTIONS For This Configuration:=
@@ -275,7 +276,6 @@ ORG-MODE LaTeX SETUPFILE for: Short PDF Excerpts of figures and examples that ma
    (Nothing in here Currently)
 
    #+END_COMMENT
-
 
 - *ENABLED ORG-MODE OPTIONS:*
 

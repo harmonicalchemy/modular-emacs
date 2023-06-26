@@ -160,14 +160,6 @@ Set any *HEADING* within your .org project file with the following PROPERTIES BO
 
    + [[https://www.offerzen.com/blog/literate-programming-empower-your-writing-with-emacs-org-mode][Empower Your Writing with Emacs Org-Mode]] - /(Literate Programming)/
 
-=LaTeX --> LOG Book PDF:=
-
-/Currently Using ~logbook~ Class/
-/Chapter Style:/  ~verville~
-/DEFINED in:/     ~09-4-org-export-conf.el~
-
-#+LATEX_CLASS:  logbook
-
 =DISABLED OPTIONS For This Configuration:= /(for debugging)/
 
 #+BEGIN_COMMENT
@@ -321,3 +313,12 @@ Set any *HEADING* within your .org project file with the following PROPERTIES BO
 
 #+OPTIONS: |:t
    # Include Tables (org-export-with-tables)
+
+=LaTeX --> LOG Book PDF:=
+
+/Currently Using ~logbook~ Class/
+/Chapter Style:/  ~verville~
+/DEFINED in:/     ~09-4-org-export-conf.el~
+
+#+LATEX_CLASS:  logbook
+
