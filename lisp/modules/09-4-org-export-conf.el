@@ -44,6 +44,19 @@
 ;; CHANGE LOG: (descending chronological order)
 ;;
 
+;; 2023-006-15 - Alisha Awen, siren1@disroot.org
+;;   General Clean up of Code... Removed as much LaTeX code that is
+;;   embedded within lisp forms below, WHICH IS REALLY UGLY IMHO...
+;;   Originally I was using .tex include files, but NOW I am using
+;;   org-mode SETUPFILES with #+LATEX directives instead...
+;;
+;;   Using SETUPFILES are Neat and well documented... The commands
+;;   do NOT have to be escaped in the org-mode directives which accepts
+;;   them as native LaTeX statements with LaTeX syntax, comments, etc...
+;;   THIS ALL MAKES MUCH BETTER SENSE doing it this way, not to mention
+;;   portability... This is all in line with Knuth's original idea of
+;;   "literate programming"... EMACS ORG-MODE IS "LITERATE PROGRAMMING"
+
 ;; 2023-002-10 - Alisha Awen, siren1@disroot.org
 ;;   New LaTeX Classes and MODS of Existing class definitions
 ;;   were performed between Dec 2022 and now...  Lots of
@@ -84,53 +97,40 @@
 (require 'ox-latex)
 (require 'tex)
 
-;; ;; The function replace-in-fundef below needs access to the source file:
-;; ;;  ob-emacs-lisp.el.
-
-;; (require 'ob-emacs-lisp)
+;; The function replace-in-fundef below needs access to the 
+;; source file: ob-emacs-lisp.el
+;;
+;; NOTE: I AM NOT USING THIS PRESENTLY BUT LEFT THE CODE IN HERE 
+;;       (AND BELOW Where It Is Used) for possible future use...
+; (require 'ob-emacs-lisp)
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  DEFAULT AucTeX - LaTeX Configs:
-;;  Note: New Configs Added 2022-012-24
+;;  Note: New Configs Added 2023-006-14
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-(setq
- org-src-preserve-indentation t
+;; Keep Outlining Indention - I find it makes TECH DOCS easier to read...
+;; Fiction does NOT usually have sub headings under chapters, but if it does
+;; it probably looks better if it is also indented... so this is FINE...
+(setq org-src-preserve-indentation t)
 
- ;;  Don'T Export Tags:
- org-export-with-tags nil
+;;  DON'T EXPORT TAGS:  (for MOST CASES, I Don't want to see TAGS in exports)
+(setq org-export-with-tags nil)
 
- ;;  Put Caption Below In Tables:
- org-export-latex-table-caption-above nil
- org-latex-table-caption-above nil
+;;  Put Caption Below In Tables: (IS THIS WORKING???)
+(setq org-export-latex-table-caption-above nil)
+(setq org-latex-table-caption-above nil)
 
- ;;  Hide the Emphasis Markup:
- ;;  (e.g., /.../ for italics, *...* for bold, etc.)
- org-hide-emphasis-markers t
+(setq org-latex-prefer-user-labels t)
 
- ;; Turn ON Source Block Syntax highlighting
- org-src-fontify-natively t
+;; Don't Prompt Before Running Code In Org
+(setq org-confirm-babel-evaluate nil)
 
- org-src-tab-acts-natively t
- org-latex-prefer-user-labels t
-
- ;; Don't Prompt Before Running Code In Org
- org-confirm-babel-evaluate nil
-
- ;; DEFINE ORG LATEX PDF PROCESS:
-
- org-latex-pdf-process '("lualatex -shell-escape -interaction nonstopmode %f")
- ;; org-latex-pdf-process '("xelatex -interaction nonstopmode %f"
- ;;                         "xelatex -interaction nonstopmode %f") ;; for multiple passes
- ;; Previous Settings tried:
- ;; org-latex-pdf-process '("latexmk -pdflatex='pdflatex -interaction nonstopmode' -pdf -bibtex -f %f")
- ;; org-latex-pdf-process '("latexmk -bibtex -f %f")
-
- org-babel-python-command "python") ;; Use Defined "python" for Current OS...
-
+;; Use Defined "python" for Current OS...
+(setq org-babel-python-command "python")
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; Set Default Compile To PDF:
+;;  DEFAULT LaTeX Export To PDF SETTINGS:
 
 (setq org-latex-listings 't)
 (setq TeX-PDF-mode t)
@@ -140,8 +140,37 @@
 (setq-default TeX-master nil)
 (setq reftex-plug-into-AUCTeX t)
 
-;;;
-;; LaTeX Mode Hook tweaks:
+;; USE MINTED LaTeX package for BETTER SOURCE CODE LISTINGS:
+(add-to-list 'org-latex-packages-alist '("" "minted"))
+(setq org-latex-listings 'minted)
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  DEFINE ORG LATEX PDF PROCESS:
+
+;; The Following Duplicate Strings Are Used For Multiple Passes:
+;; This won't work well unless you have the Pygments Python package installed...
+;; Get it at:   https://pygments.org/
+;; I believe this got installed when I installed TeX Live via Macports...
+;; (or via Linux Package Managers)... It is on my system now... Not sure how/when... %^)
+
+(setq org-latex-pdf-process
+      '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+        "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+        "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
+
+;; PREVIOUS SETTINGS USED:
+;; (setq org-latex-pdf-process '("lualatex -shell-escape -interaction nonstopmode %f"))
+;;
+;; (setq org-latex-pdf-process '("xelatex -interaction nonstopmode %f"
+;;                               "xelatex -interaction nonstopmode %f"))
+;;
+;; (setq org-latex-pdf-process '("latexmk -pdflatex='pdflatex -interaction nonstopmode' -pdf -bibtex -f %f"))
+;;
+;; (setq org-latex-pdf-process '("latexmk -bibtex -f %f"))
+
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  LaTeX MODE HOOK TWEAKS:
 
 (add-hook 'LaTeX-mode-hook 'visual-line-mode)
 (add-hook 'LaTeX-mode-hook 'flyspell-mode)
@@ -149,9 +178,10 @@
 (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
 
 ;;;
-;;  Inline Images:
+;;  INLINE IMAGES:
 ;;  Set Inline Images here to nil so that they will display with their original
 ;;  sizes...
+;;
 ;;  NOTE:  To keep very large images to a reasonable size within org-mode, and
 ;;         also for exporting to HTML, LaTeX, etc.  Set the following properties
 ;;         on the inline image link within the file where it is placed...
@@ -168,7 +198,7 @@
 (setq org-image-actual-width nil)
 
 ;;;
-;;  Automatically Refresh Inline Images:
+;;  AUTOMATICALLY REFRESH INLINE IMAGES:
 ;;  REF: http://emacs.stackexchange.com/questions/3302/live-refresh-of-inline-images-with-org-display-inline-images
 
 (defun shk-fix-inline-images ()
@@ -176,7 +206,6 @@
     (org-redisplay-inline-images)))
 
 (add-hook 'org-babel-after-execute-hook 'shk-fix-inline-images)
-
 
 ;;;
 ;;  Make Sure TEXINPUTS is Set To: elpa/auctex-nn.nn.n/latex
@@ -187,8 +216,9 @@
 
 (require 'preview)
 
-
-
+;; ;;; BEGIN: DISABLED CODE BLOCKS
+;; ;;         *** THIS IS NOT CURRENTLY USED ***
+;; ;;         (It MAY-OR-MAY-NOT be removed LATER depending on needs)
 ;; ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; ;;  BEGIN: Enable Frame Modifications from eLisp
 ;; ;;         Source Code Blocks:
@@ -285,7 +315,7 @@
 
 ;; ;; USAGE: The Above COMPLICATED Configuration (Funcs,Macro,etc...) allows you to
 ;; ;;        make source blocks within a .org file that alter frame geometry etc...
-;; ;;        This is doing by specifying :keep-windows as follows:
+;; ;;        This is done by specifying :keep-windows as follows:
 ;; ;;
 ;; ;;    #+BEGIN_SRC elisp :results silent :keep-windows t
 ;; ;;       PUT Your Window or Frame Mod Code Here...
@@ -294,11 +324,11 @@
 ;; ;; END: Enable Frame Modifications from eLisp
 ;; ;;      Source Code Blocks:
 ;; ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+;; ;;; END: *** DISABLED CODE BLOCKS ***
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  CUSTOM Imagemagick LaTeX Configuration
+;;  CUSTOM Imagemagick LaTeX CONFIGURATION
 ;;         For: Export to PDF...
 ;;
 ;;   USE Lualatex Preview: (Since 2022-011-23)
@@ -322,8 +352,8 @@
 
 
 
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  BEGIN: CUSTOM LaTeX CONFIGURATIONS for EXPORT to PDF
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  BEGIN: *** CUSTOM LaTeX CONFIGURATIONS for EXPORT to PDF ***
 ;;
 ;; NOTE: The following packages ARE included by DEFAULT during
 ;;       LaTeX Export of ALL .org files...
@@ -378,6 +408,10 @@
 ;;         They are currently the only active styles for Modular Emacs...
 ;;         The code for: refbook started out as a clone of fictbook...
 ;;         fictbook and refbook can and may dirverge at later stages...
+
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  BEGIN: *** ORG LATEX CLASS DEFINITIONS LIST ***
 
 (with-eval-after-load 'ox-latex
 
@@ -629,17 +663,16 @@
   ;;  For Reference Manuals, Technical Books, Tutorials, etc...
   ;;  This class/style was initially inspired by: .../MemoirChapStyles.pdf
   ;;  This is a morph of: "lyhne" & "EQ" Styles
-
+  ;;  THIS LATEX CLASS is Associated Org-Mode SETUPFILE:
+  ;;  ~/.emacs.d/Docs/pubOps/org-templates/ref-book-setup.org
+  
   (add-to-list
    'org-latex-classes
    '("refbook"
-     
-     "\\documentclass[openleft,oneside,showtrims]{memoir}
-             [NO-DEFAULT-PACKAGES]
-             [PACKAGES]
-             [EXTRA]
-      \\input{~/.emacs.d/Docs/TeX/ref-book-setup.tex}"
-
+     "\\documentclass{memoir}
+          [NO-DEFAULT-PACKAGES]
+          [PACKAGES]
+          [EXTRA]"
      ("\\chapter{%s}" . "\\chapter*{%s}")
      ("\\section{%s}" . "\\section*{%s}")
      ("\\subsection{%s}" . "\\subsection*{%s}")
@@ -655,43 +688,16 @@
   ;;  This class/style was initially inspired by:
   ;;  .../latex-samples/MemoirChapStyles/MemoirChapStyles.pdf
   ;;  This is a morph of: "lyhne" & "EQ" Styles
-  ;;
-  ;; REMOVED: \\usepackage{afterpage}  (this does not seem to be needed)
+  ;;  THIS LATEX CLASS is Associated Org-Mode SETUPFILE:
+  ;;  ~/.emacs.d/Docs/pubOps/org-templates/audio-drama-setup.org
 
   (add-to-list
    'org-latex-classes
    '("audio-production"
-     "\\documentclass[openleft,oneside,showtrims]{memoir}
-
-  \\usepackage{calc}
-
-  \\setstocksize{9in}{6in}
-  \\settrimmedsize{\\stockheight}{\\stockwidth}{*}
-  \\setlrmarginsandblock{2cm}{2cm}{*}       %% Left and right margin
-  \\setulmarginsandblock{2cm}{2cm}{*}       %% Upper and lower margin
-  \\checkandfixthelayout
-
-  \\setlength{\\headwidth}{\\textwidth}
-  \\addtolength{\\headwidth}{.382\\foremargin}
-  \\renewcommand\\afterchapternum{}
-  \\setlength\\beforechapskip{15pt}
-  \\renewcommand\\printchapternonum{\\global\\NoChapNumtrue}
-  \\renewcommand{\\chaptitlefont}{\\raggedleft\\normalfont\\Huge\\bfseries}
-
-  \\makeatletter
-  \\renewcommand\\afterchaptertitle{%
-  \\ifnum \\c@secnumdepth>\\m@ne%
-  \\ifNoChapNum\\else\\par\\nobreak\\vskip\\afterchapskip
-  \\fi%
-  \\fi
-  }
-  \\makeatother
-
-  \\AtBeginDocument{
-  \\nonzeroparskip
-  \\frontmatter
-  }
-  \\chapterstyle{lyhne}"
+     "\\documentclass{memoir}
+          [NO-DEFAULT-PACKAGES]
+          [PACKAGES]
+          [EXTRA]"
      ("\\chapter{%s}" . "\\chapter*{%s}")
      ("\\section{%s}" . "\\section*{%s}")
      ("\\subsection{%s}" . "\\subsection*{%s}")
@@ -753,6 +759,8 @@
    'org-latex-classes
    '("logbook"
      "\\documentclass[12pt, openleft, oneside, showtrims]{memoir}
+         [NO-DEFAULT-PACKAGES]
+         [PACKAGES]
 
          [EXTRA]
          \\input{~/.emacs.d/Docs/TeX/log-book-setup.tex}"
@@ -802,12 +810,13 @@
      ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
      ("\\paragraph{%s}" . "\\paragraph*{%s}")
      ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+
   ;; ~~~~~~~~ END: HAP LAB NOTEBOOK DOCUMENT CLASS ~~~~~~~~~
+  
+  ) ;; END: (with-eval-after-load 'ox-latex) 
 
-  );  END: CUSTOM LaTeX CONFIGURATIONS for EXPORT to PDF
-  ;;       (with-eval-after-load 'ox-latex)
-  ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  END: *** ORG LATEX CLASS DEFINITIONS LIST ***
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

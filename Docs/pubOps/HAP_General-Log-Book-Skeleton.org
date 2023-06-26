@@ -419,7 +419,12 @@ Other folks UX metrics are sorely needed!! Thanks!
 =Enjoy!= - Alisha Awen
 :END:
 
-* NEW About This Log Notebook:                       :export:
+#+begin_export latex
+   \begin{document}
+   \frontmatter
+#+end_export
+
+* NEW About This Log Notebook:                              :export:
 <<LOG_about-this-log-notebook>>
 :README:
    Use this section as Front Matter for your Log Book... The summary

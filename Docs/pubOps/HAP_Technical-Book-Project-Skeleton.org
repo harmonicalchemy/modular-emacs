@@ -614,7 +614,7 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
 * DONE Org-Mode Tricks /(example chapter)/                        :export:
 <<CHAPTER_org-mode-tricks>>
 
-** DONE 📄 Introduction:                                                       :export:
+** DONE Introduction:                                                       :export:
 <<TOPIC_org-mode-tricks-introduction>>
 
 This is a secret Org-Mode Tutorial /(presented here as an EXAMPLE Chapter)/ for a technical book...  Some good tips are in here so you may want to save this somewhere else before removing or re-writing it to use as a chapter within the technical book you have commondeerred this project skeleton for...

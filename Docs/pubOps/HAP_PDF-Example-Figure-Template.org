@@ -487,6 +487,24 @@ Use Subheadings below if needed, or REMOVE them... These templates are ALSO
 available in the Meta: Binder...  They are actually only here to give exported PDF some body, and for me to test how different export formats render...
 /"Yeah, I did all the dirty work here so you can just play with it all, no worries... Pay no attention to that lispy girl behind the Knuth Industries curtan"/ *TeeHee!*
 
+=Let's Typeset Some Music Stuff...=
+
+The SETUPFILE for this .org file uses package: "leadsheets"
+Package leadsheets provides: music symbols and chords...
+
+Leadsheets makes the music symbol font provided by MusiXTeX available as text font and then uses it to define the following symbols:
+
+$\sharp$ $\doublesharp$ $\flat$ $\doubleflat$ $\natural$ $\trebleclef$ $\altoclef$ $\bassclef$ $\meterC$ $\allabreve$ $\meter{12}{8}$ $\wholerest$ $\halfrest$ $\quarterrest$ $\eighthrest$ $\sixteenthrest$ $\Break$ $\normalbar$ $\leftrepeat$ $\rightrepeat$ $\leftrightrepeat$ $\doublebar$ $\stopbar$
+
+B$\flat$ A$\natural$  C$\sharp$
+
+
+NOW Let's typeset some chords:
+
+$\writechord{Bb7(#9)}$ $\writechord{Bbb6}$ $\writechord{C#7(b9)}$ $\writechord{C##13}$
+
+\newpage
+
 *** Sub Heading T /(template with tables - rename this)/
 <<FIG-A_subhead-t>>
 
@@ -628,29 +646,168 @@ You can create tables with vertical & horizontal borders around groups of cells 
 
          /Consult your Org-Mode cheat sheet instead/
 
-*** Heading S /(template with src-code blocks, etc. - rename this)/
+*** Sub Heading S /(template with src-code blocks, etc. - rename this)/
 <<FIG-A_subhead-s>>
+
+
+- *LibreOffice Calc Macro Code:*
+
+    #+begin_src bat
+
+REM *****************************************************************************
+REM ************************* SUB PROGRAM: GetSetCRoot **************************
+REM
+REM This Program, (first step to operate the slide rule) gets the selected Chord
+REM ROOT INDEX from currently selected Chord Root Radio Button...
+REM This INDEX is the Chord Root's position within the REF C12 SCALE...
+REM The computed root index value is put into a Named "C ROOT" CELL on the sheet.
+REM The REF C12 "Note Symbol" for this index is put into another Named Cell just
+REM below it... The ROOT's INDEX value is also saved to Global Var: lROOT...
+REM lROOT's value does not change until this Sub Program is called again...
+REM NOTHING ELSE MUST CHANGE IT'S VALUE!
+REM
+REM WARNING: DON'T USE GLOBAL lROOT UNTIL AFTER CALLING THIS SUB Program!!!
+REM          AND DONT RUN any of the FUNCTIONS in this Module before running
+REM          this Sub Program either... (they ALL DEPEND on this GLOBAL Var
+REM          being set.  Also This Program must ONLY be run as a result of
+REM          the ChordRoot RADIO BUTTON array changing STATE...
+REM	  (i.e., radio button event driven only)
+
+Sub GetSetCRoot
+
+   REM ** GLOBAL VARS (from preamble) **
+   REM
+   REM lROOT             LONG         Chord Root REL To: REF_C12_SCALE
+   REM                                WHICH ONLY GETS SET HERE... DONT USE IT
+   REM                                UNTIL you have RUN THIS SUB PROGRAM!!!
+
+   REM **** NAMED CELLS & RANGES ****
+   REM
+   REM root_Index        NAMED CELL   Contains lROOT Value (integer)
+   REM
+   REM root_Symbol       NAMED CELL   Contains Note Symbol for current ROOT (string)
+
+   REM ** LOCAL VARS **
+
+   Dim oDoc               As Object
+   Dim oSheet             As Object
+   Dim oDrawPage          As Object
+   Dim oFormCtl           As Object
+   Dim oGroupCtl          As object       'CRootRadButnGroup BUTTON GROUP Control Obj.
+   Dim oRadBtn            As Object       'CRootRadButn OBJECT from: oGroupCtl
+   Dim oCRootSymbolCell   As Object       'NAMED CELL for CRoot's NOTE Symbol (string)
+   Dim oCRootIndexCell    As Object       'Named CELL for CRoot's NOTE INDEX (integer)
+   Dim lIndex             As Long         'GP 1 Dim. Array Loop Index
+
+   REM ** PROGRAM CODE **
+
+   REM Get Basic Doc/Sheet Objects: 
+   oDoc              = ThisComponent
+   oSheet            = oDoc.Sheets.GetByName("Sheet1")
+   oDrawPage         = oSheet.DrawPage
+   oFormCtl          = oDrawPage.Forms.GetByIndex(0)
+
+   REM Get the Named Cells to Display the Chosen Chord Root:
+   oCRootSymbolCell  = oSheet.getCellRangeByName("root_Symbol")
+   oCRootIndexCell   = oSheet.getCellRangeByName("root_Index")
+
+   REM Get the Chord Root Radio Buttons as OBJECT... 
+   REM Then Get the Chord Root Radio Buttons Group Control By Name
+   REM These radio buttons belong to group: "CRootRadButnGroup"
+   oRadBtn = oFormCtl.GetbyName("CRootRadButn")
+   oFormCtl.getGroupByName("CRootRadButnGroup", oGroupCtl)
+  
+   REM Get the current STATE from selected CHordRootButton:
+   REM There are 12 button members in oGroupCtl (0-11)...
+   REM oGroupCtl (radio button array object) has a 1:1 relation
+   REM with aC12_REF_SCALE Array... i.e. their index positions
+   REM and corresponding Note Name values are equivalent...
+   For lIndex = LBound(oGroupCtl) to UBound(oGroupCtl)
+   
+      oRadBtn = oGroupCtl(lIndex)
+
+      REM Is this the ACTIVE Radio Button?
+      If oRadBtn.State <> 0 Then
+         REM YES - THIS IS ACTIVE Radio Button - Set and Save Data
+	 
+         REM Set Chord root (INDEX) NAMED CELL to current lIndex (integer)
+         oCRootIndexCell.setString(lIndex)
+
+         REM Set Chord Root (SYMBOL) NAMED CELL to oRadBtn's
+         REM Note name LABEL from ACTIVE Radio Button Object...
+         oCRootSymbolCell.setString(oRadBtn.Label)
+
+         REM Save Active CHordRootButton's Index
+         REM (same as REF_C12 index) to GLOBAL "lROOT"
+         lROOT = lIndex
+      End If
+      
+   Next 'lIndex
+
+   REM lROOT is now SET for further operations until this sub program is called
+   REM again to change it... NOTHING ELSE SHOULD DO THIS! (otherwize your radio
+   REM buttons are forced to become liars! - Nobody hates anything worse than
+   REM a calculator that lies! (or a compiler LOL!) Have you ever spent WEEKS
+   REM debugging your code only to finally discover your compiler was lying to
+   REM you? APPLE... Talking to you! That was YOUR BAD! COMPILERS MUST NOT LIE!
+
+   REM NOW the lROOT is set it is TIME TO LOAD the CHORDMODE Named Range starting
+   REM with lROOT SYMBOL IN "0" CELL... All the code for this is contained in Sub
+   REM Program UpdateChordmode which TAKES NO ARGS - It needs GLOBAL lROOT to get
+   REM the job done...
+   UpdateChordmode
+
+End Sub
+
+REM *********************** END: SUB PROGRAM GetSetCRoot ************************
+REM *****************************************************************************
+
+    #+end_src
 
 - *SysAdmin & Command Prompts:*
 
-   #+begin_src
+   #+begin_src bash
    admin@vps1:~$ sudo apt update
    #+end_src
 
-   #+begin_src
+   #+begin_src bash
    user@home:~$ git status
    #+end_src
 
 - *Evaluate some eLisp code:*
 
    #+begin_src lisp
-   (defvar test1 "test1 value")
-   (defvar test2 "test2 value")
-   test2
-   #+end_src
 
-   #+results:
-   : test2 value
+;;;;;;;;;;;;;;;;;;;;;
+;; File Management ;;
+;;;;;;;;;;;;;;;;;;;;;
+
+(defun nox/rename-file-and-buffer ()
+  "Rename current buffer and the file it is visiting, if any."
+  (interactive)
+  (let ((filename (buffer-file-name)))
+    (if (not (and filename (file-exists-p filename)))
+        (rename-buffer (read-from-minibuffer "New name: " (buffer-name)))
+      (let ((new-name (read-file-name "New name: " filename)))
+        (if (vc-backend filename)
+            (vc-rename-file filename new-name)
+          (rename-file filename new-name t))
+        (set-visited-file-name new-name t t)))))
+
+(defun nox/delete-file-and-buffer ()
+  "Kill the current buffer and delete the file it is visiting, if any."
+  (interactive)
+  (let ((filename (buffer-file-name)))
+    (if (not (and filename (file-exists-p filename)))
+        (kill-buffer)
+      (if (vc-backend filename)
+          (vc-delete-file filename)
+        (when (y-or-n-p (format "Are you sure you want to delete %s? " filename))
+          (delete-file filename delete-by-moving-to-trash)
+          (message "Deleted file %s" filename)
+          (kill-buffer))))))
+
+   #+end_src
 
    #+begin_src lisp
    (defvar test1 "test1 value")
@@ -661,7 +818,13 @@ You can create tables with vertical & horizontal borders around groups of cells 
    #+results:
    : test1 value
 
-*** Heading D /(drama script snippit template - rename this)/
+
+
+
+
+
+
+*** Sub Heading D /(drama script snippit template - rename this)/
 <<FIG-A_subhead-d>>
 
 =Fountain Radio Drama Script Excerpt:=

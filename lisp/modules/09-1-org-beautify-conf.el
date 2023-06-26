@@ -2,6 +2,9 @@
 ;; Change Log: (descending chronological order)
 ;;
 
+;; 2023-006-14 - Alisha Awen, siren1@disroot.org
+;;   Cleaned up some old code and made some slight tweaks...
+
 ;; 2022-009-28 - Alisha Awen, siren1@disroot.org
 ;;   Removed Org-Bullets... This has been commented out for a while...
 ;;   I am NOT using org-bullets and only used them for a short while in
@@ -26,18 +29,40 @@
                   (font-spec :size 20 :name "Symbola"))
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  Hide all bullets/asterisks etc. in Org mode:
+;;  Use Fancy Stars for Outline Headings in Org mode:
 ;;
-;;  For writing books, docs, etc. I decided showing
-;;  the bullets, clutters up my nice variable scale
-;;  headings outline display...
+;;  This function turns normal text stars (asterisks)
+;;  into alternate fancy characters (different on each level)
 ;;
-;;  This function was written to perform that service
-;;  globally in org mode... It is added to the my
-;;  org-mode hook function below...
+;;  However, by default leading stars are hidden so you will
+;;  most likely see ONLY the Main Heading bullet (which is
+;;  currently a solid circle (rather than *).
+;;
+;;  This function is run by the Modular Emacs org-mode hook 
+;;  function that gets executed during the org-mode start up loop...
+;;
+;;  Because I don't really care about leading stars (most of the
+;;  time) This function was created as a kind of poor-mans
+;;  "org-bullets"... (AND ITS WAY MUCH SIMPLER TOO)
+;;
+;;  If you want to see all the other pretty stars (OMG!) then
+;;  manually DISABLE INDENT while in org mode, then trailing
+;;  stars will automagically appear...
+;;
+;;  NOTE: Sometimes you will see the DEFAULT * for some reason...
+;;        This only happens when emacs is first started...
+;;        The work-around is simply perform C-c C-c on the first
+;;        startup block in the first org file you open after starting
+;;        Emacs... All other org files opened after your first fix,
+;;        will be fine...
+;;
+;;  Final Note: IMHO, Trailing Stars and Headings that are NOT indented
+;;              (as OUTLINES are SUPPOSED TO BE) makes reading .org files
+;;              much harder... In the spirit of "Elements of Style" Lets
+;;              NOT do that...
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-(defun me_hide-org-bullets ()
+(defun me_org-fancy-stars ()
   "Hide the Org Bullets..."
   (interactive)
   (font-lock-add-keywords
@@ -59,22 +84,44 @@
 
 (setq org-ellipsis "⤵")
 
-;; Open Org Files initially folded in Overview Mode:
-
+;; Open Org Files INITIALLY FOLDED in OVERVIEW Mode:
 (setq org-startup-folded 'overview)
 
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  Force org-mode to auto insert single blank lines
-;;  around headings...
+;; TELL org-mode to AUTO INSERT SINGLE BLANK LINES AROUND HEADINGS...
+;; I disabled this... I don's remember why I did it.. it may be
+;; useless... Will remove later...
+;(setq org-ascii-headline-spacing (quote (1 . 1)))
 
-(setq org-ascii-headline-spacing (quote (1 . 1)))
-
+;; Open Org files with HEADINGS INDENTED BY DEFAULT...
 (setq org-startup-indented t)
+
+;; Prevent Org-Mode Demoting Heading Also Shifting Text Inside Sections:
+(setq org-adapt-indentation nil)
+
+;; Set Maximum Indentation For Org-Mode Description Lists:
+(setq org-list-description-max-indent 5)
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; More TWEAKS... (See the Manual, The Symbol Names Tell All)
+
+;;  Hide the Emphasis Markup:
+;;  (e.g., /.../ for italics, *...* for bold, etc.)
+(setq org-hide-emphasis-markers t)
+
+;; Turn ON Source Block Syntax highlighting and adjust tabs as per language...
+(setq org-src-fontify-natively t)
+(setq org-src-tab-acts-natively t)
 
 (setq org-cycle-separator-lines 0)
 
-(setq org-blank-before-new-entry (quote ((heading)
-                                         (plain-list-item . auto))))
+;; Insert Blank lines before or after headings?
+;; auto flag = Do the right thing (depending on context)
+;; This may actually be org-mode default... (oh well)
+
+(setq org-blank-before-new-entry
+      (quote
+       ((heading . auto)
+	(plain-list-item . auto))))
 
 (setq org-insert-heading-respect-content nil)
 
@@ -113,9 +160,10 @@
               ("1." . "-")
               ("1)" . "-"))))
 
-;; Increase offset a wee bit more between plain list levels... 
+;; Increase offset a wee bit more between plain list levels...
+;; I increased it to help checklists sub text line up better...
 
-(setq-default org-list-indent-offset 1)
+(setq-default org-list-indent-offset 2)
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Use Unicode Symbols To Display Org-Mode Checkboxes:
