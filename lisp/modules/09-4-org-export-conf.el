@@ -761,7 +761,6 @@
      "\\documentclass[12pt, openleft, oneside, showtrims]{memoir}
          [NO-DEFAULT-PACKAGES]
          [PACKAGES]
-
          [EXTRA]
          \\input{~/.emacs.d/Docs/TeX/log-book-setup.tex}"
      ("\\chapter{%s}" . "\\chapter*{%s}")
