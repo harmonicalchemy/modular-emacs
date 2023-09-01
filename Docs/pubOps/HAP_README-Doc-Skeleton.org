@@ -8,7 +8,7 @@
 #+TEXT: Last Published: <NOT Published>
 #+FILETAGS: README templates unpublished
 
-#+DESCRIPTION: Short and sweet README with attached Log Notebook for any project or repository that needs such a thing... Great FOR GITHUB PAGES!!! This ORG file is NOT intended to be exported with LaTeX... There are NO LaTeX directives in here... This template's sole purpose is to provide a traditional README startup document, for you to use, (usually contained with source code, but there are many other applications)... THIS is NOT for a BOOK, INVOICE, REPORT, or anything else that may need to be typeset for publishing...  Custom tailor this to fit your needs. Change the tags in default-tags.org (referenced below) as well.. to fit your needs... Enjoy!
+#+DESCRIPTION: Short and sweet README with attached Log Notebook for any project or repository that needs such a thing... Great FOR GITHUB PAGES!!! The ORG TOC renders in Github nicely!! This ORG file is NOT intended to be exported with LaTeX... There are NO LaTeX directives in here... This template's sole purpose is to provide a traditional README startup document, for you to use, (usually contained with source code, but there are many other applications)... THIS is NOT for a BOOK, INVOICE, REPORT, or anything else that may need to be typeset for publishing...  Custom tailor this to fit your needs. Change the tags in default-tags.org (referenced below) as well.. to fit your needs... Enjoy!
 
 #+BEGIN_COMMENT
 
@@ -47,7 +47,7 @@
 #+SETUPFILE: ./org-templates/default-tags.org
 
 :LATEST_UPDATE:
-  <2023-02-16 Thu>
+  <2023-08-21 Mon>
 
   =YOU MAY REMOVE This Drawer= from your own clones of this template if
   it is bothering you... This drawer is used for HAP Modular Emacs
@@ -67,31 +67,43 @@
 
          DO THIS ALWAYS, JUST AFTER YOU UPDATE THIS TEMPLATE... DON'T FORGET!
          /(i.e., BOILERPLATE content and :README: meta data)/
-  
+
   - =PUBLIC USE Instructions:= /(FOR CLONES OF THIS TEMPLATE)/
 
-     + [ ] =Change this= *:LATEST_UPDATE:* =drawer title:= /(within clones only)/
+      + [ ] *FOR NEWLY CREATED CLONES:*
 
-          Change it to: *:LATEST_TEMPLATE_UPDATE:* within NEWLY CREATED CLONES...
+          - [ ] =Change this= *:LATEST_UPDATE:* =drawer title:= /(within clones only)/
 
-     + [ ] *COMPARE the TIMESTAMPS between THIS TEMPLATE and CLONES:*
+               Change it to: *:LATEST_TEMPLATE_UPDATE:*
 
-          The BOILERPLATE content and meta data within CLONES of this
-          TEMPLATE will get out of sync after a while due to Harmonic
-          Alchemy Modular Emacs version updates etc...
+          - [ ] *REMOVE INTERNAL USE INSTRUCTIONS*
+
+               Remove the main =INTERNAL USE Instructions:= bullet above...
+               That bullet is only relevant to the TEMPLATE, /(not clones)/
+
+      + [ ] *FOR ALREADY EXISTING PROJECTS*:
+
+          - [ ] *COMPARE the TIMESTAMPS between THIS TEMPLATE and your PROJECT:*
+
+              The BOILERPLATE content and meta data within CLONES of this
+              TEMPLATE will get out of sync after a while due to Harmonic
+              Alchemy Modular Emacs version updates etc... Some NEW features
+              or HEADINGS may have been added that make sense to be added
+              to your existing project /(originally a clone of this)/
         
-          Use the ABOVE timestamp /(within the TEMPLATE and your CLONE)/
-          to see if the clone's BOILERPLATE content needs to be updated
-          /(brought into sync with its template - MERGE)/ and then perform
-          any needed merging/replacing of BOILERPLATE and/or meta data.
-          /(e.g, *:README:* drawers, etc.)/
+              Use the ABOVE timestamp /(within the TEMPLATE and your CLONE)/
+              to see if the clone's BOILERPLATE content needs to be updated
+              /(brought into sync with its template - MERGE)/ and then perform
+              any needed merging/replacing of BOILERPLATE and/or meta data.
+              /(e.g, *:README:* drawers, etc. even this drawer)/
 
-     + [ ] *Keep ABOVE timestamp within CLONES of this template UP TO DATE:*
+          - [ ] *Keep ABOVE timestamp within CLONES of this template UP TO DATE:*
 
-          =AFTER Completing Above MERGE Step= and your clone's BOILERPLATE
-          content has been brought up to date /(i.e. in sync)/ with
-          its TEMPLATE... Then update the timestamp ABOVE...
-          /(WITHIN YOUR CLONE)/ to record the date of its last sync status...
+              =AFTER Completing Above MERGE Step= and your clone's BOILERPLATE
+              content has been brought up to date /(i.e. in sync)/ with its
+              TEMPLATE... Then update the timestamp ABOVE... /(WITHIN YOUR CLONE)/
+              to record the date of its last sync status...
+
 :END:
 :READ_ME_FIRST:
 =Instructions:= /(How to Install & Use This Template)/
@@ -366,18 +378,18 @@ Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas
 * 🔖 Table of Contents:                                                 :TOC_3:
 - [[#-readme][📖 README:]]
 - [[#-begin-log][📅 Begin Log:]]
-   - [[#-2023][📅 2023:]]
-      - [[#new--first-log-entry-general-log-entry-template][NEW 🗓 First Log Entry /(General Log Entry Template)/]]
-   - [[#-2024][📅 2024:]]
+    - [[#-2023][📅 2023:]]
+        - [[#new--first-log-entry-general-log-entry-template][NEW 🗓 First Log Entry /(General Log Entry Template)/]]
+    - [[#-2024][📅 2024:]]
 - [[#-meta-usage--templates][📋 Meta: /(Usage & Templates)/]]
-   - [[#-introduction][📄 Introduction:]]
-      - [[#emacs-shorthand-command-key-notation][Emacs Shorthand Command Key Notation:]]
-      - [[#important-note-for-mac-users][Important Note For Mac Users:]]
-      - [[#org-mode-timestamps-and-clocking][Org Mode Timestamps and Clocking:]]
-   - [[#-howto][❔ HowTo:]]
-      - [[#create-new-log-entry-within-the--begin-log-binder-04][Create New Log Entry within the *📒 Begin Log:* Binder:]]
-   - [[#-templates][⎘ Templates:]]
-      - [[#new--generic-log-entry-general-log-entry-template][NEW 🗓 Generic Log Entry /(General Log Entry Template)/]]
+    - [[#-introduction][📄 Introduction:]]
+        - [[#emacs-shorthand-command-key-notation][Emacs Shorthand Command Key Notation:]]
+        - [[#important-note-for-mac-users][Important Note For Mac Users:]]
+        - [[#org-mode-timestamps-and-clocking][Org Mode Timestamps and Clocking:]]
+    - [[#-howto][❔ HowTo:]]
+        - [[#create-new-log-entry-within-the--begin-log-binder-04][Create New Log Entry within the *📒 Begin Log:* Binder:]]
+    - [[#-templates][⎘ Templates:]]
+        - [[#new--generic-log-entry-general-log-entry-template][NEW 🗓 Generic Log Entry /(General Log Entry Template)/]]
 
 * 📖 README:
 <<README_Begin-README-Doc>>
