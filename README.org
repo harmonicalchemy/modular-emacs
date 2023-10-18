@@ -46,7 +46,9 @@
 
 #+SETUPFILE: ./Docs/org-templates/default-tags.org
 
-:LATEST_TEMPLATE_UPDATE:
+#+BEGIN_COMMENT
+
+=LATEST_TEMPLATE_UPDATE=
   <2023-10-18 Wed>
 
   =YOU MAY REMOVE This Drawer= from your own clones of this template if
@@ -95,8 +97,11 @@
               TEMPLATE... Then update the timestamp ABOVE... /(WITHIN YOUR CLONE)/
               to record the date of its last sync status...
 
-:END:
-:READ_ME_FIRST:
+#+END_COMMENT
+#+BEGIN_COMMENT
+
+=READ_ME_FIRST:=
+
 =Instructions:= /(How to Install & Use This Template)/
 
 To use *HAP_README-Doc-Skeleton.org* Org-Mode README Doc Template for your own projects, =Perform The Following Steps:= 
@@ -336,7 +341,8 @@ If you experience problems =Please Open an ISSUE At:= https://github.com/harmoni
 Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas for Improvement... =You guys are my Product Managers=  I am only a User of ONE "seat". Other folks UX metrics are sorely needed!! Thanks!
 
 =Enjoy!= - Alisha Awen
-:END:
+
+#+END_COMMENT
 
 #+NAME: fig:HAP-Mod-Emacs-Banner-001
 #+CAPTION: HAP - Modular Emacs Page Banner
