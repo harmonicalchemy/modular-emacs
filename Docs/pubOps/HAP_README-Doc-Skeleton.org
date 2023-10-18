@@ -355,19 +355,42 @@ Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas
 
 * 🔖 Table of Contents:                                                 :TOC_4:
 - [[#-readme][📖 README:]]
+- [[#-begin-log][📅 Begin Log:]]
+    - [[#-2023][📅 2023:]]
+        - [[#new--first-log-entry-general-log-entry-template][NEW 🗓 First Log Entry /(General Log Entry Template)/]]
+            - [[#new--reference][NEW 📚 Reference:]]
+            - [[#new--time-card][NEW ⏱ Time Card:]]
+            - [[#new--summary-03][NEW 📃 Summary:]]
+            - [[#new--details][NEW 📰 Details:]]
+    - [[#-2024][📅 2024:]]
+- [[#-meta-usage--templates][📋 Meta: /(Usage & Templates)/]]
+    - [[#-introduction][📄 Introduction:]]
+        - [[#emacs-shorthand-command-key-notation][Emacs Shorthand Command Key Notation:]]
+        - [[#important-note-for-mac-users][Important Note For Mac Users:]]
+        - [[#org-mode-timestamps-and-clocking][Org Mode Timestamps and Clocking:]]
+    - [[#-howto][❔ HowTo:]]
+        - [[#create-new-log-entry-within-the--begin-log-binder-04][Create New Log Entry within the *📒 Begin Log:* Binder:]]
+            - [[#edit-compose-new-log-entry][Edit-Compose New LOG Entry:]]
+            - [[#enter-new-log-entry-details][Enter New LOG Entry Details:]]
+    - [[#-templates][⎘ Templates:]]
+        - [[#new--generic-log-entry-general-log-entry-template][NEW 🗓 Generic Log Entry /(General Log Entry Template)/]]
+            - [[#new--reference-1][NEW 📚 Reference:]]
+            - [[#new--time-card-1][NEW ⏱ Time Card:]]
+            - [[#new--summary-03-1][NEW 📃 Summary:]]
+            - [[#new--details-1][NEW 📰 Details:]]
 
 * 📖 README:
 
 =Compose Main Body of your README Doc Here=
 
-* 📅 Begin Log:                                                    :noexport:
-<<README_Begin-Log>>
-
+* 📅 Begin Log:
 ** 📅 2023:
 *** NEW 🗓 First Log Entry /(General Log Entry Template)/
 <2021-03-29 Mon>
-<<LOG_first-log-entry>>
-:README:
+#+begin_comment
+
+=README:=
+
    - *Go To One of the HEADINGS Below:* /(Summary, Details, or Sub Headings)/
 
       =Punch the Time Clock= At the heading And then begin working on a task related to that Heading... =Your Time IS being Recorded Now= 
@@ -449,13 +472,17 @@ Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas
                       =Warning!= Using this command will CLUTTER ALL the headings
                                 within your org file with those timestamps!!!
 
-   - Once all of this has become routine for you, =go ahead and remove this= ~README~ =drawer from this template=... That way it does not get copied when you need to clone new log entries...
-:END:
+Once all of this has become routine for you, =go ahead and remove this= ~README~ =drawer from this template=... That way it does not get copied when you need to clone new log entries...
+
+#+end_comment
 
 This Log Entry is about: Yadda... Yadda... Yadda...
 
 **** NEW 📚 Reference:
-:README:
+#+begin_comment
+
+=README:=
+
    =Org Mode Links Tip:=
 
       + To Create a Link Type: ~C-c C-l~ 
@@ -505,7 +532,8 @@ This Log Entry is about: Yadda... Yadda... Yadda...
          
          ~org-lint~ /will detect JUNK above... Ignore that warning.../
                   /It's my "METHOD of MADNESS" %^)/
-:END:
+
+#+end_comment
 
 - *Link to Project:* [[][] ] /(comment)/
 
@@ -515,13 +543,17 @@ This Log Entry is about: Yadda... Yadda... Yadda...
 #+END:
 
 **** NEW 📃 Summary: [0/3]
-:README:
+#+begin_comment
+
+=README:=
+
    This Summary is mostly to help you find things later when you cannot remember when or where is was done... If you go to the top of this file and expand all headings to show ALL content, then do a search on "~Summary:~" you will be able to quickly scroll through and scan these summaries quickly to find what you were looking for... 
 
    Also the *Time Card* /displayed above/ each search hit will give more clues by showing important headings you worked on...
 
    Below is an optional list /(that could also provide links)./ This list could be used to itemize things you worked on, but I personally find it easier to simply write a short one or two line description containing important keywords right here and nothing more. I think that is more useful...
-:END:
+
+#+end_comment
 
 Yadda... Yadda... Yadda...
 
@@ -535,7 +567,9 @@ Yadda... Yadda... Yadda...
 
 **** NEW 📰 Details:
 ***** NEW New Item 1 /(placeholder)/ [0/3]
-:BOILERPLATE:
+#+begin_comment
+
+=BOILERPLATE:=
 
   =Delete This BOILERPLATE DRAWER If You Don't Need It...=
 
@@ -584,30 +618,7 @@ Yadda... Yadda... Yadda...
       : CAR w: text-pixels
       : CDR w: (92)
 
-  - [ ] =LaTeX Code Within ~.Org~ Docs:=
-
-      #+begin_comment
-
-      Code Embedded ~In-line~ within paragraphs:
-      
-         Put: @@latex:<LaTeX Code Here>@@ Anywhere
-         Within a paragraph...
-
-      #+LATEX: % Any Arbitrary LaTeX Code...
-      
-      #+LATEX: \newpage % Start New Page
-
-      #+BEGIN_EXPORT latex
-      %% Put LaTex Code In Here...
-      #+END_EXPORT
-
-      #+BEGIN_LaTeX
-      %% Put LaTex Code In Here...
-      #+END_LaTeX
-
-      #+end_comment
-
-:END:
+#+end_comment
 
 New Item Details... Yadda... Yadda... Yadda...
 
@@ -619,7 +630,9 @@ Don't forget to clock-in to HEADINGS while you work on them...
 AND... Don't forget to Clock OUT when you are DONE... %^)
 
 ***** NEW New Item 2 /(placeholder)/ [0/3]
-:BOILERPLATE:
+#+begin_comment
+
+=BOILERPLATE:=
 
   =Delete This BOILERPLATE DRAWER If You Don't Need It...=
 
@@ -668,30 +681,7 @@ AND... Don't forget to Clock OUT when you are DONE... %^)
       : CAR w: text-pixels
       : CDR w: (92)
 
-  - [ ] =LaTeX Code Within ~.Org~ Docs:=
-
-      #+begin_comment
-
-      Code Embedded ~In-line~ within paragraphs:
-      
-         Put: @@latex:<LaTeX Code Here>@@ Anywhere
-         Within a paragraph...
-
-      #+LATEX: % Any Arbitrary LaTeX Code...
-      
-      #+LATEX: \newpage % Start New Page
-
-      #+BEGIN_EXPORT latex
-      %% Put LaTex Code In Here...
-      #+END_EXPORT
-
-      #+BEGIN_LaTeX
-      %% Put LaTex Code In Here...
-      #+END_LaTeX
-
-      #+end_comment
-
-:END:
+#+end_comment
 
 New Item Details... Yadda... Yadda... Yadda...
 
@@ -703,7 +693,9 @@ Don't forget to clock-in to HEADINGS while you work on them...
 AND... Don't forget to Clock OUT when you are DONE... %^)
 
 ***** NEW New Item 3 /(placeholder)/ [0/3]
-:BOILERPLATE:
+#+begin_comment
+
+=BOILERPLATE:=
 
   =Delete This BOILERPLATE DRAWER If You Don't Need It...=
 
@@ -752,30 +744,7 @@ AND... Don't forget to Clock OUT when you are DONE... %^)
       : CAR w: text-pixels
       : CDR w: (92)
 
-  - [ ] =LaTeX Code Within ~.Org~ Docs:=
-
-      #+begin_comment
-
-      Code Embedded ~In-line~ within paragraphs:
-      
-         Put: @@latex:<LaTeX Code Here>@@ Anywhere
-         Within a paragraph...
-
-      #+LATEX: % Any Arbitrary LaTeX Code...
-      
-      #+LATEX: \newpage % Start New Page
-
-      #+BEGIN_EXPORT latex
-      %% Put LaTex Code In Here...
-      #+END_EXPORT
-
-      #+BEGIN_LaTeX
-      %% Put LaTex Code In Here...
-      #+END_LaTeX
-
-      #+end_comment
-
-:END:
+#+end_comment
 
 New Item Details... Yadda... Yadda... Yadda...
 
@@ -785,7 +754,8 @@ Add sub headings as needed...
 
 Don't forget to clock-in to HEADINGS while you work on them...
 AND... Don't forget to Clock OUT when you are DONE... %^)
-** 📅 2024: 
+
+** 📅 2024:
 
 /Not Here Yet but keep logging... The New Year will be here soon enough!/
 
@@ -798,11 +768,9 @@ AND... Don't forget to Clock OUT when you are DONE... %^)
 =The Following LaTeX Snippit MUST be placed AFTER All LOG Entries=
 /This Starts the BACK MATTER Section of this Log Book (nothing in it yet)/
 
-* 📋 Meta: /(Usage & Templates)/                                     :noexport:
-<<META_Begin-Meta>>
-
+* 📋 Meta: /(Usage & Templates)/
 ** 📄 Introduction:
-:README:
+
    Use this Standard README /(template)/ as a multi purpose README document
    as a Start Here First Document for any kind of project...
 
@@ -811,7 +779,6 @@ AND... Don't forget to Clock OUT when you are DONE... %^)
    I finally bit the long curve bullet and learned Emacs Org Mode /(after many many many years of using Emacs without it!)/ Today, looking back with current knowledge to me is like going back to a /"*Dec VT220* green screen *dumb terminal*"/ after experiencing *X Windows* on a Big *HP-UX Workstation!*
 
    Yeah, that's a personal story from the past, lol... All you Mac users out there, please realize that your beautiful Apple desktop is in fact an *HP-UX Motif X-Windows widget set clone*!  That's what Steve Jobs believed to be the best X-Windows tool-kit of the day /(when he was building the NeXT computer)/...  So... Yup he copied that! The Applications Doc at the bottom of your screen is a dead giveaway. Hewlet Packard was first to use such UI concepts... /(back before the dawning of the web we loved those HPUX Workstations!)/
-:END:
 
 *** Emacs Shorthand Command Key Notation:
 
@@ -852,12 +819,6 @@ Additional commands for using *Org-Mode* with Modular Emacs will be explained he
 \newpage
 
 ** ❔ HowTo:
-:README:
-   This README Doc Template is being designed as these docs are being written...  At first much of the design is being done /manually/ while formats, concepts, are tried and tested.  Eventually much of the instructions below will become much simpler as there will be capture templates, and processes in place that replace the need to manually copy/paste things as we are doing initially below...  
-
-   =Please bear with the author/architect as she makes up her mind about how to do things in here...=  *Org-mode, LaTeX options are vast!* Not to mention a sea of extra packages that could be tried out... /I feel like I am re-inventing wheels within rabbit holes!/ lol
-:END:
-
 *** Create New Log Entry within the *📒 Begin Log:* Binder: [0/4]
 
 - [ ] =Clone:= *NEW* 🗓 *Generic Log Entry* /(from:/ ⎘ *Templates:* /binder)/
@@ -959,8 +920,10 @@ Place the *:noexport:* tag at the end of any org outline heading to exclude it a
 ** ⎘ Templates:
 *** NEW 🗓 Generic Log Entry /(General Log Entry Template)/
 <2021-03-29 Mon>
-<<LOG_Generic-Log-Entry>>
-:README:
+#+begin_comment
+
+=README:=
+
    - *Go To One of the HEADINGS Below:* /(Summary, Details, or Sub Headings)/
 
       =Punch the Time Clock= At the heading And then begin working on a task related to that Heading... =Your Time IS being Recorded Now= 
@@ -1043,12 +1006,16 @@ Place the *:noexport:* tag at the end of any org outline heading to exclude it a
                                 within your org file with those timestamps!!!
 
    - Once all of this has become routine for you, =go ahead and remove this= ~README~ =drawer from this template=... That way it does not get copied when you need to clone new log entries...
-:END:
+
+#+end_comment
 
 This Log Entry is about: Yadda... Yadda... Yadda...
 
 **** NEW 📚 Reference:
-:README:
+#+begin_comment
+
+=README:=
+
    =Org Mode Links Tip:=
 
       + To Create a Link Type: ~C-c C-l~ 
@@ -1098,7 +1065,8 @@ This Log Entry is about: Yadda... Yadda... Yadda...
          
          ~org-lint~ /will detect JUNK above... Ignore that warning.../
                   /It's my "METHOD of MADNESS" %^)/
-:END:
+
+#+end_comment
 
 - *Link to Project:* [[][] ] /(comment)/
 
@@ -1108,13 +1076,17 @@ This Log Entry is about: Yadda... Yadda... Yadda...
 #+END:
 
 **** NEW 📃 Summary: [0/3]
-:README:
+#+begin_comment
+
+=README:=
+
    This Summary is mostly to help you find things later when you cannot remember when or where is was done... If you go to the top of this file and expand all headings to show ALL content, then do a search on "~Summary:~" you will be able to quickly scroll through and scan these summaries quickly to find what you were looking for... 
 
    Also the *Time Card* /displayed above/ each search hit will give more clues by showing important headings you worked on...
 
    Below is an optional list /(that could also provide links)./ This list could be used to itemize things you worked on, but I personally find it easier to simply write a short one or two line description containing important keywords right here and nothing more. I think that is more useful...
-:END:
+
+#+end_comment
 
 Yadda... Yadda... Yadda...
 
@@ -1128,7 +1100,9 @@ Yadda... Yadda... Yadda...
 
 **** NEW 📰 Details:
 ***** NEW New Item 1 /(placeholder)/ [0/3]
-:BOILERPLATE:
+#+begin_comment
+
+=BOILERPLATE:=
 
   =Delete This BOILERPLATE DRAWER If You Don't Need It...=
 
@@ -1177,30 +1151,7 @@ Yadda... Yadda... Yadda...
       : CAR w: text-pixels
       : CDR w: (92)
 
-  - [ ] =LaTeX Code Within ~.Org~ Docs:=
-
-      #+begin_comment
-
-      Code Embedded ~In-line~ within paragraphs:
-      
-         Put: @@latex:<LaTeX Code Here>@@ Anywhere
-         Within a paragraph...
-
-      #+LATEX: % Any Arbitrary LaTeX Code...
-      
-      #+LATEX: \newpage % Start New Page
-
-      #+BEGIN_EXPORT latex
-      %% Put LaTex Code In Here...
-      #+END_EXPORT
-
-      #+BEGIN_LaTeX
-      %% Put LaTex Code In Here...
-      #+END_LaTeX
-
-      #+end_comment
-
-:END:
+#+end_comment
 
 New Item Details... Yadda... Yadda... Yadda...
 
@@ -1212,7 +1163,9 @@ Don't forget to clock-in to HEADINGS while you work on them...
 AND... Don't forget to Clock OUT when you are DONE... %^)
 
 ***** NEW New Item 2 /(placeholder)/ [0/3]
-:BOILERPLATE:
+#+begin_comment
+
+=BOILERPLATE:=
 
   =Delete This BOILERPLATE DRAWER If You Don't Need It...=
 
@@ -1261,30 +1214,7 @@ AND... Don't forget to Clock OUT when you are DONE... %^)
       : CAR w: text-pixels
       : CDR w: (92)
 
-  - [ ] =LaTeX Code Within ~.Org~ Docs:=
-
-      #+begin_comment
-
-      Code Embedded ~In-line~ within paragraphs:
-      
-         Put: @@latex:<LaTeX Code Here>@@ Anywhere
-         Within a paragraph...
-
-      #+LATEX: % Any Arbitrary LaTeX Code...
-      
-      #+LATEX: \newpage % Start New Page
-
-      #+BEGIN_EXPORT latex
-      %% Put LaTex Code In Here...
-      #+END_EXPORT
-
-      #+BEGIN_LaTeX
-      %% Put LaTex Code In Here...
-      #+END_LaTeX
-
-      #+end_comment
-
-:END:
+#+end_comment
 
 New Item Details... Yadda... Yadda... Yadda...
 
@@ -1296,7 +1226,9 @@ Don't forget to clock-in to HEADINGS while you work on them...
 AND... Don't forget to Clock OUT when you are DONE... %^)
 
 ***** NEW New Item 3 /(placeholder)/ [0/3]
-:BOILERPLATE:
+#+begin_comment
+
+=BOILERPLATE:=
 
   =Delete This BOILERPLATE DRAWER If You Don't Need It...=
 
@@ -1345,30 +1277,7 @@ AND... Don't forget to Clock OUT when you are DONE... %^)
       : CAR w: text-pixels
       : CDR w: (92)
 
-  - [ ] =LaTeX Code Within ~.Org~ Docs:=
-
-      #+begin_comment
-
-      Code Embedded ~In-line~ within paragraphs:
-      
-         Put: @@latex:<LaTeX Code Here>@@ Anywhere
-         Within a paragraph...
-
-      #+LATEX: % Any Arbitrary LaTeX Code...
-      
-      #+LATEX: \newpage % Start New Page
-
-      #+BEGIN_EXPORT latex
-      %% Put LaTex Code In Here...
-      #+END_EXPORT
-
-      #+BEGIN_LaTeX
-      %% Put LaTex Code In Here...
-      #+END_LaTeX
-
-      #+end_comment
-
-:END:
+#+end_comment
 
 New Item Details... Yadda... Yadda... Yadda...
 
