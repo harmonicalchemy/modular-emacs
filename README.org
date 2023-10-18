@@ -356,7 +356,6 @@ Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas
 #+end_quote
 
 * 💡 Introduction:
-<<ME-README_introduction>>
 
 *Welcome to Harmonic Alchemy Modular Emacs* ~V3.6 (point release) [Q4 2023]~
 
@@ -424,19 +423,16 @@ All the rest of the markdown files within the Docs directory are being updated o
 - [[#-optional-packages--customization][🎁 Optional Packages & Customization:]]
 
 * 📜 History & Purpose:
-<<ME-README_history>>
 
 The history of *Harmonic Alchemy Modular Emacs* is like a confusing *Adventure* through many little twisty passages, all alike... /(or all different)/  [[./Docs/ModE-History.md][Everything is Documented Here Now]]  Read it at your leasure. It provides some perspective, insight, and purpose behind how and why things are done here in the present time.
 
 * ☞ Try Harmonic Alchemy Modular Emacs:
-<<ME-README_try-modular-emacs>>
 
 For those of you who feel [[https://github.com/harmonicalchemy/modular-emacs][Harmonic Alchemy Modular Emacs]] may be exactly what you were looking for, By all means... Lets Dive in!
 
 There are some external requirements... It may take a while... If that's OK with you, Great!... Lets go...  Eventually I will script this up so you can just enter this at the command prompt: ~./install.sh~ and be done with it... Keep your fingers crossed on that but don't get your hopes up... I am a busy girl!!! :octocat:  That script will have to install a lot of things! It will have to check a lot of system states!  I have to work all that out as a non-interactive process.  It should install everything /(transparently non-interactively)/ from that single running shell script...  If you have to answer questions and make decisions... Better that you execute manually instead, and read the docs first...  Right?
 
 * ⚙ Microsoft Windows Support Needed:
-<<ME-README_ms-windows-support-needed>>
 
 Hello MS Windows Veterans...
 
@@ -458,7 +454,6 @@ I am looking for a good MS Windows Sys Admin type to jump in here and help... Wh
 For the rest of us... For now... Let's learn this together... Please provide any feedback about your experience attempting to install this on a MS Windows box, Please open issues, ask questions!  We will get this part done some how... Thanks ;-)
 
 * 🙏 My Commitment
-<<ME-README_my-commitment>>
 
 #+begin_quote
    "Always do what is right. It will gratify half of mankind and astound the other." - Mark Twain
@@ -485,12 +480,10 @@ If you end up liking *Harmonic Alchemy Modular Emacs*, please drop me a note to 
 =Therefore:= *Here is Modular Emacs!* I hope my long years of *devOps* experience will turn out a nice jewel for new comers to try out and succeed with! *Good Luck and God Speed!*
 
 * TODO 📸 Screenshots:
-<<ME-README_screenshots>>
 
 =Add Screenshots displaying HAP Modular Emacs main Features HERE=
 
 * ☞ TL;DR - Start Here:
-<<ME-README_start-here>>
 
 Follow the steps below /(in a top down fashion beginning with "Requirements:")/ to install: *Harmonic Alchemy Productions - Modular Emacs* for the first time...
 
@@ -625,7 +618,6 @@ If you DO have Graphvix installed... When you visit a ~.dot~ file, you can compi
 
 
 * ⚛ Get Ready to Start up Modular Emacs for the first time!
-<<ME-README_get-ready-to-start>>
 
 ** 🏠 Initial House Keeping: /(before we move in)/
 
@@ -697,7 +689,6 @@ If you DO have Graphvix installed... When you visit a ~.dot~ file, you can compi
      ~$HOME~ OK? Great! :octocat:
      
 * 📢 Ready Set Go! Start Up Modular Emacs:
-<<ME-README_ready-set-go>>
 
 - [ ] *Start up GNU Emacs:*
 
@@ -780,7 +771,6 @@ If you DO have Graphvix installed... When you visit a ~.dot~ file, you can compi
           Try it out! It's easy to switch back and forth now...
 
 * 🎨 Usage:
-<<ME-README_usage>>
 
 ** Managing Your Git Repo:
 
@@ -852,7 +842,6 @@ You can even *clone OTHER git repos* wihtin ~my-modules~ without messing anythin
 
 
 * ✅ Default Package Features: /(built in)/
-<<ME-README_default-package-features>>
 
 ** Default Emacs Welcome Screen: /(~*scratch*~ buffer)/
 
@@ -1228,7 +1217,6 @@ the welcome text... /(which are lisp comments)/
 
 
 * 🎁 Optional Packages & Customization:
-<<ME-README_optional-packages>>
 
 Now it's time to forget boring defaults and really tune this baby up to be the best *DevOps* , *PubOPs* , *Lisp IDE* that it can be!
 
