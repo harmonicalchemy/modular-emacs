@@ -387,15 +387,6 @@ No Logs So far... This feature is under evaluation and may end up not being used
 
 /Not Here Yet but keep logging... The New Year will be here soon enough!/
 
-=When the New Year Comes Around: RENAME This Heading to the Next YEAR=
-
-=DON'T Clone this Heading...= /(Leave it here as the LAST Top Level Heading before the Meta Binder...  It must stay Titled as the Next Upcoming YEAR)/ 
-
-=After Doing Above:= Create a NEW Top Level Heading with the Current YEAR and Use that to place new Cloned LOG Entry Templates from the Meta Section...
-
-=The Following LaTeX Snippit MUST be placed AFTER All LOG Entries=
-/This Starts the BACK MATTER Section of this Log Book (nothing in it yet)/
-
 * 📋 Meta: /(Usage & Templates)/
 ** 📄 Introduction:
 
