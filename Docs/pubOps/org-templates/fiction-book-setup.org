@@ -1,5 +1,6 @@
 # -**- mode: org; coding: utf-8 -**-
 :LATEST_UPDATE:
+
   =Last Updated:= <2023-02-18 Sat> /(this template needs work)/
 
   =YOU MAY REMOVE This Drawer= from your own clones of this template if
@@ -45,14 +46,8 @@
          up to date /(i.e. in sync)/ with its STARTUPFILE TEMPLATE...
          Then update the timestamp ABOVE... /(WITHIN YOUR CLONE)/ to record
          the date of its last sync status...
+         
 :END:
-
-=File:=  ~~/.emacs.d/Docs/pubOps/org-templates/fiction-book-setup.org~
-
-             =ORG-MODE LaTeX SETUPFILE for: FICTION Books=
-             
-                    ~#+LATEX_CLASS: blueboxbook~
-
 :README:
 
 =Usage:= *Copy/Clone* this file and adjust to suit your needs...
@@ -100,7 +95,14 @@
       /Donald Knuth... You have been warned!!!)/
 
       =Good luck!=
+
 :END:
+
+=File:=  ~~/.emacs.d/Docs/pubOps/org-templates/fiction-book-setup.org~
+
+             =ORG-MODE LaTeX SETUPFILE for: FICTION Books=
+             
+                      =LATEX_CLASS:= ~blueboxbook~
 
 - *Reference:*
    
@@ -161,32 +163,34 @@
 =DISABLED OPTIONS For This Configuration:= /(for debugging)/
 
 #+BEGIN_COMMENT
-  #+OPTIONS: ::nil
-     # DO NOT Export fixed-width sections
-     # (org-export-with-fixed-width)
 
-  #+OPTIONS: -:t
-     # Convert Special Strings
-     # (non-nil is being tried now)
+    /DO NOT Export fixed-width sections/
+    /(org-export-with-fixed-width)/
+    #+OPTIONS: ::nil
 
-  #+OPTIONS: inline:nil
-     # DO NOT Include Inline Tasks
-     # (org-export-with-inlinetasks)
+    /Convert Special Strings/
+    /(non-nil is being tried now)/
+    #+OPTIONS: -:t
 
-  #+OPTIONS: num:nil
-     # DO NOT Include section-numbers
-     # (org-export-with-section-numbers)
+    /DO NOT Include Inline Tasks/
+    /(org-export-with-inlinetasks)/
+    #+OPTIONS: inline:nil
 
-  #+OPTIONS: tex:t
-     # Normal LaTeX Export
-     # (org-export-with-latex)
+    /DO NOT Include section-numbers/
+    /(org-export-with-section-numbers)/
+    #+OPTIONS: num:nil
 
-  #+OPTIONS: toc:1
-     # Include TOC for Top Level Headlings ONLY
-     # (org-export-with-toc)
+    /Normal LaTeX Export/
+    /(org-export-with-latex)/
+    #+OPTIONS: tex:t
+
+    /Include TOC for Top Level Headlings ONLY/
+    /(org-export-with-toc)/
+    #+OPTIONS: toc:1
+
 #+END_COMMENT
 
-=STARTUP OPTIONS For This Configuration:=
+=ORG-MODE STARTUP OPTIONS for this CONFIG:=
 
 #+LANGUAGE: en
 #+STARTUP:  overview
@@ -195,121 +199,122 @@
 #+STARTUP:  align
 #+STARTUP:  inlineimages
 
-=STANDARD OPTIONS For This Configuration:=
+=STANDARD OPTIONS for this CONFIG:=
 
+/Mutually Exclusive Export TAGS/
 #+SELECT_TAGS: export
 #+EXCLUDE_TAGS: noexport
 
+/ENABLE Smart Quotes (org-export-with-smart-quotes)/
 #+OPTIONS: ':t
-   # ENABLE Smart Quotes (org-export-with-smart-quotes)
 
+/Show Emphasized Text (org-export-with-emphasize)/
+/NOTE: Exported PDF is styled different/
+      /than org-mode buffer fontification../
 #+OPTIONS: *:t
-   # Show Emphasized Text (org-export-with-emphasize)
-   # NOTE: Exported PDF is styled different
-   # than org-mode buffer fontification..
 
+/Convert Special Strings (org-export-with-special-strings)/
 #+OPTIONS: -:nil
-   # Convert Special Strings (org-export-with-special-strings)
 
+/Export with fixed-width sections (org-export-with-fixed-width)/
+/Options: (nil, t)/
+/non-nil = Interpret Strings Starting with a/
+/colon ":" as: A Fixed-With Verbatim area./
 #+OPTIONS: ::t
-   # Export with fixed-width sections (org-export-with-fixed-width)
-   # Options: (nil, t)
-   # non-nil = Interpret Strings Starting with a
-   # colon ":" as: A Fixed-With Verbatim area.
 
+/Export time/date active/inactive stamps (org-export-with-timestamps)/
 #+OPTIONS: <:t
-   # Enclude time/date active/inactive stamps (org-export-with-timestamps)
 
+/Line Breaks: Non-nil = Preserve ALL Line Breaks (org-export-preserve-breaks)/
+/NOTE: (non-nil may affect LaTeX parskip)/
 #+OPTIONS: \n:nil
-   # Non-nil = Preserve ALL Line Breaks (org-export-preserve-breaks)
-   # NOTE: (non-nil may affect LaTeX parskip)
 
+/Use Tex-like Syntax For Sub And Superscripts (org-export-with-sub-superscripts)/
+/Typing simple a_b will not be affected anymore/
+/Use word^{super} to raise word "super" - superscript/
+/Use word_{sub} to lower the word "sub" - subscript/
 #+OPTIONS: ^:{}
-   # Use Tex-like Syntax For Sub And Superscripts (org-export-with-sub-superscripts)
-   # Typing simple a_b will not be affected anymore
-   # Use word^{super} to raise word "super" - superscript
-   # Use word_{sub} to lower the word "sub" - subscript
-                
+
+/Include Author Name into Exported file (org-export-with-author)/
 #+OPTIONS: author:t
-   # Include Author Name into Exported file (org-export-with-author)
-   
+
+/Broken link(s) found?/
+/Mark Them & Don't Export (org-export-with-broken-links)/
 #+OPTIONS: broken-links:mark
-   # Broken link(s) found?
-   # Mark Them & Don't Export (org-export-with-broken-links)
-   
+
+/Include CLOCK keywords in exported documents (org-export-with-clocks)/
 #+OPTIONS: c:t
-   # Include CLOCK keywords in exported documents (org-export-with-clocks)
    
+/Include Creator Info (org-export-with-creator)/
 #+OPTIONS: creator:t
-   # Include Creator Info (org-export-with-creator)
    
+/Do NOT Include DRAWERS in exported documents (org-export-with-drawers)/
 #+OPTIONS: d:nil
-   # Do NOT Include DRAWERS in exported documents (org-export-with-drawers)
    
+/Include DATE in exported documents (org-export-with-date)/
 #+OPTIONS: date:t
-   # Include DATE in exported documents (org-export-with-date)
 
+/DON'T Include Entities (org-export-with-entities)/
+/Example if t: HTML exports \\alpha as: &alpha;/
 #+OPTIONS: e:nil
-   # DON'T Include Entities (org-export-with-entities)
-   # Example if t: HTML exports \\alpha as: &alpha;
 
+/Include Author’s e-mail (org-export-with-email)/
 #+OPTIONS: email:t
-   # Include Author’s e-mail (org-export-with-email)
    
+/Include Footnotes (org-export-with-footnotes)/
 #+OPTIONS: f:t
-   # Include Footnotes (org-export-with-footnotes)
 
+/Set Headline Levels for Export (org-export-headline-levels)/
 #+OPTIONS: H:4
-   # Set Headline Levels for Export (org-export-headline-levels)
 
+/Toggle inclusion of TODO Task related keywords (org-export-with-tasks)/
+/IF t    - INCLUDE ALL TASK KEYWORDS.../
+/IF nil  - REMOVE ALL TASKS.../
+/IF todo - REMOVE DONE TASKS.../
+/IF list - (use list of keywords to keep)/
 #+OPTIONS: tasks:t
-   # Toggle inclusion of TODO Task related keywords (org-export-with-tasks)
-   # IF t    - INCLUDE ALL TASK KEYWORDS...
-   # IF nil  - REMOVE ALL TASKS...
-   # IF todo - REMOVE DONE TASKS...
-   # IF list - (use list of keywords to keep)
 
+/Include Inline Tasks (org-export-with-inlinetasks)/
 #+OPTIONS: inline:t
-   # Include Inline Tasks (org-export-with-inlinetasks)
 
+/LIMIT SECTION NUMBERING To TOP LEVEL HEADINGS ONLY (chapters)/
+/(org-export-with-section-numbers)/
+/When N, Number only headlines level N or above./
+/Set ‘UNNUMBERED’ property to non-nil to disable/
+/numbering of heading and subheadings entirely./
+/Moreover, when value is ‘notoc’, headline,/
+/(and all children), do NOT appear in TOC either./
 #+OPTIONS: num:1
-   # LIMIT SECTION NUMBERING To TOP LEVEL HEADINGS ONLY (chapters)
-   # (org-export-with-section-numbers)
-   # When N, Number only headlines level N or above.
-   # Set ‘UNNUMBERED’ property to non-nil to disable
-   # numbering of heading and subheadings entirely.
-   # Moreover, when value is ‘notoc’, headline,
-   # (and all children), do NOT appear in TOC either.
 
+/NO Planning Info (org-export-with-planning)/
 #+OPTIONS: p:nil
-   # NO Planning Info (org-export-with-planning)
    
+/NO priority cookies (org-export-with-priority)/
 #+OPTIONS: pri:nil
-   # NO priority cookies (org-export-with-priority)
    
+/No Property Drawers (org-export-with-properties)/
 #+OPTIONS: prop:nil
-   # No Property Drawers (org-export-with-properties)
    
+/No Stastic cookies (org-export-with-statistics-cookies)/
 #+OPTIONS: stat:nil
-   # No Stastic cookies (org-export-with-statistics-cookies)
    
+/No Tags (org-export-with-tags)/
 #+OPTIONS: tags:nil
-   # No Tags (org-export-with-tags)
 
+/Verbatim export (org-export-with-latex)/
 #+OPTIONS: tex:verbatim
-   # Verbatim export (org-export-with-latex)
 
+/Include Creation Time (org-export-time-stamp-file)/
 #+OPTIONS: timestamp:t
-   # Include Creation Time (org-export-time-stamp-file)
    
+/Include Title (org-export-with-title)/
 #+OPTIONS: title:t
-   # Include Title (org-export-with-title)
 
+/DO NOT Include Default TOC (org-export-with-toc)/
 #+OPTIONS: toc:nil
-   # DO NOT Include Default TOC (org-export-with-toc)
 
+/DONT Include TODO keywords (org-export-with-todo-keywords)/
 #+OPTIONS: todo:nil
-   # DONT Include TODO keywords (org-export-with-todo-keywords)
    
+/Include Tables (org-export-with-tables)/
 #+OPTIONS: |:t
-   # Include Tables (org-export-with-tables)

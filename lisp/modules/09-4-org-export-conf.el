@@ -44,6 +44,14 @@
 ;; CHANGE LOG: (descending chronological order)
 ;;
 
+;; 2023-010-18 - Alisha Awen, siren1@disroot.org
+;;   Added HAP AUDIO DRAMA PRODUCTION DOCUMENT CLASS
+;;   and cleaned up some of the code... All DOC Classes
+;;   from now on will get MOST of the custom latex directives
+;;   done within a .tex include file... Much better for visual
+;;   purposes and keeping embedded .TeX code OUT of Lisp
+;;   (Which is UGLY MIXED UP SPAGHETTI CODE IMHO)...
+
 ;; 2023-006-15 - Alisha Awen, siren1@disroot.org
 ;;   General Clean up of Code... Removed as much LaTeX code that is
 ;;   embedded within lisp forms below, WHICH IS REALLY UGLY IMHO...
@@ -694,16 +702,19 @@
   (add-to-list
    'org-latex-classes
    '("audio-production"
-     "\\documentclass{memoir}
+
+     ;; LaTeX CLASS & PAPER SIZE
+     "\\documentclass[letterpaper,12pt,oneside,onecolumn, openany, showtrims, final]{memoir}
           [NO-DEFAULT-PACKAGES]
           [PACKAGES]
-          [EXTRA]"
+          [EXTRA]
+     \\input{~/.emacs.d/Docs/TeX/audio-drama-setup.tex}"
+
      ("\\chapter{%s}" . "\\chapter*{%s}")
      ("\\section{%s}" . "\\section*{%s}")
      ("\\subsection{%s}" . "\\subsection*{%s}")
-     ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-     ("\\paragraph{%s}" . "\\paragraph*{%s}")
-     ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+     ("\\subsubsection{%s}" . "\\subsubsection*{%s}")))
+
   ;; ~~~ END: HAP AUDIO DRAMA PRODUCTION DOCUMENT CLASS: ~~~~
 
   ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

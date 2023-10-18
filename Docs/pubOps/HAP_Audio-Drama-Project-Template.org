@@ -4,8 +4,8 @@
 #+EXPORT_FILE_NAME: HAP_Audio-Drama-Project-Template.pdf
 #+TEXT: Copyright © 2022 Harmonic Alchemy Productions & Others
 #+AUTHOR: Alisha Awen - Harmonic Alchemy Productions
-#+EMAIL: Siren1@disroot.org
-#+DATE: {{{time(%Y-0%M-%d)}}}
+#+EMAIL: harmonicalchemy@proton.me
+#+DATE: {{{time(%A %Y-%b-%d %l%p)}}}
 #+TEXT: Created: <2019-10-01 Tue>
 #+TEXT: Last Published: <Not Published>
 #+FILETAGS: templates drama_scripts audio_theatre @projects unpublished
@@ -58,6 +58,65 @@
 #+SETUPFILE: ./org-templates/audio-drama-setup.org
 #+SETUPFILE: ./org-templates/audio-tags.org
 
+:LATEST_UPDATE:
+  <2023-10-18 Wed>
+
+  =YOU MAY REMOVE This Drawer= from your own clones of this template if
+  it is bothering you... This drawer is used for HAP Modular Emacs
+  DOC TEMPLATES housekeeping...
+
+  =HOWEVER= you may also use it for the same purpose to keep your existing
+  Modular Emacs based org documents in sync with the latest updates of the
+  template they were created from...
+  
+  =If you do wish to do the same... Read On Below...=
+  
+  - =INTERNAL USE Instructions:= /(END USERS SKIP THIS BULLET)/
+
+    This bullet is not for end users... This is /"Note to Self"/ stuff...
+
+      + [X] =MASTER TEMPLATE ONLY= *Keep The Above Timestamp Up To Date:*
+
+          DO THIS ALWAYS, JUST AFTER YOU UPDATE THIS TEMPLATE... DON'T FORGET!
+          /(i.e., BOILERPLATE content and :README: meta data)/
+  
+  - =PUBLIC USE Instructions:= /(FOR CLONES OF THIS TEMPLATE)/
+
+      + [ ] *FOR NEWLY CREATED CLONES:*
+
+          - [ ] =Change this= *:LATEST_UPDATE:* =drawer title:= /(within clones only)/
+
+               Change it to: *:LATEST_TEMPLATE_UPDATE:*
+
+          - [ ] *REMOVE INTERNAL USE INSTRUCTIONS*
+
+               Remove the main =INTERNAL USE Instructions:= bullet above...
+               That bullet is only relevant to the TEMPLATE, /(not clones)/
+
+      + [ ] *FOR ALREADY EXISTING PROJECTS*:
+
+          - [ ] *COMPARE the TIMESTAMPS between THIS TEMPLATE and your PROJECT:*
+
+              The BOILERPLATE content and meta data within CLONES of this
+              TEMPLATE will get out of sync after a while due to Harmonic
+              Alchemy Modular Emacs version updates etc... Some NEW features
+              or HEADINGS may have been added that make sense to be added
+              to your existing project /(originally a clone of this)/
+        
+              Use the ABOVE timestamp /(within the TEMPLATE and your CLONE)/
+              to see if the clone's BOILERPLATE content needs to be updated
+              /(brought into sync with its template - MERGE)/ and then perform
+              any needed merging/replacing of BOILERPLATE and/or meta data.
+              /(e.g, *:README:* drawers, etc. even this drawer)/
+
+          - [ ] *Keep ABOVE timestamp within CLONES of this template UP TO DATE:*
+
+              =AFTER Completing Above MERGE Step= and your clone's BOILERPLATE
+              content has been brought up to date /(i.e. in sync)/ with its
+              TEMPLATE... Then update the timestamp ABOVE... /(WITHIN YOUR CLONE)/
+              to record the date of its last sync status...
+
+:END:
 :READ_ME_FIRST:
 ☞ =Instructions:= /(How to Install & Use This Template)/
 
@@ -597,20 +656,19 @@ More to come later...  Hope this is enough kindling to start the fire...
 
    If a scene changes abruptly to some other situation, that may mean that the scene is over and a new one is starting... Usually a change of environment triggers a new scene...
 :END:
+
 *** ✨ Location:
 
-\newpage
+Yadda Yadda Yadda...
 
 *** 📃 Summary:
 
-\newpage
+Yadda Yadda Yadda...
 
 *** 🗒 Background Notes:
 :README:
   This area could start out as this single scene's quick synopsis summarizing all of the actions / dialog etc. that take place during this particular scene and / or the place where you sketch these things out first before committing them to the actual scene dialog script heading below...  This is also a place to add extra notes for this scene that will not become part of the final production fountain script...
 :END:
-
-\newpage
 
 *** 📃 Fountain Script: /(single scene script)/
 :README:
@@ -644,7 +702,6 @@ Please somebody write me into a real character... Thanks!
 >END of SCENE<
  #+END_SRC
 
-\newpage
 💡 <2022-08-20 Sat> Example Idea /(clone this)/
 :README:
    This is a dummy example of some crazy idea that you may have 
@@ -665,7 +722,24 @@ Please somebody write me into a real character... Thanks!
 
 =Replace all of this boilerplate content with your own content=
 
-\newpage
+** NEW 💡 <2020-06-07 Sun> Visisonar Object /(from Asimov's Foundation Series)/
+:README:
+   This is a dummy example of some crazy idea that you may have 
+   gotten at the spur of the moment, while you were doing something 
+   elsewhere within this project...  After you are done getting as 
+   much of the idea as you initally can then you can simply go back 
+   to what you were doing before the inspiration segue tore you away... 
+   You might want to schedule this as a todo item before leaving though...
+
+   Later when you are free you can come back to file this or place it 
+   where it belongs.  In the case of the note below it would probably 
+   go in a research folder of a Sci-Fi related project...
+:END:
+
+From Isaac Asimov's science fiction series 'Foundation', specifically the section of 'Foundation and Empire' entitled 'The Mule', the visisonar is considered a musical instrument.
+
+Unlike most instruments, this one does not achieve its effect by using sonic effects but, instead, directly stimulates the listeners' mental well-being. The number of people and level of effect depends on the skill level of the player. As this was a device from the First Empire, there were not that many people around with any skill at all. However, the Mule's clown, Magnifico, had some skill with the instrument and was asked to play for select parties on the Foundation and for large groups of workers on Haven. This may not have been a good idea...
+
 ** NEW 💡 <2022-08-20 Sat> New Example Idea /(BOILERPLATE clone this)/
 :README:
    This is a dummy example of some crazy idea that you may have 
@@ -685,6 +759,7 @@ Please somebody write me into a real character... Thanks!
 =Then Quickly Get Started Writing Down your FRESH NEW IDEA=
 
 =Replace all of this boilerplate content with your own content=
+
 * NEW 📕 Production Front Matter:                       :noexport:
 
 =Use this binder for INITIAL PRODUCTION NOTES= /(e.g., Production META Info, Synopsis, etc...)/, which could function as promotional material before, during, and

@@ -1,14 +1,14 @@
 # -**- mode: org; coding: utf-8 -**-
 #+TITLE: Simple README with Log Notebook Skeleton
 #+TEXT: Copyright © 2021 Harmonic Alchemy Productions & Others
-#+AUTHOR: Alisha Awen - Harmonic Alchemy Productions
-#+EMAIL: Siren1@disroot.org
-#+DATE: <2023-02-16 Thu>
+#+AUTHOR: Alisha Awen - Harmonic Alchemy Productions (HAP)
+#+EMAIL: harmonicalchemy@proton.me
+#+DATE: {{{time(%A %Y-%b-%d)}}}
 #+TEXT: Created: <2021-07-22 Thu>
 #+TEXT: Last Published: <NOT Published>
 #+FILETAGS: README templates unpublished
 
-#+DESCRIPTION: Short and sweet README with attached Log Notebook for any project or repository that needs such a thing... Great FOR GITHUB PAGES!!! The ORG TOC renders in Github nicely!! This ORG file is NOT intended to be exported with LaTeX... There are NO LaTeX directives in here... This template's sole purpose is to provide a traditional README startup document, for you to use, (usually contained with source code, but there are many other applications)... THIS is NOT for a BOOK, INVOICE, REPORT, or anything else that may need to be typeset for publishing...  Custom tailor this to fit your needs. Change the tags in default-tags.org (referenced below) as well.. to fit your needs... Enjoy!
+#+DESCRIPTION: Short and sweet README with attached Log Notebook for any project or repository that needs such a thing... Great FOR GITHUB PAGES!!! The ORG TOC renders in Github nicely!! This ORG file is NOT intended to be exported with LaTeX... This template's sole purpose is to provide a traditional README startup document, for you to use, (usually contained with source code, but there are many other applications)... THIS is NOT for a BOOK, or PDF, or anything else that may need to be typeset for publishing... The only intended export option for this file is HTML (for websites - BUT GitHub Renders this file AS IS nicely)... Custom tailor this to fit your needs. Change the tags in default-tags.org (referenced below) as well.. to fit your needs... Enjoy!
 
 #+BEGIN_COMMENT
 
@@ -47,7 +47,7 @@
 #+SETUPFILE: ./org-templates/default-tags.org
 
 :LATEST_UPDATE:
-  <2023-08-21 Mon>
+  <2023-10-18 Wed>
 
   =YOU MAY REMOVE This Drawer= from your own clones of this template if
   it is bothering you... This drawer is used for HAP Modular Emacs
@@ -191,8 +191,8 @@ To use *HAP_README-Doc-Skeleton.org* Org-Mode README Doc Template for your own p
                    =NEW Readme Doc's MASTER FOLDER=
                    /(i.e., as a sibling/ /of this README.org file).../
 
-         =Note:= SETUPFILES Within this directory are called out and included
-               by this ~README.org~ file /(within the file header above)/
+         =Note:= ONLY ONE SETUPFILE Within this directory is called out and
+               included by this ~README.org~ file /(within the file header above)/
 
          =WARNING:= There may ALREADY be an ~org-templates~ directory existing
                   within your MASTER FOLDER! In that case you will need to
@@ -200,9 +200,10 @@ To use *HAP_README-Doc-Skeleton.org* Org-Mode README Doc Template for your own p
                   existing copy of it instead...       
 
                   =YOU WON'T WANT TO OVERRITE EXISTING FILES= within this 
-                  directory you are already using, /(and modified!!!)/
-                  but you may need to update existing files you are NOT
-                  using currently if/when you DO start using them...
+                  directory IF you are already using it for OTHER .org Files,
+                  /(and they were modified!!!)/ but you may need to update
+                  existing files you are NOT using currently if/when you
+                  DO start using them...
 
      Other SETUPFILES within this directory are intended to be used by
      other document style project templates and are not needed for this:
@@ -237,17 +238,6 @@ To use *HAP_README-Doc-Skeleton.org* Org-Mode README Doc Template for your own p
     - [ ] *Change the* ~#+EMAIL:~ *directive at the top of this file:*
 
          Change to: /"your EMAIL"/
-
-    - [ ] *Change the* ~#+DATE:~ *TIMESTAMP at the top of this file:*
-
-         =DO THIS AFTER EACH AND EVERY TIME YOU UPDATE CLONES of THIS FILE=
-
-         Since this file is NOT Published to PDF, putting an automatic date
-         macro in this spot /(like other/ /Modular Emacs Document Templates)/
-         is not helpful...
-
-         Put your cursor on the TIMESTAMP: /i.e.,/ <2022-10-05 Wed>
-         and type: ~C-c . . RETURN~ The TIMESTAMP will update to NOW.
 
     - [ ] *Change the* ~#+TEXT: Created:~ *TIMESTAMP at the top of this file:*
 
@@ -325,29 +315,8 @@ To use *HAP_README-Doc-Skeleton.org* Org-Mode README Doc Template for your own p
 5) =This File is NOT SET UP TO BE EXPORTED TO PDF= [0/3]
 
       You may wish to export OTHER Modular Emacs based .org files within
-      this MASTER FOLDER to PDF format however... To do that use the following:
-
-    - [ ] *Issue the following Emacs command:*
-
-          ~M-x org-latex-export-to-pdf~
-
-    - [ ] *OR* If You Enabled *Xah-Fly-Keys* /"Command Mode"/ Try Shortcut:
-
-          ~SPACE e p~
-
-    - [ ] *OR Export to OTHER Formats:*
-
-          ~C-c C-e~
-
-          /(a pop-up will show allowing you to choose export method)/
-
-          After *AucTeX* is done parsing/compiling etc., new files will be
-          created using the file names specified within the ~HAP_file-name.org~
-          files they were exported from...
-
-    =If YOU EXPERIENCE LaTeX ERRORS:= 
-
-       *Consult Buffer:* ~*Org PDF LaTeX Output*~
+      this MASTER FOLDER to PDF format however... To do that follow the
+      instructions within those .org files
 
 6) *Handling Images:*
 
@@ -358,6 +327,9 @@ To use *HAP_README-Doc-Skeleton.org* Org-Mode README Doc Template for your own p
    Use *LaTeX* and/or *HTML* attributes as follows on the images that need
    to be a different size...
 
+   =NOTE:= Within Org-Mode =if you do NOT see images= but instead a LINK
+         *USE:* ~C-c~ ~C-x~ ~C-V~ to Toggle back to image view...
+
    =Example:=
       
        #+CAPTION: Example larger size .png file 
@@ -366,7 +338,7 @@ To use *HAP_README-Doc-Skeleton.org* Org-Mode README Doc Template for your own p
        #+attr_latex: :width 100px
       [[./media/lavender-banner.png]]
 
-=These Instructions Were Last Modified:= <2023-02-17 Fri>
+=These Instructions Were Last Modified:= <2023-10-18 Wed>
 
 If you experience problems =Please Open an ISSUE At:= https://github.com/harmonicalchemy/modular-emacs/issues
    
@@ -375,11 +347,15 @@ Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas
 =Enjoy!= - Alisha Awen
 :END:
 
-* 🔖 Table of Contents:                                                 :TOC_3:
+* 🔖 Table of Contents:                                                 :TOC_4:
 - [[#-readme][📖 README:]]
 - [[#-begin-log][📅 Begin Log:]]
     - [[#-2023][📅 2023:]]
         - [[#new--first-log-entry-general-log-entry-template][NEW 🗓 First Log Entry /(General Log Entry Template)/]]
+            - [[#new--reference][NEW 📚 Reference:]]
+            - [[#new--time-card][NEW ⏱ Time Card:]]
+            - [[#new--summary-03][NEW 📃 Summary:]]
+            - [[#new--details][NEW 📰 Details:]]
     - [[#-2024][📅 2024:]]
 - [[#-meta-usage--templates][📋 Meta: /(Usage & Templates)/]]
     - [[#-introduction][📄 Introduction:]]
@@ -388,8 +364,14 @@ Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas
         - [[#org-mode-timestamps-and-clocking][Org Mode Timestamps and Clocking:]]
     - [[#-howto][❔ HowTo:]]
         - [[#create-new-log-entry-within-the--begin-log-binder-04][Create New Log Entry within the *📒 Begin Log:* Binder:]]
+            - [[#edit-compose-new-log-entry][Edit-Compose New LOG Entry:]]
+            - [[#enter-new-log-entry-details][Enter New LOG Entry Details:]]
     - [[#-templates][⎘ Templates:]]
         - [[#new--generic-log-entry-general-log-entry-template][NEW 🗓 Generic Log Entry /(General Log Entry Template)/]]
+            - [[#new--reference-1][NEW 📚 Reference:]]
+            - [[#new--time-card-1][NEW ⏱ Time Card:]]
+            - [[#new--summary-03-1][NEW 📃 Summary:]]
+            - [[#new--details-1][NEW 📰 Details:]]
 
 * 📖 README:
 <<README_Begin-README-Doc>>

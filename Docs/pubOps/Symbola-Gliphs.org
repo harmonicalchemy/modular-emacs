@@ -18,8 +18,10 @@ you can change that number to suit size of headings where they may be placed...
 :README:
    Copy the above source code block to the top of the .org file where any of
    the ~.png~ files are used... Default size above is 50 pixels... Adjust that
-   for your needs...
+   for your 
 
+   If images are not showing but instead LINKS use: ~C-c~ ~C-x~ ~C-v~ to 
+   
    Other images within your ~.org~ file =WILL ALSO BE RESIZED=... Therefore you
    will need to use LaTeX and/or HTML attributes as follows on the images that
    need to be a different size:
@@ -117,14 +119,6 @@ you can change that number to suit size of headings where they may be placed...
 [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F483.0.png]] u1F483.0.png - woman dancing 💃
 
 [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F57A.0.png]] u1F57A.0.png - man dancing 🕺
-
-[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F465.png]] u1F465.png - 👥
-
-
-
-
-
-
 
 [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F465.png]] u1F465.png - 👥
 

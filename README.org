@@ -1,18 +1,342 @@
 # -**- mode: org; coding: utf-8 -**-
 #+TITLE: README
-#+EXPORT_FILE_NAME: HAP-ME-README.pdf
-#+TEXT: Copyright © 2022 Harmonic Alchemy Productions & Others
+#+TEXT: Copyright © 2021 Harmonic Alchemy Productions & Others
 #+AUTHOR: Alisha Awen - Harmonic Alchemy Productions (HAP)
-#+EMAIL: Siren1@disroot.org
+#+EMAIL: harmonicalchemy@proton.me
 #+DATE: {{{time(%A %Y-%b-%d)}}}
 #+TEXT: Created: <2021-07-22 Thu>
 #+TEXT: Last Published: <NOT Published>
-#+FILETAGS: README unpublished HAP_Mod_Emacs
+#+FILETAGS: README HAP_Mod_Emacs
 
-#+DESCRIPTION: MAIN README Doc for Harmonic Alchemy Productions - Modular Emacs... This File is NOT intended to be exported to PDF It is for viewing on GitHub.com ONLY...
+#+DESCRIPTION: MAIN README Doc for Harmonic Alchemy Productions - Modular Emacs... This File is NOT intended to be exported to PDF... It is for VIEWING on GitHub.com and Emacs Org-Mode ONLY...
 
-#+SETUPFILE: ./Docs/org-templates/gen-doc.org
+#+BEGIN_COMMENT
+
+=Setup TAGS:=
+
+   For Cloned Versions of this template, the file/paths below will be relative
+   to your parent project directory and as such, should be all set to your new: ~.../your_README.org_File's/org-templates/~ directory...
+
+   *SETUPFILE:* ~default-tags.org~ is where tags are defined for this project...
+              If you need to change the category, do it in your cloned version
+              of default-tags.org...  If you rename default-tags.org file from
+              "default" to something more specific, you will need to change the
+              ~#+SETUPFILE: ./org-templates/default-tags.org~ line below to reflect
+              your new file name as well...  You may change any of the tags except
+              important ones to what ever you wish... Read the *:README:* drawer
+              within the file for more information...
+
+              The Existing Tags are useful for most situations within
+              this context, and some of the tags MUST ALWAYS be defined
+              for this LaTeX publishing system to work correctly...
+
+              This file may be used by other ~.org~ files within this
+              Master Folder... If you need to customize them specifically
+              for this ~.org~ file alone, you should copy and rename:
+              ~default-tags.org~ and modify your renamed copy instead...
+              
+              If you do this, you will ALSO need to change the
+              ~#+SETUPFILE: ./org-templates/default-tags.org~
+              directive below to reflect your changed file name...
+
+              /(change the name from/ ~default-tags.org~ /to another name/
+              /and-or replace some (but NOT ALL) of the tags within/
+              /to your own tags... see instructions inside the file)/
+#+END_COMMENT
+
 #+SETUPFILE: ./Docs/org-templates/default-tags.org
+
+:LATEST_TEMPLATE_UPDATE:
+  <2023-10-18 Wed>
+
+  =YOU MAY REMOVE This Drawer= from your own clones of this template if
+  it is bothering you... This drawer is used for HAP Modular Emacs
+  DOC TEMPLATES housekeeping...
+
+  =HOWEVER= you may also use it for the same purpose to keep your existing
+  Modular Emacs based org documents in sync with the latest updates of the
+  template they were created from...
+  
+  =If you do wish to do the same... Read On Below...=
+
+  - =PUBLIC USE Instructions:= /(FOR CLONES OF THIS TEMPLATE)/
+
+      + [X] *FOR NEWLY CREATED CLONES:*
+
+          - [X] =Change this= *:LATEST_UPDATE:* =drawer title:= /(within clones only)/
+
+               Change it to: *:LATEST_TEMPLATE_UPDATE:*
+
+          - [X] *REMOVE INTERNAL USE INSTRUCTIONS*
+
+               Remove the main =INTERNAL USE Instructions:= bullet above...
+               That bullet is only relevant to the TEMPLATE, /(not clones)/
+
+      + [ ] *FOR ALREADY EXISTING PROJECTS*:
+
+          - [ ] *COMPARE the TIMESTAMPS between THIS TEMPLATE and your PROJECT:*
+
+              The BOILERPLATE content and meta data within CLONES of this
+              TEMPLATE will get out of sync after a while due to Harmonic
+              Alchemy Modular Emacs version updates etc... Some NEW features
+              or HEADINGS may have been added that make sense to be added
+              to your existing project /(originally a clone of this)/
+        
+              Use the ABOVE timestamp /(within the TEMPLATE and your CLONE)/
+              to see if the clone's BOILERPLATE content needs to be updated
+              /(brought into sync with its template - MERGE)/ and then perform
+              any needed merging/replacing of BOILERPLATE and/or meta data.
+              /(e.g, *:README:* drawers, etc. even this drawer)/
+              
+          - [ ] *Keep ABOVE timestamp within CLONES of this template UP TO DATE:*
+
+              =AFTER Completing Above MERGE Step= and your clone's BOILERPLATE
+              content has been brought up to date /(i.e. in sync)/ with its
+              TEMPLATE... Then update the timestamp ABOVE... /(WITHIN YOUR CLONE)/
+              to record the date of its last sync status...
+
+:END:
+:READ_ME_FIRST:
+=Instructions:= /(How to Install & Use This Template)/
+
+To use *HAP_README-Doc-Skeleton.org* Org-Mode README Doc Template for your own projects, =Perform The Following Steps:= 
+
+/Use the org-mode Checkboxes to Help You Keep Track of Progress/
+
+1) [ ] *Clone a Copy of This File:*
+
+      Put your clone within any existing writing or coding project's MASTER
+      FOLDER or anywhere you need to have a simple NON-PUBLISHING README.org
+      file associated with source code or other files...
+
+      Existing MASTER FOLDERS contain other files for other projects as well
+      as the SETUPFILES and MEDIA required by this README.org file...
+
+      =Note:= If you put this file within other Project's existing MASTER FOLDERS
+            that contain existing ~.org~ files /(cloned from other HAP_Doc-Skeleton/
+            /template files)/ Pay CLOSE Attention to Steps 3 & 4 below to decide
+            the correct action to take during those steps...
+
+            =Do NOT OVERWRITE ANY PRE-EXISTING FILES or FOLDERS!!!=
+
+            =OTHERWISE:= If this is a Brand NEW Project, name its NEW MASTER FOLDER to
+                       reflect what this README Doc is about...
+
+      =OTHER Files/Folders May also be placed Within your MASTER FOLDERS...=
+
+2) [ ] =Start Composing your README Content NOW:=
+
+      =NOTE:= You are most likely doing this because you have a project that
+            needs a README File included as the Start Here Document for that
+            project... Therefore... as soon as you are done with the first
+            steps above, =STOP= and immediately begin composing your README
+            Content within the: *📖 README* Binder =NOW=...
+
+      =Add Sub headings below for your README as needed...=
+
+      *btw*, if you Have *Harmonic Alchemy Modular Emacs* fully installed and
+      have enabled the ~Xah-Fly-Keys~ module, you can quickly and easily
+      insert your own /:README:/ drawers for your own purposes by typing:
+      ~SPACE e r~ on an empty line while in command mode... Type those two
+      keys, and the drawer is created for you automatically and opened...
+
+3) [ ] =Finish Setting Up The Rest Of This Project LATER= [0/12]
+
+    - [ ] *Change Title of :LATEST_UPDATE: drawer ABOVE:*
+
+         AFTER Cloning, Change *:LATEST_UPDATE:* drawer title ABOVE
+         /(WITHIN YOUR CLONE, NOT THE ORIGINAL!)/ to *:LATEST_TEMPLATE_UPDATE:*
+         AND Follow Instructions within it...
+
+    - [ ] *Copy/Clone:* ~./media~ /(and contents)/ *to your new project's MASTER FOLDER:*
+
+         Copy this directory /(into your MASTER FOLDER as a sibling of this file).../ 
+         Any external documents or images referenced by your *README Document* 
+         should be placed within this ~./media/~ directory...
+
+         All external links, images, within the boilerplate examples of this
+         template may be used as examples for getting your own images, and 
+         external attachments linked properly...  
+
+         This single ~./media~ directory will serve media and external attachments 
+         for this and other Modular Emacs Document TEMPLATE ~.org~ files that may
+         exist within this MASTER FOLDER now or in the future...
+
+         /(IF/WHEN THEY /WERE/ARE COPIED HERE)/
+
+         =Note:=  You DON'T need to copy the ~./auto/~ directory... That directory
+                may be automatically created by *AuxTeX* when exporting other ~.org~
+                files based on *Modular Emacs* TEMPLATES but =NOT= from this ~.org~
+                file which is not set up for exporting to ~.PDF~...
+
+    - [ ] *Copy/Clone:* ~./org-templates~ /(and all contents)/ *to your MASTER FOLDER:*
+
+         =WARNING!:= To avoid overwriting existing files, DO NOT COPY this
+                   ~./org-templates~ to your MASTER FOLDER IF ONE ALREADY EXISTS!
+
+                   But DO follow the rest of this step so you will know what you
+                   should do...
+
+                   =OTHERWISE For MASTER FOLDERS that DO NOT already have one:=
+                   *Copy this NEW directory to serve as your:
+                   =NEW Readme Doc's MASTER FOLDER=
+                   /(i.e., as a sibling/ /of this README.org file).../
+
+         =Note:= ONLY ONE SETUPFILE Within this directory is called out and
+               included by this ~README.org~ file /(within the file header above)/
+
+         =WARNING:= There may ALREADY be an ~org-templates~ directory existing
+                  within your MASTER FOLDER! In that case you will need to
+                  merge: ~default-tags.org~ /(contained within)/ into your
+                  existing copy of it instead...       
+
+                  =YOU WON'T WANT TO OVERRITE EXISTING FILES= within this 
+                  directory IF you are already using it for OTHER .org Files,
+                  /(and they were modified!!!)/ but you may need to update
+                  existing files you are NOT using currently if/when you
+                  DO start using them...
+
+     Other SETUPFILES within this directory are intended to be used by
+     other document style project templates and are not needed for this:
+     ~README.org~ Document... You may remove the extra files if you wish... 
+
+     =HOWEVER:= If you decide to clone another ~HAP_<book-template>.org~
+              file into this project folder it will pick up its
+              associated SETUPFILES automatically because this folder
+              already exists! Consider this case if/when you decide
+              to delete other UNUSED SETUPFILES... They are small text
+              files not really bothering you...
+
+              /(YOU MAY NEED THEM LATER DEPENDING ON YOUR CASE)/
+
+    - [ ] *Change the* ~#+TITLE:~ *directive at the top of this file:* 
+
+         Change to: /"your Readme Document's REAL Project Title"/
+
+    - [ ] *Change the* ~#+TEXT: Copyright © 2022:~ *directive top of this file:*
+
+         Change to: /"Copyright © your info here"/ You are the copyright
+         owner of your own documents created from clones of these master
+         templates... /(but these MASTER Template Files are to stay under/
+         /Harmonic Alchemy Productions copyright. Any Attribution to me/
+         /for the template structure of your published docs will be/
+         /appreciated... but unnecessary... Thanks! ;-)/
+
+    - [ ] *Change the* ~#+AUTHOR:~ *directive at the top of this file:*
+
+         Change to: /"your NAME"/
+
+    - [ ] *Change the* ~#+EMAIL:~ *directive at the top of this file:*
+
+         Change to: /"your EMAIL"/
+
+    - [ ] *Change the* ~#+TEXT: Created:~ *TIMESTAMP at the top of this file:*
+
+         Put your cursor on the TIMESTAMP: /i.e.,/ <2022-10-05 Wed>
+         and type: ~C-c . . RETURN~ The TIMESTAMP will update to NOW.
+
+         =LEAVE THIS DATE ALONE after Setting It The FIRST Time=
+
+         This Date reflects the time/date that you first created this
+         new document It should NEVER change after that...
+
+    - [ ] *Change the* ~#+TEXT: Last Published:~ *TIMESTAMP at Publish Time:*
+
+          =Don't Change This UNTIL You have completed some MAJOR Release=
+          of the files or code that this ~README.org~ doc refers to and this
+          README reflects the status of that MAJOR UPDATE
+          /(e.g., as published somewhere, in a public repository etc...)/
+
+          Until that publishing time comes leave it alone as:
+          ~<NOT Published>~
+          
+          As soon as this is published as part of a major release, etc,
+          Replace the <unpublished> placeholder with a REAL TIMESTAMP by typing:
+          ~C-c . . RETURN~ The new Last Published: <TIMESTAMP> will appear in
+          place... Do this ANY time you have completed some major update, have
+          published that update and this file needs to reflect that update...
+          /(this will help you keep track)/
+
+    - [ ] *Change the* ~#+FILETAGS:~ *directive at the top of this file:*
+
+         Add your own tags that match the context of your README document...
+
+    - [ ] *Change the* ~#+DESCRIPTION:~ *directive at the top of this file:*
+
+         Compose your ~README~ Doc's Description as a short paragraph here...
+         and then use that to change the directive above...
+
+4) *Purpose of the:* ~./org-templates~  *Directory:*
+
+    The files in here are automatically linked and included within
+    this template. You don't need to change those settings unless you
+    wish to customize the already customized tags...
+
+    /They are allready set up correctly for the General Documents genre,/
+    /and the category is all set as well... But you can and may modify/
+    /the original files to fit your needs.../
+       
+    Other SETUPFILES within this directory are intended to be used by
+    other document style project templates and are not needed for this:
+    ~README.org~ Document... You may remove the extra files if you wish... 
+
+    =HOWEVER:= If you decide to clone another ~HAP_<book-template>.org~
+             file into this project folder it will pick up its
+             associated SETUPFILES automatically because this folder
+             already exists! Consider this case if/when you decide
+             to delete other UNUSED SETUPFILES... They are small text
+             files not really bothering you...
+
+             /(YOU MAY NEED THEM LATER DEPENDING ON YOUR CASE)/
+
+             =AND= You won't want to OVERRITE existing files within this 
+                 directory you are already using, /(and modified!!!)/
+                 but you may need to update existing files you are NOT
+                 using currently if/when you DO start using them...
+
+    The DEFAULT Tags defined for all project templates are useful for
+    most situations and SOME tags are ALWAYS to be defined for this
+    LaTeX publishing system to work.
+
+    /Change the SETUPFILE name ABOVE and within this directory from/
+    ~default-tags.org~ /to another name and-or replace some -BUT NOT ALL-/
+    /of the tags within to your own tags... see instructions inside the/
+    /file.../
+
+5) =This File is NOT SET UP TO BE EXPORTED TO PDF= [0/3]
+
+      You may wish to export OTHER Modular Emacs based .org files within
+      this MASTER FOLDER to PDF format however... To do that follow the
+      instructions within those .org files
+
+6) *Handling Images:*
+
+   Some Images may render too large or too small to fit on a page
+   of an exported version of this file... This is easy do fix within
+   your content on an image by image basis...
+      
+   Use *LaTeX* and/or *HTML* attributes as follows on the images that need
+   to be a different size...
+
+   =NOTE:= Within Org-Mode =if you do NOT see images= but instead a LINK
+         *USE:* ~C-c~ ~C-x~ ~C-V~ to Toggle back to image view...
+
+   =Example:=
+      
+       #+CAPTION: Example larger size .png file 
+       #+NAME:  example:00001
+       #+attr_html: :width 600px
+       #+attr_latex: :width 100px
+      [[./media/lavender-banner.png]]
+
+=These Instructions Were Last Modified:= <2023-10-18 Wed>
+
+If you experience problems =Please Open an ISSUE At:= https://github.com/harmonicalchemy/modular-emacs/issues
+   
+Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas for Improvement... =You guys are my Product Managers=  I am only a User of ONE "seat". Other folks UX metrics are sorely needed!! Thanks!
+
+=Enjoy!= - Alisha Awen
+:END:
 
 #+NAME: fig:HAP-Mod-Emacs-Banner-001
 #+CAPTION: HAP - Modular Emacs Page Banner
@@ -26,8 +350,9 @@
 #+end_quote
 
 * 💡 Introduction:
+<<ME-README_introduction>>
 
-*Welcome to Harmonic Alchemy Modular Emacs* ~V3.5 (beta) [Q1 2023]~
+*Welcome to Harmonic Alchemy Modular Emacs* ~V3.6 (point release) [Q4 2023]~
 
 *Modular Emacs* provides a simple method of dispatching your emacs configuration in steps based on initial choice of modules starting with essentials loading first, and then loading optional user chosen modules...
 
@@ -41,11 +366,15 @@ Emacs Org-Mode also makes it possible to do [[https://en.wikipedia.org/wiki/Lite
 
 I am a systems architect, dev♺Ops engineer, computer scientist, composer/musician, sound designer, writer/publisher.  I wear a lot of hats! My Emacs needs to wear a lot of hats as well!  The central focus of *Modular Emacs* is to build empowering features into *Emacs* utilizing a modular framework that facilitates all the above without becoming an over complicated mess to manage! "*Good Luck With That*" :octocat:
 
-We are still in BETA as many changes are still being made to the LaTeX export configurations... When these org-mode export design changes are done, AND all existing Document Templates in PubOps folder are producing nice looking PDF docs, the beta period will be removed. That event will be tagged as the *Official Release* for *V3.5* /(or possibly become V4.0 instead)/
+We are still in V3 BETA /(point release)/ as many changes are still being made to the LaTeX export configurations... So far the Fiction Book Template is Exporting fairly nicely with few or no errors /(depending on added content within clones - the bare bones template renders nicely without errors now knock-on-wood!)/
+
+When these org-mode export design changes are done, AND all existing Document Templates in PubOps folder are producing nice looking PDF docs, the V3 beta period /(point release)/ will end and that COMMIT will be tagged as the NEW *Official *V4.0 Release* 
 
 Also, These README files are being converted from markdown to .org files which
 IMHO is a more professional way to document... Github renders .org files to html
-nicely, and you can add a TOC that renders nicely as well... So far only this README file has been converted... The old README.md file can be found in the ~./Docs~ directory... All the rest of the markdown files within the Docs directory are being updated one at a time... TBD...
+nicely, and you can add a TOC that renders nicely as well... So far only this README file and a few others have been converted... The old README.md file can be found in the ~./Docs~ directory...
+
+All the rest of the markdown files within the Docs directory are being updated one at a time... TBD...
 
 *Note:* Current Status & Release Notes of this project are
       documented [[./Docs/ModE-Current-Status.md][HERE]] /(WHICH NEEDS AN UPDATE NOW - TBD)/
@@ -58,47 +387,50 @@ nicely, and you can add a TOC that renders nicely as well... So far only this RE
 - [[#-my-commitment][🙏 My Commitment]]
 - [[#-screenshots][📸 Screenshots:]]
 - [[#-tldr---start-here][☞ TL;DR - Start Here:]]
-   - [[#-requirements][✅ Requirements:]]
-      - [[#-clone-this-repository][⎘ Clone This Repository:]]
-      - [[#-install-emacs][🛠 Install Emacs:]]
-      - [[#-nodejs---nvm--npm-removed][🚫 NODE.js - NVM & NPM: /(REMOVED)/]]
-      - [[#-multimarkdown--mmd-mode--removed][🚫 MultiMarkdown & mmd-mode:  /(REMOVED)/]]
-   - [[#-optional-extras][🎁 Optional Extras:]]
-      - [[#-pandoc][🛠 Pandoc:]]
-      - [[#𓂀-fonts][𓂀 Fonts:]]
-      - [[#-python--pip][▞ Python & Pip:]]
-      - [[#octocat-extra-for-experts---latex][:octocat: Extra for Experts - LaTeX]]
-      - [[#-graphviz][📈 Graphviz:]]
+    - [[#-requirements][✅ Requirements:]]
+        - [[#-clone-this-repository][⎘ Clone This Repository:]]
+        - [[#-install-emacs][🛠 Install Emacs:]]
+        - [[#-nodejs---nvm--npm-removed][🚫 NODE.js - NVM & NPM: /(REMOVED)/]]
+        - [[#-multimarkdown--mmd-mode--removed][🚫 MultiMarkdown & mmd-mode:  /(REMOVED)/]]
+    - [[#-optional-extras][🎁 Optional Extras:]]
+        - [[#-pandoc][🛠 Pandoc:]]
+        - [[#𓂀-fonts][𓂀 Fonts:]]
+        - [[#-python--pip][▞ Python & Pip:]]
+        - [[#octocat-extra-for-experts---latex][:octocat: Extra for Experts - LaTeX]]
+        - [[#-graphviz][📈 Graphviz:]]
 - [[#-get-ready-to-start-up-modular-emacs-for-the-first-time][⚛ Get Ready to Start up Modular Emacs for the first time!]]
-   - [[#-initial-house-keeping-before-we-move-in][🏠 Initial House Keeping: /(before we move in)/]]
+    - [[#-initial-house-keeping-before-we-move-in][🏠 Initial House Keeping: /(before we move in)/]]
 - [[#-ready-set-go-start-up-modular-emacs][📢 Ready Set Go! Start Up Modular Emacs:]]
 - [[#-usage][🎨 Usage:]]
-   - [[#managing-your-git-repo][Managing Your Git Repo:]]
-   - [[#blackboard-color-theme][Blackboard Color Theme:]]
+    - [[#managing-your-git-repo][Managing Your Git Repo:]]
+    - [[#blackboard-color-theme][Blackboard Color Theme:]]
 - [[#-default-package-features-built-in][✅ Default Package Features: /(built in)/]]
-   - [[#default-emacs-welcome-screen-scratch-buffer][Default Emacs Welcome Screen: /(~*scratch*~ buffer)/]]
-   - [[#miscellaneus-packages][Miscellaneus Packages:]]
-   - [[#core-emacs-system-related-packages][Core Emacs System Related Packages:]]
-   - [[#emacs-helm--extras][Emacs Helm & Extras:]]
-   - [[#tree--menu-related-packages][Tree & Menu Related Packages:]]
-   - [[#dired-related-packages][Dired Related Packages:]]
-   - [[#devops-sysadmin-infosec-related-packages][dev§Ops, sys§Admin, info✷Sec Related Packages:]]
-   - [[#writers--publishing-tools][Writer's & Publishing Tools:]]
-   - [[#spelling][Spelling:]]
-   - [[#key-bindings][Key-bindings:]]
+    - [[#default-emacs-welcome-screen-scratch-buffer][Default Emacs Welcome Screen: /(~*scratch*~ buffer)/]]
+    - [[#miscellaneus-packages][Miscellaneus Packages:]]
+    - [[#core-emacs-system-related-packages][Core Emacs System Related Packages:]]
+    - [[#emacs-helm--extras][Emacs Helm & Extras:]]
+    - [[#tree--menu-related-packages][Tree & Menu Related Packages:]]
+    - [[#dired-related-packages][Dired Related Packages:]]
+    - [[#devops-sysadmin-infosec-related-packages][dev§Ops, sys§Admin, info✷Sec Related Packages:]]
+    - [[#writers--publishing-tools][Writer's & Publishing Tools:]]
+    - [[#spelling][Spelling:]]
+    - [[#key-bindings][Key-bindings:]]
 - [[#-optional-packages--customization][🎁 Optional Packages & Customization:]]
 
 * 📜 History & Purpose:
+<<ME-README_history>>
 
 The history of *Harmonic Alchemy Modular Emacs* is like a confusing *Adventure* through many little twisty passages, all alike... /(or all different)/  [[./Docs/ModE-History.md][Everything is Documented Here Now]]  Read it at your leasure. It provides some perspective, insight, and purpose behind how and why things are done here in the present time.
 
 * ☞ Try Harmonic Alchemy Modular Emacs:
+<<ME-README_try-modular-emacs>>
 
 For those of you who feel [[https://github.com/harmonicalchemy/modular-emacs][Harmonic Alchemy Modular Emacs]] may be exactly what you were looking for, By all means... Lets Dive in!
 
 There are some external requirements... It may take a while... If that's OK with you, Great!... Lets go...  Eventually I will script this up so you can just enter this at the command prompt: ~./install.sh~ and be done with it... Keep your fingers crossed on that but don't get your hopes up... I am a busy girl!!! :octocat:  That script will have to install a lot of things! It will have to check a lot of system states!  I have to work all that out as a non-interactive process.  It should install everything /(transparently non-interactively)/ from that single running shell script...  If you have to answer questions and make decisions... Better that you execute manually instead, and read the docs first...  Right?
 
 * ⚙ Microsoft Windows Support Needed:
+<<ME-README_ms-windows-support-needed>>
 
 Hello MS Windows Veterans...
 
@@ -120,6 +452,7 @@ I am looking for a good MS Windows Sys Admin type to jump in here and help... Wh
 For the rest of us... For now... Let's learn this together... Please provide any feedback about your experience attempting to install this on a MS Windows box, Please open issues, ask questions!  We will get this part done some how... Thanks ;-)
 
 * 🙏 My Commitment
+<<ME-README_my-commitment>>
 
 #+begin_quote
    "Always do what is right. It will gratify half of mankind and astound the other." - Mark Twain
@@ -146,10 +479,12 @@ If you end up liking *Harmonic Alchemy Modular Emacs*, please drop me a note to 
 =Therefore:= *Here is Modular Emacs!* I hope my long years of *devOps* experience will turn out a nice jewel for new comers to try out and succeed with! *Good Luck and God Speed!*
 
 * TODO 📸 Screenshots:
+<<ME-README_screenshots>>
 
 =Add Screenshots displaying HAP Modular Emacs main Features HERE=
 
 * ☞ TL;DR - Start Here:
+<<ME-README_start-here>>
 
 Follow the steps below /(in a top down fashion beginning with "Requirements:")/ to install: *Harmonic Alchemy Productions - Modular Emacs* for the first time...
 
@@ -284,6 +619,8 @@ If you DO have Graphvix installed... When you visit a ~.dot~ file, you can compi
 
 
 * ⚛ Get Ready to Start up Modular Emacs for the first time!
+<<ME-README_get-ready-to-start>>
+
 ** 🏠 Initial House Keeping: /(before we move in)/
 
 - [ ] *Create an empty file:* ~custom.el~
@@ -354,6 +691,7 @@ If you DO have Graphvix installed... When you visit a ~.dot~ file, you can compi
      ~$HOME~ OK? Great! :octocat:
      
 * 📢 Ready Set Go! Start Up Modular Emacs:
+<<ME-README_ready-set-go>>
 
 - [ ] *Start up GNU Emacs:*
 
@@ -436,6 +774,8 @@ If you DO have Graphvix installed... When you visit a ~.dot~ file, you can compi
           Try it out! It's easy to switch back and forth now...
 
 * 🎨 Usage:
+<<ME-README_usage>>
+
 ** Managing Your Git Repo:
 
 The *Harmonic Alchemy Productions - Modular Emacs* git repository is configured to ignore your local ~$HOME/.emacs.d/init.el~ file... The file: ~$HOME/.emacs.d/me.init.el~ is kept in revision and you do not use or touch this file directly...  Instead, your standard emacs config file: ~$HOME/.emacs.d/init.el~ starts out as a clone of ~$HOME/.emacs.d/me.init.el~ allowing you to try out new things on the fly without upsetting the state of the git repo...
@@ -506,6 +846,8 @@ You can even *clone OTHER git repos* wihtin ~my-modules~ without messing anythin
 
 
 * ✅ Default Package Features: /(built in)/
+<<ME-README_default-package-features>>
+
 ** Default Emacs Welcome Screen: /(~*scratch*~ buffer)/
 
 The default Emacs Welcome Message is replaced with a custom greeting banner that shows the current emacs configuration, and date... With a famous Mark Twain quote /(My Favorite author)/... This quote may change from time to time with new updates...  
@@ -880,6 +1222,7 @@ the welcome text... /(which are lisp comments)/
 
 
 * 🎁 Optional Packages & Customization:
+<<ME-README_optional-packages>>
 
 Now it's time to forget boring defaults and really tune this baby up to be the best *DevOps* , *PubOPs* , *Lisp IDE* that it can be!
 

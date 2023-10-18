@@ -10,6 +10,10 @@
 ;; Change Log: (descending chronological order)
 ;;
 
+;; 2023-010-18 - Alisha Awen, harmonicalchemy@proton.me
+;;   NOTE: NEW EMAIL... Changed Harmonic Alchemy Modular Emacs TO: v3.6...
+;;   ADDED New features/tweaks that were tested locally on MBP M2 MAX machine...
+
 ;; 2022-009-18 - Alisha Awen, siren1@disroot.org
 ;;   Changed Harmonic Alchemy Modular Emacs TO: v3.5...
 ;;   Removed Auto-Complete, Powerline, AND smart-mode-line
@@ -127,7 +131,7 @@
 ;; Change Title Bar Text:
 
 (setq frame-title-format
-      "Harmonic Alchemy Modular Emacs - Version 3.5 [Q4 2022]")
+      "Harmonic Alchemy Modular Emacs - Version 3.6 [Q4 2023]")
 
 ;; Disable tool-bar - I could care less about tool bars in emacs!
 ;; An oxymoron! But you may feel differently.  Comment this out if you like them.
@@ -150,26 +154,31 @@
 ;; On my laptop my palms get in the way and cause all kinds
 ;; of scrolling crazy stuff. I hate it!!! Seriously. Key commands
 ;; are best in Emacs.  Right? I Mean Right??? Yup. ;-)
-;; 
+;;
+;; UPDATE: 2023-010-18 - I have a new MBP M2 Max with HUGE mousepad but WOW it
+;;         ACTUALLY WORKS and smooth as a baby's bottom to use! NO JERKY MOTIONS.
+;;         So for Mac I LIKE it.. But on MOST Linux Systems / Hardware, the
+;;         Mouse WHEEL is bumpy like the wheel of a "Covered Wagon"! LOL 
+;;
 ;; Disable mouse wheel (and two finger swipe) scrolling because
-;; it scrolls horribly and I would rather work without it. %^)
+;; it scrolls horribly (on LINUX) and I would rather work without it. %^)
 ;; also disable the middle mouse (mouse-2) pasting text by accident
 ;; really annoys me!
 
-(mouse-wheel-mode -1)
-(global-set-key [wheel-up] 'ignore)
-(global-set-key [wheel-down] 'ignore)
-(global-set-key [wheel-right] 'ignore)
-(global-set-key [wheel-left] 'ignore)
-(global-set-key [double-wheel-up] 'ignore)
-(global-set-key [double-wheel-down] 'ignore)
-(global-set-key [double-wheel-right] 'ignore)
-(global-set-key [double-wheel-left] 'ignore)
-(global-set-key [triple-wheel-up] 'ignore)
-(global-set-key [triple-wheel-down] 'ignore)
-(global-set-key [triple-wheel-right] 'ignore)
-(global-set-key [triple-wheel-left] 'ignore)
-(global-set-key [mouse-2] 'ignore)
+;; (mouse-wheel-mode -1)
+;; (global-set-key [wheel-up] 'ignore)
+;; (global-set-key [wheel-down] 'ignore)
+;; (global-set-key [wheel-right] 'ignore)
+;; (global-set-key [wheel-left] 'ignore)
+;; (global-set-key [double-wheel-up] 'ignore)
+;; (global-set-key [double-wheel-down] 'ignore)
+;; (global-set-key [double-wheel-right] 'ignore)
+;; (global-set-key [double-wheel-left] 'ignore)
+;; (global-set-key [triple-wheel-up] 'ignore)
+;; (global-set-key [triple-wheel-down] 'ignore)
+;; (global-set-key [triple-wheel-right] 'ignore)
+;; (global-set-key [triple-wheel-left] 'ignore)
+;; (global-set-key [mouse-2] 'ignore)
 
 ;(global-set-key [mouse-yank-at-point] 'ignore)
 ;(setq mouse-yank-at-point nil)

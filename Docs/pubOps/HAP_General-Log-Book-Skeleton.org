@@ -4,7 +4,7 @@
 #+EXPORT_FILE_NAME: HAP_General-Log-Book-Skeleton.pdf
 #+TEXT: Copyright © 2022 Harmonic Alchemy Productions & Others
 #+AUTHOR: Alisha Awen - Harmonic Alchemy Productions
-#+EMAIL: Siren1@disroot.org
+#+EMAIL: harmonicalchemy@proton.me
 #+DATE: {{{time(%A %Y-%b-%d)}}}
 #+TEXT: Created: <2021-02-11 Thu>
 #+TEXT: Last Published: <Not Published>
@@ -55,7 +55,7 @@
 #+SETUPFILE: ./org-templates/default-tags.org
 
 :LATEST_UPDATE:
-  <2023-08-14 Mon>
+  <2023-10-18 Wed>
 
   =YOU MAY REMOVE This Drawer= from your own clones of this template if
   it is bothering you... This drawer is used for HAP Modular Emacs
