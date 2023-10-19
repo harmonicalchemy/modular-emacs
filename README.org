@@ -434,7 +434,7 @@ All the rest of the markdown files within the Docs directory are being updated o
 
 * 📜 History & Purpose:
 
-The history of *Harmonic Alchemy Modular Emacs* is like a confusing *Adventure* through many little twisty passages, all alike... /(or all different)/  [[./Docs/ModE-History.md][Everything is Documented Here Now]]  Read it at your leasure. It provides some perspective, insight, and purpose behind how and why things are done here in the present time.
+The history of *Harmonic Alchemy Modular Emacs* is like a confusing *Adventure* through many little twisty passages, all alike... /(or all different)/  [[./Docs/ModE-History.org][Everything is Documented Here Now]]  Read it at your leasure. It provides some perspective, insight, and purpose behind how and why things are done here in the present time.
 
 * ☞ Try Harmonic Alchemy Modular Emacs:
 

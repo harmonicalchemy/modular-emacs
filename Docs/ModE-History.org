@@ -353,8 +353,10 @@ Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas
 
 #+END_COMMENT
 
+🔖 [[../README.org][Back To MAIN Modular Emacs README]]
+
 * 🔖 Table of Contents:                                                 :TOC_4:
-- [[#-the-history-of-harmonic-alchemy-modular-emacs][📖 The History of Harmonic Alchemy Modular Emacs]]
+- [[#-the-history-of-harmonic-alchemy-modular-emacs][📜 The History of Harmonic Alchemy Modular Emacs]]
     - [[#-introduction][📄 Introduction:]]
     - [[#-modular-emacs-is-born][📄 Modular Emacs is Born:]]
     - [[#-why-modular][📄 Why Modular?]]
@@ -377,7 +379,7 @@ Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas
             - [[#new--summary-03][NEW 📃 Summary:]]
             - [[#new--details][NEW 📰 Details:]]
 
-* 📖 The History of Harmonic Alchemy Modular Emacs
+* 📜 The History of Harmonic Alchemy Modular Emacs
 ** 📄 Introduction:
 
 This project has been a long time coming...  Its history dates back several years to a time in my life where I had become fed up with how commercial software holds your content hostage, /(especially word processors)/... I wanted to be able to publish to the web, but also other formats as well... And I did NOT wish to have more than one content source for those things... 
