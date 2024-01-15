@@ -2996,7 +2996,7 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
 #+end_export
 
 * 🔍 Research:                                                     :noexport:
-** 📚 Research Reference:
+** NEW 📚 Research Reference:
 :README:
    =Org Mode Links Tip:=
 
@@ -3047,7 +3047,7 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
 
 + *Link to Project:* [[][] ] /(comment)/
 
-** 👤 Characters:
+** NEW 👤 Characters:
 :README:
   =Place= *👤 New Character:* =Items= /(From Templates)/ Into This
         Section /(Binder)/... Place them UNDER *Major* and *Minor*
@@ -3099,7 +3099,7 @@ yadda, yadda, yadda...
 
 =BOILERPLATE Content...= /(Replace This with CLONED/ 👤 *New Character:* /items)/
 
-** ♾ Worlds:
+** NEW ♾ Worlds:
 :README:
 
    + [ ] =Place CLONED= ♾ *New World:* =Items= From the ⎘ *Templates:*
@@ -3109,7 +3109,7 @@ yadda, yadda, yadda...
 
 =BOILERPLATE Content...= /(Replace This with CLONED/ ♾ *Worlds:* /items)/
 
-** ✨ Regions:
+** NEW ✨ Regions:
 :README:
 
    + [ ] =Place CLONED= ✨ *New Region:* =Items= From the ⎘ *Templates:*
@@ -3119,7 +3119,7 @@ yadda, yadda, yadda...
 
 =BOILERPLATE Content...= /(Replace This with CLONED/ ✨ *New Region:* /items)/
 
-** ∅ Planets - Satellites:
+** NEW ∅ Planets - Satellites:
 :README:
 
    + [ ] =Place CLONED= ∅ *New Planet or Satellite:* =Items= From the ⎘ *Templates:*
@@ -3129,7 +3129,7 @@ yadda, yadda, yadda...
 
 =BOILERPLATE Content...= /(Replace This with CLONED/ ∅ *Planets - Satellites:* /items)/
 
-** 👥 Groups - Factions:
+** NEW 👥 Groups - Factions:
 :README:
 
    + [ ] =Place= 👥 *New Group or Faction:* =Items= from the ⎘ *Templates:*
@@ -3139,7 +3139,7 @@ yadda, yadda, yadda...
 
 =BOILERPLATE Content...= /(Replace This with CLONED/ 👥 *Groups - Factions:* /items)/
 
-** 🗡 Plot Research:
+** NEW 🗡 Plot Research:
 :README:
    This Research/Plots section is for documenting or planning out plots 
    that may or may not be related to the actual plots you are developing 
@@ -3168,7 +3168,7 @@ yadda, yadda, yadda...
 
 I found this classic Plot... /(see details below...)/ dealing with yadda yadda yadda which could be modified and used to: yadda yadda yadda.... To be continued...
 
-** ❝ Quotations:
+** NEW ❝ Quotations:
 :README:
    =Place New= *❝ Quotations* =Here:=
 
