@@ -111,6 +111,7 @@
               content has been brought up to date /(i.e. in sync)/ with its
               TEMPLATE... Then update the timestamp ABOVE... /(WITHIN YOUR CLONE)/
               to record the date of its last sync status...
+              
 :END:
 :READ_ME_FIRST:
 =Instructions:= /(How to Install & Use This Template)/
@@ -428,6 +429,7 @@ Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas
 Other folks UX metrics are sorely needed!! Thanks!
 
 =Enjoy!= - Alisha Awen
+
 :END:
 
 #+begin_export latex

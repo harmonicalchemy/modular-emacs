@@ -10,7 +10,7 @@
 
 #+DESCRIPTION: Short and sweet README with attached Log Notebook for any project or repository that needs such a thing... Great FOR GITHUB PAGES!!! The ORG TOC renders in Github nicely!! This ORG file is NOT intended to be exported with LaTeX... This template's sole purpose is to provide a traditional README startup document, for you to use, (usually contained with source code, but there are many other applications)... THIS is NOT for a BOOK, or PDF, or anything else that may need to be typeset for publishing... The only intended export option for this file is HTML (for websites - BUT GitHub Renders this file AS IS nicely)... Custom tailor this to fit your needs. Change the tags in default-tags.org (referenced below) as well.. to fit your needs... Enjoy!
 
-#+BEGIN_COMMENT
+:SETUP:
 
 =Setup TAGS:=
 
@@ -42,14 +42,16 @@
               /(change the name from/ ~default-tags.org~ /to another name/
               /and-or replace some (but NOT ALL) of the tags within/
               /to your own tags... see instructions inside the file)/
-#+END_COMMENT
+
+:END:
 
 #+SETUPFILE: ./org-templates/default-tags.org
+#+SETUPFILE: ./org-templates/gen-doc.org
 
-#+BEGIN_COMMENT
+:LATEST_UPDATE:
 
 =LATEST_UPDATE:=
-  <2023-10-18 Wed>
+  <2024-01-15 Mon>
 
   =YOU MAY REMOVE This Drawer= from your own clones of this template if
   it is bothering you... This drawer is used for HAP Modular Emacs
@@ -106,8 +108,8 @@
               TEMPLATE... Then update the timestamp ABOVE... /(WITHIN YOUR CLONE)/
               to record the date of its last sync status...
 
-#+END_COMMENT
-#+BEGIN_COMMENT
+:END:
+:READ_ME_FIRST:
 
 =READ_ME_FIRST:=
 
@@ -351,12 +353,11 @@ Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas
 
 =Enjoy!= - Alisha Awen
 
-#+END_COMMENT
+:END:
 
 * 🔖 Table of Contents:                                                 :TOC_4:
 - [[#-readme][📖 README:]]
 - [[#-begin-log][📅 Begin Log:]]
-    - [[#-2023][📅 2023:]]
     - [[#-2024][📅 2024:]]
 - [[#-meta-usage--templates][📋 Meta: /(Usage & Templates)/]]
     - [[#-introduction][📄 Introduction:]]
@@ -379,10 +380,6 @@ Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas
 =Compose Main Body of your README Doc Here=
 
 * 📅 Begin Log:
-** 📅 2023:
-
-No Logs So far... This feature is under evaluation and may end up not being used...
-
 ** 📅 2024:
 
 /Not Here Yet but keep logging... The New Year will be here soon enough!/
@@ -539,7 +536,7 @@ Place the *:noexport:* tag at the end of any org outline heading to exclude it a
 ** ⎘ Templates:
 *** NEW 🗓 Generic Log Entry /(General Log Entry Template)/
 <2021-03-29 Mon>
-#+begin_comment
+:README:
 
 =README:=
 
@@ -624,9 +621,11 @@ Place the *:noexport:* tag at the end of any org outline heading to exclude it a
                       =Warning!= Using this command will CLUTTER ALL the headings
                                 within your org file with those timestamps!!!
 
-   - Once all of this has become routine for you, =go ahead and remove this= ~README~ =drawer from this template=... That way it does not get copied when you need to clone new log entries...
+   - Once all of this has become routine for you, =go ahead and remove
+     this= ~README~ =drawer from this template=... That way it does not get
+     copied when you need to clone new log entries...
 
-#+end_comment
+:END:
 
 This Log Entry is about: Yadda... Yadda... Yadda...
 
