@@ -12,7 +12,7 @@
 
 #+DESCRIPTION: HAP - Bare Bones Audio Theatre Project Skeleton with generic basics already done.  Great for Authors to use when starting a new Radio Drama, Podcast, News Program, or any kind of Audio-Only Production project from scratch...
 
-#+BEGIN_COMMENT
+:SETUP-README:
 
  =Setup Files:=
 
@@ -52,14 +52,14 @@
    *SETUPFILE:* ~awc-config.json~ is for configuration of FINAL DRAFT
               *Fountain Scripts* to convert them to *PDF files* suitable
               for printing and using during rehearsals and performances
-              
-#+END_COMMENT
+
+:END:
 
 #+SETUPFILE: ./org-templates/audio-drama-setup.org
 #+SETUPFILE: ./org-templates/audio-tags.org
 
 :LATEST_UPDATE:
-  <2023-10-18 Wed>
+  <2024-01-23 Tue>
 
   =YOU MAY REMOVE This Drawer= from your own clones of this template if
   it is bothering you... This drawer is used for HAP Modular Emacs
@@ -1882,9 +1882,9 @@ nn _MUSIC: [MUS-E101-S002-M002] OPTIONAL OMINOUS HIGHLIGHT OVERLAY STING (SYNC T
 =Add links to ALL EPISODES FINAL DRAFTS Here:=
 /(Place Exported Fountain Scripts within same folder as this .org file)/
 
-1) [[./HAP_Radio-Script-Template.fountain][LINK TO E001 FINAL DRAFT - EXAMPLE Fountain Script]] 
+1) [[./org-templates/HAP_Radio-Script-Template.fountain][LINK TO E001 FINAL DRAFT - EXAMPLE Fountain Script]] 
 
-2) [[./HAP_Radio-Script-Template-w-instructions.fountain][LINK TO ANNOTATED Tony Palermo Style EXAMPLE Fountain Script]]
+2) [[./org-templates/HAP_Radio-Script-Template-w-instructions.fountain][LINK TO ANNOTATED Tony Palermo Style EXAMPLE Fountain Script]]
 * NEW Episode Title Z: /(MASTER - DON'T TOUCH UNTIL FINAL)/     :export:
 <<EPI_title-z>>
 :README:
@@ -2968,9 +2968,9 @@ nn _MUSIC: [MUS-E101-S002-M002] OPTIONAL OMINOUS HIGHLIGHT OVERLAY STING (SYNC T
 =Add links to ALL EPISODES FINAL DRAFTS Here:=
 /(Place Exported Fountain Scripts within same folder as this .org file)/
 
-1) [[./HAP_Radio-Script-Template.fountain][LINK TO E001 FINAL DRAFT - EXAMPLE Fountain Script]] 
+1) [[./org-templates/HAP_Radio-Script-Template.fountain][LINK TO E001 FINAL DRAFT - EXAMPLE Fountain Script]] 
 
-2) [[./HAP_Radio-Script-Template-w-instructions.fountain][LINK TO ANNOTATED Tony Palermo Style EXAMPLE Fountain Script]]
+2) [[./org-templates/HAP_Radio-Script-Template-w-instructions.fountain][LINK TO ANNOTATED Tony Palermo Style EXAMPLE Fountain Script]]
 
 * APPENDIX A                                                     :export:
 
