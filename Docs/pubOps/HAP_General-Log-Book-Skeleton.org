@@ -12,9 +12,7 @@
 
 #+DESCRIPTION: HAP - Modular Emacs Org Mode General Log Notebook Template.  This is the replacement for the Markdown Mode templates I was using previously, which were in turn replacements for even older templates I made originally for Evernote/Trello/Scrivener...
 
-#+BEGIN_COMMENT
-
-=Setup Files:=
+:SETUPFILES:
 
    For Cloned Versions of this template, the file/paths below will be relative
    to your parent project directory and as such, should be all set to your new:
@@ -49,13 +47,13 @@
               /and-or replace some (but NOT ALL) of the tags within/
               /to your own tags... see instructions inside the file)/
 
-#+END_COMMENT
+:END:
 
 #+SETUPFILE: ./org-templates/log-book-setup.org
 #+SETUPFILE: ./org-templates/default-tags.org
 
 :LATEST_UPDATE:
-  <2023-10-18 Wed>
+  <2024-02-08 Thu>
 
   =YOU MAY REMOVE This Drawer= from your own clones of this template if
   it is bothering you... This drawer is used for HAP Modular Emacs
