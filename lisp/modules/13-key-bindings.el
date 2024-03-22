@@ -38,7 +38,7 @@
     ("C-x b" . helm-mini)
     ("C-x C-f" . helm-find-files)
     ("C-x C-r" . helm-recentf)
-    ("<f5>" . me_reload-current-file)))
+    ("<f6>" . me_reload-current-file)))
 
 (defun me_apply-keyboard-bindings (pair)
   "Apply keyboard-bindings for supplied list of key-pair values"

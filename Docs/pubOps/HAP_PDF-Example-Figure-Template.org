@@ -510,7 +510,6 @@ $\sharp$ $\doublesharp$ $\flat$ $\doubleflat$ $\natural$ $\trebleclef$ $\altocle
 
 B$\flat$ A$\natural$  C$\sharp$
 
-
 NOW Let's typeset some chords:
 
 $\writechord{Bb7(#9)}$ $\writechord{Bbb6}$ $\writechord{C#7(b9)}$ $\writechord{C##13}$
@@ -660,7 +659,6 @@ You can create tables with vertical & horizontal borders around groups of cells 
 
 *** Sub Heading S /(template with src-code blocks, etc. - rename this)/
 <<FIG-A_subhead-s>>
-
 
 - *LibreOffice Calc Macro Code:*
 
@@ -830,22 +828,16 @@ REM ****************************************************************************
    #+results:
    : test1 value
 
-
-
-
-
-
-
 *** Sub Heading D /(drama script snippit template - rename this)/
 <<FIG-A_subhead-d>>
 
 =Fountain Radio Drama Script Excerpt:=
 
-=Note:= You need to create a NEW LaTeX "listings" language for
-      fountain if you want to see anything more than plain text
-      in the exported PDF...  /(working on this)/
+=Note:= You need to create a NEW LaTeX "listings" language for fountain if you
+              want to see anything more than plain text in the exported PDF...
+              /(afterwriting works for stand alone .fountain scripts)/
 
-#+begin_src
+#+begin_src  fountain
 MARY
 (NARRATING)
    

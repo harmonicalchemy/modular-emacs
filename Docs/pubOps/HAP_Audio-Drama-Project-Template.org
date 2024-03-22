@@ -59,7 +59,7 @@
 #+SETUPFILE: ./org-templates/audio-tags.org
 
 :LATEST_UPDATE:
-  <2024-01-23 Tue>
+  <2024-03-12 Tue>
 
   =YOU MAY REMOVE This Drawer= from your own clones of this template if
   it is bothering you... This drawer is used for HAP Modular Emacs
@@ -761,12 +761,12 @@ Unlike most instruments, this one does not achieve its effect by using sonic eff
 =Replace all of this boilerplate content with your own content=
 
 * NEW 📕 Production Front Matter:                       :noexport:
-
+:README:
 =Use this binder for INITIAL PRODUCTION NOTES= /(e.g., Production META Info, Synopsis, etc...)/, which could function as promotional material before, during, and
 after public release off the performance...
 
 =This Binder is NOT Exported...=
-
+:END:
 ** NEW 📝 Synopsis:
 :README:
    =Use This Space to record your official production Synopsis...=
@@ -800,6 +800,7 @@ after public release off the performance...
 :END:
 
 =Synopsis Content:= Yadda... Yadda... Yadda...
+
 * NEW Introduction:                                                :export:
 <<PRODUCTION_INTRO>>
 :README:
@@ -3050,14 +3051,28 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
 ** NEW 👤 Characters:
 :README:
   =Place= *👤 New Character:* =Items= /(From Templates)/ Into This
-        Section /(Binder)/... Place them UNDER *Major* and *Minor*
-        Character Summaries...
+        Section /(Binder)/... Place them UNDER *Major* or *Minor*
+        Characters: Section depending on importance of character...
 
   =Note:= New Characters are developed within this Section by 
         completing the: *👤 Character Tasks:* located within 
         the *⏰ Tasks:* Binder of this Book Project...
 :END:
-*** NEW 👥 Major Characters Summary:
+*** NEW 👥 Major Characters:
+:README:
+=INSTRUCTIONS for Adding NEW CHARACTERS to this BINDER:=
+
+- [ ] Copy/CLONE a *👤 New Character:*
+          item from: *⎘ Meta/Templates: 👥 Characters:* binder
+          to this *👥 Major Characters:* Binder...
+
+- [ ] Rename your cloned *👤 New Character:* heading:
+          Change Boilerplate Heading Title to the actual Character's Name...
+
+- [ ] Follow *👤 Character Tasks:*
+          under the *⏱ Tasks:* binder to complete research results of your new character...
+:END:
+**** NEW 👥 Major Characters Summary:
 :README:
    Write a one page synopsis (or 600 words) about 
    the major characters in your story...
@@ -3071,33 +3086,51 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
 
 =BOILERPLATE - REPLACE this with your REAL Major Characters Summary HERE=
 
-yadda, yadda, yadda...
+**** NEW 👤 New Major Character: /(placeholder)/
 
-*** NEW 👥 Minor Characters Summary:
+=THIS IS ONLY A PLACEHOLDER=
+
+/(it is only here to show where REAL characters will be placed)/
+
+Remove this once you have at least ONE real Character heading started...
+
+*** NEW 👥 Minor Characters:
 :README:
-   Write a half page synopsis (or 300 words) about 
+=INSTRUCTIONS for Adding NEW CHARACTERS to this BINDER:=
+
+- [ ] Copy/CLONE a *👤 New Character:*
+          item from: *⎘ Meta/Templates: 👥 Characters:* binder
+          to this *👥 Minor Characters:* Binder...
+
+- [ ] Rename your cloned *👤 New Character:* heading:
+          Change Boilerplate Heading Title to the actual Character's Name...
+
+- [ ] Follow *👤 Character Tasks:*
+          under the *⏱ Tasks:* binder to complete research results of your new character...
+:END:
+**** NEW 👥 Minor Characters Summary:
+:README:
+   Write a one page synopsis (or 600 words) about 
    the minor characters in your story...
 
    =Note:= This summary is written while completing the:
          *👥 Minor Characters Summary* Task located within 
-         the *⏰ Tasks:* /(Binder)/ of this Book Project...
+         the ⏱ *Tasks:* /(Binder)/ of this Audio Production Project...
 
          Add results of that task below...
 :END:
 
-=BOILERPLATE - REPLACE this with your REAL Minor Characters Summary HERE=
+=BOILERPLATE - REPLACE this with your REAL Major Characters Summary HERE=
 
 yadda, yadda, yadda...
 
-*** NEW 👤 New Character: /(placeholder)/
-:README:
+**** NEW 👤 New Minor Character: /(placeholder)/
 
-   + [ ] =Place CLONED= 👤 *New Character:* =Items= From the ⎘ *Templates:*
-        heading under the 🗂 *Meta:* binder /(below)/ and commandeer your
-        cloned template HERE for specific needs...
-:END:
+=THIS IS ONLY A PLACEHOLDER=
 
-=BOILERPLATE Content...= /(Replace This with CLONED/ 👤 *New Character:* /items)/
+/(it is only here to show where REAL characters will be placed)/
+
+Remove this once you have at least ONE real Character heading started...
 
 ** NEW ♾ Worlds:
 :README:
@@ -3562,6 +3595,11 @@ The following list contains Babel Source Code Blocks that are often needed for s
 
 =ADD a NEW Items= /(as per :README: above)/ when 2024 rolls around, right here in this Log Book Binder whenever you need to create a new Log Entry...
 
+* 🗓 Production Calendar:                                   :noexport:
+:README:
+  Make a Production /(editorial)/ Calendar for this project right here where it belongs!  You won't loose it! and you can access it quickly without having to search for it elsewhere. Org-Mode excels for this task!  Take advantage of its powerful scheduling, agenda, and filtering capabilities!
+:END:
+
 * ⏱ Tasks:                                                           :noexport:
 :README:
    This ⏱ *Tasks:* Binder is similar to the 🗓 *Production LOGS:* Binder...
@@ -3594,10 +3632,8 @@ The following list contains Babel Source Code Blocks that are often needed for s
    how to properly organize, write, and produce an audio drama with a 
    clearer mind, inspired outlook, and renewed motivation...
 :END:
-
 ** 📋 Synopsis Tasks:
 :README:
-
    =Do These Synopsis Tasks FIRST When Starting a NEW Audio Project=
 
    After completing each Timestamped Step below, Mark its TODO 
@@ -3887,57 +3923,56 @@ Your process now is to grow these ideas as episodes within your story. You are e
           headings within your final Character Item's Profile
           as you are working on them there...
 
-   Some of these Character tasks are based on the Snowflake Method 
-   as outlined in Randy Ingermanson's book:
+   - Some of these Character tasks are based on the Snowflake Method 
+        as outlined in Randy Ingermanson's book:
 
          [[https://www.advancedfictionwriting.com/articles/snowflake-method/]["How to Write a Novel Using the Snowflake Method"]]
 
-   Other tasks are based on concepts outlined within the book:
+         Other tasks are based on concepts outlined within the book:
 
-      [[https://www.kmweiland.com/wp-content/uploads/crafting-unforgettable-characters.pdf]["Crafting Unforgettable Characters" by; K.M. Weiland]] 
+         [[https://www.kmweiland.com/wp-content/uploads/crafting-unforgettable-characters.pdf]["Crafting Unforgettable Characters" by; K.M. Weiland]] 
 
-   The second book is a free download from: [[https://www.kmweiland.com/][K.M. Weilands Website]] 
-   where you can find other great books and writers resources... 
+         The second book is a free download from: [[https://www.kmweiland.com/][K.M. Weilands Website]] 
+         where you can find other great books and writers resources... 
 
-   Much of what you will be filling in below is based on the above 
-   two books but no more instruction is given here as to the why or 
-   how... Only dry forms have been included here to make it convenient 
-   for you to complete this process...  
+         Much of what you will be filling in below is based on the above
+         two books but no more instruction is given here as to the why or
+         how... Only dry forms have been included here to make it convenient
+         for you to complete this process...  
 
-   =You are strongly encouraged= to purchase and read the above two 
-   books so that you will have a deeper understanding while you 
-   work through this process...
+         =You are strongly encouraged= to purchase and read the above
+         two books so that you will have a deeper understanding while you work
+         through this process...
 
-   The tasks within this section will be used to produce a
-   *"Character Bible"* /(Binder)/ for each character in your story. 
-   The Character Bible in turn will be used to create your
-   character's Official Profile & Synopsis... /(which is a/ 
-   /more formal and condensed presentation Binder without/ 
-   /all the worksheets, interviews, and details...)/
+         The tasks within this section will be used to produce a *"Character Bible"*
+         /(Binder)/ for each character in your story. The Character Bible in turn
+         will be used to create your character's Official Profile & Synopsis...
+         /(which is a/ /more formal and condensed presentation
+    Binder without/ /all the worksheets, interviews, and
+    details...)/
 
-   =A character bible is the private lifetime personell file= of a
-   character...  It will hold scrapbook like items of importance 
-   throughout the character's life...  
+          =A character bible is the private lifetime personell file=
+          of a character...  It will hold scrapbook like items of importance throughout the
+          character's life...  
 
-   There's a TV show on Amazon called: *"Hanna"* where this concept 
-   has been illustrated perfectly! In this CIA black ops thriller, 
-   Babies DNA are enhanced with wolf genes to make them grow up into 
-   super soldiers... When these children get deployed 
-   /(looking as normal youths/ /in high school)/, they are each assigned
-   a scrap-book containing all of their *"character's"* vital details.  
-   There are pictures of family, best friends, past events, etc.  
-   Their photo is on the front cover...
+          There's a TV show on Amazon called: *"Hanna"* where this concept has been
+          illustrated perfectly! In this CIA black ops thriller, Babies DNA are enhanced
+          with wolf genes to make them grow up into super soldiers... When these children
+          get deployed /(looking as normal youths/ /in high school)/, they
+          are each assigned a scrap-book containing all of their *"character's"* vital details.
+          There are pictures of family, best friends, past events, etc. Their photo is on the
+          front cover...
 
-   =All of it is fake...=, BUT as these secret CIA teens carry out 
-   roll play /(within their fake role as normal high school students)/, 
-   soon... they begin to believe more and more that they actually 
-   "are" who their scrapbook profiles say they are and not trained 
-   CIA agents anymore! 
+          =All of it is fake...=, BUT as these secret CIA teens carry out roll play
+          /(within their fake role as normal high school students)/, 
+           soon... they begin to believe more and more that they actually "are" who their
+           scrapbook profiles say they are and not trained CIA agents anymore! 
 
-   This TV Series does an excellent Job of Illustrating: 
-   =The Power Of Getting Immersed Emphatically With Your Characters!=
-:END:
-*** NEW ⏱ <2022-08-25 Thu> 📖 Create Character Bible for Each Character:
+           This TV Series does an excellent Job of Illustrating:
+           =The Power Of Getting Immersed Emphatically With Your Characters!=
+ :END:
+
+*** NEW ⏱ <2022-08-25 Thu> 📖 Create Character Bible for Each New Character:
 
 - [ ] =Navigate to:= *👤 Character Bible:* Under Target:
        *👤 New Character:* which you created /(from clone)/ 
@@ -3946,7 +3981,7 @@ Your process now is to grow these ideas as episodes within your story. You are e
 
 - [ ] =Do the Timestamped Tasks:=
 
-       Complete the tasks under *👤 Character Bible:*
+       Complete the tasks under *📖 Character Bible:*
        When done your bible will be source material
        for Character Synopsis & Profile /(The Front/
        /facing Headings)/
@@ -3977,7 +4012,6 @@ Your process now is to grow these ideas as episodes within your story. You are e
 
 /(Use this space as a temporary scratch pad if needed...)/
 
-\newpage
 ** 📋 Other Tasks:
 *** SOMEDAY ⏱ <2022-08-28 Sun> Create Production Calendar
 
@@ -4017,8 +4051,6 @@ This =Meta= section provides skeleton templates for use within your project(s). 
 
 Or... You could try mashing several cloned templates together to create a totally new project heading with a totally different structure... The intent of this is to save lots of time starting up a new custom writing project.  Lets see if it helps. :trollface:
 
-\newpage
-
 ** 📄 Instructions:
 *** Using Templates:
 
@@ -4039,8 +4071,6 @@ Or... You could try mashing several cloned templates together to create a totall
         /keep those titles as they are universal.../ 
         /but you may wish to further qualify them by adding/ 
         /a prefixed category word.)/
-
-\newpage
 
 *** Instructions for Exporting Fountain Scripts:
 
@@ -4533,8 +4563,8 @@ The following list contains Babel Source Code Blocks that are often needed for s
       : CDR w: (92)
 
 =ADD a NEW Items= /(as per :README: above)/ right here in this Log Book Binder whenever you need to create a new Log Entry...
-
-*** NEW ⏱ <2022-08-25 Thu> New Task: /(Master Template)/
+*** Tasks:
+**** NEW ⏱ <2022-08-25 Thu> New Task: /(Master Template)/
 :README:
   =Copy/Clone= This Template as a *NEW TASK* within a 
              sub-category of your: *⏰ Tasks:* Binder... 
@@ -4562,14 +4592,14 @@ The following list contains Babel Source Code Blocks that are often needed for s
 
        Do Item Three...
 
-\newpage
-*** NEW 👤 New Character: /(Master Template)/
+*** 👥 Characters:
+**** NEW 👤 New Character: /(Master Template)/
 :README:
   =Note:= New Characters are developed by completing the:
         *👤 Character Tasks:* located within the *⏰ Tasks:* 
         Binder of this Book Project...
 :END:
-**** 📃 Character Synopsis:
+***** 📃 Character Synopsis:
 :README:
    *Each Character Synopsis has been written in first person* 
    /(i.e., from the character's own life experiences, emotions, words)/
@@ -4581,70 +4611,54 @@ The following list contains Babel Source Code Blocks that are often needed for s
    =Soap Box time!=
 :END:
 
-- [ ] *Add Character Synopsis:* 
+- [ ] *Write Character Synopsis:* 
 
-       =follow Task:=
-       *📃 Write Character Synopsis:* step within:  
-       *📖 Character Bible:* /(Below)/
+           =follow Task:=
+           *📃 Write Character Synopsis:* step within:  
+           *📖 Character Bible:* /(Below)/
 
-       =Place Results of Character Synopsis Task HERE=
+           =Place Results of Character Synopsis Task HERE=
 
-\newpage
-
-**** 💬 Profile:
-***** 🗂 Summary Sheet:
+***** 💬 Profile:
+****** 🗂 Summary Sheet:
 :README:
    Add Summary Sheet from Character Bible Below when complete...
 :END:
 
-\newpage
-
-***** 📄 Summary (Sentence):  
+****** 📄 Summary (Sentence):  
 :README:
    Put a single sentence summary of the character's storyline here.
 :END:
 
-\newpage
-
-***** 📃 Summary (Paragraph):  
+****** 📃 Summary (Paragraph):  
 :README:
    Put a single paragraph summary of the character's storyline, 
    motivation and description. Loosely based on what you will 
    write from the snowflake steps.
 :END:
 
-\newpage
-
-***** 🍦 Motivation
+****** 🍦 Motivation
 :README:
    The character's motivation /(what does he/she want abstractly?)/
 :END:
 
-\newpage
-
-***** 🥇 Goal
+****** 🥇 Goal
 :README:
    The character's goal (what does he/she want concretely?)
 :END:
 
-\newpage
-
-***** 🤺 Conflict
+****** 🤺 Conflict
 :README:
    The character's conflict (what prevents him/her from reaching this goal?)
 :END:
 
-\newpage
-
-***** 🌠 Epiphany
+****** 🌠 Epiphany
 :README:
    The character's epiphany (what will he/she learn, 
    how will he/she change?
 :END:
 
-\newpage
-
-***** 🔤 Basics:
+****** 🔤 Basics:
 
 |-----+--------+--------+-------+------+------------+-----------|
 | *Age* | *Gender* | *Species* | *Height* | *Hair*  | *Complexion* | *Nationality* |
@@ -4661,9 +4675,7 @@ The following list contains Babel Source Code Blocks that are often needed for s
 |      |           |      |        |      | Ambi  etc.   |         |
 |------+-----------+------+--------+------+------------+---------|
 
-\newpage
-
-***** 👪 Family
+****** 👪 Family
 
 |---------+----------+---------+-------+--------+---------|
 | *Married?* | *Partner(s)* | *Children* | *Father* | *Mother* | *Siblings* |
@@ -4671,9 +4683,7 @@ The following list contains Babel Source Code Blocks that are often needed for s
 |         |          |         |       |        |         |
 |---------+----------+---------+-------+--------+---------|
 
-\newpage
-
-***** 🥂 Social
+****** 🥂 Social
 
 |-----------+------------------+-----------+-------------+------|
 | *Citizenship* | *Social Status*      | *Job/Career* | *Position/Role* | *Rank* |
@@ -4690,9 +4700,7 @@ The following list contains Babel Source Code Blocks that are often needed for s
 |           | etc...             |           |             |      |
 |-----------+------------------+-----------+-------------+------|
 
-\newpage
-
-***** 🏹 Skills Etc.
+****** 🏹 Skills Etc.
 
 |------+---------+-------------+-----------|
 | *Skills* | *Hobbies* | *Talents/Gifts* | *Languages* |
@@ -4701,36 +4709,28 @@ The following list contains Babel Source Code Blocks that are often needed for s
 |      |         |             |           |
 |------+---------+-------------+-----------|
 
-\newpage
-
-***** 💪 Physical Attributes
+****** 💪 Physical Attributes
 :README:
    The Character's Physical description.... 
 :END:
 
-\newpage
-
-***** 😇 Personality
+****** 😇 Personality
 :README:
    The Character's Personality... yadda yadda yadda
 :END:
 
-\newpage
-
-****** Likes / Dislikes
+******* Likes / Dislikes
 
 :README:
 The Character's Likes / dislikes, yadda yadda yadda...
 :END:
 
-***** 📈 Personal History
+****** 📈 Personal History
 :README:
    Character’s personal history. Yadda yadda yadda...
 :END:
 
-\newpage
-
-**** 🗒 Worksheet:
+***** 🗒 Worksheet:
 :README:
    This is your scratch pad worksheet for loosely drafting up new 
    characters before organizing all the information into a Character 
@@ -4742,9 +4742,7 @@ The Character's Likes / dislikes, yadda yadda yadda...
    as a loose *re-file re-organize* for later container... 
 :END:
 
-\newpage
-
-**** 📖 Character Bible:
+***** 📖 Character Bible:
 :README:
   Use this Character Bible as a scrapbook to develop your
   character... Information is collected here and then organized 
@@ -4755,7 +4753,7 @@ The Character's Likes / dislikes, yadda yadda yadda...
   following: *👤 Character Tasks:* within the *⏰ Tasks:* Binder
   for a character you have just created (here)...
 :END:
-***** NEW <2022-08-26 Fri> 🗂 Prepare Character Summary Sheet:
+****** NEW <2022-08-26 Fri> 🗂 Prepare Character Summary Sheet:
 
 - [ ] *Take an hour to produce the following summary sheet:* 
 
@@ -4768,37 +4766,37 @@ The Character's Likes / dislikes, yadda yadda yadda...
 
        =And then= /<timestamp>/ & Mark This Task ~DONE~
 
-|-----------------+-----------------------------------|
-| *Name:*           |                                   |
-|-----------------+-----------------------------------|
-| *AKA:*            | (alias, nickname, etc..)               |
-|-----------------+-----------------------------------|
-| *Title:*            |                                   |
-|-----------------+-----------------------------------|
-| *Rank:*            |                                   |
-|-----------------+-----------------------------------|
-| *Role:*            | (heroine, villain, mentor, sidekick, etc.) |
-|-----------------+-----------------------------------|
-| *Goal:*            |                                   |
-|-----------------+-----------------------------------|
-| *Ambition:*        |                                   |
-|-----------------+-----------------------------------|
-| *Values:*          |                                   |
-|-----------------+-----------------------------------|
-| *Attracted To:*     |                                   |
-|-----------------+-----------------------------------|
-| *Empathetic With:* |                                   |
-|-----------------+-----------------------------------|
-| *Has Vendetta For:* |                                   |
-|-----------------+-----------------------------------|
-| *Fears:*           |                                   |
-|-----------------+-----------------------------------|
-| *Conflicts:*        |                                   |
-|-----------------+-----------------------------------|
-| *Epiphany:*        |                                   |
-|-----------------+-----------------------------------|
+      |-----------------+-----------------------------------|
+      | *Name:*           |                                   |
+      |-----------------+-----------------------------------|
+      | *AKA:*            | (alias, nickname, etc..)               |
+      |-----------------+-----------------------------------|
+      | *Title:*            |                                   |
+      |-----------------+-----------------------------------|
+      | *Rank:*            |                                   |
+      |-----------------+-----------------------------------|
+      | *Role:*            | (heroine, villain, mentor, sidekick, etc.) |
+      |-----------------+-----------------------------------|
+      | *Goal:*            |                                   |
+      |-----------------+-----------------------------------|
+      | *Ambition:*        |                                   |
+      |-----------------+-----------------------------------|
+      | *Values:*          |                                   |
+      |-----------------+-----------------------------------|
+      | *Attracted To:*     |                                   |
+      |-----------------+-----------------------------------|
+      | *Empathetic With:* |                                   |
+      |-----------------+-----------------------------------|
+      | *Has Vendetta For:* |                                   |
+      |-----------------+-----------------------------------|
+      | *Fears:*           |                                   |
+      |-----------------+-----------------------------------|
+      | *Conflicts:*        |                                   |
+      |-----------------+-----------------------------------|
+      | *Epiphany:*        |                                   |
+      |-----------------+-----------------------------------|
 
-***** NEW <2022-08-26 Fri> 👤 Detailed Character Interview:
+****** NEW <2022-08-26 Fri> 👤 Detailed Character Interview:
 
 - [ ] *Perform a Detailed Character Interview:*  
 
@@ -4818,7 +4816,7 @@ The Character's Likes / dislikes, yadda yadda yadda...
        expectations going into a face to face interview... The 
        results will be more authentic about the character and less, 
        if anything at all about you the author...
-
+       
 - [ ] *Transfer Some Results of below to 💬 Profile:*
 
        Some of the information collected under the Headings 
@@ -4828,7 +4826,7 @@ The Character's Likes / dislikes, yadda yadda yadda...
        You will know where to put things as you work through
        this task...
 
-****** 🏷 Name:
+******* 🏷 Name:
 :README:
    =Put full name here=.  Names are important! If you name your 
    character incorrectly based on your desired personality type 
@@ -4839,16 +4837,12 @@ The Character's Likes / dislikes, yadda yadda yadda...
 
 - [ ] *Official Name:* /(put name here)/
 
-\newpage
-
-****** 📂 Background:
+******* 📂 Background:
 ******* 🚼 Birth:
 
 - [ ] *Birthday:*  
 
 - [ ] *Place of Birth:*
-
-\newpage
 
 ******* 👫 Parents:
 :README:
@@ -4887,8 +4881,6 @@ CHARACTER
 (THINKING... TYPE ANSWER BELOW)
         #+END_SRC
 
-\newpage
-
 ******* 👭 Siblings:
 :README:
    What is important about this character's Siblings?
@@ -4926,8 +4918,6 @@ CHARACTER
 (THINKING... TYPE ANSWER BELOW)
         #+END_SRC
 
-\newpage
-
 ******* 💵 Economic/Social Status Growing Up?
 :README:
    Add descriptions here that are important
@@ -4954,8 +4944,6 @@ _4. DIALOG_
 CHARACTER
 (THINKING... TYPE ANSWER BELOW)
         #+END_SRC
-
-\newpage
 
 ******* 𐇑 Ethnic Background:
 :README:
@@ -4986,8 +4974,6 @@ CHARACTER
 (THINKING... TYPE ANSWER BELOW)
         #+END_SRC
 
-\newpage
-
 ******* 🏞 Places Lived:
 :README:
    Add descriptions here that are important
@@ -5004,8 +4990,6 @@ CHARACTER
 
       /List Current Place Name and Location/
 
-\newpage
-
 ******* 🎓 Education:
 :README:
    Add descriptions here that are important
@@ -5018,8 +5002,6 @@ CHARACTER
 - [ ] *List Special Training:*
 
 - [ ] *List Other Important Aspects of Education:*
-
-\newpage
 
 ******* 🏭 Jobs:
 :README:
@@ -5034,8 +5016,6 @@ CHARACTER
 
 - [ ] *Other Important Aspects of Jobs:*
 
-\newpage
-
 ******* 🚉 Travel:
 :README:
    Add descriptions here that are important
@@ -5045,9 +5025,7 @@ CHARACTER
 
 - [ ] *Describe Travel Details:*
 
-\newpage
-
-****** 👫 Friends:
+******* 👫 Friends:
 :README:
    Write about this character's friends, etc...
 
@@ -5070,9 +5048,7 @@ CHARACTER
 
 - [ ] *Who does this character most admire?*
 
-\newpage
-
-****** 🤺 Enemies:
+******* 🤺 Enemies:
 :README:
    Write about this character's enimies, etc...
 
@@ -5083,9 +5059,7 @@ CHARACTER
 
 - [ ] *Describe Enemies Here:*
 
-\newpage
-
-****** 💑 Dating, Marriage:
+******* 💑 Dating, Marriage:
 :README:
    Write about this character's love life...
 
@@ -5116,9 +5090,7 @@ CHARACTER
 (THINKING... TYPE ANSWER BELOW)
         #+END_SRC
 
-\newpage
-
-****** 🚼 Children:
+******* 🚼 Children:
 :README:
    Write about this character's children...
 
@@ -5151,9 +5123,7 @@ CHARACTER
 (THINKING... TYPE ANSWER BELOW)
         #+END_SRC
 
-\newpage
-
-****** 🛐 Relationship with God:
+******* 🛐 Relationship with God:
 :README:
    Write about this character's spiritual/religious life...
 
@@ -5186,9 +5156,7 @@ CHARACTER
 (THINKING... TYPE ANSWER BELOW)
         #+END_SRC
 
-\newpage
-
-****** ⛷ Overall Outlook on Life:
+******* ⛷ Overall Outlook on Life:
 :README:
    List this character's Overall Outlook...
    Treat this list just as if they were questions
@@ -5242,9 +5210,7 @@ CHARACTER
       /(Answer This Question HERE as if YOU 
        are the character answering Dr. Evans)/
 
-\newpage
-
-****** 👀 How Character is Viewed by Others:
+******* 👀 How Character is Viewed by Others:
 :README:
    Write about what others think about this character...
 
@@ -5277,9 +5243,7 @@ CHARACTER
 (THINKING... TYPE ANSWER BELOW)
         #+END_SRC
 
-\newpage
-
-****** 🌅 A Typical Day:
+******* 🌅 A Typical Day:
 :README:
    What is a Typical Day in this Character's Life Like?
 
@@ -5312,9 +5276,7 @@ CHARACTER
 (THINKING... TYPE ANSWER BELOW)
         #+END_SRC
 
-\newpage
-
-****** 𐇑 Physical Appearance:
+******* 𐇑 Physical Appearance:
 :README:
    List Attributes of this Characters Appearance:
    List these as OBSERVATIONS by Dr. Evans During
@@ -5376,11 +5338,9 @@ CHARACTER
 
 - [ ] *How the Character Describes Themsel:* 
 
-       /Put Description Here/ 
+       /Put Description Here/
 
-\newpage
-
-****** ✚ Health/Disabilities/Handicaps:
+******* ✚ Health/Disabilities/Handicaps:
 :README:
    List this Character's Health Info Here...
 
@@ -5395,10 +5355,8 @@ CHARACTER
        /copy of Patient Records released to Dr. Evans/ 
        /prior to an interview with the character.../
 
-\newpage
-
-****** 🦋 Characteristics:
-******* General:
+******* 🦋 Characteristics:
+******** General:
 :README:
    Enumerate General Specifics About This Character's 
    Most Prominent Characteristics...
@@ -5446,11 +5404,9 @@ CHARACTER
 
 - [ ] *What People Like about this character:*  
 
-       /(Provide answer from Dr. Evans Notes HERE)/      
+       /(Provide answer from Dr. Evans Notes HERE)/
 
-\newpage
-
-******* Interests and Favorites:
+******** Interests and Favorites:
 :README:
    Enumerate General Specifics About This Character's 
    Most Prominent Characteristics...
@@ -5514,9 +5470,7 @@ CHARACTER
   /(What large possessions does this person own?)/
   /(car, home, furnishings, boat, etc.)/
 
-\newpage
-
-******* Typical Expressions:
+******** Typical Expressions:
 :README:
    Enumerate General Specifics About This Character's 
    Most Prominent Characteristics...
@@ -5544,11 +5498,9 @@ CHARACTER
 
 - [ ] *When Sad:* 
 
-       /(Provide answer from Dr. Evans Notes HERE)/      
+       /(Provide answer from Dr. Evans Notes HERE)/
 
-\newpage
-
-******* Idiosyncrasies:
+******** Idiosyncrasies:
 :README:
    Write a short paragraph about this character's 
    Particular and unique Idiosyncrasies... 
@@ -5569,9 +5521,7 @@ CHARACTER
        During our interview, the patient stated... 
        Yadda... Yadda... Yadda...
 
-\newpage
-
-******* Laughs or Jeers At:
+******** Laughs or Jeers At:
 :README:
    Write a short paragraph about the kinds of
    things this character finds funny, pathetic,
@@ -5594,9 +5544,7 @@ CHARACTER
        During our interview, the patient stated... 
        Yadda... Yadda... Yadda...
 
-\newpage
-
-******* Ways to Cheer this Person Up:
+******** Ways to Cheer this Person Up:
 :README:
    Write a short paragraph about the
    best ways one might try to cheer this
@@ -5618,9 +5566,7 @@ CHARACTER
        During our interview, the patient stated... 
        Yadda... Yadda... Yadda...
 
-\newpage
-
-******* Ways to Annoy this Person:
+******** Ways to Annoy this Person:
 :README:
    Write a short paragraph about the
    best methods /(if one were so inclined)/ 
@@ -5642,9 +5588,7 @@ CHARACTER
        During our interview, the patient stated... 
        Yadda... Yadda... Yadda...
 
-\newpage
-
-******* Hopes and Dreams:
+******** Hopes and Dreams:
 :README:
    Write a short two part synopsis of this
    character's *Big Dream* & *Big Plan* to make
@@ -5667,9 +5611,7 @@ CHARACTER
 
        /(Synopsis)/
 
-\newpage
-
-******* Greatest Success:
+******** Greatest Success:
 :README:
    Write a short paragraph about the
    Greatest Success this character
@@ -5691,9 +5633,7 @@ CHARACTER
        During our interview, the patient stated... 
        Yadda... Yadda... Yadda...
 
-\newpage
-
-******* Biggest Trauma:
+******** Biggest Trauma:
 :README:
    Write a short paragraph about the
    Biggest Trauma this character
@@ -5715,9 +5655,7 @@ CHARACTER
        During our interview, the patient stated... 
        Yadda... Yadda... Yadda...
 
-\newpage
-
-******* Most Embarrassing Thing:
+******** Most Embarrassing Thing:
 :README:
    Write a short paragraph about the
    Most Embarrassing things this character
@@ -5739,9 +5677,7 @@ CHARACTER
        During our interview, the patient stated... 
        Yadda... Yadda... Yadda...
 
-\newpage
-
-******* What this Character Cares About the Most:
+******** What this Character Cares About the Most:
 :README:
    Write a short paragraph about the
    What this character cares most
@@ -5763,9 +5699,7 @@ CHARACTER
        During our interview, the patient stated... 
        Yadda... Yadda... Yadda...
 
-\newpage
-
-******* Any Secrets?
+******** Any Secrets?
 :README:
    Write a short synopsis about this
    character's *Big Secret* & Whether or not
@@ -5793,9 +5727,7 @@ CHARACTER
        During our interview, the patient stated... 
        Yadda... Yadda... Yadda...
 
-\newpage
-
-******* If Allowed to do One Thing and Succeed,  What is That?
+******** If Allowed to do One Thing and Succeed,  What is That?
 :README:
    Write a short synopsis about what it would
    take for this character to Succeed, and the 
@@ -5816,9 +5748,7 @@ CHARACTER
        During our interview, the patient stated... 
        Yadda... Yadda... Yadda...
 
-\newpage
-
-******* This is the kind of person who:
+******** This is the kind of person who:
 :README:
    Write a short synopsis about how this person
    would react/respond and/or take action, if 
@@ -5840,9 +5770,7 @@ CHARACTER
        During our interview, the patient stated... 
        Yadda... Yadda... Yadda...
 
-\newpage
-
-******* The most loveable thing about this person:
+******** The most loveable thing about this person:
 :README:
    Write a short synopsis about the things we all
    LOVE the MOST about this character...
@@ -5862,9 +5790,7 @@ CHARACTER
        During our interview, I noticed many times to
        my surprise and delight... Yadda... Yadda... Yadda...
 
-\newpage
-
-******* Why the Reader will Sympathize with this Character Immediately?
+******** Why the Reader will Sympathize with this Character Immediately?
 :README:
    Write a short synopsis about how we will all
    relate to and sympathize with this character...
@@ -5884,9 +5810,7 @@ CHARACTER
        During our interview, I noticed many times to
        my surprise and delight... Yadda... Yadda... Yadda...
 
-\newpage
-
-****** ⚖ Ordinary or Extraordinary?:
+******* ⚖ Ordinary or Extraordinary?:
 :README:
    Write a short synopsis about ANY *Ordinary* or 
    *Extraordinary* traits this Character May *Possess*
@@ -5916,9 +5840,7 @@ CHARACTER
        During our interview, I noticed many times to
        my surprise and delight... Yadda... Yadda... Yadda...
 
-\newpage
-
-****** ⎈ Core Needs:
+******* ⎈ Core Needs:
 :README:
    List this character's corresponding 
    *psychological evaluation:* which defines 
@@ -5938,9 +5860,7 @@ CHARACTER
        the self, behaviours harming others, manias, 
        and phobias...
 
-\newpage
-
-****** 🌠 Anecdote: (Defining Moment or Epiphany)
+******* 🌠 Anecdote: (Defining Moment or Epiphany)
 :README:
    Write a short synopsis about this character's
    *MOST Defining Moment In LIFE* or rather this 
@@ -5977,9 +5897,7 @@ CHARACTER
 (THINKING... TYPE ANSWER BELOW)
         #+END_SRC
 
-\newpage
-
-****** 📚 History:
+******* 📚 History:
 :README:
    Write a short synopsis about this character's
    *Life History* /(don't write a biography here! LOL)/
@@ -5998,10 +5916,8 @@ CHARACTER
        /etc.  But rather a bio written based on events/ 
        /that actually occurred.../
 
-\newpage
-
-***** NEW <2022-08-26 Fri> 📃 Write Character Synopsis:
-****** Write a One Sentence Character Summary:
+****** NEW <2022-08-26 Fri> 📃 Write Character Synopsis:
+******* Write a One Sentence Character Summary:
 :README:
    =Warning!= This is all about the character on a monologue, 
             talking about themselves...
@@ -6042,8 +5958,6 @@ CHARACTER
        different light...  etc...
 
        /(On and On... Huck goes on a personal rant all about himself!)/
-
-\newpage 
 
 *** NEW ♾ New World: /(Master Template)/
 :README:
