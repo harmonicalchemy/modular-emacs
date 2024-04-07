@@ -357,7 +357,7 @@ Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas
 
 * 💡 Introduction:
 
-*Welcome to Harmonic Alchemy Modular Emacs* ~V3.6 (point release) [Q4 2023]~
+*Welcome to Harmonic Alchemy Modular Emacs* ~V3.6.2 (point release) [Q2 2024]~
 
 *Modular Emacs* provides a simple method of dispatching your emacs configuration in steps based on initial choice of modules starting with essentials loading first, and then loading optional user chosen modules...
 

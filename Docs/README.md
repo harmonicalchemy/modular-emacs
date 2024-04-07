@@ -3,12 +3,12 @@ file: README.md
 author: Alisha Awen
 created: 2019-010-20
 updated: 2020-007-16
-tags: Emacs, 2020, apps-tools, SysAdmin, HA-ModEmacs, how-to, README 
+tags: Emacs, 2024, apps-tools, SysAdmin, HA-ModEmacs, how-to, README 
 ---
 
 ![Banner](./Docs/media/Modular-Emacs-Github-Banner-v3.png)
 
-# Version 3.2 (beta) - README
+# Version 3.6 (point release) - README
 
 **[\[Table Of Contents\]](#table-of-contents)**
 
@@ -16,7 +16,7 @@ tags: Emacs, 2020, apps-tools, SysAdmin, HA-ModEmacs, how-to, README
 
 ## Introduction:
 
-**_Welcome to Harmonic Alchemy Modular Emacs_** - V3.2 [Q3 2020] _(still in Beta)_.
+**_Welcome to Harmonic Alchemy Modular Emacs_** - V3.6 [Q2 2024] _(point release)_.
 
 **Modular Emacs** is more than just Emacs with configurable modules... It is also designed to be the centerpiece _(command central)_ of a larger _personalized, extensible_: **Dev♺Ops** / **Pub✎Ops** / **Multi🎥Media** workstation **IDE** capable of running on older but reasonably powerful **laptops/desktops** _(that would otherwise be considered legacy by most other standards)_.  
 

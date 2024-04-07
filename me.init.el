@@ -2,17 +2,17 @@
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; File:        ~/.emacs.d/init.el - Modular Emacs Config Main Entry Point
 ;; Ref:         <https://github.com/harmonicalchemy/modular-emacs>
-;; Author:      Alisha Awen Sheppard - siren1@disroot.org
+;; Author:      Alisha Awen - harmonicalchemy@proton.me
 ;; Maintainer:  Alisha Awen
 ;; Created:     2018-011-13
-;; Version:     3.5 - 2022-010-16
+;; Version:     3.6.2 - 2024-004-07
 
 ;; This File is NOT Part of GNU Emacs
 
 ;; This program is free software: you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
 ;; the Free Software Foundation, either version 3 of the License, or
-;; (at your option) any later version.
+;; (at your option) any later version...
 
 ;; This program is distributed in the hope that it will be useful,
 ;; but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -54,6 +54,11 @@
 ;;;
 ;; CHANGE LOG: (descending chronological order)
 ;;
+
+;;   2024-004-07 - Harmonic Alchemy Modular-Emacs V3.6.2 [Q2 2024]
+;;      Update mostly to the pubOps configurations... (Org-Mode Export)
+;;      Basic functionality of the eLisp code and loaded modules is MOSTLY
+;;      the same as earlier versions...
 
 ;;   2022-010-16 - Harmonic Alchemy Modular-Emacs V3.5 [Q3 2022]
 ;;      Finally have a decent configuration with updated README which is
@@ -250,7 +255,7 @@
         ";; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
         ";; Welcome to: [Your-Machine-Name-Here]                                    \n"
         ";;             Harmonic Alchemy - Modular Emacs!                           \n"
-        ";; Version:    3.5 [Q4 2022]                                               \n"
+        ";; Version:    3.6.2 [Q2 2024]                                             \n"
         ";;                                                                         \n"
         ";; Today's date: " (format-time-string "%Y %B %d") "                       \n"
         ";; Startup completed in "
@@ -258,27 +263,28 @@
                                                config-start-time)))       " seconds \n"
         ";; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
         ";;                                                                         \n"
-        ";; (quote: Anger is an acid that can do more harm                          \n"
-        ";;         to the vessel in which it is stored than                        \n"
-        ";;         to anything on which it is poured...) -- Mark Twain             \n"
+        ";;      \"Oh my eyes! It otta be illegal to project                        \n"
+        ";;       visual Ads right into the brain!  A man has                       \n"
+        ";;       a right to close his eyes and see NOTHING if                      \n"
+        ";;       he wants to...\" - Sales Pitch by Philip K Dick                   \n"
         ";;                                                                         \n"
-        ";; More Mark Twain quotes can be found here:                                \n"
-        ";; https://www.writerswrite.co.za/literary-birthday-30-november-mark-twain/  \n"
         ";; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
         ";;                                                                         \n"
         ";; Evaluate lisp expressions below within this buffer                      \n"
         ";; Check Out: GNU.org's Intro to Programming Emacs Lisp:                   \n"
         ";; https://www.gnu.org/software/emacs/manual/html_node/eintr/index.html    \n"
         ";;                                                                         \n"
-        ";; This entire message is a lisp comment! So you my compose any lisp       \n"
-        ";; statemet below and evaluate it... OR simply kill this buffer and        \n"
-        ";; you will be presented with a clean blackboard to geek out on... YAY!    \n"
-        ";; (A clean slate with NO Mark Twain quotes... I promice.  LOL             \n"
+        ";; This entire message is a lisp comment! You my compose any lisp          \n"
+        ";; statemet below and evaluate it without changing this heading...         \n"
+        ";; -OR- simply kill this buffer which will replace this *scratch*          \n"
+        ";; buffer with a clean blackboard to geek out on...                        \n"
+        ";;                                                                         \n"
+        ";; Don't Forget to check out the ./Docs/pubOps section!!!                  \n"
         ";;                                                                         \n"
         ";; Cheers!                                                                 \n"
         ";;                                                                         \n"
-        ";; Alisha Awen: @harmonicalchemy (Github, twitter etc.)                    \n"
-        ";; PGP Pubkey: 0x922CC456F48355A8D9B2E044C9E6CD44A817E7BF                  \n"
+        ";; Alisha Awen: @harmonicalchemy (GitHub, GitLab etc.)                     \n"
+        ";; PGP Pubkey:  FF3E 38C9 E731 CCEE 17D6  3A92 9D67 B6DC E4F4 7517         \n"
         ";; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
 
        (get-buffer-create (current-buffer)))

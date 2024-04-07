@@ -1,7 +1,7 @@
 # -**- mode: org; coding: utf-8 -**-
 :LATEST_UPDATE:
 
-  =Last Updated:= <2023-06-18 Sun> /(this template needs work)/
+  =Last Updated:= <2024-03-25 Mon> /(this template needs work)/
 
   =YOU MAY REMOVE This Drawer= from your own clones of this template if
   it is bothering you... This drawer is used for HAP Modular Emacs
@@ -454,6 +454,9 @@ This is a morph of: "lyhne" & "EQ" Styles
        \renewcommand{\chaptitlefont}{\raggedleft\normalfont\Huge\bfseries}
 
        \makeatletter
+
+       \makeatother
+       \usepackage{minted}
 
        %% AT BEGIN DOCUMENT  %%
 
