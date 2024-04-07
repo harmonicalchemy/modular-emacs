@@ -36,5 +36,5 @@
 
 # afterwriting --source ../HAP_Radio-Script-Template-w-instructions.fountain --pdf ../auto/HAP_Radio-Script-Template-w-instructions.pdf --config ../org-templates/awc-config.json
 
-afterwriting --source ../HAP_Radio-Script-Template.fountain --pdf ../auto/HAP_Radio-Script-Template.pdf --config ../org-templates/awc-config.json
+afterwriting --source ../HAP_Radio-Script-Template.fountain --pdf ../auto/HAP_Radio-Script-Template.pdf --config ../awc-config.json
 

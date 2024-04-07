@@ -4,7 +4,7 @@
 #+EXPORT_FILE_NAME: HAP_General-Log-Book-Skeleton.pdf
 #+TEXT: Copyright © 2022 Harmonic Alchemy Productions & Others
 #+AUTHOR: Alisha Awen - Harmonic Alchemy Productions
-#+EMAIL: Siren1@disroot.org
+#+EMAIL: harmonicalchemy@proton.me
 #+DATE: {{{time(%A %Y-%b-%d)}}}
 #+TEXT: Created: <2021-02-11 Thu>
 #+TEXT: Last Published: <Not Published>
@@ -12,9 +12,7 @@
 
 #+DESCRIPTION: HAP - Modular Emacs Org Mode General Log Notebook Template.  This is the replacement for the Markdown Mode templates I was using previously, which were in turn replacements for even older templates I made originally for Evernote/Trello/Scrivener...
 
-#+BEGIN_COMMENT
-
-=Setup Files:=
+:SETUPFILES:
 
    For Cloned Versions of this template, the file/paths below will be relative
    to your parent project directory and as such, should be all set to your new:
@@ -49,13 +47,13 @@
               /and-or replace some (but NOT ALL) of the tags within/
               /to your own tags... see instructions inside the file)/
 
-#+END_COMMENT
+:END:
 
 #+SETUPFILE: ./org-templates/log-book-setup.org
 #+SETUPFILE: ./org-templates/default-tags.org
 
 :LATEST_UPDATE:
-  <2023-02-15 Wed>
+  <2024-02-08 Thu>
 
   =YOU MAY REMOVE This Drawer= from your own clones of this template if
   it is bothering you... This drawer is used for HAP Modular Emacs
@@ -71,35 +69,47 @@
 
     This bullet is not for end users... This is /"Note to Self"/ stuff...
 
-    + [ ] =MASTER TEMPLATE ONLY= *Keep The Above Timestamp Up To Date:*
+      + [X] =MASTER TEMPLATE ONLY= *Keep The Above Timestamp Up To Date:*
 
-        DO THIS ALWAYS, JUST AFTER YOU UPDATE THIS TEMPLATE... DON'T FORGET!
-        /(i.e., BOILERPLATE content and :README: meta data)/
+          DO THIS ALWAYS, JUST AFTER YOU UPDATE THIS TEMPLATE... DON'T FORGET!
+          /(i.e., BOILERPLATE content and :README: meta data)/
   
   - =PUBLIC USE Instructions:= /(FOR CLONES OF THIS TEMPLATE)/
 
-    + [ ] =Change this= *:LATEST_UPDATE:* =drawer title:= /(within clones only)/
+      + [ ] *FOR NEWLY CREATED CLONES:*
 
-        Change it to: *:LATEST_TEMPLATE_UPDATE:* within NEWLY CREATED CLONES...
+          - [ ] =Change this= *:LATEST_UPDATE:* =drawer title:= /(within clones only)/
 
-    + [ ] *COMPARE the TIMESTAMPS between THIS TEMPLATE and CLONES:*
+               Change it to: *:LATEST_TEMPLATE_UPDATE:*
 
-        The BOILERPLATE content and meta data within CLONES of this
-        TEMPLATE will get out of sync after a while due to Harmonic
-        Alchemy Modular Emacs version updates etc...
+          - [ ] *REMOVE INTERNAL USE INSTRUCTIONS*
+
+               Remove the main =INTERNAL USE Instructions:= bullet above...
+               That bullet is only relevant to the TEMPLATE, /(not clones)/
+
+      + [ ] *FOR ALREADY EXISTING PROJECTS*:
+
+          - [ ] *COMPARE the TIMESTAMPS between THIS TEMPLATE and your PROJECT:*
+
+              The BOILERPLATE content and meta data within CLONES of this
+              TEMPLATE will get out of sync after a while due to Harmonic
+              Alchemy Modular Emacs version updates etc... Some NEW features
+              or HEADINGS may have been added that make sense to be added
+              to your existing project /(originally a clone of this)/
         
-        Use the ABOVE timestamp /(within the TEMPLATE and your CLONE)/
-        to see if the clone's BOILERPLATE content needs to be updated
-        /(brought into sync with its template - MERGE)/ and then perform
-        any needed merging/replacing of BOILERPLATE and/or meta data.
-        /(e.g, *:README:* drawers, etc.)/
+              Use the ABOVE timestamp /(within the TEMPLATE and your CLONE)/
+              to see if the clone's BOILERPLATE content needs to be updated
+              /(brought into sync with its template - MERGE)/ and then perform
+              any needed merging/replacing of BOILERPLATE and/or meta data.
+              /(e.g, *:README:* drawers, etc.)/
 
-    + [ ] *Keep ABOVE timestamp within CLONES of this template UP TO DATE:*
+          - [ ] *Keep ABOVE timestamp within CLONES of this template UP TO DATE:*
 
-        =AFTER Completing Above MERGE Step= and your clone's BOILERPLATE
-        content has been brought up to date /(i.e. in sync)/ with
-        its TEMPLATE... Then update the timestamp ABOVE...
-        /(WITHIN YOUR CLONE)/ to record the date of its last sync status...
+              =AFTER Completing Above MERGE Step= and your clone's BOILERPLATE
+              content has been brought up to date /(i.e. in sync)/ with its
+              TEMPLATE... Then update the timestamp ABOVE... /(WITHIN YOUR CLONE)/
+              to record the date of its last sync status...
+              
 :END:
 :READ_ME_FIRST:
 =Instructions:= /(How to Install & Use This Template)/
@@ -154,7 +164,7 @@ To use *HAP_General-Log-Book-Project-Skeleton.org* /(Org-Mode Log Notebook Proje
             /this LOG in the first place)/ You should come back and:
             =Resume Finishing Set Up of This LOG Notebook= /(next steps below)/
 
-3) [ ] =Finish Setting Up The Rest Of This Project LATER= [0/10]
+3) [ ] =Finish Setting Up The Rest Of This Project LATER= [0/13]
 
     - [ ] *Change Title of :LATEST_UPDATE: drawer ABOVE:*
 
@@ -417,6 +427,7 @@ Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas
 Other folks UX metrics are sorely needed!! Thanks!
 
 =Enjoy!= - Alisha Awen
+
 :END:
 
 #+begin_export latex
@@ -526,6 +537,103 @@ Here are Links to Information that may be helpful While Using this Log Book Temp
 \listoftables*
 \mainmatter
 #+END_EXPORT
+
+* NEW 💡 Scratchpad Refile:                                        :noexport:
+** ☞ Start Here!
+
+This Section is EXCLUSIVELY for QUICK WRITING OR LOGGING of things that must be documented NOW but you DON'T yet have an official LOG for it, you may be working
+on something completely diffrent, AND/OR you don't know which existing LOG your
+new idea may belong to...
+
+=NO PROBLEM!= Simply =CLONE= the *NEW Uncategorized IDEA* below and start writing! This is enough for initial organization purposes... You can work out all the other details later...
+
+This is ALSO a good place for [[https://projects.csail.mit.edu/gsb/old-archive/gsb-archive/gsb2000-02-11.html]["yak shaving"]] adventures of the beaten track while you may be working within an existing LOG but need to document something completely different BUT you don't want to switch context to this new thing completely...
+
+Use this: "*💡 Scratchpad Refile*" section as a quick place to document ideas and inspirations as they come along... You can refile them later...
+
+The following =BOILERPLATE INSTRUCTIONS= Help you get started as quickly as possible.
+/(using Knowledge Management Best Practices)/
+
+- =CREATE NEW Uncategorized IDEA:= /Use This For Anything You Want!/
+
+   + [ ] =Copy/Clone:= 💡 <2022-08-20 Sat> *NEW Uncategorized IDEA* =Below:=
+
+        =Copy the Heading AND ALL ITS CONTENTS=
+
+        /Change your Clone's Title to Your Own Title/
+
+   + [ ] *Change the timestamp on your Clone Entry:* [0/1]
+
+        =Type:= ~C-c .~ while cursor is sitting on the timestamp
+
+        /i.e., Press: ~Ctrl-c~, let go, and then type a Period/ ~.~
+
+        A date chooser panel will pop up...
+
+      - [ ] *Press* ~ENTER~ *to auto accept today's date and time.*
+
+           The existing timestamp will change to TODAY...
+
+   + [ ] *Advance your cursor and Start Writing!!!*
+
+        Advance your cursor few more lines down to some fresh 
+        empty space and Start Typing Your New Idea Like Mad!!! 
+        /(Remove the boilerplate content after reading it...)/
+
+        Don't worry about organizing beyond what is needed for writing 
+
+        However without breaking your focus, you should add relevant
+        ~:org_tags:~ that come to mind as you are writing...
+
+        This is easy to do... Simply Type: ~C-c C-q~ Add Your Tag
+        and =THEN CONTINUE WRITING...=
+
+        Adding =TAGS= is a =VITAL KM BEST PRACTICE FIRST STEP=
+        which will help you find important things you have written
+        by the seat-of-your-pants, LATER LONG After you may have
+        forgotten!  /(better than Google Search)/ :trollface:
+
+   + [ ] =TODO After You Are Done Writing:=
+
+        If you know which LOG this content belongs in and you are not
+        busy working on something else, *DON'T COPY BUT rather MOVE* this
+        entire *ScratchPad Note* Item /(heading timestamp and all)/ to the
+        proper place within that =Existing LOG Entry Item=...  where it
+        belongs and will now live... /(no longer as a Scratchpad item)/
+
+        Consequently if you Don't have an existing LOG Entry in mind,
+        but you are ready now to create a *BRAND NEW LOG ENTRY*, than go
+        ahead an *CLONE A NEW LOG ENTRY* and *DON'T COPY BUT rather MOVE* this
+        entire *ScratchPad Note* Item /(heading timestamp and all)/ to the
+        proper place within that =Existing LOG Entry Item=... where it
+        belongs and will now live... /(no longer as a Scratchpad item)/
+
+** NEW 💡 <2022-08-20 Sat> NEW Uncategorized IDEA /(BOILERPLATE Clone This)/
+:README:
+   This is a dummy example of some crazy idea that you may have 
+   gotten at the spur of the moment, while you were doing something 
+   elsewhere within this LOGBOOK...  After you are done getting as 
+   much of the idea as you initally can then you can simply go back 
+   to what you were doing before the inspiration segue tore you away... 
+   You might want to schedule this as a todo item before leaving though...
+
+   Later when you are free you can come back to file this or place it 
+   where it belongs.
+:END:
+
+=Copy/Clone this Boilerplate Template NOW=
+
+Change your clone's Title...
+Change the Timestamp to NOW...
+
+=Then Quickly Get Started Writing Down your FRESH NEW IDEA=
+
+=TIME CLOCKING WILL NOT HAPPEN HERE=
+
+/You probably were working on something else anyway.../
+/Are you still on the clock there? LOL %^)/
+
+=Replace all of this boilerplate content with your own content=
 
 * 2023 Logs:                                                         :export:
 ** NEW Lab Experiment Gone WRONG!                       :export:

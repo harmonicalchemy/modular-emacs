@@ -1,6 +1,7 @@
 # -**- mode: org; coding: utf-8 -**-
 :LATEST_UPDATE:
-  =Last Updated:= <2023-06-18 Sun> /(this template needs work)/
+
+  =Last Updated:= <2023-10-04 Wed> /(this template needs work)/
 
   =YOU MAY REMOVE This Drawer= from your own clones of this template if
   it is bothering you... This drawer is used for HAP Modular Emacs
@@ -45,6 +46,7 @@
            up to date /(i.e. in sync)/ with its STARTUPFILE TEMPLATE...
            Then update the timestamp ABOVE... /(WITHIN YOUR CLONE)/ to record
            the date of its last sync status...
+           
 :END:
 :README:
 
@@ -94,8 +96,15 @@
 
       =Good luck!=
 
+:END:
 
-- =REFERENCE:= 
+=File:=  ~~/.emacs.d/Docs/pubOps/org-templates/audio-drama-setup.org~
+
+      =ORG-MODE LaTeX SETUPFILE for: AUDIO DRAMA or PODCAST PROJECT= 
+
+                    =LaTeX CLASS:= ~audio-production~
+
+- *Reference:*
    
    + [[https://orgmode.org/manual/Export-Settings.html#Export-Settings][Org Manual Export Settings]]
 
@@ -137,24 +146,51 @@
 
    + [[https://www.offerzen.com/blog/literate-programming-empower-your-writing-with-emacs-org-mode][Empower Your Writing with Emacs Org-Mode]] - /(Literate Programming)/
 
-:END:
+   + [[][] ] - 
 
-=File:=  ~~/.emacs.d/Docs/pubOps/org-templates/audio-drama-setup.org~
+   + [[][] ] - 
 
-ORG-MODE LaTeX SETUPFILE for: AUDIO DRAMA or PODCAST PRODUCTION
+   + [[][] ] -
 
-=LaTeX CLASS:= ~audio-production~
+=LaTeX --> AUDIO PRODUCTION PROJECT PDF:=
 
-=Chapter Style:= ~lyhne~
+/Currently Using ~audio-production~ Class/
+/Chapter Style:/  ~lyhne~
+/DEFINED in:/     ~09-4-org-export-conf.el~
 
-=NOTE:= All LaTeX Configurations are done here for
-      portability... The ~audio-production~ class name
-      itself is defined within: ~09-4-org-export-conf.el~
+#+LATEX_CLASS: audio-production
 
+=DISABLED OPTIONS For This Configuration:= /(for debugging)/
 
-=STANDARD ORG-MODE OPTIONS For This Configuration:=
+#+BEGIN_COMMENT
 
-- *STARTUP ORG-MODE OPTIONS:*
+    /DO NOT Export fixed-width sections/
+    /(org-export-with-fixed-width)/
+    #+OPTIONS: ::nil
+
+    /Convert Special Strings/
+    /(non-nil is being tried now)/
+    #+OPTIONS: -:t
+
+    /DO NOT Include Inline Tasks/
+    /(org-export-with-inlinetasks)/
+    #+OPTIONS: inline:nil
+
+    /DO NOT Include section-numbers/
+    /(org-export-with-section-numbers)/
+    #+OPTIONS: num:nil
+
+    /Normal LaTeX Export/
+    /(org-export-with-latex)/
+    #+OPTIONS: tex:t
+
+    /Include TOC for Top Level Headlings ONLY/
+    /(org-export-with-toc)/
+    #+OPTIONS: toc:1
+
+   #+END_COMMENT
+
+=ORG-MODE STARTUP OPTIONS for this CONFIG:=
 
    #+LANGUAGE: en
    #+STARTUP:  overview
@@ -163,7 +199,7 @@ ORG-MODE LaTeX SETUPFILE for: AUDIO DRAMA or PODCAST PRODUCTION
    #+STARTUP:  align
    #+STARTUP:  inlineimages
 
-- *ENABLED ORG-MODE OPTIONS:*
+=STANDARD OPTIONS for this CONFIG:=
 
    /Mutually Exclusive Export TAGS/
    #+SELECT_TAGS: export
@@ -285,157 +321,3 @@ ORG-MODE LaTeX SETUPFILE for: AUDIO DRAMA or PODCAST PRODUCTION
 
    /Include Tables (org-export-with-tables)/
    #+OPTIONS: |:t
-
-- *DISABLED ORG-MODE OPTIONS:*
-
-   #+BEGIN_COMMENT
-
-    /DO NOT Export fixed-width sections/
-    /(org-export-with-fixed-width)/
-    #+OPTIONS: ::nil
-
-    /Convert Special Strings/
-    /(non-nil is being tried now)/
-    #+OPTIONS: -:t
-
-    /DO NOT Include Inline Tasks/
-    /(org-export-with-inlinetasks)/
-    #+OPTIONS: inline:nil
-
-    /DO NOT Include section-numbers/
-    /(org-export-with-section-numbers)/
-    #+OPTIONS: num:nil
-
-    /Normal LaTeX Export/
-    /(org-export-with-latex)/
-    #+OPTIONS: tex:t
-
-    /Include TOC for Top Level Headlings ONLY/
-    /(org-export-with-toc)/
-    #+OPTIONS: toc:1
-
-   #+END_COMMENT
-
-
-=LaTeX EXPORT CONFIG FOR: --> AUDIO Production Project PDF:=
-
-This class/style was initially inspired by:
-MemoirChapStyles/MemoirChapStyles.pdf (from CTAN?)
-This is a morph of: "lyhne" & "EQ" Styles
-
-- *ENABLED LATEX DIRECTIVES:*
-
-   =LaTeX CLASS & PAPER SIZE:=
-
-   #+LATEX_CLASS: audio-production
-   #+LATEX_CLASS_OPTIONS: [letterpaper, 12pt, oneside, onecolumn, openany, showtrims, final]
-
-   =GENERAL PACKAGES - Options:=
-
-   #+LaTeX_HEADER: \usepackage{paralist}
-   #+LATEX_HEADER: \usepackage{calc}
-
-   =BETTER SOURCE CODE LISTING STYLES:=
-
-   #+LATEX_HEADER: \usemintedstyle{xcode}
-
-      =RUN:= ~$> pygmentize -L styles~ /to see a list of all possible "minted" code
-           listing styles.  Then change {style-name} below to try any out.../
-           /So Far... I found these three to work fairly well for my needs.../
-           tango   - /Good but not quite.../
-           perldoc - /Nice One/
-           xcode   - /Similar to perldoc (even nicer... I am using this one NOW)/
-
-   =FONTS:=
-
-    #+LATEX_HEADER: \usepackage{fontenc}
-
-    #+LATEX_HEADER: \usepackage[english]{babel}
-    #+LATEX_HEADER: \usepackage[utf8]{inputenc}
-    #+LATEX_HEADER: \usepackage[sc]{mathpazo}
-    #+LATEX_HEADER: \usepackage{amsmath,amssymb,amsfonts,mathrsfs}
-    #+LATEX_HEADER: \usepackage[amsmath,thmmarks]{ntheorem}
-
-   =SPECIAL PACKAGES:=
-
-   /Include the use of Music and Chord Symbols/
-    #+LATEX_HEADER: \usepackage[minimal]{leadsheets}
-    #+LATEX_HEADER: \useleadsheetslibraries{musicsymbols}
-    #+LATEX_HEADER: \useleadsheetslibraries{chords}
-
-    #+LATEX_HEADER: \usepackage{graphicx}
-    #+LATEX_HEADER: \usepackage{soul}
-    #+LATEX_HEADER: \usepackage{pdfpages}
-    #+LATEX_HEADER: \usepackage[backend=bibtex,sorting=none]{biblatex}
-
-   =AUDIO PRODUCTION CUSTOM LaTeX CONFIG:=
-
-   /Chapter Heading Style & Positioning:/
-    #+BEGIN_EXPORT latex
-
-       %% DEFAULT SETTINGS %%
-
-       %% \addbibresource{org-bib-refs.bib}
-
-       \setlength{\headwidth}{\textwidth}
-       \addtolength{\headwidth}{.382\foremargin}
-       \renewcommand\afterchapternum{}
-
-       %% TITLE, CHAPTER, & SECTION, HEADING FORMAT %%
-
-       \renewcommand\afterchaptertitle{%
-          \ifnum \c@secnumdepth>\m@ne%
-             \ifNoChapNum\else\par\nobreak\vskip\afterchapskip
-             \fi%
-          \fi
-       }
-
-       \setlength\beforechapskip{15pt}
-       \renewcommand\printchapternonum{\global\NoChapNumtrue}
-       \renewcommand{\chaptitlefont}{\raggedleft\normalfont\Huge\bfseries}
-
-       \makeatletter
-
-       %% AT BEGIN DOCUMENT  %%
-
-       \AtBeginDocument{\frontmatter}
-       \chapterstyle{lyhne}
-
-    #+END_EXPORT
-
-- *DISABLED LATEX DIRECTIVES:*
-
-   #+begin_comment
-
-   =LaTeX CLASS & PAPER SIZE:=
-
-   =GENERAL PACKAGES - Options:=
-
-   /The Memoir Class has this "built in" and will ignore this line.../
-   #+LATEX_HEADER: \usepackage{parskip}
-
-   /(this does not seem to be needed)/
-   #+LATEX_HEADER: \usepackage{afterpage}
-
-   /The Memoir Class does NOT work with hyperref.../
-  # #+LATEX_HEADER: \usepackage[hyperref,x11names]{xcolor}
-  # #+LATEX_HEADER: \usepackage[colorlinks=true,urlcolor=SteelBlue4,linkcolor=Firebrick4]{hyperref}
-
-   =SPECIAL PACKAGES:=
-
-   =FONTS:=
-
-   =AUDIO PRODUCTION CUSTOM LaTeX CONFIG:=
-
-   /Stock Attributes:/
-   #+LATEX_HEADER: \setstocksize{9in}{6in}
-   #+LATEX_HEADER: \settrimmedsize{\stockheight}{\stockwidth}{*}
-
-   /Left & Right Margin:/
-   #+LATEX_HEADER: \setlrmarginsandblock{2cm}{2cm}{*}
-
-   /Upper & Lower Margin:/
-   #+LATEX_HEADER: \setulmarginsandblock{2cm}{2cm}{*}
-   #+LATEX_HEADER: \checkandfixthelayout
-
-   #+end_comment

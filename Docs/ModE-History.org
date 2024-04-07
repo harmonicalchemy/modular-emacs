@@ -1,16 +1,16 @@
 # -**- mode: org; coding: utf-8 -**-
-#+TITLE: Simple README with Log Notebook Skeleton
-#+TEXT: Copyright © 2021 Harmonic Alchemy Productions & Others
+#+TITLE: Modular Emacs History
+#+TEXT: Copyright © 2019 Harmonic Alchemy Productions & Others
 #+AUTHOR: Alisha Awen - Harmonic Alchemy Productions (HAP)
 #+EMAIL: harmonicalchemy@proton.me
 #+DATE: {{{time(%A %Y-%b-%d)}}}
-#+TEXT: Created: <2021-07-22 Thu>
+#+TEXT: Created: <2019-10-19 Sat>
 #+TEXT: Last Published: <NOT Published>
 #+FILETAGS: README templates unpublished
 
-#+DESCRIPTION: Short and sweet README with attached Log Notebook for any project or repository that needs such a thing... Great FOR GITHUB PAGES!!! The ORG TOC renders in Github nicely!! This ORG file is NOT intended to be exported with LaTeX... This template's sole purpose is to provide a traditional README startup document, for you to use, (usually contained with source code, but there are many other applications)... THIS is NOT for a BOOK, or PDF, or anything else that may need to be typeset for publishing... The only intended export option for this file is HTML (for websites - BUT GitHub Renders this file AS IS nicely)... Custom tailor this to fit your needs. Change the tags in default-tags.org (referenced below) as well.. to fit your needs... Enjoy!
+#+DESCRIPTION: The Official HISTORY of Harmonic Alchemy Modular Emacs (converted from markdown to .org)
 
-:SETUP:
+#+BEGIN_COMMENT
 
 =Setup TAGS:=
 
@@ -42,16 +42,14 @@
               /(change the name from/ ~default-tags.org~ /to another name/
               /and-or replace some (but NOT ALL) of the tags within/
               /to your own tags... see instructions inside the file)/
-
-:END:
+#+END_COMMENT
 
 #+SETUPFILE: ./org-templates/default-tags.org
-#+SETUPFILE: ./org-templates/gen-doc.org
 
-:LATEST_UPDATE:
+#+BEGIN_COMMENT
 
 =LATEST_UPDATE:=
-  <2024-01-15 Mon>
+  <2023-10-18 Wed>
 
   =YOU MAY REMOVE This Drawer= from your own clones of this template if
   it is bothering you... This drawer is used for HAP Modular Emacs
@@ -108,8 +106,8 @@
               TEMPLATE... Then update the timestamp ABOVE... /(WITHIN YOUR CLONE)/
               to record the date of its last sync status...
 
-:END:
-:READ_ME_FIRST:
+#+END_COMMENT
+#+BEGIN_COMMENT
 
 =READ_ME_FIRST:=
 
@@ -353,14 +351,20 @@ Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas
 
 =Enjoy!= - Alisha Awen
 
-:END:
+#+END_COMMENT
+
+🔖 [[../README.org][Back To MAIN Modular Emacs README]]
 
 * 🔖 Table of Contents:                                                 :TOC_4:
-- [[#-readme][📖 README:]]
+- [[#-the-history-of-harmonic-alchemy-modular-emacs][📜 The History of Harmonic Alchemy Modular Emacs]]
+    - [[#-introduction][📄 Introduction:]]
+    - [[#-modular-emacs-is-born][📄 Modular Emacs is Born:]]
+    - [[#-why-modular][📄 Why Modular?]]
 - [[#-begin-log][📅 Begin Log:]]
+    - [[#-2023][📅 2023:]]
     - [[#-2024][📅 2024:]]
 - [[#-meta-usage--templates][📋 Meta: /(Usage & Templates)/]]
-    - [[#-introduction][📄 Introduction:]]
+    - [[#-introduction-1][📄 Introduction:]]
         - [[#emacs-shorthand-command-key-notation][Emacs Shorthand Command Key Notation:]]
         - [[#important-note-for-mac-users][Important Note For Mac Users:]]
         - [[#org-mode-timestamps-and-clocking][Org Mode Timestamps and Clocking:]]
@@ -375,11 +379,61 @@ Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas
             - [[#new--summary-03][NEW 📃 Summary:]]
             - [[#new--details][NEW 📰 Details:]]
 
-* 📖 README:
+* 📜 The History of Harmonic Alchemy Modular Emacs
+** 📄 Introduction:
 
-=Compose Main Body of your README Doc Here=
+This project has been a long time coming...  Its history dates back several years to a time in my life where I had become fed up with how commercial software holds your content hostage, /(especially word processors)/... I wanted to be able to publish to the web, but also other formats as well... And I did NOT wish to have more than one content source for those things... 
+
+For years, as a software developer I used Emacs /(for coding, software design-development, and system administration on many platforms)/ I never had to change tools or content for that process as long as I could have or install Emacs on the platforms needed.
+
+On the other hand, my management of human language documents was a nightmare in contrast! I switched many different word processors, MS Office, Open Office, Evernote, etc. etc. etc... All of this switching and migration from platform to platform caused me a LOT of tedious stressful work that should have been unnecessary to begin with!
+
+All those years I never used Emacs Org-Mode and in fact did not even know about it in the early days...  I knew many Physics Professors where I worked at MIT who used Emacs/LaTeX to publish their work as professionally typeset documents... Back in those days I considered all that work to publish way OVERKILL.. but NOT Today... Not if you have worked out all the details and have Templates for all your publishing use cases...  Much LESS Overkill than all the wasted time I spent migrating and learning new word processor Apps in the past!!!
+
+I never thought that Emacs would be the way I ended up writing and publishing after many painful "restarts" over the years switching from one word processing app to another on Macintosh, MS Windows, Linux, etc...
+
+The day finally did came however to try out Emacs /(first using markdown mode, migrating from the Evernote App)/, but later scraping that idea, and going full HOG with org-mode...
+
+In order to accomplish this, I needed to figure out better ways to configure my up-until-then BARE-BONES Emacs Configuration... /(after having used emacs mostly a code editor for over two decades)/...
+
+My Journey started out by cloning a few Emacs repositories on Github and try different things out like that for a while.  I liked some things and tried to get rid of other things later.  Management became confusing after a while.  I ended up with lots of questionable elisp code, much of which were things possibly no longer needed!  
+
+After a couple years of adding, removing, configuring, re-configuring, etc. it started feeling like I was painting myself into a tangled corner like getting lost in /"a maze of twisty little passages all alike!"/ Lets face it... I was not keeping good logs and my git management skills were wanting!  I was being: /"oh that looks cool lets try that"/ (cowgirl mode)... I got into a wee bit of trouble as a result of my wild adventures! It was all my fault! But it was fun just the same.
+
+As a result of that saga, I learned a lot about ~SH~, ~BASH~, and ~ZSH~ best practices...  That spawned a complete re-write of my dotfiles project to become multiplatform and I now have a professional MULTIPLATFORM Authoring and Publishing System that produces Professionally Typeset Documents in pretty much any format...
+
+** 📄 Modular Emacs is Born:
+
+In an attempt do things better and smarter, I decided to start over from scratch and make a modular system from the ground up with the primary purpose of preventing tangled messes like this from happening within current or future Emacs configurations!
+
+=Modular Emacs= is more than just *Emacs* with configurable modules... It is also designed to be the centerpiece /(command central)/ of a larger personalized, extensible: *Dev♺Ops* / *Pub✎Ops* workstation *IDE* capable of running on older but reasonably powerful laptops/desktops /(that would otherwise be considered legacy by most other standards)/.  
+
+I am a systems architect, dev♺Ops engineer, computer scientist, composer/musician, sound designer, writer/publisher.  I wear a lot of hats! My Emacs needs to wear a lot of hats as well!  The central focus of *Modular Emacs* is to build empowering features into Emacs utilizing a modular framework that facilitates all the above without becoming an over complicated mess to manage! /"good luck with that"/  :octocat:
+
+** 📄 Why Modular?
+
+- *Modular Emacs:* designed to be easy to maintain and configure through the
+   management of independent modules... In that sense, Emacs hopefully forms
+   a basic sensible framework that is easy to use and flexible enough to adjust
+   to your work-style, programming-style, and writing-style...
+
+- *Add Only What You Need:* You have choices encapsulated within modules. Each
+   module comes with its own requirements.  Removing and or adding many of the
+   extra feature modules will not disrupt the rest of your Emacs configuration.
+   They have been designed to be encapsulated in that way... Some of the more
+   basic modules are required for Modular Emacs basic operation however. The
+   nice thing is everything is modular so it will be easy to find out which
+   ones are doing what...
+
+On the other hand, if you install Modular Emacs stripped of all external helper apps /(described below in the *Requirements* section)/, It may not provide any advantage over many of the other simpler Emacs projects on GitHub... Therefore if all you need is vanilla Emacs /(with some of the more basic options thrown in)/, you don't need Modular Emacs at all.
+
+[[https://github.com/hrs/sensible-defaults.el][Here is a simpler light weight "sensible" Emacs Config]] which claims to also be modular - I have not tried it. I only briefly read through the README. It looks like a good alternate option to try :octocat:
 
 * 📅 Begin Log:
+** 📅 2023:
+
+No Logs So far... This feature is under evaluation and may end up not being used...
+
 ** 📅 2024:
 
 /Not Here Yet but keep logging... The New Year will be here soon enough!/
@@ -536,7 +590,7 @@ Place the *:noexport:* tag at the end of any org outline heading to exclude it a
 ** ⎘ Templates:
 *** NEW 🗓 Generic Log Entry /(General Log Entry Template)/
 <2021-03-29 Mon>
-:README:
+#+begin_comment
 
 =README:=
 
@@ -621,11 +675,9 @@ Place the *:noexport:* tag at the end of any org outline heading to exclude it a
                       =Warning!= Using this command will CLUTTER ALL the headings
                                 within your org file with those timestamps!!!
 
-   - Once all of this has become routine for you, =go ahead and remove
-     this= ~README~ =drawer from this template=... That way it does not get
-     copied when you need to clone new log entries...
+   - Once all of this has become routine for you, =go ahead and remove this= ~README~ =drawer from this template=... That way it does not get copied when you need to clone new log entries...
 
-:END:
+#+end_comment
 
 This Log Entry is about: Yadda... Yadda... Yadda...
 

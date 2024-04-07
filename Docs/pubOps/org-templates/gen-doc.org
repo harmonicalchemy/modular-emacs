@@ -51,10 +51,9 @@
 
       =ORG-MODE & LaTeX SETUPFILE for: GENERAL PURPOSE Docs=
 
-=NOTE:= This SETUPFILE is NOT being used for anything
-      currently... It is here to help with troubleshooting
-      etc...  It may be incorporated into something useful
-      for real things later however...
+=NOTE:= This SETUPFILE is currently only used by:
+      *Simple README with Log Notebook Skeleton*...
+      It may be incorporated into other simple doc types later...
 
 :README:
 
@@ -163,7 +162,7 @@
 #+OPTIONS: ^:{}         # Use Tex-like syntax for sub and superscripts
                         # Typing simple a_b will not be affected anymore
                          # Use word^{super} to raise word "super" - superscript
-                           # Use word_{sub} to lower the word "sub" - subscript
+                          # Use word_{sub} to lower the word "sub" - subscript
 #+OPTIONS: author:t          # Include Author Name into Exported file
 #+OPTIONS: broken-links:mark  # Broken link(s) found? Mark Them & Don't Export
 #+OPTIONS: c:nil               # DONT Include CLOCK keywords in exported documents

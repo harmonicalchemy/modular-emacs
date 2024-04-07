@@ -56,7 +56,8 @@
     pandoc-mode
     fountain-mode
     graphviz-dot-mode
-    csv-mode))
+    csv-mode
+    simple-httpd))
 ;    markdown-toc
 ;    deft         ;; I am removing this... It is a Pain and causes Errors!
 

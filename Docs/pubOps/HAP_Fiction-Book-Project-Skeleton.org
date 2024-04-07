@@ -4,7 +4,7 @@
 #+EXPORT_FILE_NAME: HAP_Fiction-Book-Project-Skeleton.pdf
 #+TEXT: Copyright © 2022 Harmonic Alchemy Productions & Others
 #+AUTHOR: Alisha Awen - Harmonic Alchemy Productions
-#+EMAIL: Siren1@disroot.org
+#+EMAIL: harmonicalchemy@proton.me
 #+DATE: {{{time(%Y-0%M-%d)}}}
 #+TEXT: Created: <2020-07-30 Thu>
 #+TEXT: Last Published: <Not Published>
@@ -56,7 +56,7 @@
 #+SETUPFILE: ./org-templates/default-tags.org
 
 :LATEST_UPDATE:
-  <2023-02-15 Wed>
+  <2023-10-18 Wed>
 
   =YOU MAY REMOVE This Drawer= from your own clones of this template if
   it is bothering you... This drawer is used for HAP Modular Emacs
@@ -72,37 +72,50 @@
 
     This bullet is not for end users... This is /"Note to Self"/ stuff...
 
-    + [ ] =MASTER TEMPLATE ONLY= *Keep The Above Timestamp Up To Date:*
+      + [X] =MASTER TEMPLATE ONLY= *Keep The Above Timestamp Up To Date:*
 
-        DO THIS ALWAYS, JUST AFTER YOU UPDATE THIS TEMPLATE... DON'T FORGET!
-        /(i.e., BOILERPLATE content and :README: meta data)/
+          DO THIS ALWAYS, JUST AFTER YOU UPDATE THIS TEMPLATE... DON'T FORGET!
+          /(i.e., BOILERPLATE content and :README: meta data)/
   
   - =PUBLIC USE Instructions:= /(FOR CLONES OF THIS TEMPLATE)/
 
-    + [ ] =Change this= *:LATEST_UPDATE:* =drawer title:= /(within clones only)/
+      + [ ] *FOR NEWLY CREATED CLONES:*
 
-         Change it to: *:LATEST_TEMPLATE_UPDATE:* within NEWLY CREATED CLONES...
+          - [ ] =Change this= *:LATEST_UPDATE:* =drawer title:= /(within clones only)/
 
-    + [ ] *COMPARE the TIMESTAMPS between THIS TEMPLATE and CLONES:*
+               Change it to: *:LATEST_TEMPLATE_UPDATE:*
 
-         The BOILERPLATE content and meta data within CLONES of this
-         TEMPLATE will get out of sync after a while due to Harmonic
-         Alchemy Modular Emacs version updates etc...
+          - [ ] *REMOVE INTERNAL USE INSTRUCTIONS*
+
+               Remove the main =INTERNAL USE Instructions:= bullet above...
+               That bullet is only relevant to the TEMPLATE, /(not clones)/
+
+      + [ ] *FOR ALREADY EXISTING PROJECTS*:
+
+          - [ ] *COMPARE the TIMESTAMPS between THIS TEMPLATE and your PROJECT:*
+
+              The BOILERPLATE content and meta data within CLONES of this
+              TEMPLATE will get out of sync after a while due to Harmonic
+              Alchemy Modular Emacs version updates etc... Some NEW features
+              or HEADINGS may have been added that make sense to be added
+              to your existing project /(originally a clone of this)/
         
-         Use the ABOVE timestamp /(within the TEMPLATE and your CLONE)/
-         to see if the clone's BOILERPLATE content needs to be updated
-         /(brought into sync with its template - MERGE)/ and then perform
-         any needed merging/replacing of BOILERPLATE and/or meta data.
-         /(e.g, *:README:* drawers, etc.)/
+              Use the ABOVE timestamp /(within the TEMPLATE and your CLONE)/
+              to see if the clone's BOILERPLATE content needs to be updated
+              /(brought into sync with its template - MERGE)/ and then perform
+              any needed merging/replacing of BOILERPLATE and/or meta data.
+              /(e.g, *:README:* drawers, etc. even this drawer)/
 
-    + [ ] *Keep ABOVE timestamp within CLONES of this template UP TO DATE:*
+          - [ ] *Keep ABOVE timestamp within CLONES of this template UP TO DATE:*
 
-         =AFTER Completing Above MERGE Step= and your clone's BOILERPLATE
-         content has been brought up to date /(i.e. in sync)/ with
-         its TEMPLATE... Then update the timestamp ABOVE...
-         /(WITHIN YOUR CLONE)/ to record the date of its last sync status...
+              =AFTER Completing Above MERGE Step= and your clone's BOILERPLATE
+              content has been brought up to date /(i.e. in sync)/ with its
+              TEMPLATE... Then update the timestamp ABOVE... /(WITHIN YOUR CLONE)/
+              to record the date of its last sync status...
+
 :END:
 :READ_ME_FIRST:
+
 =Instructions:= /(How to Install & Use This Template)/
 
 To use *HAP_Fiction-Book-Project-Skeleton.org* Org-Mode Fiction Book Project Template
@@ -162,7 +175,7 @@ for your own projects, =Perform The Following Steps:=
 
       =Do That first!=
 
-3) [ ] =Finish Setting Up The Rest Of This Project LATER= [0/10]
+3) [ ] =Finish Setting Up The Rest Of This Project LATER= [0/13]
 
     - [ ] *Change Title of :LATEST_UPDATE: drawer ABOVE:*
 
@@ -736,6 +749,7 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
          Read the *:README:* drawer under the Scene heading for
          more info...
 :END:
+
 ** NEW Scene X /(COMMANDEER This One)/                               :noexport:
 <<SCENE_new-scene-x>>
 :README:
@@ -1073,6 +1087,7 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
       /(i.e., Your Books Internal Analyst/
              /Behind the Curtain So-To-Speak... %^)/
 :END:
+
 *** NEW 📝 Background Note 1: <2020-05-10 Sun> /(example)/
 
 *Mark each note's timestamp to its initial creation time*. This will enable emerging notes for chapters to be searched chronologically, and to give you an idea of how things evolve over time...
@@ -1090,7 +1105,6 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
 |----+--------|
 
 Do any or all the above to help get the concepts and images of your book clear in mind...
-
 *** NEW 📝 Background Note 2: <2020-05-10 Sun> /(example)/
 
 Each new note needs to get its own heading and initial timestamp...
@@ -2951,7 +2965,7 @@ Here are Links to Information that may be helpful While Using this Fiction Book 
                   /It's my "METHOD of MADNESS" %^)/
 :END:
 
-Here are Links to Information that may be helpful While Using this Fiction Book Template
+*Links to Information that may be helpful While Using this Fiction Book Template:*
 
 - [[https://mirrors.rit.edu/CTAN/macros/latex/contrib/memoir/memman.pdf][The Memoir Class]] - /Link to PDF/ 
 
@@ -5738,13 +5752,13 @@ Add Description Here:
    =To Be Determined...=
 :END:
 
-|--------+----------+--------+-----------------|
-| Sector | Quadrant | System | Description:    |
-|--------+----------+--------+-----------------|
-|        |          |        | [[link to Doc]] |
-|        |          |        | [[link to Doc]] |
-|        |          |        | [[link to Doc]] |
-|--------+----------+--------+-----------------|
+|--------+----------+--------+--------------|
+| Sector | Quadrant | System | Description: |
+|--------+----------+--------+--------------|
+|        |          |        | [[link to Doc]]  |
+|        |          |        | [[link to Doc]]  |
+|        |          |        | [[link to Doc]]  |
+|--------+----------+--------+--------------|
 
 **** NEW 📚 History
 :README:

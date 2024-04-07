@@ -1,21 +1,21 @@
 # -**- mode: org; coding: utf-8 -**-
-#+TITLE: HAP - Simple LOG Notebook Skeleton
-#+TEXT: Copyright © 2022 Harmonic Alchemy Productions & Others
+#+TITLE: HAP - Simple DATE-ONLY Journal Skeleton
+#+TEXT: Copyright © 2023 Harmonic Alchemy Productions & Others
 #+AUTHOR: Alisha Awen - Harmonic Alchemy Productions
 #+EMAIL: harmonicalchemy@proton.me
-#+DATE: <2023-02-16 Thu>
-#+TEXT: Created: <2022-01-26 Wed>
+#+DATE: {{{time(%Y-0%M-%d)}}}
+#+TEXT: Created: <2023-07-26 Wed>
 #+TEXT: Last Published: <NOT-published>
 #+FILETAGS: templates logs unpublished
 
-#+DESCRIPTION: HAP - Modular Emacs Org Mode Simple Log Notebook Template.  This is a minimalist version of: HAP_General-Log-Book-Skeleton.org (a Full Featured Look Book Skeleton Template).  This log book does not have all the bells and whistles of HAP_General-Log-Book-Skeleton.org This Simple Log Template is Great FOR Internal Tracking and Planning withtin Org-Mode ONLY when you don't need to be bothered with exporting to PDF etc... There are NO LaTeX directives in here. This Template's SOLE PURPOSE is for making a traditional Log useful for internal project management that does not itself get published...
+#+DESCRIPTION: HAP - Modular Emacs Org Mode Simple DATE-ONLY Journal Notebook Template.  This is an even more minimalist version of: HAP_Simple-Log-Book-Skeleton.org. This Journal Skeleton does not include any time tracking features or overhead... This is for less formal Journals or Diries where clocking in and out and keeping track of time is not wanted or needed... There are NO LaTeX directives in here. This Template's SOLE PURPOSE is for personal journals or informal logs that will NOT themselves get published to PDF files...
 
 #+BEGIN_COMMENT
 
 =Setup TAGS:=
 
    For Cloned Versions of this template, the file/paths below will be relative
-   to your parent project directory and as such, should be all set to your new: ~.../your_Simple-LOG.org_File's/org-templates/~ directory...
+   to your parent project directory and as such, should be all set to your new: ~.../your_Simple-JOURNAL.org_File's/org-templates/~ directory...
 
    *SETUPFILE:* ~default-tags.org~ is where tags are defined for this project...
               If you need to change the category, do it in your cloned version
@@ -108,11 +108,11 @@
 :READ_ME_FIRST:
 =Instructions:= /(How to Install & Use This Template)/
 
-To use *HAP_Simple-Log-Book-Skeleton.org* /(Minimalist Log Notebook /TEMPLATE)/ for your own projects, =Perform The Following Steps:=
+To use *HAP_Simple-date-only-JOURNAL-Skeleton.org* /(Minimalist Journal /TEMPLATE)/ for your own projects, =Perform The Following Steps:=
 
 /Use the org-mode Checkboxes to Help You Keep Track of Progress/
 
-1) [ ] *Clone a Copy of This File:* 
+1) [X] *Clone a Copy of This File:* 
 
       Put your clone where you normally organize your Logs
       or projects that need logs...
@@ -126,7 +126,7 @@ To use *HAP_Simple-Log-Book-Skeleton.org* /(Minimalist Log Notebook /TEMPLATE)/ 
 
       Existing *Modular Emacs MASTER FOLDERS* will contain other files
       for other projects as well as the SETUPFILES and MEDIA required
-      by this: ~HAP_Simple-Log-Book-Skeleton.org~ file...
+      by this: ~HAP_Simple-date-only-JOURNAL-Skeleton.org~ file...
 
       =In other words= *CLONE THIS TEMPLATE WHERE EVER YOU NEED TO PUT IT...*
       The folder you put it in becomes it's *MASTER FOLDER*...
@@ -135,9 +135,9 @@ To use *HAP_Simple-Log-Book-Skeleton.org* /(Minimalist Log Notebook /TEMPLATE)/ 
 
       =Keep This File Within its MASTER ENCLOSING FOLDER=
 
-      If this is a =STANDALONE LOG=, Name the =MASTER FOLDER= to reflect the
+      If this is a =STANDALONE JOURNAL=, Name the =MASTER FOLDER= to reflect the
       subject category that it is going to be associated with...
-      /(i.e., what you renamed this HAP_Simple-Log-Book-Lkeleton.org file to)/
+      /(i.e., Your renamed HAP_Simple-date-only-JOURNAL-Skeleton.org file)/
 
       =Other Files/Folders Will Be Placed Within This MASTER FOLDER...=
 
@@ -148,7 +148,7 @@ To use *HAP_Simple-Log-Book-Skeleton.org* /(Minimalist Log Notebook /TEMPLATE)/ 
             
       You need to write that down before you forget!  =Right?= The clock
       is ticking too! Therefore... as soon as you are done with the
-      first steps above, =STOP= and go immediately to the: 📒 *Simple Log:*
+      first steps above, =STOP= and go immediately to the: 📒 *JOURNAL:*
       Binder...
 
       =Open:= *NEW* 🗓 *EXAMPLE Log Entry* /(Cloned from TEMPLATE)/ under the
@@ -156,142 +156,142 @@ To use *HAP_Simple-Log-Book-Skeleton.org* /(Minimalist Log Notebook /TEMPLATE)/ 
       *:README:* drawer... Rename "EXAMPLE Log Entry" to a name that fits
       the subject of your new Log Entry...
 
-      Once your first LOG ENTRY is completed, /(the reason you started/
-      /this LOG in the first place)/ You should come back and:
-      =Resume Finishing Set Up of This LOG Notebook= /(next steps below)/
+      Once your first JOURNAL ENTRY is completed, /(the reason you started/
+      /this JOURNAL in the first place)/ You should come back and:
+      =Resume Finishing Set Up of This JOURNAL Notebook= /(next steps below)/
 
 3) [ ] =Finish Setting Up The Rest Of This Project LATER= [0/12]
 
-    - [ ] *Change Title of :LATEST_UPDATE: drawer ABOVE:*
+     - [ ] *Change Title of :LATEST_UPDATE: drawer ABOVE:*
 
-         AFTER Cloning, Change *:LATEST_UPDATE:* drawer title ABOVE
-         /(WITHIN YOUR CLONE, NOT THE ORIGINAL!)/ to *:LATEST_TEMPLATE_UPDATE:*
-         AND Follow Instructions within it...
+          AFTER Cloning, Change *:LATEST_UPDATE:* drawer title ABOVE
+          /(WITHIN YOUR CLONE, NOT THE ORIGINAL!)/ to *:LATEST_TEMPLATE_UPDATE:*
+          AND Follow Instructions within it...
 
-    - [ ] *Copy/Clone:* ~./media~ /(and contents)/ *to the MASTER FOLDER:*
+     - [ ] *Copy/Clone:* ~./media~ /(and contents)/ *to the MASTER FOLDER:*
 
-         Copy this directory /(into the MASTER FOLDER as a sibling of this file).../ 
-         Any external documents or images referenced by your *Simple Log Book*
-         should be placed within this ~./media/~ directory...
+          Copy this directory /(into the MASTER FOLDER as a sibling of this file).../ 
+          Any external documents or images referenced by your *Simple JOURNAL*
+          should be placed within this ~./media/~ directory...
 
-         All external links, images, within the boilerplate examples of this
-         template may be used as examples for getting your own images, and 
-         external attachments linked properly...  
+          All external links, images, within the boilerplate examples of this
+          template may be used as examples for getting your own images, and 
+          external attachments linked properly...  
 
-         This single ~./media~ directory will serve media and external attachments 
-         for this and other Modular Emacs Document TEMPLATE ~.org~ files that may
-         exist within this MASTER FOLDER now or in the future...
+          This single ~./media~ directory will serve media and external attachments 
+          for this and other Modular Emacs Document TEMPLATE ~.org~ files that may
+          exist within this MASTER FOLDER now or in the future...
 
-         /(IF/WHEN THEY /WERE/ARE COPIED HERE)/
+          /(IF/WHEN THEY /WERE/ARE COPIED HERE)/
 
-         =Note:=  You DON'T need to copy the ~./auto/~ directory... That directory
-                may be automatically created by *AuxTeX* when exporting other ~.org~
-                files based on *Modular Emacs* TEMPLATES but =NOT= from this ~.org~
-                file which is not set up for exporting to ~.PDF~...
+          =Note:=  You DON'T need to copy the ~./auto/~ directory... That directory
+                 may be automatically created by *AuxTeX* when exporting other ~.org~
+                 files based on *Modular Emacs* TEMPLATES but =NOT= from this ~.org~
+                 file which is not set up for exporting to ~.PDF~...
 
-    - [ ] *Copy/Clone:* ~./org-templates~ /(and all contents)/ *to the MASTER FOLDER:*
+     - [ ] *Copy/Clone:* ~./org-templates~ /(and all contents)/ *to the MASTER FOLDER:*
 
-         =WARNING!:= To avoid overwriting existing files, DO NOT COPY this
-                   ~./org-templates~ to your MASTER FOLDER IF ONE ALREADY EXISTS!
+          =WARNING!:= To avoid overwriting existing files, DO NOT COPY this
+                    ~./org-templates~ to your MASTER FOLDER IF ONE ALREADY EXISTS!
 
-                   But DO follow the rest of this step so you will know what you
-                   should do...
+                    But DO follow the rest of this step so you will know what you
+                    should do...
 
-                   =OTHERWISE For MASTER FOLDERS that DO NOT already have one:=
-                   *Copy this NEW directory to serve as your:*
-                   =NEW Simple Log Book's MASTER FOLDER=
-                   /(i.e., as a sibling/ /of this README.org file).../
+                    =OTHERWISE For MASTER FOLDERS that DO NOT already have one:=
+                    *Copy this NEW directory to serve as your:*
+                    =NEW Simple Journal's MASTER FOLDER=
+                    /(i.e., as a sibling/ /of this README.org file).../
 
-         =Note:= SETUPFILES Within this directory are called out and included
-               by this ~HAP_Simple-Log-Book.org~ file /(within the file header above)/
+          =Note:= SETUPFILES Within this directory are called out and included
+                by this ~HAP_Simple-Log-Book.org~ file /(within the file header above)/
 
-         =WARNING:= There may ALREADY be an ~org-templates~ directory existing
-                  within your MASTER FOLDER! In that case you will need to
-                  merge: ~default-tags.org~ /(contained within)/ into your
-                  existing copy of it instead...       
+          =WARNING:= There may ALREADY be an ~org-templates~ directory existing
+                   within your MASTER FOLDER! In that case you will need to
+                   merge: ~default-tags.org~ /(contained within)/ into your
+                   existing copy of it instead...       
 
-                  =YOU WON'T WANT TO OVERRITE EXISTING FILES= within this 
-                  directory you are already using, /(and modified!!!)/
-                  but you may need to update existing files you are NOT
-                  using currently if/when you DO start using them...
+                   =YOU WON'T WANT TO OVERRITE EXISTING FILES= within this 
+                   directory you are already using, /(and modified!!!)/
+                   but you may need to update existing files you are NOT
+                   using currently if/when you DO start using them...
 
-         Other SETUPFILES within this directory are intended to be used by
-         other document style project templates and are not needed for this:
-         ~HAP_Simple-Log-Book.org~ Document... You may remove the extra files
-         if you wish... 
+          Other SETUPFILES within this directory are intended to be used by
+          other document style project templates and are not needed for this:
+          ~HAP_Simple-Log-Book.org~ Document... You may remove the extra files
+          if you wish... 
 
-         =HOWEVER:= If you decide to clone another ~HAP_<book-template>.org~
-                  file into this project folder it will pick up its
-                  associated SETUPFILES automatically because this folder
-                  already exists! Consider this case if/when you decide
-                  to delete other UNUSED SETUPFILES... They are small text
-                  files not really bothering you...
+          =HOWEVER:= If you decide to clone another ~HAP_<book-template>.org~
+                   file into this project folder it will pick up its
+                   associated SETUPFILES automatically because this folder
+                   already exists! Consider this case if/when you decide
+                   to delete other UNUSED SETUPFILES... They are small text
+                   files not really bothering you...
 
-                  /(YOU MAY NEED THEM LATER DEPENDING ON YOUR CASE)/
+                   /(YOU MAY NEED THEM LATER DEPENDING ON YOUR CASE)/
 
-    - [ ] *Change the* ~#+TITLE:~ *directive at the top of this file:* 
+     - [ ] *Change the* ~#+TITLE:~ *directive at the top of this file:* 
 
-         Change to: /"your Simple Log's REAL Title"/
+          Change to: /"your Simple Journal's REAL Title"/
 
-    - [ ] *Change the* ~#+TEXT: Copyright © 2022:~ *directive top of this file:*
+     - [ ] *Change the* ~#+TEXT: Copyright © etc...~ *directive top of this file:*
 
-         Change to: /"Copyright © your info here"/ You are the copyright
-         owner of your own documents created from clones of these master
-         templates... /(but these master Template Files are to stay under/
-         /Harmonic Alchemy Productions copyright. Any Attribution to me/
-         /for the template structure of your published docs will be/
-         /appreciated... Thanks! ;-)/
+          Change to: /"Copyright © your info here"/ You are the copyright
+          owner of your own documents created from clones of these master
+          templates... /(but these master Template Files are to stay under/
+          /Harmonic Alchemy Productions copyright. Any Attribution to me/
+          /for the template structure of your published docs will be/
+          /appreciated... Thanks! ;-)/
 
-    - [ ] *Change the* ~#+AUTHOR:~ *directive at the top of this file:* 
+     - [ ] *Change the* ~#+AUTHOR:~ *directive at the top of this file:* 
 
-         Change to: /"your NAME"/
+          Change to: /"your NAME"/
 
-    - [ ] *Change the* ~#+EMAIL:~ *directive at the top of this file:* 
+     - [ ] *Change the* ~#+EMAIL:~ *directive at the top of this file:* 
 
-         Change to: /"your EMAIL"/
+          Change to: /"your EMAIL"/
 
-    - [ ] *Change the* ~#+DATE:~ *TIMESTAMP at the top of this file:* 
+     - [ ] *Change the* ~#+DATE:~ *TIMESTAMP at the top of this file:* 
 
-         Put your cursor on the TIMESTAMP: /i.e.,/ <2022-10-05 Wed>
-         and type: ~C-c . . RETURN~ The TIMESTAMP will update to NOW.
-         Do this whenever you update your doc to show last date
-         it was changed or modified...
+          Put your cursor on the TIMESTAMP: /i.e.,/ <2022-10-05 Wed>
+          and type: ~C-c . . RETURN~ The TIMESTAMP will update to NOW.
+          Do this whenever you update your doc to show last date
+          it was changed or modified...
 
-    - [ ] *Change the* ~#+TEXT: Created:~ *TIMESTAMP at the top of this file:*
+     - [ ] *Change the* ~#+TEXT: Created:~ *TIMESTAMP at the top of this file:*
 
-         Put your cursor on the TIMESTAMP: /i.e.,/ <2022-10-05 Wed>
-         and type: ~C-c . . RETURN~ The TIMESTAMP will update to NOW.
+          Put your cursor on the TIMESTAMP: /i.e.,/ <2022-10-05 Wed>
+          and type: ~C-c . . RETURN~ The TIMESTAMP will update to NOW.
 
-         =LEAVE THIS DATE ALONE after Setting It The FIRST Time=
+          =LEAVE THIS DATE ALONE after Setting It The FIRST Time=
 
-         This Date reflects the time/date that you first created this
-         new document It should NEVER change after that...
+          This Date reflects the time/date that you first created this
+          new document It should NEVER change after that...
 
-    - [ ] *Change the* ~#+TEXT: Last Published:~ *TIMESTAMP at Publish Time:* 
+     - [ ] *Change the* ~#+TEXT: Last Published:~ *TIMESTAMP at Publish Time:* 
 
-          =Don't Change This UNTIL You have completed some MAJOR Release=
-          of the files or code that this ~Simple-Log.org~ doc refers to and
-          this LOG reflects the status of that MAJOR UPDATE
-          /(e.g., as published somewhere, in a public repository etc...)/
+           You will for MOST CASES, Never be publishing this file since
+           that is not its purpose and there is no *LaTeX* configuration
+           for it... Therefore it is recommended to leave this Directive
+           as: ~<NOT Published>~ for the duration...
+           
+           However, if for any reason you decide you DO want to publish
+           this file as a PDF, you will have to adapt some basic *LaTeX*
+           directives for it first... With that in mind, when you publish
+           this doc,you will need to utilize this field for its intended
+           purpose at that point in time as well...
+           
+           To do that, Replace the <unpublished> placeholder with a REAL
+           TIMESTAMP by typing: ~C-c . . RETURN~ The new Last Published:
+           <TIMESTAMP> will appear in place...
 
-          Until that publishing time comes leave it alone as:
-          ~<NOT Published>~
-          
-          As soon as this is published as part of a major release, etc,
-          Replace the <unpublished> placeholder with a REAL TIMESTAMP by typing:
-          ~C-c . . RETURN~ The new Last Published: <TIMESTAMP> will appear in
-          place... Do this ANY time you have completed some major update, have
-          published that update and this file needs to reflect that update...
-          /(this will help you keep track)/
+     - [ ] *Change the* ~#+FILETAGS:~ *directive at the top of this file:* 
 
-    - [ ] *Change the* ~#+FILETAGS:~ *directive at the top of this file:* 
+           Add your own tags that match the context of your Journal...
 
-          Add your own tags that match the context of your Log Book...
+     - [ ] *Change the* ~#+DESCRIPTION:~ *directive at the top of this file:*
 
-    - [ ] *Change the* ~#+DESCRIPTION:~ *directive at the top of this file:*
-
-         Compose your ~Simple LOG's~  Description as a short paragraph here...
-         and then use that to change the directive above...
+          Compose your ~Simple JOURNAL's~  Description as a short paragraph here...
+          and then use that to change the directive above...
 
 4) *Purpose of the:* ~./org-templates~  *Directory:*
 
@@ -299,13 +299,14 @@ To use *HAP_Simple-Log-Book-Skeleton.org* /(Minimalist Log Notebook /TEMPLATE)/ 
     this template. You don't need to change those settings unless you
     wish to customize the already customized tags...
 
-    /They are allready set up correctly for the Simple Log Book genre,/
+    /They are allready set up correctly for the Simple Journal genre,/
     /and the category is all set as well... But you can and may modify/
     /the original files to fit your needs.../
-       
+
     Other SETUPFILES within this directory are intended to be used by
     other document style project templates and are not needed for this:
-    ~Simple-Log.org~ Document... You may remove the extra files if you wish... 
+    ~Simple-Journal.org~ Document... You may remove the extra files if
+    you wish... 
 
     =HOWEVER:= If you decide to clone another ~HAP_<book-template>.org~
              file into this project folder it will pick up its
@@ -335,27 +336,27 @@ To use *HAP_Simple-Log-Book-Skeleton.org* /(Minimalist Log Notebook /TEMPLATE)/ 
       You may wish to export OTHER Modular Emacs based .org files within
       this MASTER FOLDER to PDF format however... To do that use the following:
 
-    - [ ] *Issue the following Emacs command:*
+     - [ ] *Issue the following Emacs command:*
 
-          ~M-x org-latex-export-to-pdf~
+           ~M-x org-latex-export-to-pdf~
 
-    - [ ] *OR* If You Enabled *Xah-Fly-Keys* /"Command Mode"/ Try Shortcut:
+     - [ ] *OR* If You Enabled *Xah-Fly-Keys* /"Command Mode"/ Try Shortcut:
 
-          ~SPACE e p~
+           ~SPACE e p~
 
-    - [ ] *OR Export to OTHER Formats:*
+     - [ ] *OR Export to OTHER Formats:*
 
-          ~C-c C-e~
+           ~C-c C-e~
 
-          /(a pop-up will show allowing you to choose export method)/
+           /(a pop-up will show allowing you to choose export method)/
 
-          After *AucTeX* is done parsing/compiling etc., new files will be
-          created using the file names specified within the ~HAP_file-name.org~
-          files they were exported from...
+           After *AucTeX* is done parsing/compiling etc., new files will be
+           created using the file names specified within the ~HAP_file-name.org~
+           files they were exported from...
 
-    =If YOU EXPERIENCE LaTeX ERRORS:= 
+     =If YOU EXPERIENCE LaTeX ERRORS:= 
 
-       *Consult Buffer:* ~*Org PDF LaTeX Output*~
+        *Consult Buffer:* ~*Org PDF LaTeX Output*~
 
 6) *Handling Images:*
 
@@ -384,17 +385,17 @@ Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas
 =Enjoy!= - Alisha Awen
 :END:
 
-* 📒 Simple Log:
-<<SLOG>>
+* 📒 JOURNAL:
+<<JOURNAL>>
 
 ** 📅 2023:
-<<SLOG_2023>>
+<<JOURNAL_2023>>
 
-*** NEW 🗓 EXAMPLE Log Entry /(Cloned from TEMPLATE)/
+*** NEW 🗓 EXAMPLE Journal Entry /(Cloned from TEMPLATE)/
 <2021-03-29 Mon>  
-<<SLOG-2023_example-log-entry>>
+<<JOURNAL-2023_example-entry>>
 :README:
-   =Using this Log Entry TEMPLATE:= /(logging & tracking time)/
+   =Using this Journal Entry TEMPLATE:= /(logging & tracking time)/
 
    - [ ] *Go To One of the HEADINGS Below:*
 
@@ -478,7 +479,7 @@ Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas
 
       + *Clock Out & Mark Items Done:* ~C-c C-t~
 
-         When you are all done with a Log Entry use the above key 
+         When you are all done with a Journal Entry use the above key 
          command to mark its Heading *TODO* tag to: *DONE* /(Most of the/ 
          /time this will ALSO clock you out if you are still clocked/ 
          /into the item... But not allways in my experience.../  
@@ -499,11 +500,11 @@ Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas
          =Warning!= Using this command will CLUTTER ALL the headings
                   within your org file with those timestamps!!!
 
-   =CREATING A BRAND NEW LOG ENTRY:= /(from this TEMPLATE)/
+   =CREATING A BRAND NEW JOURNAL ENTRY:= /(from this TEMPLATE)/
 
    - [ ] *COPY/CLONE THIS ENTIRE:*
          
-        *NEW* 🗓 *BOILERPLATE LOG Entry* /(Simple Log Entry TEMPLATE)/
+        *NEW* 🗓 *BOILERPLATE JOURNAL Entry* /(JOURNAL Entry TEMPLATE)/
          
         Paste it under the current: 📅 *YYYY:* heading at the bottom
         of the list /(under previous log entries items from before)/
@@ -515,22 +516,22 @@ Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas
 
    - [ ] =Commandeer Your New Clone:=
      
-         The structure of this Log Entry Template's content layout is
+         The structure of this Journal Entry Template's content layout is
          all set up for you ahead of time to allow you to immediately
          begin writing... /(You only need to change titles etc...)/
 
-         After cloning, =RENAME= *BOILERPLATE LOG Entry* /(Simple Log Entry TEMPLATE)/
+         After cloning, =RENAME= *BOILERPLATE JOURNAL Entry* /(JOURNAL Entry TEMPLATE)/
          to a *Unique Title* in order to commandeer the log entry item for your
          own needs...
 
-         =Do NOT PUT "LOG" in your Title!=
+         =Do NOT PUT "JOURNAL" in your Title!=
 
          You also need to insure your anchors /(below the headings)/ are unique!
 
    - [ ] =Change The Anchor Link:=
 
-        Change the anchor /(directly under the LOG Entry Title)/ to
-        match your new Log Entry's title name...
+        Change the anchor /(directly under the JOURNAL Entry Title)/ to
+        match your new Journal Entry's title name...
 
          =Note:= I created the following convention for making unique
                anchors within ALL of these HAP_Doc-Skeleton.org
@@ -554,14 +555,14 @@ Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas
                /prefer to do it manually... The alternate is a mess/
                /IMHO)/
 
-         Leave ~SLOG-YYYY_~ as the anchor's prefix /(as in boilerplate above)/
+         Leave ~JOURNAL-YYYY_~ as the anchor's prefix /(as in boilerplate above)/
          but change the YYYY part to the current year that you copied this
          NEW log Entry item into...
 
          Change ~META-ENTRY~ /(after the underscore "_" )/ to a short but unique
          abbreviation, acronym, or mnemonic of the log entry's title... Keep
          the underscore to separate the MAIN HEADING ID of this anchor from
-         the NEW renaed title of this new LOG Entry...
+         the NEW renaed title of this new JOURNAL Entry...
    
          Make your title "POSTFIX" portion of the anchor link in all lower
          case... Use dashes to connect words within your title postfix
@@ -582,7 +583,7 @@ Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas
         bullet... 
 
         Change *META-ENTRY* within the existing anchor to the title of this
-        log entry, /(as you did for the Main Anchor of this Log Entry...)/
+        log entry, /(as you did for the Main Anchor of this Journal Entry...)/
         HOWEVER in this case it is NOW part of the PREFIX portion of this
         anchor and should be ALL UPPER CASE. /(an underscore is placed/
         /between it and the POSTFIX title of the sub heading)/
@@ -591,7 +592,7 @@ Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas
         the PREFIX for SUB-SUB Headings as well...
         
         This is why keeping that part short is a good idea because NOW
-        the Log Entry Title is part of the PREFIX for anchors made to
+        the Journal Entry Title is part of the PREFIX for anchors made to
         Sub-Headings... /(and in turn shortened versions of those sub/
         /heading titles will become part of the PREFIX for anchors of/
         /sub-sub headings... etc...)/
@@ -605,13 +606,262 @@ Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas
         /This all follows the same convention described within the previous/
         /bullet.../
 
-   =ENJOY USING YOUR BRAND NEW LOG OF ANYTHING YOU WANT!=
+   =ENJOY USING YOUR BRAND NEW JOURNAL OF ANYTHING YOU WANT!=
 :END:
 
-This Log Entry is about: Yadda... Yadda... Yadda...
+This Journal Entry is about: Yadda... Yadda... Yadda...
+
+**** NEW 📒 Details:
+<<JOURNAL-2023-EXAMPLE-ENTRY_details>>
+
+***** NEW New Item 1 /(placeholder)/ [0/3]
+<<JOURNAL-2023-EXAMPLE-ENTRY_DETAILS-new-item-1>>
+:BOILERPLATE:
+
+  =Delete This BOILERPLATE DRAWER If You Don't Need It...=
+
+  The following list contains Babel Source Code Blocks that are
+  often needed for something I am writing or "Logging" about...
+  I use them so much I decided to include them in this template...
+
+  - [ ] *__:* /(__)/
+
+      #+begin_src conf
+       keyword1:     Value1 
+       keyword2:     Value2 
+       keyword3:     Value 
+      #+end_src
+
+  - [ ] *__:* /(__)/
+
+      #+begin_src bash
+       sudo dnf install emacs
+       sudo apt install emacs
+      #+end_src
+
+  - [ ] *__:* /(__)/
+
+      #+BEGIN_SRC emacs-lisp :results output
+       ;; Initialize Local Vars from GLOBAL CONSTANTS;
+       (let ((h (list 'text-pixels ME--CODE-FRAME-HEIGHT))
+             (w (list 'text-pixels ME--CODE-FRAME-WIDTH)))
+         (princ "CAR h: ")
+         (princ (car h))
+         (princ "\n")
+         (princ "CDR h: ")
+         (princ (cdr h))
+         (princ "\n\n")
+         (princ "CAR w: ")
+         (princ (car w))
+         (princ "\n")
+         (princ "CDR w: ")
+         (princ (cdr w)))
+      #+END_SRC
+
+      #+RESULTS:
+      : CAR h: text-pixels
+      : CDR h: (42)
+      : 
+      : CAR w: text-pixels
+      : CDR w: (92)
+
+  - [ ] =LaTeX Code Within ~.Org~ Docs:=
+
+      #+begin_comment
+
+      Code Embedded ~In-line~ within paragraphs:
+      
+         Put: @@latex:<LaTeX Code Here>@@ Anywhere
+         Within a paragraph...
+
+      #+LATEX: % Any Arbitrary LaTeX Code...
+      
+      #+LATEX: \newpage % Start New Page
+
+      #+BEGIN_EXPORT latex
+      %% Put LaTex Code In Here...
+      #+END_EXPORT
+
+      #+BEGIN_LaTeX
+      %% Put LaTex Code In Here...
+      #+END_LaTeX
+
+      #+end_comment
+
+:END:
+
+New Item Details... Yadda... Yadda... Yadda...
+
+Re-Purpose these as needed and Delete anything you don't need...
+
+Add sub headings as needed...
+
+***** NEW New Item 2 /(placeholder)/ [0/3]
+<<JOURNAL-2023-EXAMPLE-ENTRY_DETAILS-new-item-2>>
+:BOILERPLATE:
+
+  =Delete This BOILERPLATE DRAWER If You Don't Need It...=
+
+  The following list contains Babel Source Code Blocks that are
+  often needed for something I am writing or "Logging" about...
+  I use them so much I decided to include them in this template...
+
+  - [ ] *__:* /(__)/
+
+      #+begin_src conf
+       keyword1:     Value1 
+       keyword2:     Value2 
+       keyword3:     Value 
+      #+end_src
+
+  - [ ] *__:* /(__)/
+
+      #+begin_src bash
+       sudo dnf install emacs
+       sudo apt install emacs
+      #+end_src
+
+  - [ ] *__:* /(__)/
+
+      #+BEGIN_SRC emacs-lisp :results output
+       ;; Initialize Local Vars from GLOBAL CONSTANTS;
+       (let ((h (list 'text-pixels ME--CODE-FRAME-HEIGHT))
+             (w (list 'text-pixels ME--CODE-FRAME-WIDTH)))
+         (princ "CAR h: ")
+         (princ (car h))
+         (princ "\n")
+         (princ "CDR h: ")
+         (princ (cdr h))
+         (princ "\n\n")
+         (princ "CAR w: ")
+         (princ (car w))
+         (princ "\n")
+         (princ "CDR w: ")
+         (princ (cdr w)))
+      #+END_SRC
+
+      #+RESULTS:
+      : CAR h: text-pixels
+      : CDR h: (42)
+      : 
+      : CAR w: text-pixels
+      : CDR w: (92)
+
+  - [ ] =LaTeX Code Within ~.Org~ Docs:=
+
+      #+begin_comment
+
+      Code Embedded ~In-line~ within paragraphs:
+      
+         Put: @@latex:<LaTeX Code Here>@@ Anywhere
+         Within a paragraph...
+
+      #+LATEX: % Any Arbitrary LaTeX Code...
+      
+      #+LATEX: \newpage % Start New Page
+
+      #+BEGIN_EXPORT latex
+      %% Put LaTex Code In Here...
+      #+END_EXPORT
+
+      #+BEGIN_LaTeX
+      %% Put LaTex Code In Here...
+      #+END_LaTeX
+
+      #+end_comment
+
+:END:
+
+New Item Details... Yadda... Yadda... Yadda...
+
+Re-Purpose these as needed and Delete anything you don't need...
+
+Add sub headings as needed...
+
+***** NEW New Item 3 /(placeholder)/ [0/3]
+<<JOURNAL-2023-EXAMPLE-ENTRY_DETAILS-new-item-3>>
+:BOILERPLATE:
+
+  =Delete This BOILERPLATE DRAWER If You Don't Need It...=
+
+  The following list contains Babel Source Code Blocks that are
+  often needed for something I am writing or "Logging" about...
+  I use them so much I decided to include them in this template...
+
+  - [ ] *__:* /(__)/
+
+      #+begin_src conf
+       keyword1:     Value1 
+       keyword2:     Value2 
+       keyword3:     Value 
+      #+end_src
+
+  - [ ] *__:* /(__)/
+
+      #+begin_src bash
+       sudo dnf install emacs
+       sudo apt install emacs
+      #+end_src
+
+  - [ ] *__:* /(__)/
+
+      #+BEGIN_SRC emacs-lisp :results output
+       ;; Initialize Local Vars from GLOBAL CONSTANTS;
+       (let ((h (list 'text-pixels ME--CODE-FRAME-HEIGHT))
+             (w (list 'text-pixels ME--CODE-FRAME-WIDTH)))
+         (princ "CAR h: ")
+         (princ (car h))
+         (princ "\n")
+         (princ "CDR h: ")
+         (princ (cdr h))
+         (princ "\n\n")
+         (princ "CAR w: ")
+         (princ (car w))
+         (princ "\n")
+         (princ "CDR w: ")
+         (princ (cdr w)))
+      #+END_SRC
+
+      #+RESULTS:
+      : CAR h: text-pixels
+      : CDR h: (42)
+      : 
+      : CAR w: text-pixels
+      : CDR w: (92)
+
+  - [ ] =LaTeX Code Within ~.Org~ Docs:=
+
+      #+begin_comment
+
+      Code Embedded ~In-line~ within paragraphs:
+      
+         Put: @@latex:<LaTeX Code Here>@@ Anywhere
+         Within a paragraph...
+
+      #+LATEX: % Any Arbitrary LaTeX Code...
+      
+      #+LATEX: \newpage % Start New Page
+
+      #+BEGIN_EXPORT latex
+      %% Put LaTex Code In Here...
+      #+END_EXPORT
+
+      #+BEGIN_LaTeX
+      %% Put LaTex Code In Here...
+      #+END_LaTeX
+
+      #+end_comment
+
+:END:
+
+New Item Details... Yadda... Yadda... Yadda...
+
+Re-Purpose these as needed and Delete anything you don't need...
+
+Add sub headings as needed...
 
 **** NEW 📚 Reference:
-<<SLOG-2023-EXAMPLE-LOG-ENTRY_ref>>
+<<JOURNAL-2023-EXAMPLE-JOURNAL-ENTRY_ref>>
 :README:
    =Org Mode Links Tip:=
 
@@ -666,302 +916,8 @@ This Log Entry is about: Yadda... Yadda... Yadda...
 
 - *Link to Project:* [[][] ] /(comment)/
 
-**** NEW ⏰ Time Card:
-<<SLOG-2023-EXAMPLE-LOG-ENTRY_time-card>>
-
-#+BEGIN: clocktable :scope tree3 :maxlevel 6 :tstart "<-1w>" :tend "<+1m>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3
-#+END:
-
-**** NEW ✅ Summary: [0/3]
-<<SLOG-2023-EXAMPLE-LOG-ENTRY_summary>>
-:README:
-   This Summary is mostly to help you find things later when you
-   cannot remember when or where is was done... If you go to the
-   top of this file and expand all headings to show ALL content,
-   then do a search on "~Summary:~" you will be able to quickly
-   scroll through and scan these summaries quickly to find what
-   you were looking for... 
-
-   Also the *Time Card* /displayed above/ each search hit will give
-   more clues by showing important headings you worked on...
-
-   Below is an optional list /(that could also provide links)./ This
-   list could be used to itemize things you worked on, but I
-   personally find it easier to simply write a short one or two
-   line description containing important keywords right here and
-   nothing more. I think that is more useful...
-:END:
-
-Yadda... Yadda... Yadda...
-
-1. [X] *New Item 1:* /(this represents a completed item)/
-
-2. [-] *New Item 2:* /(this represents a currently "radio active" item)/
-
-3. [ ] *New Item 3:* /(this represents a new item not worked on yet)/
-
-3. [ ] *New Item:* /(copy/clone more of these as needed)/
-
-**** NEW 📒 Details:
-<<SLOG-2023-EXAMPLE-LOG-ENTRY_details>>
-
-***** NEW ⏱ New Item 1 /(placeholder)/ [0/3]
-<<SLOG-2023-EXAMPLE-LOG-ENTRY-DETAILS_Item-1>>
-:BOILERPLATE:
-
-  =Delete This BOILERPLATE DRAWER If You Don't Need It...=
-
-  The following list contains Babel Source Code Blocks that are
-  often needed for something I am writing or "Logging" about...
-  I use them so much I decided to include them in this template...
-
-  - [ ] *__:* /(__)/
-
-      #+begin_src conf
-       keyword1:     Value1 
-       keyword2:     Value2 
-       keyword3:     Value 
-      #+end_src
-
-  - [ ] *__:* /(__)/
-
-      #+begin_src bash
-       sudo dnf install emacs
-       sudo apt install emacs
-      #+end_src
-
-  - [ ] *__:* /(__)/
-
-      #+BEGIN_SRC emacs-lisp :results output
-       ;; Initialize Local Vars from GLOBAL CONSTANTS;
-       (let ((h (list 'text-pixels ME--CODE-FRAME-HEIGHT))
-             (w (list 'text-pixels ME--CODE-FRAME-WIDTH)))
-         (princ "CAR h: ")
-         (princ (car h))
-         (princ "\n")
-         (princ "CDR h: ")
-         (princ (cdr h))
-         (princ "\n\n")
-         (princ "CAR w: ")
-         (princ (car w))
-         (princ "\n")
-         (princ "CDR w: ")
-         (princ (cdr w)))
-      #+END_SRC
-
-      #+RESULTS:
-      : CAR h: text-pixels
-      : CDR h: (42)
-      : 
-      : CAR w: text-pixels
-      : CDR w: (92)
-
-  - [ ] =LaTeX Code Within ~.Org~ Docs:=
-
-      #+begin_comment
-
-      Code Embedded ~In-line~ within paragraphs:
-      
-         Put: @@latex:<LaTeX Code Here>@@ Anywhere
-         Within a paragraph...
-
-      #+LATEX: % Any Arbitrary LaTeX Code...
-      
-      #+LATEX: \newpage % Start New Page
-
-      #+BEGIN_EXPORT latex
-      %% Put LaTex Code In Here...
-      #+END_EXPORT
-
-      #+BEGIN_LaTeX
-      %% Put LaTex Code In Here...
-      #+END_LaTeX
-
-      #+end_comment
-
-:END:
-
-New Item Details... Yadda... Yadda... Yadda...
-
-Re-Purpose these as needed and Delete anything you don't need...
-
-Add sub headings as needed...
-
-Don't forget to clock-in to HEADINGS while you work on them...
-AND... Don't forget to Clock OUT when you are DONE... %^)
-
-***** NEW ⏱ New Item 2 /(placeholder)/ [0/3]
-<<SLOG-2023-EXAMPLE-LOG-ENTRY-DETAILS_Item-2>>
-:BOILERPLATE:
-
-  =Delete This BOILERPLATE DRAWER If You Don't Need It...=
-
-  The following list contains Babel Source Code Blocks that are
-  often needed for something I am writing or "Logging" about...
-  I use them so much I decided to include them in this template...
-
-  - [ ] *__:* /(__)/
-
-      #+begin_src conf
-       keyword1:     Value1 
-       keyword2:     Value2 
-       keyword3:     Value 
-      #+end_src
-
-  - [ ] *__:* /(__)/
-
-      #+begin_src bash
-       sudo dnf install emacs
-       sudo apt install emacs
-      #+end_src
-
-  - [ ] *__:* /(__)/
-
-      #+BEGIN_SRC emacs-lisp :results output
-       ;; Initialize Local Vars from GLOBAL CONSTANTS;
-       (let ((h (list 'text-pixels ME--CODE-FRAME-HEIGHT))
-             (w (list 'text-pixels ME--CODE-FRAME-WIDTH)))
-         (princ "CAR h: ")
-         (princ (car h))
-         (princ "\n")
-         (princ "CDR h: ")
-         (princ (cdr h))
-         (princ "\n\n")
-         (princ "CAR w: ")
-         (princ (car w))
-         (princ "\n")
-         (princ "CDR w: ")
-         (princ (cdr w)))
-      #+END_SRC
-
-      #+RESULTS:
-      : CAR h: text-pixels
-      : CDR h: (42)
-      : 
-      : CAR w: text-pixels
-      : CDR w: (92)
-
-  - [ ] =LaTeX Code Within ~.Org~ Docs:=
-
-      #+begin_comment
-
-      Code Embedded ~In-line~ within paragraphs:
-      
-         Put: @@latex:<LaTeX Code Here>@@ Anywhere
-         Within a paragraph...
-
-      #+LATEX: % Any Arbitrary LaTeX Code...
-      
-      #+LATEX: \newpage % Start New Page
-
-      #+BEGIN_EXPORT latex
-      %% Put LaTex Code In Here...
-      #+END_EXPORT
-
-      #+BEGIN_LaTeX
-      %% Put LaTex Code In Here...
-      #+END_LaTeX
-
-      #+end_comment
-
-:END:
-
-New Item Details... Yadda... Yadda... Yadda...
-
-Re-Purpose these as needed and Delete anything you don't need...
-
-Add sub headings as needed...
-
-Don't forget to clock-in to HEADINGS while you work on them...
-AND... Don't forget to Clock OUT when you are DONE... %^)
-
-***** NEW ⏱ New Item 3 /(placeholder)/ [0/3]
-<<SLOG-2023-EXAMPLE-LOG-ENTRY-DETAILS_Item-3>>
-:BOILERPLATE:
-
-  =Delete This BOILERPLATE DRAWER If You Don't Need It...=
-
-  The following list contains Babel Source Code Blocks that are
-  often needed for something I am writing or "Logging" about...
-  I use them so much I decided to include them in this template...
-
-  - [ ] *__:* /(__)/
-
-      #+begin_src conf
-       keyword1:     Value1 
-       keyword2:     Value2 
-       keyword3:     Value 
-      #+end_src
-
-  - [ ] *__:* /(__)/
-
-      #+begin_src bash
-       sudo dnf install emacs
-       sudo apt install emacs
-      #+end_src
-
-  - [ ] *__:* /(__)/
-
-      #+BEGIN_SRC emacs-lisp :results output
-       ;; Initialize Local Vars from GLOBAL CONSTANTS;
-       (let ((h (list 'text-pixels ME--CODE-FRAME-HEIGHT))
-             (w (list 'text-pixels ME--CODE-FRAME-WIDTH)))
-         (princ "CAR h: ")
-         (princ (car h))
-         (princ "\n")
-         (princ "CDR h: ")
-         (princ (cdr h))
-         (princ "\n\n")
-         (princ "CAR w: ")
-         (princ (car w))
-         (princ "\n")
-         (princ "CDR w: ")
-         (princ (cdr w)))
-      #+END_SRC
-
-      #+RESULTS:
-      : CAR h: text-pixels
-      : CDR h: (42)
-      : 
-      : CAR w: text-pixels
-      : CDR w: (92)
-
-  - [ ] =LaTeX Code Within ~.Org~ Docs:=
-
-      #+begin_comment
-
-      Code Embedded ~In-line~ within paragraphs:
-      
-         Put: @@latex:<LaTeX Code Here>@@ Anywhere
-         Within a paragraph...
-
-      #+LATEX: % Any Arbitrary LaTeX Code...
-      
-      #+LATEX: \newpage % Start New Page
-
-      #+BEGIN_EXPORT latex
-      %% Put LaTex Code In Here...
-      #+END_EXPORT
-
-      #+BEGIN_LaTeX
-      %% Put LaTex Code In Here...
-      #+END_LaTeX
-
-      #+end_comment
-
-:END:
-
-New Item Details... Yadda... Yadda... Yadda...
-
-Re-Purpose these as needed and Delete anything you don't need...
-
-Add sub headings as needed...
-
-Don't forget to clock-in to HEADINGS while you work on them...
-AND... Don't forget to Clock OUT when you are DONE... %^)
-
 ** 📅 2024:
-<<SLOG_2024>>
+<<JOURNAL_2024>>
 
 /Not Here Yet but keep logging... The New Year will be here soon enough!/
 
@@ -981,7 +937,7 @@ AND... Don't forget to Clock OUT when you are DONE... %^)
    Use this template as a quick way to start logging things that may or may not
    be part of a Large Project, /(or possibly smaller "yak shaving" tasks that you don't want cluttering up your Larger Project's Log Notebook with)/.
 
-   =Note:= /If this Log Book is destined to be part of a much larger project/
+   =Note:= /If this Journal is destined to be part of a much larger project/
           /containing other Projects based on other Harmonic Alchemy Modular/
           /Emacs Book Templates, you will NOT have to copy any of the required/ /sub-folders for this project because they already exist.../
 
@@ -1023,14 +979,14 @@ If you see other keys alone separated by a space after the *C-x* or *M-x* /(e.g.
 
 This Template utilizes the default *Org-Mode:* "*C-c* ." command /(i.e., That's Ctrl-c and then type a dot. This Enters a timestamp range at the cursor position)/. The command employs *org-evaluate-time-range* to compute time on task.  This is useful for timesheets etc. 
 
-In addition, the *Log Entry (template)* stores and tracks *Org-Mode :CLOCKING:* entries and displays results in a *Time Card Table* with total time computed... 
+In addition, the *Journal Entry (template)* stores and tracks *Org-Mode :CLOCKING:* entries and displays results in a *Time Card Table* with total time computed... 
 
-Common time clocking commands are defined within the *Log Entry (template)* itself. Any time you need to look up clocking commands, open the *:README:* drawer under the *Log Entry (template)* heading by placing your cursor over it and hitting *TAB*.
+Common time clocking commands are defined within the *Journal Entry (template)* itself. Any time you need to look up clocking commands, open the *:README:* drawer under the *Journal Entry (template)* heading by placing your cursor over it and hitting *TAB*.
 
 Additional commands for using *Org-Mode* with Modular Emacs will be explained here if needed, as well as other *Harmonic Alchemy Modular Emacs Templates* that get produced in the future...
 
 ** ❔ HowTo:
-<<META_HOWTO>>
+<<META_howto>>
 :README:
    This Log Notebook is being designed as these docs are being written...
    At first much of the design is being done /manually/ while formats,
@@ -1045,9 +1001,9 @@ Additional commands for using *Org-Mode* with Modular Emacs will be explained he
    /I feel like I am re-inventing wheels within rabbit holes!/ lol
 
    =Note:= If you are making your very first log entry within a brand new
-         clone of this template, =DON'T use a clone from the= *Log Entry*
+         clone of this template, =DON'T use a clone from the= *Journal Entry*
          *(template)* =just yet=. /Instead use the dummy boilerplate/
-         /placeholder Log Entry /(withtimestamp)/ /already in place as/
+         /placeholder Journal Entry /(withtimestamp)/ /already in place as/
          /your first heading under the/ *Begin Log Notebook:* /heading./
 
    That first boilerplate log entry is there as an example to guide you
@@ -1057,18 +1013,20 @@ Additional commands for using *Org-Mode* with Modular Emacs will be explained he
 
    Also for first time entry within your brand new log book, Skip the next
    two headings below /(copy and paste instructions)/ and continue following
-   instructions under the: *Edit-Compose your new Log Entry:* heading /(as you/
+   instructions under the: *Edit-Compose your new Journal Entry:* heading /(as you/
    /will be commandeering the dummy boilerplate log entry as your first log/
-   /entry)/. Instructions for working on a new Cloned Log Entry are the same
+   /entry)/. Instructions for working on a new Cloned Journal Entry are the same
    as for updating/emending an existing one from that point on...
 
    =Otherwise=, if you already have one or more existing log entries from
    before, continue following instructions immediately below beginning 
-   with: *Copy/Clone Log Entry (template)*
+   with: *Copy/Clone Journal Entry (template)*
 :END:
 
-*** =Copy/Clone:= LOG: <2021-03-29 Mon> Generic Title /(from *⎘ Templates* Binder)/
-<<META-HOWTO_CLONE-LOG>>
+*** Copy/Clone a New Journal Entry:
+<<META-HOWTO_clone-new-journal-entry>>
+
+=Copy/Clone= *NEW* 🗓 BOILERPLATE JOURNAL Entry /(from *⎘ Templates* Binder)/
 
 - [ ] =Select Heading= /(named above)/ under the *⎘ Templates* Binder,
       using normal Emacs selection methods. i.e., Type ~t~ key to set
@@ -1090,7 +1048,7 @@ Additional commands for using *Org-Mode* with Modular Emacs will be explained he
 - [ ] =Complete the Copy Operation= Type ~c~ /(xah-fly-keys Command Mode)/.
       This will save the selection for pasting later, /(the highlighted/
       /text will go back to normal)/... You should have gotten only the
-      Single LOG Entry with ALL its contents, BUT nothing else below
+      Single JOURNAL Entry with ALL its contents, BUT nothing else below
       it...
 
       =Note:= If you type: "*spacebar t*" /(xah-fly-keys leader key command)/ 
@@ -1099,17 +1057,17 @@ Additional commands for using *Org-Mode* with Modular Emacs will be explained he
             To get out of the paste buffer view, type: "*spacebar u*" and 
             it will return you to where you were before...
 
-*** =Paste Cloned LOG Entry:=
-<<META-HOWTO_PASTE-LOG>>
+*** Paste Cloned JOURNAL Entry:
+<<META-HOWTO_paste-cloned-journal-entry>>
 
 - [ ] =Advance cursor= to a blank line just below the LAST Most Recent
-      LOG entry under heading =2022= within the =Begin Log:= section,
-      and press *enter* a couple times to get your cursor on a fresh
-      clean line with some extra space above and below it...
-      /(Below any previously time stamped entries you may already/
-      /have placed)/...
+      JOURNAL entry under the current *YYYY* heading within the
+      📒 *JOURNAL:* Binder, and press *enter* a couple times to get your
+      cursor on a fresh clean line with some extra space above and
+      below it... /(Below any previously time stamped entries you may
+      already/ /have placed)/...
 
-- [ ] =Press:= ~v~ /(xah-fly-keys Command Mode)/ to paste your cloned Log
+- [ ] =Press:= ~v~ /(xah-fly-keys Command Mode)/ to paste your cloned Journal
       Entry template... If you find out that what you copied also
       included some unwanted text directly below it, no problems...
       Just delete that part now... 
@@ -1125,22 +1083,20 @@ Additional commands for using *Org-Mode* with Modular Emacs will be explained he
             go away... Now you are ready to compose your new
             log entry...
 
-\newpage
+*** Edit-Compose New JOURNAL Entry:
+<<META-HOWTO_compose-new-journal-entry>>
 
-*** Edit-Compose New LOG Entry:
-<<META-HOWTO_EDIT-LOG>>
-
-=Note:= If this is your first time using this log, don't bother cloning
-      a NEW log entry as there is a dummy boilerplate placeholder Log 
+=Note:= If this is your first time using this journal, don't bother cloning
+      a NEW journal entry as there is a dummy boilerplate placeholder Journal 
       Entry ALREADY in place for you to use...
       /(initially there as an example)/
 
-      The instructions below for modifying the Boilerplate Log Entry,
-      or Editing a new Cloned Log Entry Template are pretty much the
+      The instructions below for modifying the Boilerplate Journal Entry,
+      or Editing a new Cloned Journal Entry Template are pretty much the
       same... /(differences will be noted in instructions below)/
 
 - [ ] =Place cursor directly on the existing timestamp= of the NEW
-      Log Entry, and enter the key binding: ~C-c .~ /(i.e., press/ ~Ctrl~
+      Journal Entry, and enter the key binding: ~C-c .~ /(i.e., press/ ~Ctrl~
       /key while holding/ ~c~ /and then type a dot ~.~ /)/ A date chooser
       panel will pop up...
 
@@ -1150,39 +1106,29 @@ Additional commands for using *Org-Mode* with Modular Emacs will be explained he
       /the current date/time.../ Check to make sure the timestamp was
       properly updated and then move on to the next step... This
       timestamp will not be updated after that.  It records the
-      initial time of your new log entry to the Day and time you
+      initial time of your new journal entry to the Day and time you
       first created it...
 
-- [ ] =You are now ready to start= making entries within your New
-      Log Entry... Your timestamp indicates the present, /-and-/ you
-      are all set to begin recording your time...
+      =NOTE:= /This is the ONLY Time Tracking Feature of this Journal.../
 
-- [ ] =Follow the= ~:README:~ directions within the Time Card section
-      contained within your fresh new log entry to learn how to
-      /"clock in"/ and /"clock out"/ of your log entry as you work on
-      the tasks...
+- [ ] =You are now ready to start= your New Journal Entry... Your timestamp
+     indicates the present, /-and-/ you are all set to begin writing...
 
-\newpage
+*** OPTIONAL Journal Entry Details:
+<<META-HOWTO_optional-journal-entry-details>>
 
-*** Enter New LOG Entry Details:
-<<META-HOWTO_COMPOSE-LOG>>
+Three sub headings have been provided under the 📒 *Details*: Heading for your use /(if you need them)/. However, you may structure your journal entries any way you wish, and/or REMOVE the entire 📒 *Details:* section alltogether to simply write a short Journal Entry /(which may turn out to be the usual case)/...
 
-Two sub headings have been provided for your use /(if you need them)/. However, you may structure your log entries any way you wish.  The two provided headings:  *Summary* and *Details* are simply suggestions to help make your log entries a bit more organized...
-
-The *Summary* heading could be used to log the main executive summary points, /(which you would include in the exported PDF as a report to give to your boss or clients)/. 
-
-Conversely, the *Details* heading could contain a complete, thorough log of your work, which would be excluded from the final PDF report.  Everything under *Details* heading would be extra information that you don't want to bother your clients or boss with /(unless they ask for more detail of course)/. In that case, you will have it all recorded and organized for easy access later if needed...
-
-Place the *:noexport:* tag at the end of any org outline heading to exclude it and all its children from the PDF upon export...  You can add as much detail as you need within these excluded sections without cluttering up your final PDF.  The entire main heading: *How to Use this Template:* is already excluded from the final PDF, so it can be left in and your PDF will only include the *Begin Log:* section...
+Conversely, the 📒 *Details:* heading could contain a complete thorough journal of some complex idea... Who Knows?
 
 ** ⎘ Templates:
-<<META_TEMPLATES>>
+<<META_templates>>
 
-*** NEW 🗓 BOILERPLATE LOG Entry /(Simple Log Entry TEMPLATE)/
+*** NEW 🗓 BOILERPLATE JOURNAL Entry /(JOURNAL Entry TEMPLATE)/
 <2021-03-29 Mon>  
-<<SLOG-YYYY_META-ENTRY>>
+<<JOURNAL-YYYY_meta-entry>>
 :README:
-   =Using this Log Entry TEMPLATE:= /(logging & tracking time)/
+   =Using this Journal Entry TEMPLATE:= /(logging & tracking time)/
 
    - [ ] *Go To One of the HEADINGS Below:*
 
@@ -1226,7 +1172,7 @@ Place the *:noexport:* tag at the end of any org outline heading to exclude it a
          You do this after you have worked on a task for a 
          while and you need to come back to update the item's
          info etc., and/or stop the clock before going off to 
-         do something else unrelated to the log entry...
+         do something else unrelated to the journal entry...
 
       + *Clock OUT:* ~C-c C-x C-o~ /(to stop clocking your time on task)/
 
@@ -1237,7 +1183,7 @@ Place the *:noexport:* tag at the end of any org outline heading to exclude it a
          timestamp, and total time worked during this segment...  
 
          After Clocking OUT, you can go away and do some work, leaving
-         this heading, log note, etc. to visit other files and/or work on
+         this heading, journal note, etc. to visit other files and/or work on
          them etc. The clock will be recording your time all the while...
          You will see in your mode line the elapsed clock time ticking
          away as you work on a task /(hopefully related to this clock!)/
@@ -1266,7 +1212,7 @@ Place the *:noexport:* tag at the end of any org outline heading to exclude it a
 
       + *Clock Out & Mark Items Done:* ~C-c C-t~
 
-         When you are all done with a Log Entry use the above key 
+         When you are all done with a Journal Entry use the above key 
          command to mark its Heading *TODO* tag to: *DONE* /(Most of the/ 
          /time this will ALSO clock you out if you are still clocked/ 
          /into the item... But not allways in my experience.../  
@@ -1287,14 +1233,14 @@ Place the *:noexport:* tag at the end of any org outline heading to exclude it a
          =Warning!= Using this command will CLUTTER ALL the headings
                   within your org file with those timestamps!!!
 
-   =CREATING A BRAND NEW LOG ENTRY:= /(from this TEMPLATE)/
+   =CREATING A BRAND NEW JOURNAL ENTRY:= /(from this TEMPLATE)/
 
    - [ ] *COPY/CLONE THIS ENTIRE:*
          
-        *NEW* 🗓 *BOILERPLATE LOG Entry* /(Simple Log Entry TEMPLATE)/
+        *NEW* 🗓 *BOILERPLATE JOURNAL Entry* /(JOURNAL Entry TEMPLATE)/
          
         Paste it under the current: 📅 *YYYY:* heading at the bottom
-        of the list /(under previous log entries items from before)/
+        of the list /(under previous journal entries items from before)/
          
         =or:= If you prefer... Place it at the top of the list...
         /(i.e., descending or ascending chronological order)/
@@ -1303,22 +1249,22 @@ Place the *:noexport:* tag at the end of any org outline heading to exclude it a
 
    - [ ] =Commandeer Your New Clone:=
      
-         The structure of this Log Entry Template's content layout is
+         The structure of this Journal Entry Template's content layout is
          all set up for you ahead of time to allow you to immediately
          begin writing... /(You only need to change titles etc...)/
 
-         After cloning, =RENAME= *BOILERPLATE LOG Entry* /(Simple Log Entry TEMPLATE)/
-         to a *Unique Title* in order to commandeer the log entry item for your
+         After cloning, =RENAME= *BOILERPLATE JOURNAL Entry* /(JOURNAL Entry TEMPLATE)/
+         to a *Unique Title* in order to commandeer the journal entry item for your
          own needs...
 
-         =Do NOT PUT "LOG" in your Title!=
+         =Do NOT PUT "JOURNAL" in your Title!=
 
          You also need to insure your anchors /(below the headings)/ are unique!
 
    - [ ] =Change The Anchor Link:=
 
-        Change the anchor /(directly under the LOG Entry Title)/ to
-        match your new Log Entry's title name...
+        Change the anchor /(directly under the JOURNAL Entry Title)/ to
+        match your new Journal Entry's title name...
 
          =Note:= I created the following convention for making unique
                anchors within ALL of these HAP_Doc-Skeleton.org
@@ -1342,21 +1288,21 @@ Place the *:noexport:* tag at the end of any org outline heading to exclude it a
                /prefer to do it manually... The alternate is a mess/
                /IMHO)/
 
-         Leave ~SLOG-YYYY_~ as the anchor's prefix /(as in boilerplate above)/
+         Leave ~JOURNAL-YYYY_~ as the anchor's prefix /(as in boilerplate above)/
          but change the YYYY part to the current year that you copied this
-         NEW log Entry item into...
+         NEW journal Entry item into...
 
          Change ~META-ENTRY~ /(after the underscore "_" )/ to a short but unique
-         abbreviation, acronym, or mnemonic of the log entry's title... Keep
+         abbreviation, acronym, or mnemonic of the journal entry's title... Keep
          the underscore to separate the MAIN HEADING ID of this anchor from
-         the NEW renaed title of this new LOG Entry...
+         the NEW renaed title of this new JOURNAL Entry...
    
          Make your title "POSTFIX" portion of the anchor link in all lower
          case... Use dashes to connect words within your title postfix
          portion of the anchor...
 
-         Your new unique anchor above may be used to link to this log entry
-         from Research or other sections of this log...
+         Your new unique anchor above may be used to link to this journal entry
+         from Research or other sections of this journal...
          /(Or even from/ ~.org~ /docs OUTSIDE of this file...)/
 
    - [ ] =Replace Titles, Anchors, & Content of Sub Headings=
@@ -1366,11 +1312,11 @@ Place the *:noexport:* tag at the end of any org outline heading to exclude it a
         these main headings...
 
         Change the *YYYY* part of the existing anchors to the year that this
-        log entry was placed in the same way as you did above in the previous
+        journal entry was placed in the same way as you did above in the previous
         bullet... 
 
         Change *META-ENTRY* within the existing anchor to the title of this
-        log entry, /(as you did for the Main Anchor of this Log Entry...)/
+        journal entry, /(as you did for the Main Anchor of this Journal Entry...)/
         HOWEVER in this case it is NOW part of the PREFIX portion of this
         anchor and should be ALL UPPER CASE. /(an underscore is placed/
         /between it and the POSTFIX title of the sub heading)/
@@ -1379,7 +1325,7 @@ Place the *:noexport:* tag at the end of any org outline heading to exclude it a
         the PREFIX for SUB-SUB Headings as well...
         
         This is why keeping that part short is a good idea because NOW
-        the Log Entry Title is part of the PREFIX for anchors made to
+        the Journal Entry Title is part of the PREFIX for anchors made to
         Sub-Headings... /(and in turn shortened versions of those sub/
         /heading titles will become part of the PREFIX for anchors of/
         /sub-sub headings... etc...)/
@@ -1393,13 +1339,262 @@ Place the *:noexport:* tag at the end of any org outline heading to exclude it a
         /This all follows the same convention described within the previous/
         /bullet.../
 
-   =ENJOY USING YOUR BRAND NEW LOG OF ANYTHING YOU WANT!=
+   =ENJOY USING YOUR BRAND NEW JOURNAL OF ANYTHING YOU WANT!=
 :END:
 
-This Log Entry is about: Yadda... Yadda... Yadda...
+This Journal Entry is about: Yadda... Yadda... Yadda...
+
+**** NEW 📒 Details:
+<<JOURNAL-YYYY-META-ENTRY_details>>
+
+***** NEW Item 1 /(placeholder)/ [0/3]
+<<JOURNAL-YYYY-META-ENTRY-DETAILS_item-1>>
+:BOILERPLATE:
+
+  =Delete This BOILERPLATE DRAWER If You Don't Need It...=
+
+  The following list contains Babel Source Code Blocks that are
+  often needed for something I am writing or "Logging" about...
+  I use them so much I decided to include them in this template...
+
+  - [ ] *__:* /(__)/
+
+      #+begin_src conf
+       keyword1:     Value1 
+       keyword2:     Value2 
+       keyword3:     Value 
+      #+end_src
+
+  - [ ] *__:* /(__)/
+
+      #+begin_src bash
+       sudo dnf install emacs
+       sudo apt install emacs
+      #+end_src
+
+  - [ ] *__:* /(__)/
+
+      #+BEGIN_SRC emacs-lisp :results output
+       ;; Initialize Local Vars from GLOBAL CONSTANTS;
+       (let ((h (list 'text-pixels ME--CODE-FRAME-HEIGHT))
+             (w (list 'text-pixels ME--CODE-FRAME-WIDTH)))
+         (princ "CAR h: ")
+         (princ (car h))
+         (princ "\n")
+         (princ "CDR h: ")
+         (princ (cdr h))
+         (princ "\n\n")
+         (princ "CAR w: ")
+         (princ (car w))
+         (princ "\n")
+         (princ "CDR w: ")
+         (princ (cdr w)))
+      #+END_SRC
+
+      #+RESULTS:
+      : CAR h: text-pixels
+      : CDR h: (42)
+      : 
+      : CAR w: text-pixels
+      : CDR w: (92)
+
+  - [ ] =LaTeX Code Within ~.Org~ Docs:=
+
+      #+begin_comment
+
+      Code Embedded ~In-line~ within paragraphs:
+      
+         Put: @@latex:<LaTeX Code Here>@@ Anywhere
+         Within a paragraph...
+
+      #+LATEX: % Any Arbitrary LaTeX Code...
+      
+      #+LATEX: \newpage % Start New Page
+
+      #+BEGIN_EXPORT latex
+      %% Put LaTex Code In Here...
+      #+END_EXPORT
+
+      #+BEGIN_LaTeX
+      %% Put LaTex Code In Here...
+      #+END_LaTeX
+
+      #+end_comment
+
+:END:
+
+New Item Details... Yadda... Yadda... Yadda...
+
+Re-Purpose these as needed and Delete anything you don't need...
+
+Add sub headings as needed...
+
+***** NEW Item 2 /(placeholder)/ [0/3]
+<<JOURNAL-YYYY-META-ENTRY-DETAILS_item-2>>
+:BOILERPLATE:
+
+  =Delete This BOILERPLATE DRAWER If You Don't Need It...=
+
+  The following list contains Babel Source Code Blocks that are
+  often needed for something I am writing or "Logging" about...
+  I use them so much I decided to include them in this template...
+
+  - [ ] *__:* /(__)/
+
+      #+begin_src conf
+       keyword1:     Value1 
+       keyword2:     Value2 
+       keyword3:     Value 
+      #+end_src
+
+  - [ ] *__:* /(__)/
+
+      #+begin_src bash
+       sudo dnf install emacs
+       sudo apt install emacs
+      #+end_src
+
+  - [ ] *__:* /(__)/
+
+      #+BEGIN_SRC emacs-lisp :results output
+       ;; Initialize Local Vars from GLOBAL CONSTANTS;
+       (let ((h (list 'text-pixels ME--CODE-FRAME-HEIGHT))
+             (w (list 'text-pixels ME--CODE-FRAME-WIDTH)))
+         (princ "CAR h: ")
+         (princ (car h))
+         (princ "\n")
+         (princ "CDR h: ")
+         (princ (cdr h))
+         (princ "\n\n")
+         (princ "CAR w: ")
+         (princ (car w))
+         (princ "\n")
+         (princ "CDR w: ")
+         (princ (cdr w)))
+      #+END_SRC
+
+      #+RESULTS:
+      : CAR h: text-pixels
+      : CDR h: (42)
+      : 
+      : CAR w: text-pixels
+      : CDR w: (92)
+
+  - [ ] =LaTeX Code Within ~.Org~ Docs:=
+
+      #+begin_comment
+
+      Code Embedded ~In-line~ within paragraphs:
+      
+         Put: @@latex:<LaTeX Code Here>@@ Anywhere
+         Within a paragraph...
+
+      #+LATEX: % Any Arbitrary LaTeX Code...
+      
+      #+LATEX: \newpage % Start New Page
+
+      #+BEGIN_EXPORT latex
+      %% Put LaTex Code In Here...
+      #+END_EXPORT
+
+      #+BEGIN_LaTeX
+      %% Put LaTex Code In Here...
+      #+END_LaTeX
+
+      #+end_comment
+
+:END:
+
+New Item Details... Yadda... Yadda... Yadda...
+
+Re-Purpose these as needed and Delete anything you don't need...
+
+Add sub headings as needed...
+
+***** NEW Item 3 /(placeholder)/ [0/3]
+<<JOURNAL-YYYY-META-ENTRY-DETAILS_item-3>>
+:BOILERPLATE:
+
+  =Delete This BOILERPLATE DRAWER If You Don't Need It...=
+
+  The following list contains Babel Source Code Blocks that are
+  often needed for something I am writing or "Logging" about...
+  I use them so much I decided to include them in this template...
+
+  - [ ] *__:* /(__)/
+
+      #+begin_src conf
+       keyword1:     Value1 
+       keyword2:     Value2 
+       keyword3:     Value 
+      #+end_src
+
+  - [ ] *__:* /(__)/
+
+      #+begin_src bash
+       sudo dnf install emacs
+       sudo apt install emacs
+      #+end_src
+
+  - [ ] *__:* /(__)/
+
+      #+BEGIN_SRC emacs-lisp :results output
+       ;; Initialize Local Vars from GLOBAL CONSTANTS;
+       (let ((h (list 'text-pixels ME--CODE-FRAME-HEIGHT))
+             (w (list 'text-pixels ME--CODE-FRAME-WIDTH)))
+         (princ "CAR h: ")
+         (princ (car h))
+         (princ "\n")
+         (princ "CDR h: ")
+         (princ (cdr h))
+         (princ "\n\n")
+         (princ "CAR w: ")
+         (princ (car w))
+         (princ "\n")
+         (princ "CDR w: ")
+         (princ (cdr w)))
+      #+END_SRC
+
+      #+RESULTS:
+      : CAR h: text-pixels
+      : CDR h: (42)
+      : 
+      : CAR w: text-pixels
+      : CDR w: (92)
+
+  - [ ] =LaTeX Code Within ~.Org~ Docs:=
+
+      #+begin_comment
+
+      Code Embedded ~In-line~ within paragraphs:
+      
+         Put: @@latex:<LaTeX Code Here>@@ Anywhere
+         Within a paragraph...
+
+      #+LATEX: % Any Arbitrary LaTeX Code...
+      
+      #+LATEX: \newpage % Start New Page
+
+      #+BEGIN_EXPORT latex
+      %% Put LaTex Code In Here...
+      #+END_EXPORT
+
+      #+BEGIN_LaTeX
+      %% Put LaTex Code In Here...
+      #+END_LaTeX
+
+      #+end_comment
+
+:END:
+
+New Item Details... Yadda... Yadda... Yadda...
+
+Re-Purpose these as needed and Delete anything you don't need...
+
+Add sub headings as needed...
 
 **** NEW 📚 Reference:
-<<SLOG-YYYY-META-ENTRY_ref>>
+<<JOURNAL-YYYY-META-ENTRY_ref>>
 :README:
    =Org Mode Links Tip:=
 
@@ -1453,298 +1648,3 @@ This Log Entry is about: Yadda... Yadda... Yadda...
 :END:
 
 - *Link to Project:* [[][] ] /(comment)/
-
-**** NEW ⏰ Time Card:
-<<SLOG-YYYY-META-ENTRY_time-card>>
-
-#+BEGIN: clocktable :scope tree3 :maxlevel 6 :tstart "<-1w>" :tend "<+1m>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3
-#+END:
-
-**** NEW ✅ Summary: [0/3]
-<<SLOG-YYYY-META-ENTRY_summary>>
-:README:
-   This Summary is mostly to help you find things later when you
-   cannot remember when or where is was done... If you go to the
-   top of this file and expand all headings to show ALL content,
-   then do a search on "~Summary:~" you will be able to quickly
-   scroll through and scan these summaries quickly to find what
-   you were looking for... 
-
-   Also the *Time Card* /displayed above/ each search hit will give
-   more clues by showing important headings you worked on...
-
-   Below is an optional list /(that could also provide links)./ This
-   list could be used to itemize things you worked on, but I
-   personally find it easier to simply write a short one or two
-   line description containing important keywords right here and
-   nothing more. I think that is more useful...
-:END:
-
-Yadda... Yadda... Yadda...
-
-1. [X] *New Item 1:* /(this represents a completed item)/
-
-2. [-] *New Item 2:* /(this represents a currently "radio active" item)/
-
-3. [ ] *New Item 3:* /(this represents a new item not worked on yet)/
-
-3. [ ] *New Item:* /(copy/clone more of these as needed)/
-
-**** NEW 📒 Details:
-<<SLOG-YYYY-META-ENTRY_details>>
-
-***** NEW ⏱ New Item 1 /(placeholder)/ [0/3]
-<<SLOG-YYYY-META-ENTRY-DETAILS_item-1>>
-:BOILERPLATE:
-
-  =Delete This BOILERPLATE DRAWER If You Don't Need It...=
-
-  The following list contains Babel Source Code Blocks that are
-  often needed for something I am writing or "Logging" about...
-  I use them so much I decided to include them in this template...
-
-  - [ ] *__:* /(__)/
-
-      #+begin_src conf
-       keyword1:     Value1 
-       keyword2:     Value2 
-       keyword3:     Value 
-      #+end_src
-
-  - [ ] *__:* /(__)/
-
-      #+begin_src bash
-       sudo dnf install emacs
-       sudo apt install emacs
-      #+end_src
-
-  - [ ] *__:* /(__)/
-
-      #+BEGIN_SRC emacs-lisp :results output
-       ;; Initialize Local Vars from GLOBAL CONSTANTS;
-       (let ((h (list 'text-pixels ME--CODE-FRAME-HEIGHT))
-             (w (list 'text-pixels ME--CODE-FRAME-WIDTH)))
-         (princ "CAR h: ")
-         (princ (car h))
-         (princ "\n")
-         (princ "CDR h: ")
-         (princ (cdr h))
-         (princ "\n\n")
-         (princ "CAR w: ")
-         (princ (car w))
-         (princ "\n")
-         (princ "CDR w: ")
-         (princ (cdr w)))
-      #+END_SRC
-
-      #+RESULTS:
-      : CAR h: text-pixels
-      : CDR h: (42)
-      : 
-      : CAR w: text-pixels
-      : CDR w: (92)
-
-  - [ ] =LaTeX Code Within ~.Org~ Docs:=
-
-      #+begin_comment
-
-      Code Embedded ~In-line~ within paragraphs:
-      
-         Put: @@latex:<LaTeX Code Here>@@ Anywhere
-         Within a paragraph...
-
-      #+LATEX: % Any Arbitrary LaTeX Code...
-      
-      #+LATEX: \newpage % Start New Page
-
-      #+BEGIN_EXPORT latex
-      %% Put LaTex Code In Here...
-      #+END_EXPORT
-
-      #+BEGIN_LaTeX
-      %% Put LaTex Code In Here...
-      #+END_LaTeX
-
-      #+end_comment
-
-:END:
-
-New Item Details... Yadda... Yadda... Yadda...
-
-Re-Purpose these as needed and Delete anything you don't need...
-
-Add sub headings as needed...
-
-Don't forget to clock-in to HEADINGS while you work on them...
-AND... Don't forget to Clock OUT when you are DONE... %^)
-
-***** NEW ⏱ New Item 2 /(placeholder)/ [0/3]
-<<SLOG-YYYY-META-ENTRY-DETAILS_item-2>>
-:BOILERPLATE:
-
-  =Delete This BOILERPLATE DRAWER If You Don't Need It...=
-
-  The following list contains Babel Source Code Blocks that are
-  often needed for something I am writing or "Logging" about...
-  I use them so much I decided to include them in this template...
-
-  - [ ] *__:* /(__)/
-
-      #+begin_src conf
-       keyword1:     Value1 
-       keyword2:     Value2 
-       keyword3:     Value 
-      #+end_src
-
-  - [ ] *__:* /(__)/
-
-      #+begin_src bash
-       sudo dnf install emacs
-       sudo apt install emacs
-      #+end_src
-
-  - [ ] *__:* /(__)/
-
-      #+BEGIN_SRC emacs-lisp :results output
-       ;; Initialize Local Vars from GLOBAL CONSTANTS;
-       (let ((h (list 'text-pixels ME--CODE-FRAME-HEIGHT))
-             (w (list 'text-pixels ME--CODE-FRAME-WIDTH)))
-         (princ "CAR h: ")
-         (princ (car h))
-         (princ "\n")
-         (princ "CDR h: ")
-         (princ (cdr h))
-         (princ "\n\n")
-         (princ "CAR w: ")
-         (princ (car w))
-         (princ "\n")
-         (princ "CDR w: ")
-         (princ (cdr w)))
-      #+END_SRC
-
-      #+RESULTS:
-      : CAR h: text-pixels
-      : CDR h: (42)
-      : 
-      : CAR w: text-pixels
-      : CDR w: (92)
-
-  - [ ] =LaTeX Code Within ~.Org~ Docs:=
-
-      #+begin_comment
-
-      Code Embedded ~In-line~ within paragraphs:
-      
-         Put: @@latex:<LaTeX Code Here>@@ Anywhere
-         Within a paragraph...
-
-      #+LATEX: % Any Arbitrary LaTeX Code...
-      
-      #+LATEX: \newpage % Start New Page
-
-      #+BEGIN_EXPORT latex
-      %% Put LaTex Code In Here...
-      #+END_EXPORT
-
-      #+BEGIN_LaTeX
-      %% Put LaTex Code In Here...
-      #+END_LaTeX
-
-      #+end_comment
-
-:END:
-
-New Item Details... Yadda... Yadda... Yadda...
-
-Re-Purpose these as needed and Delete anything you don't need...
-
-Add sub headings as needed...
-
-Don't forget to clock-in to HEADINGS while you work on them...
-AND... Don't forget to Clock OUT when you are DONE... %^)
-
-***** NEW ⏱ New Item 3 /(placeholder)/ [0/3]
-<<SLOG-YYYY-META-ENTRY-DETAILS_item-3>>
-:BOILERPLATE:
-
-  =Delete This BOILERPLATE DRAWER If You Don't Need It...=
-
-  The following list contains Babel Source Code Blocks that are
-  often needed for something I am writing or "Logging" about...
-  I use them so much I decided to include them in this template...
-
-  - [ ] *__:* /(__)/
-
-      #+begin_src conf
-       keyword1:     Value1 
-       keyword2:     Value2 
-       keyword3:     Value 
-      #+end_src
-
-  - [ ] *__:* /(__)/
-
-      #+begin_src bash
-       sudo dnf install emacs
-       sudo apt install emacs
-      #+end_src
-
-  - [ ] *__:* /(__)/
-
-      #+BEGIN_SRC emacs-lisp :results output
-       ;; Initialize Local Vars from GLOBAL CONSTANTS;
-       (let ((h (list 'text-pixels ME--CODE-FRAME-HEIGHT))
-             (w (list 'text-pixels ME--CODE-FRAME-WIDTH)))
-         (princ "CAR h: ")
-         (princ (car h))
-         (princ "\n")
-         (princ "CDR h: ")
-         (princ (cdr h))
-         (princ "\n\n")
-         (princ "CAR w: ")
-         (princ (car w))
-         (princ "\n")
-         (princ "CDR w: ")
-         (princ (cdr w)))
-      #+END_SRC
-
-      #+RESULTS:
-      : CAR h: text-pixels
-      : CDR h: (42)
-      : 
-      : CAR w: text-pixels
-      : CDR w: (92)
-
-  - [ ] =LaTeX Code Within ~.Org~ Docs:=
-
-      #+begin_comment
-
-      Code Embedded ~In-line~ within paragraphs:
-      
-         Put: @@latex:<LaTeX Code Here>@@ Anywhere
-         Within a paragraph...
-
-      #+LATEX: % Any Arbitrary LaTeX Code...
-      
-      #+LATEX: \newpage % Start New Page
-
-      #+BEGIN_EXPORT latex
-      %% Put LaTex Code In Here...
-      #+END_EXPORT
-
-      #+BEGIN_LaTeX
-      %% Put LaTex Code In Here...
-      #+END_LaTeX
-
-      #+end_comment
-
-:END:
-
-New Item Details... Yadda... Yadda... Yadda...
-
-Re-Purpose these as needed and Delete anything you don't need...
-
-Add sub headings as needed...
-
-Don't forget to clock-in to HEADINGS while you work on them...
-AND... Don't forget to Clock OUT when you are DONE... %^)
-
