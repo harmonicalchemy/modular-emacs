@@ -2,17 +2,17 @@
 #+TITLE: HAP - Fiction Book Project Skeleton
 #+SUBTITLE: for Fiction Books, Short Storys, etc...
 #+EXPORT_FILE_NAME: HAP_Fiction-Book-Project-Skeleton.pdf
-#+TEXT: Copyright © 2022 Harmonic Alchemy Productions & Others
+#+TEXT: Copyright © 2024 Harmonic Alchemy Productions & Others
 #+AUTHOR: Alisha Awen - Harmonic Alchemy Productions
 #+EMAIL: harmonicalchemy@proton.me
-#+DATE: {{{time(%Y-0%M-%d)}}}
+#+DATE: {{{time(%A %Y-%b-%d %l%p)}}}
 #+TEXT: Created: <2020-07-30 Thu>
 #+TEXT: Last Published: <Not Published>
-#+FILETAGS: templates fiction_books @projects unpublished
+#+FILETAGS: templates fiction_books @projects unpublished logging time_tracking
 
 #+DESCRIPTION: HAP - Fiction Book Project Skeleton with generic basics already done.  Great for Authors to use when starting a new fiction book project from scratch... Publishable as a PDF Book suitable for eBook readers... (easily modified for publishing in other eBook formats or for the web)
 
-#+BEGIN_COMMENT
+:SETUP-README:
 
 =Setup Files:=
 
@@ -50,13 +50,13 @@
               /(change the name from/ ~default-tags.org~ /to another name/
               /and-or replace some (but NOT ALL) of the tags within/
               /to your own tags... see instructions inside the file)/
-#+END_COMMENT
+:END:
 
 #+SETUPFILE: ./org-templates/fiction-book-setup.org
 #+SETUPFILE: ./org-templates/default-tags.org
 
 :LATEST_UPDATE:
-  <2023-10-18 Wed>
+  <2024-05-19 Sun>
 
   =YOU MAY REMOVE This Drawer= from your own clones of this template if
   it is bothering you... This drawer is used for HAP Modular Emacs
@@ -117,6 +117,8 @@
 :READ_ME_FIRST:
 
 =Instructions:= /(How to Install & Use This Template)/
+ 
+ =These Instructions Were Last Modified:= <2024-05-19 Sun> 
 
 To use *HAP_Fiction-Book-Project-Skeleton.org* Org-Mode Fiction Book Project Template
 for your own projects, =Perform The Following Steps:= 
@@ -428,15 +430,7 @@ for your own projects, =Perform The Following Steps:=
 
    =Example:=
       
-       #+CAPTION: Example larger size .png file 
-       #+NAME:  example:00001
-       #+attr_html: :width 600px
-       #+attr_latex: :width 100px
-      [[./media/lavender-banner.png]]
-
-
-
-=These Instructions Were Last Modified:= <2023-02-15 Wed> 
+ #+CAPTION: Example larger size .png file #+NAME: example:00001 #+attr_html: :width 600px #+attr_latex: :width 100px [[./media/lavender-banner.png]]
 
 So far Export to PDF in nice Fiction Style format... This has not been tested for HTML or other eBook formats yet... We will get fancy with other formats later... 
 I promice... I have to do all this documentation first!
@@ -1098,11 +1092,11 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
 
 *1. Or Numbered Lists...*
 
-|----+--------|
+|----+-------|
 | Or | Tables |
-|----+--------|
-|  1 |    2.3 |
-|----+--------|
+|----+-------|
+|   1 |    2.3 |
+|----+-------|
 
 Do any or all the above to help get the concepts and images of your book clear in mind...
 *** NEW 📝 Background Note 2: <2020-05-10 Sun> /(example)/
@@ -1700,11 +1694,11 @@ but leave the Export Directive Below ALLWAYS...
 
 *1. Or Numbered Lists...*
 
-|----+--------|
+|----+-------|
 | Or | Tables |
-|----+--------|
-|  1 |    2.3 |
-|----+--------|
+|----+-------|
+|   1 |    2.3 |
+|----+-------|
 
 Do any or all the above to help get the concepts and images of your book clear in mind...
 
@@ -3452,54 +3446,54 @@ The following list contains Babel Source Code Blocks that are often needed for s
 
 ***** 🔤 Basics:
 
-|-----+--------+---------+--------+--------+------------+-------------|
-| *Age* | *Gender* | *Species* | *Height* | *Hair*   | *Complexion* | *Nationality* |
-|-----+--------+---------+--------+--------+------------+-------------|
-|     |        |         |        | color, |            |             |
-|     |        |         |        | etc... |            |             |
-|-----+--------+---------+--------+--------+------------+-------------|
+|-----+--------+--------+-------+------+------------+-----------|
+| *Age* | *Gender* | *Species* | *Height* | *Hair*  | *Complexion* | *Nationality* |
+|-----+--------+--------+-------+------+------------+-----------|
+|     |        |        |       | color, |            |           |
+|     |        |        |       | etc... |            |           |
+|-----+--------+--------+-------+------+------------+-----------|
 
-|-----+------------+------+--------+--------+------------+-----------|
-| *DOB* | *Birthplace* | *Race* | *Weight* | *Eyes*   | *Handedness* | *Ethnicity* |
-|-----+------------+------+--------+--------+------------+-----------|
-|     |            |      |        | color  | Right      |           |
-|     |            |      |        | etc... | Left       |           |
-|     |            |      |        |        | Ambi  etc. |           |
-|-----+------------+------+--------+--------+------------+-----------|
+|------+-----------+------+--------+------+------------+---------|
+| *DOB* | *Birthplace* | *Race* | *Weight* | *Eyes* | *Handedness* | *Ethnicity* |
+|------+-----------+------+--------+------+------------+---------|
+|      |           |      |        | color | Right       |         |
+|      |           |      |        | etc... | Left        |         |
+|      |           |      |        |      | Ambi  etc.   |         |
+|------+-----------+------+--------+------+------------+---------|
 
 ***** 👪 Family
 
-|----------+------------+----------+--------+--------+----------|
+|---------+----------+---------+-------+--------+---------|
 | *Married?* | *Partner(s)* | *Children* | *Father* | *Mother* | *Siblings* |
-|----------+------------+----------+--------+--------+----------|
-|          |            |          |        |        |          |
-|----------+------------+----------+--------+--------+----------|
+|---------+----------+---------+-------+--------+---------|
+|         |          |         |       |        |         |
+|---------+----------+---------+-------+--------+---------|
 
 ***** 🥂 Social
 
-|-------------+--------------------+------------+---------------+------|
+|-----------+------------------+-----------+-------------+------|
 | *Citizenship* | *Social Status*      | *Job/Career* | *Position/Role* | *Rank* |
-|-------------+--------------------+------------+---------------+------|
-|             | Fugitive, Criminal |            |               |      |
-|             | Good Citizen       |            |               |      |
-|             | Priest, Teacher    |            |               |      |
-|             | Doctor, Researcher |            |               |      |
-|             | Attourney, Judge   |            |               |      |
-|             | Public Servant     |            |               |      |
-|             | Agent, Spy         |            |               |      |
-|             | Military Servant   |            |               |      |
-|             | Nefarious Villain  |            |               |      |
-|             | etc...             |            |               |      |
-|-------------+--------------------+------------+---------------+------|
+|-----------+------------------+-----------+-------------+------|
+|           | Fugitive, Criminal  |           |             |      |
+|           | Good Citizen      |           |             |      |
+|           | Priest, Teacher     |           |             |      |
+|           | Doctor, Researcher |           |             |      |
+|           | Attourney, Judge  |           |             |      |
+|           | Public Servant     |           |             |      |
+|           | Agent, Spy        |           |             |      |
+|           | Military Servant   |           |             |      |
+|           | Nefarious Villain   |           |             |      |
+|           | etc...             |           |             |      |
+|-----------+------------------+-----------+-------------+------|
 
 ***** 🏹 Skills Etc.
 
-|--------+---------+---------------+-----------|
+|------+---------+-------------+-----------|
 | *Skills* | *Hobbies* | *Talents/Gifts* | *Languages* |
-|--------+---------+---------------+-----------|
-|        |         |               |           |
-|        |         |               |           |
-|--------+---------+---------------+-----------|
+|------+---------+-------------+-----------|
+|      |         |             |           |
+|      |         |             |           |
+|------+---------+-------------+-----------|
 
 ***** 💪 Physical Attributes
 :README:
@@ -3559,35 +3553,35 @@ The Character's Likes / dislikes, yadda yadda yadda...
 
        =And then= /<timestamp>/ & Mark This Task ~DONE~
 
-|-------------------+--------------------------------------------|
-| *Name:*             |                                            |
-|-------------------+--------------------------------------------|
-| *AKA:*              | (alias, nickname, etc..)                   |
-|-------------------+--------------------------------------------|
-| *Title:*            |                                            |
-|-------------------+--------------------------------------------|
-| *Rank:*             |                                            |
-|-------------------+--------------------------------------------|
-| *Role:*             | (heroine, villain, mentor, sidekick, etc.) |
-|-------------------+--------------------------------------------|
-| *Goal:*             |                                            |
-|-------------------+--------------------------------------------|
-| *Ambition:*         |                                            |
-|-------------------+--------------------------------------------|
-| *Values:*           |                                            |
-|-------------------+--------------------------------------------|
-| *Attracted To:*     |                                            |
-|-------------------+--------------------------------------------|
-| *Empathetic With:*  |                                            |
-|-------------------+--------------------------------------------|
-| *Has Vendetta For:* |                                            |
-|-------------------+--------------------------------------------|
-| *Fears:*            |                                            |
-|-------------------+--------------------------------------------|
-| *Conflicts:*        |                                            |
-|-------------------+--------------------------------------------|
-| *Epiphany:*         |                                            |
-|-------------------+--------------------------------------------|
+|-----------------+-----------------------------------|
+| *Name:*           |                                   |
+|-----------------+-----------------------------------|
+| *AKA:*            | (alias, nickname, etc..)               |
+|-----------------+-----------------------------------|
+| *Title:*            |                                   |
+|-----------------+-----------------------------------|
+| *Rank:*            |                                   |
+|-----------------+-----------------------------------|
+| *Role:*            | (heroine, villain, mentor, sidekick, etc.) |
+|-----------------+-----------------------------------|
+| *Goal:*            |                                   |
+|-----------------+-----------------------------------|
+| *Ambition:*        |                                   |
+|-----------------+-----------------------------------|
+| *Values:*          |                                   |
+|-----------------+-----------------------------------|
+| *Attracted To:*     |                                   |
+|-----------------+-----------------------------------|
+| *Empathetic With:* |                                   |
+|-----------------+-----------------------------------|
+| *Has Vendetta For:* |                                   |
+|-----------------+-----------------------------------|
+| *Fears:*           |                                   |
+|-----------------+-----------------------------------|
+| *Conflicts:*        |                                   |
+|-----------------+-----------------------------------|
+| *Epiphany:*        |                                   |
+|-----------------+-----------------------------------|
 
 ***** NEW <2022-08-26 Fri> 👤 Detailed Character Interview:
 
@@ -5361,12 +5355,12 @@ This Section Defines a Particular & Unique *Planet* or *Satellite*
    and quadrant coordinates...
 :END:
 
-|-------+------+------------+----------------+------------|
+|------+------+----------+--------------+-----------|
 | Class | Type | Satellites | Native Species | Population |
-|-------+------+------------+----------------+------------|
-|       |      | Moons      |                |            |
-|       |      | etc...     |                |            |
-|-------+------+------------+----------------+------------|
+|------+------+----------+--------------+-----------|
+|      |      | Moons    |              |           |
+|      |      | etc...     |              |           |
+|------+------+----------+--------------+-----------|
 
 **** ⛿ Controlling party/faction
 :README:
@@ -5375,17 +5369,17 @@ This Section Defines a Particular & Unique *Planet* or *Satellite*
   facts in the tables below...
 :END:
 
-|---------+---------+---------+------------+------------|
-| Capital | Colours | Symbol  | Government | Affiliates |
-|---------+---------+---------+------------+------------|
-|         | red     | stars   | Feudal     |            |
-|         | white   | stripes | Caste      |            |
-|         | blue    | etc...  | Oligarchy  |            |
-|         | etc...  |         | Parliament |            |
-|         |         |         | democracy  |            |
-|         |         |         | plutocracy |            |
-|         |         |         | etc...     |            |
-|---------+---------+---------+------------+------------|
+|--------+--------+--------+------------+----------|
+| Capital | Colours | Symbol | Government | Affiliates |
+|--------+--------+--------+------------+----------|
+|        | red     | stars   | Feudal     |          |
+|        | white   | stripes  | Caste       |          |
+|        | blue    | etc...   | Oligarchy   |          |
+|        | etc...   |        | Parliament  |          |
+|        |        |        | democracy  |          |
+|        |        |        | plutocracy  |          |
+|        |        |        | etc...       |          |
+|--------+--------+--------+------------+----------|
 
 **** 🌃 Major cities:
 ***** City (continent/region)
@@ -5577,23 +5571,23 @@ Add Description Here:
    Do your research first!
 :END:
 
-|------------+---------+--------+----------+-----------+----------------|
+|------------+--------+--------+---------+-----------+--------------|
 | Home World | Colours | Symbol | Currency | Languages | Galactic Scope |
-|------------+---------+--------+----------+-----------+----------------|
-|            |         |        |          |           | number of      |
-|            |         |        |          |           | systems, etc.  |
-|            |         |        |          |           |                |
-|            |         |        |          |           |                |
-|------------+---------+--------+----------+-----------+----------------|
+|------------+--------+--------+---------+-----------+--------------|
+|            |        |        |         |           | number of    |
+|            |        |        |         |           | systems, etc.  |
+|            |        |        |         |           |              |
+|            |        |        |         |           |              |
+|------------+--------+--------+---------+-----------+--------------|
 
-|------------+--------------+------------+----------+------------|
-| Government | Current Body | State Head | Military | Affiliates |
-|------------+--------------+------------+----------+------------|
-| fudal      | party name   |            | navy?    |            |
-| democracy  |              |            | air?     |            |
-| etc...     |              |            | calvery? |            |
-|            |              |            | etc...   |            |
-|------------+--------------+------------+----------+------------|
+|------------+-------------+-----------+---------+----------|
+| Government | Current Body | State Head | Military  | Affiliates |
+|------------+-------------+-----------+---------+----------|
+| fudal       | party name   |           | navy?   |          |
+| democracy  |             |           | air?     |          |
+| etc...       |             |           | calvery? |          |
+|            |             |           | etc...    |          |
+|------------+-------------+-----------+---------+----------|
 
 **** NEW 🥂 Social Structure:
 :README:
@@ -5752,13 +5746,13 @@ Add Description Here:
    =To Be Determined...=
 :END:
 
-|--------+----------+--------+--------------|
+|-------+----------+--------+------------|
 | Sector | Quadrant | System | Description: |
-|--------+----------+--------+--------------|
-|        |          |        | [[link to Doc]]  |
-|        |          |        | [[link to Doc]]  |
-|        |          |        | [[link to Doc]]  |
-|--------+----------+--------+--------------|
+|-------+----------+--------+------------|
+|       |          |        | [[link to Doc]]  |
+|       |          |        | [[link to Doc]]  |
+|       |          |        | [[link to Doc]]  |
+|-------+----------+--------+------------|
 
 **** NEW 📚 History
 :README:
@@ -5831,27 +5825,27 @@ Add Description Here:
          =To Be Determined...=
 :END:
 
-|---------+---------+--------+----------+----------------|
+|---------+--------+--------+---------+--------------|
 | Country | Colours | Symbol | Currency | Official Langs |
-|---------+---------+--------+----------+----------------|
-| <name>  |         |        |          |                |
-|         |         |        |          |                |
-|---------+---------+--------+----------+----------------|
+|---------+--------+--------+---------+--------------|
+| <name>  |        |        |         |              |
+|         |        |        |         |              |
+|---------+--------+--------+---------+--------------|
 
-|-------------------+------------------+--------------------|
-| Gov type          | Current Gov Body | Current State Head |
-|-------------------+------------------+--------------------|
-| Feudal, caste,    | Party name.      |                    |
-| democracy, etc... |                  |                    |
-|                   |                  |                    |
-|-------------------+------------------+--------------------|
+|----------------+-----------------+------------------|
+| Gov type        | Current Gov Body | Current State Head |
+|----------------+-----------------+------------------|
+| Feudal, caste,   | Party name.      |                  |
+| democracy, etc... |                 |                  |
+|                |                 |                  |
+|----------------+-----------------+------------------|
 
-|-------------------+----------------+-----------------------|
-| Military          | Affiliation(s) | Number of territories |
-|-------------------+----------------+-----------------------|
-| What’s it called? |                |                       |
-|                   |                |                       |
-|-------------------+----------------+-----------------------|
+|----------------+-------------+--------------------|
+| Military         | Affiliation(s) | Number of territories |
+|----------------+-------------+--------------------|
+| What’s it called? |             |                    |
+|                |             |                    |
+|----------------+-------------+--------------------|
 
 **** NEW 🥂 Social Structure
 :README:

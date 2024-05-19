@@ -5,114 +5,127 @@
 ;; specific features on or off, choose to use Aspell or Hunspell or both,
 ;; switch dictionaries, languages. etc. all within this one module...
 ;;
-;; I use aspell instead of Hunspell because it is considered by may to be better
-;; for code...  I am also a writer as well so we will see if it is also good for
-;; that...  (given some time using it)
+;; I use aspell AND Hunspell because each is better for different things...
+;; I am a writer and a coder... I need EVERYTHING - LOL
 ;;
-;; Currently I do not have Hunspell installed so functions Below will follow the
-;; Aspell conditions only...
+;; Reference:
+;;   https://www.emacswiki.org/emacs/FlySpell
+;;   https://github.com/d12frosted/flyspell-correct
 ;;
-;; Ref: http://blog.binchen.org/posts/what-s-the-best-spell-check-set-up-in-emacs.html
+;; CHANGE LOG: (descending chronological order)
+;;
+
+;; 2024-005-06 - Alisha Awen, HarmonicAlchemy@protonmail.com
+;;    This update represents a COMPLETE rewrite of my spell checking
+;;    config for Modular Emacs... It is Much simpler now and I only
+;;    use Hunspell... I made this choice because using aspell is a PITA!
+;;    to configure and then it still generates unwanted noise for suggestions!
+;;    for strange words, camelCase, etc. Easier to simply add them to my personal
+;;    dictionary as they come up...
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;;;
-;; Function: flyspell-detect-ispell-args (&optional run-together)
-;;
-;; Pseudo Code Synopsis:
-;;
-;;   (flyspell-detect-ispell-args ()
-;;     if (Aspell installed)
-;;        use Aspell
-;;     else if (Hunspell installed)
-;;        use Hunspell
-;;
-;;     Always use Canadian English dictionary either case)
+;; Create Repositories Cache, If Required:
 
-(defun flyspell-detect-ispell-args (&optional run-together)
-  "If RUN-TOGETHER is true, spell check the CamelCase words.
-  Please note RUN-TOGETHER will make aspell less capable. 
-  So it should only be used in prog-mode-hook."
-  (let* (args)
-    (when ispell-program-name
-      (cond
-       ((string-match "aspell$" ispell-program-name)
-        ;; force the English dictionary, support Camel Case spelling check
-        ;;n(tested with aspell 0.6)
-        (setq args (list "--sug-mode=ultra" "--lang=en_CA"))
-        ;; "--run-together-min" could not be 3, see `check` in
-        ;; "speller_impl.cpp".  The algorithm is not precise.
-        ;; Run `echo tasteTableConfig | aspell --lang=en_CA -C
-        ;;     --run-together-limit=16  --encoding=utf-8 -a`
-        ;; in shell.
-        (if run-together
-            (setq args (append args '("--run-together" "--run-together-limit=16")))))
-       ((string-match "hunspell$" ispell-program-name)
-        (setq args nil))))
-    args))
+(when (not package-archive-contents)
+  (package-refresh-contents))
 
 ;;;
-;; Don't bother testing for aspel or Hunspell, Just set the variable...
-;; Just make sure to install aspell globally on the OS!
-;; Important Note!: Realize this breaks if you don't have at least aspell
-;; installed in your local environmen;!
-;;
-;; Note to self: Add above warning in the README.md file!  Don't forget. ;-)
+;; Declare Default Modular Emacs List of Required Packages:
 
-(setq ispell-program-name "aspell")
+(defvar me--required-packages
+  '(flyspell-correct
+    flyspell-correct-helm))
 
 ;;;
-;; Set dictionarys...
+;; Install Required Packages:
 
-(setq ispell-local-dictionary "en_CA")
-(setq ispell-local-dictionary-alist
-      '(("en_CA" "[[:alpha:]]" "[^[:alpha:]]" "[']" nil ("-d" "en_CA") nil utf-8)))
+(mapc (lambda (p) (package-install p))
+      me--required-packages)
 
-;;;
-;; According to the above linked article: ispell-cmd-args are useless...
-;; it's the list of *extra* arguments we will append to the ispell
-;; process when "ispell-word" is called.
-;;
-;; On the other hand, ispell-extra-args are the command arguments which
-;; will *always* be used when we start the ispell process...
-;;
-;; Please Note: When you use hunspell, ispell-extra-args will NOT be used.
-;;
-;; OK Got that?... Lets Hack ispell-local-dictionary-alist instead:
-
-(setq-default ispell-extra-args (flyspell-detect-ispell-args t))
-
-;;;
-;; (setq ispell-cmd-args (flyspell-detect-ispell-args))
-
-(defadvice ispell-word (around my-ispell-word activate)
-  (let ((old-ispell-extra-args ispell-extra-args))
-    (ispell-kill-ispell t)
-    (setq ispell-extra-args (flyspell-detect-ispell-args))
-    ad-do-it
-    (setq ispell-extra-args old-ispell-extra-args)
-    (ispell-kill-ispell t)))
-
-(defadvice flyspell-auto-correct-word (around my-flyspell-auto-correct-word activate)
-  (let ((old-ispell-extra-args ispell-extra-args))
-    (ispell-kill-ispell t)
-    ;; use emacs original arguments
-    (setq ispell-extra-args (flyspell-detect-ispell-args))
-    ad-do-it
-    ;; restore our own ispell arguments
-    (setq ispell-extra-args old-ispell-extra-args)
-    (ispell-kill-ispell t)))
-
-(defun text-mode-hook-setup ()
-  ;; Turn off RUN-TOGETHER option when spell check text-mode
-  (setq-local ispell-extra-args (flyspell-detect-ispell-args)))
-
-(add-hook 'text-mode-hook 'text-mode-hook-setup)
-
-;;;
-;; turn on flyspell in desired modes
+;; Initialize Flyspell:
 
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
+
+(require 'flyspell-correct)
+(require 'flyspell-correct-helm)
+
+;;;
+;; Order Spelling Corrections by Likeliness (not alphabetical - i.e. the default)
+
+(setq flyspell-sort-corrections nil)
+
+;;;
+;; Do not print messages for every word:
+;;    When checking the entire buffer, don’t print messages for every word.
+;;    This is a major performance gain.
+
+(setq flyspell-issue-message-flag nil)
+
+
+;;;
+;; UPDATE 2024-005-06 - NEW BARE BONES HUNSPELL SETUP for EMACS
+;;   Use this simpler config below... It does not use aspell, camelCase,
+;;   or run-together. I experienced to much noise with that setup...
+;;
+;; This configuration uses hunspell exclusively with multiple dictionaries
+;;
+;; Requirements: Make sure to install hunspell globally on the OS and its
+;; associated dictionaries are also installed! Do All this via "macports" (yay),
+;; "Homebrew" (yuck) or your "other" (Linux,BSD) OS pkg manager...
+;;
+;; Dictionaries installed by Macports:
+;;
+;;   /opt/local/share/hunspell/en_US-large
+;;   /opt/local/share/hunspell/en_GB-large
+;;   /opt/local/share/hunspell/en_CA-large
+
+(with-eval-after-load "ispell"
+  
+  ;; Configure `LANG`, otherwise ispell.el cannot find a 'default
+  ;; dictionary' even though multiple dictionaries will be configured
+  ;; in next line.
+  
+  (setenv "LANG" "en_CA.UTF-8")
+  (setq ispell-program-name "hunspell")
+  
+  ;; Configure Two variants of English...
+  
+  (setq ispell-dictionary "en_CA-large,en_GB-large,en_US-large")
+  
+  ;; ispell-set-spellchecker-params has to be called
+  ;; before ispell-hunspell-add-multi-dic will work
+  
+  (ispell-set-spellchecker-params)
+  (ispell-hunspell-add-multi-dic "en_CA-large,en_GB-large,en_US-large")
+  
+  ;; For saving words to the personal dictionary, don't infer it from
+  ;; the locale, otherwise it would save to ~/.hunspell_de_DE.
+  
+  (setq ispell-personal-dictionary "~/.hunspell_personal"))
+
+;; The personal dictionary file has to exist, otherwise hunspell will
+;; silently not use it.
+
+(unless (file-exists-p ispell-personal-dictionary)
+  (write-region "" nil ispell-personal-dictionary nil 0))
+
+;; ALSO! Set Shell ENV VAR as well (this may be a caveat to overcome)
+
+(setenv "DICTIONARY" "en_CA-large")
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Flyspell Mode Key Bindings: 
+;;  Global flyspell-mode toggle & Correct-at-point
+;;  NOTE: These Keybindings were MOVED to 13-key-bindings.el...
+
+;(global-set-key (kbd "C-c f") 'flyspell-mode)
+;(define-key flyspell-mode-map (kbd "C-;") 'flyspell-correct-wrapper)
+;(global-set-key (kbd "C-;") 'flyspell-correct-word-before-point)
+;(global-set-key (kbd "C-;") 'flyspell-auto-correct-previous-word)
+;(global-set-key (kbd "C-;") 'flyspell-correct-wrapper)
+
 
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Function:  me_toggle-letter-case ()

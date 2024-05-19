@@ -10,6 +10,12 @@
 ;; Change Log: (descending chronological order)
 ;;
 
+;; 2024-005-19 - Alisha Awen, harmonicalchemy@proton.me
+;;   Removed Spelling Configuration from this file...
+;;   flyspell-correct-helm was moved to 08-spelling.el as well
+;;   as all spelling configurations that were originally located
+;;   here...
+
 ;; 2023-010-18 - Alisha Awen, harmonicalchemy@proton.me
 ;;   NOTE: NEW EMAIL... Changed Harmonic Alchemy Modular Emacs TO: v3.6...
 ;;   ADDED New features/tweaks that were tested locally on MBP M2 MAX machine...
@@ -31,7 +37,7 @@
 ;;   ALSO: In order to make all this work, dispatcher.el will need to be
 ;;   modified (i.e., the old name of this module within dispatcher.el needs to
 ;;   be changed to this new file name and the form that loads 06-interface.el
-;;   removed alltoogether...
+;;   removed all together...
 
 ;; 2020-005-16 - Alisha Awen, siren1@disroot.org
 ;;   disabled powerline mode-line stuff...  I got tired of it...  Too busy...
@@ -107,8 +113,8 @@
     gnu-elpa-keyring-update
     helm
     olivetti
-    which-key
-    flyspell-correct-helm))
+    which-key))
+;    flyspell-correct-helm (moved to 08-spelling.el)
 ;    powerline
 ;    smart-mode-line
 ;    imenu-list

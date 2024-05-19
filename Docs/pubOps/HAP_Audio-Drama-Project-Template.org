@@ -2,13 +2,13 @@
 #+TITLE: HAP - Audio Drama Project Template
 #+SUBTITLE: for Audio Theater Production, Podcasts, etc...
 #+EXPORT_FILE_NAME: HAP_Audio-Drama-Project-Template.pdf
-#+TEXT: Copyright © 2022 Harmonic Alchemy Productions & Others
+#+TEXT: Copyright © 2024 Harmonic Alchemy Productions & Others
 #+AUTHOR: Alisha Awen - Harmonic Alchemy Productions
 #+EMAIL: harmonicalchemy@proton.me
 #+DATE: {{{time(%A %Y-%b-%d %l%p)}}}
 #+TEXT: Created: <2019-10-01 Tue>
 #+TEXT: Last Published: <Not Published>
-#+FILETAGS: templates drama_scripts audio_theatre @projects unpublished
+#+FILETAGS: templates drama_scripts audio_theatre @projects unpublished logging time_tracking
 
 #+DESCRIPTION: HAP - Bare Bones Audio Theatre Project Skeleton with generic basics already done.  Great for Authors to use when starting a new Radio Drama, Podcast, News Program, or any kind of Audio-Only Production project from scratch...
 
@@ -59,7 +59,7 @@
 #+SETUPFILE: ./org-templates/audio-tags.org
 
 :LATEST_UPDATE:
-  <2024-03-12 Tue>
+  <2024-05-19 Sun>
 
   =YOU MAY REMOVE This Drawer= from your own clones of this template if
   it is bothering you... This drawer is used for HAP Modular Emacs
@@ -364,8 +364,7 @@ To use *HAP_Audio-Drama-Project-Template.Org* /(Org-Mode Audio Drama Project Ske
          #+attr_latex: :width 200px
       [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F3D5.png]]
 
-         
-=These Instructions Were Last Modified:= <2023-01-16 Mon> 
+=These Instructions Were Last Modified:= <2024-05-19 Sun> 
 
 So far things are pretty basic PDF which is good enough for Audio Production...
 Your Printed output will not be a normal book, more like a manual containing everything you need to produce an full fledged audio production...
@@ -1886,6 +1885,7 @@ nn _MUSIC: [MUS-E101-S002-M002] OPTIONAL OMINOUS HIGHLIGHT OVERLAY STING (SYNC T
 1) [[./org-templates/HAP_Radio-Script-Template.fountain][LINK TO E001 FINAL DRAFT - EXAMPLE Fountain Script]] 
 
 2) [[./org-templates/HAP_Radio-Script-Template-w-instructions.fountain][LINK TO ANNOTATED Tony Palermo Style EXAMPLE Fountain Script]]
+
 * NEW Episode Title Z: /(MASTER - DON'T TOUCH UNTIL FINAL)/     :export:
 <<EPI_title-z>>
 :README:
@@ -4182,7 +4182,7 @@ Using the knowledge above, I created a custom file /(after a lot of trial and er
          "number_sections": false,
          "use_dual_dialogue": true,
          "print_notes": false,
-         "print_footer": "Harmonic Alchemy Productions - siren1@HarmonicAlchemy.productions",
+         "print_footer": "Harmonic Alchemy Productions - HarmonicAlchemy@Proton.me",
          "print_watermark": "",
          "scenes_numbers": "both",
          "each_scene_on_new_page": true,
@@ -4197,6 +4197,7 @@ Using the knowledge above, I created a custom file /(after a lot of trial and er
          }
      }
    #+end_src
+   
 ** ⎘ Templates:
 *** NEW 🗓 LOG: <2023-01-17 Tue> Generic Title /(Log Entry Template)/
 <<LOG_Generic-Title>>
