@@ -5,6 +5,9 @@
 ;; Change Log: (descending chronological order)
 ;;
 
+;; 2024-005-19 - Alisha Awen, siren1@disroot.org
+;;   Moved Spelling Keybindings from 08-spelling.el to HERE...
+
 ;; 2022-009-18 - Alisha Awen, siren1@disroot.org
 ;;   Changed Harmonic Alchemy Modular Emacs TO: v3.5...
 ;;   Added F1 key to invoke "wo-man" (Emacs Without Man Pages - Info Style)
@@ -16,29 +19,36 @@
 ;; Map Modular Emacs General Keys:
 
 (defvar me--my-keyboard-bindings
-  '(("C-c 1" . org-sidebar-tree-toggle)
-    ("C-c 3" . org-sidebar-toggle)
-    ("C-c 2" . me_make-frame)
-    ("C-c =" . emms-volume-mode-plus)
-    ("C-c -" . emms-volume-mode-minus)
+  '(("C-c 1"     . org-sidebar-tree-toggle)
+    ("C-c 3"     . org-sidebar-toggle)
+    ("C-c 2"     . me_make-frame)
+    ("C-c ="     . emms-volume-mode-plus)
+    ("C-c -"     . emms-volume-mode-minus)
     ("C-c <tab>" . mweb-set-extra-indentation)
-    ("C-c w" . mweb-set-default-major-mode)
-    ("C-c o" . olivetti-mode)
-    ("C-c a" . org-agenda)
-    ("C-c c" . org-capture)
-    ("C-c i" . bookmark-bmenu-list)
-    ("C-c s" . me_org-tree-open-in-right-no-focus) 
-    ("C-c t" . me_org-toggle-blocks)
-    ("C-c r" . view-mode)
-    ("C-c b" . other-frame)
-    ("C-c p" . me_toggle-default-face)
-    ("C-c u" . me_toggle-letter-case)
-    ("C-c z" . ztree-diff)
-    ("M-x" . helm-M-x)
-    ("C-x b" . helm-mini)
-    ("C-x C-f" . helm-find-files)
-    ("C-x C-r" . helm-recentf)
-    ("<f6>" . me_reload-current-file)))
+    ("C-c w"     . mweb-set-default-major-mode)
+    ("C-c o"     . olivetti-mode)
+    ("C-c a"     . org-agenda)
+    ("C-c c"     . org-capture)
+    ("C-c i"     . bookmark-bmenu-list)
+    ("C-c s"     . me_org-tree-open-in-right-no-focus)
+    ("C-c t"     . me_org-toggle-blocks)
+    ("C-c r"     . view-mode)
+    ("C-c b"     . other-frame)
+    ("C-c p"     . me_toggle-default-face)
+    ("C-c u"     . me_toggle-letter-case)
+    ("C-c z"     . ztree-diff)
+
+    ;; SPELLING:
+    ("C-c f"     . flyspell-mode)
+    ("C-;"       . flyspell-correct-wrapper)
+     ; alt1: flyspell-correct-word-before-point)
+     ; alt2: flyspell-auto-correct-previous-word)
+
+    ("M-x"       . helm-M-x)
+    ("C-x b"     . helm-mini)
+    ("C-x C-f"   . helm-find-files)
+    ("C-x C-r"   . helm-recentf)
+    ("<f6>"      . me_reload-current-file)))
 
 (defun me_apply-keyboard-bindings (pair)
   "Apply keyboard-bindings for supplied list of key-pair values"
@@ -48,14 +58,6 @@
 
 (mapc 'me_apply-keyboard-bindings
       me--my-keyboard-bindings)
-
-
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; Flyspell Correct Previous - Helm key binding:
-
-(require 'flyspell-correct-helm)
-(define-key flyspell-mode-map (kbd "C-;") 'flyspell-correct-previous)
-
 
 ;;;
 ;; Map Linux Alt keys to Emacs META:

@@ -2,7 +2,7 @@
 #+TITLE: HAP - Short Examples or Figures - Template
 #+SUBTITLE: A GP Document Template to produce SHORT PDF Exerpts...
 #+EXPORT_FILE_NAME: HAP_PDF-Example-Figure-Template.pdf
-#+TEXT: Copyright © 2022 Harmonic Alchemy Productions & Others
+#+TEXT: Copyright © 2024 Harmonic Alchemy Productions & Others
 #+AUTHOR: Alisha Awen - Harmonic Alchemy Productions
 #+EMAIL: harmonicalchemy@proton.me
 #+DATE: {{{time(%A %Y-%b-%d)}}}
@@ -12,7 +12,7 @@
 
 #+DESCRIPTION: HAP - Simple Document Skeleton to create short excrpt figures or examples that may or may not be originally from a larger Document or Book Project... These are most commonly created to serve in support of a larger project, But Publishable as a Simple STAND ALONE PDF when that's the only thing needed to look up.
 
-#+BEGIN_COMMENT
+:SETUP_README:
 
 =Setup Files:=
 
@@ -48,13 +48,14 @@
               /(change the name from/ ~default-tags.org~ /to another name/
               /and-or replace some (but NOT ALL) of the tags within/
               /to your own tags... see instructions inside the file)/
-#+END_COMMENT
+
+:END:
 
 #+SETUPFILE: ./org-templates/pdf-excerpt-setup.org
 #+SETUPFILE: ./org-templates/default-tags.org
 
 :LATEST_UPDATE:
-  <2023-10-18 Wed>
+  <2024-05-19 Sun>
 
   =YOU MAY REMOVE This Drawer= from your own clones of this template if
   it is bothering you... This drawer is used for HAP Modular Emacs
@@ -114,6 +115,9 @@
 :END:
 :READ_ME_FIRST:
 =Instructions:= /(How to Install & Use This Template)/
+
+=These Instructions Were Last Modified:=
+<2024-05-19 Sun>
 
 To use *HAP_PDF-Example-Figure-Template.org* for your own projects, perform the following steps: 
 
@@ -398,10 +402,6 @@ To use *HAP_PDF-Example-Figure-Template.org* for your own projects, perform the 
        #+attr_latex: :width 100px
       [[./media/lavender-banner.png]]
 
-
-
-=These Instructions Were Last Modified:= <2023-06-01 Thu>
-
 There are no plans to add any other eBook formats to this Simple
 *EXAMPLE or FIGURE* template... It is an entirely self contained project
 with special emphasis on proper rendering of Tables, Images, and Graphs...
@@ -527,14 +527,14 @@ The following are example Tables you can use /(with some instructions)/ Use what
 - *Simple Basic*
 
    | Item 1 | Item 2 | Item 3 | Item 4 |
-   |--------+--------+--------+--------|
-   |        |        |        |        |
+   |-------+-------+-------+-------|
+   |       |       |       |       |
 
 - *A Bit More than Basic*
 
   | My Column 1 | My Column 2 | Last Column |
   |-------------+-------------+-------------|
-  |          42 | foo         | bar         |
+  |          42 | foo          | bar          |
   |          23 | baz         | abcdefg     |
   |-------------+-------------+-------------|
   |          65 |             |             |
@@ -554,9 +554,9 @@ The following are example Tables you can use /(with some instructions)/ Use what
    use:/ ~<r>~, ~<c>~ or ~<l>~.
 
     #+CAPTION: Table with aligned columns
-   |              |     <c>      | <l>          |
-   | 1            |      2       | 3            |
-   | Right        |    Center    | Left         |
+   |              |      <c>      | <l>           |
+   | 1             |      2       | 3            |
+   | Right         |    Center     | Left          |
    | xxxxxxxxxxxx | xxxxxxxxxxxx | xxxxxxxxxxxx |
 
 **** Header rows  & Row Borders
@@ -571,10 +571,10 @@ The following are example Tables you can use /(with some instructions)/ Use what
 
    #+CAPTION: Table with an header row
    | Name of column 1 | Name of column 2 | Name of column 3 |
-   |------------------+------------------+------------------|
-   | Top left         | Top middle       |                  |
-   |                  |                  | Right            |
-   | Bottom left      | Bottom middle    |                  |
+   |-----------------+-----------------+-----------------|
+   | Top left          | Top middle       |                 |
+   |                 |                 | Right            |
+   | Bottom left      | Bottom middle    |                 |
 
 **** Vertical Borders:
 <<FIG-Z-SUBH-T_vertical-borders>>
@@ -585,20 +585,20 @@ You can create tables with vertical & horizontal borders around groups of cells 
 
 #+CAPTION: Table with Custom Bordered Columns & Rows
 
-| / | <       | <      |        | >     | <      |      | >     | <      |        | >      |
-|---+---------+--------+--------+-------+--------+------+-------+--------+--------+--------|
-|   | *Group 1* | apple  | orange | peach |        |      |       |        |        |        |
-|   |         | banana | lemon  | plum  |        |      | empty | space  |        |        |
-|   |         | lime   | pear   | grape |        |      |       |        |        |        |
-|---+---------+--------+--------+-------+--------+------+-------+--------+--------+--------|
-|   | *Group 2* |        |        |       | Dog    | Cat  | Mouse |        |        |        |
-|   |         |        | empty  |       | spider | fly  | moth  |        | empty  |        |
-|   |         |        |        |       | rabbit | bird | gnat  |        |        |        |
-|---+---------+--------+--------+-------+--------+------+-------+--------+--------+--------|
-|   | *Group 3* |        |        |       |        |      |       | knife  | spoon  | fork   |
-|   |         |        |        | empty | space  |      |       | spade  | shovel | rake   |
-|   |         |        |        |       |        |      |       | hammer | chisel | wrench |
-|---+---------+--------+--------+-------+--------+------+-------+--------+--------+--------|
+| /  | <       | <      |        | >     | <     |     | >     | <       |       | >      |
+|---+---------+--------+--------+-------+-------+-----+-------+---------+-------+--------|
+|   | *Group 1*  | apple   | orange | peach |       |     |       |         |       |        |
+|   |         | banana | lemon  | plum  |       |     | empty | space    |       |        |
+|   |         | lime    | pear    | grape |       |     |       |         |       |        |
+|---+---------+--------+--------+-------+-------+-----+-------+---------+-------+--------|
+|   | *Group 2* |        |        |       | Dog   | Cat | Mouse |         |       |        |
+|   |         |        | empty  |       | spider | fly  | moth  |         | empty |        |
+|   |         |        |        |       | rabbit | bird | gnat  |         |       |        |
+|---+---------+--------+--------+-------+-------+-----+-------+---------+-------+--------|
+|   | *Group 3*  |        |        |       |       |     |       | knife    | spoon | fork    |
+|   |         |        |        | empty | space  |     |       | spade   | shovel | rake    |
+|   |         |        |        |       |       |     |       | hammer | chisel | wrench |
+|---+---------+--------+--------+-------+-------+-----+-------+---------+-------+--------|
 
 **** Table placement
 <<FIG-A-SUBH-T_table-placement>>
@@ -606,9 +606,9 @@ You can create tables with vertical & horizontal borders around groups of cells 
 - *Align Table Centred:* 
    /(the default)/
 
-   | a | b | c |
+   | a | b |  c |
    |---+---+---|
-   | 1 | 2 | 3 |
+   |  1 | 2 | 3 |
    | 4 | 5 | 6 |
 
 - *Do NOT Align Center:*
@@ -616,15 +616,15 @@ You can create tables with vertical & horizontal borders around groups of cells 
 
     #+ATTR_LATEX: :center nil
    | a | b |
-   | 1 | 2 |
+   |  1 | 2 |
 
 - *Align Table to Left Side:*
 
    #+LATEX: \noindent
    #+ATTR_LATEX: :center nil
-   | a | b | c |
+   | a | b |  c |
    |---+---+---|
-   | 1 | 2 | 3 |
+   |  1 | 2 | 3 |
    | 4 | 5 | 6 |
    #+LATEX: \hfill
 
@@ -637,9 +637,9 @@ You can create tables with vertical & horizontal borders around groups of cells 
 
    #+LATEX: \hfill
    #+ATTR_LATEX: :center nil
-   | a | b | c |
+   | a | b |  c |
    |---+---+---|
-   | 1 | 2 | 3 |
+   |  1 | 2 | 3 |
    | 4 | 5 | 6 |
 
    /Here the hfill adds infinite stretch before the table,/
@@ -648,7 +648,7 @@ You can create tables with vertical & horizontal borders around groups of cells 
 - *Table size:*
 
    #+ATTR_HTML: :width 100%
-   | Cell in column 1, row 1 | Cell in column 2, row 1 |
+   | Cell in column 1, row 1 | Cell in column 2, row 1  |
    | Cell in column 1, row 2 | Cell in column 2, row 2 |
 
    *NOTE:* /You can do a whole lot more with org-tables /using/
@@ -944,14 +944,14 @@ The following are example Tables you can use /(with some instructions)/ Use what
 - *Simple Basic*
 
    | Item 1 | Item 2 | Item 3 | Item 4 |
-   |--------+--------+--------+--------|
-   |        |        |        |        |
+   |-------+-------+-------+-------|
+   |       |       |       |       |
 
 - *A Bit More than Basic*
 
   | My Column 1 | My Column 2 | Last Column |
   |-------------+-------------+-------------|
-  |          42 | foo         | bar         |
+  |          42 | foo          | bar          |
   |          23 | baz         | abcdefg     |
   |-------------+-------------+-------------|
   |          65 |             |             |
@@ -971,9 +971,9 @@ The following are example Tables you can use /(with some instructions)/ Use what
    use:/ ~<r>~, ~<c>~ or ~<l>~.
 
     #+CAPTION: Table with aligned columns
-   |              |     <c>      | <l>          |
-   | 1            |      2       | 3            |
-   | Right        |    Center    | Left         |
+   |              |      <c>      | <l>           |
+   | 1             |      2       | 3            |
+   | Right         |    Center     | Left          |
    | xxxxxxxxxxxx | xxxxxxxxxxxx | xxxxxxxxxxxx |
 
 **** Header row
@@ -988,10 +988,10 @@ The following are example Tables you can use /(with some instructions)/ Use what
 
    #+CAPTION: Table with an header row
    | Name of column 1 | Name of column 2 | Name of column 3 |
-   |------------------+------------------+------------------|
-   | Top left         | Top middle       |                  |
-   |                  |                  | Right            |
-   | Bottom left      | Bottom middle    |                  |
+   |-----------------+-----------------+-----------------|
+   | Top left          | Top middle       |                 |
+   |                 |                 | Right            |
+   | Bottom left      | Bottom middle    |                 |
 
 **** Table placement
 <<FIG-Z-SUBH-T_table-placement>>
@@ -999,9 +999,9 @@ The following are example Tables you can use /(with some instructions)/ Use what
 - *Align Table Centred:* 
    /(the default)/
 
-   | a | b | c |
+   | a | b |  c |
    |---+---+---|
-   | 1 | 2 | 3 |
+   |  1 | 2 | 3 |
    | 4 | 5 | 6 |
 
 - *Do NOT Align Center:*
@@ -1009,15 +1009,15 @@ The following are example Tables you can use /(with some instructions)/ Use what
 
     #+ATTR_LATEX: :center nil
    | a | b |
-   | 1 | 2 |
+   |  1 | 2 |
 
 - *Align Table to Left Side:*
 
    #+LATEX: \noindent
    #+ATTR_LATEX: :center nil
-   | a | b | c |
+   | a | b |  c |
    |---+---+---|
-   | 1 | 2 | 3 |
+   |  1 | 2 | 3 |
    | 4 | 5 | 6 |
    #+LATEX: \hfill
 
@@ -1030,9 +1030,9 @@ The following are example Tables you can use /(with some instructions)/ Use what
 
    #+LATEX: \hfill
    #+ATTR_LATEX: :center nil
-   | a | b | c |
+   | a | b |  c |
    |---+---+---|
-   | 1 | 2 | 3 |
+   |  1 | 2 | 3 |
    | 4 | 5 | 6 |
 
    /Here the hfill adds infinite stretch before the table,/
@@ -1041,7 +1041,7 @@ The following are example Tables you can use /(with some instructions)/ Use what
 - *Table size:*
 
    #+ATTR_HTML: :width 100%
-   | Cell in column 1, row 1 | Cell in column 2, row 1 |
+   | Cell in column 1, row 1 | Cell in column 2, row 1  |
    | Cell in column 1, row 2 | Cell in column 2, row 2 |
 
    *NOTE:* /You can do a whole lot more with org-tables /using/
@@ -1114,6 +1114,20 @@ Danger!!!
 <<FIG-Z_subhead-d>>
 
 =Fountain Radio Drama Script Excerpt:=
+
+=NOTE:= Currently there is no easy way to render fountain script directly within the PDF
+             exported from this file using emacs normal PDF export commands... This template
+             is only included here for the future if it ever does become a feature of emacs...
+
+             For NOW you must create a stand alone ~.fountain script~ file and use the
+             *afterwriting* python tool to produce a PDF... Then you can if needed use LaTeX
+             directives within this file to include the external PDF (already rendered) within
+             the final exported PDF of this .org file... /(or simply provide a link
+     to the script PDF)/
+
+             The Fountain Script below looks fine and proper for editing within the source
+             code block below however... You can do this within org-mode to compose and
+             later cut-paste your snippets into a stand alone .fountain script master file...
 
 #+begin_src fountain
 MARY

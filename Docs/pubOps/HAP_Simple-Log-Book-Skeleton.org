@@ -1,16 +1,16 @@
 # -**- mode: org; coding: utf-8 -**-
 #+TITLE: HAP - Simple LOG Notebook Skeleton
-#+TEXT: Copyright © 2022 Harmonic Alchemy Productions & Others
+#+TEXT: Copyright © 2024 Harmonic Alchemy Productions & Others
 #+AUTHOR: Alisha Awen - Harmonic Alchemy Productions
 #+EMAIL: harmonicalchemy@proton.me
-#+DATE: <2023-02-16 Thu>
+#+DATE: {{{time(%A %Y-%b-%d)}}}
 #+TEXT: Created: <2022-01-26 Wed>
 #+TEXT: Last Published: <NOT-published>
-#+FILETAGS: templates logs unpublished
+#+FILETAGS: templates logs unpublished time_tracking
 
 #+DESCRIPTION: HAP - Modular Emacs Org Mode Simple Log Notebook Template.  This is a minimalist version of: HAP_General-Log-Book-Skeleton.org (a Full Featured Look Book Skeleton Template).  This log book does not have all the bells and whistles of HAP_General-Log-Book-Skeleton.org This Simple Log Template is Great FOR Internal Tracking and Planning withtin Org-Mode ONLY when you don't need to be bothered with exporting to PDF etc... There are NO LaTeX directives in here. This Template's SOLE PURPOSE is for making a traditional Log useful for internal project management that does not itself get published...
 
-#+BEGIN_COMMENT
+:SETUP_README:
 
 =Setup TAGS:=
 
@@ -42,9 +42,11 @@
               /(change the name from/ ~default-tags.org~ /to another name/
               /and-or replace some (but NOT ALL) of the tags within/
               /to your own tags... see instructions inside the file)/
-#+END_COMMENT
+
+:END:
 
 #+SETUPFILE: ./org-templates/default-tags.org
+#+SETUPFILE: ./org-templates/gen-doc.org
 
 :LATEST_UPDATE:
   <2023-10-18 Wed>

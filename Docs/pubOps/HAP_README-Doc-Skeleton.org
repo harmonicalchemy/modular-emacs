@@ -1,16 +1,16 @@
 # -**- mode: org; coding: utf-8 -**-
 #+TITLE: Simple README with Log Notebook Skeleton
-#+TEXT: Copyright © 2021 Harmonic Alchemy Productions & Others
+#+TEXT: Copyright © 2024 Harmonic Alchemy Productions & Others
 #+AUTHOR: Alisha Awen - Harmonic Alchemy Productions (HAP)
 #+EMAIL: harmonicalchemy@proton.me
 #+DATE: {{{time(%A %Y-%b-%d)}}}
 #+TEXT: Created: <2021-07-22 Thu>
 #+TEXT: Last Published: <NOT Published>
-#+FILETAGS: README templates unpublished
+#+FILETAGS: README templates unpublished logging time_tracking
 
 #+DESCRIPTION: Short and sweet README with attached Log Notebook for any project or repository that needs such a thing... Great FOR GITHUB PAGES!!! The ORG TOC renders in Github nicely!! This ORG file is NOT intended to be exported with LaTeX... This template's sole purpose is to provide a traditional README startup document, for you to use, (usually contained with source code, but there are many other applications)... THIS is NOT for a BOOK, or PDF, or anything else that may need to be typeset for publishing... The only intended export option for this file is HTML (for websites - BUT GitHub Renders this file AS IS nicely)... Custom tailor this to fit your needs. Change the tags in default-tags.org (referenced below) as well.. to fit your needs... Enjoy!
 
-:SETUP:
+:SETUP_README:
 
 =Setup TAGS:=
 
@@ -51,7 +51,7 @@
 :LATEST_UPDATE:
 
 =LATEST_UPDATE:=
-  <2024-01-15 Mon>
+  <2024-05-19 Sun>
 
   =YOU MAY REMOVE This Drawer= from your own clones of this template if
   it is bothering you... This drawer is used for HAP Modular Emacs
@@ -111,9 +111,9 @@
 :END:
 :READ_ME_FIRST:
 
-=READ_ME_FIRST:=
-
 =Instructions:= /(How to Install & Use This Template)/
+
+=Last Modified:= <2024-05-19 Sun>
 
 To use *HAP_README-Doc-Skeleton.org* Org-Mode README Doc Template for your own projects, =Perform The Following Steps:= 
 
@@ -344,8 +344,6 @@ To use *HAP_README-Doc-Skeleton.org* Org-Mode README Doc Template for your own p
        #+attr_html: :width 600px
        #+attr_latex: :width 100px
       [[./media/lavender-banner.png]]
-
-=These Instructions Were Last Modified:= <2023-10-18 Wed>
 
 If you experience problems =Please Open an ISSUE At:= https://github.com/harmonicalchemy/modular-emacs/issues
    

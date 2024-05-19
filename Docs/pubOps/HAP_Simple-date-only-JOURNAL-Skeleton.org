@@ -1,16 +1,16 @@
 # -**- mode: org; coding: utf-8 -**-
 #+TITLE: HAP - Simple DATE-ONLY Journal Skeleton
-#+TEXT: Copyright © 2023 Harmonic Alchemy Productions & Others
+#+TEXT: Copyright © 2024 Harmonic Alchemy Productions & Others
 #+AUTHOR: Alisha Awen - Harmonic Alchemy Productions
 #+EMAIL: harmonicalchemy@proton.me
-#+DATE: {{{time(%Y-0%M-%d)}}}
+#+DATE: {{{time(%A %Y-%b-%d %l%p)}}}
 #+TEXT: Created: <2023-07-26 Wed>
 #+TEXT: Last Published: <NOT-published>
 #+FILETAGS: templates logs unpublished
 
 #+DESCRIPTION: HAP - Modular Emacs Org Mode Simple DATE-ONLY Journal Notebook Template.  This is an even more minimalist version of: HAP_Simple-Log-Book-Skeleton.org. This Journal Skeleton does not include any time tracking features or overhead... This is for less formal Journals or Diries where clocking in and out and keeping track of time is not wanted or needed... There are NO LaTeX directives in here. This Template's SOLE PURPOSE is for personal journals or informal logs that will NOT themselves get published to PDF files...
 
-#+BEGIN_COMMENT
+:SETUPFILE_USAGE:
 
 =Setup TAGS:=
 
@@ -42,12 +42,14 @@
               /(change the name from/ ~default-tags.org~ /to another name/
               /and-or replace some (but NOT ALL) of the tags within/
               /to your own tags... see instructions inside the file)/
-#+END_COMMENT
+
+:END:
 
 #+SETUPFILE: ./org-templates/default-tags.org
+#+SETUPFILE: ./org-templates/gen-doc.org
 
 :LATEST_UPDATE:
-  <2023-10-18 Wed>
+  <2024-05-19 Sun>
 
   =YOU MAY REMOVE This Drawer= from your own clones of this template if
   it is bothering you... This drawer is used for HAP Modular Emacs
@@ -63,10 +65,10 @@
 
     This bullet is not for end users... This is /"Note to Self"/ stuff...
 
-     + [X] =MASTER TEMPLATE ONLY= *Keep The Above Timestamp Up To Date:*
+      + [X] =MASTER TEMPLATE ONLY= *Keep The Above Timestamp Up To Date:*
 
-         DO THIS ALWAYS, JUST AFTER YOU UPDATE THIS TEMPLATE... DON'T FORGET!
-         /(i.e., BOILERPLATE content and :README: meta data)/
+          DO THIS ALWAYS, JUST AFTER YOU UPDATE THIS TEMPLATE... DON'T FORGET!
+          /(i.e., BOILERPLATE content and :README: meta data)/
   
   - =PUBLIC USE Instructions:= /(FOR CLONES OF THIS TEMPLATE)/
 
@@ -108,11 +110,13 @@
 :READ_ME_FIRST:
 =Instructions:= /(How to Install & Use This Template)/
 
+=Last Modified:= <2024-05-19 Sun>
+
 To use *HAP_Simple-date-only-JOURNAL-Skeleton.org* /(Minimalist Journal /TEMPLATE)/ for your own projects, =Perform The Following Steps:=
 
 /Use the org-mode Checkboxes to Help You Keep Track of Progress/
 
-1) [X] *Clone a Copy of This File:* 
+1) [ ] *Clone a Copy of This File:* 
 
       Put your clone where you normally organize your Logs
       or projects that need logs...
@@ -374,8 +378,6 @@ To use *HAP_Simple-date-only-JOURNAL-Skeleton.org* /(Minimalist Journal /TEMPLAT
        #+attr_html: :width 600px
        #+attr_latex: :width 100px
       [[./media/lavender-banner.png]]
-
-=These Instructions Were Last Modified:= <2023-02-17 Fri>
 
 =Please Open an ISSUE At:= https://github.com/harmonicalchemy/modular-emacs/issues
    
