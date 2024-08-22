@@ -325,6 +325,10 @@
           :height 1.5
           :foreground "AntiqueWhite" :underline nil))))))
 
+;; Use this to get Org Tables aligned properly...
+
+;; Add any needed code outside os customize - HERE
+
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;   END: [modular-emacs]:~/.emacs.d/lisp/modules/09-1-org-beautify-conf.el
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

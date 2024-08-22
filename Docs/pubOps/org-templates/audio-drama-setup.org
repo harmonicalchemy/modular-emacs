@@ -100,9 +100,11 @@
 
 =File:=  ~~/.emacs.d/Docs/pubOps/org-templates/audio-drama-setup.org~
 
-      =ORG-MODE LaTeX SETUPFILE for: AUDIO DRAMA or PODCAST PROJECT= 
+ORG-MODE & LaTeX EXPORT SETUPFILE for: AUDIO DRAMA or PODCAST Project...
 
-                    =LaTeX CLASS:= ~audio-production~
+=LaTeX CLASS:= ~audio-production~
+
+=Chapter Style:= ~lyhne~
 
 - *Reference:*
    

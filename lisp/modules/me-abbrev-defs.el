@@ -107,9 +107,12 @@
     ("zhr" "--------------------------------------------------")
     ("zbu" "•")
     ("zcatface" "😸")
-    ("zocto" "🐙")    ;; ME added this one... (not xah-lee)
-    ("zaa" "👩‍💻 Alisha Awen @harmonicalchemy")  ;; ME added this one... (not xah-lee)
-                                              ;; (Change this to your name and emoji)
+    
+    ;; ME added this one... 
+    ("zocto" "🐙")
+    
+    ;; ME added this one...
+    ("zaa" "Alisha Awen 👩‍💻 HarmonicAlchemy@Proton.me")  
     
     ("zhearts" "♥💕💓💔💖💗💘💝💞💟💙💚💛💜")
     ("zra" "→")

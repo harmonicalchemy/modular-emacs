@@ -195,6 +195,8 @@
 
 :END:
 
+
+
 =File:= ~~/.emacs.d/Docs/pubOps/org-templates/ref-book-setup.org~
 
 ORG-MODE & LaTeX EXPORT SETUPFILE for: REFERENCE Books...
@@ -207,7 +209,7 @@ ORG-MODE & LaTeX EXPORT SETUPFILE for: REFERENCE Books...
       portability... The ~refbook~ class name itself 
       is defined within: ~09-4-org-export-conf.el~
 
-=STANDARD ORG-MODE OPTIONS For This Configuration:=
+STANDARD ORG-MODE OPTIONS For This Configuration:=
 
 - *STARTUP ORG-MODE OPTIONS:*
 
@@ -280,8 +282,9 @@ ORG-MODE & LaTeX EXPORT SETUPFILE for: REFERENCE Books...
    /Include Author’s e-mail (org-export-with-email)/
     #+OPTIONS: email:t
    
-   /Include Footnotes (org-export-with-footnotes)/
-    #+OPTIONS: f:t
+   /Don't Include Footnotes (org-export-with-footnotes)/
+   /Use Built in Memoir Footnotes instead?/ *this needs research*
+   #+OPTIONS: f:nil
 
    /Set Headline Levels for Export (org-export-headline-levels)/
     #+OPTIONS: H:6
@@ -370,7 +373,6 @@ ORG-MODE & LaTeX EXPORT SETUPFILE for: REFERENCE Books...
 
    #+END_COMMENT
 
-
 =LaTeX EXPORT CONFIG FOR: --> Reference Book PDF:=
 
 This class/style was initially inspired by:
@@ -382,10 +384,12 @@ This is a morph of: "lyhne" & "EQ" Styles
    =LaTeX CLASS & PAPER SIZE:=
 
     #+LATEX_CLASS: refbook
-    #+LATEX_CLASS_OPTIONS: [letterpaper, 12pt, oneside, onecolumn, openany, showtrims, final]
+    
+    #DISABLED# #+LATEX_CLASS_OPTIONS: [letterpaper, 12pt, oneside, onecolumn, openany, showtrims, final]
 
    =GENERAL PACKAGES - Options:=
 
+    #+LATEX_HEADER: \usepackage{parskip}
     #+LATEX_HEADER: \usepackage{paralist}
     #+LATEX_HEADER: \usepackage[hyperref,x11names]{xcolor}
     #+LATEX_HEADER: \usepackage[colorlinks=true,urlcolor=SteelBlue4,linkcolor=Firebrick4]{hyperref}
@@ -404,13 +408,43 @@ This is a morph of: "lyhne" & "EQ" Styles
 
    =FONTS:=
 
-    #+LATEX_HEADER: \usepackage{fontenc}
+    #DISABLED#    #+LATEX_HEADER: \usepackage{fontenc}
 
     #+LATEX_HEADER: \usepackage[english]{babel}
     #+LATEX_HEADER: \usepackage[utf8]{inputenc}
     #+LATEX_HEADER: \usepackage[sc]{mathpazo}
     #+LATEX_HEADER: \usepackage{amsmath,amssymb,amsfonts,mathrsfs}
     #+LATEX_HEADER: \usepackage[amsmath,thmmarks]{ntheorem}
+
+   =USE Same FONT SPECS as Fiction Book Setup:=
+   
+    #+LATEX_HEADER: \usepackage[LGR, T1]{fontenc}
+    #+LATEX_HEADER: \usepackage{libertine}
+    #+LATEX_HEADER: \usepackage{libertinust1math}
+    #+LATEX_HEADER: \usepackage{gfsneohellenic}
+    #+LATEX_HEADER: \renewcommand{\sfdefault}{neohellenic}
+    #+LATEX_HEADER: \usepackage{titlesec}
+    #+LATEX_HEADER: \titleformat*{\section}{\Large\sffamily}
+    #+LATEX_HEADER: \titleformat*{\subsection}{\large\sffamily}
+    #+LATEX_HEADER: \titleformat*{\subsubsection}{\normalsize\sffamily}
+
+   =BETTER SOURCE CODE LISTING STYLES:=
+
+    #+LATEX_HEADER: \usepackage{minted}
+    #+LATEX_HEADER: \usemintedstyle{xcode}
+
+   - =NOTE:= *See List of "minted" Code Listing Styles:*
+     
+           *RUN:*
+                *$>* ~pygmentize -L styles~
+
+           Then change {style-name} below to try any out...
+           So Far... I found these three to work fairly well
+           for my needs...
+           
+             tango    - Good but not quite...
+             perldoc  - Nice One
+             xcode    - Similar to perldoc, even nicer... I am using this one NOW...
 
    =SPECIAL PACKAGES:=
 
@@ -424,18 +458,18 @@ This is a morph of: "lyhne" & "EQ" Styles
     #+LATEX_HEADER: \usepackage{pdfpages}
     #+LATEX_HEADER: \usepackage[backend=bibtex,sorting=none]{biblatex}
 
-   /These were disabled because NOT found../
-   /(not sure how they got in here as well - LOL)/
-    #+LATEX_HEADER: %\input{layoutsetup}
-    #+LATEX_HEADER: %\input{theoremsetup}
-    #+LATEX_HEADER: %\input{macrosetup}
+    /These were disabled because NOT found../
+    /(not sure how they got in here as well - LOL)/
+   
+    #DISABLED#    #+LATEX_HEADER: \input{layoutsetup}
+    #DISABLED#    #+LATEX_HEADER: \input{theoremsetup}
+    #DISABLED#    #+LATEX_HEADER: \input{macrosetup}
 
    =REFBOOK CUSTOM LaTeX CONFIG:=
 
     #+BEGIN_EXPORT latex
 
        %% DEFAULT SETTINGS %%
-
        %% \addbibresource{org-bib-refs.bib}
 
        \setlength{\headwidth}{\textwidth}
@@ -455,35 +489,13 @@ This is a morph of: "lyhne" & "EQ" Styles
 
        \makeatletter
 
-       \makeatother
-       \usepackage{minted}
-
        %% AT BEGIN DOCUMENT  %%
 
-       \AtBeginDocument{\frontmatter}
+       \AtBeginDocument{
+       \nonzeroparskip
+       \frontmatter
+       }
+       
        \chapterstyle{lyhne}
 
     #+END_EXPORT
-
-- *DISABLED LATEX DIRECTIVES:*
-
-   #+begin_comment
-
-   =LaTeX CLASS & PAPER SIZE:=
-
-
-   =GENERAL PACKAGES - Options:=
-
-   #+LATEX_HEADER: \usepackage{parskip}
-
-
-   =SPECIAL PACKAGES:=
-
-   This does not seem to be needed...
-   #+LATEX_HEADER: \usepackage{afterpage}
-
-   =REFBOOK CUSTOM LaTeX CONFIG:=
-
-   \AtBeginDocument{\nonzeroparskip}
-
-   #+end_comment

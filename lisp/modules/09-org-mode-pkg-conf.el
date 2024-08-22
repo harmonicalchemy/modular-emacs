@@ -38,6 +38,7 @@
 (defvar me--req-org-packages
   '(gnuplot-mode
     org-modern
+    valign
     toc-org
     sass-mode
     abc-mode
@@ -77,6 +78,22 @@
       (cons '("\\.ly$" . LilyPond-mode) auto-mode-alist))
 
 (add-hook 'LilyPond-mode-hook (lambda () (turn-on-font-lock)))
+
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; Configure APPS that Org should evoke for common
+;; file extensions (within org links)
+
+(setq org-file-apps
+      '((auto-mode . emacs)
+        ("\\.x?html?\\'" . "firefox %s")
+        ("\\.pdf\\(::[0-9]+\\)?\\'" . default)
+	("\\.svg\\'" . "inkscape %s")
+        ("\\.gif\\'" . default)
+	("\\.docx\\'" . "LibreOffice %s")
+	("\\.ods\\'" . "LibreOffice %s")
+        ("\\.mp4\\'" . "vlc \"%s\"")
+        ("\\.mkv" . "vlc \"%s\"")))
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Configure Org Mode Beautify Settings: (constantly under revision %^)
@@ -372,8 +389,18 @@
   ;; Use Fancy ORG Outline Heading Stars
   (me_org-fancy-stars)
 
+  ;; Set default face to Courier Prime:
+  ;; (enable this for testing table alignment)
+  ;; (set-face-attribute 'default (selected-frame)
+  ;;                     :family "Courier Prime"
+  ;;                     :height 130)
+
   ;; Set Up Fancy Unicode Checkboxes...
   (me_set-unicode-checkboxes)
+
+  ;; Use Valign Mode for ORG TABLES (SLUGGISH!)
+  
+;  (valign-mode)
 
   ;; Include toc-org...
   
@@ -427,12 +454,14 @@
 
 ;;;                      FANCY ORG MODE INIT
 ;;  Add Fancy Org Mode Hook Function to Org Mode startup list:
+
 (add-hook 'org-mode-hook 'me_fancy-org-mode-hook)
 
 ;;;                     NORMAL (EDIFF) ORG MODE INIT
 ;;  Add Normal Org Mode Hook Function to Org Mode startup list:
 ;;  NOTE:  Don't enable this unless you are troubleshooting Org Mode or something...
 ;;         And if you do enable this form, you need to disable the form above it...
+
 ;(add-hook 'org-mode-hook 'me_normal-org-mode-hook)
 
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -40,9 +40,6 @@
 
     ;; SPELLING:
     ("C-c f"     . flyspell-mode)
-    ("C-;"       . flyspell-correct-wrapper)
-     ; alt1: flyspell-correct-word-before-point)
-     ; alt2: flyspell-auto-correct-previous-word)
 
     ("M-x"       . helm-M-x)
     ("C-x b"     . helm-mini)
@@ -58,6 +55,7 @@
 
 (mapc 'me_apply-keyboard-bindings
       me--my-keyboard-bindings)
+
 
 ;;;
 ;; Map Linux Alt keys to Emacs META:

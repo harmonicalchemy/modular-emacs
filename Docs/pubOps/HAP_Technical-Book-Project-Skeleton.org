@@ -7,7 +7,7 @@
 #+EMAIL: harmonicalchemy@proton.me
 #+DATE: {{{time(%A %Y-%b-%d %l%p)}}}
 #+TEXT: Created: <2020-07-30 Thu>
-#+TEXT: Last Published: <Not Published>
+#+TEXT: Last Published: <Not Published Yet>
 #+FILETAGS: templates reference_books @projects unpublished
 
 #+DESCRIPTION: HAP - Tech Manual Book Project Skeleton with generic basics already done. Great for documenting technical projects, large or small... Also great for organizing, handling caveats, trying different methods, etc. All while building a sound outline of support docs, steps, best practices... and publishable as a PDF Book suitable for eBook readers... (easily modified for publishing in other eBook formats or for the web)
