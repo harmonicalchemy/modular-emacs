@@ -241,17 +241,8 @@
   (define-key xah-fly-command-map (kbd "\\") 'me_toggle-letter-case)
 
 
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;; Xah-Fly-Keys PRIMARY LEADER-KEY BINDINGS:
-;;; (xah-fly-leader-key-map) SPACEBAR
-;;; Add more key definitions to this list when needed:
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-  ;; Jump back to previously SAVED bookmark:
-  ;; This PRIMARY Leader-Key bookmark-jump "-" mirrors
-  ;; DIRECT Command Mode bookmark-set "-" key above...
-  ;; (which sets the bookmark)
-
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ;;; Xah-Fly-Keys PRIMARY LEADER-KEY BINDINGS: ;;; (xah-fly-leader-key-map) SPACEBAR ;;; Add more key definitions to this list when needed: ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ˙ ;; Jump back to previously SAVED bookmark: ;; This PRIMARY Leader-Key bookmark-jump "-" mirrors ;; DIRECT Command Mode bookmark-set "-" key above... ;; (which sets the bookmark)
+ 
   (define-key xah-fly-leader-key-map (kbd "-") 'bookmark-jump)
 
   ;; Set KFKeys Primary Leader-Key Sequence to expand and shrink olivetti...
@@ -344,7 +335,11 @@
 
   (define-key xah-fly-Lp2p1-key-map (kbd "p") 'org-latex-export-to-pdf)
 
-  
+  ;; Org-Mode Align Tables with valign-mode:
+  ;; (xah-fly-Lp2p1-key-map) QWERTY "t"
+
+  (define-key xah-fly-Lp2p1-key-map (kbd "t") 'valign-mode)
+
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Xah-Fly-Keys SECONDARY LEADER-KEY BINDINGS:
 ;; (xah-fly-Rp2p1-key-map) QWERTY "i"

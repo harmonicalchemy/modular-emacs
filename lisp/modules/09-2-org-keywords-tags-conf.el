@@ -16,12 +16,16 @@
 
 (setq org-todo-keywords
       (quote
-       ((sequence "TODO(t)" "NEXT(x)" "|" "DONE(d!/!)")
-        (sequence "ACTIVE(a)" "REPEATING(r)" "WAITING(g@/!)" "HOLD(h@/!)"
+       ((sequence "TODO(-)" "NEXT(+)" "|" "DONE(d!/!)")
+	
+        (sequence "ACTIVE(a)" "REPEATING(r)" "WAITING(w@/!)" "HOLD(h@/!)"
                   "|" "CANCELLED(q@/!)" "PHONE")
-	(sequence  "NEW(n)" "NOW(w)" "SOMEDAY(m)" "|" "ARCHIVED(v)")
+	
+        ;; 2024-008-13: Added META (for Meta INFO: HOWTO, Cheatsheets, etc...)
+	(sequence  "NEW(n)" "NOW(!)" "SOMEDAY(s)" "META(m)" "|" "ARCHIVED(v)")
+	
         ;; 2023-005-15: Added these 4 new (for Software Dev - NEW & DONE are used here too)
-	(sequence  "CODED(c)" "TESTING(s)" "DEBUGGED(b)" "ORIGINAL(o)"))))
+	(sequence  "CODED(c)" "TESTING(t)" "DEBUGGED(b)" "ORIGINAL(o)"))))
 
 ;;;
 ;; Setup my Default Org-Mode Keywords: (with fancy UTF 8 symbols)
@@ -65,7 +69,8 @@
         ("NEW" . (:family "Hermit" :height 100 :foreground "DodgerBlue" :weight bold))
         ("NOW" . (:family "Hermit" :height 100 :foreground "HotPink" :weight bold))
         ("SOMEDAY" . (:family "Hermit" :height 100 :foreground "gold" :weight bold))
-        ("ARCHIVED" . (:family "Hermit" :height 100 :foreground "AntiqueWhite" :weight bold))
+        ("META" . (:family "Hermit" :height 100 :foreground "gold" :weight bold))
+	("ARCHIVED" . (:family "Hermit" :height 100 :foreground "AntiqueWhite" :weight bold))
         ;; 2023-005-15: Added these 3 new (for Software Dev - NEW & DONE are used here too)
         ("CODED" . (:family "Hermit" :height 100 :foreground "purple" :weight bold))
         ("TESTING" . (:family "Hermit" :height 100 :foreground "DarkOrange" :weight bold))

@@ -678,10 +678,13 @@
   (add-to-list
    'org-latex-classes
    '("refbook"
-     "\\documentclass{memoir}
+     
+     ;; LaTeX CLASS & PAPER SIZE
+     "\\documentclass[letterpaper,12pt,oneside,onecolumn, openany, showtrims, final]{memoir}
           [NO-DEFAULT-PACKAGES]
           [PACKAGES]
           [EXTRA]"
+
      ("\\chapter{%s}" . "\\chapter*{%s}")
      ("\\section{%s}" . "\\section*{%s}")
      ("\\subsection{%s}" . "\\subsection*{%s}")
@@ -714,7 +717,9 @@
      ("\\chapter{%s}" . "\\chapter*{%s}")
      ("\\section{%s}" . "\\section*{%s}")
      ("\\subsection{%s}" . "\\subsection*{%s}")
-     ("\\subsubsection{%s}" . "\\subsubsection*{%s}")))
+     ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+     ("\\paragraph{%s}" . "\\paragraph*{%s}")
+     ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
 
   ;; ~~~ END: HAP AUDIO DRAMA PRODUCTION DOCUMENT CLASS: ~~~~
 

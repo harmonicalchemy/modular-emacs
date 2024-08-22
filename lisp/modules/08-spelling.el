@@ -43,13 +43,19 @@
 (mapc (lambda (p) (package-install p))
       me--required-packages)
 
+(require 'flyspell-correct-helm)
+
+
+;; Flyspell Mode Keys:
+
+(define-key flyspell-mode-map (kbd "C-;") 'flyspell-correct-word-before-point)
+                                                           ; default: flyspell-correct-wrapper)
+                                                           ; alt1: flyspell-correct-word-before-point)
+                                                           ; alt2: flyspell-auto-correct-previous-word)
 ;; Initialize Flyspell:
 
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
-
-(require 'flyspell-correct)
-(require 'flyspell-correct-helm)
 
 ;;;
 ;; Order Spelling Corrections by Likeliness (not alphabetical - i.e. the default)
