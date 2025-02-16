@@ -1,0 +1,57 @@
+%%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%%   File:        ~/.emacs.d/Docs/TeX/log-book-setup.tex
+%%   Ref:         <https://github.com/harmonicalchemy/modular-emacs>
+%%   Purpose:     LaTeX Setup Include File for Log Notebooks
+%%   Author:      Alisha Awen
+%%   Maintainer:  Alisha Awen
+%%   Created:     2023-001-13
+%%   Updated:     2024-009-23
+
+%%   This program is free software: you can redistribute it and/or modify
+%%   it under the terms of the GNU General Public License as published by
+%%   the Free Software Foundation, either version 3 of the License, or
+%%   (at your option) any later version.
+
+%%   This program is distributed in the hope that it will be useful,
+%%   but WITHOUT ANY WARRANTY; without even the implied warranty of
+%%   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%%   GNU General Public License for more details.
+
+%%   You should have received a copy of the GNU General Public License
+%%   along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+%%   To Customize: Copy/Clone ~/.emacs.d/Docs/PubOps/org-templates (which contains
+%%   this file) to your .org doc's MASTER FOLDER. Then, modify your cloned copy of
+%%   this file...
+%%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\usepackage{calc,fourier}
+\usepackage[T1]{fontenc}
+\makeatletter
+\setlength\midchapskip{7pt}
+\makechapterstyle{VZ21}{
+  \renewcommand\chapnamefont{\Large\scshape}
+  \renewcommand\chapnumfont{\Large\scshape\centering}
+  \renewcommand\chaptitlefont{\huge\bfseries\centering}
+  \renewcommand\printchaptertitle[1]{%
+    \setlength\tabcolsep{7pt}% used as indentation on both sides
+    \settowidth\@tempdimc{\chaptitlefont ##1}%
+    \setlength\@tempdimc{\textwidth-\@tempdimc-2\tabcolsep}%
+    \chaptitlefont
+    \ifdim\@tempdimc > 0pt\relax% one line
+      \begin{tabular}{c}
+        \toprule ##1\\ \bottomrule
+      \end{tabular}
+    \else% two+ lines
+      \begin{tabular}{%
+        >{\chaptitlefont\arraybackslash}p{\textwidth-2\tabcolsep}}
+        \toprule ##1\\ \bottomrule
+      \end{tabular}
+    \fi
+  }
+}
+\makeatother
+\chapterstyle{VZ21}
+
+%%%% END: ~/.emacs.d/Docs/TeX/log-book-setup.tex
+%%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

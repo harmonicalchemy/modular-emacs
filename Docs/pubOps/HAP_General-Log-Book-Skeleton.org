@@ -10,9 +10,9 @@
 #+TEXT: Last Published: <Not Published>
 #+FILETAGS: templates logs unpublished time_tracking
 
-#+DESCRIPTION: HAP - Modular Emacs Org Mode General Log Notebook Template.  This is the replacement for the Markdown Mode templates I was using previously, which were in turn replacements for even older templates I made originally for Evernote/Trello/Scrivener...
+#+DESCRIPTION: HAP - Modular Emacs Org Mode General Log Notebook Template.  This is the replacement for the Markdown Mode templates I was using previously, which were in turn replacements for even older templates I made originally for Evernote/Trello/Scrivener... 
 
-:SETUP_README:
+:SETUP_README: 
 
    For Cloned Versions of this template, the file/paths below will be relative
    to your parent project directory and as such, should be all set to your new:
@@ -52,17 +52,17 @@
 #+SETUPFILE: ./org-templates/log-book-setup.org
 #+SETUPFILE: ./org-templates/default-tags.org
 
-:LATEST_UPDATE:
-  <2024-05-19 Sun>
+:LATEST_UPDATE: 
+  <2024-09-21 Sat>
 
   =NOTE:= This Template is still not publishing well to PDF...
-                 I need to update or fix some of the LaTeX options...
-                 This note will be REMOVED once I have a PDF that
-                 comes out as expected... This is currently on back
-                 burner as I don't really need to publish my LOGS
-                 I use them right within Org-Mode for day to day
-                 log activities - Publishing is only if I need to report
-                 such logs to others...
+        I need to update or fix some of the LaTeX options...
+        This note will be REMOVED once I have a PDF that
+        comes out as expected... This is currently on back
+        burner as I don't really need to publish my LOGS
+        I use them right within Org-Mode for day to day
+        log activities - Publishing is only if I need to report
+        such logs to others...
 
   =YOU MAY REMOVE This Drawer= from your own clones of this template if
   it is bothering you... This drawer is used for HAP Modular Emacs
@@ -98,6 +98,8 @@
 
       + [ ] *FOR ALREADY EXISTING PROJECTS*:
 
+           =CLEAR ALL CHECKBOXES BELOW FIRST BEFORE STARTING These Items=
+
           - [ ] *COMPARE the TIMESTAMPS between THIS TEMPLATE and your PROJECT:*
 
               The BOILERPLATE content and meta data within CLONES of this
@@ -120,7 +122,7 @@
               to record the date of its last sync status...
               
 :END:
-:READ_ME_FIRST:
+:READ_ME_FIRST: 
 =Instructions:= /(How to Install & Use This Template)/
 
 =The Above Instructions Were Last Modified:= <2024-05-19 Sun>
@@ -424,6 +426,8 @@ To use *HAP_General-Log-Book-Project-Skeleton.org* /(Org-Mode Log Notebook Proje
        #+attr_latex: :width 100px
        [[./media/lavender-banner.png]]
 
+       =NOTE:= *TOGGLE Inline Display of Images In Org-Mode with:* ~C-c C-x C-v~
+
 So far things are pretty basic PDF for LOG Notebooks... We may get fancy with
 other formats later... /(Maybe a Status Report - Invoice thing with nice LOGO,
 /itemized tables with TOTAL, etc. - or something like that...)/
@@ -439,14 +443,13 @@ Other folks UX metrics are sorely needed!! Thanks!
 
 :END:
 
-#+begin_export latex
-   \begin{document}
-   \frontmatter
-#+end_export
+## #+BEGIN_EXPORT latex 
+## \begin{document}
+## #+END_EXPORT
 
-* NEW About This Log Notebook:                              :export:
+* NEW About This Log Notebook:                                       :export: 
 <<LOG_about-this-log-notebook>>
-:README:
+:README: 
    Use this section as Front Matter for your Log Book... The summary
    provided here about your log notebook will become more important
    over time as your log book gets filled with lots of information!!!
@@ -456,63 +459,50 @@ Other folks UX metrics are sorely needed!! Thanks!
    process should appear here...
 :END:
 
-#+begin_quote
+#+begin_quote 
 /“Everyone is a moon, and has a dark side which he never shows to anybody.”/ - Mark Twain 
 #+end_quote
 
 This Log Note Book was created for...  Yadda Yadda... Yadda...
+Add your own reasons here...
 
-** References:
-:README:
-   =Org Mode Links Tip:=
+** References: 
+:README: 
+=Org Mode Links Tip:=
 
-      + To Create a Link Type: ~C-c C-l~ 
-         /(then paste: ~link~ & type: "description")/
++ *TO CREATE A LINK:* 
+        
+  *Type:* ~C-c C-l~ 
 
-         =-OR-= Simply Copy/Paste BOILERPLATE:
-              /(use placeholders below)/
-              And Fill Them In Manually... 
-              Copy/Paste more placeholders as
-              needed to create more links...
+  /(then paste: ~link~ & type: "description")/
 
-      + To Open a Link Type: ~C-c C-o~
+  =-OR-= Simply Copy/Paste BOILERPLATE:
+       /(use placeholders below)/
+       And Fill Them In Manually... 
+       Copy/Paste more placeholders as
+       needed to create more links...
 
-      + To EXPAND a Link Type: ~SPACE b~
-         or: ~M-x org-toggle-link-display~
++ *TO OPEN A LINK:* 
 
-   =BOILERPLATE:= /(clone to add more ref links)/
+   *Type:* ~C-c C-o~
 
-   ☞ *Heading:* [[~/.GIT/My-Docs/][MY DOCS]] /(comment)/
++ *To EXPAND a Link:* 
 
-   - *Heading:* [[link][Link NAME] ] /(comment)/
+   *Type:* ~SPACE b~
+         
+   *OR:* ~M-x org-toggle-link-display~
 
-   ☞ [[yt:aB1cD2eF3gH ][TITLE ] ] *Description:* /(YouTube)/
 
-   - [[link][Link Name] ] *Heading:* /(comment)/
+=BOILERPLATE:= /(clone to add more ref links)/
+
+- *Heading:* [[link][Link NAME] ] /(comment)/
+
+- [[link][Link Name] ] *Heading:* /(comment)/
    
-   - *_:* [[][] ] /(yadda... yadda... yadda...)/
+- *_:* [[][] ] /(yadda... yadda... yadda...)/
 
-   - [[][] ] /(_)/
+- [[][] ] /(_)/
 
-   [[junk][JUNK]]  /(This is a stupid BUG workaround/ /for org-mode link/
-         /expansion/compression... If you invoke:/ ~org-toggle-link-display~
-         /you will notice this JUNK link DOES NOT compress to a clickable/
-         /link title alone.../
-         
-         /I am not sure if this is due to my Emacs Config or a bug within/
-         *Org-Mode* /itself.../
-
-         /I put this workaround in here because if it is not here,/
-         /SOME of your external file links created below may not/
-         /compress after expansion, even though thy are GOOD links!/
-
-         /Leaving this JUNK link in here acts like a scapegoat/
-         /so that your real links below will all compress/expand/
-         /normally... I am NOT SURE WHY THIS WORKS??? I'm to busy/
-         /to do anything beyond hacking at this point.../
-         
-         ~org-lint~ /will detect JUNK above... Ignore that warning.../
-                  /It's my "METHOD of MADNESS" %^)/
 :END:
 
 Here are Links to Information that may be helpful While Using this Log Book Template:
@@ -535,20 +525,12 @@ Here are Links to Information that may be helpful While Using this Log Book Temp
 
 - [[http://doc.norang.ca/org-mode.html][Org Mode - Organize Your Life In Plain Text!]] - /(Norang.ca Public Docs)/
 
-
-
-
-
-#+BEGIN_EXPORT latex
-\clearpage
-\listoffigures*
-\clearpage
-\listoftables*
-\mainmatter
+#+BEGIN_EXPORT latex 
+\newpage
 #+END_EXPORT
 
-* NEW 💡 Scratchpad Refile:                                        :noexport:
-** ☞ Start Here!
+* NEW 💡 Scratchpad Refile:                                               :noexport: 
+** ☞ Start Here! 
 
 This Section is EXCLUSIVELY for QUICK WRITING OR LOGGING of things that must be documented NOW but you DON'T yet have an official LOG for it, you may be working
 on something completely diffrent, AND/OR you don't know which existing LOG your
@@ -617,7 +599,7 @@ The following =BOILERPLATE INSTRUCTIONS= Help you get started as quickly as poss
         proper place within that =Existing LOG Entry Item=... where it
         belongs and will now live... /(no longer as a Scratchpad item)/
 
-** NEW 💡 <2022-08-20 Sat> NEW Uncategorized IDEA /(BOILERPLATE Clone This)/
+** NEW 💡 <2022-08-20 Sat> NEW Uncategorized IDEA /(BOILERPLATE Clone This)/ 
 :README:
    This is a dummy example of some crazy idea that you may have 
    gotten at the spur of the moment, while you were doing something 
@@ -644,106 +626,10 @@ Change the Timestamp to NOW...
 
 =Replace all of this boilerplate content with your own content=
 
-* 2023 Logs:                                                         :export:
-** NEW Lab Experiment Gone WRONG!                       :export:
-<2022-12-28 Wed>
+* 2024 Logs:                                                                  :export: 
+** NEW Lab Experiment Gone WRONG! /(BOILERPLATE)/                         :export: 
 <<LOG_lab-experiment-gone-wrong>>
-:README:
-   =Using the Clocking Feature of this Log Entry=
-
-   - [ ] *Go To One of the HEADINGS Below:*
-
-         /(Summary, Details, or Sub Headings)/
-
-         =Punch the Time Clock:= /(see Clocking Commands: below)/ At
-         the heading And then begin working on a task related to
-         that Heading...
-
-         =Your Time IS being Recorded Now= /(you will see a/ *:clocking:*
-         /item under the heading where time is recorded)/
-
-   - [ ] =Use These Clocking Commands:= /to keep track your time.../
-
-      + *Clock IN:* ~C-c C-x C-i~ /(Begin OR Resume Clocking Current task)/
-
-            This creates a new :CLOCKING: Time Card Entry just
-            underneath the HEADING...
-
-            Do this just before starting work on the task... 
-            Be in control of your life!
-
-            After doing the above, you can go away and do some 
-            work, leaving this heading, log note, etc. to visit 
-            other files and/or work on them etc. The clock will 
-            be recording your time all the while... You will see 
-            in your mode line the elapsed clock time ticking away 
-            as you work on a task /(hopefully related to this clock!)/
-            and NOT Yac Shaving or being sidetracked!!!
-
-      + *RETURN to Clock Heading:* ~C-c C-x C-j~
-
-            /Go back to the place where you started the clock.../
-
-            You do this after you have worked on a task for a 
-            while and you need to come back to update the item's
-            info etc., and/or stop the clock before going off to 
-            do something else unrelated to the log entry...
-
-      + *Clock OUT:* ~C-c C-x C-o~ /(to stop clocking your time on task)/
-
-            This *Finalizes the Time Card Entry* within:
-            ~:CLOCKING:~ /(created earlier when you started the clock)/
-
-            The Clock Entry changes showing start timestamp, end
-            timestamp, and total time worked during this segment...  
-
-            =Please DON'T Forget= /Like I often do, LOL.../ i.e., Leaving
-            a clock running all day by accident, or worse, leave it
-            dangling with the file closed only to open it again and
-            get that nasty *Org-Mode Message:* /"What do you want to do/
-            /with this?"/ If you do something like that you can always
-            come back and directly edit the clock times by hand to
-            amend them...  After changing clock times or dates, etc...
-            Whatever...
-
-                  ="Onward We Row Mates... Through the log jam!"=
-
-      + *Update Time Card Entry:* ~C-c C-c~ 
-
-            This command will change the total time at the end showing 
-            your new calculated time...
-
-            If you need to go away and do something else before finishing
-            this task, you can do so after clocking out... When you come
-            back simply clock back in again to start another Time Card
-            Entry just as before... The new time card entry will appear
-            above the earlier one within the ~:CLOCKING:~ drawer... When
-            you clock out of this task it will look just like the entry
-            below it with a total time worked tagged on the end...
-
-      + *Clock Out & Mark Items Done:* ~C-c C-t~
-
-            When you are all done with a Log Entry use the above key 
-            command to mark its Heading *TODO* tag to: *DONE* /(Most of the/ 
-            /time this will ALSO clock you out if you are still clocked/ 
-            /into the item... But not allways in my experience.../  
-            So make sure you are also clocked OUT of an Item After 
-            marking it DONE... Type: ~C-c C-x C-j~ to check this...
-            /(if no running clock it will tell you and place your/
-            /cursor at the heading where you LAST CLOCKED OUT)/
-
-      + ~C-c C-x C-q~ *Cancel Current Clock:* /(in case of accident)/
-
-            This removes currently running clock and forgets any time
-            accrued or associated with it...
-
-      + ~C-c C-x C-d~ *Display Clocking Info:* 
-
-            /This will show elapsed times to the right of headings.../
-            =Warning!= Using this command will CLUTTER ALL the headings
-                     within your org file with those timestamps!!!
-
-:END:
+:LOG-DATE: <2022-12-20 Tue>
 
 Just Kidding... No Panic... No pandemics were released and no animals were harmed... LOL
 
@@ -761,82 +647,36 @@ Because of that, This DUMMY Example shows up in exported PDF /(for showing this 
 
 If you don't like the look of they exported PDF, then do what I am doing and change it... /(good luck with that.. LaTeX Styling is a f---ing TIME SYNC)/ LOL
 
-*** NEW Reference:                                                             :noexport:
-:README:
-   =Org Mode Links Tip:=
-
-      + To Create a Link Type: ~C-c C-l~ 
-         /(then paste: ~link~ & type: "description")/
-
-         =-OR-= Simply Copy/Paste BOILERPLATE:
-              /(use placeholders below)/
-              And Fill Them In Manually... 
-              Copy/Paste more placeholders as
-              needed to create more links...
-
-      + To Open a Link Type: ~C-c C-o~
-
-      + To EXPAND a Link Type: ~SPACE b~
-         or: ~M-x org-toggle-link-display~
-
-   =BOILERPLATE:= /(clone to add more ref links)/
-
-   ☞ *Heading:* [[~/.GIT/My-Docs/][MY DOCS]] /(comment)/
-
-   + *Heading:* [[link][Link NAME] ] /(comment)/
-
-   ☞ [[yt:aB1cD2eF3gH ][TITLE ] ] *Description:* /(YouTube)/
-
-   + [[link][Link Name] ] *Heading:* /(comment)/
-   
-   + *_:* [[][] ] /(yadda... yadda... yadda...)/
-
-   + [[][] ] /(_)/
-
-   [[junk][JUNK]]  /(This is a stupid BUG workaround/ /for org-mode link/
-         /expansion/compression... If you invoke:/ ~org-toggle-link-display~
-         /you will notice this JUNK link DOES NOT compress to a clickable/
-         /link title alone.../
-         
-         /I am not sure if this is due to my Emacs Config or a bug within/
-         *Org-Mode* /itself.../
-
-         /I put this workaround in here because if it is not here,/
-         /SOME of your external file links created below may not/
-         /compress after expansion, even though thy are GOOD links!/
-
-         /Leaving this JUNK link in here acts like a scapegoat/
-         /so that your real links below will all compress/expand/
-         /normally... I am NOT SURE WHY THIS WORKS??? I'm to busy/
-         /to do anything beyond hacking at this point.../
-         
-         ~org-lint~ /will detect JUNK above... Ignore that warning.../
-                  /It's my "METHOD of MADNESS" %^)/
-:END:
+*** NEW Reference:                                                                                           :noexport: 
 
 + *Link to Project:* [[][] ] /(comment)/
 
-*** Time Card:                                                                :export:
+#+BEGIN_EXPORT latex 
+\newpage
+#+END_EXPORT
 
-#+BEGIN: clocktable :scope tree3 :maxlevel 5 :tstart "<-1w>" :tend "<+1m>" :step week :stepskip0 t :emphasize t :level t :tcolumns 4
+*** Time Card:                                                                                               :export: 
+
+#+BEGIN: clocktable :scope tree3 :maxlevel 5 :tstart "<-2y>" :tend "<+1y>" :step week :stepskip0 t :emphasize t :level t :tcolumns 4 
 
 Weekly report starting on: [2022-12-26 Mon]
-| L | Headline                       | Time |     |     |     |
-|---+-------------------------------+------+-----+-----+-----|
-|   | *Total time*                      | *2:54*  |     |     |     |
-|---+-------------------------------+------+-----+-----+-----|
-| 2 | \_  /Lab Experiment Gone WRONG!/ |      | /2:54/ |     |     |
-| 3 | \_    Summary: [1/3]             |      |     | 0:05 |     |
-| 3 | \_    Details:                    |      |     | 2:49 |     |
-| 4 | \_      First Experiment [0/3]      |      |     |     | 1:17 |
-| 5 | \_        Tables:                  |      |     |     | 0:59 |
-| 4 | \_      Second Experiment [0/3]    |      |     |     | 1:32 |
+| L | Headline                          | Time |      |      |      |
+|---+-----------------------------------+------+------+------+------|
+|   | *Total time*                        | *1:22* |      |      |      |
+|---+-----------------------------------+------+------+------+------|
+| 2 | \_  /Lab Experiment Gone WRONG!.../ |      | /1:22/ |      |      |
+| 3 | \_    Summary: [0/3]              |      |      | 0:05 |      |
+| 3 | \_    Details:                    |      |      | 1:17 |      |
+| 4 | \_      First Experiment [0/3]    |      |      |      | 1:17 |
+| 5 | \_        Tables:                 |      |      |      | 0:59 |
 
 #+END:
 
-#+LATEX: \newpage
+#+BEGIN_EXPORT latex 
+\newpage
+#+END_EXPORT
 
-*** ACTIVE Summary: [1/3]                                                      :export:
+*** ACTIVE Summary: [0/3]                                                                                 :export: 
 :CLOCKING:
 CLOCK: [2022-12-30 Fri 21:06]--[2022-12-30 Fri 21:10] =>  0:04
 CLOCK: [2022-12-28 Wed 12:23]--[2022-12-28 Wed 12:24] =>  0:01
@@ -859,18 +699,20 @@ CLOCK: [2022-12-28 Wed 12:23]--[2022-12-28 Wed 12:24] =>  0:01
    nothing more. I think that is more useful...
 :END:
 
-Yadda... Yadda... Yadda...
+What a MESS! No one died thank God!
 
-1. [X] *First Experiment*
+1. [ ] *First Experiment*
 
 2. [-] *Second Experiment*
 
 3. [ ] *New Item 3* /(copy/clone more as needed)/
 
-#+LATEX: \newpage
+#+BEGIN_EXPORT latex 
+\newpage
+#+END_EXPORT
 
-*** ACTIVE Details:                                                               :export:
-**** DONE First Experiment [0/3]
+*** ACTIVE Details:                                                                                            :export: 
+**** DONE First Experiment [0/3] 
 CLOSED: [2022-12-28 Wed 12:42]
 :LOGBOOK:
 - State "DONE"       from "ACTIVE"     [2022-12-28 Wed 12:42]
@@ -891,17 +733,17 @@ Some ways to say "Hello":
 #+ATTR_LATEX: :options [label={}, itemjoin={,}, itemjoin*={, and}]
 #+CAPTION: This is the LIST Caption
 
-- Hola /(first level List item)/
+- Hola /(first level List item)/ 
 
-   + second level list item
+   + second level list item 
 
-      - Third level list item
-
-         + Fourth level list item
+      - Third level list item 
 
          + Fourth level list item
 
-      - Third level list item
+         + Fourth level list item
+
+      - Third level list item 
 
          1. Fourth Level Numbered Item
 
@@ -911,16 +753,16 @@ Some ways to say "Hello":
 
    + second level list item
 
-- Bonjour
+- Bonjour 
+
+   + second level list item 
+
+- Guten Tag 
 
    + second level list item
 
-- Guten Tag.
-
-   + second level list item
-
-***** Tables:
-:CLOCKING:
+***** Tables: 
+:CLOCKING: 
 CLOCK: [2022-12-31 Sat 13:26]--[2022-12-31 Sat 13:27] =>  0:01
 :END:
 
@@ -929,7 +771,7 @@ Org Mode Tables are a bit more complicated than Markdown Mode tables which are s
 #+CAPTION: Normal Table Default Alignment
 | My Column 1 | My Column 2 | Last Column |
 |-------------+-------------+-------------|
-|          42 | foo          | bar          |
+|          42 | foo         | bar         |
 |          23 | baz         | abcdefg     |
 |-------------+-------------+-------------|
 |          65 |             |             |
@@ -940,7 +782,7 @@ Once you hit tab on above it will look like this:
 #+CAPTION: Normal Table Default Alignment
 | My Column 1 | My Column 2 | Last Column |
 |-------------+-------------+-------------|
-|          42 | foo          | bar          |
+|          42 | foo         | bar         |
 |          23 | baz         | abcdefg     |
 |-------------+-------------+-------------|
 |          65 |             |             |
@@ -950,7 +792,7 @@ Cool!  It even knows how to justify numbers differently than text!  And there's 
 
 Org tables have cells of at most one line long: i.e., *There Is No Such Thing As A Multi-Line Table Cell In Org.*
 
-****** Column formatting:
+****** Column formatting: 
 
 
 Columns are automatically aligned by default as such:
@@ -966,9 +808,9 @@ Columns are automatically aligned by default as such:
 /If you want to override the automatic alignment, use:/ ~<r>~, ~<c>~ or ~<l>~.
 
 #+CAPTION: Table with aligned columns
-|           <r> |      <c>      | <l>           |
-|             1 |      2       | 3            |
-|         Right |    Center     | Left          |
+|          <r> |     <c>      | <l>          |
+|            1 |      2       | 3            |
+|        Right |    Center    | Left         |
 | xxxxxxxxxxxx | xxxxxxxxxxxx | xxxxxxxxxxxx |
 
 
@@ -978,10 +820,10 @@ You can create tables with an header row (by using an horizontal line of dashes 
 
 #+CAPTION: Table with an header row
 | Name of column 1 | Name of column 2 | Name of column 3 |
-|-----------------+-----------------+-----------------|
-| Top left          | Top middle       |                 |
-|                 |                 | Right            |
-| Bottom left      | Bottom middle    |                 |
+|------------------+------------------+------------------|
+| Top left         | Top middle       |                  |
+|                  |                  | Right            |
+| Bottom left      | Bottom middle    |                  |
 
 ******* A very long table to test "sticky headers":
 :CLOCKING:
@@ -992,95 +834,95 @@ CLOCK: [2022-12-31 Sat 13:27]--[2022-12-31 Sat 13:32] =>  0:05
 #+ATTR_LATEX: :environment longtable :align l|lp{3cm}r|l
 #+CAPTION: Extra LONG Table (to see how LaTeX handles them)
 | *Name of column 1* | *Name of column 2* | *Name of column 3* |
-|-----------------+-----------------+-----------------|
+|------------------+------------------+------------------|
 |         /Top Left/ | /Top Middle/       | /Top Right/        |
-|               2 |                 |                 |
-|               3 |                 |                 |
-|               4 |                 |                 |
-|               5 | /Middle/          | /Right/            |
-|               6 |                 |                 |
-|               7 |                 |                 |
-|               8 |                 |                 |
-|               9 |                 |                 |
-|               10 | /Middle/          | /Right/            |
-|               11 |                 |                 |
-|               12 |                 |                 |
-|               13 |                 |                 |
-|               14 |                 |                 |
-|               15 | /Middle/          | /Right/            |
-|               16 |                 |                 |
-|               17 |                 |                 |
-|               18 |                 |                 |
-|               19 |                 |                 |
-|              20 | /Middle/          | /Right/            |
-|               21 |                 |                 |
-|              22 |                 |                 |
-|              23 |                 |                 |
-|              24 |                 |                 |
-|              25 | /Middle/          | /Right/            |
-|              26 |                 |                 |
-|              27 |                 |                 |
-|              28 |                 |                 |
-|              29 |                 |                 |
-|              30 | /Middle/          | /Right/            |
-|               31 |                 |                 |
-|              32 |                 |                 |
-|              33 |                 |                 |
-|              34 |                 |                 |
-|              35 | /Middle/          | /Right/            |
+|                2 |                  |                  |
+|                3 |                  |                  |
+|                4 |                  |                  |
+|                5 | /Middle/           | /Right/            |
+|                6 |                  |                  |
+|                7 |                  |                  |
+|                8 |                  |                  |
+|                9 |                  |                  |
+|               10 | /Middle/           | /Right/            |
+|               11 |                  |                  |
+|               12 |                  |                  |
+|               13 |                  |                  |
+|               14 |                  |                  |
+|               15 | /Middle/           | /Right/            |
+|               16 |                  |                  |
+|               17 |                  |                  |
+|               18 |                  |                  |
+|               19 |                  |                  |
+|               20 | /Middle/           | /Right/            |
+|               21 |                  |                  |
+|               22 |                  |                  |
+|               23 |                  |                  |
+|               24 |                  |                  |
+|               25 | /Middle/           | /Right/            |
+|               26 |                  |                  |
+|               27 |                  |                  |
+|               28 |                  |                  |
+|               29 |                  |                  |
+|               30 | /Middle/           | /Right/            |
+|               31 |                  |                  |
+|               32 |                  |                  |
+|               33 |                  |                  |
+|               34 |                  |                  |
+|               35 | /Middle/           | /Right/            |
 |      /Bottom left/ | /Bottom middle/    | /Bottom Right/     |
 
 
-****** Table Placement:
-******* Align Table Centred: /(the default)/
+****** Table Placement: 
+******* Align Table Centred: /(the default)/ 
 
 =Normal DEFAULT Tables are Centered= 
 
 
 #+CAPTION: DEFAULT TABLE (as is)
-| a | b |  c |
+| a | b | c |
 |---+---+---|
-|  1 | 2 | 3 |
+| 1 | 2 | 3 |
 | 4 | 5 | 6 |
 
 
-******* Align Table Flush RIGHT:
+******* Align Table Flush RIGHT: 
 
 
 #+LATEX: \hfill
 #+ATTR_LATEX: :center nil
 #+CAPTION: Table Flush RIGHT
-| a | b |  c |
+| a | b | c |
 |---+---+---|
-|  1 | 2 | 3 |
+| 1 | 2 | 3 |
 | 4 | 5 | 6 |
 
 
 Here the hfill adds infinite stretch before the table, so it pushes the table to the right.
 
-******* Align Table Flush LEFT:
+******* Align Table Flush LEFT: 
 
 
 #+LATEX: \noindent
 #+ATTR_LATEX: :center nil
 #+CAPTION: Table Flush LEFT
-| a | b |  c |
+| a | b | c |
 |---+---+---|
-|  1 | 2 | 3 |
+| 1 | 2 | 3 |
 | 4 | 5 | 6 |
 #+LATEX: \hfill
 
 
 The noindent just gets rid of the indentation of the first line of a paragraph which in this case is the table. The hfill adds infinite stretch after the table, so it pushes the table to the left.
 
-******* Table size:
+******* Table size: 
 
 #+ATTR_HTML: :width 100%
 #+CAPTION: Full Width Table
-| Cell in column 1, row 1 | Cell in column 2, row 1  |
+| Cell in column 1, row 1 | Cell in column 2, row 1 |
 | Cell in column 1, row 2 | Cell in column 2, row 2 |
 
-****** Using Table.el to do More With Tables:
+****** Using Table.el to do More With Tables: 
 :CLOCKING:
 CLOCK: [2022-12-31 Sat 13:32]--[2022-12-31 Sat 13:32] =>  0:00
 :END:
@@ -1093,7 +935,7 @@ CLOCK: [2022-12-31 Sat 13:32]--[2022-12-31 Sat 13:32] =>  0:00
      The blank lines should prevent a bug when converting
      the table with *C-c ~*.
 
-******* Example:
+******* Example: 
 :CLOCKING:
 CLOCK: [2022-12-31 Sat 13:32]--[2022-12-31 Sat 14:25] =>  0:53
 :END:
@@ -1105,8 +947,8 @@ CLOCK: [2022-12-31 Sat 13:32]--[2022-12-31 Sat 14:25] =>  0:53
       boxed in look...
 
 #+CAPTION: Raw Table with Extra Long Column
-| Term      | Definition                                                                                   |
-| keyword 1  | Extra Long line definition that continues beyond your frame width or beyond your set Olivetti line width |
+| Term      | Definition                                                                                     |
+| keyword 1 | Extra Long line definition that continues beyond your frame width or beyond your set Olivetti line width |
 | keyword 2 | Extra Long line definition that continues beyond your frame width or beyond your set Olivetti line width |
 
 
@@ -1124,13 +966,13 @@ CLOCK: [2022-12-31 Sat 13:32]--[2022-12-31 Sat 14:25] =>  0:53
       /(After converting back to org-table for exporting)/
 
 #+CAPTION: Resized Table (try #1)
-| *Term*      | *Definition*                                       |
-| keyword 1  | Extra Long line definition that continues beyond your |
-|           | frame width or                                   |
-|           | beyond your set Olivetti line width                 |
+| *Term*      | *Definition*                                            |
+| keyword 1 | Extra Long line definition that continues beyond your |
+|           | frame width or                                        |
+|           | beyond your set Olivetti line width                   |
 | keyword 2 | Extra Long line definition that continues beyond your |
-|           | frame width or                                   |
-|           | beyond your set Olivetti line width                 |
+|           | frame width or                                        |
+|           | beyond your set Olivetti line width                   |
 
    =Tip:= Use the universal argument key binding ~C-u~ to quickly repeat
         this step. For example, If your right column is 106 characters
@@ -1141,25 +983,27 @@ CLOCK: [2022-12-31 Sat 13:32]--[2022-12-31 Sat 14:25] =>  0:53
 After typing: ~C-c '~ /(to save and exit the table editor)/ you will see your table resized as the above table now looks below...
 
 #+CAPTION: Resized Table (Final)
-| *Term*      | *Definition*              |
-| keyword 1  | Extra Long line         |
+| *Term*      | *Definition*                |
+| keyword 1 | Extra Long line           |
 |           | definition that continues |
-|           | beyond your frame width |
-|           | or beyond your set      |
-|           | Olivetti line            |
-|           | width                 |
-| keyword 2 | Extra Long line         |
+|           | beyond your frame width   |
+|           | or beyond your set        |
+|           | Olivetti line             |
+|           | width                     |
+| keyword 2 | Extra Long line           |
 |           | definition that continues |
-|           | beyond your frame width |
-|           | or beyond your set      |
-|           | Olivetti line            |
-|           | width                 |
+|           | beyond your frame width   |
+|           | or beyond your set        |
+|           | Olivetti line             |
+|           | width                     |
 
-#+LATEX: \newpage
+#+BEGIN_EXPORT latex 
+\newpage
+#+END_EXPORT
 
-***** LiliPond Music Notation:
+***** LiliPond Music Notation: 
 
-****** Example 1:
+****** Example 1: 
 
 #+begin_comment
    #+PROPERTY: header-args:lilypond :noweb yes
@@ -1195,9 +1039,9 @@ After typing: ~C-c '~ /(to save and exit the table editor)/ you will see your ta
 #+RESULTS:
 [[file:./auto/ionian.pdf]]
 
-****** Example 2:
+****** Example 2: 
 
-#+begin_src lilypond :file ./auto/MuseScore-Frescobaldi-Lilypond-Emacs.pdf
+#+begin_src lilypond :file ./auto/MuseScore-Frescobaldi-Lilypond-Emacs.pdf 
 \version "2.23.82"
 %% automatically converted by musicxml2ly from
 %% Str-Qt-Score_2bar-Example-Template.mxl
@@ -1302,35 +1146,53 @@ PartPFourVoiceOne =  \relative g, {
     \layout {}
     }
 #+end_src
-#+RESULTS:
+#+RESULTS: 
 [[file:./auto/MuseScore-Frescobaldi-Lilypond-Emacs.pdf]]
 
-* 2024 Logs:                                                         :export:
-
-/Not Here Yet but keep logging... The New Year will be here soon enough!/
-
-=When the New Year Comes Around: RENAME This Heading to the Next YEAR=
-
-=DON'T Clone this Heading...= /(Leave it here as the LAST Top Level Heading before the Meta Binder...  It must stay Titled as the Next Upcoming YEAR)/ 
-
-=After Doing Above:= Create a NEW Top Level Heading with the Current YEAR and Use that to place new Cloned LOG Entry Templates from the Meta Section...
-
-=The Following LaTeX Snippit MUST be placed AFTER All LOG Entries=
-/This Starts the BACK MATTER Section of this Log Book (nothing in it yet)/
 
 
 
-
-
-#+BEGIN_EXPORT latex
-\backmatter
+#+BEGIN_EXPORT latex 
+\newpage
 #+END_EXPORT
 
-* ⎘ Meta: /(Usage & Templates)/                                 :noexport:
-** 📄 Introduction:
-:README:
-   Use this Standard Log /(template)/ as a multi purpose time card/log
-   entry vehicle/instrument...
+* 2025 Logs: /(BOILERPLATE)/                                                  :noexport: 
+
+/Not Here Yet but keep logging... The New Year will be here soon enough!/ 
+
+=TODO:= *When the New Year Comes Around:* 
+
+- [ ] *CLONE THIS This Heading:* /(PASTE copy above this BOILERPLATE heading)/ 
+
+- [ ] *THEN RENAME This /BOILERPLATE/ HEADING:* 
+
+     Keep this BOILERPLATE HEADING ON THE BOTTOM and set it's YEAR to
+     the NEXT Year after the current year... The BOILERPLATE heading
+     DOES NOT GET EXPORTED...
+
+- [ ] *REMOVE ALL THIS CONTENT FROM UNDER YOUR CLONED HEADING:* 
+
+     /(BUT Not this BOILERPLATE - Keep all this content in here)/ 
+
+- [ ] *COPY NEW GENERIC Log Entries* UNDER your Cloned *YYYY Logs:* Heading... 
+
+     Copy: *NEW* *Generic Log Entry* /(General Log Entry Template)/ as a sub 
+     heading under your new *YYYY Logs:* 
+     
+     The *Generic Log Entry* heading within the *⎘ Meta* binder is all set to
+     the correct heading level... No hierarchy adjustments need to be made
+     normally... BY DEFAULT it and all sub headings are NOT EXPORTED...
+
+- [ ] *START using your new Log Entry* to record work being done... 
+  
+     Change your HEADING tag from ~no-export~ to ~export~ when they are ready...
+     Don't forget to Clock IN and Clock OUT to get your time recorded!
+
+* ⎘ Meta: /(Usage & Templates)/                                               :noexport: 
+** 📄 Introduction: 
+:README: 
+   Use this Standard Log Book / Journal /(template)/ as a multi purpose
+   time card/log entry vehicle/instrument...
 
    Use one for work, one for home, one for play, for creative projects,
    for pretty much anything that needs to be recorded with time and
@@ -1362,13 +1224,17 @@ PartPFourVoiceOne =  \relative g, {
    giveaway. Hewlet Packard was first to use such UI concepts...
    /(back before the dawning of the web we loved those HPUX Workstations!)/
 :END:
-*** Emacs Shorthand Command Key Notation:
+
+=NOTE:= This BINDER Section SHOULD =NEVER BE EXPORTED OR PUBLISHED=
+      This is META DATA DOH - for use within Emacs Org-Mode only!
+
+*** Emacs Shorthand Command Key Notation: 
 
 The command key conventions used in the instructions below, /(as well as all *Harmonic Alchemy Productions* docs)/, follow *Standard Emacs* command key naming conventions.
 
 Official GNU Emacs documentation uses a shorthand notation to indicate the *Ctrl* key as an upper case *C-* (/with minus appended/). Upper case *M-* (/with minus appended/) is the shorthand notation for the Emacs *META* key...
 
-*** Important Note For Mac Users:
+*** Important Note For Mac Users: 
 
 On Mac OS, *Modular Emacs* maps your *Ctrl* key to the *Apple Command* key. Emacs *META* is mapped to both *Alt* and *Ctrl* keys... Outside of Emacs all those keys function normally.  
 
@@ -1386,7 +1252,7 @@ If you see other keys alone separated by a space after the *C-x* or *M-x* /(e.g.
 
 *Got that?* That's the key notation system we use here... It is all standard Emacs...  The above paragraphs are mostly for the benefit of new Emacs users! And there is more to learn below. If you are an Emacs/Org-Mode veteran please bear with us...
 
-*** Org Mode Timestamps and Clocking:
+*** Org Mode Timestamps and Clocking: 
 
 This Template utilizes the default *Org-Mode:* "*C-c* ." command /(i.e., That's Ctrl-c and then type a dot. This Enters a timestamp range at the cursor position)/. The command employs *org-evaluate-time-range* to compute time on task.  This is useful for timesheets etc. 
 
@@ -1394,10 +1260,11 @@ In addition, the *Log Entry (template)* stores and tracks *Org-Mode :CLOCKING:* 
 
 Common time clocking commands are defined within the *Log Entry (template)* itself. Any time you need to look up clocking commands, open the *:README:* drawer under the *Log Entry (template)* heading by placing your cursor over it and hitting *TAB*.
 
-Additional commands for using *Org-Mode* with Modular Emacs will be explained here if needed, as well as other *Harmonic Alchemy Modular Emacs Templates* that get produced in the future...
+Additional commands for using *Org-Mode* with Modular Emacs will be explained here if needed, as well as other *Harmonic Alchemy Modular Emacs Templates* that get produced in the future... 
 
-** ❔ HowTo:
-:README:
+** ❔ HowTo: 
+:README: 
+
    This Log Notebook is being designed as these docs are being written...
    At first much of the design is being done /manually/ while formats,
    concepts, are tried and tested.  Eventually much of the instructions
@@ -1431,287 +1298,328 @@ Additional commands for using *Org-Mode* with Modular Emacs will be explained he
    =Otherwise=, if you already have one or more existing log entries from
    before, continue following instructions immediately below beginning 
    with: *Copy/Clone Log Entry (template)*
+
 :END:
-*** =Copy/Clone:= LOG: <2021-03-29 Mon> Generic Title /(from *⎘ Templates* Binder)/
+*** Copy/Clone: *NEW* Generic Log Entry /(General Log Entry Template)/ [0/2] 
 
-- [ ] =Select Heading= /(named above)/ under the *⎘ Templates* Binder,
-      using normal Emacs selection methods. i.e., Type ~t~ key to set
-      the mark for selection, /(xah-fly-keys Command/ /Mode)/ or use
-      ~C-SPACE~ /(normal Emacs)/, and move the point to get the entire
-      heading, and all of its contents, but NOTHING else...
-      =and copy it...=
+- [ ] =Select Heading= /(named above)/ under the *⎘ Meta:* binder... 
+  
+     Use normal Emacs selection methods. i.e., Type ~t~ key to
+     set the mark for selection, /(xah-fly-keys Command/ /Mode)/
+     or use ~C-SPACE~ /(normal Emacs)/, and move the point to get
+     the entire heading, and all of its contents, but NOTHING
+     else... =and copy it...=
 
-      =Note:= Before Copying Selected Text, ensure your cursor is at the
-            end of it BUT not be part of any items after it...
-            Placing your cursor on the first column of the next line
-            will include the invisible new-line character which is what
-            you want, but any text directly under the cursor on the
-            next line will not be copied...  Later, after pasting this
-            text somewhere else, your cursor will end up sitting on the 
-            first column of a blank line under the pasted text.
-            /(exactly as intended)/
+     =Note:= Before Copying Selected Text, ensure your cursor
+           is at the end of it BUT not be part of any items
+           after it...
 
-- [ ] =Complete the Copy Operation= Type ~c~ /(xah-fly-keys Command Mode)/.
-      This will save the selection for pasting later, /(the highlighted/
-      /text will go back to normal)/... You should have gotten only the
-      Single LOG Entry with ALL its contents, BUT nothing else below
-      it...
+           Placing your cursor on the first column of the next
+           line will include the invisible new-line character
+           which is what you want, but any text directly under
+           the cursor on the next line will not be copied...
 
-      =Note:= If you type: "*spacebar t*" /(xah-fly-keys leader key command)/ 
-            it will show you the contents of your paste buffer...  You 
-            can see the LAST item you copied in there AT THE TOP...  
-            To get out of the paste buffer view, type: "*spacebar u*" and 
-            it will return you to where you were before...
+           Later, after pasting this text somewhere else, your
+           cursor will end up sitting on the first column of
+           a blank line under the pasted text.
+           /(exactly as intended)/
 
+- [ ] =Complete the Copy Operation= Type ~c~ /(xah-fly-keys Command Mode)/ 
+  
+    This will save the selection for pasting later,
+    /(the highlighted/ /text will go back to normal)/...
+    You should have gotten only the Single LOG Entry with
+    ALL its contents, BUT nothing else below it...
 
+    =Note:= If you type: "*spacebar t*" /(xah-fly-keys leader key command)/ 
+          it will show you the contents of your paste buffer...
+          You can see the LAST item you copied in there AT THE TOP...
+          
+          To get out of the paste buffer view, type: "*spacebar u*" and 
+          it will return you to where you were before...
 
-*** =Paste Cloned LOG Entry:=
+*** Paste Cloned LOG Entry: [0/2] 
 
-- [ ] =Advance cursor= to a blank line just below the LAST Most Recent
-      LOG entry under heading =2022= within the =Begin Log:= section,
-      and press *enter* a couple times to get your cursor on a fresh
-      clean line with some extra space above and below it...
-      /(Below any previously time stamped entries you may already/
-      /have placed)/...
+- [ ] =Advance cursor:= 
 
-- [ ] =Press:= ~v~ /(xah-fly-keys Command Mode)/ to paste your cloned Log
-      Entry template... If you find out that what you copied also
-      included some unwanted text directly below it, no problems...
-      Just delete that part now... 
+     Put your cursor on a blank line just below the LAST Most
+     Recent LOG entry under heading =2022= within the =Begin Log:=
+     section, and press *enter* a couple times to get your cursor
+     on a fresh clean line with some extra space above and below
+     it... /(Below any previously time stamped entries you may
+     already/ /have placed)/
 
-      =Note:= If you accidentally copied one or more previously
-            invisible bullets to column one on a blank line they
-            will create an invisible "ghost" heading that you will
-            now need to delete...
+- [ ] =Press:= ~v~ /(xah-fly-keys Command Mode)/ 
+
+     This will paste your cloned Log Entry template...
+     If you find out that what you copied also included some
+     unwanted text directly below it, no problems...
+     Just delete that part now... 
+
+     =Note:= If you accidentally copied one or more previously
+           invisible bullets to column one on a blank line they
+           will create an invisible "ghost" heading that you will
+           now need to delete...
             
-            You will know this if you see an org-ellipsis "⤵"
-            symbol on a line by itself indicating a heading but
-            no text... Simply delete that whole line and it will
-            go away... Now you are ready to compose your new
-            log entry...
+           You will know this if you see an org-ellipsis "⤵"
+           symbol on a line by itself indicating a heading but
+           no text... Simply delete that whole line and it will
+           go away... Now you are ready to compose your new
+           log entry...
 
-
-
-*** Edit-Compose New LOG Entry:
+*** Edit-Compose New LOG Entry: [0/4] 
 
 =Note:= If this is your first time using this log, don't bother cloning
-      a NEW log entry as there is a dummy boilerplate placeholder Log 
-      Entry ALREADY in place for you to use...
-      /(initially there as an example)/
+      a NEW log entry from the *⎘ Meta:* Binder... There ALREADY Exists
+      a dummy boilerplate placeholder Log Entry under the CURRENT YEAR
+      that you Cloned this JOURNAL Template......
+      /(initially put there as an example for you to COMMANDEER)/
 
-      The instructions below for modifying the Boilerplate Log Entry,
-      or Editing a new Cloned Log Entry Template are pretty much the
-      same... /(differences will be noted in instructions below)/
+      The instructions below WORK for BOTH modifying the INITIAL
+      Boilerplate Log Entry OR Editing a new Cloned Log Entry
+      from *⎘ Meta:* binder...
 
-- [ ] =Place cursor directly on the existing timestamp= of the NEW
-      Log Entry, and enter the key binding: ~C-c .~ /(i.e., press/ ~Ctrl~
-      /key while holding/ ~c~ /and then type a dot ~.~ /)/ A date chooser
-      panel will pop up...
+- [ ] *Place Cursor directly on existing dummy timestamp:* 
 
-- [ ] =Type one more dot:= ~.~ to force the calendar selection to the
-      current time and date and then, Press ~ENTER~ to accept your
-      choice... /This will update the existing older timestamp with/
-      /the current date/time.../ Check to make sure the timestamp was
-      properly updated and then move on to the next step... This
-      timestamp will not be updated after that.  It records the
-      initial time of your new log entry to the Day and time you
-      first created it...
+     Put the cursor on the ~<y~ of: /:LOG-DATE:/ <2021-03-29 Mon>
+     under the of the MAIN Title HEADING of your New Log Entry...
 
-- [ ] =You are now ready to start= making entries within your New
-      Log Entry... Your timestamp indicates the present, /-and-/ you
-      are all set to begin recording your time...
+     *ENTER Key Binding:* ~C-c .~
+     /(i.e., press/ ~Ctrl~ /key while holding/ ~c~ /and then type a dot ~.~ /)/
 
-- [ ] =Follow the= ~:README:~ directions within the Time Card section
-      contained within your fresh new log entry to learn how to
-      /"clock in"/ and /"clock out"/ of your log entry as you work on
-      the tasks...
+     A Date Chooser Panel Will Pop Up...
 
+- [ ] *Type one more dot:* ~.~ 
 
+     This will force the calendar selection to the current time
+     and date /(i.e. DOT=NOW)/
 
-*** Enter New LOG Entry Details:
+     *Press:* ~ENTER~ to accept your choice...
+     /This will update the existing older timestamp with/ /the
+     current date/time.../
+
+     *Check to make sure the timestamp was properly updated*
+
+     *Then move on to the next step...*
+
+     This timestamp will not be updated after that.  It records
+     the initial time of your new log entry to the Day and time
+     you first created it... =DON'T CHANGE it After THAT!= it is
+     your =GROUND ZERO Log Time=...
+
+- [ ] =You are now ready to BEGIN LOGGING:= 
+
+     FEEL FREE to begin making log entries... Your timestamp
+     indicates the present, /-and-/ you are all set to begin
+     recording your time...
+
+     *Clock your Actions with TIME CARD* /(next steps)/
+
+- [ ] *Follow TIME CARD* ~:README:~ *Directions:* 
+
+     Follow the directions found within the Time Card section 
+     of your log entry... Thee README drawer in there shows how
+     to /"clock in"/ and /"clock out"/ of your log entry as you work
+     on tasks...
+
+*** Enter New LOG Entry Details: 
 
 Two sub headings have been provided for your use /(if you need them)/. However, you may structure your log entries any way you wish.  The two provided headings:  *Summary* and *Details* are simply suggestions to help make your log entries a bit more organized...
 
 The *Summary* heading could be used to log the main executive summary points, /(which you would include in the exported PDF as a report to give to your boss or clients)/. 
 
-Conversely, the *Details* heading could contain a complete, thorough log of your work, which would be excluded from the final PDF report.  Everything under *Details* heading would be extra information that you don't want to bother your clients or boss with /(unless they ask for more detail of course)/. In that case, you will have it all recorded and organized for easy access later if needed...
+Conversely, the *Details* heading could contain a complete, thorough log of your work, which MAY or MAY NOT be excluded from the final PDF report.  Everything under *Details* heading would be extra information that you May Not want to bother your clients or boss with /(unless they ask for more detail of course)/. In that case, you will have it all recorded and organized for easy access later if needed... It all could be included as part of a final PDF Report...
 
-Place the *:noexport:* tag at the end of any org outline heading to exclude it and all its children from the PDF upon export...  You can add as much detail as you need within these excluded sections without cluttering up your final PDF.  The entire main heading: *How to Use this Template:* is already excluded from the final PDF, so it can be left in and your PDF will only include the *Begin Log:* section...
+Place the *:noexport:* tag at the end of any org outline heading to exclude it and all its children from the PDF upon export...  You can add as much detail as you need within these excluded sections without cluttering up your final PDF.
 
-*** Export LOG as a PDF Report:
+HEADINGS ARE INITIALLY Set to *:noexport:* by DEFAULT within the Generic Log Entry Template... You will change those headings within your clones as they become significant and are ready for export...
 
-Anytime you need to see your Log Notebook as a nicely printed PDF report, you can export it using the following custom key command: ~SPACE e p~ /(i.e., press ~spacebar~, type ~e~ and then ~p~ *(Xah-Fly-Keys Command Mode)* extended leader key sequence)/
-** NEW Generic Log Entry /(General Log Entry Template)/
-<2021-03-29 Mon>
-<<LOG_Generic-Title>>
-:README:
-   =Using the Clocking Feature of this Log Entry=
+*** Export LOG as a PDF Report: 
 
-   - [ ] *Go To One of the HEADINGS Below:*
+Anytime you need to see your Log Notebook as a nicely printed PDF report, you can export it using the following custom key command: ~SPACE e p~
+/(Xah-Fly-Keys Command Mode... /i.e., press ~spacebar~, type ~e~ and then ~p~)/
+OR... You can use the normal ORG-MODE commands... /(lol I forgot so you look up)/
 
-         /(Summary, Details, or Sub Headings)/
+** NEW Generic Log Entry /(General Log Entry Template)/                         :noexport: 
+<<LOG_generic-log-entry>> 
+:LOG-DATE: <2021-03-29 Mon>
 
-         =Punch the Time Clock:= /(see Clocking Commands: below)/ At
-         the heading And then begin working on a task related to
-         that Heading...
+:README: 
 
-         =Your Time IS being Recorded Now= /(you will see a/ *:clocking:*
-         /item under the heading where time is recorded)/
+   =Using the Clocking Feature of this Log Entry= 
 
-   - [ ] =Use These Clocking Commands:= /to keep track your time.../
+   - [ ] *Go To One of the Default HEADINGS:* 
 
-      + *Clock IN:* ~C-c C-x C-i~ /(Begin OR Resume Clocking Current task)/
+        /i.e, Choose:/ *Summary /*,/ *Details /*, or/ *Sub Headings*
 
-            This creates a new :CLOCKING: Time Card Entry just
-            underneath the HEADING...
+        *Punch the Time Clock on your Chosen Heading:*
+        /(see Clocking Commands: below)/
 
-            Do this just before starting work on the task... 
-            Be in control of your life!
+        =Then...= *Begin working on a task related to that Heading*...
 
-            After doing the above, you can go away and do some 
-            work, leaving this heading, log note, etc. to visit 
-            other files and/or work on them etc. The clock will 
-            be recording your time all the while... You will see 
-            in your mode line the elapsed clock time ticking away 
-            as you work on a task /(hopefully related to this clock!)/
-            and NOT Yac Shaving or being sidetracked!!!
+        =Your Time IS being Recorded Now=
+        /(you will see a/ *:clocking:* /item under the heading/
+        /where time is recorded)/
 
-      + *RETURN to Clock Heading:* ~C-c C-x C-j~
+   - [ ] =Use These Clocking Commands:= /to keep track your time.../ 
 
-            /Go back to the place where you started the clock.../
+      + *Clock IN:* ~C-c C-x C-i~ /(Begin OR Resume Clocking Current task)/ 
 
-            You do this after you have worked on a task for a 
-            while and you need to come back to update the item's
-            info etc., and/or stop the clock before going off to 
-            do something else unrelated to the log entry...
+        This creates a new :CLOCKING: Time Card Entry just
+        underneath the HEADING...
 
-      + *Clock OUT:* ~C-c C-x C-o~ /(to stop clocking your time on task)/
+        Do this just before starting work on the task... 
+        Be in control of your life!
 
-            This *Finalizes the Time Card Entry* within:
-            ~:CLOCKING:~ /(created earlier when you started the clock)/
+        After doing the above, you can go away and do some 
+        work, leaving this heading, log note, etc. to visit 
+        other files and/or work on them etc. The clock will 
+        be recording your time all the while... You will see 
+        in your mode line the elapsed clock time ticking away 
+        as you work on a task /(hopefully related to this clock!)/
+        and NOT Yac Shaving or being sidetracked!!!
 
-            The Clock Entry changes showing start timestamp, end
-            timestamp, and total time worked during this segment...  
+      + *RETURN to Clock Heading:* ~C-c C-x C-j~ 
 
-            =Please DON'T Forget= /Like I often do, LOL.../ i.e., Leaving
-            a clock running all day by accident, or worse, leave it
-            dangling with the file closed only to open it again and
-            get that nasty *Org-Mode Message:* /"What do you want to do/
-            /with this?"/ If you do something like that you can always
-            come back and directly edit the clock times by hand to
-            amend them...  After changing clock times or dates, etc...
-            Whatever...
+        /Go back to the place where you started the clock.../
 
-                  ="Onward We Row Mates... Through the log jam!"=
+        You do this after you have worked on a task for a 
+        while and you need to come back to update the item's
+        info etc., and/or stop the clock before going off to 
+        do something else unrelated to the log entry...
+
+      + *Clock OUT:* ~C-c C-x C-o~ /(to stop clocking your time on task)/ 
+
+         This *Finalizes the Time Card Entry* within:
+         ~:CLOCKING:~ /(created earlier when you started the clock)/
+
+         The Clock Entry changes showing start timestamp, end
+         timestamp, and total time worked during this segment...  
+
+         =Please DON'T Forget= /Like I often do, LOL.../ i.e., Leaving
+         a clock running all day by accident, or worse, leave it
+         dangling with the file closed only to open it again and
+         get that nasty *Org-Mode Message:* /"What do you want to do/
+         /with this?"/ If you do something like that you can always
+         come back and directly edit the clock times by hand to
+         amend them...  After changing clock times or dates, etc...
+         Whatever...
+
+         ="Onward We Row Mates... Through the log jam!"=
 
       + *Update Time Card Entry:* ~C-c C-c~ 
 
-            This command will change the total time at the end showing 
-            your new calculated time...
+         This command will change the total time at the end showing 
+         your new calculated time...
 
-            If you need to go away and do something else before finishing
-            this task, you can do so after clocking out... When you come
-            back simply clock back in again to start another Time Card
-            Entry just as before... The new time card entry will appear
-            above the earlier one within the ~:CLOCKING:~ drawer... When
-            you clock out of this task it will look just like the entry
-            below it with a total time worked tagged on the end...
+         If you need to go away and do something else before finishing
+         this task, you can do so after clocking out... When you come
+         back simply clock back in again to start another Time Card
+         Entry just as before... The new time card entry will appear
+         above the earlier one within the ~:CLOCKING:~ drawer... When
+         you clock out of this task it will look just like the entry
+         below it with a total time worked tagged on the end...
 
-      + *Clock Out & Mark Items Done:* ~C-c C-t~
+      + *Clock Out & Mark Items Done:* ~C-c C-t~ 
 
-            When you are all done with a Log Entry use the above key 
-            command to mark its Heading *TODO* tag to: *DONE* /(Most of the/ 
-            /time this will ALSO clock you out if you are still clocked/ 
-            /into the item... But not allways in my experience.../  
-            So make sure you are also clocked OUT of an Item After 
-            marking it DONE... Type: ~C-c C-x C-j~ to check this...
-            /(if no running clock it will tell you and place your/
-            /cursor at the heading where you LAST CLOCKED OUT)/
+         When you are all done with a Log Entry use the above key 
+         command to mark its Heading *TODO* tag to: *DONE* /(Most of the/ 
+         /time this will ALSO clock you out if you are still clocked/ 
+         /into the item... But not allways in my experience.../  
+         So make sure you are also clocked OUT of an Item After 
+         marking it DONE... Type: ~C-c C-x C-j~ to check this...
+         /(if no running clock it will tell you and place your/
+         /cursor at the heading where you LAST CLOCKED OUT)/
 
-      + ~C-c C-x C-q~ *Cancel Current Clock:* /(in case of accident)/
+      + ~C-c C-x C-q~ *Cancel Current Clock:* /(in case of accident)/ 
 
-            This removes currently running clock and forgets any time
-            accrued or associated with it...
+         This removes currently running clock and forgets any time
+         accrued or associated with it...
 
       + ~C-c C-x C-d~ *Display Clocking Info:* 
 
-            /This will show elapsed times to the right of headings.../
-            =Warning!= Using this command will CLUTTER ALL the headings
-                     within your org file with those timestamps!!!
+         /This will show elapsed times to the right of headings.../
+         =Warning!= Using this command will CLUTTER ALL the headings
+         within your org file with those timestamps!!!
 
 :END:
+
+=NOTE:= Delete the above README from active LOG ENTRIES... 
+      The README drawer is only for new users to help 
+      with clocking in and out and keeping a time card... 
+      You don't need this in the log entries as it is 
+      always here in the META section... 
 
 This Log Entry is about: Yadda... Yadda... Yadda...
 
-*** NEW Reference:
-:PROPERTIES:
+*** NEW Reference:                                                                                           :noexport: 
+:PROPERTIES: 
 :UNNUMBERED: notoc
 :END:
+
 :README:
-   =Org Mode Links Tip:=
 
-      + To Create a Link Type: ~C-c C-l~ 
-         /(then paste: ~link~ & type: "description")/
+=Org Mode Links Tip:=
 
-         =-OR-= Simply Copy/Paste BOILERPLATE:
-              /(use placeholders below)/
-              And Fill Them In Manually... 
-              Copy/Paste more placeholders as
-              needed to create more links...
++ To Create a Link Type: ~C-c C-l~ 
 
-      + To Open a Link Type: ~C-c C-o~
+  /(then paste: ~link~ & type: "description")/
 
-      + To EXPAND a Link Type: ~SPACE b~
-         or: ~M-x org-toggle-link-display~
+  =-OR-= Simply Copy/Paste BOILERPLATE:
+       /(use placeholders below)/
+       And Fill Them In Manually... 
+       Copy/Paste more placeholders as
+       needed to create more links...
 
-   =BOILERPLATE:= /(clone to add more ref links)/
++ To Open a Link Type: ~C-c C-o~
 
-   ☞ *Heading:* [[~/.GIT/My-Docs/][MY DOCS]] /(comment)/
++ To EXPAND a Link Type: ~SPACE b~ 
 
-   - *Heading:* [[link][Link NAME] ] /(comment)/
+  or: ~M-x org-toggle-link-display~
 
-   ☞ [[yt:aB1cD2eF3gH ][TITLE ] ] *Description:* /(YouTube)/
 
-   - [[link][Link Name] ] *Heading:* /(comment)/
+=BOILERPLATE:= /(clone to add more ref links)/
+
+- *Heading:* [[~/.GIT/My-Docs/][MY DOCS]] /(comment)/
+
+- *Heading:* [[link][Link NAME] ] /(comment)/
+
+- [[yt:aB1cD2eF3gH ][TITLE ] ] *Description:* /(YouTube)/
+
+- [[link][Link Name] ] *Heading:* /(comment)/
    
-   - *_:* [[][] ] /(yadda... yadda... yadda...)/
+- *_:* [[][] ] /(yadda... yadda... yadda...)/
 
-   - [[][] ] /(_)/
-
-   [[junk][JUNK]]  /(This is a stupid BUG workaround/ /for org-mode link/
-         /expansion/compression... If you invoke:/ ~org-toggle-link-display~
-         /you will notice this JUNK link DOES NOT compress to a clickable/
-         /link title alone.../
-         
-         /I am not sure if this is due to my Emacs Config or a bug within/
-         *Org-Mode* /itself.../
-
-         /I put this workaround in here because if it is not here,/
-         /SOME of your external file links created below may not/
-         /compress after expansion, even though thy are GOOD links!/
-
-         /Leaving this JUNK link in here acts like a scapegoat/
-         /so that your real links below will all compress/expand/
-         /normally... I am NOT SURE WHY THIS WORKS??? I'm to busy/
-         /to do anything beyond hacking at this point.../
-         
-         ~org-lint~ /will detect JUNK above... Ignore that warning.../
-                  /It's my "METHOD of MADNESS" %^)/
+- [[][] ] /(_)/
+      
 :END:
 
-- *Link to Project:* [[][] ] /(comment)/
+=NOTE:= Delete the above README from active LOG ENTRIES... 
+      The README drawer is only for new users...
+      the README info can always be found here within
+      this master template...
 
-*** NEW Time Card:
-:PROPERTIES:
+- *Link to Project:* [[][] ] /(comment)/ 
+
+#+BEGIN_EXPORT latex 
+\newpage
+#+END_EXPORT
+
+*** NEW Time Card:                                                                                           :noexport: 
+:PROPERTIES: 
 :UNNUMBERED: notoc
 :END:
 
-#+BEGIN: clocktable :scope tree3 :maxlevel 6 :tstart "<-1w>" :tend "<+1m>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3
+#+BEGIN: clocktable :scope tree3 :maxlevel 6 :tstart "<-1w>" :tend "<+1m>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3 
 
-#+END:
+#+END: 
 
-*** NEW Summary: [1/3]
-:README:
+#+BEGIN_EXPORT latex 
+\newpage
+#+END_EXPORT
+
+*** NEW Summary: [0/4]                                                                                     :noexport: 
+:README: 
    This Summary is mostly to help you find things later when you
    cannot remember when or where is was done... If you go to the
    top of this file and expand all headings to show ALL content,
@@ -1731,26 +1639,33 @@ This Log Entry is about: Yadda... Yadda... Yadda...
 
 Yadda... Yadda... Yadda...
 
-1. [X] *New Item 1:* /(this represents a completed item)/
+1. [ ] *New Item 1:* /(this represents a completed item)/ 
 
-2. [-] *New Item 2:* /(this represents a currently "radio active" item)/
+2. [-] *New Item 2:* /(this represents a currently "radio active" item)/ 
 
-3. [ ] *New Item 3:* /(this represents a new item not worked on yet)/
+3. [ ] *New Item 3:* /(this represents a new item not worked on yet)/ 
 
-3. [ ] *New Item:* /(copy/clone more of these as needed)/
+4. [ ] *New Item:* /(copy/clone more of these as needed)/ 
 
-*** NEW Details:
-**** NEW New Item 1 /(placeholder)/ [0/4]
-:PROPERTIES:
+#+BEGIN_EXPORT latex 
+\newpage
+#+END_EXPORT
+
+*** NEW Details: [0/3]                                                                                         :noexport: 
+**** NEW New Item 1 /(placeholder)/ [0/4] 
+:PROPERTIES: 
 :UNNUMBERED: notoc
 :END:
-:BOILERPLATE:
+:BOILERPLATE: 
 
   =Delete This BOILERPLATE DRAWER If You Don't Need It...=
 
   The following list contains Babel Source Code Blocks that are
   often needed for something I am writing or "Logging" about...
   I use them so much I decided to include them in this template...
+
+  =REMOVE THIS FROM LOG ENTRY CLONES= within your own LOG BOOKS...
+  You can Always find these HERE within this TEMPLATE...
 
   - [ ] *__:* /(__)/
 
@@ -1827,17 +1742,20 @@ Add sub headings as needed...
 Don't forget to clock-in to HEADINGS while you work on them...
 AND... Don't forget to Clock OUT when you are DONE... %^)
 
-**** NEW New Item 2 /(placeholder)/ [0/3]
-:PROPERTIES:
+**** NEW New Item 2 /(placeholder)/ [0/4] 
+:PROPERTIES: 
 :UNNUMBERED: notoc
 :END:
-:BOILERPLATE:
+:BOILERPLATE: 
 
   =Delete This BOILERPLATE DRAWER If You Don't Need It...=
 
   The following list contains Babel Source Code Blocks that are
   often needed for something I am writing or "Logging" about...
   I use them so much I decided to include them in this template...
+
+  =REMOVE THIS FROM LOG ENTRY CLONES= within your own LOG BOOKS...
+  You can Always find these HERE within this TEMPLATE...
 
   - [ ] *__:* /(__)/
 
@@ -1879,7 +1797,30 @@ AND... Don't forget to Clock OUT when you are DONE... %^)
       : 
       : CAR w: text-pixels
       : CDR w: (92)
+
+  - [ ] =LaTeX Code Within ~.Org~ Docs:=
+
+      #+begin_comment
+
+      Code Embedded ~In-line~ within paragraphs:
       
+         Put: @@latex:<LaTeX Code Here>@@ Anywhere
+         Within a paragraph...
+
+      #+LATEX: % Any Arbitrary LaTeX Code...
+      
+      #+LATEX: \newpage % Start New Page
+
+      #+BEGIN_EXPORT latex
+      %% Put LaTex Code In Here...
+      #+END_EXPORT
+
+      #+BEGIN_LaTeX
+      %% Put LaTex Code In Here...
+      #+END_LaTeX
+
+      #+end_comment
+
 :END:
 
 New Item Details... Yadda... Yadda... Yadda...
@@ -1891,17 +1832,20 @@ Add sub headings as needed...
 Don't forget to clock-in to HEADINGS while you work on them...
 AND... Don't forget to Clock OUT when you are DONE... %^)
 
-**** NEW New Item 3 /(placeholder)/ [0/3]
-:PROPERTIES:
+**** NEW New Item 3 /(placeholder)/ [0/4] 
+:PROPERTIES: 
 :UNNUMBERED: notoc
 :END:
-:BOILERPLATE:
+:BOILERPLATE: 
 
   =Delete This BOILERPLATE DRAWER If You Don't Need It...=
 
   The following list contains Babel Source Code Blocks that are
   often needed for something I am writing or "Logging" about...
   I use them so much I decided to include them in this template...
+
+  =REMOVE THIS FROM LOG ENTRY CLONES= within your own LOG BOOKS...
+  You can Always find these HERE within this TEMPLATE...
 
   - [ ] *__:* /(__)/
 
@@ -1943,7 +1887,30 @@ AND... Don't forget to Clock OUT when you are DONE... %^)
       : 
       : CAR w: text-pixels
       : CDR w: (92)
+
+  - [ ] =LaTeX Code Within ~.Org~ Docs:=
+
+      #+begin_comment
+
+      Code Embedded ~In-line~ within paragraphs:
       
+         Put: @@latex:<LaTeX Code Here>@@ Anywhere
+         Within a paragraph...
+
+      #+LATEX: % Any Arbitrary LaTeX Code...
+      
+      #+LATEX: \newpage % Start New Page
+
+      #+BEGIN_EXPORT latex
+      %% Put LaTex Code In Here...
+      #+END_EXPORT
+
+      #+BEGIN_LaTeX
+      %% Put LaTex Code In Here...
+      #+END_LaTeX
+
+      #+end_comment
+
 :END:
 
 New Item Details... Yadda... Yadda... Yadda...
@@ -1953,5 +1920,9 @@ Re-Purpose these as needed and Delete anything you don't need...
 Add sub headings as needed...
 
 Don't forget to clock-in to HEADINGS while you work on them...
-AND... Don't forget to Clock OUT when you are DONE... %^)
+AND... Don't forget to Clock OUT when you are DONE... %^) 
+
+#+BEGIN_EXPORT latex 
+\newpage
+#+END_EXPORT 
 

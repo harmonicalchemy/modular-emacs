@@ -163,13 +163,6 @@ Set any *HEADING* within your .org project file with the following PROPERTIES BO
 =DISABLED OPTIONS For This Configuration:= /(for debugging)/
 
 #+BEGIN_COMMENT
-   #+LATEX_HEADER: \renewcommand\familydefault{\sfdefault}
-   #+LATEX_HEADER: \setlength{\textheight}{230mm}
-   #+LATEX_HEADER: \setlength{\textwidth}{160mm}
-   #+LATEX_HEADER: \setlength{\voffset}{-10mm}
-   #+LATEX_HEADER: \setlength{\oddsidemargin}{0mm}
-   #+LATEX_HEADER: \setlength{\evensidemargin}{0mm}
-
    #+OPTIONS: e:nil
       # DO NOT Include Entities (org-export-with-entities)
       # Example: HTML exports \\alpha as: &alpha;
@@ -179,11 +172,6 @@ Set any *HEADING* within your .org project file with the following PROPERTIES BO
 
    #+OPTIONS: toc:??? 
       # I have tried all settings in past (org-export-with-toc)
-
-   #  #+begin_export latex
-   #     \begin{document}
-   #     \maketitle
-   #  #+end_export
 #+END_COMMENT
 
 =STARTUP OPTIONS For This Configuration:=
@@ -296,7 +284,7 @@ Set any *HEADING* within your .org project file with the following PROPERTIES BO
 #+OPTIONS: tags:nil
    # No Tags (org-export-with-tags)
 
-#+OPTIONS: tex:t
+#+OPTIONS: tex:verbatim
    # Do the right thing automatically (org-export-with-latex)
 
 #+OPTIONS: timestamp:t

@@ -470,7 +470,11 @@ This is a morph of: "lyhne" & "EQ" Styles
     #+BEGIN_EXPORT latex
 
        %% DEFAULT SETTINGS %%
-       %% \addbibresource{org-bib-refs.bib}
+
+       %%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       %%  DISABLED DIRECTIVES (due to ERRORS etc.)
+       %       \addbibresource{org-bib-refs.bib}
+       %%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
        \setlength{\headwidth}{\textwidth}
        \addtolength{\headwidth}{.382\foremargin}
@@ -492,8 +496,8 @@ This is a morph of: "lyhne" & "EQ" Styles
        %% AT BEGIN DOCUMENT  %%
 
        \AtBeginDocument{
-       \nonzeroparskip
-       \frontmatter
+          \nonzeroparskip
+          \frontmatter
        }
        
        \chapterstyle{lyhne}

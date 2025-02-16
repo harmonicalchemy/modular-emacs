@@ -28,10 +28,25 @@
 %%      \usepackage{afterpage}  This does not seem to be needed...
 %%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+%%% DISABLED DIRECTIVES - (for debugging) %%%
+%% \renewcommand\familydefault{\sfdefault}
+%% \setlength{\textheight}{230mm}
+%% \setlength{\textwidth}{160mm}
+%% \setlength{\voffset}{-10mm}
+%% \setlength{\oddsidemargin}{0mm}
+%% \setlength{\evensidemargin}{0mm}
+%%
+%% \AtBeginDocument
+%% \maketitle
+%% \clearpage
+%% \listoffigures*
+%% \clearpage
+%% \listoftables*
+%% \mainmatter
+
 %% PACKAGES %%
 
-%% \usepackage{parskip}
-
+\usepackage{parskip}
 \usepackage{calc}
 \usepackage{titlesec}
 
@@ -52,12 +67,14 @@
 %% TITLE, CHAPTER, & SECTION, HEADING FORMAT %%
 
 \makeatletter
+
 \renewcommand\afterchapternum{}
 \renewcommand\afterchaptertitle{%
   \ifnum \c@secnumdepth>\m@ne%
     \ifNoChapNum\else\par\nobreak\vskip\afterchapskip
     \fi%
   \fi}
+
 \makeatother
 
 \setlength\beforechapskip{15pt}
@@ -112,8 +129,18 @@
 
 %% AT BEGIN DOCUMENT  %%
 
-\chapterstyle{verville}
+\AtBeginDocument{
+\maketitle
+\clearpage
+\listoffigures*
+\clearpage
+\listoftables*
+\clearpage
+\nonzeroparskip
+\frontmatter
+}
 
+\chapterstyle{verville}
 
 %%%% END: ~/.emacs.d/Docs/TeX/log-book-setup.tex
 %%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
