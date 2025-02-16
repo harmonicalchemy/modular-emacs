@@ -91,6 +91,8 @@
 ;; (remove-hook 'xah-fly-command-mode-activate-hook 'me_xfk-command-mode-tweaks)
 ;; (remove-hook 'xah-fly-insert-mode-activate-hook  'me_xfk-insert-mode-tweaks)
 
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;                     CUSTOMIZED Xah Fly KEY BINDINGS
 ;;
@@ -241,7 +243,16 @@
   (define-key xah-fly-command-map (kbd "\\") 'me_toggle-letter-case)
 
 
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ;;; Xah-Fly-Keys PRIMARY LEADER-KEY BINDINGS: ;;; (xah-fly-leader-key-map) SPACEBAR ;;; Add more key definitions to this list when needed: ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ˙ ;; Jump back to previously SAVED bookmark: ;; This PRIMARY Leader-Key bookmark-jump "-" mirrors ;; DIRECT Command Mode bookmark-set "-" key above... ;; (which sets the bookmark)
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;; Xah-Fly-Keys PRIMARY LEADER-KEY BINDINGS:
+;;; (xah-fly-leader-key-map) SPACEBAR
+;;; Add more key definitions to this list when needed:
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  ;; Jump back to previously SAVED bookmark:
+  ;; This PRIMARY Leader-Key bookmark-jump "-" mirrors
+  ;; DIRECT Command Mode bookmark-set "-" key above...
+  ;; (which sets the bookmark)
  
   (define-key xah-fly-leader-key-map (kbd "-") 'bookmark-jump)
 
@@ -304,6 +315,10 @@
 
   (define-key xah-fly-leader-key-map (kbd "p") 'me_toggle-default-face)
 
+  ;; OVERRIDE default xah-fly-keys SPACEBAR "f" "switch to buffer"
+  ;; Use HELM MINI instead... (list is colorized for easier ID)
+
+  (define-key xah-fly-leader-key-map (kbd "f") 'helm-mini)
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;; Xah-Fly-Keys SECONDARY LEADER-KEY BINDINGS:

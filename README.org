@@ -110,24 +110,24 @@ To use *HAP_README-Doc-Skeleton.org* Org-Mode README Doc Template for your own p
 
 1) [ ] *Clone a Copy of This File:*
 
-      Put your clone within any existing writing or coding project's MASTER
-      FOLDER or anywhere you need to have a simple NON-PUBLISHING README.org
-      file associated with source code or other files...
+     Put your clone within any existing writing or coding project's MASTER
+     FOLDER or anywhere you need to have a simple NON-PUBLISHING README.org
+     file associated with source code or other files...
 
-      Existing MASTER FOLDERS contain other files for other projects as well
-      as the SETUPFILES and MEDIA required by this README.org file...
+     Existing MASTER FOLDERS contain other files for other projects as well
+     as the SETUPFILES and MEDIA required by this README.org file...
 
-      =Note:= If you put this file within other Project's existing MASTER FOLDERS
-            that contain existing ~.org~ files /(cloned from other HAP_Doc-Skeleton/
-            /template files)/ Pay CLOSE Attention to Steps 3 & 4 below to decide
-            the correct action to take during those steps...
+     =Note:= If you put this file within other Project's existing MASTER FOLDERS
+           that contain existing ~.org~ files /(cloned from other HAP_Doc-Skeleton/
+           /template files)/ Pay CLOSE Attention to Steps 3 & 4 below to decide
+           the correct action to take during those steps...
 
-            =Do NOT OVERWRITE ANY PRE-EXISTING FILES or FOLDERS!!!=
+           =Do NOT OVERWRITE ANY PRE-EXISTING FILES or FOLDERS!!!=
 
-            =OTHERWISE:= If this is a Brand NEW Project, name its NEW MASTER FOLDER to
-                       reflect what this README Doc is about...
+           =OTHERWISE:= If this is a Brand NEW Project, name its NEW MASTER FOLDER to
+                      reflect what this README Doc is about...
 
-      =OTHER Files/Folders May also be placed Within your MASTER FOLDERS...=
+     =OTHER Files/Folders May also be placed Within your MASTER FOLDERS...=
 
 2) [ ] =Start Composing your README Content NOW:=
 
@@ -147,129 +147,129 @@ To use *HAP_README-Doc-Skeleton.org* Org-Mode README Doc Template for your own p
 
 3) [ ] =Finish Setting Up The Rest Of This Project LATER= [0/12]
 
-    - [ ] *Change Title of :LATEST_UPDATE: drawer ABOVE:*
+     - [ ] *Change Title of :LATEST_UPDATE: drawer ABOVE:*
 
-         AFTER Cloning, Change *:LATEST_UPDATE:* drawer title ABOVE
-         /(WITHIN YOUR CLONE, NOT THE ORIGINAL!)/ to *:LATEST_TEMPLATE_UPDATE:*
-         AND Follow Instructions within it...
+          AFTER Cloning, Change *:LATEST_UPDATE:* drawer title ABOVE
+          /(WITHIN YOUR CLONE, NOT THE ORIGINAL!)/ to *:LATEST_TEMPLATE_UPDATE:*
+          AND Follow Instructions within it...
 
-    - [ ] *Copy/Clone:* ~./media~ /(and contents)/ *to your new project's MASTER FOLDER:*
+     - [ ] *Copy/Clone:* ~./media~ /(and contents)/ *to your new project's MASTER FOLDER:*
 
-         Copy this directory /(into your MASTER FOLDER as a sibling of this file).../ 
-         Any external documents or images referenced by your *README Document* 
-         should be placed within this ~./media/~ directory...
+          Copy this directory /(into your MASTER FOLDER as a sibling of this file).../ 
+          Any external documents or images referenced by your *README Document* 
+          should be placed within this ~./media/~ directory...
 
-         All external links, images, within the boilerplate examples of this
-         template may be used as examples for getting your own images, and 
-         external attachments linked properly...  
+          All external links, images, within the boilerplate examples of this
+          template may be used as examples for getting your own images, and 
+          external attachments linked properly...  
 
-         This single ~./media~ directory will serve media and external attachments 
-         for this and other Modular Emacs Document TEMPLATE ~.org~ files that may
-         exist within this MASTER FOLDER now or in the future...
+          This single ~./media~ directory will serve media and external attachments 
+          for this and other Modular Emacs Document TEMPLATE ~.org~ files that may
+          exist within this MASTER FOLDER now or in the future...
 
-         /(IF/WHEN THEY /WERE/ARE COPIED HERE)/
+          /(IF/WHEN THEY /WERE/ARE COPIED HERE)/
 
-         =Note:=  You DON'T need to copy the ~./auto/~ directory... That directory
-                may be automatically created by *AuxTeX* when exporting other ~.org~
-                files based on *Modular Emacs* TEMPLATES but =NOT= from this ~.org~
-                file which is not set up for exporting to ~.PDF~...
+          =Note:=  You DON'T need to copy the ~./auto/~ directory... That directory
+                 may be automatically created by *AuxTeX* when exporting other ~.org~
+                 files based on *Modular Emacs* TEMPLATES but =NOT= from this ~.org~
+                 file which is not set up for exporting to ~.PDF~...
 
-    - [ ] *Copy/Clone:* ~./org-templates~ /(and all contents)/ *to your MASTER FOLDER:*
+     - [ ] *Copy/Clone:* ~./org-templates~ /(and all contents)/ *to your MASTER FOLDER:*
 
-         =WARNING!:= To avoid overwriting existing files, DO NOT COPY this
-                   ~./org-templates~ to your MASTER FOLDER IF ONE ALREADY EXISTS!
+          =WARNING!:= To avoid overwriting existing files, DO NOT COPY this
+                    ~./org-templates~ to your MASTER FOLDER IF ONE ALREADY EXISTS!
 
-                   But DO follow the rest of this step so you will know what you
-                   should do...
+                    But DO follow the rest of this step so you will know what you
+                    should do...
 
-                   =OTHERWISE For MASTER FOLDERS that DO NOT already have one:=
-                   *Copy this NEW directory to serve as your:
-                   =NEW Readme Doc's MASTER FOLDER=
-                   /(i.e., as a sibling/ /of this README.org file).../
+                    =OTHERWISE For MASTER FOLDERS that DO NOT already have one:=
+                    *Copy this NEW directory to serve as your:
+                    =NEW Readme Doc's MASTER FOLDER=
+                    /(i.e., as a sibling/ /of this README.org file).../
 
-         =Note:= ONLY ONE SETUPFILE Within this directory is called out and
-               included by this ~README.org~ file /(within the file header above)/
+          =Note:= ONLY ONE SETUPFILE Within this directory is called out and
+                included by this ~README.org~ file /(within the file header above)/
 
-         =WARNING:= There may ALREADY be an ~org-templates~ directory existing
-                  within your MASTER FOLDER! In that case you will need to
-                  merge: ~default-tags.org~ /(contained within)/ into your
-                  existing copy of it instead...       
+          =WARNING:= There may ALREADY be an ~org-templates~ directory existing
+                   within your MASTER FOLDER! In that case you will need to
+                   merge: ~default-tags.org~ /(contained within)/ into your
+                   existing copy of it instead...       
 
-                  =YOU WON'T WANT TO OVERRITE EXISTING FILES= within this 
-                  directory IF you are already using it for OTHER .org Files,
-                  /(and they were modified!!!)/ but you may need to update
-                  existing files you are NOT using currently if/when you
-                  DO start using them...
+                   =YOU WON'T WANT TO OVERRITE EXISTING FILES= within this 
+                   directory IF you are already using it for OTHER .org Files,
+                   /(and they were modified!!!)/ but you may need to update
+                   existing files you are NOT using currently if/when you
+                   DO start using them...
 
-     Other SETUPFILES within this directory are intended to be used by
-     other document style project templates and are not needed for this:
-     ~README.org~ Document... You may remove the extra files if you wish... 
+      Other SETUPFILES within this directory are intended to be used by
+      other document style project templates and are not needed for this:
+      ~README.org~ Document... You may remove the extra files if you wish... 
 
-     =HOWEVER:= If you decide to clone another ~HAP_<book-template>.org~
-              file into this project folder it will pick up its
-              associated SETUPFILES automatically because this folder
-              already exists! Consider this case if/when you decide
-              to delete other UNUSED SETUPFILES... They are small text
-              files not really bothering you...
+      =HOWEVER:= If you decide to clone another ~HAP_<book-template>.org~
+               file into this project folder it will pick up its
+               associated SETUPFILES automatically because this folder
+               already exists! Consider this case if/when you decide
+               to delete other UNUSED SETUPFILES... They are small text
+               files not really bothering you...
 
-              /(YOU MAY NEED THEM LATER DEPENDING ON YOUR CASE)/
+               /(YOU MAY NEED THEM LATER DEPENDING ON YOUR CASE)/
 
-    - [ ] *Change the* ~#+TITLE:~ *directive at the top of this file:* 
+     - [ ] *Change the* ~#+TITLE:~ *directive at the top of this file:* 
 
-         Change to: /"your Readme Document's REAL Project Title"/
+          Change to: /"your Readme Document's REAL Project Title"/
 
-    - [ ] *Change the* ~#+TEXT: Copyright © 2022:~ *directive top of this file:*
+     - [ ] *Change the* ~#+TEXT: Copyright © 2022:~ *directive top of this file:*
 
-         Change to: /"Copyright © your info here"/ You are the copyright
-         owner of your own documents created from clones of these master
-         templates... /(but these MASTER Template Files are to stay under/
-         /Harmonic Alchemy Productions copyright. Any Attribution to me/
-         /for the template structure of your published docs will be/
-         /appreciated... but unnecessary... Thanks! ;-)/
+          Change to: /"Copyright © your info here"/ You are the copyright
+          owner of your own documents created from clones of these master
+          templates... /(but these MASTER Template Files are to stay under/
+          /Harmonic Alchemy Productions copyright. Any Attribution to me/
+          /for the template structure of your published docs will be/
+          /appreciated... but unnecessary... Thanks! ;-)/
 
-    - [ ] *Change the* ~#+AUTHOR:~ *directive at the top of this file:*
+     - [ ] *Change the* ~#+AUTHOR:~ *directive at the top of this file:*
 
-         Change to: /"your NAME"/
+          Change to: /"your NAME"/
 
-    - [ ] *Change the* ~#+EMAIL:~ *directive at the top of this file:*
+     - [ ] *Change the* ~#+EMAIL:~ *directive at the top of this file:*
 
-         Change to: /"your EMAIL"/
+          Change to: /"your EMAIL"/
 
-    - [ ] *Change the* ~#+TEXT: Created:~ *TIMESTAMP at the top of this file:*
+     - [ ] *Change the* ~#+TEXT: Created:~ *TIMESTAMP at the top of this file:*
 
-         Put your cursor on the TIMESTAMP: /i.e.,/ <2022-10-05 Wed>
-         and type: ~C-c . . RETURN~ The TIMESTAMP will update to NOW.
+          Put your cursor on the TIMESTAMP: /i.e.,/ <2022-10-05 Wed>
+          and type: ~C-c . . RETURN~ The TIMESTAMP will update to NOW.
 
-         =LEAVE THIS DATE ALONE after Setting It The FIRST Time=
+          =LEAVE THIS DATE ALONE after Setting It The FIRST Time=
 
-         This Date reflects the time/date that you first created this
-         new document It should NEVER change after that...
+          This Date reflects the time/date that you first created this
+          new document It should NEVER change after that...
 
-    - [ ] *Change the* ~#+TEXT: Last Published:~ *TIMESTAMP at Publish Time:*
+     - [ ] *Change the* ~#+TEXT: Last Published:~ *TIMESTAMP at Publish Time:*
 
-          =Don't Change This UNTIL You have completed some MAJOR Release=
-          of the files or code that this ~README.org~ doc refers to and this
-          README reflects the status of that MAJOR UPDATE
-          /(e.g., as published somewhere, in a public repository etc...)/
+           =Don't Change This UNTIL You have completed some MAJOR Release=
+           of the files or code that this ~README.org~ doc refers to and this
+           README reflects the status of that MAJOR UPDATE
+           /(e.g., as published somewhere, in a public repository etc...)/
 
-          Until that publishing time comes leave it alone as:
-          ~<NOT Published>~
+           Until that publishing time comes leave it alone as:
+           ~<NOT Published>~
           
-          As soon as this is published as part of a major release, etc,
-          Replace the <unpublished> placeholder with a REAL TIMESTAMP by typing:
-          ~C-c . . RETURN~ The new Last Published: <TIMESTAMP> will appear in
-          place... Do this ANY time you have completed some major update, have
-          published that update and this file needs to reflect that update...
-          /(this will help you keep track)/
+           As soon as this is published as part of a major release, etc,
+           Replace the <unpublished> placeholder with a REAL TIMESTAMP by typing:
+           ~C-c . . RETURN~ The new Last Published: <TIMESTAMP> will appear in
+           place... Do this ANY time you have completed some major update, have
+           published that update and this file needs to reflect that update...
+           /(this will help you keep track)/
 
-    - [ ] *Change the* ~#+FILETAGS:~ *directive at the top of this file:*
+     - [ ] *Change the* ~#+FILETAGS:~ *directive at the top of this file:*
 
-         Add your own tags that match the context of your README document...
+          Add your own tags that match the context of your README document...
 
-    - [ ] *Change the* ~#+DESCRIPTION:~ *directive at the top of this file:*
+     - [ ] *Change the* ~#+DESCRIPTION:~ *directive at the top of this file:*
 
-         Compose your ~README~ Doc's Description as a short paragraph here...
-         and then use that to change the directive above...
+          Compose your ~README~ Doc's Description as a short paragraph here...
+          and then use that to change the directive above...
 
 4) *Purpose of the:* ~./org-templates~  *Directory:*
 
@@ -357,7 +357,7 @@ Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas
 
 * 💡 Introduction:
 
-*Welcome to Harmonic Alchemy Modular Emacs* ~V3.6.2 (point release) [Q2 2024]~
+*Welcome to Harmonic Alchemy Modular Emacs* ~V3.6.3 (point release) [Q3 2024]~
 
 *Modular Emacs* provides a simple method of dispatching your emacs configuration in steps based on initial choice of modules starting with essentials loading first, and then loading optional user chosen modules...
 
@@ -491,7 +491,14 @@ If you end up liking *Harmonic Alchemy Modular Emacs*, please drop me a note to 
 
 * TODO 📸 Screenshots:
 
-=Add Screenshots displaying HAP Modular Emacs main Features HERE=
+=Misc. Screenshots displaying HAP Modular Emacs main Features=
+
+#+NAME: fig:HAP-Mod-Emacs-gen-log-book-details-001
+#+CAPTION: HAP - General LOG Book (details)
+#+ATTR_ORG: :width 600px
+#+attr_html: :width 600px
+#+attr_latex: :width 600px
+[[file:./Docs/media/HAP-General-LOG-Book-details-01.png]]
 
 * ☞ TL;DR - Start Here:
 

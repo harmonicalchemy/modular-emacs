@@ -218,6 +218,7 @@
      (latex (format "\href{%s}{%s}"
                     path (or desc "video"))))))
 
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Modular Emacs Quick Insert Org :README: Drawer  
@@ -307,7 +308,10 @@
 
         ;; Set Olivetti Width
         (olivetti-mode)
-        (olivetti-set-width ME--ORG-OLIV-WIDTH))
+        (olivetti-set-width ME--ORG-OLIV-WIDTH)
+
+        ;; Set Olivetti Toggle Width to ORG-OLIV-WIDTH:
+        (setq me--current-oliv-width ME--ORG-OLIV-WIDTH))
 
     ;; ELSE print warning about buffer not being an Org File...
     (message "Warning: You are NOT visiting a .ORG file!")))
@@ -336,7 +340,10 @@
 
         ;; Set Olivetti Width
         (olivetti-mode)
-        (olivetti-set-width ME--WIDE-ORG-OLIV-WIDTH))
+        (olivetti-set-width ME--WIDE-ORG-OLIV-WIDTH)
+
+        ;; Set Olivetti Toggle Width to WIDE-ORG-OLIV-WIDTH:
+        (setq me--current-oliv-width ME--WIDE-ORG-OLIV-WIDTH))
 
     ;; ELSE print warning about buffer not being an Org File...
     (progn
@@ -411,7 +418,10 @@
 
   ;; Enable Olivetti Mode...
   (olivetti-mode)
-  (olivetti-set-width ME--ORG-OLIV-WIDTH)
+  (olivetti-set-width ME--WIDE-ORG-OLIV-WIDTH)
+
+  ;; Set Olivetti Toggle Width to WIDE-ORG-OLIV-WIDTH:
+  (setq me--current-oliv-width ME--WIDE-ORG-OLIV-WIDTH)
 
   ;; Call Xah-Fly-Keys (resets some face attributes)
   (xah-fly-keys 1))

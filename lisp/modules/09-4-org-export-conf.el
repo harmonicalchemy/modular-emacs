@@ -768,7 +768,7 @@
   ;;  For LOG NOTEBOOKS or Possibly Lab Notes etc...
   ;;  (logbook - uses memoir doc class)
   ;;  This class/style was initially inspired by:
-  ;;  mirrors.concertpass.com/tex-archive/info/latex-samples/MemoirChapStyles/MemoirChapStyles.pdf
+  ;;  MemoirChapStyles.pdf
   ;;  This Class Defines a new Modular Emacs Logbook Chapter Style (logbook)
   ;;  LaTeX Configuration is done in Input File: log-book-setup.tex
 
@@ -777,9 +777,8 @@
    '("logbook"
      "\\documentclass[12pt, openleft, oneside, showtrims]{memoir}
          [NO-DEFAULT-PACKAGES]
-         [PACKAGES]
-         [EXTRA]
-         \\input{~/.emacs.d/Docs/TeX/log-book-setup.tex}"
+         \\input{~/.emacs.d/Docs/TeX/log-book-setup-2.tex}
+         [PACKAGES]"
      ("\\chapter{%s}" . "\\chapter*{%s}")
      ("\\section{%s}" . "\\section*{%s}")
      ("\\subsection{%s}" . "\\subsection*{%s}")

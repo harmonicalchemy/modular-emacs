@@ -137,7 +137,7 @@
 ;; Change Title Bar Text:
 
 (setq frame-title-format
-      "Harmonic Alchemy Modular Emacs - Version 3.6 [Q4 2023]")
+      "Harmonic Alchemy Modular Emacs - Version 3.6.3 [Q3 2024]")
 
 ;; Disable tool-bar - I could care less about tool bars in emacs!
 ;; An oxymoron! But you may feel differently.  Comment this out if you like them.
@@ -269,7 +269,7 @@
 
 ;; Set Default Frame Dimensions:
 (setq default-frame-alist
-	    '((name . "HA Mod Emacs v3.5 - DEFAULT Frame")
+	    '((name . "HA Mod Emacs v3.6 - DEFAULT Frame")
          (font . "Hermit")
               (height . 42)
               (width . 92)
@@ -292,15 +292,14 @@
 ;; so this should just fit...
 
 (require 'olivetti)
-(olivetti-set-width ME--CODE-OLIV-WIDTH)
+(olivetti-set-width ME--DEFAULT-OLIV-WIDTH)
 
 (defun me_toggle-olivetti-mode ()
   "Toggles olivetti-mode...  Width is set Elsewhere Depending on Context"
   (interactive)
   (progn
     (olivetti-mode 'toggle)
-    (olivetti-set-width ME--CODE-OLIV-WIDTH)))
-
+    (olivetti-set-width me--current-oliv-width)))
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Set up helm-mode:
@@ -315,7 +314,7 @@
 ;;  This makes NEW HAP Modular Emacs DEFAULT frame
 
 (defun me_make-frame ()
-"Create Frames depending on the current setting of the me--def-face flag.
+  "Create Frames depending on the current setting of the me--def-face flag.
 If flag = 2 make writer's frame. If flag = 1, make coder's frame..."
   (interactive)
   (progn
@@ -325,11 +324,11 @@ If flag = 2 make writer's frame. If flag = 1, make coder's frame..."
     ;; Make New DEFAULT CODE Frame:
     (make-frame
      (quote
-      ((name . "HA Mod Emacs v3.5 - NEW DEFAULT FRAME"))))
+      ((name . "HA Mod Emacs v3.6 - NEW DEFAULT FRAME"))))
 
     ;; Select this NEW Frame:
-    (select-frame-by-name "HA Mod Emacs v3.5 - NEW DEFAULT FRAME")
-    
+    (select-frame-by-name "HA Mod Emacs v3.6 - NEW DEFAULT FRAME")
+
     ;; Set Frame Dimentions for DEFAULT Coding etc.:
     (set-frame-size (selected-frame)
 		    ME--CODE-FRAME-WIDTH
@@ -338,35 +337,12 @@ If flag = 2 make writer's frame. If flag = 1, make coder's frame..."
     ;; Set DEFAULT Face for Coding etc.:
     (set-face-attribute 'default (selected-frame)
                         :family "Hermit"
-			:height ME--DEFAULT-CODE-TEXT-HEIGHT)))
+			:height ME--DEFAULT-CODE-TEXT-HEIGHT)
 
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  Modular Emacs - Set Default Face Functions:
-;;
-;;  Purpose:
-;;
-;;    I like to use a serif mono font for writing paragraphs...
-;;    but I use Hermit or other similar font for Coding...
-;;    This provides a way to go back and fourth from one
-;;    face (which is Emacs Default) to another depending on
-;;    my current work mode (writing or coding)...
-;;
-;;    Xah Fly LEADER Key Assigned: "SPACE p"
-;;
-;;  NOTE1:  Currently there is no check to see if these fonts are
-;;          installed on your system! It will FALL BACK TO DEFAULT
-;;          without warning if FONTS are NOT INSTALLED...
-;;
-;;  NOTE2:  It appears that Courier Prime is required to prevent
-;;          D o u b l e  W i d e rendering of certain Emacs faces! This
-;;          was a problem on Linux.  Not sure about Mac OS yet as I
-;;          installed Courier Prime there first and it "just worked" ;-)
-;;          This is the reason I have two cases below in the function.
-;;          Currently the cases produce redundant results, but i left them in
-;;          in case I need to play around with this later...
-;;
-;;  NOTE3:  If I get fancy with fonts, I will provide them in this repo for easy
-;;          installations. In fact I have already gotten fancy with fonts eh? LOL
+    ;; Set Olivetti Toggle Width to CODE WIDTH:
+    (setq me--current-oliv-width ME--CODE-OLIV-WIDTH)))
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Set Modular Emacs Writing Frame Function:
@@ -388,7 +364,11 @@ If flag = 2 make writer's frame. If flag = 1, make coder's frame..."
 		    ME--ORG-FRAME-WIDTH
 		    ME--ORG-FRAME-HEIGHT)
 
-    (set-frame-parameter nil 'name "HA Mod Emacs v3.5 - NORMAL ORG Writer's Frame")))
+    (set-frame-parameter nil 'name "HA Mod Emacs v3.6 - NORMAL ORG Writer's Frame")
+
+    ;; Set Olivetti Toggle Width to ORG WIDTH:
+    (setq me--current-oliv-width ME--ORG-OLIV-WIDTH)))
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -411,7 +391,11 @@ If flag = 2 make writer's frame. If flag = 1, make coder's frame..."
 		    ME--WIDE-ORG-FRAME-WIDTH
 		    ME--WIDE-ORG-FRAME-HEIGHT)
 
-    (set-frame-parameter nil 'name "HA Mod Emacs v3.5 - WIDE ORG Writer's Frame")))
+    (set-frame-parameter nil 'name "HA Mod Emacs v3.6 - WIDE ORG Writer's Frame")
+
+    ;; Set Olivetti Toggle Width to WIDE ORG WIDTH:
+    (setq me--current-oliv-width ME--WIDE-ORG-OLIV-WIDTH)))
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -433,8 +417,12 @@ If flag = 2 make writer's frame. If flag = 1, make coder's frame..."
     (set-frame-size (selected-frame)
 		    ME--CODE-FRAME-WIDTH
 		    ME--CODE-FRAME-HEIGHT)
-    
-    (set-frame-parameter nil 'name "HA Mod Emacs v3.5 - CODING Frame")))
+
+    (set-frame-parameter nil 'name "HA Mod Emacs v3.6 - CODING Frame")
+
+    ;; Set Olivetti Toggle Width to CODE WIDTH:
+    (setq me--current-oliv-width ME--CODE-OLIV-WIDTH)))
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -457,10 +445,14 @@ If flag = 2 make writer's frame. If flag = 1, make coder's frame..."
 		    ME--WIDE-CODE-FRAME-WIDTH
 		    ME--WIDE-CODE-FRAME-HEIGHT)
 
-    (set-frame-parameter nil 'name "HA Mod Emacs v3.5 - DEFAULT WIDE Coder's Frame")
+    (set-frame-parameter nil 'name "HA Mod Emacs v3.6 - DEFAULT WIDE Coder's Frame")
+
+    ;; Set Olivetti Toggle Width to CODE WIDTH (stays the same for 2 split screens)
+    (setq me--current-oliv-width ME--CODE-OLIV-WIDTH)
 
     ;; Split Window Side by Side for Comparing code etc.
     (split-window-right)))
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -485,8 +477,12 @@ If flag = 2 make writer's frame. If flag = 1, make coder's frame..."
     (set-frame-size (selected-frame)
 		    ME--CODE-FRAME-WIDTH
 		    ME--CODE-FRAME-HEIGHT)
-    
-    (set-frame-parameter nil 'name "HA Mod Emacs v3.5 - CODING Frame")))
+
+    (set-frame-parameter nil 'name "HA Mod Emacs v3.6 - CODING Frame")
+
+    ;; Set Olivetti Toggle Width to CODE WIDTH:
+    (setq me--current-oliv-width ME--CODE-OLIV-WIDTH)))
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -59,6 +59,37 @@
   (file-name-as-directory
    (expand-file-name "brain" ME--ORG-DOC-DIR)))
 
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; DEFAULT TEXT SIZE/WIDTH DIMENSION CONSTANTS:
+;; NOTE: These Settings were made to look best
+;; on a 16" Mac Book Pro with Built-In Display
+;; set to next Larger Text after DEFAULT size...
+;; MY EYESIGHT (with glasses) requires this %^)
+;; Adjust Your Settings to FIT YOUR DEVICE & NEEDS...
+;; DO THIS FIRST BEFORE Changing and Frame Sizes BELOW
+;; Otherwise you will have to do all that over again. 
+
+;; Set HEIGHT for Coder's mono text: (Hermit)
+;; (previous VALUE: 123)
+
+(defconst ME--DEFAULT-CODE-TEXT-HEIGHT (round 123)
+  "Default Height for mono Source Code Text. Hermit. me-constants.el")
+
+;; Set HEIGHT for Writer's Org-Mode normal text: (Courier Prime)
+;; (previous VALUE: 147)
+
+(defconst ME--DEFAULT-ORG-TEXT-HEIGHT (round 147)
+  "Default Height for Org Mode Normal Text. Courier Prime. me-constants.el")
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; DEFAULT OLIVETTI WIDTH:
+;; (this is the olivetti width for NEW DEFAULT Frames ONLY
+
+(defconst ME--DEFAULT-OLIV-WIDTH (round 88)
+  "Default Olivetti width for Codeing. me-constants.el")
+
+(defvar me--current-oliv-width ME--DEFAULT-OLIV-WIDTH
+  "Default Olivetti width (for toggle) changes depending on context")
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; DEFAULT FRAME DIMENSIONS: (width, height)
@@ -78,9 +109,9 @@
 
 (defconst ME--CODE-FRAME-HEIGHT (round 42)
   "Default Frame Height for Codeing. me-constants.el")
-(defconst ME--CODE-FRAME-WIDTH (round 92)
+(defconst ME--CODE-FRAME-WIDTH (round 100)
   "Default Frame Width for Codeing. me-constants.el")
-(defconst ME--CODE-OLIV-WIDTH (round 88)
+(defconst ME--CODE-OLIV-WIDTH (round 83)
   "Default Olivetti width for Codeing. me-constants.el")
 
 ;; WIDE CODE FRAME Dimensions:
@@ -89,12 +120,12 @@
 ;; Typing: "6" (Xah-Fly-Key command mode) Invokes It...
 ;; Adjust Numbers Below To Fit Best On Your Screen:
 
-(defconst ME--WIDE-CODE-FRAME-HEIGHT (round 42)
-  "Default Frame Height for Fancy Org Mode. me-constants.el")
-(defconst ME--WIDE-CODE-FRAME-WIDTH (round 188)
-  "Default Frame Width for Fancy Org Mode. me-constants.el")
-(defconst ME--WIDE-CODE-OLIV-WIDTH (round 88)
-  "Default Olivetti width for Fancy Org Mode. me-constants.el")
+(defconst ME--WIDE-CODE-FRAME-HEIGHT (round 38)
+  "Default Frame Height for two column coding. me-constants.el")
+(defconst ME--WIDE-CODE-FRAME-WIDTH (round 200)
+  "Default Frame Width for two column coding. me-constants.el")
+(defconst ME--WIDE-CODE-OLIV-WIDTH (round 83)
+  "Default Olivetti Width two column coding. me-constants.el")
 
 ;; Normal ORG Mode "Docs" Frame Dimensions:
 ;; This is the frame used when visiting a
@@ -103,11 +134,11 @@
 ;; Frame Title: "HA MOD Emacs Vx.x - Writer's Frame"
 ;; Adjust Numbers Below To Fit Best On Your Screen:
 
-(defconst ME--ORG-FRAME-HEIGHT (round 38)
+(defconst ME--ORG-FRAME-HEIGHT (round 42)
   "Default Frame Height for Writing. me-constants.el")
-(defconst ME--ORG-FRAME-WIDTH (round 92)
+(defconst ME--ORG-FRAME-WIDTH (round 105)
   "Default Frame Width for Writing. me-constants.el")
-(defconst ME--ORG-OLIV-WIDTH (round 88)
+(defconst ME--ORG-OLIV-WIDTH (round 100)
   "Default Olivetti width for Writing. me-constants.el")
 
 ;; ORG WIDE SCREEN Frame Dimensions:
@@ -117,27 +148,27 @@
 ;; Frame Title: "HA MOD Emacs Vx.x - Fancy Wide Org-Mode Frame"
 ;; Adjust Numbers Below To Fit Best On Your Screen:
 
-(defconst ME--WIDE-ORG-FRAME-HEIGHT (round 62)
+;; NOTE:  I Don't use this much at all... I set up this ORG MODE
+;;        WIDE Screen thing years ago when I was trying to emulate
+;;        the Layout/Workflow of Scrivener within EMACS org-mode...
+;;        I have SINCE found BETTER ways for my Book Composing/Editing,
+;;        LaTeX Configuration, Publishing to PDF, HTML, etc. etc.
+;;        (i.e. my writer's IDE within emacs org-mode) to be much
+;;        better than what I used to painfully do in Scrivener...
+;;        THEREFORE this wide thing is not much useful... but
+;;        I keep it all around anyway scratching my head on whether
+;;        to finally remove it all...
+;;        (along with my STUPID Org-Mode Side Bar thing which I
+;;        also DON'T USE...) all of this removal will make modular
+;;        emacs much more compliant with good e-lisp practice as well! 
+;;        STAY TUNED...
+
+(defconst ME--WIDE-ORG-FRAME-HEIGHT (round 42)
   "Default Frame Height for Fancy Org Mode. me-constants.el")
-(defconst ME--WIDE-ORG-FRAME-WIDTH (round 148)
+(defconst ME--WIDE-ORG-FRAME-WIDTH (round 142)
   "Default Frame Width for Fancy Org Mode. me-constants.el")
-(defconst ME--WIDE-ORG-OLIV-WIDTH (round 82)
+(defconst ME--WIDE-ORG-OLIV-WIDTH (round 100)
   "Default Olivetti width for Fancy Org Mode. me-constants.el")
-
-
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; DEFAULT TEXT SIZE/WIDTH DIMENSION CONSTANTS:
-
-;; Set HEIGHT for Coder's mono text: (Hermit)
-
-(defconst ME--DEFAULT-CODE-TEXT-HEIGHT (round 120)
-  "Default Height for mono Source Code Text. Hermit. me-constants.el")
-
-;; Set HEIGHT for Writer's Org-Mode normal text: (Courier Prime)
-
-(defconst ME--DEFAULT-ORG-TEXT-HEIGHT (round 135)
-  "Default Height for Org Mode Normal Text. Courier Prime. me-constants.el")
-
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;            Mobile Org Configuration
@@ -165,7 +196,7 @@
 ;; Any code that needs passwords will pick them up ONLY
 ;; from THIS FILE HERE. (making it easy to manage and stay safe)
 
-(defconst ME--MOBILE-ORG-PW "your-password-here"
+(defconst ME--MOBILE-ORG-PW "w1sIw1m2.0r9"
   "Default Height for Org Mode Normal Text. Courier Prime. me-constants.el")
 
 ;; END: [modular-emacs]:~/.emacs.d/lisp/modules/me-constants.el

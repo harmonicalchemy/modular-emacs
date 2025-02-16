@@ -59,7 +59,7 @@
 #+SETUPFILE: ./org-templates/audio-tags.org
 
 :LATEST_UPDATE:
-  <2024-05-19 Sun>
+  <2024-10-13 Sun>
 
   =YOU MAY REMOVE This Drawer= from your own clones of this template if
   it is bothering you... This drawer is used for HAP Modular Emacs
@@ -118,38 +118,109 @@
 
 :END:
 :READ_ME_FIRST:
+
 ☞ =Instructions:= /(How to Install & Use This Template)/
 
 To use *HAP_Audio-Drama-Project-Template.Org* /(Org-Mode Audio Drama Project Skeleton /Template)/ for your own projects, =Perform The Following Steps:= 
 
 /Use the org-mode Checkboxes to Help You Keep Track of Progress/
 
-1) [ ] *Copy/Clone ALL of the:* ~../Audio-Drama~ *Folder:* /(and ALL its contents)/ 
+1) [ ] *CREATE a NEW:* ~.../Audio-Drama/?/~  *Project Folder:* /(for your Audio Drama)/ 
 
-        Copy this template folder as your ="NEW-Audio-Project"= folder... 
+        Create a NEW folder as your ="NEW-Audio-Project"= folder...
+        Give it a name that makes sense for the entire thing... All sub components
+        of your Audio Drama will be kept within this PARENT PROJECT FOLDER
 
-        You Cloned copy will have a copy of This File which you should ALSO
-        rename to your specific Audio Drama or Podcast Production Project's
-        REAL Title...
+2) [ ] *Copy the* ~./media~ *Directory to Your Project Folder:* 
 
-        In order to use this Audio Drama Project Skeleton properly so that 
-        default Settings work, you need to *copy the ENTIRE folder* containing 
-        this file and *ALL its contents*, renaming it from: =Audio-Drama= to 
-        =Your Specific Name= or =Title= of your new Audio Drama Project...
+         The media directory exists within the same pubOps folder as this Template...
+         Copy the media dir and ALL of its contents to your NEW Audio Drama Project
+         Folder...
 
-        Put your new renamed Audio Drama Project Skeleton /(folder)/ where 
-        you normally organize your audio drama or podcast projects.
+         Any external documents or images referenced by your audio project should be
+         placed within this ~./media/~ directory... This single ~./media~ directory will
+         serve media and external attachments for this and any other extra audio drama
+         ~.org~ files you may end up creating here, as well as being the media repository
+         used by LaTeX during publishing... You will also be using this ~./media/~
+         directory to store finished sound media, /(e.g., sound-effects, loops,
+    music, etc.)/ that are called out within the cue sheets /(also contained
+    within this ~.org~ project)/ 
 
-        =OK You Did That?=  =Now You Are READY to Start Your Story!=
+         This ~./media/~ directory may ALSO contain a SymLink to the media folder
+         used by a =DAW Project= for =post production work= directly related to this 
+         Audio Drama Project...
+
+         Media required for use in template BOILERPLATE Sections already exists within
+         this folder /(for HAP Audio Project Template .org files)/
+         So that is all set...
+
+3) [ ] *Copy the* ~./org-templates~ *Directory to Your Project Folder:*
+
+         The org-templates directory exists within the same pubOps folder as this Template...
+         Copy the org-templates dir and ALL of its contents to your NEW Audio Drama Project
+         Folder...
+
+         This folder contains all of the "behind-the-scenes" files needed by THIS Template file
+         in order to be able to publish to PDF files as well as process the open standard
+         fountain drama script to produce Properly Formatted printed Scripts for Audio Only
+         Theater, Drama, News, what ever ...i.e. lighting cues etc. are not present...
+
+     - *Purpose of the:* ~./org-templates~  *Directory:*
+
+        The files in here are automatically linked and included within this
+        template. You don't need to change those settings unless you wish to
+        customize the already customized tags, and export options.
+
+        /Things are currently set up correctly for the audio drama genre, and/
+        /the category is all set as well... But you can and may modify/
+        ~audio-book-setup.org~ /to narrow down the category more/
+        /specifically, fitting everything to this project's specific/
+        /needs.../
+
+        In addition there may also be an ~audio-book-setup.tex~ file in this
+        directory, which MAY be needed for more extensive LaTeX Styling...
+        If this file is present, read the Instrutions within it for more
+        info on what to do... 
+
+        The DEFAULT Tags defined for all project templates are useful for
+        most situations and SOME tags are ALWAYS to be defined for this
+        LaTeX publishing system to work.
+
+        /Change the SETUPFILE name ABOVE and within this directory from/
+        ~default-tags.org~ /to another name and-or replace some -BUT NOT ALL-/
+        /of the tags within to your own tags... see instructions inside the/
+        /file.../
+
+4) [ ] *Other Directories are AUTO Created* /(don't copy these to your project)/
+
+     - *Purpose of the:* ~./auto/~ *Directory:*
+
+          This is where output ~.PDF~ files will be placed during export. This folder is auto
+          generated during org-mode LaTeX processing... It will also appear within your
+          project folder after you perform an EXPORT process...
+
+          LaTeX processing will not delete any prior files contained here... Some of them
+          will be updated, but will have backups...  Any files you place within this folder
+          will NOT be lost, unless you delete them...
+
+          This "auto" folder /(after it first appears from an export process)/
+          is a good place to store other temporary files you may be creating, generating...
+          For that matter, you could create and use this folder within your own project
+          ahead of time, to use for your own purposes... Later... LaTeX processing will find
+          and use your auto folder as well...
+
+     - *The www folder is for future web pub development*
+
+         Don't copy this folder to your project.  It is not used... FUTURE Plans are to use that
+         folder for auto-publishing to the web via git...
 
 2) [ ] =Start Sketching Out Your Story NOW Before You Loose It!=
 
-      =NOTE:= You may be doing this because you have some fantastic story idea
-             brewing in your mind and you need to write that down before you 
-             forget!  =Right?=  Therefore... as soon as you clone this file,
-             =STOP= and go immediately to the:
+      =NOTE:= You may be doing this because you have some fantastic story idea brewing
+                    in your mind and you need to write that down before you forget!  =Right?=
+                    Therefore... as soon as you clone this file, =STOP= and go immediately to the:
 
-                   ~💡 Scratchpad Refile Binder~ 
+                    ~💡 Scratchpad Refile Binder~ 
 
              =READ ALL OF THE INFORMATION= UNDER The *☞ Start Here!* heading and
              follow the instructions...
@@ -157,10 +228,10 @@ To use *HAP_Audio-Drama-Project-Template.Org* /(Org-Mode Audio Drama Project Ske
              =Write your idea down quickly= /(as per the instructions)/ 
              to get your inspiration recorded before you forget it...
 
-             Later, After you have all your ideas sketched out and you are 
-             ready to be in an ="organized mood"= /(rather than creative mood)/ 
-             /This does not imply being organized cannot be a CREATIVE PROCESS/ 
-             Then it is time to:
+             Later, After you have all your ideas sketched out and you are ready to be in an
+             ="organized mood"= rather than creative mood /(This does not imply
+     being organized cannot be a CREATIVE PROCESS)/
+             *Then it is time to:*
 
              =Come Back Here And Finish Setting Up Your Project...=
 
@@ -172,7 +243,7 @@ To use *HAP_Audio-Drama-Project-Template.Org* /(Org-Mode Audio Drama Project Ske
 
              =Do That first!=
 
-3) [ ] *FINISH SETTING UP THIS PROJECT...* [0/10]
+3) [ ] *FINISH SETTING UP THIS PROJECT...* [0/10] 
 
     - [ ] *Change the* ~#+TITLE:~ *directive at the top of this file:* 
 
@@ -238,67 +309,7 @@ To use *HAP_Audio-Drama-Project-Template.Org* /(Org-Mode Audio Drama Project Ske
            paragraph here... and then use that to change the directive
            above in the File HEADER...
 
-    - *The* ~./media~ *Directory is ALL Set:* 
-
-         Any external documents or images referenced by your audio project 
-         should be placed within this ~./media/~ directory... This single ~./media~ 
-         directory will serve media and external attachments for this and any 
-         other extra audio drama ~.org~ files you may end up creating here, as well 
-         as being the media repository used by LaTeX during publishing... You will 
-         also be using this ~./media/~ directory to store finished sound media, 
-         /(e.g., sound-effects, loops, music, etc.)/ that are called out within 
-         the cue sheets /(also contained within this ~.org~ project)/ 
-
-         This ~./media/~ directory may ALSO contain a SymLink to the media folder
-         used by a =DAW Project= for =post production work= directly related to this 
-         Audio Drama Project...
-
-         Media required for use in template BOILERPLATE Sections already
-         exists within this folder /(for HAP Audio Project Template .org files)/
-         So that is all set...
-
-    - *Purpose of the:* ~./bin~ *Directory:*
-
-         This folder is needed to run programs that convert your ~.fountain~ scripts into PDF or other formats...
-
-    - *Purpose of the:* ~./auto/~ *Directory:*
-
-         This is where your output ~.PDF~ files will be placed during export. 
-         This folder is auto generated during org-mode LaTeX processing...
-
-         LaTeX processing will not delete any prior files contained here... 
-         Some of them will be updated, but will have backups...  Any files 
-         you place within this folder will NOT be lost, unless you delete 
-         them... This folder is a good place to store other temporary files 
-         you may be creating, generating.. etc...
-
-    - *Purpose of the:* ~./org-templates~  *Directory:*
-
-       The files in here are automatically linked and included within this
-       template. You don't need to change those settings unless you wish to
-       customize the already customized tags, and export options.
-
-       /Things are currently set up correctly for the audio drama genre, and/
-       /the category is all set as well... But you can and may modify/
-       ~audio-book-setup.org~ /to narrow down the category more/
-       /specifically, fitting everything to this project's specific/
-       /needs.../
-
-       In addition there may also be an ~audio-book-setup.tex~ file in this
-       directory, which MAY be needed for more extensive LaTeX Styling...
-       If this file is present, read the Instrutions within it for more
-       info on what to do... 
-
-       The DEFAULT Tags defined for all project templates are useful for
-       most situations and SOME tags are ALWAYS to be defined for this
-       LaTeX publishing system to work.
-
-       /Change the SETUPFILE name ABOVE and within this directory from/
-       ~default-tags.org~ /to another name and-or replace some -BUT NOT ALL-/
-       /of the tags within to your own tags... see instructions inside the/
-       /file.../
-
-4) [ ] =Ongoing Planning / Writing - Developing Your Audio Production:=
+4) [ ] =Ongoing Planning / Writing - Developing Your Audio Production:= 
 
       /Change headings and structure to match your project's outline episodes-scenes-plots-characters, etc./ 
 
@@ -306,7 +317,7 @@ To use *HAP_Audio-Drama-Project-Template.Org* /(Org-Mode Audio Drama Project Ske
 
       =Have fun doing this...=
 
-5) [ ] =Export/Publish to PDF File:=
+5) [ ] =Export/Publish to PDF File:= 
 
       The *In-Buffer Settings* specified by the SETUPFILES above will 
       get this file looking good when exported as a Standard PDF file.  
@@ -347,7 +358,7 @@ To use *HAP_Audio-Drama-Project-Template.Org* /(Org-Mode Audio Drama Project Ske
 
          *Consult Buffer:* ~*Org PDF LaTeX Output*~
 
-6) [ ] =Handling Images=
+6) [ ] =Handling Images= 
 
       Some Images may render too large or too small to fit on a page
       of an exported version of this file... This is easy do fix within
@@ -364,15 +375,25 @@ To use *HAP_Audio-Drama-Project-Template.Org* /(Org-Mode Audio Drama Project Ske
          #+attr_latex: :width 200px
       [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F3D5.png]]
 
-=These Instructions Were Last Modified:= <2024-05-19 Sun> 
+      =To TOGGLE Inline Images ON and OFF:=
 
-So far things are pretty basic PDF which is good enough for Audio Production...
+      *Use:* ~C-c C-x C-v~ /(org-toggle-inline-images)/
+  
+      Toggle the inline display of linked images. When called with a prefix argument,
+      also display images that do have a link description. You can ask for inline images
+      to be displayed at startup by configuring the variable org-startup- with-inline-images .
+
+
+=These Instructions Were Last Modified:= <2024-10-13 Sun> 
+
+So far things are pretty basic PDF which is good enough for Audio Production... /(i.e., I'm still chasing LaTeX errors)/
+
 Your Printed output will not be a normal book, more like a manual containing everything you need to produce an full fledged audio production...
 
 =Please Open an ISSUE At:= https://github.com/harmonicalchemy/modular-emacs/issues
    
-Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas for Improvement... =You guys are my Product Managers=  I am only a User of ONE "seat". 
-Other folks UX metrics are sorely needed!! Thanks!
+Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas for Improvement...
+=You guys are my Product Managers=  I am only a User of ONE "seat".  Other folks UX metrics are sorely needed!! Thanks!
 
 =Enjoy!= - Alisha Awen
 :END:
