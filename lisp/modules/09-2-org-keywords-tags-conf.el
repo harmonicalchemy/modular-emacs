@@ -83,23 +83,29 @@
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; Tagging Best Practice:
+;; TAGGING BEST PRACTICE:
 ;;
-;; Ref: https://media.ccc.de/v/GLT18_-_321_-_en_-_g_ap147_004_-_201804281550_-_the_advantages_of_file_name_conventions_and_tagging_-_karl_voit#t=1480
+;; Ref: https://karl-voit.at/2022/01/29/How-to-Use-Tags/
 ;;
-;; - Use a controlled vocabulary and TAB-completion
-;; - Not more than 100 tags maximum - the less the better
-;; - Tags are always plural
-;; - Keep Tags General  (e.g., sports instead of vollyball etc.)
-;; - No Tags which can be derived from file extensions as follows:
+;; 1.  Use as few tags as possible. 100 tags Max - Much less tags are better...
+;; 2.  Limit yourself to a self-defined set of tags. (use a controlled vocabulary)
+;; 3.  Tags within your set must not overlap.
+;; 4.  By convention, tags are in plural.
+;; 5.  Tags are lower-case.
+;; 6.  Tags are single words.
+;; 7.  Keep tags on a general level. (e.g., sports instead of vollyball etc.)
+;; 8.  Omit tags that are obvious:
+;;     e.g., No Tags which can be derived from file extensions as follows:
 ;;      Bad Examples: images, spreadsheets, photographs, PDFs, etc...
 ;;      Recommended:  presentations instead of powerpoint, etc...
-;; - No Tags that are obvious. (as above)
-;; - Use mutually exclusive tags or datestamps instead of version numbers, etc.
-;;      Mutually Exclusive means entering a tag will remove another tag that
-;;      is set to be mutually exclusive of it. (and visa-versa)
-;;      Bad Examples:  almost-final, final, finished, etc...
-;;      Recommended Mutually Exclusive: draft|final, confidential|public|secret etc.
+;; 9.  Use one tag language.
+;; 10. Explain your tags.
+;;
+;; EXTRA - Use mutually exclusive tags or datestamps instead of version numbers, etc.
+;;         Mutually Exclusive means entering a tag will remove another tag that
+;;         is set to be mutually exclusive of it. (and visa-versa)
+;;         Bad Examples:  almost-final, final, finished, etc...
+;;         Recommended Mutually Exclusive: draft|final, confidential|public|secret etc.
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Configure top-level universal tags with quick assign letters:
@@ -159,33 +165,50 @@
 
    ;; Mutually Exclusive Tags:
 
-   ((:startgroup     . nil) ;; BEGIN: Mutually Exclusive Group:
-    ("noexport"      . ?n) ;; FLAG: "Exclude Outline Tree from Export"
-    ("export"        . ?x) ;; FLAG: "Export Outline Tree"
-    (:endgroup       . nil) ;; END Group:
+   ((:startgroup     . nil)    ;; BEGIN: Mutually Exclusive Group:
+    ("noexport"      . ?n)     ;; FLAG: "Exclude Outline Tree from Export"
+    ("export"        . ?x)     ;; FLAG: "Export Outline Tree"
+    (:endgroup       . nil)    ;; END Group:
 
-    (:startgroup     . nil) ;; BEGIN: Mutually Exclusive Group:
-    ("@home"         . ?H) ;; FLAG: (personal stuff, banking, health, etc.)
-    ("@work"         . ?W) ;; FLAG: (devOps, sysAdmin, clients, community, sales)
-    (:endgroup       . nil) ;; END Group:
+    (:startgroup     . nil)    ;; BEGIN: Mutually Exclusive Group:
+    ("noexport_1"    . ?1)     ;; FLAG: "TOC ORG 1 heading deep"
+    ("export_2"      . ?2)     ;; FLAG: "TOC ORG 2 headings deep"
+    ("export_3"      . ?3)     ;; FLAG: "TOC ORG 3 headings deep"
+    (:endgroup       . nil)    ;; END Group:
 
-    (:startgroup     . nil) ;; BEGIN: Mutually Exclusive Group:
-    ("not_in_ed_cal" . ?0)  ;; FLAG: "NOT In Editorial Calendar"
-    ("in_ed_cal"     . ?1)  ;; FLAG: "In Editorial Calendar"
-    (:endgroup       . nil) ;; END Group:
+    (:startgroup     . nil)    ;; BEGIN: Mutually Exclusive Group:
+    ("home"          . ?H)     ;; personal finance, health, leisure, crafts, etc.
+    ("work"          . ?W)     ;; software dev, computers, clients, community work, sales
+    ("music"         . ?M)     ;; Music Sound Composing, Performing, Engineering, Research
+    (:endgroup       . nil)    ;; END Group:
 
-    (:startgroup     . nil) ;; BEGIN: Mutually Exclusive Group:
-    ("TOC"           . ?2)  ;; FLAG: TOC-Org (DEFAULT 2 levels deep)
-    ("TOC_3"         . ?3)  ;; FLAG: TOC-Org (3 levels deep)
-    (:endgroup       . nil) ;; END Group:
+    (:startgroup     . nil)    ;; BEGIN: Mutually Exclusive Group:
+    ("sysAdmin"      . ?s)     ;; standard defined sub Category of "work"
+    ("devOps"        . ?o)     ;; standard defined sub Category of "work"
+    (:endgroup       . nil)    ;; END Group:
 
-    (:startgroup     . nil) ;; BEGIN: Mutually Exclusive Group:
-    ("published"     . ?+)  ;; FLAG: "IS Published"
-    ("unpublished"   . ?-)  ;; FLAG: "NOT Published"
+    (:startgroup     . nil)    ;; BEGIN: Mutually Exclusive Group:
+    ("TOC"           . ?4)     ;; FLAG: TOC-Org (DEFAULT 2 levels deep)
+    ("TOC_3"         . ?5)     ;; FLAG: TOC-Org (3 levels deep)
+    (:endgroup       . nil)    ;; END Group:
+
+    (:startgroup     . nil)    ;; BEGIN: Mutually Exclusive Group: 
+    ("friends"       . ?F)     ;; Not sure if these will be used... Maybe not needed?
+    ("family"        . ?Y)     ;; Not sure if these will be used... Maybe not needed?
+    (:endgroup       . nil)    ;; END Group:
+
+    (:startgroup     . nil)    ;; BEGIN: Mutually Exclusive Group:
+    ("draft"         . ?d)     ;; For THINGS still in DRAFT MODE
+    ("final"         . ?f)     ;; For FINAL THINGS READY for PUBLISHING
+    (:endgroup       . nil)    ;; END Group:
+
+    (:startgroup     . nil)    ;; BEGIN: Mutually Exclusive Group:
+    ("published"     . ?+)     ;; For THINGS THAT HAVE BEEN PUBLISHED
+    ("unpublished"   . ?-)     ;; For For THINGS THAT ARE NOT PUBLISHED
     (:endgroup       . nil)))) ;; END Group:
 
     ;; Keys Used So Far:
-    ;; n x H W 0 1 2 3 + -
+    ;; d f n o s x F H M W Y 2 3 + -
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Append all TOP LEVEL tag lists together for org-mode quick set tags....

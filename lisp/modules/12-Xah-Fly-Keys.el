@@ -201,22 +201,10 @@
 
   (define-key xah-fly-command-map (kbd "p") 'recenter-top-bottom)
 
-  ;; TOGGLE Org Sidebar Tree:
-  ;; (opens or closes tree window on Left Side)
-  ;; Note: This is Sidebar TREE not Sidebar (i.e., on right side)
-  ;;       PRIMARY Leader-Key keybinding "1" (below) toggles
-  ;;       sidebar (not the same as tree).
-
-  (define-key xah-fly-command-map (kbd "1") 'org-sidebar-tree-toggle)
-
-  ;; This key opens Elements(s) in Right window Pane But leaves the
-  ;; cursor in the left outline window pane (it stays on outline
-  ;; heading where it was) i.e. for navigation (Browse Mode)...
-  ;; NOTE: To Jump to the expanded element in right (or middle) window,
-  ;;       (for editing the expanded content) simply hit the RET key
-  ;;       while sitting on any heading in the left tree window.
-
-  (define-key xah-fly-command-map (kbd "s") 'me_org-tree-open-in-right-no-focus)
+  ;;;
+  ;; TOGGLE INLINE IMAGES: 
+  ;; (Emacs Normal Key: C-c C-x C-v) 
+  (define-key xah-fly-command-map (kbd "s") 'org-toggle-inline-images) 
 
   ;; Run a ztree-diff session:
   ;; (you will be prompted for right and left directories)
@@ -355,6 +343,12 @@
 
   (define-key xah-fly-Lp2p1-key-map (kbd "t") 'valign-mode)
 
+  ;; NOTE: valign-mode is extremely sluggish when you have
+  ;;       large tables or MANY tables in your org-file...
+  ;;       Don't use it for those LARGE org files
+  ;;       (i.e., your Multi Year LOG Books that have
+  ;;        at least one table for EVERY Log Entry!)
+  
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Xah-Fly-Keys SECONDARY LEADER-KEY BINDINGS:
 ;; (xah-fly-Rp2p1-key-map) QWERTY "i"

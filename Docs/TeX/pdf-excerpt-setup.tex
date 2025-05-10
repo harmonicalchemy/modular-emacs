@@ -1,4 +1,4 @@
-%%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ %%%
+%%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 %%  File: ~/.emacs.d/Docs/TeX/pdf-excerpt-setup.tex
 %%        LaTeX Configurations for HAP_PDF-Example-Figure-Template.org
 %%        and clones...
@@ -6,17 +6,12 @@
 %%  Author:      Alisha Awen
 %%  Maintainer:  Alisha Awen
 %%  Created:     2023-006-02
-%%  Updated:     2023-006-02
-
-%% NOTE: I am NO LONGER USING THIS Include File
-%%       I have decided to use ORG-MODE SETUPFILES instead...
-%%       (A much more portable and elegant way IMHO)
-%%       This file will stay here however...
-%%       (It may serve for testing, R&D, and troubleshooting)
-%%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ %%%
+%%  Updated:     2025-003-24
+%%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 %% STANDARD FILE HEADER OPTIONS:
 
+\usepackage[landscape]{geometry}
 \usepackage{parskip}
 \usepackage{paralist}
 \usepackage[hyperref,x11names]{xcolor}
@@ -24,35 +19,20 @@
 
 %% CUSTOM FILE HEADER OPTIONS:
 
-%%  \usepackage[table]{xcolor}
+%% TRY Better Source Code Listing Styles:
+%% Use Console Command:
+%%    $ pygmentize -L styles
+%% to see a list of all possible "minted" code listing styles.
+%% Then change {style-name} below to try any of them out...
+%%    tango   - Typical...
+%%    perldoc - A Nice One...
+%%    xcode   - Similar to perldoc (even nicer)
 
-\usepackage[margin=0.9in,bmargin=1.0in,tmargin=1.0in]{geometry}
-\usepackage{algorithm2e}
-\usepackage{algorithm}
-\usepackage{amsmath}
-\usepackage{arydshln}
-\usepackage{subcaption}
-\newcommand{\point}[1]{\noindent \textbf{#1}}
-\usepackage{hyperref}
-\usepackage{csquotes}
-\usepackage{graphicx}
-\usepackage{bm}
-\usepackage{subfig}
-\usepackage[mla]{ellipsis}
-\setlength\parskip{.5\baselineskip}
-\usepackage{pgf}
-\usepackage{tikz}
-\usetikzlibrary{shapes,arrows,automata,quotes}
+\usemintedstyle{xcode}
 
-%%  \usepackage[latin1]{inputenc}
+%% MUSIC PACKAGES:
 
-\usepackage{adjustbox}
+\usepackage[minimal]{leadsheets}
+\useleadsheetslibraries{musicsymbols}
+\useleadsheetslibraries{chords}
 
-%% EXTRA STUFF THAT MAY NOT BE NEEDED:
-
-%%  \linespread{1.1}
-%%  \hypersetup{pdfborder=0 0 0}
-
-%% BEGIN DOCUMENT
-
-\AtBeginDocument{\parindent = 0em \nonzeroparskip}

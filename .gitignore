@@ -26,3 +26,4 @@ custom.el
 lisp/my-modules/*
 !lisp/my-modules/.gitkeep
 
+Docs/pubOps/build/*

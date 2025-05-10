@@ -5,19 +5,7 @@
 %%   Author:      Alisha Awen
 %%   Maintainer:  Alisha Awen
 %%   Created:     2023-002-17
-%%   Updated:     2023-006-15
-
-%% NOTE: This .tex file is NOT currently USED by Modular Emacs...
-%%       Instead the code below has been added to the bottom
-%%       of ~/.emacs.d/Docs/pubOps/org-templates/ref-book-setup.org
-
-%%       NOW Modular Emacs uses org-mode SETUPFILES do all the
-%%       configurations for portability...
-
-%%       I am keeping it here for reference and documentation purposes
-%%       only... it may be commandeered later for some other purpose
-%%       you may use it for your own needs as well if you prefer doing
-%%       your LaTeX configurations with included .tex files...
+%%   Updated:     2025-003-24
 
 %%   This program is free software: you can redistribute it and/or modify
 %%   it under the terms of the GNU General Public License as published by
@@ -33,31 +21,67 @@
 %%   along with this program.  If not, see <https://www.gnu.org/licenses/>.
 %%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-%% DEFAULT SETTINGS %%
+%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%%  GENERAL PACKAGES:
 
-\addbibresource{org-bib-refs.bib}
-\setlength{\headwidth}{\textwidth}
-\addtolength{\headwidth}{.382\foremargin}
-\renewcommand\afterchapternum{}
+%\usepackage[colorlinks=true,urlcolor=SteelBlue4,linkcolor=Firebrick4]{hyperref}
+%\usepackage[margin=0.5in]{geometry} %% Set Page Margins Throughout Globally
+\usepackage{parskip}
+\usepackage{paralist}
+%\usepackage{calc}
 
-%% TITLE, CHAPTER, & SECTION, HEADING FORMAT %%
+%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%%  BETTER SOURCE CODE LISTINGS:
 
-\renewcommand\afterchaptertitle{%
-  \ifnum \c@secnumdepth>\m@ne%
-    \ifNoChapNum\else\par\nobreak\vskip\afterchapskip\fi%
-  \fi}
+%% Use Console Command:
+%%    $ pygmentize -L styles
+%% to see a list of all possible "minted" code listing styles.
+%% Then change {style-name} below to try any of them out...
+%%    tango   - Typical...
+%%    perldoc - A Nice One...
+%%    xcode   - Similar to perldoc (even nicer)
 
-\setlength\beforechapskip{15pt}
-\renewcommand\printchapternonum{\global\NoChapNumtrue}
-\renewcommand{\chaptitlefont}{\raggedleft\normalfont\Huge\bfseries}
+\usemintedstyle{xcode}
 
-\makeatletter
+%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%%  FONTS:
+%%  Fiction Book FONT SPECS: 
 
-%% AT BEGIN DOCUMENT  %%
+%\usepackage[LGR, T1]{fontenc}
+%\usepackage{libertine}
+%\usepackage{libertinust1math}
+%\usepackage{gfsneohellenic}
+%\renewcommand{\sfdefault}{neohellenic}
 
-\AtBeginDocument{\nonzeroparskip}
-\AtBeginDocument{\frontmatter}
-\chapterstyle{lyhne}
+%\usepackage{titlesec}
+%\titleformat*{\section}{\Large\sffamily}
+%\titleformat*{\subsection}{\large\sffamily}
+%\titleformat*{\subsubsection}{\normalsize\sffamily}
+
+%% SPECIAL PACKAGES:
+
+%\usepackage{soul}
+%\usepackage{pdfpages}
+%\usepackage[backend=bibtex,sorting=none]{biblatex}
+
+%% Include the use of Music and Chord Symbols
+\usepackage[minimal]{leadsheets}
+\useleadsheetslibraries{musicsymbols}
+\useleadsheetslibraries{chords}
+
+%%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%%%% CUSTOM CODE FROM: MemoirChapStyles.pdf
+%%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+%%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%% FINAL PREAMBLE DIRECTIVES:
+%%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\parindent=0em
+\nonzeroparskip
+\chapterstyle{verville}
 
 %%%% END: ~/.emacs.d/Docs/TeX/ref-book-setup.tex
 %%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

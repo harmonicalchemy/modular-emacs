@@ -48,7 +48,10 @@
 
 ;;;
 ;; Declare a list of required packages for writers, bloggers, publishers, etc.:
-;; NOTE: Removed: markdown-mode+ (no longer valid)
+;; NOTE: Currently NOT using markdown mode or any of its features... I use external app
+;; to view markdown... And I DON'T use it directly... I use ORG mode for EVERYTHING now...
+;; Fountain is considered a variant of markdown... I do USE that... Org Mode supports it
+;; in source code blocks... Getting Fountain script to LaTeX is still an ongoing research task...
 
 (defvar me--req-pubops-packages
   '(markdown-mode
@@ -59,7 +62,6 @@
     csv-mode
     simple-httpd))
 ;    markdown-toc
-;    deft         ;; I am removing this... It is a Pain and causes Errors!
 
 ;;;
 ;; Install required packages:
@@ -67,7 +69,26 @@
 (mapc (lambda (p)
         (package-install p))
       me--req-pubops-packages)
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;
 
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  DEFAULT LaTeX Mode SETTINGS:
+
+(setq TeX-PDF-mode t)
+(setq TeX-auto-save t)
+(setq TeX-fold-mode 1)
+(setq TeX-parse-self t)
+(setq-default TeX-master nil)
+(setq reftex-plug-into-AUCTeX t)
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  LaTeX MODE HOOK TWEAKS:
+
+(add-hook 'LaTeX-mode-hook 'visual-line-mode)
+(add-hook 'LaTeX-mode-hook 'flyspell-mode)
+(add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
+(add-hook 'LaTeX-mode-hook 'turn-on-reftex)
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Fountain Mode Tweaks:
@@ -132,29 +153,29 @@
 
 (add-hook 'markdown-mode-hook 'pandoc-mode)
 
-
-;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;   Graphviz-dot-mode Customizations:
-;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-;;;
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Graphviz-dot-mode Customizations:
+;;
 ;; I only changed the default output from .png to .svg...
 ;; That is my personal prefrence... Comment out if you like .png better...
 ;; Also add other custom features here to this hook as well if you like...
 ;; If there are any custom keys set for graphviz-dot-mode, you will find
 ;; those defined within 10-key-bindings.el...
 
-(defun me_graphviz-tweaks ()
-  (setq graphviz-dot-preview-extension "svg"))
+;; DISABLED for DEBUGGING  2025-004-04: 
+;(defun me_graphviz-tweaks ()
+;  (setq graphviz-dot-preview-extension "svg"))
+;
+;(add-hook 'graphviz-dot-mode-hook 'me_graphviz-tweaks)
 
-(add-hook 'graphviz-dot-mode-hook 'me_graphviz-tweaks)
-
-;;;
-;; Asymptote Configuration - Asymptote is a Vector Graphics Language 
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  Asymptote Configuration:
+;;
+;; Asymptote is a Vector Graphics Language 
 ;; asy-mode - Enables Editing Source Code and Processing for Asymptote...
 ;; (So far the path below is for Fedora as installed by DNF)
 
-(add-to-list 'load-path "/usr/share/asymptote")
+(add-to-list 'load-path "/opt/local/share/asymptote")
 (autoload 'asy-mode "asy-mode.el" "Asymptote major mode." t)
 (autoload 'lasy-mode "asy-mode.el" "hybrid Asymptote/Latex major mode." t)
 (autoload 'asy-insinuate-latex "asy-mode.el" "Asymptote insinuate LaTeX." t)

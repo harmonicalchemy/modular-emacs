@@ -29,6 +29,10 @@
                   (font-spec :size 20 :name "Symbola"))
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  NOTE: MY HOME SPUN MINIMAL ORG-BULLETS BELOW
+;;        HAS BEEN REPLACED BY ORG-SUPERSTAR...
+;;        This is kept here commented out for reference only...
+;;
 ;;  Use Fancy Stars for Outline Headings in Org mode:
 ;;
 ;;  This function turns normal text stars (asterisks)
@@ -62,24 +66,81 @@
 ;;              NOT do that...
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-(defun me_org-fancy-stars ()
-  "Hide the Org Bullets..."
-  (interactive)
-  (font-lock-add-keywords
-   'org-mode `(("\\(?:^\\(?1:\\*+\\)[[:blank:]]\\)"
-              (0 (progn (compose-region
-                         (match-beginning 1) (match-end 1)
-                         (pcase (length (match-string 1))
-                           (1 ?\u2219)
-                           (2 ?\u2022)
-                           (3 ?\u25c9)
-                           (_ ?\u25CB)))
-                        nil))))))
+;;; THIS FUNCTION IS NO LONGER USED...
+;(defun me_org-fancy-stars ()
+;  "Hide the Org Bullets..."
+;  (interactive)
+;  (font-lock-add-keywords
+;   'org-mode `(("\\(?:^\\(?1:\\*+\\)[[:blank:]]\\)"
+;              (0 (progn (compose-region
+;                         (match-beginning 1) (match-end 1)
+;                         (pcase (length (match-string 1))
+;                           (1 ?\u2219)
+;                           (2 ?\u2022)
+;                           (3 ?\u25c9)
+;                           (_ ?\u25CB)))
+;                        nil))))))
+
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; ORG SUPERSTAR to the rescue...  My ad-hoc replacement
+;; to the retired org-bullets was not so great...
+;; Then I discovered org-superstar (a complete rewrite
+;; of org-bullets... Lets see how that works...
+;; WOW.. I finally got my outline and list views looking NICE!
+
+(require 'org-superstar)
+
+;; CUSTOMIZE Headline Leading Bullets for each level: (10 levels!)
+
+(setq org-superstar-headline-bullets-list
+      (quote ((?➀) (?➁) (?➂) (?➃) (?➄) (?➅) (?➆) (?➇) (?➈) (?➉))))
+
+(setq org-superstar-cycle-headline-bullets t)
+
+;; Automatically demote / promote list items with different characters...
+;; As above, You can change (replace) bullet glifs (left column) to others
+;; that you may prefer instead...
+
+(setq org-superstar-item-bullet-alist
+      (quote
+       ((?* . ?☲)
+	(?+ . ?⛮)
+	(?- . ?⚛))))
+
+;; Bullets to Try:
+;; ☆ ☘ ☛ ☞ ☟ ☩ ☯ ⛛
+;; ☰ ☲ ☷ ☵ ☸ ☼ ♲
+;; ♳ ♻ ♾ ⚛ ⛦ ⛮ ⛯ ⛋
+;; ⬘ ⬙ ⭓ ⮕ ★ ☣ ⚑ ⛿ ⚒ 
+
+(setq org-superstar-prettify-item-bullets t)
+
+;; Set Maximum Indentation For Org-Mode Description Lists
+;; to get them lined up nicely under their ITEM BULLETS...
+;; You Need Space to push them beyond a checkbox (when you add those)
+;; (I tried 5 first... did not feel like enough space, but changing it
+;; does not do anything???)
+
+(setq org-list-description-max-indent 5)
+
+;; Increase offset a wee bit more between plain list levels...
+;; I increased it to help checklists sub text line up better...
+;; 2025-003-03: Changed offset to 5 (to see if it is better or worse)
+
+(setq-default org-list-indent-offset 3)
+
+;; You have to call: org-superstar-restart
+;; after changing any of the bullets above...
+
+(add-hook 'org-mode-hook (lambda () (org-superstar-mode 1)))
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Org ellipsis options, other than the default Go to Node...
 ;; not supported in common font, but supported in Symbola font. ⬎, ⤷, ⤵
 ;;
+
 ;; I LOVE This One:
 
 (setq org-ellipsis "⤵")
@@ -97,9 +158,6 @@
 
 ;; Prevent Org-Mode Demoting Heading Also Shifting Text Inside Sections:
 (setq org-adapt-indentation nil)
-
-;; Set Maximum Indentation For Org-Mode Description Lists:
-(setq org-list-description-max-indent 5)
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; More TWEAKS... (See the Manual, The Symbol Names Tell All)
@@ -139,43 +197,51 @@
 ;; change the characters at the end of each expression to something
 ;; that fits your style...
 
-(font-lock-add-keywords
- 'org-mode
- '(("^ *\\([-]\\) "
-    (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "►" ))))))
+;(font-lock-add-keywords
+; 'org-mode
+; '(("^ *\\([-]\\) "
+;    (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "►" ))))))
 
-(font-lock-add-keywords
- 'org-mode
- '(("^ *\\([+]\\) "
-    (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "🞜"))))))
+;(font-lock-add-keywords
+; 'org-mode
+; '(("^ *\\([+]\\) "
+;    (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "🞜"))))))
 
-;; Automatically demote / promote list items with different characters...
-;; As above, You can change (replace) bullet glifs (left column) to others
-;; that you may prefer instead...
-
-(setq org-list-demote-modify-bullet
-      (quote (("+"  . "-")
-              ("-"  . "+")
-              ("🞜"  . "-")
-              ("1." . "-")
-              ("1)" . "-"))))
-
-;; Increase offset a wee bit more between plain list levels...
-;; I increased it to help checklists sub text line up better...
-
-(setq-default org-list-indent-offset 2)
+;(setq org-list-demote-modify-bullet
+;      (quote (("+"  . "-")
+;              ("-"  . "+")
+;              ("🞜"  . "-")
+;              ("1." . "-")
+;              ("1)" . "-"))))
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Use Unicode Symbols To Display Org-Mode Checkboxes:
 
+(add-hook 'org-mode-hook
+	  (lambda ()
+	    (setq prettify-symbols-alist
+		  '(("->"     . ?➔)
+		    ("/="     . ?≠)
+		    ("!="     . ?≠)
+		    ("=="     . ?≡)
+		    ("<="     . ?≤)
+		    (">="     . ?≥)
+		    ("sqrt"   . ?√)
+		    ("sqrt"   . ?√)
+		    ("[ ]"    . ?☐)
+		    ("[X]"    . ?☑)
+		    ("[-]"    . ?☢))))
+	  (prettify-symbols-mode 1))
+
+;; Push to list...
 (defun me_set-unicode-checkboxes ()
   "Use Unicode Symbols To Display Org-Mode Checkboxes"
   (interactive)
   (progn
-  (push '("[ ]" .  "☐") prettify-symbols-alist)
-  (push '("[X]" . "☑" ) prettify-symbols-alist)
-  (push '("[-]" . "☢︎" ) prettify-symbols-alist)
-  (prettify-symbols-mode)))
+    (push '("[ ]" .  "☐") prettify-symbols-alist)
+    (push '("[X]" . "☑") prettify-symbols-alist)
+    (push '("[-]" . "☢") prettify-symbols-alist)
+    (prettify-symbols-mode)))
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Customize look of emphasized text in org-mode 
@@ -222,7 +288,8 @@
         ;; Backgrounds: GhostWhite honeydew Ivory
         ;;
         ;; Foregrounds: red red4 DarkRed firebrick DarkGreen chocolate sienna
-        ;;              SaddleBrown blue MidnightBlue aquamarine4 OrangeRed DarkOrange
+        ;;              SaddleBrown blue MidnightBlue aquamarine4
+	;;              OrangeRed, DarkOrange
         ("~" (
               :family "Hermit"
               :background "honeydew"
@@ -259,71 +326,20 @@
 
   (custom-theme-set-faces
    'user
-   `(org-level-10
-     ((t (,@headline
-          ,@variable-tuple
-          :height 1.11
-          :foreground "AntiqueWhite" ))))
-
-   `(org-level-9
-     ((t (,@headline
-          ,@variable-tuple
-          :height 1.12
-          :foreground "AntiqueWhite" ))))
-
-   `(org-level-8
-     ((t (,@headline
-          ,@variable-tuple
-          :height 1.13
-          :foreground "AntiqueWhite" ))))
-
-   `(org-level-7
-     ((t (,@headline
-          ,@variable-tuple
-          :height 1.17
-          :foreground "AntiqueWhite" ))))
-
-   `(org-level-6
-     ((t (,@headline
-          ,@variable-tuple
-          :height 1.20
-          :foreground "AntiqueWhite" ))))
-
-   `(org-level-5
-     ((t (,@headline
-          ,@variable-tuple
-          :height 1.23
-          :foreground "AntiqueWhite" ))))
-
-   `(org-level-4
-     ((t (,@headline
-          ,@variable-tuple
-          :height 1.28
-          :foreground "AntiqueWhite" ))))
-
-   `(org-level-3
-     ((t (,@headline
-          ,@variable-tuple
-          :height 1.38
-          :foreground "AntiqueWhite" ))))
-
-   `(org-level-2
-     ((t (,@headline
-          ,@variable-tuple
-          :height 1.62
-          :foreground "AntiqueWhite" ))))
-
-   `(org-level-1
-     ((t (,@headline
-          ,@variable-tuple
-          :height 1.88
-          :foreground "AntiqueWhite" ))))
-
+   `(org-level-10 ((t (,@headline ,@variable-tuple :height 1.11 :foreground "AntiqueWhite"))))
+   `(org-level-9 ((t (,@headline ,@variable-tuple :height 1.11 :foreground "AntiqueWhite"))))
+   `(org-level-8 ((t (,@headline ,@variable-tuple :height 1.13 :foreground "AntiqueWhite" ))))
+   `(org-level-7 ((t (,@headline ,@variable-tuple :height 1.17 :foreground "AntiqueWhite" ))))
+   `(org-level-6 ((t (,@headline ,@variable-tuple :height 1.20 :foreground "AntiqueWhite" ))))
+   `(org-level-5 ((t (,@headline ,@variable-tuple :height 1.23 :foreground "AntiqueWhite" ))))
+   `(org-level-4 ((t (,@headline ,@variable-tuple :height 1.28 :foreground "AntiqueWhite" ))))
+   `(org-level-3 ((t (,@headline ,@variable-tuple :height 1.38 :foreground "AntiqueWhite" ))))
+   `(org-level-2 ((t (,@headline ,@variable-tuple :height 1.62 :foreground "AntiqueWhite" ))))
+   `(org-level-1 ((t (,@headline ,@variable-tuple :height 1.88 :foreground "AntiqueWhite" ))))
+   
    `(org-document-title
-     ((t (,@headline
-          ,@variable-tuple
-          :height 1.5
-          :foreground "AntiqueWhite" :underline nil))))))
+     ((t
+       (,@headline ,@variable-tuple :height 1.88 :foreground "AntiqueWhite" :underline nil))))))
 
 ;; Use this to get Org Tables aligned properly...
 

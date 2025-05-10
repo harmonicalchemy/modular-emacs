@@ -25,19 +25,29 @@ you can change that number to suit size of headings where they may be placed...
    Other images within your ~.org~ file =WILL ALSO BE RESIZED=... Therefore you
    will need to use LaTeX and/or HTML attributes as follows on the images that
    need to be a different size:
-    #+attr_html: :width 100px
-    #+attr_latex: :width 100px
+    #+attr_html: :width 25px
+    #+attr_latex: :width 25px
    [[~/.emacs.d/emojis/Dabolus-Complete-Emoji-Collection/u1F3D5.png]] u1F3D5.png - camping
 :END:
 
-* [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4DA.png]] Reference:
+* Reference: 
+
+#+attr_html: :width 50px
+#+attr_latex: :width 50px
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F4DA.png]] 
 
 + [[https://unicode.org/emoji/charts/full-emoji-list.html#1f3d5][UNICODE.org FULL EMOJI LIST]]
 
 + [[https://kaushikamardas.medium.com/using-emojis-in-latex-c901969efa24][Using Emojis in LaTeX - Medium Article]]
 
-* [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F3DB.png]] Buildings:
 
+* Buildings:
+#+attr_html: :width 50px
+#+attr_latex: :width 50px
+[[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F3DB.png]]
+
+#+attr_html: :width 50px
+#+attr_latex: :width 50px
 [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F3D5.png]] u1F3D5.png - camping 🏕 
 
 [[~/.emacs.d/lisp/my-modules/emojis/Dabolus-Complete-Emoji-Collection/u1F3E0.png]] u1F3E0.png - house 🏠 

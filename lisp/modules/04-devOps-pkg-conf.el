@@ -41,6 +41,7 @@
     yaml-mode
     nginx-mode
     php-mode          ;; SOON to be REPLACED by xah-php-mode (when it is done)
+    lua-mode          ;; Mode for editing .lua files...
     logview))
 ;    smart-tabs-mode  ;; DISABLED - Using Xah Code Functions now...
 ;    indent-tools     ;; Removed becuase it rwquires s- Package (Insulting eLisp code)

@@ -1,4 +1,4 @@
-%%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ %%%
+%%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
 %%  File: ~/.emacs.d/Docs/TeX/simple-doc-setup.tex
 %%        LaTeX Configurations for HAP_Simple-Document-Skeleton.org
 %%        and clones...
@@ -7,14 +7,34 @@
 %%  Maintainer:  Alisha Awen
 %%  Created:     2023-002-13
 %%  Updated:     2023-002-13
-%%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ %%%
+%%
+%% This File is NOT Part of GNU Emacs
+%%
+%% This program is free software: you can redistribute it and/or modify
+%% it under the terms of the GNU General Public License as published by
+%% the Free Software Foundation, either version 3 of the License, or
+%% (at your option) any later version.
+%%
+%% This program is distributed in the hope that it will be useful,
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%% GNU General Public License for more details.
+%%
+%% You should have received a copy of the GNU General Public License
+%% along with this program.  If not, see <https://www.gnu.org/licenses/>.
+%%
+%% NOTE: 
+%%    The LaTeX Packages defined below WORK WITH Org Mode [DEFAULT PACKAGES]
+%%    which SHOULD be included in the preamble form for LaTeX Class: simple
+%%    defined within 09-org-export-conf.el...
+%%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
 
 %% STANDARD FILE HEADER OPTIONS:
 
 \usepackage{parskip}
 \usepackage{paralist}
-\usepackage[hyperref,x11names]{xcolor}
-\usepackage[colorlinks=true,urlcolor=SteelBlue4,linkcolor=Firebrick4]{hyperref}
+%\usepackage[hyperref,x11names]{xcolor} %% hyperref is Defined within Org LaTeX [DEFAULT PACKAGES]
+%\usepackage[colorlinks=true,urlcolor=SteelBlue4,linkcolor=Firebrick4]{hyperref}
 
 %% CUSTOM FILE HEADER OPTIONS:
 
@@ -22,13 +42,12 @@
 \usepackage[margin=0.9in,bmargin=1.0in,tmargin=1.0in]{geometry}
 \usepackage{algorithm2e}
 \usepackage{algorithm}
-\usepackage{amsmath}
+%\usepackage{amsmath} %% Defined within Org LaTeX [DEFAULT PACKAGES]
 \usepackage{arydshln}
 \usepackage{subcaption}
 \newcommand{\point}[1]{\noindent \textbf{#1}}
-\usepackage{hyperref}
 \usepackage{csquotes}
-\usepackage{graphicx}
+%\usepackage{graphicx} %% Defined within Org LaTeX [DEFAULT PACKAGES]
 \usepackage{bm}
 \usepackage{subfig}
 \usepackage[mla]{ellipsis}
@@ -36,17 +55,13 @@
 \usepackage{pgf}
 \usepackage{tikz}
 \usetikzlibrary{shapes,arrows,automata,quotes}
-\usepackage[latin1]{inputenc}
+%\usepackage[latin1]{inputenc} %% Defined within Org LaTeX [DEFAULT PACKAGES]
 \usepackage{adjustbox}
+
+\parindent=0em
+\nonzeroparskip
 
 %% EXTRA STUFF THAT MAY NOT BE NEEDED:
 
-\linespread{1.1}
-\hypersetup{pdfborder=0 0 0}
-
-%% BEGIN DOCUMENT
-
-\AtBeginDocument{
-  \parindent = 0em
-  \nonzeroparskip
-  }
+% \linespread{1.1}
+% \hypersetup{pdfborder=0 0 0}

@@ -256,33 +256,33 @@
 (if (display-graphic-p)
     (progn
       ;; Set Initial Startup Frame Dimensions:
-(setq initial-frame-alist
-	    '((name . "HA Mod Emacs v3.5 - INITIAL Frame")
-         (font . "Hermit")
+      (setq initial-frame-alist
+	    '((name . "HA Mod Emcs v3.6 - INITIAL Frame")
+              (font . "Hermit")
               (height . 42)
-              (width . 92)
-         (menu-bar-lines . 1)
-         (vertical-scroll-bars . nil)
-         (horizontal-scroll-bars . nil)
-         (left-fringe . 1)
-         (right-fringe . 1)))
+              (width . 100)
+              (menu-bar-lines . 1)
+              (vertical-scroll-bars . nil)
+              (horizontal-scroll-bars . nil)
+              (left-fringe . 1)
+              (right-fringe . 1)))
 
-;; Set Default Frame Dimensions:
-(setq default-frame-alist
+      ;; Set Default Frame Dimensions:
+      (setq default-frame-alist
 	    '((name . "HA Mod Emacs v3.6 - DEFAULT Frame")
-         (font . "Hermit")
+              (font . "Hermit")
               (height . 42)
-              (width . 92)
-         (menu-bar-lines . 1)
-         (vertical-scroll-bars . nil)
-         (horizontal-scroll-bars . nil)
-         (left-fringe . 1)
+              (width . 100)
+              (menu-bar-lines . 1)
+              (vertical-scroll-bars . nil)
+              (horizontal-scroll-bars . nil)
+              (left-fringe . 1)
               (right-fringe . 1))))
 
-      ;; This is a Terminal Session (No GUI)
-      (progn
-	(setq initial-frame-alist '((tool-bar-lines . 0)))
-	(setq default-frame-alist '((tool-bar-lines . 0)))))
+  ;; This is a Terminal Session (No GUI)
+  (progn
+    (setq initial-frame-alist '((tool-bar-lines . 0)))
+    (setq default-frame-alist '((tool-bar-lines . 0)))))
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Toggle Olivetti Mode:
@@ -327,7 +327,7 @@ If flag = 2 make writer's frame. If flag = 1, make coder's frame..."
       ((name . "HA Mod Emacs v3.6 - NEW DEFAULT FRAME"))))
 
     ;; Select this NEW Frame:
-    (select-frame-by-name "HA Mod Emacs v3.6 - NEW DEFAULT FRAME")
+    (select-frame-by-name "HA Mod Emacs v36 - NEW DEFAULT FRAME")
 
     ;; Set Frame Dimentions for DEFAULT Coding etc.:
     (set-frame-size (selected-frame)

@@ -36,13 +36,6 @@
 %% \setlength{\oddsidemargin}{0mm}
 %% \setlength{\evensidemargin}{0mm}
 %%
-%% \AtBeginDocument
-%% \maketitle
-%% \clearpage
-%% \listoffigures*
-%% \clearpage
-%% \listoftables*
-%% \mainmatter
 
 %% PACKAGES %%
 
@@ -57,6 +50,9 @@
 \usepackage{roboto}
 \usepackage{palatino}
 
+%% IMAGES %%
+\usepackage{svg} 
+
 %% DEFAULT PARAGRAPH SETTINGS %%
 
 \setlength{\headwidth}{\textwidth}
@@ -66,27 +62,26 @@
 
 %% TITLE, CHAPTER, & SECTION, HEADING FORMAT %%
 
-\makeatletter
+%\renewcommand\afterchapternum{}
 
-\renewcommand\afterchapternum{}
+\makeatletter
 \renewcommand\afterchaptertitle{%
   \ifnum \c@secnumdepth>\m@ne%
     \ifNoChapNum\else\par\nobreak\vskip\afterchapskip
     \fi%
   \fi}
-
 \makeatother
 
 \setlength\beforechapskip{15pt}
 \renewcommand\printchapternonum{\global\NoChapNumtrue}
 \renewcommand{\chaptitlefont}{\raggedleft\normalfont\Huge\roboto\bfseries}
 
-%\titleformat{\chapter}
-%  [display]
-%  {\Huge\bfseries\roboto}
-%  {\huge\chaptertitlename\space\thechapter}
-%  {20pt}
-%  {}
+\titleformat{\chapter}
+  [display]
+  {\Huge\bfseries\roboto}
+  {\huge\chaptertitlename\space\thechapter}
+  {20pt}
+  {}
 
 \titleformat*{\section}{\normalfont\huge\bfseries\roboto}
 \titleformat*{\subsection}{\normalfont\Large\bfseries\roboto}
@@ -129,15 +124,15 @@
 
 %% AT BEGIN DOCUMENT  %%
 
-\AtBeginDocument{
-\maketitle
-\clearpage
-\listoffigures*
-\clearpage
-\listoftables*
-\clearpage
-\nonzeroparskip
-\frontmatter
+%\AtBeginDocument{
+%\maketitle
+%\clearpage
+%\listoffigures*
+%\clearpage
+%\listoftables*
+%\clearpage
+%\nonzeroparskip
+%\frontmatter
 }
 
 \chapterstyle{verville}

@@ -7,7 +7,7 @@
 ;; makes using traditional PIM Apps look like toys! Org-Mode is the true answer
 ;; to Knowledge Management (KM) as we discussed and defined the term back at
 ;; Lotus Research in the 90s...  The solution was right under our noses in Emacs!
-;; Secondly, I will be using org-mode for a total Business Accounting System...
+;; Secondly, I will be using org-mode for a total Bsiness Accounting System...
 ;; Thirdly, I will be using org-mode for Writing, Publishing, Scrivener Style...
 ;; Also, I may end up using org-mode to organize all my System Admin stuff,
 ;; including the code and scripts...  More about that later....
@@ -38,13 +38,15 @@
 (defvar me--req-org-packages
   '(gnuplot-mode
     org-modern
+    org-superstar
     valign
     toc-org
     sass-mode
     abc-mode
     org-sidebar
     org-contrib
-    org-mind-map))
+;    org-mind-map
+    ob-asymptote))
 
 ;;;
 ;; Install required packages:
@@ -143,10 +145,11 @@
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;             Org Mind Map Configuration
-
-(require 'ox-org)
-
-(setq org-mind-map-engine "dot")       ; Default. Directed Graph
+;;
+;; CURRENTLY DISABLED - Looking for ALTS...
+;;
+;; (require 'ox-org)
+;; (setq org-mind-map-engine "dot")       ; Default. Directed Graph
 ;; (setq org-mind-map-engine "neato")  ; Undirected Spring Graph
 ;; (setq org-mind-map-engine "twopi")  ; Radial Layout
 ;; (setq org-mind-map-engine "fdp")    ; Undirected Spring Force-Directed
@@ -154,6 +157,7 @@
 ;; (setq org-mind-map-engine "twopi")  ; Radial layouts
 ;; (setq org-mind-map-engine "circo")  ; Circular Layout
 
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Set Mobile Org Directory from GLOBAL CONSTANT:
 ;; See:
 ;;   [modular-emacs]:~/.emacs.d/lisp/modules/me-constants.el
@@ -250,33 +254,30 @@
     (org-open-at-point)))
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;  DISABLED - NO LONGER USING THESE "AKA SCRIVENER" SIDE PANELS...
+;;  Over the years I find this workflow to be silly for ORG-MODE...
+;;  I am leaving the code here for Legacy but I have disabled it
+;;  AS well as Xah-Fly-Key Bindings for these functions...
+;;
 ;;  Org Outline Tree on left | content on 
 ;;  right Functions...
 ;;
 ;; Open sub elements in right window pane,
 ;; move cursor focus to right window pane...
-;; NOTE: I am not using this anymore because
-;;       I changed to using org-sidebar which
-;;       does this by defult when you hit RET
-;;       while your cursor is on an outline
-;;       heading within the leftmost
-;;       org-sidebar-tree window pane.
-
-(defun me_org-tree-open-in-right-win ()
-  (interactive)
-  (org-tree-to-indirect-buffer)
-  (windmove-right))
-
+;
+;(defun me_org-tree-open-in-right-win ()
+;  (interactive)
+;  (org-tree-to-indirect-buffer)
+;  (windmove-right))
+;
 ;; Open sub elements in right window pane,
 ;; Leave cursor in left outline window pane...
-
-(defun me_org-tree-open-in-right-no-focus ()
-  (interactive)
-  (org-sidebar-tree-jump-indirect)
-  (windmove-left))
-
+;
+;(defun me_org-tree-open-in-right-no-focus ()
+;  (interactive)
+;  (org-sidebar-tree-jump-indirect)
+;  (windmove-left))
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Set up Normal Org View in Single Window Frame
@@ -290,20 +291,7 @@
   ;; Test to make sure we are in Org Mode, if not print a warning...
   (if (equal 'org-mode major-mode)
       (progn
-        ;; Make sure we are in Split Window Fancy Org View First!
-        (when (= (length (window-list)) 2)
-          (if (eq 'selected-window 'window-left-child)
-              ;; Remove Split Sidebar Tree Window:
-              (progn
-                (org-sidebar-tree-toggle))
-            (progn
-              ;; Else Move to left most window:
-              (windmove-left)
-              ;; And now Remove Split Sidebar Tree Window...
-              (org-sidebar-tree-toggle))))
-
         ;; Make NORMAL ORG MODE Frame size for writing/composition:
-
         (me_set-writing-frame)
 
         ;; Set Olivetti Width
@@ -332,11 +320,6 @@
   (if (equal 'org-mode major-mode)
       (progn
         (me_set-org-wide-frame)
-
-        ;; Split Windows with org outline tree in narrow left window...
-
-        (org-sidebar-tree-toggle)
-        ;(org-sidebar-tree)
 
         ;; Set Olivetti Width
         (olivetti-mode)
@@ -393,9 +376,9 @@
   ;; Collapse all source blocks;
   (org-hide-block-all)
 
-  ;; Use Fancy ORG Outline Heading Stars
-  (me_org-fancy-stars)
-
+  ;; Refresh Org SUPERSTAR Configuration...
+;  org-superstar-restart
+  
   ;; Set default face to Courier Prime:
   ;; (enable this for testing table alignment)
   ;; (set-face-attribute 'default (selected-frame)

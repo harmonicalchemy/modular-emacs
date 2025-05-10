@@ -1,164 +1,213 @@
 # -**- mode: org; coding: utf-8 -**-
-:LATEST_UPDATE:
-  =Last Updated:= <2023-02-18 Sat>
+:LATEST_UPDATE: 
+=Last Updated:= <2025-03-31 Mon>
 
-  =YOU MAY REMOVE This Drawer= from your own clones of this template if
-  it is bothering you... This drawer is used for HAP Modular Emacs
-  DOC TEMPLATES housekeeping...
+=YOU MAY REMOVE This Drawer= from your own clones of this template if it is bothering you... This drawer is only here as an aid for: HAP Modular Emacs DOC TEMPLATE housekeeping/updating tasks...
 
-  =HOWEVER= you may also use it for the same purpose to keep your existing
-  Modular Emacs based org documents in sync with the latest updates of the
-  template they were created from...
-  
-  =If you do wish to do the same... Read On Below...=
-  
-  - =INTERNAL USE Instructions:= /(END USERS SKIP THIS BULLET)/
-
-    This bullet is not for end users... This is /"Note to Self"/ stuff...
-
-    + [ ] =MASTER TEMPLATE ONLY= *Keep The Above Timestamp Up To Date:*
-
-        *DO THIS ALWAYS*, JUST AFTER YOU UPDATE THIS SETUPFILE...
-        =DON'T FORGET!=
-
-  - =PUBLIC USE Instructions:= /(FOR CLONES OF THIS TEMPLATE)/
-
-    + [ ] =Change this= *:LATEST_UPDATE:* =drawer title:= /(within clones only)/
-
-         Change it to: *:LATEST_TEMPLATE_UPDATE:* within NEWLY CREATED CLONES...
-
-    + [ ] *COMPARE the TIMESTAMPS between THIS TEMPLATE and CLONES:*
-
-         ~Org-Mode~ and ~AuxTeX~ settings and meta data within CLONES of
-         this SETUPFILE TEMPLATE will get out of sync after a while due
-         to Harmonic Alchemy Modular Emacs version updates etc...
-        
-         Use the ABOVE timestamp /(within the TEMPLATE and your CLONE)/
-         to see if the clone's settings need to be updated...
-         /(i.e., brought into sync with its template - MERGE)/ and then
-         perform any needed merging/replacing of BOILERPLATE and/or
-         meta data. /(e.g, *:README:* drawers, etc.)/
-
-    + [ ] *Keep ABOVE timestamp within CLONES of this template UP TO DATE:*
-
-         =AFTER Completing Above MERGE Step= and your clone has been brought
-         up to date /(i.e. in sync)/ with its STARTUPFILE TEMPLATE...
-         Then update the timestamp ABOVE... /(WITHIN YOUR CLONE)/ to record
-         the date of its last sync status...
+TAGS are a personal thing... Therefore MY Tags /(i.e., the DEFAULT TAGS that come out of box with Modular Emacs)/, will and should change to fit your personal use case... RENAME your copies of this file within your cloned org-templates directories within your projects... Change the tags to suit your needs... Make other TAG files like this for your different categories of projects etc... and include them in the .org files associated with that category... If you are doing all that, you will NOT want to update your Tag Files LATER to match any NEW tags used by DEFAULT Modular emacs...
 :END:
 
 =File:= ~~/.emacs.d/Docs/pubOps/org-templates/default-tags.org~
 
-        =HAP Modular Emacs - DEFAULT General Purpose TAGS=
+=HAP Modular Emacs - DEFAULT General Purpose TAGS=
+
+You Can and SHOULD change the tags here to suit your own personal needs...
+READ THIS ARTICLE: [[https://karl-voit.at/2022/01/29/How-to-Use-Tags/][How to Use Tags]] /(HOW and WHY they are IMPORTANT)/
+=Because EVERYTHING is MISCELLANEOUS in our minds=...
 
 #+CATEGORY: @DEFAULT
 
-#+TAGS: auto(a) computers(c) drafts(d) examples(e) friends(f) gov_politics(g) 
-#+TAGS: health(h) images(i) literature(l) email(m) open_source(o) personal(p)
-#+TAGS: synopsis(s) travel(t) utilities(u) web(w) 
-#+TAGS: Art(A) Cloud(C) Economics(E) Family(F) @GTD(G)
-#+TAGS: New_Ideas(I) Philosophy(K) Logs(L) Music(M)
-#+TAGS: @projects(P) Must_Read(R) Software(S) Templates(T)
-#+TAGS: Apps(~) Social(@) Hardware(#) Banking($) Taxes(%)
-#+TAGS: Security(.) Media(>) Tools(/) Science(?)
+#+TAGS: art(a) emails(e) health(h) math(m)
+#+TAGS: travel(t) utilities(u) web(w) politics($)
+#+TAGS: finance(E) GTD(G) philosophy(K) logs(L) projects(P)
+#+TAGS: mustread(R) software(S) transportation(T)  
+#+TAGS: apps(~) templates(%) science(?) social(@) 
+#+TAGS: hardware(#) security(.) media(>) tools(/)
 
-* Defined TAG Shortcut KEYS:                     :noexport:
+* TODO HAP Controlled TAG Vocabulary: /(Glossary)/   :noexport: 
 
-- *GLOBALLY DEFINED KEYS:* /(from 09-2-org-keywords-tags-conf.el)/
+** GLOBAL TAGS: /(defined in: ~09-2-org-keywords-tags-conf.el~)/ 
 
-      ~n x H W 0 1 2 3 + -~ /(DON'T USE THESE)/
+*** Mutually Exclusive Global Tags:
 
-- *FILE LOCAL DEFINED KEYS:* /(KEEP THIS UPDATED)/
+=Export= ~XOR~ =No Export= Group: 
+/(these are exclusively used by ~org-mode~ - not necessarily used for searching or filtering results)/ 
+|---------+-----+------------------------------------|
+| *TAGS*    | *KEY* | *DEFINITION*                         |
+|---------+-----+------------------------------------|
+| noexport | n   | FLAG: "Exclude Outline Tree from Export" |
+| export   | x   | FLAG: "Export Outline Tree"                   |
+|---------+-----+------------------------------------|
 
-      ~a c d e f g h i l m o p s t u w~
-      
-      ~A C E F G I K L M P R S T~
-      
-      ~~ @ # $ % . > / ?~ 
+=TOC= ~XOR~ =TOC_3= Group:
+/(these are exclusively used by ~toc-org~ package - not necessarily used for searching, filtering results)/ 
+|---------+-----+-----------------------------|
+| *TAGS*    | *KEY* | *DEFINITION*                  |
+|---------+-----+-----------------------------|
+| TOC | 2   | FLAG: TOC-Org (DEFAULT 2 levels deep) |
+| TOC_3   | 3 | FLAG: TOC-Org (3 levels deep)            |
+|---------+-----+-----------------------------|
 
-- *CURRENT KEYS - FREE to USE & DEFINE LOCALLY:* /(KEEP THIS UPDATED)/
+=Work= ~XOR~ =Create= ~XOR~ =Life= Group:
+/(Activity Focus Group Partitioning)/
+|--------+-----+----------------------------------------------------------|
+| *TAG*    | *KEY* | *DEFINITION*                                               |
+|--------+-----+----------------------------------------------------------|
+| home  | H   | personal finance, health, leisure, crafts, etc.          |
+| work  | W   | SW-dev, computers, clients, community, sales             |
+| music | M   | Music Sound Composing, Performing, Engineering, Research |
+| HAP   |     | Should I make a mutually exclusive @HAP category TAG?    |
+|--------+-----+----------------------------------------------------------|
 
-      ~b               j k             r      v     y z~ 
+=sysAdmin= ~XOR~ =devOps= Group:
+|----------+-----+-----------------------------------|
+| *TAGS*     | *KEY* | *DEFINITION*                        |
+|----------+-----+-----------------------------------|
+| sysAdmin | s    | standard defined sub Category of "work" |
+| devOps   | o   | standard defined sub Category of "work" |
+|----------+-----+-----------------------------------|
 
-      ~B   D           J      N O   Q       U V   X Y Z~
+=friends= ~XOR~ =family= Group:
+|-------+-----+-------------------------------------------|
+| *TAGS*  | *KEY* | *DEFINITION*                                |
+|-------+-----+-------------------------------------------|
+| friends | F   | Not sure these will be used. Maybe not needed?   |
+| family | Y   | Not sure these will be used. Maybe not needed? |
+|-------+-----+-------------------------------------------|
+
+=draft= ~XOR~ =final= Group:
+|------+-----+-----------------------------------|
+| *TAGS* | *KEY* | *DEFINITION*                        |
+|------+-----+-----------------------------------|
+| draft | d   | For Docs still in DRAFT MODE |
+| final  | f    | For FINAL docs READY for PUBLISHING |
+|------+-----+-----------------------------------|
+
+=published= ~XOR~ =unpublished= Group:
+|-----------+-----+--------------------------------------|
+| *TAGS*      | *KEY* | *DEFINITION*                           |
+|-----------+-----+--------------------------------------|
+| published   | +   | For THINGS THAT HAVE BEEN PUBLISHED  |
+| unpublished | -    | For For THINGS THAT ARE NOT PUBLISHED |
+|-----------+-----+--------------------------------------|
+
+*** FILE LOCAL TAGS: 
+
+=15 Selection Keys ALREADY Used:= ~d f n o s x F H M W Y 2 3 + -~ 
+/(the keys above are RESERVED for selecting GLOBAL TAGS)/
+=Do NOT Duplicate the above keys for File Local Tags=
+
+These TAGS are defined above at the TOP of this file... They will ONLY be available to org-mode files that include this tags setup file...  Keeping a limited set of flags for different kinds of files make it easier to assign them to headings within the file... HELM pops up choices in small space...
+
+I am attempting to create my go-to *Controlled TAG Vocabulary* HERE as my set of *DEFAULT Tags* FIRST
+
+This file will be included in ALL org-mode files starting out... Later when I find the need for adding specialized tags for org-files related to specialized categories, I will clone and alter this list creating a NEW specialized Tags File... /(i.e., creating NEW Tags, and removing Existing ones that won't be used in that category)/  =ALL NEW TAGS will be added to the CONTROLLED VOCABULARY Regardless=...  I DON'T want to end up with a controlled vocabulary of over 100 TAGS However... So Think Hard on this and hone a nice list of say 62 or so tags max...  These TAGS will be my *KM Workhorses*... Hoping they will be a big boost getting all that meta organization work done automatically and transparently in the background...
+
+|--------------+----------+-----------------------------------|
+| *TAG*          | *Select KEY* | *Definition*                          |
+|--------------+----------+-----------------------------------|
+| art           | a        | what is art? why is art?               |
+| emails        | e         | You need a good description here...      |
+| health        | h        | Here too...                          |
+| math         | m        | and here...                          |
+| travel         | t         | why is this so hard?                  |
+| utilities       | u        | start using them and then you will      |
+| web          | w        | figure out what they are for...          |
+| politics       | $        | Poly=many tics=blood sucking parasites |
+| finance        | E        |                                   |
+| GTD          | G        | autofocus & task management         |
+| philosophy     | K        |                                   |
+| logs          | L        | anything containing LOGS in it...        |
+| projects       | P        | things assigned to some PROJECT       |
+| mustread      | R        | tag items you MUST READ or LISTEN to |
+| software      | S        | programing, code, etc.                |
+| transportation | T        | auto, ferry, trains, planes, etc.          |
+| apps          | ~        | Not Sure about this one... Quite Broad!   |
+| templates     | %        | templates or docs etc. about them.      |
+| science        | ?         |                                   |
+| social         | @        |                                   |
+| hardware      | #        |                                   |
+| security       | .         |                                   |
+| media         | >        |                                   |
+| tools         | /         |                                   |
+|--------------+----------+-----------------------------------|
+
+* TODO Defined TAG Shortcut KEYS:                      :noexport: 
+
+=NOTE:= All of the keys below were assigned to DEFAULT TAGS that come out-of-box with HAP Modular Emacs... You most LIKELY will be changing ALL of those TAGS and the keys that select them... THE DEFAULT set of GLOBAL TAGS and their selection keys are found in ~09-2-org-keywords-tags-conf.el~ AND the File Local TAGS and selection keys are defined within this file /(i.e. the ones above and key lists below)/...
+
+Since you will most likely be changing ALL Tags Global and File Local, the USED KEYS list below will have to change as well... and your Available Keys to use will also change... Hack Away! This is only a model for you to follow /(if you so choose)/... 
+
+- *GLOBALLY DEFINED KEYS:* /(from 09-2-org-keywords-tags-conf.el)/ 
+    /(DON'T USE THESE FOR FILE LOCAL - KEEP THIS LIST UPDATED. Change Keys Below if necessary)/ 
     
-      ~4 5 6 7 8 9~  ~` & * ( ) _ =~
+    ~d f n o s x~
 
-      ~[ { ] } | ; : ' " , < ^~ 
+    ~F H M W Y~
 
-* Instructions:                                              :noexport:
+    ~2 3 + -~
 
-This file is included as part of *Harmonic Alchemy Modular Emacs* to provide an example of how ~org-tags~ are organized by *Modular Emacs* as installed out-of-box
-on your machine... You can change FILE LOCAL tags HERE for your own purposes...
+- *FILE LOCAL DEFINED KEYS:*
+    /(KEEP THIS UPDATED if you change or add new FILE LOCAL TAGS ABOVE)/ 
 
-=NOTE:= In addition to *FILE LOCAL TAGS*... A set of *GLOBALLY defined TAGS*
-      are available to ALL .org files opened within a HAP Modular Emacs
-      configuration...
+      ~a e h m t u w~
       
-      *GLOBAL TAGS* get assigned within: ~09-2-org-keywords-tags-conf.el~
+      ~E G K L P R S T~
+      
+      ~~ @ # % . > / ? $~ 
 
-- [ ] *USAGE:* [0/4]
+- *CURRENT KEYS - FREE to USE & DEFINE LOCALLY:*  
+     /CHOOSE any of THESE FOR a NEW TAG to ADD ABOVE and then REMOVE it FROM THIS LIST)/ =NOTE:= this list will change if any of the keys in it are used above... KEEP IT UP TO DATE... If you make a COPY of this file (to use for OTHER Tags... The list below will let you know which selection keys are left and available to use... HOWEVER... caveat... If you copy this file and change the list below, you will need to update this same list within all your other tag files to keep them all in sync...
+
+
+
+
+
+* Instructions:                                                  :noexport: 
+
+This file is included as part of *Harmonic Alchemy Modular Emacs* to provide an example of how ~org-tags~ are organized by *Modular Emacs* as installed out-of-box on your machine... You should change FILE LOCAL tags HERE for your own purposes... These Tags fit my PIM/Knowledge Models... YMMV...
+
+=NOTE:= In addition to *FILE LOCAL TAGS*... A set of *GLOBALLY defined TAGS* are available to ALL .org files opened within a HAP Modular Emacs configuration... You may and SHOULD change those global tags to fit your own personal categories of usage as well...
+
+*GLOBAL TAGS* get assigned within: ~09-2-org-keywords-tags-conf.el~
+
+- [ ] *USAGE:* [0/4] 
   
    /Follow These Steps to Use Out-Of-Box, or Customize with Your Own Tags.../
 
-   + [ ] *COPY/CLONE:* ~~/.emacs.d/Docs/pubOps/org-templates~ directory
-          to your MASTER PROJECT directory where existing ~.org~ files reference
-          this contained default-tags SETUPFILE... Modify the copied SETUP
-          Files within your cloned org-templates directory to suit your needs...
+     - [ ] *COPY/CLONE:* ~~/.emacs.d/Docs/pubOps/org-templates~ *Directory* 
+            Copy it to your MASTER PROJECT directory where existing ~.org~ files reference this default-tags SETUPFILE... Modify the copied SETUP Files within your cloned org-templates directory to suit your needs... =NOTE:= Other instructions elsewhere within Modular Emacs may have gotten you to do this copy operation already... You Don't NEED to re-copy it again of course...
 
-          =Don't Modify The MASTER Templates Within ~/.emacs.d=
+            =Don't Modify The MASTER Templates Within ~/.emacs.d=
 
-          =VERIFY:= the following line in preamble heading of ~.Org~ Files
-          includes this file...
-          /(this is the default - which you could change to something else)/
+            =VERIFY:= the following line in preamble heading of ~.Org~ Files includes this file... /(this is the default file name - which you could change to something else)/
 
-              ~#+SETUPFILE: ./org-templates/default-tags.org~
+             ~#+SETUPFILE: ./org-templates/default-tags.org~
 
-      /Making a COPY/CLONE of:/ ~$HOME/.emacs.d/Docs/pubOps/org-templates~
-      /master folder To your book's project directory will allow you to/
-      /make your own custom configurations for different books without/
-      /affecting the configurations of other book projects within their/
-      /own MASTER FOLDERS.../
+             /Making a COPY/CLONE of:/ ~$HOME/.emacs.d/Docs/pubOps/org-templates~ /master folder To your book's project directory will allow you to/         /make your own custom configurations for different projects without/ /affecting the configurations of other projects within their/ /own MASTER FOLDERS.../
 
-   + [ ] =CONSULT:= the =Defined TAG Shortcut KEYS:= Section to see which TAG/KEY
-         assignments are already set by default... BOTH Global and Local TAG/KEY
-         assignment pairs are listed...
+     - [ ] *CONSULT the Defined TAG Shortcut KEYS Section Above:* 
+           To see which TAG/KEY assignments are already set by default... BOTH Global and Local TAG/KEY assignment pairs are listed...
 
-   + [ ] =ADD NEW LOCAL TAG/KEY Assignments:=
+     - [ ] *ADD NEW LOCAL TAG/KEY Assignments:* 
 
-          /(or modify existing LOCAL assignments)/
+            /(or modify existing LOCAL assignments)/
 
-          HERE you may /(if you need)/ modify or Replace any of the FILE LOCAL
-          TAG/KEY assignments to create your own custom ~xxx-tags.org~
-          SETUPFILE...
+            HERE you may /(and should)/ modify or Replace any of the FILE LOCAL TAG/KEY assignments to create your own custom ~xxx-tags.org~ SETUPFILE...
 
-          You may ADD NEW or Change any of the FILE LOCAL tags and key
-          assignments to fit your categorical needs...
+            You may ADD NEW or Change any of the FILE LOCAL tags and key assignments to fit your categorical needs...
 
-          =CONSULT:= the *CURRENT KEYS - FREE to USE & DEFINE LOCALLY:* list to
-                   see which key assignments are free and available to make...
-                   If you make changes, update this list as well as the
-                   *FILE LOCAL DEFINED KEYS:* list...
+            =CONSULT:= the *CURRENT KEYS - FREE to USE & DEFINE LOCALLY:* list to see which key assignments are free and available to make... If you make changes, update this list as well as the *FILE LOCAL DEFINED KEYS:* list...
 
-          Realize some of the already defined FILE LOCAL TAGS are of a General
-          and USEFUL Nature for most use-cases that you may not want to change...
+            Realize some of the already defined FILE LOCAL TAGS are of a General and USEFUL Nature for most use-cases that you may not want to change...
    
-          Therefore those general purpose tags /(e.g., must_read, etc.,)/ should
-          probably be left as is..., or at least, assign NEW shortcut KEYs to them.
-          /(if you have a better TAG in mind that fits that particular keyboard KEY
-           better than it does to the existing default TAG assignment)/
+            Therefore those general purpose tags should probably be left as is..., or at least, assign NEW shortcut KEYs to them. /(if you have a better TAG in mind, by all means use it!)/
 
-   + [ ] =DO NOT MODIFY ANY GLOBALLY DEFINED Shortcht TAG/KEY Assignments=
+     - [ ] *CHANGE GLOBALLY DEFINED TAG/KEY Assignments:*  
 
-          The GLOBALLY DEFINED Shortcut KEYS Assign TAGS for =ALL .ORG FILES=
-          Globally... These TAGS are defined within:
-      
-             ~09-2-org-keywords-tags-conf.el~
+            The GLOBALLY DEFINED Shortcut KEYS Assign TAGS for =ALL .ORG FILES= Globally... These TAGS are defined within: ~09-2-org-keywords-tags-conf.el~
 
-          These keys are conveniently listed for your inspection under:
-          the *GLOBALLY DEFINED KEYS* list above...
-        
-          =You CANNOT use these KEYS to define FILE LOCAL TAGS!=
+            These keys are conveniently listed for your inspection under: the *GLOBALLY DEFINED KEYS* list above.. You CAN and probably SHOULD change these GLOBAL TAGS and their selection keys defined within: ~09-2-org-keywords-tags-conf.el~. In that case, ALL the TAG selection keys listed above will need to be updated to reflect your changes...
 
-          /(If you try, your KEY choices will be SHADOWED by DEFAULTS/
-           /and will not work)/
+            Be careful NOT to assign the same selection "key" to two different tags (global or local) IF you do that the TAG selection for that key will be broken... 
+            
