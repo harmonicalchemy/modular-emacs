@@ -17,6 +17,12 @@
 ;;      Fixed URLs to correct TLS enabled domains...
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+;; SECURITY NOTE: Keep Melpa Public Keys UP TO DATE...
+;; Periodically issue this GnuPG command:
+;;   $ gpg --homedir ~/.emacs.d/elpa/gnupg --list-keys
+;; IF the key is expired YOU NEED TO UPDATE it to the NEW one or else
+;; you will get FINGERPRINT errors when trying to update packages...
+
 ;; Load package.el - Modified 2019-002-05 (Added the 3 Main Emacs package
 ;; Repositories)
 
@@ -42,7 +48,7 @@
 ;; This is supposed to be fixed in version 26.3  Here is the workaround...
 ;; When they fix this you may have to comment this out!  Don't forget... ;-)
 
-(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
+;(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
 
 ;; Add your pinned packages to the list below when you encounter an Emacs
 ;; mode that needs a package to be pinned:
@@ -51,6 +57,13 @@
 ;; (needed for optional ModEmacs cider-mode Clojure Lisp module)
 
 ;(add-to-list 'package-pinned-packages '(clj-refactor . "melpa-unstable") t)
+
+;;;;
+;; Add Trusted CAs from Openssl cert.pem in an attempt to stop the
+;; MacOS problem with SSL failing to verify connection to elpa.org...
+
+(require 'gnutls)
+(add-to-list 'gnutls-trustfiles "/opt/local/etc/openssl/cert.pem")
 
 ;;;;
 ;; Always try to load the newest up-to-date packages...

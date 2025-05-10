@@ -5,7 +5,7 @@
 %%   Author:      Alisha Awen
 %%   Maintainer:  Alisha Awen
 %%   Created:     2023-001-13
-%%   Updated:     2024-009-23
+%%   Updated:     2025-004-12
 
 %%   This program is free software: you can redistribute it and/or modify
 %%   it under the terms of the GNU General Public License as published by
@@ -43,55 +43,34 @@
 %%        (no output)
 %%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-%% DISABLED...
-
-%% \usepackage{calc,fourier}
-%% \usepackage[svgnames]{xcolor}
-
-%% BLOCK PARAGRAPHS No Indent: (not a novel) this is a LOG Book/Journal
-%% where Paragraph Blocks are more like nested blocks of code:
+%% BLOCK PARAGRAPHS No Indent:
+%% This Is Not A Novel - This is a LOG Book/Journal...
+%% HERE Paragraph Blocks are treated More like Nested Blocks of Code or rather,
+%% An OUTLINE Containing Blocks of Code, Diagrams, Figures, Tables, etc...
 
 \usepackage{paralist}
 \usepackage{parskip}
 
-\setlength{\parindent}{0pt}
+%% GRAPHICS PACKAGES: 
+
+\usepackage{svg}
+
+%% MUSIC PACKAGES: 
+
+\usepackage[minimal]{leadsheets}
+\useleadsheetslibraries{musicsymbols}
+\useleadsheetslibraries{chords}
+
+%% ADJUST PAGE MARGINS to 90% of STOCK... (for ledger paper)
+\settrimmedsize{0.9\stockheight}{0.9\stockwidth}{*}
+
+%%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%% FINAL PREAMBLE DIRECTIVES:
+%%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\parindent=0em
 \nonzeroparskip
-\setlength\midchapskip{7pt}
-
-%% SET PAGE MARGINS GLOBALLY THROUGHOUT:
-%% set page margins automatically
-%\usepackage[margin=0.5in]{geometry} 
-
-%% DISABLED...
-
-%% This block needs to be wrapped to modify @macros within 
-%% INTERNAL packages (containing @<macro-names>)
-
-% \makeatletter %% changes catcode of @ to 11...
-%\makechapterstyle{VZ21}{
-%  \renewcommand\chapnamefont{\Large\scshape}
-%  \renewcommand\chapnumfont{\Large\scshape\centering}
-%  \renewcommand\chaptitlefont{\huge\bfseries\centering}
-%  \renewcommand\printchaptertitle[1]{%
-%    \setlength\tabcolsep{7pt}% used as indentation on both sides
-%    \settowidth\@tempdimc{\chaptitlefont ##1}%
-%    \setlength\@tempdimc{\textwidth-\@tempdimc-2\tabcolsep}%
-%    \chaptitlefont
-%    \ifdim\@tempdimc > 0pt\relax% one line
-%      \begin{tabular}{c}
-%        \toprule ##1\\ \bottomrule
-%      \end{tabular}
-%    \else% two+ lines
-%      \begin{tabular}{%
-%        >{\chaptitlefont\arraybackslash}p{\textwidth-2\tabcolsep}}
-%        \toprule ##1\\ \bottomrule
-%      \end{tabular}
-%    \fi
-%  }
-%}
-%\makeatother %% changes catcode of @ back to 12...
-
-%\chapterstyle{verville} 
+\chapterstyle{verville}
 
 %%%% END: ~/.emacs.d/Docs/TeX/log-book-setup.tex
 %%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

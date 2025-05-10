@@ -78,6 +78,10 @@
 ;; Set the default encoding system to UTF8
 ;; Explicitly & Redundantly for all these below...
 ;; (even though Emacs may already have done it)
+;; (even though you put those directives at the top of files)
+;; I BELIEVE ALL OF THIS TAKES CARE OF utf8 NOW EH?  
+;; If I see any warnings about f---ing UTF8 within emacs
+;; or exported PDFs etc., I WILL BE SO PISSED,,, LOL
 
 (set-language-environment 'utf-8)
 (setq locale-coding-system 'utf-8)

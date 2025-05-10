@@ -449,19 +449,19 @@
 
 
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;   Org Mind Map Configuration:
+;;   Org Mind Map Configuration: CURRENTLY DISABLED - Looking for better ALT...
 ;;   Note:  Graphviz must be installed on your system in order for these
 ;;          Forms to work!!!  You may see warnings on Emacs startup but it
 ;;          will not hurt anything except trying to use Org Mind Map...
 
-(setq org-mind-map-engine "dot")      ; Default. Directed Graph
-(setq org-mind-map-engine "neato")    ; Undirected Spring Graph
-(setq org-mind-map-engine "twopi")    ; Radial Layout
-(setq org-mind-map-engine "fdp")      ; Undirected Spring Force-Directed
-(setq org-mind-map-engine "sfdp")     ; Multiscale version of fdp for the 
-                                      ; layout of large graphs
-(setq org-mind-map-engine "twopi")    ; Radial layouts
-(setq org-mind-map-engine "circo")    ; Circular Layout
+;; (setq org-mind-map-engine "dot")      ; Default. Directed Graph
+;; (setq org-mind-map-engine "neato")    ; Undirected Spring Graph
+;; (setq org-mind-map-engine "twopi")    ; Radial Layout
+;; (setq org-mind-map-engine "fdp")      ; Undirected Spring Force-Directed
+;; (setq org-mind-map-engine "sfdp")     ; Multiscale version of fdp for the 
+;;                                       ; layout of large graphs
+;; (setq org-mind-map-engine "twopi")    ; Radial layouts
+;; (setq org-mind-map-engine "circo")    ; Circular Layout
 
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;   END: [modular-emacs]:~/.emacs.d/lisp/modules/09-3-org-PM-conf.el

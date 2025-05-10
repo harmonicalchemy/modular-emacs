@@ -5,11 +5,10 @@
 %%   Author:      Alisha Awen
 %%   Maintainer:  Alisha Awen
 %%   Created:     2023-010-03
-%%   Updated:     2023-010-03
+%%   Updated:     2025-003-27
 %%
 %% This LaTeX class/style was initially inspired by:
-%% MemoirChapStyles/MemoirChapStyles.pdf (from CTAN?)
-%% This is a morph of: "lyhne" & "EQ" Styles
+%% MemoirChapStyles.pdf (from CTAN)
 %%
 %% This program is free software: you can redistribute it and/or modify
 %% it under the terms of the GNU General Public License as published by
@@ -22,72 +21,19 @@
 %% GNU General Public License for more details.
 %% You should have received a copy of the GNU General Public License
 %% along with this program.  If not, see <https://www.gnu.org/licenses/>.
-%%
-%%  CUSTOM USAGE:
-%%     This Configuration defines the: ?????????????????????????????????? STYLE
-%%     To Customize: Copy/Clone ~/.emacs.d/Docs/TeX (which contains this file)
-%%     to your .org doc's MASTER FOLDER.
-%%
-%%     THEN, modify your cloned copy of this file...
 %%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PREAMBLE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ %%%
+%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%%  GENERAL PACKAGES:
 
-%%%
-%%  DISABLED LaTeX DIRECTIVES:
-%%
-%% The Memoir Class has this "built in" and will ignore this line...
-% \usepackage{parskip}
-%%
-%% This does not seem to be needed...
-% \usepackage{afterpage}
-%%
-%% The Memoir Class does NOT work with hyperref...
-% \usepackage[hyperref,x11names]{xcolor}
-% \usepackage[colorlinks=true,urlcolor=SteelBlue4,linkcolor=Firebrick4]{hyperref}
-%%
-%% Stock Attributes:
-% \setstocksize{9in}{6in}
-% \settrimmedsize{\stockheight}{\stockwidth}{*}
-%%
-%% Left & Right Margin:
-% \setlrmarginsandblock{2cm}{2cm}{*}
-%%
-%% Upper & Lower Margin:
-% \setulmarginsandblock{2cm}{2cm}{*}
-% \checkandfixthelayout
-%%
-% \usepackage{calc}
-%%%
+%\usepackage[colorlinks=true,urlcolor=SteelBlue4,linkcolor=Firebrick4]{hyperref}
+%\usepackage[margin=0.5in]{geometry} %% Set Page Margins Throughout Globally
 \usepackage{parskip}
 \usepackage{paralist}
-\usepackage[hyperref,x11names]{xcolor}
-\usepackage[colorlinks=true,urlcolor=SteelBlue4,linkcolor=Firebrick4]{hyperref}
-\usepackage{color,calc}
+%\usepackage{calc}
 
-
-%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ FONT SPECS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ %%%
-%%
-% \usepackage{fontenc}
-\usepackage[english]{babel}
-\usepackage[utf8]{inputenc}
-\usepackage[sc]{mathpazo}
-\usepackage{amsmath,amssymb,amsfonts,mathrsfs}
-\usepackage[amsmath,thmmarks]{ntheorem}
-
-%% Fonts from Fiction Book Spec...
-\usepackage[LGR, T1]{fontenc}
-\usepackage{libertine}
-\usepackage{libertinust1math}
-\usepackage{gfsneohellenic}
-\renewcommand{\sfdefault}{neohellenic}
-\usepackage{titlesec}
-\titleformat*{\section}{\Large\sffamily}
-\titleformat*{\subsection}{\large\sffamily}
-\titleformat*{\subsubsection}{\normalsize\sffamily}
-
-
-%%% ~~~~~~~~~~~~~~~~~~~ BETTER SOURCE CODE LISTING STYLES ~~~~~~~~~~~~~~~~~~~ %%%
+%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%%  BETTER SOURCE CODE LISTING STYLES
 %%
 %%  NOTE: To see a list of all possible "minted" code listing styles,
 %%        RUN:
@@ -101,50 +47,40 @@
 
 \usemintedstyle{xcode}
 
+%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%%% TYPE SETTINGS FOR MUSIC PRODUCTION
+%%  (packages for Music and chord symbols)
 
-%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~ SPECIAL PACKAGES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ %%%
-%%
-%% Include the use of Music and Chord Symbols:
 \usepackage[minimal]{leadsheets}
 \useleadsheetslibraries{musicsymbols}
 \useleadsheetslibraries{chords}
 
-%% ...
-\usepackage{graphicx}
-\usepackage{soul}
-\usepackage{pdfpages}
-\usepackage[backend=bibtex,sorting=none]{biblatex}
-
-
-%%% ~~~~~~~~~~~~ DEFAULT SETTINGS FOR AUDIO PRODUCTION DOCUMENTS ~~~~~~~~~~~~ %%%
-%% \addbibresource{org-bib-refs.bib}
+%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%% TITLE, CHAPTER, & SECTION, HEADING FORMAT %%
 
 \setlength{\headwidth}{\textwidth}
 \addtolength{\headwidth}{.382\foremargin}
 \renewcommand\afterchapternum{}
 
-%% TITLE, CHAPTER, & SECTION, HEADING FORMAT %%
+\makeatletter
 \renewcommand\afterchaptertitle{%
    \ifnum \c@secnumdepth>\m@ne%
       \ifNoChapNum\else\par\nobreak\vskip\afterchapskip
       \fi%
    \fi
 }
+\makeatother
 
 \setlength\beforechapskip{15pt}
 \renewcommand\printchapternonum{\global\NoChapNumtrue}
 \renewcommand{\chaptitlefont}{\raggedleft\normalfont\Huge\bfseries}
 
-\makeatletter
+%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%%  PREAMBLE END
 
-%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ BEGIN DOCUMENT ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ %%%
-
-\AtBeginDocument{
+\parindent=0em
 \nonzeroparskip
-\frontmatter
-}
-
-\chapterstyle{lyhne}
+\chapterstyle{verville}
 
 %%%% END: ~/.emacs.d/Docs/TeX/audio-drama-setup.tex
 %%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -34,6 +34,21 @@
 ;; NOTE: These CONSTANTS are used by:
 ;;       09-3-org-PM-conf.el & 15-Accounting-pkg-conf.el
 ;;       (which gets loaded later in this module chain)
+;;       IF YOU INTEND TO USE MOD Emacs Org-Mode CONFIG
+;;       for Proj Management and Accounting, THEN...
+;;       YOU MUST CREATE the directories below within
+;;       your DEFINED ME--ORG-DOC-DIR (above)
+;;       Also NOTE... I am NOT using these at present...
+;;       The accounting package still needs much dev...
+;;       I use my own home spun org-mode LOGGING &
+;;       Project Management System... it is Not
+;;       set up Globally via Modular-Emacs, (it is
+;;       my local setup based on Modular Emacs
+;;       Org-Mode Doc Templates (which are pretty self
+;;       contained production packages), therefore much
+;;       of this older configuration stuff is probably
+;;       mute now, (i.e., not used) BUT You can take a
+;;       look at it and commandeer anything you find useful...
 
 (defconst ME--ORG-AGENDA-FILES
   (file-name-as-directory
@@ -174,6 +189,13 @@
 ;;            Mobile Org Configuration
 
 ;; Set up MobileOrg Staging Area Mac OS:
+;; NOTE:  I am NOT using MobileOrg presently...
+;;        THEREFORE the Moble Org Config may have bugs etc..
+;;        Please LET ME KNOW if you find some and/or fixed them...
+;;        I really don't intend to put any org files of mine
+;;        on my phone (phones are OPEN DOORS TO SPIES - ANYONE who
+;;        can Hack/Crack even the most basic, knowledge these days)
+;;        I don't DO Financial or Shopping on my phone either...
 
 (when ME--DARWIN
   (defconst ME--MOBILE-ORG-DIR
@@ -195,9 +217,10 @@
 ;; your PASSWORDS below as constants... (ONLY IN HERE)
 ;; Any code that needs passwords will pick them up ONLY
 ;; from THIS FILE HERE. (making it easy to manage and stay safe)
+;; SAFE?  LOL  Feeling safe is an intoxication, not REALITY
 
 (defconst ME--MOBILE-ORG-PW "w1sIw1m2.0r9"
-  "Default Height for Org Mode Normal Text. Courier Prime. me-constants.el")
+  "Mobile ORG Password... me-constants.el")
 
 ;; END: [modular-emacs]:~/.emacs.d/lisp/modules/me-constants.el
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

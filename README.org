@@ -392,57 +392,57 @@ All the rest of the markdown files within the Docs directory are being updated o
 - [[#-my-commitment][🙏 My Commitment]]
 - [[#-screenshots][📸 Screenshots:]]
 - [[#-tldr---start-here][☞ TL;DR - Start Here:]]
-    - [[#-requirements][✅ Requirements:]]
-        - [[#-clone-this-repository][⎘ Clone This Repository:]]
-        - [[#-install-emacs][🛠 Install Emacs:]]
-        - [[#-nodejs---nvm--npm-removed][🚫 NODE.js - NVM & NPM: /(REMOVED)/]]
-        - [[#-multimarkdown--mmd-mode--removed][🚫 MultiMarkdown & mmd-mode:  /(REMOVED)/]]
-    - [[#-optional-extras][🎁 Optional Extras:]]
-        - [[#-pandoc][🛠 Pandoc:]]
-        - [[#𓂀-fonts][𓂀 Fonts:]]
-        - [[#-python--pip][▞ Python & Pip:]]
-        - [[#octocat-extra-for-experts---latex][:octocat: Extra for Experts - LaTeX]]
-        - [[#-graphviz][📈 Graphviz:]]
-- [[#-get-ready-to-start-up-modular-emacs-for-the-first-time][⚛ Get Ready to Start up Modular Emacs for the first time!]]
-    - [[#-initial-house-keeping-before-we-move-in][🏠 Initial House Keeping: /(before we move in)/]]
+     - [[#-requirements][✅ Requirements:]]
+          - [[#-clone-this-repository][⎘ Clone This Repository:]]
+          - [[#-install-emacs][🛠 Install Emacs:]]
+          - [[#-nodejs---nvm--npm-removed][🚫 NODE.js - NVM & NPM: /(REMOVED)/]]
+          - [[#-multimarkdown--mmd-mode--removed][🚫 MultiMarkdown & mmd-mode:  /(REMOVED)/]]
+     - [[#-optional-extras][🎁 Optional Extras:]]
+          - [[#-pandoc][🛠 Pandoc:]]
+          - [[#𓂀-fonts][𓂀 Fonts:]]
+          - [[#-python--pip][▞ Python & Pip:]]
+          - [[#extra-for-experts---latex][Extra for Experts - LaTeX]]
+          - [[#-graphviz][📈 Graphviz:]]
+-  [[#prepare-modular-emacs-for-first-run][Prepare Modular Emacs for First Run:]]
+     - [[#-initial-house-keeping-before-we-move-in][🏠 Initial House Keeping: /(before we move in)/]]
 - [[#-ready-set-go-start-up-modular-emacs][📢 Ready Set Go! Start Up Modular Emacs:]]
 - [[#-usage][🎨 Usage:]]
-    - [[#managing-your-git-repo][Managing Your Git Repo:]]
-    - [[#blackboard-color-theme][Blackboard Color Theme:]]
+     - [[#managing-your-git-repo][Managing Your Git Repo:]]
+     - [[#blackboard-color-theme][Blackboard Color Theme:]]
 - [[#-default-package-features-built-in][✅ Default Package Features: /(built in)/]]
-    - [[#default-emacs-welcome-screen-scratch-buffer][Default Emacs Welcome Screen: /(~*scratch*~ buffer)/]]
-    - [[#miscellaneus-packages][Miscellaneus Packages:]]
-    - [[#core-emacs-system-related-packages][Core Emacs System Related Packages:]]
-    - [[#emacs-helm--extras][Emacs Helm & Extras:]]
-    - [[#tree--menu-related-packages][Tree & Menu Related Packages:]]
-    - [[#dired-related-packages][Dired Related Packages:]]
-    - [[#devops-sysadmin-infosec-related-packages][dev§Ops, sys§Admin, info✷Sec Related Packages:]]
-    - [[#writers--publishing-tools][Writer's & Publishing Tools:]]
-    - [[#spelling][Spelling:]]
-    - [[#key-bindings][Key-bindings:]]
+     - [[#default-emacs-welcome-screen-scratch-buffer][Default Emacs Welcome Screen: /(~*scratch*~ buffer)/]]
+     - [[#miscellaneus-packages][Miscellaneus Packages:]]
+     - [[#core-emacs-system-related-packages][Core Emacs System Related Packages:]]
+     - [[#emacs-helm--extras][Emacs Helm & Extras:]]
+     - [[#tree--menu-related-packages][Tree & Menu Related Packages:]]
+     - [[#dired-related-packages][Dired Related Packages:]]
+     - [[#devops-sysadmin-infosec-related-packages][dev§Ops, sys§Admin, info✷Sec Related Packages:]]
+     - [[#writers--publishing-tools][Writer's & Publishing Tools:]]
+     - [[#spelling][Spelling:]]
+     - [[#key-bindings][Key-bindings:]]
 - [[#-optional-packages--customization][🎁 Optional Packages & Customization:]]
 - [[#-begin-log][📅 Begin Log:]]
-    - [[#-2023][📅 2023:]]
-    - [[#-2024][📅 2024:]]
+     - [[#-2023][📅 2023:]]
+     - [[#-2024][📅 2024:]]
 - [[#-meta-usage--templates][📋 Meta: /(Usage & Templates)/]]
-    - [[#-templates][⎘ Templates:]]
-        - [[#new--generic-log-entry-general-log-entry-template][NEW 🗓 Generic Log Entry /(General Log Entry Template)/]]
-            - [[#new--reference][NEW 📚 Reference:]]
-            - [[#new--time-card][NEW ⏱ Time Card:]]
-            - [[#new--summary-03][NEW 📃 Summary:]]
-            - [[#new--details][NEW 📰 Details:]]
+     - [[#-templates][⎘ Templates:]]
+          - [[#new--generic-log-entry-general-log-entry-template][NEW 🗓 Generic Log Entry /(General Log Entry Template)/]]
+               - [[#new--reference][NEW 📚 Reference:]]
+               - [[#new--time-card][NEW ⏱ Time Card:]]
+               - [[#new--summary-03][NEW 📃 Summary:]]
+               - [[#new--details][NEW 📰 Details:]]
 
-* 📜 History & Purpose:
+* 📜 History & Purpose: 
 
 The history of *Harmonic Alchemy Modular Emacs* is like a confusing *Adventure* through many little twisty passages, all alike... /(or all different)/  [[./Docs/ModE-History.org][Everything is Documented Here Now]]  Read it at your leasure. It provides some perspective, insight, and purpose behind how and why things are done here in the present time.
 
-* ☞ Try Harmonic Alchemy Modular Emacs:
+* ☞ Try Harmonic Alchemy Modular Emacs: 
 
 For those of you who feel [[https://github.com/harmonicalchemy/modular-emacs][Harmonic Alchemy Modular Emacs]] may be exactly what you were looking for, By all means... Lets Dive in!
 
 There are some external requirements... It may take a while... If that's OK with you, Great!... Lets go...  Eventually I will script this up so you can just enter this at the command prompt: ~./install.sh~ and be done with it... Keep your fingers crossed on that but don't get your hopes up... I am a busy girl!!! :octocat:  That script will have to install a lot of things! It will have to check a lot of system states!  I have to work all that out as a non-interactive process.  It should install everything /(transparently non-interactively)/ from that single running shell script...  If you have to answer questions and make decisions... Better that you execute manually instead, and read the docs first...  Right?
 
-* ⚙ Microsoft Windows Support Needed:
+* ⚙ Microsoft Windows Support Needed: 
 
 Hello MS Windows Veterans...
 
@@ -463,7 +463,7 @@ I am looking for a good MS Windows Sys Admin type to jump in here and help... Wh
 
 For the rest of us... For now... Let's learn this together... Please provide any feedback about your experience attempting to install this on a MS Windows box, Please open issues, ask questions!  We will get this part done some how... Thanks ;-)
 
-* 🙏 My Commitment
+* 🙏 My Commitment 
 
 #+begin_quote
    "Always do what is right. It will gratify half of mankind and astound the other." - Mark Twain
@@ -489,7 +489,7 @@ If you end up liking *Harmonic Alchemy Modular Emacs*, please drop me a note to 
 
 =Therefore:= *Here is Modular Emacs!* I hope my long years of *devOps* experience will turn out a nice jewel for new comers to try out and succeed with! *Good Luck and God Speed!*
 
-* TODO 📸 Screenshots:
+* TODO 📸 Screenshots: 
 
 =Misc. Screenshots displaying HAP Modular Emacs main Features=
 
@@ -500,7 +500,7 @@ If you end up liking *Harmonic Alchemy Modular Emacs*, please drop me a note to 
 #+attr_latex: :width 600px
 [[file:./Docs/media/HAP-General-LOG-Book-details-01.png]]
 
-* ☞ TL;DR - Start Here:
+* ☞ TL;DR - Start Here: 
 
 Follow the steps below /(in a top down fashion beginning with "Requirements:")/ to install: *Harmonic Alchemy Productions - Modular Emacs* for the first time...
 
@@ -510,8 +510,8 @@ Do not skip to the /(optional)/ install guides until you have the basic default 
    *Note:* It is entirely possible that Modular Emacs will run reasonably without enabling many of the basic modules listed below. Starting bare bones like that may be a good way to get your feet wet without running into initial problems or having to install many required externals, all at once... Later, when you have a better handle on this, try installing some of the extra requirements, /(like a FULL LaTeX Package)/ and then enabling some of the more advanced modules...
 #+end_quote
 
-** ✅ Requirements:
-*** ⎘ Clone This Repository:
+** ✅ Requirements: 
+*** ⎘ Clone This Repository: 
 
 Clone this repository into your ~$HOME~ directory as: ~me.init.d~. The ~me.~ prefix /(for Modular Emacs)/ is put there so that it will not overwrite your existing ~$HOME/.emacs.d~ directory /(if you already use Emacs, which you will still need operational)/.  We will rename this folder later after all other requirements are complete...
 
@@ -523,7 +523,18 @@ Issue the following command within your default *terminal* application:
 
 After the above is done, leave things here as they are and go do the rest of the steps below... We will come back to this later when we are just about ready to launch *Harmonic Alchemy - Modular Emacs* for the first time...
 
-*** 🛠 Install Emacs:
+*** 🛠 Install Emacs: 
+
+- =UPDATE:= <2025-04-06 Sun> *No Need to Build Emacs from Source ANYMORE:* 
+
+  on MacOS, or ANY OS... In the old days I found it hard to get the proper Emacs Build for MacOS with all the correct tools installed etc... /(like it is on NX machines)/...
+
+  So I created a procedure to build Emacs from the GNU repository directly... That was a cool thing back in the day but today I have a GAZILLIAN OTHER THINGS to take care of and MacPorts / Homebrew etc. have got all that together now... Much better than before...
+
+Here is a LINK to =MacPorts Build/Install Options:= [[https://ports.macports.org/port/emacs-mac-app/details/][MacPorts: emacs-mac-app]]
+I don't use Homebrew anymore so someone else needs to pipe in about that... There are many links on the web for Homebrew Emacs on Mac though... Good Luck! 
+
+=Follow INSTRUCTIONS Below with the ABOVE UPDATE in Mind:=
 
 Many of the default packages installed with this project will not work with older versions of Emacs. Also the security older Emacs packages is horrendous! Recently, some of the older packages were removed from the updated MELPA and moved to other less-secure repositories. The entire MELPA site is TLS enabled now but these other repos are not very secure...  Updated features /(acquired securely)/ are vital for being reasonably safe going forward from 2020 onward...  Therefore, I decided not to support versions of Emacs prior to V26 and prefer to only support Emacs V26.1 and up...  
 
@@ -538,7 +549,7 @@ Many of the default packages installed with this project will not work with olde
          You still need your existing Emacs working wile you are getting
          all the requirements below together for Modular Emacs... 
 
-- [ ] *Copy/Clone your entire:* ~$HOME/.emacs.d~ directory and/or ~$HOME/.emacs file~,
+- [ ] *Copy/Clone your entire:* ~$HOME/.emacs.d~ directory and/or ~$HOME/.emacs file~, 
      as well as a copy of your old *Emacs* application into a temporary
      directory of your choice before upgrading below... /(or compress/
      /and make a/ ~.zip~ /or/ ~.gz~ /archive file)/
@@ -547,10 +558,11 @@ Many of the default packages installed with this project will not work with olde
      are not ready to upgrade. If anything goes wrong, you will be able
      to reverse everythig back no problem!
 
-- [ ] *Once your house is in order as above:*
-      [[./Docs/ModE-Install-Emacs.md][Click this Link to Build or Install Emacs 26+ on Your Platform]]
+- [ ] *Once your house is in order as above:* /(OPTIONAL)/ 
+  
+      [[./Docs/ModE-Install-Emacs.md][Click this Link to Build or Install Emacs 26+ on Your Platform]] 
 
-*** 🚫 NODE.js - NVM & NPM: /(REMOVED)/
+*** 🚫 NODE.js - NVM & NPM: /(REMOVED)/ 
 
 Previous versions of Harmonic Alchemy Modular Emacs required installing *NODE Version Manager* ~NVM~, and *Node Package Manager* ~NPM~, so that we could use the *Visual MarkDown application* ~VMD~ as a *WYSIWIM* /(what you see is what I mean)/ editing environment for *Markdown* files within Emacs...
 
@@ -563,7 +575,7 @@ Github displays .org files great and you can even have a Table of Contents!
 So going forward with Harmonic Alchemy Modular Emacs we will be doing ALL our
 docs from now on in org-mode and taking advantage of the nice org-mode features I have tweaked and beautified for Writers, Authors, Coders, i.e., anyone tired of plain jane org-mode appearances...
 
-*** 🚫 MultiMarkdown & mmd-mode:  /(REMOVED)/
+*** 🚫 MultiMarkdown & mmd-mode:  /(REMOVED)/ 
 
 *Multimarkdown* and ~mmd-mode~ are NO longer required or configured for use by *Harmonic Alchemy Modular Emacs*...
 
@@ -573,12 +585,12 @@ I am no longer using Markdown as my go-to doc format for anything except WebSite
 
 
 
-** 🎁 Optional Extras:
-*** 🛠 Pandoc:
+** 🎁 Optional Extras: 
+*** 🛠 Pandoc: 
 
 *Harmonic Alchemy Modular Emacs* will run fine without Pandoc installed on your machine, and in fact is not even used internally... Pandoc exists as an external tool you may need from time to time to convert from one format to another when *Emacs* or *Org-Mode* cannot perform the same thing internally...
 
-Therefore, instructions for getting Pandoc installed on your platform are included here but it is not required for operation... It is /"Extra for Experts/ :octocat:
+Therefore, instructions for getting Pandoc installed on your platform are included here but it is not required for operation... It is /"Extra for Experts"/ 
 
 *Read the docs for Pandoc* to decide how to use them. More instructions for installing and using Pandoc can be [[https://pandoc.org/installing.html][found on the Pandoc Official Website]]...
 
@@ -586,9 +598,7 @@ The [[Pandoc.org]] website has most everything you will need all in one place!
 
 [[./DOCS/MODE-INSTALL-PANDOC.MD][FOLLOW THIS LINK]] to Harmonic Alchemy Modular Emacs' Pandoc Install Guide /(All Platforms)/
 
-
-
-*** 𓂀 Fonts:
+*** 𓂀 Fonts: 
 
 *Harmonic Alchemy Modular Emacs* recommends a few fonts to be installed on your system to get Fancy Org-Mode, Fountain Screenplay, and coding frames/windows/mode-lines, etc. looking as good and "readable" as they possibly can.
 
@@ -600,17 +610,13 @@ Other fonts will be required by *LaTeX* /(for exporting to external document typ
 
 For Instructions on how to install modular emacs recommended fonts on All Platforms, [[./DOCS/MODE-INSTALL-FONTS.MD][FOLLOW THIS LINK]]... Afterwards, you will see some nice looking "writers" fonts in Org-Mode as well as while editing Fountain drama scripts! :octocat:
 
-
-
-*** ▞ Python & Pip:
+*** ▞ Python & Pip: 
 
 Some of the newer /(OPTIONAL)/ modules to be enabled within *Harmonic Alchemy Modular Emacs* will require Python packages to be installed... This is especially true of *Emacs MultiMedia System* ~EMMS~ which is enabled within optional module: [[./lisp/modules/11-games-pkg-conf.el][11-games-pkg-conf.el]]]
 
 [[./Docs/ModE-Install-Python-PIP.md][FOLLOW THIS GUIDE]] to get *Python & PIP* set up within your local environment so you will be ready when python packages are needed to be installed now, or later...
 
-
-
-*** :octocat: Extra for Experts - LaTeX
+*** Extra for Experts - LaTeX 
 
 No I did not forget *LaTeX*...  This is a powerful monster! It needs its own monster doc to install and configure as well... You need it to work with *Pandoc* as well as *org-mode* to take atvantage of advanced export options of included example Org-mode Doc Templates within the PubOps Section...
 
@@ -620,9 +626,7 @@ This is Great News if you would like to make *Emacs* work as well as /(or better
 
 - [ ] =Install Optional LaTeX Publishing Environment:= [[./DOCS/MODE-INSTALL-LATEX-PUBOPS-ENV.MD][FOLLOW THIS GUIDE]]...
 
-
-
-*** 📈 Graphviz:
+*** 📈 Graphviz: 
 
 Harmonic Alchemy Modular Emacs is =OPTIONALLY= configured to use the popular *Graphviz utility*, allowing the creation of nice graphs, flowcharts, data diagrams, etc. using a powerful scripting language called *dot*...  The Emacs mode for Graphviz is: ~graphviz-dot-mode~
 
@@ -630,15 +634,12 @@ Modular Emacs invokes: *graphviz-dot-mode* /(independent of whether graphviz is 
 
 If you DO have Graphvix installed... When you visit a ~.dot~ file, you can compile it with: ~C-c C-c~ which will produce an ~.svg~ file along side...  By default, Modular Emacs is configured to produce *SVG* vector files instead of ~.png~ files which is my preference because if you export and then view it as a PDF you can expand the resulting rendered chart or graph full screen and it will still look very sharp! Not to mention you can edit the resulting SVG file within *inkscape* to add things to it that Graphviz cannot...  Don't underestimate the power of *Graphviz* though! [[https://graphviz.org/documentation/][READ THE GRAPHVIZ DOCS!]]
 
-- [ ] =To Install Graphviz - All Platforms:= [[./Docs/ModE-Install-Graphviz.md][FOLLOW THIS LINK]]
+- [ ] =To Install Graphviz - All Platforms:= [[./Docs/ModE-Install-Graphviz.md][FOLLOW THIS LINK]] 
 
+*  Prepare Modular Emacs for First Run: 
+** 🏠 Initial House Keeping: /(before we move in)/ 
 
-
-* ⚛ Get Ready to Start up Modular Emacs for the first time!
-
-** 🏠 Initial House Keeping: /(before we move in)/
-
-- [ ] *Create an empty file:* ~custom.el~
+- [ ] *Create an empty file:* ~custom.el~ 
 
      This file keeps *Emacs Internal "Customize"* saved settings separate
      from *Modular Emacs constructs* and outside of your ~.init.el~ file!
@@ -656,16 +657,16 @@ If you DO have Graphvix installed... When you visit a ~.dot~ file, you can compi
        touch ~/me.emacs.d/custom.el
        #+end_src
 
-- [ ] *Clone:* ~me.init.el~ *to:* ~init.el~
+- [ ] *COPY/CLONE:* ~me.init.el~ *to:* ~init.el~ 
 
      ~me.init.el~ is a template for reference only...  I did it this way,
      adding: ~init.el~ to: ~.gitignore~ for the purpose of providing more
      flexible ways to manage your local install of Modular Emacs...
      ~me.init.el~ will stay in sync with the remote origin while your
      local clone: ~init.el~ runs the show /(with any changes you might add)/
-     without triggering git to complain about new un-tracked files etc...
+     without triggering git to complain about new un-tracked files etc...  
 
-       #+begin_src bash
+       #+begin_src bash 
          cp ~/me.emacs.d/me.init.el ~/me.emacs.d/init.el
        #+end_src
 
@@ -705,81 +706,33 @@ If you DO have Graphvix installed... When you visit a ~.dot~ file, you can compi
      a: ~$HOME/.emacs.d/~ directory and that's the only "emacs" in your
      ~$HOME~ OK? Great! :octocat:
      
-* 📢 Ready Set Go! Start Up Modular Emacs:
+* 📢 Ready Set Go! Start Up Modular Emacs: 
 
 - [ ] *Start up GNU Emacs:*
+  Envoke Emacs either from the menu or command line and hold your breath! After a lot of super computing lisp number crunching flashing away in your mini buffer /(wait wait wait... for a/
+     /BUNCH of packages to download and compile the first time,/ /which can take up to a minute or more!)/ After that startup should take no more than 5 or 6 seconds at most unless you have some huge new package that needs to be installed...
 
-     Envoke Emacs either from the menu or command line and hold your
-     breath! After a lot of super computing lisp number crunching
-     flashing away in your mini buffer /(wait wait wait... for a/
-     /BUNCH of packages to download and compile the first time,/
-     /which can take up to a minute or more!)/ After that startup
-     should take no more than 5 or 6 seconds at most unless you
-     have some huge new package that needs to be installed...
+  After your long wait... *Bam!* You should see your new emacs screen pop up with *Welcome to Harmonic Alchemy Modular Emacs!* heading your scratch buffer in a frame with a pre-determined      row/column initial size! 
 
-     After your long wait... *Bam!* You should see your new emacs
-     screen pop up with *Welcome to Harmonic Alchemy Modular Emacs!*
-     heading your scratch buffer in a frame with a pre-determined
-     row/column initial size!
+  =NO?= *It's Broken?* Oh My! 🤦‍♀️ =What a freaking let down!= *I feel your pain!* OK... Don't worry if all you see are only numerous compiler warnings... /(those are hard to avoid upon first startup with/ /all the new packages compiling etc. Not much you can do about/ /that... The developers who made the packages need to clean/ /that up, you could help them though. You can safely kill that/ /message buffer and move on.)/...
 
-- =NO?= *It's Broken?* Oh My! 🤦‍♀️ =What a freaking let down!= *I feel your pain!*
-       OK... Don't worry if all you see are only numerous compiler
-       warnings... /(those are hard to avoid upon first startup with/
-       /all the new packages compiling etc. Not much you can do about/
-       /that... The developers who made the packages need to clean/
-       /that up, you could help them though. You can safely kill that/
-       /message buffer and move on.)/...
+  =Yes?= *It worked?* =Yay!= ☕ What a fantastic feeling the first time eh? 
 
-- =Yes?= *It worked?* =Yay!= ☕ What a fantastic feeling the first time eh?
+- =Note1:= I am still chasing an OLD issue with some functions, /(not mine)/ calling the old depreciated ~cl~ /(common lisp/ /library).../ These will be replaced with calls to the new ~cl-lib~ replacement... When that happens you will no longer see the warning: *"cl lib is depreciated"* at startup...  There are several other warnings like this I will eventually chase down as well... 
 
-- =Note1:= I am still chasing an OLD issue with some functions, /(not mine)/
-         calling the old depreciated ~cl~ /(common lisp/ /library).../ These
-         will be replaced with calls to the new ~cl-lib~ replacement...
-         When that happens you will no longer see the warning:
-         *"cl lib is depreciated"* at startup...  There are several other
-         warnings like this I will eventually chase down as well...
+It is hard to keep Emacs Lean and Mean with all these *seat-of-the-pants developers* building packages that pull in gigabytes of *FLUF* just to provide some stupid silly function that you can do in three lines by yourself! *FLUF* = "Fluf is Lousy Unnessary F**ks**t!" /(R-rated Recursive Acronym inspired/ /by: Xah Lee & Having to live with F**king GNU)/
 
-         It is hard to keep Emacs Lean and Mean with all these            *
-         *seat-of-the-pants developers* building packages that pull in
-         gigabytes of *FLUF* just to provide some stupid silly function
-         that you can do in three lines by yourself! *FLUF* = "Fluf is
-         Lousy Unnessary F**ks**t!" /(R-rated Recursive Acronym inspired/
-         /by: Xah Lee & Having to live with F**king GNU)/
+If you got an error that halted completion part way thorugh, and you have an incomplete emacs startup init screen, try to retrace your steps or try running emacs with ~--debug-init~ turned on... It's probably something dumb and easy to fix...
 
-         If you got an error that halted completion part way thorugh, and you
-         have an incomplete emacs startup init screen, try to retrace your
-         steps or try running emacs with ~--debug-init~ turned on...
-         It's probably something dumb and easy to fix...
+/(This happens to us all the first few times, and comes back again/ /later as well most of the time.  Other errors only come up in a blue/ /moon, and then mysterously go away and hide before you can catch/ /them! DOH! Compiler Logs are a hacker's best friend)/ :trollface:
 
-         /(This happens to us all the first few times, and comes back again/
-         /later as well most of the time.  Other errors only come up in a blue/
-         /moon, and then mysterously go away and hide before you can catch/
-         /them! DOH! Compiler Logs are a hacker's best friend)/ :trollface:
+- =Note2:= Fetching/pulling new changes
 
-- =Note2:= Fetching/pulling new changes from the master ~modular-emacs~
-          GitHub repository to your local `~/.emacs.d/` directory will
-          automatically be reflected within your emacs configurations...
-          No need to copy any more files... But you may be surprised to
-          see some new feature or something working differently.
-          If that bothers you, you may wish to keep your changes separate
-          from the remote master branch.  Therefore create your own local
-          ~test~ branch /(or call it what you like)/ and maintain your local
-          changes in parallel... Change your local branch's .gitignore to
-          accommodate your needs...
+  from the master ~modular-emacs~ GitHub repository to your local `~/.emacs.d/` directory will           automatically be reflected within your emacs configurations... No need to copy any more files... But you may be surprised to see some new feature or something working differently. If that bothers you, you may wish to keep your changes separate from the remote master branch.  Therefore create your own local ~test~ branch /(or call it what you like)/ and maintain your local changes in parallel... Change your local branch's .gitignore to accommodate your needs...
 
-- =Note3:= The remote ~modular-emacs~ Github repository also maintains a
-          ~develop~ branch where new ideas and features are tried out before
-          folding them into the master branch which maintains the Modular
-          Emacs stable release.  You could also create a local branch that
-          tracks origin:develop if you would like to participate in any new
-          things I am trying out before final release... Earlier point
-          versions of Modular Emacs were first staged and tested within
-          the develop branch.  Version 3.x is tested on the develop branch
-          currengly. /(if not already merged into master by now)/... Any
-          time a final release of new features is ready, the develop branch
-          will be merged back into master branch, tagged as a new point
-          release /(or major release when a lot of new features have been/
-          /added to warrant it)/... maybe not this time eh?  LOL
+- =Note3:= The remote ~modular-emacs~ Github repository
+
+  also maintains a ~develop~ branch where new ideas and features are tried out before folding them into the master branch which maintains the Modular Emacs stable release.  You could also create a local branch that tracks origin:develop if you would like to participate in any new things I am trying out before final release... Earlier point versions of Modular Emacs were first staged and tested within the develop branch.  Version 3.x is tested on the develop branch currengly. /(if not already merged into master by now)/... Any time a final release of new features is ready, the develop branch will be merged back into master branch, tagged as a new point release /(or major release when a lot of new features have been/ /added to warrant it)/... maybe not this time eh?  LOL 
 
 - =Note4:= I have created a new branch called: ~xah-fly-keys~ where the
           optional module: ~12-Xah-Fly-Keys.el~ has been enabled by default.

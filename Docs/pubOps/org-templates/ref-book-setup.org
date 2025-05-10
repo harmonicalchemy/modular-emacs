@@ -1,5 +1,5 @@
 # -**- mode: org; coding: utf-8 -**-
-:LATEST_UPDATE:
+:LATEST_UPDATE: 
 
   =Last Updated:= <2024-03-25 Mon> /(this template needs work)/
 
@@ -48,7 +48,7 @@
            the date of its last sync status...
 
 :END:
-:README:
+:README: 
 
 - =USAGE:= *Copy/Clone* ~~/.emacs.d/Docs/pubOps/org-templates~ *directory*:
 
@@ -192,55 +192,43 @@
     + [[https://orgmode.org/manual/LaTeX-fragments.html][12.5.1 LaTeX fragments]] - /(The Org Manual)/ 
 
     + [[https://www.offerzen.com/blog/literate-programming-empower-your-writing-with-emacs-org-mode][Empower Your Writing with Emacs Org-Mode]] - /(Literate Programming)/
-
 :END:
-
-
 
 =File:= ~~/.emacs.d/Docs/pubOps/org-templates/ref-book-setup.org~
 
-ORG-MODE & LaTeX EXPORT SETUPFILE for: REFERENCE Books...
+=ORG-MODE SETUPFILE for: REFERENCE Book (PDF)=
 
-=LaTeX CLASS:= ~refbook~
+~refbook~ class is defined within: ~09-4-org-export-conf.el~
+Chapter Styles are Modeled After: ~MemoirChapStyles.pdf~ /(from CTAN)/
 
-=Chapter Style:= ~lyhne~
-
-=NOTE:= All LaTeX Configurations are done here for
-      portability... The ~refbook~ class name itself 
-      is defined within: ~09-4-org-export-conf.el~
-
-STANDARD ORG-MODE OPTIONS For This Configuration:=
-
-- *STARTUP ORG-MODE OPTIONS:*
-
+- =STARTUP DIRECTIVES For This Configuration:= 
    #+LANGUAGE: en
    #+STARTUP:  overview
    #+STARTUP:  hideblocks
    #+STARTUP:  indent
    #+STARTUP:  align
    #+STARTUP:  inlineimages
+      /Mutually Exclusive Export TAGS/
+   #+SELECT_TAGS: export
+   #+EXCLUDE_TAGS: noexport
 
-- *ENABLED ORG-MODE OPTIONS:*
-
-   /Mutually Exclusive Export TAGS/
-    #+SELECT_TAGS: export
-    #+EXCLUDE_TAGS: noexport
-
+- =ORG-MODE EXPORT OPTIONS:= 
    /ENABLE Smart Quotes (org-export-with-smart-quotes)/
-    #+OPTIONS: ':t
+   /Non-nil = activate smart quotes during export/
+    #+OPTIONS: ':nul
 
    /Show Emphasized Text (org-export-with-emphasize)/
-   /NOTE: Exported PDF is styled different/
-         /than org-mode buffer fontification../
+   /Non-nil means interpret *word*, /word/, _word,_ and +word+ 
+   /for export... NOTE: Exported PDF is styled different/
+   /than org-mode buffer fontification../
     #+OPTIONS: *:t
 
    /Convert Special Strings (org-export-with-special-strings)/
+   /Non-nil means interpret "\-", "--" and "---" for export/ 
     #+OPTIONS: -:nil
 
    /Export with fixed-width sections (org-export-with-fixed-width)/
-   /Options: (nil, t)/
-   /non-nil = Interpret Strings Starting with a/
-   /colon ":" as: A Fixed-With Verbatim area./
+   /non-nil = Interpret Strings Starting with a/ /colon ":" as: A Fixed-With Verbatim area./
     #+OPTIONS: ::t
 
    /Enclude time/date active/inactive stamps (org-export-with-timestamps)/
@@ -324,7 +312,7 @@ STANDARD ORG-MODE OPTIONS For This Configuration:=
     #+OPTIONS: tags:nil
 
    /Verbatim export (org-export-with-latex)/
-    #+OPTIONS: tex:verbatim
+    #+OPTIONS: tex:t 
 
    /Include Creation Time (org-export-time-stamp-file)/
     #+OPTIONS: timestamp:t
@@ -343,10 +331,8 @@ STANDARD ORG-MODE OPTIONS For This Configuration:=
    /Include Tables (org-export-with-tables)/
     #+OPTIONS: |:t
 
-- *DISABLED ORG-MODE OPTIONS:*
-
-   #+BEGIN_COMMENT
-   
+=DISABLED ORG-MODE OPTIONS:= 
+#+BEGIN_COMMENT 
     /DO NOT Export fixed-width sections/
     /(org-export-with-fixed-width)/
     #+OPTIONS: ::nil
@@ -365,141 +351,9 @@ STANDARD ORG-MODE OPTIONS For This Configuration:=
 
     /Normal LaTeX Export/
     /(org-export-with-latex)/
-    #+OPTIONS: tex:t
+    #+OPTIONS: tex:verbatum
 
     /Include Default TOC
     /(org-export-with-toc)/
     #+OPTIONS: toc:t
-
-   #+END_COMMENT
-
-=LaTeX EXPORT CONFIG FOR: --> Reference Book PDF:=
-
-This class/style was initially inspired by:
-MemoirChapStyles/MemoirChapStyles.pdf (from CTAN?)
-This is a morph of: "lyhne" & "EQ" Styles
-
-- *ENABLED LATEX DIRECTIVES:*
-      
-   =LaTeX CLASS & PAPER SIZE:=
-
-    #+LATEX_CLASS: refbook
-    
-    #DISABLED# #+LATEX_CLASS_OPTIONS: [letterpaper, 12pt, oneside, onecolumn, openany, showtrims, final]
-
-   =GENERAL PACKAGES - Options:=
-
-    #+LATEX_HEADER: \usepackage{parskip}
-    #+LATEX_HEADER: \usepackage{paralist}
-    #+LATEX_HEADER: \usepackage[hyperref,x11names]{xcolor}
-    #+LATEX_HEADER: \usepackage[colorlinks=true,urlcolor=SteelBlue4,linkcolor=Firebrick4]{hyperref}
-    #+LATEX_HEADER: \usepackage{calc}
-
-   =BETTER SOURCE CODE LISTING STYLES:=
-
-    #+LATEX_HEADER: \usemintedstyle{xcode}
-
-      =RUN:= ~$> pygmentize -L styles~ /to see a list of all possible "minted" code
-           listing styles.  Then change {style-name} below to try any out.../
-           /So Far... I found these three to work fairly well for my needs.../
-           tango   - /Good but not quite.../
-           perldoc - /Nice One/
-           xcode   - /Similar to perldoc (even nicer... I am using this one NOW)/
-
-   =FONTS:=
-
-    #DISABLED#    #+LATEX_HEADER: \usepackage{fontenc}
-
-    #+LATEX_HEADER: \usepackage[english]{babel}
-    #+LATEX_HEADER: \usepackage[utf8]{inputenc}
-    #+LATEX_HEADER: \usepackage[sc]{mathpazo}
-    #+LATEX_HEADER: \usepackage{amsmath,amssymb,amsfonts,mathrsfs}
-    #+LATEX_HEADER: \usepackage[amsmath,thmmarks]{ntheorem}
-
-   =USE Same FONT SPECS as Fiction Book Setup:=
-   
-    #+LATEX_HEADER: \usepackage[LGR, T1]{fontenc}
-    #+LATEX_HEADER: \usepackage{libertine}
-    #+LATEX_HEADER: \usepackage{libertinust1math}
-    #+LATEX_HEADER: \usepackage{gfsneohellenic}
-    #+LATEX_HEADER: \renewcommand{\sfdefault}{neohellenic}
-    #+LATEX_HEADER: \usepackage{titlesec}
-    #+LATEX_HEADER: \titleformat*{\section}{\Large\sffamily}
-    #+LATEX_HEADER: \titleformat*{\subsection}{\large\sffamily}
-    #+LATEX_HEADER: \titleformat*{\subsubsection}{\normalsize\sffamily}
-
-   =BETTER SOURCE CODE LISTING STYLES:=
-
-    #+LATEX_HEADER: \usepackage{minted}
-    #+LATEX_HEADER: \usemintedstyle{xcode}
-
-   - =NOTE:= *See List of "minted" Code Listing Styles:*
-     
-           *RUN:*
-                *$>* ~pygmentize -L styles~
-
-           Then change {style-name} below to try any out...
-           So Far... I found these three to work fairly well
-           for my needs...
-           
-             tango    - Good but not quite...
-             perldoc  - Nice One
-             xcode    - Similar to perldoc, even nicer... I am using this one NOW...
-
-   =SPECIAL PACKAGES:=
-
-   /Include the use of Music and Chord Symbols/
-    #+LATEX_HEADER: \usepackage[minimal]{leadsheets}
-    #+LATEX_HEADER: \useleadsheetslibraries{musicsymbols}
-    #+LATEX_HEADER: \useleadsheetslibraries{chords}
-
-    #+LATEX_HEADER: \usepackage{graphicx}
-    #+LATEX_HEADER: \usepackage{soul}
-    #+LATEX_HEADER: \usepackage{pdfpages}
-    #+LATEX_HEADER: \usepackage[backend=bibtex,sorting=none]{biblatex}
-
-    /These were disabled because NOT found../
-    /(not sure how they got in here as well - LOL)/
-   
-    #DISABLED#    #+LATEX_HEADER: \input{layoutsetup}
-    #DISABLED#    #+LATEX_HEADER: \input{theoremsetup}
-    #DISABLED#    #+LATEX_HEADER: \input{macrosetup}
-
-   =REFBOOK CUSTOM LaTeX CONFIG:=
-
-    #+BEGIN_EXPORT latex
-
-       %% DEFAULT SETTINGS %%
-
-       %%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-       %%  DISABLED DIRECTIVES (due to ERRORS etc.)
-       %       \addbibresource{org-bib-refs.bib}
-       %%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-       \setlength{\headwidth}{\textwidth}
-       \addtolength{\headwidth}{.382\foremargin}
-       \renewcommand\afterchapternum{}
-
-       %% TITLE, CHAPTER, & SECTION, HEADING FORMAT %%
-
-       \renewcommand\afterchaptertitle{%
-         \ifnum \c@secnumdepth>\m@ne%
-           \ifNoChapNum\else\par\nobreak\vskip\afterchapskip\fi%
-         \fi}
-
-       \setlength\beforechapskip{15pt}
-       \renewcommand\printchapternonum{\global\NoChapNumtrue}
-       \renewcommand{\chaptitlefont}{\raggedleft\normalfont\Huge\bfseries}
-
-       \makeatletter
-
-       %% AT BEGIN DOCUMENT  %%
-
-       \AtBeginDocument{
-          \nonzeroparskip
-          \frontmatter
-       }
-       
-       \chapterstyle{lyhne}
-
-    #+END_EXPORT
+#+END_COMMENT
