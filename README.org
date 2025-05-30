@@ -1,6 +1,6 @@
 # -**- mode: org; coding: utf-8 -**-
 #+TITLE: README
-#+TEXT: Copyright © 2021 Harmonic Alchemy Productions & Others
+#+TEXT: Copyright © 2021-2025 by Harmonic Alchemy Productions & Others
 #+AUTHOR: Alisha Awen - Harmonic Alchemy Productions (HAP)
 #+EMAIL: harmonicalchemy@proton.me
 #+DATE: {{{time(%A %Y-%b-%d)}}}
@@ -10,339 +10,48 @@
 
 #+DESCRIPTION: MAIN README Doc for Harmonic Alchemy Productions - Modular Emacs... This File is NOT intended to be exported to PDF... It is for VIEWING on GitHub.com and Emacs Org-Mode ONLY...
 
-#+BEGIN_COMMENT
+:LATEST_UPDATE: 
+=Last Updated:= <2025-05-17 Sat> /(this template needs work)/
 
-=Setup TAGS:=
+=YOU MAY REMOVE This Drawer= from your own clones of this template if it is bothering you... This drawer is only here as an aid for: HAP Modular Emacs DOC TEMPLATE housekeeping/updating tasks...
 
-   For Cloned Versions of this template, the file/paths below will be relative
-   to your parent project directory and as such, should be all set to your new: ~.../your_README.org_File's/org-templates/~ directory...
+=HOWEVER= you may also wish use the instructions here for the same purpose... i.e., to keep your existing Modular Emacs based org documents /(created with this template)/ in sync with the latest updates of the template they were cloned from... =NOTE:= If you have CHANGED MANY of the settings within your clone since the last template update you are advised to do a VISUAL diff /(i.e., visually line by line, not automated)/ of the two files to see whether you want to switch your settings to the new updated ones... It all depends on your use case... so check that first...
 
-   *SETUPFILE:* ~default-tags.org~ is where tags are defined for this project...
-              If you need to change the category, do it in your cloned version
-              of default-tags.org...  If you rename default-tags.org file from
-              "default" to something more specific, you will need to change the
-              ~#+SETUPFILE: ./org-templates/default-tags.org~ line below to reflect
-              your new file name as well...  You may change any of the tags except
-              important ones to what ever you wish... Read the *:README:* drawer
-              within the file for more information...
-
-              The Existing Tags are useful for most situations within
-              this context, and some of the tags MUST ALWAYS be defined
-              for this LaTeX publishing system to work correctly...
-
-              This file may be used by other ~.org~ files within this
-              Master Folder... If you need to customize them specifically
-              for this ~.org~ file alone, you should copy and rename:
-              ~default-tags.org~ and modify your renamed copy instead...
-              
-              If you do this, you will ALSO need to change the
-              ~#+SETUPFILE: ./org-templates/default-tags.org~
-              directive below to reflect your changed file name...
-
-              /(change the name from/ ~default-tags.org~ /to another name/
-              /and-or replace some (but NOT ALL) of the tags within/
-              /to your own tags... see instructions inside the file)/
-#+END_COMMENT
-
-#+SETUPFILE: ./Docs/org-templates/default-tags.org
-
-#+BEGIN_COMMENT
-
-=LATEST_TEMPLATE_UPDATE=
-  <2023-10-18 Wed>
-
-  =YOU MAY REMOVE This Drawer= from your own clones of this template if
-  it is bothering you... This drawer is used for HAP Modular Emacs
-  DOC TEMPLATES housekeeping...
-
-  =HOWEVER= you may also use it for the same purpose to keep your existing
-  Modular Emacs based org documents in sync with the latest updates of the
-  template they were created from...
+=If you do wish employ this little project management thing... Read On Below...= 
   
-  =If you do wish to do the same... Read On Below...=
+- =INTERNAL USE Instructions:= [1/1] /(END USERS SKIP THIS BULLET)/ 
 
-  - =PUBLIC USE Instructions:= /(FOR CLONES OF THIS TEMPLATE)/
+    This bullet is not for end users... This is /"Note to Self"/ stuff... 
 
-      + [X] *FOR NEWLY CREATED CLONES:*
+     - [ ] =MASTER TEMPLATE ONLY= *Keep The Above Timestamp Up To Date:*
 
-          - [X] =Change this= *:LATEST_UPDATE:* =drawer title:= /(within clones only)/
+         *DO THIS ALWAYS*, JUST AFTER YOU UPDATE THIS SETUPFILE... =DON'T FORGET!=
 
-               Change it to: *:LATEST_TEMPLATE_UPDATE:*
+- =PUBLIC USE Instructions:= [0/3] /(FOR CLONES OF THIS TEMPLATE)/ 
 
-          - [X] *REMOVE INTERNAL USE INSTRUCTIONS*
+     - [ ] *REMOVE INTERNAL USE Instructions* /(and all under the bullet)/ 
 
-               Remove the main =INTERNAL USE Instructions:= bullet above...
-               That bullet is only relevant to the TEMPLATE, /(not clones)/
+          You don't need this in the file you created from a clone of this template...
 
-      + [ ] *FOR ALREADY EXISTING PROJECTS*:
+     - [ ] *UPDATE Last Updated:* ~<timestamp>~ After Making Changes to this file: 
 
-          - [ ] *COMPARE the TIMESTAMPS between THIS TEMPLATE and your PROJECT:*
+          Copies of this file within your own projects will change over time as you try out different OPTIONS etc... You need to keep track of the LAST time this file was changed within your projects... /(and you may have copies of this file in many projects)/ All of them may have different settings after time goes on... The =Last Updated:= heading above lets you know when those changes happened... That knowledge will help you when you are comparing updated template files from the repository... 
 
-              The BOILERPLATE content and meta data within CLONES of this
-              TEMPLATE will get out of sync after a while due to Harmonic
-              Alchemy Modular Emacs version updates etc... Some NEW features
-              or HEADINGS may have been added that make sense to be added
-              to your existing project /(originally a clone of this)/
-        
-              Use the ABOVE timestamp /(within the TEMPLATE and your CLONE)/
-              to see if the clone's BOILERPLATE content needs to be updated
-              /(brought into sync with its template - MERGE)/ and then perform
-              any needed merging/replacing of BOILERPLATE and/or meta data.
-              /(e.g, *:README:* drawers, etc. even this drawer)/
-              
-          - [ ] *Keep ABOVE timestamp within CLONES of this template UP TO DATE:*
+     - [ ] *COMPARE the TIMESTAMPS between THIS TEMPLATE and your CLONES:* 
 
-              =AFTER Completing Above MERGE Step= and your clone's BOILERPLATE
-              content has been brought up to date /(i.e. in sync)/ with its
-              TEMPLATE... Then update the timestamp ABOVE... /(WITHIN YOUR CLONE)/
-              to record the date of its last sync status...
+          ~Org-Mode~ settings and meta data within CLONES of this SETUPFILE TEMPLATE will get out of sync after a while due to Harmonic Alchemy Modular Emacs version updates etc...
 
-#+END_COMMENT
-#+BEGIN_COMMENT
+          Check the TIMESTAMPS /(within this TEMPLATE and your CLONE of it)/ to see if they are different...
 
-=READ_ME_FIRST:=
+          If they are, the clone's settings need to be updated... /(i.e., brought into sync with its template - MERGE)/ You will need to perform any needed merging/replacing of BOILERPLATE and/or meta data. /(e.g, *:README:* drawers, etc.)/
 
-=Instructions:= /(How to Install & Use This Template)/
+          =NOTE:= You may have purposefully changed some of the actual SETTINGS/OPTIONS below so be careful not to sync those OPTIONS with the new template update if the feature of those OPTIONS are NOT your intention... =ALSO=... If the timestamp in your cloned version of this file is NEWER than the template... You don't have to do anything because that was done before already...
 
-To use *HAP_README-Doc-Skeleton.org* Org-Mode README Doc Template for your own projects, =Perform The Following Steps:= 
+          UPDATING the TEMPLATES THEMSELVES is ANOTHER STORY... /(and for another discussion)/ because You will need to do that in a local git branch keeping your own local commits to that branch only so that the master tracking branch can stay clean... /(that way you will have your own set of customized TEMPLATES to use)/ while still having the DEFAULT TEMPLATES in the master branch... /(but lets save that conversation for later ok?)/
+:END:
 
-/Use the org-mode Checkboxes to Help You Keep Track of Progress/
-
-1) [ ] *Clone a Copy of This File:*
-
-     Put your clone within any existing writing or coding project's MASTER
-     FOLDER or anywhere you need to have a simple NON-PUBLISHING README.org
-     file associated with source code or other files...
-
-     Existing MASTER FOLDERS contain other files for other projects as well
-     as the SETUPFILES and MEDIA required by this README.org file...
-
-     =Note:= If you put this file within other Project's existing MASTER FOLDERS
-           that contain existing ~.org~ files /(cloned from other HAP_Doc-Skeleton/
-           /template files)/ Pay CLOSE Attention to Steps 3 & 4 below to decide
-           the correct action to take during those steps...
-
-           =Do NOT OVERWRITE ANY PRE-EXISTING FILES or FOLDERS!!!=
-
-           =OTHERWISE:= If this is a Brand NEW Project, name its NEW MASTER FOLDER to
-                      reflect what this README Doc is about...
-
-     =OTHER Files/Folders May also be placed Within your MASTER FOLDERS...=
-
-2) [ ] =Start Composing your README Content NOW:=
-
-      =NOTE:= You are most likely doing this because you have a project that
-            needs a README File included as the Start Here Document for that
-            project... Therefore... as soon as you are done with the first
-            steps above, =STOP= and immediately begin composing your README
-            Content within the: *📖 README* Binder =NOW=...
-
-      =Add Sub headings below for your README as needed...=
-
-      *btw*, if you Have *Harmonic Alchemy Modular Emacs* fully installed and
-      have enabled the ~Xah-Fly-Keys~ module, you can quickly and easily
-      insert your own /:README:/ drawers for your own purposes by typing:
-      ~SPACE e r~ on an empty line while in command mode... Type those two
-      keys, and the drawer is created for you automatically and opened...
-
-3) [ ] =Finish Setting Up The Rest Of This Project LATER= [0/12]
-
-     - [ ] *Change Title of :LATEST_UPDATE: drawer ABOVE:*
-
-          AFTER Cloning, Change *:LATEST_UPDATE:* drawer title ABOVE
-          /(WITHIN YOUR CLONE, NOT THE ORIGINAL!)/ to *:LATEST_TEMPLATE_UPDATE:*
-          AND Follow Instructions within it...
-
-     - [ ] *Copy/Clone:* ~./media~ /(and contents)/ *to your new project's MASTER FOLDER:*
-
-          Copy this directory /(into your MASTER FOLDER as a sibling of this file).../ 
-          Any external documents or images referenced by your *README Document* 
-          should be placed within this ~./media/~ directory...
-
-          All external links, images, within the boilerplate examples of this
-          template may be used as examples for getting your own images, and 
-          external attachments linked properly...  
-
-          This single ~./media~ directory will serve media and external attachments 
-          for this and other Modular Emacs Document TEMPLATE ~.org~ files that may
-          exist within this MASTER FOLDER now or in the future...
-
-          /(IF/WHEN THEY /WERE/ARE COPIED HERE)/
-
-          =Note:=  You DON'T need to copy the ~./auto/~ directory... That directory
-                 may be automatically created by *AuxTeX* when exporting other ~.org~
-                 files based on *Modular Emacs* TEMPLATES but =NOT= from this ~.org~
-                 file which is not set up for exporting to ~.PDF~...
-
-     - [ ] *Copy/Clone:* ~./org-templates~ /(and all contents)/ *to your MASTER FOLDER:*
-
-          =WARNING!:= To avoid overwriting existing files, DO NOT COPY this
-                    ~./org-templates~ to your MASTER FOLDER IF ONE ALREADY EXISTS!
-
-                    But DO follow the rest of this step so you will know what you
-                    should do...
-
-                    =OTHERWISE For MASTER FOLDERS that DO NOT already have one:=
-                    *Copy this NEW directory to serve as your:
-                    =NEW Readme Doc's MASTER FOLDER=
-                    /(i.e., as a sibling/ /of this README.org file).../
-
-          =Note:= ONLY ONE SETUPFILE Within this directory is called out and
-                included by this ~README.org~ file /(within the file header above)/
-
-          =WARNING:= There may ALREADY be an ~org-templates~ directory existing
-                   within your MASTER FOLDER! In that case you will need to
-                   merge: ~default-tags.org~ /(contained within)/ into your
-                   existing copy of it instead...       
-
-                   =YOU WON'T WANT TO OVERRITE EXISTING FILES= within this 
-                   directory IF you are already using it for OTHER .org Files,
-                   /(and they were modified!!!)/ but you may need to update
-                   existing files you are NOT using currently if/when you
-                   DO start using them...
-
-      Other SETUPFILES within this directory are intended to be used by
-      other document style project templates and are not needed for this:
-      ~README.org~ Document... You may remove the extra files if you wish... 
-
-      =HOWEVER:= If you decide to clone another ~HAP_<book-template>.org~
-               file into this project folder it will pick up its
-               associated SETUPFILES automatically because this folder
-               already exists! Consider this case if/when you decide
-               to delete other UNUSED SETUPFILES... They are small text
-               files not really bothering you...
-
-               /(YOU MAY NEED THEM LATER DEPENDING ON YOUR CASE)/
-
-     - [ ] *Change the* ~#+TITLE:~ *directive at the top of this file:* 
-
-          Change to: /"your Readme Document's REAL Project Title"/
-
-     - [ ] *Change the* ~#+TEXT: Copyright © 2022:~ *directive top of this file:*
-
-          Change to: /"Copyright © your info here"/ You are the copyright
-          owner of your own documents created from clones of these master
-          templates... /(but these MASTER Template Files are to stay under/
-          /Harmonic Alchemy Productions copyright. Any Attribution to me/
-          /for the template structure of your published docs will be/
-          /appreciated... but unnecessary... Thanks! ;-)/
-
-     - [ ] *Change the* ~#+AUTHOR:~ *directive at the top of this file:*
-
-          Change to: /"your NAME"/
-
-     - [ ] *Change the* ~#+EMAIL:~ *directive at the top of this file:*
-
-          Change to: /"your EMAIL"/
-
-     - [ ] *Change the* ~#+TEXT: Created:~ *TIMESTAMP at the top of this file:*
-
-          Put your cursor on the TIMESTAMP: /i.e.,/ <2022-10-05 Wed>
-          and type: ~C-c . . RETURN~ The TIMESTAMP will update to NOW.
-
-          =LEAVE THIS DATE ALONE after Setting It The FIRST Time=
-
-          This Date reflects the time/date that you first created this
-          new document It should NEVER change after that...
-
-     - [ ] *Change the* ~#+TEXT: Last Published:~ *TIMESTAMP at Publish Time:*
-
-           =Don't Change This UNTIL You have completed some MAJOR Release=
-           of the files or code that this ~README.org~ doc refers to and this
-           README reflects the status of that MAJOR UPDATE
-           /(e.g., as published somewhere, in a public repository etc...)/
-
-           Until that publishing time comes leave it alone as:
-           ~<NOT Published>~
-          
-           As soon as this is published as part of a major release, etc,
-           Replace the <unpublished> placeholder with a REAL TIMESTAMP by typing:
-           ~C-c . . RETURN~ The new Last Published: <TIMESTAMP> will appear in
-           place... Do this ANY time you have completed some major update, have
-           published that update and this file needs to reflect that update...
-           /(this will help you keep track)/
-
-     - [ ] *Change the* ~#+FILETAGS:~ *directive at the top of this file:*
-
-          Add your own tags that match the context of your README document...
-
-     - [ ] *Change the* ~#+DESCRIPTION:~ *directive at the top of this file:*
-
-          Compose your ~README~ Doc's Description as a short paragraph here...
-          and then use that to change the directive above...
-
-4) *Purpose of the:* ~./org-templates~  *Directory:*
-
-    The files in here are automatically linked and included within
-    this template. You don't need to change those settings unless you
-    wish to customize the already customized tags...
-
-    /They are allready set up correctly for the General Documents genre,/
-    /and the category is all set as well... But you can and may modify/
-    /the original files to fit your needs.../
-       
-    Other SETUPFILES within this directory are intended to be used by
-    other document style project templates and are not needed for this:
-    ~README.org~ Document... You may remove the extra files if you wish... 
-
-    =HOWEVER:= If you decide to clone another ~HAP_<book-template>.org~
-             file into this project folder it will pick up its
-             associated SETUPFILES automatically because this folder
-             already exists! Consider this case if/when you decide
-             to delete other UNUSED SETUPFILES... They are small text
-             files not really bothering you...
-
-             /(YOU MAY NEED THEM LATER DEPENDING ON YOUR CASE)/
-
-             =AND= You won't want to OVERRITE existing files within this 
-                 directory you are already using, /(and modified!!!)/
-                 but you may need to update existing files you are NOT
-                 using currently if/when you DO start using them...
-
-    The DEFAULT Tags defined for all project templates are useful for
-    most situations and SOME tags are ALWAYS to be defined for this
-    LaTeX publishing system to work.
-
-    /Change the SETUPFILE name ABOVE and within this directory from/
-    ~default-tags.org~ /to another name and-or replace some -BUT NOT ALL-/
-    /of the tags within to your own tags... see instructions inside the/
-    /file.../
-
-5) =This File is NOT SET UP TO BE EXPORTED TO PDF= [0/3]
-
-      You may wish to export OTHER Modular Emacs based .org files within
-      this MASTER FOLDER to PDF format however... To do that follow the
-      instructions within those .org files
-
-6) *Handling Images:*
-
-   Some Images may render too large or too small to fit on a page
-   of an exported version of this file... This is easy do fix within
-   your content on an image by image basis...
-      
-   Use *LaTeX* and/or *HTML* attributes as follows on the images that need
-   to be a different size...
-
-   =NOTE:= Within Org-Mode =if you do NOT see images= but instead a LINK
-         *USE:* ~C-c~ ~C-x~ ~C-V~ to Toggle back to image view...
-
-   =Example:=
-      
-       #+CAPTION: Example larger size .png file 
-       #+NAME:  example:00001
-       #+attr_html: :width 600px
-       #+attr_latex: :width 100px
-      [[./media/lavender-banner.png]]
-
-=These Instructions Were Last Modified:= <2023-10-18 Wed>
-
-If you experience problems =Please Open an ISSUE At:= https://github.com/harmonicalchemy/modular-emacs/issues
-   
-Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas for Improvement... =You guys are my Product Managers=  I am only a User of ONE "seat". Other folks UX metrics are sorely needed!! Thanks!
-
-=Enjoy!= - Alisha Awen
-
-#+END_COMMENT
+#+SETUPFILE: ./Docs/pubOps/org-templates/default-tags.org
+#+SETUPFILE: ./Docs/pubOps/org-templates/gen-doc.org
 
 #+NAME: fig:HAP-Mod-Emacs-Banner-001
 #+CAPTION: HAP - Modular Emacs Page Banner
@@ -357,13 +66,13 @@ Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas
 
 * 💡 Introduction:
 
-*Welcome to Harmonic Alchemy Modular Emacs* ~V3.6.3 (point release) [Q3 2024]~
+*Welcome to Harmonic Alchemy Modular Emacs* ~V3.6.4 (point release) [Q2 2025]~
 
 *Modular Emacs* provides a simple method of dispatching your emacs configuration in steps based on initial choice of modules starting with essentials loading first, and then loading optional user chosen modules...
 
 There are module configurations for: *Dev♺Ops* other configurations for *Pub✎Ops* and yet others for 🎥 *MultiMedia* workstation *IDE* tasks.  Or ALL the Above completely capable of running on older but reasonably powerful *laptops/desktops* /(that would otherwise be considered legacy by most other standards)/.  
 
-In Addition *org-mode* based *Document Templates* are being designed, /(still in beta design mode)/ which when exported via LaTeX, produce the fineset quality typeset PDF or eBook docs which can be printed as hard copy books, or used with eBook readers for a quality reading experience... See: [[#-screenshots][📸 Screenshots:]] below to see examples... /(images to be added later)/
+In Addition *org-mode* based *Document Templates* are being designed, /(still in beta design mode and this styling stuff takes longer than putting on makeup for sure!)/ which when exported via LaTeX, produce the fineset quality typeset PDF or eBook docs which can be printed as hard copy books, or used with eBook readers for a quality reading experience... See: [[#-screenshots][📸 Screenshots:]] below to see examples... /(images to be added later when I finally have some decent things to show - lol)/
 
 Publishing via org-mode/LaTeX is being made as simple as possible, starting with these templates, allowing individual writers to immediately dive into professional publishing and independent book selling without depending on outside typesetting or publishing firms...
 
@@ -371,13 +80,13 @@ Emacs Org-Mode also makes it possible to do [[https://en.wikipedia.org/wiki/Lite
 
 I am a systems architect, dev♺Ops engineer, computer scientist, composer/musician, sound designer, writer/publisher.  I wear a lot of hats! My Emacs needs to wear a lot of hats as well!  The central focus of *Modular Emacs* is to build empowering features into *Emacs* utilizing a modular framework that facilitates all the above without becoming an over complicated mess to manage! "*Good Luck With That*" :octocat:
 
-We are still in V3 BETA /(point release)/ as many changes are still being made to the LaTeX export configurations... So far the Fiction Book Template is Exporting fairly nicely with few or no errors /(depending on added content within clones - the bare bones template renders nicely without errors now knock-on-wood!)/
+We are still in V3 BETA /(point release mode)/ as many changes are still being made to the LaTeX export configurations... and many changes are being made to improve Emacs operations, /(i.e., some unruly packages will be removed and replaced with more respectful packages that do the job precisely without going way out on a NON EMACS limb)/...
+
+So far the Fiction Book Template is Exporting fairly nicely with few or no errors /(depending on added content within clones - the bare bones template renders nicely without errors now knock-on-wood!)/
 
 When these org-mode export design changes are done, AND all existing Document Templates in PubOps folder are producing nice looking PDF docs, the V3 beta period /(point release)/ will end and that COMMIT will be tagged as the NEW *Official *V4.0 Release* 
 
-Also, These README files are being converted from markdown to .org files which
-IMHO is a more professional way to document... Github renders .org files to html
-nicely, and you can add a TOC that renders nicely as well... So far only this README file and a few others have been converted... The old README.md file can be found in the ~./Docs~ directory...
+Also, These README files are being converted from markdown to .org files which IMHO is a more professional way to document... Github renders .org files to html nicely, and you can add a TOC that renders nicely as well... So far only this README file and a few others have been converted... The old README.md file can be found in the ~./Docs~ directory...
 
 All the rest of the markdown files within the Docs directory are being updated one at a time... TBD...
 
@@ -425,11 +134,19 @@ All the rest of the markdown files within the Docs directory are being updated o
      - [[#-2023][📅 2023:]]
      - [[#-2024][📅 2024:]]
 - [[#-meta-usage--templates][📋 Meta: /(Usage & Templates)/]]
+     - [[#-introduction-1][📄 Introduction:]]
+          - [[#emacs-shorthand-command-key-notation][Emacs Shorthand Command Key Notation:]]
+          - [[#important-note-for-mac-users][Important Note For Mac Users:]]
+          - [[#org-mode-timestamps-and-clocking][Org Mode Timestamps and Clocking:]]
+     - [[#-how-to][❔ How To:]]
+          - [[#create-new-log-entry-within-the--begin-log-binder-04][Create New Log Entry within the 📒 Begin Log: binder:]]
+               - [[#edit-compose-new-log-entry][Edit-Compose New LOG Entry:]]
+               - [[#enter-new-log-entry-details][Enter New LOG Entry Details:]]
      - [[#-templates][⎘ Templates:]]
           - [[#new--generic-log-entry-general-log-entry-template][NEW 🗓 Generic Log Entry /(General Log Entry Template)/]]
                - [[#new--reference][NEW 📚 Reference:]]
                - [[#new--time-card][NEW ⏱ Time Card:]]
-               - [[#new--summary-03][NEW 📃 Summary:]]
+               - [[#new--summary-14][NEW 📃 Summary:]]
                - [[#new--details][NEW 📰 Details:]]
 
 * 📜 History & Purpose: 
@@ -1214,190 +931,226 @@ No Logs So far... This feature is under evaluation and may end up not being used
 
 /Not Here Yet but keep logging... The New Year will be here soon enough!/
 
-* 📋 Meta: /(Usage & Templates)/
-** ⎘ Templates:
-*** NEW 🗓 Generic Log Entry /(General Log Entry Template)/
-<2021-03-29 Mon>
-#+begin_comment
+* 📋 Meta: /(Usage & Templates)/ 
+** 📄 Introduction: 
 
-=README:=
+Use this Standard README /(template)/ as a multi purpose README document as a Start Here First Document for any kind of project...
 
-   - *Go To One of the HEADINGS Below:* /(Summary, Details, or Sub Headings)/
+I stopped using Markdown files for this purpose a few years ago... This makes total sense as *Org-Mode* was designed exclusively for such things! *Markdown* is great for composing content intended for web pages etc.  But =Emacs Org Mode is Vastly Superior as a Publishing Environment=, with many features and power, completely agnostic of final publishing format... Whereas markdown mode excels doing one thing only... Translating author structured plain text into beautiful web pages... /(which is a good thing)/
 
-      =Punch the Time Clock= At the heading And then begin working on a task related to that Heading... =Your Time IS being Recorded Now= 
+I finally bit the long curve bullet and learned Emacs Org Mode /(after many many many years of using Emacs without it!)/ Today, looking back with current knowledge to me is like going back to a /"*Dec VT220* green screen *dumb terminal*"/ after experiencing *X Windows* on a Big *HP-UX Workstation!*
 
-   - =Use These Commands:= /as you work to keep track your time.../
+Yeah, that's a personal story from the past, lol... All you Mac users out there, please realize that your beautiful Apple desktop is in fact an *HP-UX Motif X-Windows widget set clone*!  That's what Steve Jobs believed to be the best X-Windows tool-kit of the day /(when he was building the NeXT computer)/...  So... Yup he copied that! The Applications Doc at the bottom of your screen is a dead giveaway. Hewlet Packard was first to use such UI concepts... /(back before the dawning of the web we loved those HPUX Workstations!)/
 
-      + *Clock IN:* ~C-c C-x C-i~ 
+*** Emacs Shorthand Command Key Notation:
 
-                    /(Begin OR Resume Clocking Current task)/
+The command key conventions used in the instructions below, /(as well as all *Harmonic Alchemy Productions* docs)/, follow *Standard Emacs* command key naming conventions.
 
-                    This creates a new :CLOCKING: Time Card Entry just
-                    underneath the HEADING...
+Official GNU Emacs documentation uses a shorthand notation to indicate the *Ctrl* key as an upper case *C-* (/with minus appended/). Upper case *M-* (/with minus appended/) is the shorthand notation for the Emacs *META* key...
 
-                    Do this just before starting work on the task... 
-                    Be in control of your life!
+*** Important Note For Mac Users:
 
-                    After doing the above, you can go away and do some 
-                    work, leaving this heading, log note, etc. to visit 
-                    other files and/or work on them etc. The clock will 
-                    be recording your time all the while... You will see 
-                    in your mode line the elapsed clock time ticking away 
-                    as you work on a task /(hopefully related to this clock!)/
-                    and NOT Yac Shaving or being sidetracked!!!
+On Mac OS, *Modular Emacs* maps your *Ctrl* key to the *Apple Command* key. Emacs *META* is mapped to both *Alt* and *Ctrl* keys... Outside of Emacs all those keys function normally.  
 
-      + *RETURN to Clock Heading:* ~C-c C-x C-j~
+Therefore, for Mac users, anytime you either see *C-* or *Ctrl* below, use your *Apple Command* key for that when using Modular Emacs.  Anytime you see either *M-* or *META* below, use *Alt* or *Ctrl* keys for that when using Modular Emacs. 
 
-                        /Go back to the place where you started the clock.../
+Anytime you are using Modular Emacs following instructions from standard vanilla Emacs docs, keep in mind your ~Ctrl~ and ~META~ keys are not /"standard"/ anymore and you must make a mental translation.  Beyond that, you will be fine following other emacs tutorials etc.  Hey... you Mac enthusiasts are used to that kind of /"being different"/ stuff anyway, right? Being one of /"the rest of us"/ that is... What the heck does that mean anyway? LOL
 
-                        You do this after you have worked on a task for a 
-                        while and you need to come back to update the item's
-                        info etc., and/or stop the clock before going off to 
-                        do something else unrelated to the log entry...
+The above key assignments were done to get the *Emacs C-* key closer to the space bar where it can be activated with your left thumb instead of contorting to get at it with your pinkie finger. This makes using *Xah Fly Keys* even easier to use and less stressful on your fingers...
 
-      + *Clock OUT:* ~C-c C-x C-o~ /(to stop clocking your time on task)/
+In the Official Emacs documentation you will commonly find key command notations such as *C-x* or *M-x*... This means: Hold the *Ctrl* /(or *META*)/ key down while typing the *x* key.  
 
-                      This *Finalizes the Time Card Entry* within:
-                      ~:CLOCKING:~ /(created earlier when you started the/ 
-                      /clock)/...
+Any time you see this notation, regardless of what key may be connected to it with a dash /(e.g., *C-c*, *M-5*, etc.)/, this means to hold the *Ctrl*-or-*META* key down while you press the other key connected to it with the dash... If you have a command that includes many *C-key* or *M-key* commands in succession simply hold the *Ctrl*-or-*META* key down the entire time you type the other keys and then let go...
 
-                      The Clock Entry changes showing start timestamp, end timestamp, and total time worked during this segment...  
+If you see other keys alone separated by a space after the *C-x* or *M-x* /(e.g., C-x *d*, M-x *b*, etc.)/ this means to type that key /AFTER/ letting go of the *Ctrl*-or-*META* key...
 
-                      =Please DON'T Forget= /Like I often do, LOL.../ i.e.,
-                      Leaving a clock running all day by accident, or worse,
-                      leave it dangling with the file closed only to open it
-                      again and get that nasty *Org-Mode Message:* /"What do/
-                      /you want to do with this?"/ If you do something like 
-                      that you can always come back and directly edit the 
-                      clock times by hand to amend them...  After changing 
-                      clock times or dates, etc... Whatever...
+*Got that?* That's the key notation system we use here... It is all standard Emacs...  The above paragraphs are mostly for the benefit of new Emacs users! And there is more to learn below. If you are an Emacs/Org-Mode veteran please bear with us...
 
-                      ="Onward We Row Mates... Through the log jam!"=
+\newpage
 
-      + *Update Time Card Entry:* ~C-c C-c~ 
+*** Org Mode Timestamps and Clocking:
 
-                  This command will change the total time at the end showing 
-                  your new calculated time...
+This Template utilizes the default *Org-Mode:* "*C-c* ." command /(i.e., That's Ctrl-c and then type a dot. This Enters a timestamp range at the cursor position)/. The command employs *org-evaluate-time-range* to compute time on task.  This is useful for timesheets etc. 
 
-                  If you need to go away and do something else before finishing this task, you can do so after clocking out... When you come back simply clock back in again to start another Time Card Entry just as before... The new time card entry will appear above the earlier one within the ~:CLOCKING:~ drawer... When you clock out of this task it will look just like the entry below it with a total time worked tagged on the end...
+In addition, the *Log Entry (template)* stores and tracks *Org-Mode :CLOCKING:* entries and displays results in a *Time Card Table* with total time computed... 
 
-      + *Clock Out & Mark Items Done:* ~C-c C-t~
+Common time clocking commands are defined within the *Log Entry (template)* itself. Any time you need to look up clocking commands, open the *:README:* drawer under the *Log Entry (template)* heading by placing your cursor over it and hitting *TAB*.
 
-            When you are all done with a Log Entry use the above key 
-            command to mark its Heading *TODO* tag to: *DONE* /(Most of the/ 
-            /time this will ALSO clock you out if you are still clocked/ 
-            /into the item... But not allways in my experience.../  
-            So make sure you are also clocked OUT of an Item After 
-            marking it DONE... Type: ~C-c C-x C-j~ to check this...
-            /(if no running clock it will tell you and place your/
-            /cursor at the heading where you LAST CLOCKED OUT)/
+Additional commands for using *Org-Mode* with Modular Emacs will be explained here if needed, as well as other *Harmonic Alchemy Modular Emacs Templates* that get produced in the future...
 
-      + ~C-c C-x C-q~ *Cancel Current Clock:* /(in case of accident)/
+\newpage
 
-                      This removes currently running clock and forgets 
-                      any time accrued or associated with it...
+** ❔ How To: 
+*** Create New Log Entry within the 📒 Begin Log: binder: [0/4] 
 
-      + ~C-c C-x C-d~ *Display Clocking Info:* 
+- [ ] =Clone:= *NEW* 🗓 *Generic Log Entry* /(from:/ ⎘ *Templates:* /binder)/ 
+  
+- [ ] =Select the Heading= /(named above)/ from the ⎘ *Templates:* binder,  
+             using normal Emacs selection methods. i.e., Type ~t~ key to set the mark for selection, /(xah-fly-keys Command/ /Mode)/ or use ~C-SPACE~ /(normal Emacs)/, and move the point to get the entire heading, and all of its contents, but NOTHING else... and copy it...
 
-                      /This will show elapsed times to the right of headings.../
-                      =Warning!= Using this command will CLUTTER ALL the headings
-                                within your org file with those timestamps!!!
+             =Note:= Before Copying Selected Text, ensure your cursor is at the end of it BUT not be part of any items after it... Placing your cursor on the first column of the next line will include the invisible new-line character which is what you want, but any text directly under the cursor on the next line will not be copied...  Later, after pasting this text somewhere else, your cursor will end up sitting on the first column of a blank line under the pasted text. /(exactly as intended)/
+          
+- [ ] =Complete the Copy Operation= Type ~c~ /(xah-fly-keys Command Mode)/. 
+            This will save the selection for pasting later, /(the highlighted text will go/ /back to normal)/... You should have gotten only the Single LOG Entry with ALL its contents, BUT nothing else below it...
 
-   - Once all of this has become routine for you, =go ahead and remove this= ~README~ =drawer from this template=... That way it does not get copied when you need to clone new log entries...
+            =Note:= If you type: "*spacebar t*" /(xah-fly-keys leader key command)/ it will show you the contents of your paste buffer...  You can see the LAST item you copied in there AT THE TOP... To get out of the paste buffer view, type: "*spacebar u*" and it will return you to where you were before...
 
-#+end_comment
+- [ ] =Paste Cloned LOG Entry:= [0/2] 
+
+     - [ ] =Advance cursor= to a blank line just below the LAST Most Recent LOG entry 
+              under heading *📅 2022* within the *📒 Begin Log:* section, and press *ENTER* a couple times to get your cursor on a fresh clean line with some extra space above and below it... /(Below any previously time stamped entries you may already/ /have placed)/...
+
+     - [ ] =Press:= ~v~ /(xah-fly-keys Command Mode)/ 
+             to paste your cloned Log Entry template... If you find out that what you copied also included some unwanted text directly below it, no problems... Just delete that part now... 
+
+             =Note:= If you accidentally copied one or more previously invisible bullets to column one on a blank line they will create an invisible "ghost" heading that you will now need to delete...
+
+             You will know this if you see an org-ellipsis "⤵" symbol on a line by itself indicating a heading but no text... Simply delete that whole line and it will go away... Now you are ready to compose your new log entry...
+
+**** Edit-Compose New LOG Entry: 
+
+=Note:= If this is your first time using this log, don't bother cloning a NEW log entry as there is a dummy boilerplate placeholder Log Entry ALREADY in place for you to use... /(initially there as an example)/
+
+The instructions below for modifying the Boilerplate Log Entry, or Editing a new Cloned Log Entry Template are pretty much the same... /(differences will be noted in instructions below)/
+
+- [ ] =Place cursor directly on the existing timestamp= 
+         of the NEW Log Entry, and enter the key binding: ~C-c .~ /(i.e., press/ ~Ctrl~ /key while holding/ ~c~ /and then type a dot ~.~ /)/ A date chooser panel will pop up...
+
+- [ ] =Type one more dot:= ~.~ 
+         to force the calendar selection to the current time and date and then, Press ~ENTER~ to accept your choice... /This will update the existing older timestamp with/ /the current date/time.../ Check to make sure the timestamp was     properly updated and then move on to the next step... This timestamp will not be updated after that.  It records the initial time of your new log entry to the Day and time you first created it...
+
+- [ ] =You are now ready to start= 
+         making entries within your New Log Entry... Your timestamp indicates the present, /-and-/ you are all set to begin recording time...
+
+- [ ] =Follow the= ~:README:~ 
+         directions within the Time Card section contained within your fresh new log entry to learn how to /"clock in"/ and /"clock out"/ of your log entry as you work on the tasks...
+
+**** Enter New LOG Entry Details: 
+
+Two sub headings have been provided for your use /(if you need them)/. However, you may structure your log entries any way you wish.  The two provided headings:  *Summary* and *Details* are simply suggestions to help make your log entries a bit more organized...
+
+The *Summary* heading could be used to log the main executive summary points, /(which you would include in the exported PDF as a report to give to your boss or clients)/. 
+
+Conversely, the *Details* heading could contain a complete, thorough log of your work, which would be excluded from the final PDF report.  Everything under *Details* heading would be extra information that you don't want to bother your clients or boss with /(unless they ask for more detail of course)/. In that case, you will have it all recorded and organized for easy access later if needed...
+
+Place the *:noexport:* tag at the end of any org outline heading to exclude it and all its children from the PDF upon export...  You can add as much detail as you need within these excluded sections without cluttering up your final PDF.  The entire main heading: *How to Use this Template:* is already excluded from the final PDF, so it can be left in and your PDF will only include the *Begin Log:* section...
+
+** ⎘ Templates: 
+*** NEW 🗓 Generic Log Entry /(General Log Entry Template)/ 
+<2021-03-29 Mon> 
+:README: 
+- *Go To One of the HEADINGS Below:* /(Summary, Details, or Sub Headings)/ 
+
+      =Punch the Time Clock= At the heading And then begin working on a task related to that Heading... =Your Time IS being Recorded NOW= 
+
+- =Use These Commands:= /as you work to keep track your time.../ 
+
+     - *Clock IN:* ~C-c C-x C-i~ 
+
+          /(Begin OR Resume Clocking Current task)/
+
+           This creates a new :CLOCKING: Time Card Entry just underneath the HEADING...
+
+           Do this just before starting work on the task... Be in control of your life!
+
+           After doing the above, you can go away and do some work, leaving this heading, log note, etc. to visit other files and/or work on them etc. The clock will be recording your time all the while... You will see in your mode line the elapsed clock time ticking away as you work on a task /(hopefully related to this clock!)/ and NOT Yac Shaving or being sidetracked!!!
+
+     - *RETURN to Clock Heading:* ~C-c C-x C-j~ 
+
+          /Go back to the place where you started the clock.../
+
+          You do this after you have worked on a task for a while and you need to come back to update the item's info etc., and/or stop the clock before going off to do something else unrelated to the log entry...
+
+     - *Clock OUT:* ~C-c C-x C-o~ /(to stop clocking your time on task)/ 
+
+         This *Finalizes the Time Card Entry* within: ~:CLOCKING:~ /(created earlier when you started the/ /clock)/...
+
+         The Clock Entry changes showing start timestamp, end timestamp, and total time worked during this segment...  
+
+          =Please DON'T Forget= /Like I often do, LOL.../ i.e., Leaving a clock running all day by accident, or worse, leave it dangling with the file closed only to open it again and get that nasty *Org-Mode Message:* /"What do/ /you want to do with this?"/ If you do something like that you can always come back and directly edit the clock times by hand to amend them...  After changing clock times or dates, etc... Whatever...
+
+          ="Onward We Row Mates... Through the log jam!"=
+
+     - *Update Time Card Entry:* ~C-c C-c~ 
+
+         This command will change the total time at the end showing your new calculated time...
+
+         If you need to go away and do something else before finishing this task, you can do so after clocking out... When you come back simply clock back in again to start another Time Card Entry just as before... The new time card entry will appear above the earlier one within the ~:CLOCKING:~ drawer... When you clock out of this task it will look just like the entry below it with a total time worked tagged on the end...
+
+     - *Clock Out & Mark Items Done:* ~C-c C-t~ 
+
+         When you are all done with a Log Entry use the above key command to mark its Heading *TODO* tag to: *DONE* /(Most of the/ /time this will ALSO clock you out if you are still clocked/ /into the item... But not allways in my experience.../ So make sure you are also clocked OUT of an Item After            marking it DONE... Type: ~C-c C-x C-j~ to check this... /(if no running clock it will tell you and place your/ /cursor at the heading where you LAST CLOCKED OUT)/
+
+     - ~C-c C-x C-q~ *Cancel Current Clock:* /(in case of accident)/ 
+
+         This removes currently running clock and forgets any time accrued or associated with it...
+
+     - ~C-c C-x C-d~ *Display Clocking Info:* 
+
+         /This will show elapsed times to the right of headings.../
+         
+         =Warning!= Using this command will CLUTTER ALL the headings within your org file with those timestamps!!!
+
+- =Once All Of This Has Become Routine:= 
+
+    Now that you got all this memorized /(you wizard!)/, =go ahead and remove this= ~README~ =drawer from this template=... That way it does not get copied when you need to clone new log entries...
+:END:
 
 This Log Entry is about: Yadda... Yadda... Yadda...
 
-**** NEW 📚 Reference:
-#+begin_comment
+**** NEW 📚 Reference: 
+:README: 
+=Org Mode Links Tip:= 
 
-=README:=
+- To Create a Link Type: ~C-c C-l~ /(then paste: ~link~ & type: "description")/ 
+     =-OR-= Simply Copy/Paste BOILERPLATE: /(use placeholders below)/ And Fill Them In Manually... Copy/Paste more placeholders as needed to create more links...
 
-   =Org Mode Links Tip:=
+- To Open a Link Type: ~C-c C-o~ 
 
-      + To Create a Link Type: ~C-c C-l~ 
-         /(then paste: ~link~ & type: "description")/
+- To EXPAND a Link Type: ~SPACE b~ or: ~M-x org-toggle-link-display~ 
 
-         =-OR-= Simply Copy/Paste BOILERPLATE:
-              /(use placeholders below)/
-              And Fill Them In Manually... 
-              Copy/Paste more placeholders as
-              needed to create more links...
+=BOILERPLATE:= /(clone to add more ref links)/ 
 
-      + To Open a Link Type: ~C-c C-o~
+- *Heading:* [[~/.GIT/My-Docs/][MY DOCS]] /(comment)/ 
 
-      + To EXPAND a Link Type: ~SPACE b~
-         or: ~M-x org-toggle-link-display~
+- *Heading:* [[link][Link NAME] ] /(comment)/ 
 
-   =BOILERPLATE:= /(clone to add more ref links)/
+- [[yt:aB1cD2eF3gH ][TITLE ] ] *Description:* /(YouTube)/ 
 
-   ☞ *Heading:* [[~/.GIT/My-Docs/][MY DOCS]] /(comment)/
-
-   - *Heading:* [[link][Link NAME] ] /(comment)/
-
-   ☞ [[yt:aB1cD2eF3gH ][TITLE ] ] *Description:* /(YouTube)/
-
-   - [[link][Link Name] ] *Heading:* /(comment)/
+- [[link][Link Name] ] *Heading:* /(comment)/ 
    
-   - *_:* [[][] ] /(yadda... yadda... yadda...)/
+- *_:* [[][] ] /(yadda... yadda... yadda...)/ 
+:END:
 
-   - [[][] ] /(_)/
+- *Link to Project:* [[][] ] /(comment)/ 
 
-   [[junk][JUNK]]  /(This is a stupid BUG workaround/ /for org-mode link/
-         /expansion/compression... If you invoke:/ ~org-toggle-link-display~
-         /you will notice this JUNK link DOES NOT compress to a clickable/
-         /link title alone.../
-         
-         /I am not sure if this is due to my Emacs Config or a bug within/
-         *Org-Mode* /itself.../
+**** NEW ⏱ Time Card: 
 
-         /I put this workaround in here because if it is not here,/
-         /SOME of your external file links created below may not/
-         /compress after expansion, even though thy are GOOD links!/
+#+BEGIN: clocktable :scope tree3 :maxlevel 6 :tstart "<-1w>" :tend "<+1m>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3 
 
-         /Leaving this JUNK link in here acts like a scapegoat/
-         /so that your real links below will all compress/expand/
-         /normally... I am NOT SURE WHY THIS WORKS??? I'm to busy/
-         /to do anything beyond hacking at this point.../
-         
-         ~org-lint~ /will detect JUNK above... Ignore that warning.../
-                  /It's my "METHOD of MADNESS" %^)/
-
-#+end_comment
-
-- *Link to Project:* [[][] ] /(comment)/
-
-**** NEW ⏱ Time Card:
-
-#+BEGIN: clocktable :scope tree3 :maxlevel 6 :tstart "<-1w>" :tend "<+1m>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3
 #+END:
 
-**** NEW 📃 Summary: [0/3]
-#+begin_comment
+**** NEW 📃 Summary: [1/4] 
+:README: 
+This Summary is mostly to help you find things later when you cannot remember when or where is was done... If you go to the top of this file and expand all headings to show ALL content, then do a search on "~Summary:~" you will be able to quickly scroll through and scan these summaries quickly to find what you were looking for... 
 
-=README:=
+Also the *Time Card* /displayed above/ each search hit will give more clues by showing important headings you worked on...
 
-   This Summary is mostly to help you find things later when you cannot remember when or where is was done... If you go to the top of this file and expand all headings to show ALL content, then do a search on "~Summary:~" you will be able to quickly scroll through and scan these summaries quickly to find what you were looking for... 
+Below is an optional list /(that could also provide links)./ This list could be used to itemize things you worked on, but I personally find it easier to simply write a short one or two line description containing important keywords right here and nothing more. I think that is more useful...
+:END: 
 
-   Also the *Time Card* /displayed above/ each search hit will give more clues by showing important headings you worked on...
+Yadda... Yadda... Yadda... 
 
-   Below is an optional list /(that could also provide links)./ This list could be used to itemize things you worked on, but I personally find it easier to simply write a short one or two line description containing important keywords right here and nothing more. I think that is more useful...
+1. [X] *New Item 1:* /(this represents a completed item)/ 
 
-#+end_comment
+2. [-] *New Item 2:* /(this represents a currently "radio active" item)/ 
 
-Yadda... Yadda... Yadda...
+3. [ ] *New Item 3:* /(this represents a new item not worked on yet)/ 
 
-1. [X] *New Item 1:* /(this represents a completed item)/
+3. [ ] *New Item:* /(copy/clone more of these as needed)/ 
 
-2. [-] *New Item 2:* /(this represents a currently "radio active" item)/
-
-3. [ ] *New Item 3:* /(this represents a new item not worked on yet)/
-
-3. [ ] *New Item:* /(copy/clone more of these as needed)/
-
-**** NEW 📰 Details:
-***** NEW New Item 1 /(placeholder)/ [0/3]
+**** NEW 📰 Details: 
+***** NEW New Item 1 /(placeholder)/ [0/0] 
 
 New Item Details... Yadda... Yadda... Yadda...
 
@@ -1408,7 +1161,7 @@ Add sub headings as needed...
 Don't forget to clock-in to HEADINGS while you work on them...
 AND... Don't forget to Clock OUT when you are DONE... %^)
 
-***** NEW New Item 2 /(placeholder)/ [0/3]
+***** NEW New Item 2 /(placeholder)/ [0/0] 
 
 New Item Details... Yadda... Yadda... Yadda...
 
@@ -1419,7 +1172,7 @@ Add sub headings as needed...
 Don't forget to clock-in to HEADINGS while you work on them...
 AND... Don't forget to Clock OUT when you are DONE... %^)
 
-***** NEW New Item 3 /(placeholder)/ [0/3]
+***** NEW New Item 3 /(placeholder)/ [0/0] 
 
 New Item Details... Yadda... Yadda... Yadda...
 

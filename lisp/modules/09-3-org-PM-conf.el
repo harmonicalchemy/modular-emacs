@@ -18,7 +18,7 @@
 ;;        for proper operation of HAP Modular Emacs custom functionality within
 ;;        org-mode.
 ;;
-;; NEW ORG USERS NOTE: If you don't allready have an org-files system structure
+;; NEW ORG USERS NOTE: If you don't already have an org-files system structure
 ;; set up, it is highly recommended to create your directory structure exactly as
 ;; below, (replacing "Your-Org-Docs-dir" with the directory path where you will
 ;; be setting up the structure below it... The symbol defined above:

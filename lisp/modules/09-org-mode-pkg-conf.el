@@ -331,9 +331,9 @@
     ;; ELSE print warning about buffer not being an Org File...
     (progn
       (message "Warning: You are NOT visiting a .ORG file!"))))
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Modular Emacs - me_org-toggle-blocks Function:
 ;;
 ;;  With this in place, org-mode collapses SRC blocks by default and lets you
@@ -347,6 +347,13 @@
       (org-show-block-all)
     (org-hide-block-all))
   (setq-local me--org-blocks-hidden (not me--org-blocks-hidden)))
+
+;; *ALSO* TREAT PLAIN LIST ITEMS AS LOW-LEVEL HEADLINES:
+;; REF: https://emacs.stackexchange.com/questions/5544/how-to-make-ordered-lists-collapsed-by-default-in-org-mode
+;; (LISTS are COLLAPSED by DEFAULT Just Like Headings)
+
+(setq org-cycle-include-plain-lists 'integrate)
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Modular Emacs - Fancy Org View - org-mode Hook Function:

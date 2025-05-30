@@ -170,26 +170,42 @@
     ("export"        . ?x)     ;; FLAG: "Export Outline Tree"
     (:endgroup       . nil)    ;; END Group:
 
+    ;;;
+    ;; TOC-ORG TAGS (for Table Of Contents in Org Files, GitHub, etc...
+    
+    (:startgroup     . nil)    ;; BEGIN: Mutually Exclusive Group:
+    ("TOC"           . ?4)     ;; FLAG: TOC-Org (DEFAULT 2 levels deep)
+    ("TOC_3"         . ?5)     ;; FLAG: TOC-Org (3 levels deep)
+    (:endgroup       . nil)    ;; END Group:
+
+    ;; SPECIAL TOC-ORG tags:
+    ;; Headings tagged with :noexport: will be excluded from the TOC. If you want to preserve
+    ;; the heading, but strip its children (for changelog entries, for example), you can tag it
+    ;; :noexport_1: (by analogy, you can use :noexport_2:, :noexport_3:, etc. for children of
+    ;; deeper levels). Note, though, :noexport: has a similar meaning in org-mode, which I hope
+    ;; is a Good Thing (tm). However, :noexport_1: and friends won’t be recognized by org-mode
+    ;; as anything special. Look at org-export-exclude-tags variable for more detail...
+
     (:startgroup     . nil)    ;; BEGIN: Mutually Exclusive Group:
     ("noexport_1"    . ?1)     ;; FLAG: "TOC ORG 1 heading deep"
     ("export_2"      . ?2)     ;; FLAG: "TOC ORG 2 headings deep"
     ("export_3"      . ?3)     ;; FLAG: "TOC ORG 3 headings deep"
     (:endgroup       . nil)    ;; END Group:
 
+    ;; END: TOC-ORG TAGS
+    ;;;
+
     (:startgroup     . nil)    ;; BEGIN: Mutually Exclusive Group:
     ("home"          . ?H)     ;; personal finance, health, leisure, crafts, etc.
-    ("work"          . ?W)     ;; software dev, computers, clients, community work, sales
-    ("music"         . ?M)     ;; Music Sound Composing, Performing, Engineering, Research
+    ("unca"          . ?W)     ;; software dev, computers, clients, community work, sales
+    ("alisha"         . ?M)     ;; Music Sound Composing, Performing, Engineering, Research
     (:endgroup       . nil)    ;; END Group:
 
     (:startgroup     . nil)    ;; BEGIN: Mutually Exclusive Group:
-    ("sysAdmin"      . ?s)     ;; standard defined sub Category of "work"
-    ("devOps"        . ?o)     ;; standard defined sub Category of "work"
-    (:endgroup       . nil)    ;; END Group:
-
-    (:startgroup     . nil)    ;; BEGIN: Mutually Exclusive Group:
-    ("TOC"           . ?4)     ;; FLAG: TOC-Org (DEFAULT 2 levels deep)
-    ("TOC_3"         . ?5)     ;; FLAG: TOC-Org (3 levels deep)
+    ("sysadmin"      . ?s)     ;; defined sub Category for "Sys$Admin"
+    ("devops"        . ?o)     ;; defined sub Category of "dev⚒OPS"
+    ("pubops"        . ?o)     ;; defined sub Category of "pub📚Ops"
+    ("daw"           . ?o)     ;; defined sub Category of "DAW🎧"
     (:endgroup       . nil)    ;; END Group:
 
     (:startgroup     . nil)    ;; BEGIN: Mutually Exclusive Group: 

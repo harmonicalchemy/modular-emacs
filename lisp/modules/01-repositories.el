@@ -59,13 +59,6 @@
 ;(add-to-list 'package-pinned-packages '(clj-refactor . "melpa-unstable") t)
 
 ;;;;
-;; Add Trusted CAs from Openssl cert.pem in an attempt to stop the
-;; MacOS problem with SSL failing to verify connection to elpa.org...
-
-(require 'gnutls)
-(add-to-list 'gnutls-trustfiles "/opt/local/etc/openssl/cert.pem")
-
-;;;;
 ;; Always try to load the newest up-to-date packages...
 
 (setq load-prefer-newer t)

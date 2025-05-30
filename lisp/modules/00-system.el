@@ -26,7 +26,15 @@
 (setq epg-gpg-program "gpg")
 
 ;;;
-;; System Constants: (Sonnet XVIII rebuttal - no rhyming yet. maybe later)
+;; FORCE EMACS to USE SSL/TLS Certs from MacPorts OPENSSL:
+
+(require 'gnutls)
+(add-to-list 'gnutls-trustfiles "/opt/local/etc/openssl/cert.pem")
+
+;;;
+;; SYSTEM CONSTANTS:
+;;
+;;   Sonnet XVIII Rebuttal - (no rhyming yet. maybe later)
 ;;
 ;;   There are no constants in life,
 ;;   Nothing to compare,
@@ -36,13 +44,14 @@
 ;;   Even our dead contain life not ours,
 ;;   Only timeless skeletons remain,
 ;;   Fading and soon forgotten,
+;;
 ;;   But the living, they move on,
 ;;   Engaged in the flux,
 ;;   Intoxicated from fair to fair,
 ;;   New memories emerge,
 ;;   Old memories lost,
-;;   forever now new...
-;;                  - Alisha Awen
+;;   forever now... forever new... something completely different...
+;;      - Alisha Awen ("OK... Right... NEXT!!" - Auditions Judge)
 
 (defconst ME--DARWIN (eq system-type 'darwin))
 (defconst ME--LINUX (eq system-type 'gnu/linux))

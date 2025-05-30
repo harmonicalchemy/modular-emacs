@@ -1,18 +1,20 @@
 # -**- mode: org; coding: utf-8 -**-
-#+TITLE: Simple README with Log Notebook Skeleton
-#+TEXT: Copyright © 2024 by Alisha Awen Sheppard, Harmonic Alchemy Productions, & Others
+#+TITLE: Simple README Skeleton with LOG
+#+TEXT: Copyright © 2021-2025 by Harmonic Alchemy Productions & Others
 #+AUTHOR: Alisha Awen - Harmonic Alchemy Productions (HAP) 
 #+EMAIL: harmonicalchemy@proton.me 
 #+DATE: {{{time(%A %Y-%b-%d)}}} 
 #+TEXT: Created: <2021-07-22 Thu> 
 #+TEXT: Last Published: <NOT Published> 
-#+FILETAGS: README templates unpublished logging time_tracking 
+#+FILETAGS: docs drafts templates 
 
-#+DESCRIPTION: Short and sweet README with attached Log Notebook for any project or repository that needs such a thing... Great FOR GITHUB PAGES!!! The ORG TOC renders in Github nicely!! This ORG file is NOT intended to be exported with LaTeX... This template's sole purpose is to provide a traditional README startup document, for you to use, (usually contained with source code, but there are many other applications)... THIS is NOT for a BOOK, or PDF, or anything else that may need to be typeset for publishing... The only intended export option for this file is HTML (for websites - BUT GitHub Renders this file AS IS nicely)... Custom tailor this to fit your needs. Change the tags in default-tags.org (referenced below) as well.. to fit your needs... Enjoy!
+#+DESCRIPTION: Short and Sweet README with attached Log Notebook for any project or repository that needs such a thing... Great FOR GITHUB PAGES!!! The ORG TOC renders in GitHub nicely!! This ORG file is NOT intended to be exported with LaTeX... This template's sole purpose is to provide a traditional README startup document, for you to use, (usually contained with source code, but there are many other applications)... THIS is NOT for a BOOK, or PDF, or anything else that may need to be typeset for publishing... The only intended export option for this file is HTML (for websites - BUT GitHub Renders this file AS IS nicely)... Custom tailor this to fit your needs. Change the tags in default-tags.org (referenced below) as well.. to fit your needs... Enjoy!
+
+* ⚒ setup-config:                                            :noexport: 
 
 :READ_ME_FIRST: 
 =Instructions:= [0/3] /(How to Install & Use This Template)/ 
-=Last Modified:= <2025-03-31 Mon>
+=Last Modified:= <2025-05-29 Thu>
 
 To use *HAP_README-Doc-Skeleton.org* Org-Mode README Doc Template for your own projects, =Perform The Following Steps:= 
 
@@ -20,31 +22,31 @@ To use *HAP_README-Doc-Skeleton.org* Org-Mode README Doc Template for your own p
 
 1) [ ] *Clone a Copy of This File:* 
 
-             Put your clone within any existing writing or coding project's MASTER FOLDER or anywhere you need to have a simple NON-PUBLISHING README.org file associated with source code or other files...
+   Put your clone within any existing writing or coding project's MASTER FOLDER or anywhere you need to have a simple NON-PUBLISHING README.org file associated with source code or other files...
 
-             Existing MASTER FOLDERS contain other files for other projects as well as the SETUPFILES and MEDIA required by this README.org file...
+   Existing MASTER FOLDERS contain other files for other projects as well as the SETUPFILES and MEDIA required by this README.org file...
 
-             =Note:= If you put this file within other Project's existing MASTER FOLDERS that contain existing ~.org~ files /(cloned from other HAP_Doc-Skeleton/ /template files)/ Pay CLOSE Attention to Steps 3 & 4 below to decide the correct action to take during those steps...
+   =Note:= If you put this file within other Project's existing MASTER FOLDERS that contain existing ~.org~ files /(cloned from other HAP_Doc-Skeleton/ /template files)/ Pay CLOSE Attention to Steps 3 & 4 below to decide the correct action to take during those steps...
 
-             =Do NOT OVERWRITE ANY PRE-EXISTING FILES or FOLDERS!!!=
+   =Do NOT OVERWRITE ANY PRE-EXISTING FILES or FOLDERS!!!=
 
-             =OTHERWISE:= If this is a Brand NEW Project, name its NEW MASTER FOLDER to reflect what this README Doc is about...
+   =OTHERWISE:= If this is a Brand NEW Project, name its NEW MASTER FOLDER to reflect what this README Doc is about...
 
-             =OTHER Files/Folders May also be placed Within your MASTER FOLDERS...=
+   =OTHER Files/Folders May also be placed Within your MASTER FOLDERS...=
 
 2) [ ] =Start Composing your README Content NOW:= 
 
-             =NOTE:= You are most likely doing this because you have a project that needs a README File included as the Start Here Document for that project... Therefore... as soon as you are done with the first steps above, =STOP= and immediately begin composing your README Content within the: *📖 README* Binder =NOW=...
+   =NOTE:= You are most likely doing this because you have a project that needs a README File included as the Start Here Document for that project... Therefore... as soon as you are done with the first steps above, =STOP= and immediately begin composing your README Content within the: *📖 README* Binder =NOW=...
 
-             =Add Sub headings below for your README as needed...=
+   =Add Sub headings below for your README as needed...=
 
-             *btw*, if you Have *Harmonic Alchemy Modular Emacs* fully installed and have enabled the ~Xah-Fly-Keys~ module, you can quickly and easily insert your own /:README:/ drawers for your own purposes by typing: ~SPACE e r~ on an empty line while in command mode... Type those two keys, and the drawer is created for you automatically and opened...
+   *btw*, if you Have *Harmonic Alchemy Modular Emacs* fully installed and have enabled the ~Xah-Fly-Keys~ module, you can quickly and easily insert your own /:README:/ drawers for your own purposes by typing: ~SPACE e r~ on an empty line while in command mode... Type those two keys, and the drawer is created for you automatically and opened... =BTW:= You can change the title "README" to something else but words must be connected by dashes or underscores to keep it working correctly... /(i.e., drawer opening and closing etc...)/
 
-3) [ ] [0/11] =Finish Setting Up The Rest Of This Project LATER= 
+3) [ ] [0/12] =Finish Setting Up The Rest Of This Project LATER= 
 
-      - [ ] *Change Title of :LATEST_UPDATE: drawer ABOVE:* 
+      - [ ] *Read Directions Under The :LATEST_UPDATE: Drawer Below:* 
 
-           AFTER Cloning, Change *:LATEST_UPDATE:* drawer title ABOVE /(WITHIN YOUR CLONE, NOT THE ORIGINAL!)/ to *:LATEST_TEMPLATE_UPDATE:* AND Follow Instructions within it...
+           AFTER Cloning, Read and Follow Instructions contained within this :DRAWER: They are tips for managing updates to the META data contained within Clones of this Template...
 
       - [ ] *Copy/Clone:* ~./media~ /(and contents)/ *to your new project's MASTER FOLDER:* 
 
@@ -75,9 +77,9 @@ To use *HAP_README-Doc-Skeleton.org* Org-Mode README Doc Template for your own p
 
              =YOU WON'T WANT TO OVERRITE EXISTING FILES= within this directory IF you are already using it for OTHER .org Files, /(and they were modified!!!)/ but you may need to update existing files you are NOT using currently if/when you DO start using them...
 
-             =Other SETUPFILES= within this directory are intended to be used by other document style project templates and are not needed for this: ~README.org~ Document... You may remove the extra files if you wish... 
+             =Other SETUPFILES= within this directory are intended to be used by other document style project templates and are not needed for this: ~README.org~ Document... You may remove the extra files if you wish...
 
-             =HOWEVER:= If you decide to clone another ~HAP_<book-template>.org~ file into this project folder it will pick up its associated SETUPFILES automatically because this folder                 already exists! Consider this case if/when you decide to delete other UNUSED SETUPFILES... They are small text files not really bothering you...
+             =HOWEVER:= If you decide to clone another ~HAP_<book-template>.org~ file into this project folder it will pick up its associated SETUPFILES automatically because this folder already exists! Consider this case if/when you decide to delete other UNUSED SETUPFILES... They are small text files not really bothering you...
 
              /(YOU MAY NEED THEM LATER DEPENDING ON YOUR CASE)/ 
 
@@ -105,13 +107,13 @@ To use *HAP_README-Doc-Skeleton.org* Org-Mode README Doc Template for your own p
 
            This Date reflects the time/date that you first created this new document It should NEVER change after that...
 
-      - [ ] *Change the* ~#+TEXT: Last Published:~ *TIMESTAMP at Publish Time:* 
+      - [ ] *Leave the* ~#+TEXT: Last Published:~ *TIMESTAMP ALONE:* 
 
-            =Don't Change This UNTIL= You have completed some MAJOR Release of the files or code that this ~README.org~ doc refers to and this README reflects the status of that MAJOR UPDATE /(e.g., as published somewhere, in a public repository etc...)/
+            =Don't Change This DUMMY TIMESTAMP FOR README FILES:=
 
-            Until that publishing time comes leave it alone as: ~<NOT Published>~
-          
-            As soon as this is published as part of a major release, etc, Replace the <unpublished> placeholder with a REAL TIMESTAMP by typing: ~C-c . . RETURN~ The new Last Published: <TIMESTAMP> will appear in place... Do this ANY time you have completed some major update, have published that update and this file needs to reflect that update...             /(this will help you keep track)/ 
+            *Leave:* ~#+TEXT: Last Published: <NOT Published>~ *ALONE*
+
+            ~README.org~ docs are *NOT PUBLISHED*... They are intended to live only within folders containing items that need an accompanying *start-here-first* kind of doc... You see this concept reflected everywhere... Like when you receive a new package /(that requires self assembly - lol)/ 
 
       - [ ] *Change the* ~#+FILETAGS:~ *directive at the top of this file:* 
 
@@ -120,6 +122,14 @@ To use *HAP_README-Doc-Skeleton.org* Org-Mode README Doc Template for your own p
       - [ ] *Change the* ~#+DESCRIPTION:~ *directive at the top of this file:* 
 
            Compose your ~README~ Doc's Description as a short paragraph here... and then use that to change the directive above...
+
+      - [ ] *Follow Extra Instructions found Under the 📋 Meta: binder:* 
+
+        The *📋 Meta:* binder contains more detailed Information about how to use this template, as well as a few tips for New Emacs Users, Modular Emacs Specifics, How to Commandeer a Clone of the *Generic Log Entry*, and how to Add, Modify, and Link to ~ANCHORS~ within this file... 
+
+        =NOTE:= ~ANCHORS~ are important for *README* files as you will be referring to them often from other docs /(possibly a MAJOR doc that also refers to the thing your README is about)/...
+
+        Visit the *📋 Meta:* binder [[META][HERE]] to at least summarize yourself with everything in there...
 
 4) *Purpose of the:* ~./org-templates~  *Directory:* 
 
@@ -161,54 +171,50 @@ To use *HAP_README-Doc-Skeleton.org* Org-Mode README Doc Template for your own p
 
 =If you Experience Problems Please Open an ISSUE At:= https://github.com/harmonicalchemy/modular-emacs/issues
    
-Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas for Improvement... =You guys are my Product Managers=  I am only a User of ONE "seat". Other folks UX metrics are sorely needed!! Thanks!
+Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas for Improvement... =You guys are my Product Managers=  I am only a User of ONE "seat". Other folks UX metrics are sorely needed!! Thanks! 
 
 =Enjoy!= - Alisha Awen
 :END:
 :LATEST_UPDATE: 
+=Last Updated:= <2025-05-29 Thu> /(this TEMPLATE IS ALL SET for Prime Time)/
 
-=LATEST_UPDATE:= <2025-03-31 Mon>
+=YOU MAY REMOVE This Drawer= from your own clones of this template if it is bothering you... This drawer is only here as an aid for: HAP Modular Emacs DOC TEMPLATE housekeeping/updating tasks...
 
-=YOU MAY REMOVE This Drawer= from your own clones of this template if it is bothering you... This drawer is used for HAP Modular Emacs DOC TEMPLATES housekeeping...
+=HOWEVER= you may also wish use the instructions here for the same purpose... i.e., to keep your existing Modular Emacs based org documents /(created with this template)/ in sync with the latest updates of the template they were cloned from... =NOTE:= If you have CHANGED MANY of the settings within your clone since the last template update you are advised to do a VISUAL diff /(i.e., visually line by line, not automated)/ of the two files to see whether you want to switch your settings to the new updated ones... It all depends on your use case... so check that first...
 
-=HOWEVER= you may also use it for the same purpose to keep your existing Modular Emacs based org documents in sync with the latest updates of the template they were created from...
+=If you do wish employ this little project management thing... Read On Below...= 
   
-=If you do wish to do the same... Read On Below...=
-  
-- =INTERNAL USE Instructions:= [1/1] /(END USERS SKIP THIS BULLET)/ 
+- =INTERNAL USE Instructions:= [0/1] /(END USERS SKIP THIS BULLET)/ 
 
-    This bullet is not for end users... This is /"Note to Self"/ stuff...
+    This bullet is NOT for END USERS... This is /"Note to Self"/ stuff... No Worries... 
 
-     - [X] =MASTER TEMPLATE ONLY= *Keep The Above Timestamp Up To Date:* 
+     - [ ] =MASTER TEMPLATE ONLY= *Keep The Above Timestamp Up To Date:*
 
-         DO THIS ALWAYS, JUST AFTER YOU UPDATE THIS TEMPLATE... DON'T FORGET!
-         /(i.e., BOILERPLATE content and :README: meta data)/
+       Anytime you make CHANGES to the META DATA within this TEMPLATE you must UPDATE the =Last Updated:= TIMESTAMP above... *DO THIS ALWAYS*  ...
 
-- =PUBLIC USE Instructions:= /(FOR CLONES OF THIS TEMPLATE)/ 
+       =DON'T FORGET!= This information will help you keep Internal Docs in SYNC with the TEMPLATES that you make and present PUBLICLY to the world...
 
-     + [ ] *FOR NEWLY CREATED CLONES:* 
+- =PUBLIC USE Instructions:= [0/3] /(FOR CLONES OF THIS TEMPLATE)/ 
 
-          + [ ] =Change this= *:LATEST_UPDATE:* =drawer title:= 
-            
-                  /(within clones only)/
+     - [ ] *REMOVE INTERNAL USE Instructions* /(and all under the bullet)/ 
 
-                  Change it to: *:LATEST_TEMPLATE_UPDATE:*
+          You don't need this in the file you created from a clone of this template...
 
-          + [ ] *REMOVE INTERNAL USE INSTRUCTIONS* 
+     - [ ] *UPDATE Last Updated:* ~<timestamp>~ /(After Making Changes to this file)/  
 
-               Remove the main =INTERNAL USE Instructions:= bullet above... That bullet is only relevant to the TEMPLATE, /(not clones)/
+       Copies of this file within your own projects will change over time as you try out different OPTIONS etc... You need to keep track of the LAST time this file was changed within your projects... /(and you may have copies of this file in many projects)/ All of them may have different settings after time goes on... The =Last Updated:= heading above lets you know when those changes happened... That knowledge will help you when you are comparing updated template files from the repository... 
 
-     + [ ] *FOR ALREADY EXISTING PROJECTS*: 
+     - [ ] *COMPARE the TIMESTAMPS between THIS TEMPLATE and your CLONES:* 
 
-          + [ ] *COMPARE the TIMESTAMPS between THIS TEMPLATE and your PROJECT:* 
+          ~Org-Mode~ Settings and META data within CLONES of TEMPLATE will get out of sync after a while due to Harmonic Alchemy Modular Emacs version updates etc...
 
-              The BOILERPLATE content and meta data within CLONES of this TEMPLATE will get out of sync after a while due to Harmonic Alchemy Modular Emacs version updates etc... Some NEW features or HEADINGS may have been added that make sense to be added to your existing project /(originally a clone of this)/
-        
-              Use the ABOVE timestamp /(within the TEMPLATE and your CLONE)/ to see if the clone's BOILERPLATE content needs to be updated /(brought into sync with its template - MERGE)/ and then perform any needed merging/replacing of BOILERPLATE and/or meta data. /(e.g, *:README:* drawers, etc. even this drawer)/
+          Check the TIMESTAMPS /(within this TEMPLATE and your CLONE of it)/ to see if they are different...
 
-          + [ ] *Keep ABOVE timestamp within CLONES of this template UP TO DATE:* 
+          If they are, the clone's settings need to be updated... /(i.e., brought into sync with its template - MERGE)/ You will need to perform any needed merging/replacing of BOILERPLATE and/or meta data. /(e.g, *:README:* drawers, etc.)/
 
-                =AFTER Completing Above MERGE Step= and your clone's BOILERPLATE content has been brought up to date /(i.e. in sync)/ with its TEMPLATE... Then update the timestamp ABOVE... /(WITHIN YOUR CLONE)/ to record the date of its last sync status...
+          =NOTE:= You may have purposefully changed some of the actual SETTINGS/OPTIONS below so be careful not to sync those OPTIONS with the new template update if the feature of those OPTIONS are NOT your intention... =ALSO=... If the timestamp in your cloned version of this file is NEWER than the template... You don't have to do anything because that was done before (and possibly changed by you) already... You will know that NEW changes to META data needs to be examined when the TEMPLATE's timestamp is AHEAD of your Doc...
+
+          UPDATING the TEMPLATES THEMSELVES is ANOTHER STORY... /(and for another discussion if that is something you might want to do)/ You will need to do that in a local git branch keeping your own local commits to that branch only so that the master tracking branch can stay clean... /(that way you will have your own set of customized TEMPLATES to use)/ while still having the DEFAULT TEMPLATES in the master branch... /(but lets save that conversation for later OK?)/
 :END:
 :SETUP_README: 
 
@@ -216,7 +222,7 @@ Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas
 
 For Cloned Versions of this template, the file/paths below will be relative to your parent project directory and as such, should be all set to your new: ~.../your_README.org_File's/org-templates/~ directory...
 
-*SETUPFILE:* ~default-tags.org~ is where tags are defined for this project... If you need to change the category, do it in your cloned version of default-tags.org...  If you rename default-tags.org file from "default" to something more specific, you will need to change the ~#+SETUPFILE: ./org-templates/default-tags.org~ line below to reflect your new file name as well...  You may change any of the tags except important ones to what ever you wish... Read the *:README:* drawer               within the file for more information...
+*SETUPFILE:* ~default-tags.org~ is where tags are defined for this project... If you need to change the category, do it in your cloned version of default-tags.org...  If you rename default-tags.org file from "default" to something more specific, you will need to change the ~#+SETUPFILE: ./org-templates/default-tags.org~ line below to reflect your new file name as well...  You may change any of the tags except important ones to what ever you wish... Read the *:README:* drawer within the file for more information...
 
 The Existing Tags are useful for most situations within this context, and some of the tags MUST ALWAYS be defined for this LaTeX publishing system to work correctly...
 
@@ -231,58 +237,129 @@ If you do this, you will ALSO need to change the ~#+SETUPFILE: ./org-templates/d
 #+SETUPFILE: ./org-templates/gen-doc.org
 
 * 🔖 Table of Contents:                                         :TOC_4: 
-- [[#-readme][📖 README:]] 
-- [[#-begin-log][📅 Begin Log:]] 
+- [[#-setup-config][⚒ setup-config:]]
+- [[#-readme][📖 README:]]
+     - [[#new--reference][NEW 📚 Reference:]]
+- [[#-begin-log][📒 Begin Log:]]
      - [[#-2025][📅 2025:]]
-- [[#-meta-usage--templates][📋 Meta: /(Usage & Templates)/]] 
-     - [[#-introduction][📄 Introduction:]] 
-          - [[#emacs-shorthand-command-key-notation][Emacs Shorthand Command Key Notation:]] 
-          - [[#important-note-for-mac-users][Important Note For Mac Users:]] 
-          - [[#org-mode-timestamps-and-clocking][Org Mode Timestamps and Clocking:]] 
-     - [[#-how-to][❔ How To:]] 
-          - [[#create-new-log-entry-within-the--begin-log-binder-04][Create New Log Entry within the 📒 Begin Log: binder:]] 
-               - [[#edit-compose-new-log-entry][Edit-Compose New LOG Entry:]]
-               - [[#enter-new-log-entry-details][Enter New LOG Entry Details:]]
-     - [[#-templates][⎘ Templates:]] 
-          - [[#new--generic-log-entry-general-log-entry-template][NEW 🗓 Generic Log Entry /(General Log Entry Template)/]] 
-               - [[#new--reference][NEW 📚 Reference:]]
-               - [[#new--time-card][NEW ⏱ Time Card:]]
-               - [[#new--summary-03][NEW 📃 Summary:]]
-               - [[#new--details][NEW 📰 Details:]]
+- [[#-meta-usage--templates][📋 Meta: /(Usage & Templates)/]]
+     - [[#-introduction][📄 Introduction:]]
+          - [[#emacs-shorthand-command-key-notation][Emacs Shorthand Command Key Notation:]]
+          - [[#important-note-for-mac-users][Important Note For Mac Users:]]
+          - [[#org-mode-timestamps-and-clocking][Org Mode Timestamps and Clocking:]]
+     - [[#-how-to][❔ How To:]]
+          - [[#create-a-new-log-entry-01][Create A New Log Entry:]]
+               - [[#copyclone--generic-log-entry-02][Copy/Clone: *🗓 Generic Log Entry:*]]
+          - [[#place-your-cloned-log-entry-03][Place Your Cloned LOG Entry:]]
+               - [[#paste--generic-log-entry-02][PASTE: *🗓 Generic Log Entry:*]]
+          - [[#edit-compose-new-log-entry-05][Edit-Compose New LOG Entry:]]
+          - [[#hap-org-mode-anchors-05][HAP Org Mode Anchors:]]
+               - [[#hap-anchors-howto-03][HAP ANCHORS HOWTO:]]
+               - [[#hap-org-mode-anchor-conventions][HAP Org-Mode ANCHOR Conventions:]]
+     - [[#-templates][⎘ Templates:]]
+          - [[#new--generic-log-entry-boilerplate-log-entry-template][NEW 🗓 Generic LOG Entry: /(BOILERPLATE Log Entry TEMPLATE)/]]
+               - [[#new--reference-1][NEW 📚 Reference:]]
+               - [[#new--time-card][NEW ⏰ Time Card:]]
+               - [[#new--summary-03][NEW ✅ Summary:]]
+               - [[#new--details][NEW 📒 Details:]]
+          - [[#copy-paste-items][COPY-PASTE ITEMS:]]
 
-* 📖 README: 
+* 📖 README:                                               :rdmes:export: 
+<<RDME>>
 
 =Compose Main Body of your README Doc Here=
 
-* 📅 Begin Log: 
+** NEW 📚 Reference: 
+<<RDME-ref>>
+:HOWTO: 
+=Org Mode Links Tip:=
+
+- To Create a Link Type: ~C-c C-l~ 
+    /(then paste: ~link~ & type: "description")/
+
+     =-OR-= Simply Copy/Paste BOILERPLATE: /(use placeholders below)/ And Fill Them In Manually... Copy/Paste more placeholders as needed to create more links...
+
+- To Open a Link Type: ~C-c C-o~ 
+
+- To EXPAND a Link Type: ~SPACE b~ 
+     or: ~M-x org-toggle-link-display~
+
+=BOILERPLATE:= /(clone to add more ref links)/
+
+- *Heading:* [[link][Link NAME] ] /(comment)/ 
+
+- [[link][Link Name] ] *Heading:* /(comment)/ 
+   
+- *_:* [[][] ] /(yadda... yadda... yadda...)/ 
+
+- [[][] ] /(_)/ 
+:END:
+
+- *Link to Project:* [[][] ] /(comment)/
+
+* 📒 Begin Log:                                             :noexport:logs: 
+<<LOG>>
 ** 📅 2025: 
+<<LOG_2025>>
 
 Place a Clone of *🗓 Generic Log Entry* /(heading and contents)/ from *⎘ Templates:* binder within this Log YEAR section, and Commandeer it as your NEXT NEW Log Entry...
 
-* 📋 Meta: /(Usage & Templates)/ 
+* 📋 Meta: /(Usage & Templates)/                               :meta:noexport: 
+<<META>>
 ** 📄 Introduction: 
+<<META_intro>>
 
-Use this Standard README /(template)/ as a multi purpose README document as a Start Here First Document for any kind of project...
+Use this Standard *README* /(template)/ as a multi purpose *README document* or a *Start Here First Document* for any kind of project...
 
-I stopped using Markdown files for this purpose a few years ago... This makes total sense as *Org-Mode* was designed exclusively for such things! *Markdown* is great for composing content intended for web pages etc.  But =Emacs Org Mode is Vastly Superior as a Publishing Environment=, with many features and power, completely agnostic of final publishing format... Whereas markdown mode excels doing one thing only... Translating author structured plain text into beautiful web pages... /(which is a good thing)/
+=Such as for example:= A *Controlled Vocabulary* for your *TAGS* Which is something you will need to consult and make available to quickly consult while you are Writing things in Other Org-Mode Docs... Which WILL get published to different formats with the tags you chose for each document...
 
-I finally bit the long curve bullet and learned Emacs Org Mode /(after many many many years of using Emacs without it!)/ Today, looking back with current knowledge to me is like going back to a /"*Dec VT220* green screen *dumb terminal*"/ after experiencing *X Windows* on a Big *HP-UX Workstation!*
+I stopped using Markdown files for this purpose a few years ago... This makes total sense as *Org-Mode* was designed exclusively for such things! *Markdown* is great for composing content intended for web pages etc.  But =Emacs Org Mode is Vastly Superior as BOTH a Project Management AND Publishing Environment=, with many features and power, completely agnostic of final publishing format... Whereas markdown mode excels doing one thing only... Translating author structured plain text into beautiful web pages... /(which is a good thing of course)/ 
 
-Yeah, that's a personal story from the past, lol... All you Mac users out there, please realize that your beautiful Apple desktop is in fact an *HP-UX Motif X-Windows widget set clone*!  That's what Steve Jobs believed to be the best X-Windows tool-kit of the day /(when he was building the NeXT computer)/...  So... Yup he copied that! The Applications Doc at the bottom of your screen is a dead giveaway. Hewlet Packard was first to use such UI concepts... /(back before the dawning of the web we loved those HPUX Workstations!)/
+I finally bit the long curve bullet and learned Emacs Org Mode /(after many many many years of using Emacs without it!)/ Today, looking back with current knowledge is like going back to a /"*Dec VT220* green screen *dumb terminal*"/ after experiencing *X Windows* on a Big *HP-UX Workstation!*
 
-*** Emacs Shorthand Command Key Notation:
+Yeah, that's a personal story from the past, lol... All you Mac users out there, please realize that your beautiful Apple desktop is in fact an *HP-UX Motif X-Windows widget set clone*!  That's what Steve Jobs believed to be the best X-Windows tool-kit of the day /(when he was building the NeXT computer)/...  So... Yup he copied that! The Applications Doc at the bottom of your screen is a dead giveaway. Hewlet Packard was first to use such UI concepts... /(back before the dawning of the web we loved those HPUX Workstations! I got my first taste of them on the MIT Athena Project).../
+
+*** Emacs Shorthand Command Key Notation: 
+<<META_emacs-cmd-keys>> 
 
 The command key conventions used in the instructions below, /(as well as all *Harmonic Alchemy Productions* docs)/, follow *Standard Emacs* command key naming conventions.
 
 Official GNU Emacs documentation uses a shorthand notation to indicate the *Ctrl* key as an upper case *C-* (/with minus appended/). Upper case *M-* (/with minus appended/) is the shorthand notation for the Emacs *META* key...
 
-*** Important Note For Mac Users:
+If you are on Linux, BSD, or other machine there are OTHER Options on how to map your keys for the least stress on your fingers etc...  Now that I have an EXPENSIVE MacBook Pro I kind of gave up spending time building unix machines for office work... For me all my UNIX work is NOW only done on self hosted VPS running in data centers... (I got EMACS running on those configurations as well... and my Mac at home is my keyboard so NO Problems Messing with nx key mapping woes!
 
-On Mac OS, *Modular Emacs* maps your *Ctrl* key to the *Apple Command* key. Emacs *META* is mapped to both *Alt* and *Ctrl* keys... Outside of Emacs all those keys function normally.  
+IF YOU NEED HELP on a LINUX box mapping your keys... /(lol GOOD LUCK)/... You can visit [[http://xahlee.info/kbd/linux_vs_windows_vs_mac_best_keybinding.html][Xah Lee's Linux vs Mac vs Windows Blog Post]] as well as: [[http://xahlee.info/kbd/keyboard_blog.html][Xah Lee's Keyboard Blog]] for great help with Keyboards to use /(focusing on Linux but urging you to use a Mac)/
 
-Therefore, for Mac users, anytime you either see *C-* or *Ctrl* below, use your *Apple Command* key for that when using Modular Emacs.  Anytime you see either *M-* or *META* below, use *Alt* or *Ctrl* keys for that when using Modular Emacs. 
+*** Important Note For Mac Users: 
+<<META_mac-users>> 
 
-Anytime you are using Modular Emacs following instructions from standard vanilla Emacs docs, keep in mind your ~Ctrl~ and ~META~ keys are not /"standard"/ anymore and you must make a mental translation.  Beyond that, you will be fine following other emacs tutorials etc.  Hey... you Mac enthusiasts are used to that kind of /"being different"/ stuff anyway, right? Being one of /"the rest of us"/ that is... What the heck does that mean anyway? LOL
+For the BEST experience using *HAP Modular Emacs* On MacOS, you need to install a Keyboard Mapping App called *Karabiner-Elements* [[https://karabiner-elements.pqrs.org/][LINK to Download]]
+
+=THEN MAP YOUR KEYS as FOLLOWS:=
+
+~CAPS-LOCK~ ➔ ~HOME~
+
+     /(You WILL NEED THIS if you want to make your *xah-fly-keys* experience a FLYING one rather than a TRIPPING and CRASHING one)... LOL/ 
+
+~F6~ ➔ ~CAPS-LOCK~ 
+
+     /(You don't really need to use this much as there is another key "~\~" assigned via *xah-fly-keys* that can do some fancy upper/lower case flipping of words, paragraphs, etc... Try it... you will see %^)/
+
+In addition *xah-fly-keys* makes the following Emacs Configurations:
+     
+=Control Key:=    ~C-~ ➔ ~⌘~ /(Apple Command Key)/
+
+=META Key:=           ~M-~ ➔ ~⌥~ /(Apple Option key)/
+
+=Apple Ctrl Key:= ~⌃~ ➔ Still Works as standard Control Key /(emacs, other apps, console, etc.)/
+
+=ALSO:= For ALL machines using *xah-fly-keys* config, typing the "~a~" key invokes the Emacs ~M-x~ Key Chord directly... allowing you to immediately type and execute an emacs command from a single key alone right under your left little finger!
+
+With *Karabiner-Elements* [[https://karabiner-elements.pqrs.org/][LINK to Download]] Installed and configured properly as above, AND you are using *HAP Modular Emacs* configured to use *XAH-FLY-KEYS*, =Keep the Following in Mind:=
+
+While following instructions from standard vanilla Emacs docs, NOTE that your ~Ctrl~ , ~META~ and ~CAPS-LOCK~ keys are not /"standard"/ anymore and you must make a mental translation to the keys you have reassigned... /(you will get used to it soon enough)/ It has been designed /(after YEARS of research by Xah Lee)/ to Protect your fingers and fine motor muscles...
+
+Beyond that, you will be fine following other emacs tutorials etc.  Hey... you Mac enthusiasts are used to that kind of /"being different"/ stuff anyway, right? Being one of /"the rest of us"/ that is... What the heck does that mean anyway? LOL
 
 The above key assignments were done to get the *Emacs C-* key closer to the space bar where it can be activated with your left thumb instead of contorting to get at it with your pinkie finger. This makes using *Xah Fly Keys* even easier to use and less stressful on your fingers...
 
@@ -294,150 +371,365 @@ If you see other keys alone separated by a space after the *C-x* or *M-x* /(e.g.
 
 *Got that?* That's the key notation system we use here... It is all standard Emacs...  The above paragraphs are mostly for the benefit of new Emacs users! And there is more to learn below. If you are an Emacs/Org-Mode veteran please bear with us...
 
-\newpage
+For *HELP* using *Xah-Fly-Keys* with *HAP Modular Emacs* [[][VISIT THIS DOC] ] =TBD= later...
 
-*** Org Mode Timestamps and Clocking:
+*** Org Mode Timestamps and Clocking: 
+<<META_time-clocking>> 
 
-This Template utilizes the default *Org-Mode:* "*C-c* ." command /(i.e., That's Ctrl-c and then type a dot. This Enters a timestamp range at the cursor position)/. The command employs *org-evaluate-time-range* to compute time on task.  This is useful for timesheets etc. 
+This Template utilizes the default *Org-Mode:* "~C-c .~" Command. /(i.e., That's Ctrl-c and then type a dot. This Enters a timestamp range at the cursor position)/. The command employs *org-evaluate-time-range* to compute time on task.  This is useful for Time Sheets etc. 
 
-In addition, the *Log Entry (template)* stores and tracks *Org-Mode :CLOCKING:* entries and displays results in a *Time Card Table* with total time computed... 
+In addition, the *Log Entry (template)* stores and tracks *Org-Mode* ~:CLOCKING:~ entries and displays results in a *Time Card Table* with total time computed... 
 
-Common time clocking commands are defined within the *Log Entry (template)* itself. Any time you need to look up clocking commands, open the *:README:* drawer under the *Log Entry (template)* heading by placing your cursor over it and hitting *TAB*.
+Common time clocking commands are defined within the *Log Entry* /(template)/ itself...
 
-Additional commands for using *Org-Mode* with Modular Emacs will be explained here if needed, as well as other *Harmonic Alchemy Modular Emacs Templates* that get produced in the future...
-
-\newpage
+Any time you need to look up clocking commands, open the ~:README:~ drawer under the *Log Entry* /(template)/ heading by placing your cursor over it and hitting ~TAB~...
 
 ** ❔ How To: 
-*** Create New Log Entry within the 📒 Begin Log: binder: [0/4] 
+<<META_howto>>
 
-- [ ] =Clone:= *NEW* 🗓 *Generic Log Entry* /(from:/ ⎘ *Templates:* /binder)/ 
+=NOTE:= Additional HELP/Commands for using *Org-Mode* with Modular Emacs will be explained here if needed, as well as other *Harmonic Alchemy Modular Emacs Templates* that get produced in the future...
+
+*** Create A New Log Entry: [0/1] 
+<<META-HOWTO_create-new-log-entry>>
+
+- [ ] *RESET all Check Boxes UNDER These Headings:* 
+
+  Do this FIRST before following any of the tasks... This is to help you get your workflow down...
+
+  Later once you got all this in muscle memory you can forget wasting your time here...
+
+  /(this is for beginners - HOPE IT HELPS)/
+
+**** Copy/Clone: *🗓 Generic Log Entry:* [0/2] 
+/(BOILERPLATE Log Entry from *⎘ Templates* Binder)/ 
+
+- [ ] *SELECT the ENTIRE NEW LOG /(heading)/ & ALL its Contents:* 
+
+  Use normal Emacs selection methods. i.e., Type ~t~ key to set the mark for selection, /(xah-fly-keys Command/ /Mode)/ or use ~C-SPACE~ /(normal Emacs)/, and move the point to get the entire heading, and all of its contents, but NOTHING else... =and copy it...=
+
+  =Note:= Before Copying Selected Text, ensure your cursor is at the end of it BUT not be part of any items after it... Placing your cursor on the first column of the next line will include the invisible new-line character which is what you want, but any text directly under the cursor on the next line will not be copied...  Later, after pasting this text somewhere else, your cursor will end up sitting on the first column of a blank line under the pasted text. /(exactly as intended)/ 
+
+- [ ] *Complete the Copy Operation:* 
+
+  *Type*: ~c~ /(xah-fly-keys Command Mode)/
+
+  This will save the selection for pasting later, /(the highlighted/ /text will go back to normal)/... You should have gotten only the Single LOG Entry with ALL its contents, BUT nothing else below it...
+
+  =Note:= If you type: "~spacebar t~" /(xah-fly-keys leader key command),/ it will show you the contents of your paste buffer...  You can see the LAST item you copied in there AT THE TOP... To get out of the paste buffer view, *Type:* "~spacebar u~" and it will return you to where you were before... 
+
+*** Place Your Cloned LOG Entry: [0/3] 
+<<META-HOWTO_place-cloned-log>>
+
+- [ ] *RESET all Check Boxes UNDER These Headings:* 
+
+  Do this FIRST before following any of the tasks... This is to help you get your workflow down...
+
+  Later once you got all this in muscle memory you can forget wasting your time here...
+
+  /(this is for beginners - HOPE IT HELPS)/
+
+**** PASTE: *🗓 Generic Log Entry:* [0/2] 
+
+/(Paste Copied BOILERPLATE Log Entry)/ From the PASTE BUFFER... 
+
+- [ ] *Advance Cursor:* 
+
+  Advance your cursor to a blank line just below the LAST Most Recent LOG entry under the CURRENT *📅 YYYY:* heading within the *📒 Begin Log:* binder, and press *ENTER* a couple times to get your cursor on a fresh clean line with some extra space above and below it... /(Below any previously time stamped entries you may already/ /have placed)/... 
+
+- [ ] *Press:* ~v~ *To PASTE your cloned Log Entry:* 
+
+  *Press:* ~v~ /(xah-fly-keys Command Mode)/ to paste your cloned Log Entry template...
+
+  If you find out that what you copied also included some unwanted text directly below it, no problems... Just delete that part now...
+
+  =Note:= If you accidentally copied one or more previously invisible bullets to column one on a blank line they will create an invisible "ghost" heading that you will now need to delete...
+
+  You will know this if you see an org-ellipsis "⤵" symbol on a line by itself indicating a heading but no text... Simply delete that whole line and it will go away... Now you are ready to compose your new log entry... 
+
+*** Edit-Compose New LOG Entry: [0/5] 
+<<META-HOWTO_compose-new-log-entry>>
+
+The instructions below for EDITING a NEW CLONED LOG ENTRY Template:
+
+- [ ] *RESET all Check Boxes UNDER This Heading:* 
+
+  Do this FIRST before following any of the tasks... This is to help you get your workflow down...
+
+  Later once you got all this in muscle memory you can forget wasting your time here...
+
+  /(this is for beginners - HOPE IT HELPS)/
+
+- [ ] *Place Cursor Directly on the Existing Timestamp:* 
+
+  Place your cursor directly on the existing timestamp directly under your CLONED  *🗓 Generic LOG Entry:* heading and enter the key binding: ~C-c .~ /(i.e., press/ ~Ctrl~ /key while holding/ ~c~ /and then type a dot ~.~ /)/ A date chooser panel will pop up... 
+
+- [ ] *Type one more dot:* 
+
+  Type one more dot ~.~ to force the calendar selection to the current time and date and then, Press ~ENTER~ to accept your choice... /This will update the existing older timestamp with/ /the current date/time.../
+
+  Check to make sure the timestamp was properly updated then move on to the next step...
+
+  This timestamp will not be updated after that.  IT RECORDS THE INITIAL TIME OF YOUR NEW LOG ENTRY to the Day and time you first started it...
+
+- [ ] *Follow the* ~:HOW-TO-USE-THIS:~ *Directions:* 
+
+  Follow STEPS Within the ~:HOW-TO-USE-THIS:~ drawer directly under your NEW RENAMED *🗓 Generic LOG Entry:*
   
-- [ ] =Select the Heading= /(named above)/ from the ⎘ *Templates:* binder,  
-             using normal Emacs selection methods. i.e., Type ~t~ key to set the mark for selection, /(xah-fly-keys Command/ /Mode)/ or use ~C-SPACE~ /(normal Emacs)/, and move the point to get the entire heading, and all of its contents, but NOTHING else... and copy it...
+  These steps show you how to commandeer your NEW CLONE, change headings, ANCHORS, clock-in/out, etc... =Once those initial tasks are done you will be Ready to Start Writing...=
 
-             =Note:= Before Copying Selected Text, ensure your cursor is at the end of it BUT not be part of any items after it... Placing your cursor on the first column of the next line will include the invisible new-line character which is what you want, but any text directly under the cursor on the next line will not be copied...  Later, after pasting this text somewhere else, your cursor will end up sitting on the first column of a blank line under the pasted text. /(exactly as intended)/
-          
-- [ ] =Complete the Copy Operation= Type ~c~ /(xah-fly-keys Command Mode)/. 
-            This will save the selection for pasting later, /(the highlighted text will go/ /back to normal)/... You should have gotten only the Single LOG Entry with ALL its contents, BUT nothing else below it...
+*** HAP Org Mode Anchors: [0/5] 
+**** HAP ANCHORS HOWTO: [0/3] 
+<<<META-HOWTO_hap-ancs>>>
 
-            =Note:= If you type: "*spacebar t*" /(xah-fly-keys leader key command)/ it will show you the contents of your paste buffer...  You can see the LAST item you copied in there AT THE TOP... To get out of the paste buffer view, type: "*spacebar u*" and it will return you to where you were before...
+Here are some *GUIDELINES for Creating and Editing ANCHORS* as well as *LINKS* to them within any ~HAP_Doc-Skeleton.org~ Template file...
 
-- [ ] =Paste Cloned LOG Entry:= [0/2] 
+- [ ] *Adjust ANCHORS to make them UNIQUE:* 
 
-     - [ ] =Advance cursor= to a blank line just below the LAST Most Recent LOG entry 
-              under heading *📅 2022* within the *📒 Begin Log:* section, and press *ENTER* a couple times to get your cursor on a fresh clean line with some extra space above and below it... /(Below any previously time stamped entries you may already/ /have placed)/...
+  Anchors Must Be Unique! Following HAP ANCHOR CONVENTIONS helps this process transparently... Be Extra Careful if you make any ANCHORS into RADIO TARGETS!
 
-     - [ ] =Press:= ~v~ /(xah-fly-keys Command Mode)/ 
-             to paste your cloned Log Entry template... If you find out that what you copied also included some unwanted text directly below it, no problems... Just delete that part now... 
+  =NOTE:= All of this work in the beginning will help keep your anchors unique within this file, and also add an extra *KM* dimension of *category* to them automagically...
 
-             =Note:= If you accidentally copied one or more previously invisible bullets to column one on a blank line they will create an invisible "ghost" heading that you will now need to delete...
+  Your unique anchors may be used to link to sections or headings from other sections within this file, and quite easily reach the headings or sections from EXTERNAL *Org-Links* referencing the FILE simply by adding the ANCHOR name after the Path/File Spec separated by two colons /(i.e., ~::~ )/...
 
-             You will know this if you see an org-ellipsis "⤵" symbol on a line by itself indicating a heading but no text... Simply delete that whole line and it will go away... Now you are ready to compose your new log entry...
+  To reach these ANCHORS from an external file: *Use xfk Command:* ~O~ /(UPPER CASE Letter: O while in xfk COMMAND Mode)/... That will OPEN the Target Org file in a NEW Frame Without Closing your Current Frame or Loosing your Current Org File Position...
 
-**** Edit-Compose New LOG Entry: 
+  It would be wise to follow this convention when you create anchors elsewhere within ALL of your Writing Projects created from HAP Modular Emacs Document Skeleton Template files...
 
-=Note:= If this is your first time using this log, don't bother cloning a NEW log entry as there is a dummy boilerplate placeholder Log Entry ALREADY in place for you to use... /(initially there as an example)/
+  If you wish to change any of this, go ahead and do what ever you want... For simplicity's sake, follow the instructions below... There are ways to use *:PROPERTY:* directives to get your links GLOBAL as well... I prefer to do it manually... The alternate is a mess IMHO... I don't have time to spend on this mess... What I have currently works nice and simple for me... Probably you too... /(trust me I have tried EVERYTHING - Well... ALMOST)/ lol
 
-The instructions below for modifying the Boilerplate Log Entry, or Editing a new Cloned Log Entry Template are pretty much the same... /(differences will be noted in instructions below)/
+- *ANCHORS within the the 📋 Meta: binder are ALL SET:* 
 
-- [ ] =Place cursor directly on the existing timestamp= 
-         of the NEW Log Entry, and enter the key binding: ~C-c .~ /(i.e., press/ ~Ctrl~ /key while holding/ ~c~ /and then type a dot ~.~ /)/ A date chooser panel will pop up...
+  You don't need to change ANY of the ANCHORS within the the *📋 Meta:* binder... These anchors are all fixed...
 
-- [ ] =Type one more dot:= ~.~ 
-         to force the calendar selection to the current time and date and then, Press ~ENTER~ to accept your choice... /This will update the existing older timestamp with/ /the current date/time.../ Check to make sure the timestamp was     properly updated and then move on to the next step... This timestamp will not be updated after that.  It records the initial time of your new log entry to the Day and time you first created it...
+  =You may= Place an *org-link* to any of the ~ANCHORS~ contained within the *📋 Meta:* binder from elsewhere within CLONES of ANY of these ~HAP_Doc-Skeleton.org~ Template files and it will work... You might find making links to sections of the *📋 Meta:* binder useful as a quick reference while you are writing, easy access from the place where you are writing...
 
-- [ ] =You are now ready to start= 
-         making entries within your New Log Entry... Your timestamp indicates the present, /-and-/ you are all set to begin recording time...
+- [ ] *Radio Targets:* 
 
-- [ ] =Follow the= ~:README:~ 
-         directions within the Time Card section contained within your fresh new log entry to learn how to /"clock in"/ and /"clock out"/ of your log entry as you work on the tasks...
+  There is ALSO a neat *org-mode trick* called *Radio Targets* 
 
-**** Enter New LOG Entry Details: 
+  If you want to use that, simply place another pair of angle brackets ~< >~ around ANY of the ANCHORS within CLONES of these ~HAP_Doc-Skeleton.org~ template files.
 
-Two sub headings have been provided for your use /(if you need them)/. However, you may structure your log entries any way you wish.  The two provided headings:  *Summary* and *Details* are simply suggestions to help make your log entries a bit more organized...
+  Doing that will make the *NAME* inside the ANCHOR into a *HOT NAME* that will instantly =Turn Into a LINK= ANY TIME you type the *NAME* somewhere within the file!
 
-The *Summary* heading could be used to log the main executive summary points, /(which you would include in the exported PDF as a report to give to your boss or clients)/. 
+  =NOTE:= Radio Targets are NOT GLOBAL... /(i.e, they only work within the .org file they were created in)/ You cannot address these ANCHORS alone from an external file...
 
-Conversely, the *Details* heading could contain a complete, thorough log of your work, which would be excluded from the final PDF report.  Everything under *Details* heading would be extra information that you don't want to bother your clients or boss with /(unless they ask for more detail of course)/. In that case, you will have it all recorded and organized for easy access later if needed...
+  =In other words, don't worry=... If you visit another org file and accidentally type a radio anchor name from ANOTHER file, nothing will happen and you will not be disrupted... the radio anchor from the remote file will NOT activate within your current file... Even if it did, It would not work since ANCHORS themselves are Not GLOBAL..
 
-Place the *:noexport:* tag at the end of any org outline heading to exclude it and all its children from the PDF upon export...  You can add as much detail as you need within these excluded sections without cluttering up your final PDF.  The entire main heading: *How to Use this Template:* is already excluded from the final PDF, so it can be left in and your PDF will only include the *Begin Log:* section...
+  =NOTE:= You have to INITIALIZE any radio anchors you create for the first time with the command: ~C-c~ ~C-c~ before they will automagically turn into links... =HOWEVER=, These NEW Radio Anchors WILL get initialized automatically once you close and re-open the file...
+
+- [ ] *Existing ANCHORS and LINKS within ~HAP_Doc-Skeleton.org~ Template files:* 
+
+  SOME ANCHORS already have LINKS going to them within *LOG Templates*... These LINKS are present in the *Sub-Headings* under the *✅ Summary* AND *📒 Details* Headings...  Use ~SPACE-BAR b~ /(xfk shortcut key command)/ to expand links so you can see them under these sub-headings and change them to MATCH the Changed ANCHORS that they should be linking to... 
+
+**** HAP Org-Mode ANCHOR Conventions: 
+<<<META-HOWTO_hap-anc-cnvents>>>
+
+The following is a *UNIQUE Mnemonic ANCHOR Convention* which is standard across ALL ~HAP_Doc-Skeleton.org~ Template files...
+
+Use this Convention to create, adjust, and use  ~<ANCHORS>~ under *Org Headings* within your CLONED ~HAP_Doc-Skeleton.org~ files...
+
+=For me= this is a *quite easy scheme to use*, especially once I got used to using it... It becomes a simple extra step to take anytime I create a heading that I believe is one that needs to be referenced a LOT... Done instantly... Easy... 
+
+*Here is how it Works:*
+
+- *HAP ANCHORS* comprise =THREE= ~mnemonic~ =SYMBOLS= 
+
+  Three symbols separated by an underscore ~_~ character... 
+
+  The =first= mnemonic is the ~PREFIX~ 
+
+  The =second= mnemonic is the ~LABEL~ 
+
+  The =third= mnemonic is the ~postfix~ 
+
+- The ~PREFIX~ 
+
+  The PREFIX is there to identify the *KIND of file* or *Major Section Within* that File where the *ANCHOR* has been placed...
+
+- The ~_LABEL_~ 
+
+  The LABEL is a short UPPER CASE mnemonic representing the =Title= of the *PARENT Heading* above it. Be careful NOT to make this so cryptic and short that you no longer recognize the original Title it represents...  /(just as in creating variable or parameter names in programs)/
+
+- The ~postfix~ 
+
+  The postfix is a short lower case mnemonic representing the =Title= of the *Heading* =Directly Above= the *ANCHOR* that represents it.
+
+***** Putting It All Together: 
+
+*Here are some Examples of how these Three mnemonics are Used Together:*
+
+- For *MAIN HEADINGS* it looks like this: ~PREFIX_postfix~ 
+
+  =NOTE:= There is no ~LABEL~ in Main Heading ANCHORS... In fact... ONLY the PREFIX alone is used for ANCHORS that reflect *Main Headings* of *Major Sections* within any ~HAP_Doc-Skeleton.org~ files...
+
+- For *SUB HEADINGS* it looks like this: ~PREFIX_LABEL_postfix~ 
+
+  LABEL appears here representing the =Title= of the Sub-Heading's *PARENT Heading*
+
+- For *SUB-SUB HEADINGS* it might look like this: ~PREFIX_LABEL_LABEL_postfix~ 
+
+  /(etc...and probably unnecessary overkill as well - but if you need an anchor like this, This is how you go about expanding the ANCHORS to reflect the extension of the schema above it - like a path)/
+
+  =NOTE:= To make the Idea Above =More Practical=... You may OFTEN create *Sub Headings* within your doc that by themselves do not contain any TEXT, figures, tables, or other objects  between them and their children *Sub-Sub Headings*... =INSTEAD=, they may have many *sub-sub headings* under them which are all specifics of the *Sub-Heading category*...
+
+  =In That Case= you would not put an anchor under the *Main Sub-Heading* but rather place ANCHORS under =ALL= the *Sub-Sub Headings* Instead... These *sub-sub* ANCHORS would Not have as many LABEL Chains, /(e.g., ~_LABEL_LABEL_LABEL_~ )/ in them... Using that idea makes it =LESS Over Kill= AND *You Will Need to LINK* to those *specific headings* that have good content directly under them rather than a family of *child headings* which you would then have to choose from manually...
 
 ** ⎘ Templates: 
-*** NEW 🗓 Generic Log Entry /(General Log Entry Template)/ 
-<2021-03-29 Mon> 
-:README: 
-- *Go To One of the HEADINGS Below:* /(Summary, Details, or Sub Headings)/ 
+<<META_templates>>
+*** NEW 🗓 Generic LOG Entry: /(BOILERPLATE Log Entry TEMPLATE)/ 
+<2021-03-29 Mon>  
+<<<LOG_generic-entry>>>
+:HOW-TO-USE-THIS: 
+=COMMANDEERING CLONES of this GENERIC LOG Entry BOILERPLATE TEMPLATE:=
 
-      =Punch the Time Clock= At the heading And then begin working on a task related to that Heading... =Your Time IS being Recorded NOW= 
+- [ ] *COMMANDEER Your New CLONE:* 
 
-- =Use These Commands:= /as you work to keep track your time.../ 
+  The structure of this GENERIC LOG Entry Template's content layout is all set up for you ahead of time to allow you to immediately begin writing... /(You only need to change titles etc...)/ 
 
-     - *Clock IN:* ~C-c C-x C-i~ 
+  After cloning, =RENAME= *🗓 Generic LOG Entry* /(BOILERPLATE Log Entry TEMPLATE)/ to a *Unique Title* in order to commandeer this log entry item for your own needs... 
 
-          /(Begin OR Resume Clocking Current task)/
+  =Do NOT PUT "LOG" in your Title!= /(not needed as you already placed this clone within your log binder)/
 
-           This creates a new :CLOCKING: Time Card Entry just underneath the HEADING...
+- [ ] *UPDATE MAIN Timestamp to TODAY:* 
 
-           Do this just before starting work on the task... Be in control of your life!
+  Place your cursor directly on the existing timestamp directly under the title of THIS CLONED or REPURPOSED *🗓 Generic LOG Entry:* and enter the key binding: ~C-c .~ /(i.e., press/ ~Ctrl~ /key while holding/ ~c~ /and then type a dot ~.~ /)/ A date chooser panel will pop up... 
 
-           After doing the above, you can go away and do some work, leaving this heading, log note, etc. to visit other files and/or work on them etc. The clock will be recording your time all the while... You will see in your mode line the elapsed clock time ticking away as you work on a task /(hopefully related to this clock!)/ and NOT Yac Shaving or being sidetracked!!!
+- [ ] *Type One More DOT:* 
 
-     - *RETURN to Clock Heading:* ~C-c C-x C-j~ 
+  Type one more dot ~.~ to force the calendar selection to the current time and date and then, Press ~ENTER~ to accept your choice... /This will update the existing BOILERPLATE timestamp with TODAY's date/time.../
 
-          /Go back to the place where you started the clock.../
+  Check to make sure the timestamp was properly updated then move on to the next step...
 
-          You do this after you have worked on a task for a while and you need to come back to update the item's info etc., and/or stop the clock before going off to do something else unrelated to the log entry...
+  This timestamp will not be updated after that, as it records the FIRST time you started this particular Log entry... You need that date to stay permanent for historical reasons...
 
-     - *Clock OUT:* ~C-c C-x C-o~ /(to stop clocking your time on task)/ 
+  =NOTE:= /This is the FIRST Time Tracking TASK of Starting a NEW LOG Entry/...
 
-         This *Finalizes the Time Card Entry* within: ~:CLOCKING:~ /(created earlier when you started the/ /clock)/...
+  =DO NOT CHANGE the TITLES of These MAIN Headings:= *📚 Reference* , *⏰ Time Card* , *✅ Summary* , or *📒 Details* =Within your CLONES=... 
 
-         The Clock Entry changes showing start timestamp, end timestamp, and total time worked during this segment...  
+  =BUT= YOU Will Need to =CHANGE PART of the ANCHOR LINKS= under these main headings...
 
-          =Please DON'T Forget= /Like I often do, LOL.../ i.e., Leaving a clock running all day by accident, or worse, leave it dangling with the file closed only to open it again and get that nasty *Org-Mode Message:* /"What do/ /you want to do with this?"/ If you do something like that you can always come back and directly edit the clock times by hand to amend them...  After changing clock times or dates, etc... Whatever...
+=NOTE:= You will need to change all these default ANCHORS and LINKS in the beginning before you start using the log entry, /(e.g., Making SURE CASE shifting of parent heading mnemonics are done correctly, etc...)/ You should have read the *HAP Org Mode Anchors:* section /(above)/ to help you get started... =However=, Soon enough... you will have figured out the pattern and it will become second nature for your workflow the next time you clone one of these things... /(I hope)/ Follow the steps below to adjust ANCHORS within CLONES of this *🗓 Generic LOG Entry:* 
 
-          ="Onward We Row Mates... Through the log jam!"=
+- [ ] *Change The 🗓 Log Entry MAIN ANCHOR:* /<LOG_generic-entry>/ 
 
-     - *Update Time Card Entry:* ~C-c C-c~ 
+  =USE the Above:= *HAP ANCHORS HOWTO:* META-HOWTO_hap-ancs and *HAP Org-Mode ANCHOR CONVENTIONS:* META-HOWTO_hap-anc-cnvents to Change the MAIN ANCHOR directly under the *LOG Entry's Main Title* /(heading)/ to match your NEW *LOG Entry's Title*... /(your new renamed log TITLE is actually the ~postfix~ and there is NO ~_LABEL_~ within this Anchor as it is under a MAIN Heading)/
 
-         This command will change the total time at the end showing your new calculated time...
+  Change ~generic-entry~ /(the postfix)/ to a short but unique abbreviation, acronym, or mnemonic of your NEW Log Entry's *Title*... /(don't make it too cryptic to the point that you can no longer cognitively connect your mnemonic with the actual title)/ but keep it short and simple as possible.  In case you have to make anchors more than 3 levels deep this practice will keep your anchors short, /(as you will find out)/
 
-         If you need to go away and do something else before finishing this task, you can do so after clocking out... When you come back simply clock back in again to start another Time Card Entry just as before... The new time card entry will appear above the earlier one within the ~:CLOCKING:~ drawer... When you clock out of this task it will look just like the entry below it with a total time worked tagged on the end...
+  You may LINK to this Unique ANCHOR from other sections of this Log... You may also link to this Anchor from external ORG-LINKS that reference this File in the first part of the link adding this ANCHOR separated by a double colon, /(i.e. ~::~ )/
 
-     - *Clock Out & Mark Items Done:* ~C-c C-t~ 
+- [ ] *Change the 📚 Reference: ANCHOR:* /<LOG_GENERIC-ENTRY_ref>/ 
 
-         When you are all done with a Log Entry use the above key command to mark its Heading *TODO* tag to: *DONE* /(Most of the/ /time this will ALSO clock you out if you are still clocked/ /into the item... But not allways in my experience.../ So make sure you are also clocked OUT of an Item After            marking it DONE... Type: ~C-c C-x C-j~ to check this... /(if no running clock it will tell you and place your/ /cursor at the heading where you LAST CLOCKED OUT)/
+  =USE the Above:= *HAP ANCHORS HOWTO:* META-HOWTO_hap-ancs and *HAP Org-Mode ANCHOR CONVENTIONS:* META-HOWTO_hap-anc-cnvents to Change the *Reference:* ANCHOR.
 
-     - ~C-c C-x C-q~ *Cancel Current Clock:* /(in case of accident)/ 
+  For the *📚 Reference:* Anchor, Leave the ~PREFIX~ and ~postfix~ alone but CHANGE the ~_LABEL_~ portion of the Anchor...
 
-         This removes currently running clock and forgets any time accrued or associated with it...
+  COPY your lower-case ~postfix~ portion from the ANCHOR under your CLONED/RENAMED version of This: *🗓 Generic LOG Entry:* /(which is now a mnemonic representing your New Log Entry Title)/ and use that to rename ~GENERIC-ENTRY~ within the *📚 Reference:* ANCHOR... CHANGE it to UPPER CASE to comply with HAP Org-Mode ANCHOR Conventions.  This mnemonic has NOW transformed into this ANCHOR's ~_LABEL_~
 
-     - ~C-c C-x C-d~ *Display Clocking Info:* 
+  As explained within: META-HOWTO_hap-anc-cnvents /(see, you know what the mnemonics in that link mean right?)/, The new ~_LABEL_~ is simply the UPPER CASE version of the ~postfix~ within the ANCHOR under its *PARENT heading*...
 
-         /This will show elapsed times to the right of headings.../
-         
-         =Warning!= Using this command will CLUTTER ALL the headings within your org file with those timestamps!!!
+  You may LINK to this Unique ANCHOR from other sections of this Log... You may also link to this Anchor from external ORG-LINKS that reference this File in the first part of the link adding this ANCHOR separated by a double colon, /(i.e. ~::~ )/ =However:= This Reference section may also be duplicated within those files as well which you will be able to LINK directly to by using this same ANCHOR alone... But maybe the reference section within this LOG contains some good things needed for your work elsewhere... You will find out soon enough how to organize things to make your workflow easier... /(I have no idea... It's not my workflow... It's your workflow)/...
 
-- =Once All Of This Has Become Routine:= 
+  =NOTE:= For All *Sub-Headings* the ~_LABEL_~ is actually the UPPER CASE version of the *Parent Heading's* ~posfix~ /(i.e., a mnemonic of the parent heading's title)/
 
-    Now that you got all this memorized /(you wizard!)/, =go ahead and remove this= ~README~ =drawer from this template=... That way it does not get copied when you need to clone new log entries...
+  *Leave the* ~_postfix~ *Portion ALONE* because the Reference Heading does not change...
+
+- [ ] *Change the *⏰ Time Card: ANCHOR:* /<LOG_GENERIC-ENTRY_time-card>/
+
+  =USE the Above:= *HAP ANCHORS HOWTO:* META-HOWTO_hap-ancs and *HAP Org-Mode ANCHOR CONVENTIONS:* META-HOWTO_hap-anc-cnvents to Change the *⏰ Time Card:* ANCHOR.
+
+  For the *⏰ Time Card:* Anchor, Leave the ~PREFIX~ and ~postfix~ alone but CHANGE the ~_LABEL_~ portion of the Anchor...
+
+  COPY your lower-case ~postfix~ portion from the ANCHOR under your CLONED/RENAMED version of This: *🗓 Generic LOG Entry:* /(which is now a mnemonic representing your New Log Entry Title)/ and use that to rename ~GENERIC-ENTRY~ within the *⏰ Time Card:* Anchor... CHANGE it to UPPER CASE to comply with HAP Org-Mode ANCHOR Conventions.  This mnemonic has NOW transformed into this ANCHOR's ~_LABEL_~
+
+  The new ~_LABEL_~ is simply the UPPER CASE version of the ~postfix~ within the ANCHOR under its *PARENT heading*...
+
+  You may LINK to this Unique ANCHOR from other sections of this Log... You may also link to this Anchor from external ORG-LINKS that reference this File in the first part of the link adding this ANCHOR separated by a double colon, /(i.e. ~::~ )/
+
+  *Leave the* ~_postfix~ *Portion ALONE* because the Time Card Heading does not change...
+
+- [ ] *Change the *✅ Summary: ANCHOR:* /<LOG_GENERIC-ENTRY_summary>/ 
+
+  =USE the Above:= *HAP ANCHORS HOWTO:* META-HOWTO_hap-ancs and *HAP Org-Mode ANCHOR CONVENTIONS:* META-HOWTO_hap-anc-cnvents to Change the *✅ Summary:* ANCHOR.
+
+  For the *✅ Summary:* Anchor, Leave the ~PREFIX~ and ~postfix~ alone but CHANGE the ~_LABEL_~ portion of the Anchor...
+
+  COPY your lower-case ~postfix~ portion from the ANCHOR under your CLONED/RENAMED version of This: *🗓 Generic LOG Entry:* /(which is now a mnemonic representing your New Log Entry Title)/ and use that to rename ~GENERIC-ENTRY~ within the *⏰ Time Card:* Anchor... CHANGE it to UPPER CASE to comply with HAP Org-Mode ANCHOR Conventions.  This mnemonic has NOW transformed into this ANCHOR's ~_LABEL_~
+
+  The new ~_LABEL_~ is simply the UPPER CASE version of the ~postfix~ within the ANCHOR under its *PARENT Heading*... 
+
+  You may =LINK to this Unique ANCHOR= from other sections of this Log... You may also link to this Anchor from =External Org-Links= that =Reference This File= in the =First Part= of the link adding this ANCHOR to the end of the file spec separated by a double colon, /(i.e. ~::~ )/ Org ANCHORS,  just as in HTML are =LOCAL FILE LINKS= appended to the URL to get the cursor exactly to the subject of interest within the target File or HTML page...
+
+  *Leave the* ~_postfix~ *Portion ALONE* because the *✅ Summary:* Heading does not change...
+
+  =NOTE:= *SUB-HEADINGS* under the *✅ Summary:* ANCHOR ALSO Contain ANCHORS that you will =Need To Change=, as well as the LINKS to those ANCHORS from the *📒 Details:* section that you will =ALSO Need To Change=...
+
+  Use ~SPACE-BAR b~ /(xfk shortcut key command)/ to =expand links= so you can see them under these *sub-headings* and change them to =MATCH the Changed ANCHORS= they should be linking to...
+
+  =NOTE:= After Initial CLONING, /(i.e., While Executing This HOW-TO-USE-THIS TASK)/ You will ONLY need to change the ~_LABEL_~ portion: ~GENERIC-ENTRY~ of all of these anchors to your NEW Log Entry Title mnemonic, to fix the anchors... /(For now... until such time that you need to RENAME these ITEMS Later)/ when you actually start writing in this LOG... Then you will need to change the ~postfix~ mnemonic to match your changed sub-heading titles as well...
+
+  =ALSO NOTE:= If you DO NOT change the ~_LABEL_~ portion: ~GENERIC-ENTRY~ of all of these anchors within your CLONE /(Right NOW)/ you will BREAK org-links within this file when you try to use them, because =you just duplicated a BUNCH of Anchors= within the *📋 Meta:* Binder!! The ~_LABEL_~ portion MUST change but the ~postfix~ mnemonics can STAY... Your new ANCHORS will be Unique...
+
+- [ ] *Change the 📒 Details: ANCHOR:* /<<LOG_GENERIC-ENTRY_details>>/ 
+
+    =USE the Above:= *HAP ANCHORS HOWTO:* META-HOWTO_hap-ancs and *HAP Org-Mode ANCHOR CONVENTIONS:* META-HOWTO_hap-anc-cnvents to Change the *📒 Details:* ANCHOR.
+
+  For the *📒 Details:* Anchor, Leave the ~PREFIX~ and ~postfix~ alone but CHANGE the ~_LABEL_~ portion of the Anchor...
+
+  COPY your lower-case ~postfix~ portion from the ANCHOR under your CLONED/RENAMED version of This: *🗓 Generic LOG Entry:* /(which is now a mnemonic representing your New Log Entry Title)/ and use that to rename ~GENERIC-ENTRY~ within the *📒 Details:* Anchor... CHANGE it to UPPER CASE to comply with HAP Org-Mode ANCHOR Conventions.  This mnemonic has NOW transformed into this ANCHOR's ~_LABEL_~
+
+  The new ~_LABEL_~ is simply the UPPER CASE version of the ~postfix~ within the ANCHOR under its *PARENT Heading*...
+
+  You may =LINK to this Unique ANCHOR= from other sections of this Log... You may also link to this Anchor from =External Org-Links= that =Reference This File= in the =First Part= of the link adding this ANCHOR to the end of the file spec separated by a double colon, /(i.e. ~::~ )/ Org ANCHORS,  just as in HTML are =LOCAL FILE LINKS= appended to the URL to get the cursor exactly to the subject of interest within the target File or HTML page...
+
+  *Leave the* ~_postfix~ *Portion ALONE* because the *📒 Details:* Heading does not change...
+
+  =NOTE:= *SUB-HEADINGS* under the *📒 Details:* Heading ALSO Contain ANCHORS that you will =Need To Change=, as well as the LINKS to those ANCHORS from the the *✅ Summary:* section that you probably already changed above if you are following these ...
+
+  Use ~SPACE-BAR b~ /(xfk shortcut key command)/ to =expand links= so you can see them under these *sub-headings* and change them to =MATCH the Changed ANCHORS= they should be linking to...
+
+  =NOTE:= After Initial CLONING, /(i.e., While Executing This HOW-TO-USE-THIS TASK)/ You will ONLY need to change the ~_LABEL_~ portion: ~GENERIC-ENTRY~ of all of these anchors to your *NEW Log Entry Title* mnemonic, to fix the anchors... /(For now... until such time that you need to RENAME these ITEMS Later)/ when you actually start writing in this LOG... Then you will need to change the ~postfix~ mnemonic to match your changed sub-heading titles as well...
+
+  =ALSO NOTE:= If you DO NOT change the ~_LABEL_~ portion: ~GENERIC-ENTRY~ of all of these anchors within your CLONE /(Right NOW)/ you will BREAK org-links within this file when you try to use them, because =you just duplicated a BUNCH of Anchors= within the *📋 Meta:* Binder!! The ~_LABEL_~ portion MUST change but the ~postfix~ mnemonics can STAY... Your new ANCHORS will be Unique...
+
+- [ ] *Change ANCHORS of Sub Headings:* /<<PREFIX_PARENT-HEADING_postfix>>/ 
+
+  In the case of all *Sub Headings*, under the *📒 Details: Heading* For NOW you will need ONLY to CHANGE the ~_LABEL_~ portion of the ANCHORS... As explained in the two bullets above this one... Later when you actually start logging within this log, you will be changing the ~postfix~ as well... /(within LINKS & ANCHORS)/
+
+  FOR *New Sub-Headings* /(ANYWHERE not just this Log Entry)/ First... Copy an existing Sub-Heading /(a sibling of the place where you want to make a new sub-heading)/ and modify that ANCHOR in the same way as above... /(easy-peasy)/
+
+  If you decide to Create a *New Sub-Heading* =FROM SCRATCH= or suddenly find you have no siblings to CLONE, *Make your NEW ANCHOR look like the following:* /(not so easy-paasy)/
+
+  ~PREFIX_LABEL_postfix~ where ~PREFIX~ is pretty much the same for all the ANCHORS of the MAJOR Section you are in, ~LABEL~ is the title of the *Parent Heading*, and ~postfix~ is the title of this new *sub-heading*... /(all mnemonics)/ That's It in a nutshell... *Now do it below*...
+
+  *COPY:* The lower-case ~postfix~ mnemonic from the ANCHOR under the *Parent Heading* of your New *Sub-Heading* and place that AFTER the ~PREFIX~ of your *NEW Sub Heading* ANCHOR separated by an underscore character... This NOW represents the LABEL of your new Sub-Heading Anchor so you must also *change it to UPPER-CASE* now...
+
+  Create a ~_postfix~ mnemonic representing your *NEW Sub Heading* title and place that after the ~_LABEL~ mnemonic separated by an underscore character... That's it... All done...
+
+- [ ] *You Are Ready To Start Writing NOW:* 
+
+  You are ready to start making notes within your newly Cloned *Log Book Entry*... Your timestamp indicates the present, /-and-/ you are all set to begin writing!
+
+  =READ= the ~:TIME-TRACKING-HOWTO:~ Under the [[LOG_GENERIC-ENTRY_time-card][⏰ Time Card]] /(as you Begin your writing)/ to learn how to use the time card to clock In/out etc...
+
+=ENJOY USING YOUR BRAND NEW LOG OF ANYTHING YOU WANT!=
 :END:
+
+=REPLACE this BOILERPLATE With Your Own Description HERE=
 
 This Log Entry is about: Yadda... Yadda... Yadda...
 
 **** NEW 📚 Reference: 
+<<LOG_GENERIC-ENTRY_ref>>
 :README: 
-=Org Mode Links Tip:= 
+=Org Mode Links Tip:=
 
-- To Create a Link Type: ~C-c C-l~ /(then paste: ~link~ & type: "description")/ 
++ To Create a Link Type: ~C-c C-l~ /(then paste: ~link~ & type: "description")/ 
      =-OR-= Simply Copy/Paste BOILERPLATE: /(use placeholders below)/ And Fill Them In Manually... Copy/Paste more placeholders as needed to create more links...
 
-- To Open a Link Type: ~C-c C-o~ 
++ To Open a Link Type: ~C-c C-o~ 
 
-- To EXPAND a Link Type: ~SPACE b~ or: ~M-x org-toggle-link-display~ 
-
-=BOILERPLATE:= /(clone to add more ref links)/ 
++ To EXPAND a Link Type: ~SPACE b~ or: ~M-x org-toggle-link-display~ 
 
 - *Heading:* [[~/.GIT/My-Docs/][MY DOCS]] /(comment)/ 
 
@@ -452,33 +744,211 @@ This Log Entry is about: Yadda... Yadda... Yadda...
 
 - *Link to Project:* [[][] ] /(comment)/ 
 
-**** NEW ⏱ Time Card: 
+**** NEW ⏰ Time Card: 
+<<LOG_GENERIC-ENTRY_time-card>>
+:TIME-TRACKING-HOWTO: 
+
+=HOW TO DO Time Tracking:= 
+
+You can track time related to =ANY HEADING= within your log... You will mostly be working under the *📒 Details:* section where you will be tracking most of your time, but also a little time will be spent within the *✅ Summary:* section at the start of new tasks... You won't be tracking time under this *⏰ Time Card:* /(Tracking the time it takes to track time? "OK Einstein"... LOL)/ but you may be spending time doing research for the *📚 Reference:* Section, so you should clock that time as well as Summary and Details... 
+
+=Here is how to Track your Time:=
+
+- *Go To ANY HEADING under your MAIN LOG Entry Heading:* 
+
+  /(Summary, Details, or Sub Headings)/
+
+  =Punch the Time Clock:= /(USE: CLOCKING COMMANDS below)/
+
+  To Punch the clock at any heading use the *Clock IN:* command below, and then begin working on a task related that heading... =Your Time will start Recording Immediately= and you will see a ~:clocking:~ item under the heading where time is recorded
+
+  Document your work under the current "clocking" heading as you do the task...
+  *Clock OUT*: when you are done working... /(do this whether any related tasks are complete or not... This simply logs all the time worked so far)/
+
+=CLOCKING COMMANDS:= /(how to keep track your time)/
+
++ *Clock IN:* ~C-c C-x C-i~ 
+
+  /(Begin OR Resume Clocking Current task)/
+
+  This creates a new :CLOCKING: Time Card Entry just underneath its HEADING...
+
+  Do this just before starting work on the task... Be in control of your life!
+
+  If you need to go away and do something else before finishing this task, you can do so after clocking out... When you come back simply clock back in again to start another Time Card Entry just as before... The new time card entry will appear above the earlier one within the ~:CLOCKING:~ drawer... When you clock out of this task it will look just like the entry below it with a total time worked tagged on the end... 
+    
++ *RETURN to Clock Heading:* ~C-c C-x C-j~ 
+
+  /Go back to the place where you started the clock.../
+
+  You do this after you have worked on a task for a while and you need to come back to update the item's info etc., and/or stop the clock before going off to do something else unrelated to the log entry... 
+
++ *Clock OUT:* ~C-c C-x C-o~ 
+
+  /(to stop clocking your time on task)/
+
+  This *Finalizes the Time Card Entry* within: ~:CLOCKING:~ /(created earlier when you started the clock)/
+
+  The Clock Entry changes showing start timestamp, end timestamp, and total time worked during this segment...
+
+  After Clocking OUT, you can go away and do some work, leaving this heading, log note, etc. to visit other files and/or work on them etc. The clock will be recording your time all the while...
+
+  You will see in your mode line the elapsed clock time ticking away as you work on a task /(hopefully related to this clock!)/ and you are NOT Yac Shaving or being sidetracked!!! LOL
+
+  =Please DON'T Forget= /Like I often do, LOL.../ i.e., Leaving a clock running all day by accident, or worse, leave it dangling with the file closed only to open it again and get that nasty *Org-Mode Message:* /"What do you want to do/ /with this?"/ If you do something like that you can always come back and directly edit the clock times by hand to amend them...  After changing clock times or dates, etc... Whatever...
+
+  ="Onward We Row Mates... Through the LOG jam!"= 
+
++ *Update Time Card Entry:* ~C-c C-c~ 
+
+  Go To The: ⏰ *Time Card* Heading... 
+
+  Place your Cursor on the Same Line or at the Beginning Of: ~#+BEGIN:~ clocktable
+  =Type:= ~C-c C-c~
+
+  This command will change the total time at the end showing your new calculated time... 
+
++ *Clock Out & Mark Items Done:* ~C-c C-t~ 
+
+  When you are all done with a Log Entry use the above key command to mark its Heading *TODO* tag to: *DONE*
+
+  /(Most of the/ /time this will ALSO clock you out if you are still clocked/ /into the item... But not allways in my experience.../
+
+  So make sure you are also clocked OUT of an Item After marking it DONE...
+
+  =Type:= ~C-c C-x C-j~ to check current clock state/position...
+  /(if no running clock it will tell you and place your/ /cursor at the heading where you LAST CLOCKED OUT)/ 
+
++ *Cancel Current Clock:* ~C-c C-x C-q~ 
+
+  /(in case of accident)/ This removes currently running clock and forgets any time accrued or associated with it... 
+
++ *Display Clocking Info:* ~C-c C-x C-d~ 
+
+  /This will show elapsed times to the right of headings.../
+
+  =Warning!= Using this command will CLUTTER ALL the headings within your org file with those timestamps!!! 
+  
+:END:
 
 #+BEGIN: clocktable :scope tree3 :maxlevel 6 :tstart "<-1w>" :tend "<+1m>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3 
 
 #+END:
 
-**** NEW 📃 Summary: [1/4] 
+**** NEW ✅ Summary: [0/3] 
+<<LOG_GENERIC-ENTRY_summary>> 
 :README: 
 This Summary is mostly to help you find things later when you cannot remember when or where is was done... If you go to the top of this file and expand all headings to show ALL content, then do a search on "~Summary:~" you will be able to quickly scroll through and scan these summaries quickly to find what you were looking for... 
 
 Also the *Time Card* /displayed above/ each search hit will give more clues by showing important headings you worked on...
 
-Below is an optional list /(that could also provide links)./ This list could be used to itemize things you worked on, but I personally find it easier to simply write a short one or two line description containing important keywords right here and nothing more. I think that is more useful...
-:END: 
+Below is an optional list /(that could also provide links)./ This list could be used to itemize things you worked on, but I personally find it easier to simply write a short one or two
+line description containing important keywords right here and nothing more. I think that is more useful...
+:END:
 
-Yadda... Yadda... Yadda... 
+The SUMMARY section is a sort of EXPANDED TABLE OF CONTENTS so-to-speak.. Providing a bit more info than a TOC would provide normally... Useful for your LOGGING WORKFLOW...
+Putting the summary section all together provides an excellent EXECUTIVE OVERVIEW of your PROJECTS... ANCHORS provide easy navigation from summary to details for each item...
 
-1. [X] *New Item 1:* /(this represents a completed item)/ 
+Commandeer all of the examples below changing their titles both in the heading as well as the lower case title part of the link anchors... 
 
-2. [-] *New Item 2:* /(this represents a currently "radio active" item)/ 
+1. [X] *New Item 1:* /(a COMPLETED ITEM)/ 
+   <<LOG_GENERIC-ENTRY_new-item-1>> 
+   [[LOG_GENERIC-ENTRY-DETAILS_new-item-1][DETAILS]] 
 
-3. [ ] *New Item 3:* /(this represents a new item not worked on yet)/ 
+   =Write a SHORT ONE PARAGRAPH SUMMARY HERE...= 
+        
+2. [-] *New Item 2:* /(a CURRENTLY ACTIVE item i.e., "Radio ACTIVE" %^)/ 
+   <<LOG_GENERIC-ENTRY_new-item-2>> 
+   [[LOG_GENERIC-ENTRY-DETAILS_new-item-2][DETAILS]] 
 
-3. [ ] *New Item:* /(copy/clone more of these as needed)/ 
+   =Write a SHORT ONE PARAGRAPH SUMMARY HERE...= 
 
-**** NEW 📰 Details: 
-***** NEW New Item 1 /(placeholder)/ [0/0] 
+3. [ ] *New Item 3:* /(a NEW ITEM not worked on yet)/ 
+   <<LOG_GENERIC-ENTRY_new-item-3>> 
+   [[LOG_GENERIC-ENTRY-DETAILS_new-item-3][DETAILS]] 
+
+   =Write a SHORT ONE PARAGRAPH SUMMARY HERE...= 
+
+4. [-] *New Item 4:* /(COPY/CLONE more of these as needed)/ 
+   <<LOG_GENERIC-ENTRY_new-item-4>> 
+   [[LOG_GENERIC-ENTRY-DETAILS_new-item-4][DETAILS]] 
+
+   =Write a SHORT ONE PARAGRAPH SUMMARY HERE...= 
+
+**** NEW 📒 Details: 
+<<LOG_GENERIC-ENTRY_details>>
+***** NEW ⏱ New Item 1 /(placeholder)/ [0/3] 
+<<LOG_GENERIC-ENTRY-DETAILS_new-item-1>>
+:BOILERPLATE: 
+  =Delete This BOILERPLATE DRAWER If You Don't Need It...=
+
+  The following list contains Babel Source Code Blocks that are
+  often needed for something I am writing or "Logging" about...
+  I use them so much I decided to include them in this template...
+
+  - [ ] *__:* /(__)/ 
+
+      #+begin_src conf
+       keyword1:     Value1 
+       keyword2:     Value2 
+       keyword3:     Value 
+      #+end_src
+
+  - [ ] *__:* /(__)/ 
+
+      #+begin_src bash
+       sudo dnf install emacs
+       sudo apt install emacs
+      #+end_src
+
+  - [ ] *__:* /(__)/ 
+
+      #+BEGIN_SRC emacs-lisp :results output
+       ;; Initialize Local Vars from GLOBAL CONSTANTS;
+       (let ((h (list 'text-pixels ME--CODE-FRAME-HEIGHT))
+             (w (list 'text-pixels ME--CODE-FRAME-WIDTH)))
+         (princ "CAR h: ")
+         (princ (car h))
+         (princ "\n")
+         (princ "CDR h: ")
+         (princ (cdr h))
+         (princ "\n\n")
+         (princ "CAR w: ")
+         (princ (car w))
+         (princ "\n")
+         (princ "CDR w: ")
+         (princ (cdr w)))
+      #+END_SRC
+
+      #+RESULTS:
+      : CAR h: text-pixels
+      : CDR h: (42)
+      : 
+      : CAR w: text-pixels
+      : CDR w: (92)
+
+  - [ ] =LaTeX Code Within ~.Org~ Docs:= 
+
+    #+begin_comment 
+    Code Embedded ~In-line~ within paragraphs:
+
+    Put: @@latex:<LaTeX Code Here>@@ Anywhere Within a paragraph...
+
+    #+LATEX: % Any Arbitrary LaTeX Code...
+
+    #+LATEX: \newpage % Start New Page
+
+    #+BEGIN_EXPORT latex
+    %% Put LaTex Code In Here...
+    #+END_EXPORT
+
+    #+BEGIN_LaTeX
+    %% Put LaTex Code In Here...
+    #+END_LaTeX 
+    #+end_comment 
+:END:
+
+[[LOG_GENERIC-ENTRY_new-item-1][SUMMARY]]
 
 New Item Details... Yadda... Yadda... Yadda...
 
@@ -489,7 +959,78 @@ Add sub headings as needed...
 Don't forget to clock-in to HEADINGS while you work on them...
 AND... Don't forget to Clock OUT when you are DONE... %^)
 
-***** NEW New Item 2 /(placeholder)/ [0/0] 
+***** NEW ⏱ New Item 2 /(placeholder)/ [0/3] 
+<<RDME-LOG_GENERIC-ENTRY-DETAILS_new-item-2>>
+:BOILERPLATE: 
+  =Delete This BOILERPLATE DRAWER If You Don't Need It...=
+
+  The following list contains Babel Source Code Blocks that are
+  often needed for something I am writing or "Logging" about...
+  I use them so much I decided to include them in this template...
+
+  - [ ] *__:* /(__)/ 
+
+      #+begin_src conf
+       keyword1:     Value1 
+       keyword2:     Value2 
+       keyword3:     Value 
+      #+end_src
+
+  - [ ] *__:* /(__)/ 
+
+      #+begin_src bash
+       sudo dnf install emacs
+       sudo apt install emacs
+      #+end_src
+
+  - [ ] *__:* /(__)/ 
+
+      #+BEGIN_SRC emacs-lisp :results output
+       ;; Initialize Local Vars from GLOBAL CONSTANTS;
+       (let ((h (list 'text-pixels ME--CODE-FRAME-HEIGHT))
+             (w (list 'text-pixels ME--CODE-FRAME-WIDTH)))
+         (princ "CAR h: ")
+         (princ (car h))
+         (princ "\n")
+         (princ "CDR h: ")
+         (princ (cdr h))
+         (princ "\n\n")
+         (princ "CAR w: ")
+         (princ (car w))
+         (princ "\n")
+         (princ "CDR w: ")
+         (princ (cdr w)))
+      #+END_SRC
+
+      #+RESULTS:
+      : CAR h: text-pixels
+      : CDR h: (42)
+      : 
+      : CAR w: text-pixels
+      : CDR w: (92)
+
+  - [ ] =LaTeX Code Within ~.Org~ Docs:= 
+
+    #+begin_comment 
+    Code Embedded ~In-line~ within paragraphs:
+
+    Put: @@latex:<LaTeX Code Here>@@ Anywhere Within a paragraph...
+
+    #+LATEX: % Any Arbitrary LaTeX Code...
+
+    #+LATEX: \newpage % Start New Page
+
+    #+BEGIN_EXPORT latex
+    %% Put LaTex Code In Here...
+    #+END_EXPORT
+
+    #+BEGIN_LaTeX
+    %% Put LaTex Code In Here...
+    #+END_LaTeX 
+    #+end_comment 
+:END:
+
+[[RDME-LOG_GENERIC-ENTRY_new-item-2][SUMMARY]]
 
 New Item Details... Yadda... Yadda... Yadda...
 
@@ -500,7 +1041,78 @@ Add sub headings as needed...
 Don't forget to clock-in to HEADINGS while you work on them...
 AND... Don't forget to Clock OUT when you are DONE... %^)
 
-***** NEW New Item 3 /(placeholder)/ [0/0] 
+***** NEW ⏱ New Item 3 /(placeholder)/ [0/3] 
+<<RDME-LOG_GENERIC-ENTRY-DETAILS_new-item-3>>
+:BOILERPLATE: 
+  =Delete This BOILERPLATE DRAWER If You Don't Need It...=
+
+  The following list contains Babel Source Code Blocks that are
+  often needed for something I am writing or "Logging" about...
+  I use them so much I decided to include them in this template...
+
+  - [ ] *__:* /(__)/ 
+
+      #+begin_src conf
+       keyword1:     Value1 
+       keyword2:     Value2 
+       keyword3:     Value 
+      #+end_src
+
+  - [ ] *__:* /(__)/ 
+
+      #+begin_src bash
+       sudo dnf install emacs
+       sudo apt install emacs
+      #+end_src
+
+  - [ ] *__:* /(__)/ 
+
+      #+BEGIN_SRC emacs-lisp :results output
+       ;; Initialize Local Vars from GLOBAL CONSTANTS;
+       (let ((h (list 'text-pixels ME--CODE-FRAME-HEIGHT))
+             (w (list 'text-pixels ME--CODE-FRAME-WIDTH)))
+         (princ "CAR h: ")
+         (princ (car h))
+         (princ "\n")
+         (princ "CDR h: ")
+         (princ (cdr h))
+         (princ "\n\n")
+         (princ "CAR w: ")
+         (princ (car w))
+         (princ "\n")
+         (princ "CDR w: ")
+         (princ (cdr w)))
+      #+END_SRC
+
+      #+RESULTS:
+      : CAR h: text-pixels
+      : CDR h: (42)
+      : 
+      : CAR w: text-pixels
+      : CDR w: (92)
+
+  - [ ] =LaTeX Code Within ~.Org~ Docs:= 
+
+    #+begin_comment 
+    Code Embedded ~In-line~ within paragraphs:
+
+    Put: @@latex:<LaTeX Code Here>@@ Anywhere Within a paragraph...
+
+    #+LATEX: % Any Arbitrary LaTeX Code...
+
+    #+LATEX: \newpage % Start New Page
+
+    #+BEGIN_EXPORT latex
+    %% Put LaTex Code In Here...
+    #+END_EXPORT
+
+    #+BEGIN_LaTeX
+    %% Put LaTex Code In Here...
+    #+END_LaTeX 
+    #+end_comment 
+:END:
+
+[[RDME-LOG_GENERIC-ENTRY_new-item-3][SUMMARY]]
 
 New Item Details... Yadda... Yadda... Yadda...
 
@@ -510,3 +1122,169 @@ Add sub headings as needed...
 
 Don't forget to clock-in to HEADINGS while you work on them...
 AND... Don't forget to Clock OUT when you are DONE... %^)
+
+***** NEW ⏱ New Item 4 /(placeholder)/ [0/4] 
+<<RDME-LOG_GENERIC-ENTRY-DETAILS_new-item-4>>
+:BOILERPLATE: 
+  =Delete This BOILERPLATE DRAWER If You Don't Need It...=
+
+  The following list contains Babel Source Code Blocks that are
+  often needed for something I am writing or "Logging" about...
+  I use them so much I decided to include them in this template...
+
+  - [ ] *__:* /(__)/ 
+
+      #+begin_src conf
+       keyword1:     Value1 
+       keyword2:     Value2 
+       keyword3:     Value 
+      #+end_src
+
+  - [ ] *__:* /(__)/ 
+
+      #+begin_src bash
+       sudo dnf install emacs
+       sudo apt install emacs
+      #+end_src
+
+  - [ ] *__:* /(__)/ 
+
+      #+BEGIN_SRC emacs-lisp :results output
+       ;; Initialize Local Vars from GLOBAL CONSTANTS;
+       (let ((h (list 'text-pixels ME--CODE-FRAME-HEIGHT))
+             (w (list 'text-pixels ME--CODE-FRAME-WIDTH)))
+         (princ "CAR h: ")
+         (princ (car h))
+         (princ "\n")
+         (princ "CDR h: ")
+         (princ (cdr h))
+         (princ "\n\n")
+         (princ "CAR w: ")
+         (princ (car w))
+         (princ "\n")
+         (princ "CDR w: ")
+         (princ (cdr w)))
+      #+END_SRC
+
+      #+RESULTS:
+      : CAR h: text-pixels
+      : CDR h: (42)
+      : 
+      : CAR w: text-pixels
+      : CDR w: (92)
+
+  - [ ] =LaTeX Code Within ~.Org~ Docs:= 
+
+    #+begin_comment 
+    Code Embedded ~In-line~ within paragraphs:
+
+    Put: @@latex:<LaTeX Code Here>@@ Anywhere Within a paragraph...
+
+    #+LATEX: % Any Arbitrary LaTeX Code...
+
+    #+LATEX: \newpage % Start New Page
+
+    #+BEGIN_EXPORT latex
+    %% Put LaTex Code In Here...
+    #+END_EXPORT
+
+    #+BEGIN_LaTeX
+    %% Put LaTex Code In Here...
+    #+END_LaTeX 
+    #+end_comment 
+:END:
+
+[[RDME-LOG_GENERIC-ENTRY_new-item-4][SUMMARY]] 
+
+New Item Details... Yadda... Yadda... Yadda...
+
+Re-Purpose these as needed and Delete anything you don't need...
+
+Add sub headings as needed...
+
+Don't forget to clock-in to HEADINGS while you work on them...
+AND... Don't forget to Clock OUT when you are DONE... %^)
+
+*** COPY-PASTE ITEMS: 
+
+- =INLINE IMAGES:= 
+  Use this to place an image centered on the page when rendered on the Web...
+  
+  The image will not Auto Expand in org-mode, -and- if it becomes Visible, you can easily turn it OFF if you don't want it. (i.e. to save vertical space while editing)...
+
+  *Type:* ~C-c~  ~C-x~ ~C-v~ to toggle visibility... 
+  #+NAME: Figure:RDME-LOG_object-name 
+  #+ATTR_ORG: :align left
+  #+ATTR_HTML: :align center
+  #+ATTR_HTML: :width 600px
+  #+CAPTION: This is The Caption for a table, graph, image, or etc...
+    [[./media/svg/monochord.svg]]
+
+- =TABLES:= 
+
+  Lets See how VERSE blocks effect HTML output... I normally use CENTERED blocks...
+
+  #+NAME: table:-LOG_table-name
+  #+CAPTION: Org-Mode BOILERPLATE Table
+  #+begin_verse 
+|------+-------+-------|
+| *COL-1* | *COL-2* | *COL-3* |
+|------+-------+-------|
+|   42 | foo    | bar    |
+|    13 | fee    | fum   |
+|------+-------+-------|
+  #+end_verse
+
+- =Generate TABLE from SRC CODE Block:= 
+
+  =NOTE:= You must have iTerm running for this zsh command to work... I have not tried this with BASH, but I like the output table here so that is fine...
+
+  Use this to generate a raw org-mode table for some data you need via a script, SHELL, Python, whatever... Then once the table is made you can copy it, fix up headings etc., add a NAME: and CAPTION: to it and place it where you need it... /(I should make capture templates or ya-snippets for this stuff but NOT YET)/.. First do it manually, then automate... 
+
+  #+begin_src zsh :results table :exports both 
+  ps -a 
+  #+end_src 
+
+  #+RESULTS:
+  |  PID | TTY    |   TIME | CMD |
+  | 70518 | ttys001 | 0:00.15 | zsh   |
+
+- =Graphviz DOT SRC CODE BLOCK:= 
+
+  #+NAME: dot:-LOG_Nested-CLusters
+  #+begin_src dot :file ./media/svg/nested-clusters.svg :exports both 
+digraph D {
+
+  subgraph cluster_p {
+    label = "Parent";
+
+    subgraph cluster_c1 {
+      label = "Child one";
+      a;
+
+      subgraph cluster_gc_1 {
+        label = "Grand-Child one";
+         b;
+      }
+      subgraph cluster_gc_2 {
+        label = "Grand-Child two";
+          c;
+          d;
+      }
+
+    }
+
+    subgraph cluster_c2 {
+      label = "Child two";
+      e;
+    }
+  }
+}
+  #+end_src 
+  #+attr_org: :width 600px
+  #+attr_html: :width 600px
+  #+CAPTION: DOT Generated Nested Clusters
+  #+RESULTS: dot:-LOG_Nested-CLusters
+  [[file:./media/svg/nested-clusters.svg]]
+
+

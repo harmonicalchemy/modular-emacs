@@ -1,6 +1,6 @@
 # -**- mode: org; coding: utf-8 -**-
 :LATEST_UPDATE: 
-=Last Updated:= <2025-03-29 Sat> 
+=Last Updated:= <2025-05-17 Sat> 
 
 =YOU MAY REMOVE This Drawer= from your own clones of this template if it is bothering you... This drawer is only here as an aid for: HAP Modular Emacs DOC TEMPLATE housekeeping/updating tasks...
 
@@ -30,9 +30,13 @@
 
           ~Org-Mode~ and ~AuxTeX~ settings and meta data within CLONES of this SETUPFILE TEMPLATE will get out of sync after a while due to Harmonic Alchemy Modular Emacs version updates etc...
         
-          =Use the ABOVE timestamp= /(within this TEMPLATE and your CLONE of it)/ to see if the clone's settings need to be updated... /(i.e., brought into sync with its template - MERGE)/ and then perform any needed merging/replacing of BOILERPLATE and/or meta data. /(e.g, *:README:* drawers, etc.)/
+          Check the TIMESTAMPS /(within this TEMPLATE and your CLONE of it)/ to see if they are different...
 
-          =NOTE:= You may have purposefully changed some of the actual SETTINGS/OPTIONS below so be careful not to sync those OPTIONS with the new template update if the feature of those OPTIONS are NOT your intention... =ALSO=... If the timestamp in your cloned version of this file is NEWER than the template... You don't have to do anything because that was done before already... Updating the TEMPLATES themselves is another story...  You need to do that in a local git branch keeping your own local commits to that branch only so that the master tracking branch can stay clean... /(that way you will have your own set of customized TEMPLATES to use)/ while still having the DEFAULT TEMPLATES in the master branch...
+          If they are, the clone's settings need to be updated... /(i.e., brought into sync with its template - MERGE)/ You will need to perform any needed merging/replacing of BOILERPLATE and/or meta data. /(e.g, *:README:* drawers, etc.)/
+
+          =NOTE:= You may have purposefully changed some of the actual SETTINGS/OPTIONS below so be careful not to sync those OPTIONS with the new template update if the feature of those OPTIONS are NOT your intention... =ALSO=... If the timestamp in your cloned version of this file is NEWER than the template... You don't have to do anything because that was done before already...
+
+          UPDATING the TEMPLATES THEMSELVES is ANOTHER STORY... /(and for another discussion)/ because You will need to do that in a local git branch keeping your own local commits to that branch only so that the master tracking branch can stay clean... /(that way you will have your own set of customized TEMPLATES to use)/ while still having the DEFAULT TEMPLATES in the master branch... /(but lets save that conversation for later ok?)/
 :END:
 
 =File:= ~~/.emacs.d/Docs/pubOps/org-templates/log-book-setup.org~

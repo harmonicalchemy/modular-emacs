@@ -1,15 +1,15 @@
 # -**- mode: org; coding: utf-8 -**-
-#+TITLE: HAP - General LOG Book Skeleton
-#+SUBTITLE: A GP Log Book with Time Tracking and Reporting
-#+EXPORT_FILE_NAME: ./build/HAP_General-Log-Book-Skeleton.pdf
-#+TEXT: Copyright © 2024 Harmonic Alchemy Productions & Others
+#+TITLE: HAP - SSH KEY LOG Template
+#+SUBTITLE: Official SSH Keys Journal with Policy and Prodedures
+#+EXPORT_FILE_NAME: ./build/HAP_SSH-KEY-LOG-Template.pdf
+#+TEXT: Copyright © 2025 Harmonic Alchemy Productions & Others
 #+AUTHOR: Alisha Awen - Harmonic Alchemy Productions
 #+EMAIL: harmonicalchemy@proton.me
 #+DATE: {{{time(%A %Y-%b-%d)}}}
-#+TEXT: Created: <2021-02-11 Thu>
+#+TEXT: Created: <2025-05-15 Thu>
 #+TEXT: Last Published: <Not Published>
-#+FILETAGS: templates logs unpublished time_tracking
-#+DESCRIPTION: HAP - Modular Emacs Org Mode General Log Notebook Template. This is the replacement for the Markdown Mode templates I was using previously, which were in turn replacements for even older templates I made originally for Evernote/Trello/Scrivener...
+#+FILETAGS: templates logs SSH unpublished time_tracking
+#+DESCRIPTION: HAP - Modular Emacs Org Mode SSH Key Log Notebook Template. Clone this and Use it as is to keep track and manage your SSH Keys... Important Security Info and Due-Diligence policies are included...
 
 #+BEGIN_EXPORT latex 
   \begin{document} 
@@ -219,7 +219,7 @@ To use *HAP_General-Log-Book-Project-Skeleton.org* /(Org-Mode Log Notebook Proje
 
    =Example:= 
    #+CAPTION: This is the caption for the next figure link (or table) 
-   #+NAME: music:-LOG_object-name 
+   #+NAME: music:SSH-LOG_object-name 
    #+ATTR_HTML: :align left 
    #+ATTR_ORG: :align left 
    #+attr_html: :width 600px 
@@ -241,7 +241,7 @@ Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas
 =Enjoy!= - Alisha Awen 
 :END: 
 :LATEST_TEMPLATE_UPDATE: 
-<2025-05-17 Sat> 
+<2025-05-10 Sat> 
 
 =YOU MAY REMOVE This Drawer= from your own clones of this template if it is bothering you... This drawer is used for HAP Modular Emacs DOC TEMPLATES housekeeping... 
 
@@ -311,8 +311,8 @@ If you do this, you will ALSO need to change the *#+SETUPFILE:*  ~./org-template
 =LaTeX CLASS for PDF:= 
 #+LATEX_CLASS: logbook 
 
-* NEW About This Log Notebook:                            :export: 
-<<-LOG_about-this-log-notebook>>
+* NEW About This SSH KEY Log Template:              :export:  
+<<SSH-LOG_about-this-ssh-key-log>>
 :README: 
 Use this section as Front Matter for your Log Book... The summary provided here about your log notebook will become more important over time as your log book gets filled with lots of information!!! 
 
@@ -323,11 +323,13 @@ This is where you will be looking first years later when searching to find somet
 /“Everyone is a moon, and has a dark side which he never shows to anybody.”/ - Mark Twain 
 #+end_quote
 
-This =Log Note Book SKELETON TEMPLATE= was created to be used for almost anything... Anywhere you need to record events, make notes, diary entries, and keep precise time tracking of research or development or ANY of your own reasons...
+This SSH Key Log Template is simply a CLONE of HAP_General-Log-Book-Skeleton.org REPURPOSED SPECIFICALLY for keeping track of and managing all the SSH Keys that you create over the years to access servers etc.  If you don't keep track of your keys you can get into BIG TROUBLE later... This Journal Template will help to mitigate that... /(if you do your Due-Diligence that is)/
 
-Use this first section to compose a general overview of the Project of Projects that this log records data from...   I HOPE this Helps you as it has me...
+Replace this Heading with "ABOUT YOUR SSH KEY LOG" title and REPLACE These paragraphs to compose a general overview of your SSH Key Management practice, /(or anything you want to put here)/
 
-** References: 
+I HOPE this Helps you as it has me...
+
+** References: [0/1] 
 :README: 
 =Org Mode Links Tip:=
 
@@ -352,7 +354,9 @@ Use this first section to compose a general overview of the Project of Projects 
 - *_:* [[][] ] /(yadda... yadda... yadda...)/
 :END: 
 
-Here are Links to Information that may help you utilize this template to create your logbooks in org-mode, as well as EXPORTING your Log Books to professionally typeset PDFs or To the WEB as a regular timestamped blog or as selected single pages on some other website or snippets to Mastodon...
+Here are Links to Information about SSH Security, As well as some ORG-MODE tips that may help you utilize this template to manage your SSH Key log in org-mode, as well as EXPORTING this Log to professionally typeset PDFs...
+
+- [ ] =TODO:=  Add links to important SSH Security articles, etc...
 
 - [[https://orgmode.org/manual/Table-of-Contents.html][Table of Contents]] - /(The ORG Manual)/
 
@@ -418,7 +422,6 @@ Here are Links to Information that may help you utilize this template to create 
 - [[https://karl-voit.at/2022/01/29/How-to-Use-Tags/][How to Use Tags]] /(HOW and WHY they are IMPORTANT)/ 
     =Because EVERYTHING is MISCELLANEOUS in our minds=...
 
-
 #+BEGIN_EXPORT latex 
 \clearpage
 %\listoffigures*
@@ -426,6 +429,171 @@ Here are Links to Information that may help you utilize this template to create 
 %\listoftables*
 \mainmatter
 #+END_EXPORT
+
+* NEW Policy & Due Diligence:                               :export:  
+<<SSH-LOG_about-this-log-notebook>>
+
+** Purpose: 
+
+This Document OUTLINES *HAP Official Policy*, & Instructions for creating, using, and managing SSH keys within an air-gaped Private PC or Laptop while ALONE in COMPLETE PRIVACY away from cameras, eyes, microphones, and ESPECIALLY OFF-LINE!
+
+The best way to keep this file is within a *KeePassXC* Database where you also Store ALL your created SSH Key Pairs /(as well as public keys of servers you connect to)/...
+
+Using *KeePassXC* will allow you to choose WHEN and WHERE to enable any keys that you need to use to connect to a server but keep other keys not currently being used OUT of SSH-AGENT and locked up in the KeePassXC DB... This is way more secure than doing it manually /(how I used to do things)/
+
+Backups should be made to the KeePassXC Database /(credential vault)/ to a SECURE backup store that cannot be accessed on-line and is reasonably physically secure from theft...
+
+=Keep your Secure Archives SAFE=
+
+** DIRECTIVE 1: /(General Directives)/  
+
+IF you Revoke or EXPIRE a key, UPDATE its LOG ENTRY within the *SSH-KEYS-LOG* Binder BELOW to document that fact!
+
+=Do NOT Revoke keys unless they become compromised!=
+
+If you believe a key is compromised, or just replacing it, simply remove its PUBLIC key from the authorized keys file on the server where it was enabled, and disable the key from loading into ssh-agent.  The secret key may remain locked up inside of its KeePassXC DB item as an attachment, and the item will have SSH agent integration turned OFF...
+
+IF You Loose Your SECRET Key (or it was stolen) you MUST create a new Keypair, and then load the new public key to the server it was intended for...  Remove the old public key as it is now useless... or dangerous if your secret key was stolen!
+
+=Be Careful!!!=
+
+** DIRECTIVE 2: /(Creation of NEW Keys)/ 
+
+=WARNING!= Do Not create client SSH keys anywhere except within an air-gapped PC or Laptop while off-line and private!
+
+This includes keys intended for use on other client machines...
+
+VPS Host keys are created on the VPS server itself and saved within a kdbx2 database where they may also be configured in a similar way using the kpcli utility on the server to manage them and their dynamic inclusion into the servers running ssh daemon...
+
+You may wish to make a backup of the kdbx2 database on the remote VPS and save it to your local KeePassXC Database.  This will allow you to continue using the key on the server if it crashed and you had to rebuild it over again etc...
+
+#+BEGIN_EXPORT latex 
+\clearpage
+#+END_EXPORT
+
+** KEY CREATION STEPS: 
+
+=All SSH Keys are generated within an air-gaped computer while off-line and in total privacy!=
+
+Follow the steps below as well as instructions contained within the *NEW LOG* /(template)/ Under the *Meta:* binder, to create your new key pair.
+
+After you are done creating new keys, and have them stored away safely within ~ssh-keys.kdbx~ -or- the name of your ~cloned.kdbx~ you may go Back ON-LINE and perform normal operations...
+
+Anytime you have to create new keys, modify keys, revoke keys, change expiraion dates... /(i.e., anything that alters any keys)/ you MUST document that within this log file! You must exercise your due diligence on this or you will forget what happened a year later! =This is important!=
+
+*** Post Key Creation Steps: [0/5] 
+
+=Execute the following immediately after new keypair creation:=
+  
+- [ ] *Import newly created SSH Keypairs:* 
+
+  Import your new keys into a *NEW Item* within ~ssh-keys.kdbx~ /(your master SSH key database for ALL keys - or what ever you named it to be)/.
+
+- [ ] *CLONE ssh-keys.kdbx for Other Client Machines:* 
+
+  If you created new client SSH keys for use on ANOTHER Client Computer, you will need to make a clone of your ssh-keys.kdbx /(for THAT MACHINE to USE)/ renamed to for example: ~iMac-ssh-keys.kdbx~ /(i.e., Named after the New Machine that will use it)/
+
+  Remove any SSH Key pairs from your CLONE that will NOT be used by the Client Machine... No need to have keys on machines that DON'T use them... Especially SECRET KEYS!
+
+   Lastly, change the password for your new CLONED KeePassXC Database... Best to have different passwords for each KeePassXC DB you create.  If one of them gets compromised the others will still be FINE...
+
+- [ ] *Verify the New Key works with SSH-AGENT:*  
+
+  As soon as the key has been imported and verified to be working with local ssh-agent, shred & delete the original key on the file system: ( e.g,  ~~/.ssh/new-key_id_ed25519, etc.~ )
+  
+  Make sure all secret keys are gone from all filesystems before going back on-line!
+   
+   =NOTE:= New secret keys should exist within: ~~/.ssh/vault~ /(filesystem)/ on your private PC ONLY DURING INITIAL KEY CREATION...
+
+   After that, the keys should never leave their KeePassXC DB once they have been put there... This is the best protection scheme for ssh secret keys IMHO!
+
+- [ ] *USE Signal to Transfer Keys Securely to Client Machines:* 
+
+  If the client machine belongs to you, use Signal *Note to Self* /(between your machines)/ to transfer the CLONED KeePassXC Database... Or... Send the KeePassXC DB to a Co-Worker's machine to *Their Signal Account*...
+
+- [ ] *Configure CLONED KeePassXC.kdbx Files on Client Machines to READ-ONLY:* 
+
+  Don't modify Clones after creation... Use your MASTER KeePassXC Database (on your most secure development machine where you should be creating them) to make changes... there and only there...
+
+- [ ] *Optionally Use YubiKey for 2FA:* 
+
+  If you use, or wish to use YubiKeys for 2 Factor Auth, Configure KeePassXC to require it... That will make things even more secure for you...
+
+
+** KEY ARCHIVAL PROCEDURE:
+
+
+
+1. [ ] *Create a new KeepassXC db item entry within:* ~ssh-keys.kdbx~
+
+      Create the DB entry title as follows:  
+
+    + [ ] *Key Creation Year:*
+      
+         USE Q1, Q2, Q3, Q4 prefix with dash
+         
+         /(e.g., Q4-2018, Q2-2020, Q1-2021, etc.)/
+         
+         Follow with a single space char
+
+    + Client device name: Unique Name "iMac" or "QVM"...
+
+    + "->" (text arrow indicating client connecting to
+      server) followed by a single space char
+
+    + Host Server Name: user@server-name.domain.tld followed by
+      a space and dash "-" and another space
+
+    + "Client SSH Keypair:" (append this text followed by
+      another space)
+
+    + Key Filename: (e.g., bitbucket_id_rsa,
+      vps1_id_ed25519, etc.) (final postfix on name)
+
+2. Attach the new exported OpenSSH complient secret key pair
+   to this new KeepassXC db item... (both private and public
+   keys, e.g, github_id_rsa and github_id_rsa.pub, etc.)
+
+   If you created new client SSH keys for use on iMac, do NOT
+   configre those keys for SSH-Agent here. Skip those steps
+   below... You will be doing those steps on the iMac...
+   The iMac client SSH keys are destined for the iMac within a
+   clone of ssh-keys.kdbx renamed to:  iMac-ssh-keys.kdbx.
+
+3. If the a new keypair you created is for use within your Qubes
+   environment, Click on the SSH Agent tab within this keys db
+   entry and then click Attachment, and choose the private key
+   that is listed...  (no other options will be there)...
+
+4. Make sure this key is added to ssh-agent when the database is
+   opened and removed from agent when database is closed.  Save
+   the database entry now... It will be all set for action...
+
+5. Shred and Delete all OpenSSH compliant secret key files for
+   this key outside of the single kdbx db entry you just created...
+   Move the public keys to ~/.ssh
+
+6. Once all the above is complete, you may enable networking.
+   Copy the new public keys to AppVMs where they will be needed.
+   Try to use SSH normally from within one of your enabled AppVMs.
+   If it does not work, make sure ssh-agent has the keys loaded
+   from your open ssh-keys.kdbx database...
+
+7. If you had to re-clone: iMac-ssh-keys.kdbx due to new iMac keys
+   created or modified, you now need to securely transfer that file
+   to your iMac using your black ops P2P file transfer utility...
+   Change the password to the iMac yubikey version now before you
+   transfer the database... Better to set passwords here in a more
+   secure environment...
+
+8. on [Rodrigo] Shred and delete the old outdated iMac-ssh-keys.kdbx,
+   and set up the updated one to use Yubikey 2FA...
+   Copy the attached public key to ~/.ssh
+
+9. Finally, make iMac-ssh-keys.kdbx Read-Only on [Rodrigo].
+   You are now done and ready for normal SSH operations!  It may also
+   be wise to reboot your machines to make sure your new settings
+   stick permanantly!
 
 * NEW 💡 Scratchpad Refile:                                  :noexport: 
 ** ☞ Start Here! [0/4] 
@@ -501,8 +669,8 @@ Change the Timestamp to NOW...
 =Replace all of this boilerplate content with your own content=
 
 * 2025 Logs:                                                       :export: 
-** ACTIVE Lab Experiment Gone WRONG!                            :export: 
-<<-LOG_lab-experiment-gone-wrong>> 
+** NEW Lab Experiment Gone WRONG!                               :export: 
+<<SSH-LOG_lab-experiment-gone-wrong>> 
 :LOG-DATE: <2022-12-20 Tue> 
 
 *** Introduction: 
@@ -599,16 +767,16 @@ Below is an optional list /(that could also provide links)./ This list could be 
 What a MESS! It was my first attempt... Should we try to do it again right next time?
 
 1. [X] *First Experiment:* /(COMPLETED)/ 
-   <<-LOG_GENERIC-LOG_first-experiment>> 
+   <<SSH-LOG_GENERIC-LOG_first-experiment>> 
 
-   [[-LOG_GENERIC-LOG-DETAILS_first-experiment][DETAILS]]
+   [[SSH-LOG_GENERIC-LOG-DETAILS_first-experiment][DETAILS]]
 
    This is the FIRST EXPERIMENT I did... No one died (thank God) but it was a Total Horrible MESS!  I am still picking up all the pieces..  See Details for more information... 
 
 2. [-] *Second Experiment:* /(details doc NOT created yet)/ 
-   <<-LOG_GENERIC-LOG_second-experiment>> 
+   <<SSH-LOG_GENERICSSH-LOG_second-experiment>> 
 
-   [[-LOG_GENERIC-LOG-DETAILS_new-item][DETAILS]] 
+   [[SSH-LOG_GENERIC-LOG-DETAILS_new-item][DETAILS]] 
 
    =Write a SHORT ONE PARAGRAPH SUMMARY HERE...= 
 
@@ -621,9 +789,9 @@ What a MESS! It was my first attempt... Should we try to do it again right next 
    =SO...= Go Ahead and *Create your Details Doc...* Change Headings, Links, and Anchors Accordingly... 
 
 4. [-] *New Item:* /(COPY/CLONE more of these as needed)/ 
-   <<-LOG_GENERIC-LOG_new-item>> 
+   <<SSH-LOG_GENERIC-LOG_new-item>> 
 
-   [[-LOG_GENERIC-LOG-DETAILS_new-item][DETAILS]] 
+   [[SSH-LOG_GENERIC-LOG-DETAILS_new-item][DETAILS]] 
 
    =Write a SHORT ONE PARAGRAPH SUMMARY HERE...= 
 
@@ -641,7 +809,7 @@ What a MESS! It was my first attempt... Should we try to do it again right next 
 
 *** ACTIVE Details: 
 **** DONE First Experiment [0/3] 
-<<-LOG_GENERIC-LOG-DETAILS_first-experiment>>
+<<SSH-LOG_GENERIC-LOG-DETAILS_first-experiment>>
 CLOSED: [2022-12-28 Wed 12:42] 
 :LOGBOOK: 
 - State "DONE"       from "ACTIVE"     [2022-12-28 Wed 12:42]
@@ -650,7 +818,7 @@ CLOSED: [2022-12-28 Wed 12:42]
 CLOCK: [2022-12-28 Wed 12:24]--[2022-12-28 Wed 12:42] =>  0:18 
 :END: 
 
-[[-LOG_GENERIC-LOG_first-experiment][SUMMARY]] 
+[[SSH-LOG_GENERIC-LOG_first-experiment][SUMMARY]] 
 
 This is the FIRST EXPERIMENT... Not really...  In truth it is a LOG NOTEBOOK Item Details Example... in the form of an ad-hoc org-mode cheat sheet... BUT I almost killed someone during my extreme frustration of trying to get tables aligned properly on export... Just kidding about the killing but NOT about the frustration... LOL.  My Next Experiments will be Much Better! I promise!
 
@@ -989,7 +1157,7 @@ CLOCK: [2022-12-31 Sat 13:32]--[2022-12-31 Sat 14:25] =>  0:53
 
 *Example 1:*
 
-#+NAME: music:-LOG_12-tone-row
+#+NAME: music:SSH-LOG_12-tone-row
 #+CAPTION: 12 Tone Row
 #+attr_org:     :width 550px 
 #+attr_html:    :width 550px 
@@ -998,7 +1166,7 @@ CLOCK: [2022-12-31 Sat 13:32]--[2022-12-31 Sat 14:25] =>  0:53
 
 *Example 2:* 
 
-#+NAME: music:-LOG_Str-Qrt-exerpt-1
+#+NAME: music:SSH-LOG_Str-Qrt-exerpt-1
 #+CAPTION:  Example 2 Bar String Quartet 
 #+attr_org:     :width 550px 
 #+attr_html:    :width 550px 
@@ -1106,7 +1274,6 @@ digraph D {
 [[file:./auto/nested-clusters.svg]]
 
 
-
 #+BEGIN_EXPORT latex 
 \clearpage
 #+END_EXPORT
@@ -1155,7 +1322,7 @@ digraph D {
   #+RESULTS: ORG Version 
   : 9.6.15
 
-* NEXT 2026 Logs: [0/4] /(BOILERPLATE)/                             :noexport: 
+* TODO 2026 Logs: [0/4] /(BOILERPLATE)/                             :noexport: 
 
 /Not Here Yet but keep logging... The New Year will be here soon enough!/ 
 
@@ -1186,9 +1353,7 @@ digraph D {
      Don't forget to Clock IN and Clock OUT to get your time recorded 
 
 * ⎘ Meta: /(Usage & Templates)/                                   :noexport: 
-<<META>>
 ** 📄 Introduction: 
-<<META_INTRO>>
 :README: 
 Use this Standard Log Book / Journal /(template)/ as a multi purpose time card/log entry vehicle/instrument... 
 
@@ -1199,16 +1364,9 @@ I stopped using Markdown files for this purpose a few years ago... This makes to
 I finally bit the long curve bullet and learned Emacs Org Mode /(after many many many years of using Emacs without it!)/ Today, looking back with current knowledge to me is like going back to a /"*Dec VT220* green screen *dumb terminal*"/ after experiencing *X Windows* on a Big *HP-UX Workstation!* 
 
 Yeah, that's a personal story from the past, lol... All you Mac users out there, please realize that your beautiful Apple desktop is in fact an *HP-UX Motif X-Windows widget set clone*!  That's what Steve Jobs believed to be the best X-Windows tool-kit of the day /(when he was building the NeXT computer)/...  So... Yup he copied that! The Applications Doc at the bottom of your screen is a dead    giveaway. Hewlet Packard was first to use such UI concepts... /(back before the dawning of the web we loved those HPUX Workstations!)/ 
-:END:
+:END: 
 
-=NOTE:= This BINDER Section SHOULD =NEVER BE EXPORTED OR PUBLISHED=
-/(This is META DATA - for use within Emacs Org-Mode only!)/
-
-#+begin_quote
-/“Everyone is a moon,/
- /and has a dark side,/
- /which he never shows to anybody.”/ - Mark Twain 
-#+end_quote
+            =NOTE:= This BINDER Section SHOULD =NEVER BE EXPORTED OR PUBLISHED= This is META DATA DOH - for use within Emacs Org-Mode only! 
 
 *** Emacs Shorthand Command Key Notation: 
 
@@ -1340,7 +1498,7 @@ Anytime you need to see your Log Notebook as a nicely printed PDF report, you ca
 OR... Use the normal ORG-MODE Specific Export Commands... /(look those up RTFM... I am not documenting that here as Org-Mode already has a good MANUAL... Probably composed in org-mode itself)/ 
 
 ** NEW Generic Log Entry /(GP Log Entry Template)/                  :noexport: 
-<<-LOG_generic-log>> 
+<<SSH-LOG_generic-log>> 
 :LOG-DATE: <2021-03-29 Mon>
 :README: 
 =Using the Clocking Feature of this Log Entry= 
@@ -1478,26 +1636,26 @@ Putting the summary section all together provides an excellent EXECUTIVE OVERVIE
 Commandeer all of the examples below changing their titles both in the heading as well as the lower case title part of the link anchors... (change -LOG to: "SOME-UNIQUE-NAME"-LOG_ to make it unique for this file ONLY... /(usually a mnemonic that encapsulates the file name if this LOG BOOK that you cloned & created for some purpose)/..
 
 1. [X] *New Item 1:* /(a COMPLETED ITEM)/ 
-   <<-LOG_GENERIC-LOG_new-item-1>> 
-   [[-LOG_GENERIC-LOG-DETAILS_new-item-1][DETAILS]] 
+   <<SSH-LOG_GENERIC-LOG_new-item-1>> 
+   [[SSH-LOG_GENERIC-LOG-DETAILS_new-item-1][DETAILS]] 
 
    =Write a SHORT ONE PARAGRAPH SUMMARY HERE...= 
         
 2. [-] *New Item 2:* /(a CURRENTLY ACTIVE item i.e., "Radio ACTIVE" %^)/ 
-   <<-LOG_GENERIC-LOG_new-item-2>> 
-   [[-LOG_GENERIC-LOG-DETAILS_new-item-2][DETAILS]] 
+   <<SSH-LOG_GENERIC-LOG_new-item-2>> 
+   [[SSH-LOG_GENERIC-LOG-DETAILS_new-item-2][DETAILS]] 
 
    =Write a SHORT ONE PARAGRAPH SUMMARY HERE...= 
 
 3. [ ] *New Item 3:* /(a NEW ITEM not worked on yet)/ 
-   <<-LOG_GENERIC-LOG_new-item-3>> 
-   [[-LOG_GENERIC-LOG-DETAILS_new-item-3][DETAILS]] 
+   <<SSH-LOG_GENERIC-LOG_new-item-3>> 
+   [[SSH-LOG_GENERIC-LOG-DETAILS_new-item-3][DETAILS]] 
 
    =Write a SHORT ONE PARAGRAPH SUMMARY HERE...= 
 
 4. [-] *New Item 4:* /(COPY/CLONE more of these as needed)/ 
-   <<-LOG_GENERIC-LOG_new-item-4>> 
-   [[-LOG_GENERIC-LOG-DETAILS_new-item-4][DETAILS]] 
+   <<SSH-LOG_GENERIC-LOG_new-item-4>> 
+   [[SSH-LOG_GENERIC-LOG-DETAILS_new-item-4][DETAILS]] 
 
    =Write a SHORT ONE PARAGRAPH SUMMARY HERE...= 
 
@@ -1507,7 +1665,7 @@ Commandeer all of the examples below changing their titles both in the heading a
 
 *** NEW Details: [0/3]                                                                      :noexport: 
 **** NEW New Item 1 /(placeholder)/ [0/4] 
-<<-LOG_GENERIC-LOG-DETAILS_new-item-1>> 
+<<SSH-LOG_GENERIC-LOG-DETAILS_new-item-1>> 
 :PROPERTIES: 
 :UNNUMBERED: notoc
 :END: 
@@ -1588,7 +1746,7 @@ Commandeer all of the examples below changing their titles both in the heading a
 
 :END: 
 
-[[-LOG_GENERIC-LOG_new-item-1][SUMMARY]] 
+[[SSH-LOG_GENERICSSH-LOG_new-item-1][SUMMARY]] 
 
 New Item Details... Yadda... Yadda... Yadda... 
 
@@ -1600,7 +1758,7 @@ Don't forget to clock-in to HEADINGS while you work on them...
 AND... Don't forget to Clock OUT when you are DONE... %^) 
 
 **** NEW New Item 2 /(placeholder)/ [0/4] 
-<<-LOG_GENERIC-LOG-DETAILS_new-item-2>> 
+<<SSH-LOG_GENERIC-LOG-DETAILS_new-item-2>> 
 :PROPERTIES: 
 :UNNUMBERED: notoc
 :END:
@@ -1681,7 +1839,7 @@ AND... Don't forget to Clock OUT when you are DONE... %^)
 
 :END: 
 
-[[-LOG_GENERIC-LOG_new-item-2][SUMMARY]] 
+[[SSH-LOG_GENERIC-LOG_new-item-2][SUMMARY]] 
 
 New Item Details... Yadda... Yadda... Yadda...
 
@@ -1693,7 +1851,7 @@ Don't forget to clock-in to HEADINGS while you work on them...
 AND... Don't forget to Clock OUT when you are DONE... %^)
 
 **** NEW New Item 3 /(placeholder)/ [0/4] 
-<<-LOG_GENERIC-LOG-DETAILS_new-item-3>> 
+<<SSH-LOG_GENERIC-LOG-DETAILS_new-item-3>> 
 :PROPERTIES: 
 :UNNUMBERED: notoc
 :END:
@@ -1774,7 +1932,7 @@ AND... Don't forget to Clock OUT when you are DONE... %^)
 
 :END: 
 
-[[-LOG_GENERIC-LOG_new-item-3][SUMMARY]] 
+[[SSH-LOG_GENERIC-LOG_new-item-3][SUMMARY]] 
 
 New Item Details... Yadda... Yadda... Yadda...
 
@@ -1786,7 +1944,7 @@ Don't forget to clock-in to HEADINGS while you work on them...
 AND... Don't forget to Clock OUT when you are DONE... %^)
 
 **** NEW New Item 4 /(placeholder)/ [0/4] 
-<<-LOG_GENERIC-LOG-DETAILS_new-item-4>>
+<<SSH-LOG_GENERIC-LOG-DETAILS_new-item-4>>
 :PROPERTIES: 
 :UNNUMBERED: notoc
 :END:
@@ -1867,7 +2025,7 @@ AND... Don't forget to Clock OUT when you are DONE... %^)
 
 :END: 
 
-[[-LOG_GENERIC-LOG_new-item-4][SUMMARY]] 
+[[SSH-LOG_GENERIC-LOG_new-item-4][SUMMARY]] 
 
 New Item Details... Yadda... Yadda... Yadda...
 
@@ -1884,7 +2042,7 @@ AND... Don't forget to Clock OUT when you are DONE... %^)
   Use this to place an image centered on the page when rendered with LaTeX or for the Web...
   The image not Auto Expand in org-mode so you don't have to see it while editing if you don't
   want to and it saves vertical space while editing as well...
-  #+NAME: music:-LOG_object-name 
+  #+NAME: music:SSH-LOG_object-name 
   #+ATTR_HTML: :align right
   #+ATTR_ORG: :align left
   #+attr_html: :width 600px

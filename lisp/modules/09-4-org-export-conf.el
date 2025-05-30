@@ -818,10 +818,10 @@
   (add-to-list
    'org-latex-classes
    '( "refbook"
-      "\\documentclass[letterpaper,12pt,oneside,onecolumn,openany]{memoir} 
+      "\\documentclass[letterpaper,12pt,oneside,onecolumn,openany,showtrims]{memoir} 
           [DEFAULT-PACKAGES] 
+       \\input{~/.emacs.d/Docs/TeX/ref-book-setup.tex}
           [PACKAGES] 
-       \\input{~/.emacs.d/Docs/TeX/ref-book-setup.tex} 
           [EXTRA]" 
      ("\\chapter{%s}" . "\\chapter*{%s}") 
      ("\\section{%s}" . "\\section*{%s}") 
