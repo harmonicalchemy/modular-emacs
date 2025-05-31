@@ -37,16 +37,28 @@
 
 (defvar me--req-org-packages
   '(gnuplot-mode
-    org-modern
     org-superstar
     valign
     toc-org
     sass-mode
     abc-mode
-    org-sidebar
-    org-contrib
-;    org-mind-map
     ob-asymptote))
+
+;;;
+;; REMOVED: 
+;;    org-mind-map - This OLD package requires DASH... I don't need a mind map anyway...
+;;                   If i do I will use an external open-source app... Mind maps are
+;;                   GRAPHICAL not text... Even though Emacs can do graphics...
+;;
+;;    org-modern   -  Removed this because I am NOT using it anymore...
+;;
+;;    org-contrib  - Not SURE if I need this either, so I am removing it to see...
+;;                   There does not seem to be any config for this...
+;;                   Sub-Packages of ORG-CONTRIB may be needed...
+;;                   (I DON'T LIKE HOW THIS WORKS)
+;;
+;;    org-sidebar  - This is no longer needed as I am not trying to mimic
+;;                   Scrivener anymore... Also this removed dependency on DASH!
 
 ;;;
 ;; Install required packages:

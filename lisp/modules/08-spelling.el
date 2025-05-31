@@ -34,8 +34,8 @@
 ;; Declare Default Modular Emacs List of Required Packages:
 
 (defvar me--required-packages
-  '(flyspell-correct))
-  ;flyspell-correct-helm
+  '(flyspell-correct
+    flyspell-correct-helm))
 
 ;;;
 ;; Install Required Packages:
