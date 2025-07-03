@@ -202,9 +202,11 @@
   (define-key xah-fly-command-map (kbd "p") 'recenter-top-bottom)
 
   ;;;
-  ;; TOGGLE INLINE IMAGES: 
-  ;; (Emacs Normal Key: C-c C-x C-v) 
-  (define-key xah-fly-command-map (kbd "s") 'org-toggle-inline-images) 
+  ;; TOGGLE INLINE IMAGES:
+  ;; NOTE: I disabled this one... It is too dangerous to hit the "s" key by accident,
+  ;;       and then.. If I am in an org file with LOTS of images, I have to WAIT!!!! NO!!!
+  ;; (Emacs Normal Key: C-c C-x C-v) <-this is fine for me...
+  ;; (define-key xah-fly-command-map (kbd "s") 'org-toggle-inline-images) 
 
   ;; Run a ztree-diff session:
   ;; (you will be prompted for right and left directories)
@@ -348,7 +350,14 @@
   ;;       Don't use it for those LARGE org files
   ;;       (i.e., your Multi Year LOG Books that have
   ;;        at least one table for EVERY Log Entry!)
-  
+
+  ;; Org-Mode Sort Table Lines:
+  ;; According to the COLUMN at POINT: (or you will be prompted)
+  ;; (xah-fly-Lp2p1-key-map) QWERTY "s"
+  ;; (Emacs Normal Key: C-c ^ (interactive asking for sort type) 
+
+  (define-key xah-fly-Lp2p1-key-map (kbd "s") 'org-table-sort-lines)
+
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Xah-Fly-Keys SECONDARY LEADER-KEY BINDINGS:
 ;; (xah-fly-Rp2p1-key-map) QWERTY "i"

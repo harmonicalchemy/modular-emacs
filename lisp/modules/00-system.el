@@ -58,17 +58,6 @@
 (defconst ME--POSIX (memq window-system `(ns x)))
 
 ;;;
-;; Load Harmonic Alchemy Productions - Modular Emacs CONSTANTS
-;; NOTE: Override The Defaults set in the load file below to
-;;       better fit your particular platform needs... Do this
-;;       by copying the file below into "my-modules" and then
-;;       editing it...
-
-(if (file-exists-p "~/.emacs.d/lisp/my-modules/me-constants.el")
-    (load-file "~/.emacs.d/lisp/my-modules/me-constants.el")
-  (load-file "~/.emacs.d/lisp/modules/me-constants.el"))
-
-;;;
 ;; Configure custom elisp library load path.
 
 (add-to-list 'load-path "~/.emacs.d/lisp/")
@@ -115,6 +104,17 @@
 (if (boundp buffer-file-coding-system)
     (setq buffer-file-coding-system 'utf-8)
   (setq default-buffer-file-coding-system 'utf-8))
+
+;;;
+;; Load Harmonic Alchemy Productions - Modular Emacs CONSTANTS
+;; NOTE: Override The Defaults set in the load file below to
+;;       better fit your particular platform needs... Do this
+;;       by copying the file below into "my-modules" and then
+;;       editing it...
+
+(if (file-exists-p "~/.emacs.d/lisp/my-modules/me-constants.el")
+    (load-file "~/.emacs.d/lisp/my-modules/me-constants.el")
+  (load-file "~/.emacs.d/lisp/modules/me-constants.el"))
 
 ;; END: [modular-emacs]:~/.emacs.d/lisp/modules/00-system.el
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

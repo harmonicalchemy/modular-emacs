@@ -1,197 +1,42 @@
 # -**- mode: org; coding: utf-8 -**-
 :LATEST_UPDATE: 
+=Last Updated:= <2025-05-17 Sat> 
 
-  =Last Updated:= <2024-03-25 Mon> /(this template needs work)/
+=YOU MAY REMOVE This Drawer= from your own clones of this template if it is bothering you... This drawer is only here as an aid for: HAP Modular Emacs DOC TEMPLATE housekeeping/updating tasks...
 
-  =YOU MAY REMOVE This Drawer= from your own clones of this template if
-  it is bothering you... This drawer is used for HAP Modular Emacs
-  DOC TEMPLATES housekeeping...
+=HOWEVER= you may also wish use the instructions here for the same purpose... i.e., to keep your existing Modular Emacs based org documents /(created with this template)/ in sync with the latest updates of the template they were cloned from... =NOTE:= If you have CHANGED MANY of the settings within your clone since the last template update you are advised to do a VISUAL diff /(i.e., visually line by line, not automated)/ of the two files to see whether you want to switch your settings to the new updated ones... It all depends on your use case... so check that first...
 
-  =HOWEVER= you may also use it for the same purpose to keep your existing
-  Modular Emacs based org documents in sync with the latest updates of the
-  template they were created from...
-  
-  =If you do wish to do the same... Read On Below...=
-  
-  - =INTERNAL USE Instructions:= [1/1] /(END USERS SKIP THIS BULLET)/
+=If you do wish employ this little project management thing... Read On Below...= 
 
-    This bullet is not for end users... This is /"Note to Self"/ stuff...
+- =INTERNAL USE Instructions:= [1/1] /(END USERS SKIP THIS BULLET)/ 
 
-      + [X] =MASTER TEMPLATE ONLY= *Keep The Above Timestamp Up To Date:*
+    This bullet is not for end users... This is my /"Note to Self"/ stuff...
 
-          *DO THIS ALWAYS*, JUST AFTER YOU UPDATE THIS SETUPFILE...
-          =DON'T FORGET!=
+     - [X] =MASTER TEMPLATE ONLY= *Keep The Above Timestamp Up To Date:* 
 
-  - =PUBLIC USE Instructions:= /(FOR CLONES OF THIS TEMPLATE)/
+         *DO THIS ALWAYS*, JUST AFTER YOU UPDATE THIS SETUPFILE... =DON'T FORGET!= 
 
-      + [ ] =Change this= *:LATEST_UPDATE:* =drawer title:= /(within clones only)/
+- =PUBLIC USE Instructions:= [0/3] /(FOR CLONES OF THIS TEMPLATE)/ 
 
-           Change it to: *:LATEST_TEMPLATE_UPDATE:* within NEWLY CREATED CLONES...
+     - [ ] *REMOVE INTERNAL USE Instructions* /(and all under the bullet)/ 
 
-      + [ ] *COMPARE the TIMESTAMPS between THIS TEMPLATE and CLONES:*
+          You don't need this in the file you created from a clone of this template...
 
-           ~Org-Mode~ and ~AuxTeX~ settings and meta data within CLONES of
-           this SETUPFILE TEMPLATE will get out of sync after a while due
-           to Harmonic Alchemy Modular Emacs version updates etc...
+     - [ ] *UPDATE Last Updated:* ~<timestamp>~ After Making Changes to this file: 
+
+          Copies of this file within your own projects will change over time as you try out different OPTIONS etc... You need to keep track of the LAST time this file was changed within your projects... /(and you may have copies of this file in many projects)/ All of them may have different settings after time goes on... The =Last Updated:= heading above lets you know when those changes happened... That knowledge will help you when you are comparing updated template files from the repository...
+
+     - [ ] *COMPARE the TIMESTAMPS between THIS TEMPLATE and your CLONES:* 
+
+          ~Org-Mode~ and ~AuxTeX~ settings and meta data within CLONES of this SETUPFILE TEMPLATE will get out of sync after a while due to Harmonic Alchemy Modular Emacs version updates etc...
         
-           Use the ABOVE timestamp /(within the TEMPLATE and your CLONE)/
-           to see if the clone's settings need to be updated...
-           /(i.e., brought into sync with its template - MERGE)/ and then
-           perform any needed merging/replacing of BOILERPLATE and/or
-           meta data. /(e.g, *:README:* drawers, etc.)/
+          Check the TIMESTAMPS /(within this TEMPLATE and your CLONE of it)/ to see if they are different...
 
-      + [ ] *Keep ABOVE timestamp within CLONES of this template UP TO DATE:*
+          If they are, the clone's settings need to be updated... /(i.e., brought into sync with its template - MERGE)/ You will need to perform any needed merging/replacing of BOILERPLATE and/or meta data. /(e.g, *:README:* drawers, etc.)/
 
-           =AFTER Completing Above MERGE Step= and your clone has been brought
-           up to date /(i.e. in sync)/ with its STARTUPFILE TEMPLATE...
-           Then update the timestamp ABOVE... /(WITHIN YOUR CLONE)/ to record
-           the date of its last sync status...
+          =NOTE:= You may have purposefully changed some of the actual SETTINGS/OPTIONS below so be careful not to sync those OPTIONS with the new template update if the feature of those OPTIONS are NOT your intention... =ALSO=... If the timestamp in your cloned version of this file is NEWER than the template... You don't have to do anything because that was done before already...
 
-:END:
-:README: 
-
-- =USAGE:= *Copy/Clone* ~~/.emacs.d/Docs/pubOps/org-templates~ *directory*:
-
-          If you HAVEN'T ALREADY DONE SO EARLIER: *COPY/CLONE* the entire
-          ~/.emacs.d/Docs/pubOps/org-templates directory (containing
-          these setupfiles) to your "master folder" which should contain
-          one or more .org files which need these SETUPFILES to properly
-          get them compiled and exported to the final Document format
-          they are intended for...
-
-          =Don't Modify The MASTER Templates Within ~/.emacs.d=
-
-          /(if you did by accident, you can easily enough perform:/
-       
-          ~git restore <this file>~ /or:/ ~git checkout .~ /to refresh ALL since
-          you are not modifying the master branch...)/
-
-          *COPY/CLONE:* ~~/.emacs.d/Docs/pubOps/org-templates~ directory
-          to the MASTER directory where existing .org files reference
-          this contained SETUPFILE... Modify the copied SETUP Files within
-          your cloned org-templates directory to suit your needs...
-
-          *Adjust Your Cloned Copy Of THIS File Within:*
-          .../<your-master-folder>/org-templates/ folder To Suit Your Needs:
-  
-          *INCLUDE: This Setupfile* within .org files residing within your
-          /"master folder"/ which are destined to become a Reference Manual
-          or Technical Book Project...
-
-          =ADD THE FOLLOWING LINE TO THE HEADER OF= ~.Org~ 
-          =FILES That You Wish To Include (use) This Configuration:=
-
-              ~#+SETUPFILE: ./org-templates/ref-book-setup.org~
-
-          Making a COPY/CLONE of: $HOME/.emacs.d/Docs/pubOps/org-templates
-          master folder To your book's project directory will allow you to
-          make your own custom configurations for different books without
-          affecting the configurations of other book projects within their
-          own MASTER FOLDERS...
-
-
-- =NOTE:= *Dependencies:*
-
-         The Configurations within this file depend on Harmonic Alchemy Modular
-         Emacs init file: ~~/.emacs.d/lisp/modules/09-4-org-export-conf.el~...
-
-         If you need to create other LaTeX Document Styles or customize existing
-         ones, you will also need to override ~09-4-org-export-conf.el~
-         by placing a copy of it within: ~~/.emacs.d/lisp/my-modules~ and then
-         make your changes in your cloned copy...
-
-         Many LaTeX Classes are defined within 09-4-org-export-conf.el BUT
-         ARE YET UNUSED... These blocks are simple makeing it easy for you
-         to commandeer them for your own use... You WILL need to create new
-         SETUPFILES for them... That is where all the MAGIC happens...
-         So.. in that case you will simply be changing the include file name
-         within the lisp code block for that "unused" Named LaTeX Class...
-
-         In the current version of Harmonic Alchemy Modular Emacs, there is
-         little need to go to the lisp level to get nice LaTeX docs for MOST
-         situations... Use the supplied Emacs Org-Mode Setupfiles and make
-         your customizations there alone...
-
-         Find: =LaTeX CONFIGURATIONS FOR: --> Reference Book PDF:= Below:
-
-         Modify or add new configurations and even ~\\input~ external LaTeX
-         files with even more fancy modifications if you need that...
-
-         You will need to study *LaTeX* a LOT, and in particular, the *"memoir"*
-         document class... =Read The Well Documented Docs=
-         
-         /(see reference section below)/
-
-         Once you have tried this several times /(and failed)/ it won't look so
-         complicated and you will begin to "get it"... /(Be Diligent! TeX/LaTeX/
-         /IS a complicated Turing Complete Language... Created by one of the/
-         /Geekiest GEEKS of Computer Science, Mathematics, and Algorithm Analysis!/
-         /Donald Knuth... You have been warned!!!)/
-
-         =Good luck!=
-
-
-- =HERE ARE A FEW Org-Mode LaTeX Tips:=
-
-  /(I may add a few more here as I find them, i.e., if I find them to
-  be common  hurdles/caveats for most folks)/
-
-    + Prevent Headlines from Showing Up in the *TOC*
-
-       Set any *HEADING* within your ~.org~ project file with the
-       following *:PROPERTIES:* BOX...
-
-       *Set The NOTOC Property:* /(NOT in TOC)/
-
-         ~*~ =ANY Section HEADING:=
-         *:PROPERTIES:*
-         :       :NOTOC: t
-         *:END:*
-
-         Don't copy this pretty text example... It is NOT code... LOL
-
-
-- =REFERENCE:=
-   
-    + [[https://orgmode.org/manual/Export-Settings.html#Export-Settings][Org Manual Export Settings]]
-
-    + [[https://orgmode.org/worg/dev/org-export-reference.html][WORG - Org Export Reference]]
-
-    + [[https://www.linuxjournal.com/content/org-mode-latex-exporter-latex-non-texers][Org Mode Latex Exporter - Linux Journal]]
-
-    + [[https://tug.org/][TeX Users Group]] - /TUG/
-
-    + [[https://tug.org/FontCatalogue/][The LaTeX Font Catalogue]] - /(TUG.org)/
-
-    + [[https://tug.org/FontCatalogue/seriffonts.html][Serif Fonts]] - /(TUG.org)/
-
-    + [[https://tug.org/FontCatalogue/sansseriffonts.html][Sans Serif Fonts]] - /(TUG.org)/
-
-    + [[https://tug.org/FontCatalogue/typewriterfonts.html][Typewriter Fonts]] - /(TUG.org)/
-
-    + [[https://tug.org/FontCatalogue/calligraphicalfonts.html][Calligraphical Fonts]] - /(TUG.org)/
-
-    + [[https://en.wikibooks.org/wiki/LaTeX/Fonts][LaTeX Fonts]] - /(WIKIbooks.org)/
-
-    + [[https://www.ctan.org/pkg/latexmk/][latexmk – Fully automated LaTeX document generation]]
-
-    + [[https://damitr.org/2014/01/09/latex-tufte-class-in-org-mode/][Latex Tufte class in org-mode]]
-
-    + [[https://tufte-latex.github.io/tufte-latex/][Tufte-LaTeX]] - /For Producing Handouts, Papers, and Books/
-
-    + [[https://github.com/Tufte-LaTeX/tufte-latex][tufte-latex.github.io/tufte-latex/]]
-
-    + [[https://latex-tutorial.com/documentclass-latex/][Your Guide to documentclass LaTeX - Latex-Tutorial.com]]
-
-    + [[https://mirror2.sandyriver.net/pub/ctan/macros/latex/contrib/memoir/memman.pdf][The Memoir Document Class]] - /(link to PDF)/
-
-    + [[https://www.ctan.org/pkg/memoir][memoir – Typeset fiction, non-fiction and mathematical books]] - /(CTAN)/
-
-    + [[https://orgmode.org/manual/Embedded-LaTeX.html][12.5 Embedded LaTeX]] - /(The Org Manual)/ 
-
-    + [[https://orgmode.org/manual/LaTeX-fragments.html][12.5.1 LaTeX fragments]] - /(The Org Manual)/ 
-
-    + [[https://www.offerzen.com/blog/literate-programming-empower-your-writing-with-emacs-org-mode][Empower Your Writing with Emacs Org-Mode]] - /(Literate Programming)/
+          UPDATING the TEMPLATES THEMSELVES is ANOTHER STORY... /(and for another discussion)/ because You will need to do that in a local git branch keeping your own local commits to that branch only so that the master tracking branch can stay clean... /(that way you will have your own set of customized TEMPLATES to use)/ while still having the DEFAULT TEMPLATES in the master branch... /(but lets save that conversation for later ok?)/
 :END:
 
 =File:= ~~/.emacs.d/Docs/pubOps/org-templates/ref-book-setup.org~
@@ -201,138 +46,70 @@
 ~refbook~ class is defined within: ~09-4-org-export-conf.el~
 Chapter Styles are Modeled After: ~MemoirChapStyles.pdf~ /(from CTAN)/
 
-- =STARTUP DIRECTIVES For This Configuration:= 
-   #+LANGUAGE: en
-   #+STARTUP:  overview
-   #+STARTUP:  hideblocks
-   #+STARTUP:  indent
-   #+STARTUP:  align
-   #+STARTUP:  inlineimages
-      /Mutually Exclusive Export TAGS/
-   #+SELECT_TAGS: export
-   #+EXCLUDE_TAGS: noexport
+None of the content or annotations in this SETUPFILE are exported to PDF or WEB...
+Its Best to view this file within a CODING Frame /(as if it were source code)/
 
-- =ORG-MODE EXPORT OPTIONS:= 
-   /ENABLE Smart Quotes (org-export-with-smart-quotes)/
-   /Non-nil = activate smart quotes during export/
-    #+OPTIONS: ':nul
+:README: 
+=Usage:= *Copy/Clone* this file and adjust to suit your needs... *Include* this SETUPFILE within ~.org~ files destined to become *Reference Books* or Smaller *User Guides*...
 
-   /Show Emphasized Text (org-export-with-emphasize)/
-   /Non-nil means interpret *word*, /word/, _word,_ and +word+ 
-   /for export... NOTE: Exported PDF is styled different/
-   /than org-mode buffer fontification../
-    #+OPTIONS: *:t
+*COPY/CLONE:* ~~/.emacs.d/Docs/pubOps/org-templates~ directory to the MASTER directory where existing .org files reference this contained SETUPFILE... Modify the copied SETUP Files within your cloned org-templates directory to suit your needs...
 
-   /Convert Special Strings (org-export-with-special-strings)/
-   /Non-nil means interpret "\-", "--" and "---" for export/ 
-    #+OPTIONS: -:nil
+=Don't Modify The MASTER Templates Within ~/.emacs.d= 
+/(if you did by accident, you can easily enough perform:/ 
+       
+   ~git restore <this file>~ =or easier:= ~git checkout .~ 
 
-   /Export with fixed-width sections (org-export-with-fixed-width)/
-   /non-nil = Interpret Strings Starting with a/ /colon ":" as: A Fixed-With Verbatim area./
-    #+OPTIONS: ::t
+/to refresh ALL since you are not modifying the master branch...)/ 
 
-   /Enclude time/date active/inactive stamps (org-export-with-timestamps)/
-    #+OPTIONS: <:t
+=Add:= The following line to the Header of ~.Org~ Files that need to include this file:
 
-   /Line Breaks: Non-nil = Preserve ALL Line Breaks (org-export-preserve-breaks)/
-   /NOTE: (non-nil may affect LaTeX parskip)/
-    #+OPTIONS: \n:nil
+   ~#+SETUPFILE: ./org-templates/ref-book-setup.org~
 
-   /Use Tex-like Syntax For Sub And Superscripts (org-export-with-sub-superscripts)/
-   /Typing simple a_b will not be affected anymore/
-   /Use word^{super} to raise word "super" - superscript/
-   /Use word_{sub} to lower the word "sub" - subscript/
-    #+OPTIONS: ^:{}
+/Making a COPY/CLONE of:/ ~$HOME/.emacs.d/Docs/pubOps/org-templates~ /master folder To your book's project directory will allow you to make your own custom configurations for different books or other docs, without affecting the configurations of other book projects within other MASTER FOLDERS.../
 
-   /Include Author Name into Exported file (org-export-with-author)/
-    #+OPTIONS: author:t
+=NOTE:= Modular Emacs Config File: ~~/.emacs.d/lisp/modules/09-4-org-export-conf.el~ DEPENDS on the Configurations contained within this startup file...
 
-   /Broken link(s) found?/
-   /Mark Them & Don't Export (org-export-with-broken-links)/
-    #+OPTIONS: broken-links:mark
+If you need to create other *LaTeX Document Styles* or customize existing ones, you will also need to override ~09-4-org-export-conf.el~ by placing a copy of it within: ~~/.emacs.d/lisp/my-modules~ and then make your changes to add more document class definitions within your cloned copy...
 
-   /Include CLOCK keywords in exported documents (org-export-with-clocks)/
-    #+OPTIONS: c:t
+Find the: ~BEGIN: CUSTOM LaTeX CONFIGURATIONS for EXPORT to PDF~ heading comment within that file... Then scroll down till you get inside the ~with-eval-after-load 'ox-latex~ line... Then scroll down some more until you find the first ~add-to-list 'org-latex-classes~ block /(form)/...
 
-   /Include Creator Info (org-export-with-creator)/
-    #+OPTIONS: creator:t
+Copy any of the ~add-to-list~ blocks that you see, as a template... /(copy the heading comment to that block as well)/. Paste your copy between existing ~add-to-list~ blocks /(separated by heading comments)/ and change your *NEW* *heading comment* to describe your new export document type, class, etc...
 
-   /Do NOT Include DRAWERS in exported documents (org-export-with-drawers)/
-    #+OPTIONS: d:nil
+During this process, you will need to create a NEW:  ~???-setup.tex~ file for your new document class before completing your NEW ~add-to-list~ block within: ~~/.emacs.d/lisp/my-modules/09-4-org-export-conf.el~
 
-   /Include DATE in exported documents (org-export-with-date)/
-    #+OPTIONS: date:t
+Clone one of the existing ~setup.tex~ files within the ~~/.emacs.d/Docs/TeX/.~ folder.  Place that new file somewhere outside of the git repo, /(so that it won't go away the next time your pull changes from the DEPOT master branch)/ and modify your new setup.tex file to set the typesetting rules of your new document class... 
+Copy the full path to this new setup.tex file for the NEXT STEP...
 
-   /Include Entities (org-export-with-entities)/
-   /Example if t: HTML exports \\alpha as: &alpha;/
-    #+OPTIONS: e:t
+Once that is all done, go back and change the line: ~\\input{~~/.emacs.d/Docs/TeX/???-setup.tex}~ within your cloned ~add-to-list~ block in:  ~~/.emacs.d/lisp/my-modules/09-4-org-export-conf.el~ to call out the correct file name of your new ~setup.tex~ file... Use the full path, otherwise Emacs will not find it...
 
-   /Include Author’s e-mail (org-export-with-email)/
-    #+OPTIONS: email:t
-   
-   /Don't Include Footnotes (org-export-with-footnotes)/
-   /Use Built in Memoir Footnotes instead?/ *this needs research*
-   #+OPTIONS: f:nil
+Once all the above has been done, *SAVE* ~my-modules/09-4-org-export-conf.el~... At this point, you are all done with the emacs config portion....
 
-   /Set Headline Levels for Export (org-export-headline-levels)/
-    #+OPTIONS: H:6
+Continue modifying and testing your new ~setup.tex~ and new ~SETUPFILE.org~ files, making trial-and-error exports of your ~.org~ DOC /(which uses them)/ until you see nice results within an exported PDF...
 
-   /Toggle inclusion of TODO Task related keywords (org-export-with-tasks)/
-   /IF t    - INCLUDE ALL TASK KEYWORDS.../
-   /IF nil  - REMOVE ALL TASKS.../
-   /IF todo - REMOVE DONE TASKS.../
-   /IF list - (use list of keywords to keep)/
-    #+OPTIONS: tasks:t
+=OMG! This is a LOT of WORK!= /(research, trying things, etc.)/ but worth it in the end when you have something looking really nice! You =WILL LEARN a LOT= about *LaTeX* after going through several rounds of this process!
+You will also begin to realize that *LaTeX* is a =MONSTROUSLY HUGE ELEPHANT!= *TeX/LaTeX* IS a complicated *Turing Complete Language*... Created by one of the Geekiest GEEKS of Computer Science, Mathematics, and Algorithm Analysis! [[https://www-cs-faculty.stanford.edu/~knuth/][Donald Knuth]]. It is POWERFUL! You cannot eat the whole elephant all at once... You have been warned!!!
 
-   /Do NOT Include Inline Tasks (org-export-with-inlinetasks)/
-    #+OPTIONS: inline:nil
+Take your time on the easy stuff first... Then GO AWAY and Comeback on Another Day to find out how to do the more fancy stuff... You will NEVER know all of it, but you won't need all of it.. This Gutenberg Elephant was designed to accommodate MANY different document styles and purposes, most of them you will never need... /(but someone else will)/...
 
-   /Limit Section Numbering to 3 levels deep.../
-   /(org-export-with-section-numbers)/
-   /When N, Number only headlines level N or above./
-   /Set ‘UNNUMBERED’ property to non-nil to disable/
-   /numbering of heading and subheadings entirely./
-   /Moreover, when value is ‘notoc’, headline,/
-   /(and all children), do NOT appear in TOC either./
-    #+OPTIONS: num:3
+=Good luck!= Here is one tip for you starting off /(org-mode related tweak)/
 
-   /NO Planning Info (org-export-with-planning)/
-    #+OPTIONS: p:nil
+=HOWTO: Prevent Headlines from Showing Up in the TOC=
 
-   /NO priority cookies (org-export-with-priority)/
-    #+OPTIONS: pri:nil
+Set any *HEADING* within your .org project file with the following PROPERTIES BOX...
 
-   /No Property Drawers (org-export-with-properties)/
-    #+OPTIONS: prop:nil
+- *Set The NOTOC Property:* /(NOT in TOC)/ 
 
-   /No Stastic cookies (org-export-with-statistics-cookies)/
-    #+OPTIONS: stat:nil
+     =* Section HEADING:=
+     *:PROPERTIES:*
+          ~:NOTOC: t~
+     *:END:*
+     
+Don't copy above.. /(it is formatted text)/... Create a REAL org-mode property's box... *Read the docs about that*... I will not put instructions for that here as it is easily found within the Org-Mode Manual.. Good Luck! Its easy... Actually... If you type the above /(as you see it rendered above)/ as naked text under any heading, THAT WILL WORK and you will see the text turn grey, confirming to you that org-mode sees and registers it... /(see... I just gave you the cheat answer)/, but you Still need to RTFM! OK? =HAVE FUN!=
+:END:
 
-   /No Tags (org-export-with-tags)/
-    #+OPTIONS: tags:nil
+- =DISABLED ORG-MODE OPTIONS:= /(for debugging)/ 
 
-   /Verbatim export (org-export-with-latex)/
-    #+OPTIONS: tex:t 
-
-   /Include Creation Time (org-export-time-stamp-file)/
-    #+OPTIONS: timestamp:t
-
-   /Include Title (org-export-with-title)/
-    #+OPTIONS: title:t
-
-   /Include TOC 3 levels deep (org-export-with-toc)/
-   /BUT Maybe Use Memoir Built In TOC features INSTEAD?...
-   (Using Memoir, you can have multiple TOCs)/
-    #+OPTIONS: toc:3
-
-   /DONT Include TODO keywords (org-export-with-todo-keywords)/
-    #+OPTIONS: todo:nil
-
-   /Include Tables (org-export-with-tables)/
-    #+OPTIONS: |:t
-
-=DISABLED ORG-MODE OPTIONS:= 
-#+BEGIN_COMMENT 
+  #+BEGIN_COMMENT 
     /DO NOT Export fixed-width sections/
     /(org-export-with-fixed-width)/
     #+OPTIONS: ::nil
@@ -357,3 +134,137 @@ Chapter Styles are Modeled After: ~MemoirChapStyles.pdf~ /(from CTAN)/
     /(org-export-with-toc)/
     #+OPTIONS: toc:t
 #+END_COMMENT
+
+- =STARTUP DIRECTIVES For This Configuration:= 
+  
+   #+LANGUAGE: en
+   #+STARTUP:  overview
+   #+STARTUP:  hideblocks
+   #+STARTUP:  indent
+   #+STARTUP:  align
+   #+STARTUP:  inlineimages
+      /Mutually Exclusive Export TAGS/
+   #+SELECT_TAGS: export
+   #+EXCLUDE_TAGS: noexport
+
+- =STANDARD OPTIONS For This Configuration:= 
+  
+   /ENABLE Smart Quotes (~org-export-with-smart-quotes~)/
+   /Non-nil = activate smart quotes during export/
+    #+OPTIONS: ':t
+
+   /Show Emphasized Text (~org-export-with-emphasize~)/
+   /Non-nil means interpret *word*, /word/, _word,_ and +word+ 
+   /for export... NOTE: Exported PDF is styled different/
+   /than org-mode buffer fontification../
+    #+OPTIONS: *:t
+
+   /Convert Special Strings (~org-export-with-special-strings~)/
+   /Non-nil means interpret "\-", "--" and "---" for export/ 
+    #+OPTIONS: -:nil
+
+   /Export with fixed-width sections (~org-export-with-fixed-width~)/
+   /non-nil = Interpret Strings Starting with a/ /colon ":" as: A Fixed-With Verbatim area./
+    #+OPTIONS: ::t
+
+   /Enclude time/date active/inactive stamps (~org-export-with-timestamps~)/
+    #+OPTIONS: <:t
+
+   /Line Breaks: Non-nil = Preserve ALL Line Breaks (~org-export-preserve-breaks~)/
+   =NOTE:= /(non-nil may affect LaTeX parskip)/
+    #+OPTIONS: \n:nil
+
+   /Use Tex-like Syntax For Sub And Superscripts (~org-export-with-sub-superscripts~)/
+   /Typing simple ~a_b~ will not be affected anymore/
+   /Use ~word^{super}~ to raise word "~super~" i.e., superscript/
+   /Use ~word_{sub}~ to lower the word "~sub~" - i.e., subscript/
+    #+OPTIONS: ^:{}
+
+   /Include Author Name into Exported file (~org-export-with-author~)/
+    #+OPTIONS: author:t
+
+   /Broken link(s) found?/
+   /Mark Them & Don't Export (~org-export-with-broken-links~)/
+    #+OPTIONS: broken-links:mark
+
+   /Include CLOCK keywords in exported documents (~org-export-with-clocks~)/
+    #+OPTIONS: c:t
+
+   /Include Creator Info (~org-export-with-creator~)/
+    #+OPTIONS: creator:t
+
+   /Do NOT Include DRAWERS in exported documents (~org-export-with-drawers~)/
+    #+OPTIONS: d:nil
+
+   /Include DATE in exported documents (~org-export-with-date~)/
+    #+OPTIONS: date:t
+
+   /Include Entities (~org-export-with-entities~)/
+   /Example IF ~t~: HTML exports/  ~\\alpha~ as: ~&alpha;~ 
+    #+OPTIONS: e:t
+
+   /Include Author’s e-mail (~org-export-with-email~)/
+    #+OPTIONS: email:t
+   
+   /Don't Include Footnotes (~org-export-with-footnotes~)/
+   /Use Built in Memoir Footnotes instead?/ *this needs research*
+   #+OPTIONS: f:nil
+
+   /Set Headline Levels for Export (~org-export-headline-levels~)/
+    #+OPTIONS: H:6
+
+   /Toggle inclusion of TODO Task related keywords (~org-export-with-tasks~)/ 
+   /IF ~t~    - INCLUDE ALL TASK KEYWORDS.../ 
+   /IF ~nil~  - REMOVE ALL TASKS.../ 
+   /IF ~todo~ - REMOVE DONE TASKS.../ 
+   /IF ~list~ - (use list of keywords to keep)/ 
+    #+OPTIONS: tasks:t
+
+   /Include Inline Tasks (~org-export-with-inlinetasks~)/
+   #+OPTIONS: inline:t 
+
+   /Limit Section Numbering to 5 levels deep.../ /(~org-export-with-section-numbers~)/
+   /When ~N~, Number only headlines level N or above./
+   /Set ‘ ~UNNUMBERED~ ’ property to non-nil to disable/ /numbering of heading
+ and subheadings entirely./ /Moreover, when value is ‘ ~notoc~ ’, headline/
+ /(and all children), do NOT appear in TOC either.../
+    #+OPTIONS: num:5
+
+   /NO Planning Info (~org-export-with-planning~)/
+    #+OPTIONS: p:nil
+
+   /NO priority cookies (~org-export-with-priority~)/
+    #+OPTIONS: pri:nil
+
+   /No Property Drawers (~org-export-with-properties~)/ 
+   #+OPTIONS: prop:nil 
+
+   /No Stastic cookies (~org-export-with-statistics-cookies~)/
+    #+OPTIONS: stat:nil
+
+   /No Tags (~org-export-with-tags~)/
+    #+OPTIONS: tags:nil
+
+   /Verbatim export (~org-export-with-latex~)/
+   ~t~ /= EXPORTS./
+   ~nil~ /= Do not process LATEX fragments at all... i.e., DO NOT Export/
+   ~verbatum~ /= Keep Everything In Verbatim/
+    #+OPTIONS: tex:verbatim 
+
+   /Include Creation Time in Exports (~org-export-time-stamp-file~)/
+    #+OPTIONS: timestamp:t
+
+   /Include Title in Exports (~org-export-with-title~)/
+    #+OPTIONS: title:t
+
+   /INCLUDE DEFAULT TOC... (~org-export-with-toc~)/ 
+   ~N~ = /Include TOC N levels deep/
+   /For TOCs, Maybe Use Memoir Built In TOC features INSTEAD?/
+   /(Using Memoir, you can have multiple TOCs)/
+   #+OPTIONS: toc:t 
+
+   /DONT Include TODO keywords (~org-export-with-todo-keywords~)/
+    #+OPTIONS: todo:nil
+
+   /Include Tables (~org-export-with-tables~)/
+    #+OPTIONS: |:t

@@ -527,7 +527,7 @@
   ;;  (i.e. nested closing parenthesis on lines by themselves)
   ;;  I did this here BECAUSE I wanted to keep each LaTeX CLASS
   ;;  Definition looking like a separate block alone rather
-  ;;  than PART of a really LONG LIST (including my comments
+  ;;  than PART of the really LONG LIST (including my comments
   ;;  LOL)... I mean L O N G List... So please excuse my non
   ;;  standard styling here... Thank you! I promise to say 12
   ;;  Hail Marys as a penance for my wrong doings... (Jeez..
@@ -582,6 +582,7 @@
      ("\\subsection{%s}" . "\\subsection*{%s}")
      ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
      ("\\paragraph{%s}" . "\\paragraph*{%s}")))
+  
   ;; ~~~~~~~~~~~~~ END: EXCERPT DOCUMENT CLASS ~~~~~~~~~~~~~~~
 
   ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -616,72 +617,14 @@
   ;; ~~~~~~~~~~~~~ END: SIMPLE DOCUMENT CLASS ~~~~~~~~~~~~~~~
 
   ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ;; GENERIC DOCUMENT CLASS:
-  ;;
-  ;; NOTE: This class definition was copied from the ref
-  ;;       BELOW... I have not created any .tex file to
-  ;;       \\input{...} yet... This class is not being used
-  ;;       currently... If I develop it further you will see
-  ;;       this NOTE change...
-  ;;
-  ;; From: Gene Ting-Chun Kao - PhD Researcher @ ETH Zurich
-  ;;       BRG & NCCR dfab Research in Computational Design
-  ;;       & Fabrication, Visual Computing
-  ;;
-  ;; REF:
-  ;;   https://github.com/GeneKao/orgmode-latex-templates
-  ;;
-  ;; The code below may be quite modified from Gene's original
-  ;; example code... Using his as a starter was better (for me)
-  ;; than starting with the default article setup from WORG %^)
-  ;;
-  ;; TODO:
-  ;;  This has not been fully implemented or tested
-  ;;  since making big changes to Org-Mode Export
-  ;;  configuration... It needs to be tried again later.
-
-  (add-to-list
-   'org-latex-classes
-   '("generic"
-     "\\documentclass[11pt,a4paper]{article}
-
-  \\usepackage[T1]{fontenc}
-  \\usepackage{fixltx2e}
-  \\usepackage{graphicx}
-  \\usepackage{longtable}
-  \\usepackage{float}
-  \\usepackage{wrapfig}
-  \\usepackage{rotating}
-  \\usepackage[normalem]{ulem}
-  \\usepackage{amsmath}
-  \\usepackage{textcomp}
-  \\usepackage{marvosym}
-  \\usepackage{wasysym}
-  \\usepackage{amssymb}
-  \\usepackage{hyperref}
-  \\usepackage{mathpazo}
-  \\usepackage{color}
-  \\usepackage{enumerate}
-  \\definecolor{bg}{rgb}{0.95,0.95,0.95}
-  \\tolerance=1000
-  [NO-DEFAULT-PACKAGES]
-  [PACKAGES]
-  [EXTRA]
-  \\linespread{1.1}
-  \\hypersetup{pdfborder=0 0 0}"
-     ("\\section{%s}" . "\\section*{%s}")
-     ("\\subsection{%s}" . "\\subsection*{%s}")
-     ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-     ("\\paragraph{%s}" . "\\paragraph*{%s}")))
-  ;; ~~~~~~~~~~~~~ END: GENERIC DOCUMENT CLASS ~~~~~~~~~~~~~~~
-
-  ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   ;; ORG-NOTES DOCUMENT CLASS:
   ;; (for exporting Org NOTES to a Finer Quality LaTeX PDF)
   ;;
   ;; NOTE: This class definition was copied from the ref BELOW...
-  ;;       It is NOT currently being USED...
-  ;;       If I develop it further you will see this NOTE change...
+  ;;       It is NOT currently being USED... I am currently 
+  ;;       evaluating its value for usage by me and HAP Modular 
+  ;;       Emacs Users... If I develop it further you will 
+  ;;       see this NOTE change...
   ;;
   ;; REF:
   ;;   https://github.com/mclearc/org-latex-classes
@@ -700,6 +643,7 @@
      ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
      ("\\paragraph{%s}" . "\\paragraph*{%s}")
      ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+  
   ;; ~~~~~~~~~~~~ END: ORG-NOTES DOCUMENT CLASS: ~~~~~~~~~~~~
 
   ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -713,7 +657,7 @@
   ;; REF:
   ;;   https://damitr.org/2014/01/09/latex-tufte-class-in-org-mode/
   ;;   https://tufte-latex.github.io/tufte-latex/
-  ;;   https://github.com/Tufte-LaTeX/tufte-latex
+  ;;   https://GitHub.com/Tufte-LaTeX/tufte-latex
   ;;
   ;; TODO:
   ;;  This has not been fully implemented or tested since making
@@ -723,16 +667,16 @@
   (add-to-list
    'org-latex-classes
    '("tuftebook"
-     "\\documentclass{tufte-book}\n
-  \\usepackage{color}
-  \\usepackage{amssymb}
-  \\usepackage{gensymb}
-  \\usepackage{nicefrac}
-  \\usepackage{units}"
+     "\\documentclass{tufte-book}
+          [DEFAULT-PACKAGES] 
+          [PACKAGES] 
+       \\input{~/.emacs.d/Docs/TeX/tufte-book-setup.tex}
+          [EXTRA]"
      ("\\section{%s}" . "\\section*{%s}")
      ("\\subsection{%s}" . "\\subsection*{%s}")
      ("\\paragraph{%s}" . "\\paragraph*{%s}")
      ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+  
   ;; ~~~~~~~~~~~ END: TUFTE-BOOK DOCUMENT CLASS: ~~~~~~~~~~~~
 
   ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -747,63 +691,21 @@
   ;;   https://damitr.org/2014/01/09/latex-tufte-class-in-org-mode/
   ;;   https://tufte-latex.github.io/tufte-latex/
   ;;   https://github.com/Tufte-LaTeX/tufte-latex
-  ;;
-  ;; TODO:
-  ;;  This has not been fully implemented or tested since making
-  ;;  big changes to Org-Mode Export configuration... It needs
-  ;;  to be tried again later...
 
   (add-to-list
    'org-latex-classes
    '("tuftehandout"
      "\\documentclass{tufte-handout}
-  \\usepackage{color}
-  \\usepackage{amssymb}
-  \\usepackage{amsmath}
-  \\usepackage{gensymb}
-  \\usepackage{nicefrac}
-  \\usepackage{units}"
+        [DEFAULT-PACKAGES] 
+        [PACKAGES] 
+      \\input{~/.emacs.d/Docs/TeX/tufte-handout-setup.tex}
+        [EXTRA]"
      ("\\section{%s}" . "\\section*{%s}")
      ("\\subsection{%s}" . "\\subsection*{%s}")
      ("\\paragraph{%s}" . "\\paragraph*{%s}")
      ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+  
   ;; ~~~~~~~~~~ END: TUFTE-HANDOUT DOCUMENT CLASS: ~~~~~~~~~~
-
-  ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ;;  TEST REF BOOK DOCUMENT CLASS: (uses stock memoir)
-  ;;
-  ;;  THIS IS A DEFAULT MEMOIR LaTeX Class out-of-box 
-  ;;  CONFIGURATION... (for TESTING PURPOSES) 
-  ;;
-  ;;  This is for TROUBLESHOOTING Customized Memoir Class
-  ;;  configurations for Reference Manuals, Technical Books,
-  ;;  Tutorials, etc... 
-  ;;
-  ;;  THIS LATEX CLASS is Associated with Org-Mode SETUPFILE:
-  ;;  ~/.emacs.d/Docs/pubOps/org-templates/test-memoir-setup.org
-  ;;  THERE ARE NO EXTERNAL \\input .tex files for this one... 
-  ;;
-  ;;  Call this setup file from .org files that normally use
-  ;;  CUSTOMIZED Setupfiles for Memoir Class... (i.e., replace
-  ;;  the SETUPFILE directive at the top of the file to the
-  ;;  test-memoir-setup.org SETUPFILE above...
-  ;;  USE THIS as an A-B TEST to see what BREAKS)
-
-  (add-to-list
-   'org-latex-classes
-   '( "memoir"
-      "\\documentclass{memoir}
-          [DEFAULT-PACKAGES] 
-          [PACKAGES] 
-          [EXTRA]" 
-     ("\\part{%s}" . "\\part*{%s}")
-     ("\\chapter{%s}" . "\\chapter*{%s}")
-     ("\\section{%s}" . "\\section*{%s}")
-     ("\\subsection{%s}" . "\\subsection*{%s}")
-     ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-     ("\\paragraph{%s}" . "\\paragraph*{%s}")
-     ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
-  ;; ~~~~~~~ END: TEST MEMOIR REF BOOK DOCUMENT CLASS: ~~~~~~~~
 
   ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   ;;  HAP REFERENCE BOOK DOCUMENT CLASS:
@@ -813,15 +715,14 @@
   ;;  THIS LATEX CLASS is Associated Org-Mode SETUPFILE:
   ;;  ~/.emacs.d/Docs/pubOps/org-templates/ref-book-setup.org
   ;;  AND ANY .org file that includes ref-book-setup.org...
-  ;;  \documentclass[letterpaper, 12pt, oneside, onecolumn, openany]{memoir}
 
   (add-to-list
    'org-latex-classes
    '( "refbook"
-      "\\documentclass[letterpaper,12pt,oneside,onecolumn,openany,showtrims]{memoir} 
+      "\\documentclass[letter,11pt,oneside,onecolumn,openany]{memoir} 
           [DEFAULT-PACKAGES] 
-       \\input{~/.emacs.d/Docs/TeX/ref-book-setup.tex}
           [PACKAGES] 
+       \\input{~/.emacs.d/Docs/TeX/ref-book-setup.tex}
           [EXTRA]" 
      ("\\chapter{%s}" . "\\chapter*{%s}") 
      ("\\section{%s}" . "\\section*{%s}") 
@@ -841,7 +742,7 @@
   (add-to-list
    'org-latex-classes
    '("audio-production"
-     "\\documentclass[letterpaper,12pt,oneside,onecolumn,openany]{memoir}
+     "\\documentclass[letter,11pt,oneside,onecolumn,openany]{memoir}
           [DEFAULT-PACKAGES]
           [PACKAGES]
        \\input{~/.emacs.d/Docs/TeX/audio-drama-setup.tex}
@@ -906,7 +807,7 @@
   (add-to-list
    'org-latex-classes
    '("logbook"
-     "\\documentclass[ledgerpaper,12pt,oneside,onecolumn,openany]{memoir} 
+     "\\documentclass[letter,11pt,oneside,onecolumn,openany]{memoir} 
          [DEFAULT-PACKAGES] 
          [PACKAGES] 
        \\input{/Users/sirena128/.emacs.d/Docs/TeX/log-book-setup-3.tex} 
@@ -933,8 +834,8 @@
      "\\documentclass[a4paper,12pt]{report}
 
   \\renewcommand{\\chaptername}{EXPERIMENT}
-  \\makeatletter
 
+  \\makeatletter
   \\renewcommand{\\maketitle}{
     \\begin{titlepage}
       \\begin{center}

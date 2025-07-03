@@ -1,11 +1,16 @@
 %%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-%%   File:        ~/.emacs.d/Docs/TeX/log-book-setup.tex
+%%   File:        ~/.emacs.d/Docs/TeX/tufte-book-setup.tex
 %%   Ref:         <https://github.com/harmonicalchemy/modular-emacs>
-%%   Purpose:     LaTeX Setup Include File for Log Notebooks
+%%   Purpose:     LaTeX Setup Include File for Tufte-book class classy books
 %%   Author:      Alisha Awen
 %%   Maintainer:  Alisha Awen
-%%   Created:     2023-001-13
-%%   Updated:     2025-004-12
+%%   Created:     2025-006-22
+%%   Updated:     2025-006-22
+%%
+%%   INFO: Edward Tufte is known for graphical excellence in his famous books.
+%%   Some enthusiasts combined his design principles into LaTeX and you have the
+%%   tufte-book and tufte-handout classes for excellence in typesetting...
+%%   THIS File Typesets to: tuftebook Classy Book Style...
 
 %%   This program is free software: you can redistribute it and/or modify
 %%   it under the terms of the GNU General Public License as published by
@@ -23,19 +28,6 @@
 %%   To Customize: Copy/Clone ~/.emacs.d/Docs/PubOps/org-templates (which contains
 %%   this file) to your .org doc's MASTER FOLDER. Then, modify your cloned copy of
 %%   this file...
-
-%%   NOTE ABOUT \makeatletter & \makeatother:
-%%   IN TECH TERMS: 
-%%      These commands (for the preamble) change the catcode of "@" for
-%%.     different purposes... (RTFM for more info on that mess of code hacks!)
-%%
-%%   IN PRACTICAL TERMS: (sometimes you will need these delimiters)
-%%      If you need to modify a package internal macro that contains the @ symbol
-%%      in its name, you will need to surround your modifications with the two
-%%      commands: \makeatletter & \makeatother... (OTHERWISE HELL - LOL)
-%%      BUT - Sometimes this is NOT what you would want to do... There may be
-%%      ways to get the same results without having to override those DEPOT
-%%      @macros...
 
 %%   ORG-MODE [DEFAULT-PACKAGES]: Do NOT \usepackage ANY of the Packages
 %%      Listed HERE:  (org-mode already loaded these by default GLOBALLY)
@@ -59,10 +51,15 @@
 %%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 %%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-%%  GENERAL PACKAGES:
+%%  GENERAL TUFTE CLASS PACKAGES:
 %%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-\usepackage{paralist}
+\usepackage{color}
+%\usepackage{amssymb}  %% Already Provided by org-mode DEFAULT-PACKAGES
+%\usepackage{amsmath} %% Already Provided by org-mode DEFAULT-PACKAGES
+\usepackage{gensymb}
+\usepackage{nicefrac}
+\usepackage{units}"
 
 %%% ~~~~~~~~~~~~~~~~
 %%  BETTER SOURCE CODE LISTINGS:
@@ -88,26 +85,6 @@
 %% Before and After WIDE Figures, Tables, images, etc...
 \usepackage{pdflscape}
 
-\usepackage[
-	margin=1.5cm  % Equal margin on all sides
-%	showframe     % Uncomment to show frames around the margins for debugging purposes
-]{geometry}
-
-%%% ~~~~~~~~~~~~~~~~
-%%  ADJUST PAGE DIMENSIONS: (not sure if we need any of this fine tuning stuff)
-
-%\settrimmedsize{297mm}{210mm}{*}
-%\setlength{\trimtop}{0pt}
-%\setlength{\trimedge}{\stockwidth}
-%\addtolength{\trimedge}{-\paperwidth}
-%\settypeblocksize{634pt}{448.13pt}{*}
-%\setulmargins{4cm}{*}{*}
-%\setlrmargins{*}{*}{1.5}
-%\setmarginnotes{17pt}{51pt}{\onelineskip}
-%\setheadfoot{\onelineskip}{2\onelineskip}
-%\setheaderspaces{*}{2\onelineskip}{*}
-%\checkandfixthelayout
-
 %%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 %% FONTS:
 %% NOTE: [T1]{fontenc} is included and LOADED
@@ -126,15 +103,6 @@
 
 %% Set table column padding to be proportional to text width
 \setlength{\tabcolsep}{0.0075\textwidth}
-
-%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-%% DEFAULT PARAGRAPH SETTINGS %%
-%% Yeah... I read the manual and their reasons for indenting paragraphs,
-%% BUT this is a LOG/Journal... NOT a Fiction Novel...
-%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-\setlength{\headwidth}{\textwidth}
-\addtolength{\headwidth}{.382\foremargin}
 
 %%% ~~~~~~~~~~~~~~~~
 %% BLOCK PARAGRAPHS No Indent:
@@ -162,7 +130,5 @@
 %%  FINAL PREAMBLE DIRECTIVES:
 %%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-\chapterstyle{verville}
-
-%%%% END: ~/.emacs.d/Docs/TeX/log-book-setup.tex
+%%%% END: ~/.emacs.d/Docs/TeX/tufte-book-setup.tex
 %%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

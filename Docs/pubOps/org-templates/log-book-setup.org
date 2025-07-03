@@ -43,6 +43,9 @@
 
 =ORG-MODE SETUPFILE for: Journals or LOG Notebooks=
 
+~logbook~ class is defined within: ~09-4-org-export-conf.el~
+Chapter Styles are Modeled After: ~MemoirChapStyles.pdf~ /(from CTAN)/
+
 None of the content or annotations in this SETUPFILE are exported to PDF or WEB...
 Its Best to view this file within a CODING Frame /(as if it were source code)/
 
@@ -53,10 +56,8 @@ Its Best to view this file within a CODING Frame /(as if it were source code)/
 
 =Don't Modify The MASTER Templates Within ~/.emacs.d= 
 /(if you did by accident, you can easily enough perform:/ 
-       
-   ~git restore <this file>~
 
-   =or:= ~git checkout .~
+   ~git restore <this file>~ =or easier:= ~git checkout .~
 
 /to refresh ALL since you are not modifying the master branch...)/
 
@@ -68,21 +69,30 @@ Its Best to view this file within a CODING Frame /(as if it were source code)/
 
 =NOTE:= Modular Emacs Config File: ~~/.emacs.d/lisp/modules/09-4-org-export-conf.el~ DEPENDS on the Configurations contained within this startup file...
 
-If you need to create other LaTeX Document Styles or customize existing ones, you will also need to override ~09-4-org-export-conf.el~ by placing a copy of it within: ~~/.emacs.d/lisp/my-modules~ and then make your changes in your cloned copy...
+If you need to create other *LaTeX Document Styles* or customize existing ones, you will also need to override ~09-4-org-export-conf.el~ by placing a copy of it within: ~~/.emacs.d/lisp/my-modules~ and then make your changes to add more document class definitions within your cloned copy...
 
-Find the: ~BEGIN: CUSTOM LaTeX CONFIGURATIONS for EXPORT to PDF~ heading within that file... Then scroll down till you get inside the ~(with-eval-after-load 'ox-latex~ line... Then scroll down some more until you find the first (add-to-list 'org-latex-classes block (form)...
+Find the: ~BEGIN: CUSTOM LaTeX CONFIGURATIONS for EXPORT to PDF~ heading within that file... Then scroll down till you get inside the ~with-eval-after-load 'ox-latex~ line... Then scroll down some more until you find the first ~add-to-list 'org-latex-classes~ block /(form)/...
 
-Copy any of the ~add-to-list~ blocks that you see, as a template... /(copy the heading comment to that block as well)/. Paste your copy between existing blocks /(with their comment headings)/ and change the heading to describe your new export document type,class, etc... Then modify the actual block so that it defines your NEW document type... You will also have to create a NEW SETUP.tex file for the \\input{~/.emacs.d/Docs/TeX/???-setup.tex} that you will need to also create, /(most likely from another one that you cloned as a template)/
+Copy any of the ~add-to-list~ blocks that you see, as a template... /(copy the heading comment to that block as well)/. Paste your copy between existing ~add-to-list~ blocks /(separated by heading comments)/ and change your *NEW* *heading comment* to describe your new export document type, class, etc...
 
-It's a LOT of work, /(research)/ but worth it in the end when you have something looking really nice!
+During this process, you will need to create a NEW:  ~???-setup.tex~ file for your new document class before completing your NEW ~add-to-list~ block within: ~~/.emacs.d/lisp/my-modules/09-4-org-export-conf.el~
 
-The ~logbook~ =CLASS= defined within: ~09-4-org-export-conf.el~ Uses: ~~/.emacs.d/Docs/TeX/log-book-setup-2.tex~ for its *LaTeX* Configuration...
+Clone one of the existing ~setup.tex~ files within the ~~/.emacs.d/Docs/TeX/.~ folder.  Place that new file somewhere outside of the git repo, /(so that it won't go away the next time your pull changes from the DEPOT master branch)/ and modify your new setup.tex file to set the typesetting rules of your new document class... 
+Copy the full path to this new setup.tex file for the NEXT STEP...
 
-=For Local Customizing:= You will have to edit your local CLONED copy of: ~09-4-org-export-conf.el~... /(as per above NOTE...)/ Find the ~"logbook"~ section within ~org-latex-classes~ list, and change the ~\\input~ path to your local customized clone of ~log-book-setup-2.tex~ file... You will need to study *LaTeX* a lot and in particular, the *"memoir"* document class... =read the well documented docs= /(see reference section below)/
+Once that is all done, go back and change the line: ~\\input{~~/.emacs.d/Docs/TeX/???-setup.tex}~ within your cloned ~add-to-list~ block in:  ~~/.emacs.d/lisp/my-modules/09-4-org-export-conf.el~ to call out the correct file name of your new ~setup.tex~ file... Use the full path, otherwise Emacs will not find it...
 
-Once you have tried this several times /(and failed)/ it won't look so complicated and you will begin to "get it"... /(Be Diligent! TeX/LaTeX IS a complicated Turing Complete Language... Created by one of the Geekiest GEEKS of Computer Science, Mathematics, and Algorithm Analysis! Donald Knuth... You have been warned!!!)/
+Once all the above has been done, *SAVE* ~my-modules/09-4-org-export-conf.el~... At this point, you are all done with the emacs config portion....
 
-=Good luck!=
+
+Continue modifying and testing your new ~setup.tex~ and new ~SETUPFILE.org~ files, making trial-and-error exports of your ~.org~ DOC /(which uses them)/ until you see nice results within an exported PDF...
+
+=OMG! This is a LOT of WORK!= /(research, trying things, etc.)/ but worth it in the end when you have something looking really nice! You =WILL LEARN a LOT= about *LaTeX* after going through several rounds of this process!
+You will also begin to realize that *LaTeX* is a =MONSTROUSLY HUGE ELEPHANT!= *TeX/LaTeX* IS a complicated *Turing Complete Language*... Created by one of the Geekiest GEEKS of Computer Science, Mathematics, and Algorithm Analysis! [[https://www-cs-faculty.stanford.edu/~knuth/][Donald Knuth]]. It is POWERFUL! You cannot eat the whole elephant all at once... You have been warned!!!
+
+Take your time on the easy stuff first... Then GO AWAY and Comeback on Another Day to find out how to do the more fancy stuff... You will NEVER know all of it, but you won't need all of it.. This Gutenberg Elephant was designed to accommodate MANY different document styles and purposes, most of them you will never need... /(but someone else will)/...
+
+=Good luck!= Here is one tip for you starting off /(org-mode related tweak)/
 
 =HOWTO: Prevent Headlines from Showing Up in the TOC=
 
@@ -94,22 +104,24 @@ Set any *HEADING* within your .org project file with the following PROPERTIES BO
      *:PROPERTIES:*
           ~:NOTOC: t~
      *:END:*
-     Don't copy above.. /(it is formatted text)/... Create you own property's box.. LOL Read the docs... Not putting instructions for that here... Good Luck! Its easy... Actually... If you type the above /(as you see it rendered above)/ as naked text under any heading, THAT WILL WORK and you will see the text turn grey, confirming to you that org-mode sees and registers it...
+     
+Don't copy above.. /(it is formatted text)/... Create a REAL org-mode property's box... *Read the docs about that*... I will not put instructions for that here as it is easily found within the Org-Mode Manual.. Good Luck! Its easy... Actually... If you type the above /(as you see it rendered above)/ as naked text under any heading, THAT WILL WORK and you will see the text turn grey, confirming to you that org-mode sees and registers it... /(see... I just gave you the cheat answer)/, but you Still need to RTFM! OK? =HAVE FUN!=
 :END:
 
 - =DISABLED OPTIONS For This Configuration:= /(for debugging)/ 
+  
   #+BEGIN_COMMENT 
-   #+OPTIONS: e:nil
-      # DO NOT Include Entities (org-export-with-entities)
-      # Example: HTML exports \\alpha as: &alpha;
-
-   #+OPTIONS: tex:verbatim
-      # Verbatim export (org-export-with-latex)
-
-   #+OPTIONS: toc:??? 
-      # I have tried all settings in past (org-export-with-toc)
+    /DO NOT Include Entities (org-export-with-entities)/
+    /Example: HTML exports \\alpha as: &alpha;/
+     #+OPTIONS: e:nil
+     
+     /Verbatim export (org-export-with-latex)/
+     #+OPTIONS: tex:verbatim
+     
+     /I have tried all settings in past (org-export-with-toc)/
+     #+OPTIONS: toc:???
   #+END_COMMENT
-
+  
 - =STARTUP OPTIONS For This Configuration:= 
 
   #+LANGUAGE: en 
@@ -125,16 +137,19 @@ Set any *HEADING* within your .org project file with the following PROPERTIES BO
 - =STANDARD OPTIONS For This Configuration:= 
 
     /ENABLE Smart Quotes (~org-export-with-smart-quotes~)/ 
-   #+OPTIONS: ':t 
+    /Non-nil = activate smart quotes during export/
+    #+OPTIONS: ':t 
 
     /Show Emphasized Text (~org-export-with-emphasize~)/ 
     =NOTE:= /Exported PDF is styled different than org-mode buffer fontification../ 
    #+OPTIONS: *:t 
 
-    /Convert Special Strings (~org-export-with-special-strings~)/ 
+   /Convert Special Strings (~org-export-with-special-strings~)/ 
+   /Non-nil means interpret "\-", "--" and "---" for export/ 
    #+OPTIONS: -:nil 
 
-    /Export with fixed-width sections (~org-export-with-fixed-width~) Options: (~nil~, ~t~) non-nil = Interpret Strings Starting with a colon "~:~" as A Fixed-With Verbatim area.../ 
+   /Export with fixed-width sections (~org-export-with-fixed-width~)/
+   /non-nil = Interpret Strings Starting with a/ /colon ":" as: A Fixed-With Verbatim area./
    #+OPTIONS: ::t 
 
     /Include-time/date-active/inactive-stamps-(~org-export-with-timestamps~)/ 
@@ -144,13 +159,17 @@ Set any *HEADING* within your .org project file with the following PROPERTIES BO
     =NOTE:= (non-nil may affect LaTeX parskip)/
    #+OPTIONS: \n:nil 
 
-    /Use Tex-like Syntax For Sub And Superscripts (~org-export-with-sub-superscripts~) Typing simple ~a_b~ will not be affected anymore Use ~word^{super}~ to raise word "~super~" i.e., superscript... Use ~word_{sub}~ to lower the word "~sub~" i.e., subscript.../
+   /Use Tex-like Syntax For Sub And Superscripts (~org-export-with-sub-superscripts~)/
+   /Typing simple ~a_b~ will not be affected anymore/
+   /Use ~word^{super}~ to raise word "~super~" i.e., superscript/
+   /Use ~word_{sub}~ to lower the word "~sub~" - i.e., subscript/
    #+OPTIONS: ^:{} 
 
     /Include Author Name into Exported file (~org-export-with-author~)/ 
    #+OPTIONS: author:t 
 
-    /Broken link(s) found? Mark Them & Don't Export (~org-export-with-broken-links~)/ 
+   /Broken link(s) found?/
+   /Mark Them & Don't Export (~org-export-with-broken-links~)/
    #+OPTIONS: broken-links:mark 
 
     /Include CLOCK keywords in exported documents (~org-export-with-clocks~)/ 
@@ -165,19 +184,21 @@ Set any *HEADING* within your .org project file with the following PROPERTIES BO
    /Include DATE in exported documents (~org-export-with-date~)/ 
    #+OPTIONS: date:t 
 
-   /Include Entities (~org-export-with-entities~) Example: IF ~t~: HTML exports ~\\alpha~ as:/ ~&alpha;~
+   /Include Entities (~org-export-with-entities~)/
+   /Example IF ~t~: HTML exports/  ~\\alpha~ as: ~&alpha;~ 
    #+OPTIONS: e:t 
 
    /Include Author’s e-mail (~org-export-with-email~)/ 
    #+OPTIONS: email:t 
 
-   /Include Footnotes (~org-export-with-footnotes~)/ 
+   /Don't Include Footnotes (~org-export-with-footnotes~)/
+   /Use Built in Memoir Footnotes instead?/ *this needs research*
    #+OPTIONS: f:nil 
 
    /Set Number of Headline Levels for Export (~org-export-headline-levels~)/ 
    #+OPTIONS: H:6 
 
-   /Toggle inclusion of TODO Task related keywords (org-export-with-tasks)/ 
+   /Toggle inclusion of TODO Task related keywords (~org-export-with-tasks~)/ 
    /IF ~t~    - INCLUDE ALL TASK KEYWORDS.../ 
    /IF ~nil~  - REMOVE ALL TASKS.../ 
    /IF ~todo~ - REMOVE DONE TASKS.../ 
@@ -187,7 +208,11 @@ Set any *HEADING* within your .org project file with the following PROPERTIES BO
    /Include Inline Tasks (~org-export-with-inlinetasks~)/
    #+OPTIONS: inline:t 
 
-   /LIMIT SECTION NUMBERING TO 6 LEVELS DEEP... (~org-export-with-section-numbers~) When ~N~, Number only headlines level N or above. Set ‘ ~UNNUMBERED~ ’ property to non-nil to disable numbering of heading and subheadings entirely. Moreover, when value is ‘ ~notoc~ ’, headline, (and all children), do NOT appear in TOC either.../ 
+   /Limit Section Numbering to 6 levels deep.../ /(~org-export-with-section-numbers~)/
+   /When ~N~, Number only headlines level N or above./
+   /Set ‘ ~UNNUMBERED~ ’ property to non-nil to disable/ /numbering of heading
+ and subheadings entirely./ /Moreover, when value is ‘ ~notoc~ ’, headline/
+ /(and all children), do NOT appear in TOC either.../
    #+OPTIONS: num:6 
 
    /NO Planning Info (~org-export-with-planning~)/ 
@@ -205,16 +230,22 @@ Set any *HEADING* within your .org project file with the following PROPERTIES BO
    /No Tags (~org-export-with-tags~)/ 
    #+OPTIONS: tags:nil 
 
-   /Do the right thing automatically (~org-export-with-latex~)/ 
+   /Verbatim export (~org-export-with-latex~)/
+   ~t~ /= EXPORTS./
+   ~nil~ /= Do not process LATEX fragments at all... i.e., DO NOT Export/
+   ~verbatum~ /= Keep Everything In Verbatim/
    #+OPTIONS: tex:verbatim 
 
-   /Include Creation Time (~org-export-time-stamp-file~)/ 
+   /Include Creation Time in Exports (~org-export-time-stamp-file~)/
    #+OPTIONS: timestamp:t 
 
-   /Include Title (~org-export-with-title~)/ 
+   /Include Title in Exports (~org-export-with-title~)/
    #+OPTIONS: title:t 
 
-   /Create DEFAULT TOC... (~org-export-with-toc~)/ 
+   /INCLUDE DEFAULT TOC... (~org-export-with-toc~)/ 
+   ~N~ = /Include TOC N levels deep/
+   /For TOCs, Maybe Use Memoir Built In TOC features INSTEAD?/
+   /(Using Memoir, you can have multiple TOCs)/
    #+OPTIONS: toc:t 
 
    /DO NOT Include TODO keywords (~org-export-with-todo-keywords~)/ 
