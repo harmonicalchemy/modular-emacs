@@ -54,7 +54,8 @@
 
 (xah-fly-keys 1)
 
-(set-background-color "#280028")
+;;(set-background-color "#280028")
+(set-background-color ME--DEFAULT-BACKGROUND)
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Set different Modeline Background Colors:
@@ -63,12 +64,12 @@
 ;; (Jessica's Corner of Cyberspace)
 
 (defun me_modeline-color-on ()
-  (set-face-background 'mode-line "orange")
-  (set-face-foreground 'mode-line "#280028"))
+  (set-face-background 'mode-line ME--XFK-CMD-MODELINE-BACKGROUND)
+  (set-face-foreground 'mode-line ME--DARKER-TEXT))
 
 (defun me_modeline-color-off ()
-  (set-face-background 'mode-line "LightPink")
-  (set-face-foreground 'mode-line "#280028"))
+  (set-face-background 'mode-line ME--XFK-INSERT-MODELINE-BACKGROUND)
+  (set-face-foreground 'mode-line ME--DARKER-TEXT))
 
 (add-hook 'xah-fly-command-mode-activate-hook 'me_modeline-color-on)
 (add-hook 'xah-fly-insert-mode-activate-hook  'me_modeline-color-off)
@@ -78,19 +79,18 @@
 
 (defun me_xfk-command-mode-tweaks ()
   (global-hl-line-mode 1)
-  (set-background-color "Grey5"))
+  (set-background-color ME--DEFAULT-BACKGROUND))
 
 (defun me_xfk-insert-mode-tweaks ()
   (global-hl-line-mode 0)
-  (set-background-color "Grey15"))
+  (set-background-color ME--XFK-INSERT-BACKGROUND))
 
-(add-hook 'xah-fly-command-mode-activate-hook 'me_xfk-command-mode-tweaks)
-(add-hook 'xah-fly-insert-mode-activate-hook  'me_xfk-insert-mode-tweaks)
+(add-hook 'xah-fly-command-mode-activate-hook 'me_xfk-command-mode-tweaks) 
+(add-hook 'xah-fly-insert-mode-activate-hook  'me_xfk-insert-mode-tweaks) 
 
-;; Remove Above XFKey Mode Tweeks If you Don't Like them...
-;; (remove-hook 'xah-fly-command-mode-activate-hook 'me_xfk-command-mode-tweaks)
-;; (remove-hook 'xah-fly-insert-mode-activate-hook  'me_xfk-insert-mode-tweaks)
-
+;; NOTE: Remove Above XFKey Mode Tweeks If you Don't Like them...
+; (remove-hook 'xah-fly-command-mode-activate-hook 'me_xfk-command-mode-tweaks)
+; (remove-hook 'xah-fly-insert-mode-activate-hook  'me_xfk-insert-mode-tweaks)
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -202,9 +202,11 @@
   (define-key xah-fly-command-map (kbd "p") 'recenter-top-bottom)
 
   ;;;
-  ;; TOGGLE INLINE IMAGES: 
-  ;; (Emacs Normal Key: C-c C-x C-v) 
-  (define-key xah-fly-command-map (kbd "s") 'org-toggle-inline-images) 
+  ;; TOGGLE INLINE IMAGES:
+  ;; NOTE: I disabled this one... It is too dangerous to hit the "s" key by accident,
+  ;;       and then.. If I am in an org file with LOTS of images, I have to WAIT!!!! NO!!!
+  ;; (Emacs Normal Key: C-c C-x C-v) <-this is fine for me...
+  ;; (define-key xah-fly-command-map (kbd "s") 'org-toggle-inline-images) 
 
   ;; Run a ztree-diff session:
   ;; (you will be prompted for right and left directories)
@@ -348,7 +350,14 @@
   ;;       Don't use it for those LARGE org files
   ;;       (i.e., your Multi Year LOG Books that have
   ;;        at least one table for EVERY Log Entry!)
-  
+
+  ;; Org-Mode Sort Table Lines:
+  ;; According to the COLUMN at POINT: (or you will be prompted)
+  ;; (xah-fly-Lp2p1-key-map) QWERTY "s"
+  ;; (Emacs Normal Key: C-c ^ (interactive asking for sort type) 
+
+  (define-key xah-fly-Lp2p1-key-map (kbd "s") 'org-table-sort-lines)
+
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Xah-Fly-Keys SECONDARY LEADER-KEY BINDINGS:
 ;; (xah-fly-Rp2p1-key-map) QWERTY "i"

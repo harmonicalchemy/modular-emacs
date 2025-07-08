@@ -26,7 +26,15 @@
 (setq epg-gpg-program "gpg")
 
 ;;;
-;; System Constants: (Sonnet XVIII rebuttal - no rhyming yet. maybe later)
+;; FORCE EMACS to USE SSL/TLS Certs from MacPorts OPENSSL:
+
+(require 'gnutls)
+(add-to-list 'gnutls-trustfiles "/opt/local/etc/openssl/cert.pem")
+
+;;;
+;; SYSTEM CONSTANTS:
+;;
+;;   Sonnet XVIII Rebuttal - (no rhyming yet. maybe later)
 ;;
 ;;   There are no constants in life,
 ;;   Nothing to compare,
@@ -36,28 +44,18 @@
 ;;   Even our dead contain life not ours,
 ;;   Only timeless skeletons remain,
 ;;   Fading and soon forgotten,
+;;
 ;;   But the living, they move on,
 ;;   Engaged in the flux,
 ;;   Intoxicated from fair to fair,
 ;;   New memories emerge,
 ;;   Old memories lost,
-;;   forever now new...
-;;                  - Alisha Awen
+;;   forever now... forever new... something completely different...
+;;      - Alisha Awen ("OK... Right... NEXT!!" - Auditions Judge)
 
 (defconst ME--DARWIN (eq system-type 'darwin))
 (defconst ME--LINUX (eq system-type 'gnu/linux))
 (defconst ME--POSIX (memq window-system `(ns x)))
-
-;;;
-;; Load Harmonic Alchemy Productions - Modular Emacs CONSTANTS
-;; NOTE: Override The Defaults set in the load file below to
-;;       better fit your particular platform needs... Do this
-;;       by copying the file below into "my-modules" and then
-;;       editing it...
-
-(if (file-exists-p "~/.emacs.d/lisp/my-modules/me-constants.el")
-    (load-file "~/.emacs.d/lisp/my-modules/me-constants.el")
-  (load-file "~/.emacs.d/lisp/modules/me-constants.el"))
 
 ;;;
 ;; Configure custom elisp library load path.
@@ -106,6 +104,17 @@
 (if (boundp buffer-file-coding-system)
     (setq buffer-file-coding-system 'utf-8)
   (setq default-buffer-file-coding-system 'utf-8))
+
+;;;
+;; Load Harmonic Alchemy Productions - Modular Emacs CONSTANTS
+;; NOTE: Override The Defaults set in the load file below to
+;;       better fit your particular platform needs... Do this
+;;       by copying the file below into "my-modules" and then
+;;       editing it...
+
+(if (file-exists-p "~/.emacs.d/lisp/my-modules/me-constants.el")
+    (load-file "~/.emacs.d/lisp/my-modules/me-constants.el")
+  (load-file "~/.emacs.d/lisp/modules/me-constants.el"))
 
 ;; END: [modular-emacs]:~/.emacs.d/lisp/modules/00-system.el
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

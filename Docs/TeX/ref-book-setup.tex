@@ -4,8 +4,6 @@
 %%   Purpose:     LaTeX Setup Include File for Reference Books
 %%   Author:      Alisha Awen
 %%   Maintainer:  Alisha Awen
-%%   Created:     2023-002-17
-%%   Updated:     2025-003-24
 
 %%   This program is free software: you can redistribute it and/or modify
 %%   it under the terms of the GNU General Public License as published by
@@ -19,19 +17,24 @@
 
 %%   You should have received a copy of the GNU General Public License
 %%   along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+%%   To Customize: Copy/Clone ~/.emacs.d/Docs/PubOps/org-templates (which contains
+%%   this file) to your .org doc's MASTER FOLDER. Then, modify your cloned copy of
+%%   this file...
 %%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 %%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 %%  GENERAL PACKAGES:
+%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-%\usepackage[colorlinks=true,urlcolor=SteelBlue4,linkcolor=Firebrick4]{hyperref}
-%\usepackage[margin=0.5in]{geometry} %% Set Page Margins Throughout Globally
-\usepackage{parskip}
 \usepackage{paralist}
 %\usepackage{calc}
+%\usepackage{titlesec}
 
-%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%%% ~~~~~~~~~~~~~~~~
 %%  BETTER SOURCE CODE LISTINGS:
+%%  NOTE: the minted package is ALREADY LOADED by:
+%%        09-4-org-export-conf.el Just USE it HERE...
 
 %% Use Console Command:
 %%    $ pygmentize -L styles
@@ -41,30 +44,84 @@
 %%    perldoc - A Nice One...
 %%    xcode   - Similar to perldoc (even nicer)
 
-\usemintedstyle{xcode}
+\setminted{style=xcode,frame=leftline}
+\setminted[r]{linenos=true}
 
 %%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-%%  FONTS:
-%%  Fiction Book FONT SPECS: 
+%%  LANDSCAPE & MARGINS:
+%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-%\usepackage[LGR, T1]{fontenc}
+%% This allows using \begin{landscape} & \end{landscape} 
+%% Before and After WIDE Figures, Tables, images, etc...
+\usepackage{pdflscape}
+
+\usepackage[
+	margin=1.5cm  % Equal margin on all sides
+%	showframe     % Uncomment to show frames around the margins for debugging purposes
+]{geometry}
+
+%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%% FONTS:
+%% NOTE: [T1]{fontenc} is included and LOADED
+%%       by org-mode [DEFAULT-PACKAGES]
+%%       (org-latex-default-packages-alist)
+
+%%% ~~~~~~~~~~~~~~~~
+%% REFERENCE BOOK FONT SPECS:
+
+\usepackage{roboto}
+\usepackage{palatino}
+
 %\usepackage{libertine}
 %\usepackage{libertinust1math}
 %\usepackage{gfsneohellenic}
 %\renewcommand{\sfdefault}{neohellenic}
 
-%\usepackage{titlesec}
 %\titleformat*{\section}{\Large\sffamily}
 %\titleformat*{\subsection}{\large\sffamily}
 %\titleformat*{\subsubsection}{\normalsize\sffamily}
 
+%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%%. TABLES
+%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+%% Book Like Table Formatting
+\usepackage{booktabs}
+
+%% Set table column padding to be proportional to text width
+\setlength{\tabcolsep}{0.0075\textwidth}
+
+%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%% DEFAULT PARAGRAPH SETTINGS %%
+%% Yeah... I read the manual and their reasons for indenting paragraphs,
+%% BUT this is a Technical Book... NOT a Fiction Novel...
+%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\setlength{\headwidth}{\textwidth}
+\addtolength{\headwidth}{.382\foremargin}
+
+%%% ~~~~~~~~~~~~~~~~
+%% BLOCK PARAGRAPHS No Indent:
+
+\setlength{\parindent}{0pt} % Paragraph indentation
+\setlength{\parskip}{6pt} % Vertical space between paragraphs
+
+%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 %% SPECIAL PACKAGES:
+%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 %\usepackage{soul}
 %\usepackage{pdfpages}
 %\usepackage[backend=bibtex,sorting=none]{biblatex}
 
-%% Include the use of Music and Chord Symbols
+%%% ~~~~~~~~~~~~~~~~
+%%  GRAPHICS PACKAGES: 
+
+\usepackage{svg}
+
+%%% ~~~~~~~~~~~~~~~~
+%%  MUSIC PACKAGES: 
+
 \usepackage[minimal]{leadsheets}
 \useleadsheetslibraries{musicsymbols}
 \useleadsheetslibraries{chords}
@@ -79,8 +136,6 @@
 %% FINAL PREAMBLE DIRECTIVES:
 %%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-\parindent=0em
-\nonzeroparskip
 \chapterstyle{verville}
 
 %%%% END: ~/.emacs.d/Docs/TeX/ref-book-setup.tex

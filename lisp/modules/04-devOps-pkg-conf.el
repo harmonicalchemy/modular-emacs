@@ -8,14 +8,14 @@
 ;; Change Log: (descending chronological order)
 ;;
 
-;; 2022-009-18 - Alisha Awen, siren1@disroot.org
+;; 2022-009-18 - Alisha Awen, HarmonicAlchemy@proton.me
 ;;   Changed Harmonic Alchemy Modular Emacs TO: v3.5...
 ;;   I am no longer using magit... It requires emacs packages
 ;;   I don't want this extra FLUF in my Emacs...
 ;;   I have my own GIT macros,aliases, etc. set up for ZSH and BASH...
 ;;   DOING GIT within ZSH IS MY AWESOME WORKFLOW... (Magit Take a HIKE Thanks!)
 
-;; 2022-005-15 - Alisha Awen, siren1@disroot.org
+;; 2022-005-15 - Alisha Awen, HarmonicAlchemy@proton.me
 ;;   Removed Premium XahEmacs package loads and created a dedicated conf.el file
 ;;   for that: 06-XahEmacs-conf.el which is disabled by default within
 ;;   dispatcher.el...  If you purchase XahEmacs you will need to create a

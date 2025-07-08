@@ -15,7 +15,7 @@
 ;; CHANGE LOG: (descending chronological order)
 ;;
 
-;; 2024-005-06 - Alisha Awen, HarmonicAlchemy@protonmail.com
+;; 2024-005-06 - Alisha Awen, HarmonicAlchemy@proton.me
 ;;    This update represents a COMPLETE rewrite of my spell checking
 ;;    config for Modular Emacs... It is Much simpler now and I only
 ;;    use Hunspell... I made this choice because using aspell is a PITA!
@@ -34,8 +34,8 @@
 ;; Declare Default Modular Emacs List of Required Packages:
 
 (defvar me--required-packages
-  '(flyspell-correct))
-  ;flyspell-correct-helm
+  '(flyspell-correct
+    flyspell-correct-helm))
 
 ;;;
 ;; Install Required Packages:

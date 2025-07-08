@@ -1,86 +1,87 @@
 # -**- mode: org; coding: utf-8 -**-
-#+TITLE: Simple README Skeleton with LOG
+#+TITLE: HAP Controlled Vocabulary
 #+TEXT: Copyright © 2021-2025 by Harmonic Alchemy Productions & Others
 #+AUTHOR: Alisha Awen - Harmonic Alchemy Productions (HAP) 
 #+EMAIL: harmonicalchemy@proton.me 
 #+DATE: {{{time(%A %Y-%b-%d)}}} 
-#+TEXT: Created: <2021-07-22 Thu> 
+#+TEXT: Created: <2025-05-22 Thu> 
 #+TEXT: Last Published: <NOT Published> 
-#+FILETAGS: docs drafts templates 
+#+FILETAGS: docs rdmes logs drafts public
 
-#+DESCRIPTION: Short and Sweet README with attached Log Notebook for any project or repository that needs such a thing... Great FOR GITHUB PAGES!!! The ORG TOC renders in GitHub nicely!! This ORG file is NOT intended to be exported with LaTeX... This template's sole purpose is to provide a traditional README startup document, for you to use, (usually contained with source code, but there are many other applications)... THIS is NOT for a BOOK, or PDF, or anything else that may need to be typeset for publishing... The only intended export option for this file is HTML (for websites - BUT GitHub Renders this file AS IS nicely)... Custom tailor this to fit your needs. Change the tags in default-tags.org (referenced below) as well.. to fit your needs... Enjoy!
+#+DESCRIPTION: This is My OFFICIAL Controlled Vocabulary for TAGS... These will be used in file names, on the web, within org-mode, EVERYWHERE that they can help me FIND THINGS because they "self organized themselves in a non-ambiguous way"... This Master list of TAGS will be consulted and used during all activities: writing, coding, designing, whatever... This STANDARD set serves as my Controlled Vocabulary for all workflows... It is HOPED THIS WILL HELP MITIGATE the problems of homographs, synonyms, & polysemes by a bijection between concepts and preferred terms... Reducing unwanted ambiguity.. Making access to things I may even have forgotten about, properly indexed, collected with like items, and easy to find...
 
-* ⚒ setup-config: 
+* ⚒ setup-config: [3/3]                                        :noexport: 
 
 :READ_ME_FIRST: 
-
 =Instructions:= [0/3] /(How to Install & Use This Template)/ 
-=Last Modified:= <2025-05-31 Sat>
+=Last Modified:= <2025-05-21 Wed>
 
-=REFERENCE for Clones:=
-
-This ORG FILE was Created from:
-
-~~/.emacs.d/Docs/pubOps/HAP_README-Doc-Skeleton.org~
-
-=INSTALL & SETUP INSTRUCTIONS:= 
-/(How to Install, Configure, & Use Files Created from this Template)/
-
-To use *HAP_README-Doc-Skeleton.org* /(Org-Mode README Doc Project Template)/ for your own projects, =Perform The Following Steps:= 
+To use *HAP_README-Doc-Skeleton.org* Org-Mode README Doc Template for your own projects, =Perform The Following Steps:= 
 
 /Use the org-mode Checkboxes to Help You Keep Track of Progress/ 
 
 1) [ ] *Clone a Copy of This File:* 
 
-   Put your =CLONE= within Any Existing Writing, Coding, or Whatever Project's: *MASTER FOLDER* or *ANYWHERE* you need to have a *GENERAL LOG* file associated with other content located within *Some Folder*, /(forever herein called THE "MASTER FOLDER")/ for CLONES of THIS or any other ~HAP_ORG-DOC-Skeleton-Template.org~ files...
+   Put your clone within any existing writing or coding project's MASTER FOLDER or anywhere you need to have a simple NON-PUBLISHING README.org file associated with source code or other files...
 
-   *EXISTING MASTER FOLDERS* may already contain SETUPFILES and MEDIA required by  other ~HAP_ORG-DOC-Skeleton-Template.org~ files as well as your CLONE of this file...
+   Existing MASTER FOLDERS contain other files for other projects as well as the SETUPFILES and MEDIA required by this README.org file...
 
-   =Note:= If you put this file within another Project's existing *MASTER FOLDER* containing existing ~.org~ files /(cloned from other HAP_Doc-Skeleton/ /template files)/ Pay CLOSE Attention to Steps 3 & 4 below to decide the correct action to take during those steps...
+   =Note:= If you put this file within other Project's existing MASTER FOLDERS that contain existing ~.org~ files /(cloned from other HAP_Doc-Skeleton/ /template files)/ Pay CLOSE Attention to Steps 3 & 4 below to decide the correct action to take during those steps...
 
    =Do NOT OVERWRITE ANY PRE-EXISTING FILES or FOLDERS!!!=
 
-   =OTHERWISE:= If this is a Brand NEW Project, *NAME its NEW MASTER FOLDER* to reflect what this LOG Book is about...
+   =OTHERWISE:= If this is a Brand NEW Project, name its NEW MASTER FOLDER to reflect what this README Doc is about...
 
-   =OTHER Files/Folders May also be placed Within your MASTER FOLDERS...= 
+   =OTHER Files/Folders May also be placed Within your MASTER FOLDERS...=
 
-2) [ ] *Start Composing your README Content NOW:* 
+2) [ ] =Start Composing your README Content NOW:= 
 
    =NOTE:= You are most likely doing this because you have a project that needs a README File included as the Start Here Document for that project... Therefore... as soon as you are done with the first steps above, =STOP= and immediately begin composing your README Content within the: *📖 README* Binder =NOW=...
 
    =Add Sub headings below for your README as needed...=
 
-   *btw*, if you Have *Harmonic Alchemy Modular Emacs* fully installed and have enabled the ~Xah-Fly-Keys~ module, you can quickly and easily insert your own /:README:/ drawers for your own purposes by typing: ~SPACE e r~ on an empty line while in command mode... Type those two keys, and the drawer is created for you automatically and opened... =BTW:= You can ALSO change the drawer title: "README" to some other title /(multiple words separated by dashes or underscores)/ to keep it working correctly... /(i.e., drawer opening and closing etc...)/ Don't change the ~:END:~ tag or else your DRAWER will break... 
+   *btw*, if you Have *Harmonic Alchemy Modular Emacs* fully installed and have enabled the ~Xah-Fly-Keys~ module, you can quickly and easily insert your own /:README:/ drawers for your own purposes by typing: ~SPACE e r~ on an empty line while in command mode... Type those two keys, and the drawer is created for you automatically and opened... =BTW:= You can change the title "README" to something else but words must be connected by dashes or underscores to keep it working correctly... /(i.e., drawer opening and closing etc...)/
 
 3) [ ] [0/12] =Finish Setting Up The Rest Of This Project LATER= 
 
-      - [ ] *Read Directions Under The :LATEST_UPDATE: Drawer Below:* 
+      - [ ] *Change Title of :LATEST_UPDATE: drawer ABOVE:* 
 
-        AFTER Cloning, Read and Follow Instructions contained within the ~:LATEST_UPDATE:~ DRAWER directly below this DRAWER... There you will find tips for managing updates to the META data contained within Clones of this Template...
+           AFTER Cloning, Change *:LATEST_UPDATE:* drawer title ABOVE /(WITHIN YOUR CLONE, NOT THE ORIGINAL!)/ to *:LATEST_TEMPLATE_UPDATE:* AND Follow Instructions within it...
 
-      - [ ] *Copy/Clone:* ~~/.emacs.d/Docs/pubOps/media~ /(and contents)/: 
+      - [ ] *Copy/Clone:* ~./media~ /(and contents)/ *to your new project's MASTER FOLDER:* 
 
-        Copy the media folder to your new project's MASTER FOLDER as a sibling of this file... Any external documents or images referenced by your log book or other projects within this MASTER FOLDER should be placed within this ~./media/~ directory... 
+           Copy this directory /(into your MASTER FOLDER as a sibling of this file).../
+           Any external documents or images referenced by your *README Document* should be placed within this ~./media/~ directory...
 
-        =NOTE:= IF a ~./media~ folder ALREADY EXISTS within an EXISTING MASTER FOLDER where you put a CLONE of this file, *SKIP THIS STEP*... =INSTEAD:= Use the existing ~media~ directory for any media to be used by this file...
+           All external links, images, within the boilerplate examples of this template may be used as examples for getting your own images, and external attachments linked properly...  
 
-        There are images contained within the ~./media/~ directory that may be required by boilerplate examples within this template... You may inspect/copy etc., these boilerplate examples /(with links to media files)/ to get your own images, and external attachments linked and published properly...
+           This single ~./media~ directory will serve media and external attachments for this and other Modular Emacs Document TEMPLATE ~.org~ files that may exist within this MASTER FOLDER now or in the future...
 
-        This single ~./media~ directory will serve media and external attachments for this and other Modular Emacs Document TEMPLATE ~.org~ files that may exist within this MASTER FOLDER now or in the future... /(IF/WHEN THEY /WERE/ARE COPIED HERE)/
+           /(IF/WHEN THEY /WERE/ARE COPIED HERE)/
 
-        =Note:= You DON'T need to copy the ~./auto/~ directory... That directory is automatically created by *AuxTex* the first time you export this ~.org~ file to ~.PDF~... You may store other things within the auto folder for archiving if you need to... Org-Mode and AuxTex will not mind them being in there... 
+           =Note:=  You DON'T need to copy the ~./auto/~ directory... That directory may be automatically created by *AuxTeX* when exporting other ~.org~ files based on *Modular Emacs* TEMPLATES but =NOT= from this ~.org~ file which is not set up for exporting to ~.PDF~...
 
-      + [ ] *Copy/Clone* ~~/.emacs.d/Docs/pubOps/org-templates~ /(and contents)/: 
+      - [ ] *Copy/Clone:* ~./org-templates~ /(and all contents)/ *to your MASTER FOLDER:* 
 
-        =For MASTER FOLDERS that DO NOT already have one:= *Copy the ~org-templates~  directory /(above)/ to your README Doc's MASTER FOLDER* /(i.e., as a sibling/ /of this .org file).../ 
+            =WARNING!:= To avoid overwriting existing files, DO NOT COPY this ~./org-templates~ to your MASTER FOLDER IF ONE ALREADY EXISTS!
 
-        =WARNING!= To avoid overwriting existing files, =DO NOT COPY= this ~./org-templates~ to your MASTER FOLDER =IF ONE ALREADY EXISTS!= But =DO Follow The Rest Of This Step= so you will know what you should do... 
+            But DO follow the rest of this step so you will know what you should do...
 
-        =ONE SETUPFILE= Within this NEW or EXISTING ~org-templates~ folder is called out and included by this ~HAP_README-Doc-Skeleton.org~ file... /(within the file header directly under these README DRAWERS)/ 
+             =OTHERWISE For MASTER FOLDERS that DO NOT already have one:= 
+             Copy this NEW directory to serve as your: =NEW Readme Doc's MASTER FOLDER=
+             /(i.e., as a sibling/ /of this README.org file).../
 
-        =WARNING:= FOR ALREADY EXISTING  ~org-templates~ directories within your MASTER FOLDER! You Will Need to MERGE any NEW: ~gen-doc.org~ AND ~default-tags.org~ /(updated from the REPO)/ WITH modified copies of them contained within your existing MASTER FOLDER's ~org-templates~ directory... /(don't LOOSE your special settings and tags!)/ =YOU WON'T WANT TO OVERRITE EXISTING FILES= within this directory you are already using, /(and modified!!!)/ but you may need to update existing files you are NOT using currently /if/when you DO start using them/... 
+             =Note:= ONLY ONE SETUPFILE Within this directory is called out and included by this ~README.org~ file /(within the file header above)/
 
-        =OTHER SETUPFILES= within this directory are intended to be used by other document style project templates and are not needed for this: ~HAP_README-Doc-Skeleton~ Document... You may remove the extra files if you wish... =HOWEVER:= If you decide to clone another ~HAP_<book-template>.org~ file into this project folder it will pick up its associated SETUPFILES automatically because this folder already exists! /(Consider this case if/when you decide to delete other UNUSED SETUPFILES... They are small text files not really bothering you. YOU MAY NEED THEM LATER DEPENDING ON YOUR USE CASE)/... 
+             =WARNING:= There may ALREADY be an ~org-templates~ directory existing within your MASTER FOLDER! In that case you will need to merge: ~default-tags.org~ /(contained within)/ into your existing copy of it instead...       
+
+             =YOU WON'T WANT TO OVERRITE EXISTING FILES= within this directory IF you are already using it for OTHER .org Files, /(and they were modified!!!)/ but you may need to update existing files you are NOT using currently if/when you DO start using them...
+
+             =Other SETUPFILES= within this directory are intended to be used by other document style project templates and are not needed for this: ~README.org~ Document... You may remove the extra files if you wish... 
+
+             =HOWEVER:= If you decide to clone another ~HAP_<book-template>.org~ file into this project folder it will pick up its associated SETUPFILES automatically because this folder                 already exists! Consider this case if/when you decide to delete other UNUSED SETUPFILES... They are small text files not really bothering you...
+
+             /(YOU MAY NEED THEM LATER DEPENDING ON YOUR CASE)/ 
 
       - [ ] *Change the* ~#+TITLE:~ *directive at the top of this file:* 
 
@@ -100,20 +101,19 @@ To use *HAP_README-Doc-Skeleton.org* /(Org-Mode README Doc Project Template)/ fo
 
       - [ ] *Change the* ~#+TEXT: Created:~ *TIMESTAMP at the top of this file:* 
 
-        Put your cursor on the TIMESTAMP: /i.e.,/ <2022-10-05 Wed> 
-        AND then TYPE: ~C-c . . RETURN~... The TIMESTAMP will update to =NOW= 
+           Put your cursor on the TIMESTAMP: /i.e.,/ <2022-10-05 Wed> and type: ~C-c . . RETURN~ The TIMESTAMP will update to NOW.
 
-        =LEAVE THIS DATE ALONE after Setting It The FIRST Time= 
+           =LEAVE THIS DATE ALONE after Setting It The FIRST Time=
 
-        This Date reflects the time/date that you first created this new document It should NEVER change after that... 
+           This Date reflects the time/date that you first created this new document It should NEVER change after that...
 
-      - [ ] *Leave the* ~#+TEXT: Last Published:~ *TIMESTAMP ALONE:* 
+      - [ ] *Change the* ~#+TEXT: Last Published:~ *TIMESTAMP at Publish Time:* 
 
-            =Don't Change This DUMMY TIMESTAMP FOR README FILES:=
+            =Don't Change This UNTIL= You have completed some MAJOR Release of the files or code that this ~README.org~ doc refers to and this README reflects the status of that MAJOR UPDATE /(e.g., as published somewhere, in a public repository etc...)/
 
-            *Leave:* ~#+TEXT: Last Published: <NOT Published>~ *ALONE*
-
-            ~README.org~ docs are *NOT PUBLISHED*... They are intended to live only within folders containing items that need an accompanying *start-here-first* kind of doc... You see this concept reflected everywhere... Like when you receive a new package /(that requires self assembly - lol)/ 
+            Until that publishing time comes leave it alone as: ~<NOT Published>~
+          
+            As soon as this is published as part of a major release, etc, Replace the <unpublished> placeholder with a REAL TIMESTAMP by typing: ~C-c . . RETURN~ The new Last Published: <TIMESTAMP> will appear in place... Do this ANY time you have completed some major update, have published that update and this file needs to reflect that update...             /(this will help you keep track)/ 
 
       - [ ] *Change the* ~#+FILETAGS:~ *directive at the top of this file:* 
 
@@ -127,9 +127,7 @@ To use *HAP_README-Doc-Skeleton.org* /(Org-Mode README Doc Project Template)/ fo
 
         The *📋 Meta:* binder contains more detailed Information about how to use this template, as well as a few tips for New Emacs Users, Modular Emacs Specifics, How to Commandeer a Clone of the *Generic Log Entry*, and how to Add, Modify, and Link to ~ANCHORS~ within this file... 
 
-        =NOTE:= ~ANCHORS~ are important for *README* Docs as you will be referring to them often from other docs /(possibly a MAJOR doc or log that also refers to the thing your README is about)/... 
-
-        Visit the *📋 Meta:* binder [[META][HERE]] to at least summarize yourself with everything in there...
+        Visit the *📋 Meta:* binder NOW to at least summarize yourself with everything in there... 
 
 4) *Purpose of the:* ~./org-templates~  *Directory:* 
 
@@ -137,13 +135,17 @@ To use *HAP_README-Doc-Skeleton.org* /(Org-Mode README Doc Project Template)/ fo
 
     /They are allready set up correctly for the General Documents genre,/ /and the category is all set as well... But you can and may modify/ /the original files to fit your needs.../
        
-    Other SETUPFILES within this directory are intended to be used by other document style project templates and are not needed for this: ~README.org~ Document...
+    Other SETUPFILES within this directory are intended to be used by other document style project templates and are not needed for this: ~README.org~ Document... You may remove the extra files if you wish... 
 
-    The *DEFAULT Tags* are defined for all project templates, and are useful for most situations...
+    =HOWEVER:= If you decide to clone another ~HAP_<book-template>.org~ file into this project folder it will pick up its associated SETUPFILES automatically because this folder already exists! Consider this case if/when you decide to delete other UNUSED SETUPFILES... They are small text files not really bothering you...
 
-    =SOME TAGS are ALWAYS NEEDED= for the LaTeX publishing system to work.
+    /(YOU MAY NEED THEM LATER DEPENDING ON YOUR CASE)/
 
-    *Change the SETUPFILE name ABOVE* and within this directory from ~default-tags.org~ to  ~your-new-tags.org~ and-or *REPLACE SOME BUT NOT ALL* of the ~TAGS~ within to your own tags... *See: Instructions And KM Guidance* inside the ~default-tags.org~ itself...
+    =AND= You won't want to OVERRITE existing files within this directory you are already using, /(and modified!!!)/ but you may need to update existing files you are NOT using currently if/when you DO start using them...
+
+    The DEFAULT Tags defined for all project templates are useful for most situations and SOME tags are ALWAYS to be defined for this LaTeX publishing system to work.
+
+    /Change the SETUPFILE name ABOVE and within this directory from/ ~default-tags.org~ /to another name and-or replace some -BUT NOT ALL-/ /of the tags within to your own tags... see instructions inside the/ /file.../
 
 5) =This File is NOT SET UP TO BE EXPORTED TO PDF= 
 
@@ -157,24 +159,22 @@ To use *HAP_README-Doc-Skeleton.org* /(Org-Mode README Doc Project Template)/ fo
 
    =NOTE:= Within Org-Mode =if you do NOT see images= but instead a LINK *USE:* ~C-c~ ~C-x~ ~C-V~ to Toggle back to image view...
 
-   #+CAPTION: This is the caption for the next figure link (or table) 
-   #+NAME: music:RDME_object-name 
-   #+attr_html: :width 600px 
-   #+ATTR_HTML: :align left 
-   #+attr_org: :width 600px 
-   #+ATTR_ORG: :align left
-      [[./media/svg/12-Tone-Row-1.svg]] 
-
-      =NOTE:= *TOGGLE Inline Display of Images In Org-Mode with:* ~C-c C-x C-v~
+   =Example:=
+      
+       #+CAPTION: Example larger size .png file 
+       #+NAME:  example:00001
+       #+attr_html: :width 600px
+       #+attr_latex: :width 100px
+      [[./media/lavender-banner.png]]
 
 =If you Experience Problems Please Open an ISSUE At:= https://github.com/harmonicalchemy/modular-emacs/issues
    
 Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas for Improvement... =You guys are my Product Managers=  I am only a User of ONE "seat". Other folks UX metrics are sorely needed!! Thanks! 
 
 =Enjoy!= - Alisha Awen
-:END: 
+:END:
 :LATEST_UPDATE: 
-=Last Updated:= <2025-06-22 Sun> /(this TEMPLATE IS ALL SET for Prime Time)/
+=Last Updated:= <2025-05-26 Mon> /(this TEMPLATE IS ALL SET for Prime Time)/
 
 =YOU MAY REMOVE This Drawer= from your own clones of this template if it is bothering you... This drawer is only here as an aid for: HAP Modular Emacs DOC TEMPLATE housekeeping/updating tasks...
 
@@ -186,7 +186,7 @@ Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas
 
     This bullet is NOT for END USERS... This is /"Note to Self"/ stuff... No Worries... 
 
-     - [ ] =MASTER TEMPLATE ONLY= *Keep The Above Timestamp Up To Date:* 
+     - [ ] =MASTER TEMPLATE ONLY= *Keep The Above Timestamp Up To Date:*
 
        Anytime you make CHANGES to the META DATA within this TEMPLATE you must UPDATE the =Last Updated:= TIMESTAMP above... *DO THIS ALWAYS*  ...
 
@@ -198,22 +198,22 @@ Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas
 
           You don't need this in the file you created from a clone of this template...
 
-     - [ ] *UPDATE Last Updated:* ~<timestamp>~ /(After Making Changes to this file)/  
+     - [ ] *UPDATE Last Updated:* ~<timestamp>~ After Making Changes to this file: 
 
        Copies of this file within your own projects will change over time as you try out different OPTIONS etc... You need to keep track of the LAST time this file was changed within your projects... /(and you may have copies of this file in many projects)/ All of them may have different settings after time goes on... The =Last Updated:= heading above lets you know when those changes happened... That knowledge will help you when you are comparing updated template files from the repository... 
 
      - [ ] *COMPARE the TIMESTAMPS between THIS TEMPLATE and your CLONES:* 
 
-          ~Org-Mode~ Settings and META data within CLONES of TEMPLATE will get out of sync after a while due to Harmonic Alchemy Modular Emacs version updates etc...
+          ~Org-Mode~ settings and meta data within CLONES of this SETUPFILE TEMPLATE will get out of sync after a while due to Harmonic Alchemy Modular Emacs version updates etc...
 
           Check the TIMESTAMPS /(within this TEMPLATE and your CLONE of it)/ to see if they are different...
 
           If they are, the clone's settings need to be updated... /(i.e., brought into sync with its template - MERGE)/ You will need to perform any needed merging/replacing of BOILERPLATE and/or meta data. /(e.g, *:README:* drawers, etc.)/
 
-          =NOTE:= You may have purposefully changed some of the actual SETTINGS/OPTIONS below so be careful not to sync those OPTIONS with the new template update if the feature of those OPTIONS are NOT your intention... =ALSO=... If the timestamp in your cloned version of this file is NEWER than the template... You don't have to do anything because that was done before (and possibly changed by you) already... You will know that NEW changes to META data needs to be examined when the TEMPLATE's timestamp is AHEAD of your Doc...
+          =NOTE:= You may have purposefully changed some of the actual SETTINGS/OPTIONS below so be careful not to sync those OPTIONS with the new template update if the feature of those OPTIONS are NOT your intention... =ALSO=... If the timestamp in your cloned version of this file is NEWER than the template... You don't have to do anything because that was done before already...
 
-          UPDATING the TEMPLATES THEMSELVES is ANOTHER STORY... /(and for another discussion if that is something you might want to do)/ You will need to do that in a local git branch keeping your own local commits to that branch only so that the master tracking branch can stay clean... /(that way you will have your own set of customized TEMPLATES to use)/ while still having the DEFAULT TEMPLATES in the master branch... /(but lets save that conversation for later OK?)/
-:END: 
+          UPDATING the TEMPLATES THEMSELVES is ANOTHER STORY... /(and for another discussion)/ because You will need to do that in a local git branch keeping your own local commits to that branch only so that the master tracking branch can stay clean... /(that way you will have your own set of customized TEMPLATES to use)/ while still having the DEFAULT TEMPLATES in the master branch... /(but lets save that conversation for later ok?)/
+:END:
 :SETUP_README: 
 
 =Setup TAGS:=
@@ -224,52 +224,807 @@ For Cloned Versions of this template, the file/paths below will be relative to y
 
 The Existing Tags are useful for most situations within this context, and some of the tags MUST ALWAYS be defined for this LaTeX publishing system to work correctly...
 
-~default-tags.org~ may be used by other ~.org~ files within this Master Folder... If you need to customize them specifically for this ~.org~ file alone, you should copy and rename: ~default-tags.org~ and modify your renamed copy instead...
-
+This file may be used by other ~.org~ files within this Master Folder... If you need to customize them specifically for this ~.org~ file alone, you should copy and rename: ~default-tags.org~ and modify your renamed copy instead...
+              
 If you do this, you will ALSO need to change the ~#+SETUPFILE: ./org-templates/default-tags.org~ directive below to reflect your changed file name...
 
-=NEXT:= *EDIT Your Renamed tags file:* =ADD= And/Or =REPLACE= Some =BUT-NOT-ALL= of the tags within to your own tags... /(see instructions inside the file)/... 
+/(change the name from/ ~default-tags.org~ /to another name/ /and-or replace some (but NOT ALL) of the tags within/ /to your own tags... see instructions inside the file)/
 :END: 
 
-#+SETUPFILE: ./org-templates/default-tags.org
+##+SETUPFILE: ./org-templates/default-tags.org
 #+SETUPFILE: ./org-templates/gen-doc.org
 
 * 🔖 Table of Contents:                                         :TOC_4: 
-- [[#-setup-config][⚒ setup-config:]]
-- [[#-readme][📖 README:]]
-     - [[#new--reference][NEW 📚 Reference:]]
-- [[#-begin-log][📒 Begin Log:]]
+- [[#-readme][📖 README:]] 
+- [[#-begin-log][📅 Begin Log:]] 
      - [[#-2025][📅 2025:]]
-- [[#-meta-usage--templates][📋 Meta: /(Usage & Templates)/]]
-     - [[#-introduction][📄 Introduction:]]
-          - [[#emacs-shorthand-command-key-notation][Emacs Shorthand Command Key Notation:]]
-          - [[#important-note-for-mac-users][Important Note For Mac Users:]]
-          - [[#org-mode-timestamps-and-clocking][Org Mode Timestamps and Clocking:]]
-     - [[#-how-to][❔ How To:]]
-          - [[#create-a-new-log-entry-01][Create A New Log Entry:]]
-               - [[#copyclone--generic-log-entry-02][Copy/Clone: *🗓 Generic Log Entry:*]]
-          - [[#place-your-cloned-log-entry-03][Place Your Cloned LOG Entry:]]
-               - [[#paste--generic-log-entry-02][PASTE: *🗓 Generic Log Entry:*]]
-          - [[#edit-compose-new-log-entry-05][Edit-Compose New LOG Entry:]]
-          - [[#hap-org-mode-anchors-05][HAP Org Mode Anchors:]]
-               - [[#hap-anchors-howto-03][HAP ANCHORS HOWTO:]]
-               - [[#hap-org-mode-anchor-conventions][HAP Org-Mode ANCHOR Conventions:]]
-     - [[#-templates][⎘ Templates:]]
-          - [[#new--generic-log-entry-boilerplate-log-entry-template][NEW 🗓 Generic LOG Entry: /(BOILERPLATE Log Entry TEMPLATE)/]]
-               - [[#new--reference-1][NEW 📚 Reference:]]
-               - [[#new--time-card][NEW ⏰ Time Card:]]
-               - [[#new--summary-03][NEW ✅ Summary:]]
-               - [[#new--details][NEW 📒 Details:]]
-          - [[#copy-paste-items][COPY-PASTE ITEMS:]]
+- [[#-meta-usage--templates][📋 Meta: /(Usage & Templates)/]] 
+     - [[#-introduction][📄 Introduction:]] 
+          - [[#emacs-shorthand-command-key-notation][Emacs Shorthand Command Key Notation:]] 
+          - [[#important-note-for-mac-users][Important Note For Mac Users:]] 
+          - [[#org-mode-timestamps-and-clocking][Org Mode Timestamps and Clocking:]] 
+     - [[#-how-to][❔ How To:]] 
+          - [[#create-new-log-entry-within-the--begin-log-binder-04][Create New Log Entry within the 📒 Begin Log: binder:]] 
+               - [[#edit-compose-new-log-entry][Edit-Compose New LOG Entry:]]
+               - [[#enter-new-log-entry-details][Enter New LOG Entry Details:]]
+     - [[#-templates][⎘ Templates:]] 
+          - [[#new--generic-log-entry-general-log-entry-template][NEW 🗓 Generic Log Entry /(General Log Entry Template)/]] 
+               - [[#new--reference][NEW 📚 Reference:]]
+               - [[#new--time-card][NEW ⏱ Time Card:]]
+               - [[#new--summary-03][NEW 📃 Summary:]]
+               - [[#new--details][NEW 📰 Details:]]
 
-* 📖 README:                                               :rdmes:export: 
+* DONE 📖 HAP Controlled Vocabulary: :export: 
+CLOSED: [2025-06-12 Thu 08:46]
+:LOGBOOK:
+- State "DONE"       from "ACTIVE"     [2025-06-12 Thu 08:46]
+:END:
 <<RDME>>
 
-=Compose Main Body of your README Doc Here=
+The Following List Serves as my =OFFICIAL MASTER LIST= - *Controlled Vocabulary of TAGS*...
 
-** NEW 📚 Reference: 
-<<RDME-ref>>
-:HOWTO: 
+These will be used in file names, headings, on the web, within org-mode, EVERYWHERE that they can help me FIND THINGS... because they automagically "self organize" themselves into non-ambiguous  categories... /(CHANGE ANY OF THESE TO FIT YOUR OWN PERSONAL WORK-FLOWS)/
+
+=Sort Tables Using:=   ~SPC e s~ /(xah-fly-key chord)/ =OR:= ~C-c ^~ and then choose ~a~ for Alphabetic Sort
+
+** DONE Master CONTROLLED VOCABULARY LIST: /(The Source)/ 
+CLOSED: [2025-06-10 Tue 18:14]
+:LOGBOOK:
+- State "DONE"       from              [2025-06-10 Tue 18:14]
+:END:
+<<RDME_master-list>>
+
+=NOTE:= ALL TAGS SET ELSEWHERE MUST EXIST WITHIN THE LISTS UNDER THIS BINDER /(if you wish to add a NEW tag somewhere during your travels, you MUST do that HERE FIRST.. OK?)/ TAGS included within ~org-tag-persistent-alist~ are defined below with *bold blue* text for easy cross reference to =prevent those tags from being set twice= at the file local level... /(Don't do that... i.e., There are-org mode bugs to contend with!)/
+
+- =DOCUMENT PROCESSING TAGS:= 
+
+  #+NAME: table:RDME_CV-document-processing-tags 
+  #+CAPTION: HAP Controlled Vocabulary - Document Processing Related Tags 
+  #+begin_quote 
+|---------------+--------------------------------------------------|
+| *TAG*           | *DESCRIPTION* - DOCUMENT PROCESSING RELATED TAGS   |
+|---------------+--------------------------------------------------|
+| *archived*      | Out of Circulation & SAVED for History           |
+| *default*       | This ITEM is DEFAULT...                          |
+| cliparts      | Yadda... Yadda... Yadda...                       |
+| docs          | Documents of ANY type, format, subject, etc...   |
+| drafts        | Things Still Unfinished (work in progress)       |
+| fiction       | any pubs classified as fiction                   |
+| final         | Things FINISHED (but not published/submitted     |
+| logs          | Journals, Logs, Diaries, time-tracking etc...    |
+| manuals       | Any Kind of Manual or Guide (a book, NOT rdmes)  |
+| meta          | DOCS about Docs, Reflective Thought, CliffsNotes |
+| presentations | Slide Pres in any Format file or web             |
+| pubops        | pub📚Ops Pub Operations, Methods, Tools, etc...   |
+| rdmes         | SMALL to Medium Size READ ME Docs (not BIG REF)  |
+| reference     | PUBS Classified as REFERENCE                     |
+| scrshots      | Screen Shots, clips of display windows etc.      |
+| submitted     | finals that have been published i.e.,submitted   |
+| typography    | font design, typesetting, LaTeX, etc...          |
+|---------------+--------------------------------------------------|
+  #+end_quote
+
+- =GTD TAGS:= 
+
+  #+NAME: table:RDME_CV-gtd-tags 
+  #+CAPTION: HAP Controlled Vocabulary - Gtd Related Tags 
+  #+begin_quote 
+|------------+-------------------------------------------|
+| *TAG*        | *DESCRIPTION* GTD RELATED TAGS              |
+|------------+-------------------------------------------|
+| pim        | PIM (general KM category)                 |
+| projects   | General Projects Category                 |
+| yakshaving | META Task loosely related to Primary TASK |
+|------------+-------------------------------------------|
+  #+end_quote
+
+- =MONEY TAGS:= 
+
+  #+NAME: table:RDME_CV-money-tags 
+  #+CAPTION: HAP Controlled Vocabulary - Money Related Tags 
+  #+begin_quote 
+|----------+----------------------------------------|
+| *TAG*      | *DESCRIPTION* - MONEY RELATED TAGS       |
+|----------+----------------------------------------|
+| finances | Money, Investments, Yadda... Yadda...  |
+| goods    | as opposed to "services"               |
+| invoices | BOTH TO me & FROM me (General)         |
+| ledgers  | Statements, with transactions etc.     |
+| services | as opposed to "goods"                  |
+| taxes    | All TAX related (NOT General finances) |
+|----------+----------------------------------------|
+  #+end_quote 
+
+- =PRODUCTION TAGS:= 
+
+  #+NAME: table:RDME_CV-production-tags
+  #+CAPTION: HAP Controlled Vocabulary - Production Related Tags
+  #+begin_quote 
+|-------------+---------------------------------------------|
+| *TAG*         | *DESCRIPTION* - PRODUCTION RELATED TAGS       |
+|-------------+---------------------------------------------|
+| *diy*         | Do It Yourself Items...                     |
+| daw         | EM, CM, Sound & Music Audio Tech            |
+| dorico      | DORICO related                              |
+| hap         | HA Productions related Items and Activities |
+| instruments | Musical ONLY (e.g., not Lab Equip)          |
+| midi        | ALL midi related things...                  |
+| pd          | Pure Data related Items and Activities      |
+| playlists   | media playlists for any process or device   |
+| plugins     | vst, etc. (Also NON DAW CALLED "plugins")   |
+| presets     | Params for anything e.g., .ini files, JASON |
+| productions | general tag for the Production Process      |
+| reaper      | reaper related                              |
+|-------------+---------------------------------------------|
+  #+end_quote
+
+- =REFERENCE TAGS:= 
+
+  #+NAME: table:RDME_CV-reference-tags 
+  #+CAPTION: HAP Controlled Vocabulary - Reference Related Tags 
+  #+begin_quote 
+|----------------+-----------------------------------------------|
+| *TAG*            | *DESCRIPTION* - REFERENCE RELATED TAGS          |
+|----------------+-----------------------------------------------|
+| art            | visual Art Any Medium: 2d, 3d, etc.           |
+| culinary       | recipes, prep, cook, bake, fry, braze, etc... |
+| dance          | Anything resembling poetic movement...        |
+| health         | All Health related                            |
+| math           | anything MATH related...                      |
+| music          | Comp, Perf, media, scores, works              |
+| news           | All News Related items...                     |
+| philosophy     | anything philosophical...                     |
+| poetry         | Anything resembling verse...                  |
+| politics       | All Political Related things...               |
+| psychology     | anything psychology related...                |
+| research       | Personal or External Research...              |
+| science        | General SCIENCE / PHYSICS UMBRELLA            |
+| sustainability | Local, Global, environment, health, ALL       |
+| *transportation* | cars, trains, planes, boats, etc.             |
+|----------------+-----------------------------------------------|
+  #+end_quote
+
+- =SOCIAL TAGS:= 
+
+  #+NAME: table:RDME_CV-social-tags 
+  #+CAPTION: HAP Controlled Vocabulary - Social Related Tags 
+  #+begin_quote 
+|--------------+---------------------------------------------------|
+| *TAG*          | *DESCRIPTION* - SOCIAL RELATED TAGS                 |
+|--------------+---------------------------------------------------|
+| associates   | assoc, bus partners, contractors, vendors, etc... |
+| *confidential* | NON Encrypted CONFIDENTIAL materials.             |
+| family       | family related... (including virtual members)     |
+| friends      | friends related...                                |
+| *home*         | general home related (try not to overlap)         |
+| *personal*     | personal, my stuff, etc...                        |
+| *public*       | available to the public, etc...                   |
+| *secrets*      | ENCRYPTED SECRET Credentials & Materials.         |
+| social       | People AND Public Interactions                    |
+| *work*         | ALL projects considered (work)                    |
+|--------------+---------------------------------------------------|
+  #+end_quote
+
+- =TECHNICAL TAGS:= 
+
+  #+NAME: table:RDME_CV-tech-tags 
+  #+CAPTION: HAP Controlled Vocabulary - Technically Related Tags 
+  #+begin_quote 
+|-----------+------------------------------------------------------|
+| *TAG*       | *DESCRIPTION* TECHNICALLY RELATED TAGS                 |
+|-----------+------------------------------------------------------|
+| cloud     | What "The Cloud" means during the Roaring 2020s...   |
+| devops    | dev⚒Ops web-dev, app-dev, system design, etc...      |
+| emacs     | All Emacs & Org Mode related                         |
+| ssh       | All SSH Related Items                                |
+| git       | Items Belonging to git Repos                         |
+| hardware  | Needs Tools to change battery! LOL %^)               |
+| *installed* | Items CURRENTLY Installed (not just programs)        |
+| iot       | Internet of Things...                                |
+| macos     | Apple Mac OS ALL Related                             |
+| macports  | All Macports related Things...                       |
+| mods      | Hacking EXISTING to make something DIFFERENT         |
+| security  | sec☣Ops, hacking, malware, profiling, etc.           |
+| software  | general programs, languages, etc.                    |
+| sysadmin  | sys$Admin System or Device Config, Provision, Test   |
+| templates | Cloned Constructs for a default set or environment   |
+| *tools*     | HUGE General Category for different applications     |
+| unix      | BSD, Linux, etc... (Not Darwin, MacOS)               |
+| wordpress | ALL WP RELATED (plugins can also use plugins tag)... |
+|-----------+------------------------------------------------------|
+  #+end_quote 
+
+** DONE Mod Emacs org-mode PERSISTENT TAGS: 
+CLOSED: [2025-06-10 Tue 18:14]
+:LOGBOOK:
+- State "DONE"       from              [2025-06-10 Tue 18:14]
+:END:
+<<RDME_modemacs-persistent-tags>>
+
+The LISTS within this Section DEFINE *ALL PURPOSE GLOBAL TAGS* 
+They are HARDWIRED into: ~09-org-keywords-tags.conf.el~
+Members of: ~org-tag-persistent-alist~
+
+=SHORTCUT KEYS for GLOBAL TAGS:=
+
+=Used So Far:= *TODO:* /UPDATE this after all the dust settles.../
+
+=NOTE:= If you update the source with new tags/keys you must refresh this list to reflect changes...
+
+     ~a d h i n p t w x y C P S~
+
+=NOTE:= These =GLOBAL TAGS DO NOT NEED TO BE DUPLICATED= Within =FILE LEVEL SETUPFILES= as they will show up in the list first /(followed by the tags defined within the included SETUPFILE)/ any time you use org-mode commands to add/remove tags...
+
+IF you would rather start up an *org project* WITHOUT these DEFAULT tags but instead Set your own *FILE-LOCAL* set... then *PLACE:*  ~#+STARTUP: noptag~ At the top of your ~.org~ file in the preamble... Then USE the ~#+TAGS:~ keyword with your custom TAG Definitions within the *SETUPFILE* to be included with that particular ~.org~ file... 
+
+*** Persistent Mutual Exclusive TAGS: 
+<<RDME_modemacs-persistent-me-tags>> 
+
+- =Org-Mode Internal Processing Mutual Exclusive TAGS:= 
+
+  #+NAME: table:RDME_HAP-ModEmacs_org-mode-internal-processing-tags 
+  #+CAPTION: ModEmacs Org-Mode-persistent-me-tags 
+  #+begin_quote 
+|----------+------------------------------------|
+| *ME TAGS*  | *Purpose:* flags Org Mode Export     |
+|----------+------------------------------------|
+| *noexport* | FLAG: Outline Tree is NOT EXPORTED |
+| *export*   | FLAG: Outline Tree IS EXPORTED     |
+|----------+------------------------------------|
+  #+end_quote
+
+- =TOC-ORG Flags - Mutual Exclusive TAGS LIST= 
+
+  #+NAME: table:RDME_toc-org-mutual-exclusive-tags 
+  #+CAPTION: TOC-ORG FLAGS (Mutually Exclusive Tags) 
+  #+begin_quote
+|---------+------------------------------|
+| *ME TAGS* | *Purpose:* flags for toc depth |
+|---------+------------------------------|
+| *TOC*     | TOC-Org DEFAULT 2 levels     |
+| *TOC_3*   | TOC-Org 3 levels deep        |
+|---------+------------------------------|
+  #+end_quote
+
+- =GENERAL PURPOSE MUTUALLY EXCLUSIVE TAGS LIST= 
+
+  #+NAME: table:RDME_gp-mutual-exclusive-tags 
+  #+CAPTION: GP Mutually Exclusive TAGS
+  #+begin_quote 
+|--------------+-------------------------------------------|
+| *ME TAGS*      | *Purpose:*                                  |
+|--------------+-------------------------------------------|
+| *home*         | general home related (try not to overlap) |
+| *personal*     | personal, my stuff, etc...                |
+| *work*         | Any Projects Considered WORK              |
+|--------------+-------------------------------------------|
+| *ME TAGS*      | *Purpose:*                                  |
+|--------------+-------------------------------------------|
+| *confidential* | NON Encrypted CONFIDENTIAL materials.     |
+| *public*       | available to the public, etc...           |
+| *secrets*      | ENCRYPTED SECRET Credentials & Materials. |
+|--------------+-------------------------------------------|
+  #+end_quote
+
+*** Persistent Singleton TAGS: 
+<<RDME_modemacs-persistent-singleton-global-tags>>
+
+#+NAME: table:RDME_ModEmacs_Org-DEFAULT-GLOBAL-SINGLETON-TAGS 
+#+CAPTION: HAP Modular Emacs Org Mode MAIN GLOBAL TAGS LIST 
+#+begin_quote 
+|----------------+--------------------------------------------------|
+| *TAG*            | *DESCRIPTION*                                      |
+|----------------+--------------------------------------------------|
+| *archived*       | Out of Circulation & SAVED for History           |
+| *default*        | ITEMS in their DEFAULT State                     |
+| *diy*            | Do It Yourself Items...                          |
+| *installed*      | Items CURRENTLY IN USE (not just programs)       |
+| *tools*          | HUGE General Category for different applications |
+| *transportation* | cars, trains, planes, boats, etc.                |
+|----------------+--------------------------------------------------|
+#+end_quote
+
+** DONE ~09-2-org-keywords-tags-conf.el~ /(eLisp)/: 
+CLOSED: [2025-06-12 Thu 07:33]
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2025-06-12 Thu 07:33]
+:END:
+<<RDME_09-2-org-keywords-tags-conf.el>>
+
+=SOURCE LISP CODE:=
+
+/(refresh this list with the source lisp code when you finally get all of this configured and working the way you want it to work...  ongoing configurations)/
+
+#+NAME: elisp:RDME_HAP-ModEmacs_org-keywords-tags-conf 
+#+CAPTION: ModEmacs org-keywords-tags-conf.el Persistent Tags 
+#+begin_src elisp 
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; DEFINE PERSISTENT GLOBAL TAGS for GENERAL USE:
+;; (org-tag-persistent-alist)
+;;
+;; NOTE:
+;;
+;;   2025-006-07 - The TAG LIST BELOW has been greatly  
+;;   shortened from previous iterations of this file...
+;;
+;;   For this GLOBAL LIST only Tags of the MOST GENERAL 
+;;   NATURE and represent the Top Level of their category. 
+;;   These tags must also be useful for most common cases.
+;;
+;;   More Specific Tags will be placed within xxx-tags.org 
+;;   files which may be imported by any .org projects that 
+;;   need specific tags from specific categories. The result 
+;;   will be a much shorter choice of tags when assigning 
+;;   them for headings in your docs...
+;;
+;;   The Tags below are available (persistent) to ALL 
+;;   .ORG files... YOU MAY DISABLE These Tags on a per
+;;   file basis by PUTTING: "#+STARTUP: noptag" at the top 
+;;   of the file... (and then add a custom set of tags to
+;;   that file alone)
+;;
+;; WARNING:
+;;
+;;   Do NOT use any keyboard keys which are already defined 
+;;   below to define any NEW local TAGS for any specific 
+;;   .org files... Your KEYS will NOT WORK as they were 
+;;   already defined globally HERE
+;;   (SEE: "Keys Used So Far:" BELOW)...
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+;; FIRST CLEAR ANY PREVIOUS LIST before Initializing below:
+(setq org-tag-persistent-alist nil)
+
+(setq
+ org-tag-persistent-alist 
+ (quote
+   ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   ;; BEGIN: MUTUALLY EXCLUSIVE TAGS:
+   ;; DEFAULT (persistent)  org mode tags for Mod Emacs
+
+   ((:startgroup  . nil) ;; BEGIN: ME Group:
+    ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ;; Special Purpose EXPORT / NOEXPORT Flags
+    ("noexport"   . ?n)  ;; EXCLUDE TREE from Export
+    ("export"     . ?x)  ;; EXPORT This TREE
+    (:endgroup    . nil) ;; END ME Group:
+    ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    (:newline        . nil) ;; Put next tags on fresh new line...
+
+    ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ;; TOC-ORG TAGS:
+    ;; (for Table Of Contents in Org Files, GitHub, etc.)
+  
+    (:startgroup) ;; BEGIN: ME Group
+    ("TOC")        ;; TOC-Org DEFAULT 2 levels
+    ("TOC_3")      ;; FLAG: TOC-Org (3 levels deep)
+    (:endgroup)    ;; END: ME Group
+    ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    ;; ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ;; ;; SPECIAL TOC-ORG tags:
+    ;; ;;
+    ;; ;; NOTE: These Were REMOVED from PERSISTENT TAGS... They will
+    ;; ;; Be placed within the default-tags.org SETUPFILE instead...
+    ;; ;;
+    ;; ;; Headings tagged with :noexport: will be excluded from the
+    ;; ;; TOC. HOWEVER, If you want to preserve the heading, but
+    ;; ;; strip its children (for changelog entries, for example),
+    ;; ;; you can tag it :noexport_1: (by analogy, you can use
+    ;; ;; :noexport_2:, :noexport_3:, etc. for children of deeper
+    ;; ;; levels). Note, though, :noexport: has a similar meaning in
+    ;; ;; org-mode, which I hope is a Good Thing (tm). However,
+    ;; ;; :noexport_1: and friends won’t be recognized by org-mode
+    ;; ;; as anything special. Look at org-export-exclude-tags
+    ;; ;; variable for more detail...
+
+    ;; (:startgroup)   ;; BEGIN: ME Group
+    ;; ("noexport_1")  ;; FLAG: "TOC ORG 1 heading deep"
+    ;; ("export_2")    ;; FLAG: "TOC ORG 2 headings deep"
+    ;; ("export_3")    ;; FLAG: "TOC ORG 3 headings deep"
+    ;; (:endgroup)     ;; END: ME Group
+    ;; ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ;; GENERAL PURPOSE MUTUALLY EXCLUSIVE TAGS:
+    ;; (Select one of these for each file's use-case)
+
+    (:startgroup)     ;; BEGIN: ME Group
+    ("home"     . ?h) ;;
+    ("personal" . ?p) ;;
+    ("work"     . ?w) ;;
+    (:endgroup)       ;; END: ME Group
+
+    (:startgroup)         ;; BEGIN: ME Group
+    ("confidential" . ?C) ;; NON Encrypted CONFIDENTIAL
+    ("public"       . ?P) ;; AVAILABLE to the public, etc...
+    ("secrets"      . ?S) ;; ENCRYPTED SECRET Materials
+    (:endgroup)           ;; END: ME Group
+
+    ;; END: MUTUALLY EXCLUSIVE TAGS:
+    ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ;; BEGIN: PERSISTENT SINGLETON TAGS:
+    ;; (USED by All HAP Modular Emacs org-mode files)
+    ;;
+    ;; These general purpose TAGS should be useful for 
+    ;; most any use-case...
+
+    ("archived"        . ?a) 
+    ("default"         . ?d) 
+    ("diy"             . ?y)
+    ("installed"       . ?i)
+    ("transportation"  . ?t)
+    ("tools"           . ?T)
+    (:newline          . nil))))
+
+    ;; END: PERSISTENT SINGLETON TAGS
+    ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+;; KEYS USED SO FAR (above):
+;;  a d h i n p t w x y C P S T 
+;;
+;; END: GLOBAL TAGS for GENERAL USE: (org-tag-persistent-alist)
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#+end_src 
+
+** DONE Mod Emacs org-mode SETUPFILE TAGS: 
+CLOSED: [2025-06-12 Thu 08:45]
+:LOGBOOK:
+- State "DONE"       from "ACTIVE"     [2025-06-12 Thu 08:45]
+:END:
+<<RDME_modemacs-setupfile-tags>>
+
+The LISTS within this Section DEFINE *ALL PURPOSE AVAILABLE TAGS* assigned to SETUPFILES to be included with individual org-mode files... /(this will keep the default list SHORT)/ while allowing variations of tags /(comprising all tags within my CONTROLLED VOCABULARY)/ to be distributed to different projects /(requiring some common but many specific for each doc category)/
+
+=NOTE:= All tags Listed UNDER This Heading are =DEFINED WITHIN INDIVIDUAL SETUPFILES= Which are Loaded by HAP Modular Emacs  *ORG-MODE Document Skeleton Template* files and *ANY CLONES* made from those Templates...
+
+*** DONE DEFAULT DOC TAGS: /(default-tags.org)/ 
+CLOSED: [2025-06-11 Wed 09:45]
+:LOGBOOK:
+- State "DONE"       from "ACTIVE"     [2025-06-11 Wed 09:45]
+:END:
+<<RDME_modemacs-default-doc-tags>>
+:README: 
+=NOTE:= When choosing *SETUPFILE* TAGS from the *Controlled Vocabulary*... =DON'T USE= any tags set in *BOLD* /(i.e., *blue bold* text in my org-mode buffers)/
+
+=GLOBAL TAGS= /(named in *bold blue* within the CV tables)/ are not needed in *SETUPFILES*, as these tags are Always Present and listed in the helm interface when choosing tags...
+
+=IN ADDITION:= some tags from your controlled vocabulary may be rarely used in special cases or for what ever reason, you don't want to clutter up your SETUPFILES with TOO MANY TAGS! Therefore RESERVE these tags for individual FILE LOCAL /(set in the top header of the org doc)/ or by putting file local ~#+TAGS:~ directives within the *⚒ setup-config:* binder of the Org Document...
+:END:
+
+TAGS LISTED HERE shall be placed within the *DEFAULT TAGS SETUPFILE* 
+/(which will be updated to reflect below)/
+
+**** DEFAULT Hierarchical TAGS: [8/8] 
+<<RDME_modemacs-gp-hierarchical-tags>>
+
+- [X] =TOC-ORG FLAGS:=
+
+  =NOTE:= I am NOT Using these *EXTRA TOC-ORG FLAGS* for anything presently, and have commented out their line within: ~default-tags.org~...  You may find them useful so I leave them documented here, and you can take the extra ~##~ from the ~#+TAGS:~ directive to enable and use them... 
+
+  =INFO:= Headings tagged with ~:noexport:~ will be excluded from the TOC. HOWEVER, If you want to preserve the heading, but strip its children /(for example: change-log entries)/, you can tag it ~:noexport_1:~ By analogy... you can use ~:noexport_2:~, ~:noexport_3:~, etc. for children of deeper levels. Note: ~:noexport:~ has a similar meaning in org-mode but :noexport_1: and friends won’t be recognized by org-mode as anything special. Look at ~org-export-exclude-tags~ variable and ~toc-org~ docs for more detail... 
+
+  #+NAME: table:RDME_system flags-grouptags 
+  #+CAPTION: GENERAL ARTS Tag Group 
+  #+begin_quote 
+|------------+-----------------------------------------|
+| *ME TAGS*    | *Purpose:* TOC ORG Mark toc depth@heading |
+|------------+-----------------------------------------|
+| noexport_1 | toc 1 heading deep                      |
+| export_2   | toc 2 headings deep                     |
+| export_3   | toc 3 headings deep                     |
+|------------+-----------------------------------------|
+  #+end_quote 
+
+- [X] =GENERAL ARTS:= 
+  #+NAME: table:RDME_arts-grouptags 
+  #+CAPTION: GENERAL ARTS Tag Group 
+  #+begin_quote 
+|-----------+-----------------------------|
+| *Group TAG* | *Member Tags*                 |
+|-----------+-----------------------------|
+| art       | music dance poetry culinary |
+|-----------+-----------------------------|
+  #+end_quote
+
+- [X] =PUBLISING OPERATIONS:= 
+  #+NAME: table:RDME_pubops-grouptags 
+  #+CAPTION: GENERAL PUBLISING Tag Group 
+  #+begin_quote 
+|-----------+-------------|
+| *Group TAG* | *Member Tags* |
+|-----------+-------------|
+| pubops    | docs meta   |
+|-----------+-------------|
+  #+end_quote 
+  
+  #+NAME: table:RDME_docs-grouptags 
+  #+CAPTION: DOCS Tag Group 
+  #+begin_quote 
+|-----------+--------------------------------|
+| *Group TAG* | *Member Tags*                    |
+|-----------+--------------------------------|
+| docs      | reference news fiction manuals |
+|           | rdmes logs presentations       |
+|-----------+--------------------------------|
+  #+end_quote
+
+  #+NAME: table:RDME_meta-grouptags 
+  #+CAPTION: META Tag Group 
+  #+begin_quote 
+|-----------+---------------------------------------|
+| *Group TAG* | *Member Tags* (mutual exclusive)        |
+|-----------+---------------------------------------|
+| meta      | { drafts final submitted }            |
+|           | scrshots cliparts playlists templates |
+|-----------+---------------------------------------|
+  #+end_quote
+
+- [X] =SOFTWARE GROUP:= 
+  #+NAME: table:RDME_software-grouptags 
+  #+CAPTION:  SOFTWARE Tag Group 
+  #+begin_quote 
+|-----------+-------------|
+| *Group TAG* | *Member Tags* |
+|-----------+-------------|
+| software  | emacs       |
+|-----------+-------------|
+  #+end_quote
+
+- [X] =SOCIAL GROUP:= 
+  #+NAME: table:RDME_social-grouptags 
+  #+CAPTION:  SOCIAL Tag Group 
+  #+begin_quote 
+|-----------+------------------------------------|
+| *Group TAG* | *Member Tags*                        |
+|-----------+------------------------------------|
+| social    | associates family friends politics |
+|-----------+------------------------------------|
+  #+end_quote 
+
+- [X] =FINANCE OPERATIONS:= 
+
+  #+NAME: table:RDME_finances-grouptags 
+  #+CAPTION: GENERAL FINANCE Tag Group 
+  #+begin_quote 
+|-----------+-----------------------------------------------|
+| *Group TAG* | *Member Tags* (including mutual exclusive tags) |
+|-----------+-----------------------------------------------|
+| finances  | { goods services } invoices ledgers taxes     |
+|-----------+-----------------------------------------------|
+  #+end_quote 
+
+- [X] =PIM OPERATIONS:= 
+
+  #+NAME: table:RDME_pim-grouptags 
+  #+CAPTION: Personal Information Management TAG Group 
+  #+begin_quote 
+|-----------+---------------------|
+| *Group TAG* | *Member Tags*         |
+|-----------+---------------------|
+| pim       | projects yakshaving |
+|-----------+---------------------|
+  #+end_quote
+
+- [X] =GENERAL SCIENCE:= 
+
+  #+NAME: table:RDME_science-grouptags 
+  #+CAPTION: GENERAL SCIENCE TAG Group 
+  #+begin_quote 
+|-----------+-----------------------------------|
+| *Group TAG* | *Member Tags*                       |
+|-----------+-----------------------------------|
+| science   | health philosophy math psychology |
+|           | research sustainability           |
+|-----------+-----------------------------------|
+  #+end_quote 
+
+**** DEFAULT Singleton TAGS: [1/1] 
+<<RDME_modemacs-def-singleton-tags>>
+
+=NOTE:= Most Likely, =MANY= of the =TAGS LISTED BELOW= are actually not for ~default-tags.org~ but rather for ~hap-tags.org~... /(which will be created after all the default stuff has been sorted out and put in its proper places)/...
+
+- [X] =DEFAULT SINGLETON TAGS LIST:= 
+
+  #+NAME: table:RDME_default-singleton-tags 
+  #+CAPTION: Default Doc Singleton TAGS List: 
+  #+begin_quote 
+|----------+----------------------------------------------|
+| *TAG*      | *DESCRIPTION* - DEFAULT DOC SINGLETON TAGS     |
+|----------+----------------------------------------------|
+| mods     | Hacking EXISTING to make something DIFFERENT |
+| security | sec☣Ops, hacking, malware, profiling, etc.   |
+|----------+----------------------------------------------|
+  #+end_quote 
+
+*** DONE HAP TAGS: /(hap-tags.org)/ 
+CLOSED: [2025-06-12 Thu 08:43]
+:LOGBOOK:
+- State "DONE"       from "ACTIVE"     [2025-06-12 Thu 08:43]
+:END:
+<<RDME_modemacs-hap-setupfile-tags>>
+:README: 
+=NOTE:= When choosing *SETUPFILE* TAGS from the *Controlled Vocabulary*... =DON'T USE= any tags set in *BOLD* /(i.e., *blue bold* text in my org-mode buffers)/
+
+=GLOBAL TAGS= /(named in *bold blue* within the CV tables)/ are not needed in *SETUPFILES*, as these tags are Always Present and listed in the helm interface when choosing tags...
+
+=IN ADDITION:= some tags from your controlled vocabulary may be rarely used in special cases or for what ever reason, you don't want to clutter up your SETUPFILES with TOO MANY TAGS! Therefore RESERVE these tags for individual FILE LOCAL /(set in the top header of the org doc)/ or by putting file local ~#+TAGS:~ directives within the *⚒ setup-config:* binder of the Org Document...
+:END:
+
+**** HAP Hierarchical TAGS: [9/9]
+<<RDME_modemacs-hap-hierarchical-tags>>
+
+- [X] =GENERAL ARTS:= 
+  #+NAME: table:RDME_arts-grouptags 
+  #+CAPTION: GENERAL ARTS Tag Group 
+  #+begin_quote 
+|-----------+----------------------------------------|
+| *Group TAG* | *Member Tags*                            |
+|-----------+----------------------------------------|
+| art       | music dance poetry culinary typography |
+|-----------+----------------------------------------|
+  #+end_quote
+
+- [X] =HAP: PRODUCTIONS: DAW: GROUP= 
+
+  #+NAME: table:RDME_hap-grouptags 
+  #+CAPTION: HAP: Tag Group 
+  #+begin_quote 
+|-----------+-------------|
+| *Group TAG* | *Member Tags* |
+|-----------+-------------|
+| hap       | productions |
+|-----------+-------------|
+  #+end_quote 
+
+  #+NAME: table:RDME_productions-grouptags 
+  #+CAPTION: Productions: Tag Group 
+  #+begin_quote 
+|-------------+------------------------------------------------|
+| *Group TAG*   | *Member Tags*                                    |
+|-------------+------------------------------------------------|
+| productions | daw instruments midi playlists plugins presets |
+|-------------+------------------------------------------------|
+  #+end_quote
+
+  #+NAME: table:RDME_daw-grouptags 
+  #+CAPTION: DAW: Tag Group 
+  #+begin_quote 
+|-----------+------------------|
+| *Group TAG* | *Member Tags*      |
+|-----------+------------------|
+| daw       | reaper dorico pd |
+|-----------+------------------|
+  #+end_quote
+
+- [X] =DEVOPS GROUP:= 
+
+  #+NAME: table:RDME_devops-tags 
+  #+CAPTION: HAP devOps TAGS 
+  #+begin_quote 
+|-----------+--------------------|
+| *Group TAG* | *Member Tags*        |
+|-----------+--------------------|
+| devops    | git mods wordpress |
+|-----------+--------------------|
+  #+end_quote
+
+- [X] =SYS$ADMIN GROUP:= 
+
+  #+NAME: table:RDME_sysadmin-tags 
+  #+CAPTION: HAP sys$Admin TAGS 
+  #+begin_quote 
+|-----------+-------------------------------------|
+| *Group TAG* | *Member Tags*                         |
+|-----------+-------------------------------------|
+| sysadmin  | security hardware software ssh      |
+|           | cloud macports emacs iot macos unix |
+|-----------+-------------------------------------|
+  #+end_quote
+
+- [X] =PUBLISING GROUP:=  
+  #+NAME: table:RDME_pubops-grouptags 
+  #+CAPTION: GENERAL PUBLISING Tag Group 
+  #+begin_quote 
+|-----------+-------------|
+| *Group TAG* | *Member Tags* |
+|-----------+-------------|
+| pubops    | docs meta   |
+|-----------+-------------|
+  #+end_quote 
+  
+  #+NAME: table:RDME_docs-grouptags 
+  #+CAPTION: DOCS Tag Group 
+  #+begin_quote 
+|-----------+--------------------------------|
+| *Group TAG* | *Member Tags*                    |
+|-----------+--------------------------------|
+| docs      | reference news fiction manuals |
+|           | rdmes logs presentations       |
+|-----------+--------------------------------|
+  #+end_quote 
+
+  #+NAME: table:RDME_meta-grouptags 
+  #+CAPTION: META Tag Group 
+  #+begin_quote 
+|-----------+---------------------------------------|
+| *Group TAG* | *Member Tags* (mutual exclusive)        |
+|-----------+---------------------------------------|
+| meta      | { drafts final submitted }            |
+|           | scrshots cliparts playlists templates |
+|-----------+---------------------------------------|
+  #+end_quote 
+
+- [X]  =BUSINESS GROUP:=  
+
+  #+NAME: table:RDME_business-grouptags 
+  #+CAPTION: HAP BUSINESS Tag Group 
+  #+begin_quote 
+|------------+-------------|
+| *Group TAG*  | *Member Tags* |
+|------------+-------------|
+| associates | unca        |
+|------------+-------------|
+  #+end_quote
+
+- [X] =FINANCES GROUP:=  
+
+  #+NAME: table:RDME_finances-grouptags 
+  #+CAPTION: GENERAL FINANCE Tag Group 
+  #+begin_quote 
+|-----------+-----------------------------------------------|
+| *Group TAG* | *Member Tags* (including mutual exclusive tags) |
+|-----------+-----------------------------------------------|
+| finances  | { goods services } invoices ledgers           |
+|-----------+-----------------------------------------------|
+  #+end_quote 
+
+- [X] =PIM OPERATIONS:=  
+
+  #+NAME: table:RDME_pim-grouptags 
+  #+CAPTION: Personal Information Management TAG Group 
+  #+begin_quote 
+|-----------+---------------------|
+| *Group TAG* | *Member Tags*         |
+|-----------+---------------------|
+| pim       | projects yakshaving |
+|-----------+---------------------|
+  #+end_quote
+
+- [X] =GENERAL SCIENCE:= 
+
+  #+NAME: table:RDME_science-grouptags 
+  #+CAPTION: GENERAL SCIENCE TAG Group 
+  #+begin_quote 
+|-----------+-----------------------------------|
+| *Group TAG* | *Member Tags*                       |
+|-----------+-----------------------------------|
+| science   | health philosophy math psychology |
+|           | research sustainability           |
+|-----------+-----------------------------------|
+  #+end_quote
+
+**** HAP Singleton TAGS: [1/1] 
+<<RDME_modemacs-hap-singleton-tags>>
+
+- [X] =HAP SINGLETON TAGS LIST:= 
+
+  #+NAME: table:RDME_hap-singleton-tags 
+  #+CAPTION: HAP Singleton TAGS List: 
+  #+begin_quote 
+|------+----------------------------------|
+| *TAG*  | *DESCRIPTION* - HAP SINGLETON TAGS |
+|------+----------------------------------|
+| none | CURRENTLY NO SINGLETONS for HAP  |
+|------+----------------------------------|
+  #+end_quote 
+
+** 📚 Reference: 
+<<RDME_ref>>
+:README: 
 =Org Mode Links Tip:=
 
 - To Create a Link Type: ~C-c C-l~ 
@@ -295,236 +1050,15 @@ If you do this, you will ALSO need to change the ~#+SETUPFILE: ./org-templates/d
 
 - *Link to Project:* [[][] ] /(comment)/
 
-* 📒 Begin Log:                                             :noexport:logs: 
+* NEW 📒 Begin Log:                                              :noexport: 
 <<LOG>>
-** 📅 2025: 
+*** 📅 2025: 
 <<LOG_2025>>
 
 Place a Clone of *🗓 Generic Log Entry* /(heading and contents)/ from *⎘ Templates:* binder within this Log YEAR section, and Commandeer it as your NEXT NEW Log Entry...
 
-* 📋 Meta: /(Usage & Templates)/                               :meta:noexport: 
+* 📋 Meta: /(Usage & Templates)/                                   :noexport: 
 <<META>>
-
-=NOTE:= This BINDER Section SHOULD =NEVER BE EXPORTED OR PUBLISHED=
-/(This is META DATA - for use within Emacs Org-Mode only!)/
-
-#+begin_quote 
-/“Everyone is a moon,/
- /and has a dark side,/
- /which he never shows to anybody.”/ - Mark Twain 
-#+end_quote
-
-** Meta Reference: 
-<<META_ref>> 
-
-Here are Links to Information that may help you utilize this template to create your README Doc in org-mode...
-
-=NOTE:= This template is NOT really intended to be exported but this reference section is included here as there are many links that will help you within org-mode itself here...
-
-=Organized by Categories=
-
-*** General Emacs: 
-
-- [[https://emacsdocs.org/][Emacs Docs]] - /(Emacs Docs)/ 
-
-  /The modern documentation website Emacs deserves./
-
-- [[http://xahlee.info/][Xah Lee MAIN Website]] - /(Xah Lee's Main Website with Links to all his Blogs, Talk Show, etc.)/
-
-- [[http://xahlee.info/emacs/emacs/blog.html][Xah Lee EMACS Blog]] - /(Xah Lee's Emacs Blog with Links to Tutorials, etc.)/
-
-- [[http://xahlee.info/emacs/emacs/emacs_keys_index.html][Xah Lee EMACS KEYS]] - /(Xah Lee's Emacs KEYS Blog with Links to Tutorials, etc.)/
-
-- [[http://xahlee.info/emacs/misc/xah-fly-keys.html][Xah Fly Keys]] - /(Xah Lee's Xah-fly-keys Blog with Links to Tutorials, etc.)/
-
-- [[https://github.com/xahlee/xah-fly-keys][Xah Fly Keys - GitHub]] - /(Xah Lee's Xah-fly-keys GitHub Repository)/
-
-*** Emacs Lisp: /(eLisp)/ 
-
-- [[https://emacsdocs.org/docs/elisp/Emacs-Lisp][Emacs Lisp Manual]] - /(Emacs Docs)/ 
-
-  /This is the GNU Emacs Lisp Reference Manual corresponding to Emacs version 27.2/
-
-- [[https://www.gnu.org/software/emacs/manual/html_node/elisp/index.html][EMACS LISP MANUAL]] - /(GNU.org)/ 
-
-  /This is the OFFICIAL GNU Emacs Lisp Reference Manual corresponding to Emacs version 30.1/
-
-- [[http://xahlee.info/emacs/emacs/practical_elisp.html][Practical Emacs Lisp]] - /(Xah Lee's Practical Lisp Blog)/ 
-
-  /(With Links to both Standard lisp and elisp, Tutorials, etc.)/ 
-
-*** ORG-MODE: 
-
-- [[https://emacsdocs.org/docs/org/The-Org-Manual][The Org Manual]]  - /(Emacs Docs)/ 
-
-  /Emacs Docs Format - This manual is currently for Org version 9.4. Check Link Below to LATEST VERSION to see if it is up to date.../
-
-- [[https://orgmode.org/manual][THE ORG MANUAL]] - /(Orgmode.org)/ 
-
-  /OFFICIAL Orgmode.org Manual Latest Version/
-
-- [[https://orgmode.org/worg/][Hello Worg, the Org-Mode Community!]] - /(WORG)/ 
-
-  /Worg documentation & Org-Mode Resources.../
-
-- [[https://orgmode.org/worg/dev/org-export-reference.html][Org Export Reference]] - /(WORG)/ 
-
-  /This document is aimed at back-end developers for the generic export engine ox.el. It assumes a good understanding of Org syntax from the reader./
-
-- [[https://orgmode.org/manual/In_002dbuffer-Settings.html][Summary of In-Buffer Settings]] - /The ORG Manual/ 
-
-- [[https://orgmode.org/manual/Export-Settings.html#Export-Settings][Export Settings]] - /The ORG Manual/ 
-
-- [[https://orgmode.org/manual/Embedded-LaTeX.html][12.5 Embedded LaTeX]] - /(The Org Manual)/ 
-
-- [[http://doc.norang.ca/org-mode.html][Org Mode - Organize Your Life In Plain Text!]] - /(Norang.ca Public Docs)/
-
-*** Tools for ORG-MODE / LaTeX: 
-
-- [[https://www.offerzen.com/blog/literate-programming-empower-your-writing-with-emacs-org-mode][Literate Programming]] - /(Article by: by Justin Worthe)/ 
-
-  /(Literate Programming - Empower Your Writing with Emacs Org-Mode)/
-
-- [[https://www.ctan.org/pkg/latexmk/][latexmk - Fully Automated LaTeX Document Generation]] - /(CTAN)/ 
-
-  /Latexmk completely automates the process of generating a LaTeX document. Given the source files for a document, latexmk issues the appropriate sequence of commands to generate a .dvi, .ps, .pdf or hardcopy version of the document./
-
-- [[https://orgmode.org/manual/LaTeX-fragments.html][12.5.1 LaTeX fragments]] - /(The Org Manual)/
-
-- [[https://emacsdocs.org/docs/org/Images-in-LaTeX-export#nil][Images in LaTeX export]] - /(Emacs Docs)/ 
-
-  /placeholder Text.../
-
-- [[https://ctan.org/pkg/nopageno][nopageno – No Page Numbers in LaTeX Documents]] - /(CTAN)/ 
-
-  /CTAN Comprehensive TeX Archive Network.../
-
-- [[https://www.miskatonic.org/2023/11/15/minted/][Export Org SRC Code Blocks to LaTeX w Minted]] - /(Miskatonic University Press)/ 
-
-  When minted is one of the included packages for Org-Mode export, it’s always necessary to run ~pdflatex~ ~-shell-escape~ to compile the PDF, even if there are no source blocks... This article explains ways around that problem - /(code from Xah Lee)/
-
-- [[https://tex.stackexchange.com/questions/22741/how-to-remove-header-on-a-certain-page][How to Remove Header on a Certain Page]] - /(Stackexchange)/ 
-
-  /A Question/Answer on Stackexchange TeX Discussion Group.../
-
-- [[Https://Github.Com/GeneKao/Orgmode-Latex-Templates][Org-Mode Starter Codes for Exporting to LaTeX PDF:]] - /(GeneKao@GitHub)/ 
-
-  /This repo contains different templates for org-mode -> LaTeX and PDF. Along with the document templates... There are ALSO many great tips for formatting exotic figures and MATH.../ 
-
-  /Created by:/ [[https://www.geneatcg.com/][GeneKao]] /- Gene Ting-Chun Kao - R&D Computational Geometry Processing Engineer at Ansys - Meshing Development Unit (MDU).../
-
-- [[https://www.geneatcg.com/emacs-org-mode-export-to-pdf/][Emacs Org Mode export to pdf]] - /(Article by: Gene Ting-Chun Kao)/
-
-=PIM & TAGGING:=
-
-- [[https://www.gnu.org/software/emacs/manual/html_node/org/Tags.html][TAGS]] - /(GNU.org)/ 
-
-  An excellent way to implement labels and contexts for cross-correlating information is to assign tags to headlines. Org mode has extensive support for tags...
-
-- [[https://karl-voit.at/2022/01/29/How-to-Use-Tags/][How to Use Tags]] - /(Home Page of Karl Voit)/ 
-
-  /(HOW and WHY they are IMPORTANT)/
-  =Because EVERYTHING is MISCELLANEOUS in our minds=...
-
-- [[https://github.com/harmonicalchemy/Memacs][Memacs]] - /(fork of Karl Voit's Repo: harmonicalchemy@GitHub)/ 
-
-  Memacs extracts metadata /(subjects, timestamps, contact information, etc.)/ from many different existing data sources /(file names, emails, tweets, bookmarks, etc.)/ on your computer and generates files which are readable by GNU Emacs with Org-Mode...
-
-=ORG-TABLES:=
-
-- [[https://www.teachmaths.org/20250117_orgmode-tables/][Exporting Org Mode Tables to LaTeX]] - /(teachmaths.org)/ 
-
-  The tables produced by Org mode are pretty basic by default. However, you can use the LaTeX *tabularray* package to customise the look of your tables. 
-
-- [[https://emacs.stackexchange.com/questions/37550/preventing-org-mode-pdf-tables-from-running-off-the-page?noredirect=1&lq=1][Preventing Org-Mode PDF Tables from Running Off the Page]] - /(Stackexchange)/ 
-
-  The answer to this question explains: ~longtable :align |p{3cm}|p{6cm}|l|l|l|l|l|l|~ /(etc.)/
-  Where you replace any ~| l |~ /(column)/ with ~p{*cm}~ where ~*~ can be any numeral as required to fit table to page... /(i.e., hard wired column widths)/
-
-- [[https://tex.stackexchange.com/questions/721496/wide-landscape-table-to-fit-page-margins?rq=1][Wide Landscape Table to Fit Page Margins]] - /(Stackexchange)/ 
-
-  /A Question/Answer on Stackexchange TeX Discussion Group.../
-
-=Blogging Tools:=
-
-- [[https://orgmode.org/worg/org-blog-wiki.html][Blogs and Wikis with Org]] /(Blogging tools - with links to GitHub projects)/
-
-- [[https://github.com/org2blog/org2blog?tab=readme-ov-file#make-your-first-post-in-less-5-minutes][org2blog - Publish to WordPress Blog]] -  /(Puneeth Chaganti @ Github)/ 
-
-  /Org2Blog is SUPPOSEDLY the most advanced WordPress blog editor and manager available today.../
-
-- [[https://github.com/novoid/lazyblorg][lazyblorg]] - /(novoid@GitHub - Karl Voit)/ 
-
-  /Blogging with Org-mode for very lazy people/
-
-*** AUCTeX: 
-
-- [[https://emacsdocs.org/docs/auctex/Top][AUCTeX Manual ]] - /(Emacs Docs)/ 
-
-  /This manual is for AUCTeX (version 12.3 from 2020-10-10), a sophisticated TeX environment for Emacs./
-
-- [[https://elpa.gnu.org/packages/doc/auctex.html][OFFICIAL AUCTeX MANUAL]] - /(GNU.org)/ 
-
-  /This is the LATEST Version of the OFFICIAL GNU AUCTeX Manual/
-
-*** LaTeX: 
-
-- [[https://tug.org/][TeX Users Group]] - /(TUG.org)/
-
-- [[https://ctan.org/][Comprehensive TeX Archive Network]] - /(CTAN)/ 
-
-- [[https://latex-tutorial.com/documentclass-latex/][Your Guide to documentclass LaTeX: Types and options]] - /LaTeX-Tutorial.com/
-
-- [[https://www.ctan.org/pkg/memoir][The Memoir Document Class]] - /(CTAN Page)/ 
-
-- [[https://mirror.math.princeton.edu/pub/CTAN/macros/latex/contrib/memoir/memman.pdf][The Memoir Class - Manual:]] - /(CTAN PDF)/
-
-- [[https://www.linuxjournal.com/content/org-mode-latex-exporter-latex-non-texers][The org-mode LaTeX exporter]] - /(LaTeX for non-TEXers) LINUX Journal/
-
-- [[https://tufte-latex.github.io/tufte-latex/][Tufte-LaTeX]] - /(Tufte LaTeX PAGE @GitHub.io)/ 
-
-  /A Tufte-inspired LaTeX class for producing handouts, papers, and books... This site is home to LaTeX classes for producing handouts and books according to the style of Edward R. Tufte and Richard Feynman./
-
-- [[https://github.com/Tufte-LaTeX/tufte-latex][tufte-latex CLASS]] - /(Tufte-Latex@GitHub)/ 
-
-  /The GitHub Repo for the Tufte-inspired LaTeX Class.../
-
-- [[https://damitr.org/2014/01/09/latex-tufte-class-in-org-mode/][Latex Tufte class in org-mode]] - /(Article on damitr.org)/ 
-
-  Edward Tufte is known for graphical excellence in his famous books. Some enthusiasts combined his design principles into LaTeX and you have the tufte-book and tufte-handout classes for excellence in typesetting. This has support for side notes, margin figures, full width figures etc.
-
-  The Instructions within this article are integrated with ORG-MODE to produce results...
-
-*** LaTeX Fonts: 
-
-- [[https://tug.org/FontCatalogue/][The LaTeX Font Catalogue]] - /(TUG.org)/
-
-- [[https://tug.org/FontCatalogue/seriffonts.html][Serif Fonts]] - /(TUG.org)/ 
-
-- [[https://tug.org/FontCatalogue/sansseriffonts.html][Sans Serif Fonts]] - /(TUG.org)/ 
-
-- [[https://tug.org/FontCatalogue/typewriterfonts.html][Typewriter Fonts]] - /(TUG.org)/ 
-
-- [[https://tug.org/FontCatalogue/calligraphicalfonts.html][Calligraphical Fonts]] - /(TUG.org)/
-
-- [[https://en.wikibooks.org/wiki/LaTeX/Fonts][LaTeX Fonts]] - /(WIKIbooks.org)/
-
-*** LaTeX Music Related Software: 
-
-- [[https://www-cs-faculty.stanford.edu/~knuth/organ.html][Donald Knuth's Pipe Organ]] - /(Stanford.edu)/ 
-
-  =The Organ of Don and Jill Knuth= - This sixteen-rank organ was designed and built for our home by Abbott and Sieker of Los Angeles, California, as their “Opus 67.” It has 812 pipes, separated into three divisions...
-
-- [[https://icking-music-archive.org/][Werner Icking Music Archive]] - /(WIMA)/
-
-- [[https://icking-music-archive.org/software/htdocs/index.html][MusiXTeX and Related Software]] - /(WIMA)/
-
-- [[https://ctan.org/pkg/musixtex][MusiXTeX – Sophisticated Music Typesetting]] -  /(CTAN)/
-
-- [[https://tug.ctan.org/info/latex4musicians/latex4musicians.pdf][LaTeX for Musicians by Guido Gonzato, PhD]] - /(CTAN - PDF)/ 
-
-  This guide shows how to create LaTeX documents that include several kinds of music elements, from very simple to quite complex. Music features may consist of music symbols, song lyrics, guitar chords diagrams, lead sheets, music excerpts, guitar tablatures, multi-page scores.
-
 ** 📄 Introduction: 
 <<META_intro>>
 
@@ -536,9 +1070,7 @@ I stopped using Markdown files for this purpose a few years ago... This makes to
 
 I finally bit the long curve bullet and learned Emacs Org Mode /(after many many many years of using Emacs without it!)/ Today, looking back with current knowledge is like going back to a /"*Dec VT220* green screen *dumb terminal*"/ after experiencing *X Windows* on a Big *HP-UX Workstation!*
 
-Yeah, that's a personal story from the past, lol... All you Mac users out there, please realize that your beautiful Apple desktop is in fact an *HP-UX Motif X-Windows widget set clone*!  That's what Steve Jobs believed to be the best X-Windows tool-kit of the day /(when he was building the NeXT computer)/...  So... Yup he copied that! The Applications Doc at the bottom of your screen is a dead giveaway. Hewlet Packard was first to use such UI concepts...
-
-/(back before the dawning of the web we loved those HPUX Workstations! I got my first taste of them on the MIT Athena Project).../
+Yeah, that's a personal story from the past, lol... All you Mac users out there, please realize that your beautiful Apple desktop is in fact an *HP-UX Motif X-Windows widget set clone*!  That's what Steve Jobs believed to be the best X-Windows tool-kit of the day /(when he was building the NeXT computer)/...  So... Yup he copied that! The Applications Doc at the bottom of your screen is a dead giveaway. Hewlet Packard was first to use such UI concepts... /(back before the dawning of the web we loved those HPUX Workstations! I got my first taste of them on the MIT Athena Project).../
 
 *** Emacs Shorthand Command Key Notation: 
 <<META_emacs-cmd-keys>> 
@@ -696,11 +1228,11 @@ The instructions below for EDITING a NEW CLONED LOG ENTRY Template:
 
   Follow STEPS Within the ~:HOW-TO-USE-THIS:~ drawer directly under your NEW RENAMED *🗓 Generic LOG Entry:*
   
-  These steps show you how to commandeer your NEW CLONE, change headings, ANCHORS, clock-in/out, etc... =Once those initial tasks are done you will be Ready to Start Writing...=
+  These steps show you how to commandeer your NEW CLONE, change headings, ANCHORS, clock-in/out, etc... =Once those initial tasks are done you will be Ready to Start Writing=...
 
 *** HAP Org Mode Anchors: [0/5] 
 **** HAP ANCHORS HOWTO: [0/3] 
-<<META-HOWTO_hap-ancs>>
+<<<META-HOWTO_hap-ancs>>>
 
 Here are some *GUIDELINES for Creating and Editing ANCHORS* as well as *LINKS* to them within any ~HAP_Doc-Skeleton.org~ Template file...
 
@@ -743,7 +1275,7 @@ Here are some *GUIDELINES for Creating and Editing ANCHORS* as well as *LINKS* t
   SOME ANCHORS already have LINKS going to them within *LOG Templates*... These LINKS are present in the *Sub-Headings* under the *✅ Summary* AND *📒 Details* Headings...  Use ~SPACE-BAR b~ /(xfk shortcut key command)/ to expand links so you can see them under these sub-headings and change them to MATCH the Changed ANCHORS that they should be linking to... 
 
 **** HAP Org-Mode ANCHOR Conventions: 
-<<META-HOWTO_hap-anc-cnvents>>
+<<<META-HOWTO_hap-anc-cnvents>>>
 
 The following is a *UNIQUE Mnemonic ANCHOR Convention* which is standard across ALL ~HAP_Doc-Skeleton.org~ Template files...
 
@@ -798,10 +1330,9 @@ Use this Convention to create, adjust, and use  ~<ANCHORS>~ under *Org Headings*
 ** ⎘ Templates: 
 <<META_templates>>
 *** NEW 🗓 Generic LOG Entry: /(BOILERPLATE Log Entry TEMPLATE)/ 
+<2021-03-29 Mon>  
 <<LOG_generic-entry>>
-=LOG-DATE:= <2021-03-29 Mon>  
 :HOW-TO-USE-THIS: 
-
 =COMMANDEERING CLONES of this GENERIC LOG Entry BOILERPLATE TEMPLATE:=
 
 - [ ] *COMMANDEER Your New CLONE:* 
@@ -812,17 +1343,17 @@ Use this Convention to create, adjust, and use  ~<ANCHORS>~ under *Org Headings*
 
   =Do NOT PUT "LOG" in your Title!= /(not needed as you already placed this clone within your log binder)/
 
-- [ ] *UPDATE =LOG-DATE= ~<timestamp>~ to TODAY:* 
+- [ ] *UPDATE MAIN Timestamp to TODAY:* 
 
-  Place your cursor directly on the existing =LOG-DATE:= ~<timestamp>~ directly under the title of THIS CLONED or REPURPOSED *🗓 Generic LOG Entry:* and enter the key binding: ~C-c .~ /(i.e., press/ ~Ctrl~ /key while holding/ ~c~ /and then type a dot ~.~ /)/ A date chooser panel will pop up... 
+  Place your cursor directly on the existing timestamp directly under the title of THIS CLONED or REPURPOSED *🗓 Generic LOG Entry:* and enter the key binding: ~C-c .~ /(i.e., press/ ~Ctrl~ /key while holding/ ~c~ /and then type a dot ~.~ /)/ A date chooser panel will pop up... 
 
 - [ ] *Type One More DOT:* 
 
-  Type one more dot ~.~ to force the calendar selection to the current time and date and then, Press ~ENTER~ to accept your choice... /This will update the existing BOILERPLATE timestamp with TODAY's date/time.../ 
+  Type one more dot ~.~ to force the calendar selection to the current time and date and then, Press ~ENTER~ to accept your choice... /This will update the existing BOILERPLATE timestamp with TODAY's date/time.../
 
   Check to make sure the timestamp was properly updated then move on to the next step...
 
-  This timestamp will =NOT BE UPDATED AFTER THIS=... This timestamp records the FIRST time you started this particular Log entry... You need that date to stay permanent for historical reasons... 
+  This timestamp will not be updated after that, as it records the FIRST time you started this particular Log entry... You need that date to stay permanent for historical reasons...
 
   =NOTE:= /This is the FIRST Time Tracking TASK of Starting a NEW LOG Entry/...
 
@@ -830,13 +1361,11 @@ Use this Convention to create, adjust, and use  ~<ANCHORS>~ under *Org Headings*
 
   =BUT= YOU Will Need to =CHANGE PART of the ANCHOR LINKS= under these main headings...
 
-=NOTE:= You will need to change all these default ANCHORS and LINKS in the beginning before you start using the log entry, /(e.g., Making SURE CASE shifting of parent heading mnemonics are done correctly, etc...)/ You should have read [[META-HOWTO_hap-anc-cnvents][HAP ANCHOR CONVENTIONS]] /(above)/ under the *❔ How To:* binder to help you get started...
-
-=However=, Soon enough... you will have figured out the pattern and it will become second nature for your workflow the next time you clone one of these things... /(I hope)/ Follow the steps below to adjust ANCHORS within CLONES of this *🗓 Generic LOG Entry:* 
+=NOTE:= You will need to change all these default ANCHORS and LINKS in the beginning before you start using the log entry, /(e.g., Making SURE CASE shifting of parent heading mnemonics are done correctly, etc...)/ You should have read the *HAP Org Mode Anchors:* section /(above)/ to help you get started... =However=, Soon enough... you will have figured out the pattern and it will become second nature for your workflow the next time you clone one of these things... /(I hope)/ Follow the steps below to adjust ANCHORS within CLONES of this *🗓 Generic LOG Entry:* 
 
 - [ ] *Change The 🗓 Log Entry MAIN ANCHOR:* /<LOG_generic-entry>/ 
 
-  =USE the Above:= [[META-HOWTO_hap-ancs][HAP ANCHORS HOWTO]] and *HAP Org-Mode* [[META-HOWTO_hap-anc-cnvents][ANCHOR CONVENTIONS]] to Change the MAIN ANCHOR directly under the *LOG Entry's Main Title* /(heading)/ to match your NEW *LOG Entry's Title*... /(your new renamed log TITLE is actually the ~postfix~ and there is NO ~_LABEL_~ within this Anchor as it is under a MAIN Heading)/ 
+  =USE the Above:= *HAP ANCHORS HOWTO:* META-HOWTO_hap-ancs and *HAP Org-Mode ANCHOR CONVENTIONS:* META-HOWTO_hap-anc-cnvents to Change the MAIN ANCHOR directly under the *LOG Entry's Main Title* /(heading)/ to match your NEW *LOG Entry's Title*... /(your new renamed log TITLE is actually the ~postfix~ and there is NO ~_LABEL_~ within this Anchor as it is under a MAIN Heading)/
 
   Change ~generic-entry~ /(the postfix)/ to a short but unique abbreviation, acronym, or mnemonic of your NEW Log Entry's *Title*... /(don't make it too cryptic to the point that you can no longer cognitively connect your mnemonic with the actual title)/ but keep it short and simple as possible.  In case you have to make anchors more than 3 levels deep this practice will keep your anchors short, /(as you will find out)/
 
@@ -844,13 +1373,13 @@ Use this Convention to create, adjust, and use  ~<ANCHORS>~ under *Org Headings*
 
 - [ ] *Change the 📚 Reference: ANCHOR:* /<LOG_GENERIC-ENTRY_ref>/ 
 
-  =USE the Above:= [[META-HOWTO_hap-ancs][HAP ANCHORS HOWTO]] and *HAP Org-Mode* [[META-HOWTO_hap-anc-cnvents][ANCHOR CONVENTIONS]] to Change the *📚 Reference:* ANCHOR... 
+  =USE the Above:= *HAP ANCHORS HOWTO:* META-HOWTO_hap-ancs and *HAP Org-Mode ANCHOR CONVENTIONS:* META-HOWTO_hap-anc-cnvents to Change the *Reference:* ANCHOR.
 
-  For the *📚 Reference:* ANCHOR, Leave the ~PREFIX~ and ~postfix~ alone but CHANGE the ~_LABEL_~ portion of the Anchor...
+  For the *📚 Reference:* Anchor, Leave the ~PREFIX~ and ~postfix~ alone but CHANGE the ~_LABEL_~ portion of the Anchor...
 
-  COPY the lower-case ~postfix~ portion from the ANCHOR under your CLONED/RENAMED version of This: *🗓 Generic LOG Entry:* /(which is now a mnemonic representing your New Log Entry Title)/ and use that to rename ~GENERIC-ENTRY~ within the *📚 Reference:* ANCHOR... *THEN CHANGE it to UPPER CASE* to comply with HAP Org-Mode ANCHOR Conventions.  This mnemonic has NOW transformed into this ANCHOR's ~_LABEL_~
+  COPY your lower-case ~postfix~ portion from the ANCHOR under your CLONED/RENAMED version of This: *🗓 Generic LOG Entry:* /(which is now a mnemonic representing your New Log Entry Title)/ and use that to rename ~GENERIC-ENTRY~ within the *📚 Reference:* ANCHOR... CHANGE it to UPPER CASE to comply with HAP Org-Mode ANCHOR Conventions.  This mnemonic has NOW transformed into this ANCHOR's ~_LABEL_~
 
-  As explained within: [[META-HOWTO_hap-anc-cnvents][ANCHOR CONVENTIONS]] /(see, you know what the mnemonics in that link mean right?)/, The new ~_LABEL_~ is simply the UPPER CASE version of the ~postfix~ within the ANCHOR under its *PARENT heading*...
+  As explained within: META-HOWTO_hap-anc-cnvents /(see, you know what the mnemonics in that link mean right?)/, The new ~_LABEL_~ is simply the UPPER CASE version of the ~postfix~ within the ANCHOR under its *PARENT heading*...
 
   You may LINK to this Unique ANCHOR from other sections of this Log... You may also link to this Anchor from external ORG-LINKS that reference this File in the first part of the link adding this ANCHOR separated by a double colon, /(i.e. ~::~ )/ =However:= This Reference section may also be duplicated within those files as well which you will be able to LINK directly to by using this same ANCHOR alone... But maybe the reference section within this LOG contains some good things needed for your work elsewhere... You will find out soon enough how to organize things to make your workflow easier... /(I have no idea... It's not my workflow... It's your workflow)/...
 
@@ -858,9 +1387,9 @@ Use this Convention to create, adjust, and use  ~<ANCHORS>~ under *Org Headings*
 
   *Leave the* ~_postfix~ *Portion ALONE* because the Reference Heading does not change...
 
-- [ ] *Change the *⏰ Time Card: ANCHOR:* /<LOG_GENERIC-ENTRY_time-card>/ 
+- [ ] *Change the *⏰ Time Card: ANCHOR:* /<LOG_GENERIC-ENTRY_time-card>/
 
-  =USE the Above:= [[META-HOWTO_hap-ancs][HAP ANCHORS HOWTO]] and *HAP Org-Mode* [[META-HOWTO_hap-anc-cnvents][ANCHOR CONVENTIONS]] to Change *⏰ Time Card:* ANCHOR...
+  =USE the Above:= *HAP ANCHORS HOWTO:* META-HOWTO_hap-ancs and *HAP Org-Mode ANCHOR CONVENTIONS:* META-HOWTO_hap-anc-cnvents to Change the *⏰ Time Card:* ANCHOR.
 
   For the *⏰ Time Card:* Anchor, Leave the ~PREFIX~ and ~postfix~ alone but CHANGE the ~_LABEL_~ portion of the Anchor...
 
@@ -874,7 +1403,7 @@ Use this Convention to create, adjust, and use  ~<ANCHORS>~ under *Org Headings*
 
 - [ ] *Change the *✅ Summary: ANCHOR:* /<LOG_GENERIC-ENTRY_summary>/ 
 
-  =USE the Above:= [[META-HOWTO_hap-ancs][HAP ANCHORS HOWTO]] and *HAP Org-Mode* [[META-HOWTO_hap-anc-cnvents][ANCHOR CONVENTIONS]] to change the *✅ Summary:* ANCHOR...
+  =USE the Above:= *HAP ANCHORS HOWTO:* META-HOWTO_hap-ancs and *HAP Org-Mode ANCHOR CONVENTIONS:* META-HOWTO_hap-anc-cnvents to Change the *✅ Summary:* ANCHOR.
 
   For the *✅ Summary:* Anchor, Leave the ~PREFIX~ and ~postfix~ alone but CHANGE the ~_LABEL_~ portion of the Anchor...
 
@@ -896,7 +1425,7 @@ Use this Convention to create, adjust, and use  ~<ANCHORS>~ under *Org Headings*
 
 - [ ] *Change the 📒 Details: ANCHOR:* /<<LOG_GENERIC-ENTRY_details>>/ 
 
-  =USE the Above:= [[META-HOWTO_hap-ancs][HAP ANCHORS HOWTO]] and *HAP Org-Mode* [[META-HOWTO_hap-anc-cnvents][ANCHOR CONVENTIONS]] to change the *📒 Details:* ANCHOR...
+    =USE the Above:= *HAP ANCHORS HOWTO:* META-HOWTO_hap-ancs and *HAP Org-Mode ANCHOR CONVENTIONS:* META-HOWTO_hap-anc-cnvents to Change the *📒 Details:* ANCHOR.
 
   For the *📒 Details:* Anchor, Leave the ~PREFIX~ and ~postfix~ alone but CHANGE the ~_LABEL_~ portion of the Anchor...
 
@@ -908,7 +1437,7 @@ Use this Convention to create, adjust, and use  ~<ANCHORS>~ under *Org Headings*
 
   *Leave the* ~_postfix~ *Portion ALONE* because the *📒 Details:* Heading does not change...
 
-  =NOTE:= *SUB-HEADINGS* under the *📒 Details:* Heading ALSO Contain ANCHORS that you will =Need To Change=, as well as the LINKS to those ANCHORS from the the *✅ Summary:* section that you probably already changed above if you are following these steps in sequence...
+  =NOTE:= *SUB-HEADINGS* under the *📒 Details:* Heading ALSO Contain ANCHORS that you will =Need To Change=, as well as the LINKS to those ANCHORS from the the *✅ Summary:* section that you probably already changed above if you are following these ...
 
   Use ~SPACE-BAR b~ /(xfk shortcut key command)/ to =expand links= so you can see them under these *sub-headings* and change them to =MATCH the Changed ANCHORS= they should be linking to...
 
@@ -918,9 +1447,7 @@ Use this Convention to create, adjust, and use  ~<ANCHORS>~ under *Org Headings*
 
 - [ ] *Change ANCHORS of Sub Headings:* /<<PREFIX_PARENT-HEADING_postfix>>/ 
 
-  =USE the Above:= [[META-HOWTO_hap-ancs][HAP ANCHORS HOWTO]] and *HAP Org-Mode* [[META-HOWTO_hap-anc-cnvents][ANCHOR CONVENTIONS]] to Create and/or Change ANCHOR's Under *Sub Headings* & *Sub-Sub Headings*...
-
-  =FOR ALL EXISTING= *Sub Headings* under the *📒 Details:* heading... For NOW... You will need ONLY to CHANGE the ~_LABEL_~ portion of the ANCHORS... As explained in the two bullets above this one... Later when you actually start logging within this log, you will be changing the ~postfix~ as well... /(within LINKS & ANCHORS)/
+  In the case of all *Sub Headings*, under the *📒 Details: Heading* For NOW you will need ONLY to CHANGE the ~_LABEL_~ portion of the ANCHORS... As explained in the two bullets above this one... Later when you actually start logging within this log, you will be changing the ~postfix~ as well... /(within LINKS & ANCHORS)/
 
   FOR *New Sub-Headings* /(ANYWHERE not just this Log Entry)/ First... Copy an existing Sub-Heading /(a sibling of the place where you want to make a new sub-heading)/ and modify that ANCHOR in the same way as above... /(easy-peasy)/
 
@@ -930,7 +1457,7 @@ Use this Convention to create, adjust, and use  ~<ANCHORS>~ under *Org Headings*
 
   *COPY:* The lower-case ~postfix~ mnemonic from the ANCHOR under the *Parent Heading* of your New *Sub-Heading* and place that AFTER the ~PREFIX~ of your *NEW Sub Heading* ANCHOR separated by an underscore character... This NOW represents the LABEL of your new Sub-Heading Anchor so you must also *change it to UPPER-CASE* now...
 
-  Create a ~_postfix~ mnemonic representing your *NEW Sub Heading* title and place that after the ~_LABEL~ mnemonic separated by an underscore character... That's it... All done... 
+  Create a ~_postfix~ mnemonic representing your *NEW Sub Heading* title and place that after the ~_LABEL~ mnemonic separated by an underscore character... That's it... All done...
 
 - [ ] *You Are Ready To Start Writing NOW:* 
 
@@ -941,9 +1468,9 @@ Use this Convention to create, adjust, and use  ~<ANCHORS>~ under *Org Headings*
 =ENJOY USING YOUR BRAND NEW LOG OF ANYTHING YOU WANT!=
 :END:
 
-=NOTE:= Delete the above ~:HOW-TO-USE-THIS:~ DRAWER from your ACTIVE LOG ENTRIES after you are done setting then up... This README drawer is always present HERE within the *⎘ Meta:* binder if you need to consult it...
+=REPLACE this BOILERPLATE With Your Own Description HERE=
 
-This Log Entry is about: Yadda... Yadda... Yadda... *REPLACE ALL OF THIS BOILERPLATE* WITH YOUR OWN CONTENT...
+This Log Entry is about: Yadda... Yadda... Yadda...
 
 **** NEW 📚 Reference: 
 <<LOG_GENERIC-ENTRY_ref>>
@@ -1075,7 +1602,7 @@ line description containing important keywords right here and nothing more. I th
 The SUMMARY section is a sort of EXPANDED TABLE OF CONTENTS so-to-speak.. Providing a bit more info than a TOC would provide normally... Useful for your LOGGING WORKFLOW...
 Putting the summary section all together provides an excellent EXECUTIVE OVERVIEW of your PROJECTS... ANCHORS provide easy navigation from summary to details for each item...
 
-Commandeer all of the examples below changing their titles both in the heading as well as the lower case title part of the link anchors... 
+Commandeer all of the examples below changing their titles both in the heading as well as the lower case title part of the link anchors...
 
 1. [X] *New Item 1:* /(a COMPLETED ITEM)/ 
    <<LOG_GENERIC-ENTRY_new-item-1>> 
@@ -1099,7 +1626,7 @@ Commandeer all of the examples below changing their titles both in the heading a
    <<LOG_GENERIC-ENTRY_new-item-4>> 
    [[LOG_GENERIC-ENTRY-DETAILS_new-item-4][DETAILS]] 
 
-   =Write a SHORT ONE PARAGRAPH SUMMARY HERE...= 
+   =Write a SHORT ONE PARAGRAPH SUMMARY HERE...=
 
 **** NEW 📒 Details: 
 <<LOG_GENERIC-ENTRY_details>>
@@ -1434,12 +1961,13 @@ AND... Don't forget to Clock OUT when you are DONE... %^)
 *** COPY-PASTE ITEMS: 
 
 - =INLINE IMAGES:= 
+  
   Use this to place an image centered on the page when rendered on the Web...
   
   The image will not Auto Expand in org-mode, -and- if it becomes Visible, you can easily turn it OFF if you don't want it. (i.e. to save vertical space while editing)...
 
   *Type:* ~C-c~  ~C-x~ ~C-v~ to toggle visibility... 
-  #+NAME: Figure:RDME-LOG_object-name 
+  #+NAME: Figure:-LOG_object-name 
   #+ATTR_ORG: :align left
   #+ATTR_HTML: :align center
   #+ATTR_HTML: :width 600px
@@ -1460,6 +1988,8 @@ AND... Don't forget to Clock OUT when you are DONE... %^)
 |    13 | fee    | fum   |
 |------+-------+-------|
   #+end_verse
+
+  =Sort Tables Using:=  ~C-c ^~ and then choose the sort type prompt...
 
 - =Generate TABLE from SRC CODE Block:= 
 
@@ -1512,5 +2042,3 @@ digraph D {
   #+CAPTION: DOT Generated Nested Clusters
   #+RESULTS: dot:-LOG_Nested-CLusters
   [[file:./media/svg/nested-clusters.svg]]
-
-

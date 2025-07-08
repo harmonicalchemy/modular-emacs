@@ -18,7 +18,7 @@
 ;;        for proper operation of HAP Modular Emacs custom functionality within
 ;;        org-mode.
 ;;
-;; NEW ORG USERS NOTE: If you don't allready have an org-files system structure
+;; NEW ORG USERS NOTE: If you don't already have an org-files system structure
 ;; set up, it is highly recommended to create your directory structure exactly as
 ;; below, (replacing "Your-Org-Docs-dir" with the directory path where you will
 ;; be setting up the structure below it... The symbol defined above:
@@ -61,7 +61,6 @@
 ;;      me--org-templates      = org-directory/02-Templates
 ;;      me--org-files          = org-directory/03-Private
 ;;      me--org-rtfm           = org-directory/10-RTFM
-;;      me--org-brain          = org-directory/brain
 
 ;; Load Default Org Agenda Files (directories) that are permanent...
 ;; Any .org files located within the directories of this list
@@ -93,7 +92,6 @@
 ;;        (file-name-as-directory (expand-file-name ME--ORG-TEMPLATES))
 ;;        (file-name-as-directory (expand-file-name ME--ORG-FILES))
 ;;        (file-name-as-directory (expand-file-name ME--ORG-RTFM))
-;;        (file-name-as-directory (expand-file-name ME--ORG-BRAIN))
 ;;        (file-name-as-directory (expand-file-name "~/.emacs.d/Docs/pubOps"))
 ;;        (file-name-as-directory (expand-file-name "~/.emacs.d/Docs/pubOps/Audio-Drama"))))
 

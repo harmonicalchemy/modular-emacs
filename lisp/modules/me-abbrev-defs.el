@@ -112,7 +112,7 @@
     ("zocto" "🐙")
     
     ;; ME added this one...
-    ("zaa" "Alisha Awen 👩‍💻 HarmonicAlchemy@Proton.me")  
+    ("zaa" "Alisha Awen HarmonicAlchemy@Proton.me")  
     
     ("zhearts" "♥💕💓💔💖💗💘💝💞💟💙💚💛💜")
     ("zra" "→")

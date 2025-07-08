@@ -12,7 +12,7 @@
 
 #+DESCRIPTION: HAP - Fiction Book Project Skeleton with generic basics already done.  Great for Authors to use when starting a new fiction book project from scratch... Publishable as a PDF Book suitable for eBook readers... (easily modified for publishing in other eBook formats or for the web)
 
-:SETUP-README:
+:SETUP-README: 
 
 =Setup Files:=
 
@@ -55,8 +55,8 @@
 #+SETUPFILE: ./org-templates/fiction-book-setup.org
 #+SETUPFILE: ./org-templates/default-tags.org
 
-:LATEST_UPDATE:
-  <2024-05-19 Sun>
+:LATEST_UPDATE: 
+  <2025-06-22 Sun>
 
   =YOU MAY REMOVE This Drawer= from your own clones of this template if
   it is bothering you... This drawer is used for HAP Modular Emacs
@@ -114,7 +114,7 @@
               to record the date of its last sync status...
 
 :END:
-:READ_ME_FIRST:
+:READ_ME_FIRST: 
 
 =Instructions:= /(How to Install & Use This Template)/
  
@@ -2443,14 +2443,46 @@ This TV Series does an excellent Job of Illustrating: =The Power Of Getting Imme
 This =Meta= section provides skeleton templates for use within your project(s).  Any sub heading under this Meta: group can be utilized by copy-pasting the collapsed heading into any of your existing project sections (i.e., making a clone anywhere you need to create a new section based on the template's structure)... 
 
 Or... You could try mashing several cloned templates together to create a totally new project heading with a totally different structure... The intent of this is to save lots of time starting up a new custom writing project.  Lets see if it helps. :trollface:
+** Meta Reference: 
+<<META_ref>> 
 
-** Reference: 
+Here are Links to Information that may help you utilize this template to create your Fiction Books in org-mode, as well as EXPORTING your Book to a professionally typeset PDF or To the WEB... 
 
-Here are Links to Information that may help you utilize this template to create your logbooks in org-mode, as well as EXPORTING your Log Books to professionally typeset PDFs or To the WEB as a regular timestamped blog or as selected single pages on some other website or snippets to Mastodon...
+=Organized by Categories=
 
-- [[https://orgmode.org/manual/Table-of-Contents.html][Table of Contents]] - /(The ORG Manual)/
+*** General Emacs: 
 
-- [[http://doc.norang.ca/org-mode.html][Org Mode - Organize Your Life In Plain Text!]] - /(Norang.ca Public Docs)/
+- [[https://emacsdocs.org/][Emacs Docs]] - /(Emacs Docs)/ 
+
+  /The modern documentation website Emacs deserves./
+
+*** Emacs Lisp: /(eLisp)/
+
+- [[https://emacsdocs.org/docs/elisp/Emacs-Lisp][Emacs Lisp Manual ]] - /(Emacs Docs)/ 
+
+  /This is the GNU Emacs Lisp Reference Manual corresponding to Emacs version 27.2/
+
+- [[https://www.gnu.org/software/emacs/manual/html_node/elisp/index.html][EMACS LISP MANUAL]] - /(GNU.org)/ 
+
+  /This is the OFFICIAL GNU Emacs Lisp Reference Manual corresponding to Emacs version 30.1/
+
+*** ORG-MODE: 
+
+- [[https://emacsdocs.org/docs/org/The-Org-Manual][The Org Manual]]  - /(Emacs Docs)/ 
+
+  /Emacs Docs Format - This manual is currently for Org version 9.4. Check Link Below to LATEST VERSION to see if it is up to date.../
+
+- [[https://orgmode.org/manual][THE ORG MANUAL]] - /(Orgmode.org)/ 
+
+  /OFFICIAL Orgmode.org Manual Latest Version/
+
+- [[https://orgmode.org/worg/][Hello Worg, the Org-Mode Community!]] - /(WORG)/ 
+
+  /Worg documentation & Org-Mode Resources.../
+
+- [[https://orgmode.org/worg/dev/org-export-reference.html][Org Export Reference]] - /(WORG)/ 
+
+  /This document is aimed at back-end developers for the generic export engine ox.el. It assumes a good understanding of Org syntax from the reader./
 
 - [[https://orgmode.org/manual/In_002dbuffer-Settings.html][Summary of In-Buffer Settings]] - /The ORG Manual/ 
 
@@ -2458,25 +2490,127 @@ Here are Links to Information that may help you utilize this template to create 
 
 - [[https://orgmode.org/manual/Embedded-LaTeX.html][12.5 Embedded LaTeX]] - /(The Org Manual)/ 
 
+- [[http://doc.norang.ca/org-mode.html][Org Mode - Organize Your Life In Plain Text!]] - /(Norang.ca Public Docs)/
+
+*** Tools for ORG-MODE / LaTeX: 
+
+- [[https://www.offerzen.com/blog/literate-programming-empower-your-writing-with-emacs-org-mode][Literate Programming]] - /(Article by: by Justin Worthe)/ 
+
+  /(Literate Programming - Empower Your Writing with Emacs Org-Mode)/
+
+- [[https://www.ctan.org/pkg/latexmk/][latexmk - Fully Automated LaTeX Document Generation]] - /(CTAN)/ 
+
+  /Latexmk completely automates the process of generating a LaTeX document. Given the source files for a document, latexmk issues the appropriate sequence of commands to generate a .dvi, .ps, .pdf or hardcopy version of the document./
+
 - [[https://orgmode.org/manual/LaTeX-fragments.html][12.5.1 LaTeX fragments]] - /(The Org Manual)/
 
-- [[https://orgmode.org/worg/][Introduction to Org-Mode and Worg]] /(Hello Worg, the Org-Mode Community!)/
+- [[https://emacsdocs.org/docs/org/Images-in-LaTeX-export#nil][Images in LaTeX export]] - /(Emacs Docs)/ 
 
-- [[https://orgmode.org/worg/dev/org-export-reference.html][WORG - Org Export Reference]]
+  /placeholder Text.../
+
+- [[https://ctan.org/pkg/nopageno][nopageno – No Page Numbers in LaTeX Documents]] - /(CTAN)/ 
+
+  /CTAN Comprehensive TeX Archive Network.../
+
+- [[https://www.miskatonic.org/2023/11/15/minted/][Export Org SRC Code Blocks to LaTeX w Minted]] - /(Miskatonic University Press)/ 
+
+  When minted is one of the included packages for Org-Mode export, it’s always necessary to run ~pdflatex~ ~-shell-escape~ to compile the PDF, even if there are no source blocks... This article explains ways around that problem - /(code from Xah Lee)/
+
+- [[https://tex.stackexchange.com/questions/22741/how-to-remove-header-on-a-certain-page][How to Remove Header on a Certain Page]] - /(Stackexchange)/ 
+
+  /A Question/Answer on Stackexchange TeX Discussion Group.../
+
+- [[Https://Github.Com/GeneKao/Orgmode-Latex-Templates][Org-Mode Starter Codes for Exporting to LaTeX PDF:]] - /(GeneKao@GitHub)/ 
+
+  /This repo contains different templates for org-mode -> LaTeX and PDF. Along with the document templates... There are ALSO many great tips for formatting exotic figures and MATH.../ 
+
+  /Created by:/ [[https://www.geneatcg.com/][GeneKao]] /- Gene Ting-Chun Kao - R&D Computational Geometry Processing Engineer at Ansys - Meshing Development Unit (MDU).../
+
+- [[https://www.geneatcg.com/emacs-org-mode-export-to-pdf/][Emacs Org Mode export to pdf]] - /(Article by: Gene Ting-Chun Kao)/
+
+=PIM & TAGGING:=
+
+- [[https://www.gnu.org/software/emacs/manual/html_node/org/Tags.html][TAGS]] - /(GNU.org)/ 
+
+  An excellent way to implement labels and contexts for cross-correlating information is to assign tags to headlines. Org mode has extensive support for tags...
+
+- [[https://karl-voit.at/2022/01/29/How-to-Use-Tags/][How to Use Tags]] - /(Home Page of Karl Voit)/ 
+
+  /(HOW and WHY they are IMPORTANT)/
+  =Because EVERYTHING is MISCELLANEOUS in our minds=...
+
+- [[https://github.com/harmonicalchemy/Memacs][Memacs]] - /(fork of Karl Voit's Repo: harmonicalchemy@GitHub)/ 
+
+  Memacs extracts metadata /(subjects, timestamps, contact information, etc.)/ from many different existing data sources /(file names, emails, tweets, bookmarks, etc.)/ on your computer and generates files which are readable by GNU Emacs with Org-Mode...
+
+=ORG-TABLES:=
+
+- [[https://www.teachmaths.org/20250117_orgmode-tables/][Exporting Org Mode Tables to LaTeX]] - /(teachmaths.org)/ 
+
+  The tables produced by Org mode are pretty basic by default. However, you can use the LaTeX *tabularray* package to customise the look of your tables. 
+
+- [[https://emacs.stackexchange.com/questions/37550/preventing-org-mode-pdf-tables-from-running-off-the-page?noredirect=1&lq=1][Preventing Org-Mode PDF Tables from Running Off the Page]] - /(Stackexchange)/ 
+
+  The answer to this question explains: ~longtable :align |p{3cm}|p{6cm}|l|l|l|l|l|l|~ /(etc.)/
+  Where you replace any ~| l |~ /(column)/ with ~p{*cm}~ where ~*~ can be any numeral as required to fit table to page... /(i.e., hard wired column widths)/
+
+- [[https://tex.stackexchange.com/questions/721496/wide-landscape-table-to-fit-page-margins?rq=1][Wide Landscape Table to Fit Page Margins]] - /(Stackexchange)/ 
+
+  /A Question/Answer on Stackexchange TeX Discussion Group.../
+
+=Blogging Tools:=
 
 - [[https://orgmode.org/worg/org-blog-wiki.html][Blogs and Wikis with Org]] /(Blogging tools - with links to GitHub projects)/
 
-- [[https://www.linuxjournal.com/content/org-mode-latex-exporter-latex-non-texers][The org-mode LaTeX exporter]] - /(LaTeX for non-TEXers) LINUX Journal/
+- [[https://github.com/org2blog/org2blog?tab=readme-ov-file#make-your-first-post-in-less-5-minutes][org2blog - Publish to WordPress Blog]] -  /(Puneeth Chaganti @ Github)/ 
 
-- [[https://ctan.org/][Comprehensive TeX Archive Network]] - /CTAN/
+  /Org2Blog is SUPPOSEDLY the most advanced WordPress blog editor and manager available today.../
 
-- [[https://www.ctan.org/pkg/latexmk/][Fully Automated LaTeX Document Generation]] - /(CTAN - latexmk)/
+- [[https://github.com/novoid/lazyblorg][lazyblorg]] - /(novoid@GitHub - Karl Voit)/ 
+
+  /Blogging with Org-mode for very lazy people/
+
+*** AUCTeX: 
+
+- [[https://emacsdocs.org/docs/auctex/Top][AUCTeX Manual ]] - /(Emacs Docs)/ 
+
+  /This manual is for AUCTeX (version 12.3 from 2020-10-10), a sophisticated TeX environment for Emacs./
+
+- [[https://elpa.gnu.org/packages/doc/auctex.html][OFFICIAL AUCTeX MANUAL]] - /(GNU.org)/ 
+
+  /This is the LATEST Version of the OFFICIAL GNU AUCTeX Manual/
+
+*** LaTeX: 
+
+- [[https://tug.org/][TeX Users Group]] - /(TUG.org)/
+
+- [[https://ctan.org/][Comprehensive TeX Archive Network]] - /(CTAN)/ 
 
 - [[https://latex-tutorial.com/documentclass-latex/][Your Guide to documentclass LaTeX: Types and options]] - /LaTeX-Tutorial.com/
 
-- [[https://tug.org/][TeX Users Group]] - /(TUG.org)/ 
+- [[https://www.ctan.org/pkg/memoir][The Memoir Document Class]] - /(CTAN Page)/ 
 
-- [[https://tug.org/FontCatalogue/][The LaTeX Font Catalogue]] - /(TUG.org)/ 
+- [[https://mirror.math.princeton.edu/pub/CTAN/macros/latex/contrib/memoir/memman.pdf][The Memoir Class - Manual:]] - /(CTAN PDF)/
+
+- [[https://www.linuxjournal.com/content/org-mode-latex-exporter-latex-non-texers][The org-mode LaTeX exporter]] - /(LaTeX for non-TEXers) LINUX Journal/
+
+- [[https://tufte-latex.github.io/tufte-latex/][Tufte-LaTeX]] - /(Tufte LaTeX PAGE @GitHub.io)/ 
+
+  /A Tufte-inspired LaTeX class for producing handouts, papers, and books... This site is home to LaTeX classes for producing handouts and books according to the style of Edward R. Tufte and Richard Feynman./
+
+- [[https://github.com/Tufte-LaTeX/tufte-latex][tufte-latex CLASS]] - /(Tufte-Latex@GitHub)/ 
+
+  /The GitHub Repo for the Tufte-inspired LaTeX Class.../
+
+- [[https://damitr.org/2014/01/09/latex-tufte-class-in-org-mode/][Latex Tufte class in org-mode]] - /(Article on damitr.org)/ 
+
+  Edward Tufte is known for graphical excellence in his famous books. Some enthusiasts combined his design principles into LaTeX and you have the tufte-book and tufte-handout classes for excellence in typesetting. This has support for side notes, margin figures, full width figures etc.
+
+  The Instructions within this article are integrated with ORG-MODE to produce results...
+
+*** LaTeX Fonts: 
+
+- [[https://tug.org/FontCatalogue/][The LaTeX Font Catalogue]] - /(TUG.org)/
 
 - [[https://tug.org/FontCatalogue/seriffonts.html][Serif Fonts]] - /(TUG.org)/ 
 
@@ -2484,37 +2618,26 @@ Here are Links to Information that may help you utilize this template to create 
 
 - [[https://tug.org/FontCatalogue/typewriterfonts.html][Typewriter Fonts]] - /(TUG.org)/ 
 
-- [[https://tug.org/FontCatalogue/calligraphicalfonts.html][Calligraphical Fonts]] - /(TUG.org)/ 
+- [[https://tug.org/FontCatalogue/calligraphicalfonts.html][Calligraphical Fonts]] - /(TUG.org)/
 
 - [[https://en.wikibooks.org/wiki/LaTeX/Fonts][LaTeX Fonts]] - /(WIKIbooks.org)/
 
-- [[https://www.ctan.org/pkg/latexmk/][latexmk – Fully automated LaTeX document generation]]
+*** LaTeX Music Related Software: 
 
-- [[https://mirror2.sandyriver.net/pub/ctan/macros/latex/contrib/memoir/memman.pdf][The Memoir Document Class]] - /(link to PDF)/ 
+- [[https://www-cs-faculty.stanford.edu/~knuth/organ.html][Donald Knuth's Pipe Organ]] - /(Stanford.edu)/ 
 
-- [[https://www.ctan.org/pkg/memoir][memoir – Typeset fiction, non-fiction and mathematical books]] - /(CTAN)/
+  =The Organ of Don and Jill Knuth= - This sixteen-rank organ was designed and built for our home by Abbott and Sieker of Los Angeles, California, as their “Opus 67.” It has 812 pipes, separated into three divisions...
 
-- [[https://damitr.org/2014/01/09/latex-tufte-class-in-org-mode/][Latex Tufte class in org-mode]]
+- [[https://icking-music-archive.org/][Werner Icking Music Archive]] - /(WIMA)/
 
-- [[https://www.geneatcg.com/emacs-org-mode-export-to-pdf/][Emacs Org Mode export to pdf]] - /(Article by: Gene Ting-Chun Kao)/
+- [[https://icking-music-archive.org/software/htdocs/index.html][MusiXTeX and Related Software]] - /(WIMA)/
 
-- [[https://www.offerzen.com/blog/literate-programming-empower-your-writing-with-emacs-org-mode][Empower Your Writing with Emacs Org-Mode]] - /(Literate Programming)/ 
+- [[https://ctan.org/pkg/musixtex][MusiXTeX – Sophisticated Music Typesetting]] -  /(CTAN)/
 
-- [[https://tufte-latex.github.io/tufte-latex/][Tufte-LaTeX]] - /For Producing Handouts, Papers, and Books/ 
+- [[https://tug.ctan.org/info/latex4musicians/latex4musicians.pdf][LaTeX for Musicians by Guido Gonzato, PhD]] - /(CTAN - PDF)/ 
 
-- [[https://github.com/Tufte-LaTeX/tufte-latex][tufte-latex.github.io/tufte-latex/]]
+  This guide shows how to create LaTeX documents that include several kinds of music elements, from very simple to quite complex. Music features may consist of music symbols, song lyrics, guitar chords diagrams, lead sheets, music excerpts, guitar tablatures, multi-page scores.
 
-- [[https://github.com/org2blog/org2blog?tab=readme-ov-file#make-your-first-post-in-less-5-minutes][org2blog - Publish to WordPress Blog - Github]] 
-    /(Org2Blog is the most advanced WordPress blog editor and manager available today)/
-
-- [[https://github.com/novoid/lazyblorg][lazyblorg]] /(Blogging with Org-mode for very lazy people)/
-
-- [[https://karl-voit.at/2022/01/29/How-to-Use-Tags/][How to Use Tags]] /(HOW and WHY they are IMPORTANT)/ 
-    =Because EVERYTHING is MISCELLANEOUS in our minds=...
-
-- [[https://orgmode.org/worg/org-contrib/babel/languages/ob-doc-lilypond.html][Org-babel-lilypond]] *Org Babel support for:* [[https://lilypond.org/][LilyPond]] 
-  /(Score Engraving and Arrangement)/ Lilypond is a music engraving program devoted to producing the highest-quality sheet music possible. Org-mode supports lilypond source code blocks that can generate music scores with optional auditing via MIDI.
-    
 ** 📕 Instructions: [0/3] 
 
 - [ ] *Choose One Of The Templates Below And Copy It:* 

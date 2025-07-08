@@ -1,18 +1,20 @@
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;   [modular-emacs]:~/.emacs.d/lisp/modules/09-2-org-keywords-tags-conf.el
 ;;
-;;   This is a sub module of 09-org-mode-pkg-conf.el which takes care of all
+;;   This is a sub module of 09-org-mode-pkg-conf.el which takes care of GLOBAL
 ;;   Org mode Keywords and TAGS...
 ;;
-;;   Override this file by placing a copy of it into "my-modules" then change
-;;   it to suit your personal org-mode keywords and tags needs...
+;;   The TAGS are defined in: $Org-Docs/HAP-Controlled-Vocabulary.org
+;;
+;;   Override THIS file by placing a copy of it into "my-modules" then change
+;;   your copy to suit your personal org-mode keywords and tags needs...
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  Setup my Default Org-Mode Keywords:
+;;  Setup Modular Emacs Default Org-Mode Keywords:
 ;;  The above are based on general GTD schemes I am using...
-;;  Note: "PHONE" has no key assignment.  It gets handled elsewhere...
-;;  (adjust this list to fit your own planning style)
+;;  Note: "PHONE" has no key assignment. It gets handled elsewhere...
+;;  (adjust this list to fit your own planning style) 
 
 (setq org-todo-keywords
       (quote
@@ -26,16 +28,6 @@
 	
         ;; 2023-005-15: Added these 4 new (for Software Dev - NEW & DONE are used here too)
 	(sequence  "CODED(c)" "TESTING(t)" "DEBUGGED(b)" "ORIGINAL(o)"))))
-
-;;;
-;; Setup my Default Org-Mode Keywords: (with fancy UTF 8 symbols)
-;; NOTE: I decided this was cluttering things up to much so I disabled it...
-;(setq org-todo-keywords
-;      (quote
-;       ((sequence "☞ TODO(t)" "⚡ NEXT(x)" "|" "✔ DONE(d!/!)")
-;        (sequence "ACTIVE(a)" "↺ REPEATING(r)" "⚑ WAITING(w@/!)" "⨂ HOLD(h@/!)"
-;                  "|" "✘ CANCELLED(c@/!)" "PHONE(p)")
-;	(sequence  "NEW(n)" "⦾ NOW(o)" "SOMEDAY(s)"  "|" "ARCHIVED(a)"))))
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Set Org TODO keyword faces:
@@ -78,11 +70,11 @@
         ("ORIGINAL" . (:family "Hermit" :height 100 :foreground "yellow" :weight bold)))))
 
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;   My Specific Universal TAGS & Other Custom Global Configurations Section:
-;;   (change theses as needed for your own specific individual setup)
+;;   SPECIFIC UNIVERSAL TAGS & Other Custom Global Configurations Section:
+;;   (change theses as needed for your own specific global tags)
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; TAGGING BEST PRACTICE:
 ;;
 ;; Ref: https://karl-voit.at/2022/01/29/How-to-Use-Tags/
@@ -101,143 +93,147 @@
 ;; 9.  Use one tag language.
 ;; 10. Explain your tags.
 ;;
-;; EXTRA - Use mutually exclusive tags or datestamps instead of version numbers, etc.
-;;         Mutually Exclusive means entering a tag will remove another tag that
-;;         is set to be mutually exclusive of it. (and visa-versa)
-;;         Bad Examples:  almost-final, final, finished, etc...
-;;         Recommended Mutually Exclusive: draft|final, confidential|public|secret etc.
-
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  Configure top-level universal tags with quick assign letters:
+;; EXTRA:
 ;;
-;;    These are your quick universal tags that can be set for the 
-;;    current headline within an .org file by entering:   C-c C-q  
-;;    (and then typing one of the single letter keys listed below)
-;;    Also:  You will be prompted after typing a colon ":" at the end
-;;    of any headline, followed by typing M-TAB
+;;   Use mutually exclusive tags or datestamps instead of version numbers, etc.
+;;   Mutually Exclusive means entering a tag will remove another tag that is set
+;;   to be mutually exclusive of it. (and visa-versa) Bad Examples:  almost-final,
+;;   final, finished, etc... Recommended Mutually Exclusive: draft|final,
+;;   confidential|public|secret etc...
+;;   There is ALSO TAG Hierarchy... (not implemented here YET)
+;;   which looks quite useful for searching and filtering later with agendas.
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; DEFINE PERSISTENT GLOBAL TAGS for GENERAL USE:
+;; (org-tag-persistent-alist)
 ;;
-;;  Note 1:
-;;    If you need to override this global org-tag-alist, for a specific
-;;    file, and instead use a dynamic tag list, add an empty ‘TAGS’ keyword
-;;    to that file:
-;;      Example:
-;;        #+TAGS:
+;; NOTE:
 ;;
-;;  Note 2:
-;;    Also, to set specific tags assigned to a single file alone, use the
-;;      "TAGS" keyword within the file itself to assign local tags...
-;;      Example:
-;;        #+TAGS: @work @home @tennisclub
-;;        #+TAGS: laptop car pc sailboat
+;;   2025-006-07 - The TAG LIST BELOW has been greatly  
+;;   shortened from previous iterations of this file...
 ;;
-;;  Note 3:
-;;    If you have a preferred set of tags that you would like to use in every
-;;    file, in addition to those defined on a per-file basis by the TAGS
-;;    keyword, then you may specify a list of tags with the variable:
-;;                          org-tag-persistent-alist
-;;    You may turn this off on a per-file basis by adding a "STARTUP" keyword
-;;    to that file:
-;;      Example:
-;;        #+STARTUP: noptag
-;;    Making tags persistant does not seem that useful to me, but it is another option...
+;;   For this GLOBAL LIST only Tags of the MOST GENERAL 
+;;   NATURE and represent the Top Level of their category. 
+;;   These tags must also be useful for most common cases.
 ;;
-
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; DEFINE General AND GLOBAL Tags for EVERYTHING ELSE:
+;;   More Specific Tags will be placed within xxx-tags.org 
+;;   files which may be imported by any .org projects that 
+;;   need specific tags from specific categories. The result 
+;;   will be a much shorter choice of tags when assigning 
+;;   them for headings in your docs...
 ;;
-;; NOTE: 2021-003-10 - This general tag list has been greatly shortened...
-;;       Instead, I am now using Org Categories with Tag Files of specific
-;;       categories instead.  These xxx-tags.org files are imported by .org
-;;       files that need specific tags from specific categories. The result
-;;       is a much shorter general-tags list below... "Keep it Simple Stupid"
+;;   The Tags below are available (persistent) to ALL 
+;;   .ORG files... YOU MAY DISABLE These Tags on a per
+;;   file basis by PUTTING: "#+STARTUP: noptag" at the top 
+;;   of the file... (and then add a custom set of tags to
+;;   that file alone)
 ;;
-;;       The Tags below MUST be available to ALL .ORG files for proper
-;;       operation of specialized features of Harmonic Alchemy Modular
-;;       Emacs "fancy org mode" kinds of things...
+;; WARNING:
 ;;
-;;       WARNING: Do NOT use any keyboard keys which are already defined
-;;                below to define any NEW local TAGS for any specific .org
-;;                files... Your KEYS will NOT WORK as they were already
-;;                defined globally HERE (see Keys Used So Far: below)...
+;;   Do NOT use any keyboard keys which are already defined 
+;;   below to define any NEW local TAGS for any specific 
+;;   .org files... Your KEYS will NOT WORK as they were 
+;;   already defined globally HERE
+;;   (SEE: "Keys Used So Far:" BELOW)...
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-(defvar me--general-tags
-  (quote
+;; FIRST CLEAR ANY PREVIOUS LIST before Initializing below:
+(setq org-tag-persistent-alist nil)
 
-   ;; Mutually Exclusive Tags:
+(setq
+ org-tag-persistent-alist 
+ (quote
+   ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   ;; BEGIN: MUTUALLY EXCLUSIVE TAGS:
+   ;; DEFAULT (persistent)  org mode tags for Mod Emacs
 
-   ((:startgroup     . nil)    ;; BEGIN: Mutually Exclusive Group:
-    ("noexport"      . ?n)     ;; FLAG: "Exclude Outline Tree from Export"
-    ("export"        . ?x)     ;; FLAG: "Export Outline Tree"
-    (:endgroup       . nil)    ;; END Group:
+   ((:startgroup  . nil) ;; BEGIN: ME Group:
+    ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ;; Special Purpose EXPORT / NOEXPORT Flags
+    ("noexport"   . ?n)  ;; EXCLUDE TREE from Export
+    ("export"     . ?x)  ;; EXPORT This TREE
+    (:endgroup    . nil) ;; END ME Group:
+    ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    (:startgroup     . nil)    ;; BEGIN: Mutually Exclusive Group:
-    ("noexport_1"    . ?1)     ;; FLAG: "TOC ORG 1 heading deep"
-    ("export_2"      . ?2)     ;; FLAG: "TOC ORG 2 headings deep"
-    ("export_3"      . ?3)     ;; FLAG: "TOC ORG 3 headings deep"
-    (:endgroup       . nil)    ;; END Group:
+    (:newline        . nil) ;; Put next tags on fresh new line...
 
-    (:startgroup     . nil)    ;; BEGIN: Mutually Exclusive Group:
-    ("home"          . ?H)     ;; personal finance, health, leisure, crafts, etc.
-    ("work"          . ?W)     ;; software dev, computers, clients, community work, sales
-    ("music"         . ?M)     ;; Music Sound Composing, Performing, Engineering, Research
-    (:endgroup       . nil)    ;; END Group:
+    ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ;; TOC-ORG TAGS:
+    ;; (for Table Of Contents in Org Files, GitHub, etc.)
+  
+    (:startgroup) ;; BEGIN: ME Group
+    ("TOC")        ;; TOC-Org DEFAULT 2 levels
+    ("TOC_3")      ;; FLAG: TOC-Org (3 levels deep)
+    (:endgroup)    ;; END: ME Group
+    ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    (:startgroup     . nil)    ;; BEGIN: Mutually Exclusive Group:
-    ("sysAdmin"      . ?s)     ;; standard defined sub Category of "work"
-    ("devOps"        . ?o)     ;; standard defined sub Category of "work"
-    (:endgroup       . nil)    ;; END Group:
+    ;; ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ;; ;; SPECIAL TOC-ORG tags:
+    ;; ;;
+    ;; ;; NOTE: These Were REMOVED from PERSISTENT TAGS... They will
+    ;; ;; Be placed within the default-tags.org SETUPFILE instead...
+    ;; ;;
+    ;; ;; Headings tagged with :noexport: will be excluded from the
+    ;; ;; TOC. HOWEVER, If you want to preserve the heading, but
+    ;; ;; strip its children (for changelog entries, for example),
+    ;; ;; you can tag it :noexport_1: (by analogy, you can use
+    ;; ;; :noexport_2:, :noexport_3:, etc. for children of deeper
+    ;; ;; levels). Note, though, :noexport: has a similar meaning in
+    ;; ;; org-mode, which I hope is a Good Thing (tm). However,
+    ;; ;; :noexport_1: and friends won’t be recognized by org-mode
+    ;; ;; as anything special. Look at org-export-exclude-tags
+    ;; ;; variable for more detail...
 
-    (:startgroup     . nil)    ;; BEGIN: Mutually Exclusive Group:
-    ("TOC"           . ?4)     ;; FLAG: TOC-Org (DEFAULT 2 levels deep)
-    ("TOC_3"         . ?5)     ;; FLAG: TOC-Org (3 levels deep)
-    (:endgroup       . nil)    ;; END Group:
+    ;; (:startgroup)   ;; BEGIN: ME Group
+    ;; ("noexport_1")  ;; FLAG: "TOC ORG 1 heading deep"
+    ;; ("export_2")    ;; FLAG: "TOC ORG 2 headings deep"
+    ;; ("export_3")    ;; FLAG: "TOC ORG 3 headings deep"
+    ;; (:endgroup)     ;; END: ME Group
+    ;; ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    (:startgroup     . nil)    ;; BEGIN: Mutually Exclusive Group: 
-    ("friends"       . ?F)     ;; Not sure if these will be used... Maybe not needed?
-    ("family"        . ?Y)     ;; Not sure if these will be used... Maybe not needed?
-    (:endgroup       . nil)    ;; END Group:
+    ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ;; GENERAL PURPOSE MUTUALLY EXCLUSIVE TAGS:
+    ;; (Select one of these for each file's use-case)
 
-    (:startgroup     . nil)    ;; BEGIN: Mutually Exclusive Group:
-    ("draft"         . ?d)     ;; For THINGS still in DRAFT MODE
-    ("final"         . ?f)     ;; For FINAL THINGS READY for PUBLISHING
-    (:endgroup       . nil)    ;; END Group:
+    (:startgroup)     ;; BEGIN: ME Group
+    ("home"     . ?h) ;;
+    ("personal" . ?p) ;;
+    ("work"     . ?w) ;;
+    (:endgroup)       ;; END: ME Group
 
-    (:startgroup     . nil)    ;; BEGIN: Mutually Exclusive Group:
-    ("published"     . ?+)     ;; For THINGS THAT HAVE BEEN PUBLISHED
-    ("unpublished"   . ?-)     ;; For For THINGS THAT ARE NOT PUBLISHED
-    (:endgroup       . nil)))) ;; END Group:
+    (:startgroup)         ;; BEGIN: ME Group
+    ("confidential" . ?C) ;; NON Encrypted CONFIDENTIAL
+    ("public"       . ?P) ;; AVAILABLE to the public, etc...
+    ("secrets"      . ?S) ;; ENCRYPTED SECRET Materials
+    (:endgroup)           ;; END: ME Group
 
-    ;; Keys Used So Far:
-    ;; d f n o s x F H M W Y 2 3 + -
+    ;; END: MUTUALLY EXCLUSIVE TAGS:
+    ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  Append all TOP LEVEL tag lists together for org-mode quick set tags....
+    ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ;; BEGIN: PERSISTENT SINGLETON TAGS:
+    ;; (USED by All HAP Modular Emacs org-mode files)
+    ;;
+    ;; These general purpose TAGS should be useful for 
+    ;; most any use-case...
 
-;(setq org-tag-alist (append me--general-tags nil))
+    ("archived"        . ?a) 
+    ("default"         . ?d) 
+    ("diy"             . ?y)
+    ("installed"       . ?i)
+    ("transportation"  . ?t)
+    ("tools"           . ?T)
+    (:newline          . nil))))
 
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  Reset Org Tag Persistent alist with General Tags: 
+    ;; END: PERSISTENT SINGLETON TAGS
+    ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-(setq org-tag-persistent-alist nil) ;; Start with empty list...
-
-(setq org-tag-persistent-alist (append me--general-tags nil))
-
-;;;
-;; Here is some code I snarfed from the web that may help simplify the above...
-;; The code below is not finished... It is supposed to save org-tag-alist to a file.
-;; I am not sure if I need to save to a file, as I am doing the opposite; i.e.,
-;; reading this file and then loading org-tags-alist with data stored here...
-;; This function may be modified to do something else though... Don't delete it yet...
-
-;; (defun me_org-persist-new-tags ()
-;;   (interactive)
-;;   (let ((known-tags (append org-tag-persistent-alist org-tag-alist))
-;;         (item-tags (split-string (org-get-tags))))
-;;     (setq org-tag-alist
-;;           (append org-tag-alist
-;;                   (-filter (lambda (tag) (assoc tag known-tags)) item-tags)))
-;;     ;; TODO: write out to a file the org-tag-alist
-;;     ))
+;; KEYS USED SO FAR (above):
+;;  a d h i n p t w x y C P S T   
+;;
+;; END: GLOBAL TAGS for GENERAL USE: (org-tag-persistent-alist)
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;   END: [modular-emacs]:~/.emacs.d/lisp/modules/09-2-org-keywords-tags-conf.el

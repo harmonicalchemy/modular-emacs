@@ -9,10 +9,10 @@
 ;; CHANGE LOG: (descending chronological order)
 ;;
 
-;; 2023-003-25 - Alisha Awen, HarmonicAlchemy@protonmail.com
+;; 2023-003-25 - Alisha Awen, HarmonicAlchemy@proton.me
 ;;    Added ORG Emphasis Functions:
 
-;; 2022-010-06 - Alisha Awen, siren1@disroot.org
+;; 2022-010-06 - Alisha Awen, HarmonicAlchemy@proton.me
 ;;    Updated Comments, etc.  Nothing special... This module started out as an
 ;;    afterthought... But it is an important place to keep odds-and-ends that
 ;;    Don't fit anywhere else...

@@ -11,7 +11,12 @@
 #+FILETAGS: templates reference_books @projects unpublished
 #+DESCRIPTION: HAP Reference Book or Tech Manual Project Skeleton. This Template is a good choice for documenting research projects, large or small. Based on the Memoir Class. Adapted for my personal not so academic scientific methods, etc. Exports to PDF suitable for any eBook reader, or publish HTML pages to a website and-or use plugins to publish to WordPress Blog, Static engines, etc...
 
-* ⚒ setup-config:                                            :noexport: 
+#+BEGIN_EXPORT latex 
+\begin{document} 
+\frontmatter
+#+END_EXPORT
+
+* ⚒ setup-config:                                                    :noexport: 
 
 :READ_ME_FIRST: 
 ☞ =Instructions:= /(How to Install & Use This Template)/
@@ -301,7 +306,7 @@ Other folks UX metrics are sorely needed!! Thanks!
 =Enjoy!= - Alisha Awen
 :END:
 :LATEST_UPDATE: 
-  <2025-04-18 Fri>
+  <2025-06-22 Sun>
 
   =YOU MAY REMOVE This Drawer= from your own clones of this template if
   it is bothering you... This drawer is used for HAP Modular Emacs
@@ -313,51 +318,34 @@ Other folks UX metrics are sorely needed!! Thanks!
   
   =If you do wish to do the same... Read On Below...=
   
-  - =INTERNAL USE Instructions:= /(END USERS SKIP THIS BULLET)/
+  - =INTERNAL USE Instructions:= [1/1] /(END USERS SKIP THIS BULLET)/ 
 
     This bullet is not for end users... This is /"Note to Self"/ stuff...
 
-      + [X] =MASTER TEMPLATE ONLY= *Keep The Above Timestamp Up To Date:*
+       + [X] =MASTER TEMPLATE ONLY= *Keep The Above Timestamp Up To Date:* 
 
-          DO THIS ALWAYS, JUST AFTER YOU UPDATE THIS TEMPLATE... DON'T FORGET!
-          /(i.e., BOILERPLATE content and :README: meta data)/
+         DO THIS ALWAYS, JUST AFTER YOU UPDATE THIS TEMPLATE... DON'T FORGET!
+              /(i.e., BOILERPLATE content and :README: meta data)/
   
-  - =PUBLIC USE Instructions:= /(FOR CLONES OF THIS TEMPLATE)/
+  - =PUBLIC USE Instructions:= [0/2] /(FOR CLONES OF THIS TEMPLATE)/ 
 
-      + [ ] *FOR NEWLY CREATED CLONES:*
+       + [ ] *FOR NEWLY CREATED CLONES:* 
 
-          - [ ] =Change this= *:LATEST_UPDATE:* =drawer title:= /(within clones only)/
+            - [ ] *REMOVE INTERNAL USE INSTRUCTIONS* 
 
-               Change it to: *:LATEST_TEMPLATE_UPDATE:*
+              Remove the main =INTERNAL USE Instructions:= bullet above... That bullet is only relevant to the TEMPLATE, /(not clones)/
 
-          - [ ] *REMOVE INTERNAL USE INSTRUCTIONS*
+       + [ ] *FOR ALREADY EXISTING PROJECTS*: 
 
-               Remove the main =INTERNAL USE Instructions:= bullet above...
-               That bullet is only relevant to the TEMPLATE, /(not clones)/
+            - [ ] *COMPARE the TIMESTAMPS between THIS TEMPLATE and your PROJECT:* 
 
-      + [ ] *FOR ALREADY EXISTING PROJECTS*:
+                 The BOILERPLATE content and meta data within CLONES of this TEMPLATE will get out of sync after a while due to Harmonic Alchemy Modular Emacs version updates etc... Some NEW features or HEADINGS may have been added that make sense to be added to your existing project /(originally a clone of this)/
 
-          - [ ] *COMPARE the TIMESTAMPS between THIS TEMPLATE and your PROJECT:*
+                 Use the ABOVE timestamp /(within the TEMPLATE and your CLONE)/ to see if the clone's BOILERPLATE content needs to be updated /(brought into sync with its template - MERGE)/ and then perform any needed merging/replacing of BOILERPLATE and/or meta data. /(e.g, *:README:* drawers, etc. even this drawer)/
 
-              The BOILERPLATE content and meta data within CLONES of this
-              TEMPLATE will get out of sync after a while due to Harmonic
-              Alchemy Modular Emacs version updates etc... Some NEW features
-              or HEADINGS may have been added that make sense to be added
-              to your existing project /(originally a clone of this)/
-        
-              Use the ABOVE timestamp /(within the TEMPLATE and your CLONE)/
-              to see if the clone's BOILERPLATE content needs to be updated
-              /(brought into sync with its template - MERGE)/ and then perform
-              any needed merging/replacing of BOILERPLATE and/or meta data.
-              /(e.g, *:README:* drawers, etc. even this drawer)/
+                 - [ ] *Keep ABOVE timestamp within CLONES of this template UP TO DATE:* 
 
-          - [ ] *Keep ABOVE timestamp within CLONES of this template UP TO DATE:*
-
-              =AFTER Completing Above MERGE Step= and your clone's BOILERPLATE
-              content has been brought up to date /(i.e. in sync)/ with its
-              TEMPLATE... Then update the timestamp ABOVE... /(WITHIN YOUR CLONE)/
-              to record the date of its last sync status...
-
+                     =AFTER Completing Above MERGE Step= and your clone's BOILERPLATE content has been brought up to date /(i.e. in sync)/ with its TEMPLATE... Then update the timestamp ABOVE... /(WITHIN YOUR CLONE)/ to record the date of its last sync status...
 :END:
 :SETUPFILE_USAGE: 
 
@@ -388,13 +376,11 @@ Other folks UX metrics are sorely needed!! Thanks!
 
 #+SETUPFILE: ./org-templates/ref-book-setup.org
 #+SETUPFILE: ./org-templates/default-tags.org
-#+LATEX_CLASS: refbook
-#+begin_export latex 
-\begin{document}
-\frontmatter
-#+end_export
 
-* NEW 💡 Scratchpad Refile:                                  :noexport: 
+=LaTeX CLASS for PDF:= 
+#+LATEX_CLASS: refbook
+
+* NEW 💡 Scratchpad Refile:                                         :noexport: 
 ** ☞ Start Here!
 
 This Section is mainly to accommodate "seat-of-pants" writers /(Of Which I Have Been Accused Of... But I Also Crave The Planning Stuff)/. 
@@ -547,7 +533,7 @@ Having done the simple steps above any time you get inspired, you will much late
 
 =Replace all of this boilerplate content with your own content=
 
-* NEW 📕 Front Matter:                                          :noexport: 
+* NEW 📕 Front Matter:                                                 :noexport: 
 
 =Use this binder for Front Page Ideas= /(e.g., Information about Title Page, Synopsis, etc...)/, which could function as an abstract when published...
 
@@ -599,7 +585,7 @@ Having done the simple steps above any time you get inspired, you will much late
 
 =Synopsis Content:= Yadda... Yadda... Yadda...
 
-* NEW Preface:                                                        :export: 
+* NEW Preface:                                                               :export: 
 <<BOOK_PREFACE>> 
 /(or Introduction - Optional)/ 
 :README: 
@@ -624,10 +610,10 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
 \mainmatter
 #+END_EXPORT
 
-* DONE Org-Mode Tricks                                         :export: 
+* DONE Org-Mode Tricks                                                 :export: 
 <<CHAPTER_org-mode-tricks>>
 /(example chapter)/     
-** DONE Introduction:                                                       :export:
+** DONE Introduction:                                                         :export: 
 <<TOPIC_org-mode-tricks-introduction>>
 
 This is a secret Org-Mode Tutorial /(presented here as an EXAMPLE Chapter)/ for a technical book...  Some good tips are in here so you may want to save this somewhere else before removing or re-writing it to use as a chapter within the technical book you have commondeerred this project skeleton for...
@@ -636,7 +622,7 @@ In Particular, here are some *Org-Mode publishing tips and snippits* I have foun
 
 This initial draft only contains Ref Links...  I did a lot of re-configuring of this template to get it looking good when exported to PDF...  I discuss some of the hurdles I ran into getting all this done, /(and the tricks I learned)/ as next sub topics below... That will be done later... /(all in good time)/
 
-** DONE Org Mode Reference:                                              :export:
+** DONE Org Mode Reference:                                             :export: 
 <<TOPIC_org-mode-reference>>
 :README:
    =Org Mode Links Tip:=
@@ -696,7 +682,7 @@ This initial draft only contains Ref Links...  I did a lot of re-configuring of 
 
 + [[https://www.linuxjournal.com/content/org-mode-latex-exporter-latex-non-texers][The org-mode LaTeX exporter: LaTeX for non-TEXers]] - /Article on LINUX Journal/
 
-** New Sub Topic Z /(BOILERPLATE - Keep Until Final Draft)/      :noexport:
+** New Sub Topic Z /(BOILERPLATE - Keep Until Final Draft)/    :noexport: 
 <<TOPIC_new-sub-topic-z>>
 :README:
    Sub Topics are the DNA that make up the chapters in a reference
@@ -783,7 +769,7 @@ Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus
 
 At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
 
-** 📚 Chapter References:                                               :noexport:
+** 📚 Chapter References:                                            :noexport: 
 :README:
    =Org Mode Links Tip:=
 
@@ -816,7 +802,7 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
 
 + *Link to Project:* [[][] ] /(comment)/
   
-** 📝 Chapter Notes:                                                        :noexport:
+** 📝 Chapter Notes:                                                    :noexport: 
 :README:
    *Chapter Notes*, Should be written in =OUTLINE= form to aid in organization
    of events, etc... This section is =NOT the place to create NEW ideas=, 
@@ -865,7 +851,7 @@ but not important for them to also be time-stamped...
 ***** Quid Novi? /(example note sub heading)/
 
 Quid Novi? Lorem Ipsum dolor sit amet,consectetur adipisicing elit, sed doeiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim adminim veniam, quis nostrudexercitation ullamco laboris nisi utaliquip ex ea commodo consequat.Duis aute irure dolor inreprehenderit in coluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatatnon proident, sunt in culpa quiofficia deserunt mollit anim id estlaborum.
-* NEW Chapter Title A                                           :noexport: 
+* NEW Chapter Title A /(boilerplate)/                                   :noexport: 
 <<CHAPTER_chapter-title-a>>
 /(BOILERPLATE Clone This)/ 
 :README: 
@@ -1237,7 +1223,7 @@ but not so important for them to also be time-stamped since their parent heading
 
 Quid Novi? Lorem Ipsum dolor sit amet,consectetur adipisicing elit, sed doeiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim adminim veniam, quis nostrudexercitation ullamco laboris nisi utaliquip ex ea commodo consequat.Duis aute irure dolor inreprehenderit in coluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatatnon proident, sunt in culpa quiofficia deserunt mollit anim id estlaborum.
 
-* NEW Chapter Title Z                                             :export: 
+* NEW Chapter Title Z /(boilerplate)/                                     :export: 
 <<CHAPTER_chapter-title-z>> 
 /(MASTER - DON'T TOUCH UNTIL FINAL)/ 
 :README: 
@@ -1537,7 +1523,7 @@ It is fine to make as many sub-headings as needed for these notes but not import
 
 Quid Novi? Lorem Ipsum dolor sit amet,consectetur adipisicing elit, sed doeiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim adminim veniam, quis nostrudexercitation ullamco laboris nisi utaliquip ex ea commodo consequat.Duis aute irure dolor inreprehenderit in coluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatatnon proident, sunt in culpa quiofficia deserunt mollit anim id estlaborum.
 
-* APPENDIX A                                                    :export: 
+* APPENDIX A                                                            :export: 
 
 =Insert Appendix Content Here=
 
@@ -1545,7 +1531,7 @@ Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus
 
 At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
 
-* APPENDIX B                                                    :export: 
+* APPENDIX B                                                            :export: 
 
 =Insert Appendix Content Here=
 
@@ -1553,7 +1539,7 @@ Lorem Ipsum Lorem Ipsum dolor sit amet, consectetuer adipiscingelit. Duis tellus
 
 At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie non, venenatis vel, lorem. Sedlacinia. Suspendisse potenti. Sed ultricies cursuslectus. In id magna sit amet nibh suspicit euismod.Integer enim. Donec sapien ante, accumsan ut,sodales commodo, auctor quis, lacus. Maecenas a elitlacinia urna posuere sodales. Curabitur pede pede,molestie id, blandit vitae, varius ac, purus. Mauris atipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel,lorem. Sed lacinia. Suspendisse potenti. Sed ultrucies cursus lectus. In id magna sit amet nibhsuspicit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctorquis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id,blandit vitae, varius ac, purus.
 
-* 🔍 Research:                                                  :noexport: 
+* 🔍 Research:                                                          :noexport: 
 ** 📚 Research Reference:                                            :noexport: 
 :README: 
 =Org Mode Links Tip:=
@@ -1633,7 +1619,7 @@ Create sub-level outlines below each heading as needed for your purposes.
 
 Anything goes here... You can make this into what ever you want..
 
-* 🗓 LOGS:                                                        :noexport: 
+* 🗓 LOGS:                                                                :noexport: 
 :README: 
 Use this space to add time stamped log note entries for any pourpose you may need while you are planning, writing, or publishing your book...
 
@@ -1975,7 +1961,7 @@ The following list contains Babel Source Code Blocks that are often needed for s
 
 =ADD a NEW Items= /(as per :README: above)/ when 2023 rolls around, right here in this Log Book Binder whenever you need to create a new Log Entry...
 
-* ⏱ TASKS:                                                      :noexport: 
+* ⏱ TASKS:                                                              :noexport: 
 :README: 
 This *⏱ Tasks* Binder is similar to the *🗓 LOGS:* Binder...
 
@@ -2201,12 +2187,206 @@ Make an *Editorial* for this project! You will need this for quick access during
 
 Use this space to design your *EC* and then transfer it as a New Top Level Binder of this Book Project...
 
-* 🗂 Meta: /(templates etc.)/                                     :noexport: 
+* 🗂 Meta: /(templates etc.)/                                             :noexport: 
 ** 📃 About: 
 
 This =Meta= section provides skeleton templates for use within your project(s).  Any sub heading under this Meta: group can be utilized by copy-pasting the collapsed heading into any of your existing project sections (i.e., making a clone anywhere you need to create a new section based on the template's structure)... 
 
 Or... You could try mashing several cloned templates together to create a totally new project heading with a totally different structure... The intent of this is to save lots of time starting up a new custom writing project.  Lets see if it helps...
+** 📚 Meta Reference: 
+<<META_ref>> 
+
+Here are Links to Information that may help you utilize this template to create your Reference Books in org-mode, as well as EXPORTING your Book to a professionally typeset PDF or To the WEB...
+
+=Organized by Categories=
+
+*** General Emacs: 
+
+- [[https://emacsdocs.org/][Emacs Docs]] - /(Emacs Docs)/ 
+
+  /The modern documentation website Emacs deserves./
+
+*** Emacs Lisp: /(eLisp)/
+
+- [[https://emacsdocs.org/docs/elisp/Emacs-Lisp][Emacs Lisp Manual ]] - /(Emacs Docs)/ 
+
+  /This is the GNU Emacs Lisp Reference Manual corresponding to Emacs version 27.2/
+
+- [[https://www.gnu.org/software/emacs/manual/html_node/elisp/index.html][EMACS LISP MANUAL]] - /(GNU.org)/ 
+
+  /This is the OFFICIAL GNU Emacs Lisp Reference Manual corresponding to Emacs version 30.1/
+
+*** ORG-MODE: 
+
+- [[https://emacsdocs.org/docs/org/The-Org-Manual][The Org Manual]]  - /(Emacs Docs)/ 
+
+  /Emacs Docs Format - This manual is currently for Org version 9.4. Check Link Below to LATEST VERSION to see if it is up to date.../
+
+- [[https://orgmode.org/manual][THE ORG MANUAL]] - /(Orgmode.org)/ 
+
+  /OFFICIAL Orgmode.org Manual Latest Version/
+
+- [[https://orgmode.org/worg/][Hello Worg, the Org-Mode Community!]] - /(WORG)/ 
+
+  /Worg documentation & Org-Mode Resources.../
+
+- [[https://orgmode.org/worg/dev/org-export-reference.html][Org Export Reference]] - /(WORG)/ 
+
+  /This document is aimed at back-end developers for the generic export engine ox.el. It assumes a good understanding of Org syntax from the reader./
+
+- [[https://orgmode.org/manual/In_002dbuffer-Settings.html][Summary of In-Buffer Settings]] - /The ORG Manual/ 
+
+- [[https://orgmode.org/manual/Export-Settings.html#Export-Settings][Export Settings]] - /The ORG Manual/ 
+
+- [[https://orgmode.org/manual/Embedded-LaTeX.html][12.5 Embedded LaTeX]] - /(The Org Manual)/ 
+
+- [[http://doc.norang.ca/org-mode.html][Org Mode - Organize Your Life In Plain Text!]] - /(Norang.ca Public Docs)/
+
+*** Tools for ORG-MODE / LaTeX: 
+
+- [[https://www.offerzen.com/blog/literate-programming-empower-your-writing-with-emacs-org-mode][Literate Programming]] - /(Article by: by Justin Worthe)/ 
+
+  /(Literate Programming - Empower Your Writing with Emacs Org-Mode)/
+
+- [[https://www.ctan.org/pkg/latexmk/][latexmk - Fully Automated LaTeX Document Generation]] - /(CTAN)/ 
+
+  /Latexmk completely automates the process of generating a LaTeX document. Given the source files for a document, latexmk issues the appropriate sequence of commands to generate a .dvi, .ps, .pdf or hardcopy version of the document./
+
+- [[https://orgmode.org/manual/LaTeX-fragments.html][12.5.1 LaTeX fragments]] - /(The Org Manual)/
+
+- [[https://emacsdocs.org/docs/org/Images-in-LaTeX-export#nil][Images in LaTeX export]] - /(Emacs Docs)/ 
+
+  /placeholder Text.../
+
+- [[https://ctan.org/pkg/nopageno][nopageno – No Page Numbers in LaTeX Documents]] - /(CTAN)/ 
+
+  /CTAN Comprehensive TeX Archive Network.../
+
+- [[https://www.miskatonic.org/2023/11/15/minted/][Export Org SRC Code Blocks to LaTeX w Minted]] - /(Miskatonic University Press)/ 
+
+  When minted is one of the included packages for Org-Mode export, it’s always necessary to run ~pdflatex~ ~-shell-escape~ to compile the PDF, even if there are no source blocks... This article explains ways around that problem - /(code from Xah Lee)/
+
+- [[https://tex.stackexchange.com/questions/22741/how-to-remove-header-on-a-certain-page][How to Remove Header on a Certain Page]] - /(Stackexchange)/ 
+
+  /A Question/Answer on Stackexchange TeX Discussion Group.../
+
+- [[Https://Github.Com/GeneKao/Orgmode-Latex-Templates][Org-Mode Starter Codes for Exporting to LaTeX PDF:]] - /(GeneKao@GitHub)/ 
+
+  /This repo contains different templates for org-mode -> LaTeX and PDF. Along with the document templates... There are ALSO many great tips for formatting exotic figures and MATH.../ 
+
+  /Created by:/ [[https://www.geneatcg.com/][GeneKao]] /- Gene Ting-Chun Kao - R&D Computational Geometry Processing Engineer at Ansys - Meshing Development Unit (MDU).../
+
+- [[https://www.geneatcg.com/emacs-org-mode-export-to-pdf/][Emacs Org Mode export to pdf]] - /(Article by: Gene Ting-Chun Kao)/
+
+=PIM & TAGGING:=
+
+- [[https://www.gnu.org/software/emacs/manual/html_node/org/Tags.html][TAGS]] - /(GNU.org)/ 
+
+  An excellent way to implement labels and contexts for cross-correlating information is to assign tags to headlines. Org mode has extensive support for tags...
+
+- [[https://karl-voit.at/2022/01/29/How-to-Use-Tags/][How to Use Tags]] - /(Home Page of Karl Voit)/ 
+
+  /(HOW and WHY they are IMPORTANT)/
+  =Because EVERYTHING is MISCELLANEOUS in our minds=...
+
+- [[https://github.com/harmonicalchemy/Memacs][Memacs]] - /(fork of Karl Voit's Repo: harmonicalchemy@GitHub)/ 
+
+  Memacs extracts metadata /(subjects, timestamps, contact information, etc.)/ from many different existing data sources /(file names, emails, tweets, bookmarks, etc.)/ on your computer and generates files which are readable by GNU Emacs with Org-Mode...
+
+=ORG-TABLES:=
+
+- [[https://www.teachmaths.org/20250117_orgmode-tables/][Exporting Org Mode Tables to LaTeX]] - /(teachmaths.org)/ 
+
+  The tables produced by Org mode are pretty basic by default. However, you can use the LaTeX *tabularray* package to customise the look of your tables. 
+
+- [[https://emacs.stackexchange.com/questions/37550/preventing-org-mode-pdf-tables-from-running-off-the-page?noredirect=1&lq=1][Preventing Org-Mode PDF Tables from Running Off the Page]] - /(Stackexchange)/ 
+
+  The answer to this question explains: ~longtable :align |p{3cm}|p{6cm}|l|l|l|l|l|l|~ /(etc.)/
+  Where you replace any ~| l |~ /(column)/ with ~p{*cm}~ where ~*~ can be any numeral as required to fit table to page... /(i.e., hard wired column widths)/
+
+- [[https://tex.stackexchange.com/questions/721496/wide-landscape-table-to-fit-page-margins?rq=1][Wide Landscape Table to Fit Page Margins]] - /(Stackexchange)/ 
+
+  /A Question/Answer on Stackexchange TeX Discussion Group.../
+
+=Blogging Tools:=
+
+- [[https://orgmode.org/worg/org-blog-wiki.html][Blogs and Wikis with Org]] /(Blogging tools - with links to GitHub projects)/
+
+- [[https://github.com/org2blog/org2blog?tab=readme-ov-file#make-your-first-post-in-less-5-minutes][org2blog - Publish to WordPress Blog]] -  /(Puneeth Chaganti @ Github)/ 
+
+  /Org2Blog is SUPPOSEDLY the most advanced WordPress blog editor and manager available today.../
+
+- [[https://github.com/novoid/lazyblorg][lazyblorg]] - /(novoid@GitHub - Karl Voit)/ 
+
+  /Blogging with Org-mode for very lazy people/
+
+*** AUCTeX: 
+
+- [[https://emacsdocs.org/docs/auctex/Top][AUCTeX Manual ]] - /(Emacs Docs)/ 
+
+  /This manual is for AUCTeX (version 12.3 from 2020-10-10), a sophisticated TeX environment for Emacs./
+
+- [[https://elpa.gnu.org/packages/doc/auctex.html][OFFICIAL AUCTeX MANUAL]] - /(GNU.org)/ 
+
+  /This is the LATEST Version of the OFFICIAL GNU AUCTeX Manual/
+
+*** LaTeX: 
+
+- [[https://tug.org/][TeX Users Group]] - /(TUG.org)/
+
+- [[https://ctan.org/][Comprehensive TeX Archive Network]] - /(CTAN)/ 
+
+- [[https://latex-tutorial.com/documentclass-latex/][Your Guide to documentclass LaTeX: Types and options]] - /LaTeX-Tutorial.com/
+
+- [[https://www.ctan.org/pkg/memoir][The Memoir Document Class]] - /(CTAN Page)/ 
+
+- [[https://mirror.math.princeton.edu/pub/CTAN/macros/latex/contrib/memoir/memman.pdf][The Memoir Class - Manual:]] - /(CTAN PDF)/
+
+- [[https://www.linuxjournal.com/content/org-mode-latex-exporter-latex-non-texers][The org-mode LaTeX exporter]] - /(LaTeX for non-TEXers) LINUX Journal/
+
+- [[https://tufte-latex.github.io/tufte-latex/][Tufte-LaTeX]] - /(Tufte LaTeX PAGE @GitHub.io)/ 
+
+  /A Tufte-inspired LaTeX class for producing handouts, papers, and books... This site is home to LaTeX classes for producing handouts and books according to the style of Edward R. Tufte and Richard Feynman./
+
+- [[https://github.com/Tufte-LaTeX/tufte-latex][tufte-latex CLASS]] - /(Tufte-Latex@GitHub)/ 
+
+  /The GitHub Repo for the Tufte-inspired LaTeX Class.../
+
+- [[https://damitr.org/2014/01/09/latex-tufte-class-in-org-mode/][Latex Tufte class in org-mode]] - /(Article on damitr.org)/ 
+
+  Edward Tufte is known for graphical excellence in his famous books. Some enthusiasts combined his design principles into LaTeX and you have the tufte-book and tufte-handout classes for excellence in typesetting. This has support for side notes, margin figures, full width figures etc.
+
+  The Instructions within this article are integrated with ORG-MODE to produce results...
+
+*** LaTeX Fonts: 
+
+- [[https://tug.org/FontCatalogue/][The LaTeX Font Catalogue]] - /(TUG.org)/
+
+- [[https://tug.org/FontCatalogue/seriffonts.html][Serif Fonts]] - /(TUG.org)/ 
+
+- [[https://tug.org/FontCatalogue/sansseriffonts.html][Sans Serif Fonts]] - /(TUG.org)/ 
+
+- [[https://tug.org/FontCatalogue/typewriterfonts.html][Typewriter Fonts]] - /(TUG.org)/ 
+
+- [[https://tug.org/FontCatalogue/calligraphicalfonts.html][Calligraphical Fonts]] - /(TUG.org)/
+
+- [[https://en.wikibooks.org/wiki/LaTeX/Fonts][LaTeX Fonts]] - /(WIKIbooks.org)/
+
+*** LaTeX Music Related Software: 
+
+- [[https://www-cs-faculty.stanford.edu/~knuth/organ.html][Donald Knuth's Pipe Organ]] - /(Stanford.edu)/ 
+
+  =The Organ of Don and Jill Knuth= - This sixteen-rank organ was designed and built for our home by Abbott and Sieker of Los Angeles, California, as their “Opus 67.” It has 812 pipes, separated into three divisions...
+
+- [[https://icking-music-archive.org/][Werner Icking Music Archive]] - /(WIMA)/
+
+- [[https://icking-music-archive.org/software/htdocs/index.html][MusiXTeX and Related Software]] - /(WIMA)/
+
+- [[https://ctan.org/pkg/musixtex][MusiXTeX – Sophisticated Music Typesetting]] -  /(CTAN)/
+
+- [[https://tug.ctan.org/info/latex4musicians/latex4musicians.pdf][LaTeX for Musicians by Guido Gonzato, PhD]] - /(CTAN - PDF)/ 
+
+  This guide shows how to create LaTeX documents that include several kinds of music elements, from very simple to quite complex. Music features may consist of music symbols, song lyrics, guitar chords diagrams, lead sheets, music excerpts, guitar tablatures, multi-page scores.
 
 ** 📕 Instructions: 
 
@@ -2227,52 +2407,6 @@ Or... You could try mashing several cloned templates together to create a totall
         /keep those titles as they are universal.../ 
         /but you may wish to further qualify them by adding/ 
         /a prefixed category word.)/
-        
-** 📚 Meta Reference: 
-:README: 
-=Org Mode Links Tip:=
-
-+ To Create a Link Type: ~C-c C-l~ /(then paste: ~link~ & type: "description")/
-     =-OR-= Simply Copy/Paste BOILERPLATE: /(use placeholders below)/ And Fill Them In Manually... Copy/Paste more placeholders as needed to create more links...
-
-+ To Open a Link Type: ~C-c C-o~ 
-
-+ To EXPAND a Link Type: ~SPACE b~ or: ~M-x org-toggle-link-display~ 
-
-=BOILERPLATE:= /(clone to add more ref links)/ 
-
-- *Heading:* [[~/.GIT/My-Docs/][MY DOCS]] /(comment)/ 
-
-- *Heading:* [[link][Link NAME] ] /(comment)/ 
-
-- [[yt:aB1cD2eF3gH ][TITLE ] ] *Description:* /(YouTube)/ 
-
-- [[link][Link Name] ] *Heading:* /(comment)/ 
-   
-- *_:* [[][] ] /(yadda... yadda... yadda...)/ 
-:END:
-
-Here are Links to Information that may be helpful While Using this Technical Book Template
-
-- [[https://mirrors.rit.edu/CTAN/macros/latex/contrib/memoir/memman.pdf][The Memoir Class]] - /Link to PDF/ 
-
-      The above document is all about the LaTeX Class used by: 
-      *This  Book Template*...
-
-- [[https://latex-tutorial.com/documentclass-latex/][Your Guide to documentclass LaTeX: Types and options]] - /LaTeX-Tutorial.com/ 
-
-- [[https://orgmode.org/manual/In_002dbuffer-Settings.html][Summary of In-Buffer Settings]] - /The ORG Manual/ 
-
-- [[https://orgmode.org/manual/Export-Settings.html#Export-Settings][Export Settings]] - /The ORG Manual/ 
-
-- [[https://orgmode.org/manual/Table-of-Contents.html][Table of Contents]] - /(Ths ORG Manual)/ 
-
-- [[https://ctan.org/][Comprehensive TeX Archive Network]] - /CTAN/ 
-
-- [[https://www.linuxjournal.com/content/org-mode-latex-exporter-latex-non-texers][The org-mode LaTeX exporter]] - /(LaTeX for non-TEXers) LINUX Journal/ 
-
-- [[https://www.geneatcg.com/emacs-org-mode-export-to-pdf/][Emacs Org Mode export to pdf]] - /(Article by: Gene Ting-Chun Kao)/ 
-
 ** ⎘ Templates: 
 *** NEW 🗓 LOG: <2021-03-29 Mon> Generic Title /(General Log Entry Template)/ 
 <<LOG_Generic-Title>>
@@ -2619,16 +2753,92 @@ More Project Management elements may be added in future versions of this templat
 
        Do Item Three...
 
-** COPY-PASTE ITEMS: 
+** COPY-PASTE ITEMS:                                               :noexport: 
+
+- =LaTeX:= 
+
+  ##+BEGIN_EXPORT latex 
+  \clearpage
+  %\listoffigures*
+  %\clearpage
+  %\listoftables*
+  \mainmatter
+  ##+END_EXPORT
 
 - =INLINE IMAGES:= 
   Use this to place an image centered on the page when rendered with LaTeX or for the Web...
   The image not Auto Expand in org-mode so you don't have to see it while editing if you don't
   want to and it saves vertical space while editing as well...
-  #+CAPTION: This is the caption for the next figure link (or table)
-  #+NAME: fig:-LOG_object-name
+  #+NAME: music:-LOG_object-name 
   #+ATTR_HTML: :align right
   #+ATTR_ORG: :align left
   #+attr_html: :width 600px
-  #+attr_latex: :width 600px 
-    [[./media/12-Tone-Row-1.svg]] 
+  #+CAPTION: This is the caption for the next figure link (or table)
+    [[./media/12-Tone-Row-1.svg]]
+
+- =TABLES:= 
+
+  Lets See how VERSE blocks effect HTML output... I normally use CENTERED blocks...
+
+  #+NAME: table:-LOG_table-name
+  #+CAPTION: Org-Mode BOILERPLATE Table
+  #+begin_verse 
+|------+-------+-------|
+| *COL-1* | *COL-2* | *COL-3* |
+|------+-------+-------|
+|   42 | foo    | bar    |
+|    13 | fee    | fum   |
+|------+-------+-------|
+  #+end_verse
+
+- =Generate TABLE from SRC CODE Block:= 
+
+  =NOTE:= You must have iTerm running for this zsh command to work... I have not tried this with BASH, but I like the output table here so that is fine...
+
+  Use this to generate a raw org-mode table for some data you need via a script, SHELL, Python, whatever... Then once the table is made you can copy it, fix up headings etc., add a NAME: and CAPTION: to it and place it where you need it... /(I should make capture templates or ya-snippets for this stuff but NOT YET)/.. First do it manually, then automate... 
+
+  #+begin_src zsh :results table :exports both 
+  ps -a 
+  #+end_src 
+
+  #+RESULTS:
+  |   PID | TTY     |    TIME | CMD |
+  | 70518 | ttys001 | 0:00.15 | zsh |
+
+- =Graphviz DOT SRC CODE BLOCK:= 
+
+  #+NAME: dot:-LOG_Nested-CLusters
+  #+begin_src dot :file ./media/svg/nested-clusters.svg :exports both 
+digraph D {
+
+  subgraph cluster_p {
+    label = "Parent";
+
+    subgraph cluster_c1 {
+      label = "Child one";
+      a;
+
+      subgraph cluster_gc_1 {
+        label = "Grand-Child one";
+         b;
+      }
+      subgraph cluster_gc_2 {
+        label = "Grand-Child two";
+          c;
+          d;
+      }
+
+    }
+
+    subgraph cluster_c2 {
+      label = "Child two";
+      e;
+    }
+  }
+}
+  #+end_src 
+  #+attr_org: :width 600px
+  #+attr_html: :width 600px
+  #+CAPTION: DOT Generated Nested Clusters
+  #+RESULTS: dot:-LOG_Nested-CLusters
+  [[file:./media/svg/nested-clusters.svg]]

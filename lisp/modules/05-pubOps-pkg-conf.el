@@ -15,14 +15,14 @@
 ;; Change Log: (descending chronological order)
 ;;
 
-;; 2023-002-10 - Alisha Awen, siren1@disroot.org
+;; 2023-002-10 - Alisha Awen, HarmonicAlchemy@proton.me
 ;;   Removed DEFT I am NOT using it and it is a PAIN in the ASS!
 ;;   Sorry about that Jason Blevins... You did a lot great of work
 ;;   and contributed to Emacs but this thing drives me nuts!
 ;;   Also, DUDE!... Please Update Your Code... the cl (old common lisp lib)
 ;;   is depreciated! I am tired of seeing that in my startup logs...
 ;;
-;; 2022-009-27 - Alisha Awen, siren1@disroot.org
+;; 2022-009-27 - Alisha Awen, HarmonicAlchemy@proton.me
 ;;   Changed Harmonic Alchemy Modular Emacs TO: v3.5...
 ;;   No Longer Using mmd-mode (IMHO it is not worth the effort)...
 ;;   Removed VMD-MODE completely. (VMD has critical security problem)
@@ -56,12 +56,13 @@
 (defvar me--req-pubops-packages
   '(markdown-mode
     auctex
-    pandoc-mode
     fountain-mode
     graphviz-dot-mode
     csv-mode
     simple-httpd))
-;    markdown-toc
+
+;;  NOTE: pandoc-mode  (Was Removed because it requires DASH and other "MODERN SHIT"
+;;        I don't even think I use pandoc-mode in emacs anyway... so this is fantastic!
 
 ;;;
 ;; Install required packages:
@@ -122,6 +123,9 @@
 
 ;;;; ~~~~~~~~~~~~~~~~~~~~~
 ;;   Pandoc Mode:
+;;
+;;   NOTE: pandoc-mode Was Removed because it requires DASH and other "MODERN SHIT"
+;;        I don't even think I use pandoc-mode in emacs anyway... so this is fantastic!
 ;;;; ~~~~~~~~~~~~~~~~~~~~~
 
 ;;;
@@ -131,27 +135,27 @@
 ;;;; ~~~~~~~~~~~~
 ;; Mac OS Case:
 
-(when ME--DARWIN
-  ;; You may need to enable the first form if you used HomeBrew
-  ;; to install Pandoc...  If you enable the first form, be sure to comment
-  ;; out (disable) the second form below it and visa-versa!!
-  ;; Your Pandoc was installed by HomeBrew.  Ensure Emacs gets the path...
-  ;(setq pandoc-binary "/usr/local/bin/pandoc"))
-  ;; Your Pandoc was installed by MacPorts.  Ensure Emacs gets the path...
-  (setq pandoc-binary "/opt/local/bin/pandoc"))
+;; (when ME--DARWIN
+;;   ;; You may need to enable the first form if you used HomeBrew
+;;   ;; to install Pandoc...  If you enable the first form, be sure to comment
+;;   ;; out (disable) the second form below it and visa-versa!!
+;;   ;; Your Pandoc was installed by HomeBrew.  Ensure Emacs gets the path...
+;;   ;(setq pandoc-binary "/usr/local/bin/pandoc"))
+;;   ;; Your Pandoc was installed by MacPorts.  Ensure Emacs gets the path...
+;;   (setq pandoc-binary "/opt/local/bin/pandoc"))
 
 
 ;;;; ~~~~~~~~~~~~
 ;; Linux Case:
 
-(when ME--LINUX
-  (setq pandoc-binary "~/.local/bin/pandoc"))
+;; (when ME--LINUX
+;;   (setq pandoc-binary "~/.local/bin/pandoc"))
 
 ;;;
 ;; Add Pandoc Mode to all Markdown Files:
 ;; Ref: https://joostkremers.github.io/pandoc-mode/
 
-(add-hook 'markdown-mode-hook 'pandoc-mode)
+;; (add-hook 'markdown-mode-hook 'pandoc-mode)
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Graphviz-dot-mode Customizations:

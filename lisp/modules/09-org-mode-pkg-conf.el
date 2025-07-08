@@ -16,10 +16,15 @@
 ;; Change Log: (descending chronological order)
 ;;
 
-;; 2022-009-18 - Alisha Awen, siren1@disroot.org
+;; 2025-007-03 - Alisha Awen, HarmonicAlchemy@proton.me
+;;   Updated the way my Org-Mode hook functions work...
+;;   Fixed some related site-effect bugs... Using CONSTANTS
+;;   defined in me_constants.el (which help with portability)
+
+;; 2022-009-18 - Alisha Awen, HarmonicAlchemy@proton.me
 ;;   Added ABC-MODE Back in... (package loads fine now)
 
-;; 2022-009-18 - Alisha Awen, siren1@disroot.org
+;; 2022-009-18 - Alisha Awen, HarmonicAlchemy@proton.me
 ;;   Removed (commented out) abc-mode.. This was causing some problems
 ;;   Still troubleshooting this...
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -37,16 +42,28 @@
 
 (defvar me--req-org-packages
   '(gnuplot-mode
-    org-modern
     org-superstar
     valign
     toc-org
     sass-mode
     abc-mode
-    org-sidebar
-    org-contrib
-;    org-mind-map
     ob-asymptote))
+
+;;;
+;; REMOVED: 
+;;    org-mind-map - This OLD package requires DASH... I don't need a mind map anyway...
+;;                   If i do I will use an external open-source app... Mind maps are
+;;                   GRAPHICAL not text... Even though Emacs can do graphics...
+;;
+;;    org-modern   -  Removed this because I am NOT using it anymore...
+;;
+;;    org-contrib  - Not SURE if I need this either, so I am removing it to see...
+;;                   There does not seem to be any config for this...
+;;                   Sub-Packages of ORG-CONTRIB may be needed...
+;;                   (I DON'T LIKE HOW THIS WORKS)
+;;
+;;    org-sidebar  - This is no longer needed as I am not trying to mimic
+;;                   Scrivener anymore... Also this removed dependency on DASH!
 
 ;;;
 ;; Install required packages:
@@ -291,26 +308,24 @@
   ;; Test to make sure we are in Org Mode, if not print a warning...
   (if (equal 'org-mode major-mode)
       (progn
-        ;; Make NORMAL ORG MODE Frame size for writing/composition:
+
+	;; Set Olivetti Toggle Width to ORG WIDTH:
+        (setq me--current-oliv-width ME--ORG-OLIV-WIDTH)
+        (olivetti-set-width me--current-oliv-width)
+        (olivetti-mode 'toggle)
+
+	;; Make NORMAL ORG MODE Frame size for writing/composition:
         (me_set-writing-frame)
 
-        ;; Set Olivetti Width
-        (olivetti-mode)
-        (olivetti-set-width ME--ORG-OLIV-WIDTH)
-
-        ;; Set Olivetti Toggle Width to ORG-OLIV-WIDTH:
-        (setq me--current-oliv-width ME--ORG-OLIV-WIDTH))
-
     ;; ELSE print warning about buffer not being an Org File...
-    (message "Warning: You are NOT visiting a .ORG file!")))
-
+    (message "Warning: You are NOT visiting a .ORG file!"))))
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Set up Fancy Org View in W I D E  S C R E E N
 ;;  mode with Org Sidebar Tree in Left pane and
 ;;  Content window on right... (i.e., Like Scrivener)
 
-(defun me_org-wide-screen ()
+(defun me_org-wide-screen () 
   "Set up Fancy Org View in W I D E  S C R E E N view with frame
    dimensions set to work nicely with split windows:  A navigation
    window pane on left side showing the Org Tree headings only, and a content
@@ -319,21 +334,20 @@
   ;; Test to make sure we are in Org Mode, if not print a warning...
   (if (equal 'org-mode major-mode)
       (progn
-        (me_set-org-wide-frame)
 
-        ;; Set Olivetti Width
-        (olivetti-mode)
-        (olivetti-set-width ME--WIDE-ORG-OLIV-WIDTH)
+	;; Set Olivetti Toggle Width to ORG WIDTH:
+        (setq me--current-oliv-width ME--WIDE-ORG-OLIV-WIDTH)
+        (olivetti-set-width me--current-oliv-width)
+        (olivetti-mode 'toggle)
 
-        ;; Set Olivetti Toggle Width to WIDE-ORG-OLIV-WIDTH:
-        (setq me--current-oliv-width ME--WIDE-ORG-OLIV-WIDTH))
+        (me_set-org-wide-frame))
 
     ;; ELSE print warning about buffer not being an Org File...
     (progn
       (message "Warning: You are NOT visiting a .ORG file!"))))
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Modular Emacs - me_org-toggle-blocks Function:
 ;;
 ;;  With this in place, org-mode collapses SRC blocks by default and lets you
@@ -348,25 +362,39 @@
     (org-hide-block-all))
   (setq-local me--org-blocks-hidden (not me--org-blocks-hidden)))
 
+;; *ALSO* TREAT PLAIN LIST ITEMS AS LOW-LEVEL HEADLINES:
+;; REF: https://emacs.stackexchange.com/questions/5544/how-to-make-ordered-lists-collapsed-by-default-in-org-mode
+;; (LISTS are COLLAPSED by DEFAULT Just Like Headings)
+
+(setq org-cycle-include-plain-lists 'integrate)
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;;  Modular Emacs - Fancy Org View - org-mode Hook Function:
-;;  This Fancy Org View hook takes care of setting your writing/publishing
-;;  environment nicely...
+;;  HOOK FUNCTION: Modular Emacs - NORMAL WRITER's ORG-MODE
+;;  This Org Mode View hook takes care of setting your Writing/Publishing
+;;  Environment Nicely...
 ;;
 ;;  Using this mode you can have two different Screen Layouts via a Toggle key..
 ;;  Normal Layout for general purpose Org mode work in a single window...  and
-;;  Fancy Org View W I D E  S C R E E N layout with navigation tree window on
-;;  left side and content window on right side for adding content.  The wide screen
-;;  based publishing environment is working just as well as my Scrivener Projects
-;;  were in the past!  It will soon be exceeding anything that I could do with
-;;  Scrivener and be future proof to boot!  Combined with Fountain mode for
-;;  screenwriting, audio and VR scripting etc... When this project is done
-;;  you will be glad to know "all your base are belong to" Emacs Org Mode! %^)
+;;  Fancy Org View W I D E  S C R E E N layout for Documents that need a wide 
+;;  LANDSCAPE View...
+;;
+;;  This ALL STARTED OUT when I was setting up org-mode to replace Book Publishing
+;;  with Scrivener... It already exceeds anything I could do previously with
+;;  Scrivener and this Publishing System is future proof to boot!
+;;
+;;  Combined with Fountain mode for screenwriting, audio and VR scripting etc...
 
 (defun me_fancy-org-mode-hook ()
   "Harmonic Alchemy Modular Emacs Fancy Org Mode Hook Function.
    This function takes care of setting up a nice org-mode writing
    environment for both planning and / or writing-publishing"
+
+  ;; SET Olivetti Toggle WIDTH to NORMAL WRITER'S WIDTH:
+  
+  (setq me--current-oliv-width ME--ORG-OLIV-WIDTH)
+  (olivetti-set-width me--current-oliv-width)
+  (olivetti-mode 'toggle)
 
   ;; NOTE: All settings below change the currently selected frame only...
   ;;       (other existing and future frames are not affected)
@@ -377,36 +405,36 @@
   (org-hide-block-all)
 
   ;; Refresh Org SUPERSTAR Configuration...
-;  org-superstar-restart
+  ;; I don't think this is necessary anymore...
+  ;org-superstar-restart
   
-  ;; Set default face to Courier Prime:
-  ;; (enable this for testing table alignment)
-  ;; (set-face-attribute 'default (selected-frame)
-  ;;                     :family "Courier Prime"
-  ;;                     :height 130)
+  ;; SET DEFAULT FACE to Courier Prime:
+  ;; NOTE: Not Necessary here... me_set-writing-frame
+  ;;       Takes care of below now...
+  ;;
+  ;(enable this for testing table alignment)
+  ;(set-face-attribute 'default (selected-frame)
+  ;                     :family "Courier Prime"
+  ;                     :height 130)
 
   ;; Set Up Fancy Unicode Checkboxes...
   (me_set-unicode-checkboxes)
 
-  ;; Use Valign Mode for ORG TABLES (SLUGGISH!)
-  
-;  (valign-mode)
+  ;; Use Valign Mode for ORG TABLES:
+  ;; NOTE: THIS IS SLUGGISH! SO I disabled it
+  ;;       you can enable it via Xah-Fly-Key
+  ;;       Chord: SPC e t
+  ;(valign-mode)
 
-  ;; Include toc-org...
+  ;; INCLUDE toc-org:
   
   (if (require 'toc-org nil t)
       (progn
         (toc-org-mode))
     (warn "toc-org not found"))
 
-  ;; Enable Olivetti Mode...
-  (olivetti-mode)
-  (olivetti-set-width ME--WIDE-ORG-OLIV-WIDTH)
-
-  ;; Set Olivetti Toggle Width to WIDE-ORG-OLIV-WIDTH:
-  (setq me--current-oliv-width ME--WIDE-ORG-OLIV-WIDTH)
-
   ;; Call Xah-Fly-Keys (resets some face attributes)
+  ;; It seemed that this was necessary when switching contexts or something...
   (xah-fly-keys 1))
 
 ;; END Fancy Org View - org-mode Hook function...

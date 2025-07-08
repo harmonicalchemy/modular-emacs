@@ -58,7 +58,7 @@
 ;; Change Log: (descending chronological order)
 ;;
 
-;; 2022-005-15 - Alisha Awen, siren1@disroot.org
+;; 2022-005-15 - Alisha Awen, HarmonicAlchemy@proton.me
 ;;   Created this file: 06-XahEmacs-conf.el which is disabled by default within
 ;;   dispatcher.el...  
 ;;

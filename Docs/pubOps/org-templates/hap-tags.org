@@ -1,6 +1,6 @@
 # -**- mode: org; coding: utf-8 -**-
 :LATEST_UPDATE: 
-=Last Updated:= <2025-06-12 Thu>
+=Last Updated:= <2025-06-17 Tue>
 
 =YOU MAY REMOVE This Drawer= from your own clones of this template if it is bothering you... This drawer is only here as an aid for: HAP Modular Emacs DOC TEMPLATE housekeeping/updating tasks...
 
@@ -13,54 +13,67 @@ The Default Tags in this SETUPFILE are defined within the HAP Controlled Vocabul
 READ THIS ARTICLE: [[https://karl-voit.at/2022/01/29/How-to-Use-Tags/][How to Use Tags]] /(HOW and WHY they are IMPORTANT)/
 =Because EVERYTHING is MISCELLANEOUS in our minds=...
 
-You CAN and MAY CHANGE HAP's CONTROLLED VOCABULARY to FIT your PERSONAL WORK-FLOW  by removing tags that do not apply, and replacing them with ones that do apply... Consult ~HAP-Controlled-Vocabulary.org~ for further instructions on how to Modify it for your own work-flows [[file:~/.emacs.d/Docs/pubOps/HAP-Controlled-Vocabulary.org::RDME_modemacs-default-doc-tags][HERE]]
+You CAN and MAY CHANGE HAP's CONTROLLED VOCABULARY to FIT your PERSONAL WORK-FLOW  by removing tags that do not apply, and replacing them with ones that do apply... Consult ~HAP-Controlled-Vocabulary.org~ for further instructions on how to Modify it for your own work-flows [[file:~/.emacs.d/Docs/pubOps/HAP-Controlled-Vocabulary.org::RDME_modemacs-hap-setupfile-tags][HERE]]
 
 =NOTE:= Many Useful Tags were NOT INCLUDED in THIS SETUPFILE... This was done to keep the HELM list of Tag choices short... HOWEVER, the tags in the list at the bottom of this file may be used as *FILE LOCAL TAGS* for =ANY particular docs= and or projects that need them... Simply copy the ones you need from the provided list /(extracted from HAP Controlled Vocabulary)/  and place them after the ~#+FILETAGS:~ directive in your ~.org~ file's header...
 :END:
 
-=File:= ~~/.emacs.d/Docs/pubOps/org-templates/default-tags.org~ 
+=File:= ~~/.emacs.d/Docs/pubOps/org-templates/hap-tags.org~ 
 
-=HAP Modular Emacs - DEFAULT TAGS SETUPFILE= 
+=Modular Emacs - HAP TAGS SETUPFILE= 
 
 The following TAGS List is =AUTOMATICALLY AVAILABLE= to ~.org~ Files that have included this SETUPFILE within their preamble at the top...
 
-#+CATEGORY: @DEFAULT
-
-=TOC-ORG FLAGS:= NOTE: Not using these presently... If I need it I will type it in manually...
-
-###+TAGS: { noexport_1 export_2 export_3  }
+#+CATEGORY: @HAP 
 
 =GENERAL ARTS:= 
 
-#+TAGS: [ art : music dance poetry culinary ] 
+#+TAGS: [ art : music dance poetry culinary typography ] 
 
-=PUBLISING OPERATIONS:= 
+
+
+=HAP: PRODUCTIONS: DAW: GROUPS=
+
+=HAP:= 
+#+TAGS: [ hap : productions ] 
+
+=PRODUCTIONS:=
+#+TAGS: [ productions : daw instruments midi playlists plugins presets ] 
+
+=DAW:= 
+#+TAGS: [ daw : reaper dorico pd ]
+
+
+
+=DEV~OPS GROUP:= 
+
+#+TAGS: [ devops : git mods wordpress ]
+
+=SYS$ADMIN GROUP:= 
+
+#+TAGS: [ sysadmin : security hardware software ssh cloud macports emacs iot macos unix ]
+
+
+=PUBLISING GROUP:= 
 
 #+TAGS: [ pubops : docs meta ] 
 #+TAGS: [ docs : reference news fiction manuals rdmes logs presentations ] 
-#+TAGS: [ meta : { drafts final submitted } scrshots cliparts playlists templates ] 
+#+TAGS: [ meta : { drafts final submitted } scrshots cliparts playlists templates ]
 
-=SOFTWARE GROUP:= 
 
-#+TAGS: [ software : emacs ] 
+=BUSINESS GROUP:= 
 
-=SOCIAL GROUP:= 
+#+TAGS: [ associates : unca ] 
 
-#+TAGS: [ social : associates family friends politics ] 
+=FINANCES GROUP:= 
 
-=FINANCE OPERATIONS:= 
-
-#+TAGS: [ finances : { goods services } invoices ledgers taxes ] 
+#+TAGS: [ finances : { goods services } invoices ledgers ]
 
 =PIM OPERATIONS:= 
 
-#+TAGS: [ pim : projects yakshaving ] 
+#+TAGS: [ pim : projects yakshaving ]
 
 =GENERAL SCIENCE:= 
 
 #+TAGS: [ science : health philosophy math psychology research sustainability ] 
-
-=DEFAULT SINGLETON TAGS LIST:= 
-
-#+TAGS: mods security 
 

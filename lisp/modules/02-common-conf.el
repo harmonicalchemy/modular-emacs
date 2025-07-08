@@ -10,6 +10,10 @@
 ;; Change Log: (descending chronological order)
 ;;
 
+;; 2025-007-08 - Alisha Awen, harmonicalchemy@proton.me
+;;   Improved the frame adjusting functions below to
+;;   minimize side effects of switching across frames,,,
+;;
 ;; 2024-005-19 - Alisha Awen, harmonicalchemy@proton.me
 ;;   Removed Spelling Configuration from this file...
 ;;   flyspell-correct-helm was moved to 08-spelling.el as well
@@ -45,58 +49,60 @@
 ;;   default going forward.  I left the powerline code in, (disabled) in case
 ;;   you like it and would like to switch back...
 
-;;; OLD CHANGE LOG of 06-interface.el:
-;;      (before merging all its code into here)
-;;      (descending chronological order)
-;;
-;;   2021-004-08 - Updated Modular Emacs to v3.4.0 [Q2 2021]
-;;                 (still beta - working on updating many docs to
-;;                  org-mode and publishing as PDFs)
-;;                 This version includes new feature additions &
-;;                 bugfixes...
+;;;
+;; OLD CHANGE LOG of 06-interface.el:
+;;   (before merging all its code into here)
+;;   (descending chronological order)
+;;;
 
-;;   2021-001-07 - Modified width of initial and default frames to 88.
+;; 2021-004-08 - Updated Modular Emacs to v3.4.0 [Q2 2021]
+;;   (still beta - working on updating many docs to
+;;   org-mode and publishing as PDFs)
+;;   This version includes new feature additions &
+;;   bugfixes...
 
-;;   2020-007-16 - Harmonic Alchemy Modular-Emacs V3.2 (beta) [Q3 2020]
-;;      This has been tested on the develop branch long enough... I am
-;;      still calling it "beta" because there is still a lot of work
-;;      still unfinished... (mostly peripheral support files, templates, etc.
-;;      and the Docs are still being updated... (does documentation ever end? lol)
-;;      I will be calling this Beta for a while i guess... But version numbers
-;;      will continue to advance...  The nature of Emacs is "always in Beta"
-;;      because it is so powerful and flexible, and empowers the user who can
-;;      not only use and customize it but can also completely change functionality!
+;; 2021-001-07 - Modified width of initial and default frames to 88.
 
-;;   2019-007-05 - Harmonic Alchemy Modular-Emacs Lisp IDE Fork v2.2.0 [Q3 2019]
-;;      v2.0.1 [Q3 2019] Final testing period over... Version 2.0.1 is stable.
-;;      This fork represents new commented out features added from Lisp-IDE
-;;      branch/fork back into the develop branch so they can be kept up to
-;;      date when the time comes for these features to be turned on within
-;;      the develop or master branch at a later date...
+;; 2020-007-16 - Harmonic Alchemy Modular-Emacs V3.2 (beta) [Q3 2020]
+;;   This has been tested on the develop branch long enough... I am
+;;   still calling it "beta" because there is still a lot of work
+;;   still unfinished... (mostly peripheral support files, templates, etc.
+;;   and the Docs are still being updated... (does documentation ever end? lol)
+;;   I will be calling this Beta for a while i guess... But version numbers
+;;   will continue to advance...  The nature of Emacs is "always in Beta"
+;;   because it is so powerful and flexible, and empowers the user who can
+;;   not only use and customize it but can also completely change functionality!
 
-;;   2019-007-05 - Harmonic Alchemy Modular-Emacs Official Release:
-;;      v2.0.1 [Q3 2019] Final testing period over... Version 2.0.1 is stable.
+;; 2019-007-05 - Harmonic Alchemy Modular-Emacs Lisp IDE Fork v2.2.0 [Q3 2019]
+;;   v2.0.1 [Q3 2019] Final testing period over... Version 2.0.1 is stable.
+;;   This fork represents new commented out features added from Lisp-IDE
+;;   branch/fork back into the develop branch so they can be kept up to
+;;   date when the time comes for these features to be turned on within
+;;   the develop or master branch at a later date...
 
-;;   2019-006-23 - Harmonic Alchemy Modular-Emacs Official Release:
-;;      v1.0.0 [Q2 2019] Final testing period over... Version 2 is stable.
+;; 2019-007-05 - Harmonic Alchemy Modular-Emacs Official Release:
+;;   v2.0.1 [Q3 2019] Final testing period over... Version 2.0.1 is stable.
 
-;;   2019-004-24 - Harmonic Alchemy Modular-Emacs Official Point Release:
-;;      v1.0.0 [Q2 2019] Final testing a new point release within the develop
-;;      branch... After testing period is over a final commit will be made and
-;;      merged back into master...  Master still holds Official Release: 1.0...
+;; 2019-006-23 - Harmonic Alchemy Modular-Emacs Official Release:
+;;   v1.0.0 [Q2 2019] Final testing period over... Version 2 is stable.
 
-;;   2019-003-04 - Harmonic Alchemy Modular-Emacs Official Release v1.0 [Q1 2019]
-;;      Final test of release candidates is over now... the develop
-;;      branch has been merged back into master... (after this commit)...
-;;      This commit will be tagged as Harmonic Alchemy Modular Emacs Version 1.0
-;;      Official Release [Q1-2019]...
+;; 2019-004-24 - Harmonic Alchemy Modular-Emacs Official Point Release:
+;;   v1.0.0 [Q2 2019] Final testing a new point release within the develop
+;;   branch... After testing period is over a final commit will be made and
+;;   merged back into master...  Master still holds Official Release: 1.0...
 
-;;   2019-002-21 - Updated to Release Candidate 3 for Modular Emacs
-;;      Version: 1.0 (Q1-2019)
+;; 2019-003-04 - Harmonic Alchemy Modular-Emacs Official Release v1.0 [Q1 2019]
+;;   Final test of release candidates is over now... the develop
+;;   branch has been merged back into master... (after this commit)...
+;;   This commit will be tagged as Harmonic Alchemy Modular Emacs Version 1.0
+;;   Official Release [Q1-2019]...
 
-;;   2019-001-21 - This file marks the first Release Candidate for Version
-;;      1 of: Harmonic Alchemy Modular Emacs (displayed in the default Emacs
-;;      frame title)
+;; 2019-002-21 - Updated to Release Candidate 3 for Modular Emacs
+;;   Version: 1.0 (Q1-2019)
+
+;; 2019-001-21 - This file marks the first Release Candidate for Version
+;;   1 of: Harmonic Alchemy Modular Emacs (displayed in the default Emacs
+;;   frame title)
 ;;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ;;;
@@ -114,10 +120,6 @@
     helm
     olivetti
     which-key))
-;    flyspell-correct-helm (moved to 08-spelling.el)
-;    powerline
-;    smart-mode-line
-;    imenu-list
 
 ;;;
 ;; Install Required Packages:
@@ -133,11 +135,6 @@
 ;; Install: from MELPA exec-path-from-shell
 
 (when ME--POSIX (exec-path-from-shell-initialize))
-
-;; Change Title Bar Text:
-
-(setq frame-title-format
-      "Harmonic Alchemy Modular Emacs - Version 3.6.3 [Q3 2024]")
 
 ;; Disable tool-bar - I could care less about tool bars in emacs!
 ;; An oxymoron! But you may feel differently.  Comment this out if you like them.
@@ -155,20 +152,25 @@
 (scroll-bar-mode -1)
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; Disable this section if you like using the mouse wheel:
+;; NOTE: DISABLE THIS SECTION TO ENABLE the MOUSE WHEEL
+;;       Most Linux machines (laptops) have mouse wheels or
+;;       mousse pads that suffer from the JITTERS! I find
+;;       that to be quite annoying!
 ;;
-;; On my laptop my palms get in the way and cause all kinds
-;; of scrolling crazy stuff. I hate it!!! Seriously. Key commands
-;; are best in Emacs.  Right? I Mean Right??? Yup. ;-)
-;;
-;; UPDATE: 2023-010-18 - I have a new MBP M2 Max with HUGE mousepad but WOW it
-;;         ACTUALLY WORKS and smooth as a baby's bottom to use! NO JERKY MOTIONS.
-;;         So for Mac I LIKE it.. But on MOST Linux Systems / Hardware, the
-;;         Mouse WHEEL is bumpy like the wheel of a "Covered Wagon"! LOL 
+;; UPDATE: 2023-010-18 - I have a new MBP M3 MAX with a HUGE
+;;         mousepad but WOW it ACTUALLY WORKS and smooth as a
+;;         baby's bottom to use! NO JERKY MOTIONS at All!
+;;         THEREFORE for Macs I LIKE using it in Emacs..
+;;         (although there are still accidental swiping issues
+;;         that still bother me a bit) - I have to be careful
+;;         where I rest my palms, etc.) BUT on MOST Linux
+;;         Systems / Hardware, the Mouse WHEEL is bumpy like
+;;         the broken wheel of a Gypsy Wagon rolling away
+;;         to an 11/8 time signature! LOL 
 ;;
 ;; Disable mouse wheel (and two finger swipe) scrolling because
-;; it scrolls horribly (on LINUX) and I would rather work without it. %^)
-;; also disable the middle mouse (mouse-2) pasting text by accident
+;; it scrolls horribly (on LINUX) and I would rather work without it.
+;; Also disable the middle mouse (mouse-2) pasting text by accident
 ;; really annoys me!
 
 ;; (mouse-wheel-mode -1)
@@ -197,7 +199,7 @@
 ;(setq imenu-list-focus-after-activation t)
 ;(setq imenu-list-auto-resize nil)
 
-;; imenu tweaks:
+;; IMENU TWEAKS:
 
 (setq imenu-auto-rescan t)
 
@@ -217,7 +219,7 @@
       column-number-mode t
       line-number-mode t)
 
-;;
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Trim some minor mode’s display to a single unicode icon:
 
 (dolist (mim '((auto-revert-mode   . "♺")
@@ -234,13 +236,12 @@
     (when (assq (car mim) minor-mode-alist)
       (setf (cdr (assq (car mim) minor-mode-alist)) repl))))
 
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Activate Blackboard theme:
 
 (load-theme 'blackboard t)
 
-
-;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Set Up Default Frame Parameters for both INITIAL Frame
 ;; AND DEFAULT Frame. (Use same parameter values for BOTH)
 ;;
@@ -257,8 +258,7 @@
     (progn
       ;; Set Initial Startup Frame Dimensions:
       (setq initial-frame-alist
-	    '((name . "HA Mod Emcs v3.6 - INITIAL Frame")
-              (font . "Hermit")
+	    '((font . "Hermit")
               (height . 42)
               (width . 100)
               (menu-bar-lines . 1)
@@ -269,8 +269,7 @@
 
       ;; Set Default Frame Dimensions:
       (setq default-frame-alist
-	    '((name . "HA Mod Emacs v3.6 - DEFAULT Frame")
-              (font . "Hermit")
+	    '((font . "Hermit")
               (height . 42)
               (width . 100)
               (menu-bar-lines . 1)
@@ -279,27 +278,31 @@
               (left-fringe . 1)
               (right-fringe . 1))))
 
-  ;; This is a Terminal Session (No GUI)
+  ;; This is for Terminal Sessions (No GUI)
   (progn
     (setq initial-frame-alist '((tool-bar-lines . 0)))
     (setq default-frame-alist '((tool-bar-lines . 0)))))
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; Toggle Olivetti Mode:
+;; INITIALIZE DEFAULT Olivetti Mode:
+
+(require 'olivetti) 
+(setq me--current-oliv-width ME--DEFAULT-OLIV-WIDTH)
+(olivetti-set-width me--current-oliv-width)
+
+;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; FUNCTION: Toggle Olivetti Mode:
 ;; The extra 6 chars over standard 80 col allows
 ;; for code and org-mode indention (a compromise)
 ;; My standard frame width is set to 88 columns)
 ;; so this should just fit...
 
-(require 'olivetti)
-(olivetti-set-width ME--DEFAULT-OLIV-WIDTH)
-
 (defun me_toggle-olivetti-mode ()
   "Toggles olivetti-mode...  Width is set Elsewhere Depending on Context"
   (interactive)
   (progn
-    (olivetti-mode 'toggle)
-    (olivetti-set-width me--current-oliv-width)))
+    (olivetti-set-width me--current-oliv-width)
+    (olivetti-mode 'toggle)))
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Set up helm-mode:
@@ -307,7 +310,6 @@
 (helm-mode 1)
 (helm-autoresize-mode 1)
 (setq helm-split-window-in-side-p t)
-
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;;  Modular Emacs - Make Frame Function:
@@ -321,28 +323,15 @@ If flag = 2 make writer's frame. If flag = 1, make coder's frame..."
     ;; Set buffer to *Bookmark List*
     (bookmark-bmenu-list)
 
-    ;; Make New DEFAULT CODE Frame:
+    ;; Set Olivetti Toggle Width to CODE WIDTH:
+    (setq me--current-oliv-width ME--DEFAULT-OLIV-WIDTH)
+    (olivetti-set-width me--current-oliv-width)
+
+    ;; MAKE NEW DEFAULT CODE Frame:
     (make-frame
      (quote
-      ((name . "HA Mod Emacs v3.6 - NEW DEFAULT FRAME"))))
-
-    ;; Select this NEW Frame:
-    (select-frame-by-name "HA Mod Emacs v36 - NEW DEFAULT FRAME")
-
-    ;; Set Frame Dimentions for DEFAULT Coding etc.:
-    (set-frame-size (selected-frame)
-		    ME--CODE-FRAME-WIDTH
-		    ME--CODE-FRAME-HEIGHT)
-
-    ;; Set DEFAULT Face for Coding etc.:
-    (set-face-attribute 'default (selected-frame)
-                        :family "Hermit"
-			:height ME--DEFAULT-CODE-TEXT-HEIGHT)
-
-    ;; Set Olivetti Toggle Width to CODE WIDTH:
-    (setq me--current-oliv-width ME--CODE-OLIV-WIDTH)))
+      ((name . "HAP Mod Emacs V3.6.4 [Q2 2025] - CODERS FRAME"))))))
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Set Modular Emacs Writing Frame Function:
@@ -354,22 +343,32 @@ If flag = 2 make writer's frame. If flag = 1, make coder's frame..."
   "Set Frame Font & Frame Dimensions for Writing"
   (interactive)
   (progn
+
+    ;; Set Olivetti Toggle Width to ORG WIDTH:
+    (setq me--current-oliv-width ME--ORG-OLIV-WIDTH)
+    (olivetti-set-width me--current-oliv-width)
+    (olivetti-mode 'toggle)
+
+    ;; GET DEFAULT FRAME:
+    ;; NOTE: This created a side-effects bug!!! REMOVED
+    ;; ALSO: Not Necessary because you are ALREADY in the Selected Frame
+    ;(select-frame-by-name "HAP Mod Emacs V3.6.4 [Q2 2025] - CODERS FRAME")
+
+    ;; NOTE: This CURRENT FRAME is already set to Writer's Fonts
+    ;;       We ONLY NEED to Change Frame Dimensions now...
+    ;;       SO DISABLE THIS ONE TOO...
     ;; RESET to NORMAL ORG Writer's FACE Specs:
-    (set-face-attribute 'default (selected-frame)
-                        :family "Courier Prime"
-			:height ME--DEFAULT-ORG-TEXT-HEIGHT)
+    ;(set-face-attribute 'default (selected-frame)
+    ;                    :family "Courier Prime"
+    ;                    :height ME--DEFAULT-ORG-TEXT-HEIGHT)
 
     ;; RESET Frame dimensions for NORMAL ORG Writing from GLOBAL CONSTANTS:
     (set-frame-size (selected-frame)
 		    ME--ORG-FRAME-WIDTH
 		    ME--ORG-FRAME-HEIGHT)
 
-    (set-frame-parameter nil 'name "HA Mod Emacs v3.6 - NORMAL ORG Writer's Frame")
-
-    ;; Set Olivetti Toggle Width to ORG WIDTH:
-    (setq me--current-oliv-width ME--ORG-OLIV-WIDTH)))
+    (set-frame-parameter nil 'name "HAP Mod Emacs V3.6.4 [Q2 2025] - Writer's FRAME")))
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;; Set Modular Emacs Fancy Org-Mode WIDE Frame Function:
@@ -378,36 +377,53 @@ If flag = 2 make writer's frame. If flag = 1, make coder's frame..."
 ;;        (other frames are not affected)
 
 (defun me_set-org-wide-frame ()
-  "Set Frame Font & Frame Dimensions for Modular Emacs Fancy WIDESCREEN Org-Mode"
+  "Set Frame Dimensions for Org Mode LANDSCAPE VIEW"
   (interactive)
   (progn
-    ;; RESET to ORG Writer's FACE Spec from GLOBAL CONSTANT:
-    (set-face-attribute 'default (selected-frame)
-                        :family "Courier Prime"
-                        :height ME--DEFAULT-ORG-TEXT-HEIGHT)
 
-    ;; RESET Frame dimensions for WIDE ORG Writing from GLOBAL CONSTANTS:
+    ;; Set Olivetti Toggle Width to ORG WIDTH:
+    (setq me--current-oliv-width ME--WIDE-ORG-OLIV-WIDTH)
+    (olivetti-set-width me--current-oliv-width)
+    (olivetti-mode 'toggle)
+
+    ;; GET EXISTING WRITER's FRAME: 
+    ;; NOTE: This created a side-effects bug!!! REMOVED
+    ;; ALSO: Not Necessary because you are ALREADY in the Selected Frame
+    ;(select-frame-by-name "HAP Mod Emacs V3.6.4 [Q2 2025] - Writer's FRAME")
+
+    ;; NOTE: This CURRENT FRAME is already set to Writer's Fonts
+    ;;       We ONLY NEED to Change Frame Dimensions now...
+    ;;       SO DISABLE THIS ONE TOO...
+    ;; RESET to ORG Writer's FACE Spec from GLOBAL CONSTANT:
+    ;(set-face-attribute 'default (selected-frame)
+    ;                    :family "Courier Prime"
+    ;                    :height ME--DEFAULT-ORG-TEXT-HEIGHT)
+
+    ;; RESET Frame dimensions for ORG-MODE Writer's LANDSCAPE VIEW:
     (set-frame-size (selected-frame)
 		    ME--WIDE-ORG-FRAME-WIDTH
 		    ME--WIDE-ORG-FRAME-HEIGHT)
 
-    (set-frame-parameter nil 'name "HA Mod Emacs v3.6 - WIDE ORG Writer's Frame")
-
-    ;; Set Olivetti Toggle Width to WIDE ORG WIDTH:
-    (setq me--current-oliv-width ME--WIDE-ORG-OLIV-WIDTH)))
+    (set-frame-parameter nil 'name "HAP Mod Emacs V3.6.4 [Q2 2025] - WIDE ORG FRAME")))
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; Set Modular Emacs Default Frame Function:
-;; NOTE: This only sets the frame parameters
-;;       for the currently Selected Frame...
-;;        (other frames are not affected)
+;; FUNCTION: Set Modular Emacs DEFAULT FRAME:
+;;
+;; NOTE: This only sets the frame parameters for the currently 
+;;       Selected Frame... (other frames are not affected)
 
 (defun me_set-default-frame ()
   "Set Font & Frame Parameters back to HA Modular Emacs Default"
   (interactive)
   (progn
+
+    ;; SET Olivetti Toggle Width to CODE WIDTH:
+    (setq me--current-oliv-width ME--DEFAULT-OLIV-WIDTH)
+    (olivetti-set-width me--current-oliv-width)
+    (olivetti-mode 'toggle)
+
     ;; RESET to DEFAULT Coder's FACE Spec from GLOBAL CONSTANT:
     (set-face-attribute 'default (selected-frame)
                         :family "Hermit"
@@ -418,10 +434,7 @@ If flag = 2 make writer's frame. If flag = 1, make coder's frame..."
 		    ME--CODE-FRAME-WIDTH
 		    ME--CODE-FRAME-HEIGHT)
 
-    (set-frame-parameter nil 'name "HA Mod Emacs v3.6 - CODING Frame")
-
-    ;; Set Olivetti Toggle Width to CODE WIDTH:
-    (setq me--current-oliv-width ME--CODE-OLIV-WIDTH)))
+    (set-frame-parameter nil 'name "HAP Mod Emacs V3.6.4 [Q2 2025] - CODERS FRAME")))
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -435,6 +448,12 @@ If flag = 2 make writer's frame. If flag = 1, make coder's frame..."
   "Set Frame Font & Frame Dimensions for WIDE-SCREEN Coding"
   (interactive)
   (progn
+
+    ;; SET Olivetti Toggle Width to WIDE CODE WIDTH:
+    (setq me--current-oliv-width ME--WIDE-CODE-OLIV-WIDTH)
+    (olivetti-set-width me--current-oliv-width)
+    (olivetti-mode 'toggle)
+
     ;; RESET to DEFAULT Coder's FACE Spec from GLOBAL CONSTANT:
     (set-face-attribute 'default (selected-frame)
                         :family "Hermit"
@@ -445,10 +464,7 @@ If flag = 2 make writer's frame. If flag = 1, make coder's frame..."
 		    ME--WIDE-CODE-FRAME-WIDTH
 		    ME--WIDE-CODE-FRAME-HEIGHT)
 
-    (set-frame-parameter nil 'name "HA Mod Emacs v3.6 - DEFAULT WIDE Coder's Frame")
-
-    ;; Set Olivetti Toggle Width to CODE WIDTH (stays the same for 2 split screens)
-    (setq me--current-oliv-width ME--CODE-OLIV-WIDTH)
+    (set-frame-parameter nil 'name "HAP Mod Emacs V3.6.4 [Q2 2025] - WIDE CODERS FRAME")
 
     ;; Split Window Side by Side for Comparing code etc.
     (split-window-right)))
@@ -456,10 +472,10 @@ If flag = 2 make writer's frame. If flag = 1, make coder's frame..."
 
 
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;; Set Modular Emacs Default Coding Frame Function:
-;; NOTE: This only sets the frame parameters
-;;       for the currently Selected Frame...
-;;        (other frames are not affected)
+;; FUNCTION: SET Modular Emacs DEFAULT CODING FRAME 
+;;
+;; NOTE: This only sets the frame parameters for the currently 
+;;       Selected Frame... (other frames are not affected)
 
 (defun me_set-coding-default-frame ()
   "Set Frame Font & Frame Dimensions to Coding Default"
@@ -467,6 +483,11 @@ If flag = 2 make writer's frame. If flag = 1, make coder's frame..."
   (progn
     ;; Remove Split Windows (remaining window is where cursor is)
     (delete-other-windows)
+
+    ;; SET Olivetti Toggle Width to DEFAULT CODE WIDTH:
+    (setq me--current-oliv-width ME--DEFAULT-OLIV-WIDTH)
+    (olivetti-set-width me--current-oliv-width)
+    (olivetti-mode 'toggle)
 
     ;; RESET to DEFAULT Coder's FACE Spec from GLOBAL CONSTANT:
     (set-face-attribute 'default (selected-frame)
@@ -478,10 +499,7 @@ If flag = 2 make writer's frame. If flag = 1, make coder's frame..."
 		    ME--CODE-FRAME-WIDTH
 		    ME--CODE-FRAME-HEIGHT)
 
-    (set-frame-parameter nil 'name "HA Mod Emacs v3.6 - CODING Frame")
-
-    ;; Set Olivetti Toggle Width to CODE WIDTH:
-    (setq me--current-oliv-width ME--CODE-OLIV-WIDTH)))
+    (set-frame-parameter nil 'name "HAP Mod Emacs V3.6.4 [Q2 2025] - CODERS FRAME")))
 ;;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -521,14 +539,14 @@ If flag = 2 make writer's frame. If flag = 1, make coder's frame..."
   ;;
   ;;       UPDATE:  I may have fixed this... Need to test...
 
-  (if me--def-face
-      (progn
-    (message "Setting default face to Courier Prime for Writing")
+    (if me--def-face
+	(progn
+	(message "Setting default face to Courier Prime for Writing")
 	(me_set-writing-frame))
 
-    (progn
-    (message "Setting default face to Hermit for Coding")
-      (me_set-default-frame)))
+      (progn
+	(message "Setting default face to Hermit for Coding")
+	(me_set-default-frame)))
 
   (setq-local me--def-face (not me--def-face))))
 

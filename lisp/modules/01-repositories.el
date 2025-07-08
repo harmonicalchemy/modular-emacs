@@ -3,17 +3,17 @@
 ;;
 ;; Change Log:
 ;;
-;;   2019-006-23 - Alisha Awen Sheppard Siren1@disroot.org
+;;   2019-006-23 - Alisha Awen Sheppard HarmonicAlchemy@proton.me
 ;;      Completely re-wrote this module to improve quality
 ;;      of package installs to the most stable versions
 ;;      while allowing installs of systems requiring "pinned"
 ;;      packages at the same time... It's a balancing act...
 ;;      Thank God Emacs is Lisp based. We can do this! ;-)
 ;;
-;;   2019-002-05 - Alisha Awen Sheppard Siren1@disroot.org
+;;   2019-002-05 - Alisha Awen Sheppard HarmonicAlchemy@proton.me
 ;;      Added melpa-stable.  Removed Marmalade which is dead now...
 ;;
-;;   2019-004-22 - Alisha Awen Sheppard Siren1@disroot.org
+;;   2019-004-22 - Alisha Awen Sheppard HarmonicAlchemy@proton.me
 ;;      Fixed URLs to correct TLS enabled domains...
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -57,13 +57,6 @@
 ;; (needed for optional ModEmacs cider-mode Clojure Lisp module)
 
 ;(add-to-list 'package-pinned-packages '(clj-refactor . "melpa-unstable") t)
-
-;;;;
-;; Add Trusted CAs from Openssl cert.pem in an attempt to stop the
-;; MacOS problem with SSL failing to verify connection to elpa.org...
-
-(require 'gnutls)
-(add-to-list 'gnutls-trustfiles "/opt/local/etc/openssl/cert.pem")
 
 ;;;;
 ;; Always try to load the newest up-to-date packages...

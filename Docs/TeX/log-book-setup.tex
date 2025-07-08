@@ -1,11 +1,9 @@
 %%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-%%   File:        ~/.emacs.d/Docs/TeX/log-book-setup.tex
+%%   File:        ~/.emacs.d/Docs/TeX/ref-book-setup.tex
 %%   Ref:         <https://github.com/harmonicalchemy/modular-emacs>
-%%   Purpose:     LaTeX Setup Include File for Log Notebooks
+%%   Purpose:     LaTeX Setup Include File for Reference Books
 %%   Author:      Alisha Awen
 %%   Maintainer:  Alisha Awen
-%%   Created:     2023-001-13
-%%   Updated:     2023-001-14
 
 %%   This program is free software: you can redistribute it and/or modify
 %%   it under the terms of the GNU General Public License as published by
@@ -37,22 +35,40 @@
 %% \setlength{\evensidemargin}{0mm}
 %%
 
-%% PACKAGES %%
+%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%%  GENERAL PACKAGES:
 
 \usepackage{parskip}
 \usepackage{calc}
 \usepackage{titlesec}
 
-%% FONTS %%
-%% Note: [T1]{fontenc} is included and LOADED FIRST
-%%       BY: (org-latex-default-packages-alist)
+%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%%  BETTER SOURCE CODE LISTINGS:
+
+%% Use Console Command:
+%%    $ pygmentize -L styles
+%% to see a list of all possible "minted" code listing styles.
+%% Then change {style-name} below to try any of them out...
+%%    tango   - Typical...
+%%    perldoc - A Nice One...
+%%    xcode   - Similar to perldoc (even nicer)
+
+\usemintedstyle{xcode}
+
+%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%%  FONTS:
+%% NOTE: [T1]{fontenc} is included and LOADED
+%%       by org-mode [DEFAULT-PACKAGES]
+%%       (org-latex-default-packages-alist)
 
 \usepackage{roboto}
 \usepackage{palatino}
 
+%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 %% IMAGES %%
 \usepackage{svg} 
 
+%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 %% DEFAULT PARAGRAPH SETTINGS %%
 
 \setlength{\headwidth}{\textwidth}
@@ -60,6 +76,7 @@
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{10pt plus 2pt minus 1pt}
 
+%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 %% TITLE, CHAPTER, & SECTION, HEADING FORMAT %%
 
 %\renewcommand\afterchapternum{}
@@ -87,6 +104,7 @@
 \titleformat*{\subsection}{\normalfont\Large\bfseries\roboto}
 \titleformat*{\subsubsection}{\normalfont\large\bfseries\roboto}
 
+%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 %% FOOTNOTES %%
 
 \usepackage[hang,flushmargin, stable, multiple]{footmisc}
@@ -107,6 +125,7 @@
 %% \usepackage{setspace} \singlespacing
 %% \setstretch{1.15}
 
+%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 %% ADD BAR FOR QUOTE BLOCKS %%
 
 \usepackage[most]{tcolorbox} 
@@ -122,6 +141,7 @@
   enhanced jigsaw,
   borderline west={2pt}{0pt}{gray}}
 
+%%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 %% AT BEGIN DOCUMENT  %%
 
 %\AtBeginDocument{
