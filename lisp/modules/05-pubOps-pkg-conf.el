@@ -15,14 +15,14 @@
 ;; Change Log: (descending chronological order)
 ;;
 
-;; 2023-002-10 - Alisha Awen, siren1@disroot.org
+;; 2023-002-10 - Alisha Awen, HarmonicAlchemy@proton.me
 ;;   Removed DEFT I am NOT using it and it is a PAIN in the ASS!
 ;;   Sorry about that Jason Blevins... You did a lot great of work
 ;;   and contributed to Emacs but this thing drives me nuts!
 ;;   Also, DUDE!... Please Update Your Code... the cl (old common lisp lib)
 ;;   is depreciated! I am tired of seeing that in my startup logs...
 ;;
-;; 2022-009-27 - Alisha Awen, siren1@disroot.org
+;; 2022-009-27 - Alisha Awen, HarmonicAlchemy@proton.me
 ;;   Changed Harmonic Alchemy Modular Emacs TO: v3.5...
 ;;   No Longer Using mmd-mode (IMHO it is not worth the effort)...
 ;;   Removed VMD-MODE completely. (VMD has critical security problem)

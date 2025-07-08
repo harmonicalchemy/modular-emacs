@@ -15,7 +15,7 @@
 ;; CHANGE LOG: (descending chronological order)
 ;;
 
-;; 2024-005-06 - Alisha Awen, HarmonicAlchemy@protonmail.com
+;; 2024-005-06 - Alisha Awen, HarmonicAlchemy@proton.me
 ;;    This update represents a COMPLETE rewrite of my spell checking
 ;;    config for Modular Emacs... It is Much simpler now and I only
 ;;    use Hunspell... I made this choice because using aspell is a PITA!

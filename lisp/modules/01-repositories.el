@@ -3,17 +3,17 @@
 ;;
 ;; Change Log:
 ;;
-;;   2019-006-23 - Alisha Awen Sheppard Siren1@disroot.org
+;;   2019-006-23 - Alisha Awen Sheppard HarmonicAlchemy@proton.me
 ;;      Completely re-wrote this module to improve quality
 ;;      of package installs to the most stable versions
 ;;      while allowing installs of systems requiring "pinned"
 ;;      packages at the same time... It's a balancing act...
 ;;      Thank God Emacs is Lisp based. We can do this! ;-)
 ;;
-;;   2019-002-05 - Alisha Awen Sheppard Siren1@disroot.org
+;;   2019-002-05 - Alisha Awen Sheppard HarmonicAlchemy@proton.me
 ;;      Added melpa-stable.  Removed Marmalade which is dead now...
 ;;
-;;   2019-004-22 - Alisha Awen Sheppard Siren1@disroot.org
+;;   2019-004-22 - Alisha Awen Sheppard HarmonicAlchemy@proton.me
 ;;      Fixed URLs to correct TLS enabled domains...
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

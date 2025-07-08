@@ -23,7 +23,7 @@
 ;; Change Log: (descending chronological order)
 ;;
 
-;; 2022-009-18 - Alisha Awen, siren1@disroot.org
+;; 2022-009-18 - Alisha Awen, HarmonicAlchemy@proton.me
 ;;   Not using Slime/SBCL anymore...
 ;;   ALL OF SBCL for Emacs needs a re-factoring now.
 ;;   CURRENTLY THIS FILE DOES NOTHING!!!  It is ALL being refactored...

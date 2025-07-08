@@ -357,27 +357,27 @@ Please use Issues to Ask Questions, Report Problems/Bugs etc., and Suggest Ideas
 
 * 🔖 Table of Contents:                                                 :TOC_4:
 - [[#-the-history-of-harmonic-alchemy-modular-emacs][📜 The History of Harmonic Alchemy Modular Emacs]]
-    - [[#-introduction][📄 Introduction:]]
-    - [[#-modular-emacs-is-born][📄 Modular Emacs is Born:]]
-    - [[#-why-modular][📄 Why Modular?]]
+     - [[#-introduction][📄 Introduction:]]
+     - [[#-modular-emacs-is-born][📄 Modular Emacs is Born:]]
+     - [[#-why-modular][📄 Why Modular?]]
 - [[#-begin-log][📅 Begin Log:]]
-    - [[#-2023][📅 2023:]]
-    - [[#-2024][📅 2024:]]
+     - [[#-2025][📅 2025:]]
+     - [[#-2026][📅 2026:]]
 - [[#-meta-usage--templates][📋 Meta: /(Usage & Templates)/]]
-    - [[#-introduction-1][📄 Introduction:]]
-        - [[#emacs-shorthand-command-key-notation][Emacs Shorthand Command Key Notation:]]
-        - [[#important-note-for-mac-users][Important Note For Mac Users:]]
-        - [[#org-mode-timestamps-and-clocking][Org Mode Timestamps and Clocking:]]
-    - [[#-howto][❔ HowTo:]]
-        - [[#create-new-log-entry-within-the--begin-log-binder-04][Create New Log Entry within the *📒 Begin Log:* Binder:]]
-            - [[#edit-compose-new-log-entry][Edit-Compose New LOG Entry:]]
-            - [[#enter-new-log-entry-details][Enter New LOG Entry Details:]]
-    - [[#-templates][⎘ Templates:]]
-        - [[#new--generic-log-entry-general-log-entry-template][NEW 🗓 Generic Log Entry /(General Log Entry Template)/]]
-            - [[#new--reference][NEW 📚 Reference:]]
-            - [[#new--time-card][NEW ⏱ Time Card:]]
-            - [[#new--summary-03][NEW 📃 Summary:]]
-            - [[#new--details][NEW 📰 Details:]]
+     - [[#-introduction-1][📄 Introduction:]]
+          - [[#emacs-shorthand-command-key-notation][Emacs Shorthand Command Key Notation:]]
+          - [[#important-note-for-mac-users][Important Note For Mac Users:]]
+          - [[#org-mode-timestamps-and-clocking][Org Mode Timestamps and Clocking:]]
+     - [[#-howto][❔ HowTo:]]
+          - [[#create-new-log-entry-within-the--begin-log-binder-04][Create New Log Entry within the *📒 Begin Log:* Binder:]]
+               - [[#edit-compose-new-log-entry][Edit-Compose New LOG Entry:]]
+               - [[#enter-new-log-entry-details][Enter New LOG Entry Details:]]
+     - [[#-templates][⎘ Templates:]]
+          - [[#new--generic-log-entry-general-log-entry-template][NEW 🗓 Generic Log Entry /(General Log Entry Template)/]]
+               - [[#new--reference][NEW 📚 Reference:]]
+               - [[#new--time-card][NEW ⏱ Time Card:]]
+               - [[#new--summary-03][NEW 📃 Summary:]]
+               - [[#new--details][NEW 📰 Details:]]
 
 * 📜 The History of Harmonic Alchemy Modular Emacs
 ** 📄 Introduction:
@@ -430,11 +430,11 @@ On the other hand, if you install Modular Emacs stripped of all external helper 
 [[https://github.com/hrs/sensible-defaults.el][Here is a simpler light weight "sensible" Emacs Config]] which claims to also be modular - I have not tried it. I only briefly read through the README. It looks like a good alternate option to try :octocat:
 
 * 📅 Begin Log:
-** 📅 2023:
+** 📅 2025:
 
 No Logs So far... This feature is under evaluation and may end up not being used...
 
-** 📅 2024:
+** 📅 2026:
 
 /Not Here Yet but keep logging... The New Year will be here soon enough!/
 

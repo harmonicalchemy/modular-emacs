@@ -5,10 +5,10 @@
 ;; Change Log: (descending chronological order)
 ;;
 
-;; 2024-005-19 - Alisha Awen, siren1@disroot.org
+;; 2024-005-19 - Alisha Awen, HarmonicAlchemy@proton.me
 ;;   Moved Spelling Keybindings from 08-spelling.el to HERE...
 
-;; 2022-009-18 - Alisha Awen, siren1@disroot.org
+;; 2022-009-18 - Alisha Awen, HarmonicAlchemy@proton.me
 ;;   Changed Harmonic Alchemy Modular Emacs TO: v3.5...
 ;;   Added F1 key to invoke "wo-man" (Emacs Without Man Pages - Info Style)
 ;;   (stupid name but it works to get all those MAN pages into Emacs)

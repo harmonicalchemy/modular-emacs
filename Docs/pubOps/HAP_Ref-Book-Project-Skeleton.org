@@ -380,7 +380,7 @@ Other folks UX metrics are sorely needed!! Thanks!
 =LaTeX CLASS for PDF:= 
 #+LATEX_CLASS: refbook
 
-* NEW 💡 Scratchpad Refile:                                          :noexport: 
+* NEW 💡 Scratchpad Refile:                                         :noexport: 
 ** ☞ Start Here!
 
 This Section is mainly to accommodate "seat-of-pants" writers /(Of Which I Have Been Accused Of... But I Also Crave The Planning Stuff)/. 
@@ -533,7 +533,7 @@ Having done the simple steps above any time you get inspired, you will much late
 
 =Replace all of this boilerplate content with your own content=
 
-* NEW 📕 Front Matter:                                                  :noexport: 
+* NEW 📕 Front Matter:                                                 :noexport: 
 
 =Use this binder for Front Page Ideas= /(e.g., Information about Title Page, Synopsis, etc...)/, which could function as an abstract when published...
 
@@ -585,7 +585,7 @@ Having done the simple steps above any time you get inspired, you will much late
 
 =Synopsis Content:= Yadda... Yadda... Yadda...
 
-* NEW Preface:                                                                :export: 
+* NEW Preface:                                                               :export: 
 <<BOOK_PREFACE>> 
 /(or Introduction - Optional)/ 
 :README: 
@@ -610,7 +610,7 @@ At ipsum vitae est lacinia tincidunt. Maecenas elit orci,gravida ut, molestie no
 \mainmatter
 #+END_EXPORT
 
-* DONE Org-Mode Tricks                                                  :export: 
+* DONE Org-Mode Tricks                                                 :export: 
 <<CHAPTER_org-mode-tricks>>
 /(example chapter)/     
 ** DONE Introduction:                                                         :export: 
@@ -851,7 +851,7 @@ but not important for them to also be time-stamped...
 ***** Quid Novi? /(example note sub heading)/
 
 Quid Novi? Lorem Ipsum dolor sit amet,consectetur adipisicing elit, sed doeiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim adminim veniam, quis nostrudexercitation ullamco laboris nisi utaliquip ex ea commodo consequat.Duis aute irure dolor inreprehenderit in coluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatatnon proident, sunt in culpa quiofficia deserunt mollit anim id estlaborum.
-* NEW Chapter Title A                                                   :noexport: 
+* NEW Chapter Title A /(boilerplate)/                                   :noexport: 
 <<CHAPTER_chapter-title-a>>
 /(BOILERPLATE Clone This)/ 
 :README: 
@@ -1223,7 +1223,7 @@ but not so important for them to also be time-stamped since their parent heading
 
 Quid Novi? Lorem Ipsum dolor sit amet,consectetur adipisicing elit, sed doeiusmod tempor incididunt ut laboreet dolore magna aliqua. Ut enim adminim veniam, quis nostrudexercitation ullamco laboris nisi utaliquip ex ea commodo consequat.Duis aute irure dolor inreprehenderit in coluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatatnon proident, sunt in culpa quiofficia deserunt mollit anim id estlaborum.
 
-* NEW Chapter Title Z                                                     :export: 
+* NEW Chapter Title Z /(boilerplate)/                                     :export: 
 <<CHAPTER_chapter-title-z>> 
 /(MASTER - DON'T TOUCH UNTIL FINAL)/ 
 :README: 
@@ -2802,8 +2802,8 @@ More Project Management elements may be added in future versions of this templat
   #+end_src 
 
   #+RESULTS:
-  |  PID | TTY    |   TIME | CMD |
-  | 70518 | ttys001 | 0:00.15 | zsh   |
+  |   PID | TTY     |    TIME | CMD |
+  | 70518 | ttys001 | 0:00.15 | zsh |
 
 - =Graphviz DOT SRC CODE BLOCK:= 
 

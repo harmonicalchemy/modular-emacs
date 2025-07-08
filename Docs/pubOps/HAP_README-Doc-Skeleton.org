@@ -329,15 +329,29 @@ Here are Links to Information that may help you utilize this template to create 
 
   /The modern documentation website Emacs deserves./
 
-*** Emacs Lisp: /(eLisp)/
+- [[http://xahlee.info/][Xah Lee MAIN Website]] - /(Xah Lee's Main Website with Links to all his Blogs, Talk Show, etc.)/
 
-- [[https://emacsdocs.org/docs/elisp/Emacs-Lisp][Emacs Lisp Manual ]] - /(Emacs Docs)/ 
+- [[http://xahlee.info/emacs/emacs/blog.html][Xah Lee EMACS Blog]] - /(Xah Lee's Emacs Blog with Links to Tutorials, etc.)/
+
+- [[http://xahlee.info/emacs/emacs/emacs_keys_index.html][Xah Lee EMACS KEYS]] - /(Xah Lee's Emacs KEYS Blog with Links to Tutorials, etc.)/
+
+- [[http://xahlee.info/emacs/misc/xah-fly-keys.html][Xah Fly Keys]] - /(Xah Lee's Xah-fly-keys Blog with Links to Tutorials, etc.)/
+
+- [[https://github.com/xahlee/xah-fly-keys][Xah Fly Keys - GitHub]] - /(Xah Lee's Xah-fly-keys GitHub Repository)/
+
+*** Emacs Lisp: /(eLisp)/ 
+
+- [[https://emacsdocs.org/docs/elisp/Emacs-Lisp][Emacs Lisp Manual]] - /(Emacs Docs)/ 
 
   /This is the GNU Emacs Lisp Reference Manual corresponding to Emacs version 27.2/
 
 - [[https://www.gnu.org/software/emacs/manual/html_node/elisp/index.html][EMACS LISP MANUAL]] - /(GNU.org)/ 
 
   /This is the OFFICIAL GNU Emacs Lisp Reference Manual corresponding to Emacs version 30.1/
+
+- [[http://xahlee.info/emacs/emacs/practical_elisp.html][Practical Emacs Lisp]] - /(Xah Lee's Practical Lisp Blog)/ 
+
+  /(With Links to both Standard lisp and elisp, Tutorials, etc.)/ 
 
 *** ORG-MODE: 
 

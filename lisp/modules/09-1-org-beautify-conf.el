@@ -2,10 +2,10 @@
 ;; Change Log: (descending chronological order)
 ;;
 
-;; 2023-006-14 - Alisha Awen, siren1@disroot.org
+;; 2023-006-14 - Alisha Awen, HarmonicAlchemy@proton.me
 ;;   Cleaned up some old code and made some slight tweaks...
 
-;; 2022-009-28 - Alisha Awen, siren1@disroot.org
+;; 2022-009-28 - Alisha Awen, HarmonicAlchemy@proton.me
 ;;   Removed Org-Bullets... This has been commented out for a while...
 ;;   I am NOT using org-bullets and only used them for a short while in
 ;;   the beginning BEFORE I set up my Fancy Org Mode which HIDES all bullets

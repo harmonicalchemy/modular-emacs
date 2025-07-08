@@ -839,25 +839,25 @@ The following example will Export an *Extra W-I-D-E Table*  on a *BLANK Landscap
 #+ATTR_HTML: :width 100% 
 #+ATTR_LATEX: :environment longtable :align |p{4cm}|p{1.5cm}|p{1.5cm}|p{3cm}|p{8cm}|p{2.5cm}|p{3cm}|
 #+CAPTION: Afro Eurasian Jungle Jazz Orch. xStringZ
-|----------------------+--------+------+------------------+----------------------------------------+--------------+---------------|
-| *Instrument Name*      | *MIDI*   | *OUTS* | *Articulation*     | *HAP File Name*                          | *Vendor*       | *LIB Name*      |
-|----------------------+--------+------+------------------+----------------------------------------+--------------+---------------|
-| Kemence              | Sm6.1  | LEAD | Relaxed Preset   | HAP-MID-E_Kemence_Q2-2025.nki          | NI Discovery | MID EAST      |
-| Erhu                 | Sm6.5  | LEAD | Classic Preset   | HAP-E-ASIA_Erhu_Q2-2025.nki            | NI Spotlight | EAST ASIA     |
-| Ajaeng               | Sm6.7  | LEAD | Relaxed Preset   | HAP-E-ASIA_Ajaeng_Q2-2025.nki          | NI Spotlight | EAST ASIA     |
-| New York Weirdness   | Sm6.9  | LOW  | Plucked Bass     | HAP-SEQUIS_NYC-Weirdness_Q2-2025.nki   | NI           | Sequis        |
-| Aperture Ensemble    | Sm6.12 | ENS  | Spiccato         | HAP-APE-ENS_Spiccato_Q2-2025.nki       | SPITFIRE     | Aperture Strs |
-| Emotive Strings      | Sm6.12 | ENS  | ostinatos motifs | HAP-EMOT-S_Emotive-Strings_Q2-2025.nki | NI           | Emotive Strs  |
-| Ensemble Modern      | Sm6.13 | ENS  | SUS Accented     | HAP-SSSN-S_ENS-Modern_Q2-2025.nki      | NI           | SSN Str Pro 2 |
-| Ensemble Traditional | Sm6.14 | ENS  | SUS Accented     | HAP-SSSN-S_ENS-Trad_Q2-2025.nki        | NI           | SSN Str Pro 2 |
-| Pinhole Ensemble     | Sm6.13 | ENS  | Staccato         | HAP-PIN-ENS_Spiccato_Q2-2025.nki       | SPITFIRE     | Aperture Strs |
-| Refractions          | Sm6.14 | STfx | Tremolo          | HAP-RFRAC_Tremolo_Q2-2025.nki          | SPITFIRE     | Aperture Strs |
-| Violin Ens Pizz      | Sm6.15 | STfx | Plucked Str Ens  | HAP-DEFT-L_Violin-ENS-Pizz_Q2-2025.nki | NI           | DEFT LINES    |
-| Violin Ens SUSTAIN   | Sm6.15 | STfx | SUS Str Ens      | HAP-DEFT-L_Violin-ENS-SUS_Q2-2025.nki  | NI           | DEFT LINES    |
-| Cello Tremolo        | Sm6.15 | STfx | Tremolo          | HAP-DEFT-L_Cello-Trem_Q2-2025.nki      | NI           | DEFT LINES    |
-| Strings 3&4          | Sm6.16 | STfx | dynamic pads     | HAP-MELT-V_Str3-4_Q2-2025.nki          | NI           | MELT VIBES    |
-| CLUSTERFUNK          | Sm6.16 | STfx | trem ambi clstr  | HAP-THRIL_CLUSTERFUNK_Q2-2025.nki      | Galaxy Inst  | THRILL        |
-|----------------------+--------+------+------------------+----------------------------------------+--------------+---------------|
+|-------------------+-------+------+---------------+--------------------------------------+------------+-------------|
+| *Instrument Name*    | *MIDI*  | *OUTS* | *Articulation*     | *HAP File Name*                         | *Vendor*      | *LIB Name*    |
+|-------------------+-------+------+---------------+--------------------------------------+------------+-------------|
+| Kemence           | Sm6.1  | LEAD | Relaxed Preset  | HAP-MID-E_Kemence_Q2-2025.nki        | NI Discovery | MID EAST    |
+| Erhu               | Sm6.5 | LEAD | Classic Preset   | HAP-E-ASIA_Erhu_Q2-2025.nki           | NI Spotlight | EAST ASIA   |
+| Ajaeng             | Sm6.7 | LEAD | Relaxed Preset  | HAP-E-ASIA_Ajaeng_Q2-2025.nki         | NI Spotlight | EAST ASIA   |
+| New York Weirdness | Sm6.9 | LOW | Plucked Bass    | HAP-SEQUIS_NYC-Weirdness_Q2-2025.nki  | NI         | Sequis       |
+| Aperture Ensemble   | Sm6.12 | ENS  | Spiccato       | HAP-APE-ENS_Spiccato_Q2-2025.nki      | SPITFIRE    | Aperture Strs |
+| Emotive Strings     | Sm6.12 | ENS  | ostinatos motifs | HAP-EMOT-S_Emotive-Strings_Q2-2025.nki | NI         | Emotive Strs  |
+| Ensemble Modern    | Sm6.13 | ENS  | SUS Accented   | HAP-SSSN-S_ENS-Modern_Q2-2025.nki    | NI         | SSN Str Pro 2 |
+| Ensemble Traditional | Sm6.14 | ENS  | SUS Accented   | HAP-SSSN-S_ENS-Trad_Q2-2025.nki       | NI         | SSN Str Pro 2 |
+| Pinhole Ensemble    | Sm6.13 | ENS  | Staccato       | HAP-PIN-ENS_Spiccato_Q2-2025.nki      | SPITFIRE    | Aperture Strs |
+| Refractions         | Sm6.14 | STfx  | Tremolo        | HAP-RFRAC_Tremolo_Q2-2025.nki        | SPITFIRE    | Aperture Strs |
+| Violin Ens Pizz      | Sm6.15 | STfx  | Plucked Str Ens  | HAP-DEFT-L_Violin-ENS-Pizz_Q2-2025.nki  | NI         | DEFT LINES  |
+| Violin Ens SUSTAIN  | Sm6.15 | STfx  | SUS Str Ens     | HAP-DEFT-L_Violin-ENS-SUS_Q2-2025.nki  | NI         | DEFT LINES  |
+| Cello Tremolo       | Sm6.15 | STfx  | Tremolo        | HAP-DEFT-L_Cello-Trem_Q2-2025.nki      | NI         | DEFT LINES  |
+| Strings 3&4         | Sm6.16 | STfx  | dynamic pads   | HAP-MELT-V_Str3-4_Q2-2025.nki         | NI         | MELT VIBES  |
+| CLUSTERFUNK      | Sm6.16 | STfx  | trem ambi clstr  | HAP-THRIL_CLUSTERFUNK_Q2-2025.nki   | Galaxy Inst  | THRILL      |
+|-------------------+-------+------+---------------+--------------------------------------+------------+-------------|
 
 #+BEGIN_EXPORT latex 
 \end{landscape}

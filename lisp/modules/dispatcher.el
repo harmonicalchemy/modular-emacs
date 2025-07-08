@@ -45,7 +45,7 @@
 ;; Change Log: (descending chronological order)
 ;;
 
-;; 2022-010-25 - Alisha Awen, siren1@disroot.org
+;; 2022-010-25 - Alisha Awen, HarmonicAlchemy@proton.me
 ;;   Added a new module: me-abbrev-defs.el
 ;;   Which contains GLOBAL Abbrev Definitions taken directly from Xah Lee's 
 ;;   webpage:  http://xahlee.info/emacs/emacs/emacs_abbrev_mode.html
@@ -57,7 +57,7 @@
 ;;   These default global abbrevs work in all emacs modes... You can make
 ;;   some exclusive to specific modes as well...
 ;;
-;; 2022-005-15 - Alisha Awen, siren1@disroot.org
+;; 2022-005-15 - Alisha Awen, HarmonicAlchemy@proton.me
 ;;   Added a new form that invokes new file: 06-XahEmacs-conf.el...
 ;;   This module is disabled by default (the form is commented out) You won't
 ;;   be able to use it unless you have purchased XahEmacs...
@@ -76,7 +76,7 @@
 ;;   them and find a good use-case for them within the context of Harmonic Alchemy
 ;;   Modular Emacs...
 
-;; 2022-005-15 - Alisha Awen, siren1@disroot.org
+;; 2022-005-15 - Alisha Awen, HarmonicAlchemy@proton.me
 ;;   Renamed: 02-package-conf.el to: 02-common-conf.el
 ;;   Removed; 06-interface.el and the form here that loads that file...
 
@@ -153,9 +153,9 @@
 ;;
 ;; Load - XahEmacs module:
 
-;(if (file-exists-p "~/.emacs.d/lisp/my-modules/06-XahEmacs-conf.el")
-;    (load-file "~/.emacs.d/lisp/my-modules/06-XahEmacs-conf.el")
-;  (load-file "~/.emacs.d/lisp/modules/06-XahEmacs-conf.el"))
+(if (file-exists-p "~/.emacs.d/lisp/my-modules/06-XahEmacs-conf.el")
+    (load-file "~/.emacs.d/lisp/my-modules/06-XahEmacs-conf.el")
+  (load-file "~/.emacs.d/lisp/modules/06-XahEmacs-conf.el"))
 
 ;;;
 ;; Load Harmonic Alchemy Modular Emacs - Key Bindings module:
@@ -214,7 +214,7 @@
   (load-file "~/.emacs.d/lisp/modules/09-org-mode-pkg-conf.el"))
 
 ;;;;
-;;             *** Optional Programming IDE Features ***
+;;           *** Optional Programming IDE Features ***
 ;;
 ;; Load Harmonic Alchemy Modular Emacs - Programming Languages module:
 ;; This is for using Emacs as a full fledged Common Lisp IDE!
@@ -231,16 +231,17 @@
 ;  (load-file "~/.emacs.d/lisp/modules/10-progLang-pkg-conf.el"))
 
 ;;;;
-;;         *** Optional Games & Multi Media Feature ***
+;;        *** Optional Games & Multi Media Features ***
+;;
 ;; Un-comment the load file line below if you would like
 ;; to explore MOOs or MUDs using a customized Emacs MOO client! ;-)
 ;; This option is OFF by default.  Make sure to follow the instructions
 ;; within the ~/.emacs.d/README.md to install the RMOO package first...
 ;; Load Harmonic Alchemy Modular Emacs - Games module:
 
-; (if (file-exists-p "~/.emacs.d/lisp/my-modules/11-games-pkg-conf.el")
-;     (load-file "~/.emacs.d/lisp/my-modules/11-games-pkg-conf.el")
-;   (load-file "~/.emacs.d/lisp/modules/11-games-pkg-conf.el"))
+;(if (file-exists-p "~/.emacs.d/lisp/my-modules/11-external-integrations-conf.el")
+;    (load-file "~/.emacs.d/lisp/my-modules/11-external-integrations-conf.el")
+;  (load-file "~/.emacs.d/lisp/modules/11-external-integrations-conf.el"))
 
 ;;;;
 ;;              *** Optional Accounting Feature ***
