@@ -28,6 +28,10 @@
 
 *Welcome to Harmonic Alchemy Modular Emacs* ~V3.6.4 (point release) [Q3-2025]~
 
+#+begin_quote 
+*Note:* Current Status & Release Notes of this Project are Documented [[./Docs/ModE-Current-Status.org][HERE]] 
+#+end_quote
+
 *Modular Emacs* provides a simple method of dispatching your emacs configuration in steps based on initial choice of modules starting with essentials loading first, and then loading optional user chosen modules...
 
 There are module configurations for: *Dev♺Ops* other configurations for *Pub✎Ops* and yet others for 🎥 *MultiMedia* workstation *IDE* tasks. Or... ALL the Above completely capable of running on older but reasonably powerful *laptops/desktops* /(that would otherwise be considered legacy by most other standards)/.  
@@ -50,11 +54,7 @@ These ORIGINAL README files are being converted from markdown to ~.org~ files /(
 
 All the rest of the markdown files within the Docs directory are being updated one at a time... TBD...
 
-#+begin_quote 
-*Note:* Current Status & Release Notes of this project are documented [[./Docs/ModE-Current-Status.md][HERE]] /(WHICH NEEDS AN UPDATE and Conversion to ~.org~ NOW)/
-#+end_quote
-
-* 🔖 Contents:                                           :TOC_4: 
+* 🔖 Contents:                                                       :TOC_3: 
 - [[#-introduction][💡 Introduction:]]
 - [[#-history--purpose][📜 History & Purpose:]]
 - [[#-try-harmonic-alchemy-modular-emacs][☞ Try Harmonic Alchemy Modular Emacs:]]
@@ -91,19 +91,6 @@ All the rest of the markdown files within the Docs directory are being updated o
      - [[#spelling][Spelling:]]
      - [[#key-bindings][Key-bindings:]]
 - [[#-optional-packages--customization][🎁 Optional Packages & Customization:]]
-- [[#-meta][📋 Meta:]]
-     - [[#emacs-shorthand-command-key-notation][Emacs Shorthand Command Key Notation:]]
-     - [[#important-note-for-mac-users][Important Note For Mac Users:]]
-     - [[#org-mode-timestamps-and-clocking][Org Mode Timestamps and Clocking:]]
-     - [[#reference][Reference:]]
-          - [[#general-emacs][General Emacs:]]
-          - [[#emacs-lisp-elisp][Emacs Lisp: /(eLisp)/]]
-          - [[#org-mode][ORG-MODE:]]
-          - [[#tools-for-org-mode--latex][Tools for ORG-MODE / LaTeX:]]
-          - [[#auctex][AUCTeX:]]
-          - [[#latex][LaTeX:]]
-          - [[#latex-fonts][LaTeX Fonts:]]
-          - [[#latex-music-related-software][LaTeX Music Related Software:]]
 
 * 📜 History & Purpose: 
 
@@ -677,7 +664,7 @@ The following doc with guide you through that process:
 =Note:= These Extra Features are constantly /"a work in progress"/ as new options come up that work better, and other options turn out to be more trouble than worth... etc. etc. etc... At the same time I have to document all of this stuff and then revise, revise, revise... Many of you know this delima... %^) Org-Mode helps tremendously! I will be updating these extra docs after weeding out the dead-wood... /(which is my current task to get ready for/ /The major release of:/ *HAP Modular Emacs V4.0* /on the horizon.../
 #+end_quote 
 
-* 📋 Meta: 
+* 📋 Meta:                                                    :noexport:meta: 
 ** Emacs Shorthand Command Key Notation: 
 
 The command key conventions used in the instructions below, /(as well as all/ *Harmonic Alchemy Productions* /docs)/, follow *Standard Emacs* command key naming conventions.
