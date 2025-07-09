@@ -10,46 +10,6 @@
 
 #+DESCRIPTION: MAIN README Doc for Harmonic Alchemy Productions - Modular Emacs... This File is NOT intended to be exported to PDF... It is for VIEWING on GitHub.com and Emacs Org-Mode ONLY...
 
-:LATEST_UPDATE: 
-=Last Updated:= <2025-05-17 Sat> /(this template needs work)/
-
-=YOU MAY REMOVE This Drawer= from your own clones of this template if it is bothering you... This drawer is only here as an aid for: HAP Modular Emacs DOC TEMPLATE housekeeping/updating tasks...
-
-=HOWEVER= you may also wish use the instructions here for the same purpose... i.e., to keep your existing Modular Emacs based org documents /(created with this template)/ in sync with the latest updates of the template they were cloned from... =NOTE:= If you have CHANGED MANY of the settings within your clone since the last template update you are advised to do a VISUAL diff /(i.e., visually line by line, not automated)/ of the two files to see whether you want to switch your settings to the new updated ones... It all depends on your use case... so check that first...
-
-=If you do wish employ this little project management thing... Read On Below...= 
-  
-- =INTERNAL USE Instructions:= [1/1] /(END USERS SKIP THIS BULLET)/ 
-
-    This bullet is not for end users... This is /"Note to Self"/ stuff... 
-
-     - [ ] =MASTER TEMPLATE ONLY= *Keep The Above Timestamp Up To Date:*
-
-         *DO THIS ALWAYS*, JUST AFTER YOU UPDATE THIS SETUPFILE... =DON'T FORGET!=
-
-- =PUBLIC USE Instructions:= [0/3] /(FOR CLONES OF THIS TEMPLATE)/ 
-
-     - [ ] *REMOVE INTERNAL USE Instructions* /(and all under the bullet)/ 
-
-          You don't need this in the file you created from a clone of this template...
-
-     - [ ] *UPDATE Last Updated:* ~<timestamp>~ After Making Changes to this file: 
-
-          Copies of this file within your own projects will change over time as you try out different OPTIONS etc... You need to keep track of the LAST time this file was changed within your projects... /(and you may have copies of this file in many projects)/ All of them may have different settings after time goes on... The =Last Updated:= heading above lets you know when those changes happened... That knowledge will help you when you are comparing updated template files from the repository... 
-
-     - [ ] *COMPARE the TIMESTAMPS between THIS TEMPLATE and your CLONES:* 
-
-          ~Org-Mode~ settings and meta data within CLONES of this SETUPFILE TEMPLATE will get out of sync after a while due to Harmonic Alchemy Modular Emacs version updates etc...
-
-          Check the TIMESTAMPS /(within this TEMPLATE and your CLONE of it)/ to see if they are different...
-
-          If they are, the clone's settings need to be updated... /(i.e., brought into sync with its template - MERGE)/ You will need to perform any needed merging/replacing of BOILERPLATE and/or meta data. /(e.g, *:README:* drawers, etc.)/
-
-          =NOTE:= You may have purposefully changed some of the actual SETTINGS/OPTIONS below so be careful not to sync those OPTIONS with the new template update if the feature of those OPTIONS are NOT your intention... =ALSO=... If the timestamp in your cloned version of this file is NEWER than the template... You don't have to do anything because that was done before already...
-
-          UPDATING the TEMPLATES THEMSELVES is ANOTHER STORY... /(and for another discussion)/ because You will need to do that in a local git branch keeping your own local commits to that branch only so that the master tracking branch can stay clean... /(that way you will have your own set of customized TEMPLATES to use)/ while still having the DEFAULT TEMPLATES in the master branch... /(but lets save that conversation for later ok?)/
-:END:
-
 #+SETUPFILE: ./Docs/pubOps/org-templates/default-tags.org
 #+SETUPFILE: ./Docs/pubOps/org-templates/gen-doc.org
 
