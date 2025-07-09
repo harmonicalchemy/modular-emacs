@@ -26,13 +26,13 @@
 
 * 💡 Introduction: 
 
-*Welcome to Harmonic Alchemy Modular Emacs* ~V3.6.4 (point release) [Q2 2025]~
+*Welcome to Harmonic Alchemy Modular Emacs* ~V3.6.4 (point release) [Q3-2025]~
 
 *Modular Emacs* provides a simple method of dispatching your emacs configuration in steps based on initial choice of modules starting with essentials loading first, and then loading optional user chosen modules...
 
 There are module configurations for: *Dev♺Ops* other configurations for *Pub✎Ops* and yet others for 🎥 *MultiMedia* workstation *IDE* tasks. Or... ALL the Above completely capable of running on older but reasonably powerful *laptops/desktops* /(that would otherwise be considered legacy by most other standards)/.  
 
-In Addition *org-mode* based *Document Templates* are being designed, /(ALMOST OUT OF BETA... i.e., this styling stuff takes longer than putting on makeup for sure! 💋)/ which when exported via LaTeX, produce the fineset quality typeset PDF or eBook docs which can be printed as professional hard copy books, or used with eBook readers for a quality reading experience... See: [[#-screenshots][📸 Screenshots:]] below to see examples... /(images to be added later when I finally have some decent things to show - lol)/
+In Addition *org-mode* based *Document Templates* are being designed, /(ALMOST OUT OF BETA... i.e., this styling stuff takes longer than putting on makeup for sure! 💋)/ which when exported via LaTeX, produce the fineset quality typeset PDF or eBook docs which can be printed as professional hard copy books, or used with eBook readers for a quality reading experience... See: [[README_screenshots][Screenshots:]] 📸 BELOW to see examples... /(images to be added later when I finally have some decent things to show - lol)/
 
 Publishing via org-mode/LaTeX is being made as simple as possible, starting with these templates, allowing individual writers to immediately dive into professional publishing and independent book selling without depending on outside typesetting or publishing firms...
 
@@ -162,15 +162,18 @@ If you end up liking *Harmonic Alchemy Modular Emacs*, please drop me a note to 
 =Therefore:= *Here is Modular Emacs!* I hope my long years of *devOps* experience will turn out a nice jewel for new comers to try out and succeed with! *Good Luck and God Speed!*
 
 * ACTIVE 📸 Screenshots: 
-
+<<README_screenshots>>
 =Misc. Screenshots displaying HAP Modular Emacs main Features=
 
 #+NAME: fig:HAP-Mod-Emacs-gen-log-book-details-001
-#+CAPTION: HAP - General LOG Book (details)
+#+CAPTION: HAP - General LOG Book (Details Section)
 #+ATTR_ORG: :width 600px
 #+attr_html: :width 600px
 #+attr_latex: :width 600px
 [[file:./Docs/media/HAP-General-LOG-Book-details-01.png]]
+
+=General LOG Book TEMPLATE (details Section)=
+
 
 #+NAME: fig:HAP-Mod-Emacs-log-book-time-card
 #+CAPTION: HAP - Viewing General Log Book TIME CARD
@@ -178,6 +181,8 @@ If you end up liking *Harmonic Alchemy Modular Emacs*, please drop me a note to 
 #+attr_html: :width 600px
 #+attr_latex: :width 600px
 [[file:./Docs/media/HAP-LOG-Template-Time-Card_2025-007-01.png]]
+
+=Viewing The General Log Book TIME CARD=
 
 - [[file:./Docs/media/HAP_General-Log-Book-Skeleton.pdf][PUBLISHED LOG Book PDF]] /(Published Example General Log Book Skeleton)/ 
 
@@ -190,6 +195,9 @@ If you end up liking *Harmonic Alchemy Modular Emacs*, please drop me a note to 
 #+attr_latex: :width 600px
 [[file:./Docs/media/HAP-Audio-Drama-Project-Skeleton-02.png]]
 
+=Audio Drama Project Skeleton Template=
+
+
 - [[file:./Docs/media/The-Coffee-Shop.pdf][The Coffee Shop - Audio Drama Script]] /(Published Audio Drama Script)/ 
 
   Open this PDF file and examine it.. /(not a screenshot)/
@@ -201,12 +209,17 @@ If you end up liking *Harmonic Alchemy Modular Emacs*, please drop me a note to 
 #+attr_latex: :width 600px
 [[file:./Docs/media/HAP-Reference-Book-Project-Skeleton-01.png]]
 
+=Reference Book Project Skeleton Template=
+
+
 #+NAME: fig:HAP-Mod-Emacs-devOps-workflow
 #+CAPTION: HAP - devOps Workflow Showing Mod Emacs on BOTH Local Mac & Remote Server!
 #+ATTR_ORG: :width 600px
 #+attr_html: :width 600px
 #+attr_latex: :width 600px
 [[file:./Docs/media/devOps-Workflow-using-HAP-Mod-Emacs-2024.png]]
+
+=dev⚒Ops Workflow Showing Mod Emacs on BOTH Local Mac & Remote Server!=
 
 * ☞ TL;DR - Start Here: 
 
@@ -313,7 +326,7 @@ For Instructions on how to install modular emacs recommended fonts on All Platfo
 
 *** ▞ Python & Pip: 
 
-Some of the newer /(OPTIONAL)/ modules to be enabled within *Harmonic Alchemy Modular Emacs* will require Python packages to be installed... This is especially true of *Emacs MultiMedia System* ~EMMS~ which is enabled within optional module: [[./lisp/modules/11-games-pkg-conf.el][11-games-pkg-conf.el]]]
+Some of the newer /(OPTIONAL)/ modules to be enabled within *Harmonic Alchemy Modular Emacs* will require Python packages to be installed... This is especially true of *Emacs MultiMedia System* ~EMMS~ which is enabled within optional module: [[./lisp/modules/11-external-integrations-conf.el][11-external-integrations-conf.el]]
 
 [[./Docs/ModE-Install-Python-PIP.md][FOLLOW THIS GUIDE]] to get *Python & PIP* set up within your local environment so you will be ready when python packages are needed to be installed now, or later...
 
@@ -331,9 +344,10 @@ This is Great News if you would like to make *Emacs* work as well as /(or better
 
 Harmonic Alchemy Modular Emacs is =OPTIONALLY= configured to use the popular *Graphviz utility*, allowing the creation of nice graphs, flowcharts, data diagrams, etc. using a powerful scripting language called *dot*...  The Emacs mode for Graphviz is: ~graphviz-dot-mode~
 
-Modular Emacs invokes: *graphviz-dot-mode* /(independent of whether graphviz is actually installed on your system)/ when you visit files ending in either: **`.dot`** or **`.gv`** Emacs will format these files nicely for you... But you cannot execute them unless you have Graphviz installed externally...
+Modular Emacs invokes: *graphviz-dot-mode* /(independent of whether graphviz is actually installed on your system)/ when you visit files ending in either: ~.dot~ or ~.gv~ Emacs will format these files nicely for you... But you cannot execute them unless you have Graphviz installed externally...
 
-If you DO have Graphvix installed... When you visit a ~.dot~ file, you can compile it with: ~C-c C-c~ which will produce an ~.svg~ file along side...  By default, Modular Emacs is configured to produce *SVG* vector files instead of ~.png~ files which is my preference because if you export and then view it as a PDF you can expand the resulting rendered chart or graph full screen and it will still look very sharp! Not to mention you can edit the resulting SVG file within *inkscape* to add things to it that Graphviz cannot...  Don't underestimate the power of *Graphviz* though! [[https://graphviz.org/documentation/][READ THE GRAPHVIZ DOCS!]]
+If you DO have Graphvix installed... When you visit a ~.dot~ file, you can compile it with: 
+~C-c C-c~ which will produce an ~.svg~ file along side...  By default, Modular Emacs is configured to produce *SVG* vector files instead of ~.png~ files which is my preference because if you export and then view it as a PDF you can expand the resulting rendered chart or graph full screen and it will still look very sharp! Not to mention you can edit the resulting SVG file within *inkscape* to add things to it that Graphviz cannot...  Don't underestimate the power of *Graphviz* though! [[https://graphviz.org/documentation/][READ THE GRAPHVIZ DOCS!]]
 
 - [ ] =To Install Graphviz - All Platforms:= [[./Docs/ModE-Install-Graphviz.md][FOLLOW THIS LINK]] 
 
@@ -342,9 +356,9 @@ If you DO have Graphvix installed... When you visit a ~.dot~ file, you can compi
 
 - [ ] *Create an empty file:* ~custom.el~ 
 
-  This file keeps *Emacs Internal "Customize"* saved settings separate from *Modular Emacs constructs* and outside of your ~.init.el~ file! /(so you won't have to worry about tiptoeing over it)/ Emacs will use this file /(initially empty)/ behind the scenes to save your Emacs internal "customizations"...  Git ignores this file. /(Which is why we have to create it here now)/ You will not need to mess with this file after creating it, /(unless you want to/ /empty it out and start over when Emacs "customized" things get/      /out of hand)/...
+  This file keeps *Emacs Internal "Customize"* saved settings separate from *Modular Emacs constructs* and outside of your ~.init.el~ file! /(so you won't have to worry about tiptoeing over it)/ Emacs will use this file /(initially empty)/ behind the scenes to save your Emacs internal "customizations"... Git ignores this file. /(Which is why we have to create it here now)/ You will not need to mess with this file after creating it, /(unless you want to/ /empty it out and start over when Emacs "customized" things get/ /out of hand)/...
 
-  Create Empty Custom.el File:
+  =Create Empty ~Custom.el~ File:= 
 
   #+begin_src bash
     touch ~/me.emacs.d/custom.el
@@ -360,9 +374,9 @@ If you DO have Graphvix installed... When you visit a ~.dot~ file, you can compi
 
   Later... You may want to edit your fresh new ~init.d~ and change the Banner Message to be more specific to your installation... Also, later we will discuss different strategies of management that will hopefully allow you to build your own setup concurrently and in harmony with Modular Emacs, and be able to easily share any extra features/modules of your own that you may wish to bring to the rest of the Modular Emacs user community!
 
-- [ ] *FINAL STEP - Make Modular Emacs Folder the DEFAULT ~$HOME/.emacs.d~ Folder:* 
+- [ ] *FINAL STEP - Make Modular Emacs Folder the DEFAULT* ~$HOME/.emacs.d~ *Folder:*  
 
-  At the very beginning of this guide, you were advised to copy your existing Emacs setup first.  I hope you did that because now you are going to over-write your old installed Emacs configuration with      Harmonic Alchemy Modular Emacs! 
+  At the very beginning of this guide, you were advised to copy your existing Emacs setup first. I hope you did that because now you are going to over-write your old installed Emacs configuration with Harmonic Alchemy Modular Emacs! 
 
   Therefore if you did not backup, FIRST make sure to rename /(save)/ your existing: ~$HOME/.emacs.d~ to: ~$HOME/save.emacs.d~ /(if you did not do/ /this in the beginning)/ You may also have a ~.emacs~ init file outside of the ~.emacs.d~ folder that also needs to be renamed! =This is very important!= Becase the next steps will overwrite them if you did not change their names!!!
 
@@ -385,7 +399,7 @@ If you DO have Graphvix installed... When you visit a ~.dot~ file, you can compi
 
   After your long wait... *Bam!* You should see your new emacs screen pop up with *Welcome to Harmonic Alchemy Modular Emacs!* heading your scratch buffer in a frame with a pre-determined row/column initial size! 
 
-  =NO?= *It's Broken?* Oh My! 🤦‍♀️ =What a freaking let down!= *I feel your pain!* OK... Don't worry if all you see are only numerous compiler warnings... /(those are hard to avoid upon first startup with/ /all the new packages compiling etc. Not much you can do about/ /that... The developers who made the packages need to clean/ /that up, you could help them though. You can safely kill that/ /message buffer and move on.)/...
+  =NO?= *It's Broken?* Oh My! 🤦‍♀ =What a freaking let down!= *I feel your pain!* OK... Don't worry if all you see are only numerous compiler warnings... /(those are hard to avoid upon first startup with/ /all the new packages compiling etc. Not much you can do about/ /that... The developers who made the packages need to clean/ /that up, you could help them though. You can safely kill that/ /message buffer and move on.)/...
 
   =Yes?= *It worked?* =Yay!= ☕ What a fantastic feeling the first time eh?
 
@@ -402,7 +416,7 @@ If you got an error that halted completion part way thorugh, and you have an inc
 #+begin_quote
 =Note2:= Fetching/pulling new changes
 
-from the master ~modular-emacs~ GitHub repository to your local ~~/.emacs.d/~  directory will automatically be reflected within your emacs configurations... No need to copy any more files... But you may be surprised to see some new feature or something working differently. If that bothers you, you may wish to keep your changes separate from the remote master branch.  Therefore create your own local ~test~ branch /(or call it what you like)/ and maintain your local changes in parallel... Change your local branch's .gitignore to accommodate your needs...
+from the master ~modular-emacs~ GitHub repository to your local ~/.emacs.d~ directory will automatically be reflected within your emacs configurations... No need to copy any more files... But you may be surprised to see some new feature or something working differently. If that bothers you, you may wish to keep your changes separate from the remote master branch.  Therefore create your own local ~test~ branch /(or call it what you like)/ and maintain your local changes in parallel... Change your local branch's .gitignore to accommodate your needs...
 #+end_quote
 
 #+begin_quote 
@@ -437,7 +451,7 @@ Feel free to use your ~$HOME/.emacs.d/init.el~ /(clone)/ to try out experimental
 /boilerplate heading that gets displayed to suit your fancy)/ This is the
 purpose of ~dispatcher.el~ and the ~my-modules~ directory...
 
-You can also use the Emacs ~*scratch*~ buffer to paste experimental lisp code to try out before making it permanent as a stand alone ~.el~ emacs lisp file, /(as the welcome banner suggests ;-)/. Evaluate the entire ~*scratch*~ buffer without needing to remove the banner message at the top as that message is one huge lisp comment... If something horrible happens, no worries... Simply restart emacs... Your mess-up will be gone and you will be back to where you were before you or that elisp test code goofed up...
+You can also use the Emacs *scratch* buffer to paste experimental lisp code to try out before making it permanent as a stand alone ~.el~ emacs lisp file, /(as the welcome banner suggests ;-)/. Evaluate the entire ~*scratch*~ buffer without needing to remove the banner message at the top as that message is one huge lisp comment... If something horrible happens, no worries... Simply restart emacs... Your mess-up will be gone and you will be back to where you were before you or that elisp test code goofed up...
 
 If your customization proves stable, and you like it, you could then save your scratch buffer (as is) to a new file, for example:
 
@@ -453,9 +467,7 @@ You can even *clone OTHER git repos* wihtin ~my-modules~ without messing anythin
 
 ** Blackboard Color Theme:  
 
-*HAP Modular Emacs* comes with my new customized version of the *Blackboard color theme* /(patterned after the famous Textmate Blackboard Theme)/ which I like for the *pedagogic essence* it inspires... I have also tweaked it to look good under my *Fancy Org Mode* colors and faces.  If you would like to add more custom themes or a different theme than ~blackboard.el~, you can replace it or add additional themes into your local branch's: ~$HOME/.emacs.d/lisp/themes~ directory and they will also will work with this setup by choosing ~M-x load-theme~ or changing the last line within ~$HOME/.emacs.d/lisp/modules/06-interface.el~ to:
-
-   ~(load-theme 'your-chosen-theme-name t)~
+*HAP Modular Emacs* comes with my new customized version of the *Blackboard color theme* /(patterned after the famous Textmate Blackboard Theme)/ which I like for the *pedagogic essence* it inspires... I have also tweaked it to look good under my *Fancy Org Mode* colors and faces.  If you would like to add more custom themes or a different theme than ~blackboard.el~, you can replace it or add additional themes into your local branch's: ~$HOME/.emacs.d/lisp/themes~ directory and they will also will work with this setup by choosing ~M-x load-theme~ or changing the last line within ~$HOME/.emacs.d/lisp/modules/06-interface.el~ to: ~(load-theme 'your-chosen-theme-name t)~
 
 #+begin_quote 
 =Note:= Obviously if you add more themes to your *Modular Emacs* ~themes~ directory you will be adding new un-tracked files to your cloned git repository! /(this one does not have an untracked/ *my-themes* /directory option like/ *my-modules* /is set up - but/ /I may add this later if needed)/...
@@ -507,7 +519,7 @@ As you can see... It is NOT LONG and all of these I have VETTED and Allowed to c
 | ztree                   |         1.0.6 |
 |-------------------------+---------------|
 
-** Default Emacs Welcome Screen: /(~*scratch*~ buffer)/ 
+** Default Emacs Welcome Screen: (*scratch* Buffer)
 
 The default Emacs Welcome Message is replaced with a custom greeting banner that shows the current emacs configuration, and date... With a famous Mark Twain quote /(My Favorite author)/... This quote may change from time to time with new updates...  
 
@@ -580,7 +592,7 @@ Use Scratch buffer to evaluate snippets of ~lisp~ without having to remove the w
 =Note:= The above is for launching apps /(inline your emacs buffer)/ but there are many ways to skin this external app launch business... the following commands will launch a file in an external application whilst your cursor is positioned on a file in a dired buffer: ~W~, or ~SPC i w~ in *Xah Fly Keys*          command mode... /(Xah Fly Keys must be enabled for this/ /leader key sequence in Commnd Mode)/ but simply typing upper case W is easier IMHO. 
 #+end_quote 
 
-** TODO dev§Ops, sys§Admin, info✷Sec Related Packages: 
+** TODO dev§Ops, sys$Admin, info✷Sec Related Packages: 
 
 - [[https://github.com/fourier/ztree][ztree]] - *Ztree* is a project dedicated to implementation of several *text-tree* applications inside *GNU Emacs*. It consists of 2 subprojects: ~ztree-diff~ and ~ztree-dir~ /(the basis of ztree-diff)/... 
 
@@ -653,7 +665,7 @@ Use Scratch buffer to evaluate snippets of ~lisp~ without having to remove the w
           They will most definately be listed here nicely for
           *HAP Modular Emacs V4.0* /(soon to be released)/
 
-- =Note2:= If you type a *prefix key*: /(e.g., ~C-x~ /,/ ~C-c~ /,/ or ~M-x~ /, etc.)/ 
+- =Note2:= If you type a *prefix key*: /(e.g.,/ ~C-x~ /,/ ~C-c~ /, or/ ~M-x~ /, etc.)/  
 
   And then wait a second, =You Will See a HELM Pop Up= showing all the key commands available to choose from!!! *EURICA BABY!* This ALSO works for ~SPACEBAR~ in *Xah-Fly-Keys* command mode. *No guessing needed...* =The Helm Popup has a menu to= =navigate the whole list as well=... *Try it!!*
 
@@ -674,7 +686,7 @@ The following doc with guide you through that process:
 * 📋 Meta: 
 ** Emacs Shorthand Command Key Notation: 
 
-The command key conventions used in the instructions below, /(as well as all *Harmonic Alchemy Productions* docs)/, follow *Standard Emacs* command key naming conventions.
+The command key conventions used in the instructions below, /(as well as all/ *Harmonic Alchemy Productions* /docs)/, follow *Standard Emacs* command key naming conventions.
 
 Official GNU Emacs documentation uses a shorthand notation to indicate the *Ctrl* key as an upper case *C-* (/with minus appended/). Upper case *M-* (/with minus appended/) is the shorthand notation for the Emacs *META* key...
 
@@ -682,17 +694,17 @@ Official GNU Emacs documentation uses a shorthand notation to indicate the *Ctrl
 
 On Mac OS, *Modular Emacs* maps your *Ctrl* key to the *Apple Command* key. Emacs *META* is mapped to both *Alt* and *Ctrl* keys... Outside of Emacs all those keys function normally.  
 
-Therefore, for Mac users, anytime you either see *C-* or *Ctrl* below, use your *Apple Command* key for that when using Modular Emacs.  Anytime you see either *M-* or *META* below, use *Alt* or *Ctrl* keys for that when using Modular Emacs. 
+Therefore, for Mac users, anytime you either see *C-* or *Ctrl* below, use your *Apple Command* key for that when using Modular Emacs. Anytime you see either *M-* or *META* below, use *Alt* or *Ctrl* keys for that when using Modular Emacs. 
 
 Anytime you are using Modular Emacs following instructions from standard vanilla Emacs docs, keep in mind your ~Ctrl~ and ~META~ keys are not /"standard"/ anymore and you must make a mental translation.  Beyond that, you will be fine following other emacs tutorials etc.  Hey... you Mac enthusiasts are used to that kind of /"being different"/ stuff anyway, right? Being one of /"the rest of us"/ that is... What the heck does that mean anyway? LOL
 
 The above key assignments were done to get the *Emacs C-* key closer to the space bar where it can be activated with your left thumb instead of contorting to get at it with your pinkie finger. This makes using *Xah Fly Keys* even easier to use and less stressful on your fingers...
 
-In the Official Emacs documentation you will commonly find key command notations such as *C-x* or *M-x*... This means: Hold the *Ctrl* /(or *META*)/ key down while typing the *x* key.  
+In the Official Emacs documentation you will commonly find key command notations such as *C-x* or *M-x*... This means: Hold the *CTRL* or *META* key down while typing the *x* key.  
 
-Any time you see this notation, regardless of what key may be connected to it with a dash /(e.g., *C-c*, *M-5*, etc.)/, this means to hold the *Ctrl*-or-*META* key down while you press the other key connected to it with the dash... If you have a command that includes many *C-key* or *M-key* commands in succession simply hold the *Ctrl*-or-*META* key down the entire time you type the other keys and then let go...
+Any time you see this notation, regardless of what key may be connected to it with a dash (e.g., *C-c*, *M-5*, etc.), this means to hold the *CTRL* -or- *META* key down while you press the other key connected to it with the dash... If you have a command that includes many *C-key* or *M-key* commands in succession simply hold the *Ctrl*-or-*META* key down the entire time you type the other keys and then let go...
 
-If you see other keys alone separated by a space after the *C-x* or *M-x* /(e.g., C-x *d*, M-x *b*, etc.)/ this means to type that key /AFTER/ letting go of the *Ctrl*-or-*META* key...
+If you see other keys alone separated by a space after the *C-x* or *M-x* (e.g., ~C-x d~, ~M-x b~, etc.) this means to type that key AFTER letting go of the *Ctrl* -or- *META* key...
 
 *Got that?* That's the key notation system we use here... It is all standard Emacs...  The above paragraphs are mostly for the benefit of new Emacs users! And there is more to learn below. If you are an Emacs/Org-Mode veteran please bear with us...
 
