@@ -32,7 +32,7 @@
 
 There are module configurations for: *Dev♺Ops* other configurations for *Pub✎Ops* and yet others for 🎥 *MultiMedia* workstation *IDE* tasks. Or... ALL the Above completely capable of running on older but reasonably powerful *laptops/desktops* /(that would otherwise be considered legacy by most other standards)/.  
 
-In Addition *org-mode* based *Document Templates* are being designed, /(ALMOST OUT OF BETA... i.e., this styling stuff takes longer than putting on makeup for sure! 💋)/ which when exported via LaTeX, produce the fineset quality typeset PDF or eBook docs which can be printed as professional hard copy books, or used with eBook readers for a quality reading experience... See: [[README_screenshots][Screenshots:]] 📸 BELOW to see examples... /(images to be added later when I finally have some decent things to show - lol)/
+In Addition *org-mode* based *Document Templates* are being designed, /(ALMOST OUT OF BETA... i.e., this styling stuff takes longer than putting on makeup for sure! 💋)/ which when exported via LaTeX, produce the fineset quality typeset PDF or eBook docs which can be printed as professional hard copy books, or used with eBook readers for a quality reading experience... See: [[#active--screenshots][ACTIVE 📸 Screenshots:]] BELOW to see examples... /(images to be added later when I finally have some decent things to show - lol)/
 
 Publishing via org-mode/LaTeX is being made as simple as possible, starting with these templates, allowing individual writers to immediately dive into professional publishing and independent book selling without depending on outside typesetting or publishing firms...
 
