@@ -1,127 +1,1429 @@
----
-file: ModE-Current-Status.md
-author: Alisha Awen
-created: 2020-007-15
-updated: 2020-007-16
-tags: Emacs, apps-tools, SysAdmin, HA-ModEmacs, how-to, README 
----
-<!-- #Emacs #apps-tools #SysAdmin #HA-ModEmacs #how-to #README -->
+# -**- mode: org; coding: utf-8 -**-
+#+TITLE: HAP Modular Emacs Current Status
+#+TEXT: Copyright © 2013-2025 by Harmonic Alchemy Productions & Others
+#+AUTHOR: Alisha Awen - Harmonic Alchemy Productions (HAP) 
+#+EMAIL: harmonicalchemy@proton.me 
+#+DATE: {{{time(%A %Y-%b-%d)}}} 
+#+TEXT: Created: <2020-007-15 Wed> 
+#+TEXT: Latest Update: <2025-007-08 Tue> 
+#+TEXT: Last Published: <NOT Published Yet> 
+#+FILETAGS: docs logs drafts hap emacs rdme
+#+DESCRIPTION: Current Status LOG of Harmonic Alchemy Modular Emacs (converted from markdown to .org)
 
-![Banner](./media/Modular-Emacs-Github-Banner-v3.png)
+#+SETUPFILE: ./org-templates/default-tags.org
+#+SETUPFILE: ./org-templates/gen-doc.org
 
-# Modular Emacs - Current Status
+#+NAME: fig:HAP-Mod-Emacs-Banner-001
+#+CAPTION: HAP - Modular Emacs Page Banner
+#+ATTR_ORG: :width 500px
+#+attr_html: :width 500px
+[[./media/Modular-Emacs-Github-Banner-v3.png]]
 
-**[\[Table of Contents\]](#table-of-contents)**
+🔖 [[../README.org][Back To MAIN Modular Emacs README]]
 
-**[\[Back To MAIN Modular Emacs README\]](../README.md)**
+* 🔖 Table of Contents:                                           :TOC_3: 
+- [[#-hap-modular-emacs-current-status][📖 HAP Modular Emacs Current Status:]]
+- [[#-change-log][📒 Change Log:]]
+     - [[#-2025][📅 2025:]]
+          - [[#new--readme-log-entry-boilerplate][NEW 🗓 README LOG Entry: /(BOILERPLATE)/]]
+     - [[#-2022][📅 2022:]]
+          - [[#-updated-docs--pdf-export-methods][🗓 Updated Docs & PDF Export Methods:]]
+     - [[#-2020][📅 2020:]]
+          - [[#-version-321-functions--bug-fixes][🗓 Version 3.2.1 Functions & Bug Fixes:]]
+          - [[#-modular-emacs-version-32][🗓 Modular Emacs Version 3.2:]]
+          - [[#-added-doc-about-fonts][🗓 Added Doc About Fonts:]]
+          - [[#-readme-log-entry][🗓 README LOG Entry:]]
+          - [[#-org-mode-became-heavily-customized][🗓 Org Mode Became Heavily Customized!:]]
+          - [[#-fancy-org-mode][🗓 Fancy Org Mode:]]
 
-## Release Notes:
+* 📖 HAP Modular Emacs Current Status: 
+<<RDME>>
 
-### 2022 Sept 02:
+This is an ONGOING Log of Changes made to *Harmonic Alchemy Productions Modular Emacs* since its initial creation as a git Repository on *GitHub*... This New ~.org~ file Replaces the OLDER Markdown file that was used originally for this purpose...
 
-**Docs:** Much work has been done _(finally)_ on Org-Mode configuration and Exporting to LaTeX PDF to make eBooks, Tech Manuals, Log Notebooks, etc.  Up until this point Exporting to PDF has been basic out-of-box default.  
+I have been using this emacs configuration for much longer before it became a Public Repository but none of that was documented here... /(which is a good thing as it took me a LONG time to figure out the best way to configure emacs to keep it future proof, make it robust, and make it simple to use and modify without disruption or confusion)/...
 
-I am now modifying `09-4-org-export-conf.el` to add new custom export options... Also creating SETUPFILES for Org-Mode documents.  There are many ways to configure LaTeX and configure it to work well with Emacs Org-Mode... I am working out the best way to do this for Harmonic Alchemy Modular Emacs... 
+#+begin_quote 
+=NOTE:= Log entries between 2020 and 2023 do not contain any time tracking or details sections as those entries were copied AS IS. The Markdown file from which they were copied has no time tracking features...
 
-This work is currently on-going. Once I finally have a good setup complete with nice Templates to use, then we may be ready for a final NON BETA release!  These Markdown Based Readme files will be changed to .org files as well...
+I intend to include TIME Tracking, as well as Summary and Details sections for Future on-going Log Entries...
+#+end_quote 
 
-### 2020 July 25:
+* 📒 Change Log: 
+<<LOG>>
+** 📅 2025: 
+<<LOG_2023>>
 
-Refactored many things, created new functions, etc. to fix buggy behaviour around making new frames, changing default faces, org-mode faces, etc.  Also made Xha-Fly-Keys Command Mode background a lighter more 'red' background than Insert Mode background which stays the dark indigo slate blackboard colour.  Thinks are looking and behaving much better now...  This will be tagged as Version 3.2.1   Docs, _(as usual, are still being updated)_ More about doc updates will be logged here later...
+NOTHING here Yet... Stay Tuned /(Please Ignore the BOILERPLATE)/ that is a Template for the NEXT Log Entry...
+
+*** NEW 🗓 README LOG Entry: /(BOILERPLATE)/ 
+<<LOG_rdme-entry>>
+=LOG-DATE:= <2020-05-17 Sun>
+
+#+begin_verse 
+=NOTE:= PUT YOUR LOG IN HERE... Yadda... Yadda... Yadda... 
+#+end_verse
+
+** 📅 2022: 
+<<LOG_2022>>
+*** DONE 🗓 Updated Docs & PDF Export Methods: 
+<<LOG_updated-docs-&-export-methods>>
+=LOG-DATE:= <2022-09-02 Fri>
+
+Much work has been done /(finally)/ on Modular Emacs Org-Mode configuration around Exporting to LaTeX PDF Files. Document Classes were created to make *eBooks*, *Tech Manuals*, *Log Notebooks*, etc...
+
+Up until this point Exporting to PDF has been a basic out-of-box default... Now things are starting to become more stylized as intended for Modular Emacs...
+
+~09-4-org-export-conf.el~ was UPDATED adding new custom export options... SETUPFILES for Org-Mode documents were created...
+
+There are many ways to configure LaTeX and configure it to work well with Emacs Org-Mode... I am working out the best method to do this for Harmonic Alchemy Modular Emacs... 
+
+This work is currently on-going. Once I finally have a good setup complete with nice Templates to use, then we may be ready for a final NON BETA Release!
+
+The OLD Markdown Based README files are being changed to ~.org~ files now... /(a slow ongoing process)/ Stay tuned...
+
+** 📅 2020: 
+<<LOG_2020>>
+*** DONE 🗓 Version 3.2.1 Functions & Bug Fixes: 
+<<LOG_v3.2.1-functions-&-bug-fixes>>
+=LOG-DATE:= <2020-07-25 Sat>
+
+New functions were created and existing code was refactored to fix buggy behaviour around making new frames, changing default faces, org-mode faces, etc... 
+
+Also made *Xah-Fly-Keys Command Mode* background a lighter more 'red' background than Insert Mode background which stays the dark indigo slate blackboard colour. Things are looking and behaving much better now...  This will be tagged as *Version 3.2.1* The Docs, /(as usual, are still being updated)/ DOC updates will be logged here later... 
+
+*** DONE 🗓 Modular Emacs Version 3.2: 
+<<LOG_mod-emacs-v3.2>>
+=LOG-DATE:= <2020-07-16 Thu>
+
+Modular Emacs is now at Version 3.2. This has been tested on the develop branch long enough... I am still calling it "beta" because there is still a lot of work still unfinished... /(mostly peripheral support files, templates, etc. and the Docs are still being updated)/... Does Documentation Ever End? lol. Lots of improvements with the docs has been done however...
+
+Testing all of the features on different platforms has proven it to be stable enough to merge back into the Master branch... This commit adds new improved docs. Also templates for authors, publishers, and screenwriters have been included. Those templates are still being refined. I will be using org-mode to do the exports and publishing automatons... Final stages of exporting and publishing are now the main focus... All of the basic editing features are mature now...
+
+Although this project is "beta", version numbers will continue to advance... The true nature of Emacs is *"Its always in Beta"* because it is so powerful and flexible, and empowers the user who can not only use and customize it but can also completely change functionality!
+
+Any new features I end up trying out do not get merged into the Master branch until I have used them for a while, they are stable, and I like the new added features... 
+
+*There's More to come of course!* 
+
+*** DONE 🗓 Added Doc About Fonts:
+<<LOG_added-doc-about-fonts>>
+=LOG-DATE:= <2020-06-27 Sat>
+
+The DOCS were Updated... A new section was added to the main README about installing fonts for use with Modular Emacs, and a NEW Doc was created showing how to install and configure Fonts used by Modular Emacs for different contexts...
+
+*** DONE 🗓 README LOG Entry: 
+<<LOG_rdme-entry>>
+=LOG-DATE:= <2020-06-16 Tue>
+
+#+begin_verse 
+=NOTE:= PUT YOUR LOG IN HERE... Yadda... Yadda... Yadda... 
+#+end_verse
+
+I have been using "Fancy Org Mode" with Xah-Fly-Keys enabled for a several months now. Since the beginning of 2020 many refinements have been made. I have been mucking around with custom key-bindings and modified many of the default key-bindings that come with Xah-Fly-Keys mode by default... The primary incentive is to put your most often used key commands as close as possible to the "home row" to speed up productivity, and also save your fingers from doing stressful things repeatedly which is the main cause of tendinitis.  
+
+There is a second incentive to NOT assign keys close to the home row that evoke radical transformations, or do things that could get you totally hosed and confused if you hit that key by accident! If you hit it by accident while editing an important doc /(or not so important)/, messing up like that is frustrating to say the least!  
+
+Needless to say... I have been modifying these keys based on the above experiences I have had with it since around November of 2019... Things are working much better for me now but I am not done...
+
+Since I also have to support folks who do not care to use Emacs as a "modal editor" like vi, I am committed to mapping custom key bindings using the Control and Meta keys that match things I can do when I am in Xah-Fly-Keys mode...
+
+Unfortunately, I have been using Xah-Fly-Keys for over 6 months and my fingers /(muscle memory)/ are constantly tripping when I am in regular Emacs mode... This also happens to me outside of emacs, editing documents in LibreOffice, copy-and-pasting, or something as simple as renaming a file, Etc. My fingers forget they are not in Emacs and un-consciously try command keys that produce error messages etc. This is the downside of using modal editors. If the entire computing experience was configured modally like this, I would not have that problem. LOL "The bane of doing things differently" eh? Keep this in mind when trying to decide whether or not to use Emacs as a "modal editor" there a pluses and minuses... Nothing is perfect...
+
+=Please Help!=
+
+At this point I need some folks to try Harmonic Alchemy Modular Emacs /(normal key bindings mode)/ to give me some feedback about their user experience (UX). *Please* Where are you? Come try this stuff out! Thousands of man-hours have been put into it and more to come! All Free-as-in-freedom... What are you waiting for?
+
+#+begin_quote 
+=WARNING:= This is the year of *key-bindings refinement*... Key bindings defined within the module: *12-Xah-Fly-Keys.el* will most likely be changing several times this year... If you are already using this project and are used to the way things were set up before now, it would be wise to *Copy:*
+   ~lisp/modules/12-Xah-Fly-Keys.el~ *To:* ~lisp/my-modules/12-Xah-Fly-Keys.el~ 
+*Also copy:* 
+   ~lisp/modules/13-key-bindings.el~ *To:* ~lisp/my-modules/13-key-bindings.el~ 
+Doing that will OVERRIDE the originals that get updated when you pull down new changes from the master branch...
+#+end_quote 
+
+By OVERRIDING those two files, if any key-bindings change after an update, you will still have your OWN key bindings to keep /(as you like them)/ While also being able to try out my new keybindings temporarily, simply by switching to the master branch, /(to discover any new key-bindings you might find useful)/... No pain or disruptions... You will have it all...
+
+*** DONE 🗓 Org Mode Became Heavily Customized!: 
+<<LOG_org-mode-heavy-custom>>
+=LOG-DATE:= <2020-05-22 Fri>
+
+Org Mode has become heavily customized! I am calling it *Fancy Org Mode...* Also, some of the Module files were re-organized... In particular ~12-Xah-Fly-Keys.el~ and ~13-key-bindings.el~... Tweaks were added to improve package management and minimize the effects of load errors etc. Keybindings for both *Xah-Fly-Keys* mode as well as normal mode were added/changed...
+
+The FILE: ~dispatcher.el~ got more automated as well. Any module within the lisp/modules directory will be automatically overridden simply by making a copy of it /(using same file name of course)/ to: ~lisp/my-modules~ where the file will not be tracked by git and you can make any local modifications or additions without upsetting the original files that get updated periodically as new git commits are pulled down...
+
+#+begin_verse 
+*NOTE:* New changes emerging within new pulled down files which you have previously overridden will be shadowed of course! If you need the updates, you will need to merge those changes into your overrides...
+
+In addition, you no longer have to copy ~dispatcher.el~ into ~my-modules~ either... /(except to enable normally disabled optional modules)/ 
+#+end_verse
+
+In case you do have to copy dispatcher.el into my-modules /(e.g., To enable the optional Common Lisp related modules, etc.)/ you won't have to edit ~init.el~ anymore to change the location of ~dispatcher.el~...
+
+That part has been automated as well. ~modules/dispatcher.el~ will be overridden by your custom copy in: my-modules automagically...
+
+Now, the only reason to edit ~init.el~ is to add your own custom heading and/or body to the Welcome Screen Message... /(If and when you care to do that, now or later...)/
+
+I created a branch /(fork)/ where you can try out: Xah-Fly-Keys without having to go in and OVERRIDE ~dispatcher.el~ manually...
+
+In the Master Branch, optional modules are disabled /(see details below)/... Not having *Xah-Fly-Keys* enabled kind of cripples things for me for running tests within normal Emacs mode now that my fingers are used to flying with a SPACE BAR leader key! Going back to the old way is painful! It is hard to test my setup using the old ~C-x~ and ~M-x~ keys etc... %^) Last year at this time I was complaining about the opposite... /(i.e., having to learn Xah-Fly-Keys and using Emacs as a Modal editor like vi)/
+
+You have two editor mode options available to choose now, /(and it's easy to switch back and forth)/. BUT DON'T DO THAT! YOU WILL GO CRAZY Trust Me :trollface: Choose Either *Normal Emacs* or *Modal Emacs* based on how you feel about trying *xah-fly-keys* for long enough to see if it feels right for you... Then GO DIRECTLY to the Emacs Interface Style you feel drawn to at that moment, ENGAGE it with your SOUL, and NEVER LOOK BACK... Ever Again... OKIE? 
+
+#+begin_quote 
+*IMPORTANT NOTE:* Making the switch to a model editor is a BIG HUGE COMMITMENT... But it has its BIG HUGE PAYOFF at the end of that bumpy road! Trust me on that! There are also caveats along the way as well. Such is LIFE in the FLY zone... :octocat: 
+#+end_quote 
+
+*** DONE 🗓 Fancy Org Mode: 
+<<LOG_fancy-org-mode>>
+=LOG-DATE:= <2020-05-17 Sun>
+
+This COMMIT adds a bunch of new Org-Mode tweaks... I am setting up my Org-Mode based Book Publishing System my pubOps so-to-speak...
+
+There will be some included examples added to this a bit later...  Fancy Org Mode is now enabled by default...
+
+To use Fancy Org Mode you will need to override and edit the file: 09-org-mode-pkg-conf.el and depending on your OS, (Mac or Linux) change the dummy placeholder path to your REAL org docs directory path. There are two options allowing you to run this on both MacOS and Linux if you are a multi OS kind of person that is... :octocat:
+
+=NOTE 1:= I am implementing a cleaner way to get all local directory path and user specific meta data into the load process rather than having to override and edit indvidual files as in the above bullet... This will all be done in one file that you will override during your initial install... Once it is set with your specific edits it will stay that way and you will never have to touch it again...
+
+=NOTE 2:= I am still working on custom Export options for Modular Emacs Fancy Org Mode... But everything else is working nicely now... Export features will be forthcomming over the next few months! Stay tuned... Book publishing time!
+
+The Blackboard Color Theme was also updated to accommodate prettifying Org-Mode... Also, I am back to using the standard mode line. I got tired of powerline... It felt too cluttered and also seemed to have bugs... Then I tried smart-mode-line to see if I could make things look better and simpler... I got frustrated with it as well and after mucking around I realized there is nothing wrong with the Emacs standard mode-line and you can tweak it to fit exactly your needs... So now that is the new plan... I left the old code for both powerline and smart-mode-line in place (commented out) making it easy for you to enable either of them, if you like them better... You can see changes to mode line features in 02-package-conf.el... 
+
+=Everything else stays pretty much the same as Version 3.0=
+
+Exception: Debian and Mac users will have to follow a linked doc that guides you through building and maintaining your own Official GNU Emacs from source first! Building from source is tedious, especially if you are doing it for the first time, you WILL have to try many times before getting all those "twisty little snippets all different", sorted out and resolved. If you stick to your guns and stay persistent, you will be awesome! You will also be in total control of your personal and OFFICIAL build of GNU Emacs, how it works, and what it does!
+
+Your second build experience will go much more smoothly... By the third build the process will become the boring routine of typing a few commands, and then waiting as your machine cranks away a brand new version for you... Play mind sweeper with your smart *spyPhone*, or read a book about exploding brain synapses while your computer's busy making free-as-in-liberated Emacs... :trollface:
+
+Once you have the basics running smoothly, then it will be safe to visit the optional section headings below to find links to install guides for optional modules you may be interested in trying out... Consult the The Table of Contents for quick access if you are coming back to this doc later...
+
+#+begin_verse 
+=WARNING!= Enabling optional features may require you to remap some of your keys and also change Emacs into a modal editor /(similar to Vi but more Emacs like)/ *Read carefully* before making that 
+#+end_verse
+
+#+begin_verse 
+=NOTE:= If you are on Mac OS or some flavor of Debian, you may have to build Emacs from source (as mentioned above) to enable extra features support (like VMD-Mode which needs special libraries linked in during the Emacs build process)... Full instructions are provided for those sections... 
+#+end_verse
+
+* 📋 Meta: /(Usage & Templates)/                              :meta:noexport: 
+<<META>>
+
+=NOTE:= This BINDER Section SHOULD =NEVER BE EXPORTED OR PUBLISHED=
+/(This is META DATA - for use within Emacs Org-Mode only!)/
+
+#+begin_quote 
+/“Everyone is a moon,/
+ /and has a dark side,/
+ /which he never shows to anybody.”/ - Mark Twain 
+#+end_quote
+
+** Meta Reference: 
+<<META_ref>> 
+
+Here are Links to Information that may help you utilize this template to create your README Doc in org-mode...
+
+=NOTE:= This template is NOT really intended to be exported but this reference section is included here as there are many links that will help you within org-mode itself here...
+
+=Organized by Categories=
+
+*** General Emacs: 
+
+- [[https://emacsdocs.org/][Emacs Docs]] - /(Emacs Docs)/ 
+
+  /The modern documentation website Emacs deserves./
+
+- [[http://xahlee.info/][Xah Lee MAIN Website]] - /(Xah Lee's Main Website with Links to all his Blogs, Talk Show, etc.)/
+
+- [[http://xahlee.info/emacs/emacs/blog.html][Xah Lee EMACS Blog]] - /(Xah Lee's Emacs Blog with Links to Tutorials, etc.)/
+
+- [[http://xahlee.info/emacs/emacs/emacs_keys_index.html][Xah Lee EMACS KEYS]] - /(Xah Lee's Emacs KEYS Blog with Links to Tutorials, etc.)/
+
+- [[http://xahlee.info/emacs/misc/xah-fly-keys.html][Xah Fly Keys]] - /(Xah Lee's Xah-fly-keys Blog with Links to Tutorials, etc.)/
+
+- [[https://github.com/xahlee/xah-fly-keys][Xah Fly Keys - GitHub]] - /(Xah Lee's Xah-fly-keys GitHub Repository)/
+
+*** Emacs Lisp: /(eLisp)/ 
+
+- [[https://emacsdocs.org/docs/elisp/Emacs-Lisp][Emacs Lisp Manual]] - /(Emacs Docs)/ 
+
+  /This is the GNU Emacs Lisp Reference Manual corresponding to Emacs version 27.2/
+
+- [[https://www.gnu.org/software/emacs/manual/html_node/elisp/index.html][EMACS LISP MANUAL]] - /(GNU.org)/ 
+
+  /This is the OFFICIAL GNU Emacs Lisp Reference Manual corresponding to Emacs version 30.1/
+
+- [[http://xahlee.info/emacs/emacs/practical_elisp.html][Practical Emacs Lisp]] - /(Xah Lee's Practical Lisp Blog)/ 
+
+  /(With Links to both Standard lisp and elisp, Tutorials, etc.)/ 
+
+*** ORG-MODE: 
+
+- [[https://emacsdocs.org/docs/org/The-Org-Manual][The Org Manual]]  - /(Emacs Docs)/ 
+
+  /Emacs Docs Format - This manual is currently for Org version 9.4. Check Link Below to LATEST VERSION to see if it is up to date.../
+
+- [[https://orgmode.org/manual][THE ORG MANUAL]] - /(Orgmode.org)/ 
+
+  /OFFICIAL Orgmode.org Manual Latest Version/
+
+- [[https://orgmode.org/worg/][Hello Worg, the Org-Mode Community!]] - /(WORG)/ 
+
+  /Worg documentation & Org-Mode Resources.../
+
+- [[https://orgmode.org/worg/dev/org-export-reference.html][Org Export Reference]] - /(WORG)/ 
+
+  /This document is aimed at back-end developers for the generic export engine ox.el. It assumes a good understanding of Org syntax from the reader./
+
+- [[https://orgmode.org/manual/In_002dbuffer-Settings.html][Summary of In-Buffer Settings]] - /The ORG Manual/ 
+
+- [[https://orgmode.org/manual/Export-Settings.html#Export-Settings][Export Settings]] - /The ORG Manual/ 
+
+- [[https://orgmode.org/manual/Embedded-LaTeX.html][12.5 Embedded LaTeX]] - /(The Org Manual)/ 
+
+- [[http://doc.norang.ca/org-mode.html][Org Mode - Organize Your Life In Plain Text!]] - /(Norang.ca Public Docs)/
+
+*** Tools for ORG-MODE / LaTeX: 
+
+- [[https://www.offerzen.com/blog/literate-programming-empower-your-writing-with-emacs-org-mode][Literate Programming]] - /(Article by: by Justin Worthe)/ 
+
+  /(Literate Programming - Empower Your Writing with Emacs Org-Mode)/
+
+- [[https://www.ctan.org/pkg/latexmk/][latexmk - Fully Automated LaTeX Document Generation]] - /(CTAN)/ 
+
+  /Latexmk completely automates the process of generating a LaTeX document. Given the source files for a document, latexmk issues the appropriate sequence of commands to generate a .dvi, .ps, .pdf or hardcopy version of the document./
+
+- [[https://orgmode.org/manual/LaTeX-fragments.html][12.5.1 LaTeX fragments]] - /(The Org Manual)/
+
+- [[https://emacsdocs.org/docs/org/Images-in-LaTeX-export#nil][Images in LaTeX export]] - /(Emacs Docs)/ 
+
+  /placeholder Text.../
+
+- [[https://ctan.org/pkg/nopageno][nopageno – No Page Numbers in LaTeX Documents]] - /(CTAN)/ 
+
+  /CTAN Comprehensive TeX Archive Network.../
+
+- [[https://www.miskatonic.org/2023/11/15/minted/][Export Org SRC Code Blocks to LaTeX w Minted]] - /(Miskatonic University Press)/ 
+
+  When minted is one of the included packages for Org-Mode export, it’s always necessary to run ~pdflatex~ ~-shell-escape~ to compile the PDF, even if there are no source blocks... This article explains ways around that problem - /(code from Xah Lee)/
+
+- [[https://tex.stackexchange.com/questions/22741/how-to-remove-header-on-a-certain-page][How to Remove Header on a Certain Page]] - /(Stackexchange)/ 
+
+  /A Question/Answer on Stackexchange TeX Discussion Group.../
+
+- [[Https://Github.Com/GeneKao/Orgmode-Latex-Templates][Org-Mode Starter Codes for Exporting to LaTeX PDF:]] - /(GeneKao@GitHub)/ 
+
+  /This repo contains different templates for org-mode -> LaTeX and PDF. Along with the document templates... There are ALSO many great tips for formatting exotic figures and MATH.../ 
+
+  /Created by:/ [[https://www.geneatcg.com/][GeneKao]] /- Gene Ting-Chun Kao - R&D Computational Geometry Processing Engineer at Ansys - Meshing Development Unit (MDU).../
+
+- [[https://www.geneatcg.com/emacs-org-mode-export-to-pdf/][Emacs Org Mode export to pdf]] - /(Article by: Gene Ting-Chun Kao)/
+
+=PIM & TAGGING:=
+
+- [[https://www.gnu.org/software/emacs/manual/html_node/org/Tags.html][TAGS]] - /(GNU.org)/ 
+
+  An excellent way to implement labels and contexts for cross-correlating information is to assign tags to headlines. Org mode has extensive support for tags...
+
+- [[https://karl-voit.at/2022/01/29/How-to-Use-Tags/][How to Use Tags]] - /(Home Page of Karl Voit)/ 
+
+  /(HOW and WHY they are IMPORTANT)/
+  =Because EVERYTHING is MISCELLANEOUS in our minds=...
+
+- [[https://github.com/harmonicalchemy/Memacs][Memacs]] - /(fork of Karl Voit's Repo: harmonicalchemy@GitHub)/ 
+
+  Memacs extracts metadata /(subjects, timestamps, contact information, etc.)/ from many different existing data sources /(file names, emails, tweets, bookmarks, etc.)/ on your computer and generates files which are readable by GNU Emacs with Org-Mode...
+
+=ORG-TABLES:=
+
+- [[https://www.teachmaths.org/20250117_orgmode-tables/][Exporting Org Mode Tables to LaTeX]] - /(teachmaths.org)/ 
+
+  The tables produced by Org mode are pretty basic by default. However, you can use the LaTeX *tabularray* package to customise the look of your tables. 
+
+- [[https://emacs.stackexchange.com/questions/37550/preventing-org-mode-pdf-tables-from-running-off-the-page?noredirect=1&lq=1][Preventing Org-Mode PDF Tables from Running Off the Page]] - /(Stackexchange)/ 
+
+  The answer to this question explains: ~longtable :align |p{3cm}|p{6cm}|l|l|l|l|l|l|~ /(etc.)/
+  Where you replace any ~| l |~ /(column)/ with ~p{*cm}~ where ~*~ can be any numeral as required to fit table to page... /(i.e., hard wired column widths)/
+
+- [[https://tex.stackexchange.com/questions/721496/wide-landscape-table-to-fit-page-margins?rq=1][Wide Landscape Table to Fit Page Margins]] - /(Stackexchange)/ 
+
+  /A Question/Answer on Stackexchange TeX Discussion Group.../
+
+=Blogging Tools:=
+
+- [[https://orgmode.org/worg/org-blog-wiki.html][Blogs and Wikis with Org]] /(Blogging tools - with links to GitHub projects)/
+
+- [[https://github.com/org2blog/org2blog?tab=readme-ov-file#make-your-first-post-in-less-5-minutes][org2blog - Publish to WordPress Blog]] -  /(Puneeth Chaganti @ Github)/ 
+
+  /Org2Blog is SUPPOSEDLY the most advanced WordPress blog editor and manager available today.../
+
+- [[https://github.com/novoid/lazyblorg][lazyblorg]] - /(novoid@GitHub - Karl Voit)/ 
+
+  /Blogging with Org-mode for very lazy people/
+
+*** AUCTeX: 
+
+- [[https://emacsdocs.org/docs/auctex/Top][AUCTeX Manual ]] - /(Emacs Docs)/ 
+
+  /This manual is for AUCTeX (version 12.3 from 2020-10-10), a sophisticated TeX environment for Emacs./
+
+- [[https://elpa.gnu.org/packages/doc/auctex.html][OFFICIAL AUCTeX MANUAL]] - /(GNU.org)/ 
+
+  /This is the LATEST Version of the OFFICIAL GNU AUCTeX Manual/
+
+*** LaTeX: 
+
+- [[https://tug.org/][TeX Users Group]] - /(TUG.org)/
+
+- [[https://ctan.org/][Comprehensive TeX Archive Network]] - /(CTAN)/ 
+
+- [[https://latex-tutorial.com/documentclass-latex/][Your Guide to documentclass LaTeX: Types and options]] - /LaTeX-Tutorial.com/
+
+- [[https://www.ctan.org/pkg/memoir][The Memoir Document Class]] - /(CTAN Page)/ 
+
+- [[https://mirror.math.princeton.edu/pub/CTAN/macros/latex/contrib/memoir/memman.pdf][The Memoir Class - Manual:]] - /(CTAN PDF)/
+
+- [[https://www.linuxjournal.com/content/org-mode-latex-exporter-latex-non-texers][The org-mode LaTeX exporter]] - /(LaTeX for non-TEXers) LINUX Journal/
+
+- [[https://tufte-latex.github.io/tufte-latex/][Tufte-LaTeX]] - /(Tufte LaTeX PAGE @GitHub.io)/ 
+
+  /A Tufte-inspired LaTeX class for producing handouts, papers, and books... This site is home to LaTeX classes for producing handouts and books according to the style of Edward R. Tufte and Richard Feynman./
+
+- [[https://github.com/Tufte-LaTeX/tufte-latex][tufte-latex CLASS]] - /(Tufte-Latex@GitHub)/ 
+
+  /The GitHub Repo for the Tufte-inspired LaTeX Class.../
+
+- [[https://damitr.org/2014/01/09/latex-tufte-class-in-org-mode/][Latex Tufte class in org-mode]] - /(Article on damitr.org)/ 
+
+  Edward Tufte is known for graphical excellence in his famous books. Some enthusiasts combined his design principles into LaTeX and you have the tufte-book and tufte-handout classes for excellence in typesetting. This has support for side notes, margin figures, full width figures etc.
+
+  The Instructions within this article are integrated with ORG-MODE to produce results...
+
+*** LaTeX Fonts: 
+
+- [[https://tug.org/FontCatalogue/][The LaTeX Font Catalogue]] - /(TUG.org)/
+
+- [[https://tug.org/FontCatalogue/seriffonts.html][Serif Fonts]] - /(TUG.org)/ 
+
+- [[https://tug.org/FontCatalogue/sansseriffonts.html][Sans Serif Fonts]] - /(TUG.org)/ 
+
+- [[https://tug.org/FontCatalogue/typewriterfonts.html][Typewriter Fonts]] - /(TUG.org)/ 
+
+- [[https://tug.org/FontCatalogue/calligraphicalfonts.html][Calligraphical Fonts]] - /(TUG.org)/
+
+- [[https://en.wikibooks.org/wiki/LaTeX/Fonts][LaTeX Fonts]] - /(WIKIbooks.org)/
+
+*** LaTeX Music Related Software: 
+
+- [[https://www-cs-faculty.stanford.edu/~knuth/organ.html][Donald Knuth's Pipe Organ]] - /(Stanford.edu)/ 
+
+  =The Organ of Don and Jill Knuth= - This sixteen-rank organ was designed and built for our home by Abbott and Sieker of Los Angeles, California, as their “Opus 67.” It has 812 pipes, separated into three divisions...
+
+- [[https://icking-music-archive.org/][Werner Icking Music Archive]] - /(WIMA)/
+
+- [[https://icking-music-archive.org/software/htdocs/index.html][MusiXTeX and Related Software]] - /(WIMA)/
+
+- [[https://ctan.org/pkg/musixtex][MusiXTeX – Sophisticated Music Typesetting]] -  /(CTAN)/
+
+- [[https://tug.ctan.org/info/latex4musicians/latex4musicians.pdf][LaTeX for Musicians by Guido Gonzato, PhD]] - /(CTAN - PDF)/ 
+
+  This guide shows how to create LaTeX documents that include several kinds of music elements, from very simple to quite complex. Music features may consist of music symbols, song lyrics, guitar chords diagrams, lead sheets, music excerpts, guitar tablatures, multi-page scores.
+
+** 📄 Introduction: 
+<<META_intro>>
+
+Use this Standard *README* /(template)/ as a multi purpose *README document* or a *Start Here First Document* for any kind of project...
+
+=Such as for example:= A *Controlled Vocabulary* for your *TAGS* Which is something you will need to consult and make available to quickly consult while you are Writing things in Other Org-Mode Docs... Which WILL get published to different formats with the tags you chose for each document...
+
+I stopped using Markdown files for this purpose a few years ago... This makes total sense as *Org-Mode* was designed exclusively for such things! *Markdown* is great for composing content intended for web pages etc.  But =Emacs Org Mode is Vastly Superior as BOTH a Project Management AND Publishing Environment=, with many features and power, completely agnostic of final publishing format... Whereas markdown mode excels doing one thing only... Translating author structured plain text into beautiful web pages... /(which is a good thing of course)/ 
+
+I finally bit the long curve bullet and learned Emacs Org Mode /(after many many many years of using Emacs without it!)/ Today, looking back with current knowledge is like going back to a /"*Dec VT220* green screen *dumb terminal*"/ after experiencing *X Windows* on a Big *HP-UX Workstation!*
+
+Yeah, that's a personal story from the past, lol... All you Mac users out there, please realize that your beautiful Apple desktop is in fact an *HP-UX Motif X-Windows widget set clone*!  That's what Steve Jobs believed to be the best X-Windows tool-kit of the day /(when he was building the NeXT computer)/...  So... Yup he copied that! The Applications Doc at the bottom of your screen is a dead giveaway. Hewlet Packard was first to use such UI concepts...
+
+/(back before the dawning of the web we loved those HPUX Workstations! I got my first taste of them on the MIT Athena Project).../
+
+*** Emacs Shorthand Command Key Notation: 
+<<META_emacs-cmd-keys>> 
+
+The command key conventions used in the instructions below, /(as well as all *Harmonic Alchemy Productions* docs)/, follow *Standard Emacs* command key naming conventions.
+
+Official GNU Emacs documentation uses a shorthand notation to indicate the *Ctrl* key as an upper case *C-* (/with minus appended/). Upper case *M-* (/with minus appended/) is the shorthand notation for the Emacs *META* key...
+
+If you are on Linux, BSD, or other machine there are OTHER Options on how to map your keys for the least stress on your fingers etc...  Now that I have an EXPENSIVE MacBook Pro I kind of gave up spending time building unix machines for office work... For me all my UNIX work is NOW only done on self hosted VPS running in data centers... (I got EMACS running on those configurations as well... and my Mac at home is my keyboard so NO Problems Messing with nx key mapping woes!
+
+IF YOU NEED HELP on a LINUX box mapping your keys... /(lol GOOD LUCK)/... You can visit [[http://xahlee.info/kbd/linux_vs_windows_vs_mac_best_keybinding.html][Xah Lee's Linux vs Mac vs Windows Blog Post]] as well as: [[http://xahlee.info/kbd/keyboard_blog.html][Xah Lee's Keyboard Blog]] for great help with Keyboards to use /(focusing on Linux but urging you to use a Mac)/
+
+*** Important Note For Mac Users: 
+<<META_mac-users>> 
+
+For the BEST experience using *HAP Modular Emacs* On MacOS, you need to install a Keyboard Mapping App called *Karabiner-Elements* [[https://karabiner-elements.pqrs.org/][LINK to Download]]
+
+=THEN MAP YOUR KEYS as FOLLOWS:=
+
+~CAPS-LOCK~ ➔ ~HOME~
+
+     /(You WILL NEED THIS if you want to make your *xah-fly-keys* experience a FLYING one rather than a TRIPPING and CRASHING one)... LOL/ 
+
+~F6~ ➔ ~CAPS-LOCK~ 
+
+     /(You don't really need to use this much as there is another key "~\~" assigned via *xah-fly-keys* that can do some fancy upper/lower case flipping of words, paragraphs, etc... Try it... you will see %^)/
+
+In addition *xah-fly-keys* makes the following Emacs Configurations:
+     
+=Control Key:=    ~C-~ ➔ ~⌘~ /(Apple Command Key)/
+
+=META Key:=           ~M-~ ➔ ~⌥~ /(Apple Option key)/
+
+=Apple Ctrl Key:= ~⌃~ ➔ Still Works as standard Control Key /(emacs, other apps, console, etc.)/
+
+=ALSO:= For ALL machines using *xah-fly-keys* config, typing the "~a~" key invokes the Emacs ~M-x~ Key Chord directly... allowing you to immediately type and execute an emacs command from a single key alone right under your left little finger!
+
+With *Karabiner-Elements* [[https://karabiner-elements.pqrs.org/][LINK to Download]] Installed and configured properly as above, AND you are using *HAP Modular Emacs* configured to use *XAH-FLY-KEYS*, =Keep the Following in Mind:=
+
+While following instructions from standard vanilla Emacs docs, NOTE that your ~Ctrl~ , ~META~ and ~CAPS-LOCK~ keys are not /"standard"/ anymore and you must make a mental translation to the keys you have reassigned... /(you will get used to it soon enough)/ It has been designed /(after YEARS of research by Xah Lee)/ to Protect your fingers and fine motor muscles...
+
+Beyond that, you will be fine following other emacs tutorials etc.  Hey... you Mac enthusiasts are used to that kind of /"being different"/ stuff anyway, right? Being one of /"the rest of us"/ that is... What the heck does that mean anyway? LOL
+
+The above key assignments were done to get the *Emacs C-* key closer to the space bar where it can be activated with your left thumb instead of contorting to get at it with your pinkie finger. This makes using *Xah Fly Keys* even easier to use and less stressful on your fingers...
+
+In the Official Emacs documentation you will commonly find key command notations such as *C-x* or *M-x*... This means: Hold the *Ctrl* /(or *META*)/ key down while typing the *x* key.  
+
+Any time you see this notation, regardless of what key may be connected to it with a dash /(e.g., *C-c*, *M-5*, etc.)/, this means to hold the *Ctrl*-or-*META* key down while you press the other key connected to it with the dash... If you have a command that includes many *C-key* or *M-key* commands in succession simply hold the *Ctrl*-or-*META* key down the entire time you type the other keys and then let go...
+
+If you see other keys alone separated by a space after the *C-x* or *M-x* /(e.g., C-x *d*, M-x *b*, etc.)/ this means to type that key /AFTER/ letting go of the *Ctrl*-or-*META* key...
+
+*Got that?* That's the key notation system we use here... It is all standard Emacs...  The above paragraphs are mostly for the benefit of new Emacs users! And there is more to learn below. If you are an Emacs/Org-Mode veteran please bear with us...
+
+For *HELP* using *Xah-Fly-Keys* with *HAP Modular Emacs* [[][VISIT THIS DOC] ] =TBD= later...
+
+*** Org Mode Timestamps and Clocking: 
+<<META_time-clocking>> 
+
+This Template utilizes the default *Org-Mode:* "~C-c .~" Command. /(i.e., That's Ctrl-c and then type a dot. This Enters a timestamp range at the cursor position)/. The command employs *org-evaluate-time-range* to compute time on task.  This is useful for Time Sheets etc. 
+
+In addition, the *Log Entry (template)* stores and tracks *Org-Mode* ~:CLOCKING:~ entries and displays results in a *Time Card Table* with total time computed... 
+
+Common time clocking commands are defined within the *Log Entry* /(template)/ itself...
+
+Any time you need to look up clocking commands, open the ~:README:~ drawer under the *Log Entry* /(template)/ heading by placing your cursor over it and hitting ~TAB~...
+
+** ❔ How To: 
+<<META_howto>>
+
+=NOTE:= Additional HELP/Commands for using *Org-Mode* with Modular Emacs will be explained here if needed, as well as other *Harmonic Alchemy Modular Emacs Templates* that get produced in the future...
+
+*** Create A New Log Entry: [0/1] 
+<<META-HOWTO_create-new-log-entry>>
+
+- [ ] *RESET all Check Boxes UNDER These Headings:* 
+
+  Do this FIRST before following any of the tasks... This is to help you get your workflow down...
+
+  Later once you got all this in muscle memory you can forget wasting your time here...
+
+  /(this is for beginners - HOPE IT HELPS)/
+
+**** Copy/Clone: *🗓 Generic Log Entry:* [0/2] 
+/(BOILERPLATE Log Entry from *⎘ Templates* Binder)/ 
+
+- [ ] *SELECT the ENTIRE NEW LOG /(heading)/ & ALL its Contents:* 
+
+  Use normal Emacs selection methods. i.e., Type ~t~ key to set the mark for selection, /(xah-fly-keys Command/ /Mode)/ or use ~C-SPACE~ /(normal Emacs)/, and move the point to get the entire heading, and all of its contents, but NOTHING else... =and copy it...=
+
+  =Note:= Before Copying Selected Text, ensure your cursor is at the end of it BUT not be part of any items after it... Placing your cursor on the first column of the next line will include the invisible new-line character which is what you want, but any text directly under the cursor on the next line will not be copied...  Later, after pasting this text somewhere else, your cursor will end up sitting on the first column of a blank line under the pasted text. /(exactly as intended)/ 
+
+- [ ] *Complete the Copy Operation:* 
+
+  *Type*: ~c~ /(xah-fly-keys Command Mode)/
+
+  This will save the selection for pasting later, /(the highlighted/ /text will go back to normal)/... You should have gotten only the Single LOG Entry with ALL its contents, BUT nothing else below it...
+
+  =Note:= If you type: "~spacebar t~" /(xah-fly-keys leader key command),/ it will show you the contents of your paste buffer...  You can see the LAST item you copied in there AT THE TOP... To get out of the paste buffer view, *Type:* "~spacebar u~" and it will return you to where you were before... 
+
+*** Place Your Cloned LOG Entry: [0/3] 
+<<META-HOWTO_place-cloned-log>>
+
+- [ ] *RESET all Check Boxes UNDER These Headings:* 
+
+  Do this FIRST before following any of the tasks... This is to help you get your workflow down...
+
+  Later once you got all this in muscle memory you can forget wasting your time here...
+
+  /(this is for beginners - HOPE IT HELPS)/
+
+**** PASTE: *🗓 Generic Log Entry:* [0/2] 
+
+/(Paste Copied BOILERPLATE Log Entry)/ From the PASTE BUFFER... 
+
+- [ ] *Advance Cursor:* 
+
+  Advance your cursor to a blank line just below the LAST Most Recent LOG entry under the CURRENT *📅 YYYY:* heading within the *📒 Begin Log:* binder, and press *ENTER* a couple times to get your cursor on a fresh clean line with some extra space above and below it... /(Below any previously time stamped entries you may already/ /have placed)/... 
+
+- [ ] *Press:* ~v~ *To PASTE your cloned Log Entry:* 
+
+  *Press:* ~v~ /(xah-fly-keys Command Mode)/ to paste your cloned Log Entry template...
+
+  If you find out that what you copied also included some unwanted text directly below it, no problems... Just delete that part now...
+
+  =Note:= If you accidentally copied one or more previously invisible bullets to column one on a blank line they will create an invisible "ghost" heading that you will now need to delete...
+
+  You will know this if you see an org-ellipsis "⤵" symbol on a line by itself indicating a heading but no text... Simply delete that whole line and it will go away... Now you are ready to compose your new log entry... 
+
+*** Edit-Compose New LOG Entry: [0/5] 
+<<META-HOWTO_compose-new-log-entry>>
+
+The instructions below for EDITING a NEW CLONED LOG ENTRY Template:
+
+- [ ] *RESET all Check Boxes UNDER This Heading:* 
+
+  Do this FIRST before following any of the tasks... This is to help you get your workflow down...
+
+  Later once you got all this in muscle memory you can forget wasting your time here...
+
+  /(this is for beginners - HOPE IT HELPS)/
+
+- [ ] *Place Cursor Directly on the Existing Timestamp:* 
+
+  Place your cursor directly on the existing timestamp directly under your CLONED  *🗓 Generic LOG Entry:* heading and enter the key binding: ~C-c .~ /(i.e., press/ ~Ctrl~ /key while holding/ ~c~ /and then type a dot ~.~ /)/ A date chooser panel will pop up... 
+
+- [ ] *Type one more dot:* 
+
+  Type one more dot ~.~ to force the calendar selection to the current time and date and then, Press ~ENTER~ to accept your choice... /This will update the existing older timestamp with/ /the current date/time.../
+
+  Check to make sure the timestamp was properly updated then move on to the next step...
+
+  This timestamp will not be updated after that.  IT RECORDS THE INITIAL TIME OF YOUR NEW LOG ENTRY to the Day and time you first started it...
+
+- [ ] *Follow the* ~:HOW-TO-USE-THIS:~ *Directions:* 
+
+  Follow STEPS Within the ~:HOW-TO-USE-THIS:~ drawer directly under your NEW RENAMED *🗓 Generic LOG Entry:*
+  
+  These steps show you how to commandeer your NEW CLONE, change headings, ANCHORS, clock-in/out, etc... =Once those initial tasks are done you will be Ready to Start Writing...=
+
+*** HAP Org Mode Anchors: [0/5] 
+**** HAP ANCHORS HOWTO: [0/3] 
+<<META-HOWTO_hap-ancs>>
+
+Here are some *GUIDELINES for Creating and Editing ANCHORS* as well as *LINKS* to them within any ~HAP_Doc-Skeleton.org~ Template file...
+
+- [ ] *Adjust ANCHORS to make them UNIQUE:* 
+
+  Anchors Must Be Unique! Following HAP ANCHOR CONVENTIONS helps this process transparently... Be Extra Careful if you make any ANCHORS into RADIO TARGETS!
+
+  =NOTE:= All of this work in the beginning will help keep your anchors unique within this file, and also add an extra *KM* dimension of *category* to them automagically...
+
+  Your unique anchors may be used to link to sections or headings from other sections within this file, and quite easily reach the headings or sections from EXTERNAL *Org-Links* referencing the FILE simply by adding the ANCHOR name after the Path/File Spec separated by two colons /(i.e., ~::~ )/...
+
+  To reach these ANCHORS from an external file: *Use xfk Command:* ~O~ /(UPPER CASE Letter: O while in xfk COMMAND Mode)/... That will OPEN the Target Org file in a NEW Frame Without Closing your Current Frame or Loosing your Current Org File Position...
+
+  It would be wise to follow this convention when you create anchors elsewhere within ALL of your Writing Projects created from HAP Modular Emacs Document Skeleton Template files...
+
+  If you wish to change any of this, go ahead and do what ever you want... For simplicity's sake, follow the instructions below... There are ways to use *:PROPERTY:* directives to get your links GLOBAL as well... I prefer to do it manually... The alternate is a mess IMHO... I don't have time to spend on this mess... What I have currently works nice and simple for me... Probably you too... /(trust me I have tried EVERYTHING - Well... ALMOST)/ lol
+
+- *ANCHORS within the the 📋 Meta: binder are ALL SET:* 
+
+  You don't need to change ANY of the ANCHORS within the the *📋 Meta:* binder... These anchors are all fixed...
+
+  =You may= Place an *org-link* to any of the ~ANCHORS~ contained within the *📋 Meta:* binder from elsewhere within CLONES of ANY of these ~HAP_Doc-Skeleton.org~ Template files and it will work... You might find making links to sections of the *📋 Meta:* binder useful as a quick reference while you are writing, easy access from the place where you are writing...
+
+- [ ] *Radio Targets:* 
+
+  There is ALSO a neat *org-mode trick* called *Radio Targets* 
+
+  If you want to use that, simply place another pair of angle brackets ~< >~ around ANY of the ANCHORS within CLONES of these ~HAP_Doc-Skeleton.org~ template files.
+
+  Doing that will make the *NAME* inside the ANCHOR into a *HOT NAME* that will instantly =Turn Into a LINK= ANY TIME you type the *NAME* somewhere within the file!
+
+  =NOTE:= Radio Targets are NOT GLOBAL... /(i.e, they only work within the .org file they were created in)/ You cannot address these ANCHORS alone from an external file...
+
+  =In other words, don't worry=... If you visit another org file and accidentally type a radio anchor name from ANOTHER file, nothing will happen and you will not be disrupted... the radio anchor from the remote file will NOT activate within your current file... Even if it did, It would not work since ANCHORS themselves are Not GLOBAL..
+
+  =NOTE:= You have to INITIALIZE any radio anchors you create for the first time with the command: ~C-c~ ~C-c~ before they will automagically turn into links... =HOWEVER=, These NEW Radio Anchors WILL get initialized automatically once you close and re-open the file...
+
+- [ ] *Existing ANCHORS and LINKS within ~HAP_Doc-Skeleton.org~ Template files:* 
+
+  SOME ANCHORS already have LINKS going to them within *LOG Templates*... These LINKS are present in the *Sub-Headings* under the *✅ Summary* AND *📒 Details* Headings...  Use ~SPACE-BAR b~ /(xfk shortcut key command)/ to expand links so you can see them under these sub-headings and change them to MATCH the Changed ANCHORS that they should be linking to... 
+
+**** HAP Org-Mode ANCHOR Conventions: 
+<<META-HOWTO_hap-anc-cnvents>>
+
+The following is a *UNIQUE Mnemonic ANCHOR Convention* which is standard across ALL ~HAP_Doc-Skeleton.org~ Template files...
+
+Use this Convention to create, adjust, and use  ~<ANCHORS>~ under *Org Headings* within your CLONED ~HAP_Doc-Skeleton.org~ files...
+
+=For me= this is a *quite easy scheme to use*, especially once I got used to using it... It becomes a simple extra step to take anytime I create a heading that I believe is one that needs to be referenced a LOT... Done instantly... Easy... 
+
+*Here is how it Works:*
+
+- *HAP ANCHORS* comprise =THREE= ~mnemonic~ =SYMBOLS= 
+
+  Three symbols separated by an underscore ~_~ character... 
+
+  The =first= mnemonic is the ~PREFIX~ 
+
+  The =second= mnemonic is the ~LABEL~ 
+
+  The =third= mnemonic is the ~postfix~ 
+
+- The ~PREFIX~ 
+
+  The PREFIX is there to identify the *KIND of file* or *Major Section Within* that File where the *ANCHOR* has been placed...
+
+- The ~_LABEL_~ 
+
+  The LABEL is a short UPPER CASE mnemonic representing the =Title= of the *PARENT Heading* above it. Be careful NOT to make this so cryptic and short that you no longer recognize the original Title it represents...  /(just as in creating variable or parameter names in programs)/
+
+- The ~postfix~ 
+
+  The postfix is a short lower case mnemonic representing the =Title= of the *Heading* =Directly Above= the *ANCHOR* that represents it.
+
+***** Putting It All Together: 
+
+*Here are some Examples of how these Three mnemonics are Used Together:*
+
+- For *MAIN HEADINGS* it looks like this: ~PREFIX_postfix~ 
+
+  =NOTE:= There is no ~LABEL~ in Main Heading ANCHORS... In fact... ONLY the PREFIX alone is used for ANCHORS that reflect *Main Headings* of *Major Sections* within any ~HAP_Doc-Skeleton.org~ files...
+
+- For *SUB HEADINGS* it looks like this: ~PREFIX_LABEL_postfix~ 
+
+  LABEL appears here representing the =Title= of the Sub-Heading's *PARENT Heading*
+
+- For *SUB-SUB HEADINGS* it might look like this: ~PREFIX_LABEL_LABEL_postfix~ 
+
+  /(etc...and probably unnecessary overkill as well - but if you need an anchor like this, This is how you go about expanding the ANCHORS to reflect the extension of the schema above it - like a path)/
+
+  =NOTE:= To make the Idea Above =More Practical=... You may OFTEN create *Sub Headings* within your doc that by themselves do not contain any TEXT, figures, tables, or other objects  between them and their children *Sub-Sub Headings*... =INSTEAD=, they may have many *sub-sub headings* under them which are all specifics of the *Sub-Heading category*...
+
+  =In That Case= you would not put an anchor under the *Main Sub-Heading* but rather place ANCHORS under =ALL= the *Sub-Sub Headings* Instead... These *sub-sub* ANCHORS would Not have as many LABEL Chains, /(e.g., ~_LABEL_LABEL_LABEL_~ )/ in them... Using that idea makes it =LESS Over Kill= AND *You Will Need to LINK* to those *specific headings* that have good content directly under them rather than a family of *child headings* which you would then have to choose from manually...
+
+** ⎘ Templates: 
+<<META_templates>>
+*** NEW 🗓 Generic LOG Entry: /(BOILERPLATE Log Entry TEMPLATE)/ 
+<<LOG_generic-entry>>
+=LOG-DATE:= <2021-03-29 Mon>  
+:HOW-TO-USE-THIS: 
+
+=COMMANDEERING CLONES of this GENERIC LOG Entry BOILERPLATE TEMPLATE:=
+
+- [ ] *COMMANDEER Your New CLONE:* 
+
+  The structure of this GENERIC LOG Entry Template's content layout is all set up for you ahead of time to allow you to immediately begin writing... /(You only need to change titles etc...)/ 
+
+  After cloning, =RENAME= *🗓 Generic LOG Entry* /(BOILERPLATE Log Entry TEMPLATE)/ to a *Unique Title* in order to commandeer this log entry item for your own needs... 
+
+  =Do NOT PUT "LOG" in your Title!= /(not needed as you already placed this clone within your log binder)/
+
+- [ ] *UPDATE =LOG-DATE= ~<timestamp>~ to TODAY:* 
+
+  Place your cursor directly on the existing =LOG-DATE:= ~<timestamp>~ directly under the title of THIS CLONED or REPURPOSED *🗓 Generic LOG Entry:* and enter the key binding: ~C-c .~ /(i.e., press/ ~Ctrl~ /key while holding/ ~c~ /and then type a dot ~.~ /)/ A date chooser panel will pop up... 
+
+- [ ] *Type One More DOT:* 
+
+  Type one more dot ~.~ to force the calendar selection to the current time and date and then, Press ~ENTER~ to accept your choice... /This will update the existing BOILERPLATE timestamp with TODAY's date/time.../ 
+
+  Check to make sure the timestamp was properly updated then move on to the next step...
+
+  This timestamp will =NOT BE UPDATED AFTER THIS=... This timestamp records the FIRST time you started this particular Log entry... You need that date to stay permanent for historical reasons... 
+
+  =NOTE:= /This is the FIRST Time Tracking TASK of Starting a NEW LOG Entry/...
+
+  =DO NOT CHANGE the TITLES of These MAIN Headings:= *📚 Reference* , *⏰ Time Card* , *✅ Summary* , or *📒 Details* =Within your CLONES=... 
+
+  =BUT= YOU Will Need to =CHANGE PART of the ANCHOR LINKS= under these main headings...
+
+=NOTE:= You will need to change all these default ANCHORS and LINKS in the beginning before you start using the log entry, /(e.g., Making SURE CASE shifting of parent heading mnemonics are done correctly, etc...)/ You should have read [[META-HOWTO_hap-anc-cnvents][HAP ANCHOR CONVENTIONS]] /(above)/ under the *❔ How To:* binder to help you get started...
+
+=However=, Soon enough... you will have figured out the pattern and it will become second nature for your workflow the next time you clone one of these things... /(I hope)/ Follow the steps below to adjust ANCHORS within CLONES of this *🗓 Generic LOG Entry:* 
+
+- [ ] *Change The 🗓 Log Entry MAIN ANCHOR:* /<LOG_generic-entry>/ 
+
+  =USE the Above:= [[META-HOWTO_hap-ancs][HAP ANCHORS HOWTO]] and *HAP Org-Mode* [[META-HOWTO_hap-anc-cnvents][ANCHOR CONVENTIONS]] to Change the MAIN ANCHOR directly under the *LOG Entry's Main Title* /(heading)/ to match your NEW *LOG Entry's Title*... /(your new renamed log TITLE is actually the ~postfix~ and there is NO ~_LABEL_~ within this Anchor as it is under a MAIN Heading)/ 
+
+  Change ~generic-entry~ /(the postfix)/ to a short but unique abbreviation, acronym, or mnemonic of your NEW Log Entry's *Title*... /(don't make it too cryptic to the point that you can no longer cognitively connect your mnemonic with the actual title)/ but keep it short and simple as possible.  In case you have to make anchors more than 3 levels deep this practice will keep your anchors short, /(as you will find out)/
+
+  You may LINK to this Unique ANCHOR from other sections of this Log... You may also link to this Anchor from external ORG-LINKS that reference this File in the first part of the link adding this ANCHOR separated by a double colon, /(i.e. ~::~ )/
+
+- [ ] *Change the 📚 Reference: ANCHOR:* /<LOG_GENERIC-ENTRY_ref>/ 
+
+  =USE the Above:= [[META-HOWTO_hap-ancs][HAP ANCHORS HOWTO]] and *HAP Org-Mode* [[META-HOWTO_hap-anc-cnvents][ANCHOR CONVENTIONS]] to Change the *📚 Reference:* ANCHOR... 
+
+  For the *📚 Reference:* ANCHOR, Leave the ~PREFIX~ and ~postfix~ alone but CHANGE the ~_LABEL_~ portion of the Anchor...
+
+  COPY the lower-case ~postfix~ portion from the ANCHOR under your CLONED/RENAMED version of This: *🗓 Generic LOG Entry:* /(which is now a mnemonic representing your New Log Entry Title)/ and use that to rename ~GENERIC-ENTRY~ within the *📚 Reference:* ANCHOR... *THEN CHANGE it to UPPER CASE* to comply with HAP Org-Mode ANCHOR Conventions.  This mnemonic has NOW transformed into this ANCHOR's ~_LABEL_~
+
+  As explained within: [[META-HOWTO_hap-anc-cnvents][ANCHOR CONVENTIONS]] /(see, you know what the mnemonics in that link mean right?)/, The new ~_LABEL_~ is simply the UPPER CASE version of the ~postfix~ within the ANCHOR under its *PARENT heading*...
+
+  You may LINK to this Unique ANCHOR from other sections of this Log... You may also link to this Anchor from external ORG-LINKS that reference this File in the first part of the link adding this ANCHOR separated by a double colon, /(i.e. ~::~ )/ =However:= This Reference section may also be duplicated within those files as well which you will be able to LINK directly to by using this same ANCHOR alone... But maybe the reference section within this LOG contains some good things needed for your work elsewhere... You will find out soon enough how to organize things to make your workflow easier... /(I have no idea... It's not my workflow... It's your workflow)/...
+
+  =NOTE:= For All *Sub-Headings* the ~_LABEL_~ is actually the UPPER CASE version of the *Parent Heading's* ~posfix~ /(i.e., a mnemonic of the parent heading's title)/
+
+  *Leave the* ~_postfix~ *Portion ALONE* because the Reference Heading does not change...
+
+- [ ] *Change the *⏰ Time Card: ANCHOR:* /<LOG_GENERIC-ENTRY_time-card>/ 
+
+  =USE the Above:= [[META-HOWTO_hap-ancs][HAP ANCHORS HOWTO]] and *HAP Org-Mode* [[META-HOWTO_hap-anc-cnvents][ANCHOR CONVENTIONS]] to Change *⏰ Time Card:* ANCHOR...
+
+  For the *⏰ Time Card:* Anchor, Leave the ~PREFIX~ and ~postfix~ alone but CHANGE the ~_LABEL_~ portion of the Anchor...
+
+  COPY your lower-case ~postfix~ portion from the ANCHOR under your CLONED/RENAMED version of This: *🗓 Generic LOG Entry:* /(which is now a mnemonic representing your New Log Entry Title)/ and use that to rename ~GENERIC-ENTRY~ within the *⏰ Time Card:* Anchor... CHANGE it to UPPER CASE to comply with HAP Org-Mode ANCHOR Conventions.  This mnemonic has NOW transformed into this ANCHOR's ~_LABEL_~
+
+  The new ~_LABEL_~ is simply the UPPER CASE version of the ~postfix~ within the ANCHOR under its *PARENT heading*...
+
+  You may LINK to this Unique ANCHOR from other sections of this Log... You may also link to this Anchor from external ORG-LINKS that reference this File in the first part of the link adding this ANCHOR separated by a double colon, /(i.e. ~::~ )/
+
+  *Leave the* ~_postfix~ *Portion ALONE* because the Time Card Heading does not change...
+
+- [ ] *Change the *✅ Summary: ANCHOR:* /<LOG_GENERIC-ENTRY_summary>/ 
+
+  =USE the Above:= [[META-HOWTO_hap-ancs][HAP ANCHORS HOWTO]] and *HAP Org-Mode* [[META-HOWTO_hap-anc-cnvents][ANCHOR CONVENTIONS]] to change the *✅ Summary:* ANCHOR...
+
+  For the *✅ Summary:* Anchor, Leave the ~PREFIX~ and ~postfix~ alone but CHANGE the ~_LABEL_~ portion of the Anchor...
+
+  COPY your lower-case ~postfix~ portion from the ANCHOR under your CLONED/RENAMED version of This: *🗓 Generic LOG Entry:* /(which is now a mnemonic representing your New Log Entry Title)/ and use that to rename ~GENERIC-ENTRY~ within the *⏰ Time Card:* Anchor... CHANGE it to UPPER CASE to comply with HAP Org-Mode ANCHOR Conventions.  This mnemonic has NOW transformed into this ANCHOR's ~_LABEL_~
+
+  The new ~_LABEL_~ is simply the UPPER CASE version of the ~postfix~ within the ANCHOR under its *PARENT Heading*... 
+
+  You may =LINK to this Unique ANCHOR= from other sections of this Log... You may also link to this Anchor from =External Org-Links= that =Reference This File= in the =First Part= of the link adding this ANCHOR to the end of the file spec separated by a double colon, /(i.e. ~::~ )/ Org ANCHORS,  just as in HTML are =LOCAL FILE LINKS= appended to the URL to get the cursor exactly to the subject of interest within the target File or HTML page...
+
+  *Leave the* ~_postfix~ *Portion ALONE* because the *✅ Summary:* Heading does not change...
+
+  =NOTE:= *SUB-HEADINGS* under the *✅ Summary:* ANCHOR ALSO Contain ANCHORS that you will =Need To Change=, as well as the LINKS to those ANCHORS from the *📒 Details:* section that you will =ALSO Need To Change=...
+
+  Use ~SPACE-BAR b~ /(xfk shortcut key command)/ to =expand links= so you can see them under these *sub-headings* and change them to =MATCH the Changed ANCHORS= they should be linking to...
+
+  =NOTE:= After Initial CLONING, /(i.e., While Executing This HOW-TO-USE-THIS TASK)/ You will ONLY need to change the ~_LABEL_~ portion: ~GENERIC-ENTRY~ of all of these anchors to your NEW Log Entry Title mnemonic, to fix the anchors... /(For now... until such time that you need to RENAME these ITEMS Later)/ when you actually start writing in this LOG... Then you will need to change the ~postfix~ mnemonic to match your changed sub-heading titles as well...
+
+  =ALSO NOTE:= If you DO NOT change the ~_LABEL_~ portion: ~GENERIC-ENTRY~ of all of these anchors within your CLONE /(Right NOW)/ you will BREAK org-links within this file when you try to use them, because =you just duplicated a BUNCH of Anchors= within the *📋 Meta:* Binder!! The ~_LABEL_~ portion MUST change but the ~postfix~ mnemonics can STAY... Your new ANCHORS will be Unique...
+
+- [ ] *Change the 📒 Details: ANCHOR:* /<<LOG_GENERIC-ENTRY_details>>/ 
+
+  =USE the Above:= [[META-HOWTO_hap-ancs][HAP ANCHORS HOWTO]] and *HAP Org-Mode* [[META-HOWTO_hap-anc-cnvents][ANCHOR CONVENTIONS]] to change the *📒 Details:* ANCHOR...
+
+  For the *📒 Details:* Anchor, Leave the ~PREFIX~ and ~postfix~ alone but CHANGE the ~_LABEL_~ portion of the Anchor...
+
+  COPY your lower-case ~postfix~ portion from the ANCHOR under your CLONED/RENAMED version of This: *🗓 Generic LOG Entry:* /(which is now a mnemonic representing your New Log Entry Title)/ and use that to rename ~GENERIC-ENTRY~ within the *📒 Details:* Anchor... CHANGE it to UPPER CASE to comply with HAP Org-Mode ANCHOR Conventions.  This mnemonic has NOW transformed into this ANCHOR's ~_LABEL_~
+
+  The new ~_LABEL_~ is simply the UPPER CASE version of the ~postfix~ within the ANCHOR under its *PARENT Heading*...
+
+  You may =LINK to this Unique ANCHOR= from other sections of this Log... You may also link to this Anchor from =External Org-Links= that =Reference This File= in the =First Part= of the link adding this ANCHOR to the end of the file spec separated by a double colon, /(i.e. ~::~ )/ Org ANCHORS,  just as in HTML are =LOCAL FILE LINKS= appended to the URL to get the cursor exactly to the subject of interest within the target File or HTML page...
+
+  *Leave the* ~_postfix~ *Portion ALONE* because the *📒 Details:* Heading does not change...
+
+  =NOTE:= *SUB-HEADINGS* under the *📒 Details:* Heading ALSO Contain ANCHORS that you will =Need To Change=, as well as the LINKS to those ANCHORS from the the *✅ Summary:* section that you probably already changed above if you are following these steps in sequence...
+
+  Use ~SPACE-BAR b~ /(xfk shortcut key command)/ to =expand links= so you can see them under these *sub-headings* and change them to =MATCH the Changed ANCHORS= they should be linking to...
+
+  =NOTE:= After Initial CLONING, /(i.e., While Executing This HOW-TO-USE-THIS TASK)/ You will ONLY need to change the ~_LABEL_~ portion: ~GENERIC-ENTRY~ of all of these anchors to your *NEW Log Entry Title* mnemonic, to fix the anchors... /(For now... until such time that you need to RENAME these ITEMS Later)/ when you actually start writing in this LOG... Then you will need to change the ~postfix~ mnemonic to match your changed sub-heading titles as well...
+
+  =ALSO NOTE:= If you DO NOT change the ~_LABEL_~ portion: ~GENERIC-ENTRY~ of all of these anchors within your CLONE /(Right NOW)/ you will BREAK org-links within this file when you try to use them, because =you just duplicated a BUNCH of Anchors= within the *📋 Meta:* Binder!! The ~_LABEL_~ portion MUST change but the ~postfix~ mnemonics can STAY... Your new ANCHORS will be Unique...
+
+- [ ] *Change ANCHORS of Sub Headings:* /<<PREFIX_PARENT-HEADING_postfix>>/ 
+
+  =USE the Above:= [[META-HOWTO_hap-ancs][HAP ANCHORS HOWTO]] and *HAP Org-Mode* [[META-HOWTO_hap-anc-cnvents][ANCHOR CONVENTIONS]] to Create and/or Change ANCHOR's Under *Sub Headings* & *Sub-Sub Headings*...
+
+  =FOR ALL EXISTING= *Sub Headings* under the *📒 Details:* heading... For NOW... You will need ONLY to CHANGE the ~_LABEL_~ portion of the ANCHORS... As explained in the two bullets above this one... Later when you actually start logging within this log, you will be changing the ~postfix~ as well... /(within LINKS & ANCHORS)/
+
+  FOR *New Sub-Headings* /(ANYWHERE not just this Log Entry)/ First... Copy an existing Sub-Heading /(a sibling of the place where you want to make a new sub-heading)/ and modify that ANCHOR in the same way as above... /(easy-peasy)/
+
+  If you decide to Create a *New Sub-Heading* =FROM SCRATCH= or suddenly find you have no siblings to CLONE, *Make your NEW ANCHOR look like the following:* /(not so easy-paasy)/
+
+  ~PREFIX_LABEL_postfix~ where ~PREFIX~ is pretty much the same for all the ANCHORS of the MAJOR Section you are in, ~LABEL~ is the title of the *Parent Heading*, and ~postfix~ is the title of this new *sub-heading*... /(all mnemonics)/ That's It in a nutshell... *Now do it below*...
+
+  *COPY:* The lower-case ~postfix~ mnemonic from the ANCHOR under the *Parent Heading* of your New *Sub-Heading* and place that AFTER the ~PREFIX~ of your *NEW Sub Heading* ANCHOR separated by an underscore character... This NOW represents the LABEL of your new Sub-Heading Anchor so you must also *change it to UPPER-CASE* now...
+
+  Create a ~_postfix~ mnemonic representing your *NEW Sub Heading* title and place that after the ~_LABEL~ mnemonic separated by an underscore character... That's it... All done... 
+
+- [ ] *You Are Ready To Start Writing NOW:* 
+
+  You are ready to start making notes within your newly Cloned *Log Book Entry*... Your timestamp indicates the present, /-and-/ you are all set to begin writing!
+
+  =READ= the ~:TIME-TRACKING-HOWTO:~ Under the [[LOG_GENERIC-ENTRY_time-card][⏰ Time Card]] /(as you Begin your writing)/ to learn how to use the time card to clock In/out etc...
+
+=ENJOY USING YOUR BRAND NEW LOG OF ANYTHING YOU WANT!=
+:END:
+
+=NOTE:= Delete the above ~:HOW-TO-USE-THIS:~ DRAWER from your ACTIVE LOG ENTRIES after you are done setting then up... This README drawer is always present HERE within the *⎘ Meta:* binder if you need to consult it...
+
+This Log Entry is about: Yadda... Yadda... Yadda... *REPLACE ALL OF THIS BOILERPLATE* WITH YOUR OWN CONTENT...
+
+**** NEW 📚 Reference: 
+<<LOG_GENERIC-ENTRY_ref>>
+:README: 
+=Org Mode Links Tip:=
+
++ To Create a Link Type: ~C-c C-l~ /(then paste: ~link~ & type: "description")/ 
+     =-OR-= Simply Copy/Paste BOILERPLATE: /(use placeholders below)/ And Fill Them In Manually... Copy/Paste more placeholders as needed to create more links...
+
++ To Open a Link Type: ~C-c C-o~ 
+
++ To EXPAND a Link Type: ~SPACE b~ or: ~M-x org-toggle-link-display~ 
+
+- *Heading:* [[~/.GIT/My-Docs/][MY DOCS]] /(comment)/ 
+
+- *Heading:* [[link][Link NAME] ] /(comment)/ 
+
+- [[yt:aB1cD2eF3gH ][TITLE ] ] *Description:* /(YouTube)/ 
+
+- [[link][Link Name] ] *Heading:* /(comment)/ 
+   
+- *_:* [[][] ] /(yadda... yadda... yadda...)/ 
+:END:
+
+- *Link to Project:* [[][] ] /(comment)/ 
+
+**** NEW ⏰ Time Card: 
+<<LOG_GENERIC-ENTRY_time-card>>
+:TIME-TRACKING-HOWTO: 
+
+=HOW TO DO Time Tracking:= 
+
+You can track time related to =ANY HEADING= within your log... You will mostly be working under the *📒 Details:* section where you will be tracking most of your time, but also a little time will be spent within the *✅ Summary:* section at the start of new tasks... You won't be tracking time under this *⏰ Time Card:* /(Tracking the time it takes to track time? "OK Einstein"... LOL)/ but you may be spending time doing research for the *📚 Reference:* Section, so you should clock that time as well as Summary and Details... 
+
+=Here is how to Track your Time:=
+
+- *Go To ANY HEADING under your MAIN LOG Entry Heading:* 
+
+  /(Summary, Details, or Sub Headings)/
+
+  =Punch the Time Clock:= /(USE: CLOCKING COMMANDS below)/
+
+  To Punch the clock at any heading use the *Clock IN:* command below, and then begin working on a task related that heading... =Your Time will start Recording Immediately= and you will see a ~:clocking:~ item under the heading where time is recorded
+
+  Document your work under the current "clocking" heading as you do the task...
+  *Clock OUT*: when you are done working... /(do this whether any related tasks are complete or not... This simply logs all the time worked so far)/
+
+=CLOCKING COMMANDS:= /(how to keep track your time)/
+
++ *Clock IN:* ~C-c C-x C-i~ 
+
+  /(Begin OR Resume Clocking Current task)/
+
+  This creates a new :CLOCKING: Time Card Entry just underneath its HEADING...
+
+  Do this just before starting work on the task... Be in control of your life!
+
+  If you need to go away and do something else before finishing this task, you can do so after clocking out... When you come back simply clock back in again to start another Time Card Entry just as before... The new time card entry will appear above the earlier one within the ~:CLOCKING:~ drawer... When you clock out of this task it will look just like the entry below it with a total time worked tagged on the end... 
+    
++ *RETURN to Clock Heading:* ~C-c C-x C-j~ 
+
+  /Go back to the place where you started the clock.../
+
+  You do this after you have worked on a task for a while and you need to come back to update the item's info etc., and/or stop the clock before going off to do something else unrelated to the log entry... 
+
++ *Clock OUT:* ~C-c C-x C-o~ 
+
+  /(to stop clocking your time on task)/
+
+  This *Finalizes the Time Card Entry* within: ~:CLOCKING:~ /(created earlier when you started the clock)/
+
+  The Clock Entry changes showing start timestamp, end timestamp, and total time worked during this segment...
+
+  After Clocking OUT, you can go away and do some work, leaving this heading, log note, etc. to visit other files and/or work on them etc. The clock will be recording your time all the while...
+
+  You will see in your mode line the elapsed clock time ticking away as you work on a task /(hopefully related to this clock!)/ and you are NOT Yac Shaving or being sidetracked!!! LOL
+
+  =Please DON'T Forget= /Like I often do, LOL.../ i.e., Leaving a clock running all day by accident, or worse, leave it dangling with the file closed only to open it again and get that nasty *Org-Mode Message:* /"What do you want to do/ /with this?"/ If you do something like that you can always come back and directly edit the clock times by hand to amend them...  After changing clock times or dates, etc... Whatever...
+
+  ="Onward We Row Mates... Through the LOG jam!"= 
+
++ *Update Time Card Entry:* ~C-c C-c~ 
+
+  Go To The: ⏰ *Time Card* Heading... 
+
+  Place your Cursor on the Same Line or at the Beginning Of: ~#+BEGIN:~ clocktable
+  =Type:= ~C-c C-c~
+
+  This command will change the total time at the end showing your new calculated time... 
+
++ *Clock Out & Mark Items Done:* ~C-c C-t~ 
+
+  When you are all done with a Log Entry use the above key command to mark its Heading *TODO* tag to: *DONE*
+
+  /(Most of the/ /time this will ALSO clock you out if you are still clocked/ /into the item... But not allways in my experience.../
+
+  So make sure you are also clocked OUT of an Item After marking it DONE...
+
+  =Type:= ~C-c C-x C-j~ to check current clock state/position...
+  /(if no running clock it will tell you and place your/ /cursor at the heading where you LAST CLOCKED OUT)/ 
+
++ *Cancel Current Clock:* ~C-c C-x C-q~ 
+
+  /(in case of accident)/ This removes currently running clock and forgets any time accrued or associated with it... 
+
++ *Display Clocking Info:* ~C-c C-x C-d~ 
+
+  /This will show elapsed times to the right of headings.../
+
+  =Warning!= Using this command will CLUTTER ALL the headings within your org file with those timestamps!!! 
+  
+:END:
+
+#+BEGIN: clocktable :scope tree3 :maxlevel 6 :tstart "<-1w>" :tend "<+1m>" :step week :stepskip0  t :emphasize t :level t :tcolumns 3 
+
+#+END:
+
+**** NEW ✅ Summary: [0/3] 
+<<LOG_GENERIC-ENTRY_summary>> 
+:README: 
+This Summary is mostly to help you find things later when you cannot remember when or where is was done... If you go to the top of this file and expand all headings to show ALL content, then do a search on "~Summary:~" you will be able to quickly scroll through and scan these summaries quickly to find what you were looking for... 
+
+Also the *Time Card* /displayed above/ each search hit will give more clues by showing important headings you worked on...
+
+Below is an optional list /(that could also provide links)./ This list could be used to itemize things you worked on, but I personally find it easier to simply write a short one or two
+line description containing important keywords right here and nothing more. I think that is more useful...
+:END:
+
+The SUMMARY section is a sort of EXPANDED TABLE OF CONTENTS so-to-speak.. Providing a bit more info than a TOC would provide normally... Useful for your LOGGING WORKFLOW...
+Putting the summary section all together provides an excellent EXECUTIVE OVERVIEW of your PROJECTS... ANCHORS provide easy navigation from summary to details for each item...
+
+Commandeer all of the examples below changing their titles both in the heading as well as the lower case title part of the link anchors... 
+
+1. [X] *New Item 1:* /(a COMPLETED ITEM)/ 
+   <<LOG_GENERIC-ENTRY_new-item-1>> 
+   [[LOG_GENERIC-ENTRY-DETAILS_new-item-1][DETAILS]] 
+
+   =Write a SHORT ONE PARAGRAPH SUMMARY HERE...= 
+        
+2. [-] *New Item 2:* /(a CURRENTLY ACTIVE item i.e., "Radio ACTIVE" %^)/ 
+   <<LOG_GENERIC-ENTRY_new-item-2>> 
+   [[LOG_GENERIC-ENTRY-DETAILS_new-item-2][DETAILS]] 
+
+   =Write a SHORT ONE PARAGRAPH SUMMARY HERE...= 
+
+3. [ ] *New Item 3:* /(a NEW ITEM not worked on yet)/ 
+   <<LOG_GENERIC-ENTRY_new-item-3>> 
+   [[LOG_GENERIC-ENTRY-DETAILS_new-item-3][DETAILS]] 
+
+   =Write a SHORT ONE PARAGRAPH SUMMARY HERE...= 
+
+4. [-] *New Item 4:* /(COPY/CLONE more of these as needed)/ 
+   <<LOG_GENERIC-ENTRY_new-item-4>> 
+   [[LOG_GENERIC-ENTRY-DETAILS_new-item-4][DETAILS]] 
+
+   =Write a SHORT ONE PARAGRAPH SUMMARY HERE...= 
+
+**** NEW 📒 Details: 
+<<LOG_GENERIC-ENTRY_details>>
+***** NEW ⏱ New Item 1 /(placeholder)/ [0/3] 
+<<LOG_GENERIC-ENTRY-DETAILS_new-item-1>>
+:BOILERPLATE: 
+  =Delete This BOILERPLATE DRAWER If You Don't Need It...=
+
+  The following list contains Babel Source Code Blocks that are
+  often needed for something I am writing or "Logging" about...
+  I use them so much I decided to include them in this template...
+
+  - [ ] *__:* /(__)/ 
+
+      #+begin_src conf
+       keyword1:     Value1 
+       keyword2:     Value2 
+       keyword3:     Value 
+      #+end_src
+
+  - [ ] *__:* /(__)/ 
+
+      #+begin_src bash
+       sudo dnf install emacs
+       sudo apt install emacs
+      #+end_src
+
+  - [ ] *__:* /(__)/ 
+
+      #+BEGIN_SRC emacs-lisp :results output
+       ;; Initialize Local Vars from GLOBAL CONSTANTS;
+       (let ((h (list 'text-pixels ME--CODE-FRAME-HEIGHT))
+             (w (list 'text-pixels ME--CODE-FRAME-WIDTH)))
+         (princ "CAR h: ")
+         (princ (car h))
+         (princ "\n")
+         (princ "CDR h: ")
+         (princ (cdr h))
+         (princ "\n\n")
+         (princ "CAR w: ")
+         (princ (car w))
+         (princ "\n")
+         (princ "CDR w: ")
+         (princ (cdr w)))
+      #+END_SRC
+
+      #+RESULTS:
+      : CAR h: text-pixels
+      : CDR h: (42)
+      : 
+      : CAR w: text-pixels
+      : CDR w: (92)
+
+  - [ ] =LaTeX Code Within ~.Org~ Docs:= 
+
+    #+begin_comment 
+    Code Embedded ~In-line~ within paragraphs:
+
+    Put: @@latex:<LaTeX Code Here>@@ Anywhere Within a paragraph...
+
+    #+LATEX: % Any Arbitrary LaTeX Code...
+
+    #+LATEX: \newpage % Start New Page
+
+    #+BEGIN_EXPORT latex
+    %% Put LaTex Code In Here...
+    #+END_EXPORT
+
+    #+BEGIN_LaTeX
+    %% Put LaTex Code In Here...
+    #+END_LaTeX 
+    #+end_comment 
+:END:
+
+[[LOG_GENERIC-ENTRY_new-item-1][SUMMARY]]
+
+New Item Details... Yadda... Yadda... Yadda...
+
+Re-Purpose these as needed and Delete anything you don't need...
+
+Add sub headings as needed...
+
+Don't forget to clock-in to HEADINGS while you work on them...
+AND... Don't forget to Clock OUT when you are DONE... %^)
+
+***** NEW ⏱ New Item 2 /(placeholder)/ [0/3] 
+<<RDME-LOG_GENERIC-ENTRY-DETAILS_new-item-2>>
+:BOILERPLATE: 
+  =Delete This BOILERPLATE DRAWER If You Don't Need It...=
+
+  The following list contains Babel Source Code Blocks that are
+  often needed for something I am writing or "Logging" about...
+  I use them so much I decided to include them in this template...
+
+  - [ ] *__:* /(__)/ 
+
+      #+begin_src conf
+       keyword1:     Value1 
+       keyword2:     Value2 
+       keyword3:     Value 
+      #+end_src
+
+  - [ ] *__:* /(__)/ 
+
+      #+begin_src bash
+       sudo dnf install emacs
+       sudo apt install emacs
+      #+end_src
+
+  - [ ] *__:* /(__)/ 
+
+      #+BEGIN_SRC emacs-lisp :results output
+       ;; Initialize Local Vars from GLOBAL CONSTANTS;
+       (let ((h (list 'text-pixels ME--CODE-FRAME-HEIGHT))
+             (w (list 'text-pixels ME--CODE-FRAME-WIDTH)))
+         (princ "CAR h: ")
+         (princ (car h))
+         (princ "\n")
+         (princ "CDR h: ")
+         (princ (cdr h))
+         (princ "\n\n")
+         (princ "CAR w: ")
+         (princ (car w))
+         (princ "\n")
+         (princ "CDR w: ")
+         (princ (cdr w)))
+      #+END_SRC
+
+      #+RESULTS:
+      : CAR h: text-pixels
+      : CDR h: (42)
+      : 
+      : CAR w: text-pixels
+      : CDR w: (92)
+
+  - [ ] =LaTeX Code Within ~.Org~ Docs:= 
+
+    #+begin_comment 
+    Code Embedded ~In-line~ within paragraphs:
+
+    Put: @@latex:<LaTeX Code Here>@@ Anywhere Within a paragraph...
+
+    #+LATEX: % Any Arbitrary LaTeX Code...
+
+    #+LATEX: \newpage % Start New Page
+
+    #+BEGIN_EXPORT latex
+    %% Put LaTex Code In Here...
+    #+END_EXPORT
+
+    #+BEGIN_LaTeX
+    %% Put LaTex Code In Here...
+    #+END_LaTeX 
+    #+end_comment 
+:END:
+
+[[RDME-LOG_GENERIC-ENTRY_new-item-2][SUMMARY]]
+
+New Item Details... Yadda... Yadda... Yadda...
+
+Re-Purpose these as needed and Delete anything you don't need...
+
+Add sub headings as needed...
+
+Don't forget to clock-in to HEADINGS while you work on them...
+AND... Don't forget to Clock OUT when you are DONE... %^)
+
+***** NEW ⏱ New Item 3 /(placeholder)/ [0/3] 
+<<RDME-LOG_GENERIC-ENTRY-DETAILS_new-item-3>>
+:BOILERPLATE: 
+  =Delete This BOILERPLATE DRAWER If You Don't Need It...=
+
+  The following list contains Babel Source Code Blocks that are
+  often needed for something I am writing or "Logging" about...
+  I use them so much I decided to include them in this template...
+
+  - [ ] *__:* /(__)/ 
+
+      #+begin_src conf
+       keyword1:     Value1 
+       keyword2:     Value2 
+       keyword3:     Value 
+      #+end_src
+
+  - [ ] *__:* /(__)/ 
+
+      #+begin_src bash
+       sudo dnf install emacs
+       sudo apt install emacs
+      #+end_src
+
+  - [ ] *__:* /(__)/ 
+
+      #+BEGIN_SRC emacs-lisp :results output
+       ;; Initialize Local Vars from GLOBAL CONSTANTS;
+       (let ((h (list 'text-pixels ME--CODE-FRAME-HEIGHT))
+             (w (list 'text-pixels ME--CODE-FRAME-WIDTH)))
+         (princ "CAR h: ")
+         (princ (car h))
+         (princ "\n")
+         (princ "CDR h: ")
+         (princ (cdr h))
+         (princ "\n\n")
+         (princ "CAR w: ")
+         (princ (car w))
+         (princ "\n")
+         (princ "CDR w: ")
+         (princ (cdr w)))
+      #+END_SRC
+
+      #+RESULTS:
+      : CAR h: text-pixels
+      : CDR h: (42)
+      : 
+      : CAR w: text-pixels
+      : CDR w: (92)
+
+  - [ ] =LaTeX Code Within ~.Org~ Docs:= 
+
+    #+begin_comment 
+    Code Embedded ~In-line~ within paragraphs:
+
+    Put: @@latex:<LaTeX Code Here>@@ Anywhere Within a paragraph...
+
+    #+LATEX: % Any Arbitrary LaTeX Code...
+
+    #+LATEX: \newpage % Start New Page
+
+    #+BEGIN_EXPORT latex
+    %% Put LaTex Code In Here...
+    #+END_EXPORT
+
+    #+BEGIN_LaTeX
+    %% Put LaTex Code In Here...
+    #+END_LaTeX 
+    #+end_comment 
+:END:
+
+[[RDME-LOG_GENERIC-ENTRY_new-item-3][SUMMARY]]
+
+New Item Details... Yadda... Yadda... Yadda...
+
+Re-Purpose these as needed and Delete anything you don't need...
+
+Add sub headings as needed...
+
+Don't forget to clock-in to HEADINGS while you work on them...
+AND... Don't forget to Clock OUT when you are DONE... %^)
+
+***** NEW ⏱ New Item 4 /(placeholder)/ [0/4] 
+<<RDME-LOG_GENERIC-ENTRY-DETAILS_new-item-4>>
+:BOILERPLATE: 
+  =Delete This BOILERPLATE DRAWER If You Don't Need It...=
+
+  The following list contains Babel Source Code Blocks that are
+  often needed for something I am writing or "Logging" about...
+  I use them so much I decided to include them in this template...
+
+  - [ ] *__:* /(__)/ 
+
+      #+begin_src conf
+       keyword1:     Value1 
+       keyword2:     Value2 
+       keyword3:     Value 
+      #+end_src
+
+  - [ ] *__:* /(__)/ 
+
+      #+begin_src bash
+       sudo dnf install emacs
+       sudo apt install emacs
+      #+end_src
+
+  - [ ] *__:* /(__)/ 
+
+      #+BEGIN_SRC emacs-lisp :results output
+       ;; Initialize Local Vars from GLOBAL CONSTANTS;
+       (let ((h (list 'text-pixels ME--CODE-FRAME-HEIGHT))
+             (w (list 'text-pixels ME--CODE-FRAME-WIDTH)))
+         (princ "CAR h: ")
+         (princ (car h))
+         (princ "\n")
+         (princ "CDR h: ")
+         (princ (cdr h))
+         (princ "\n\n")
+         (princ "CAR w: ")
+         (princ (car w))
+         (princ "\n")
+         (princ "CDR w: ")
+         (princ (cdr w)))
+      #+END_SRC
+
+      #+RESULTS:
+      : CAR h: text-pixels
+      : CDR h: (42)
+      : 
+      : CAR w: text-pixels
+      : CDR w: (92)
+
+  - [ ] =LaTeX Code Within ~.Org~ Docs:= 
+
+    #+begin_comment 
+    Code Embedded ~In-line~ within paragraphs:
+
+    Put: @@latex:<LaTeX Code Here>@@ Anywhere Within a paragraph...
+
+    #+LATEX: % Any Arbitrary LaTeX Code...
+
+    #+LATEX: \newpage % Start New Page
+
+    #+BEGIN_EXPORT latex
+    %% Put LaTex Code In Here...
+    #+END_EXPORT
+
+    #+BEGIN_LaTeX
+    %% Put LaTex Code In Here...
+    #+END_LaTeX 
+    #+end_comment 
+:END:
+
+[[RDME-LOG_GENERIC-ENTRY_new-item-4][SUMMARY]] 
+
+New Item Details... Yadda... Yadda... Yadda...
+
+Re-Purpose these as needed and Delete anything you don't need...
+
+Add sub headings as needed...
+
+Don't forget to clock-in to HEADINGS while you work on them...
+AND... Don't forget to Clock OUT when you are DONE... %^)
 
 
-### 2020 July 16:
+*** NEW 🗓 README LOG Entry: 
+<<LOG_rdme-entry>>
+=LOG-DATE:= <2020-05-17 Sun>
 
-Modular Emacs is now at Version 3.2. This has been tested on the develop branch long enough... I am still calling it "beta" because there is still a lot of work still unfinished... (mostly peripheral support files, templates, etc. and the Docs are still being updated... (does documentation ever end? lol).  Lots of improvements with the docs has been done however...
+#+begin_verse 
+=NOTE:= PUT YOUR LOG IN HERE... Yadda... Yadda... Yadda... 
+#+end_verse
 
-Testing all of the features on different platforms has proven it to be stable enough to merge back into the Master branch...  This commit adds new improved docs.  Also templates for authors, publishers, and screenwriters has been included.  Those templates are still being refined.  I will be using org-mode to do the exports and publishing automations... Final stages of exporting and publishing are now the main focus...  All of the basic editing features are mature now...
+*** COPY-PASTE ITEMS: 
 
-Although this project is "beta", version numbers will continue to advance...  The nature of Emacs is "always in Beta" because it is so powerful and flexible, and empowers the user who can not only use and customize it but can also completely change functionality!  Any new features I end up trying out do not get merged into the Master branch until I have used them for a while, they are stable, and I like the new added features...
+- =INLINE IMAGES:= 
+  Use this to place an image centered on the page when rendered on the Web...
+  
+  The image will not Auto Expand in org-mode, -and- if it becomes Visible, you can easily turn it OFF if you don't want it. (i.e. to save vertical space while editing)...
 
-More to come later of course!
+  *Type:* ~C-c~  ~C-x~ ~C-v~ to toggle visibility... 
+  #+NAME: Figure:RDME-LOG_object-name 
+  #+ATTR_ORG: :align left
+  #+ATTR_HTML: :align center
+  #+ATTR_HTML: :width 600px
+  #+CAPTION: This is The Caption for a table, graph, image, or etc...
+    [[./media/svg/monochord.svg]]
 
-### 2020 June 27:
+- =TABLES:= 
 
-Updated the docs... Added a new section below about installing fonts for use with Modular Emacs, and also created a how-to doc for you to follow along to get that important task done...
+  Lets See how VERSE blocks effect HTML output... I normally use CENTERED blocks...
 
-### 2020 June 16:
+  #+NAME: table:-LOG_table-name
+  #+CAPTION: Org-Mode BOILERPLATE Table
+  #+begin_verse 
+|------+-------+-------|
+| *COL-1* | *COL-2* | *COL-3* |
+|------+-------+-------|
+|   42 | foo    | bar    |
+|    13 | fee    | fum   |
+|------+-------+-------|
+  #+end_verse
 
-I have been using **_"Fancy Org Mode"_** with **`Xah-Fly-Keys`** enabled for a several months now. Since the beginning of 2020 many refinements have been made.  I have been mucking around with custom key-bindings and modified many of the default key-bindings that come with **`Xah-Fly-Keys`** mode by default...   The primary incentive is to put your most often used key commands as close as possible to the **_"home row"_** to speed up productivity, and also save your fingers from doing stressful things repeatedly which is the main cause of tendenitis.  
+- =Generate TABLE from SRC CODE Block:= 
 
-There is a second insentive to NOT assign keys close to the home row that evoke radical transformations, or do things that could get you totally hosed and confused if you hit that key by accident! If you hit it by accident while editing an important doc _(or not so important)_, messing up like that is frustrating to say the least!  
+  =NOTE:= You must have iTerm running for this zsh command to work... I have not tried this with BASH, but I like the output table here so that is fine...
 
-Needless to say... I have been modifying these keys based on the above experiences I have had with it since around Novemember of 2019... Things are working much better for me now but I am not done...
+  Use this to generate a raw org-mode table for some data you need via a script, SHELL, Python, whatever... Then once the table is made you can copy it, fix up headings etc., add a NAME: and CAPTION: to it and place it where you need it... /(I should make capture templates or ya-snippets for this stuff but NOT YET)/.. First do it manually, then automate... 
 
-Since I also have to support folks who do not care to use Emacs as a **_"modal editor"_** like **vi**, I am committed to mapping custom key bindings using the **`Control`** and **`Meta`** keys that match things I can do when I am in Xah-Fly-Keys mode...
+  #+begin_src zsh :results table :exports both 
+  ps -a 
+  #+end_src 
 
-Unfortunately, I have been using **`Xah-Fly-Keys`** for over 6 months and my fingers _(muscle memory)_ are constantly tripping when I am in regular Emacs mode... _(This also happens to me outside of emacs, editing documents in Libre Office, copy-and-pasting, or something as simple as renaming a file, Etc. My fingers forget they are not in Emacs and un-counscously try command keys that produce error messages etc. This is the downside of using modal editors.  If the entire computing experience was configured modally like this, I would not have that problem. LOL "The bane of doing things differently" eh?)_ Keep this in mind when trying to decide whether or not to use Emacs as a "modal editor" there a pluses and minuses... Nothing is perfect...
+  #+RESULTS:
+  |   PID | TTY     |    TIME | CMD |
+  | 70518 | ttys001 | 0:00.15 | zsh |
 
-**Please Help!**
+- =Graphviz DOT SRC CODE BLOCK:= 
 
- At this point I need some folks to try Harmonic Alchemy Modular Emacs _(normal key bindings mode)_ to give me some feedback about their user experience (**UX**). Please! Where are you?  Come try this stuff out! Thousands of man-hours have been put into it and more to come!  All Free-as-in-freedom... What are you waiting for?
+  #+NAME: dot:-LOG_Nested-CLusters
+  #+begin_src dot :file ./media/svg/nested-clusters.svg :exports both 
+digraph D {
 
-> **Warning!** This year is the year of key-bindings refinement...  Key bindings defined within the module: **`12-Xah-Fly-Keys.el`** will most likely be changing several times this year... If you are already using this project and are used to the way things were set up before now, it would be wise to copy, **`lisp/modules/12-Xah-Fly-Keys.el`** into: **`lisp/my-modules/12-Xah-Fly-Keys.el`** and also copy: **`lisp/modules/13-key-bindings.el`** to: **`lisp/my-modules/13-key-bindings.el`** to override the ones that get updated when you pull down new changes from the master branch...  
-That way if key-bindings change, you will stil have your old ones to keep (if you like) and you can also try out the new keybindings for size as well... No pain or disruptions...
+  subgraph cluster_p {
+    label = "Parent";
 
-### 2020 May 22:
+    subgraph cluster_c1 {
+      label = "Child one";
+      a;
 
-Org Mode has been heavily customized!  I am calling it **_Fancy Org Mode_**.  Also some of the Module files were re-organized... (In particular `12-Xah-Fly-Keys.el` and `13-key-bindings.el)`... Tweaks were added to improve package management and minimize the effects of load errors etc.  Keybindings for both Xah-Fly-Keys mode as well as normal mode were added/changed...
+      subgraph cluster_gc_1 {
+        label = "Grand-Child one";
+         b;
+      }
+      subgraph cluster_gc_2 {
+        label = "Grand-Child two";
+          c;
+          d;
+      }
 
-The file: **`dispatcher.el`** got more automated as well.  Any module within the **`lisp/modules`** directory will be automatically overrided simply by making a copy of it _(using same file name of course)_ to: **`lisp/my-modules`** where the file will not be tracked by git and you can make any local modifications or additions without upsetting the original files that get updated periodically as new git commits are pulled down...  
+    }
 
-> **Note:** _New changes emerging within new pulled down files which you have previously overridden will be shadowed of course!_    
-If you need the updates, you will need to merge those changes into your overrides...
+    subgraph cluster_c2 {
+      label = "Child two";
+      e;
+    }
+  }
+}
+  #+end_src 
+  #+attr_org: :width 600px
+  #+attr_html: :width 600px
+  #+CAPTION: DOT Generated Nested Clusters
+  #+RESULTS: dot:-LOG_Nested-CLusters
+  [[file:./media/svg/nested-clusters.svg]]
 
 
-In addition, you no longer have to copy **`dispatcher.el`** into **`my-modules`** either _(except to enable normally disabled optional modules)_...
-
-In case you do have to copy **`dispatcher.el`** into **`my-modules`** _(e.g., To enable the optional Common Lisp related modules, etc.)_ you won't have to edit **`init.el`** anymore to change the location of **`dispatcher.el`**.  That part has been automated as well. **`modules/dispatcher.el`** will be  overridden by your custom copy in: **`my-modules`** automagically.
-
-Now, the only reason to edit **init.el** is to add your own custom heading and/or body to the Welcome Screen Message... _(If and when you care to do that, now or later...)_
-
-I created a branch _(fork)_ where you can try out: **Xah-Fly-Keys** without having to go in to override **`dispatcher.el`** manually...
-
-In the Master Branch, optional modules are disabled _(see details below)_...  Not having Xah-Fly-Keys enabled kind of cripples things for me for running tests within normal Emacs mode now that my fingers are used to flying with a spacebar leader key!  Going back to the old way is painful! It is hard to test my setup using the old C-x and M-x keys etc... %^) Last year at this time I was complaing about the opposite... _(i.e., having to learn Xah-Fly-Keys and using Emacs as a Modal editor like **vi**)_
-
-You have two editor mode options available to choose now, _(and it's easy to switch back and forth)_.   Choose between using **Normal Emacs** edit mode **_or_** **Xah Fly Keys** modal edit mode simply by switching git branches...
-
-**Note:** Making the switch to a model editor is a BIG HUGE commitment... But it has its BIG HUGE payoff at the end of that bumpy road! Trust me on that!  There are also caveats as well though.  _(arent there always?)_ :trollface:
-
-### 2020 May 17 - Fancy Org Mode:
-
-This commit adds a bunch of new Org-Mode tweaks... I am setting up my Org-Mode based Book Publishing System _(my **pubOps**)_ now... There will be some included examples added to this a bit later...  **_Fancy Org Mode is now enabled by default_**...
-
-To use **Fancy Org Mode** you will need to override and edit the file: **`09-org-mode-pkg-conf.el`** and depending on your OS, (Mac or Linux) change the dummy placeholder path to your REAL **org docs** directory path.  There are two options allowing you to run this on both MacOS and Linux if you are a multi OS kind of person that is... :octocat:
-
-> **Note 1:** I am implementing a cleaner way to get all local directory path and user specific meta data into the load process rather than having to override and edit indvidual files as in the above bullet...  This will all be done in one file that you will override during your initial install... Once it is set with your specific edits it will stay that way and you will never have to touch it again...
-
-> **Note 2:** I am still working on custom Export options for Modular Emacs Fancy Org Mode...  But everything else is working nicely now... Export features will be forthcomming over the next few months!  Stay tuned...  Book publishing time!
-
-The **Blackboard** Color Theme was also updated _(to accomodate prettifying Org-Mode)_.  Also, I am back to using the standard mode line.  I got tired of **powerline** _(It felt too cluttered and also seemed to have bugs)_... Then I tried **smart-mode-line** to see if I could make things look better and simpler... I got frustrated with it as well and after mucking around I realized there is nothing wrong with the Emacs standard mode-line and you can tweak it to fit exactly your needs... So now that is the new plan... I left the old code for both `powerline` and `smart-mode-line` in place _(commented out)_ making it easy for you to enable either of them, if you like them better... You can see changes to mode line features in **`02-package-conf.el`**... 
-
-**_Everything else stays pretty much the same as Version 3.0..._**
-
-> **Exception: _Debian and Mac users will have to follow a linked doc that guides you through building and maintaining your own Official GNU Emacs from source first!_** Building from source is tedious, _especially if you are doing it for the first time, you WILL have to try many times before getting all those "twisty little snippets all different", sorted out and resolved._  If you stick to your guns and stay persistant, you will be awesome!  You will also be in total control of your personal and OFFICIAL build of GNU Emacs, how it works, and what it does!  Your second build experience will go much more smoothly...  By the third build the process will become the boring routine of typing a few commands, and then waiting as your machine cranks away a brand new version for you...  Play **_mind_ sweeper** with your smart spyPhone, or read a book about exploding brain synapses while your computer's busy making free-as-in-liberated Emacs... :trollface:
-
-Once you have the basics running smoothly, then it will be safe to visit the _**optional section headings**_ below to find links to install guides for optional modules you may be interested in trying out...  Consult the **[\[Table Of Contents\]](../README.md#version-312-beta---readme)** for quick access if you are coming back to this doc later...
-
-> **Warning:** Enabling optional features may require you to remap some of your keys and also change Emacs into a modal editor _(similar to Vi but more Emacs like)_  Read carefully before making that commitment...
-
-> **Note:** If you are on Mac OS or some flavor of Debian, you may have to build Emacs from source _(as mentioned above)_ to enable extra features support _(like VMD-Mode which needs special libraries linked in during the Emacs build process)_...  Full instructions are provided for those sections...
-
-**[\[Back To MAIN Modular Emacs README\]](../README.md)**
-
-## Table Of Contents:
-
-<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
-
-- [Modular Emacs - Current Status](#modular-emacs---current-status)
-    - [Release Notes:](#release-notes)
-        - [2020 July 25:](#2020-july-25)
-        - [2020 July 16:](#2020-july-16)
-        - [2020 June 27:](#2020-june-27)
-        - [2020 June 16:](#2020-june-16)
-        - [2020 May 22:](#2020-may-22)
-        - [2020 May 17 - Fancy Org Mode:](#2020-may-17---fancy-org-mode)
-
-<!-- markdown-toc end -->

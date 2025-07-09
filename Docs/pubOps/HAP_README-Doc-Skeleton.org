@@ -1511,6 +1511,4 @@ digraph D {
   #+attr_html: :width 600px
   #+CAPTION: DOT Generated Nested Clusters
   #+RESULTS: dot:-LOG_Nested-CLusters
-  [[file:./media/svg/nested-clusters.svg]]
-
-
+  [[file:./media/svg/nested-clusters.
