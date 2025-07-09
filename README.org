@@ -165,6 +165,9 @@ If you end up liking *Harmonic Alchemy Modular Emacs*, please drop me a note to 
 <<README_screenshots>>
 =Misc. Screenshots displaying HAP Modular Emacs main Features=
 
+
+
+=General LOG Book TEMPLATE (details Section)=
 #+NAME: fig:HAP-Mod-Emacs-gen-log-book-details-001
 #+CAPTION: HAP - General LOG Book (Details Section)
 #+ATTR_ORG: :width 600px
@@ -172,9 +175,7 @@ If you end up liking *Harmonic Alchemy Modular Emacs*, please drop me a note to 
 #+attr_latex: :width 600px
 [[file:./Docs/media/HAP-General-LOG-Book-details-01.png]]
 
-=General LOG Book TEMPLATE (details Section)=
-
-
+=Viewing The General Log Book TIME CARD=
 #+NAME: fig:HAP-Mod-Emacs-log-book-time-card
 #+CAPTION: HAP - Viewing General Log Book TIME CARD
 #+ATTR_ORG: :width 600px
@@ -182,12 +183,11 @@ If you end up liking *Harmonic Alchemy Modular Emacs*, please drop me a note to 
 #+attr_latex: :width 600px
 [[file:./Docs/media/HAP-LOG-Template-Time-Card_2025-007-01.png]]
 
-=Viewing The General Log Book TIME CARD=
-
 - [[file:./Docs/media/HAP_General-Log-Book-Skeleton.pdf][PUBLISHED LOG Book PDF]] /(Published Example General Log Book Skeleton)/ 
 
   Open this PDF file and examine it.. /(not a screenshot)/
 
+=Audio Drama Project Skeleton Template=
 #+NAME: fig:HAP-Mod-Emacs-audio-drama-project-template
 #+CAPTION: HAP - Audio Drama Project Skeleton Template
 #+ATTR_ORG: :width 600px
@@ -195,13 +195,11 @@ If you end up liking *Harmonic Alchemy Modular Emacs*, please drop me a note to 
 #+attr_latex: :width 600px
 [[file:./Docs/media/HAP-Audio-Drama-Project-Skeleton-02.png]]
 
-=Audio Drama Project Skeleton Template=
-
-
 - [[file:./Docs/media/The-Coffee-Shop.pdf][The Coffee Shop - Audio Drama Script]] /(Published Audio Drama Script)/ 
 
   Open this PDF file and examine it.. /(not a screenshot)/
 
+=Reference Book Project Skeleton Template=
 #+NAME: fig:HAP-Mod-Emacs-ref-book-project-template
 #+CAPTION: HAP - Reference Book Project Skeleton Template
 #+ATTR_ORG: :width 600px
@@ -209,17 +207,13 @@ If you end up liking *Harmonic Alchemy Modular Emacs*, please drop me a note to 
 #+attr_latex: :width 600px
 [[file:./Docs/media/HAP-Reference-Book-Project-Skeleton-01.png]]
 
-=Reference Book Project Skeleton Template=
-
-
+=dev⚒Ops Workflow Showing Mod Emacs on BOTH Local Mac & Remote Server!=
 #+NAME: fig:HAP-Mod-Emacs-devOps-workflow
 #+CAPTION: HAP - devOps Workflow Showing Mod Emacs on BOTH Local Mac & Remote Server!
 #+ATTR_ORG: :width 600px
 #+attr_html: :width 600px
 #+attr_latex: :width 600px
 [[file:./Docs/media/devOps-Workflow-using-HAP-Mod-Emacs-2024.png]]
-
-=dev⚒Ops Workflow Showing Mod Emacs on BOTH Local Mac & Remote Server!=
 
 * ☞ TL;DR - Start Here: 
 
